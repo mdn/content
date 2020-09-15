@@ -33,13 +33,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: mdn/yari
+          path: yari
 
       - name: Debug what was checked out
         run: |
           pwd
           ls -l
-
-
 
       # - name: Setup Node.js environment
       #   if: steps.git_diff_content.outputs.diff
