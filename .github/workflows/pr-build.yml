@@ -28,7 +28,7 @@ jobs:
         with:
           SEPARATOR: ","
           SUFFIX_FILTER: .html
-          PREFIX_FILTER: content/files/
+          PREFIX_FILTER: files/
 
       - uses: actions/checkout@v2
         with:
