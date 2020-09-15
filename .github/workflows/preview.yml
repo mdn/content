@@ -15,7 +15,7 @@ jobs:
           FILES: |
             package.json
             yarn.lock
-            .github/workflows/preview.yml
+            preview.yml
 
       - name: Debug GIT_DIFF
         run: |
