@@ -1,0 +1,56 @@
+name: Preview
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: technote-space/get-diff-action@v3
+        id: git_diff_content
+        with:
+          FILES: |
+            package.json
+            yarn.lock
+
+      - name: Setup Node.js environment
+        if: steps.git_diff_content.outputs.diff
+        uses: actions/setup-node@v2.1.1
+        with:
+          node-version: "12"
+
+      - name: Get yarn cache directory path
+        if: steps.git_diff_content.outputs.diff
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2.1.1
+        if: steps.git_diff_content.outputs.diff
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install all yarn packages
+        if: steps.git_diff_content.outputs.diff
+        run: yarn --frozen-lockfile
+
+      - name: Start the Yari server
+        if: steps.git_diff_content.outputs.diff
+        run: |
+          yarn start &
+
+      - name: Wait for server
+        if: steps.git_diff_content.outputs.diff
+        run: |
+          curl --retry-connrefused --retry 5 http://localhost:5000
+
+          # TODO Do something with puppeteer here maybe
+
+          curl --fail http://localhost:5000/en-US/docs/Web/HTML/Element/video > /dev/null
+          curl --fail http://localhost:5000/en-US/docs/Web/HTML/Element/video/index.json > /dev/null
