@@ -1,0 +1,50 @@
+---
+title: Document.hidden
+slug: Web/API/Document/hidden
+tags:
+  - DOM
+  - Document
+  - Page Visibility API
+  - Property
+  - Read-only
+  - Reference
+  - Web
+---
+<p>{{ ApiRef("DOM") }}</p>
+
+<p>The <code><strong>Document.hidden</strong></code> read-only property returns a Boolean value indicating if the page is considered hidden or not.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>boolean</em> = document.hidden</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush:js;">document.addEventListener("visibilitychange", function() {
+  console.log( document.hidden );
+  // Modify behavior...
+});
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th>Specification</th>
+			<th>Status</th>
+			<th>Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}}</td>
+			<td>{{Spec2('Page Visibility API')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Document.hidden")}}</p>

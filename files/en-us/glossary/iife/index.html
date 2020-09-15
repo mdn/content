@@ -1,0 +1,63 @@
+---
+title: IIFE
+slug: Glossary/IIFE
+tags:
+  - CodingScripting
+  - DesignPattern
+  - Functions
+  - Glossary
+  - JavaScript
+---
+<p>An <strong>IIFE</strong> (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.</p>
+
+<pre class="brush: js">(function () {
+    statements
+})();</pre>
+
+<p>It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:</p>
+
+<ol>
+ <li>The first is the anonymous function with lexical scope enclosed within the {{jsxref("Operators/Grouping", "Grouping Operator")}} <code>()</code>. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.</li>
+ <li>The second part creates the immediately invoked function expression <code>()</code> through which the JavaScript engine will directly interpret the function.</li>
+</ol>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The function becomes a function expression which is immediately executed. The variable within the expression can not be accessed from outside it.</p>
+
+<pre class="brush: js">(function () {
+    var aName = "Barry";
+})();
+// Variable aName is not accessible from the outside scope
+aName // throws "Uncaught ReferenceError: aName is not defined"
+</pre>
+
+<p>Assigning the IIFE to a variable stores the function's return value, not the function definition itself.</p>
+
+<pre class="brush: js">var result = (function () {
+    var name = "Barry";
+    return name;
+})();
+// Immediately creates the output:
+result; // "Barry"</pre>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li>Learn about it
+  <ol>
+   <li><a href="/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions">Quick example</a> (at the end of the "Functions" section, right before "Custom objects")</li>
+  </ol>
+ </li>
+ <li>Wikipedia articles
+  <ol>
+   <li>{{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}}</li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Glossary">Glossary</a>
+  <ol>
+   <li>{{Glossary("Function")}}</li>
+   <li>{{Glossary("Self-Executing Anonymous Function")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

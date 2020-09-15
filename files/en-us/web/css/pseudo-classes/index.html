@@ -1,0 +1,167 @@
+---
+title: Pseudo-classes
+slug: Web/CSS/Pseudo-classes
+tags:
+  - CSS
+  - Guide
+  - Overview
+  - Pseudo-class
+  - Reference
+  - Selectors
+---
+<div>{{CSSRef}}</div>
+
+<p class="summary"><span class="seoSummary">A <a href="/en-US/docs/Web/CSS">CSS</a> <strong><dfn>pseudo-class</dfn></strong> is a keyword added to a selector that specifies a special state of the selected element(s).</span> For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.</p>
+
+<pre class="brush: css no-line-numbers notranslate">/* Any button over which the user's pointer is hovering */
+button:hover {
+  color: blue;
+}</pre>
+
+<p>Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> In contrast to pseudo-classes, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> can be used to style a <em>specific part</em> of an element.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">selector:pseudo-class {
+  property: value;
+}
+</pre>
+
+<p>Like regular classes, you can chain together as many pseudo-classes as you want in a selector.</p>
+
+<h2 id="Index_of_standard_pseudo-classes">Index of standard pseudo-classes</h2>
+
+<div class="index" id="index">
+<ul>
+ <li>{{CSSxRef(":active")}}</li>
+ <li>{{CSSxRef(":any-link")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":blank")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":checked")}}</li>
+ <li>{{CSSxRef(":current")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":default")}}</li>
+ <li>{{CSSxRef(":defined")}}</li>
+ <li>{{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":disabled")}}</li>
+ <li>{{CSSxRef(":drop")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":empty")}}</li>
+ <li>{{CSSxRef(":enabled")}}</li>
+ <li>{{CSSxRef(":first")}}</li>
+ <li>{{CSSxRef(":first-child")}}</li>
+ <li>{{CSSxRef(":first-of-type")}}</li>
+ <li>{{CSSxRef(":fullscreen")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":future")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":focus")}}</li>
+ <li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":focus-within")}}</li>
+ <li>{{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":host")}}</li>
+ <li>{{CSSxRef(":host()")}}</li>
+ <li>{{CSSxRef(":host-context()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":hover")}}</li>
+ <li>{{CSSxRef(":indeterminate")}}</li>
+ <li>{{CSSxRef(":in-range")}}</li>
+ <li>{{CSSxRef(":invalid")}}</li>
+ <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":lang", ":lang()")}}</li>
+ <li>{{CSSxRef(":last-child")}}</li>
+ <li>{{CSSxRef(":last-of-type")}}</li>
+ <li>{{CSSxRef(":left")}}</li>
+ <li>{{CSSxRef(":link")}}</li>
+ <li>{{CSSxRef(":local-link")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":not", ":not()")}}</li>
+ <li>{{CSSxRef(":nth-child", ":nth-child()")}}</li>
+ <li>{{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":nth-last-child", ":nth-last-child()")}}</li>
+ <li>{{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}</li>
+ <li>{{CSSxRef(":nth-of-type", ":nth-of-type()")}}</li>
+ <li>{{CSSxRef(":only-child")}}</li>
+ <li>{{CSSxRef(":only-of-type")}}</li>
+ <li>{{CSSxRef(":optional")}}</li>
+ <li>{{CSSxRef(":out-of-range")}}</li>
+ <li>{{CSSxRef(":past")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":placeholder-shown")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":read-only")}}</li>
+ <li>{{CSSxRef(":read-write")}}</li>
+ <li>{{CSSxRef(":required")}}</li>
+ <li>{{CSSxRef(":right")}}</li>
+ <li>{{CSSxRef(":root")}}</li>
+ <li>{{CSSxRef(":scope")}}</li>
+ <li>{{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":target")}}</li>
+ <li>{{CSSxRef(":target-within")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":user-invalid")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":valid")}}</li>
+ <li>{{CSSxRef(":visited")}}</li>
+ <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}</li>
+</ul>
+</div>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen")}}</td>
+   <td>{{Spec2("Fullscreen")}}</td>
+   <td>Defined <code>:fullscreen</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "#pseudo-classes")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Defines when particular selectors match HTML elements.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS4 Selectors")}}</td>
+   <td>{{Spec2("CSS4 Selectors")}}</td>
+   <td>Defined <code style="white-space: nowrap;">:any-link</code>, <code>:blank</code>, <code style="white-space: nowrap;">:local-link</code>, <code>:scope</code>, <code>:drop</code>, <code>:current</code>, <code>:past</code>, <code>:future</code>, <code style="white-space: nowrap;">:placeholder-shown</code>, <code style="white-space: nowrap;">:user-invalid</code>, <code style="white-space: nowrap;">:nth-col()</code>, <code style="white-space: nowrap;">:nth-last-col()</code>, <code>:is()</code> and <code>:where()</code>.<br>
+    Changed <code>:empty</code> to behave like {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.<br>
+    No significant change for other pseudo-classes defined in {{SpecName("CSS3 Selectors")}} and {{SpecName("HTML5 W3C")}} (though semantic meaning not taken over).</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C")}}</td>
+   <td>{{Spec2("HTML5 W3C")}}</td>
+   <td>Copies the relevant section from the canonical (WHATWG) HTML spec.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS3 Basic UI")}}</td>
+   <td>{{Spec2("CSS3 Basic UI")}}</td>
+   <td>Defined <code>:default</code>, <code>:valid</code>, <code>:invalid</code>, <code>:in-range</code>, <code>:out-of-range</code>, <code>:required</code>, <code>:optional</code>, <code>:read-only</code> and <code>:read-write</code>, but without the associated semantic meaning.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS3 Selectors")}}</td>
+   <td>{{Spec2("CSS3 Selectors")}}</td>
+   <td>Defined <code>:target</code>, <code>:root</code>, <code>:nth-child()</code>, <code>:nth-last-of-child()</code>, <code>:nth-of-type()</code>, <code>:nth-last-of-type()</code>, <code>:last-child</code>, <code>:first-of-type</code>, <code>:last-of-type</code>, <code>:only-child</code>, <code>:only-of-type</code>, <code>:empty</code> and <code>:not()</code>.<br>
+    Defined the syntax of <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, and <code>:indeterminate</code>, but without the associated semantic meaning.<br>
+    No significant change for pseudo-classes defined in {{SpecName('CSS2.1')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS2.1")}}</td>
+   <td>{{Spec2("CSS2.1")}}</td>
+   <td>Defined <code>:lang()</code>, <code>:first-child</code>, <code>:hover</code>, and <code>:focus</code>.<br>
+    No significant change for pseudo-classes defined in {{SpecName('CSS1')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS1")}}</td>
+   <td>{{Spec2("CSS1")}}</td>
+   <td>Defined <code>:link</code>, <code>:visited</code> and <code>:active</code>, but without the associated semantic meaning.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></li>
+</ul>

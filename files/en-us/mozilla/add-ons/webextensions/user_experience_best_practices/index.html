@@ -1,0 +1,185 @@
+---
+title: User experience best practices
+slug: Mozilla/Add-ons/WebExtensions/User_experience_best_practices
+tags:
+  - Add-ons
+  - Extensions
+  - Guide
+  - UI
+  - UX
+---
+<div>{{AddonSidebar()}}</div>
+
+<p dir="ltr">You want to make sure your users have a great experience using your extension—when you do, the good reviews and ratings will follow on <a href="https://addons.mozilla.org">addons.mozilla.org </a>(AMO)</p>
+
+<p dir="ltr">If you are new to the subject of making software usable, a good place to start is Jakob Nielsen’s <a href="https://en.wikipedia.org/wiki/Heuristic_evaluation#Nielsen">Usability Heuristics</a>. We recommend all developers use Nielsen’s Heuristics as a checklist when building and testing your user experience (UX).</p>
+
+<p dir="ltr">Here we lay out the six steps to creating specific Firefox and extension UX features so that you can build an extension that entices, informs, delights, and retains your users.</p>
+
+<p>In addition to the steps described here, your extension should follow <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Add-on Policies</a>, which include being transparent with users about user security, privacy and control.</p>
+
+<h2 id="1._Keep_it_focused">1. Keep it focused</h2>
+
+<p dir="ltr">The best Firefox extensions provide users with a new feature or capability that addresses a need—be it smarter, more efficient, or more enjoyable browsing. Ideally, your extension saves the user time, money, or frustration.</p>
+
+<p>An extension is best when it is centered around one main use case, and addresses that use case as well as possible for the target audience:</p>
+
+<ul>
+ <li>It should add one function or set of closely related functions to the browser, modify a function of the browser, or modify web pages.</li>
+ <li>Determine if you have achieved this by asking whether you can easily communicate the features and purpose of the extension in three (short) sentences or less.</li>
+</ul>
+
+<h2 id="2._Give_users_what_they_need_where_they_need_it">2. Give users what they need, where they need it</h2>
+
+<p dir="ltr">Choosing the right way, or combination of ways, to make your extension's functionality available to the user can have a significant effect on usability. Asking a few simple questions about your extension’s functionality can quickly guide you to the right choices:</p>
+
+<h3 dir="ltr" id="Does_my_extension_work_on_most_websites_and_web_pages">Does my extension work on most websites and web pages?</h3>
+
+<p dir="ltr">If your extension provides the user with features they can use on almost every website or page, give the user access to it from a <strong><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Browser_action">toolbar button</a> using the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browser action</a></strong>.</p>
+
+<ul dir="ltr">
+ <li>This might include providing access to your image editor or opening a page from your website.</li>
+</ul>
+
+<p dir="ltr"><img alt="" src="https://mdn.mozillademos.org/files/12966/browser-action.png" style="display: block; height: 387px; margin-left: auto; margin-right: auto; width: 782px;"></p>
+
+<p dir="ltr">Where you have several features you want to give the user access, you can add a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a> to the button (a popup appears like a door hanger that opens when the user selects the browser action button).</p>
+
+<h3 dir="ltr" id="Does_my_extension_work_for_only_some_web_sites_and_pages">Does my extension work for only some web sites and pages?</h3>
+
+<p dir="ltr">If your extension offers a feature for a type of web page or specific domains, give the user access to it <strong>from an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">address bar button</a> using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">page action</a></strong>.</p>
+
+<ul dir="ltr">
+ <li>This might include providing access to your RSS reader on pages with RSS feeds or providing an extended feature to pages on your website.</li>
+</ul>
+
+<p dir="ltr"><img alt="" src="https://mdn.mozillademos.org/files/12960/page-action.png" style="display: block; height: 262px; margin-left: auto; margin-right: auto; width: 850px;"></p>
+
+<p dir="ltr">Where you have several features you want to give the user access, you can add a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a> to the button.</p>
+
+<h3 dir="ltr" id="Does_my_extension_need_to_show_information_or_offer_actions_in_parallel_with_web_pages">Does my extension need to show information or offer actions in parallel with web pages?</h3>
+
+<p dir="ltr">If your extension includes information or actions that a user would want immediate access to while viewing any web page, <strong>use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebar</a></strong>.</p>
+
+<ul dir="ltr">
+ <li>This might include notes the user can make about a page’s content or a feature offering various font substitutions to improve readability.</li>
+</ul>
+
+<p dir="ltr"><img alt="" src="https://mdn.mozillademos.org/files/14825/bookmarks-sidebar.png" style="display: block; height: 761px; margin-left: auto; margin-right: auto; width: 728px;"></p>
+
+<h3 dir="ltr" id="Does_my_extension_offer_functionality_specific_to_page_content_or_other_browser_features">Does my extension offer functionality specific to page content or other browser features?</h3>
+
+<p dir="ltr">If your extension offers features the user might want to access in context, <strong>add them to an appropriate <a href="/en-US/Add-ons/WebExtensions/user_interface/Context_menu_items">context menu</a></strong>.</p>
+
+<ul dir="ltr">
+ <li>This might include offering access to an image editor on the image context menu or offering extended copy features on the context menu for selected page content.</li>
+</ul>
+
+<p dir="ltr"><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="https://mdn.mozillademos.org/files/15051/context_menu_example.png" style="display: block; height: 587px; margin-left: auto; margin-right: auto; width: 573px;"></p>
+
+<h3 dir="ltr" id="Does_my_extension_have_settings_the_user_can_adjust">Does my extension have settings the user can adjust?</h3>
+
+<p dir="ltr">If your extension enables the user to change and save settings that affect the behavior of the extension, use an <strong><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">options page</a> to provide a standard Preferences link to settings</strong> from the Add-on Manager.</p>
+
+<p dir="ltr"><img alt="Typical preferences button, to access an extension's settings, from the Add-on Manager" src="https://mdn.mozillademos.org/files/15271/add-on-manager-preferences-button.png" style="display: block; height: 80px; margin-left: auto; margin-right: auto; width: 732px;"></p>
+
+<div class="note">
+<p dir="ltr">In the Windows operating system, the “Preferences” button is labeled “Options”.</p>
+</div>
+
+<h3 dir="ltr" id="Does_my_extension_need_to_gather_a_lot_of_information_or_display_content_in_addition_to_the_current_tabs">Does my extension need to gather a lot of information or display content in addition to the current tabs?</h3>
+
+<p dir="ltr">Where your extension needs to gather or display significant amounts of information (more than is suitable for an <a href="/en-US/docs/Web/API/Window/alert">alert</a> or would benefit from additional formatting) <strong>use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages">bundled web pages</a> to deliver forms and similar content.</strong></p>
+
+<p dir="ltr"><img alt="Example of a simple bundled page displayed as a detached panel." src="https://mdn.mozillademos.org/files/15073/bundled_page_as_panel.png" style="display: block; height: 445px; margin-left: auto; margin-right: auto; width: 680px;"></p>
+
+<h3 dir="ltr" id="Does_my_extension_try_to_help_the_user_find_web_pages_or_content">Does my extension try to help the user find web pages or content?</h3>
+
+<p dir="ltr">If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">address bar suggestions</a> to deliver those recommendations.</p>
+
+<p dir="ltr"><img alt="Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions." src="https://mdn.mozillademos.org/files/15075/omnibox_example_full.png" style="display: block; height: 325px; margin-left: auto; margin-right: auto; width: 679px;"></p>
+
+<h3 dir="ltr" id="Does_my_extension_offer_tools_for_developers">Does my extension offer tools for developers?</h3>
+
+<p dir="ltr">If you are providing tools for developers, add them to the Firefox developer tools using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">developer tools panels</a>.</p>
+
+<h2 dir="ltr" id="3._Keep_the_user_informed">3. Keep the user informed</h2>
+
+<p dir="ltr">Ensuring the user knows what will happen, is happening, and has happened in your extension is an essential part of building trust and ensuring a happy user.</p>
+
+<h3 dir="ltr" id="Tell_the_user_what_will_happen_before_it_happens">Tell the user what will happen, before it happens</h3>
+
+<p dir="ltr">Users should understand what will happen when they click a button:</p>
+
+<ul dir="ltr">
+ <li>Do provide a meaningful, descriptive button label.</li>
+ <li>Do provide tooltips that describe the action that the button will perform.</li>
+ <li>Do <strong>not</strong> put the name of the extension alone in the tooltip, unless it is descriptive of the action the button will perform.</li>
+ <li>Do <strong>not</strong> use the tooltip for any other types of information such as elaborate statistics about your extension. Keep the tooltip content simple and focused on what will happen when the user clicks the button.</li>
+</ul>
+
+<h3 dir="ltr" id="If_something_is_really_important_and_the_user_may_not_be_aware_notify_them">If something is <em>really</em> important and the user may not be aware, notify them</h3>
+
+<p>If your extension has completed a critical, long running background task, use the operating system’s native <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">notifications</a> to update the user when the task completes. This can be useful where the user may not be focusing on the extension or the browser, when the task finishes.</p>
+
+<p>However, use notifications sparingly. If it is sufficient for the user to discover that a process has completed when they return to the browser or extension, do <strong>not</strong> use notifications.</p>
+
+<p dir="ltr"><img alt="" src="https://mdn.mozillademos.org/files/14043/notify-shadowed.png" style="display: block; height: 334px; margin-left: auto; margin-right: auto; width: 700px;"></p>
+
+<h3 dir="ltr" id="Use_browserAction_badges_sparingly">Use browserAction badges sparingly</h3>
+
+<p>To inform users of important events, you can <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText">add a badge</a> over the toolbar icon of a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a>. Do so sparingly—do not use badges to provide regular or persistent status updates.</p>
+
+<p>When it comes to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor">coloring a badge</a>, using one of four colors for notifications of different severity is recommended:</p>
+
+<ul>
+ <li>Casual: blue</li>
+ <li>Success: green</li>
+ <li>Warning: yellow</li>
+ <li>Error: red</li>
+</ul>
+
+<div class="note">
+<p dir="ltr">Use of Firefox colors is suggested, for more details see <a href="http://design.firefox.com/photon/visuals/color.html">Firefox Colors</a>. However, for purposes of <a href="https://developer.chrome.com/extensions/browserAction#icon">Chrome</a> and Opera compatibility, we support any color you wish to use.</p>
+</div>
+
+<h2 dir="ltr" id="4._Be_Firefoxy_in_look_and_feel">4. Be Firefoxy in look and feel</h2>
+
+<p>Your users have chosen Firefox for a reason, possibly several reasons, so match your extension’s look and feel to that of Firefox using the <a href="http://design.firefox.com/photon">Firefox Photon Design System</a>.</p>
+
+<p>Following Photon will ensure that your extension integrates with the Firefox experience and will make it easier for people to use.</p>
+
+<h2 dir="ltr" id="5._Great_onboarding_experience">5. Great onboarding experience</h2>
+
+<p dir="ltr">The first few minutes after someone installs your extension can be critical to its success. Your new user needs to know where to start and how to use the features of your browser extension.</p>
+
+<p dir="ltr">Provide an onboarding page that gives users the essential information they need to get started. Keep the information brief and to the point, and provide simple configuration options if applicable. For more information on creating an onboarding page, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Best practices for onboarding, upboarding, and offboarding users</a>.</p>
+
+<p dir="ltr">In case the user skips the onboarding page, ensure that your extension is ready to be used immediately after installation. It should be optimized for its main use case, and work as expected for most users without the need for customization.</p>
+
+<h2 dir="ltr" id="6._Test_test_and_then_test_again">6. Test, test, and then test again</h2>
+
+<p dir="ltr">Testing is a vital part of creating an outstanding UX for your extension. There are two key aspects of testing your UX:</p>
+
+<ol>
+ <li>Test across devices and platforms to ensure your extension works and performs well in as many places as possible. This includes considering factors such as the user’s screen size and resolution—just because your extension looks good and is easy to use on your desktop monitor does not mean it looks as good and works as well on a smaller laptop screen, or, indeed, vice versa.</li>
+ <li>Test with as many users as possible. Do not assume that you know your audience, as people’s backgrounds and experience can make a huge difference to how they interact with your extension. So, allow for user testing as part of your extension’s development.</li>
+</ol>
+
+<p dir="ltr">Testing tips:</p>
+
+<ul>
+ <li>In AMO you have the option to <a href="/en-US/Add-ons/Distribution/Submitting_an_add-on#Listing_on_AMO">identify your extension as "experimental"</a> or publish a <a href="/en-US/Add-ons/Distribution#Beta_versions">beta or other non-final release</a>.
+
+  <ul>
+   <li>If you flag your extension as experimental it is listed in AMO, but with a lower profile. When the extension is ready for a wider audience, you can turn off the experimental flag in AMO.</li>
+   <li>If you have a published extension, you can use the Development channel to offer an alpha or beta version for testing. You will need to direct your testers to the Development Channel of your extension’s listing or let your testers know the link to use to install your extension.<br>
+    <img alt="The development channel section of an extension's listing page, offering access to alpha and beta versions for testing." src="https://mdn.mozillademos.org/files/15273/extensions-development-channel.png" style="display: block; height: 262px; margin-left: auto; margin-right: auto; width: 751px;"><br>
+    When you are happy with your update, you can publish it as the new release version of your extension.</li>
+  </ul>
+ </li>
+ <li>If you want to distribute your extension to users outside AMO, you can find the instructions for doing so, and the installation instructions you need to provide users, in the article on <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">Sideloading add-ons</a>. Remember that, unlike distribution through AMO, you will need to send users any updated versions of your extension as you make improvements.</li>
+ <li>Use the <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> to test your extension for its behavior on other screen sizes and device types.</li>
+</ul>
+
+<p><strong>Creating a great extension is an iterative process. While we’ve laid out the six steps here, you’ll likely revisit these as you learn what works and what doesn’t through user feedback, testing, and time.  </strong></p>

@@ -1,0 +1,75 @@
+---
+title: AudioNode.channelInterpretation
+slug: Web/API/AudioNode/channelInterpretation
+tags:
+  - API
+  - AudioNode
+  - Property
+  - Reference
+  - Web Audio API
+  - channelInterpretation
+---
+<p>{{ APIRef("Web Audio API") }}</p>
+
+<div>
+<p>The <strong><code>channelInterpretation</code></strong> property of the {{ domxref("AudioNode") }} interface represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.</p>
+</div>
+
+<p>{{page("/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API","Up-mixing and down-mixing")}}</p>
+
+<p> </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js;highlight[2]">var oscillator = audioCtx.createOscillator();
+oscillator.channelInterpretation = 'discrete';</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>An enumerated value representing a <a href="http://webaudio.github.io/web-audio-api/#idl-def-ChannelInterpretation">channelInterpretation</a>.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js;highlight[11]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+
+var audioCtx = new AudioContext();
+
+var oscillator = audioCtx.createOscillator();
+var gainNode = audioCtx.createGain();
+
+oscillator.connect(gainNode);
+gainNode.connect(audioCtx.destination);
+
+oscillator.channelInterpretation = 'discrete';
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#dom-audionode-channelinterpretation', 'channelInterpretation')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.AudioNode.channelInterpretation")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

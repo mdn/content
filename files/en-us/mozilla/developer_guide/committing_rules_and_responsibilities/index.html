@@ -1,0 +1,103 @@
+---
+title: Committing rules and responsibilities
+slug: Mozilla/Developer_guide/Committing_Rules_and_Responsibilities
+tags:
+  - Developing Mozilla
+---
+<h2 id="Preparation">Preparation</h2>
+
+<p>There are things you need to be sure of before you even attempt to check in:</p>
+
+<ul>
+ <li>Your code must <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build" title="en/Developer Guide/Build Instructions">compile</a> and <a class="internal" href="/en/Mozilla_automated_testing" title="en/Mozilla automated testing">pass all the automated tests</a> before you consider pushing changes. If you are at all unsure, verify your changes with the <a class="link-https" href="https://wiki.mozilla.org/Build:TryServer" title="https://wiki.mozilla.org/Build:TryServer">mozilla-central</a> or <a class="link-https" href="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer" title="https://wiki.mozilla.org/Thunderbird/Infrastructure/TryServer">comm-central</a> try server, as appropriate.</li>
+ <li>You need <a class="external" href="/en/Code_Review_FAQ" title="https://developer.mozilla.org/en/Code_Review_FAQ">code review</a>.</li>
+ <li>Depending on the stage of the development process, you may need <a class="link-https" href="https://wiki.mozilla.org/Tree_Rules">approval</a>. Commits to trees where approval is required must have "a=" in the commit message followed by the name of the approver.</li>
+ <li>Code should be factored in such a way such that we can disable features which cause regressions, either by backout or via a kill switch/preference. Be especially careful when landing features which depend on other new features which may be disabled. Ask mozilla.dev.planning for assistance if there are any questions.</li>
+ <li>If your code is likely to break a product other than the one you are focused on (e.g. SeaMonkey or Camino), it's polite to warn them in advance. For instance, you might send a message to <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-apps-seamonkey" title="https://lists.mozilla.org/listinfo/dev-apps-seamonkey">mozilla.dev.apps.seamonkey</a>.</li>
+</ul>
+
+<h2 id="Checkin_comment">Checkin comment</h2>
+
+<p>The checkin comment for the change you push should include the bug number, the names of the reviewers, and a clear explanation of the fix. Please say what changes are made, not what problem was fixed, e.g.:</p>
+
+<p><span style="color: #339966;">Good</span>: "Bug 123456 - Null-check pres shell so we don't crash when a button removes itself during its own onclick handler. r=paul, a=ringo."</p>
+
+<p><span style="color: #ff0000;">Bad</span>: "Bug 123456 - crash clicking button on <span class="nowiki"><span class="external moz-txt-link-abbreviated">www.example.com</span></span>"</p>
+
+<p>If you are not the author of the code, use <code>hg commit -u</code> to specify the actual author in the Mercurial changeset:</p>
+
+<pre>hg commit -u "Pat Chauthor &lt;pat@chauthor.com&gt;"
+</pre>
+
+<h2 id="Commit_message_restrictions">Commit message restrictions</h2>
+
+<p>The purpose of these new restrictions, implemented via a mercurial hook, is to prevent commit messages that do not have a bug number. We will still allow a small set of special commits lacking bugs numbers, like merges and backouts.</p>
+
+<p>This hook will be enabled on mozilla-central and every major branch that directly merges into it, such as mozilla-inbound or integration branches, team branches, or established project branches.</p>
+
+<p>An example for a passing commit message would be,</p>
+
+<pre>Bug 577872 - Create WebM versions of Ogg reftests. r=kinetik
+</pre>
+
+<p>Note the <em>Bug ####</em>, you at least need that. You also can't commit bustage-fixes without a bug number anymore. This is intentional to keep track of the bug which caused it.</p>
+
+<p>Allowed are:</p>
+
+<ul>
+ <li>Commit messages containing "bug" or "b=" followed by a bug number</li>
+ <li>Commit messages containing "no bug" (please use this sparingly)</li>
+ <li>Commit message indicating backout of a given 12+ digit changeset ID, starting with (back out|backing out|backed out|backout)( of)? (rev|changeset|cset)s? [0-9a-f]{12}</li>
+ <li>Commit messages that start with "merge" or "merging" and are actually for a merge changeset.</li>
+</ul>
+
+<p>Special exceptions:</p>
+
+<ul>
+ <li>Commits by the special users "ffxbld", "seabld", "tbirdbld", or "cltbld".</li>
+ <li>When the commit is older then some date shortly after the hook has been enabled, to allow merges from other branches. This exception will be lifted after a short period of time (probably a few months) after the hooks is enabled.</li>
+ <li>You can also specify "IGNORE BAD COMMIT MESSAGES" in the tip (latest) commit message to override all the restrictions. This is an extreme measure, so you should only do this if you have a very good reason.</li>
+</ul>
+
+<p>Explicitly disallowed:</p>
+
+<ul>
+ <li>Commit messages containing "try: " to avoid unintentional commits that were meant for the try server.</li>
+</ul>
+
+<p>All tests for allowed or excluded messages are case-insensitive. The hook, <a class="external" href="http://hg.mozilla.org/hgcustom/hghooks/file/default/mozhghooks/commit-message.py" title="http://hg.mozilla.org/hgcustom/hghooks/file/default/mozhghooks/commit-message.py">commit-message.py</a>, was added in <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=506949" title="https://bugzilla.mozilla.org/show_bug.cgi?id=506949">bug 506949</a>.</p>
+
+<h2 id="Check_the_tree">Check the tree</h2>
+
+<p>Buildbot is a continuous build system that builds and tests every change checked into mozilla-central and related source trees. <a class="external" href="https://treeherder.mozilla.org/" title="https://treeherder.mozilla.org/">Treeherder</a> displays the progress and results of all the build and test jobs for a given tree. For a particular job, green means all is well, orange means tests have failed, and red means the build itself broke.  Purple means that a test was interrupted, possibly by a problem with the build system or the network.  Blue means that a test was interrupted in a known way and will be automatically restarted.  You can click on the "Help" link in the top right corner of Treeherder for a legend to help you decode all the other colors and letters.</p>
+
+<p>If the tree is green, it is okay to check in. If some builds are orange or red, you can either wait, or make sure all the failures are classified with annotations/comments that reference bug numbers or fixes.</p>
+
+<p>If the tree is marked as "closed", or if you have questions about any oranges or reds, you should contact the sheriff before checking in.</p>
+
+<h2 id="Failures_and_backouts">Failures and backouts</h2>
+
+<p>Patches which cause unit test failures (on <a href="/en/Supported_build_configurations" title="en/Supported_build_configurations">tier 1 platforms</a>) will be <a class="external" href="/En/Mercurial/Reverting_Changesets_With_File_Moves//Renames" title="https://developer.mozilla.org/index.php?title=En/Mercurial/Reverting_Changesets_With_File_Moves//Renames">backed out</a>. Regressions on tier-2 platforms and in performance are not cause for a direct backout, but you will be expected to help fix them if quickly.</p>
+
+<p><em>Note: Performance regressions require future data points to ensure a sustained regression and can take anywhere from 3 hours to 30 hours depending on the volume of the tree and build frequency. All regression alerts do get briefly investigated and bugs are filed if necessary.</em></p>
+
+<h3 id="Dealing_with_test_failures">Dealing with test failures</h3>
+
+<p>If a build or a test job fails, you can click on the red or orange or purple symbol for the job on Treeherder to display more information.  The information will appear in the footer, including a summary of any error messages, a "+" icon to re-trigger the job (schedule it to run again), and links to the log files and to possibly-related bugs.</p>
+
+<p>Here are some steps you can follow to figure out what is causing most failures, <a href="http://ehsanakhgari.org/blog/2010-04-09/assisted-starring-oranges" title="http://ehsanakhgari.org/blog/2010-04-09/assisted-starring-oranges">and "star" them appropriately</a>:</p>
+
+<ol>
+ <li>Click on the failing job to see a list of suggested bugs.  If the failure clearly matches a known bug, <strong>click on the star</strong> next to that bug and then click "Add a comment" and then submit the comment. This is referred to as "starring the build;" you'll see this phrase or ones like it in IRC a lot.</li>
+ <li>If the failure might match a known bug but you are not sure, click the bug number to open the Bugzilla report, and click the failing job to open its log.  If the log and the bug do match, add a comment as in step 1 (above).</li>
+ <li>If the summary does not seem to match any suggested bugs, search Bugzilla for the name of the failing test or the error message.  If you find a matching bug, add a comment in the bug in Bugzilla, and another to the job in Treeherder.</li>
+ <li>If you can't figure out whether a known bug exists (for example, because you can't figure out what part of the log you should search for), look on Treeherder to see if there are other similar failures nearby, or ask on #developers to see if anyone recognizes it as a known failure.  For example, many Android tests fail frequently in ways that do not produce useful log messages.  You can often find the appropriate bug just by looking at other Android failures that are already starred.</li>
+ <li>If there is no matching bug, you can back out the change (if you suspect the  failure was caused by your changeset) or re-trigger the job (if you suspect it's an unrelated intermittent failure).  After more test runs it should become clear whether it is a new regression or just an unknown intermittent failure.</li>
+ <li>If it turns out to be an unknown intermittent failure, file a new bug with "intermittent-failure" in the keywords.  Include the name of the test file and an one-line summary of the log messages in the Summary field.  In the description, include an excerpt of the error messages from the log, and a link to the log file itself.</li>
+</ol>
+
+<p>At any point if you are not sure or can't figure out what to do, ask for advice or help in <a class="link-irc" href="irc://irc.mozilla.org/developers" title="irc://irc.mozilla.org/developers">#developers</a> on <a class="link-https" href="https://wiki.mozilla.org/IRC" title="https://wiki.mozilla.org/IRC">IRC</a>. If a large number of jobs are failing and you suspect an infrastructure problem, you can also ask about it in <a class="link-irc" href="irc://irc.mozilla.org/releng" title="irc://irc.mozilla.org/build">#releng</a>.</p>
+
+<h3 id="Dealing_with_performance_regressions">Dealing with performance regressions</h3>
+
+<p>Under some circumstances, if your patch causes a performance regression that is not acceptable, it will get backed out.</p>

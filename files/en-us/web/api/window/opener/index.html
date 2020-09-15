@@ -1,0 +1,35 @@
+---
+title: Window.opener
+slug: Web/API/Window/opener
+tags:
+  - API
+  - HTML DOM
+  - NeedsExample
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Window
+  - opener
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><span class="seoSummary">The {{domxref("Window")}} interface's <code><strong>opener</strong></code> property returns a reference to the window that opened the window using {{domxref("Window.open", "open()")}}.</span></p>
+
+<p>In other words, if window <code>A</code> opens window <code>B</code>, <code>B.opener</code> returns <code>A</code>.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">const <var>openerWindow</var> = window.opener
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("Window")}} referring to the window that opened the current window (using {{domxref("window.open()")}}, or by a link with {{htmlattrxref("target", "a")}} attribute set). If this window was not opened by being linked to or created by another, returns {{jsxref("null")}}.</p>
+
+<p>In <a href="https://caniuse.com/#search=noopener">some browsers</a>, a <code>rel="noopener noreferrer"</code> attribute on the originating {{HTMLElement("a")}} element will prevent the <code>window.opener</code> reference from being set, in which case this property will return <code>null</code>.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Window.opener")}}</p>

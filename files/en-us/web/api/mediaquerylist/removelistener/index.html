@@ -1,0 +1,87 @@
+---
+title: MediaQueryList.removeListener()
+slug: Web/API/MediaQueryList/removeListener
+tags:
+  - API
+  - CSSOM View
+  - Media Queries
+  - MediaQueryList
+  - Method
+  - Reference
+  - removeListener
+---
+<p>{{APIRef("CSSOM")}}</p>
+
+<p>The <code><strong>removeListener()</strong></code> method of the {{DOMxRef("MediaQueryList")}} interface removes a listener from the <code>MediaQueryListener</code>.</p>
+
+<p>This is basically an alias for {{DOMxRef("EventTarget.removeEventListener()")}}, for backwards compatibility purposes — in older browsers you could use <code>removeEventListener()</code> instead.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate"><em>MediaQueryList.removeListener(func)</em></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt>func</dt>
+ <dd>A function or function reference representing the callback function you want to remove. In the original implementation, the callback was a non-standard {{DOMxRef("MediaQueryListListener")}} object. In the new implementation the standard event mechanism is used, and the callback is a standard function.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>Void.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
+
+function screenTest(e) {
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    para.textContent = 'This is a narrow screen — less than 600px wide.';
+    document.body.style.backgroundColor = 'red';
+  } else {
+    /* the viewport is more than than 600 pixels wide */
+    para.textContent = 'This is a wide screen — more than 600px wide.';
+    document.body.style.backgroundColor = 'blue';
+  }
+}
+
+mql.addListener(screenTest);
+
+// Later on, when it is no longer needed
+mql.removeListener(screenTest);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Specification</th>
+   <th>Status</th>
+   <th>Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.MediaQueryList.removeListener")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
+ <li>{{DOMxRef("window.matchMedia()")}}</li>
+ <li>{{DOMxRef("MediaQueryList")}}</li>
+ <li>{{DOMxRef("MediaQueryListEvent")}}</li>
+</ul>

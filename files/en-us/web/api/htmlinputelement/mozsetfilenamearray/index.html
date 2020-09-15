@@ -1,0 +1,54 @@
+---
+title: HTMLInputElement.mozSetFileNameArray()
+slug: Web/API/HTMLInputElement/mozSetFileNameArray
+tags:
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - Method
+  - NeedsBrowserCompatibility
+  - Non-standard
+  - Reference
+---
+<div>{{ APIRef("HTML DOM") }}{{Non-standard_header}}</div>
+
+<p>The <strong><code>HTMLInputElement.mozSetFileNameArray()</code></strong> method sets the names of the files that selected on an HTML <code>input</code> element.</p>
+
+<div class="note"><strong>Note:</strong> This method is Gecko-specific and is not available in other browsers. Also, it throws an error if used in Web pages.</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">inputElement.mozSetFileNameArray(<em>aFileNames, </em><em>aLength</em>);
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>aFileNames</code></dt>
+ <dd>Is the array of file names to apply to the element.</dd>
+ <dt><code>aLength</code></dt>
+ <dd>Is the number of file names in the array.</dd>
+</dl>
+
+<ul>
+</ul>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js notranslate">var fileArray = {"/foo/bar.txt", "/foo/foosball.txt"};
+
+inputElement.mozSetFileNameArray(fileArray, fileArray.length);
+</pre>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.HTMLInputElement.mozSetFileNameArray")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/DOM/Input" title="en/DOM/Input"><code>Input</code></a></li>
+ <li><a href="/en/DOM/Input.mozGetFileNameArray" title="en/DOM/Input.mozGetFileNameArray"><code>Input.mozGetFileNameArray</code></a></li>
+</ul>

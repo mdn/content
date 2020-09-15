@@ -1,0 +1,58 @@
+---
+title: WEBGL_debug_shaders
+slug: Web/API/WEBGL_debug_shaders
+tags:
+  - API
+  - Reference
+  - WebGL
+  - WebGL extension
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p>The <code><strong>WEBGL_debug_shaders</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes a method to debug shaders from privileged contexts.</p>
+
+<p>This extension is not directly available to web sites as the way of how the shader is translated may uncover personally-identifiable information to the web page about the kind of graphics card in the user's computer.</p>
+
+<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+
+<div class="note">
+<p><strong>Availability:</strong> Depending on the privacy settings of the browser, this extension might only be available to privileged contexts.</p>
+
+<p>This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
+</div>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{domxref("WEBGL_debug_shaders.getTranslatedShaderSource()")}}</dt>
+ <dd>Returns the translated shader source.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WEBGL_debug_shaders', "", "WEBGL_debug_shaders")}}</td>
+   <td>{{Spec2('WEBGL_debug_shaders')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.WEBGL_debug_shaders.getTranslatedShaderSource")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
+</ul>

@@ -1,0 +1,15 @@
+---
+title: System Headers
+slug: Mozilla/Developer_guide/Build_Instructions/System_Headers
+tags:
+  - Build documentation
+  - Developing Mozilla
+---
+<p>In the Mozilla codebase, the compiler, at least recent version of gcc, is set to default to hidden symbols, in order to avoid a some problems. </p><p>{{ Note("Include the whole rationale here") }}
+</p><p>For this reason any system header included in the build has to be wrapped to make the symbols it defines visible. These so called system headers are listed in &lt;tt&gt;mozilla/config/system-headers&lt;/tt&gt;
+</p><p>The main symptom of the problem is if you get a message like this at link time:
+</p>
+<pre class="eval">/usr/lib/gcc/i586-suse-linux/4.3/../../../../i586-suse-linux/bin/ld: libwidget_gtk2.so: hidden symbol `gtk_tree_view_new' isn't defined
+</pre>
+<p>This means that the header that declares &lt;tt&gt;gtk_tree_view_new()&lt;/tt&gt;, &lt;tt&gt;gtk/gtktreeview.h&lt;/tt&gt; in this case, is not in &lt;tt&gt;mozilla/config/system-headers&lt;/tt&gt;.
+</p>

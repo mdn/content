@@ -1,0 +1,120 @@
+---
+title: Math.hypot()
+slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
+tags:
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>Math.hypot()</code></strong> function returns the square root of the sum of squares of its arguments, that is:</p>
+
+<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v_1, v_2, \dots, v_n)} = \sqrt{\sum_{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math></p>
+
+<div>{{EmbedInteractiveExample("pages/js/math-hypot.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>Math.hypot([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>value1, value2, ...</code></dt>
+ <dd>Numbers.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The square root of the sum of squares of the given arguments. If at least one of the arguments cannot be converted to a number, {{jsxref("NaN")}} is returned.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Calculating the hypotenuse of a right triangle, or the magnitude of a complex number, uses the formula <code>Math.sqrt(v1*v1 + v2*v2)</code> where v1 and v2 are either the sides of the triangle, or the real and complex values.  For calculating distance in 2 or more dimensions, simply add in more squares inside the square root sign, like <code>Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)</code>.  </p>
+
+<p>This function makes it a little easier and faster, you just call <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code> .  </p>
+
+<p>It also avoids a problem if the magnitude of your numbers is huge.  The largest number you can represent in JS's double floats is <span style="line-height: 1.5;"><code>Number.MAX_VALUE = 1.797...e+308</code> .  If your numbers are larger  than about 1e154, taking the square of them will result in Infinity, demolishing your results.  For example, <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code> .  If you use <code>hypot()</code> instead, you get a good answer <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code> .  This is also true with very small numbers.  <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, but </span><code><span style="line-height: 1.5;">Math.hypot(1e-200, 1e-200) =</span></code><span style="line-height: 1.5;"><code>1.4142...e-200</code>, a good answer.</span></p>
+
+<p>Because <code>hypot()</code> is a static method of <code>Math</code>, you always use it as <code>Math.hypot()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+
+<p>If no arguments are given, the result is +0.</p>
+
+<p>If at least one of the arguments cannot be converted to a number, the result is {{jsxref("NaN")}}.</p>
+
+<p>With one argument, <code>Math.hypot()</code> returns the same as <code>Math.abs()</code>.</p>
+
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>This can be emulated using the following function:</p>
+
+<pre class="brush: js">if (!Math.hypot) Math.hypot = function() {
+  var y = 0, i = arguments.length;
+  while (i--) y += arguments[i] * arguments[i];
+  return Math.sqrt(y);
+};
+</pre>
+
+<p>A polyfill that avoids underflows and overflows:</p>
+
+<pre class="brush: js">if (!Math.hypot) Math.hypot = function (x, y) {
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
+  var max = 0;
+  var s = 0;
+  for (var i = 0; i &lt; arguments.length; i += 1) {
+    var arg = Math.abs(Number(arguments[i]));
+    if (arg &gt; max) {
+      s *= (max / arg) * (max / arg);
+      max = arg;
+    }
+    s += arg === 0 &amp;&amp; max === 0 ? 0 : (arg / max) * (arg / max);
+  }
+  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
+};
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Math.hypot">Using <code>Math.hypot()</code></h3>
+
+<pre class="brush: js">Math.hypot(3, 4);        // 5
+Math.hypot(3, 4, 5);     // 7.0710678118654755
+Math.hypot();            // 0
+Math.hypot(NaN);         // NaN
+Math.hypot(3, 4, 'foo'); // NaN, +'foo' =&gt; NaN
+Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' =&gt; 5
+Math.hypot(-3);          // 3, the same as Math.abs(-3)
+</pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Math.hypot")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Math.abs()")}}</li>
+ <li>{{jsxref("Math.pow()")}}</li>
+ <li>{{jsxref("Math.sqrt()")}}</li>
+</ul>

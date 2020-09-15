@@ -1,0 +1,44 @@
+---
+title: browserSettings.zoomFullPage
+slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Property
+  - Reference
+  - WebExtensions
+  - browserSettings
+  - zoomFullPage
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.</p>
+
+<p>By default zoom applies to all the content of a web page. Using the <span class="menu"><a href="https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages#w_how-to-only-change-the-size-of-the-text/en-US/docs/">Zoom Text Only setting</a> users can choose to zoom only the text on a page</span>. This settings enables web extensions to control this setting and determine whether zoom is applied to the entire page or to text only.</p>
+
+<p>The settings are:</p>
+
+<ul>
+ <li><code>true</code>: zoom applies to all the content of a web page (default).</li>
+ <li><code>false</code>: zoom applies to web page text only.</li>
+</ul>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.browserSettings.zoomFullPage")}}</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Set the setting to <code>false</code>:</p>
+
+<pre class="brush: js">function logResult(result) {
+  console.log(`Setting was modified: ${result}`);
+}
+
+browser.browserSettings.zoomFullPage.set({value: false}).
+  then(logResult);</pre>
+
+<p>{{WebExtExamples}}</p>

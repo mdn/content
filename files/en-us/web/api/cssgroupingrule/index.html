@@ -1,0 +1,81 @@
+---
+title: CSSGroupingRule
+slug: Web/API/CSSGroupingRule
+tags:
+  - API
+  - CSSOM
+  - Interface
+  - Reference
+---
+<p>{{ APIRef("CSSOM") }}</p>
+
+<p>An object implementing the <strong><code>CSSGroupingRule</code></strong> interface represents any CSS at-rule that contains other rules nested within it.</p>
+
+<p>Objects deriving from it :</p>
+
+<ul>
+ <li>{{domxref("CSSConditionRule")}} and its children: {{domxref("CSSMediaRule")}}, {{domxref("CSSSupportsRule")}}, and {{domxref("CSSDocumentRule")}}.</li>
+ <li>{{domxref("CSSPageRule")}}</li>
+</ul>
+
+<h2 id="Properties" name="Properties">Syntax</h2>
+
+<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+
+<pre>interface CSSGroupingRule : CSSRule {
+    readonly attribute CSSRuleList cssRules;
+    unsigned long insertRule (DOMString rule, unsigned long index);
+    void deleteRule (unsigned long index);
+}
+</pre>
+
+<h2 id="Properties_common_to_all_CSSGroupingRule_instances">Properties common to all CSSGroupingRule instances</h2>
+
+<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all properties of this class. It has one specific property:</p>
+
+<dl>
+ <dt id="cssRules">{{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}</dt>
+ <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
+</dl>
+
+<h2 id="Methods_common_to_all_CSSGroupingRule_instances">Methods common to all CSSGroupingRule instances</h2>
+
+<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all methods of this class. It has two specific methods:</p>
+
+<dl>
+ <dt id="deleteRule">{{domxref("CSSGroupingRule.deleteRule")}}</dt>
+ <dd>Deletes a rule from the style sheet.</dd>
+ <dt id="insertRule">{{domxref("CSSGroupingRule.insertRule")}}</dt>
+ <dd>Inserts a new style rule into the current style sheet.</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM', '#cssgroupingrule', 'CSSGroupingRule') }}</td>
+   <td>{{ Spec2('CSSOM') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSGroupingRule")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/DOM/Using_dynamic_styling_information" title="en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+</ul>

@@ -1,0 +1,81 @@
+---
+title: 'Document: selectionchange event'
+slug: Web/API/Document/selectionchange_event
+tags:
+  - API
+  - Event
+  - Reference
+  - Selection
+  - Selection API
+  - selectionchange
+---
+<p>{{APIRef}}</p>
+
+<div>
+<p>The <code><strong>selectionchange</strong></code> event of the <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> is fired when the current text selection on a document is changed.</p>
+</div>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th>Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th>Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th>Interface</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th>Event handler property</th>
+   <td>{{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js notranslate">// addEventListener version
+document.addEventListener('selectionchange', () =&gt; {
+  console.log(document.getSelection());
+});
+
+// onselectionchange version
+document.onselectionchange = () =&gt; {
+  console.log(document.getSelection());
+};
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Selection API', '#selectionchange-event', 'selectionchange')}}</td>
+   <td>{{Spec2('Selection API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.Document.selectionchange_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("Document/selectstart_event", "selectstart")}}</li>
+ <li>{{domxref("Document/getSelection", "Document.getSelection")}}</li>
+ <li>{{domxref("Selection", "Selection")}}</li>
+</ul>

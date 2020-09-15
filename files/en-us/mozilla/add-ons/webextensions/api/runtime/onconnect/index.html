@@ -1,0 +1,154 @@
+---
+title: runtime.onConnect
+slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
+tags:
+  - API
+  - Add-ons
+  - Event
+  - Extensions
+  - Non-standard
+  - Reference
+  - WebExtensions
+  - onconnect
+  - runtime
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>Fired when a connection is made with either an extension process or a content script.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox brush:js">browser.runtime.onConnect.addListener(listener)
+browser.runtime.onConnect.removeListener(listener)
+browser.runtime.onConnect.hasListener(listener)
+</pre>
+
+<p>Events have three functions:</p>
+
+<dl>
+ <dt><code>addListener(callback)</code></dt>
+ <dd>Adds a listener to this event.</dd>
+ <dt><code>removeListener(listener)</code></dt>
+ <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
+ <dt><code>hasListener(listener)</code></dt>
+ <dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
+</dl>
+
+<h2 id="addListener_syntax">addListener syntax</h2>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>function</code></dt>
+ <dd>
+ <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
+
+ <dl class="reference-values">
+  <dt><code>port</code></dt>
+  <dd>A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.runtime.onConnect")}}</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This content script:</p>
+
+<ul>
+ <li>connects to the background script, and stores the <code>Port</code> in a variable <code>myPort</code></li>
+ <li>listens for messages on <code>myPort</code>, and logs them</li>
+ <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document</li>
+</ul>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js</span>
+
+<span class="keyword token">var</span> myPort <span class="operator token">=</span> browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">connect</span><span class="punctuation token">(</span><span class="punctuation token">{</span>name<span class="punctuation token">:</span><span class="string token">"port-from-cs"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+myPort<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>greeting<span class="punctuation token">:</span> <span class="string token">"hello from content script"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+myPort<span class="punctuation token">.</span>onMessage<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>m<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"In content script, received message from background script: "</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>m<span class="punctuation token">.</span>greeting<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  myPort<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>greeting<span class="punctuation token">:</span> <span class="string token">"they clicked the page!"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>The corresponding background script:</p>
+
+<ul>
+ <li>listens for connection attempts from the content script</li>
+ <li>when it receives a connection attempt:
+  <ul>
+   <li>stores the port in a variable named <code>portFromCS</code></li>
+   <li>sends the content script a message using the port</li>
+   <li>starts listening to messages received on the port, and logs them</li>
+  </ul>
+ </li>
+ <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
+</ul>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// background-script.js</span>
+
+<span class="keyword token">var</span> portFromCS<span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">connected</span><span class="punctuation token">(</span>p<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  portFromCS <span class="operator token">=</span> p<span class="punctuation token">;</span>
+  portFromCS<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>greeting<span class="punctuation token">:</span> <span class="string token">"hi there content script!"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  portFromCS<span class="punctuation token">.</span>onMessage<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>m<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"In background script, received message from content script"</span><span class="punctuation token">)</span>
+    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>m<span class="punctuation token">.</span>greeting<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span>onConnect<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>connected<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  portFromCS<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>greeting<span class="punctuation token">:</span> <span class="string token">"they clicked the button!"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>{{WebExtExamples}}</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+</div>
+
+<div class="hidden">
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+</div>

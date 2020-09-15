@@ -1,0 +1,55 @@
+---
+title: DataTransfer.mozItemCount
+slug: Web/API/DataTransfer/mozItemCount
+tags:
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - drag and drop
+---
+<div>{{APIRef("HTML Drag and Drop API")}}</div>
+
+<p>{{ Non-standard_header() }}{{deprecated_header}}</p>
+
+<p>The <strong><code>DataTransfer.mozItemCount</code></strong> property returns the number of items being dragged. This can be used, for example, to get the number of files being dragged.</p>
+
+<div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
+
+<p>This property is {{readonlyInline}}.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>dataTransfer</em>.mozItemCount;
+</pre>
+
+<h3 id="Return_Value" name="Return_Value">Return value</h3>
+
+<p>A <code>number</code> representing the number of items being dragged.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>This example shows the use of the <code>mozItemCount</code> property.</p>
+
+<pre class="brush: js">function drop_handler(event)
+{
+  var files = [];
+  var dt = event.dataTransfer;
+  for (var i = 0; i &lt; dt.mozItemCount; i++)
+    files.push(dt.mozGetDataAt("application/x-moz-file", i));
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>This property is not defined in any Web standard.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.DataTransfer.mozItemCount")}}</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<p><a> </a></p>

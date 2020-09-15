@@ -1,0 +1,109 @@
+---
+title: Intl.Collator() constructor
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
+tags:
+  - Collator
+  - Constructor
+  - Intl
+  - JavaScript
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>Intl.Collator</code></strong> object is a constructor for collators, objects that enable language sensitive string comparison.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>new Intl.Collator([<var>locales</var>[, <var>options</var>]])</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>locales</code></dt>
+ <dd>
+ <p>Optional. A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. The following Unicode extension keys are allowed:</p>
+
+ <dl>
+  <dt><code>co</code></dt>
+  <dd>Variant collations for certain locales. Possible values include: <code>"big5han"</code>, <code>"dict"</code>, <code>"direct"</code>, <code>"ducet"</code>, <code>"gb2312"</code>, <code>"phonebk"</code>, <code>"phonetic"</code>, <code>"pinyin"</code>, <code>"reformed"</code>, <code>"searchjl"</code>, <code>"stroke"</code>, <code>"trad"</code>, <code>"unihan"</code>. The <code>"standard"</code> and <code>"search"</code> values are ignored; they are replaced by the <code>options</code> property <code>usage</code> (see below).</dd>
+  <dt><code>kn</code></dt>
+  <dd>Whether numeric collation should be used, such that "1" &lt; "2" &lt; "10". Possible values are <code>"true"</code> and <code>"false"</code>. This option can be set through an <code>options</code> property or through a Unicode extension key; if both are provided, the <code>options</code> property takes precedence.</dd>
+  <dt><code>kf</code></dt>
+  <dd>Whether upper case or lower case should sort first. Possible values are <code>"upper"</code>, <code>"lower"</code>, or <code>"false"</code> (use the locale's default). This option can be set through an <code>options</code> property or through a Unicode extension key; if both are provided, the <code>options</code> property takes precedence.</dd>
+ </dl>
+ </dd>
+ <dt><code>options</code></dt>
+ <dd>
+ <p>Optional. An object with some or all of the following properties:</p>
+
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>The locale matching algorithm to use. Possible values are <code>"lookup"</code> and <code>"best fit"</code>; the default is <code>"best fit"</code>. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dt><code>usage</code></dt>
+  <dd>Whether the comparison is for sorting or for searching for matching strings. Possible values are <code>"sort"</code> and <code>"search"</code>; the default is <code>"sort"</code>.</dd>
+  <dt><code>sensitivity</code></dt>
+  <dd>
+  <p>Which differences in the strings should lead to non-zero result values. Possible values are:</p>
+
+  <ul>
+   <li><code>"base"</code>: Only strings that differ in base letters compare as unequal. Examples: <code>a ≠ b</code>, <code>a = á</code>, <code>a = A</code>.</li>
+   <li><code>"accent"</code>: Only strings that differ in base letters or accents and other diacritic marks compare as unequal. Examples: <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a = A</code>.</li>
+   <li><code>"case"</code>: Only strings that differ in base letters or case compare as unequal. Examples: <code>a ≠ b</code>, <code>a = á</code>, <code>a ≠ A</code>.</li>
+   <li><code>"variant"</code>: Strings that differ in base letters, accents and other diacritic marks, or case compare as unequal. Other differences may also be taken into consideration. Examples: <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a ≠ A</code>.</li>
+  </ul>
+
+  <p>The default is <code>"variant"</code> for usage <code>"sort"</code>; it's locale dependent for usage <code>"search"</code>.</p>
+  </dd>
+  <dt><code>ignorePunctuation</code></dt>
+  <dd>Whether punctuation should be ignored. Possible values are <code>true</code> and <code>false</code>; the default is <code>false</code>.</dd>
+  <dt><code>numeric</code></dt>
+  <dd>Whether numeric collation should be used, such that "1" &lt; "2" &lt; "10". Possible values are <code>true</code> and <code>false</code>; the default is <code>false</code>. This option can be set through an <code>options</code> property or through a Unicode extension key; if both are provided, the <code>options</code> property takes precedence. Implementations are not required to support this property.</dd>
+  <dt><code>caseFirst</code></dt>
+  <dd>Whether upper case or lower case should sort first. Possible values are <code>"upper"</code>, <code>"lower"</code>, or <code>"false"</code> (use the locale's default); the default is <code>"false"</code>. This option can be set through an <code>options</code> property or through a Unicode extension key; if both are provided, the <code>options</code> property takes precedence. Implementations are not required to support this property.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Collator">Using <code>Collator</code></h3>
+
+<p>The following example demonstrates the different potential results for a string occurring before, after, or at the same level as another:</p>
+
+<pre class="brush: js">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
+console.log(new Intl.Collator().compare('c', 'a')); // → a positive value
+console.log(new Intl.Collator().compare('a', 'a')); // → 0
+</pre>
+
+<p>Note that the results shown in the code above can vary between browsers and browser versions. This is because the values are implementation-specific. That is, the specification requires only that the before and after values are negative and positive.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int Draft', '#sec-the-intl-collator-constructor', 'Intl.Collator constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Intl.Collator.Collator")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+</ul>

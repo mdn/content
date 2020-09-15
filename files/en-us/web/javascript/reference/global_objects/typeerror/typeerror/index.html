@@ -1,0 +1,85 @@
+---
+title: TypeError() constructor
+slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
+tags:
+  - Constructor
+  - JavaScript
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <code><strong>TypeError()</strong></code> constructor creates a new error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>message</code> {{optional_inline}}</dt>
+ <dd>Optional. Human-readable description of the error</dd>
+ <dt><code>fileName</code> {{optional_inline}}</dt>
+ <dd>Optional. The name of the file containing the code that caused the exception</dd>
+ <dt><code>lineNumber</code> {{optional_inline}}</dt>
+ <dd>Optional. The line number of the code that caused the exception</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Catching_a_TypeError">Catching a <code>TypeError</code></h3>
+
+<pre class="brush: js">try {
+  null.f()
+} catch (e) {
+  console.log(e instanceof TypeError)  // true
+  console.log(e.message)               // "null has no properties"
+  console.log(e.name)                  // "TypeError"
+  console.log(e.fileName)              // "Scratchpad/1"
+  console.log(e.lineNumber)            // 2
+  console.log(e.columnNumber)          // 2
+  console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+}
+</pre>
+
+<h3 id="Creating_a_TypeError">Creating a <code>TypeError</code></h3>
+
+<pre class="brush: js">try {
+  throw new TypeError('Hello', "someFile.js", 10)
+} catch (e) {
+  console.log(e instanceof TypeError)  // true
+  console.log(e.message)               // "Hello"
+  console.log(e.name)                  // "TypeError"
+  console.log(e.fileName)              // "someFile.js"
+  console.log(e.lineNumber)            // 10
+  console.log(e.columnNumber)          // 0
+  console.log(e.stack)                 // "@Scratchpad/2:2:9\n"
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.TypeError.TypeError")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Error")}}</li>
+</ul>

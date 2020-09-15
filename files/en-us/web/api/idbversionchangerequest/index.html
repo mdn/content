@@ -1,0 +1,50 @@
+---
+title: IDBVersionChangeRequest
+slug: Web/API/IDBVersionChangeRequest
+tags:
+  - API
+  - Interface
+  - Obsolete
+  - Reference
+  - Référence(2)
+---
+<div>{{APIRef("IndexedDB")}}</div>
+
+<div class="warning"><strong>Warning: </strong> The latest specification does not include this interface anymore as the <code>IDBDatabase.setVersion()</code> method has been removed. See the compatibility table for version details.<br>
+The new way to do it is to use the <a href="/en/IndexedDB/IDBOpenDBRequest" title="en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface which has now the <code>onblocked</code> handler and the newly needed <code>onupgradeneeded</code> one.</div>
+
+<p>The <code>IDBVersionChangeRequest</code> interface the <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API </a>represents a request to change the version of a database. It is used only by the <a href="/en/IndexedDB/IDBDatabase#setVersion" title="en/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <code><a href="/en/IndexedDB/IDBDatabase" title="en/IndexedDB/IDBDatabase">IDBDatabase</a></code>.</p>
+
+<h2 id="Methods">Methods</h2>
+
+<p>Inherits from: <code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a></code></p>
+
+<dl>
+ <dt>{{domxref("IDBVersionChangeRequest.setVersion")}} {{ obsolete_inline }}</dt>
+ <dd>Updates the version of the database. Returns immediately and runs a <a href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a> transaction on the connected database in a separate thread.</dd>
+</dl>
+
+<h2 id="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Attribute</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code><a name="attr_onblocked">onblocked</a></code></td>
+   <td><code>Function</code></td>
+   <td>The event handler for the blocked event.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.IDBVersionChangeRequest")}}</p>

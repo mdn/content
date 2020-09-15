@@ -1,0 +1,373 @@
+---
+title: '<table>: The Table element'
+slug: Web/HTML/Element/table
+tags:
+  - Element
+  - HTML
+  - HTML tabular data
+  - Reference
+  - Tables
+  - Web
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary">The <strong>HTML <code>&lt;table&gt;</code> element</strong> represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.</span></p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}</div>
+
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td>
+    <div class="content-models">
+    <div id="table-mdls">In this order:
+    <ol>
+     <li>an optional {{HTMLElement("caption")}} element,</li>
+     <li>zero or more {{HTMLElement("colgroup")}} elements,</li>
+     <li>an optional {{HTMLElement("thead")}} element,</li>
+     <li>either one of the following:
+      <ul>
+       <li>zero or more {{HTMLElement("tbody")}} elements</li>
+       <li>one or more {{HTMLElement("tr")}} elements</li>
+      </ul>
+     </li>
+     <li>an optional {{HTMLElement("tfoot")}} element</li>
+    </ol>
+    </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parents</th>
+   <td>Any element that accepts flow content</td>
+  </tr>
+  <tr>
+   <th scope="row">Implicit ARIA role</th>
+   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code></td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>Any</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLTableElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes">Attributes</h2>
+
+<p>This element includes the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+
+<h3 id="Deprecated_attributes">Deprecated attributes</h3>
+
+<dl>
+ <dt>{{htmlattrdef("align")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This enumerated attribute indicates how the table must be aligned inside the containing document. It may have the following values:</p>
+
+ <ul>
+  <li><code>left</code>: the table is displayed on the left side of the document;</li>
+  <li><code>center</code>: the table is displayed in the center of the document;</li>
+  <li><code>right</code>: the table is displayed on the right side of the document.</li>
+ </ul>
+
+ <p>Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to <code>auto</code> or {{cssxref("margin")}} to <code>0 auto</code> to achieve an effect that is similar to the align attribute.</p>
+ </dd>
+ <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p>
+
+ <p>To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.</p>
+ </dd>
+ <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the {{htmlattrxref("frame", "table")}} attribute is set to void.</p>
+
+ <p>To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.</p>
+ </dd>
+ <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This attribute defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right).</p>
+
+ <p>To achieve a similar effect, apply the {{cssxref("border-collapse")}} property to the <code>&lt;table&gt;</code> element, with its value set to collapse, and the {{cssxref("padding")}} property to the {{HTMLElement("td")}} elements.</p>
+ </dd>
+ <dt>{{htmlattrdef("cellspacing")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This attribute defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.</p>
+
+ <p>To achieve a similar effect, apply the {{cssxref("border-spacing")}} property to the <code>&lt;table&gt;</code> element. <code>border-spacing</code> does not have any effect if {{cssxref("border-collapse")}} is set to collapse.</p>
+ </dd>
+ <dt>{{htmlattrdef("frame")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This enumerated attribute defines which side of the frame surrounding the table must be displayed.</p>
+
+ <p>To achieve a similar effect, use the {{cssxref("border-style")}} and {{cssxref("border-width")}} properties.</p>
+ </dd>
+ <dt>{{htmlattrdef("rules")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This enumerated attribute defines where rules, i.e. lines, should appear in a table. It can have the following values:</p>
+
+ <ul>
+  <li><code>none</code>, which indicates that no rules will be displayed; it is the default value;</li>
+  <li><code>groups</code>, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("col")}} and {{HTMLElement("colgroup")}} elements) only;</li>
+  <li><code>rows</code>, which will cause the rules to be displayed between rows;</li>
+  <li><code>columns</code>, which will cause the rules to be displayed between columns;</li>
+  <li><code>all</code>, which will cause the rules to be displayed between rows and columns.</li>
+ </ul>
+
+ <p>To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.</p>
+ </dd>
+ <dt>{{htmlattrdef("summary")}} {{Deprecated_inline}}</dt>
+ <dd>This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.</dd>
+ <dt>{{htmlattrdef("width")}} {{Deprecated_inline}}</dt>
+ <dd>
+ <p>This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.</p>
+ </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Simple_Table">Simple Table</h3>
+
+<pre class="brush: html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p>{{EmbedLiveSample('Simple_Table', '100%', '100', '', 'Web/HTML/Element/table')}}</p>
+
+<h3 id="More_Examples">More Examples</h3>
+
+<pre class="brush: html">&lt;p&gt;Simple table with header&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;First name&lt;/th&gt;
+    &lt;th&gt;Last name&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table with thead, tfoot, and tbody&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header content 1&lt;/th&gt;
+      &lt;th&gt;Header content 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Body content 1&lt;/td&gt;
+      &lt;td&gt;Body content 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer content 1&lt;/td&gt;
+      &lt;td&gt;Footer content 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table with colgroup&lt;/p&gt;
+&lt;table&gt;
+  &lt;colgroup span="4"&gt;&lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Countries&lt;/th&gt;
+    &lt;th&gt;Capitals&lt;/th&gt;
+    &lt;th&gt;Population&lt;/th&gt;
+    &lt;th&gt;Language&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+    &lt;td&gt;Washington, D.C.&lt;/td&gt;
+    &lt;td&gt;309 million&lt;/td&gt;
+    &lt;td&gt;English&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sweden&lt;/td&gt;
+    &lt;td&gt;Stockholm&lt;/td&gt;
+    &lt;td&gt;9 million&lt;/td&gt;
+    &lt;td&gt;Swedish&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Table with colgroup and col&lt;/p&gt;
+&lt;table&gt;
+  &lt;colgroup&gt;
+    &lt;col style="background-color: #0f0"&gt;
+    &lt;col span="2"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Lime&lt;/th&gt;
+    &lt;th&gt;Lemon&lt;/th&gt;
+    &lt;th&gt;Orange&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Green&lt;/td&gt;
+    &lt;td&gt;Yellow&lt;/td&gt;
+    &lt;td&gt;Orange&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Simple table with caption&lt;/p&gt;
+&lt;table&gt;
+  &lt;caption&gt;Awesome caption&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Awesome data&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div class="hidden">
+<pre class="brush: css">table
+{
+border-collapse: collapse;
+border-spacing: 0px;
+}
+table, th, td
+{
+padding: 5px;
+border: 1px solid black;
+}</pre>
+</div>
+
+<p>{{EmbedLiveSample('More_Examples', '100%', '700', '', 'Web/HTML/Element/table')}}</p>
+
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+<h3 id="Captions">Captions</h3>
+
+<p>By supplying a {{HTMLElement("caption")}} element whose value clearly and concisely describes the table's purpose, it helps the people decide if they need to read the rest of the table content or skip over it.</p>
+
+<p>This helps people navigating with the aid of assistive technology such as a screen reader, people experiencing low vision conditions, and people with cognitive concerns.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Adding_a_caption_to_your_table_with_&lt;caption>">MDN Adding a caption to your table with &lt;caption&gt;</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/tables/caption-summary/">Caption &amp; Summary • Tables • W3C WAI Web Accessibility Tutorials</a></li>
+</ul>
+
+<h3 id="Scoping_rows_and_columns">Scoping rows and columns</h3>
+
+<p>The {{htmlattrxref("scope", "th")}} attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified so as to provide necessary information about the cells related to a header.</p>
+
+<h4 id="Example">Example</h4>
+
+<pre class="brush: html">&lt;table&gt;
+  &lt;caption&gt;Color names and values&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;HEX&lt;/th&gt;
+      &lt;th scope="col"&gt;HSLa&lt;/th&gt;
+      &lt;th scope="col"&gt;RGBa&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Teal&lt;/th&gt;
+      &lt;td&gt;&lt;code&gt;#51F6F6&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;hsla(180, 90%, 64%, 1)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;rgba(81, 246, 246, 1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Goldenrod&lt;/th&gt;
+      &lt;td&gt;&lt;code&gt;#F6BC57&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;hsla(38, 90%, 65%, 1)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;rgba(246, 188, 87, 1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+<p>Providing a declaration of <code>scope="col"</code> on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of <code>scope="row"</code> on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/tables/two-headers/">Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/tables/irregular/">Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H63.html">H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0</a></li>
+</ul>
+
+<h3 id="Complicated_tables">Complicated tables</h3>
+
+<p>Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.</p>
+
+<p>Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the <code>colspan</code> and <code>rowspan</code> attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.</p>
+
+<p>If the table cannot be broken apart, use a combination of the {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/tables/multi-level/">Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H43.html">H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0</a></li>
+</ul>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','tables.html#the-table-element','table element')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C','tabular-data.html#the-table-element','table element')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("html.elements.table")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>CSS properties that may be especially useful to style the <code>&lt;table&gt;</code> element:
+
+  <ul>
+   <li>{{cssxref("width")}} to control the width of the table;</li>
+   <li>{{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;</li>
+   <li>{{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;</li>
+   <li>{{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.</li>
+  </ul>
+ </li>
+</ul>

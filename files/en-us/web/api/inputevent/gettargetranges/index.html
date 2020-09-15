@@ -1,0 +1,54 @@
+---
+title: InputEvent.getTargetRanges()
+slug: Web/API/InputEvent/getTargetRanges
+tags:
+  - API
+  - DOM Events
+  - Experimental
+  - Input
+  - InputEvent
+  - Method
+  - Reference
+  - events
+  - getTargetRanges()
+---
+<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+
+<p>The <strong><code>getTargetRanges()</code></strong> property of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>staticRanges</em>[] = <em>inputEvent</em>.getTargetRanges()</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>An array of {{domxref("StaticRange")}} objects.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('InputEvents2','#dom-inputevent-gettargetranges','getTargetRanges()')}}</td>
+   <td>{{Spec2('InputEvents2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.InputEvent.getTargetRanges")}}</p>
+</div>

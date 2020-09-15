@@ -1,0 +1,123 @@
+---
+title: Access-Control-Allow-Headers
+slug: Web/HTTP/Headers/Access-Control-Allow-Headers
+tags:
+  - CORS
+  - HTTP
+  - Reference
+  - Response Header
+  - header
+---
+<div>{{HTTPSidebar}}</div>
+
+<p>The <strong><code>Access-Control-Allow-Headers</code></strong> response header is used in response to a {{glossary("preflight request")}} which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.</p>
+
+<p>This header is required if the request has an {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Access-Control-Allow-Headers: <em>&lt;header-name&gt;</em>[, <em>&lt;header-name&gt;</em>]*
+Access-Control-Allow-Headers: *
+</pre>
+
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt><code>&lt;header-name&gt;</code></dt>
+ <dd>The name of a supported request header. The header may list any number of headers, separated by commas.</dd>
+ <dt><code>*</code> (wildcard)</dt>
+ <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="A_custom_header">A custom header</h3>
+
+<p>Here's an example of what an <code>Access-Control-Allow-Headers</code> header might look like. It indicates that in addition to the <em>CORS-safelisted request headers</em>, a custom header named <code>X-Custom-Header</code> is supported by CORS requests to the server.</p>
+
+<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
+
+<h3 id="Multiple_headers">Multiple headers</h3>
+
+<p>This example shows <code>Access-Control-Allow-Headers</code> when it specifies support for multiple headers.</p>
+
+<pre>Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests</pre>
+
+<h3 id="Bypassing_additional_restrictions">Bypassing additional restrictions</h3>
+
+<p>Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in <code>Access-Control-Allow-Headers</code>, listing them anyway will circumvent the <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions">additional restrictions</a> that apply.</p>
+
+<pre>Access-Control-Allow-Headers: Accept</pre>
+
+<h3 id="Example_preflight_request">Example preflight request</h3>
+
+<p>Let's look at an example of a preflight request involving <code>Access-Control-Allow-Headers</code>.</p>
+
+<h4 id="Request">Request</h4>
+
+<p>First, the request.  The preflight request is an {{HTTPMethod("OPTIONS")}} request which includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}, such as:</p>
+
+<pre>OPTIONS /resource/foo
+Access-Control-Request-Method: DELETE
+Access-Control-Request-Headers: origin, x-requested-with
+Origin: https://foo.bar.org</pre>
+
+<h4 id="Response">Response</h4>
+
+<p>If the server allows CORS requests to use the {{HTTPMethod("DELETE")}} method, it responds with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists <code>DELETE</code> along with the other methods it supports:</p>
+
+<pre>HTTP/1.1 200 OK
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Max-Age: 86400</pre>
+
+<p>If the requested method isn't supported, the server will respond with an error.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}}</td>
+   <td>{{Spec2("Fetch")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("http.headers.Access-Control-Allow-Headers")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
+ <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
+ <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
+</ul>

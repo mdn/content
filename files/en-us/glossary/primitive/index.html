@@ -1,0 +1,124 @@
+---
+title: Primitive
+slug: Glossary/Primitive
+tags:
+  - CodingScripting
+  - Glossary
+  - JavaScript
+---
+<p><span class="seoSummary">In {{Glossary("JavaScript")}}, a <strong>primitive</strong> (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}}. There are 6 primitive data types: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, and {{Glossary("symbol")}}. There also is {{Glossary("null")}}, which is seemingly primitive, but indeed is a special case for every {{jsxref("Object")}}: and any structured type is derived from <code>null</code> by the <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Prototype Chain</a>.</span></p>
+
+<p>Most of the time, a primitive value is represented directly at the lowest level of the language implementation.</p>
+
+<p>All primitives are <strong>immutable</strong>, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value can not be changed in the ways that objects, arrays, and functions can be altered.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>This example will help you understand that primitive values are <strong>immutable.</strong></p>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js notranslate">// Using a string method doesn't mutate the string
+var bar = "baz";
+console.log(bar);               // baz
+bar.toUpperCase();
+console.log(bar);               // baz
+
+// Using an array method mutates the array
+var foo = [];
+console.log(foo);               // []
+foo.push("plugh");
+console.log(foo);               // ["plugh"]
+
+// Assignment gives the primitive a new (not a mutated) value
+bar = bar.toUpperCase();       // BAZ
+</pre>
+
+<p>A primitive can be replaced, but it can't be directly altered.</p>
+
+<h2 id="Another_Example_Step-by-step">Another Example [ Step-by-step ]</h2>
+
+<p>The following example will help you go through how JavaScript deals with primitives.</p>
+
+<h3 class="highlight-spanned" id="JavaScript_2"><span class="highlight-span">JavaScript</span></h3>
+
+<pre class="brush: js line-numbers  language-js notranslate">// The primitive
+let foo = 5;
+
+// Defining a function that should change the primitive value
+function addTwo(num) {
+   num += 2;
+}
+// Another function trying to do the same thing
+function addTwo_v2(foo) {
+   foo += 2;
+}
+
+// Calling our first function while passing our primitive as an argument
+addTwo(foo);
+// Getting the current primitive value
+console.log(foo);   // 5
+
+// Trying again with our second function...
+addTwo_v2(foo);
+console.log(foo);   // 5
+</pre>
+
+<p>Did you expect it to be <code>7</code> instead of <code>5</code>? If so, read how this code runs:</p>
+
+<ul>
+ <li>For both the <code>addTwo</code> and <code>addTwo_v2</code> functions calls, JavaScript looks up the value for the identifier <code>foo</code>. It correctly finds our variable instantiated with our first statement</li>
+ <li>After finding it, the expression is evaluated, <code>foo</code> is replaced by 5 and the JavaScript engine passes that value to the functions as an argument</li>
+ <li>Before executing the statements inside the functions' bodies, <strong>JavaScript takes a copy of the originally passed argument</strong> (which is a primitive) and creates a local copy. These copies, existing only inside the functions' scopes, are accessible via the identifiers we specified in the functions' definitions (<code>num</code> for <code>addTwo</code>, <code>foo</code> for <code>addTwo_v2</code>)</li>
+ <li>Then, the functions' statements are executed:
+  <ul>
+   <li>In the first function, a local <code>num</code> variable had been created. We are increasing its value by 2, not the original <code>foo</code>'s value!</li>
+   <li>In the second function, a local <code>foo</code> variable had been created. We are increasing its value by 2, not the original (external) <code>foo</code>'s value! Also, in this situation, the external <code>foo</code> variable cannot be accessed directly. This is because of JavaScript's lexical scoping and the resulting variable shadowing. The local <code>foo</code> hides the external <code>foo</code>. For more information, see <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>. (Note that <code>window.foo</code> could still be used to access the external <code>foo</code> variable.)</li>
+  </ul>
+ </li>
+ <li>In conclusion, any changes inside our functions <strong>won't</strong> affect the original <code>foo</code> at all, as we are modifying <strong>copies</strong> of it</li>
+</ul>
+
+<p>That's why primitives are immutable - instead of changing them directly, we're modifying a <em>copy, without affecting the original</em>.</p>
+
+<h2 id="Primitive_wrapper_objects_in_JavaScript">Primitive wrapper objects in JavaScript</h2>
+
+<p>Except for <code>null</code> and <code>undefined</code>, all primitive values have object equivalents that wrap around the primitive values:</p>
+
+<ul>
+ <li>{{jsxref("String")}} for the string primitive.</li>
+ <li>{{jsxref("Number")}} for the number primitive.</li>
+ <li>{{jsxref("BigInt")}} for the bigint primitive.</li>
+ <li>{{jsxref("Boolean")}} for the boolean primitive.</li>
+ <li>{{jsxref("Symbol")}} for the symbol primitive.</li>
+</ul>
+
+<p>The wrapper's <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf"><code>valueOf()</code></a> method returns the primitive value.</p>
+
+<h2 id="Learn_more">Learn more</h2>
+
+<h3 id="General_knowledge">General knowledge</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Introduction to JavaScript data types</a></li>
+ <li>{{Interwiki("wikipedia", "Primitive data type")}} on Wikipedia</li>
+</ul>
+
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><a href="/en-US/docs/Glossary">Glossary</a>
+
+  <ol>
+   <li>{{Glossary("JavaScript")}}</li>
+   <li>{{Glossary("string")}}</li>
+   <li>{{Glossary("number")}}</li>
+   <li>{{Glossary("bigint")}}</li>
+   <li>{{Glossary("boolean")}}</li>
+   <li>{{Glossary("null")}}</li>
+   <li>{{Glossary("undefined")}}</li>
+   <li>{{Glossary("symbol")}}</li>
+  </ol>
+ </li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data types</a></li>
+</ol>
+</section>

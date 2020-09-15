@@ -1,0 +1,103 @@
+---
+title: Prompt users for data and privacy consents
+slug: Mozilla/Add-ons/WebExtensions/Prompt_users_for_data_and_privacy_consents
+tags:
+  - Add-ons
+  - Extensions
+  - How to
+  - Privacy
+  - UI
+  - UX
+  - User Interface
+  - WebExtensions
+---
+<p>{{AddonSidebar()}}</p>
+
+<p>If your extension uses cookies or collects user data, it needs to comply with the requirement of the <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management">Data Disclosure, Collection and Management</a> section of the <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Add-on Policies</a>.</p>
+
+<p>A common developer question about these policies is how to translate them into web extension features that can pass the addons.mozilla.org reviews. This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.</p>
+
+<h2 id="Know_your_privacy_settings">Know your privacy settings</h2>
+
+<p>To create the consent flow and consent dialogues your extension needs, you should first answer these questions:</p>
+
+<ol>
+ <li>Does my extension use cookies?  If so, you’ll need to get user consent to store cookies.</li>
+ <li>Does my extension collect technical or interaction data? (If you’re unsure what technical and interaction data is, check out the definition in <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management">Data Disclosure, Collection and Management</a>.) If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.</li>
+ <li>Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an IP address.</li>
+</ol>
+
+<h2 id="Get_prepared">Get prepared</h2>
+
+<p>Before designing the data collection and use of cookies consents for your extension, you should:</p>
+
+<ul>
+ <li>eliminate any unnecessary data collection or cookies.</li>
+ <li>design your extension to offer as much functionality as possible if the user declines the collection of data or the use of cookies.</li>
+ <li>create a privacy policy.</li>
+</ul>
+
+<h2 id="Create_a_privacy_policy">Create a privacy policy</h2>
+
+<p>When your users arrive at your data and privacy consent dialogue, they need to know what they're consenting to and this is where your privacy policy comes in. The <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management">Data Disclosure, Collection and Management</a> section of the <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Add-on Policies</a> provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that privacy policy generator—such as <a href="https://www.cooleygo.com/documents/privacy-policy/">Cooley LLP</a> or <a href="http://www.iubenda.com">iubenda</a>—may be helpful. You may also want to take a look at <a href="https://www.mozilla.org/en-US/privacy/">Mozilla's privacy policy</a> as a model to follow.</p>
+
+<h2 id="Prompt_after_install_or_on_first_use">Prompt after install or on first use</h2>
+
+<p>As part of your extension’s onboarding flow, include information about your privacy policy and data collection, and seek any necessary user consents. Any privacy information and settings should be clear and unmissable, separating these details from general information about your extension can help.</p>
+
+<p>For more information on how to implement a post-install page or dialog, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Best practices for onboarding, upboarding, and offboarding users</a>.</p>
+
+<p>As mentioned in the <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management">Add-on policies</a>, if your extension uses cookies or collects user data in association with features that run in the background, such as ad blocking, you need to make sure the cookies or data collection are not activated until you have user consent.</p>
+
+<p>We have talked about how you could let users opt-out of collecting technical and interaction data but must have users opt-in to collecting personally identifying information. Before you design your extension features around your consent requests, it is important to understand how these options affect your design.</p>
+
+<p>Where you provide the user with an opt-in option, the related feature must be turned off by default and only turned on once the user has actively agreed to use that feature.</p>
+
+<p>Where you provide the user with an opt-out, option the related features can be turned on by default but must be turned off if the user indicates they want to opt-out.</p>
+
+<h2 id="Determine_your_consent_flow">Determine your consent flow</h2>
+
+<p>Before designing your consent dialogs, you should determine the privacy consent flow for your extension, based on the data it collects and whether it uses cookies. Here is an example of a consent flow where an extension collects personally identifying information and technical data and uses cookies:</p>
+
+<p><img alt="Illustrating an example of the application flow for handling privacy consents." src="https://mdn.mozillademos.org/files/16588/MDN_Privacy_Flags_Flow_Diagram.png" style="height: 840px; width: 1060px;"></p>
+
+<p>In this example:</p>
+
+<ol>
+ <li>Your extension should start up with all cookie and data collection functionality disabled.</li>
+ <li>Either shortly after installation (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">Best practices for onboarding, upboarding, and offboarding users</a>) or when the user first attempts to uses an extension feature, present them with a consent dialog.<br>
+  On this dialog:
+  <ol>
+   <li>The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.</li>
+   <li>The options for technical data and cookies may default to enabled, so that the user may choose to opt-out.</li>
+  </ol>
+ </li>
+ <li>If the user opts:
+  <ol>
+   <li>IN to all features, continue with all extension features enabled.</li>
+   <li>OUT of any feature that cannot be disabled, offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.</li>
+   <li>OUT only from features that can be disabled, disable those features and continue running the extension.</li>
+  </ol>
+ </li>
+</ol>
+
+<h2 id="Your_consent_dialogs">Your consent dialogs</h2>
+
+<p>Once you understand your privacy consent flow, you can add suitable consent dialogues. The following are suggestions on how to present data collection and cookie consent dialogs. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.</p>
+
+<ul>
+ <li>Only Cookies. The option to add cookies can be set as the default response.<br>
+  <img alt="Mockup of a prompt that could be used when an extension requires user consent to use cookies alone." src="https://mdn.mozillademos.org/files/16589/privacy_prompt_mockup_cookies_only.png" style="height: 283px; width: 810px;"></li>
+ <li>Only personally identifying information. The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.<br>
+  <img alt="Mockup of a prompt that could be used when an extension requires consent for processing personal data only." src="https://mdn.mozillademos.org/files/16590/privacy_prompt_mockup_personal_data.png" style="height: 403px; width: 808px;"></li>
+ <li>Only technical data, (no user identifiers). The option to collect technical data can be set as the default response.<br>
+  <img alt="Mockup of a prompt that could be used when an extension requires consent for processing technical data only." src="https://mdn.mozillademos.org/files/16591/privacy_prompt_mockup_anonymous_data.png" style="height: 367px; width: 798px;"></li>
+ <li>Combination: Cookies, Personal, and Technical Data.<br>
+  <img alt="Mockup of a prompt that could be used when extension requires consent for cookies and processing personal and technical data." src="https://mdn.mozillademos.org/files/16592/privacy_prompt_mockup_all_three.png" style="height: 623px; width: 891px;"></li>
+ <li>The extension won’t work without data or cookies. The default option is your choice.<br>
+  <img alt="Mockup of a prompt that could be used when the user provide insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings." src="https://mdn.mozillademos.org/files/16594/privacy_prompt_mockup_remove_extension.png" style="height: 238px; width: 790px;"></li>
+</ul>
+
+<p> </p>
+
+<p> </p>

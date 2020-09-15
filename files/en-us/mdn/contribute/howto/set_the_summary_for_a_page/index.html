@@ -1,0 +1,113 @@
+---
+title: How to set the summary for a page
+slug: MDN/Contribute/Howto/Set_the_summary_for_a_page
+tags:
+  - Documentation
+  - Guide
+  - Howto
+  - MDN Meta
+  - SEO
+  - Summaries
+  - Summary
+---
+<div>{{MDNSidebar}}</div>
+
+<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+
+<p><span class="seoSummary">In this article, we'll show you how to set the <strong>SEO summary</strong> (also known as the <strong>description</strong> or just as the <strong>summary</strong>) of an article on the MDN Web Docs site.</span> The summary is used in a number of ways:</p>
+
+<ul>
+ <li>It's used by Google and other search engines to help catalog and index pages.</li>
+ <li>Search engines display the summary in search result pages to help readers choose the page that most closely matches their needs.</li>
+ <li>MDN menus and topic landing pages often display the summary below the article title, again to help users find the information they're looking for.</li>
+ <li>Links on MDN frequently have tooltips containing the summary text, to provide quick insight to users without having to click through to the article itself.</li>
+</ul>
+
+<p>The summary should, therefore, be text that makes sense both in the context of the article itself as well as when presented alone in other contexts. You should also keep the <a href="/en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide">MDN writing style guide</a> in mind while writing the summary text.</p>
+
+<h2 id="The_default_summary">The default summary</h2>
+
+<p>Pages for which no summary has been explicitly set take on a default summary. By default, the summary's text is the entire text of the first block of {{Glossary("HTML")}} that looks like it might be text content rather than a title. This is not always the best text to use, however, for a number of possible reasons:</p>
+
+<ul>
+ <li>The first text block is an aside or note of some kind, rather than a useful overview of the article content.</li>
+ <li>The first text block is a content paragraph but doesn't contain a good overview of the article.</li>
+ <li>The text is too long (or too short).</li>
+</ul>
+
+<p>It's best to explicitly set the page summary, to help ensure that the summary is as helpful as possible.</p>
+
+<h2 id="Setting_the_summary">Setting the summary</h2>
+
+<p>Let's look at how to go about setting a page's summary.</p>
+
+<h3 id="What_is_the_task">What is the task?</h3>
+
+<p>Marking the text within a page that should be used as its summary in other contexts; if the appropriate text isn't already available, this task might include writing a small amount of appropriate text.</p>
+
+<h3 id="Where_does_it_need_to_be_done">Where does it need to be done?</h3>
+
+<p>On pages that lack a summary, have a summary that isn't helpful, or have a summary that unnecessarily fails to meet recommended guidelines.</p>
+
+<h3 id="What_do_you_need_to_know_to_do_the_task">What do you need to know to do the task?</h3>
+
+<p>Ability to use the MDN editor; good English writing skills; enough familiarity with the topic of the page to write a good summary.</p>
+
+<h3 id="What_are_the_steps_to_do_it">What are the steps to do it?</h3>
+
+<ol>
+ <li>Pick a page on which to set the summary. If you already have one in mind, great! You can skip to step 2; otherwise, to find a page to fix:
+  <ol>
+   <li>In the <a href="/en-US/docs/MDN/Doc_status">MDN documentation status</a> page, click the link under <strong>Sections</strong> for a topic that you know something about (for example, HTML):<br>
+    <img alt="" src="https://mdn.mozillademos.org/files/8681/sections.png" style="height: 130px; width: 504px;"></li>
+   <li>On the topic's documentation status page, click the <strong>Pages</strong> header in the <strong>Summary</strong> table. This takes you to an index of all the pages in that topic section; it shows the page links in the left column, and the tags and summaries in the right column:<br>
+    <img alt="" src="https://mdn.mozillademos.org/files/8675/pages.png" style="height: 82px; width: 361px;"></li>
+   <li>Pick a page that is missing a summary, or that has a poor summary:<br>
+    <img alt="" src="https://mdn.mozillademos.org/files/8677/summary.png" style="height: 38px; width: 296px;"></li>
+   <li>Click the link to go to that page.</li>
+  </ol>
+ </li>
+ <li>Once on the page to which you wish to add a summary, click <strong>Edit</strong> to open the page in the MDN editor. See the <a href="/en-US/docs/MDN/Contribute/Editor">Guide to the MDN editor</a> if you need information about using the editor.</li>
+ <li>Look for a sentence or two that works as a summary, even if taken out of context. If needed, edit the existing content to create or modify the text until you can select a sentence or two that make a good summary. See {{anch("Crafting a good summary")}} for help selecting or creating an appropriate summary.</li>
+ <li>Select the text to be used as a summary.</li>
+ <li>In the <em>Styles</em> widget of the editor toolbar, select <strong>SEO Summary</strong>. In the page source, this creates a {{HTMLElement("span")}} element with <code>class="seoSummary"</code> around the selected text.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/8679/styles.png" style="height: 231px; width: 403px;"></li>
+ <li>Save your changes with a revision comment. The comment is optional, but we encourage you to provide one. It makes it easier for other people to track the changes. Something like "Set SEO summary" is enough.</li>
+</ol>
+
+<h2 id="Crafting_a_good_summary">Crafting a good summary</h2>
+
+<p>The summary is used in many different scenarios, including these:</p>
+
+<ul>
+ <li>As the description of the article on search results pages on MDN as well as on Google and other search engines.</li>
+ <li>As the description of the article in menus and topic landing pages on MDN itself.</li>
+ <li>In contextual tooltips when the user hovers the cursor over links to articles on MDN.</li>
+</ul>
+
+<p>It's important to keep these scenarios in mind while composing a summary. In order to help ensure that the summary works well in all of these situations, please try to follow the guidelines below.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Unless otherwise specifically stated, these are <em>guidelines</em>, not hard and fast rules. While you should do what you can to meet these guidelines, sometimes there are exceptions that can't be  avoided.</p>
+</div>
+
+<ul>
+ <li>The summary should indicate both the topic and the type of page. "In this guide, we'll learn to use the Intersection Observer API to create responsive web apps that only update animations that are currently visible on screen." is 160 characters, for example, and explains what technology is being covered, how the technology is being used, and that the article is a tutorial.</li>
+ <li>You can choose text from anywhere within any paragraph in the article, but it should ideally be within the first paragraph (or the second, in some cases). If the point of the article isn't made in those paragraphs, the introduction of the page probably needs rewriting.</li>
+ <li>The summary must still fit well within the context of the article's body, since it is in fact part of the article.</li>
+ <li>It's okay to have links to other pages within the summary. These are automatically removed before being given to search engines, and do not count against you. They're also removed before the summary is used as a tooltip. Links are <em>not</em> removed from the summary when used as a page description within menus and landing pages on MDN, which is really convenient as well.</li>
+ <li>The summary should include an appropriate selection of key terms likely to be searched for by someone looking for information contained on the page. In the example case about the Intersection Observer API, those keywords include the API name, "animations", "visible", "responsive", and "web apps", possibly among others.</li>
+ <li>To optimize the <strong>Search Engine Optimization</strong> (SEO) value gained from a summary, it should be no longer than 150 characters long.</li>
+ <li>Since a <strong>search engine result page</strong> (<strong>SERP</strong>) typically doesn't show more than 160 characters of the summary, you should avoid summaries longer than that. Having your text unceremoniously chopped off can dissuade people from clicking the link.</li>
+ <li>It might be tempting to write a great summary that doesn't work on page, then hide the summary inside a block with the <code>"hidden"</code> class on it. But <em>this doesn't work</em>, because search engines ignore text that's not visible to the user.</li>
+</ul>
+
+<p>Think of the summary as being akin to the {{interwiki("wikipedia", "blurb")}} on the back or inside the front cover of a book. This short text has to catch the reader's attention quickly and encourage them to read on.</p>
+
+<p>It can be a little tricky to write an summary that works well both for search engine result pages and within the article text itself, but currently MDN doesn't offer a way to create an SEO summary separate from the page content, so do the best you can.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">How to write with SEO in mind on MDN Web Docs</a></li>
+</ul>

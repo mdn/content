@@ -1,0 +1,90 @@
+---
+title: Document.domain
+slug: Web/API/Document/domain
+tags:
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
+---
+<div>{{ApiRef}}</div>
+
+<p>The <strong><code>domain</code></strong> property of the {{domxref("Document")}} interface gets/sets the domain portion of the {{glossary("origin")}} of the current document, as used by the <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin policy</a>.</p>
+
+<p>If this property is successfully set, the port part of the origin is also set to {{jsxref("null")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">const <var>domainString</var> = <var>document</var>.domain
+<var>document</var>.domain = <var>domainString</var></pre>
+
+<h3 id="Value">Value</h3>
+
+<p>The domain portion of the current document's origin.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+ <dt><code>SecurityError</code></dt>
+ <dd>An attempt has been made to set <code>domain</code> under one of the following conditions:
+ <ul>
+  <li>The document is inside a sandboxed {{htmlelement("iframe")}}</li>
+  <li>The document has no {{glossary("browsing context")}}</li>
+  <li>The document's <a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective domain</a> is <code>null</code></li>
+  <li>The given value is not equal to the document's effective domain (or it is not a registerable domain suffix of it)</li>
+  <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}} is enabled</li>
+ </ul>
+ </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Getting_the_domain">Getting the domain</h3>
+
+<p>For the URI <code>http://developer.mozilla.org/en-US/docs/Web</code>, this example sets <code>currentDomain</code> to the string "<code>developer.mozilla.org</code>".</p>
+
+<pre class="brush:js">const currentDomain = document.domain;</pre>
+
+<h3 id="Closing_a_window">Closing a window</h3>
+
+<p>If a document, such as <code>www.example.xxx/good.html</code>, has the domain of <code>"www.example.xxx"</code>, this example attempts to close the window.</p>
+
+<pre class="brush:js">const badDomain = "www.example.xxx";
+
+if (document.domain === badDomain) {
+  // Just an example: window.close() sometimes has no effect
+  window.close();
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<div>{{Compat("api.Document.domain")}}</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
+</ul>

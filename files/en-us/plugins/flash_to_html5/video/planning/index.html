@@ -1,0 +1,68 @@
+---
+title: Planning your transition from Flash video to HTML5 video
+slug: Plugins/Flash_to_HTML5/Video/Planning
+tags:
+  - Advertising
+  - Audio
+  - Auditing
+  - Authentication
+  - DRM
+  - Flash
+  - HTML
+  - Planning
+  - Video
+  - captions
+  - streaming
+  - subtitles
+---
+<p>{{NextMenu("Plugins/Flash_to_HTML5/Video/File_format_conversion", "Plugins/Flash_to_HTML5/Video")}}</p>
+
+<p class="summary">Transitioning from Flash to HTML5 can take several months and may require new skills and software. This guide shows you how to plan for that transition.</p>
+
+<h2 id="Auditing_what_you_have">Auditing what you have</h2>
+
+<p>Before you begin, you'll need to identify the media assets and core use cases of your existing Flash functionality. The following questions can help you prepare:</p>
+
+<h3 id="Media_Files">Media Files</h3>
+
+<ul>
+ <li>How many media files do you have on the site?</li>
+ <li>What format are the media files in? Some formats (e.g. FLV) are not compatible with HTML and the media files will need to be converted.</li>
+ <li>Do you have the original media files? If you need to create new files (e.g. MP4) then transcoding from the original will give you higher quality.</li>
+</ul>
+
+<h3 id="Business_Requirements">Business Requirements</h3>
+
+<ul>
+ <li>Do you currently support video ads, such as pre-rolls or interstitials? What ad networks do you partner with?</li>
+ <li>Do you currently authenticate user access?</li>
+ <li>Do you currently use digital rights management (DRM), for example <a href="http://www.adobe.com/uk/products/adobe-access.html">Adobe Access</a>?</li>
+</ul>
+
+<h3 id="Distribution">Distribution</h3>
+
+<ul>
+ <li>Do you currently support adaptive streaming (e.g. the <a href="http://www.adobe.com/products/hds-dynamic-streaming.html">Adobe HTTP Dynamic Streaming</a> format?)</li>
+ <li>Do you use a {{glossary("CDN")}} for distribution?</li>
+ <li>Do you provide captions or subtitles for your media? If so, what file formats are those in? What languages do you support?</li>
+</ul>
+
+<h2 id="Decision_points">Decision points</h2>
+
+<p>Once you've audited your Flash experience, there are a few key decisions you'll want to make about your new HTML experience:</p>
+
+<h3 id="User_Requirements">User Requirements</h3>
+
+<ul>
+ <li>Will you support the mobile web as well as desktop?</li>
+ <li>Will you support offline playback?</li>
+ <li>Do you need to support changing network conditions? If so, you will want to use an adaptive streaming format.</li>
+</ul>
+
+<h3 id="Business_Requirements_2">Business Requirements</h3>
+
+<ul>
+ <li>Will you authenticate users before allowing them to access your media?</li>
+ <li>Will you need video (or audio) ads? Which partners will you use?</li>
+ <li>Do you need to protect the media files with DRM?</li>
+</ul>

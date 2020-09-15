@@ -1,0 +1,342 @@
+---
+title: Getting started with web-ext
+slug: Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext
+tags:
+  - Guide
+  - Installing
+  - Testing
+  - Tools
+  - WebExtension
+  - packaging
+  - web-ext
+---
+<div>{{AddonSidebar}}</div>
+
+<p class="summary"><code>web-ext</code> is a command line tool designed to speed up various parts of the extension development process, making development faster and easier. This article explains how to install and use <code>web-ext</code>.</p>
+
+<h2 id="Installation">Installation</h2>
+
+<p><code>web-ext</code> is a node-based application that you install with the <a href="https://nodejs.org/">nodejs/npm</a> tool. Install web-ext using the following command:</p>
+
+<pre class="brush: bash"><code>npm install --global web-ext</code></pre>
+
+<p><code>web-ext</code> requires the current <a href="https://github.com/nodejs/Release#release-schedule">LTS</a> (long-term support) version of <a href="https://nodejs.org/">NodeJS</a>.</p>
+
+<p>To test whether the installation worked run the following command, which displays the <code>web-ext</code> version number:</p>
+
+<pre class="brush: bash"><code>web-ext --version</code></pre>
+
+<h2 id="Using_web-ext">Using web-ext</h2>
+
+<p>Before you start using <code>web-ext</code> locate an example extension to use—if you don't have one, use one from the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repo.</p>
+
+<h3 id="Testing_out_an_extension">Testing out an extension</h3>
+
+<p>Test an extension in Firefox by <code>cd</code>'ing into your extension's root directory and entering:</p>
+
+<pre class="brush: bash"><code>web-ext run</code></pre>
+
+<p>This starts Firefox and loads the extension temporarily in the browser, just as you can on the <a href="/en-US/docs/Tools/about:debugging#Add-ons">about:debugging page</a>. Note that this <code>web-ext</code> method has the same <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Limitations">limitations regarding prompts for permissions and restart features</a> as about:debugging.</p>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run reference guide</a> to learn more.</p>
+
+<h3 id="Automatic_extension_reloading">Automatic extension reloading</h3>
+
+<p>The <code>run</code> command watches your source files and tells Firefox to reload the extension after you edit and save a file. For example, if you changed the <code>name</code> property in your <code>manifest.json</code> file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:</p>
+
+<pre class="brush: bash"><code>web-ext run</code></pre>
+
+<p>You can also press the <code>r</code> key in the <code>web-ext</code> terminal to trigger an extension reload.</p>
+
+<p>If you experience unexpected behavior with the reloading feature, please <a href="https://github.com/mozilla/web-ext/issues">file a bug</a>. You can also disable reloading like this:</p>
+
+<pre class="brush: bash"><code>web-ext run --no-reload</code></pre>
+
+<div class="note">
+<p>Extension reloading is only supported in Firefox 49 or higher.</p>
+</div>
+
+<h3 id="Testing_in_different_versions_of_Firefox">Testing in different versions of Firefox</h3>
+
+<p>To run your extension in a version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox Desktop</a> other than the default, use the <code>--firefox</code> option to specify a full path to the binary file. Here is an example for Mac OS:</p>
+
+<pre class="brush: bash">web-ext run --firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin</pre>
+
+<p>On Windows, the path needs to include <code>firefox.exe</code>, for example:</p>
+
+<pre class="brush: bash">web-ext run --firefox="C:\Program Files\Mozilla Firefox\firefox.exe"</pre>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run command</a> reference to learn more.</p>
+
+<h3 id="Testing_in_Firefox_48">Testing in Firefox 48</h3>
+
+<p>Firefox 48 was the first stable version to use the WebExtension platform, but it doesn't allow <code>web-ext</code> to install an extension remotely. You need to run your extension in Firefox 48 using:</p>
+
+<pre class="brush: bash">web-ext run --pre-install</pre>
+
+<h3 id="Testing_in_Firefox_for_Android">Testing in Firefox for Android</h3>
+
+<p>To run your extension in <a href="https://www.mozilla.org/en-US/firefox/mobile/">Firefox for Android</a>, follow these instructions to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android#Set_up_your_computer_and_Android_emulator_or_device">set up your computer and device</a>.</p>
+
+<p>With your device connected to your development computer, run:</p>
+
+<pre class="brush: bash">web-ext run --target=firefox-android</pre>
+
+<p>This command displays the device ID for your connected Android device or devices. If you don't see a list of device IDs, make sure you set up the device for development correctly.</p>
+
+<p><span style="background-color: #ffffff;">N</span>ow, add the device ID to the command:</p>
+
+<pre class="brush: bash">web-ext run --target=firefox-android --android-device=&lt;device ID&gt;</pre>
+
+<p>If you've multiple versions of Firefox installed, you may need to choose a specific version. For example:</p>
+
+<pre class="brush: bash">web-ext run --target=firefox-android ... --firefox-apk=org.mozilla.firefox</pre>
+
+<p>The first time you run this command, you may need to grant Android permissions for the APK. This is because the command needs read/write access to the device storage, so that Firefox for Android can run on a temporary profile. The <code>web-ext</code> output guides you in how to grant these permissions.</p>
+
+<p>The <code>web-ext</code> command does not alter any of your existing Firefox for Android preferences or data. To see more information about how <code>web-ext</code> is interacting with your device, run the command with <code>--verbose</code>.</p>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run command</a> reference to learn more.</p>
+
+<h3 id="Debugging_in_Firefox_for_Android">Debugging in Firefox for Android</h3>
+
+<p>When using <code>web-ext run</code> to test an extension on Firefox for Android, you'll notice a message like this in the console output:</p>
+
+<pre>You can connect to this Android device on TCP port 51499
+</pre>
+
+<p>This is a remote debugger port that you can <a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting">connect to with Firefox's developer tools</a>. In this case, you'd connect to host <code>localhost</code> on port <code>51499</code>.</p>
+
+<p>See <a href="/en-US/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android#Debug_your_extension">this guide</a> for more information about debugging an extension on Firefox for Android.</p>
+
+<h3 id="Testing_unsigned_extensions">Testing unsigned extensions</h3>
+
+<p>When you execute <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">web-ext run</a>, the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build">web-ext build</a> and try to install it into Firefox, you will see an error telling you that the add-on is not signed. You will need to use an <a href="https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds">unbranded build</a> or use a <a href="https://www.mozilla.org/en-US/firefox/developer/">development build</a> to install unsigned extensions.</p>
+
+<h3 id="Using_a_custom_profile">Using a custom profile</h3>
+
+<p>By default, the <code>run</code> command will create a temporary Firefox profile. To run your extension with a specific profile use the <code>--firefox-profile</code> option, like this:</p>
+
+<pre class="brush: bash">web-ext run --firefox-profile=your-custom-profile</pre>
+
+<p>This option accepts a string containing the name of your profile or an absolute path to the profile directory. This is helpful if you want to manually configure some settings that will always be available to the <code>run</code> command.</p>
+
+<h3 id="Keeping_profile_changes">Keeping profile changes</h3>
+
+<p>The <code>run</code> command does not save any changes made to the custom profile specified by <code>--firefox-profile</code>. To keep changes, add this option:</p>
+
+<pre class="brush: bash">web-ext run --keep-profile-changes --firefox-profile=your-custom-profile</pre>
+
+<p>This may be helpful if your extension has many different run states.</p>
+
+<div class="warning">
+<p>This option makes the profile specified by <code>--firefox-profile</code> completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for <code>web-ext</code> to operate.</p>
+</div>
+
+<h3 id="Packaging_your_extension">Packaging your extension</h3>
+
+<p>Once you've tested your extension and verified that it's working, you can turn it into a package for submitting to <a href="https://addons.mozilla.org">addons.mozilla.org</a> using the following command:</p>
+
+<pre class="brush: bash"><code>web-ext build</code></pre>
+
+<p>This outputs a full path to the generated <code>.zip</code> file that can be loaded into a browser.</p>
+
+<div class="warning">
+<p>The generated <code>.zip</code> file doesn't work on Firefox without signing or adding <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications</a>.gecko.id</code> key into <code><a href="/en-US/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>.  For more information, please refer <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions and the Add-on ID</a> page.</p>
+</div>
+
+<p><code>web-ext build</code> is designed to ignore files that are commonly not wanted in packages, such as <code>.git</code>, <code>node_modules</code>, and other artifacts.</p>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build">build reference guide</a> to learn more.</p>
+
+<h3 id="Signing_your_extension_for_self-distribution">Signing your extension for self-distribution</h3>
+
+<p>As an alternative to publishing your extension on <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, you can self-host your package file but it needs to be <a href="https://developer.mozilla.org/Add-ons/Distribution">signed by Mozilla</a> first. The following command packages and signs a ZIP file, then returns it as a signed XPI file for distribution:</p>
+
+<pre class="brush: bash"><code>web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET </code></pre>
+
+<p>The API options are required to specify your <a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">addons.mozilla.org credentials</a>.</p>
+
+<ul>
+ <li><code>--api-key</code>: the API key (JWT issuer) from <code>addons.mozilla.org</code> needed to sign the extension. This is a string that will look something like <code>user:12345:67</code>.</li>
+ <li><code>--api-secret</code>: the API secret (JWT secret) from <code>addons.mozilla.org</code> needed to sign the extension. This is a string that will look something like <code>634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009</code>.</li>
+</ul>
+
+<div class="blockIndicator warning">
+<p>If you've <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">listed</a> the extension on <a href="https://addons.mozilla.org">addons.mozilla.org</a>, see <a href="#Signing_a_test_version_of_a_listed_extension">Signing a test version of a listed extension</a>.</p>
+</div>
+
+<p>See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">sign reference guide</a> to learn more.</p>
+
+<h3 id="Signing_extensions_without_an_explicit_ID">Signing extensions without an explicit ID</h3>
+
+<p><code>web-ext</code> supports signing extensions that do not declare the <a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications.gecko.id</a> property in their manifest. The first time you sign an extension without an explicit ID, <a href="https://addons.mozilla.org/">addons.mozilla.org</a> will generate an ID and <code>web-ext</code> will save it to <code>.web-extension-id</code> in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the <code>applications.gecko.id</code> property or use the <code>--id</code> option when signing, for example:</p>
+
+<pre class="brush: bash"><code>web-ext sign --api-key=... --api-secret=... --id="</code>{c23c69a7-f889-447c-9d6b-7694be8035bc}<code>"</code></pre>
+
+<h3 id="Signing_in_a_restricted_environment">Signing in a restricted environment</h3>
+
+<p>If you're working in an environment that restricts access to certain domains, you can try using a proxy when signing:</p>
+
+<pre class="brush: bash"><code>web-ext sign --api-key=... --api-secret=... --api-proxy=https://yourproxy:6000</code></pre>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#--api-proxy">--api-proxy</a> option to learn more.</p>
+
+<p>The following domains are used for signing and downloading files:</p>
+
+<ul>
+ <li><code>addons.mozilla.org</code></li>
+ <li><code>addons.cdn.mozilla.net</code></li>
+</ul>
+
+<h3 id="Signing_a_test_version_of_a_listed_extension">Signing a test version of a listed extension</h3>
+
+<p>If you've <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">listed</a> an extension on <a href="https://addons.mozilla.org">addons.mozilla.org</a>, use <code>web-ext</code> to create a signed but <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on#Self-distribution">unlisted</a> version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.</p>
+
+<p>First, change the version number in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> so that it is different from the latest listed version. Then, create the unlisted version by using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">--channel</a></code> option like this:</p>
+
+<pre class="brush: bash">web-ext sign --channel=unlisted --api-key=... --api-secret=...</pre>
+
+<p>This signs and downloads an XPI file that can be installed into Firefox.</p>
+
+<p>Once you've finished testing, <strong>to publish the extension you must define</strong> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">--channel</a></code><strong> as listed</strong>, as the channel option defaults to the one used previously. So, after incrementing the version in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, run:</p>
+
+<pre class="brush: bash">web-ext sign --channel=listed --api-key=... --api-secret=...</pre>
+
+<p>This publishes and submits your extension for review as if you had uploaded it to <a href="https://addons.mozilla.org">addons.mozilla.org</a>.</p>
+
+<div class="warning">
+<p>Setting <code>--channel=listed</code> for a new version of a listed extension is not well supported. It uploads your new version to <a class="external external-icon" href="https://addons.mozilla.org" rel="noopener">addons.mozilla.org</a> as if you'd <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">submitted it manually</a>. However, the command will fail and you'll have to check <a href="https://addons.mozilla.org/developers/addons">addons.mozilla.org/developers/addons</a> for the correct status.</p>
+</div>
+
+<p>See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">sign reference guide</a> to learn more.</p>
+
+<h3 id="Checking_for_code_lint">Checking for code "lint"</h3>
+
+<p>Before trying out your extension with the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run</a> command or submitting your package to <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a>, use the <code>lint</code> command to make sure your <a href="/en-US/Add-ons/WebExtensions/manifest.json">manifest</a> and other source files do not contain any errors. You can also set <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">strict_min_version</a> in your extension’s manifest file and lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:</p>
+
+<pre class="brush: bash">web-ext lint</pre>
+
+<p>This uses the <a href="https://github.com/mozilla/addons-linter">addons-linter</a> library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.</p>
+
+<p>See the <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_lint">lint reference guide</a> to learn more.</p>
+
+<h3 id="Setting_option_defaults_in_a_configuration_file">Setting option defaults in a configuration file</h3>
+
+<p>You can specify <code>--config=my-config.js</code> to set default values for any option. Here is an example with the <code>build</code> command:</p>
+
+<pre class="brush: bash">web-ext --config=my-config.js build</pre>
+
+<p>The file should be a CommonJS module <a href="https://nodejs.org/docs/latest/api/modules.html#modules_modules">as understood by NodeJS</a> and must export each configuration value. Here is how you would set the default value of <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#--verbose_-v">--verbose</a> to <code>true</code>:</p>
+
+<pre class="brush: javascript">module.exports = {
+  verbose: true,
+};</pre>
+
+<p>If you want to specify options that only apply to a specific command, you nest the configuration under the command name. Here is an example of adding configuration for <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#--overwrite-dest_-o">--overwrite-dest</a> that only applies to the <code>build</code> command as well as <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#--firefox_-f">--firefox</a> that only applies to the <code>run</code> command:</p>
+
+<pre class="brush: javascript">module.exports = {
+  // Global options:
+  verbose: true,
+  // Command options:
+  build: {
+    overwriteDest: true,
+  },
+  run: {
+    firefox: 'nightly',
+  },
+};</pre>
+
+<p>To create a configuration key for a command line option, you remove the preceding dashes and convert the name to camel case. As you can see from this example, <code>--overwrite-dest</code> was converted to <code>overwriteDest</code>.</p>
+
+<p>If an option can be specified multiple times on the command line then you define it as an array. For example, here is how to specify multiple <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#--ignore-files_-i">--ignore-files</a> patterns:</p>
+
+<pre class="brush: javascript">module.exports = {
+  ignoreFiles: [
+    'package-lock.json',
+    'yarn.lock',
+  ],
+};</pre>
+
+<p><code>web-ext</code> will also try to load its configuration options from a <code>"webExt"</code> property included in the <code>package.json</code> file in the current directory:</p>
+
+<pre>{
+  "name": "an-extension-src-dir-with-a-package-json",
+  "version": "1.0.0",
+  ...
+  "webExt": {
+    <span class="blob-code-inner blob-code-marker-addition"><span class="pl-s">"sourceDir": "dist/extension/"</span></span>
+  }
+}
+</pre>
+
+<h3 id="Automatic_discovery_of_configuration_files">Automatic discovery of configuration files</h3>
+
+<p><code>web-ext</code> will load existing configuration files in the following order:</p>
+
+<ul>
+ <li>A config file named <code>.web-ext-config.js</code> in your home directory, for example:
+
+  <ul>
+   <li>On Windows: <code>C:\Users\&lt;username&gt;\.web-ext-config.js</code></li>
+   <li>On macOS: <code>/Users/&lt;username&gt;/.web-ext-config.js</code></li>
+   <li>On Linux: <code>/home/&lt;username&gt;/.web-ext-config.js</code></li>
+  </ul>
+ </li>
+ <li>A config property named <code>"webExt"</code> included in a <code>package.json</code> file in the current directory.</li>
+ <li>A config file named <code>web-ext-config.js</code> in the current directory.</li>
+</ul>
+
+<p>If a home directory config and a local directory config define the same option, the value from the latter file will be used.</p>
+
+<p>To disable automatic loading of configuration files, set this option:</p>
+
+<pre class="brush: bash">web-ext --no-config-discovery run</pre>
+
+<p>To diagnose an issue related to config files, re-run your command with <code>--verbose</code>. This will tell you which config file affected which option value.</p>
+
+<h3 id="Specifying_different_source_and_destination_directories">Specifying different source and destination directories</h3>
+
+<p>The preceding commands use default directories for the extension source and artifact creation (for example, built <code>.zip</code> files). The defaults are:</p>
+
+<ul>
+ <li>Source: The directory you are in.</li>
+ <li>Artifacts: A directory called <code>./web-ext-artifacts</code>, created inside the current directory.</li>
+</ul>
+
+<p>You can specify different source and destination directories using the <code>--source-dir</code> and <code>--artifacts-dir</code> options when running your commands. Their values can be relative or absolute paths, but must always be specified as strings. Here is an example of specifying both options when building an extension:</p>
+
+<pre class="brush: bash"><code>web-ext build --source-dir=webextension-examples/notify-link-clicks-i18n --artifacts-dir=zips</code></pre>
+
+<h3 id="Outputting_verbose_messages">Outputting verbose messages</h3>
+
+<p>To see in detail what web-ext is doing when you run a command, include the <code>--verbose</code> option. For example:</p>
+
+<pre class="brush: bash"><code>web-ext build --verbose</code></pre>
+
+<h3 id="Viewing_all_commands_and_options">Viewing all commands and options</h3>
+
+<p>You can list all commands and options like this:</p>
+
+<pre class="brush: bash"><code>web-ext --help</code></pre>
+
+<p>You can list options for a specific command by adding it as an argument:</p>
+
+<pre class="brush: bash"><code>web-ext --help run</code></pre>
+
+<h3 id="Detecting_temporary_installation">Detecting temporary installation</h3>
+
+<p>Your extension can detect whether it was installed using <code>web-ext run</code>, rather than as a built and signed extension downloaded from <code>addons.mozilla.org</code>. Listen for the {{WebExtAPIRef("runtime.onInstalled")}} event and check the value of <code>details.temporary</code>.</p>
+
+<h3 id="Using_web-ext_from_a_script">Using web-ext from a script</h3>
+
+<p>You can use <code>web-ext</code> as a <code>NodeJS</code> module. Here is <a href="https://github.com/mozilla/web-ext#using-web-ext-in-nodejs-code">more information</a>, with example code.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a class="external external-icon" href="https://github.com/mozilla/web-ext">web-ext repo</a></li>
+ <li>
+  <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></p>
+ </li>
+</ul>

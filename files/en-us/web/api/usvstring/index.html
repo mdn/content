@@ -1,0 +1,39 @@
+---
+title: USVString
+slug: Web/API/USVString
+tags:
+  - API
+  - DOM
+  - Reference
+  - String
+  - WebIDL
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>USVString</code></strong> corresponds to the set of all possible sequences of unicode scalar values. <code>USVString</code> maps to a {{JSxRef("String")}} when returned in JavaScript; it's generally only used for APIs that perform text processing and need a string of unicode scalar values to operate on. <code>USVString</code> is equivalent to {{DOMxRef("DOMString")}} except for not allowing unpaired surrogate codepoints. Unpaired surrogate codepoints present in <code>USVString</code> are converted by the browser to Unicode 'replacement character' <code>U+FFFD</code>, (�).</p>
+
+<h2 id="Specification" name="Specification">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("WebIDL", "#idl-USVString", "USVString")}}</td>
+   <td>{{Spec2("WebIDL")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{JSxRef("String")}}</li>
+ <li>{{DOMxRef("DOMString")}}</li>
+ <li>{{DOMxRef("CSSOMString")}}</li>
+ <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
+</ul>

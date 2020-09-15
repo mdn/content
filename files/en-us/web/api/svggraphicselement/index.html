@@ -1,0 +1,66 @@
+---
+title: SVGGraphicsElement
+slug: Web/API/SVGGraphicsElement
+tags:
+  - API
+  - NeedsExample
+  - Reference
+  - SVG
+  - SVG OM
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p>The <strong><code>SVGGraphicsElement</code></strong> interface represents SVG elements whose primary purpose is to directly render graphics into a group.</p>
+
+<p>{{InheritanceDiagram(600, 120)}}</p>
+
+<div class="note">
+<p><strong>Note:</strong> This interface was introduced in SVG 2 and replaces the {{domxref("SVGLocatable")}} and {{domxref("SVGTransformable")}} interfaces from SVG 1.1.</p>
+</div>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>This interface also inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("SVGGraphicsElement.getBBox()")}}</dt>
+ <dd>Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.</dd>
+ <dt>{{domxref("SVGGraphicsElement.getCTM()")}}</dt>
+ <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.</dd>
+ <dt>{{domxref("SVGGraphicsElement.getScreenCTM()")}}</dt>
+ <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG2", "types.html#InterfaceSVGGraphicsElement", "SVGGraphicsElement")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.SVGGraphicsElement")}}</p>

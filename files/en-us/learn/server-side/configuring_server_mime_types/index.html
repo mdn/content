@@ -1,0 +1,116 @@
+---
+title: Properly configuring server MIME types
+slug: Learn/Server-side/Configuring_server_MIME_types
+tags:
+  - HTTP
+---
+<div class="blockIndicator warning">
+<p>This article may contain out of date information, as it has not been significantly updated in many years.</p>
+</div>
+
+<h2 id="Background" name="Background">Background</h2>
+
+<p>By default, many web servers are configured to report a MIME type of <code>text/plain</code> or <code>application/octet-stream</code> for unknown content types. As new content types are invented or added to web servers, web administrators may fail to add the new MIME types to their web server's configuration. This is a major source of problems for users of Gecko-based browsers, which respect the MIME types as reported by web servers and web applications.</p>
+
+<h3 id="What_are_MIME_types.3F" name="What_are_MIME_types.3F">What are MIME types?</h3>
+
+<p><abbr>MIME</abbr> types describe the media type of content either in email or served by web servers or web applications and are intended to help guide a web browser in how the content is to be processed and displayed. Examples of MIME types are:</p>
+
+<ul>
+ <li><code>text/html</code> for normal web pages</li>
+ <li><code>text/plain</code> for plain text</li>
+ <li><code>text/css</code> for Cascading Style Sheets</li>
+ <li><code>text/javascript</code> for scripts</li>
+ <li><code>application/octet-stream</code> meaning "download this file"</li>
+ <li><code>application/x-java-applet</code> for Java applets</li>
+ <li><code>application/pdf</code> for PDF documents</li>
+</ul>
+
+<h3 id="Technical_Background" name="Technical_Background">Technical Background</h3>
+
+<p>Registered values for MIME types are available in <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a>. The <a class="external" href="http://www.w3.org/Protocols/HTTP/1.1/spec.html">HTTP specification</a> defines a superset of MIME which is used to describe the media types used on the web.</p>
+
+<h3 id="Why_are_correct_MIME_types_important.3F" name="Why_are_correct_MIME_types_important.3F">Why are correct MIME types important?</h3>
+
+<p><img alt="Example of an incorrect MIME type result" class="internal" src="/@api/deki/files/729/=Incorrect-mime-screen.jpg" style="float: right;"> If the web server or application reports an incorrect MIME type for content, a web browser has no way, <em>according to the HTTP specification</em>, of knowing that the author actually intended the content to be processed and displayed in a way different from that implied by the reported MIME type.</p>
+
+<p>Some other web browsers, such as Microsoft<sup>®</sup> Internet Explorer, try to allow for misconfigured web servers and applications by <em><a class="external" href="http://support.microsoft.com/default.aspx?sd=msdn&amp;scid=kb;en-us;293336">guessing</a></em> what the correct MIME type should be. This has sheltered many web administrators from their own errors, since Internet Explorer will continue to process content as expected even though the web server is misconfigured, e.g. displays an image which is reported to be plain text.</p>
+
+<p>Serving content using the correct MIME type can also be important for security reasons; it's possible for malicious content to affect the user's computer by pretending to be a safe type of document when it is in fact not.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Historically, Firefox has loaded CSS files even if they had the wrong MIME type, as long as the HTML document that requested them was being processed in quirks mode. For security reasons, {{ gecko("2.0") }} will no longer do this for stylesheets loaded from a different origin than the requesting document. If your stylesheet comes from a different origin than the document, you <strong>must</strong> serve it with the correct MIME type (<code>text/css</code>).</p>
+
+<p>Gecko 1.9.1.11 (Firefox 3.5.11) and Gecko 1.9.2.5 (Firefox 3.6.5) also implement this security fix, but to improve compatibility, there was a <strong>temporary</strong> heuristic that allows the load if the first line in the style sheet appears to be a well-formed CSS construct; the heuristic has been removed in Firefox 4, and you have to properly set the <code>text/css</code> MIME types to have your CSS pages recognized.</p>
+</div>
+
+<h2 id="Why_browsers_should_not_guess_MIME_types" name="Why_browsers_should_not_guess_MIME_types">Why browsers should not guess MIME types</h2>
+
+<p>Apart from violating the HTTP specification, it is a bad strategy for browsers to guess MIME types for the following reasons:</p>
+
+<h4 id="Loss_of_control" name="Loss_of_control">Loss of control</h4>
+
+<p>If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.</p>
+
+<p>For example, a web site oriented for web developers might wish to send certain example HTML documents as either <code>text/html</code> or <code>text/plain</code> in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.</p>
+
+<h4 id="Security" name="Security">Security</h4>
+
+<p>Some content types, such as executable programs, are inherently unsafe. For this reason these MIME types are usually restricted in terms of what actions a web browser will take when given content of that type. An executable program should not be executed on the user's computer and at most should cause a dialog to appear <strong>asking the user</strong> if they wish to download the file.</p>
+
+<p>MIME type guessing has led to security exploits in Internet Explorer which were based upon a malicious author incorrectly reporting a MIME type of a dangerous file as a safe type. This bypassed the normal download dialog resulting in Internet Explorer guessing that the content was an executable program and then running it on the user's computer.</p>
+
+<h2 id="How_to_determine_the_MIME_type_sent_by_a_server">How to determine the MIME type sent by a server</h2>
+
+<p>In Firefox, load the file and use Tools | Page Info. You can also use <a class="external" href="http://www.rexswain.com/httpview.html">Rex Swain's HTTP Viewer</a> or <a class="external" href="http://livehttpheaders.mozdev.org/">Live HTTP Headers</a> to see the full headers and content of any file sent from a web server.</p>
+
+<p>According to the standards, a <code>meta</code> tag that gives the MIME type such as <code><span class="nowiki">&lt;meta http-equiv="Content-Type" content="text/html"&gt;</span></code> should be ignored if there's a {{HTTPHeader("Content-Type")}} line in the header. Instead of looking for this line in the HTML source, use the above techniques to determine the MIME type sent by the server.</p>
+
+<h2 id="How_to_determine_the_correct_MIME_type_for_your_content">How to determine the correct MIME type for your content</h2>
+
+<p>There are several steps which you can take to determine the correct MIME type value to be used for your content.</p>
+
+<ol>
+ <li>If your content was created using a vendor's software application, read the vendor's documentation to see what MIME types should be reported for different media types.</li>
+ <li>Look in the <a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types registry</a> which contains all registered MIME types.</li>
+ <li>If the media type is displayed using a plug-in in Netscape Gecko, install the plug-in and then look in the Help-&gt;About Plug-ins Menu to see what MIME types are associated with the media type.</li>
+ <li>Search for the file extension in <a class="external" href="http://filext.com/">FILExt</a> or <a class="external" href="http://www.file-extensions.org/">File extensions reference</a> to see what MIME types are associated with that extension.</li>
+</ol>
+
+<h2 id="How_to_set_up_your_server_to_send_the_correct_MIME_types">How to set up your server to send the correct MIME types</h2>
+
+<p>The fundamental idea is to configure your server to send the correct {{HTTPHeader("Content-Type")}} HTTP header for each document.</p>
+
+<ul>
+ <li>If you're using the Apache web server, simply copy this <a href="/en/Sample_.htaccess_file" title="en/Sample_.htaccess_file">sample .htaccess file</a> to the directory that contains the files that you want to send with the correct MIME types. If you have an entire subdirectory of files, just place the file in the parent directory; you need not place it in each subdirectory.</li>
+ <li>If you're using a server-side script to generate content, you can generally add one line near the top of your script. You can serve content other than HTML from Perl, PHP, ASP, or Java — just change the MIME type accordingly.
+  <ul>
+   <li>For Perl CGI, you should have the line <code>print "Content-Type: text/html\n\n";</code> before any other output lines. If you're using the CGI module, you can use the line <code>print $cgi-&gt;header('text/html');</code> instead, where <code>$cgi</code> is your reference to the CGI instance.</li>
+   <li>For PHP, you should have the line <code>header('Content-Type: text/html');</code> before any other output lines.</li>
+   <li>For ASP, you should have the line <code>response.ContentType = "text/html";</code> before any other output lines.</li>
+   <li>For a Java servlet, you should have the line <code>response.setContentType("text/html");</code> at the top of your <code>doGet</code> or <code>doPost</code> method, where <code>response</code> is a reference to the <code>HttpServletResponse</code>.</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Related_Links" name="Related_Links">Related Links</h3>
+
+<ul>
+ <li><a href="/en/Incorrect_MIME_Type_for_CSS_Files" title="en/Incorrect_MIME_Type_for_CSS_Files">Incorrect MIME Type for CSS Files</a></li>
+ <li><a class="external" href="http://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a></li>
+ <li><a class="external" href="http://www.w3.org/Protocols/HTTP/1.1/spec.html">Hypertext Transfer Protocol — HTTP/1.1</a></li>
+ <li><a class="external" href="http://support.microsoft.com/default.aspx?sd=msdn&amp;scid=kb;en-us;293336">Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/workshop/networking/moniker/overview/appendix_a.asp">Microsoft - Appendix A: MIME Type Detection in Internet Explorer</a></li>
+ <li><a class="external" href="http://www.microsoft.com/windows/ie/downloads/critical/q290108/">Microsoft - Security Update, March 29, 2001</a></li>
+ <li><a class="external" href="http://www.microsoft.com/windows/ie/downloads/critical/Q313675/">Microsoft - Security Update, December 13, 2001</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author: Bob Clary, date: 20 Feb 2003</li>
+</ul>
+</div>
+
+<div>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</div>

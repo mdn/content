@@ -1,0 +1,122 @@
+---
+title: in2
+slug: Web/SVG/Attribute/in2
+tags:
+  - Filters
+  - NeedsCompatTable
+  - NeedsExample
+  - SVG
+  - SVG Attribute
+---
+<div>{{SVGRef}}</div>
+
+<p>The <strong><code>in2</code></strong> attribute identifies the second input for the given filter primitive. It works exactly like the {{SVGAttr("in")}} attribute.</p>
+
+<p>Three elements use this attribute: {{SVGElement("feBlend")}}, {{SVGElement("feComposite")}} and {{SVGElement("feDisplacementMap")}}.</p>
+
+<h2 id="feBlend">feBlend</h2>
+
+<p>For {{SVGElement("feBlend")}}, <code>in2</code> defines the second input image to the blending operation.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>SourceGraphic</code> | <code>SourceAlpha</code> | <code>BackgroundImage</code> | <code>BackgroundAlpha</code> | <code>FillPaint</code> | <code>StrokePaint</code> | <code>&lt;filter-primitive-reference&gt;</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>SourceGraphic</code> for first filter primitive, otherwise result of previous filter primitive</td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="feComposite">feComposite</h2>
+
+<p>For {{SVGElement("feComposite")}}, <code>in2</code> defines the second input image to the compositing operation.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>SourceGraphic</code> | <code>SourceAlpha</code> | <code>BackgroundImage</code> | <code>BackgroundAlpha</code> | <code>FillPaint</code> | <code>StrokePaint</code> | <code>&lt;filter-primitive-reference&gt;</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>SourceGraphic</code> for first filter primitive, otherwise result of previous filter primitive</td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="feDisplacementMap">feDisplacementMap</h2>
+
+<p>For {{SVGElement("feDisplacementMap")}}, <code>in2</code> defines the second input image, which is used to displace the pixels in the image defined in the {{SVGAttr("in")}} attribute.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>SourceGraphic</code> | <code>SourceAlpha</code> | <code>BackgroundImage</code> | <code>BackgroundAlpha</code> | <code>FillPaint</code> | <code>StrokePaint</code> | <code>&lt;filter-primitive-reference&gt;</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>SourceGraphic</code> for first filter primitive, otherwise result of previous filter primitive</td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-in2", "in2 for &lt;feDisplacementMap&gt;")}}</td>
+   <td>{{Spec2("Filters 1.0")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("Filters 1.0", "#element-attrdef-fecomposite-in2", "in2 for &lt;feComposite&gt;")}}</td>
+   <td>{{Spec2("Filters 1.0")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("Filters 1.0", "#element-attrdef-feblend-in2", "in2 for &lt;feBlend&gt;")}}</td>
+   <td>{{Spec2("Filters 1.0")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "filters.html#feDisplacementMapIn2Attribute", "in2 for &lt;feDisplacementMap&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;feDisplacementMap&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "filters.html#feCompositeIn2Attribute", "in2 for &lt;feComposite&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;feComposite&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "filters.html#feBlendIn2Attribute", "in2 for &lt;feBlend&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;feBlend&gt;</code></td>
+  </tr>
+ </tbody>
+</table>

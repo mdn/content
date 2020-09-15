@@ -1,0 +1,48 @@
+---
+title: NDEFWriter
+slug: Web/API/NDEFWriter
+tags:
+  - NDEF
+  - Reference
+  - Web NFC
+---
+<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+
+<p class="summary"><span class="seoSummary">The <strong><code>NDEFWriter</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> is an abstract interface used to write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</span></p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+ <dt>{{DOMxRef("NDEFWriter.NDEFWriter", "NDEFWriter.NDEFWriter()")}} {{Experimental_Inline}}</dt>
+ <dd>Returns an <code>NDEFWriter</code>.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{DOMxRef("NDEFWriter.write", "NDEFWriter.write()")}} {{Experimental_Inline}}</dt>
+ <dd>Called to write NDEF message to a tag (after ensuring hardware and UA compatibility and obtaining permission from the user) or get an error explaining why feature is not available.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a href="https://w3c.github.io/web-nfc/#dom-ndefreader">Web NFC, NDEFReader</a></td>
+   <td>Draft</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.NDEFWriter")}}</p>

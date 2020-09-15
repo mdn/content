@@ -1,0 +1,88 @@
+---
+title: width
+slug: Web/CSS/@viewport/width
+tags:
+  - '@viewport'
+  - At-rule descriptor
+  - CSS
+  - CSS Descriptor
+  - Reference
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong>width</strong> CSS descriptor is shorthand for setting both the <a href="/en-US/docs/Web/CSS/@viewport/min-width"><code>min-width</code></a> and the <a href="/en-US/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a> descriptors of the viewport. By providing one viewport length value, that value will determine both the <code>min-width</code> and the <code>max-width</code> to the value provided.</p>
+
+<p>If two viewport values are provided the first value will be set to the <code>min-width</code> and the second value will be set <code>max-width</code>.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="brush: css notranslate">/* An example with one viewport value: */
+@viewport {
+    width: 320px;
+}
+
+/* An example with two viewport values: */
+@viewport {
+    width: 320px, 120px;
+}
+
+</pre>
+
+<h3 id="Values" name="Values">Values</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>The used value is calculated from the other CSS descriptors' values.</dd>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>A non-negative absolute or relative length.</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>A percentage value relative to the width or height of the <span class="css">initial viewport</span> at zoom factor 1.0, for horizontal and vertical lengths respectively. Must be non-negative.</dd>
+</dl>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Setting_minimum_and_maximum_width">Setting minimum and maximum width</h3>
+
+<pre class="brush: css notranslate">@viewport {
+  width: 500px;
+}</pre>
+
+<h2 id="Specifications" name="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Device', '#descdef-viewport-min-width', '"min-width" descriptor')}}</td>
+   <td>{{Spec2('CSS3 Device')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.at-rules.viewport.width")}}</p>
+
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/CSS/@viewport">@viewport</a></code></li>
+</ul>

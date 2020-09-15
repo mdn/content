@@ -1,0 +1,76 @@
+---
+title: Date.prototype.setUTCFullYear()
+slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>setUTCFullYear()</code></strong> method sets the full year for a specified date according to universal time.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.setUTCFullYear(<var>yearValue</var>[, <var>monthValue</var>[, <var>dayValue</var>]])</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>yearValue</code></dt>
+ <dd>An integer specifying the numeric value of the year, for example, 1995.</dd>
+ <dt><code>monthValue</code></dt>
+ <dd>Optional. An integer between 0 and 11 representing the months January through December.</dd>
+ <dt><code>dayValue</code></dt>
+ <dd>Optional. An integer between 1 and 31 representing the day of the month. If you specify the <code>dayValue</code> parameter, you must also specify the <code>monthValue</code>.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>If you do not specify the <code>monthValue</code> and <code>dayValue</code> parameters, the values returned from the {{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} and {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} methods are used.</p>
+
+<p>If a parameter you specify is outside of the expected range, <code>setUTCFullYear()</code> attempts to update the other parameters and the date information in the {{jsxref("Date")}} object accordingly. For example, if you specify 15 for <code>monthValue</code>, the year is incremented by 1 (<code>yearValue + 1</code>), and 3 is used for the month.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_setUTCFullYear">Using <code>setUTCFullYear()</code></h3>
+
+<pre class="brush: js">var theBigDay = new Date();
+theBigDay.setUTCFullYear(1997);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.setUTCFullYear")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
+</ul>

@@ -1,0 +1,64 @@
+---
+title: MerchantValidationEvent.methodName
+slug: Web/API/MerchantValidationEvent/methodName
+tags:
+  - API
+  - Commerce
+  - Identifier
+  - Merchant
+  - MerchantValidationEvent
+  - NeedsExample
+  - Payment Method
+  - Payment Method Identifier
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - Validation
+  - methodName
+  - payment
+---
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+
+<p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} property <code><strong>methodName</strong></code> is a read-only value which returns a string indicating the payment method identifier which represents the payment handler that requires merchant validation.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>methodID</em> = <em>merchantValidationEvent</em>.methodName;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler which is requesting merchant validation. See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for more information on the process.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Payment','#dom-merchantvalidationeventinit-methodname','MerchantValidationEvent.methodName')}}</td>
+   <td>{{Spec2('Payment')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.MerchantValidationEvent.methodName")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
+ <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
+ <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</a></li>
+</ul>

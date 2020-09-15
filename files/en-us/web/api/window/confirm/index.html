@@ -1,0 +1,70 @@
+---
+title: Window.confirm()
+slug: Web/API/Window/confirm
+tags:
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - Window
+  - confirm
+---
+<div>{{ApiRef("Window")}}</div>
+
+<p><span class="seoSummary">The <code><strong>Window.confirm()</strong></code> method displays a modal dialog with an optional message and two buttons: OK and Cancel.</span></p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre><em>result</em> = window.confirm(<em>message</em>);
+</pre>
+
+<ul>
+ <li><code>message</code> is an optional string to display in the dialog.</li>
+ <li><code>result</code> is a boolean indicating whether OK (<code>true</code>) or Cancel (<code>false</code>) was selected. If a browser is ignoring in-page dialogs, then <code>result</code> is always <code>false</code>.</li>
+</ul>
+
+<h2 id="Example" name="Example">Example</h2>
+
+<pre>if (window.confirm("Do you really want to leave?")) {
+  window.open("exit.html", "Thanks for Visiting!");
+}
+</pre>
+
+<p>Produces:</p>
+
+<p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
+  </p>
+
+<h2 id="Notes" name="Notes">Notes</h2>
+
+<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box (or modal window). Regardless, there are good reasons to <a href="http://alistapart.com/article/neveruseawarning">avoid using dialog boxes for confirmation</a>.</p>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Window.confirm")}}</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("window.alert","alert")}}</li>
+ <li>{{domxref("window.prompt","prompt")}}</li>
+</ul>

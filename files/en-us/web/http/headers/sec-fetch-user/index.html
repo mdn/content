@@ -1,0 +1,80 @@
+---
+title: Sec-Fetch-User
+slug: Web/HTTP/Headers/Sec-Fetch-User
+tags:
+  - Fetch metadate request headers
+  - HTTP
+  - HTTP Headers
+---
+<p>{{HTTPSidebar}}{{Draft}}</p>
+
+<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header indicates whether or not a navigation request was triggered by a user activation.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>yes, since it has prefix <code>Sec-</code></td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Sec-Fetch-User: ?0
+Sec-Fetch-User: ?1
+</pre>
+
+<h2 id="Values">Values</h2>
+
+<p>The value is a Boolean Structured Header.</p>
+
+<dl>
+ <dt><code>?0</code></dt>
+ <dd>The navigation request was triggered by a user activation.</dd>
+ <dt><code>?1</code></dt>
+ <dd>The navigation request was triggered by something other than a user activation.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>TODO</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-user-header">Fetch Metadata Request Headers</a></td>
+   <td>The Sec-Fetch-User HTTP Request Header</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("http.headers.Sec-Fetch-User")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
+ <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
+ <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
+</ul>

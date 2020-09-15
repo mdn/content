@@ -1,0 +1,91 @@
+---
+title: VRFrameData.timestamp
+slug: Web/API/VRFrameData/timestamp
+tags:
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - VRFrameData
+  - Virtual Reality
+  - WebVR
+  - timeStamp
+---
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+
+<p>The <strong><code>timestamp</code></strong> read-only property of the {{domxref("VRFrameData")}} interface returns a constantly increasing timestamp value representing the time a frame update occurred.</p>
+
+<p>Timestamps are useful for determining if position state data has been updated from the hardware. Since values are monotonically increasing, they can be compared to determine the ordering of updates — newer values will always be greater than or equal to older values.</p>
+
+<p>The timestamp starts at 0 the first time {{domxref("VRDisplay.getFrameData()")}} is invoked for a given {{domxref("VRDisplay")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">var myTimestamp = vrFrameDataInstance.timestamp;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("DOMHighResTimeStamp")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> frameData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">VRFrameData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> vrDisplay<span class="punctuation token">;</span>
+
+navigator<span class="punctuation token">.</span><span class="function token">getVRDisplays</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>displays<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  vrDisplay <span class="operator token">=</span> displays<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Display found'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="comment token">// Starting the presentation when the button is clicked: It can only be called in response to a user gesture</span>
+  btn<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    vrDisplay<span class="punctuation token">.</span><span class="function token">requestPresent</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="punctuation token">{</span> source<span class="punctuation token">:</span> canvas <span class="punctuation token">}</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      <span class="function token">drawVRScene</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="comment token">// WebVR: Draw the scene for the WebVR display.</span>
+<span class="keyword token">function</span> <span class="function token">drawVRScene</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="comment token">// WebVR: Request the next frame of the animation</span>
+  vrSceneFrame <span class="operator token">=</span> vrDisplay<span class="punctuation token">.</span><span class="function token">requestAnimationFrame</span><span class="punctuation token">(</span>drawVRScene<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+  <span class="comment token">// Populate frameData with the data of the next frame to display</span>
+  vrDisplay<span class="punctuation token">.</span><span class="function token">getFrameData</span><span class="punctuation token">(</span>frameData<span class="punctuation token">)</span><span class="punctuation token">;
+
+  // grab the current timestamp on each run of the rendering loop
+  // and do something with it
+  framedata.timestamp</span>
+
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+
+  <span class="comment token">// WebVR: Indicates that we are ready to present the rendered frame to the VR display</span>
+  vrDisplay<span class="punctuation token">.</span><span class="function token">submitFrame</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR 1.1', '#dom-vrframedata-timestamp', 'timestamp')}}</td>
+   <td>{{Spec2('WebVR 1.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.VRFrameData.timestamp")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
+</ul>

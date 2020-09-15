@@ -1,0 +1,33 @@
+---
+title: GlobalEventHandlers.onmousewheel
+slug: Web/API/GlobalEventHandlers/onmousewheel
+---
+<p>{{ ApiRef("HTML DOM") }} {{ Non-standard_header() }}</p>
+
+<p>The <strong>onmousewheel</strong> property sets and returns the <a href="/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">event handler</a> for the {{event("mousewheel")}} event.</p>
+
+<div class="note">
+<p><strong>Do not use this wheel event.</strong> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard {{event("wheel")}} event.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em><var>element</var></em>.onmousewheel = <em>handlerFunction</em>;
+var <em>handlerFunction</em> = <em><var>element</var></em>.onmousewheel;
+</pre>
+
+<p><code><em>handlerFunction</em></code> should be either <code>null</code> or a <a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">JavaScript function</a> specifying the handler for the event.</p>
+
+<h2 id="Notes" name="Notes">Notes</h2>
+
+<p>See the <a href="/en-US/docs/Web/Guide/Events/Event_handlers" title="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">DOM event handlers</a> page for information on working with <code>on...</code> handlers.</p>
+
+<p>The <code>mousewheel</code> event is fired asynchronously when a mouse wheel or similar device is operated. It's represented by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseWheelEvent" title="The MouseWheelEvent interface represents events that occur due to the user turning a mouse wheel."><code>MouseWheelEvent</code></a> interface.</p>
+
+<p>See the {{event("mousewheel")}} event documentation for more information about the event.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.GlobalEventHandlers.onmousewheel")}}</p>

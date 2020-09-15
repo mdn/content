@@ -1,0 +1,74 @@
+---
+title: LocalLibrary base template
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
+tags:
+  - Express
+  - Node
+  - displaying data
+  - part 5
+  - server-side
+---
+<p>Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.</p>
+
+<p>Open<strong> /views/layout.pug</strong> and replace the content with the code below.</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='container-fluid')
+      div(class='row')
+        div(class='col-sm-2')
+          block sidebar
+            ul(class='sidebar-nav')
+              li
+                a(href='/catalog') Home
+              li
+                a(href='/catalog/books') All books
+              li
+                a(href='/catalog/authors') All authors
+              li
+                a(href='/catalog/genres') All genres
+              li
+                a(href='/catalog/bookinstances') All book-instances
+              li
+                hr
+              li
+                a(href='/catalog/author/create') Create new author
+              li
+                a(href='/catalog/genre/create') Create new genre
+              li
+                a(href='/catalog/book/create') Create new book
+              li
+                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+
+        div(class='col-sm-10')
+          block content</code></pre>
+
+<p>The template uses (and includes) JavaScript and CSS from <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!</p>
+
+<p>The layout should be fairly obvious if you've read our above <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">Template primer</a>. Note the use of <code>block content</code> as a placeholder for where the content for our individual pages will be placed.</p>
+
+<p>The base template also references a local css file (<strong>style.css</strong>) that provides a little additional styling. Open <strong>/public/stylesheets/style.css</strong> and replace its content with the following CSS code:</p>
+
+<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css"><span class="selector token"><span class="class token">.sidebar-nav</span> </span><span class="punctuation token">{</span>
+    <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>
+    <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
+    <span class="property token">list-style</span><span class="punctuation token">:</span> none<span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<p>When we get round to running our site, we should see the sidebar appear! In the next sections we will use the above layout to define the individual pages.</p>
+
+<h2 id="Next_steps">Next steps</h2>
+
+<ul>
+ <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Home page</a>.</li>
+</ul>

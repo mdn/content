@@ -1,0 +1,70 @@
+---
+title: CSSKeyframesRule
+slug: Web/API/CSSKeyframesRule
+tags:
+  - API
+  - CSS Animations
+  - CSSOM
+  - Experimental
+  - Interface
+  - Reference
+---
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+
+<p>The <strong><code>CSSKeyframesRule</code></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} <a href="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSRule")}} interface with a type value of <code>7</code> (<code>CSSRule.KEYFRAMES_RULE</code>).</p>
+
+<h2 id="Properties">Properties</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSKeyframesRule</code> also implements the properties of these interfaces. It has two properties :</p>
+
+<dl>
+ <dt>{{domxref("CSSKeyframesRule.name")}}</dt>
+ <dd>Represents the name of the animation, used by the {{cssxref("animation-name")}} property.</dd>
+ <dt id="cssRules">{{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}</dt>
+ <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSKeyframesRule</code> also implements the methods of that interface. It has three specific methods:</p>
+
+<dl>
+ <dt id="appendRule">{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
+ <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
+ <dt id="deleteRule">{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
+ <dd>Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between <code>0%</code> and <code>100%</code>.</dd>
+ <dt>{{domxref("CSSKeyframesRule.findRule()")}}</dt>
+ <dd>Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between <code>0%</code> and <code>100%</code>. If no such keyframe exists, <code>findRule</code> returns <code>null</code>.</dd>
+</dl>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#interface-csskeyframesrule', 'CSSKeyframesRule')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSKeyframesRule")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("@keyframes")}}</li>
+ <li>{{domxref("CSSKeyFrameRule")}}</li>
+</ul>

@@ -1,0 +1,112 @@
+---
+title: MediaSession.setActionHandler()
+slug: Web/API/MediaSession/setActionHandler
+tags:
+  - API
+  - Audio
+  - Media
+  - Media Session API
+  - MediaSession
+  - Method
+  - Reference
+  - UX
+  - Video
+  - setActionHandler
+---
+<p>{{APIRef("Media Session API")}}</p>
+
+<p>The <strong><code>setActionHandler()</code></strong> property of the {{domxref("MediaSession")}} interface sets an event handler for a media session action. These actions let a web app receive notifications when the user engages a device's built-in physical or onscreen media controls, such as play, stop, or seek buttons.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>type</code></dt>
+ <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one of <code>{{anch("play")}}</code>, <code>{{anch("pause")}}</code>, <code>{{anch("seekbackward")}}</code>, <code>{{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>, or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be found below under {{anch("Media session actions")}}.</dd>
+ <dt><code>callback</code></dt>
+ <dd>A function to call when the specified action type is invoked. The callback receives no input parameters, and should not return a value.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p><code>undefined</code>.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>To remove a previously-established action handler, call <code>setActionHandler()</code> again, specifying <code>null</code> as the <code>callback</code>.</p>
+
+<p>The action handler receives as input a single parameter: an object conforming to the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.</p>
+
+<h2 id="Media_session_actions">Media session actions</h2>
+
+<p>{{page("/en-US/docs/Web/API/MediaSessionAction", "Syntax")}}</p>
+
+<dl>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example creates a new media session and assigns action handlers (which don't do anything) to it.</p>
+
+<pre class="brush: js notranslate">if ('mediaSession' in navigator){
+ navigator.mediaSession.metadata = new MediaMetadata({
+    title: "Podcast Episode Title",
+    artist: "Podcast Host",
+    album: "Podcast Name",
+    artwork: [{src: "podcast.jpg"}]
+  });
+ navigator.mediaSession.setActionHandler('play', function() {});
+ navigator.mediaSession.setActionHandler('pause', function() {});
+ navigator.mediaSession.setActionHandler('seekbackward', function() {});
+ navigator.mediaSession.setActionHandler('seekforward', function() {});
+ navigator.mediaSession.setActionHandler('previoustrack', function() {});
+ navigator.mediaSession.setActionHandler('nexttrack', function() {});
+}
+</pre>
+
+<p>This example uses appropriate action handlers to allow seeking in either direction through the playing media.</p>
+
+<pre class="brush: js notranslate">let skipTime = 10; // Time to skip in seconds
+
+navigator.mediaSession.setActionHandler('seekbackward', evt =&gt; {
+ // User clicked "Seek Backward" media notification icon.
+ audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+});
+
+navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
+ // User clicked "Seek Forward" media notification icon.
+ audio.currentTime = Math.min(audio.currentTime + skipTime,
+               audio.duration);
+});</pre>
+
+<p>To remove a media action handler, assign it to null.</p>
+
+<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Session','#dom-mediasession-setactionhandler','MediaSession.setActionHandler()')}}</td>
+   <td>{{Spec2('Media Session')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.MediaSession.setActionHandler")}}</p>
+</div>

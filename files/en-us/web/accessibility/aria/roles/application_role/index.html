@@ -1,0 +1,111 @@
+---
+title: 'ARIA: application role'
+slug: Web/Accessibility/ARIA/Roles/Application_Role
+tags:
+  - ARIA
+  - ARIA Role
+  - ARIA widget
+  - Reference
+  - Role application
+---
+<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
+
+<p><span class="seoSummary">The <code>application</code> role indicates to assistive technologies that an element <em>and all of its children</em> should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications.</span></p>
+
+<pre class="brush: html">&lt;div role="application"&gt;...&lt;/div&gt;
+</pre>
+
+<p>This defines this <code>div</code> element and all of its descendants to be treated like they are part of a desktop application.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>The <code>application</code> role indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.</p>
+
+<p>In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.</p>
+
+<p>If the web application encompassed by the application role contains parts that <em>should</em> be treated like normal web content, a role of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code> should be used.</p>
+
+<h3 id="Background">Background</h3>
+
+<p>For historic reasons, especially on Windows, screen readers and some other assistive technologies (AT) have traditionally grabbed the whole web content from the browser at once after it had finished loading. The ATs build their own representation of it that makes the most sense for a blind user to consume the content. This is often referred to as <em>virtual document</em>, <em>browse mode</em>, or similar terms. The document is streamlined to a single-column view. A keyboard interaction model is generated that is very similar to a word processor where users can read line by line, sentence by sentence, or paragraph by paragraph. The AT will read any semantics like links, headings, form controls, tables, lists, or images.</p>
+
+<p>In addition, a set of so-called <em>quick navigation keys</em> has been established over the years that allows blind users to skim through a page via a certain element type. Such elements usually include headings, form fields, lists, tables, links, graphics, or landmark regions.</p>
+
+<p>For all of this to work, ATs intercept almost all keyboard input and consume it themselves, letting nothing through to the browser or other user agent. To be able to interact with a web page, a standard set of widgets is recognized that, when pressing a certain key (usually the <kbd>Enter</kbd> key) this mode is switched off. The screen reader mode, often called <em>forms mode</em> or <em>focus mode</em>, lets all keyboard input go through to the browser again. <kbd>Escape</kbd> is the most common way of switching back to <em>browse</em> mode.</p>
+
+<p>The <code>application</code> role is designed to provide a means for widgets that are not part of the standard set to be accessible for direct interaction in ATs that use both <em>browse</em> and <em>focus</em> modes for interacting with web content.</p>
+
+<h3 id="Associated_WAI-ARIA_roles_states_and_properties">Associated WAI-ARIA roles, states, and properties</h3>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code></dt>
+ <dd>Used to indicate parts of the application that should be treated as normal web content</dd>
+ <dt>aria-activedescendant</dt>
+ <dd>Used to manage focus inside the application.</dd>
+ <dt>aria-label</dt>
+ <dd>Used to provide the name of the application or purpose of the widget that is being exposed.</dd>
+ <dt>aria-describedby</dt>
+ <dd>Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.</dd>
+ <dt>aria-roledescription</dt>
+ <dd>Used to give the application a more descriptive role text for screen readers to speak. This should be localized.</dd>
+</dl>
+
+<h3 id="Keyboard_interactions">Keyboard interactions</h3>
+
+<p>Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via <em>aria-activedescendant</em>.</p>
+
+<p>The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd> , must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an <a href="/en-US/docs/Web/HTML/Element/input">input</a> element.</p>
+
+<h3 id="Required_JavaScript_features">Required JavaScript features</h3>
+
+<dl>
+ <dt>keyPress</dt>
+ <dd>Used to handle keyboard input and control the focus</dd>
+ <dt>Click, Touch</dt>
+ <dd>Handle as appropriate for your widget as well</dd>
+ <dt>Changing attribute values</dt>
+ <dd><code>aria-activedescendant</code> is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.</dd>
+</dl>
+
+<div class="note">
+<p>The <code>application</code> role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus limbo or trap focus inside something the user cannot exit of. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously!</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Some prominent web applications that use the application role properly are:</p>
+
+<ul>
+ <li>Google Docs, Sheets and Slides</li>
+ <li>CKEditor and TinyMCE WYSIWYG web editors, like the one used on the Mozilla Developer Network</li>
+ <li>Some parts of Gmail</li>
+</ul>
+
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+<p>Improperly using the <code>application</code> role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task. If used, the application role should be added to the lowest common container possible, not on the <code>&lt;body&gt;</code> element, for example.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("ARIA","#application","application")}}</td>
+   <td>{{Spec2('ARIA')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Precedence_order">Precedence order</h2>
+
+<p>Applying the <code>application</code> role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.</p>
+
+<p>See also</p>
+
+<ul>
+ <li><a href="https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/">If you use the WAI-ARIA role "application", please do so wisely</a> - blog post by Marco Zehe</li>
+</ul>

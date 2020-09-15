@@ -1,0 +1,120 @@
+---
+title: forced-colors
+slug: Web/CSS/@media/forced-colors
+tags:
+  - CSS
+  - Reference
+  - color
+  - forced-colors
+  - media feature
+---
+<div>{{CSSRef}}</div>
+
+<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page.</span></p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> This feature is not supported by any user agent and its specifics are subject to change.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<p>The <code>forced-colors</code> media feature indicates whether or not the browser is currently in forced-colors mode.</p>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code><dfn>none</dfn></code></dt>
+ <dd>Forced colors mode is not active; the page’s colors are not being forced into a limited palette.</dd>
+ <dt><code>active</code></dt>
+ <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#System_Colors">CSS system color</a> keywords and, if appropriate, it triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page.</dd>
+</dl>
+
+<h2 id="Usage_notes">Usage notes</h2>
+
+<h3 id="Properties_affected_by_forced-color_mode">Properties affected by forced-color mode</h3>
+
+<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, user-specified values (if any) or browser-specified values are used instead.</p>
+
+<ul>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("fill")}}</li>
+ <li>{{cssxref("stroke")}}</li>
+ <li>{{cssxref("text-decoration-color")}}</li>
+ <li>{{cssxref("text-emphasis-color")}}</li>
+ <li>{{cssxref("border-color")}}</li>
+ <li>{{cssxref("outline-color")}}</li>
+ <li>{{cssxref("column-rule-color")}}</li>
+ <li>{{cssxref("scrollbar-color")}}</li>
+ <li>{{cssxref("-webkit-tap-highlight-color")}}</li>
+ <li>{{cssxref("box-shadow")}}</li>
+ <li>{{cssxref("text-shadow")}}</li>
+</ul>
+
+<p>You can use <a href="/en-US/docs/web/css/color_value#System_Colors">system color keywords</a> with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
+
+<h3 id="User_preferences">User preferences</h3>
+
+<p>Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system in use.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> No browser currently implements this feature so the following example will not work.</p>
+</div>
+
+<p>This example has an annoying color palette by default. This example does not take advantage of the colors provided by the user agent.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;div class="colors"&gt;weird color box&lt;/div&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css notranslate">.colors {
+  background-color: red;
+  color: grey;
+}
+
+@media (forced-colors: active) {
+  .colors {
+    background-color: white;
+    color: black;
+  }
+}
+</pre>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample("Examples")}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS5 Media Queries', '#forced-colors', 'forced-colors')}}</td>
+   <td>{{Spec2('CSS5 Media Queries')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+</div>
+
+<p>{{Compat("css.at-rules.media.forced-colors")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<p>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</p>

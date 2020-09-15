@@ -1,0 +1,45 @@
+---
+title: webRequest.Streamfilter.error
+slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Reference
+  - StreamFilter.error
+  - WebExtensions
+  - webRequest
+---
+<div>{{AddonSidebar()}}</div>
+
+<div>
+<p>A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.</p>
+</div>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.webRequest.StreamFilter.error", 10)}}</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">listener</span><span class="punctuation token">(</span>details<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">let</span> filter <span class="operator token">=</span> browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span><span class="function token">filterResponseData</span><span class="punctuation token">(</span><span class="string token">"12345"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+  filter<span class="punctuation token">.</span>onerror <span class="operator token">=</span> event <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Error: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>filter<span class="punctuation token">.</span>error<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span>
+
+  <span class="keyword token">//return</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">; // not needed</span>
+<span class="punctuation token">}</span>
+
+browser<span class="punctuation token">.</span>webRequest<span class="punctuation token">.</span>onBeforeRequest<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>
+  listener<span class="punctuation token">,</span>
+  <span class="punctuation token">{</span>urls<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"&lt;all_urls&gt;"</span><span class="punctuation token">]</span><span class="punctuation token">,</span> types<span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="string token">"main_frame"</span><span class="punctuation token">]</span><span class="punctuation token">}</span><span class="punctuation token">,</span>
+  <span class="punctuation token">[</span><span class="string token">"blocking"</span><span class="punctuation token">]</span>
+<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>{{WebExtExamples}}</p>

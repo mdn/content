@@ -1,0 +1,75 @@
+---
+title: ByteLengthQueuingStrategy
+slug: Web/API/ByteLengthQueuingStrategy
+tags:
+  - API
+  - ByteLengthQueuingStrategy
+  - Experimental
+  - Interface
+  - Reference
+  - Streams
+---
+<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+
+<p>The <strong><code>ByteLengthQueuingStrategy</code></strong> interface of the the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> provides a built-in byte length queuing strategy that can be used when constructing streams.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+ <dt>{{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}</dt>
+ <dd>Creates a new <code>ByteLengthQueuingStrategy</code> object instance.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p>None.</p>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{domxref("ByteLengthQueuingStrategy.size()")}}</dt>
+ <dd>Returns the given chunk’s <code>byteLength</code> property.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queueingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> ByteLength<span class="class-name token">QueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> Readable<span class="class-name token">Stream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  pull<span class="punctuation token">(controller</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  <span class="function token">cancel</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"stream error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span>
+<span class="punctuation token">}</span><span class="punctuation token">,</span> queueingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> size <span class="operator token">=</span> queueingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span><span class="punctuation token">chunk)</span></code>;</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Streams','#blqs-class','ByteLengthQueuingStrategy')}}</td>
+   <td>{{Spec2('Streams')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.ByteLengthQueuingStrategy")}}</p>
+</div>

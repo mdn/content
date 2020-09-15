@@ -1,0 +1,70 @@
+---
+title: MediaRecorderErrorEvent
+slug: Web/API/MediaRecorderErrorEvent
+tags:
+  - AV
+  - Audio
+  - Error
+  - Event
+  - Interface
+  - Media
+  - MediaRecorderErrorEvent
+  - MediaStream
+  - MediaStream Recording
+  - MediaStream Recording API
+  - Recording Audio
+  - Recording Media
+  - Recording Video
+  - Video
+  - WebRTC
+---
+<div>{{APIRef("MediaStream Recording")}}</div>
+
+<p><span class="seoSummary">The <code>MediaRecorderErrorEvent</code> interface represents errors returned by the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API.</a> It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.</span></p>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>Inherits properties from its parent interface, {{domxref("Event")}}</em>.</p>
+
+<dl>
+ <dt>{{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}</dt>
+ <dd>A {{domxref("DOMException")}} containing information about the error that occurred. Read only.</dd>
+</dl>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+ <dt>{{domxref("MediaRecorderErrorEvent.MediaRecorderErrorEvent", "MediaStreamRecorderEvent()")}}</dt>
+ <dd>Creates and returns a new <code>MediaRecorderErrorEvent</code> event object with the given parameters.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>Inherits methods from its parent interface, {{domxref("Event")}}</em>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('MediaStream Recording', '#errorevent-section', 'MediaRecorderErrorEvent') }}</td>
+   <td>{{ Spec2('MediaStream Recording') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+</div>
+
+<p>{{Compat("api.MediaRecorderErrorEvent")}}</p>

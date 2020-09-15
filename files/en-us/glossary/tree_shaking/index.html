@@ -1,0 +1,31 @@
+---
+title: Tree shaking
+slug: Glossary/Tree_shaking
+tags:
+  - JavaScript
+  - Modules
+  - Statement
+  - Web Performance
+  - export
+  - import
+  - tree shaking
+---
+<p><strong>Tree shaking</strong> is a term commonly used within a JavaScript context to describe the removal of dead code.</p>
+
+<p>It relies on the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a> statements in ES2015 to detect if code modules are exported and imported for use between JavaScript files. </p>
+
+<p>In modern JavaScript applications, we use module bundlers (e.g., <a href="https://webpack.js.org/">webpack</a> or <a href="https://github.com/rollup/rollup">Rollup</a>) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size. </p>
+
+<h2 id="Learn_more">Learn more</h2>
+
+<h4 id="General_knowledge">General knowledge</h4>
+
+<ul>
+ <li><a href="http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling">"Benefits of dead code elimination during bundling"</a> in Axel Rauschmayer's book: "Exploring JS: Modules"</li>
+</ul>
+
+<h4 id="Technical_reference">Technical reference</h4>
+
+<ul>
+ <li><a href="https://webpack.js.org/guides/tree-shaking/">Tree shaking implementation with webpack</a></li>
+</ul>

@@ -1,0 +1,102 @@
+---
+title: exponent
+slug: Web/SVG/Attribute/exponent
+tags:
+  - NeedsCompatTable
+  - SVG
+  - SVG Attribute
+---
+<div>{{SVGRef}}</div>
+
+<p>The <code><strong>exponent</strong></code> attribute defines the exponent of the gamma function.</p>
+
+<p>Four elements are using this attribute: {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncR")}}</p>
+
+<div id="topExample">
+<div class="hidden">
+<pre class="brush: css">html, body, svg {
+  height: 100%;
+}</pre>
+</div>
+
+<pre class="brush: html; highlight[13-15,20-22]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="gradient" gradientUnits="userSpaceOnUse"
+        x1="0" y1="0" x2="200" y2="0"&gt;
+      &lt;stop offset="0" stop-color="#ff0000" /&gt;
+      &lt;stop offset="0.5" stop-color="#00ff00" /&gt;
+      &lt;stop offset="1" stop-color="#0000ff" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;filter id="componentTransfer1" x="0" y="0" width="100%" height="100%"&gt;
+    &lt;feComponentTransfer&gt;
+      &lt;feFuncR type="gamma" exponent="1"/&gt;
+      &lt;feFuncG type="gamma" exponent="1"/&gt;
+      &lt;feFuncB type="gamma" exponent="1"/&gt;
+    &lt;/feComponentTransfer&gt;
+  &lt;/filter&gt;
+  &lt;filter id="componentTransfer2" x="0" y="0" width="100%" height="100%"&gt;
+    &lt;feComponentTransfer&gt;
+      &lt;feFuncR type="gamma" exponent="5"/&gt;
+      &lt;feFuncG type="gamma" exponent="5"/&gt;
+      &lt;feFuncB type="gamma" exponent="5"/&gt;
+    &lt;/feComponentTransfer&gt;
+  &lt;/filter&gt;
+
+  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer1);" /&gt;
+  &lt;rect x="0" y="0" width="200" height="200" fill="url(#gradient)"
+      style="filter: url(#componentTransfer2); transform: translateX(220px);" /&gt;
+&lt;/svg&gt;</pre>
+
+<p>{{EmbedLiveSample("topExample", "480", "200")}}</p>
+</div>
+
+<h2 id="Usage_notes">Usage notes</h2>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td>{{cssxref("number")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>1</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<dl>
+ <dt><code>&lt;number&gt;</code></dt>
+ <dd>If the {{SVGAttr("type")}} attribute of the component element is set to <code>gamma</code>, this value specifies the exponent of the gamma function</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Filters 1.0", "#element-attrdef-fecomponenttransfer-exponent", "exponent")}}</td>
+   <td>{{Spec2("Filters 1.0")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "filters.html#feComponentTransferExponentAttribute", "exponent")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>

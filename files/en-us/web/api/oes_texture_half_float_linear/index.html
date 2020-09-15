@@ -1,0 +1,70 @@
+---
+title: OES_texture_half_float_linear
+slug: Web/API/OES_texture_half_float_linear
+tags:
+  - API
+  - Reference
+  - WebGL
+  - WebGL extension
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p>The <code><strong>OES_texture_half_float_linear</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows linear filtering with half floating-point pixel types for textures.</p>
+
+<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+
+<div class="note">
+<p><strong>Availability:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
+</div>
+
+<h2 id="Linear_filtering">Linear filtering</h2>
+
+<p>The {{domxref("OES_texture_half_float")}} extension alone does not allow linear filtering with half floating-point textures. This extension enables this ability.</p>
+
+<p>With the help of this extension, you can now set the magnification or minification filter in the {{domxref("WebGLRenderingContext.texParameter()")}} method to one of <code>gl.LINEAR</code>, <code>gl.LINEAR_MIPMAP_NEAREST</code>, <code>gl.NEAREST_MIPMAP_LINEAR</code>, or <code>gl.LINEAR_MIPMAP_LINEAR</code>, and use half floating-point textures.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush:js">var halfFloat = gl.getExtension('OES_texture_half_float');
+gl.getExtension('OES_texture_half_float_linear');
+
+var texture = gl.createTexture();
+gl.bindTexture(gl.TEXTURE_2D, texture);
+
+gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, halfFloat.HALF_FLOAT_OES, image);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('OES_texture_half_float_linear', "", "OES_texture_half_float_linear")}}</td>
+   <td>{{Spec2('OES_texture_half_float')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.OES_texture_half_float_linear")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
+ <li>{{domxref("OES_texture_float")}}</li>
+ <li>{{domxref("OES_texture_float_linear")}}</li>
+ <li>{{domxref("OES_texture_half_float")}}</li>
+</ul>

@@ -1,0 +1,87 @@
+---
+title: Clipping and masking
+slug: Web/SVG/Tutorial/Clipping_and_masking
+tags:
+  - Advanced
+  - SVG
+  - 'SVG:Tutorial'
+---
+<p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}</p>
+
+<p>Erasing part of what one has created might at first sight look contradictory. But when you try to create a semicircle in SVG, you will find out the use of the following properties quickly.</p>
+
+<p><strong>Clipping</strong> refers to removing parts of elements defined by other parts. In this case, any half-transparent effects are not possible, it's an all-or-nothing approach.</p>
+
+<p><strong>Masking</strong> on the other hand allows soft edges by taking transparency and grey values of the mask into account.</p>
+
+<h3 id="Creating_clips">Creating clips</h3>
+
+<p>We create the above mentioned semicircle based on a <code>circle</code> element:</p>
+
+<pre class="brush: html">&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  &lt;defs&gt;
+    &lt;clipPath id="cut-off-bottom"&gt;
+      &lt;rect x="0" y="0" width="200" height="100" /&gt;
+    &lt;/clipPath&gt;
+  &lt;/defs&gt;
+
+  &lt;circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" /&gt;
+&lt;/svg&gt;
+</pre>
+
+<p>Centered at (100,100) a circle with radius 100 is painted. The attribute <code>clip-path</code> references a <code>{{ SVGElement("clipPath") }}</code> element with a single <code>rect</code> element. This rectangular on its own would paint the upper half of the canvas black. Note, that the <code>clipPath</code> element is usually placed in a <code>defs</code> section.</p>
+
+<p>The <code>rect</code> will not be painted, however. Instead its pixel data will be used to determine, which pixels of the circle "make it" to the final rendering. Since the rectangle covers only the upper half of the circle, the lower half of the circle will vanish:</p>
+
+<p>{{ EmbedLiveSample('Creating_clips','240','240','/files/3224/clipdemo.png') }}</p>
+
+<p>We now have a semicircle without having to deal with arcs in path elements. For the clipping, every path inside the <code>clipPath</code> is inspected and evaluated together with its stroke properties and transformation. Then every part of the target lying in a transparent area of the resulting <code>clipPath</code>'s content will not be rendered. Color, opacity and such have no effect as long as they don't let parts vanish completely.</p>
+
+<h3 id="Masking">Masking</h3>
+
+<p>The effect of masking is most impressively presented with a gradient. If you want an element to fade out, you can achieve this effect quite quickly with masks.</p>
+
+<pre class="brush: html">&lt;svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient"&gt;
+      &lt;stop offset="0" stop-color="black" /&gt;
+      &lt;stop offset="1" stop-color="white" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;mask id="Mask"&gt;
+      &lt;rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  /&gt;
+    &lt;/mask&gt;
+  &lt;/defs&gt;
+
+  &lt;rect x="0" y="0" width="200" height="200" fill="green" /&gt;
+  &lt;rect x="0" y="0" width="200" height="200" fill="red" mask="url(#Mask)" /&gt;
+&lt;/svg&gt;
+</pre>
+
+<p>You see a green-filled <code>rect</code> at the lowest layer and on top a red-filled <code>rect</code>. The latter has the <code>mask</code> attribute pointing to the <code>mask</code> element. The content of the mask is a single <code>rect</code> element, that is filled with a black-to-white gradient. As a result the pixels of the red rectangle use the luminance value of the mask content as the alpha value (the transparency), and we see a green-to-red gradient as a result:</p>
+
+<p>{{ EmbedLiveSample('Masking','240','240','/files/3234/maskdemo.png') }}</p>
+
+<h3 id="Transparency_with_opacity">Transparency with <code>opacity</code></h3>
+
+<p>There is a simple possibility to set the transparency for a whole element. It's the <code>opacity</code> attribute:</p>
+
+<pre class="brush: xml">&lt;rect x="0" y="0" width="100" height="100" opacity=".5" /&gt;
+</pre>
+
+<p>The above rectangle will be painted half-transparent. For the fill and stroke there are two separate attributes, <code>fill-opacity</code> and <code>stroke-opacity</code>, that control each of those property opacities separately. Note, that the stroke will be painted on top of the filling. Hence, if you set a stroke opacity on an element, that also has a fill, the fill will shine through on half of the stroke, while on the other half the background will appear:</p>
+
+<pre class="brush: html">&lt;svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  &lt;rect x="0" y="0" width="200" height="200" fill="blue" /&gt;
+  &lt;circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" /&gt;
+&lt;/svg&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('Transparency_with_opacity','240','240','/files/3231/opacitydemo.png') }}</p>
+
+<p>You see in this example the red circle on blue background. The yellow stroke is set to 50% opacity, which leads effectively to a double-color stroke.</p>
+
+<h2 id="Using_well-known_CSS_techniques">Using well-known CSS techniques</h2>
+
+<p>One of the most powerful tools in a web developer's toolbox is <code>display: none</code>. It is therefore little surprise, that it was decided to take this CSS property into SVG as well, together with <code>visibility</code> and <code>clip</code> as defined by CSS 2. For reverting a previously set <code>display: none</code> it is important to know, that the initial value for all SVG elements is <code>inline</code>.</p>
+
+<p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}</p>

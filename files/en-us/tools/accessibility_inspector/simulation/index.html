@@ -1,0 +1,95 @@
+---
+title: Color vision simulation
+slug: Tools/Accessibility_inspector/Simulation
+tags:
+  - Accessibility
+  - Accessibility inspector
+  - Color blindness
+  - DevTools
+  - Guide
+  - Simulation
+  - Tools
+---
+<p><span class="seoSummary">The simulator in the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a> in Firefox Developer Tools lets you see what a web page would look like to users with various forms of <em>color vision deficiency</em> (better known as "color blindness"), as well as <em>contrast sensitivity loss</em>.</span></p>
+
+<p>"Color blindness" is a bit of a misnomer, since most people with these disorders can see colors, but do not see all of the distinctions that people with normal color vision can see; color vision deficiencies affect perception across the color spectrum, not only of specific colors like red or green. Color vision deficiencies affect about 8% of men, and 0.5% of women. The most common forms of color blindness (commonly lumped together as "red-green color blindness") affect more men than women, because they are due to a mutation in a gene in the X chromosome, which men usually have only one copy of.</p>
+
+<p>Contrast sensitivity loss can be caused by cataracts, glaucoma, diabetic retinopathy, and other disorders of the retina; it can be age-related, congenital, or due to an injury.</p>
+
+<div class="blockIndicator note">
+<p>To enable this feature, you must have webrender enabled; it may be enabled by default, depending on your configuration of Firefox. In the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a>, make sure the <strong>gfx.webrender.all</strong> option is set to <code>true</code>.</p>
+</div>
+
+<p>In the <strong>Simulate</strong> menu, you can choose one option at a time from the following list:</p>
+
+<ul>
+ <li>None — choose this to return to normal display</li>
+ <li>Protanomaly (low red)</li>
+ <li>Deuteranomaly (low green)</li>
+ <li>Tritanomaly (low blue)</li>
+ <li>Protanopia (no red)</li>
+ <li>Deuteranopia (no green)</li>
+ <li>Tritanopia (no blue)</li>
+ <li>Contrast loss</li>
+</ul>
+
+<div class="blockIndicator note">
+<p>These simulations are not completely medically accurate. However, they can give you a sense of what your web site looks like to users with vision problems, and therefore help you judge whether you need to make adjustments in your color or contrast choices.</p>
+</div>
+
+<p>The following table shows a colorful image of a cat's face, and what it looks like in the various simulations.</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Simulation</th>
+   <th scope="col">Image displayed</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>None</td>
+   <td><img alt="Colorful image of a cat's face, without modification" src="https://mdn.mozillademos.org/files/16876/28369550088_617db0d6f2_m.jpg" style="height: 240px; width: 240px;"></td>
+  </tr>
+  <tr>
+   <td>Protanomaly (low red)</td>
+   <td><img alt="Colorful image of a cat's face, with deuteranomaly simulation" src="https://mdn.mozillademos.org/files/16877/colorcat_protanomaly.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Deuteranomaly (low green)</td>
+   <td><img alt="Colorful image of a cat's face, with deuteranomaly simulation" src="https://mdn.mozillademos.org/files/16878/colorcat_deuteranomaly.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Tritanomaly (low blue)</td>
+   <td><img alt="Colorful image of a cat's face, with tritanomaly simulation" src="https://mdn.mozillademos.org/files/16879/colorcat_tritanomaly.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Protanopia (no red)</td>
+   <td><img alt="Colorful image of a cat's face, with protanopia simulation" src="https://mdn.mozillademos.org/files/16880/colorcat_protanopia.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Deuteranopia (no green)</td>
+   <td><img alt="Colorful image of a cat's face, with deuteranopia simulation" src="https://mdn.mozillademos.org/files/16881/colorcat_deuteranopia.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Tritanopia (no blue)</td>
+   <td><img alt="Colorful image of a cat's face, with tritanopia simulation" src="https://mdn.mozillademos.org/files/16882/colorcat_tritanopia.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>Contrast loss</td>
+   <td><img alt="Colorful image of a cat's face, with contrast loss simulation" src="https://mdn.mozillademos.org/files/16883/colorcat_contrastloss.png" style="height: 250px; width: 250px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://www.color-blindness.com/types-of-color-blindness/">Types of color blindness</a></li>
+ <li><a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Color blindness simulator</a></li>
+ <li><a href="http://www.vision-and-eye-health.com/contrast-sensitivity.html">Contrast sensitivity</a></li>
+ <li><a href="http://mkweb.bcgsc.ca/colorblind/">Color palettes for color blindness</a></li>
+ <li><a href="https://jfly.uni-koeln.de/color/">Color universal design</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG21/#use-of-color">WCAG success criterion 1.4.1: Use of color</a></li>
+ <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">WCAG success criterion 1.4.11: Non-text contrast</a></li>
+</ul>

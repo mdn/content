@@ -1,0 +1,224 @@
+---
+title: '<select>: The HTML Select element'
+slug: Web/HTML/Element/select
+tags:
+  - Element
+  - Forms
+  - HTML
+  - HTML forms
+  - Reference
+  - Web
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary">The <strong>HTML <code>&lt;select&gt;</code> element</strong> represents a control that provides a menu of options</span>:</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}</div>
+
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+
+<p>The above example shows typical <code>&lt;select&gt;</code> usage. It is given an <code>id</code> attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a <code>name</code> attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the <code>&lt;select&gt;</code>.</p>
+
+<p>Each <code>&lt;option&gt;</code> element should have a {{htmlattrxref("value", "option")}} attribute containing the data value to submit to the server when that option is selected. If no <code>value</code> attribute is included, the value defaults to the text contained inside the element. You can include a {{htmlattrxref("selected")}} attribute on an <code>&lt;option&gt;</code> element to make it selected by default when the page first loads.</p>
+
+<p>The <code>&lt;select&gt;</code> element has some unique attributes you can use to control it, such as <code>multiple</code> to specify whether multiple options can be selected, and <code>size</code> to specify how many options should be shown at once. It also accepts most of the general form input attributes such as <code>required</code>, <code>disabled</code>, <code>autofocus</code>, etc.</p>
+
+<p>You can further nest <code>&lt;option&gt;</code> elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.</p>
+
+<p>For further examples, see <a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
+
+<h2 id="Attributes">Attributes</h2>
+
+<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+
+<dl>
+ <dt>{{htmlattrdef("autocomplete")}}</dt>
+ <dd>A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See <a href="/en-US/docs/Web/HTML/Attributes/autocomplete">The HTML autocomplete attribute</a> for a complete list of values and details on how to use autocomplete.</dd>
+ <dt>{{htmlattrdef("autofocus")}}</dt>
+ <dd>This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the <code>autofocus</code> attribute.</dd>
+ <dt>{{htmlattrdef("disabled")}}</dt>
+ <dd>This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the <code>disabled</code> attribute set, then the control is enabled.</dd>
+ <dt>{{htmlattrdef("form")}}</dt>
+ <dd>The {{HTMLElement("form")}} element to associate the <code>&lt;select&gt;</code> with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;select&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</dd>
+ <dd>This attribute lets you associate <code>&lt;select&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</dd>
+ <dt>{{htmlattrdef("multiple")}}</dt>
+ <dd>This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When <code>multiple</code> is specified, most browsers will show a scrolling list box instead of a single line dropdown.</dd>
+ <dt>{{htmlattrdef("name")}}</dt>
+ <dd>This attribute is used to specify the name of the control.</dd>
+ <dt>{{htmlattrdef("required")}}</dt>
+ <dd>A Boolean attribute indicating that an option with a non-empty string value must be selected.</dd>
+ <dt>{{htmlattrdef("size")}}</dt>
+ <dd>
+ <p>If the control is presented as a scrolling list box (e.g. when <code>multiple</code> is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is <code>0</code>.</p>
+
+ <div class="note"><strong>Note:</strong> According to the HTML5 specification, the default value for size should be <code>1</code>; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return <code>0</code> for the time being with Firefox.</div>
+ </dd>
+</dl>
+
+<h2 id="Usage_notes">Usage notes</h2>
+
+<h3 id="Selecting_multiple_options">Selecting multiple options</h3>
+
+<p>On a desktop computer, there are a number of ways to select multiple options in a <code>&lt;select&gt;</code> element with a <code>multiple</code> attribute:</p>
+
+<p>Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.</p>
+
+<div class="blockIndicator warning">
+<p><strong>Warning</strong>: The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.</p>
+
+<p><strong>Also note:</strong> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for <em>Mission Control</em> and <em>Application windows</em>, so you'll have to turn these off before it will work.</p>
+</div>
+
+<p>Keyboard users can select multiple contiguous items by:</p>
+
+<ul>
+ <li>Focusing on the <code>&lt;select&gt;</code> element (e.g. using <kbd>Tab</kbd>).</li>
+ <li>Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.</li>
+ <li>Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.</li>
+</ul>
+
+<p>Keyboard users can select multiple non-contiguous items by:</p>
+
+<ul>
+ <li>Focusing on the <code>&lt;select&gt;</code> element (e.g. using <kbd>Tab</kbd>).</li>
+ <li>Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.</li>
+ <li>Pressing <kbd>Space</kbd> to select/deselect "focused" select options.</li>
+</ul>
+
+<h2 id="Styling_with_CSS">Styling with CSS</h2>
+
+<p>The <code>&lt;select&gt;</code> element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">box model</a>, the <a href="/en-US/docs/Web/CSS/CSS_Fonts">displayed font</a>, etc., and you can use the {{cssxref("appearance")}} property to remove the default system <code>appearance</code>.</p>
+
+<p>However, these properties don't produce a consistent result across browsers, and it is hard to do things like line different types of form element up with one another in a column. The <code>&lt;select&gt;</code> element's internal structure is complex, and hard to control. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> to provide semantics.</p>
+
+<p>For more useful information on styling <code>&lt;select&gt;</code>, see:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Basic_select">Basic select</h3>
+
+<p>The following example creates a very simple dropdown menu, the second option of which is selected by default.</p>
+
+<pre class="brush: html notranslate">&lt;!-- The second value will be selected initially --&gt;
+&lt;select name="choice"&gt;
+  &lt;option value="first"&gt;First Value&lt;/option&gt;
+  &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
+  &lt;option value="third"&gt;Third Value&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Basic_select", "", "100")}}</p>
+
+<h3 id="Advanced_select_with_multiple_features">Advanced select with multiple features</h3>
+
+<p>The follow example is more complex, showing off more features you can use on a <code>&lt;select&gt;</code> element:</p>
+
+<pre class="brush: html notranslate">&lt;label&gt;Please choose one or more pets:
+  &lt;select name="pets" multiple size="4"&gt;
+    &lt;optgroup label="4-legged pets"&gt;
+      &lt;option value="dog"&gt;Dog&lt;/option&gt;
+      &lt;option value="cat"&gt;Cat&lt;/option&gt;
+      &lt;option value="hamster" disabled&gt;Hamster&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Flying pets"&gt;
+      &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+      &lt;option value="macaw"&gt;Macaw&lt;/option&gt;
+      &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+&lt;/label&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}</p>
+
+<p>You'll see that:</p>
+
+<ul>
+ <li>Multiple options are selectable because we've included the <code>multiple</code> attribute.</li>
+ <li>The <code>size</code> attribute causes only 4 lines to display at a time; you can scroll to view all the options.</li>
+ <li>We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.</li>
+ <li>The "Hamster" option includes a <code>disabled</code> attribute and therefore can't be selected at all.</li>
+</ul>
+
+<h2 id="Technical_summary">Technical summary</h2>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_resettable">resettable</a>, and <a href="/en-US/docs/Web/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td>Zero or more {{HTMLElement("option")}} or {{HTMLElement("optgroup")}} elements.</td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parents</th>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Implicit ARIA role</th>
+   <td>{{ARIARole("combobox")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise {{ARIARole("listbox")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>{{ARIARole("menu")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLSelectElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comments</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("html.elements.select")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>Events fired by <code>&lt;select&gt;</code>: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}</li>
+ <li>The {{HTMLElement("option")}} element</li>
+ <li>The {{HTMLElement("optgroup")}} element</li>
+</ul>

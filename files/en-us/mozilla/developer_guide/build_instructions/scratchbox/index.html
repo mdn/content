@@ -1,0 +1,11 @@
+---
+title: Scratchbox
+slug: Mozilla/Developer_guide/Build_Instructions/Scratchbox
+tags:
+  - Build documentation
+  - Developing Mozilla
+---
+<p>Scratchbox (<a class=" external" href="http://www.scratchbox.org/">http://www.scratchbox.org/</a>) is a tool to assist in cross-compiling code using a Linux system, but building executables for a different platform. It is similar to another tool, crosstool (<a class=" external" href="http://www.crosstool.org/">http://www.crosstool.org/</a>), but Mozilla is using scratchbox in building Firefox Mobile applications.
+</p><p>Traditionally, one would be using platform A to build a Mozilla executable for the same platform. If there was something odd about the platform, configuration flags would allow the application to be built for that platform. This led to moderately complex lists of configuration flags, but it was a manageable situation. When one is trying to build for another platform, one can use this declarative approach to building. But the list of odd things to keep track of when building on one platform for another platform got much longer. Additionally, if one figures out the configuration flags necessary for cross-compilation of one application, one may have to use a similar but slightly different set of flags to build another application. This becomes a problem.
+</p><p>The scratchbox approach is to set up something like a virtual machine. One sets up an environment on a Linux box and one configures a scratchbox "target" for the platform for which one is trying to build executables. Then one can use "configure" with a very small number of flags. The complexities are captured in the environment set up by scratchbox. From inside the scratchbox, each separate build looks fairly obvious and simple.
+</p>

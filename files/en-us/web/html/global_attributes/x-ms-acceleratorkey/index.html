@@ -1,0 +1,42 @@
+---
+title: x-ms-acceleratorkey
+slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
+tags:
+  - Attribute
+  - HTML
+  - 'HTML:Microsoft Extensions'
+  - Non-standard
+  - Reference
+  - x-ms-acceleratorkey
+---
+<div>{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}</div>
+
+<p><span class="seoSummary">The <code><strong>x-ms-acceleratorkey</strong></code> attribute accessibly declares that an <a href="https://docs.microsoft.com/en-us/windows/uwp/design/input/keyboard-accelerators">accelerator key</a> has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.</span></p>
+
+<p>{{Non-standard_Inline}} This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+
+<p><code>x-ms-acceleratorkey</code> exposes a notification in the accessibility tree, for screen readers and other assistive technologies, that an accelerator key exists for that element. This attribute does <strong>not</strong> provide the accelerator key behavior. You must provide JavaScript event handlers, like <code>onkeypress</code>, <code>onkeydown</code>, or <code>onkeyup</code>, to listen for your declared accelerator keys and activate the element accordingly.</p>
+
+<p>To provide a keyboard shortcut for an element that <em>does not</em> need JavaScript, use <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">the <code>accesskey</code> attribute</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: html">&lt;button x-ms-acceleratorkey="[explanation of key combination]"&gt;…&lt;/button&gt;</pre>
+
+<h2 id="Value">Value</h2>
+
+<p>The accelerator key combination. For example:</p>
+
+<ul>
+ <li><code>"Ctrl+B"</code> for a combination of the <kbd>Ctrl</kbd> and <kbd>B</kbd> keys.</li>
+ <li><code>"J"</code> for just the <kbd>J</kbd> key.</li>
+ <li><code>"Ctrl+; then K"</code> for a shortcut similar to <a href="https://help.manuscript.com/7558/fogbugz-keyboard-shortcuts#For_Your_Server_or_non-Ocelot_Keyboard_Shortcuts">FogBugz’s old keyboard mode</a>. This approach is more complicated, but does not override existing keyboard shortcuts provided by the user’s browser or operating system.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">The global <code>accesskey</code> attribute</a></li>
+ <li><a href="/en-US/docs/Web/CSS/-ms-accelerator">The <code>-ms-accelerator</code> CSS property</a></li>
+ <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a></li>
+</ul>

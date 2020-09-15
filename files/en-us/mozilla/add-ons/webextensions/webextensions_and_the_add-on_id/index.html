@@ -1,0 +1,70 @@
+---
+title: Extensions and the add-on ID
+slug: Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID
+tags:
+  - WebExtensions
+---
+<div>{{AddonSidebar}}</div>
+
+<div class="summary">
+<p>Firefox add-ons contain a unique ID which is used to distinguish this add-on from any other Firefox add-on.</p>
+
+<p>This article describes how add-on IDs are handled for extensions that are built with WebExtensions APIs.</p>
+</div>
+
+<p>Firefox add-ons contain a unique identifier which is used both inside Firefox itself and on the <a href="https://addons.mozilla.org/">addons.mozilla.org</a> (AMO) website. For example, it's used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by this add-on.</p>
+
+<p>With older types of Firefox add-on, the add-on developer must set the add-on ID explicitly. XUL/XPCOM add-ons set the ID in the <a href="/en-US/docs/Mozilla/Add-ons/Install_Manifests">install manifest</a>, while SDK add-ons set it in the <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/package_json">package.json</a>.</p>
+
+<p>However, from Firefox 48 you can develop, debug, publish, and update extensions without needing to set an explicit ID at all.</p>
+
+<div class="note">
+<p>Note that the ability to develop and debug WebExtensions that don't include an ID is new in Firefox 48. If you need to use an earlier version of Firefox, then you must use the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a></code> key to set an ID explicitly.</p>
+</div>
+
+<h2 id="Basic_workflow_with_no_add-on_ID">Basic workflow with no add-on ID</h2>
+
+<p>Extensions can explicitly set the add-on ID using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in manifest.json. However, this key is usually optional. If you don't set it, then you can usually develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome does not recognize the <code>browser_specific_settings</code> key and will show a warning if you include it.</p>
+
+<p>Note, though, that some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs in Firefox, then you must set the ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key. See <a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_add-on_ID">When do you need an Add-on ID?</a>.</p>
+
+<h3 id="Developing_and_debugging">Developing and debugging</h3>
+
+<p>Starting in Firefox 48, if your manifest.json does not contain an ID then the extension will be assigned a randomly-generated temporary ID when you <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">install it in Firefox</a> through about:debugging. If you then reload the extension using the "Reload" button, the same ID will be used. If you then restart Firefox and load the add-on again, it will get a new ID.</p>
+
+<p>If you turn the extension into an .xpi or .zip and install it through about:addons, it will not work. To have it work in this scenario, you will need to add in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in manifest.json</p>
+
+<h3 id="Publishing">Publishing</h3>
+
+<p>Once you have finished developing the extension, you can <a href="/en-US/Add-ons/WebExtensions/Publishing_your_WebExtension">package it and submit it to AMO for review and signing</a>. If the packaged extension you upload does not contain an ID, AMO will generate one for you. It's only at this point that the add-on will be assigned a permanent ID, which will be embedded in the signed packaged extension.</p>
+
+<p>Note that once an extension has been given a permanent ID, you can't then update it to use the Add-on SDK or legacy XUL/XPCOM techniques. If you do switch to one of these platforms, you must submit it as a distinct new add-on, with a new ID.</p>
+
+<h3 id="Updating">Updating</h3>
+
+<p>Even after this point, though, you don't generally have to deal with the ID at all. You can continue to develop the add-on without an ID, and when you want to update, upload the new version by visiting the add-on's AMO page. Because you are uploading the add-on through that page, AMO knows that this is an update to this particular add-on, even though it doesn't contain an ID.</p>
+
+<div class="note">
+<p>It's essential with this workflow that you update the add-on <em>manually using its page on AMO</em>, otherwise AMO will not understand that the submission is an update to an existing add-on, and will treat the update as a brand-new add-on.</p>
+</div>
+
+<p>You can do the same thing if you are updating from an older add-on type, such as a XUL/XPCOM add-on, to use WebExtensions APIs. Just visit the old add-on's page on AMO, upload the new extension there, and it will be treated as an update to the old version.</p>
+
+<h2 id="When_do_you_need_an_add-on_ID">When do you need an add-on ID?</h2>
+
+<ul>
+ <li>If you are loading the add-on from its XPI file, are not loading it temporarily using about:debugging and it is not signed.</li>
+ <li>If you use <a href="https://addons-server.readthedocs.io/en/latest/topics/api/signing.html">AMO's API</a> for uploading your add-on, rather than uploading it manually on its page, then you need to include the add-on's ID in the request.</li>
+ <li>Some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, then you must set the ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key. This applies to the following APIs:
+  <ul>
+   <li>{{WebExtAPIRef("storage.managed")}}</li>
+   <li>{{WebExtAPIRef("storage.sync")}}</li>
+   <li>{{WebExtAPIRef("identity.getRedirectURL")}}</li>
+   <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+   <li>{{WebExtAPIRef("pkcs11")}}</li>
+   <li>{{WebExtAPIRef("runtime.onMessageExternal")}}</li>
+   <li>{{WebExtAPIRef("runtime.onConnectExternal")}}</li>
+  </ul>
+ </li>
+ <li>Using Firefox for Android. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings in manifest.json</a>.</li>
+</ul>

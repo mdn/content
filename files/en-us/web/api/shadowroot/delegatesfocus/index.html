@@ -1,0 +1,46 @@
+---
+title: ShadowRoot.delegatesFocus
+slug: Web/API/ShadowRoot/delegatesFocus
+tags:
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - ShadowRoot
+  - Web Components
+  - delegatesFocus
+  - shadow dom
+---
+<div>{{APIRef("Shadow DOM")}}</div>
+
+<p>The <strong><code>delegatesFocus</code></strong> read-only property of the {{domxref("ShadowRoot")}} interface returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</p>
+
+<p>This is currently an experimental non-standard feature, available only in Chrome.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A boolean value — <code>true</code> if the shadow root does delegate focus, <code>false</code> if it doesn't.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+let shadow = customElem.shadowRoot;
+
+  ...
+
+// Does it delegate focus?
+let hostElem = shadow.delegatesFocus;</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>This feature is not currently in a specification.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.ShadowRoot.delegatesFocus")}}</p>

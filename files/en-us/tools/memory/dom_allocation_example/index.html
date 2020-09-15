@@ -1,0 +1,53 @@
+---
+title: DOM allocation example
+slug: Tools/Memory/DOM_allocation_example
+---
+<div>{{ToolsSidebar}}</div><p>This article describes a very simple web page that we'll use to illustrate some features of the Memory tool.</p>
+
+<p>You can try out the site at <a href="https://mdn.github.io/performance-scenarios/dom-allocs/alloc.html">https://mdn.github.io/performance-scenarios/dom-allocs/alloc.html</a>.</p>
+
+<p>It just contains a script that creates a large number of DOM nodes:</p>
+
+<pre class="brush: js">var toolbarButtonCount = 20;
+var toolbarCount = 200;
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createToolbarButton() {
+  var toolbarButton = document.createElement("span");
+  toolbarButton.classList.add("toolbarbutton");
+  // stop Spidermonkey from sharing instances
+  toolbarButton[getRandomInt(0,5000)] = "foo";
+  return toolbarButton;
+}
+
+function createToolbar() {
+  var toolbar = document.createElement("div");
+  // stop Spidermonkey from sharing instances
+  toolbar[getRandomInt(0,5000)] = "foo";
+  for (var i = 0; i &lt; toolbarButtonCount; i++) {
+    var toolbarButton = createToolbarButton();
+    toolbar.appendChild(toolbarButton);
+  }
+  return toolbar;
+}
+
+function createToolbars() {
+  var container = document.getElementById("container");
+  for (var i = 0; i &lt; toolbarCount; i++) {
+    var toolbar = createToolbar();
+    container.appendChild(toolbar);
+  }
+}
+
+createToolbars();</pre>
+
+<p>A simple pseudocode representation of how this code operates looks like this:</p>
+
+<pre>createToolbars()
+    -&gt; createToolbar() // called 200 times, creates 1 DIV element each time
+       -&gt; createToolbarButton() // called 20 times per toolbar, creates 1 SPAN element each time</pre>
+
+<p>In total, then, it creates 200 <code><a href="/en-US/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> objects, and 4000 <code><a href="/en-US/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> objects.</p>

@@ -1,0 +1,468 @@
+---
+title: Arrow function expressions
+slug: Web/JavaScript/Reference/Functions/Arrow_functions
+tags:
+  - ECMAScript 2015
+  - Functions
+  - Intermediate
+  - JavaScript
+  - Language feature
+  - Reference
+---
+<div>{{jsSidebar("Functions")}}</div>
+
+<p>An <strong>arrow function expression</strong> is a syntactically compact alternative to a regular <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>, although without its own bindings to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> keywords. Arrow function expressions are ill suited as methods, and they cannot be used as constructors.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<h3 id="Basic_syntax">Basic syntax</h3>
+
+<pre class="syntaxbox notranslate">(param1, param2, …, paramN) =&gt; { statements }
+(param1, param2, …, paramN) =&gt; expression
+// equivalent to: =&gt; { return expression; }
+
+// Parentheses are optional when there's only one parameter name:
+(singleParam) =&gt; { statements }
+singleParam =&gt; { statements }
+
+// The parameter list for a function with no parameters should be written with a pair of parentheses.
+() =&gt; { statements }
+</pre>
+
+<h3 id="Advanced_syntax">Advanced syntax</h3>
+
+<pre class="syntaxbox notranslate">// Parenthesize the body of a function to return an object literal expression:
+params =&gt; ({foo: bar})
+
+// <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Rest parameters</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> are supported
+(param1, param2, ...rest) =&gt; { statements }
+(param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; {
+statements }
+
+// <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> within the parameter list is also supported
+var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
+f(); // 6
+</pre>
+
+<h2 id="Description">Description</h2>
+
+<p>See also <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
+
+<p>Two factors influenced the introduction of arrow functions: the need for shorter functions and the behavior of the <code>this</code> keyword.</p>
+
+<h3 id="Shorter_functions">Shorter functions</h3>
+
+<pre class="brush: js notranslate">var elements = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+// This statement returns the array: [8, 6, 7, 9]
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(function(element) {
+  return element.length;
+});
+
+// The regular function above can be written as the arrow function below
+elements.map((element) =&gt; {
+  return element.length;
+}); // [8, 6, 7, 9]
+
+// When there is only one parameter, we can remove the surrounding parentheses
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(element =&gt; {
+  return element.length;
+}); // [8, 6, 7, 9]
+
+// When the only statement in an arrow function is `return`, we can remove `return` and remove
+// the surrounding curly brackets
+elements.map(element =&gt; element.length); // [8, 6, 7, 9]
+
+// In this case, because we only need the length property, we can use destructuring parameter:
+// Notice that the `length` corresponds to the property we want to get whereas the
+// obviously non-special `lengthFooBArX` is just the name of a variable which can be changed
+// to any valid variable name you want
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length: lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
+
+// This destructuring parameter assignment can also be written as seen below. However, note that in
+// this example we are not assigning `length` value to the made up property. Instead, the literal name
+// itself of the variable `length` is used as the property we want to retrieve from the object.
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length }) =&gt; length); // [8, 6, 7, 9]
+</pre>
+
+<h3 id="No_separate_this">No separate <code>this</code></h3>
+
+<p>Before arrow functions, every new function defined its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> value based on how the function was called:</p>
+
+<ul>
+ <li>A new object in the case of a constructor.</li>
+ <li><code>undefined</code> in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> function calls.</li>
+ <li>The base object if the function was called as an "object method".</li>
+ <li>etc.</li>
+</ul>
+
+<p>This proved to be less than ideal with an object-oriented style of programming.</p>
+
+<pre class="brush: js notranslate">function Person() {
+  // The Person() constructor defines `this` as an instance of itself.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // In non-strict mode, the growUp() function defines `this`
+    // as the global object (because it's where growUp() is executed.),
+    // which is different from the `this`
+    // defined by the Person() constructor.
+    this.age++;
+  }, 1000);
+}
+
+var p = new Person();</pre>
+
+<p>In ECMAScript 3/5, the <code>this</code> issue was fixable by assigning the value in <code>this</code> to a variable that could be closed over.</p>
+
+<pre class="brush: js notranslate">function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    // The callback refers to the `that` variable of which
+    // the value is the expected object.
+    that.age++;
+  }, 1000);
+}</pre>
+
+<p>Alternatively, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bound function</a> could be created so that a preassigned <code>this</code> value would be passed to the bound target function (the <code>growUp()</code> function in the example above).</p>
+
+<p>An arrow function does not have its own <code>this</code>. The <code>this</code> value of the enclosing lexical scope is used; arrow functions follow the normal variable lookup rules. So while searching for <code>this</code> which is not present in the current scope, an arrow function ends up finding the <code>this</code> from its enclosing scope.</p>
+
+<p>Thus, in the following code, the <code>this</code> within the function that is passed to <code>setInterval</code> has the same value as the <code>this</code> in the lexically enclosing function:</p>
+
+<pre class="brush: js notranslate">function Person(){
+  this.age = 0;
+
+  setInterval(() =&gt; {
+    this.age++; // |this| properly refers to the Person object
+  }, 1000);
+}
+
+var p = new Person();</pre>
+
+<h4 id="Relation_with_strict_mode">Relation with strict mode</h4>
+
+<p>Given that <code>this</code> comes from the surrounding lexical context, <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> rules with regard to <code>this</code> are ignored.</p>
+
+<pre class="brush: js notranslate">var f = () =&gt; { 'use strict'; return this; };
+f() === window; // or the global object</pre>
+
+<p>All other strict mode rules apply normally.</p>
+
+<p><strong>CORRECTION: START</strong></p>
+
+<p>NOTE: the previous statement seems false.</p>
+
+<p>Strict mode should prevent creating global variables when assigning to an undeclared identifier in a function.</p>
+
+<p>This code sample using Chrome 81 demonstrates that arrow functions allow the creation of global variables in such situations (both for a concise body and for a normal function body):</p>
+
+<pre class="notranslate">&gt; f1 = x =&gt; { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
+x =&gt; { y = x; console.log(`x: ${x}, y: ${y}`); return x + 1; }
+
+&gt; y
+VM51587:1 Uncaught ReferenceError: y is not defined
+    at &lt;anonymous&gt;:1:1
+(anonymous) @ VM51587:1
+
+&gt; f1(3)
+VM51533:1 x: 3, y: 3
+4
+
+&gt; y
+3
+
+&gt; f2 = x =&gt; { 'use strict'; z = x; console.log(`x: ${x}, z: ${z}`); return x + 1; }
+x =&gt; { 'use strict'; z = x; console.log(`x: ${x}, z: ${z}`); return x + 1; }
+
+&gt; z
+VM51757:1 Uncaught ReferenceError: z is not defined
+    at &lt;anonymous&gt;:1:1
+(anonymous) @ VM51757:1
+
+&gt; f2(4)
+VM51712:1 Uncaught ReferenceError: z is not defined
+    at f2 (&lt;anonymous&gt;:1:29)
+    at &lt;anonymous&gt;:1:1
+f2 @ VM51712:1
+(anonymous) @ VM51800:1
+
+&gt; f3 = x =&gt; (z1 = x + 1)
+x =&gt; (z1 = x + 1)
+
+&gt; z1
+VM51891:1 Uncaught ReferenceError: z1 is not defined
+    at &lt;anonymous&gt;:1:1
+(anonymous) @ VM51891:1
+
+&gt; f3(10)
+11
+
+&gt; z1
+11
+</pre>
+
+<p>f2 illustrates that when explicitly setting the arrow function to apply strict mode, it does throw an error when attempting to assign an undeclared variable.</p>
+
+<p>https://www.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code</p>
+
+<p>https://www.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation</p>
+
+<p><strong>CORRECTION: END</strong></p>
+
+<h4 id="Invoked_through_call_or_apply">Invoked through call or apply</h4>
+
+<p>Since arrow functions do not have their own <code>this</code>, the methods <code>call()</code> and <code>apply()</code> can only pass in parameters. Any <code>this</code> argument is ignored.</p>
+
+<pre class="brush: js notranslate">var adder = {
+  base: 1,
+
+  add: function(a) {
+    var f = v =&gt; v + this.base;
+    return f(a);
+  },
+
+  addThruCall: function(a) {
+    var f = v =&gt; v + this.base;
+    var b = {
+      base: 2
+    };
+
+    return f.call(b, a);
+  }
+};
+
+console.log(adder.add(1));         // This would log 2
+console.log(adder.addThruCall(1)); // This would log 2 still</pre>
+
+<h3 id="No_binding_of_arguments">No binding of <code>arguments</code></h3>
+
+<p>Arrow functions do not have their own <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> object</a>. Thus, in this example, <code>arguments</code> is simply a reference to the arguments of the enclosing scope:</p>
+
+<pre class="brush: js notranslate">var arguments = [1, 2, 3];
+var arr = () =&gt; arguments[0];
+
+arr(); // 1
+
+function foo(n) {
+  var f = () =&gt; arguments[0] + n; // <em>foo</em>'s implicit arguments binding. arguments[0] is n
+  return f();
+}
+
+foo(3); // 6</pre>
+
+<p>In most cases, using <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> is a good alternative to using an <code>arguments</code> object.</p>
+
+<pre class="brush: js notranslate">function foo(n) {
+  var f = (...args) =&gt; args[0] + n;
+  return f(10);
+}
+
+foo(1); // 11</pre>
+
+<h3 id="Arrow_functions_used_as_methods">Arrow functions used as methods</h3>
+
+<p>As stated previously, arrow function expressions are best suited for non-method functions. Let's see what happens when we try to use them as methods:</p>
+
+<pre class="brush: js notranslate">'use strict';
+
+var obj = { // does not create a new scope
+  i: 10,
+  b: () =&gt; console.log(this.i, this),
+  c: function() {
+    console.log(this.i, this);
+  }
+}
+
+obj.b(); // prints undefined, Window {...} (or the global object)
+obj.c(); // prints 10, Object {...}</pre>
+
+<p>Arrow functions do not have their own <code>this</code>. Another example involving {{jsxref("Object.defineProperty()")}}:</p>
+
+<pre class="brush: js notranslate">'use strict';
+
+var obj = {
+  a: 10
+};
+
+Object.defineProperty(obj, 'b', {
+  get: () =&gt; {
+    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
+  }
+});
+</pre>
+
+<h3 id="Use_of_the_new_operator">Use of the <code>new</code> operator</h3>
+
+<p>Arrow functions cannot be used as constructors and will throw an error when used with <code>new</code>.</p>
+
+<pre class="brush: js notranslate">var Foo = () =&gt; {};
+var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
+
+<h3 id="Use_of_prototype_property">Use of <code>prototype</code> property</h3>
+
+<p>Arrow functions do not have a <code>prototype</code> property.</p>
+
+<pre class="brush: js notranslate">var Foo = () =&gt; {};
+console.log(Foo.prototype); // undefined
+</pre>
+
+<h3 id="Use_of_the_yield_keyword">Use of the <code>yield</code> keyword</h3>
+
+<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> keyword may not be used in an arrow function's body (except when permitted within functions further nested within it). As a consequence, arrow functions cannot be used as generators.</p>
+
+<h3 id="Function_body">Function body</h3>
+
+<p>Arrow functions can have either a "concise body" or the usual "block body".</p>
+
+<p>In a concise body, only an expression is specified, which becomes the implicit return value. In a block body, you must use an explicit <code>return</code> statement.</p>
+
+<pre class="brush: js notranslate">var func = x =&gt; x * x;
+// concise body syntax, implied "return"
+
+var func = (x, y) =&gt; { return x + y; };
+// with block body, explicit "return" needed
+</pre>
+
+<h3 id="Returning_object_literals">Returning object literals</h3>
+
+<p>Keep in mind that returning object literals using the concise body syntax <code>params =&gt; {object:literal}</code> will not work as expected.</p>
+
+<pre class="brush: js notranslate">var func = () =&gt; { foo: 1 };
+// Calling func() returns undefined!
+
+var func = () =&gt; { foo: function() {} };
+// SyntaxError: function statement requires a name</pre>
+
+<p>This is because the code inside braces ({}) is parsed as a sequence of statements (i.e. <code>foo</code> is treated like a label, not a key in an object literal).</p>
+
+<p>You must wrap the object literal in parentheses:</p>
+
+<pre class="brush: js notranslate">var func = () =&gt; ({ foo: 1 });</pre>
+
+<h3 id="Line_breaks">Line breaks</h3>
+
+<p>An arrow function cannot contain a line break between its parameters and its arrow.</p>
+
+<pre class="brush: js notranslate">var func = (a, b, c)
+  =&gt; 1;
+// SyntaxError: expected expression, got '=&gt;'</pre>
+
+<p>However, this can be amended by putting the line break after the arrow or using parentheses/braces as seen below to ensure that the code stays pretty and fluffy. You can also put line breaks between arguments.</p>
+
+<pre class="brush: js notranslate">var func = (a, b, c) =&gt;
+  1;
+
+var func = (a, b, c) =&gt; (
+  1
+);
+
+var func = (a, b, c) =&gt; {
+  return 1
+};
+
+var func = (
+  a,
+  b,
+  c
+) =&gt; 1;
+
+// no SyntaxError thrown</pre>
+
+<h3 id="Parsing_order">Parsing order</h3>
+
+<p>Although the arrow in an arrow function is not an operator, arrow functions have special parsing rules that interact differently with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a> compared to regular functions.</p>
+
+<pre class="brush: js notranslate">let callback;
+
+callback = callback || function() {}; // ok
+
+callback = callback || () =&gt; {};
+// SyntaxError: invalid arrow-function arguments
+
+callback = callback || (() =&gt; {});    // ok
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Basic_usage">Basic usage</h3>
+
+<pre class="brush: js notranslate">// An empty arrow function returns undefined
+let empty = () =&gt; {};
+
+(() =&gt; 'foobar')();
+// Returns "foobar"
+// (this is an Immediately Invoked Function Expression)
+
+var simple = a =&gt; a &gt; 15 ? 15 : a;
+simple(16); // 15
+simple(10); // 10
+
+let max = (a, b) =&gt; a &gt; b ? a : b;
+
+// Easy array filtering, mapping, ...
+
+var arr = [5, 6, 13, 0, 1, 18, 23];
+
+var sum = arr.reduce((a, b) =&gt; a + b);
+// 66
+
+var even = arr.filter(v =&gt; v % 2 == 0);
+// [6, 0, 18]
+
+var double = arr.map(v =&gt; v * 2);
+// [10, 12, 26, 0, 2, 36, 46]
+
+// More concise promise chains
+promise.then(a =&gt; {
+  // ...
+}).then(b =&gt; {
+  // ...
+});
+
+// Parameterless arrow functions that are visually easier to parse
+setTimeout( () =&gt; {
+  console.log('I happen sooner');
+  setTimeout( () =&gt; {
+    // deeper code
+    console.log('I happen later');
+  }, 1);
+}, 1);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.functions.arrow_functions")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a></li>
+</ul>

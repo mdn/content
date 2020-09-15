@@ -1,0 +1,97 @@
+---
+title: Math.max()
+slug: Web/JavaScript/Reference/Global_Objects/Math/max
+tags:
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p><span class="seoSummary">The <strong><code>Math.max()</code></strong> function returns the largest of the zero or more numbers given as input parameters.</span></p>
+
+<div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>value1, value2, ...</code></dt>
+ <dd>Numbers.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The largest of the given numbers. If at least one of the arguments cannot be converted to a number, {{jsxref("NaN")}} is returned.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Because <code>Math</code> is not a constructor, <code>max()</code> is a static method of <code>Math</code> (You always use it as <code>Math.max()</code>, rather than as a method of an instanced <code>Math</code> object).</p>
+
+<p>-{{jsxref("Infinity")}} is the initial comparant because almost every other value is bigger, that's why when no arguments are given, -{{jsxref("Infinity")}} is returned.</p>
+
+<p>If at least one of arguments cannot be converted to a number, the result is {{jsxref("NaN")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Math.max">Using <code>Math.max()</code></h3>
+
+<pre class="brush: js">Math.max(10, 20);   //  20
+Math.max(-10, -20); // -10
+Math.max(-10, 20);  //  20
+</pre>
+
+<h4 id="Getting_the_maximum_element_of_an_array">Getting the maximum element of an array</h4>
+
+<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} can be used to find the maximum element in a numeric array, by comparing each value:</p>
+
+<pre class="brush: js">var arr = [1,2,3];
+var max = arr.reduce(function(a, b) {
+    return Math.max(a, b);
+});
+</pre>
+
+<p>The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum of an array. <code>getMaxOfArray([1, 2, 3])</code> is equivalent to <code>Math.max(1, 2, 3)</code>, but you can use <code>getMaxOfArray()</code> on programmatically constructed arrays. This should only be used for arrays with relatively few elements.</p>
+
+<pre class="brush: js">function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}</pre>
+
+<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is a shorter way of writing the <code>apply</code> solution to get the maximum of an array:</p>
+
+<pre class="brush: js">var arr = [1, 2, 3];
+var max = Math.max(...arr);
+</pre>
+
+<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using <code>apply</code> and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Math.max")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Math.min()")}}</li>
+</ul>

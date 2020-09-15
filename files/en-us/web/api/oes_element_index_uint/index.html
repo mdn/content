@@ -1,0 +1,63 @@
+---
+title: OES_element_index_uint
+slug: Web/API/OES_element_index_uint
+tags:
+  - API
+  - Reference
+  - WebGL
+  - WebGL extension
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p>The <code><strong>OES_element_index_uint</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds support for <code>gl.UNSIGNED_INT</code> types to {{domxref("WebGLRenderingContext.drawElements()")}}.</p>
+
+<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+
+<div class="note">
+<p><strong>Availability:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.</p>
+</div>
+
+<h2 id="Extended_methods">Extended methods</h2>
+
+<p>This extension extends {{domxref("WebGLRenderingContext.drawElements()")}}:</p>
+
+<ul>
+ <li>The <code>type</code> parameter now accepts <code>gl.UNSIGNED_INT</code>.</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush:js">var ext = gl.getExtension('OES_element_index_uint');
+
+gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_INT, 0);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('OES_element_index_uint', '', 'OES_element_index_uint')}}</td>
+   <td>{{Spec2('OES_element_index_uint')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.OES_element_index_uint")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
+</ul>

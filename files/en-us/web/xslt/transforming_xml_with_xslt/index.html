@@ -1,0 +1,149 @@
+---
+title: Transforming XML with XSLT
+slug: Web/XSLT/Transforming_XML_with_XSLT
+tags:
+  - NeedsMigration
+  - Transforming_XML_with_XSLT
+  - XML
+  - XSLT
+---
+<div>{{XSLTRef}}</div>
+
+<h2 id="An_Overview"><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview">An Overview</a></h2>
+
+<p>The separation of content and presentation is a key design feature of <a href="/en-US/docs/XML">XML</a>. The structure of an XML document is designed to reflect and clarify important relationships among the individual aspects of the content itself, unhindered by a need to provide any indication about how this data should eventually be presented. This intelligent structuring is particularly important as more and more data transfers are automated and take place between highly heterogeneous machines linked by a network.</p>
+
+<p>Yet eventually much of the content stored in XML documents will need to be presented to human readers. Because a browser provides a familiar and highly flexible interface, it is an ideal mechanism for delivering such presentation versions of XML content. Built from the ground up utilizing a wide variety of XML technologies, Firefox incorporates within itself all of the mechanisms needed to process both original XML documents and the specialized stylesheets used to style and lay them out for HTML display, reducing server load with client-side processing.</p>
+
+<p>At present, Gecko (the layout engine behind Firefox) supports two forms of XML stylesheets. For basic control of appearance — fonts, colors, position, and so forth — Gecko uses <a href="/en-US/docs/CSS" title="CSS">CSS</a>. CSS1 and CSS2 are well supported and support for the emerging CSS3 standard is under development. For further information about CSS, see <a href="http://www.meyerweb.com/eric/css/">Eric Meyer's CSS pages</a>.</p>
+
+<p>Our focus here is on the second type of stylesheet that Gecko supports: the XSLT stylesheet. XSLT stands for eXtensible Stylesheet Language/Transform and the name is apt. XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format (and in the case of Firefox, the focus is on converting it on the fly into HTML which can then be displayed by the browser).</p>
+
+<h2 id="XSLTXPath_reference">XSLT/XPath reference</h2>
+
+<h3 id="Elements"><a href="/en-US/docs/Web/XSLT/Elements">Elements</a></h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/XSLT/apply-imports">xsl:apply-imports</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/apply-templates">xsl:apply-templates</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/attribute">xsl:attribute</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/attribute-set">xsl:attribute-set</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/call-template">xsl:call-template</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/choose">xsl:choose</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/comment">xsl:comment</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/copy">xsl:copy</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/copy-of">xsl:copy-of</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/decimal-format">xsl:decimal-format</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/element">xsl:element</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/fallback">xsl:fallback</a> <em>(not supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/for-each">xsl:for-each</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/if">xsl:if</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/import">xsl:import</a> <em>(mostly supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/include">xsl:include</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/key">xsl:key</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/message">xsl:message</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/namespace-alias">xsl:namespace-alias</a> <em>(not supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/number">xsl:number</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/otherwise">xsl:otherwise</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/output">xsl:output</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/param">xsl:param</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/preserve-space">xsl:preserve-space</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/processing-instruction">xsl:processing-instruction</a></li>
+ <li><a href="/en-US/docs/Web/XSLT/sort">xsl:sort</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/strip-space">xsl:strip-space</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/stylesheet">xsl:stylesheet</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/template">xsl:template</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/text">xsl:text</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/transform">xsl:transform</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/value-of">xsl:value-of</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/variable">xsl:variable</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/when">xsl:when</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/Web/XSLT/with-param">xsl:with-param</a> <em>(supported)</em></li>
+</ul>
+
+<h3 id="Axes"><a href="/en-US/docs/XPath/Axes">Axes</a></h3>
+
+<ul>
+ <li><a href="/en-US/docs/XPath/Axes/ancestor" title="XPath/Axes/ancestor">ancestor</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/ancestor-or-self" title="XPath/Axes/ancestor-or-self">ancestor-or-self</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/attribute" title="XPath/Axes/attribute">attribute</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/child" title="XPath/Axes/child">child</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/descendant" title="XPath/Axes/descendant">descendant</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/descendant-or-self" title="XPath/Axes/descendant-or-self">descendant-or-self</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/following" title="XPath/Axes/following">following</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/following-sibling" title="XPath/Axes/following-sibling">following-sibling</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/namespace" title="XPath/Axes/namespace">namespace</a> <em>(not supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Axes/parent" title="XPath/Axes/parent">parent</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/preceding" title="XPath/Axes/preceding">preceding</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/preceding-sibling" title="XPath/Axes/preceding-sibling">preceding-sibling</a></li>
+ <li><a href="/en-US/docs/XPath/Axes/self" title="XPath/Axes/self">self</a></li>
+</ul>
+
+<h3 id="Functions"><a href="/en-US/docs/XPath/Functions">Functions</a></h3>
+
+<ul>
+ <li><a href="/en-US/docs/XPath/Functions/boolean" title="XPath/Functions/boolean">boolean()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/ceiling" title="XPath/Functions/ceiling">ceiling()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/concat" title="XPath/Functions/concat">concat()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/contains" title="XPath/Functions/contains">contains()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/count" title="XPath/Functions/count">count()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/current" title="XPath/Functions/current">current()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/document" title="XPath/Functions/document">document()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/element-available" title="XPath/Functions/element-available">element-available()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/false" title="XPath/Functions/false">false()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/floor" title="XPath/Functions/floor">floor()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/format-number" title="XPath/Functions/format-number">format-number()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/function-available" title="XPath/Functions/function-available">function-available()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/generate-id" title="XPath/Functions/generate-id">generate-id()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/id" title="XPath/Functions/id">id()</a> <em>(partially supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/key" title="XPath/Functions/key">key()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/lang" title="XPath/Functions/lang">lang()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/last" title="XPath/Functions/last">last()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/local-name" title="XPath/Functions/local-name">local-name()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/name" title="XPath/Functions/name">name()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/namespace-uri" title="XPath/Functions/namespace-uri">namespace-uri()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/normalize-space" title="XPath/Functions/normalize-space">normalize-space()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/not" title="XPath/Functions/not">not()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/number" title="XPath/Functions/number">number()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/position" title="XPath/Functions/position">position()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/round" title="XPath/Functions/round">round()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/starts-with" title="XPath/Functions/starts-with">starts-with()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/string" title="XPath/Functions/string">string()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/string-length" title="XPath/Functions/string-length">string-length()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/substring" title="XPath/Functions/substring">substring()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/substring-after" title="XPath/Functions/substring-after">substring-after()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/substring-before" title="XPath/Functions/substring-before">substring-before()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/sum" title="XPath/Functions/sum">sum()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/system-property" title="XPath/Functions/system-property">system-property()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/translate" title="XPath/Functions/translate">translate()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/true" title="XPath/Functions/true">true()</a> <em>(supported)</em></li>
+ <li><a href="/en-US/docs/XPath/Functions/unparsed-entity-url" title="XPath/Functions/unparsed-entity-url">unparsed-entity-url()</a> <em>(not supported)</em></li>
+</ul>
+
+<h2 id="For_Further_Reading" name="For_Further_Reading"><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading">For Further Reading</a></h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Books" title="Transforming_XML_with_XSLT/For_Further_Reading#Books">Books</a></li>
+ <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Online" title="Transforming_XML_with_XSLT/For_Further_Reading#Online">Online</a>
+  <ul>
+   <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium" title="Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium">The World Wide Web Consortium</a></li>
+   <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Portals" title="Transforming_XML_with_XSLT/For_Further_Reading#Portals">Portals</a></li>
+   <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Articles" title="Transforming_XML_with_XSLT/For_Further_Reading#Articles">Articles</a></li>
+   <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples" title="Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples">Tutorials/Examples</a></li>
+   <li><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups" title="Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups">Mailing Lists/Newsgroups</a></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Resources" name="Resources"><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources">Resources</a></h2>
+
+<h2 id="Index" name="Index"><a href="/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Index" title="Transforming_XML_with_XSLT/Index">Index</a></h2>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.</li>
+ <li>Note: This reprinted article was originally part of the DevEdge site.</li>
+</ul>
+</div>

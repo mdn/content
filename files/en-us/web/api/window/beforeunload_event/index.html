@@ -1,0 +1,103 @@
+---
+title: 'Window: beforeunload event'
+slug: Web/API/Window/beforeunload_event
+tags:
+  - Event
+  - Reference
+  - Window
+---
+<div>{{APIRef}}</div>
+
+<p><span class="seoSummary">The <strong><code>beforeunload</code></strong> event is fired when the window, the document and its resources are about to be unloaded.</span> The document is still visible and the event is still cancelable at this point.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>This event enables a web page to trigger a confirmation dialog asking the user if they really want to leave the page. If the user confirms, the browser navigates to the new page, otherwise it cancels the navigation.</p>
+
+<p>According to the specification, to show the confirmation dialog an event handler should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event.</p>
+
+<p>However note that not all browsers support this method, and some instead require the event handler to implement one of two legacy methods:</p>
+
+<ul>
+ <li>assigning a string to the event's <code>returnValue</code> property</li>
+ <li>returning a string from the event handler.</li>
+</ul>
+
+<p>Some browsers used to display the returned string in the confirmation dialog, enabling the event handler to display a custom message to the user. However, this is deprecated and no longer supported in most browsers.</p>
+
+<p>To combat unwanted pop-ups, browsers may not display prompts created in <code>beforeunload</code> event handlers unless the page has been interacted with, or may even not display them at all.</p>
+
+<p>Attaching an event handler/listener to <code>window</code> or <code>document</code>'s <code>beforeunload</code> event prevents browsers from using in-memory page navigation caches, like <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
+
+<p>The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts">HTML specification</a> for more details.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The HTML specification states that authors should use the {{domxref("Event.preventDefault()")}} method instead of using {{domxref("Event.returnValue")}}. However, this is not supported by all browsers.</p>
+
+<pre class="brush: js notranslate">window.addEventListener('beforeunload', (event) =&gt; {
+  // Cancel the event as stated by the standard.
+  event.preventDefault();
+  // Chrome requires returnValue to be set.
+  event.returnValue = '';
+});
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}}</td>
+   <td>{{Spec2("HTML5 W3C")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Window.beforeunload_event")}}</p>
+
+<p>See <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility">WindowEventHandlers/onbeforeunload</a> for more details on how various browsers handle this event.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}</li>
+ <li><a href="https://html.spec.whatwg.org/#prompt-to-unload-a-document">Unloading Documents — Prompt to unload a document</a></li>
+ <li><a href="https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs">Remove Custom Messages in onbeforeload Dialogs after Chrome 51</a></li>
+</ul>

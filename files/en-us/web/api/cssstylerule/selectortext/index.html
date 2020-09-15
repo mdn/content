@@ -1,0 +1,54 @@
+---
+title: CSSStyleRule.selectorText
+slug: Web/API/CSSStyleRule/selectorText
+tags:
+  - API
+  - CSSOM
+  - CSSStyleRule
+  - Reference
+---
+<div>{{APIRef("CSSOM") }}</div>
+
+<p>The <code><strong>CSSRule.selectorText</strong></code> property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see <a href="/en-US/docs/DOM/Using_dynamic_styling_information" title="/en-US/docs/DOM/Using_dynamic_styling_information">Using dynamic styling information</a>.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>string</em> = cssRule.selectorText
+</pre>
+
+<h2 id="Example" name="Example">Example</h2>
+
+<pre class="brush: js">// for cssrule: body { background-color: darkblue; }
+var stylesheet = document.styleSheets[0];
+
+alert(stylesheet.cssRules[0].selectorText); // body
+</pre>
+
+<h2 class="Notes" id="Notes">Notes</h2>
+
+<p>The implementation may have stripped out insignificant whitespace while parsing the selector. If set to a selector string which cannot be parsed, a SyntaxError is thrown.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSSOM', '#dom-cssstylerule-selectortext', 'CSSStyleRule.selectorText')}}</td>
+			<td>{{Spec2('CSSOM')}}</td>
+			<td> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSStyleRule.selectorText")}}</p>

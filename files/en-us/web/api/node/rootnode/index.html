@@ -1,0 +1,48 @@
+---
+title: Node.rootNode
+slug: Web/API/Node/rootNode
+tags:
+  - API
+  - DOM
+  - Node
+  - Obsolete
+  - Property
+  - Reference
+  - rootNode
+---
+<p>{{APIRef("DOM")}}{{Obsolete_Header}}</p>
+
+<div class="blockIndicator warning">
+<p><strong>Important</strong>: For compatibility reasons, this property has been replaced by the {{DOMxRef("Node.getRootNode()")}} method.</p>
+</div>
+
+<p>The <code><strong>Node.rootNode</strong></code> read-only property returns a {{domxref("Node")}} object representing the topmost node in the tree, or the current node if it's the topmost node in the tree. This is found by walking backward along {{domxref("Node.parentNode")}} until the top is reached.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre><var>rootNode</var> = <em>node</em>.rootNode;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{DOMxRef("Node")}} object representing the topmost node in the tree.</p>
+
+<h2 id="Example" name="Example">Example</h2>
+
+<p>Running the following line in supporting browsers should return a reference to the HTML/document node:</p>
+
+<pre class="brush: js">console.log(document.body.rootNode);</pre>
+
+<h2 id="Notes" name="Notes">Notes</h2>
+
+<div>
+<p>Gecko-based browsers insert text nodes into a document to represent whitespace in the source markup. Therefore a node obtained, for example, using <a href="/en-US/docs/Web/API/Node/firstChild" title="The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."><code>Node.firstChild</code></a> or <a href="/en-US/docs/Web/API/Node/previousSibling" title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a> may refer to a whitespace text node rather than the actual element the author intended to get.</p>
+
+<p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the DOM</a> and <a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Why are some Text nodes empty?</a> for more information.</p>
+</div>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Node.rootNode")}}</p>

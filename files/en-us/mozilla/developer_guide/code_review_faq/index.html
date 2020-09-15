@@ -1,0 +1,53 @@
+---
+title: Code Review FAQ
+slug: Mozilla/Developer_guide/Code_Review_FAQ
+tags:
+  - Developing Mozilla
+  - Review
+---
+<h2 id="What_is_the_purpose_of_code_review.3F" name="What_is_the_purpose_of_code_review.3F">What is the purpose of code review?</h2>
+
+<p>Code review is our basic mechanism for validating the design and implementation of patches. It also helps us maintain a level of consistency in design and implementation practices across the many hackers and among the various modules of Mozilla.</p>
+
+<p>Of course, code review doesn't happen instantaneously, and so there is some latency built into the system. We're always looking for ways to reduce the wait, while simultaneously allowing reviewers to do a good chunk of hacking themselves. We don't have a perfect system, and we never will. It's still evolving, so let us know if you have suggestions.</p>
+
+<p>Mozilla used to have the concept of "super-review", but <a href="https://groups.google.com/forum/#!topic/mozilla.governance/HHU0h-44NDo">a consensus was reached in 2018</a> to retire this process.</p>
+
+<h2 id="Who_must_review_my_code.3F" name="Who_must_review_my_code.3F">Who must review my code?</h2>
+
+<p>You must have an approval ("r={{ mediawiki.external('name') }}") from the module owner or designated "peer" of the module where the code will be checked in. If your code affects several modules, then generally you should have an "r={{ mediawiki.external('name') }}" from the owner or designated peer of each affected module. We try to be reasonable here, so we don't have an absolute rule on when every module owner must approve. For example, tree-wide changes such as a change to a string class or a change to text that is displayed in many modules generally doesn't get reviewed by every module owner.</p>
+
+<p>If your patch affects the user interface of Firefox, you should read "<a href="/en-US/docs/Developer_Guide/Requesting_feedback_and_ui-review_for_desktop_Firefox_front-end_changes" title="Requesting feedback and ui-review for desktop Firefox front-end changes">Requesting feedback and ui-review for desktop Firefox front-end changes</a>" to learn how to get that review performed.</p>
+
+<p>You may wish to ask others as well.</p>
+
+<h2 id="What_do_reviewers_look_for.3F" name="What_do_reviewers_look_for.3F">What do reviewers look for?</h2>
+
+<p>A review is focused on a patch's design, implementation, usefulness in fixing a stated problem, and fit within its module. A reviewer should be someone with domain expertise in the problem area. A reviewer may also utilize other areas of his or her expertise and comment on other possible improvements. There are no inherent limitations on what comments a reviewer might make about improving the code.</p>
+
+<p>Reviewers will probably look at the following areas of the code:</p>
+
+<ul>
+ <li>“goal” review: is the issue being fixed actually a bug? Does the patch fix the fundamental problem?</li>
+ <li>API/design review. Because APIs define the interactions between modules, they need special care. Review is especially important to keep APIs balanced and targeted, and not too specific or overdesigned. There are also specific <a class="internal" href="/en-US/docs/API_change_rules" title="API-change rules">API change rules</a> that must be followed and a <a href="https://wiki.mozilla.org/WebAPI/WebIDL_Review_Checklist">WebIDL review checklist</a>. There are also templates for emails that should be sent when APIs are going to be exposed to the Web and general guidance around naming on <a href="https://wiki.mozilla.org/WebAPI/ExposureGuidelines">this wiki page</a>.</li>
+ <li>Maintainability review. Code which is unreadable is impossible to maintain. If the reviewer has to ask questions about the purpose of a piece of code, then it is probably not documented well enough. Does the code follow the <a class="internal" href="/en-US/docs/Developer_Guide/Coding_Style" title="en-US/docs/Developer_Guide/Coding_Style">coding style guide</a>? <span class="message"><span class="content">Be careful when reviewing code using modern C++ features like auto.</span></span></li>
+ <li>Security review. Does the design use security concepts such as input sanitizers, wrappers, and other techniques? Does this code need additional security testing such as fuzz-testing or static analysis?</li>
+ <li>Integration review. Does this code work properly with other modules? Is it localized properly? Does it have server dependencies? Does it have user documentation?</li>
+ <li>Testing review. Are there tests for correct function? Are there tests for error conditions and incorrect inputs which could happen during operation?</li>
+ <li>Performance review. Has this code been profiled? Are you sure it's not negatively affecting performance of other code?</li>
+ <li>License review. Does the code follow the <a class="external" href="http://www.mozilla.org/hacking/committer/committers-agreement.pdf" title="http://www.mozilla.org/hacking/committer/committers-agreement.pdf">code licensing rules</a>?</li>
+</ul>
+
+<h2 id="How_can_I_tell_the_status_of_reviews_and_super-reviews.3F" name="How_can_I_tell_the_status_of_reviews_and_super-reviews.3F">How can I tell the status of reviews?</h2>
+
+<p>When a patch has passed review you'll see "Accepted" in green at the top of a Phabricator revision, under the title. In Bugzilla (which is deprecated in favour of Phabricator), this is indicated by "{{ mediawiki.external('name') }}:review+" in the attachment table in the bug report. If it has failed review then you'll see "Needs Revision" in red at the top of the revision, or, in Bugzilla, "{{ mediawiki.external('name') }}:review-". Most of the time that a reviewer sets a review flag, they will also add a comment to the bug explaining the review.</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): Marcia Knous</li>
+ <li>Other Contributors: dbaron, asa</li>
+ <li>Last Updated Date: 2005-03-30</li>
+</ul>
+</div>

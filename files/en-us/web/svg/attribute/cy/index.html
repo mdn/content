@@ -1,0 +1,171 @@
+---
+title: cy
+slug: Web/SVG/Attribute/cy
+tags:
+  - SVG
+  - SVG Attribute
+---
+<div>{{SVGRef}}</div>
+
+<p>The <strong><code>cy</code></strong> attribute define the y-axis coordinate of a center point.</p>
+
+<p>Three elements are using this attribute: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, and {{SVGElement("radialGradient")}}</p>
+
+<div id="topExample">
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;radialGradient cy="25%" id="myGradient"&gt;
+    &lt;stop offset="0"    stop-color="white" /&gt;
+    &lt;stop offset="100%" stop-color="black" /&gt;
+  &lt;/radialGradient&gt;
+
+  &lt;circle  cy="50"  cx="50" r="45"/&gt;
+  &lt;ellipse cy="150" cx="50" rx="45" ry="25" /&gt;
+  &lt;rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" /&gt;
+&lt;/svg&gt;</pre>
+
+<p>{{EmbedLiveSample('topExample', '100%', 300)}}</p>
+</div>
+
+<h2 id="circle">circle</h2>
+
+<p>For {{SVGElement('circle')}}, <code>cy</code> defines the y-axis coordinate of the center of the shape.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> Starting with SVG2, <code>cy</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for circles.</p>
+
+<h2 id="ellipse">ellipse</h2>
+
+<p>For {{SVGElement('ellipse')}}, <code>cy</code> defines the y-axis coordinate of the center of the shape.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> Starting with SVG2, <code>cy</code> is a <em>Geometry Property</em> meaning this attribute can also be used as a CSS property for ellipses.</p>
+
+<h2 id="radialGradient">radialGradient</h2>
+
+<p>For {{SVGElement('radialGradient')}}, <code>cy</code> defines the y-axis coordinate of the end circle for the radial gradient.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>50%</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Example">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;radialGradient cy="0" id="myGradient000"&gt;
+      &lt;stop offset="0%"   stop-color="gold" /&gt;
+      &lt;stop offset="50%"  stop-color="green" /&gt;
+      &lt;stop offset="100%" stop-color="white" /&gt;
+    &lt;/radialGradient&gt;
+
+    &lt;radialGradient cy="50%" id="myGradient050"&gt;
+      &lt;stop offset="0%"   stop-color="gold" /&gt;
+      &lt;stop offset="50%"  stop-color="green" /&gt;
+      &lt;stop offset="100%" stop-color="white" /&gt;
+    &lt;/radialGradient&gt;
+
+    &lt;radialGradient cy="100%" id="myGradient100"&gt;
+      &lt;stop offset="0%"   stop-color="gold" /&gt;
+      &lt;stop offset="50%"  stop-color="green" /&gt;
+      &lt;stop offset="100%" stop-color="white" /&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;rect x="1"  y="1" width="8" height="8" fill="url(#myGradient000)" stroke="black" /&gt;
+  &lt;rect x="13" y="1" width="8" height="8" fill="url(#myGradient050)" stroke="black" /&gt;
+  &lt;rect x="25" y="1" width="8" height="8" fill="url(#myGradient100)" stroke="black" /&gt;
+&lt;/svg&gt;</pre>
+
+<p>{{EmbedLiveSample('radialGradient', 150, '100%')}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG2", "geometry.html#CY", "cy")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Definition as a geometry property</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Definition for SVG2 paint servers.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;radialGradient&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;ellipse&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;circle&gt;</code></td>
+  </tr>
+ </tbody>
+</table>

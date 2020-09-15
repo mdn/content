@@ -1,0 +1,119 @@
+---
+title: MediaSource.endOfStream()
+slug: Web/API/MediaSource/endOfStream
+tags:
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - MediaSource
+  - Method
+  - Reference
+  - Video
+  - endOfStream
+---
+<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+
+<p>The <code><strong>endOfStream()</strong></code> method of the {{domxref("MediaSource")}} interface signals the end of the stream.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>mediaSource</em>.endOfStream(<em>endOfStreamError</em>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt>endOfStreamError {{optional_inline}}</dt>
+ <dd>A {{domxref("DOMString")}} representing an error to throw when the end of the stream is reached. The possible values are:
+ <ul>
+  <li><code>network</code>: Terminates playback and signals that a network error has occured. This can be used create a custom error handler related to media streams. For example, you might have a function that handles media chunk requests, separate from other network requests. When you make an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> call for a media chunk, and <code>onabort</code> or <code>onerror</code> triggers, you might want to call <code>endOfStream('network')</code>, display a descriptive message in the UI, and maybe retry the network request immediately or wait until the network is back up (via some kind of polling.)</li>
+  <li><code>decode</code>: Terminates playback and signals that a decoding error has occured. This can be used to indicate that a parsing error has occured while fetching media data; maybe the data is corrupt, or is encoded using a codec that the browser doesn't know how to decode.</li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>{{jsxref('undefined')}}</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Exception</th>
+   <th scope="col">Explanation</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>InvalidStateError</code></td>
+   <td>{{domxref("MediaSource.readyState")}} is not equal to <code>open</code>, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is <code>true</code>.)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Example">Example</h2>
+
+<p>The following snippet is from a simple example written by Nick Desaulniers (<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+
+<pre class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
+// Need to be specific for Blink regarding codecs
+// ./mp4info frag_bunny.mp4 | grep Codec
+var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+
+<code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'MediaSource'</span> <span class="keyword token">in</span> window <span class="operator token">&amp;&amp;</span> MediaSource<span class="punctuation token">.</span><span class="function token">isTypeSupported<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaSource</span><span class="punctuation token">;</span>
+ <span class="comment token"> //console.log(mediaSource.readyState); // closed
+</span>  video<span class="punctuation token">.</span>src <span class="operator token">=</span> URL<span class="punctuation token">.</span><span class="function token">createObjectURL<span class="punctuation token">(</span></span>mediaSource<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  mediaSource<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'sourceopen'</span><span class="punctuation token">,</span> sourceOpen<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">'Unsupported MIME type or codec: '</span><span class="punctuation token">,</span> mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+ <span class="comment token"> //console.log(this.readyState); // open
+</span>  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
+  <span class="keyword token">var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="function token">fetchAB<span class="punctuation token">(</span></span>assetURL<span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>buf<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    sourceBuffer<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'updateend'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      mediaSource<span class="punctuation token">.</span><span class="function token">endOfStream<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      video<span class="punctuation token">.</span><span class="function token">play<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+     <span class="comment token"> //console.log(mediaSource.readyState); // ended
+</span>    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    sourceBuffer<span class="punctuation token">.</span><span class="function token">appendBuffer<span class="punctuation token">(</span></span>buf<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions', '#dom-mediasource-endofstream', 'endOfStream()')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.MediaSource.endOfStream")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("SourceBuffer")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

@@ -1,0 +1,59 @@
+---
+title: CSSSupportsRule
+slug: Web/API/CSSSupportsRule
+tags:
+  - API
+  - CSSOM
+  - Interface
+  - Reference
+---
+<p>{{APIRef("CSSOM")}}</p>
+
+<p>The <strong><code>CSSSupportsRule</code></strong> interface describes an object representing a single CSS {{cssxref("@supports")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSConditionRule")}} interface, and therefore the {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}} interfaces with a type value of <code>12</code> (<code>CSSRule.SUPPORTS_RULE</code>).</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+
+<pre class="syntaxbox">interface CSSSupportsRule : CSSConditionRule {
+}
+</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<p>As a {{domxref("CSSConditionRule")}} and therefore a {{domxref("CSSRule")}} and a {{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> also implements the properties of these interfaces. It has no specific properties.</p>
+
+<h2 id="Methods">Methods</h2>
+
+<p>As a {{domxref("CSSConditionRule")}} and therefore a {{domxref("CSSRule")}}and a {{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> also implements the methods of that interface. It has no specific methods.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Conditional', '#the-csssupportsrule-interface', 'CSSSupportsRule') }}</td>
+   <td>{{ Spec2('CSS3 Conditional') }}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSSupportsRule")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("@supports")}}</li>
+</ul>

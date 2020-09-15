@@ -1,0 +1,80 @@
+---
+title: Porting a legacy Firefox extension
+slug: Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on
+tags:
+  - WebExtensions
+---
+<div>{{AddonSidebar}}</div>
+
+<p><span class="seoSummary">If you have developed a Firefox extension using XUL/XPCOM or the Add-on SDK, this page will help you migrate your extension to use WebExtensions APIs. The standard to build extensions for Firefox is to use</span><a class="external text" href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions" rel="nofollow">WebExtensions</a> APIs. It will be the only type of extension supported in Firefox by the end of November 2017 with the release of <a class="external text" href="https://wiki.mozilla.org/RapidRelease/Calendar" rel="nofollow">Firefox 57</a>.</p>
+
+<div class="blockIndicator warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<h2 id="Quick_start">Quick start</h2>
+
+<ol>
+ <li>Get an idea of the main things you'll have to change in your extension:
+  <ul>
+   <li>Familiarize yourself with the <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">WebExtension format and structure</a>, and <a href="/en-US/Add-ons/WebExtensions/Your_first_WebExtension">build a basic example</a>.</li>
+   <li>If your extension is based on XUL and XPCOM, whether it's an <a href="https://developer.mozilla.org/en-US/Add-ons/Overlay_Extensions">overlay extension</a> or a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions">bootstrapped extension</a>, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a> to find out how WebExtensions can correspond with the legacy APIs you're using.</li>
+   <li>If your extension is based on the Add-on SDK, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a> to find out how WebExtensions can correspond with the legacy SDK APIs you're using.</li>
+  </ul>
+ </li>
+ <li>Rewrite your extension code. See below for migration paths for different types of extensions. From Firefox 51 onwards, you can embed an extension built using WebExtension APIs in a bootstrapped extension or an SDK add-on, and can thus port a legacy extension a piece at a time, and have a working extension at each step. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a> for more information.</li>
+ <li>When you're ready to submit the WebExtension version of your extension to AMO... wait a minute... are you truly ready? Because of the extensions permissions model, you cannot revert from WebExtensions back to using a legacy extension format. So test <em>thoroughly</em>, because this is a permanent one-way trip. Also, see the hybrid example below. If you're not ready, you can embed your WebExtension in a legacy extension container, which allows you to test your extension migration but still go back if needed in an emergency.</li>
+ <li>When you're <em>really</em> ready to submit the WebExtension version of your extension to AMO, first port your old add-on ID to the new WebExtension manifest.json file. Your extension must have the same ID as previous versions. Copy the value in the "id" field from your package.json file into the id field in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> section of the WebExtension manifest.json file. Then you can submit your extension update to AMO as your normally would.</li>
+</ol>
+
+<div class="note">
+<p>Note that this is a one-way conversion: You <strong>cannot</strong> update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.</p>
+</div>
+
+<h2 id="Migration_paths">Migration paths</h2>
+
+<h3 id="SDK_Extensions">SDK Extensions</h3>
+
+<p>Here is the comparison chart showing <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">SDK APIs and their WebExtensions format counterparts</a>. If you don't see the APIs you need to port to use WebExtensions APIs, look below to learn how to request APIs and also how to implement them.</p>
+
+<h3 id="XULXPCOM_Extensions">XUL/XPCOM Extensions</h3>
+
+<p>Here is the comparison chart showing <a href="/en-US/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">XUL/XPCOM APIs and their WebExtensions format counterparts</a>. If you don't see the APIs you need to port to use WebExtension APIs, look below to learn how to request APIs and also how to implement them.</p>
+
+<h2 id="Don't_see_the_WebExtensions_APIs_you_need">Don't see the WebExtensions APIs you need?</h2>
+
+<p><strong>Develop WebExtension APIs for Firefox</strong> - If you're experienced with Mozilla infrastructure and would like to develop WebExtensions APIs directly for Firefox, here is a list of <a href="https://mzl.la/2dVs5Ys">approved APIs</a> that you can start contributing to.</p>
+
+<p><strong>Experiment with new WebExtension APIs</strong> - If you want to prototype and tinker with WebExtensions APIs without having to build Firefox, <a href="http://webextensions-experiments.readthedocs.io/en/latest/index.html">WebExtensions Experiments</a> is for you!</p>
+
+<p><strong>Request a new WebExtensions API</strong> - If you want to request a new WebExtensions API, please read <a class="external text" href="https://wiki.mozilla.org/WebExtensions/NewAPIs" rel="nofollow">this page</a>.</p>
+
+<h2 id="Tools">Tools</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> is a command line tool designed to speed up various parts of the extension development process, making development faster and easier.</li>
+ <li><a href="https://github.com/mi-g/weh">WebExtensions Helper</a> speeds up browser extension development by providing utilities for WebExtensions-based (Firefox, Chrome, Opera and Edge) extensions</li>
+ <li><a href="https://github.com/yeoman/generator-chrome-extension">Chrome Extension generator </a>creates everything you need to get started with extension development. You can choose Browser UI(Browser,Page Action, Omnibox) type and select permissions you need.</li>
+ <li><a href="http://extensionizr.com/">Extensionizr</a> is a wizard that helps you create a basic extension</li>
+ <li><a href="https://github.com/mahemoff/chrome-boilerplate">Chrome Boilerplate</a> is boilerplate code for Chrome WebE<span class="col-11 mr-2 text-gray-dark">xtension.</span></li>
+ <li><a href="https://github.com/sitepoint/ChromeSkel_a">Skeleton Chrome Extension</a> is an extension bootstrap and template</li>
+</ul>
+
+<h2 id="Documentation">Documentation</h2>
+
+<ul>
+ <li><a href="https://wiki.mozilla.org/Add-ons/developer/communication">WebExtensions Project Page</a> on the Mozilla Wiki</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">How-to guides</a> covering common extension developer cases, like <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">intercepting web requests</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">adding a button to the toolbar</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser compatibility table</a> for all WebExtensions APIs</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples">Examples of extensions</a></li>
+</ul>
+
+<h2 id="Contact">Contact</h2>
+
+<ul>
+ <li>
+  <p>You can use the links <a href="https://developer.mozilla.org/en-US/Add-ons#Contact_us">here</a> to get help, keep up to date with news around add-ons, and give us feedback.</p>
+ </li>
+</ul>

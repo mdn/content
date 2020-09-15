@@ -1,0 +1,38 @@
+---
+title: Building Firefox with Debug Symbols
+slug: Mozilla/Developer_guide/Build_Instructions/Building_Firefox_with_Debug_Symbols
+tags:
+  - Build documentation
+  - Crash_reporting
+  - Developing Mozilla
+---
+<p>By default, a release build of Firefox will not generate debug symbols suitable for debugging or post-processing into the <a href="/en-US/docs/Crash_reporting" title="en-US/docs/Crash_reporting">breakpad</a> symbol format. Use the following <a href="/en-US/docs/Configuring_Build_Options" title="en-US/docs/Configuring_Build_Options">mozconfig</a> settings to do a build with symbols:</p>
+
+<p>{{ fx_minversion_header("4") }}</p>
+
+<h3 id="Building_Firefox_with_symbols">Building Firefox with symbols</h3>
+
+<p>There is a single configure option to enable building with symbols on all platforms. This is enabled by default so unless you have explcitly disabled it your build you should include symbols.</p>
+
+<pre>ac_add_options --enable-debug-symbols
+</pre>
+
+<p>This can optionally take an argument for the type of symbols that need to be produced (like "-g3"). By default it uses "-g" on Linux and MacOS. This value takes precedence over the flags set in <code>MOZ_DEBUG_FLAGS</code></p>
+
+<p>Note that this will override the values provided for <code>CFLAGS</code> and <code>CXXFLAGS</code>.</p>
+
+<h3 id="Breakpad_symbol_files" name="Breakpad_symbol_files">Breakpad symbol files</h3>
+
+<p>After the build is complete, run the following command to generate an archive of <a href="/en-US/docs/Crash_reporting" title="en-US/docs/Crash_reporting">Breakpad</a> symbol files:</p>
+
+<pre class="eval">mach buildsymbols
+</pre>
+
+<p>The tinderbox uses an additional <code>uploadsymbols</code> target to upload symbols to a socorro server. See <a class="external external-icon" href="https://dxr.mozilla.org/mozilla/source/toolkit/crashreporter/tools/upload_symbols.sh" rel="custom noopener">https://dxr.mozilla.org/mozilla/source/toolkit/crashreporter/tools/upload_symbols.sh</a> for more information about the environment variables used by this target.</p>
+
+<h3 id="make_package" name="make_package"><code>make package</code></h3>
+
+<p>If you use <code>make package</code> to package your build, symbols will be stripped. If you want to keep the symbols in the patches, you need to add this to your mozconfig:</p>
+
+<pre class="eval"> ac_add_options --disable-install-strip
+</pre>

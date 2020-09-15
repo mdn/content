@@ -1,0 +1,71 @@
+---
+title: GamepadPose.position
+slug: Web/API/GamepadPose/position
+tags:
+  - API
+  - Experimental
+  - Gamepad API
+  - GamepadPose
+  - Position
+  - Property
+  - Reference
+  - Virtual Reality
+  - WebVR
+---
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+
+<p>The <strong><code>position</code></strong> read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.</p>
+
+<p>The coordinate system is as follows:</p>
+
+<ul>
+ <li>Positive X is to the user’s right.</li>
+ <li>Positive Y is up.</li>
+ <li>Positive Z is behind the user.</li>
+</ul>
+
+<p>Positions are measured in meters from an origin point — this point is the position the sensor was first read at.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">var myGamepadPosition = gamepadPoseInstance.position;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("Float32Array")}}, or <code>null</code> if the gamepad is not able to provide position data.</p>
+
+<div class="note">
+<p><strong>Note</strong>: User agents may provide emulated position values through certain techniques; when doing so they should still report {{domxref("GamepadPose.hasPosition")}} as false.</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<p>TBD</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('GamepadExtensions', '#dom-gamepadpose-position', 'position')}}</td>
+   <td>{{Spec2('GamepadExtensions')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.GamepadPose.position")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
+ <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
+</ul>

@@ -1,0 +1,467 @@
+---
+title: web-ext command reference
+slug: Mozilla/Add-ons/WebExtensions/web-ext_command_reference
+tags:
+  - Options
+  - Reference
+  - Tools
+  - WebExtensions
+  - commands
+  - web-ext
+---
+<p>{{AddonSidebar}}</p>
+
+<p>This page lists all the commands and options available under the <a href="https://github.com/mozilla/web-ext">web-ext</a> command line tool.</p>
+
+<h2 id="Commands">Commands</h2>
+
+<p>web-ext has the following commands; options specific to these commands are included as subsections.</p>
+
+<h3 id="web-ext_build">web-ext build</h3>
+
+<p>Packages an extension into a <code>.zip</code> file, ignoring files that are commonly unwanted in packages, such as <code>.git</code> and other artifacts. The name of the <code>.zip</code> file is taken from the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a> field in the extension <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest</a>.</p>
+
+<h4 id="--as-needed">--as-needed</h4>
+
+<p>Re-build the extension anytime you edit and save a source file. This allows you to continuously create a package with the most up to date source code.</p>
+
+<p>Environment variable: <code>$WEB_EXT_AS_NEEDED=true</code></p>
+
+<h4 id="--overwrite-dest_-o">--overwrite-dest, -o</h4>
+
+<p>Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.</p>
+
+<p>Environment variable: <code>$WEB_EXT_OVERWRITE_DEST=true</code></p>
+
+<h3 id="web-ext_docs">web-ext docs</h3>
+
+<p>Opens the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext documentation</a> in the user's default browser.</p>
+
+<h3 id="web-ext_lint">web-ext lint</h3>
+
+<p>Reports errors in the extension <a href="/en-US/Add-ons/WebExtensions/manifest.json">manifest</a> or other source code files. When <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">strict_min_version</a> is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the <a href="https://github.com/mozilla/addons-linter">addons-linter</a> project for more information about what kind of rules are used to validate extension source.</p>
+
+<h4 id="--output_-o">--output, -o</h4>
+
+<p>The type of output to generate when reporting on errors. Choices: <code>json</code> or <code>text</code>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_OUTPUT</code></p>
+
+<h4 id="--metadata">--metadata</h4>
+
+<p>Output only metadata about the extension in JSON.</p>
+
+<p>Environment variable: <code>$WEB_EXT_METADATA=true</code></p>
+
+<h4 id="--pretty">--pretty</h4>
+
+<p>Format the JSON output so that it's easier to read. This only applies when <code>--output</code> is set to <code>json</code>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_PRETTY=true</code></p>
+
+<h4 id="--self-hosted">--self-hosted</h4>
+
+<p>Declares that your extension will be self-hosted. This disables messages related to hosting on <a href="https://addons.mozilla.org/">addons.mozilla.org</a>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_SELF_HOSTED=true</code></p>
+
+<h4 id="--boring">--boring</h4>
+
+<p>Disables colorful shell characters so that the output only contains plain text.</p>
+
+<p>Environment variable: <code>$WEB_EXT_BORING=true</code></p>
+
+<h4 id="--warnings-as-errors_-w">--warnings-as-errors, -w</h4>
+
+<p>Treat warnings as errors by exiting non-zero for warnings.</p>
+
+<p>Environment variable: <code>$WEB_EXT_WARNINGS_AS_ERRORS=true</code></p>
+
+<h3 id="web-ext_run">web-ext run</h3>
+
+<p>Builds and then temporarily installs an extension on the target application, so it can be tested. By default, watches extension source files and reload the extension in each target as files change.</p>
+
+<h4 id="--adb-bin">--adb-bin</h4>
+
+<p>Path to the <a href="https://developer.android.com/studio/command-line/adb.html">ADB (Android Device Bridge)</a> executable on the machine you are running <code>web-ext</code> from. By default, the <code>adb</code> executable will be located on your PATH.</p>
+
+<p>Environment variable: <code>$WEB_EXT_ADB_BIN</code></p>
+
+<h4 id="--adb-device_--android-device">--adb-device, --android-device</h4>
+
+<p>The ID of your target Android device. If you do not specify this option, <code>web-ext</code> will list the IDs of each device connected. If you don't see a list of connected devices, make sure <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android#Set_up_your_computer_and_Android_emulator_or_device">yours is set up for development</a>.</p>
+
+<p>Example:</p>
+
+<pre class="brush: bash">web-ext run --target=firefox-android --android-device FA4AX0201736</pre>
+
+<p>Environment variable: <code>$WEB_EXT_ADB_DEVICE</code></p>
+
+<h4 id="--adb-host">--adb-host</h4>
+
+<p>Host name to use when connecting to an Android device with <a href="https://developer.android.com/studio/command-line/adb.html">ADB (Android Device Bridge)</a>. This will be discovered automatically by default.</p>
+
+<p>Environment variable: <code>$WEB_EXT_ADB_HOST</code></p>
+
+<h4 id="--adb-port">--adb-port</h4>
+
+<p>Network port to use when connecting to an Android device with <a href="https://developer.android.com/studio/command-line/adb.html">ADB (Android Device Bridge)</a>. This will be discovered automatically by default.</p>
+
+<p>Environment variable: <code>$WEB_EXT_ADB_PORT</code></p>
+
+<h4 id="--browser-console_-bc">--browser-console, -bc</h4>
+
+<p>This opens a <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> on startup, so you can see log messages for your extension. Example:</p>
+
+<pre class="brush: bash">web-ext run --browser-console</pre>
+
+<p>Environment variable: <code>$WEB_EXT_BROWSER_CONSOLE=true</code></p>
+
+<p>Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.</p>
+
+<h4 id="--firefox_-f">--firefox, -f</h4>
+
+<p>Specify a particular version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox Desktop</a> to run the extension in. The value is an absolute path to the Firefox executable or an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.</p>
+
+<p>Here is an example specifying a full path to a Firefox executable on Windows:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">--firefox="C:\Program Files\Mozilla Firefox\firefox.exe"</code></pre>
+
+<p>Here is an example specifying an executable path on Mac OS:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">--firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin</code></pre>
+
+<p>You can also use aliases, like this:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">--firefox=beta</code></pre>
+
+<p>Here are all available aliases and the executables they map to:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Alias</th>
+   <th scope="col">Firefox executable</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>firefox</code></td>
+   <td>The <a href="https://www.mozilla.org/en-US/firefox/new/">release</a> build of Firefox</td>
+  </tr>
+  <tr>
+   <td><code>beta</code></td>
+   <td>The <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">beta</a> build of Firefox</td>
+  </tr>
+  <tr>
+   <td><code>nightly</code></td>
+   <td>The <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">nightly</a> build of Firefox</td>
+  </tr>
+  <tr>
+   <td><code>firefoxdeveloperedition</code></td>
+   <td>The <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">developer</a> build of Firefox</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Environment variable: <code>$WEB_EXT_FIREFOX</code></p>
+
+<h4 id="--firefox-apk">--firefox-apk</h4>
+
+<p>The exact <a href="https://en.wikipedia.org/wiki/Android_application_package">APK</a> name for <a href="https://www.mozilla.org/en-US/firefox/mobile/">Firefox</a> on your Android device. Without specifying this option, <code>web-ext</code> will automatically select it for you. If more than one Firefox APK is installed, <code>web-ext</code> will show a list of values to choose from.</p>
+
+<p>Example:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox</code></pre>
+
+<p>Environment variable: <code>$WEB_EXT_FIREFOX_APK</code></p>
+
+<h4 id="--firefox-profile_-p">--firefox-profile, -p</h4>
+
+<p>Specify a base Firefox profile to run the extension in. This is specified as a string containing your profile name or an absolute path to its directory. The profile you specify is copied into a new temporary profile and some settings are added that are required for <code>web-ext</code> to function.</p>
+
+<p>If a profile is not specified, it runs the extension using a new temporary profile.</p>
+
+<p>Environment variable: <code>$WEB_EXT_FIREFOX_PROFILE</code></p>
+
+<h4 id="--keep-profile-changes">--keep-profile-changes</h4>
+
+<p>With this option, any changes made to the profile directory (specified by <code>--firefox-profile</code>) are saved. Without this option, profile changes are not saved.</p>
+
+<div class="warning">
+<p>This option makes the profile specified by <code>--firefox-profile</code> completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for <code>web-ext</code> to operate.</p>
+</div>
+
+<p>Environment variable: <code>$WEB_EXT_KEEP_PROFILE_CHANGES=true</code></p>
+
+<h4 id="--no-reload">--no-reload</h4>
+
+<p>Do not automatically reload the extension in the browser as you edit and save source files.</p>
+
+<p>Environment variable: <code>$WEB_EXT_NO_RELOAD=true</code></p>
+
+<h4 id="--pre-install">--pre-install</h4>
+
+<p>Pre-install the extension into the profile before starting the browser. This is a way to support Firefox versions less than 49, as they don't support remote installation. Specifying this option implies <code>--no-reload</code>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_PRE_INSTALL=true</code></p>
+
+<h4 id="--pref">--pref</h4>
+
+<p>Customize any Firefox preference without creating or modifying the profile. Use the equal sign to set values, for example:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code>--pref general.useragent.locale=fr-FR</code></pre>
+
+<p>Specify this option multiple times to set more than one preference.</p>
+
+<p>Environment variable: <code>$WEB_EXT_PREF</code></p>
+
+<h4 id="--target_-t">--target, -t</h4>
+
+<p>This specifies which application to run your extension in. Specify this option multiple times to run the extension in each application concurrently.</p>
+
+<p>Here are the supported targets:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Target</th>
+   <th scope="col">Application</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>firefox-desktop</code></td>
+   <td>The extension will run in <a href="https://www.mozilla.org/en-US/firefox/">Firefox Desktop</a>.</td>
+  </tr>
+  <tr>
+   <td><code>firefox-android</code></td>
+   <td>The extension will run in <a href="https://www.mozilla.org/en-US/firefox/mobile/">Firefox for Android</a>. You must also specify <code>--android-device</code>.</td>
+  </tr>
+  <tr>
+   <td><code>chromium</code></td>
+   <td>The extension will run in Chrome. <code>--chromium-binary BINARY_PATH</code> can be used to run a specific Chromium-based browser, including Brave, Edge, Opera or Vivaldi. Requires <a href="https://github.com/mozilla/web-ext/releases/tag/3.2.0">web-ext@3.2.0</a> or higher.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If no target is specified, the extension will run in <code>firefox-desktop</code>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_TARGET</code></p>
+
+<h4 id="--start-url">--start-url</h4>
+
+<p>This will open a tab at the specified URL when the browser starts. Example:</p>
+
+<pre class="brush: bash">web-ext run --start-url www.mozilla.com</pre>
+
+<p>Declare this option multiple times to open multiple tabs. Example:</p>
+
+<pre class="brush: bash">web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org</pre>
+
+<p>Environment variable: <code style="font-style: normal;">$WEB_EXT_START_URL</code></p>
+
+<h3 id="web-ext_sign">web-ext sign</h3>
+
+<p>This command uses the <a href="https://addons-server.readthedocs.io/en/latest/topics/api/signing.html">addons.mozilla.org API</a> to sign your extension. If successful, it will download the signed <code>.xpi</code> file, which you can use to <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on#Self-distribution">self-host your extension</a>.</p>
+
+<p>You need to create <a href="http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials">API access credentials</a> to run this command. <a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">Obtain your personal access credentials here</a>.</p>
+
+<h4 id="--api-key">--api-key</h4>
+
+<p>Your API key (<a href="http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request/">JWT issuer</a>) for accessing the <a href="http://addons-server.readthedocs.org/en/latest/topics/api/index.html">addons.mozilla.org API</a>. This should always be a string.</p>
+
+<p>Environment variable: <code>$WEB_EXT_API_KEY</code></p>
+
+<h4 id="--api-secret">--api-secret</h4>
+
+<p>Your API secret (<a href="http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request">JWT secret</a>) from <a href="http://addons-server.readthedocs.org/en/latest/topics/api/index.html">addons.mozilla.org API</a>. This should always be a string.</p>
+
+<p>Environment variable: <code>$WEB_EXT_API_SECRET</code></p>
+
+<h4 id="--api-url-prefix">--api-url-prefix</h4>
+
+<p>The signing API URL prefix. This should always be a string. If not specified, this will default to <code>https://addons.mozilla.org/api/v3</code> which is the production API.</p>
+
+<p>Environment variable: <code>$WEB_EXT_API_URL_PREFIX</code></p>
+
+<h4 id="--api-proxy">--api-proxy</h4>
+
+<p>A proxy host to use for all API connections. Example: <code>https://yourproxy:6000. </code>Read more about <a href="https://github.com/request/request#proxies">how proxy requests work</a>. There is a separate section about <a href="/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_in_a_restricted_environment">signing in a restricted environment</a> if the proxy approach doesn't work for you.</p>
+
+<p>Environment variable: <code>$WEB_EXT_API_PROXY</code></p>
+
+<h4 id="--channel">--channel</h4>
+
+<p>This specifies the <code>channel</code> in which the extension is signed. It defaults to <code>unlisted</code> or the <code>channel</code> of your extension's latest version. The values for <code>channel</code> are:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Channel</th>
+   <th scope="col">Result</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>listed</code></td>
+   <td>The extension gets submitted for review so it can be listed on <a href="https://addons.mozilla.org">addons.mozilla.org</a>. This type of channel is not well supported and cannot be used for some cases, as documented below.</td>
+  </tr>
+  <tr>
+   <td><code>unlisted</code></td>
+   <td>The extension gets signed for publication on your own website.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>One example of using the <code>--channel</code> option is to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_a_test_version_of_a_listed_extension">create a beta version</a> for a <code>listed</code> extension (that is, one you have already <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on#Listing_on_AMO">submitted to addons.mozilla.org</a>).</p>
+
+<div class="warning">
+<ul>
+ <li>Setting <code>--channel=listed</code> for a new extension is not yet supported. See <a href="https://github.com/mozilla/web-ext/issues/804">https://github.com/mozilla/web-ext/issues/804</a></li>
+ <li>Setting <code>--channel=listed</code> for a new version of a listed extension is not well supported. It will upload your new version to <a href="https://addons.mozilla.org">addons.mozilla.org</a> as if you'd <a href="/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">submitted it manually</a>. However, the command will fail and you'll have to check <a href="https://addons.mozilla.org/developers/addons">addons.mozilla.org/developers/addons</a> for the correct status.</li>
+</ul>
+</div>
+
+<p>See <a href="https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version">documentation on the signing API</a> for more information.</p>
+
+<p>Environment variable: <code>$WEB_EXT_CHANNEL</code></p>
+
+<h4 id="--timeout">--timeout</h4>
+
+<p>Number of milleseconds to wait before giving up on a response from Mozilla's web service. This should always be a number.</p>
+
+<p>Environment variable: <code>$WEB_EXT_TIMEOUT</code></p>
+
+<h4 id="--id">--id</h4>
+
+<p>A custom identifier string for the extension. This has no effect if the extension already declares an identifier in its manifest. This option may be useful for signing versions of an exisiting extension that you own.</p>
+
+<p>Environment variable: <code>$WEB_EXT_ID</code></p>
+
+<h2 id="Global_options">Global options</h2>
+
+<p>web-ext has the following global options that may apply to multiple commands.</p>
+
+<h3 id="--artifacts-dir_-a">--artifacts-dir, -a</h3>
+
+<p>Specifies a particular directory to save artifacts in, e.g the <code>.zip</code> file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If this is not specified, the default is the relative path <code>./web-ext-artifacts</code>.</p>
+</div>
+
+<p>Environment variable: <code>$WEB_EXT_ARTIFACTS_DIR</code></p>
+
+<h3 id="--config_-c">--config, -c</h3>
+
+<p>Load a config file to set option value defaults. See an example of <a href="/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Setting_option_defaults_in_a_configuration_file">what config files look like and how they work</a>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_CONFIG</code></p>
+
+<h3 id="--config-discoveryfalse_--no-config-discovery">--config-discovery=false, --no-config-discovery</h3>
+
+<p>Disable <a href="/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Automatic_discovery_of_configuration_files">automatic config file discovery</a>.</p>
+
+<p>Environment variable: <code>$WEB_EXT_CONFIG_DISCOVERY=false</code> or <code>$WEB_EXT_NO_CONFIG_DISCOVERY</code></p>
+
+<h3 id="--ignore-files_-i">--ignore-files, -i</h3>
+
+<p>A list of <a href="https://github.com/isaacs/node-glob#glob-primer">glob patterns</a> to define which files should be ignored by <code>build</code>, <code>run</code>, <code>lint</code> and other commands. If you specify relative paths, they will be relative to your <code>--source-dir</code>.</p>
+
+<p>Here is an example of ignoring any file within your <code>--source-dir</code> (or its subdirectories) that ends in the suffix <code>.api-key</code>:</p>
+
+<pre class="brush: bash">web-ext build --ignore-files "**/*.api-key"</pre>
+
+<p>You can specify multiple patterns by separating them with spaces:</p>
+
+<pre class="brush: bash">web-ext build --ignore-files path/to/first.js path/to/second.js</pre>
+
+<p>By default, without the use of <code>--ignore-files</code>, the following rules are applied:</p>
+
+<ul>
+ <li>Any file ending in <code>.xpi</code> or <code>.zip</code> is ignored</li>
+ <li>Any hidden file (one that starts with a dot) is ignored</li>
+ <li>Any directory named <code>node_modules</code> is ignored</li>
+</ul>
+
+<p>When you specify custom patterns using <code>--ignore-files</code>, they are applied <em>in addition to</em> the default patterns.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Order is important: you must specify the web-ext command before specifying the --ignore-files option.</p>
+</div>
+
+<p>Environment variable: <code>$WEB_EXT_IGNORE_FILES</code></p>
+
+<h3 id="--help_-h">--help, -h</h3>
+
+<p>Lists all the available commands and options available for the web-ext tool.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You can list the options available for a specific command by including the command name as you request help, for example <code>web-ext --help run</code>.</p>
+</div>
+
+<h3 id="--no-input">--no-input</h3>
+
+<p>Disable all features that require standard input.</p>
+
+<p>Environment variable: <code>$WEB_EXT_NO_INPUT=true</code></p>
+
+<h3 id="--source-dir_-s">--source-dir, -s</h3>
+
+<p>Specifies the directory of the extension's source code, e.g. when building or running an extension. This can be specified as a relative or absolute path, and should always be a string.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If this is not specified, the default is the directory you are currently inside in your terminal.</p>
+</div>
+
+<p>Environment variable: <code>$WEB_EXT_SOURCE_DIR</code></p>
+
+<h3 id="--verbose_-v">--verbose, -v</h3>
+
+<p>Shows verbose output when commands are run.</p>
+
+<p>Environment variable: <code>$WEB_EXT_VERBOSE=true</code></p>
+
+<h3 id="--version">--version</h3>
+
+<p>Shows the version number of the installed web-ext tool.</p>
+
+<h2 id="Setting_option_environment_variables">Setting option environment variables</h2>
+
+<p>Environment variables can be set for any option. You:</p>
+
+<ol>
+ <li>Take the option name.</li>
+ <li>Remove the two dashes at the start.</li>
+ <li>Convert the remaining dashes to underscores.</li>
+ <li>Capitalize the letters.</li>
+ <li>Prefix the result with <code>$WEB_EXT_</code>.</li>
+</ol>
+
+<p>So, for example, instead of specifying the following source option every time you wish to run the extension:</p>
+
+<pre class="brush: bash"><code>web-ext run --source-dir=/path/to/my/extension</code></pre>
+
+<p>You could set the source directory as an environment variable like this:</p>
+
+<pre class="brush: bash"><code>WEB_EXT_SOURCE_DIR=/path/to/my/extension</code></pre>
+
+<p>Then you can just specify the run command without options:</p>
+
+<pre class="brush: bash">web-ext run</pre>
+
+<p>A command line option will always override the environment variable. For example, this ignores the environment variable:</p>
+
+<pre class="brush: bash">web-ext run --source-dir=/another/path/to/source</pre>
+
+<p>To define a <code>true</code> / <code>false</code> flag option (which does not have a value on the command line), set it to a literal string value of either <code>true</code> or <code>false</code>. Example:</p>
+
+<pre class="brush: bash"><code>WEB_EXT_VERBOSE=true</code></pre>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://github.com/mozilla/web-ext">web-ext repo</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+</ul>

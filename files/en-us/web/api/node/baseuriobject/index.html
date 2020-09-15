@@ -1,0 +1,41 @@
+---
+title: Node.baseURIObject
+slug: Web/API/Node/baseURIObject
+tags:
+  - API
+  - DOM
+  - DOM 3
+  - DOM Reference
+  - Gecko
+  - Node
+  - Non-standard
+  - Property
+  - Read-only
+  - Reference
+---
+<div>{{APIRef("DOM")}} {{Non-standard_header}}</div>
+
+<p>The <code><strong>Node.baseURIObject</strong></code> property returns the {{Interface("nsIURI")}} representing the node's (typically a document or an element) base URL. It's similar to {{domxref("Node.baseURI")}}, except it returns an <code>nsIURI</code> instead of a string.</p>
+
+<p>This property exists on all nodes (HTML, XUL, SVG, MathML, etc.), but only if the script trying to use it has UniversalXPConnect privileges.</p>
+
+<p>See {{domxref("Node.baseURI")}} for details on what the base URL is.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>uriObj</var> = <em>node</em>.baseURIObject
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>An {{Interface("nsIURI")}}. This property is read-only; attempting to write to it will throw an exception. In addition, this property may only be accessed from privileged code.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<p>Not in any specification.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Node.baseURIObject")}}</p>

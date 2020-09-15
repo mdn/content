@@ -1,0 +1,61 @@
+---
+title: menus.overrideContext()
+slug: Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Method
+  - WebExtensions
+  - contextMenus
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. This should be called during a <code>contextmenu</code> DOM event handler, and only applies to the menu that opens after this event.</p>
+
+<p>This API becomes callable only if the addon has the <code>"menus.overrideContext"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox brush:js">browser.menus.overrideContext(
+  contextOptions // object
+)
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>contextOptions</code></dt>
+ <dd><code>object</code>. Properties that set the context for the context menu.</dd>
+ <dd>
+ <dl class="reference-values">
+  <dt><code>bookmarkId</code> {{optional_inline}}</dt>
+  <dd><code>string</code> Required when context is <code>bookmark</code>. Requires the <code>"bookmark"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+  <dt><code>context</code> {{optional_inline}}</dt>
+  <dd><code>string</code>. ContextType to override, to allow menu items from other extensions in the menu. Currently only <code>"bookmark"</code> and <code>"tab"</code> are supported. <code>showDefaults</code> cannot be used with this option.</dd>
+  <dt><code>showDefaults</code> {{optional_inline}}</dt>
+  <dd><code>boolean</code>. Whether to also include default menu items in the menu.</dd>
+  <dt><code>tabId</code> {{optional_inline}}</dt>
+  <dd><code>string</code> Required when context is <code>"tab"</code>. Requires the <code>"tabs"</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Open the tab context menu on your custom UI, in this case :</p>
+
+<pre class="brush:js">document.addEventListener('contextmenu', event =&gt; {
+  const foo = event.target.closest('.foo');
+  if (foo) {
+    // When the context menu is opened on an element with the foo class
+    // set the context to "opening a tab context menu".
+    browser.menus.overrideContext({
+      context: 'tab',
+      tabId: parseInt(foo.dataset.tabId)
+    });
+  }
+}, { capture: true });
+</pre>
+
+<p>See <a href="https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm">this blog post</a> for more details.</p>

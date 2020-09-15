@@ -1,0 +1,27 @@
+---
+title: Node.lookupPrefix()
+slug: Web/API/Node/lookupPrefix
+tags:
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p>The <code><strong>Node.lookupPrefix()</strong></code> method returns a {{domxref("DOMString")}} containing the prefix for a given namespace URI, if present, and <code>null</code> if not. When multiple prefixes are possible, the result is implementation-dependent.</p>
+
+<p>Due to <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=312019" title="https://bugzilla.mozilla.org/show_bug.cgi?id=312019">bug 312019</a>, this method does not work with dynamically assigned namespaces, that is, those set with the {{domxref("Node.prefix")}} property.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Node.lookupPrefix")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix" rel="freelink">http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix</a></li>
+</ul>

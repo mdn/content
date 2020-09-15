@@ -1,0 +1,139 @@
+---
+title: Virtual ARM Linux environment
+slug: Mozilla/Developer_guide/Virtual_ARM_Linux_environment
+tags:
+  - ARM
+  - Developing Mozilla
+  - Guide
+  - Intermediate
+  - Mobile
+  - Testing
+---
+<p><span class="seoSummary">If you need to test ARM-specific code but don't have (or need) real ARM hardware for testing, you can set up a virtual ARM environment running Ubuntu Linux in the <a href="https://wiki.qemu.org/">QEMU</a> emulator. This is the same emulator system used by the <a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator</a>.</span></p>
+
+<div class="note">
+<p><strong>Note:</strong> In this article, we'll be making use of Linux distributions and other software provided by <a href="https://www.linaro.org/">Linaro</a>, which provides distributions customized for various ARM hardware.</p>
+</div>
+
+<h2 id="Prerequisites">Prerequisites</h2>
+
+<p>This article assumes that the computer on which you'll be running the virtual ARM environment is <a href="https://www.ubuntu.com/">Ubuntu Linux</a>. This makes setup easier, since it's much easier to install the required software from external repositories. It's possible to set up this simulation on other platforms but that is not (yet) covered here.</p>
+
+<h2 id="Select_a_target_board_and_CPU">Select a target board and CPU</h2>
+
+<p>QEMU is capable of emulating a variety of boards and ARM CPUs. At the time of writing, the author of this article was only able to get the <strong>Versatile Express</strong> board to work with more than 256 MB of RAM, so for the purposes of this article we'll use that one, and we'll use the Cortex A9 (ARMv7) CPU.</p>
+
+<h2 id="Install_the_required_software">Install the required software</h2>
+
+<p>First, we need to tell the package manager to allow us to use Linaro's repository, since it contains the tools we'll need as well as recent versions of the QEMU simulator package. We need to be using at least QEMU 0.15*.</p>
+
+<pre class="brush: bash">sudo add-apt-repository ppa:linaro-maintainers/tools
+</pre>
+
+<p>Next, we install the Linaro tools and the QEMU packages:</p>
+
+<pre class="brush: bash">sudo apt-get install linaro-image-tools qemu-user-static qemu-system</pre>
+
+<p>If you want to be able to cross-compile using your host computer to build code to run on the simulator, you'll need to install the GCC packages for doing so:</p>
+
+<pre class="brush: bash">sudo apt-get install gcc-arm-linux-gnueabi g++-arm-linux-gnueabi</pre>
+
+<h3 id="Download_a_Linaro_release_and_hardware_pack">Download a Linaro release and hardware pack</h3>
+
+<p>You can find suitable release and hardware pack tarballs on the <a href="https://www.linaro.org/downloads/">Linaro release page</a>. Some of them might work, others might not; you may have to experiment in order to come up with a combination that adequately simulates the environment you want to simulate. Those used in the instructions below worked well at the time this article was written.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Update! If you use Natty today, you will need to update /etc/sources.list to reflect that the repositories for natty have been moved to http://old-releases.ubuntu.com/ubuntu before you will be able to install additional software</p>
+</div>
+
+<pre>wget https://releases.linaro.org/platform/linaro-n/nano/alpha-3/linaro-natty-nano-tar-20110302-0.tar.gz
+wget https://releases.linaro.org/platform/linaro-n/hwpacks/alpha-3/hwpack_linaro-vexpress_20110302-0_armel_supported.tar.gz
+</pre>
+
+<h3 id="Create_the_VM_disk_image">Create the VM disk image</h3>
+
+<p>Using the Linaro tools, you can easily create an SD card image from the downloaded packs. This will take a while, so be patient.</p>
+
+<pre>linaro-media-create --rootfs ext2 --image_file vexpress.img --dev vexpress \
+  --binary linaro-natty-nano-tar-20110302-0.tar.gz \
+  --hwpack hwpack_linaro-vexpress_20110302-0_armel_supported.tar.gz
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> These instructions were derived from <a href="https://wiki.linaro.org/PeterMaydell/QemuVersatileExpress">Versatile Express support in QEMU</a>, with some modification.</p>
+</div>
+
+<h3 id="Extracting_the_kernel_and_initrd">Extracting the kernel and initrd</h3>
+
+<p>The VM image we just created contains the kernel and <code>initrd</code> for our machine. We need to extract them from the VM so QEMU can use them.</p>
+
+<p>First, we mount the image at <code>/mnt/tmp</code>. The snippet below finds the correct partition in the image and mounts it.</p>
+
+<pre class="brush: bash">sudo mount -o loop,offset="$(file vexpress.img | awk 'BEGIN { RS=";"; } /partition 2/ { print $7*512; }')" \
+  -t auto vexpress.img /mnt/tmp
+
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> In version 16.10 of Ubuntu $7 is no longer correct , $10 works instead.</p>
+</div>
+
+<p>Next, copy the kernel and initrd files from the VM image.</p>
+
+<div class="note">
+<p><strong>Note:</strong> The actual names of the files might vary slightly in your build.</p>
+</div>
+
+<pre class="brush: bash">cp /mnt/tmp/vmlinuz-2.6.38-1000-linaro-vexpress .
+cp /mnt/tmp/initrd.img-2.6.38-1000-linaro-vexpress .
+</pre>
+
+<p>To make the kernel and initrd files easier to refer to, we can create symlinks:</p>
+
+<pre class="brush: bash">ln -s vmlinuz-2.6.38-1000-linaro-vexpress vmlinuz
+ln -s initrd.img-2.6.38-1000-linaro-vexpress initrd.img</pre>
+
+<h2 id="Starting_QEMU">Starting QEMU</h2>
+
+<p>You can now start QEMU with the following command:</p>
+
+<pre>qemu-system-arm -M vexpress-a9 -cpu cortex-a9 -kernel ./vmlinuz \
+  -initrd ./initrd.img -redir tcp:2200::22 -m 512 \
+  -append "root=/dev/mmcblk0p2 vga=normal mem=512M devtmpfs.mount=0 rw" \
+  -drive file=vexpress.img,if=sd,cache=writeback
+</pre>
+
+<p>Some explanation of the non-obvious options:</p>
+
+<ul>
+ <li>The ''-redir tcp:2200::22'' redirects TCP traffic on the host port 2200 to the guest machine (QEMU) port 22. This will allow us to SSH into the machine later by connecting to localhost on port 2200.</li>
+ <li>The ''-m 512'' specifies that we want 512 MB of RAM. You can adjust this, but make sure you also change it in the ''-append'' string.</li>
+ <li>The ''-drive file=vexpress.img,if=sd,cache=writeback'' attaches our images as an SD card. According to people at Linaro, this way provides faster I/O compared to the traditional ''-sd'' option.</li>
+</ul>
+
+<p>After starting the machine, you should end up with a Linux shell in the QEMU window after some startup time.</p>
+
+<h2 id="Using_SSH">Using SSH</h2>
+
+<p>To use SSH to connect to the VM, you first need to bring up its network and install the SSH server package.</p>
+
+<p>Bring up network temporarily using the following commands in the simulator:</p>
+
+<pre class="brush: bash">ifconfig eth0 up
+dhclient eth0
+</pre>
+
+<p>Now install SSH:</p>
+
+<pre class="brush: bash">apt-get install openssh-server
+</pre>
+
+<p>To make the network changes permanent, edit the file <code>/etc/network/interfaces</code> (you can use the <code>vi</code> editor, for instance) and add the following lines:</p>
+
+<pre>auto eth0
+iface eth0 inet dhcp
+</pre>
+
+<p>Finally, set a password for root using the <code>passwd</code> command, reboot the virtual machine and see if you are able to SSH into it by typing the following command into a terminal window on the host:</p>
+
+<pre class="brush: bash">ssh -p2200 root@localhost</pre>

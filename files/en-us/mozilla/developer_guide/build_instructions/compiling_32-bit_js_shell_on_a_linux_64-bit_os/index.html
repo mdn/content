@@ -1,0 +1,25 @@
+---
+title: Compiling 32-bit JS Shell on a Linux 64-bit OS
+slug: >-
+  Mozilla/Developer_guide/Build_Instructions/Compiling_32-bit_JS_Shell_on_a_Linux_64-bit_OS
+tags:
+  - Build documentation
+  - Developing Mozilla
+---
+<p>Normally, a Javascript shell is built as follows (assuming an Ubuntu installation):</p>
+<pre>cd js/src
+autoconf2.13
+mkdir obj
+cd obj
+../configure --enable-debug --disable-optimize
+make
+</pre>
+<p>To build a 32-bit shell, the following commands will work:</p>
+<pre>cd js/src
+autoconf2.13
+mkdir obj
+cd obj
+CFLAGS="-m32" CXXFLAGS="-m32" linux32 ../configure --enable-debug --disable-optimize
+make
+</pre>
+<p>Credit for this goes to Sean Stangl.</p>

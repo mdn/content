@@ -1,0 +1,300 @@
+---
+title: mach
+slug: Mozilla/Developer_guide/mach
+tags:
+  - mach
+---
+<p><a href="https://hg.mozilla.org/mozilla-central/file/tip/mach">Mach</a> (German for <em>to make</em>) is a program via the "command-line interface" to help developers perform installation tasks such as installing Firefox from its C++ source code.</p>
+
+<h2 id="Requirements">Requirements</h2>
+
+<p>Mach requires a current version of /mozilla-central/ (or a tree derived from there). Mach was committed on 2012-SEP-26. Mach also requires Python 2.7. Mach itself is Python 3 compliant, but modules used by mach likely are not Python 3 compliant - so stick to Python 2.7.</p>
+
+<h2 id="Running">Running</h2>
+
+<p>From the root of the source tree checkout, you should just be able to type:</p>
+
+<pre><code>$ ./mach</code>
+</pre>
+
+<p>If all is well, you should see a help message. Of course, in a random dir you just get a cryptic error message to improve the experience.</p>
+
+<p>For full help:</p>
+
+<pre>$ ./mach help</pre>
+
+<p>Try building the tree:</p>
+
+<pre>$ ./mach build
+</pre>
+
+<p>If you get error messages, make sure that you have all of the <a href="/en-US/docs/Developer_Guide/Build_Instructions#Build_prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions#Build_prerequisites">build requisites</a> for your system.</p>
+
+<p>If it works, you can look at compiler warnings:</p>
+
+<pre>$ ./mach warnings-list</pre>
+
+<p>Try running the program:</p>
+
+<pre>$ ./mach run
+</pre>
+
+<p>Try running your program in a debugger:</p>
+
+<pre>$ ./mach run --debug</pre>
+
+<p>Try running some tests:</p>
+
+<pre>$ ./mach xpcshell-test services/common/tests/unit/</pre>
+
+<p>Or run an individual test:</p>
+
+<pre>$ ./mach mochitest browser/base/content/test/general/browser_pinnedTabs.js</pre>
+
+<p>You run mach from the source directory, so you should be able to use your shell's tab completion to tab-complete paths to tests. Mach figures out how to execute the tests for you!</p>
+
+<p>Check out the linting and analysis tools:</p>
+
+<pre>$ ./mach lint
+$ ./mach static-analysis</pre>
+
+<h3 id="mach_and_mozconfigs">mach and mozconfigs</h3>
+
+<p>It's possible to use mach with multiple mozconfig files. mach's logic for determining which mozconfig to use is effectively the following:</p>
+
+<ol>
+ <li>If a .mozconfig file (some say it is the file <strong>mozconfig</strong> without the dot) exists in the current directory, use that.</li>
+ <li>If the <code>MOZCONFIG </code>environment variable is set, use the file pointed to in that variable.</li>
+ <li>If the current working directory mach is invoked with is inside an object directory, the mozconfig used when creating that object directory is used.</li>
+ <li>The default mozconfig search logic is applied.</li>
+</ol>
+
+<p>Here are some examples:</p>
+
+<pre># Use an explicit mozconfig file.
+$ MOZCONFIG=/path/to/mozconfig ./mach build
+
+# Alternatively (for persistent mozconfig usage):
+$ export MOZCONFIG=/path/to/mozconfig
+$ ./mach build
+
+# Let's pretend the MOZCONFIG environment variable isn't set. This will use
+# the mozconfig from the object directory.
+$ cd objdir-firefox
+$ mach build</pre>
+
+<h3 id="Adding_mach_to_your_shells_search_path">Adding mach to your shell's search path</h3>
+
+<p>If you add mach to your path (by modifying the <code>PATH</code> environment variable to include your source directory, or by copying <code>mach </code>to a directory in the default path like <code>/usr/local/bin</code>) then you can type <code>mach </code>anywhere in your source directory or your <a href="/en-US/docs/Configuring_Build_Options" title="/en-US/docs/Configuring_Build_Options">objdir</a>.  Mach expands relative paths starting from the current working directory, so you can run commands like <code>mach build .</code> to rebuild just the files in the current directory.  For example:</p>
+
+<pre class="brush: bash">$ cd devtools/client
+$ mach build webconsole <em># Rebuild only the files in the devtools/client/webconsole directory</em>
+$ mach mochitest webconsole/test <em># Run mochitests in devtools/client/webconsole/test</em>
+</pre>
+
+<h3 id="Enable_tab_completion">Enable tab completion</h3>
+
+<p>To enable tab completion in <code>bash</code>, run the following command.  You can add the command to your <code>.profile</code> so it will run automatically when you start the shell:</p>
+
+<pre>source /path/to/mozilla-central/python/mach/bash-completion.sh</pre>
+
+<p>This will enable tab completion of mach command names, and in the future it may complete flags and other arguments too.  Note: Mach tab completion will not work when running mach in a source directory older than Firefox 24.</p>
+
+<p>For zsh, you can call the built-in bashcompinit function before sourcing:</p>
+
+<pre>autoload bashcompinit
+bashcompinit
+source /path/to/mozilla-central/python/mach/bash-completion.sh</pre>
+
+<h2 id="Frequently_Asked_Questions">Frequently Asked Questions</h2>
+
+<h3 id="Why_should_I_NOT_use_mach">Why should I NOT use mach?</h3>
+
+<ul>
+ <li>A <strong>real</strong> <strong>F</strong>AQ for a change! Mach is not the best software ever. Say, if you run a rolling release Arch Linux Distro or derivate thereof ("Manjaro"), you have something less tedious: <strong>Octopi</strong>! Just install Thunderbird from sources out of the <a href="https://aur.archlinux.org/packages/thunderbird-hg/">AUR</a> repo! Many PKGBUILD options to choose from and most work like a charm - while "mach" may not necessarily work like a charm for everyone. Why even bother with a competing build system in Arch when Octopi does what you want and even has a GUI? Those makepkg scripts named PKGBUILD are (typically) simple bash scripts that are easy to maintain and modify. Python based <strong>mach</strong> tends to involve more complexity and potential for breakage.</li>
+ <li>Another possible reason: mach gives you an error, while running, say <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/python/mozboot/bin/bootstrap.py">bootstrap.py </a>directly (that is to type in a bash shell:   <strong>python2 ./bootstrap.py</strong> <em>ENTER-KEY</em> ) in an otherwise empty ..../subDir/ may work for you! Less may be better! And <strong>mach</strong>'s error messages tend to be cryptic and not utterly helpful. That above <strong>bootstrap.py</strong> will download and setup everything so you can build a Mozilla app such as Firefox <span>etcetera</span>, so it is a nice starting point.</li>
+</ul>
+
+<h3 id="Why_should_I_use_mach">Why should I use mach?</h3>
+
+<p>You should use mach because it provides a better and more unified developer experience for working on Mozilla projects. If you don't use mach, you have to find another solution for the following problems:</p>
+
+<ul>
+ <li>Discovering what commands or make targets are available (mach exposes everything through <code>mach help</code> while inside "mozilla-central" , else you'll just get a cryptic error message)</li>
+ <li>Making more sense out of command output (mach offers terminal colorization and structured logging)</li>
+ <li>Getting productive tools in the hands of others (mach "advertises" tools to people through <code>mach help</code> (unless it actually just gives you a cryptic error message) - in the former case, people don't need to discover your tool from a blog post, wiki page, or word of mouth). So this 3rd point does not make much sense, does it?</li>
+</ul>
+
+<h3 id="Are_there_any_known_issues">Are there any known issues?</h3>
+
+<p>Yes, of course several! Mach is still relatively young ("born" in 2012) and there are a number of bugs and numerous areas for improvement. Some larger known issues include:</p>
+
+<ul>
+ <li>MinTTY (alternative terminal emulator on Windows) doesn't work.</li>
+ <li>Text encoding issues (especially on Windows where Latin-1 is not the default system encoding).</li>
+ <li>Failed commands spew lots of extra error output, e.g. you will see a big mach error message when all that happened was an invoked command returned a non-0 exit code - possibly expectedly so in Mozilla!</li>
+</ul>
+
+<p>Generally, mach is known to work pretty well without issues for most people and works terribly for others with even the "basics" being quite unsatisfactory.</p>
+
+<h3 id="How_do_I_report_bugs">How do I report bugs?</h3>
+
+<p>Bugs against the mach core can be filed in Bugzilla in the <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20Build%20System&amp;component=Mach%20Core">Firefox Build System::Mach Core</a>.</p>
+
+<div class="note">
+<p>Most mach bugs are bugs in individual commands, not bugs in the core mach code. Bugs for individual commands should be filed against the component that command is related to. For example, bugs in the <em>build </em>command should be filed against <em>Firefox Build System :: General</em>. Bugs against testing commands should be filed somewhere in the <em>Testing </em>product.</p>
+</div>
+
+<h3 id="How_is_building_with_mach_different_from_building_with_client.mk_from_using_make_directly">How is building with mach different from building with client.mk, from using make directly?</h3>
+
+<p>Currently, <code>mach build</code> simply invokes client.mk as an ersatz Makefile. <strong>There are no differences in terms of how the build is performed</strong> (well, at least there should not be any ideally). However - mach does offer some additional features over manual invocation of client.mk:</p>
+
+<ul>
+ <li>If on Windows, mach will automatically use pymake instead of GNU make, as that is preferred on Windows.</li>
+ <li>mach will print timings with each line of output from the build. This gives you an idea of how long things take.</li>
+ <li>mach will colorize terminal output (on terminals that support it - typically most terminals except on Windows)</li>
+ <li>mach will scan build output for compiler warnings and will automatically record them to a database which can be queried with <code>mach warnings-list</code> and <code>mach warnings-summary</code>. Not all warnings are currently detected. Do not rely on mach as a substitute for raw build output.</li>
+ <li>mach will invoke make in silent mode. This suppresses excessive (often unncessary) output.</li>
+</ul>
+
+<h3 id="Is_mach_a_build_system">Is mach a build system?</h3>
+
+<p>No. Mach is just a generic command dispatching tool that happens to have a few commands that interact with the real build system. Historically, mach <em>was </em>born to become a better interface to the build system. However, its potential beyond just build system interaction was quickly realized and mach grew to fit those needs. Generally, Mozilla wants to move to a python-based build system but the transition period will be rather long.</p>
+
+<h3 id="Does_mach_work_with_mozconfigs">Does mach work with mozconfigs?</h3>
+
+<p>Yes! You use the control file <strong>mozconfig</strong> like you have always used them.</p>
+
+<h3 id="Does_mach_have_its_own_configuration_file">Does mach have its own configuration file?</h3>
+
+<p>Yes. You can specify configuration settings in a <code>~/.mozbuild/machrc</code> file. To see the list of the 4 available settings ( which are:  alias , test , try , runprefs )  type :</p>
+
+<pre class="brush: bash">$ ./mach settings
+</pre>
+
+<h3 id="Should_I_implement_X_as_a_mach_command">Should I implement X as a mach command?</h3>
+
+<p>There are no hard or fast rules. Generally speaking, if you have some piece of functionality or action that is useful to multiple people (especially if it results in productivity wins), then you should consider implementing a mach command for it.</p>
+
+<p>Some other cases where you should consider implementing something as a mach command:</p>
+
+<ul>
+ <li>When your tool is a random script in the tree. Random scripts are hard to find and may not conform to coding conventions or best practices. Mach provides a framework in which your tool can live that will put it in a better position to succeed than if it were on its own.</li>
+ <li>When the alternative is a make target. The build team generally does not like one-off make targets that aren't part of building (read: compiling) the tree. This includes things related to testing and packaging. These weigh down make files and add to the burden of maintaining the build system. Instead, you are encouraged to implement ancillary functionality in <em>not make</em> (preferably Python). If you do implement something in Python, hooking it up to mach is often trivial (just a few lines of proxy code).</li>
+</ul>
+
+<h3 id="How_does_mach_fit_into_the_modules_system">How does mach fit into the modules system?</h3>
+
+<p>Mozilla operates with a <a href="https://www.mozilla.org/hacking/module-ownership.html" title="https://www.mozilla.org/hacking/module-ownership.html">modules governance system</a> where there are different components with different owners. There is not currently a mach module. There may or may never be one. Mach is just a generic tool. The mach core is the only thing that could fall under perview of a module and an owner.</p>
+
+<p>Even if a mach module were established, mach command modules (see below) would likely never belong to it. Instead, mach command modules are owned by the team/module that owns the system they interact with. In other words, mach is not a power play to consolidate authority for tooling. Instead, it aims to expose that tooling through a common, shared interface.</p>
+
+<h3 id="Who_do_I_contact_for_help_or_to_report_issues">Who do I contact for help or to report issues?</h3>
+
+<p>You can ask questions in #build.</p>
+
+<h3 id="Can_I_use_mach_outside_of_mozilla-central">Can I use mach outside of mozilla-central?</h3>
+
+<p>Yes, the mach core is in <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mach/">mozilla-central inside the python/mach directory</a> and available on PyPI at <a href="https://pypi.python.org/pypi/mach/" title="https://pypi.python.org/pypi/mach/">https://pypi.python.org/pypi/mach/</a>. The actual file "mach" (a py script) , which you need, is not there though - look for that driver <a href="https://hg.mozilla.org/mozilla-central/file/default/mach">at moz-central</a> or <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/mach">here directly</a>.</p>
+
+<h2 id="mach_Architecture">mach Architecture</h2>
+
+<p>Under the hood mach is a generic command dispatching framework which currently targets command line interfaces (CLIs). You essentially have a bunch of Python functions saying "I provide command X" and mach hooks up command line argument parsing, terminal interaction, and dispatching.</p>
+
+<p>There are 3 main components to mach:</p>
+
+<ol>
+ <li>The mach core.</li>
+ <li>Mach commands</li>
+ <li>The mach driver</li>
+</ol>
+
+<p>The mach core is the main Python modules that implement the basic functionality of mach. These include command line parsing, a structured logger, dispatching, and utility functions to aid in the implementation of mach commands.</p>
+
+<p>Mach commands are what actually perform work when you run mach. Mach has a few built-in commands. However, most commands aren't part of mach itself. Instead, they are registered with mach.</p>
+
+<p>The mach driver is the mach command line interface. It's a Python script that creates an instance of the mach core, registers commands with it, then tells the mach core to execute.</p>
+
+<p>The canonical source repository for the mach core is the<em> <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mach/" title="https://hg.mozilla.org/mozilla-central/file/default/python/mach/">python/mach</a></em> directory in mozilla-central. The main mach routine lives in <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mach/mach/main.py" title="https://hg.mozilla.org/mozilla-central/file/default/python/mach/mach/main.py">main.py</a>. The mach driver is the <em><a href="https://hg.mozilla.org/mozilla-central/file/default/mach" title="https://hg.mozilla.org/mozilla-central/file/default/mach">mach</a></em> file in the root directory of mozilla-central. As you can see, the mach driver is a shim that calls into the mach core.</p>
+
+<p>As you may have inferred, mach is implemented in Python. Python is our tooling programming language of choice at Mozilla. Mach is also Python 3 compliant (at least it should be).</p>
+
+<h2 id="Adding_Features_to_mach">Adding Features to mach</h2>
+
+<p>Most mach features come in the form of new commands. Implementing new commands is as simple as writing a few lines of Python and registering the created file with mach.</p>
+
+<p>The first step to adding a new feature to mach is to file a bug. You have the choice of filing a bug in the <code><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&amp;component=mach" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&amp;component=mach">Core :: mach</a></code> component or in any other component. If you file outside of <code>Core :: mach</code>, please add <code>[mach]</code> to the whiteboard.</p>
+
+<p>Mach is relatively new and the API is changing. So, the best way to figure out how to implement a new mach command is probably to look at an existing one.</p>
+
+<p>Start by looking at the source for the <a href="https://hg.mozilla.org/mozilla-central/file/default/mach" title="https://hg.mozilla.org/mozilla-central/file/default/mach">mach driver</a>. You will see a list defining paths to Python files (likely named <code>mach_commands.py</code>). These are the Python files that implement mach commands and are loaded by the mach driver. These are relative paths in the source repository. Simply find one you are interested in and dig in!</p>
+
+<h3 id="mach_Command_Providers">mach Command Providers</h3>
+
+<p>A mach command provider is simply a Python module. When these modules are loaded, mach looks for specific signatures to detect mach commands. Currently, this is implemented through Python decorators. Here is a minimal mach command module:</p>
+
+<pre class="brush: python">from __future__ import print_function, unicode_literals
+
+from mach.decorators import (
+    CommandArgument,
+    CommandProvider,
+    Command,
+)
+
+@CommandProvider
+class MachCommands(object):
+    @Command('doit', description='Run it!')
+    @CommandArgument('--debug', '-d', action='store_true',
+        help='Do it in debug mode.')
+    def doit(self, debug=False):
+        print('I did it!')</pre>
+
+<p class="brush: python">From <code>mach.decorators</code> we import some Python decorators which are used to define what Python code corresponds to mach commands.</p>
+
+<p class="brush: python">The decorators are:</p>
+
+<dl>
+ <dt class="brush: python">@CommandProvider</dt>
+ <dd>This is a class decorator that tells mach that this class contains methods that implement mach commands. Without this decorator, mach will not know about any commands defined within, even if they have decorators.</dd>
+ <dt>@Command</dt>
+ <dd>This is a method decorator that tells mach that this method implements a mach command. The arguments to the decorator are those that can be passed to the <a href="http://docs.python.org/library/argparse.html#sub-commands" title="http://docs.python.org/library/argparse.html#argparse.ArgumentParser.add_argument"><code>argparse.ArgumentParser</code></a> constructor by way of sub-commands.</dd>
+ <dt>@CommandArgument</dt>
+ <dd>This is a method decorator that tells mach about an argument to a mach command. The arguments to the decorator are passed to <a href="http://docs.python.org/library/argparse.html#argparse.ArgumentParser.add_argument" title="http://docs.python.org/library/argparse.html#argparse.ArgumentParser.add_argument"><code>argparse.ArgumentParser.add_argument()</code></a>.</dd>
+</dl>
+
+<p>The class and method names can be whatever you want. They are irrelevant to mach.</p>
+
+<p>An instance of the <code>@CommandProvider</code> class is instantiated by the mach driver if a command in it is called for execution. The <code>__init__</code> method of the class must take either 1 or 2 arguments (including <code>self</code>). If your class inherits from <code>object</code>, no explicit <code>__init__</code> implementation is required (the default takes 1 argument). If your class's <code>__init__</code> takes 2 arguments, the second argument will be an instance of <code>mach.base.CommandContext</code>. This object holds state from the mach driver, including the current directory, a handle on the logging manager, the settings object, and information about available mach commands.</p>
+
+<p>The arguments registered with @CommandArgument are passed to your method as keyword arguments using the <code>**kwargs</code> calling convention. So, you should define default values for all of your method's arguments.</p>
+
+<p>The return value from the @Command method should be the integer exit code from the process. If not defined or None, 0 will be used.</p>
+
+<h3 id="Registering_mach_Command_Providers">Registering mach Command Providers</h3>
+
+<p>Once you've written a Python module providing a mach command, you'll need to register it with mach. There are two ways to do this.</p>
+
+<p>If you have a single file, the easiest solution is probably to register it as a one-off inside <code>build/mach_bootstrap.py</code>. There should be a Python list of paths named <code>MACH_MODULES</code> or similar. Just add your file to that list, run <code>mach help</code> and your new command should appear!</p>
+
+<h3 id="Submitting_a_mach_Command_for_Approval">Submitting a mach Command for Approval</h3>
+
+<p>Once you've authored a mach command, submit the patch for approval. Please flag <span>firefox-build-system-reviewers</span> for review.</p>
+
+<h3 id="Mach_Command_Modules_Useful_Information">Mach Command Modules Useful Information</h3>
+
+<p>Command modules are not imported into a reliable Python package/module "namespace." Therefore, you can't rely on the module name. All imports must be absolute, not relative.</p>
+
+<p>Because mach command modules are loaded at mach start-up, it is important that they be lean and not have a high import cost. This means that you should avoid global <code>import</code> statements as much as possible. Instead, defer your import until inside the <code>@Command</code> decorated method.</p>
+
+<p>Mach ships with a toolbox of mix-in classes to facilitate common actions. See <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mach/mach/mixin" title="https://hg.mozilla.org/mozilla-central/file/default/python/mach/mach/mixin"><code>python/mach/mach/mixin</code></a>. If you find yourself reinventing the wheel or doing something you feel that many mach commands will want to do, please consider authoring a new mix-in class so your effort can be shared!</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://gfritzsche-demo.readthedocs.io/en/latest/python/mach/index.html">Mach in the Mozilla source tree docs</a></li>
+ <li><a href="https://pypi.org/project/mach/">Mach PyPi page</a></li>
+</ul>
+
+<div style="display: none;"></div>
+
+<div style="display: none;"></div>

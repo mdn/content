@@ -1,0 +1,25 @@
+---
+title: Page load time
+slug: Glossary/Page_load_time
+tags:
+  - Glossary
+  - Timings
+  - Web Performance
+  - metrics
+  - page load time
+---
+<p><span class="seoSummary"><strong>Page load time</strong> is the time it takes for a page to load, measured from <a href="/en-US/docs/Web/API/PerformanceTiming/navigationStart">navigation start</a> to the </span><a href="/en-US/docs/Web/API/PerformanceTiming/loadEventStart"><span class="seoSummary">start of the load event</span>. </a></p>
+
+<pre class="brush: js">let time = performance.timing;
+
+let pageloadtime = time.loadEventStart - time.navigationStart;</pre>
+
+<p>While page load time 'sounds' like the perfect web performance metric, it isn't. Load times can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. The development environment, where page load time is measured, is likely an optimal experience, not reflective of your users' reality. In addition, web performance isn't just about when the load event happens. It's also about <a href="/en-US/docs/Glossary/Perceived_performance">perceived performance</a>, responsiveness, <a href="/en-US/docs/Glossary/Jank">jank</a> and jitter.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Performance/Navigation_and_resource_timings">Navigation and resource timing</a></li>
+ <li>{{domxref("PerformanceNavigationTiming")}}</li>
+ <li>{{domxref("PerformanceResourceTiming")}},</li>
+</ul>

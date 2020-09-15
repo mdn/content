@@ -1,0 +1,141 @@
+---
+title: How to write and reference an entry in the glossary
+slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
+tags:
+  - Contributing
+  - Definition
+  - Entry
+  - Glossary
+  - Guide
+  - Howto
+  - MDN Meta
+  - Term
+  - Word
+  - define
+---
+<div>{{MDNSidebar}}</div>
+
+<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+
+<p><span class="seoSummary">This article explains how to add and link to entries in the <a href="/en-US/docs/Glossary">MDN Web Docs glossary</a>. It also provide guidelines about glossary entry layout and content.</span> The glossary provides definitions for all the terms, jargon, abbreviations, and acronyms you'll come across when reading MDN content about the web and web development.</p>
+
+<p>It's possible that the glossary will never be complete because the web is always changing. By contributing new entries or fixing problems, you can help us update the glossary and fill-in gaps.</p>
+
+<p>Contributing to the glossary is an easy way to help make the web more understandable for everyone. You don't need high level technical skills. Glossary entries are intended to be straightforward and brief.</p>
+
+<h2 id="How_to_write_an_entry">How to write an entry</h2>
+
+<p>If you're looking for topics that need a glossary entry, check the <a href="/en-US/docs/Glossary#Contribute_to_the_glossary">list of undocumented terms</a> at the end of the <a href="/en-US/docs/Glossary">Glossary landing page</a>. Click any of those links to start a new Glossary page for the item you clicked. Then follow the steps below.</p>
+
+<p>If you have an idea for a new glossary entry, open the button (below) in a new tab. Follow the steps listed below the button:</p>
+
+<div class="align-center"><a class="button ignore-external mega positive" href="/en-US/docs/new?parent=4391">Write a new entry in the glossary</a></div>
+
+<h3 id="Step_1_Select_a_term_to_explain">Step 1: Select a term to explain</h3>
+
+<p>Choose a term to add to the glossary. If you don't know which terms need definitions, you can view a <a href="/en-US/docs/Glossary#Contribute_to_the_glossary">list of suggestions</a>. Click any term to get started! If you're already logged in, clicking the term opens the MDN editor.</p>
+
+<h3 id="Step_2_Write_a_summary">Step 2: Write a summary</h3>
+
+<p>The first paragraph of any glossary page is a simple and short description of the term. Preferably, this should be no more than two sentences. Make sure anyone reading the description can immediately understand the defined term.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Please don't copy-and-paste from other definitions or content on the Internet. (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.</p>
+</div>
+
+<h4 id="Writing_a_good_glossary_entry">Writing a good glossary entry</h4>
+
+<p>Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article. Writing an article is fine, but please don't create it in/for the glossary. If you aren't sure where to put your article, feel free to <a href="/en-US/docs/MDN/Community#Join_our_mailing_lists">reach out to discuss it</a>.</p>
+
+<p>There are a few simple guidelines to consider for writing a better glossary entry:</p>
+
+<ul>
+ <li>When you use terms in the glossary's description of the term or when you use abbreviation, you should create appropriate links. Often, this just involves creating links to other pages in the glossary. (See below: <a href="#How_to_use_the_Glossary_macro">How to use the Glossary macro</a>.) For terms directly related to the glossary entry's term, link to MDN Web Docs' main article.</li>
+ <li>Use appropriate related terms (with links) in the glossary entry, if it can be done without making the article difficult to follow. Having a good network of related and useful links makes a page—or set of pages—much easier to use.</li>
+ <li>Think about the search terms you would choose if you wanted to find this page. Try to use all the words you would use to search for the term, but without making the glossary entry nonsensical, long, or difficult to read.</li>
+</ul>
+
+<h4 id="Specifying_the_tooltip">Specifying the tooltip</h4>
+
+<p>As it is with most MDN links, hovering your cursor over a glossary link shows a brief description of the page. (In this case, it is a short summary of the term's definition.) By default, the tooltip takes the text from the entire first paragraph of the glossary entry. This is usually too long.</p>
+
+<p>As an alternative, you can assign a subsection of text as the page summary (which also becomes the tooltip text). Select one or two sentences that summarize the definition of the term, adding the <em>SEO Summary</em> style to the selected text. This defines the tooltip text. It also assigns the text sent to search engines as a summary of the page contents. For that reason, specifically selecting a page summary helps your work become more visible in search results.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Ideally, the text selected for <em>SEO summary</em> should be 150-160 characters. Less is better than more.</p>
+</div>
+
+<h3 id="Step_3_Expand_with_links">Step 3: Expand with links</h3>
+
+<p>A glossary entry should always end with a <em>Learn more</em> section. This section should contain links to help the reader move forward: discovering more details; learning to use the relevant technology.</p>
+
+<p>It is good practice to organize the links into three groups:</p>
+
+<dl>
+ <dt>General knowledge</dt>
+ <dd>These links provide higher-level information about the term or topic. For example: a link to a relevant <a href="http://wikipedia.org/">Wikipedia</a> page.</dd>
+ <dt>Technical reference</dt>
+ <dd>These links offer in-depth technical information, on MDN Web Docs or other sites.</dd>
+ <dt>Learn about it</dt>
+ <dd>These are links to tutorials, exercises, examples, or any other instructional content that helps the reader learn.</dd>
+</dl>
+
+<h2 id="Dealing_with_disambiguation">Dealing with disambiguation</h2>
+
+<p>Some terms can have multiple meanings depending upon context. To resolve ambiguity, follow these guidelines:</p>
+
+<ul>
+ <li>The term's main page must be a disambiguation page containing the {{TemplateLink("GlossaryDisambiguation")}} macro.</li>
+ <li>The term has subpages that define the term for different contexts.</li>
+</ul>
+
+<p>Let's illustrate this with an example. The term <em>signature</em> can have different meanings in at least three different contexts: security, function, and email.</p>
+
+<ol>
+ <li>The page <a href="/en-US/docs/Glossary/Signature">Glossary/Signature</a> is the disambiguation page with the {{TemplateLink("GlossaryDisambiguation")}} macro.</li>
+ <li>The page <a href="/en-US/docs/Glossary/Signature/Security">Glossary/Signature/Security</a> is the page defining a signature in a security context.</li>
+ <li>The page <a href="/en-US/docs/Glossary/Signature/Function">Glossary/Signature/Function</a> is the page defining a function signature.</li>
+ <li>The page <a href="/en-US/docs/Glossary/Signature/Email">Glossary/Signature/Email</a> is the page defining an email signature.</li>
+</ol>
+
+<h2 id="How_to_use_the_Glossary_macro">How to use the \{{Glossary}} macro</h2>
+
+<p>The glossary is more useful when people can access the definitions from another document. Please link to the glossary using the {{TemplateLink("Glossary")}} macro:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Macro</th>
+   <th scope="col">Result</th>
+   <th scope="col">Note</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>\{{Glossary("browser")}}</td>
+   <td>{{Glossary("browser")}}</td>
+   <td>When text matches the term to be defined, just use the macro as-is. (It's case insensitive.)</td>
+  </tr>
+  <tr>
+   <td>\{{Glossary("browser", "Web browser")}}</td>
+   <td>{{Glossary("browser","Web browser")}}</td>
+   <td>To display alternative text, use the second argument to specify the alternative text.</td>
+  </tr>
+  <tr>
+   <td>\{{Glossary("browser", "Web browser", 1)}}</td>
+   <td>{{Glossary("browser","Web browser",1)}}</td>
+   <td>Specify <code>1</code> as an optional third argument to display the link as an ordinary link instead of a hint.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Links created with the \{{Glossary}} macro display a tooltip containing the glossary entry's summary paragraph, or the text defined as the <em>SEO summary</em> (as described in a prior section <a href="#Specifying_the_tooltip">Specifying the tooltip</a>).</p>
+
+<h3 id="Using_the_macro_wisely">Using the macro wisely</h3>
+
+<p>In many cases, it's perfectly safe to use the Glossary macro anywhere on MDN. Consider these guidelines for using the \{{Glossary}} macro :</p>
+
+<ul>
+ <li>If a term already has a link to an appropriate page on MDN, <strong>don't replace the link</strong> with a glossary link.</li>
+ <li><strong>Within an article section, use the \{{Glossary}} macro only once for the same term.</strong> You can recognize article sections by the way an article section always starts with a title.</li>
+</ul>

@@ -1,0 +1,151 @@
+---
+title: Accessibility guidelines
+slug: Mozilla/Add-ons/WebExtensions/user_interface/Accessibility_guidelines
+tags:
+  - Development
+  - Extensions
+  - UI
+  - UX
+  - User Interface
+  - Web Extensions
+---
+<p>{{AddonSidebar()}}</p>
+
+<p>When it comes to accessibility, extensions should follow the same guidelines as websites. However, extensions have unique features that deserve consideration when designing for accessibility. Here is a breakdown of extension features and how they should be used to make an extension accessible.</p>
+
+<p>There is more information on design and accessibility in the <a href="https://design.firefox.com/photon/">Photon Design System</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Accessibility">Accessibility and Mozilla</a> section on MDN.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">UI feature</th>
+   <th scope="col"> Guidelines</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">Keyboard shortcuts (commands)</a></p>
+   </td>
+   <td>
+    <p>Keyboard shortcuts provide an easy way to activate extension features.</p>
+
+    <p>To improve accessibility, add keyboard shortcuts for:</p>
+
+    <ul>
+     <li>extension UI elements, such as toolbar and address bar buttons.</li>
+     <li>all of an extension’s features, however, where this is impractical provide shortcuts for commonly used extension features.  </li>
+    </ul>
+
+    <div class="blockIndicator note">
+    <p>Users can modify an extension’s keyboard shortcuts to suit their needs. However, users cannot add shortcuts, which is why it’s best to add as many as practical.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button (browser action)</a></p>
+   </td>
+   <td>
+    <p>To account for the active theme, provide <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#theme_icons">toolbar buttons icons for themes with light and dark text</a>.</p>
+
+    <p>Follow the Photon Design System guidelines on <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a>. Use different images to convey state, such as toggled or active. Don’t use colored icons or color changes to indicate state changes as these may not be visible to all users.</p>
+
+    <p>Always include a text title, so the button details can be read out by a screen reader. The button’s title should be updated to reflect:</p>
+
+    <ul>
+     <li>the extension status.</li>
+     <li>the content of text badges displayed over the button.</li>
+    </ul>
+
+    <p>Add a shortcut to the button’s action, using the special shortcut <code>option _execute_browser_action</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Toolbar button with a popup</a></p>
+   </td>
+   <td>
+    <p>The markup in the popup should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button (page action)</a></p>
+   </td>
+   <td>
+    <p>The same guidelines as toolbar buttons should be followed.</p>
+
+    <p>Add a shortcut to the button’s action, using the special shortcut <code>option _execute_page_action</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Address bar button with a popup</a></p>
+   </td>
+   <td>
+    <p>The markup in the popup should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu item</a></p>
+   </td>
+   <td>
+    <p>Context menu items provide an accessible way for users to discover extension features associated with elements in a webpage. Therefore, where possible, add extension features to their relevant context menus.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebar</a></p>
+   </td>
+   <td>
+    <p>The markup in the sidebar should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>.</p>
+
+    <p>Add a keyboard shortcut to open a sidebar, using the special shortcut <code>option _execute_sidebar_action</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></p>
+   </td>
+   <td>
+    <p>The markup in the options page should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/Add-ons/WebExtensions/user_interface/Extension_pages">Extension page</a></p>
+   </td>
+   <td>
+    <p>The markup in the extension page should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notification</a></p>
+   </td>
+   <td>
+    <p>Provide notifications for events that happen in the background or are not otherwise notified in the UI. Be sparing with notifications but take care not to minimize them at the expense of accessibility.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestion</a></p>
+   </td>
+   <td>
+    <p>Add suggestions as per the guide, there are no additional accessibility considerations for extensions.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panel</a></p>
+   </td>
+   <td>
+    <p>The markup in the sidebar should follow <a href="/en-US/docs/Web/Accessibility">standard web accessibility guidelines</a>. </p>
+
+    <p>Offering a keyboard shortcut to open a devtools panel is recommended.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>

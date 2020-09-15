@@ -1,0 +1,69 @@
+---
+title: CSSMediaRule
+slug: Web/API/CSSMediaRule
+tags:
+  - API
+  - CSSOM
+  - Interface
+  - Reference
+---
+<div>{{ APIRef("CSSOM") }}</div>
+
+<p>The <strong><code>CSSMediaRule</code></strong> interface represents a single CSS {{cssxref("@media")}} rule. It implements the {{domxref("CSSConditionRule")}} interface, and therefore the {{domxref("CSSGroupingRule")}} and the {{domxref("CSSRule")}} interface with a type value of <code>4</code> (<code>CSSRule.MEDIA_RULE</code>).</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+
+<pre class="syntaxbox">interface CSSMediaRule : CSSConditionRule {
+    readonly attribute MediaList media;
+}
+</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<p>As a {{ domxref("CSSConditionRule") }}, and therefore both a {{domxref("CSSGroupingRule")}} and a {{ domxref("CSSRule") }}, <code>CSSMediaRule</code> also implements the properties of these interfaces. It has the following specific property:</p>
+
+<dl>
+ <dt>{{domxref("CSSMediaRule.media")}} {{readonlyinline}}</dt>
+ <dd>Specifies a {{domxref("MediaList")}} representing the intended destination medium for style information.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>As a {{ domxref("CSSConditionRule") }}, and therefore both a {{domxref("CSSGroupingRule")}} and a {{ domxref("CSSRule") }}, <code>CSSMediaRule</code> also implements the methods of that interface. It has no specific methods.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Conditional', '#the-cssmediarule-interface', 'CSSMediaRule') }}</td>
+   <td>{{ Spec2('CSS3 Conditional')}}</td>
+   <td>Make it derived from the {{domxref("CSSConditionRule")}}.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSSOM', '#the-cssmediarule-interface', 'CSSMediaRule') }}</td>
+   <td>{{ Spec2('CSSOM') }}</td>
+   <td>No changes from {{SpecName('DOM2 Style')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSMediaRule', 'CSSMediaRule') }}</td>
+   <td>{{ Spec2('DOM2 Style') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSMediaRule")}}</p>

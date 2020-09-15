@@ -1,0 +1,52 @@
+---
+title: RenderingContext
+slug: Web/API/RenderingContext
+tags:
+  - API
+  - Canvas
+  - Context
+  - Graphics
+  - Graphics Context
+  - Helper
+  - Reference
+  - Rendering Context
+  - Type
+  - WebGL
+  - WebGL2
+  - rendering
+---
+<p>{{APIRef("Canvas API")}}</p>
+
+<p><span class="seoSummary"><code><strong>RenderingContext</strong></code> is a WebIDL <code>typedef</code> which can refer to any one of the interfaces that represent a graphics rendering context within a {{HTMLElement("canvas")}} element: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, or {{domxref("WebGL2RenderingContext")}}.</span></p>
+
+<p>By using the shorthand <code>RenderingContext</code>, methods and properties which can make use of any of these interfaces can be specified and written more easily; since <code>&lt;canvas&gt;</code> supports several rendering systems, it's helpful from a specification and browser implementation perspective to have a shorthand that means "one of these interfaces."</p>
+
+<p>As such, <code>RenderingContext</code> is an implementation detail, and isn't something web developers directly use. There is no <code>RenderingContext</code> interface, and there are no objects which implement type <code>RenderingContext</code>.</p>
+
+<p>The primary use of this type is the definition of the <code>&lt;canvas&gt;</code> element's {{domxref("HTMLCanvasElement.getContext()")}} method, which returns a <code>RenderingContext</code> (meaning it returns any one of the rendering context types).</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#renderingcontext", "RenderingContext")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The rendering context interfaces: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, and {{domxref("WebGL2RenderingContext")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics on the Web</a></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and {{HTMLElement("canvas")}}</li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></li>
+</ul>

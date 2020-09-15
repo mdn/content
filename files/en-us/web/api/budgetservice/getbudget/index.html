@@ -1,0 +1,35 @@
+---
+title: BudgetService.getBudget()
+slug: Web/API/BudgetService/getBudget
+tags:
+  - API
+  - BudgetService
+  - Method
+  - Reference
+  - Web Budget API
+  - getBudget
+---
+<p>{{APIRef("Web Budget API")}}{{SeeCompatTable}}{{obsolete_header}}</p>
+
+<p><span class="seoSummary">The <strong><code>getBudget()</code></strong> property of the {{domxref("BudgetService")}} interface returns a {{domxref("Promise")}} that resolves to an array of BudgetState objects indicating the expected state of the budget at times in the future.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var aPromise = BudgetService.getBudget();
+aPromise.then(function(budgetState[]){ ... });</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Returns</h3>
+
+<p>A {{domxref("Promise")}} that resolves to an instance of {{domxref("BudgetState")}}.</p>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.BudgetService.getBudget")}}</p>
+</div>

@@ -1,0 +1,91 @@
+---
+title: lang
+slug: Web/HTML/Global_attributes/lang
+tags:
+  - Global attributes
+  - HTML
+  - Reference
+---
+<div>{{HTMLSidebar("Global_attributes")}}</div>
+
+<p>The <strong><code>lang</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>.</p>
+
+<p class="note">The default value of <code>lang</code> is <code>unknown</code>, therefore it is recommended to always specify this attribute with the appropriate value.</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}</div>
+
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+
+<p>If the attribute value is the <em>empty string</em> (<code>lang=""</code>), the language is set to <em>unknown</em>; if the language tag is not valid according to BCP47, it is set to <em>invalid</em>.</p>
+
+<div class="note">
+<h2 id="Language_tag_syntax">Language tag syntax</h2>
+
+<p>The full BCP47 syntax is in-depth enough to mark extremely specific language dialects, but most usage is much simpler.</p>
+
+<p>A language tag is made of hyphen-separated <em>language subtags</em>, where each subtag indicates a certain property of the language. The 3 most common subtags are:</p>
+
+<dl>
+ <dt>Language subtag</dt>
+ <dd>Required. A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is <code>en</code>, and the code for Badeshi is <code>bdz</code>.</dd>
+ <dt>Script subtag</dt>
+ <dd>Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is <code>fr-Brai</code> and <code>ja-Kana</code> is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.</dd>
+ <dt>Region subtag</dt>
+ <dd>Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, <code>es-ES</code> is for Spanish as spoken in Spain, and <code>es-013</code> is Spanish as spoken in Central America. “International Spanish” would just be <code>es</code>.</dd>
+</dl>
+
+<p>The script subtag precedes the region subtag if both are present — <code>ru-Cyrl-BY</code> is Russian, written in the Cyrillic alphabet, as spoken in Belarus.</p>
+
+<p>To find the correct subtag codes for a language, try <a href="https://r12a.github.io/app-subtags/" rel="external">the Language Subtag Lookup</a>.</p>
+</div>
+
+<p>Even if the <strong>lang</strong> attribute is set, it may not be taken into account, as the <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> attribute has priority.</p>
+
+<p>For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would <em>not</em> match <code>lang="xyzzy-Zorp!"</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Snapshot of {{SpecName('HTML WHATWG')}}, behavior with <code>xml:lang</code> and language determination algorithm defined. It also is a true global attribute.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("html.global_attributes.lang")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
+ <li><a href="/en-US/docs/Web/HTTP/Headers/Content-Language"><code>Content-Language</code> HTTP Header</a></li>
+</ul>

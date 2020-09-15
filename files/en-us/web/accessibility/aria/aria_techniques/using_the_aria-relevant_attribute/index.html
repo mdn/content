@@ -1,0 +1,32 @@
+---
+title: Using the aria-relevant attribute
+slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute
+tags:
+  - ARIA
+  - Accessibility
+  - NeedsExample
+  - ariaLive
+  - attri
+---
+<p><span class="seoSummary">The <strong><code><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant" rel="external" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant">aria-relevant</a></code></strong> attribute is an optional value used to describe what types of changes have occurred to an <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions" title="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> region, and which are relevant and should be announced. Any change that is not relevant acts in the same manner it would if the <code>aria-live</code> attribute were set to <code>off</code>.</span></p>
+
+<p><code>aria-relevant</code> is commonly used when a web page contains content that may be updated while viewing the page.</p>
+
+<h3 id="Values">Values</h3>
+
+<p>A space-delimited list of one or more of the following values:</p>
+
+<ul>
+ <li><code>additions</code> Element nodes added to the accessibility tree within the live region; should be considered relevant.</li>
+ <li><code>removals</code> are deletion of nodes in the accessiblity tree; should be considered relevant.</li>
+ <li><code>text</code> are changes to the textual content of existing nodes; should be considered relevant.</li>
+ <li><code>all</code> is equivalent to additions removals text.</li>
+</ul>
+
+<p><code>aria-relevant="additions text"</code> is the default value on a live region.</p>
+
+<h3 id="Additional_resources">Additional resources</h3>
+
+<ul>
+ <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant" title="https://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant">WAI-ARIA specification for aria-relevant</a></li>
+</ul>

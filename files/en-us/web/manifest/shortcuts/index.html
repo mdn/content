@@ -1,0 +1,79 @@
+---
+title: shortcuts
+slug: Web/Manifest/shortcuts
+tags:
+  - Manifest
+  - Web
+  - shortcuts
+---
+<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Type</th>
+   <td><code>Object</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Mandatory</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <code>shortcuts</code> member defines an array of shortcuts or links to key tasks or pages within a web app. A user agent can use these values to assemble a context menu to be displayed by the operating system when a user engages with the web app's icon. When user invokes a shortcut, the user agent will navigate to the address given by shortcut's <code>url</code> member.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following is a list of shortcuts a calendar app might have:</p>
+
+<pre class="brush: json notranslate">"shortcuts" : [
+  {
+    "name": "Today's agenda",
+    "url": "/today",
+    "description": "List of events planned for today"
+  },
+  {
+    "name": "New event",
+    "url": "/create/event"
+  },
+  {
+    "name": "New reminder",
+    "url": "/create/reminder"
+  }
+]</pre>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+   <th scope="col">Feedback</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <p>{{SpecName('Manifest', '#shortcuts-member', 'shortcuts')}}</p>
+   </td>
+   <td>
+    <p>{{Spec2('Manifest')}}</p>
+   </td>
+   <td>
+    <p>Initial definition.</p>
+   </td>
+   <td>
+    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("html.manifest.shortcuts")}}</p>

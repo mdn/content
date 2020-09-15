@@ -1,0 +1,69 @@
+---
+title: InputEvent.data
+slug: Web/API/InputEvent/data
+tags:
+  - API
+  - DOM Events
+  - Experimental
+  - Input
+  - InputEvent
+  - Property
+  - Reference
+  - data
+  - events
+---
+<p>{{SeeCompatTable}}{{APIRef("DOM Events")}}</p>
+
+<p>The <strong><code>data</code></strong> read-only property of the {{domxref("InputEvent")}} interface returns a {{domxref("DOMString")}} with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example).</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>aString</em> = <em>inputEvent</em>.data;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("DOMString")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following simple example we've set up an event listener on the <a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a> event so that when any change is made to the contents of the {{htmlelement("input")}} element (either by typing or pasting), the text that was added is retrieved via the InputEvent.data property and reported in the paragraph below the input.</p>
+
+<pre class="brush: html">&lt;p&gt;Some text to copy and paste.&lt;/p&gt;
+
+&lt;input type="text"&gt;
+
+&lt;p class="result"&gt;&lt;/p&gt;</pre>
+
+<pre class="brush: js">var editable = document.querySelector('input')
+var result = document.querySelector('.result');
+
+editable.addEventListener('input', (e) =&gt; {
+  result.textContent = "Inputted text: " + e.data;
+});</pre>
+
+<p>{{EmbedLiveSample('Examples')}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('InputEvents2','#dfn-data','data')}}</td>
+   <td>{{Spec2('InputEvents2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.InputEvent.data")}}</p>
+</div>

@@ -1,0 +1,98 @@
+---
+title: MediaSession
+slug: Web/API/MediaSession
+tags:
+  - API
+  - Audio
+  - Interface
+  - Media
+  - Media Session API
+  - MediaSession
+  - Reference
+  - Video
+---
+<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+
+<p><span class="seoSummary">The <strong><code>MediaSession</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.</span></p>
+
+<p>For example, a smartphone might have a standard panel in its lock screen that provides controls for media. A browser on that device might deliver the metadata provided by calling <code>MediaSession</code> to the device in order to be controllable using the global user interface.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("MediaSession.metadata", "metadata")}}</dt>
+ <dd>Returns an instance of {{domxref("MediaMetadata")}} which contains rich media metadata, for display in a platform UI.</dd>
+ <dt>{{domxref("MediaSession.playbackState", "playbackState")}}</dt>
+ <dd>Indicates whether the current media session is playing. Valid values are <code>none</code>, <code>paused</code>, or <code>playing</code>.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</dt>
+ <dd>Sets an event handler for a media session action, such as play or pause. See the method page for a full list.</dd>
+ <dt>{{domxref("MediaSession.setPositionState", "setPositionState()")}}</dt>
+ <dd>Sets the current playback position and speed of the media currently being presented.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example creates a new media session and assigns action handlers to it:</p>
+
+<pre class="brush: js">if ('mediaSession' in navigator){
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: "Podcast Episode Title",
+    artist: "Podcast Host",
+    album: "Podcast Name",
+    artwork: [{src: "podcast.jpg"}]
+  });
+  navigator.mediaSession.setActionHandler('play', function() {});
+  navigator.mediaSession.setActionHandler('pause', function() {});
+  navigator.mediaSession.setActionHandler('seekbackward', function() {});
+  navigator.mediaSession.setActionHandler('seekforward', function() {});
+  navigator.mediaSession.setActionHandler('previoustrack', function() {});
+  navigator.mediaSession.setActionHandler('nexttrack', function() {});
+}</pre>
+
+<p>The following example sets up event handlers for pausing and playing:</p>
+
+<pre class="brush: js">var audio = document.querySelector("#player");
+audio.src = "song.mp3";
+
+navigator.mediaSession.setActionHandler('play', play);
+navigator.mediaSession.setActionHandler('pause', pause);
+
+function play() {
+  audio.play();
+  navigator.mediaSession.playbackState = "playing";
+}
+
+function pause() {
+  audio.pause();
+  navigator.mediaSession.playbackState = "paused";
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Media Session','#the-mediasession-interface','MediaSession')}}</td>
+   <td>{{Spec2('Media Session')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.MediaSession")}}</p>

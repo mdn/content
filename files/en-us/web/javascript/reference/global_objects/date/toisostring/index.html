@@ -1,0 +1,96 @@
+---
+title: Date.prototype.toISOString()
+slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - polyfill
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>toISOString()</code></strong> method returns a string in <em>simplified</em> extended ISO format (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), which is always 24 or 27 characters long (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code> or <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>, respectively). The timezone is always zero UTC offset, as denoted by the suffix "<code>Z</code>".</p>
+
+<div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.toISOString()</code></pre>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A string representing the given date in the <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format according to universal time.</p>
+
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>This method was standardized in ECMA-262 5th edition. Engines which have not been updated to support this method can work around the absence of this method using the following shim:</p>
+
+<pre class="brush: js">if (!Date.prototype.toISOString) {
+  (function() {
+
+    function pad(number) {
+      if (number &lt; 10) {
+        return '0' + number;
+      }
+      return number;
+    }
+
+    Date.prototype.toISOString = function() {
+      return this.getUTCFullYear() +
+        '-' + pad(this.getUTCMonth() + 1) +
+        '-' + pad(this.getUTCDate()) +
+        'T' + pad(this.getUTCHours()) +
+        ':' + pad(this.getUTCMinutes()) +
+        ':' + pad(this.getUTCSeconds()) +
+        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        'Z';
+    };
+
+  })();
+}
+</pre>
+
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_toISOString">Using <code>toISOString()</code></h3>
+
+<pre class="brush: js">let today = new Date('05 October 2011 14:48 UTC')
+
+console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
+</pre>
+
+<p>The above example uses parsing of a non–standard string value that may not be correctly parsed in non–Mozilla browsers.</p>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
+ <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
+</ul>

@@ -1,0 +1,198 @@
+---
+title: Global attributes
+slug: Web/HTML/Global_attributes
+tags:
+  - Attribute
+  - HTML
+  - Reference
+  - Web
+---
+<div>{{HTMLSidebar("Global_attributes")}}</div>
+
+<p><strong>Global attributes</strong> are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.</p>
+
+<p>Global attributes may be specified on all <a href="/en-US/docs/Web/HTML/Element">HTML elements</a>, <em>even those not specified in the standard</em>. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as <code>&lt;foo hidden&gt;...&lt;/foo&gt;</code>, even though <code>&lt;foo&gt;</code> is not a valid HTML element.</p>
+
+<p>In addition to the basic HTML global attributes, the following global attributes also exist:</p>
+
+<ul>
+ <li>{{HTMLAttrDef("xml:lang")}} and {{HTMLAttrDef("xml:base")}} — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.</li>
+ <li>The multiple <code><strong><a href="/en-US/docs/Web/Accessibility/ARIA">aria-*</a></strong></code> attributes, used for improving accessibility.</li>
+ <li>The <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handler</a> attributes: <code><strong>onabort</strong></code>, <code><strong>onautocomplete</strong></code>, <code><strong>onautocompleteerror</strong></code>, <code><strong>onblur</strong></code>, <code><strong>oncancel</strong></code>, <code><strong>oncanplay</strong></code>, <code><strong>oncanplaythrough</strong></code>, <code><strong>onchange</strong></code>, <code><strong>onclick</strong></code>, <code><strong>onclose</strong></code>, <code><strong>oncontextmenu</strong></code>, <code><strong>oncuechange</strong></code>, <code><strong>ondblclick</strong></code>, <code><strong>ondrag</strong></code>, <code><strong>ondragend</strong></code>, <code><strong>ondragenter</strong></code>, <code><strong>ondragexit</strong></code>, <code><strong>ondragleave</strong></code>, <code><strong>ondragover</strong></code>, <code><strong>ondragstart</strong></code>, <code><strong>ondrop</strong></code>, <code><strong>ondurationchange</strong></code>, <code><strong>onemptied</strong></code>, <code><strong>onended</strong></code>, <code><strong>onerror</strong></code>, <code><strong>onfocus</strong></code>, <code><strong>oninput</strong></code>, <code><strong>oninvalid</strong></code>, <code><strong>onkeydown</strong></code>, <code><strong>onkeypress</strong></code>, <code><strong>onkeyup</strong></code>, <code><strong>onload</strong></code>, <code><strong>onloadeddata</strong></code>, <code><strong>onloadedmetadata</strong></code>, <code><strong>onloadstart</strong></code>, <code><strong>onmousedown</strong></code>, <code><strong>onmouseenter</strong></code>, <code><strong>onmouseleave</strong></code>, <code><strong>onmousemove</strong></code>, <code><strong>onmouseout</strong></code>, <code><strong>onmouseover</strong></code>, <code><strong>onmouseup</strong></code>, <code><strong>onmousewheel</strong></code>, <code><strong>onpause</strong></code>, <code><strong>onplay</strong></code>, <code><strong>onplaying</strong></code>, <code><strong>onprogress</strong></code>, <code><strong>onratechange</strong></code>, <code><strong>onreset</strong></code>, <code><strong>onresize</strong></code>, <code><strong>onscroll</strong></code>, <code><strong>onseeked</strong></code>, <code><strong>onseeking</strong></code>, <code><strong>onselect</strong></code>, <code><strong>onshow</strong></code>, <code><strong>onsort</strong></code>, <code><strong>onstalled</strong></code>, <code><strong>onsubmit</strong></code>, <code><strong>onsuspend</strong></code>, <code><strong>ontimeupdate</strong></code>, <code><strong>ontoggle</strong></code>, <code><strong>onvolumechange</strong></code>, <code><strong>onwaiting</strong></code>.</li>
+</ul>
+
+<h2 id="List_of_global_attributes">List of global attributes</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">{{HTMLAttrDef("accesskey")}}</a></dt>
+ <dd>Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/autocapitalize">{{HTMLAttrDef("autocapitalize")}}</a></dt>
+ <dd>Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
+ <ul>
+  <li><code>off</code> or <code>none</code>, no autocapitalization is applied (all letters default to lowercase)</li>
+  <li><code>on</code> or <code>sentences</code>, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase</li>
+  <li><code>words</code>, the first letter of each word defaults to a capital letter; all other letters default to lowercase</li>
+  <li><code>characters</code>, all letters should default to uppercase</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/class">{{HTMLAttrDef("class")}}</a></dt>
+ <dd>A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the <a href="/en-US/docs/Web/CSS/Class_selectors">class selectors</a> or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">{{HTMLAttrDef("contenteditable")}}</a></dt>
+ <dd>An enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
+ <ul>
+  <li><code>true</code> or the <em>empty string</em>, which indicates that the element must be editable;</li>
+  <li><code>false</code>, which indicates that the element must not be editable.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">{{HTMLAttrDef("contextmenu")}}{{Obsolete_Inline}}</a></dt>
+ <dd>The <code><a href="#attr-id"><strong>id</strong></a></code> of a {{HTMLElement("menu")}} to use as the contextual menu for this element.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">{{HTMLAttrDef("data-*")}}</a></dt>
+ <dd>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/dir">{{HTMLAttrDef("dir")}}</a></dt>
+ <dd>An enumerated attribute indicating the directionality of the element's text. It can have the following values:
+ <ul>
+  <li><code>ltr</code>, which means <em>left to right </em>and is to be used for languages that are written from the left to the right (like English);</li>
+  <li><code>rtl</code>, which means <em>right to left</em> and is to be used for languages that are written from the right to the left (like Arabic);</li>
+  <li><code>auto</code>, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">{{HTMLAttrDef("draggable")}}</a></dt>
+ <dd>An enumerated attribute indicating whether the element can be dragged, using the <a href="/en-us/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a>. It can have the following values:
+ <ul>
+  <li><code>true</code>, which indicates that the element may be dragged</li>
+  <li><code>false</code>, which indicates that the element may not be dragged.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/dropzone">{{HTMLAttrDef("dropzone")}}</a> {{deprecated_inline}}</dt>
+ <dd>An enumerated attribute indicating what types of content can be dropped on an element, using the <a href="/en-US/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a>. It can have the following values:
+ <ul>
+  <li><code>copy</code>, which indicates that dropping will create a copy of the element that was dragged</li>
+  <li><code>move</code>, which indicates that the element that was dragged will be moved to this new location.</li>
+  <li><code>link</code>, will create a link to the dragged data.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/exportparts">{{HTMLAttrDef("exportparts")}}</a> {{Experimental_Inline}}</dt>
+ <dd>Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">{{HTMLAttrDef("hidden")}}</a></dt>
+ <dd>A Boolean attribute indicates that the element is not yet, or is no longer, <em>relevant</em>. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/id">{{HTMLAttrDef("id")}}</a></dt>
+ <dd>Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/inputmode">{{HTMLAttrDef("inputmode")}}</a></dt>
+ <dd>Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/is">{{HTMLAttrDef("is")}}</a></dt>
+ <dd>Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> for more details).</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note: </strong>The <code>item*</code> attributes are part of the <a class="external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>.</p>
+</div>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemid">{{HTMLAttrDef("itemid")}}</a></dt>
+ <dd>The unique, global identifier of an item.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">{{HTMLAttrDef("itemprop")}}</a></dt>
+ <dd>Used to add properties to an item. Every HTML element may have an <code>itemprop</code> attribute specified, where an <code>itemprop</code> consists of a name and value pair.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemref">{{HTMLAttrDef("itemref")}}</a></dt>
+ <dd>Properties that are not descendants of an element with the <code>itemscope</code> attribute can be associated with the item using an <code>itemref</code>. It provides a list of element ids (not <code>itemid</code>s) with additional properties elsewhere in the document.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">{{HTMLAttrDef("itemscope")}}</a></dt>
+ <dd><code>itemscope</code> (usually) works along with {{HTMLAttrxRef("itemtype")}} to specify that the HTML contained in a block is about a particular item. <code>itemscope</code> creates the Item and defines the scope of the <code>itemtype</code> associated with it. <code>itemtype</code> is a valid URL of a vocabulary (such as <a class="external external-icon" href="https://schema.org/">schema.org</a>) that describes the item and its properties context.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">{{HTMLAttrDef("itemtype")}}</a></dt>
+ <dd>Specifies the URL of the vocabulary that will be used to define <code>itemprop</code>s (item properties) in the data structure. {{HTMLAttrxRef("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by <code>itemtype</code> will be active.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/lang">{{HTMLAttrDef("lang")}}</a></dt>
+ <dd>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/part">{{HTMLAttrDef("part")}}</a></dt>
+ <dd>A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/slot">{{HTMLAttrDef("slot")}}</a></dt>
+ <dd>Assigns a slot in a <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> shadow tree to an element: An element with a <code>slot</code> attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that <code>slot</code> attribute's value.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">{{HTMLAttrDef("spellcheck")}}</a></dt>
+ <dd>An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
+ <ul>
+  <li><code>true</code>, which indicates that the element should be, if possible, checked for spelling errors;</li>
+  <li><code>false</code>, which indicates that the element should not be checked for spelling errors.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/style">{{HTMLAttrDef("style")}}</a></dt>
+ <dd>Contains <a href="/en-US/docs/Web/CSS">CSS</a> styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">{{HTMLAttrDef("tabindex")}}</a></dt>
+ <dd>An integer attribute indicating if the element can take input focus (is <em>focusable</em>), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:
+ <ul>
+  <li>a <em>negative value</em> means that the element should be focusable, but should not be reachable via sequential keyboard navigation;</li>
+  <li><code>0</code> means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;</li>
+  <li>a <em>positive value</em> means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the <a href="#attr-tabindex"><strong>tabindex</strong></a>. If several elements share the same tabindex, their relative order follows their relative positions in the document.</li>
+ </ul>
+ </dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/title">{{HTMLAttrDef("title")}}</a></dt>
+ <dd>Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/translate">{{HTMLAttrDef("translate")}}</a> {{Experimental_Inline}}</dt>
+ <dd>An enumerated attribute that is used to specify whether an element's attribute values and the values of its {{DOMxRef("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
+ <ul>
+  <li>empty string and <code>yes</code>, which indicates that the element will be translated.</li>
+  <li><code>no</code>, which indicates that the element will not be translated.</li>
+ </ul>
+ </dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "dom.html#global-attributes", "Global attributes")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSS Shadow Parts", "#exposing")}}</td>
+   <td>{{Spec2("CSS Shadow Parts")}}</td>
+   <td>Added the <code>part</code> and <code>exportparts</code> global attributes.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5.2", "dom.html#global-attributes", "Global attributes")}}</td>
+   <td>{{Spec2("HTML5.2")}}</td>
+   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML5.1")}}, <code>itemid</code>, <code>itemprop</code>, <code>itemref</code>, <code>itemscope</code>, and <code>itemtype</code> have been added.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5.1", "dom.html#global-attributes", "Global attributes")}}</td>
+   <td>{{Spec2("HTML5.1")}}</td>
+   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML5 W3C")}}, <code>contextmenu</code>, <code>draggable</code>, <code>dropzone</code>, and <code>spellcheck</code> have been added.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "dom.html#global-attributes", "Global attributes")}}</td>
+   <td>{{Spec2("HTML5 W3C")}}</td>
+   <td>Snapshot of {{SpecName("HTML WHATWG")}}. From {{SpecName("HTML4.01")}}, the concept of global attributes is introduced and the <code>dir</code>, <code>lang</code>, <code>style</code>, <code>id</code>, <code>class</code>, <code>tabindex</code>, <code>accesskey</code>, and <code>title</code> are now true global attributes.<br>
+    <code>xml:lang</code> which was initially part of XHTML, is now also part of HTML.<br>
+    <code>hidden</code>, <code>data-*</code>, <code>contenteditable</code>, and <code>translate</code> have been added.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML4.01")}}</td>
+   <td>{{Spec2("HTML4.01")}}</td>
+   <td>There are no global attributes defined. Several attributes that will become global attributes in subsequent specifications are defined on a subset of elements.<br>
+    <code>class</code> and <code>style</code> are supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
+    <code>dir</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
+    <code>id</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("title")}}.<br>
+    <code>lang</code> is supported on all elements but {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}}.<br>
+    <code>tabindex</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.<br>
+    <code>accesskey</code> is only supported on {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}} and {{HTMLElement("textarea")}}.<br>
+    <code>title</code> is supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("html.global_attributes")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{DOMxRef("Element")}} and {{DOMxRef("GlobalEventHandlers")}} interfaces that allow to query most global attributes.</li>
+</ul>

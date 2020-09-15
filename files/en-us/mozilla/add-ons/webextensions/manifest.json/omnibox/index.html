@@ -1,0 +1,49 @@
+---
+title: omnibox
+slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
+tags:
+  - Add-ons
+  - Extensions
+  - WebExtensions
+---
+<div>{{AddonSidebar}}</div>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">Type</th>
+   <td><code>Object</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Mandatory</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Example</th>
+   <td>
+    <pre class="brush: json no-line-numbers">
+"omnibox": {
+  "keyword": "mdn"
+}</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Use the <code>omnibox</code> key to define an omnibox keyword for your extension.</p>
+
+<p>When the user types this keyword into the browser's address bar, followed by a space, then any subsequent characters will be sent to the extension using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></code> API. The extension will then be able to populate the address bar's drop-down suggestions list with its own suggestions.</p>
+
+<p>If two or more extensions define the same keyword, then the extension that was installed last gets to control the keyword. Any previously installed extensions that defined the same keyword will no longer be able to use the <code>omnibox</code> API.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: json no-line-numbers">"omnibox": {
+  "keyword": "mdn"
+}</pre>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.manifest.omnibox")}}</p>

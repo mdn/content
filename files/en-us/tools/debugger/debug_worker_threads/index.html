@@ -1,0 +1,26 @@
+---
+title: Debug worker threads
+slug: Tools/Debugger/Debug_worker_threads
+tags:
+  - Debugger
+  - Service Workers
+  - Web Workers
+  - debug threads
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>The debugger shows the source code for all running worker threads — <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, etc. — listed in the sources list. You can open the JavaScript file for the worker process and set <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a> and <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoints</a> just as you can with JavaScript code running on the main thread.</p>
+
+<h2 id="Inspecting_worker_code">Inspecting worker code</h2>
+
+<p>For example, see the selected item <code>worker.js</code> below — it is listed in a separate thread in the sources list, but appears in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a> in the same way as main thread code when selected<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">.</a></p>
+
+<p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<h2 id="Setting_breakpoints_etc.">Setting breakpoints, etc.</h2>
+
+<p>You can set a breakpoint (or logpoint) on any active worker thread:</p>
+
+<p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<p>When execution is paused in a worker thread, the context of the debugger is updated to show the correct breakpoints, call stack, etc., just as you'd expect.</p>

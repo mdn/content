@@ -1,0 +1,742 @@
+---
+title: Comparison with the Add-on SDK
+slug: Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK
+tags:
+  - Addon SDK
+  - AddonSDK
+  - WebExtensions
+  - porting
+---
+<div>{{AddonSidebar}}</div>
+
+<p>This article is a technical comparison of the Add-on SDK and WebExtensions technology. It's intended to help orient people who have an add-on that uses the SDK, and who are planning to port it to use WebExtension APIs.</p>
+
+<div class="blockIndicator warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>If you're planning to port an <a href="/en-US/Add-ons/Overlay_Extensions">overlay extension</a> or a <a href="/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions">bootstrapped extension</a>, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a>.</p>
+
+<p>The basic structure and concepts of the Add-on SDK are shared by WebExtensions. Both technologies include:</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#Manifest_files">manifest files</a> defining metadata for the extension and some aspects of its behavior.</li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#Persistent_scripts">persistent scripts</a> that get access to a set of privileged JavaScript APIs and that stay loaded for as long as the extension itself is enabled.</li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#Content_scripts">content scripts</a> that can be injected into web pages, and that can communicate with persistent scripts using an asynchronous messaging API.</li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#UI_elements">the ability to add specific UI elements</a>, such as buttons, to the browser. Buttons in turn can have popups that are defined using HTML, JavaScript, and CSS.</li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#JavaScript_APIs">a set of privileged JavaScript APIs</a> for interacting with the web or with the browser.</li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK#Command-line_tool">a command-line tool</a> that developers can use to test their extensions.</li>
+</ul>
+
+<p>Beyond these broad similarities, there are a lot of differences in the details, and these are summarised in the following sections.</p>
+
+<h2 id="Manifest_files">Manifest files</h2>
+
+<p>In both technologies you have a JSON manifest file in the extension's root directory. In the SDK this is called "<a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/package_json">package.json</a>", while in WebExtensions it's called "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>". Both files contain basic metadata such as the extension's name, description, and icons.</p>
+
+<p>However, "manifest.json" includes many keys that define parts of the extension's capabilities and behavior, which in the SDK are more often defined in code. For example:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 30%;">Feature</th>
+   <th scope="col">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Content scripts matching URL patterns</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a></code> API</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key</td>
+  </tr>
+  <tr>
+   <td>Toolbar buttons</td>
+   <td> <code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">ui/button/action</a></code> API</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key</td>
+  </tr>
+  <tr>
+   <td>Access privileged APIs</td>
+   <td><code>require()</code> function</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> key</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>This makes developing extensions with WebExtension APIs more declarative and less programmatic, compared with SDK add-ons.</p>
+
+<p>With the SDK you'll typically use <code><a href="/en-US/Add-ons/SDK/Tools/jpm#jpm_init">jpm init</a></code> to create a new package.json. The WebExtensions technology doesn't have an equivalent of <code>jpm init</code>, so you'll probably write the manifest from scratch or copy and adapt an existing one.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Learn more about manifest.json</a></li>
+</ul>
+
+<h2 id="Persistent_scripts">Persistent scripts</h2>
+
+<p>Both technologies have the concept of persistent scripts that stay loaded for the extension's lifetime, have access to privileged APIs, and can communicate with other parts of the extension such as content scripts.</p>
+
+<p>In the SDK this script is by default called "index.js", and it can <a href="/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK#Local_Modules">load other scripts using the module loader</a>.</p>
+
+<p>With WebExtensions, these scripts are called "<a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>". You can define a set of scripts using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code> manifest key, and they will all be loaded into the same document, which is a hidden, auto-generated, blank HTML page. You can also define your own custom document using the <code>background</code> key.</p>
+
+<p>An important difference is that background scripts get a <code><a href="/en-US/docs/Web/API/Window">window</a></code> global, with all the DOM objects you'd expect to be present on a window. This makes writing extensions more like writing web pages, with direct access to all the normal Web APIs like <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+
+<p>Also note that by default, extensions have a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> applied to them. You can specify your own policy, but the default policy, among other things, disallows potentially unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.</p>
+
+<h3 id="Learn_more">Learn more</h3>
+
+<ul>
+ <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">Background scripts for extensions</a></li>
+</ul>
+
+<h2 id="Content_scripts">Content scripts</h2>
+
+<p>In both the Add-on SDK and WebExtensions, persistent scripts can't directly access the content of web pages. Instead, extensions can attach content scripts to web pages. These scripts:</p>
+
+<ul>
+ <li>do get direct access to web content</li>
+ <li>don't have access to privileged APIs</li>
+ <li>can communicate with the persistent scripts using a messaging API.</li>
+</ul>
+
+<p>In both technologies, there are two ways to attach scripts: you can automatically attach a set of scripts to pages whose URL matches a given pattern, or you can programmatically attach a script to the page hosted by a given tab. The way to do this is different in each technology, though:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Operation</th>
+   <th scope="col">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Attach scripts to pages matching URL pattern</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a></code> API</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key</td>
+  </tr>
+  <tr>
+   <td>Attach scripts to pages hosted by a tab</td>
+   <td><code><a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Run_scripts_in_a_tab">tab.attach()</a></code></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The match patterns used for URLs are different:</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/Low-Level_APIs/util_match-pattern">SDK match patterns</a></li>
+ <li><a href="/en-US/Add-ons/WebExtensions/match_patterns">WebExtension match patterns</a></li>
+</ul>
+
+<p>In both technologies you can pass options to control when the script runs and whether it will be attached to subframes. WebExtensions don't include an equivalent of <code>contentScriptOptions</code>, though, so to pass configuration options to a content script in an extension, you would either have to send them in a message or store them in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code>.</p>
+
+<p>In both technologies, content scripts can communicate with persistent scripts using an asynchronous messaging API:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Operation</th>
+   <th scope="col">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Send message</td>
+   <td><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/port#emit()"><code>port.emit()</code></a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> / <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code></td>
+  </tr>
+  <tr>
+   <td>Receive message</td>
+   <td><code><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/port#on()">port.on()</a></code></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts#Communicating_with_the_add-on">Communicating with persistent scripts in the SDK</a></li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">Communicating with persistent scripts in WebExtensions</a></li>
+</ul>
+
+<p>In both cases, content scripts can communicate with scripts loaded by the page using <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code>.</p>
+
+<p>In both technologies, have access to the page they're injected into, but get "a clean view of the DOM", meaning that they don't get to see modifications made to the DOM by scripts loaded by the page.</p>
+
+<p>In the SDK, content scripts can <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/Interacting_with_page_scripts#Sharing_objects_with_page_scripts">share objects with page scripts</a>, using techniques like <code>unsafeWindow</code> and <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.createObjectIn">createObjectIn</a></code>. With WebExtensions, the <code>unsafeWindow</code> is available via <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Accessing_page_script_objects_from_content_scripts">wrappedJSObject</a></code> instead. All the export helper functions are available, too.</p>
+
+<h3 id="Learn_more_2">Learn more</h3>
+
+<ul>
+ <li><a href="/en-US/Add-ons/WebExtensions/Content_scripts">Content scripts for WebExtensions</a></li>
+</ul>
+
+<h2 id="UI_elements">UI elements</h2>
+
+<p>Both technologies provide APIs to create a UI for your extension. UI options for WebExtensions are more limited.</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">UI element</th>
+   <th scope="col">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Button</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">ui/button/action</a></code></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> / <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></td>
+  </tr>
+  <tr>
+   <td>Toggle button</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">ui/button/toggle</a></code></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> / <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></td>
+  </tr>
+  <tr>
+   <td>Toolbar</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_toolbar">ui/toolbar</a></code></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td>Sidebar</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar">ui/sidebar</a></code></td>
+   <td><code>sidebar_action</code></td>
+  </tr>
+  <tr>
+   <td>Panel</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel">panel</a></code></td>
+   <td><code>browser_action</code> / <code>page_action</code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Popups"> popup</a></td>
+  </tr>
+  <tr>
+   <td>Context menu</td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/context-menu">context-menu</a></code></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus">contextMenus</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Panels_and_popups">Panels and popups</h3>
+
+<p>Panels and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Popups">popups</a> are both transient dialogs specified using HTML, CSS, and JavaScript.</p>
+
+<p>Unlike panels, popups are always attached to a button (either a browser action or a page action) and can't be displayed programmatically: they are only shown when the user clicks the button.</p>
+
+<p>Also unlike panels, popup scripts get access to all the same APIs that background scripts do. They can even get direct access to the background page, via <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage">runtime.getBackgroundPage()</a></code>.</p>
+
+<h2 id="Settings">Settings</h2>
+
+<p>The Add-on SDK and WebExtensions both have some support for settings (sometimes also called options or preferences).</p>
+
+<p>With the SDK you can define preferences using a <code>preferences</code> key in package.json. The user can see and change these preferences in the extension's entry in the Add-ons Manager. The extension in turn can listen for changes using the <code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs">simple-prefs</a></code> API.</p>
+
+<p>With WebExtensions, you will have to implement your own UI for presenting settings, and your own code for persisting them for your extension. You do this by writing an HTML file that presents the settings UI, which can include a script for persisting the settings. The script gets access to all the WebExtensions APIs, and it's generally expected that you should use the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API to persist settings.</p>
+
+<p>You then assign the HTML file's URL to the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> key in manifest.json. Your settings page then appears in the extension's entry in the Add-ons Manager. The options page can also be programmatically opened with an API call to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage">browser.runtime.openOptionsPage</a></code>.</p>
+
+<p>Note that WebExtensions does not provide an equivalent of the SDK's <code><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/preferences_service">preferences/service</a></code> API, which provides general access to browser settings. However, you can change some browser settings using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></code> APIs.</p>
+
+<h3 id="Learn_more_3">Learn more</h3>
+
+<ul>
+ <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">Introduction to options pages</a></li>
+ <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">An example extension that has an options page</a></li>
+</ul>
+
+<h2 id="Internationalization">Internationalization</h2>
+
+<p>The Add-on SDK and WebExtensions both include tools for localizing user-visible text. They offer mostly similar functionality:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Feature</th>
+   <th scope="col">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Strings in add-on scripts</td>
+   <td>Yes</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>Strings in content scripts</td>
+   <td>No</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>Strings in HTML</td>
+   <td>Yes</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>Strings in CSS</td>
+   <td>No</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>Title &amp; description</td>
+   <td>Yes</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>Plural forms</td>
+   <td>Yes</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>Placeholders</td>
+   <td>Yes</td>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>In both systems, you supply localized strings as a collection of files, one for each locale.</p>
+
+<p>To retrieve localized strings in extension code, there's a JavaScript API - <code><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/l10n">l10n</a></code> in the SDK and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code> in WebExtensions - that returns a localized string given an ID.</p>
+
+<p>WebExtensions don't have direct support for localizing strings appearing in HTML, so you have to do this yourself, using JavaScript to retrieve localized strings and to replace the HTML with the localized version.</p>
+
+<h3 id="Learn_more_4">Learn more</h3>
+
+<ul>
+ <li><a href="/en-US/Add-ons/WebExtensions/Internationalization">Extensions Internationalization guide.</a></li>
+ <li><a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">Example internationalized extension.</a></li>
+ <li><a href="https://gist.github.com/freaktechnik/4a72bc0711d9bc82cf3b075bcc292953">Example script for an extension using WebExtensions to translate HTML in the SDK style</a></li>
+</ul>
+
+<h2 id="Command-line_tool">Command-line tool</h2>
+
+<p>The Add-on SDK comes with a command-line tool, <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a>, that you can use for testing and packaging extensions. There's an equivalent tool for WebExtensions, called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>. web-ext doesn't yet support all the same commands that jpm does, but it has the basics: <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run</a>, <a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build">build</a>, and <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign">sign</a>.</p>
+
+<p>It's also now possible to install (and reload) SDK add-ons and extensions built with WebExtension APIs in Firefox from their source directory, without needing to package them as an XPI. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a>.</p>
+
+<h3 id="Learn_more_5">Learn more</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext tutorial</a></li>
+ <li><a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference">web-ext reference</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary installation in Firefox</a></li>
+</ul>
+
+<h2 id="JavaScript_APIs">JavaScript APIs</h2>
+
+<p>In both the SDK and WebExtensions, the main power of the extension comes from a set of dedicated JavaScript APIs. For most of the SDK high-level APIs, there is a WebExtensions equivalent.</p>
+
+<p>One big limitation of WebExtensions compared with the SDK is that SDK add-ons can use require("chrome") to get access to the full range of XPCOM APIs in Firefox. This is not possible with WebExtensions.</p>
+
+<p>To access privileged APIs in the SDK, you use require():</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open("https://developer.mozilla.org/");</pre>
+
+<p>With WebExtensions most APIs are made available already, with no need to import them:</p>
+
+<pre class="brush: js">browser.tabs.create({
+  "url": "https://developer.mozilla.org/"
+});</pre>
+
+<p>For some WebExtension APIs, you need to ask permission first, using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> manifest.json key. In the example below, the extension will need to ask for the "tabs" permission if they want access to the tab's URL:</p>
+
+<p><strong>manifest.json:</strong></p>
+
+<pre class="brush: json">...
+
+"permissions": [
+    "tabs"
+  ]
+
+...</pre>
+
+<p><strong>background script:</strong></p>
+
+<pre class="brush: js">function logUrl(tabs) {
+ console.log(tabs[0].url);
+}
+
+var querying = browser.tabs.query(
+  {active: true, currentWindow: true}
+);
+
+querying.then(logUrl);
+</pre>
+
+<h3 id="Add-on_SDK_>_WebExtensions">Add-on SDK =&gt; WebExtensions</h3>
+
+<p>The tables in this section list every SDK API and describe what the equivalent WebExtensions API would be, if there is one implemented in the current Developer Edition.</p>
+
+<p>The first table covers high-level SDK APIs, the second covers low-level APIs.</p>
+
+<h4 id="High-level_APIs">High-level APIs</h4>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 35%;">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/addon-page">addon-page</a></td>
+   <td>Use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create">tabs.create()</a></code> to load pages packaged with your add-on into normal browser tabs.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/base64">base64</a></td>
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64"><code>window.atob()</code> and <code>btoa()</code></a></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/clipboard">clipboard</a></td>
+   <td><code><a href="/en-US/docs/Web/API/Document/execCommand">document.execCommand</a></code> without using <code>select()</code> and similar in the background page.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/context-menu">context-menu</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus">contextMenus</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/hotkeys">hotkeys</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands">commands</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/indexed-db">indexed-db</a></td>
+   <td><code><a href="/en-US/docs/Web/API/IndexedDB_API">window.indexedDB</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/l10n">l10n</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/notifications">notifications</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-worker">page-worker</a></td>
+   <td>
+    <p>Porting isn't complete and being treated in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1318532">Bug 1318532</a></p>
+
+    <p>Workarounds (that might require webrequestBlocking to access all webpages [<a href="https://stackoverflow.com/questions/15532791/getting-around-x-frame-options-deny-in-a-chrome-extension">example</a>]):</p>
+
+    <ul>
+     <li>Use the background page</li>
+     <li>load remote iframes into the background page</li>
+     <li>make an <a href="/en-US/docs/AJAX">ajax</a> call to get static information from the page</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel">panel</a></td>
+   <td>See <a href="/en-US/Add-ons/WebExtensions/Porting_from_the_Add-on_SDK#UI_elements">UI elements</a> above.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/passwords">passwords</a></td>
+   <td><a href="https://github.com/web-ext-experiments/logins">Experimental logins API </a></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/private-browsing">private-browsing</a></td>
+   <td><code><a href="/en-US/Add-ons/WebExtensions/API/Tabs/Tab">Tab.incognito</a></code> and <code><a href="/en-US/Add-ons/WebExtensions/API/windows/Window">Window.incognito</a></code>.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/querystring">querystring</a></td>
+   <td><code><a href="/en-US/docs/Web/API/URLSearchParams">window.URLSearchParams</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request">request</a></td>
+   <td><code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch</a></code> or <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/selection">selection</a></td>
+   <td>Use a content script that sends the selection data to the add-on. Alternatively, if you can use a contextmenu on a selection, the selection is contained in selectionText (see <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/OnClickData">contextMenus.OnClickData</a></code>).</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/self">self</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest">runtime.getManifest()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">extension.getURL()</a></code> for <code>data.url()</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs">simple-prefs</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-storage">simple-storage</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/system">system</a></td>
+   <td>Partly provided by <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs">tabs</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/timers">timers</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms">alarms</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/ui">ui</a></td>
+   <td>See <a href="/en-US/Add-ons/WebExtensions/Porting_from_the_Add-on_SDK#UI_elements">UI elements</a> above.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/url">url</a></td>
+   <td><code><a href="/en-US/docs/Web/API/Window/URL">window.URL</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/widget">widget</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows">windows</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Low-level_APIs">Low-level APIs</h4>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 35%;">Add-on SDK</th>
+   <th scope="col">WebExtensions</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/_loader">loader</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/chrome">chrome</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/console_plain-text">console/plain-text</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/console_traceback">console/traceback</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/content_content">content/content</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/content_loader">content/loader</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/content_mod">content/mod</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/content_symbiont">content/symbiont</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/content_worker">content/worker</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/core_heritage">core/heritage</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/core_namespace">core/namespace</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/core_promise">core/promise</a></td>
+   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel">dev/panel</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/event_core">event/core</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/event_target">event/target</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/frame_hidden-frame">frame/hidden-frame</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/frame_utils">frame/utils</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/fs_path">fs/path</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/io_byte-streams">io/byte-streams</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/io_file">io/file</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/io_text-streams">io/text-streams</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/lang_functional">lang/functional</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/lang_type">lang/type</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/loader_cuddlefish">loader/cuddlefish</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/loader_sandbox">loader/sandbox</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/net_url">net/url</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/net_xhr">net/xhr</a></td>
+   <td><code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch</a></code> or <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/places_bookmarks">places/bookmarks</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks">bookmarks</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/places_favicon">places/favicon</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/places_history">places/history</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">history</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/platform_xpcom">platform/xpcom</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/preferences_event-target">preferences/event-target</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/preferences_service">preferences/service</a></td>
+   <td>Limited support via the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browserSettings</a></code> APIs.</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/remote_child">remote/child</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/remote_parent">remote/parent</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/stylesheet_style">stylesheet/style</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/stylesheet_utils">stylesheet/utils</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/system_child_process">system/child_process</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connectNative">runtime.connectNative</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/system_environment">system/environment</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/system_events">system/events</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/system_runtime">system/runtime</a></td>
+   <td>Partially provided by <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo">runtime.getPlatformInfo</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/system_xul-app">system/xul-app</a></td>
+   <td>Partially provided by <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo">runtime.getBrowserInfo</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/tabs_utils">tabs/utils</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">ui/button/action</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> / <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">ui/button/toggle</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> / <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_frame">ui/frame</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_id">ui/id</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar">ui/sidebar</a></td>
+   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">sidebarAction</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_toolbar">ui/toolbar</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_array">util/array</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_collection">util/collection</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_deprecate">util/deprecate</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_list">util/list</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_match-pattern">util/match-pattern</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_object">util/object</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/util_uuid">util/uuid</a></td>
+   <td>None</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/window_utils">window/utils</a></td>
+   <td>None</td>
+  </tr>
+ </tbody>
+</table>

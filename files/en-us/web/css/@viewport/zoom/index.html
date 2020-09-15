@@ -1,0 +1,91 @@
+---
+title: zoom
+slug: Web/CSS/@viewport/zoom
+tags:
+  - '@viewport'
+  - At-rule descriptor
+  - CSS
+  - CSS Descriptor
+  - Graphics
+  - Layout
+  - Reference
+  - Web
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong><code>zoom</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> descriptor sets the initial zoom factor of a document defined by the {{cssxref("@viewport")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
+
+<p>A <em>zoom factor</em> of <code>1.0</code> or <code>100%</code> corresponds to no zooming. Larger values are zoomed in. Smaller values are zoomed out.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css notranslate">/* Keyword value */
+zoom: auto;
+
+/* &lt;number&gt; values */
+zoom: 0.8;
+zoom: 2.0;
+
+/* &lt;percentage&gt; values */
+zoom: 150%;
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>The {{glossary("user agent")}} will set the document's initial zoom factor. The user agent may use the size of canvas area on which the document is rendered to determine that factor.</dd>
+ <dt>{{cssxref("&lt;number&gt;")}}</dt>
+ <dd>A non-negative number used as the zoom factor.</dd>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+ <dd>A non-negative percentage value used as the zoom factor.</dd>
+</dl>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Setting_viewport_zoom_factor">Setting viewport zoom factor</h3>
+
+<pre class="notranslate"><code>@viewport {
+  zoom: 2.0;
+}</code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Device', '#zoom-desc', '"zoom" descriptor')}}</td>
+   <td>{{Spec2('CSS3 Device')}}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.at-rules.viewport.zoom")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/CSS/@viewport">@viewport</a></code></li>
+</ul>

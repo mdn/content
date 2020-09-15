@@ -1,0 +1,26 @@
+---
+title: So you just built Firefox
+slug: Mozilla/Developer_guide/So_you_just_built_Firefox
+tags:
+  - Developing Mozilla
+  - NeedsContent
+---
+<p>A link to this page will be printed after a successful Firefox build. It should contain useful next steps, such as links to how to run tests, package the build, etc. Try to keep the content on this page brief, and put more detailed information on other pages that you link to. The primary audience is people who have just built Firefox for the first time.</p>
+
+<p>Your new Firefox executable can be found in: <em>$OBJDIR/dist/bin/firefox</em>. You can run it from there.</p>
+
+<p>If you need to move it, e.g. to another machine, you can run:</p>
+
+<pre>./mach package</pre>
+
+<p>This should create an OS-specific package, e.g. a tarball on Linux, which will appear in <em>$OBJDIR/dist</em>. You can also copy the <em>$OBJDIR/dist/bin</em> directory -- be sure to use a copy method that expands soft links -- but the result will be much larger than what you get with <code>mach package</code>.<em> </em> On Windows you may want to read about <a href="https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/InstallerBuild.html">Windows Installer Builds.</a></p>
+
+<p>Some interesting links:</p>
+
+<p><a href="/en-US/docs/Running_automated_tests" title="Running automated tests">Run the tests</a></p>
+
+<p><a href="/en-US/docs/Mozilla/Debugging" title="Debugging">Debug</a></p>
+
+<p><a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines" title="Bug writing guidelines">File a bug</a></p>
+
+<p><a href="/en-US/docs/Mozilla/Developer_guide">Developer guide</a></p>

@@ -1,0 +1,198 @@
+---
+title: Update Book form
+slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
+tags:
+  - Express
+  - Forms
+  - Node
+  - part 6
+  - server-side
+---
+<p><a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Update_Book_form" rel="nofollow, noindex"><span>Edit</span></a>This final subarticle shows how to define a page to update <code>Book</code> objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the <code>GET</code> route with values from the database.</p>
+
+<h2 class="highlight-spanned" id="Controller—get_route"><span class="highlight-span">Controller—get route</span></h2>
+
+<p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_update_get()</code> controller method and replace it with the following code.</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display book update form on GET.</span>
+exports<span class="punctuation token">.</span>book_update_get <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+
+    <span class="comment token">// Get book, authors and genres for form.</span>
+    <span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+        book<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            Book<span class="punctuation token">.</span><span class="function token">findById</span><span class="punctuation token">(</span>req<span class="punctuation token">.</span>params<span class="punctuation token">.</span>id<span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'author'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'genre'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span><span class="punctuation token">,</span>
+        authors<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            Author<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span><span class="punctuation token">,</span>
+        genres<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            Genre<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span><span class="punctuation token">,</span>
+        <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+            <span class="keyword token">if</span> <span class="punctuation token">(</span>results<span class="punctuation token">.</span>book<span class="operator token">==</span><span class="keyword token">null</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// No results.</span>
+                <span class="keyword token">var</span> err <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'Book not found'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+                err<span class="punctuation token">.</span>status <span class="operator token">=</span> <span class="number token">404</span><span class="punctuation token">;</span>
+                <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span>
+            <span class="punctuation token">}</span>
+            <span class="comment token">// Success.</span>
+            <span class="comment token">// Mark our selected genres as checked.</span>
+            <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> all_g_iter <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> all_g_iter <span class="operator token">&lt;</span> results<span class="punctuation token">.</span>genres<span class="punctuation token">.</span>length<span class="punctuation token">;</span> all_g_iter<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> book_g_iter <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> book_g_iter <span class="operator token">&lt;</span> results<span class="punctuation token">.</span>book<span class="punctuation token">.</span>genre<span class="punctuation token">.</span>length<span class="punctuation token">;</span> book_g_iter<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                    <span class="keyword token">if</span> <span class="punctuation token">(</span>results<span class="punctuation token">.</span>genres<span class="punctuation token">[</span>all_g_iter<span class="punctuation token">]</span><span class="punctuation token">.</span>_id<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="operator token">==</span>results<span class="punctuation token">.</span>book<span class="punctuation token">.</span>genre<span class="punctuation token">[</span>book_g_iter<span class="punctuation token">]</span><span class="punctuation token">.</span>_id<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                        results<span class="punctuation token">.</span>genres<span class="punctuation token">[</span>all_g_iter<span class="punctuation token">]</span><span class="punctuation token">.</span>checked<span class="operator token">=</span><span class="string token">'true'</span><span class="punctuation token">;</span>
+                    <span class="punctuation token">}</span>
+                <span class="punctuation token">}</span>
+            <span class="punctuation token">}</span>
+            res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'book_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Update Book'</span><span class="punctuation token">,</span> authors<span class="punctuation token">: </span>results<span class="punctuation token">.</span>authors<span class="punctuation token">,</span> genres<span class="punctuation token">: </span>results<span class="punctuation token">.</span>genres<span class="punctuation token">,</span> book<span class="punctuation token">:</span> results<span class="punctuation token">.</span>book <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+
+<p>The controller gets the id of the <code>Book</code> to be updated from the URL parameter (<code>req.params.id</code>). It uses the <code>async.parallel()</code> method to get the specified <code>Book</code> record (populating its genre and author fields) and lists of all the <code>Author</code> and <code>Genre</code> objects.</p>
+
+<p>When the operations complete it checks for any errors in the find operation, and also whether any books were found.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Not finding any book results is <strong>not an error</strong> for a search — but it is for this application because we know there must be a matching book record! The code above compares for (<code>results==null</code>) in the callback, but it could equally well have daisy chained the method <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> to the query. </p>
+</div>
+
+<p>We then mark the currently selected genres as checked and then render the<strong> book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
+
+<h2 class="highlight-spanned" id="Controller—post_route"><span class="highlight-span">Controller—post route</span></h2>
+
+<p>Find the exported <code>book_update_post()</code> controller method, and replace it with the following code.</p>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Handle book update on POST.</span>
+exports<span class="punctuation token">.</span>book_update_post <span class="operator token">=</span> <span class="punctuation token">[</span>
+
+    <span class="comment token">// Convert the genre to an array</span>
+    <span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+        <span class="keyword token">if</span><span class="punctuation token">(</span><span class="operator token">!</span><span class="punctuation token">(</span>req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre <span class="keyword token">instanceof</span> <span class="class-name token">Array</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
+            <span class="keyword token">if</span><span class="punctuation token">(</span><span class="keyword token">typeof</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="operator token">===</span><span class="string token">'undefined'</span><span class="punctuation token">)</span>
+            req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="operator token">=</span><span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+            <span class="keyword token">else</span>
+            req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="operator token">=</span><span class="keyword token">new</span> <span class="class-name token">Array</span><span class="punctuation token">(</span>req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span>
+        <span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">,</span>
+
+    <span class="comment token">// Validate fields.</span>
+    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'title'</span><span class="punctuation token">,</span> <span class="string token">'Title must not be empty.'</span><span class="punctuation token">).</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">).</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'author'</span><span class="punctuation token">,</span> <span class="string token">'Author must not be empty.'</span><span class="punctuation token">).</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">).</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'summary'</span><span class="punctuation token">,</span> <span class="string token">'Summary must not be empty.'</span><span class="punctuation token">).</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">).</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">body</span><span class="punctuation token">(</span><span class="string token">'isbn'</span><span class="punctuation token">,</span> <span class="string token">'ISBN must not be empty'</span><span class="punctuation token">).</span><span class="function token">trim</span><span class="punctuation token">(</span><span class="punctuation token">).</span><span class="function token">isLength</span><span class="punctuation token">(</span><span class="punctuation token">{</span> min<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+
+    <span class="comment token">// Sanitize fields.</span>
+    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'title'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'author'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'summary'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'isbn'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+    <span class="function token">sanitizeBody</span><span class="punctuation token">(</span><span class="string token">'genre.*'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">escape</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
+
+    <span class="comment token">// Process request after validation and sanitization.</span>
+    <span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
+
+        <span class="comment token">// Extract the validation errors from a request.</span>
+        <span class="keyword token">const</span> errors <span class="operator token">=</span> <span class="function token">validationResult</span><span class="punctuation token">(</span>req<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        <span class="comment token">// Create a Book object with escaped/trimmed data and old id.</span>
+        <span class="keyword token">var</span> book <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Book</span><span class="punctuation token">(</span>
+          <span class="punctuation token">{</span> title<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>title<span class="punctuation token">,</span>
+            author<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>author<span class="punctuation token">,</span>
+            summary<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>summary<span class="punctuation token">,</span>
+            isbn<span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>isbn<span class="punctuation token">,</span>
+            genre<span class="punctuation token">:</span> <span class="punctuation token">(</span><span class="keyword token">typeof</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="operator token">===</span><span class="string token">'undefined'</span><span class="punctuation token">)</span> <span class="operator token">?</span> <span class="punctuation token">[</span><span class="punctuation token">]</span> <span class="punctuation token">:</span> req<span class="punctuation token">.</span>body<span class="punctuation token">.</span>genre<span class="punctuation token">,</span>
+            _id<span class="punctuation token">:</span>req<span class="punctuation token">.</span>params<span class="punctuation token">.</span>id <span class="comment token">//This is required, or a new ID will be assigned!</span>
+           <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>errors<span class="punctuation token">.</span><span class="function token">isEmpty</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            <span class="comment token">// There are errors. Render form again with sanitized values/error messages.</span>
+
+            <span class="comment token">// Get all authors and genres for form.</span>
+            <span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+                authors<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                    Author<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
+                <span class="punctuation token">}</span><span class="punctuation token">,</span>
+                genres<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                    Genre<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span>
+                <span class="punctuation token">}</span><span class="punctuation token">,</span>
+            <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+
+                <span class="comment token">// Mark our selected genres as checked.</span>
+                <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> results<span class="punctuation token">.</span>genres<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                    <span class="keyword token">if</span> <span class="punctuation token">(</span>book<span class="punctuation token">.</span>genre<span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span>results<span class="punctuation token">.</span>genres<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>_id<span class="punctuation token">)</span> <span class="operator token">&gt;</span> <span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                        results<span class="punctuation token">.</span>genres<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>checked<span class="operator token">=</span><span class="string token">'true'</span><span class="punctuation token">;</span>
+                    <span class="punctuation token">}</span>
+                <span class="punctuation token">}</span>
+                res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'book_form'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Update Book'</span><span class="punctuation token">,</span>authors<span class="punctuation token">: </span>results<span class="punctuation token">.</span>authors<span class="punctuation token">,</span> genres<span class="punctuation token">: </span>results<span class="punctuation token">.</span>genres<span class="punctuation token">,</span> book<span class="punctuation token">:</span> book<span class="punctuation token">,</span> errors<span class="punctuation token">:</span> errors<span class="punctuation token">.</span><span class="function token">array</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+            <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+            <span class="keyword token">return</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span>
+        <span class="keyword token">else</span> <span class="punctuation token">{</span>
+            <span class="comment token">// Data from form is valid. Update the record.</span>
+            Book<span class="punctuation token">.</span><span class="function token">findByIdAndUpdate</span><span class="punctuation token">(</span>req<span class="punctuation token">.</span>params<span class="punctuation token">.</span>id<span class="punctuation token">,</span> book<span class="punctuation token">,</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span>thebook<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+                <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+                   <span class="comment token">// Successful - redirect to book detail page.</span>
+                   res<span class="punctuation token">.</span><span class="function token">redirect</span><span class="punctuation token">(</span>thebook<span class="punctuation token">.</span>url<span class="punctuation token">)</span><span class="punctuation token">;</span>
+                <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="punctuation token">}</span>
+    <span class="punctuation token">}</span>
+<span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
+
+<p>This is very similar to the post route used when creating a Book. First we validate and sanitize the book data from the form and use it to create a new <code>Book</code> object (setting its <code>_id</code> value to the id of the object to update). If there are errors when we validate the data then we re-render the form, additionally displaying the data entered by the user, the errors, and lists of genres and authors. If there are no errors then we call <code>Book.findByIdAndUpdate()</code> to update the <code>Book</code> document, and then redirect to its detail page.</p>
+
+<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+
+<p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">    div.form-group
+      label(for='author') Author:
+      select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
+        for author in authors
+          if book
+            //- Handle GET form, where book.author is an object, and POST form, where it is a string.
+            option(
+              value=author._id
+              selected=(
+                author._id.toString()==book.author._id
+                || author._id.toString()==book.author
+              ) ? 'selected' : false
+            ) #{author.name}
+          else
+            option(value=author._id) #{author.name}</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: This code change is required so that the book_form can be used for both creating and updating book objects (without this, there is an error on the <code>GET</code> route when creating a form).</p>
+</div>
+
+<h2 class="highlight-spanned" id="Add_an_update_button"><span class="highlight-span">Add an update button</span></h2>
+
+<p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
+
+<pre class="brush: html line-numbers  language-html"><code class="language-html">  hr
+  p
+    a(href=book.url+'/delete') Delete Book
+  p
+    a(href=book.url+'/update') Update Book</code></pre>
+
+<p>You should now be able to update books from the <em>Book detail</em> page.</p>
+
+<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+
+<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books </em>link, then select a particular book. Finally select the <em>Update Book </em>link.</p>
+
+<p>The form should look just like the<em> Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14498/LocalLibary_Express_Book_Update_NoErrors.png" style="border-style: solid; border-width: 1px; display: block; height: 443px; margin: 0px auto; width: 1000px;"></p>
+
+<div class="note">
+<p><strong>Note:</strong> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.</p>
+</div>
+
+<h2 id="Next_steps">Next steps</h2>
+
+<ul>
+ <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
+</ul>

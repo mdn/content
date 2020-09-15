@@ -1,0 +1,292 @@
+---
+title: Configuring Build Options
+slug: Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
+tags:
+  - Build documentation
+  - Developing Mozilla
+  - NeedsContent
+  - NeedsMarkupWork
+  - Tutorial
+---
+<p><span class="comment"><strong>Note:</strong> Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us" rel="freelink">benjamin@smedbergs.us</a>&gt; or one of the build-config peers</span>This document details how to configure Firefox builds. Most of the time a <code>mozconfig</code> file is not required. The default options are the most well-supported, so it is preferable to add as few options as possible. Please read the following directions carefully before building, and follow them in order. Skipping any step may cause the build to fail, or the built software to be unusable. Build options, including options not usable from the command-line, may appear in "<code>confvars.sh</code>" files in the source tree.</p>
+
+<h3 id="Using_a_.mozconfig_Configuration_File" name="Using_a_.mozconfig_Configuration_File">Using a <code>mozconfig</code> configuration file</h3>
+
+<p>The choice of which Mozilla application to build and other configuration options can be configured in a <code>mozconfig</code> file. (It is possible to manually call <code>configure</code> with command-line options, but this is not recommended). The <code>mozconfig</code> file should be in your source directory (that is, <code>/mozilla-central/mozconfig</code> or <code>/comm-central/mozconfig</code>).</p>
+
+<p>Create a blank <code>mozconfig</code> file:</p>
+
+<pre class="eval notranslate"> echo "# My first mozilla config" &gt; mozconfig
+</pre>
+
+<p>If your mozconfig isn't in your source directory, you can also use the <code>MOZCONFIG</code> environment variable to specify the path to your <code>mozconfig</code>. The path you specify <strong>must</strong> be an <strong>absolute</strong> path or else <code>client.mk</code> will not find it. This is useful if you choose to have multiple <code>mozconfig</code> files for different applications or configurations (see below for a full example). Note that in the <code>export</code> example below the filename was not <code>mozconfig</code>. Regardless of the name of the actual file you use, we refer to this file as the <code>mozconfig</code> file in the examples below.</p>
+
+<p>Setting the <code>mozconfig</code> path:</p>
+
+<pre class="eval notranslate">export MOZCONFIG=$HOME/mozilla/mozconfig-firefox
+</pre>
+
+<div class="note">
+<p>Calling the file <code>.mozconfig</code> (with a leading dot) is also supported, but this is not recommended because it may make the file harder to find. This will also help when troubleshooting because people will want to know which build options you have selected and will assume that you have put them in your <code>mozconfig</code> file.</p>
+</div>
+
+<h3 id="Using_a_.mozconfig_Configuration_File" name="Using_a_.mozconfig_Configuration_File"><code>mozconfig</code> contains two types of options:</h3>
+
+<ul>
+ <li>Options prefixed with <code>mk_add_options</code> are passed to <code>client.mk</code>.  The most important of these is <code>MOZ_OBJDIR</code>, which controls where your application gets built (also known as the object directory).</li>
+ <li>Options prefixed with <code>ac_add_options</code> are passed to <code>configure</code>, and affect the build process.</li>
+</ul>
+
+<h3 id="Building_with_an_Objdir" name="Building_with_an_Objdir">Building with an objdir</h3>
+
+<p>This means that the source code and object files are not intermingled in your directory system and you can build multiple applications (e.g., Firefox and Thunderbird) from the same source tree. If you do not specify a <code>MOZ_OBJDIR</code>, it will be automatically set to <code>@TOPSRCDIR@/obj-@CONFIG_GUESS@</code>.</p>
+
+<p>If you need to re-run <code>configure</code>, the easiest way to do it is using <code>./mach configure</code>; running <code>configure</code> manually is strongly discouraged.</p>
+
+<p>Adding the following line to your <code>mozconfig</code> allows you to change the objdir:</p>
+
+<pre class="eval notranslate">mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-@CONFIG_GUESS@
+</pre>
+
+<p>It is a good idea to have your objdir name start with <code>obj</code> so that Mercurial ignores it.</p>
+
+<p>Sometimes it can be useful to build multiple versions of the source (such as with and without diagnostic asserts). To avoid the time it takes to do a full rebuild, you can create multiple <code>mozconfig</code> files which specify different objdirs. For example, a <code>mozconfig-dbg</code>:</p>
+
+<pre class="notranslate">mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-ff-dbg
+ac_add_options --enable-debug</pre>
+
+<p>and a <code>mozconfig-rel-opt</code>:</p>
+
+<pre class="notranslate">mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-ff-rel-opt
+ac_add_options --disable-debug
+ac_add_options --enable-optimize
+</pre>
+
+<p>allow for building both versions by specifiying the configuration via the <code>MOZCONFIG</code> environment variable:</p>
+
+<pre class="notranslate">$ env MOZCONFIG=/path/to/mozconfig-dbg ./mach build
+$ env MOZCONFIG=/path/to/mozconfig-rel-opt ./mach build</pre>
+
+<p>Don't forget to set the <code>MOZCONFIG</code> environment variable for the <code>mach run</code> command as well.</p>
+
+<p>Be aware that changing your <code>mozconfig</code> will require the configure process to be rerun and therefore the build will take considerably longer, so if you find yourself changing the same options regularly, it may be worth having a separate <code>mozconfig</code> for each. The main downside of this is that each objdir will take up a significant amount of space on disk.</p>
+
+<h3 id="Parallel_compilation" name="Parallel_compilation">Parallel compilation</h3>
+
+<div class="note"><strong>Note</strong>: The build system automatically makes an intelligent guess for how many CPU cores to use when building. The option below is typically not needed.</div>
+
+<p>Most modern systems have multiple cores or CPUs, and they can be optionally used concurrently to make the build faster. The <code>-j</code> flag controls how many parallel builds will run concurrently. You will see (diminishing) returns up to a value approximately 1.5× to 2.0× the number of cores on your system.</p>
+
+<pre class="notranslate">mk_add_options MOZ_MAKE_FLAGS="-j4"
+</pre>
+
+<p>If your machine is overheating, you might want to try a lower value, e.g. <code>-j1</code>.</p>
+
+<h3 id="Choose_an_Application" name="Choose_an_Application">Choose an application</h3>
+
+<p>The <code>--enable-application=<var>application</var></code> flag is used to select an application to build. Firefox is the default.</p>
+
+<p>Choose one of the following options to add to your <code>mozconfig</code> file:</p>
+
+<dl>
+ <dt>Browser (Firefox)</dt>
+ <dd>
+ <pre class="eval notranslate">ac_add_options --enable-application=browser
+</pre>
+
+ <div class="note">
+ <p><strong>Note</strong>: This is the default</p>
+ </div>
+ </dd>
+</dl>
+
+<dl>
+ <dt>Mail (Thunderbird)</dt>
+ <dd>
+ <pre class="eval notranslate">ac_add_options --enable-application=comm/mail
+</pre>
+ </dd>
+ <dt>Mozilla Suite (SeaMonkey)</dt>
+ <dd>
+ <pre class="eval notranslate">ac_add_options --enable-application=suite
+</pre>
+ </dd>
+ <dt>Calendar (Lightning Extension, uses Thunderbird)</dt>
+ <dd>
+ <pre class="eval notranslate">ac_add_options --enable-application=comm/mail
+ac_add_options --enable-calendar
+</pre>
+ </dd>
+</dl>
+
+<h3 id="Selecting_Build_Options" name="Selecting_Build_Options">Selecting build options</h3>
+
+<p>The build options you choose depends on what application you are building and what you will be using the build for. If you want to use the build regularly, you will want a release build without extra debugging information; if you are a developer who wants to hack the source code, you probably want a non-optimized build with extra debugging macros.</p>
+
+<p>There are many options recognized by the configure script which are special-purpose options intended for embedders or other special situations, and should not be used to build the full suite/XUL applications. The full list of options can be obtained by running <code>./configure --help</code>.</p>
+
+<p>{{ Warning("Do not use a configure option unless you know what it does. The default values are usually the right ones. Each additional option you add to your <code>mozconfig</code> file reduces the chance that your build will compile and run correctly.") }}</p>
+
+<p>The following build options are very common:</p>
+
+<h4 id="Optimization" name="Optimization">Optimization</h4>
+
+<dl>
+ <dt><code>ac_add_options --enable-optimize</code></dt>
+ <dd>
+ <p>Enables the default compiler optimization options</p>
+
+ <div class="note">
+ <p><strong>Note</strong>: This is enabled by default</p>
+ </div>
+ </dd>
+ <dt><code>ac_add_options --enable-optimize=-O2</code></dt>
+ <dd>Chooses particular compiler optimization options. In most cases, this will not give the desired results, unless you know the Mozilla codebase very well; note, however, that if you are building with the Microsoft compilers, you probably <strong>do</strong> want this as <code>-O1</code> will optimize for size, unlike GCC.</dd>
+ <dt><code>ac_add_options --enable-debug</code></dt>
+ <dd>Enables assertions in C++ and JavaScript, plus other debug-only code. This can significantly slow a build, but it is invaluable when writing patches.  <strong>People developing patches (especially in C++) should generally use this option.</strong></dd>
+ <dt><code>ac_add_options --disable-optimize</code></dt>
+ <dd>Disables compiler optimization. This makes it much easier to step through code in a debugger.</dd>
+ <dt><strong><code>ac_add_options --enable-debug-js-modules</code></strong></dt>
+ <dd>Enable only JavaScript assertions. This is useful when working locally on JavaScript-powered components like the DevTools. This will help catch any errors introduced into the JS code, with less of a performance impact compared to the <code>--enable-debug</code> option.</dd>
+</dl>
+
+<p>You can make an optimized build with debugging symbols. See <a href="/en-US/docs/Building_Firefox_with_Debug_Symbols" title="en-US/docs/Building_Firefox_with_Debug_Symbols">Building Firefox with Debug Symbols</a>.</p>
+
+<h4 id="Extensions" name="Extensions">Extensions</h4>
+
+<dl>
+ <dt><code>ac_add_options --enable-extensions=default|all|ext1,ext2,-skipext3</code></dt>
+ <dd>There are many optional pieces of code that live in {{ Source("extensions/") }}. Many of these extensions are now considered an integral part of the browsing experience. There is a default list of extensions for the suite, and each app-specific <code>mozconfig</code> specifies a different default set. Some extensions are not compatible with all apps, for example:
+ <ul>
+  <li><code>cookie</code> is not compatible with thunderbird</li>
+  <li><code>typeaheadfind</code> is not compatible with any toolkit app (Firefox, Thunderbird)</li>
+ </ul>
+
+ <p>Unless you know which extensions are compatible with which apps, do not use the <code>--enable-extensions</code> option; the build system will automatically select the proper default set of extensions.</p>
+ </dd>
+</dl>
+
+<h4 id="Tests" name="Tests">Tests</h4>
+
+<dl>
+ <dt><code>ac_add_options --disable-tests</code></dt>
+ <dd>By default, many auxiliary test applications are built, which can help debug and patch the mozilla source. Disabling these tests can speed build time and reduce disk space considerably. Developers should generally not use this option.</dd>
+</dl>
+
+<h4 id="Localization" name="Localization">Localization</h4>
+
+<dl>
+ <dt><code>mk_add_options MOZ_CO_LOCALES=ISOcode</code></dt>
+ <dd>TBD. </dd>
+ <dt><code>ac_add_options --enable-ui-locale=ISOcode</code></dt>
+ <dd>TBD.</dd>
+ <dt><code>ac_add_options --with-l10n-base=/path/to/base/dir</code></dt>
+ <dd>TBD.</dd>
+</dl>
+
+<h4 id="Other_Options" name="Other_Options">Other Options</h4>
+
+<dl>
+ <dt><code>mk_add_options AUTOCLOBBER=1</code></dt>
+ <dd>If a clobber would be required before a build, this will cause mach to clobber and continue with the build instead of asking the user to manually clobber and exiting.</dd>
+ <dt><code>ac_add_options --disable-crypto</code></dt>
+ <dd>Cryptography is enabled by default. In some countries, it may be illegal to use or export cryptographic software. You should become familiar with the cryptography laws in your country.
+ <p>On the 1.7 and aviary branches, cryptography was off by default. You need to specify <code>--enable-crypto</code> if you want SSL, S/MIME, or other software features that require cryptography.</p>
+ </dd>
+ <dt><code>ac_add_options --enable-crashreporter</code></dt>
+ <dd>This enables the machinery that allows Firefox to write out a <a href="https://docs.microsoft.com/en-us/windows/desktop/Debug/minidump-files">minidump</a> files when crashing as well as the tools to process and submit crash reports to Mozilla. After enabling the crash reporter in your local build, you will need to run mach with the --enable-crash-reporter (note the extra dash) to enable it at runtime, like so: `<code>./mach run --enable-crash-reporter</code>`</dd>
+ <dt><code>ac_add_options --enable-warnings-as-errors</code></dt>
+ <dd>This makes compiler warnings into errors which fail the build. This can be useful since certain warnings coincide with reviewbot lints which must be fixed before merging.</dd>
+ <dt><code>ac_add_options --with-ccache=/path/to/.mozbuild/sccache/sccache</code></dt>
+ <dd>This enables sccache to speed up builds. This saves a considerable amount of time directly after a clobber build, so pulling in new updates and rebasing is less time-consuming.</dd>
+</dl>
+
+<h3 id="Example_.mozconfig_Files" name="Example_.mozconfig_Files">Example <code>mozconfig</code> Files</h3>
+
+<p>Mozilla's official builds use mozconfig files from the appropriate directory within each repository.</p>
+
+<p>{{ Warning("These <code>mozconfig</code> files are taken from production builds and are provided as examples only. It is recommended to use the default build options, and only change the properties from the list above as needed. The production builds aren't really appropriate for local builds.") }}</p>
+
+<ul>
+ <li>
+  <h4 id="Firefox.2C_Default_Release_Configuration" name="Firefox.2C_Default_Release_Configuration">Firefox, <a class="external" href="http://hg.mozilla.org/mozilla-central/file/tip/browser/config/mozconfigs/macosx64/debug">Debugging Build (Mac OS X 64bits)</a></h4>
+ </li>
+ <li>
+  <h4 id="Thunderbird.2C_Debugging_Build" name="Thunderbird.2C_Debugging_Build">Thunderbird, <a class="external" href="http://hg.mozilla.org/comm-central/file/tip/mail/config/mozconfigs/linux64/debug">Debugging Build (Linux 64 bits)</a></h4>
+ </li>
+</ul>
+
+<h3 id="Building_multiple_applications_from_the_same_source_tree" name="Building_multiple_applications_from_the_same_source_tree">Building multiple applications from the same source tree</h3>
+
+<p>It is possible to build multiple applications from the same source tree, as long as you <a href="#Building_with_an_Objdir">use a different objdir</a> for each application.</p>
+
+<p>You can either create multiple <code>mozconfig</code> files, or alternatively, use the <code>MOZ_BUILD_PROJECTS</code> make option.</p>
+
+<h4 id="Using_MOZ_BUILD_PROJECTS_in_a_single_mozconfig" name="Using_MOZ_BUILD_PROJECTS_in_a_single_mozconfig">Using <code>MOZ_BUILD_PROJECTS</code> in a single <code>mozconfig</code></h4>
+
+<p>To use <code>MOZ_BUILD_PROJECTS</code>, you must specify a <code>MOZ_OBJDIR</code> and a <code>MOZ_BUILD_PROJECTS</code> make option, containing space separated names. Each name can be an arbitrary directory name. For each name, a subdirectory is created under the toplevel objdir. You then need to use the <code>ac_add_app_options</code> with the specified names to enable different applications in each object directory.</p>
+
+<p>For example:</p>
+
+<pre class="eval notranslate"> ac_add_options --disable-optimize --enable-debug
+ mk_add_options MOZ_OBJDIR=/mozilla/src/obj-@CONFIG_GUESS@
+ mk_add_options MOZ_BUILD_PROJECTS="browser mail"
+ ac_add_app_options browser --enable-application=browser
+ ac_add_app_options mail --enable-application=comm/mail
+</pre>
+
+<p>If you want to build only one project using this <code>mozconfig</code>, use the following command line:</p>
+
+<pre class="eval notranslate">MOZ_CURRENT_PROJECT=browser ./mach build
+</pre>
+
+<p>This will build only the browser.</p>
+
+<h4 id="Using_multiple_mozconfig_files" name="Using_multiple_mozconfig_files">Using multiple mozconfig files</h4>
+
+<p>Alternatively, you may want to create separate <code>mozconfig</code> files.</p>
+
+<p>As an example, the following steps can be used to build Firefox and Thunderbird. You should first create three <code>mozconfig</code> files.</p>
+
+<p><code>mozconfig-common</code>:</p>
+
+<pre class="eval notranslate"># add common options here, such as making an optimized release build
+mk_add_options MOZ_MAKE_FLAGS="-j4"
+ac_add_options --enable-optimize --disable-debug
+</pre>
+
+<p><code>mozconfig-firefox</code>:</p>
+
+<pre class="eval notranslate"># include the common mozconfig
+. ./mozconfig-common
+
+# Build Firefox
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-firefox
+ac_add_options --enable-application=browser
+</pre>
+
+<p><code>mozconfig-thunderbird</code>:</p>
+
+<pre class="eval notranslate"># include the common mozconfig
+. ./mozconfig-common
+
+# Build Thunderbird
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-thunderbird
+ac_add_options --enable-application=comm/mail
+</pre>
+
+<p>To build Firefox, run the following commands:</p>
+
+<pre class="eval notranslate">export MOZCONFIG=/path/to/mozilla/mozconfig-firefox
+./mach build
+</pre>
+
+<p>To build Thunderbird, run the following commands:</p>
+
+<pre class="eval notranslate">export MOZCONFIG=/path/to/mozilla/mozconfig-thunderbird
+./mach build
+</pre>
+
+<h4 id="Using_mozconfigwrapper" name="Using_mozconfigwrapper">Using mozconfigwrapper</h4>
+
+<p>Mozconfigwrapper is similar to using multiple mozconfig files except that it abstracts and hides them so you don't have to worry about where they live or which ones you've created. It also saves you from having to export the MOZCONFIG variable each time. For information on installing and configuring mozconfigwrapper, see <a href="https://github.com/ahal/mozconfigwrapper" title="https://github.com/ahal/mozconfigwrapper">https://github.com/ahal/mozconfigwrapper</a>.</p>

@@ -1,0 +1,61 @@
+---
+title: CSSKeyframeRule
+slug: Web/API/CSSKeyframeRule
+tags:
+  - API
+  - CSS Animations
+  - CSSOM
+  - Experimental
+  - Interface
+  - Reference
+---
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+
+<p>The <strong><code>CSSKeyframeRule</code></strong> interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a {{cssxref("@keyframes")}} <a href="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSRule")}} interface with a type value of <code>8</code> (<code>CSSRule.KEYFRAME_RULE</code>).</p>
+
+<h2 id="Properties">Properties</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSKeyframeRule</code> also implements the properties of these interfaces. It has two specific properties:</p>
+
+<dl>
+ <dt>{{domxref("CSSKeyframe.keyText")}}</dt>
+ <dd>Represents the key of the keyframe, like <code>'10%'</code>, <code>'75%'</code>. The <code>from</code> keyword maps to <code>'0%'</code> and the <code>to</code> keyword maps to <code>'100%'</code>.</dd>
+ <dt id="cssRules">{{domxref("CSSKeyframe.style")}}  {{readOnlyInline}}</dt>
+ <dd>Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSKeyframeRule</code> also implements the methods of that interface. It has no specific methods.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#interface-csskeyframerule', 'CSSKeyframeRule')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSKeyframeRule")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("@keyframes")}}</li>
+ <li>{{domxref("CSSKeyFramesRule")}}</li>
+</ul>

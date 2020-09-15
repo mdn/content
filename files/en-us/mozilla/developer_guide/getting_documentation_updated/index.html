@@ -1,0 +1,86 @@
+---
+title: Getting documentation updated
+slug: Mozilla/Developer_guide/Getting_documentation_updated
+tags:
+  - Developing Mozilla
+  - Guide
+  - MDN Meta
+---
+<p>As a contributor to Firefox, Firefox OS, or any Mozilla project, you'll often file bugs or submit patches that result in changes needing to be made to the documentation, here on MDN. This article provides tips to help ensure those documentation updates occur.</p>
+
+<h2 id="Flag_your_bugs">Flag your bugs</h2>
+
+<p>When you file a bug which, upon resolution, will likely require its documentation being updated, you should add the <code>dev-doc-needed</code> keyword to the bug:</p>
+
+<p><img alt="dev-doc-needed.png" class="default internal" src="/@api/deki/files/5887/=dev-doc-needed.png"></p>
+
+<p>You don't need to wait until the bug is fixed. It's preferable, for the doc team, if you add this keyword well in advance of the bug being resolved. This lets us plan ahead. That said, it's never too late to apply <code>dev-doc-needed</code> to your bugs!</p>
+
+<div class="note">
+<p>Note: If you use the <code>addon-compat</code> keyword to flag a bug will impact add-on compatibility, you should also add <code>dev-doc-needed</code>!</p>
+</div>
+
+<p>The writing team uses Bugzilla queries, as well as a <a class="external" href="http://beta.elchi3.de/doctracker" title="http://beta.elchi3.de/doctracker">special documentation tracking site</a> that interfaces with Bugzilla, to track our work. By using <code>dev-doc-needed</code>, your bugs will get brought to our attention, improving the likelihood your efforts will be escalated in a timely manner.</p>
+
+<p>When a bug's contents are documented, the person doing the work will replace the <code>dev-doc-needed</code> keyword with <code>dev-doc-complete</code>, adding a comment to the bug with links to the pages that were updated, or created to cover the bug's contents. You should try to review any changes to help ensure the writer is correct.</p>
+
+<p>Many Mozillians choose to remain available, helping when writers have questions. You may be contacted by email, or they may post any questions as comments on the bug. It's especially helpful to set aside a few moments from your day to answer questions.</p>
+
+<div class="note">
+<p><strong>Note:</strong> If you're working on docs and don't have access to edit the keywords field in Bugzilla, contact <a class="link-mailto" href="mailto:eshepherd@mozilla.com" title="mailto:eshepherd@mozilla.com">sheppy</a> and he may be able to hook you up.</p>
+</div>
+
+<h2 id="Provide_information_to_the_writers">Provide information to the writers</h2>
+
+<p>This brings us to the next point. Not only should you make yourself avilable, to answer questions writers may have, some basic preparation can stave off a lot of back and forth.</p>
+
+<h3 id="Bug_annotations_and_tags">Bug annotations and tags</h3>
+
+<p>Try to add a note to the bug, indicating exactly what needs documenting. A lot of bugs have rather cryptic descriptions, or the documentation issue at hand isn't obvious from the bug's description.</p>
+
+<p>For example, a bug might have a summary like "foobar.com doesn't work in Firefox 45". Then there may be pages and pages of comments, where the problem is debated, possible solutions suggested, and so forth, followed by the bug eventually being marked as resolved. With no other information, the hapless writer is left to pore over all those comments, and patches, hoping to fathom what needs documenting.</p>
+
+<p>When a patch is finally checked in, try to add a comment which summarizes what the final resolution was. Ideally, this should be a brief summary of what has changed, like "Check out the new method and attributes in nsISomeInterface", or "We added the someStandardDOMMethod method to DOM elements". Doing this can save the writers a significant amount of time, which could better be spent writing even more, and might even save you from answering troublesome questions.</p>
+
+<p>Also, if a comment on a bug contains information that should be documented, please add the comment tag "dev-doc-info" to this comment. That helps the docs team track down those tidbits of required information.</p>
+
+<p>It's also helpful, if your bug includes a link to the specification or design document, for the feature being affected by the patch.</p>
+
+<p>Having clear directions, navigating where in the code to look, or what subtle change has occurred, makes all the difference between your changes quickly documented, or scaring writers off and having it languish for a longer time.</p>
+
+<h3 id="Links_to_code">Links to code</h3>
+
+<p>Provide the writing team with links to sample code, or tests for the technology. Having easy access to this is a huge help. Helping the writing team know where the technology or API is implemented in the code, is a big help. Let us know precisely where to look for the code on mozilla-central, or github, so we too can locate it.</p>
+
+<h2 id="What_if_there's_not_a_bug_for_it">What if there's not a bug for it?</h2>
+
+<p>Sometimes, you notice something wrong with the current documentation. Maybe a missing article, or we need a guide on how to use a technology, and there doesn't seem to be one. You can, of course, <a href="/En/Developer_Guide/Getting_documentation_updated#Feel_free_to_update_the_documentation_yourself" title="En/Developer_Guide/Getting_documentation_updated#Feel_free_to_update_the_documentation_yourself">write it yourself</a>. If that is not possible, please feel free to file a <a href="https://bugzilla.mozilla.org/form.doc">documentation request bug</a>. See our extensive documentation for <a href="/en-US/docs/Project:MDN/Contributing">contributing to MDN</a> for additional details.</p>
+
+<h2 id="Feel_free_to_update_the_documentation_yourself">Feel free to update the documentation yourself</h2>
+
+<p>This is a wiki! You can log in and update the documentation yourself. A lot of programmers don't consider themselves up to the task of writing documentation, or are crazy busy, and that's okay! That's why we have writers, and that's why we have all the above tips.</p>
+
+<p>However, if you have a few minutes, and feel comfortable doing so, log in and apply the necessary fixes yourself. This is often really simple for minor changes to the behavior of something, saving everyone time and effort, and more rapidly improves our documentation.</p>
+
+<p>I can prove helpful if you jot down relatively thorough notes about your changes as you go. You can toss them into the bug, or add them to the wiki. Our happy, helpful documentation gnomes live to clean up your writing, so don't be afraid to try.</p>
+
+<p>To update the documentation yourself, you'll need a <a href="https://github.com/">GitHub account</a>. Once you have that, you can log into MDN and edit any page on the site. See our <a href="/en-US/docs/MDN/Getting_started">Getting started with MDN</a> guide, for additional information.</p>
+
+<h2 id="Review_the_results">Review the results</h2>
+
+<p>Once the content has been written, often we'll ask for a <a href="/en-US/docs/Project:MDN/Contributing/How_to_help/Reviewing">technical review</a>. Having the right person to hand doing this can be a huge help, ensuring the documentation we produce is accurate, thorough, and truly useful.</p>
+
+<h2 id="Ask_for_help!">Ask for help!</h2>
+
+<p>If you're not sure how to get something handled in documentation, or are trying to update the docs and feel stuck, pop over to <a class="link-irc" href="irc://irc.mozilla.org/devmo" title="irc://irc.mozilla.org/devmo">#devmo</a> on IRC. This is where the docs team hangs out, or alternatively ask questions on the <a class="external" href="https://groups.google.com/group/mozilla.dev.mdc" title="https://groups.google.com/group/mozilla.dev.mdc">documentation newsgroup</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<p>Here are some helpful links, with additional information you may find handy:</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor" title="MDC editor guide">MDN editor guide</a></li>
+ <li><a href="/Project:en/Using_the_Mozilla_Developer_Center" title="Using the Mozilla Developer Center">Using the Mozilla Developer Center</a></li>
+ <li><a href="/Project:en/How_to_Help" title="MDN:How to Help">How to help</a></li>
+ <li><a class="external" href="http://beta.elchi3.de/doctracker" title="http://beta.elchi3.de/doctracker">Documentation bug tracker</a></li>
+</ul>

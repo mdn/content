@@ -1,0 +1,59 @@
+---
+title: TimeRanges
+slug: Web/API/TimeRanges
+tags:
+  - API
+  - HTML DOM
+  - Interface
+  - Media
+  - NeedsExample
+  - Reference
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p>The <code>TimeRanges</code> interface is used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.</p>
+
+<p>A <code>TimeRanges</code> object includes one or more ranges of time, each specified by a starting and ending time offset. You reference each time range by using the <code>start()</code> and <code>end()</code> methods, passing the index number of the time range you want to retrieve.</p>
+
+<p>The term "<a class="external" href="https://www.w3.org/TR/html52/semantics-embedded-content.html#normalized-timeranges-object">normalized TimeRanges object</a>" indicates that ranges in such an object are ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into one bigger range).</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("TimeRanges.length")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns an <code>unsigned long</code> representing the number of time ranges represented by the time range object.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{domxref("TimeRanges.start()")}}</dt>
+ <dd>Returns the time for the start of the range with the specified index.</dd>
+ <dt>{{domxref("TimeRanges.end()")}}</dt>
+ <dd>Returns the time for the end of the specified range.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "#time-ranges", "TimeRanges")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.TimeRanges")}}</p>

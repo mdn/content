@@ -1,0 +1,29 @@
+---
+title: msExtendedCode
+slug: Web/API/MediaError/msExtendedCode
+---
+<p id="Summary">{{APIRef("DOM")}}</p>
+
+<p>{{Non-standard_header()}}</p>
+
+<p>In the event of an error, the media element's error event will be fired. The element's error property will then contain an <code><strong>msExtendedCode</strong></code> read-only property with platform-specific error code information.</p>
+
+<p><code><strong>msExtendedCode</strong></code> is a read-only proprietary property specific to Internet Explorer and Microsoft Edge.</p>
+
+<h2 id="Value">Value</h2>
+
+<p>Type: <strong>long</strong>; The platform specific error code.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var video1 = object.getElementById("video1");
+
+video1.addEventListener('error', function () {
+  var error = video1.error.msExtendedCode;
+  //...
+}, false);
+
+video.addEventListener('canplay', function () {
+  video1.play();
+}, false);
+</pre>

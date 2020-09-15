@@ -1,0 +1,62 @@
+---
+title: 'Element: webkitmouseforcedown event'
+slug: Web/API/Element/webkitmouseforcedown_event
+tags:
+  - Element
+  - Event
+  - Force Touch
+  - MouseEvent
+  - NeedsCompatTable
+  - NeedsExample
+  - Reference
+  - Safari
+  - Trackpad
+  - UI
+  - Web
+  - WebKit
+  - apple
+  - mouse
+  - touch
+  - webkitmouseforcedown
+---
+<p>{{APIRef}}{{Non-standard_header()}}</p>
+
+<p>After a {{domxref("Element.mousedown_event", "mousedown")}} event has been fired at the element, if and when sufficient pressure has been applied to the mouse or trackpad button to qualify as a "force click," Safari begins sending <code><strong>webkitmouseforcedown</strong></code> events to the element.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>Unknown</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>Unknown</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("MouseEvent")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong><code>webkitmouseforcedown</code></strong> is a proprietary, WebKit-specific event. It is part of the <a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a> feature.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p><em>Not part of any specification.</em> Apple has <a href="https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html">a description at the Mac Developer Library</a>.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.Element.webkitmouseforcedown_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+ <li><a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a></li>
+ <li>{{event("webkitmouseforcewillbegin")}}</li>
+ <li>{{event("webkitmouseforceup")}}</li>
+ <li>{{event("webkitmouseforcechanged")}}</li>
+ <li>{{domxref("Force_Touch_events")}}</li>
+</ul>

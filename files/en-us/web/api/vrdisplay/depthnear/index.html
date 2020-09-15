@@ -1,0 +1,68 @@
+---
+title: VRDisplay.depthNear
+slug: Web/API/VRDisplay/depthNear
+tags:
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - VRDisplay
+  - Virtual Reality
+  - WebVR
+  - depthNear
+---
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+
+<p>The <code><strong>depthNear</strong></code> property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the nearest viewable boundary of the scene.</p>
+
+<p>Generally you should leave the value as is, but you might want to increase it if you are trying to improve performance on slower computers, and/or your UI makes sense with the near boundary made further away.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">var mydepthNear = vrDisplayInstance.depthNear;
+
+vrDisplayInstance.depthNear = 1.0;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A double, representing the z-depth in meters; its initial value is <code>0.01</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> vrDisplay<span class="punctuation token">;</span>
+
+navigator<span class="punctuation token">.</span><span class="function token">getVRDisplays</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>displays<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  vrDisplay <span class="operator token">=</span> displays<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+  vrDisplay<span class="punctuation token">.</span>depthNear <span class="operator token">=</span> <span class="number token">1.0</span><span class="punctuation token">;</span>
+  vrDisplay<span class="punctuation token">.</span>depthFar <span class="operator token">=</span> <span class="number token">7500.0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR 1.1', '#dom-vrdisplay-depthnear', 'depthNear')}}</td>
+   <td>{{Spec2('WebVR 1.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.VRDisplay.depthNear")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
+</ul>

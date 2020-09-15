@@ -1,0 +1,154 @@
+---
+title: Microdata DOM API
+slug: Web/API/Microdata_DOM_API
+---
+<div class="warning">
+<p>Microdata were implemented in some browsers for a long time. Nowadays, they have been abandoned and removed from all browsers and are therefore<strong> deprecated</strong>. You can't use them anymore and this document is kept as information only.</p>
+</div>
+
+<p>Microdata becomes even more useful when scripts can use it to expose information to the user, for example offering it in a form that can be used by other applications. The <strong>document.getItems(typeNames)</strong> method provides access to the top-level microdata items. It returns a NodeList containing the items with the specified types, or all types if no argument is specified. Each item is represented in the DOM by the element on which the relevant itemscope attribute is found. These elements have their element.itemScope IDL attribute set to true. The type(s) of items can be obtained using the element.itemType IDL attribute on the element with the itemscope attribute.</p>
+
+<h2 id="Methods"><strong>Methods</strong></h2>
+
+<p><strong>document . getItems( [ types ] )</strong></p>
+
+<p style="margin-left: .5in;">Returns a NodeList of the elements in the Document that create items, that are not part of other items, and that are of the types given in the argument, if any are listed.</p>
+
+<p style="margin-left: .5in;">The types argument is interpreted as a space-separated list of types.</p>
+
+<p style="margin-left: .5in;">The <strong>document.getItems(typeNames)</strong> method takes a string that contains an unordered set of unique space-separated tokens that are case-sensitive, representing types. When called, the method must return a live NodeList object containing all the elements in the document, in tree order, that are each top-level microdata items whose types include all the types specified in the method's argument, having obtained the types by splitting the string on spaces. If there are no tokens specified in the argument, then the method must return a NodeList containing all the top-level microdata items in the document. When the method is invoked on a Document object again with the same argument, the user agent may return the same object as the object returned by the earlier call. In other cases, a new NodeList object must be returned.</p>
+
+<h2 id="Properties" style="margin-left: 0.5in;">Properties</h2>
+
+<p><strong>element . itemValue [ = value ]</strong></p>
+
+<p style="margin-left: .5in;">Returns the element's value.</p>
+
+<p style="margin-left: .5in;">Can be set, to change the element's value. Setting the value when the element has no itemprop attribute or when the element's value is an item throws an InvalidAccessError exception.</p>
+
+<p><strong>element . properties</strong></p>
+
+<p style="margin-left: .5in;">If the element has an itemscope attribute, returns an HTMLPropertiesCollection object with all the element's properties. Otherwise, an empty HTMLPropertiesCollection object.</p>
+
+<h2 id="Code_example"><strong>Code example</strong></h2>
+
+<p>This sample shows how the <a href="https://www.w3.org/TR/microdata/#dom-document-getitems">getItems()</a> method can be used to obtain a list of all the top-level microdata items of a particular type given in the document:</p>
+
+<pre>var cats = document.getItems("http://example.com/feline");</pre>
+
+<p>Once an element representing an <a href="https://www.w3.org/TR/microdata/#concept-item" title="concept-item">item</a> has been obtained, its properties can be extracted using the <a href="https://www.w3.org/TR/microdata/#dom-properties">properties</a> IDL attribute. This attribute returns an <a href="https://www.w3.org/TR/microdata/#htmlpropertiescollection-0">HTMLPropertiesCollection</a>, which can be enumerated to go through each element that adds one or more properties to the item. It can also be indexed by name, which will return an object with a list of the elements that add properties with that name.</p>
+
+<p>Each element that adds a property also has an <a href="https://www.w3.org/TR/microdata/#dom-itemvalue">itemValue</a> IDL attribute that returns its value.</p>
+
+<h2 id="Code_example_2"><strong>Code example</strong></h2>
+
+<p>This sample gets the first item of type "http://example.net/user" and then pops up an alert using the "name" property from that item.</p>
+
+<pre>var user = document.getItems('http://example.net/user')[0];
+alert('Hello ' + user.properties['name'][0].itemValue + '!');</pre>
+
+<p>The <a href="https://www.w3.org/TR/microdata/#htmlpropertiescollection-0">HTMLPropertiesCollection</a> object, when indexed by name in this way, actually returns a <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object with all the matching properties. The <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object can be used to obtain all the values at once using<em>its</em> <a href="https://www.w3.org/TR/microdata/#dom-propertynodelist-getvalues">getValues</a> method, which returns an array of all the values.</p>
+
+<h2 id="Code_example_3"><strong>Code example</strong></h2>
+
+<p>In an earlier example, a "http://example.org/animals#cat" item had two "http://example.com/color" values. This script looks up the first such item and then lists all its values.</p>
+
+<pre class="brush: cpp">var cat = document.getItems('http://example.org/animals#cat')[0];
+var colors = cat.properties['http://example.com/color'].getValues();
+var result;
+if (colors.length == 0) {
+  result = 'Color unknown.';
+} else if (colors.length == 1) {
+  result = 'Color: ' + colors[0];
+} else {
+  result = 'Colors:';
+  for (var i = 0; i &lt; colors.length; i += 1)
+    result += ' ' + colors[i];
+}</pre>
+
+<p>It's also possible to get a list of all the <a href="https://www.w3.org/TR/microdata/#property-names">property names</a> using the object's <a href="https://www.w3.org/TR/microdata/#dom-htmlpropertiescollection-names">names</a> IDL attribute.</p>
+
+<h2 id="Code_example_4"><strong>Code example</strong></h2>
+
+<p>This example creates a big list with a nested list for each item on the page, each with all of the property names used in that item.</p>
+
+<pre class="brush: css" style="margin-right: 0.75in;">var outer = document.createElement('ul');
+var items = document.getItems();
+for (var item = 0; item &lt; items.length; item += 1) {
+  var itemLi = document.createElement('li');
+  var inner = document.createElement('ul');
+  for (var name = 0; name &lt; items[item].properties.names.length; name += 1) {
+    var propLi = document.createElement('li');
+    propLi.appendChild(document.createTextNode(items[item].properties.names[name]));
+    inner.appendChild(propLi);
+  }
+  itemLi.appendChild(inner);
+  outer.appendChild(itemLi);
+}
+document.body.appendChild(outer);
+
+If faced with the following from an earlier example:
+
+&lt;section itemscope itemtype="http://example.org/animals#cat"&gt;
+&lt;h1 itemprop="name http://example.com/fn"&gt;Hedral&lt;/h1&gt;
+&lt;p itemprop="desc"&gt;Hedral is a male american domestic
+shorthair, with a fluffy &lt;span
+itemprop="http://example.com/color"&gt;black&lt;/span&gt; fur with &lt;span
+itemprop="http://example.com/color"&gt;white&lt;/span&gt; paws and belly.&lt;/p&gt;
+&lt;img itemprop="img" src="hedral.jpeg" alt="" title="Hedral, age 18 months"&gt;
+&lt;/section&gt;
+
+...it would result in the following output:
+
+name
+http://example.com/fn
+desc
+http://example.com/color
+img
+(The duplicate occurrence of "http://example.com/color" is not included in the list.)</pre>
+
+<h2 id="HTMLPropertiesCollection">HTMLPropertiesCollection</h2>
+
+<p>The HTMLPropertiesCollection interface is used for collections of elements that add name-value pairs to a particular item in the microdata model.</p>
+
+<h3 id="Interface_description_language">Interface description language</h3>
+
+<pre class="idl">interface <dfn>HTMLPropertiesCollection</dfn> : <a href="https://www.w3.org/TR/microdata/#htmlcollection">HTMLCollection</a> {
+  // inherits <span title="dom-HTMLCollection-length">length</span> and <span title="dom-HTMLCollection-item">item</span>()
+  getter <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a>? <a href="https://www.w3.org/TR/microdata/#dom-htmlpropertiescollection-nameditem" title="dom-HTMLPropertiesCollection-namedItem">namedItem</a>(DOMString name); // shadows inherited namedItem()
+  readonly attribute DOMString[] <a href="https://www.w3.org/TR/microdata/#dom-htmlpropertiescollection-names" title="dom-HTMLPropertiesCollection-names">names</a>;
+};
+
+typedef sequence&lt;any&gt; <dfn>PropertyValueArray</dfn>;
+
+interface <dfn>PropertyNodeList</dfn> : <span>NodeList</span> {
+  <a href="https://www.w3.org/TR/microdata/#propertyvaluearray">PropertyValueArray</a> <a href="https://www.w3.org/TR/microdata/#dom-propertynodelist-getvalues" title="dom-PropertyNodeList-getValues">getValues</a>();
+};</pre>
+
+<dl>
+ <dt id="attr-accesskey"><code><strong>collection . length</strong></code></dt>
+ <dd>Returns the number of elements in the collection.</dd>
+ <dt id="attr-accesskey">element = collection . item(index)</dt>
+ <dt>collection[index]</dt>
+ <dd>Returns the element with index index from the collection. The items are sorted in tree order.</dd>
+ <dt>propertyNodeList = collection . namedItem(name)</dt>
+ <dd>Returns a PropertyNodeList object containing any elements that add a property named name.</dd>
+</dl>
+
+<dl>
+ <dt id="attr-accesskey">collection[name]</dt>
+ <dd>Returns a PropertyNodeList object containing any elements that add a property named name. The name index has to be one of the values listed in the names list.</dd>
+ <dt id="attr-accesskey">collection . names</dt>
+ <dd>Returns an array with the property names of the elements in the collection.</dd>
+ <dt>propertyNodeList . getValues()</dt>
+ <dd>Returns an array of the various values that the relevant elements have.</dd>
+</dl>
+
+<ul>
+ <li>The object's supported property indices are as defined for HTMLCollection objects.</li>
+ <li>The supported property names consist of the property names of all the elements represented by the collection, in tree order, ignoring later duplicates.</li>
+ <li>The names attribute must return a live read only array object giving the property names of all the elements represented by the collection, listed in tree order, but with duplicates removed, leaving only the first occurrence of each name. The same object must be returned each time.</li>
+ <li>The namedItem(name) method must return a PropertyNodeList object representing a live view of the HTMLPropertiesCollection object, further filtered so that the only nodes in the PropertyNodeList object are those that have a property name equal to name. The nodes in the PropertyNodeList object must be sorted in tree order, and the same object must be returned each time a particular name is queried.</li>
+ <li>Members of the PropertyNodeList interface inherited from the NodeList interface must behave as they would on a NodeList object.</li>
+ <li>The getValues method the PropertyNodeList object must return a newly constructed array whose values are the values obtained from the itemValue IDL attribute of each of the elements represented by the object, in tree order.</li>
+</ul>

@@ -1,0 +1,182 @@
+---
+title: Developing extensions for Firefox for Android
+slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android
+tags:
+  - Add-ons
+  - Beginner
+  - Guide
+  - Mobile
+  - WebExtensions
+---
+<p>{{AddonSidebar}}</p>
+
+<p><span class="seoSummary">You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code.</span> However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.</p>
+
+<p>Using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> in your extension development is recommended. Follow the set up and debugging processes described here, but use <code style="white-space: nowrap;"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">web-ext</a> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run">run</a></code> to execute your extension on Firefox for Android. Among other advantages, using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of <code>web-ext lint</code> , which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.</p>
+
+<p>However, instructions are provided for the steps you need to take should you choose not to use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext.</a></p>
+
+<h2 id="Set_up_your_computer_and_Android_emulator_or_device">Set up your computer and Android emulator or device</h2>
+
+<p>Complete some one-off setup tasks on your computer and Android device.</p>
+
+<p>On your development computer:</p>
+
+<ul>
+ <li>To test on your computer by running Firefox for Android in the Android emulator and in Firefox for Android running on a device:
+  <ul>
+   <li>Install <a href="https://developer.android.com/studio/index.html">Android Studio</a>.</li>
+   <li dir="ltr">Use the Android Studio<a href="https://developer.android.com/studio/intro/update.html#sdk-manager"> SDK Manager</a> or the<a href="https://developer.android.com/studio/command-line/sdkmanager.html"> sdkmanager</a> command-line tool to install the<a href="https://developer.android.com/studio/releases/platform-tools.html"> Android Platform Tools</a>.</li>
+  </ul>
+ </li>
+ <li>To test in Firefox for Android running on a device only:
+  <ul>
+   <li>Download and extract the <a href="https://developer.android.com/studio/releases/platform-tools.html">standalone Android SDK Platform-Tools package</a> to a suitable location on your computer.</li>
+   <li>On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s PATH environment variable.</li>
+   <li>Alternatively, on Mac or Linux: Link the binary to /usr/local/bin using <code>sudo ln -s /&lt;extract folder&gt;/platform-tools/adb /usr/local/bin</code>.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>On your device or Android emulator:</p>
+
+<ul>
+ <li>Install <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&amp;referrer=utm_source%3Dmozilla%26utm_medium%3DReferral%26utm_campaign%3Dmozilla-org">Firefox for Android</a> and, if you wish to test the latest features, <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Firefox for Android Beta</a> or <a href="https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora">Firefox Nightly for Developers</a>.</li>
+ <li>(If you're using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>, you can skip this step.) Open Firefox for Android and turn off signing by browsing to <code>about:config</code> then locating and setting <code>xpinstall</code><code>.signatures.required</code> to false.<br>
+  <img alt="Firefox for Android with about:config open, showing xpinstall.signatures.required set to false." src="https://mdn.mozillademos.org/files/15101/set_xpinstall.png" style="display: block; height: 492px; margin-left: auto; margin-right: auto; width: 300px;"></li>
+</ul>
+
+<p>If you are using a device:</p>
+
+<ul>
+ <li><a href="https://developer.android.com/studio/run/device.html">Enable Android USB debugging on the device</a>. You need to follow step 2 only, but note that you may have to <a href="https://developer.android.com/studio/debug/dev-options.html">enable the developer options</a> if you do not see them on your device.</li>
+ <li>Attach your device to the development computer using a USB cable and on the device, when prompted, allow USB debugging for the connection.</li>
+</ul>
+
+<p>(If you're using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>, you can skip this step.) On your development computer:</p>
+
+<ul>
+ <li>Open a command shell.</li>
+ <li>Run <code>adb devices</code><br>
+  You should see output similar to:<br>
+  <code>List of devices attached<br>
+  51800F220F01564 device</code><br>
+  Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).</li>
+</ul>
+
+<h2 id="Check_for_Firefox_for_Android_compatibility">Check for Firefox for Android compatibility</h2>
+
+<p>Before running your extension on Firefox for Android, consider using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_lint">web-ext lint</a></code>. Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including <code>strict_min_version</code>, it then reports on the  features that are not supported by the minimum version you have set.</p>
+
+<p>In the lint report:</p>
+
+<ul>
+ <li>incompatible permissions are identified by <code>PERMISSION_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION</code>,</li>
+ <li>incompatible manifest keys are identified by <code>KEY_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION</code>, and</li>
+ <li>incompatible APIs are identified by <code>ANDROID_INCOMPATIBLE_API</code></li>
+</ul>
+
+<p>similar to this:</p>
+
+<p><img alt="WebIDE showing console with messages filtered for those including 'borderify'" src="https://mdn.mozillademos.org/files/16579/linter_output2.png" style="height: 704px; width: 833px;"></p>
+
+<div class="blockIndicator warning">
+<p>Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.  </p>
+</div>
+
+<p>When setting <code>strict_min_version</code>, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:</p>
+
+<pre>"browser_specific_settings": {
+  "gecko": {
+    "strict_min_version": "65.0"
+  }
+}</pre>
+
+<h2 id="Install_and_run_your_extension_in_Firefox_for_Android">Install and run your extension in Firefox for Android</h2>
+
+<p>In your extension, ensure that you've included an application ID using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key in the manifest.json:</p>
+
+<pre class="brush: json; auto-links: false; no-line-numbers">"browser_specific_settings": {
+  "gecko": {
+    "id": "borderify@example.com"
+  }
+},</pre>
+
+<p>If you’re using web-ext, follow the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext#Testing_in_Firefox_for_Android">Testing in Firefox for Android</a> instructions.</p>
+
+<p>Otherwise, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension#1._Zip_up_your_add-on%27s_files">zip the content of your extension into an xpi file</a> named to match the application ID, for example, <code>borderify@example.com.xpi</code>.</p>
+
+<p>You now have two options for transferring and running your extension: using adb or a website.</p>
+
+<h3 id="Transfer_your_extension_using_adb">Transfer your extension using adb</h3>
+
+<p>On your computer, execute <code>/path/to/adb push /path/to/&lt;extension file name&gt;.xpi /mnt/sdcard/</code>, which will transfer the extensions xpi file to your attached emulator or device.</p>
+
+<p>On your Android device or in the emulator, open Firefox for Android and browse to <code>file:///mnt/sdcard</code>:</p>
+
+<p><img alt="Firefox for Android showing the add-on xpi file located on the memory card" src="https://mdn.mozillademos.org/files/15103/xpi%20file%20on%20memory%20card.png" style="display: block; height: 492px; margin-left: auto; margin-right: auto; width: 300px;"></p>
+
+<p>Tap on <code>&lt;extension file name&gt;.xpi</code> to install it. You will get a warning about the extension being blocked, tap ALLOW:</p>
+
+<p><img alt="Firefox for Android blocked add-on message" src="https://mdn.mozillademos.org/files/15105/blocked-add-on-message.png" style="display: block; height: 492px; margin-left: auto; margin-right: auto; width: 300px;"></p>
+
+<p>An additional warning will tell you the extension is unverified, tap INSTALL:</p>
+
+<p><img alt="Firefox for Android unverified add-on message" src="https://mdn.mozillademos.org/files/15107/unverified_add_on_messages.png" style="display: block; height: 492px; margin-left: auto; margin-right: auto; width: 300px;"></p>
+
+<p>Your extension will start running (in this case a copy of the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#borderify">borderify</a> example extension):</p>
+
+<p><img alt="Borderify shown adding a red border to the www.mozilla.org home page" src="https://mdn.mozillademos.org/files/15109/borderify_in_action.png" style="display: block; height: 492px; margin-left: auto; margin-right: auto; width: 300px;"></p>
+
+<h3 id="Transfer_your_extension_via_a_website.">Transfer your extension via a website.</h3>
+
+<p>Upload your xpi file to your website and make it accessible over HTTP. Browse to the file and download it. Follow the installation instructions, which will be similar to those for an extension transferred using adb.</p>
+
+<h2 id="Debug_your_extension">Debug your extension</h2>
+
+<p>You can debug your extension in the web developer tools and view any <code>manifest.json</code> validation messages using <code>adb</code><code> </code><code>logcat</code>. To make use of these features, first set up Firefox remote debugging <a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE#Enable_remote_debugging_in_Firefox_for_Android">over USB</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Wi-Fi</a>.</p>
+
+<h3 id="Using_web_development_tools_to_debug_your_extension">Using web development tools to debug your extension</h3>
+
+<p>With your device connected over USB or Wi-Fi, open <kbd>about</kbd><kbd>:debugging</kbd> and enable the device connection.</p>
+
+<p><img alt="With your Android device connected over USB or Wi-fi, enable the device connection in about:debugging" src="https://mdn.mozillademos.org/files/16732/enable_device_connection.png" style="height: 534px; width: 960px;"></p>
+
+<p>Your device is listed in the left-hand column, click <strong>Connect</strong>.</p>
+
+<p><img alt="With the remote connection enabled, click Connect next to your device to start debugging" src="https://mdn.mozillademos.org/files/16733/connect_to_device.png"></p>
+
+<p>If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device. Note, the following instructions assume you are using <code>web-ext run</code>.  Click your device in the left-hand column and scroll down to find <strong>Processes</strong> in the list of active features in the browser.</p>
+
+<p><img alt="To start on-device debugging, locate the list of processes and against the main process click Inspect" src="https://mdn.mozillademos.org/files/16734/locate_processes.png" style="height: 496px; width: 960px;"></p>
+
+<p>Click <strong>Inspect</strong> next to <strong>Main Process</strong>. The web developer toolbox displays in <strong>Debugger</strong>.</p>
+
+<p>For much of the debugging work, it's useful to be able to view <strong>Console</strong> with <strong>Inspector</strong> or <strong>Debugger</strong>. You do this using the <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Split_console">split console</a>, press <kbd>esc</kbd> to activate this mode.</p>
+
+<p>Load a page in which your extension exercises. Now you can access any of the JavaScript in your extension.</p>
+
+<p><img alt="By inspecting the main process you can access the JavaScript and HTML document content in your Firefox for Android extension" src="https://mdn.mozillademos.org/files/16735/on_device_debugging.png" style="height: 583px; width: 960px;"></p>
+
+<div class="blockIndicator note">
+<p>Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run,  you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.</p>
+</div>
+
+<p>In the <strong>Debugger</strong> you can set breakpoints, step through code, modify the extension's state, and do <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">everything else you'd expect to be able to do in a debugger</a>. Any messages logged by your code display in <strong>Console</strong>.</p>
+
+<p>To inspect the popup's HTML and CSS, use <strong>Inspector</strong>. First, click the page select icon (<img alt="If your extension has multiple pages open, use the page selector to load the one you want to review in Inspector." src="https://mdn.mozillademos.org/files/16720/page_selector.png" style="height: 18px; width: 20px;">) to open the HTML document you want to inspect. You can <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">review and modify the document's HTML and CSS in <strong>Inspector</strong>,</a> as you would with any webpage.</p>
+
+<p>For more details on using the web developer tools, see <a href="/en-US/docs/">Firefox Developer Tools</a>.</p>
+
+<h3 id="Viewing_manifest_validation_messages_using_the_console">Viewing manifest validation messages using the console</h3>
+
+<p>In addition to the console messages output through WebIDE, there may also be messages relating to the validation of the extension’s manifest.json files. These messages can be viewed using the adb logcat command. To avoid receiving other, unrelated messages, you can pipe the output through grep, filtering by the extension’s ID, for example:</p>
+
+<pre class="brush: bash;">/path/to/adb logcat | grep borderify@example.com
+</pre>
+
+<p>This will give output similar to this:</p>
+
+<pre class="brush: none;">I/Gecko   (30440): 1496056181889    addons.xpi    WARN    Addon with ID borderify@example.com already installed, older version will be disabled</pre>
+
+<p>If your add-on fails to run, check these messages as they may provide information explaining why.</p>

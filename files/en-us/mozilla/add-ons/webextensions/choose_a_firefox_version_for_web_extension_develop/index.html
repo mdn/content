@@ -1,0 +1,215 @@
+---
+title: Choose a Firefox version for web extension development
+slug: >-
+  Mozilla/Add-ons/WebExtensions/Choose_a_Firefox_version_for_web_extension_develop
+tags:
+  - Add-ons
+  - Development
+  - Extensions
+  - Guide
+  - Tools
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Firefox provides several versions that offer different capabilities for developing web extensions. This article provides an overview of the differences amoung these versions of Firefox and recommends how to use each in the development lifecycle.</p>
+
+<p>This table summarizes the edition information, features for extension development, and provides a recommendation for each editions use in extension development.</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">
+    <p>Edition</p>
+   </th>
+   <th scope="col">
+    <p>Version</p>
+   </th>
+   <th scope="col">
+    <p>Stable</p>
+   </th>
+   <th scope="col">
+    <p>Tools for extension development</p>
+   </th>
+   <th scope="col">
+    <p>Installs unsigned extensions</p>
+   </th>
+   <th scope="col">
+    <p>Recommended extension development use</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <p><a href="https://www.mozilla.org/en-US/firefox/">Release</a></p>
+   </td>
+   <td>
+    <p>Current</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>No</p>
+   </td>
+   <td>
+    <p>Regression testing</p>
+
+    <p>User alpha and beta testing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://beta.mozilla.org">Beta</a></p>
+   </td>
+   <td>
+    <p>Current +1</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>No</p>
+   </td>
+   <td>
+    <p>Regression testing</p>
+
+    <p>User alpha and beta testing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#developer">Developer Edition</a></p>
+   </td>
+   <td>
+    <p>Current +1</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Extension development</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://nightly.mozilla.org">Nightly</a></p>
+   </td>
+   <td>
+    <p>Current +2</p>
+   </td>
+   <td>
+    <p>No</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Early access to the latest WebExtension API</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://www.mozilla.org/en-US/firefox/organizations/">ESR</a></p>
+   </td>
+   <td>
+    <p>Current  - &gt;1</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Yes</p>
+   </td>
+   <td>
+    <p>Extension development within enterprises</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Firefox_version_and_their_web_extension_development_capabilities">Firefox version and their web extension development capabilities</h2>
+
+<h3 id="Release">Release</h3>
+
+<p>This is the version of Firefox that most people use, it’s the version offered when someone visits the <a href="https://www.mozilla.org/en-US/firefox/">main Firefox download page</a>.</p>
+
+<p>You load extensions under development into this version of Firefox using <a href="/en-US/docs/Tools/about:debugging">about:debugging</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> and have access to the <a href="/en-US/docs/Tools/Browser_Toolbox">addon debugging window</a>. However, you cannot install unsigned extensions, which limits your ability to test features such as restart behavior, permission prompts, and upgrades.</p>
+
+<p>Development of extensions for Firefox for Android is fully supported.</p>
+
+<p>Suggested development use: You may want to install and test a signed copy of your extension into the release version to conduct final regression testing. You can also distribute signed copies of your extension to other people to assist with alpha or beta testing.</p>
+
+<p><a href="https://www.mozilla.org/en-US/firefox/">Download</a></p>
+
+<h3 id="Beta">Beta</h3>
+
+<p>This version of Firefox is generally used by people interested in taking advantage of the features due in the next Release version of Firefox.</p>
+
+<p>You load extensions under development into this version of Firefox using <a href="/en-US/docs/Tools/about:debugging">about:debugging</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> and have access to the <a href="/en-US/docs/Tools/Browser_Toolbox">addon debugging window</a>. However, you cannot install unsigned extensions, which limits your ability to test features such as restart behavior, permission prompts, and upgrades.</p>
+
+<p>Development of extensions for Firefox for Android is fully supported.</p>
+
+<p>Suggested development use: You may want to install and test a signed copy of your extension into Beta to conduct regression testing. Such testing will provide you with some certainty that your extension will continue to function correctly in the next version of Firefox. You can also distribute signed copies of your extension to other people to assist with alpha or beta testing.</p>
+
+<p><a href="https://beta.mozilla.org">Download</a></p>
+
+<h3 id="Developer_Edition">Developer Edition</h3>
+
+<p>This version of Firefox is based on Firefox Beta with additional features designed to assist with web and web extension development.</p>
+
+<p>You load extensions under development into this version of Firefox using <a href="/en-US/docs/Tools/about:debugging">about:debugging</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> and have access to the <a href="/en-US/docs/Tools/Browser_Toolbox">addon debugging window</a>. You can also install unsigned extensions, after adjusting or setting certain about:config properties (generally fewer changes than you need to achieve the same tasks in Nightly). This enables you to test features such as restart behavior, permission prompts, and upgrades.</p>
+
+<p>Development of extensions for Firefox for Android is fully supported.</p>
+
+<p>Suggested development use: Use Developer Edition as your primary web extension development and testing platform.</p>
+
+<p><a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#developer">Download</a></p>
+
+<h3 id="Nightly">Nightly</h3>
+
+<p>This version of Firefox provides a build that is updated nightly with the latest in development features for the future release of Firefox. It is generally used by people interested in experiencing the very latest features and providing feedback when they find issues.</p>
+
+<p>You load extensions under development into this version of Firefox using <a href="/en-US/docs/Tools/about:debugging">about:debugging</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> and have access to the <a href="/en-US/docs/Tools/Browser_Toolbox">addon debugging window</a>. You can also install unsigned extensions, after adjusting or setting certain about:config properties. This enables you to test features such as restart behavior, permission prompts, and upgrades.</p>
+
+<p>Development of extensions for Firefox for Android is fully supported.</p>
+
+<p>Suggested development use: Nightly provides a preview of future Firefox features, including WebExtension APIs, that are under development. Feature stability isn’t guaranteed, therefore, Nightly isn’t recommended as your primary web extension development platform. You may, however, wish to use Nightly where you want to take advantage of forthcoming features or test to give yourself the longest forward view of the compatibility of your extension with Firefox.</p>
+
+<p><a href="https://nightly.mozilla.org">Download</a></p>
+
+<h3 id="ESR">ESR</h3>
+
+<p>The Extended Support Release (ESR) version of Firefox has features for IT professionals to configure and deploy Firefox in their organization. It also provides enterprises with a feature stable version of Firefox for longer than the normal release cycle provides. So, at the time of writing, the release version of Firefox was 65 (with Beta on 66 and Nightly on 67) the ESR version was 60.</p>
+
+<p>You load extensions under development into this version of Firefox using <a href="/en-US/docs/Tools/about:debugging">about:debugging</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> and have access to the <a href="/en-US/docs/Tools/Browser_Toolbox">addon debugging window</a>. You can also install unsigned extensions, after adjusting or setting certain about:config properties (this feature is provided so enterprises can install extensions they want to keep private and don’t want to submit to add-ons.mozilla.org for signing).</p>
+
+<p>Development of extensions for Firefox for Android is fully supported.</p>
+
+<p>Suggested development use: Use ESR as your primary web extension development and testing platform when developing extensions for an enterprise and you want to confirm that your extension’s feature set is compatible with the ESR version.</p>
+
+<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">Download</a></p>
+
+<div class="SnapLinksContainer" style="margin-left: 0px; margin-top: 0px; display: none;">
+<div class="SL_SelectionRect">
+<div class="SL_SelectionLabel"> </div>
+</div>
+&lt;svg class="SnapLinksHighlighter" xmlns:xmlns="http://www.w3.org/2000/svg"&gt; &lt;rect height="0" width="0"&gt;&lt;/rect&gt;  &lt;/svg&gt;</div>

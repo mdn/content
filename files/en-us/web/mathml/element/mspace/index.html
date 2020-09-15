@@ -1,0 +1,87 @@
+---
+title: <mspace>
+slug: Web/MathML/Element/mspace
+tags:
+  - MathML
+  - MathML Reference
+  - 'MathML:Element'
+  - 'MathML:Token Elements'
+---
+<div>{{MathMLRef}}</div>
+
+<p class="summary">The MathML <code>&lt;mspace&gt;</code> element is used to display a blank space, whose size is set by its attributes.</p>
+
+<h2 id="Attributes">Attributes</h2>
+
+<dl>
+ <dt id="attr-class-id-style">class, id, style</dt>
+ <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dt id="attr-depth">depth</dt>
+ <dd>The desired depth (below the baseline) of the space (see <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a> for values and units).</dd>
+ <dt id="attr-height">height</dt>
+ <dd>The desired height (above the baseline) of the space (see <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a> for values and units).</dd>
+ <dt id="attr-linebreak">linebreak</dt>
+ <dd>Indicates a line-break at the space. Possible values: <code>auto</code> (default value), <code>newline</code>, <code>nobreak</code>, <code>goodbreak</code>, <code>badbreak</code>.<br>
+ Starting with MathML 3, it is preferred to use {{ MathMLElement("mo") }} to control linebreaking.</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dt id="attr-width">width</dt>
+ <dd>The desired width of the space (see <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a> for values and units).</dd>
+</dl>
+
+<p>Note that some common attributes like <code>mathcolor</code>, <code>mathvariant</code> or <code>dir</code> have no effect on <code>&lt;mspace&gt;</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: html">&lt;math&gt;
+
+  &lt;mspace depth="40px" height="20px" /&gt;
+
+  &lt;mspace width="100px" /&gt;
+
+&lt;/math&gt;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('MathML3', 'chapter3.html#presm.mspace', 'mspace') }}</td>
+   <td>{{ Spec2('MathML3') }}</td>
+   <td>Current specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML2', 'chapter3.html#presm.mspace', 'mspace') }}</td>
+   <td>{{ Spec2('MathML2') }}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("mathml.elements.mspace")}}</p>
+
+<h2 id="Gecko-specific_notes">Gecko-specific notes</h2>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs" title="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">Indentation attributes</a> are not implemented yet (for Gecko see {{ bug("534962") }}).</li>
+ <li>Support for negative values for the <code>width</code> attribute has been implemented in Gecko 23.0 {{geckoRelease("23.0")}}.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{ MathMLElement("mpadded") }}</li>
+ <li>{{ MathMLElement("mphantom") }}</li>
+</ul>

@@ -1,0 +1,70 @@
+---
+title: How do you host your website on Google App Engine?
+slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
+tags:
+  - Beginner
+  - Google App Engine
+  - Google Cloud Platform
+  - Guide
+  - Host
+  - Learn
+  - Web
+  - publish
+  - website
+---
+<p class="summary"><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud">Google App Engine</a> is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. Here's a step-by-step guide to hosting your website on Google App Engine.</p>
+
+<h2 id="Creating_a_Google_Cloud_Platform_project">Creating a Google Cloud Platform project</h2>
+
+<p>To use Google's tools for your own site or app, you need to create a new project on Google Cloud Platform. This requires having a Google account.</p>
+
+<ol>
+ <li>Go to the <a href="https://console.cloud.google.com/projectselector/appengine">App Engine dashboard</a> on the Google Cloud Platform Console and press the <em>Create</em> button.</li>
+ <li>If you've not created a project before, you'll need to select whether you want to receive email updates or not, agree to the Terms of Service, and then you should be able to continue.</li>
+ <li>Enter a name for the project, edit your project ID and note it down. For this tutorial, the following values are used:
+  <ul>
+   <li>Project Name: <em>GAE Sample Site</em></li>
+   <li>Project ID: <em>gaesamplesite</em></li>
+  </ul>
+ </li>
+ <li>Click the <em>Create</em> button to create your project.</li>
+</ol>
+
+<h2 id="Creating_an_application">Creating an application</h2>
+
+<p>Each Cloud Platform project can contain one App Engine application. Let's prepare an app for our project.</p>
+
+<ol>
+ <li>We'll need a sample application to publish. If you've not got one to use, download and unzip this <a href="http://gaesamplesite.appspot.com/downloads.html">sample app</a>.</li>
+ <li>Have a look at the sample application's structure — the <code>website</code> folder contains your website content and <code>app.yaml</code> is your application configuration file.
+  <ul>
+   <li>Your website content must go inside the <code>website</code> folder, and its landing page must be called <code>index.html</code>, but apart from that it can take whatever form you like.</li>
+   <li>The <code>app.yaml</code> file is a configuration file that tells App Engine how to map URLs to your static files. You don't need to edit it.</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="Publishing_your_application">Publishing your application</h2>
+
+<p>Now that we've got our project made and sample app files collected together, let's publish our app.</p>
+
+<ol>
+ <li>Open <a href="https://console.cloud.google.com/cloudshell/editor">Google Cloud Shell</a>.</li>
+ <li>Drag and drop the <code>sample-app</code> folder into the left pane of the code editor.</li>
+ <li>Run the following in the command line to select your project:
+  <pre class="brush:bash no-line-numbers" style="margin: 1em 0;">gcloud config set project <em>gaesamplesite</em></pre>
+ </li>
+ <li>Then run the following command to go to your app's directory:
+  <pre class="brush:bash no-line-numbers" style="margin: 1em 0;">cd <em>sample-app</em></pre>
+ </li>
+ <li>You are now ready to deploy your application, i.e. upload your app to App Engine:
+  <pre class="brush:bash no-line-numbers" style="margin: 1em 0;">gcloud app deploy</pre>
+ </li>
+ <li>Enter a number to choose the region where you want your application located.</li>
+ <li>Enter <code>Y</code> to confirm.</li>
+ <li>Now navigate your browser to <em>your-project-id</em>.appspot.com to see your website online. For example, for the project ID <em>gaesamplesite</em>, go to <a href="http://gaesamplesite.appspot.com/"><em>gaesamplesite</em>.appspot.com</a>.</li>
+</ol>
+
+<h2 id="See_also">See also</h2>
+
+<p>To learn more, see <a href="https://cloud.google.com/appengine/docs/">Google App Engine Documentation</a>.</p>

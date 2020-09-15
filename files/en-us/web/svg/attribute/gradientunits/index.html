@@ -1,0 +1,108 @@
+---
+title: gradientUnits
+slug: Web/SVG/Attribute/gradientUnits
+tags:
+  - NeedsCompatTable
+  - NeedsExample
+  - SVG
+  - SVG Attribute
+---
+<div>{{SVGRef}}</div>
+
+<p>The <strong><code>gradientUnits</code></strong> attribute defines the coordinate system used for attributes specified on the gradient elements.</p>
+
+<p>Two elements are using this attribute: {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}}</p>
+
+<h2 id="linearGradient">linearGradient</h2>
+
+<p>For {{SVGElement("linearGradient")}}, <code>gradientUnits</code> defines the coordinate system used for the attributes {{SVGAttr("x1")}}, {{SVGAttr("y1")}}, {{SVGAttr("x2")}}, and {{SVGAttr("y2")}}.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>objectBoundingBox</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<dl>
+ <dt><code>userSpaceOnUse</code></dt>
+ <dd>This value indicates that the attributes represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.<br>
+ Percentages represent values relative to the current SVG viewport.</dd>
+ <dt><code>objectBoundingBox</code></dt>
+ <dd>This value indicates that the user coordinate system for the attributes is established using the bounding box of the element to which the gradient is applied and then applying the transform specified by attribute <code>gradientTransform</code>.<br>
+ Percentages represent values relative to the bounding box for the object.</dd>
+ <dd>With this value and <code>gradientTransform</code> being the identity matrix, the normal of the linear gradient is perpendicular to the gradient vector in object bounding box space (i.e., the abstract coordinate system where (0,0) is at the top/left of the object bounding box and (1,1) is at the bottom/right of the object bounding box). When the object's bounding box is not square, the gradient normal which is initially perpendicular to the gradient vector within object bounding box space may render non-perpendicular relative to the gradient vector in user space. If the gradient vector is parallel to one of the axes of the bounding box, the gradient normal will remain perpendicular. This transformation is due to application of the non-uniform scaling transformation from bounding box space to user space.</dd>
+</dl>
+
+<h2 id="radialGradient">radialGradient</h2>
+
+<p>For {{SVGElement("radialGradient")}}, <code>gradientUnits</code> defines the coordinate system used for the attributes {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}}.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>objectBoundingBox</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<dl>
+ <dt><code>userSpaceOnUse</code></dt>
+ <dd>{{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.</dd>
+ <dt><code>objectBoundingBox</code></dt>
+ <dd>for {{SVGElement("radialGradient")}}: the user coordinate system for attributes {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} is established using the bounding box of the element to which the gradient is applied (see Object bounding box units) and then applying the transform specified by attribute <code>gradientTransform</code>.<br>
+ With this value and <code>gradientTransform</code> being the identity matrix, the rings of the radial gradient are circular with respect to the object bounding box space (i.e., the abstract coordinate system where (0,0) is at the top/left of the object bounding box and (1,1) is at the bottom/right of the object bounding box). When the object's bounding box is not square, the rings that are conceptually circular within object bounding box space will render as elliptical due to application of the non-uniform scaling transformation from bounding box space to user space.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG2", "pservers.html#RadialGradientElementGradientUnitsAttribute", "gradientUnits for &lt;radialGradient&gt;")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "pservers.html#LinearGradientElementGradientUnitsAttribute", "gradientUnits for &lt;linearGradient&gt;")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "pservers.html#RadialGradientElementGradientUnitsAttribute", "gradientUnits for &lt;radialGradient&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;radialGradient&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "pservers.html#LinearGradientElementGradientUnitsAttribute", "gradientUnits for &lt;linearGradient&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;linearGradient&gt;</code></td>
+  </tr>
+ </tbody>
+</table>

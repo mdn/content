@@ -1,0 +1,78 @@
+---
+title: HEAD
+slug: Web/HTTP/Methods/HEAD
+tags:
+  - HTTP
+  - Reference
+  - Request method
+---
+<div>{{HTTPSidebar}}</div>
+
+<p>The <strong>HTTP <code>HEAD</code> method</strong> requests the headers that are returned if the specified resource would be requested with an HTTP {{HTTPMethod("GET")}} method. Such a request can be done before deciding to download a large resource to save bandwidth, for example.</p>
+
+<p>A response to a <code>HEAD</code> method should not have a body. If so, it must be ignored. Even so, {{glossary("Entity header", "entity headers")}} describing the content of the body, like {{HTTPHeader("Content-Length")}} may be included in the response. They don't relate to the body of the <code>HEAD</code> response, which should be empty, but to the body which a similar request using the {{HTTPMethod("GET")}} method would have returned as a response.</p>
+
+<p>If the result of a <code>HEAD</code> request shows that a cached resource after a {{HTTPMethod("GET")}} request is now outdated, the cache is invalidated, even if no {{HTTPMethod("GET")}} request has been made.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Request has body</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Successful response has body</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Safe")}}</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Idempotent")}}</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Cacheable")}}</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">HEAD /index.html
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "HEAD", "4.3.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("http.methods.HEAD")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPMethod("GET")}}</li>
+</ul>

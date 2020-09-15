@@ -1,0 +1,110 @@
+---
+title: MediaSource.addSourceBuffer()
+slug: Web/API/MediaSource/addSourceBuffer
+tags:
+  - API
+  - Audio
+  - MSE
+  - Media
+  - Media Source Extensions
+  - MediaSource
+  - Method
+  - Reference
+  - Video
+  - addSourceBuffer
+---
+<div>{{APIRef("Media Source Extensions")}}</div>
+
+<p>The <code><strong>addSourceBuffer()</strong></code> method of the {{domxref("MediaSource")}} interface creates a new {{domxref("SourceBuffer")}} of the given {{Glossary("MIME type")}} and adds it to the <code>MediaSource</code>'s {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list. The new <code>SourceBuffer</code> is also returned.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>sourceBuffer</em> = <em>mediaSource</em>.addSourceBuffer(<em>mimeType</em>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>mimeType</code></dt>
+ <dd>A {{domxref("DOMString")}} specifying the MIME type of the {{domxref("SourceBuffer")}} to create and add to the {{domxref("MediaSource")}}.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A {{domxref("SourceBuffer")}} object representing the new source buffer that has been created and added to the media source.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+ <dt><code>InvalidAccessError</code></dt>
+ <dd>The value specified for <code>mimeType</code> is an empty string rather than a valid MIME type.</dd>
+ <dt><code>InvalidStateError</code></dt>
+ <dd>The {{domxref("MediaSource")}} is not in the <code>"open"</code> {{domxref("MediaSource.readyState", "readyState")}}.</dd>
+ <dt><code>NotSupportedError</code></dt>
+ <dd>The specified <code>mimeType</code> isn't supported by the {{Glossary("user agent")}}, or is not compatible with the MIME types of other {{domxref("SourceBuffer")}} objects that are already included in the media source's {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list.</dd>
+ <dt><code>QuotaExceededError</code></dt>
+ <dd>The user agent can't handle any more <code>SourceBuffer</code> objects, or creating a new <code>SourceBuffer</code> using the given <code>mimeType</code> would result in an <a href="https://w3c.github.io/media-source/#sourcebuffer-configuration">unsupported configuration of <code>SourceBuffer</code>s</a>.</dd>
+</dl>
+
+<h2 id="Example">Example</h2>
+
+<p>The following snippet is from a simple example written by Nick Desaulniers (<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+
+<pre class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
+// Need to be specific for Blink regarding codecs
+// ./mp4info frag_bunny.mp4 | grep Codec
+var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+
+<code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'MediaSource'</span> <span class="keyword token">in</span> window <span class="operator token">&amp;&amp;</span> MediaSource<span class="punctuation token">.</span><span class="function token">isTypeSupported<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaSource</span><span class="punctuation token">;</span>
+ <span class="comment token"> //console.log(mediaSource.readyState); // closed
+</span>  video<span class="punctuation token">.</span>src <span class="operator token">=</span> URL<span class="punctuation token">.</span><span class="function token">createObjectURL<span class="punctuation token">(</span></span>mediaSource<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  mediaSource<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'sourceopen'</span><span class="punctuation token">,</span> sourceOpen<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">'Unsupported MIME type or codec: '</span><span class="punctuation token">,</span> mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+ <span class="comment token"> //console.log(this.readyState); // open
+</span>  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
+  <span class="keyword token">var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="function token">fetchAB<span class="punctuation token">(</span></span>assetURL<span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>buf<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    sourceBuffer<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'updateend'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      mediaSource<span class="punctuation token">.</span><span class="function token">endOfStream<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      video<span class="punctuation token">.</span><span class="function token">play<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+     <span class="comment token"> //console.log(mediaSource.readyState); // ended
+</span>    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    sourceBuffer<span class="punctuation token">.</span><span class="function token">appendBuffer<span class="punctuation token">(</span></span>buf<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Source Extensions', '#dom-mediasource-addsourcebuffer', 'addSourceBuffer()')}}</td>
+   <td>{{Spec2('Media Source Extensions')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("api.MediaSource.addSourceBuffer")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("SourceBuffer")}}</li>
+ <li>{{domxref("SourceBufferList")}}</li>
+</ul>

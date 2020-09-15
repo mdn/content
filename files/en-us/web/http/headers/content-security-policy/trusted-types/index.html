@@ -1,0 +1,68 @@
+---
+title: 'CSP: trusted-types'
+slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
+tags:
+  - CSP
+  - Directive
+  - HTTP
+  - Security
+---
+<div>{{HTTPSidebar}}</div>
+
+<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict usage of known DOM XSS sinks to a predefined set of functions that <span>only accept non-spoofable, typed values in place of strings. This allows authors to</span><span> define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</span> This directive declares a white-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre>Content-Security-Policy: trusted-types;
+Content-Security-Policy: trusted-types &lt;policyName&gt;;
+Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
+</pre>
+
+<dl>
+ <dt>&lt;DOMString&gt;</dt>
+ <dd>Any string can be a Trusted Type policy name.</dd>
+ <dt><code>'allow-duplicates'</code></dt>
+ <dd>Allows for creating policies with a name that was already used</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>TODO</p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>A <a href="https://github.com/w3c/webappsec-trusted-types#polyfill">polyfill for Trusted Types</a> is available on Github.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/">Trusted Types</a></td>
+   <td>Draft</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Content-Security-Policy")}}</li>
+ <li><a href="/en-US/docs/Glossary/Cross-site_scripting">Cross-Site Scripting (XSS)</a></li>
+ <li><a href="https://developers.google.com/web/updates/2019/02/trusted-types">Google Developers: Intro to Trusted-Types</a></li>
+ <li>Trusted Types with <a href="https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types">DOMPurify</a> XSS sanitizer</li>
+</ul>

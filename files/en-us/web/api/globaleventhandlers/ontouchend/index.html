@@ -1,0 +1,83 @@
+---
+title: GlobalEventHandlers.ontouchend
+slug: Web/API/GlobalEventHandlers/ontouchend
+tags:
+  - API
+  - Experimental
+  - HTML DOM
+  - Reference
+  - TouchEvent
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchend")}} event.</p>
+
+<p>{{SeeCompatTable}}</p>
+
+<div class="note">
+<p><strong>Note:</strong> This attribute has <em>not</em> been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="eval">var endHandler = targetElement.ontouchend;
+</pre>
+
+<h3 id="Return_Value" name="Return_Value">Return value</h3>
+
+<dl>
+ <dt><code>endHandler</code></dt>
+ <dd>The <em>touchend</em> event handler for element <code>targetElement</code>.</dd>
+</dl>
+
+<h2 id="Example">Example</h2>
+
+<p>This example shows two ways to use <em>ontouchend</em> to set an element's <em>touchend</em> event handler.</p>
+
+<pre class="brush: js">&lt;html&gt;
+&lt;script&gt;
+
+function endTouch(ev) {
+ // Process the event
+}
+
+function init() {
+ var el=document.getElementById("target1");
+ el.ontouchend = endTouch;
+}
+&lt;/script&gt;
+&lt;body onload="init();"&gt;
+&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+&lt;div id="target2" ontouchend="endTouch(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Touch Events 2','#dom-globaleventhandlers-ontouchend')}}</td>
+   <td>{{Spec2('Touch Events 2')}}</td>
+   <td>Non-stable version.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.GlobalEventHandlers.ontouchend")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{ event("touchend") }}</li>
+</ul>

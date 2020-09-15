@@ -1,0 +1,75 @@
+---
+title: 'WebSocket: error event'
+slug: Web/API/WebSocket/error_event
+tags:
+  - API
+  - Error
+  - Event
+  - Reference
+  - Web
+  - WebSocket
+---
+<div>{{APIRef}}</div>
+
+<p>The <code>error</code> event is fired when a connection with a <code>WebSocket</code> has been closed due to an error (some data couldn't be sent for example).</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{ domxref("WebSocket.onerror","onerror")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js notranslate">// Create WebSocket connection
+const socket = new WebSocket('ws://localhost:8080');
+
+// Listen for possible errors
+socket.addEventListener('error', function (event) {
+  console.log('WebSocket error: ', event);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Specification</th>
+   <th>Status</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "web-sockets.html#event-error", "WebSocket error")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.WebSocket.error_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebSocket/close_event">WebSocket: close event</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSocket/message_event">WebSocket: message event</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSocket/open_event">WebSocket: open event</a></li>
+ <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
+</ul>

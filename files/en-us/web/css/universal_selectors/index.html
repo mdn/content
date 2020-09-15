@@ -1,0 +1,105 @@
+---
+title: Universal selectors
+slug: Web/CSS/Universal_selectors
+tags:
+  - CSS
+  - Reference
+  - Selector
+  - Selectors
+---
+<div>{{CSSRef}}</div>
+
+<p>The CSS <strong>universal selector</strong> (<code>*</code>) matches elements of any type.</p>
+
+<pre class="brush: css no-line-numbers notranslate">/* Selects all elements */
+* {
+  color: green;
+}</pre>
+
+<p>Beginning with CSS3, the asterisk may be used in combination with {{cssxref("CSS_Namespaces", "namespaces")}}:</p>
+
+<ul>
+ <li><code>ns|*</code> - matches all elements in namespace <em>ns</em></li>
+ <li><code>*|*</code> - matches all elements</li>
+ <li><code>|*</code> - matches all elements without any declared namespace</li>
+</ul>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">* { <em>style properties</em> }</pre>
+
+<p>The asterisk is optional with simple selectors. For instance, <code>*.warning</code> and <code>.warning</code> are equivalent.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css notranslate">* [lang^=en] {
+  color: green;
+}
+
+*.warning {
+  color: red;
+}
+
+*#maincontent {
+  border: 1px solid blue;
+}
+
+.floating {
+  float: left
+}
+
+/* automatically clear the next sibling after a floating element */
+.floating + * {
+  clear: left;
+}
+</pre>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;p class="warning"&gt;
+  &lt;span lang="en-us"&gt;A green span&lt;/span&gt; in a red paragraph.
+&lt;/p&gt;
+&lt;p id="maincontent" lang="en-gb"&gt;
+  &lt;span class="warning"&gt;A red span&lt;/span&gt; in a green paragraph.
+&lt;/p&gt;</pre>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample('Examples')}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>No changes</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#universal-selector', 'universal selector')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Defines behavior regarding namespaces and adds hint that omitting the selector is allowed within pseudo-elements</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.selectors.universal")}}</p>

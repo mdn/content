@@ -1,0 +1,129 @@
+---
+title: '<section>: The Generic Section element'
+slug: Web/HTML/Element/section
+tags:
+  - Element
+  - HTML
+  - HTML sections
+  - Reference
+  - Section
+  - Web
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary">The <strong>HTML <code>&lt;section&gt;</code> element</strong> represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document.</span> Typically, but not always, sections have a heading.</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
+
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
+
+<p>As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results and a map display and its controls don't have specific elements, and could be put inside a <code>&lt;section&gt;</code>.</p>
+
+<div class="note">
+<p><strong>Note:</strong> If the contents of the element would make sense syndicated as a standalone piece, the {{HTMLElement("article")}} element may be a better choice.</p>
+</div>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content">Sectioning content</a>, palpable content.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parents</th>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>. Note that a <code>&lt;section&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
+  </tr>
+  <tr>
+   <th scope="row">Implicit ARIA role</th>
+   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></code> if the element has an <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">accessible name</a>, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("none")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes">Attributes</h2>
+
+<p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+
+<h2 id="Usage_notes">Usage notes</h2>
+
+<ul>
+ <li>Each <code>&lt;section&gt;</code> should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the <code>&lt;section&gt;</code> element.</li>
+ <li>If it makes sense to separately syndicate the content of a <code>&lt;section&gt;</code> element, use an {{HTMLElement("article")}} element instead.</li>
+ <li>Do not use the <code>&lt;section&gt;</code> element as a generic container; this is what {{HTMLElement("div")}} is for, especially when the sectioning is only for styling purposes. A rule of thumb is that a section should logically appear in the outline of a document.</li>
+</ul>
+
+<h2 id="Example">Example</h2>
+
+<h3 id="Before">Before</h3>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="After">After</h3>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
+&lt;/section&gt;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("html.elements.section")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Using HTML sections and outlines</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: Region role</a></li>
+</ul>

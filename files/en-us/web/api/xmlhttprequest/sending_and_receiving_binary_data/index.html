@@ -1,0 +1,158 @@
+---
+title: Sending and Receiving Binary Data
+slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+tags:
+  - AJAX
+  - FileReader
+  - MIME
+  - XMLHttpRequest
+---
+<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays" name="Receiving_binary_data_using_JavaScript_typed_arrays">Receiving binary data using JavaScript typed arrays</h2>
+
+<p>The <code>responseType</code> property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), <code>"arraybuffer"</code>, <code>"blob"</code>, <code>"document"</code>, <code>"json"</code>, and <code>"text"</code>. The <code>response</code> property will contain the entity body according to <code>responseType</code>, as an <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JSON</code>, or string. This is <code>null</code> if the request is not complete or was not successful.</p>
+
+<p>This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a <a href="https://github.com/devongovett/png.js/">png decoding library</a> for that.</p>
+
+<pre class="brush: js">var oReq = new XMLHttpRequest();
+oReq.open("GET", "/myfile.png", true);
+oReq.responseType = "arraybuffer";
+
+oReq.onload = function (oEvent) {
+  var arrayBuffer = oReq.response; // Note: not oReq.responseText
+  if (arrayBuffer) {
+    var byteArray = new Uint8Array(arrayBuffer);
+    for (var i = 0; i &lt; byteArray.byteLength; i++) {
+      // do something with each byte in the array
+    }
+  }
+};
+
+oReq.send(null);
+</pre>
+
+<p> </p>
+
+<p>You can also read a binary file as a {{domxref("Blob")}} by setting the string <code>"blob"</code> to the <code>responseType</code> property.</p>
+
+<p> </p>
+
+<pre class="brush: js">var oReq = new XMLHttpRequest();
+oReq.open("GET", "/myfile.png", true);
+oReq.responseType = "blob";
+
+oReq.onload = function(oEvent) {
+  var blob = oReq.response;
+  // ...
+};
+
+oReq.send();</pre>
+
+<h2 id="Receiving_binary_data_in_older_browsers" name="Receiving_binary_data_in_older_browsers">Receiving binary data in older browsers</h2>
+
+<p>The <code>load_binary_resource()</code> function shown below loads binary data from the specified URL, returning it to the caller.</p>
+
+<pre class="brush: js">function load_binary_resource(url) {
+  var req = new XMLHttpRequest();
+  req.open('GET', url, false);
+  //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
+  req.overrideMimeType('text\/plain; charset=x-user-defined');
+  req.send(null);
+  if (req.status != 200) return '';
+  return req.responseText;
+}
+</pre>
+
+<p>The magic happens in line 5, which overrides the MIME type, forcing the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.</p>
+
+<pre class="brush: js">var filestream = load_binary_resource(url);
+var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (f7)
+</pre>
+
+<p>The example above fetches the byte at offset <code>x</code> within the loaded binary data. The valid range for <code>x</code> is from 0 to <code>filestream.length-1</code>.</p>
+
+<p>See <a href="http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html">downloading binary streams with XMLHttpRequest</a> for a detailed explanation. See also <a href="/en-US/docs/Code_snippets/Downloading_Files" title="Code_snippets/Downloading_Files">downloading files</a>.</p>
+
+<h2 id="Sending_binary_data" name="Sending_binary_data">Sending binary data</h2>
+
+<p>The <code>send</code> method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, or {{domxref("File")}} object.</p>
+
+<p>The following example creates a text file on-the-fly and uses the <code>POST</code> method to send the "file" to the server. This example uses plain text, but you can imagine the data being a binary file instead.</p>
+
+<pre class="brush: js">var oReq = new XMLHttpRequest();
+oReq.open("POST", url, true);
+oReq.onload = function (oEvent) {
+  // Uploaded.
+};
+
+var blob = new Blob(['abc123'], {type: 'text/plain'});
+
+oReq.send(blob);
+</pre>
+
+<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Sending typed arrays as binary data</h2>
+
+<p>You can send JavaScript typed arrays as binary data as well.</p>
+
+<pre class="brush: js">var myArray = new ArrayBuffer(512);
+var longInt8View = new Uint8Array(myArray);
+
+// generate some data
+for (var i=0; i&lt; longInt8View.length; i++) {
+  longInt8View[i] = i % 256;
+}
+
+var xhr = new XMLHttpRequest;
+xhr.open("POST", url, false);
+xhr.send(myArray);
+</pre>
+
+<p>This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.</p>
+
+<div class="note"><strong>Note:</strong> Support for sending <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
+
+<h2 id="Submitting_forms_and_uploading_files" name="Submitting_forms_and_uploading_files">Submitting forms and uploading files</h2>
+
+<p>Please, read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
+
+<h2 id="Firefox-specific_examples" name="Firefox-specific_examples">Firefox-specific examples</h2>
+
+<p>This example transmits binary content asynchronously, using the <code>POST</code> method, and Firefox's non-standard <code>sendAsBinary()</code>.</p>
+
+<pre class="brush: js">var req = new XMLHttpRequest();
+req.open("POST", url, true);
+// set headers and mime-type appropriately
+req.setRequestHeader("Content-Length", 741);
+req.sendAsBinary(aBody);
+</pre>
+
+<p>Line 4 sets the Content-Length header to 741, indicating that the data is 741 bytes long.  Obviously you need to change this value based on the actual size of the data being sent.</p>
+
+<p>Line 5 uses the <code>sendAsBinary()</code> method to initiate the request.</p>
+
+<div class="note"><strong>Note:</strong> This non-standard <code>sendAsBinary</code> method is considered deprecated as of Gecko 31 {{ geckoRelease(31) }} and will be removed soon. The standard <code>send(Blob data)</code> method can be used instead as explained above.</div>
+
+<p>You can also send binary content by passing an instance of the {{interface("nsIFileInputStream")}} to <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. In that case, you don't have to set the <code>Content-Length</code> header yourself, as the information is fetched from the stream automatically:</p>
+
+<pre class="brush: js">// Make a stream from a file.
+var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                       .createInstance(Components.interfaces.nsIFileInputStream);
+stream.init(file, 0x04 | 0x08, 0644, 0x04); // file is an nsIFile instance
+
+// Try to determine the MIME type of the file
+var mimeType = "text\/plain";
+try {
+  var mimeService = Components.classes["@mozilla.org/mime;1"]
+          .getService(Components.interfaces.nsIMIMEService);
+  mimeType = mimeService.getTypeFromFile(file); // file is an nsIFile instance
+}
+catch (oEvent) { /* eat it; just use text/plain */ }
+
+// Send
+var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
+                    .createInstance(Components.interfaces.nsIXMLHttpRequest);
+req.open('PUT', url, false); /* synchronous! */
+req.setRequestHeader('Content-Type', mimeType);
+req.send(stream);
+</pre>
+
+<div>{{APIRef("XMLHttpRequest")}}</div>

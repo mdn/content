@@ -1,0 +1,133 @@
+---
+title: StorageEvent
+slug: Web/API/StorageEvent
+tags:
+  - API
+  - Event
+  - Reference
+  - StorageEvent
+  - Web Storage API
+---
+<div>{{APIRef("Web Storage API")}}</div>
+
+<p>A <strong><code>StorageEvent</code></strong> is sent to a window when a storage area it has access to is changed within the context of another document.</p>
+
+<p>{{InheritanceDiagram}}</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> Although this event existed prior to {{Gecko("2.0")}}, it did not match the specification. The old event format is now represented by the {{interface("nsIDOMStorageEventObsolete")}} interface.</p>
+</div>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<pre>void <a href="#initStorageEvent()">initStorageEvent</a>(
+  in DOMString type,
+  in boolean canBubble,
+  in boolean cancelable,
+  in DOMString key,
+  in DOMString oldValue,
+  in DOMString newValue,
+  in USVString url,
+  in nsIDOMStorage storageArea
+);</pre>
+
+<h2 id="Attributes">Attributes</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<td class="header">Attribute</td>
+			<td class="header">Type</td>
+			<td class="header">Description</td>
+		</tr>
+		<tr>
+			<td><code>key</code></td>
+			<td>{{DOMxRef("DOMString")}}</td>
+			<td>Represents the key changed. The <code>key</code> attribute is <code>null</code> when the change is caused by the storage <code>clear()</code> method. <strong>Read only.</strong></td>
+		</tr>
+		<tr>
+			<td><code>newValue</code></td>
+			<td>{{DOMxRef("DOMString")}}</td>
+			<td>The new value of the <code>key</code>. The <code>newValue</code> is <code>null</code> when the change has been invoked by storage <code>clear()</code> method or the <code>key</code> has been removed from the storage. <strong>Read only.</strong></td>
+		</tr>
+		<tr>
+			<td><code>oldValue</code></td>
+			<td>{{DOMxRef("DOMString")}}</td>
+			<td>The original value of the <code>key</code>. The <code>oldValue</code> is <code>null</code> when the <code>key</code> has been newly added and therefore doesn't have any previous value. <strong>Read only.</strong></td>
+		</tr>
+		<tr>
+			<td><code>storageArea</code></td>
+			<td>{{Interface("nsIDOMStorage")}}</td>
+			<td>Represents the Storage object that was affected. <strong>Read only.</strong></td>
+		</tr>
+		<tr>
+			<td><code>url</code></td>
+			<td>{{DOMxRef("USVString")}}</td>
+			<td>The URL of the document whose <code>key</code> changed. <strong>Read only.</strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="initStorageEvent">initStorageEvent()</h3>
+
+<p>Initializes the event in a manner analogous to the similarly-named method in the DOM Events interfaces.</p>
+
+<pre class="eval">void initStorageEvent(
+  in DOMString type,
+  in boolean canBubble,
+  in boolean cancelable,
+  in DOMString key,
+  in DOMString oldValue,
+  in DOMString newValue,
+  in USVString url,
+  in nsIDOMStorage storageArea
+);
+</pre>
+
+<h4 id="Parameters">Parameters</h4>
+
+<dl>
+	<dt><code>typeArg</code></dt>
+	<dd>The name of the event.</dd>
+	<dt><code>canBubble</code></dt>
+	<dd>A boolean indicating whether the event bubbles up through the DOM or not.</dd>
+	<dt><code>cancelable</code></dt>
+	<dd>A boolean indicating whether the event is cancelable.</dd>
+	<dt><code>key</code></dt>
+	<dd>The key whose value is changing as a result of this event.</dd>
+	<dt><code>oldValue</code></dt>
+	<dd>The key's old value.</dd>
+	<dt><code>newValue</code></dt>
+	<dd>The key's new value.</dd>
+	<dt><code>url</code></dt>
+	<dd>The URL of the document initiating the change.</dd>
+	<dt><code>storageArea</code></dt>
+	<dd>The DOM {{DOMxRef("Storage")}} object representing the storage area on which this event occurred.</dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Statuc</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("HTML WHATWG", "webstorage.html#the-storageevent-interface", "The <code>StorageEvent</code> interface")}}</td>
+			<td>{{Spec2("HTML WHATWG")}}</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.StorageEvent")}}</p>

@@ -1,0 +1,19 @@
+---
+title: inert
+slug: Web/API/HTMLElement/inert
+---
+<p>The boolean <code>inert</code> attribute, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
+
+<p>According to the <a href="https://html.spec.whatwg.org/multipage/interaction.html#inert">spec</a>:</p>
+
+<blockquote>
+<p>When a node is inert, then the user agent must act as if the node was absent for the purposes of targeting user interaction events, may ignore the node for the purposes of text search user interfaces (commonly known as "find in page"), and may prevent the user from selecting text in that node.</p>
+</blockquote>
+
+<h4 id="Polyfills">Polyfills</h4>
+
+<p>Currently, browser support is lacking. Check out the following polyfills:</p>
+
+<ul>
+ <li><a href="https://github.com/WICG/inert">Inert </a></li>
+</ul>

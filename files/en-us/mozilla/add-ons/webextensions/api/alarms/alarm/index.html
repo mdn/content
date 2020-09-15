@@ -1,0 +1,45 @@
+---
+title: alarms.Alarm
+slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Non-standard
+  - Reference
+  - Type
+  - WebExtensions
+  - alarm
+  - alarms
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.</p>
+
+<h2 id="Type">Type</h2>
+
+<p>Values of this type are objects. They contain the following properties:</p>
+
+<dl class="reference-values">
+ <dt><code>name</code></dt>
+ <dd><code>string</code>. Name of this alarm. This is the name that was passed into the {{WebExtAPIRef('alarms.create()')}} call that created this alarm.</dd>
+ <dt><code>scheduledTime</code></dt>
+ <dd><code>double</code>. Time at which the alarm is scheduled to fire next, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
+ <dt><code>periodInMinutes</code>{{optional_inline}}</dt>
+ <dd><code>double</code>. If this is not <code>null</code>, then the alarm is periodic, and this represents its period in minutes.</dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.alarms.Alarm")}}</p>
+
+<p>{{WebExtExamples}}</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+</div>

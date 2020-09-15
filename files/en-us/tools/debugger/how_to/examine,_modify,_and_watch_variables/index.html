@@ -1,0 +1,45 @@
+---
+title: 'Examine, modify, and watch variables'
+slug: 'Tools/Debugger/How_to/Examine,_modify,_and_watch_variables'
+---
+<div>{{ToolsSidebar}}</div><div class="note">
+<p>This feature isn't yet supported in the new debugger. If you need to use it, you can, for now, switch back to the old debugger by visiting about:config and setting the "devtools.debugger.new-debugger-frontend" preference to <code>false</code>.</p>
+
+<p>To see the docs for the old debugger, please visit <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger_%28before_Firefox_52%29">Debugger (before Firefox 52)</a>.</p>
+</div>
+
+<h2 id="Examine_variables">Examine variables</h2>
+
+<p>When the code has stopped at a breakpoint, you can examine its state in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Variables_pane" title="#variables-pane">variables pane</a> of the debugger:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13216/debugger-variables-pane.png" style="display: block; height: 335px; margin-left: auto; margin-right: auto; width: 903px;"></p>
+
+<p>Variables are grouped by scope: in Function scope you'll see the built-in <code>arguments</code> and <code>this</code> variables as well as local variables defined by the function like <code>user</code> and <code>greeting</code>. Similarly, in Global scope you'll see global variables you've defined, like <code>greetme</code>, as well as built-in globals like <code>localStorage</code> and <code>console</code>.</p>
+
+<p>Each object can be expanded, using a disclosure triangle, to show its properties.</p>
+
+<p>Pointing your cursor at a variable's name displays a tooltip that provides additional information about the variable. See <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty()</code></a> for details on what these property descriptors mean.</p>
+
+<p>You can filter the variables that are displayed, either by using the "*" modifier in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Search_and_filter" title="#script-filter">script filter</a>, or by typing into the filter variables box, if you have enabled this in the <a href="/en-US/docs/Tools/Debugger/Settings" title="#debugger-settings">debugger settings</a>.</p>
+
+<p>{{EmbedYouTube("dxCvnixpM_Q")}}</p>
+
+<p>If a variable exists in the source but has been optimized away by the JavaScript engine, then it is shown in the Variables view, but is given the value <code>(optimized away)</code>, and is not editable. In the screenshot below the variable <code>upvar</code> has been optimized away:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10169/optimized-out.png" style="display: block; height: 235px; margin-left: auto; margin-right: auto; width: 332px;"></p>
+
+<h2 id="Modify_variables">Modify variables</h2>
+
+<p>When the code has stopped at a breakpoint, you can modify variables in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Variables_pane" title="#variables-pane">variables pane</a> of the debugger. Just click on the variable's current value and you'll be able to type there:</p>
+
+<p>{{EmbedYouTube("FKG-jkvSpq8")}}</p>
+
+<h2 id="Watch_an_expression">Watch an expression</h2>
+
+<p>Watch expressions are expressions that are evaluated each time execution pauses. You can then examine the results of these expressions. These are useful in that they let you inspect invariants in your code that you know are there but aren't necessarily in the code ready for inspection. To add a watch expression, click in the box that says "Add watch expression" and enter a JavaScript expression whose output you'd like to monitor as you step through code.</p>
+
+<p>Then start running your code. The watch expression does nothing until you begin to step through your code, so nothing happens until you reach a breakpoint. At that point, a box showing your active watch expressions and their current values will appear:</p>
+
+<p>{{EmbedYouTube("CwGU-5wKRw0")}}</p>
+
+<p>You can step through your code, watching the value of the expression as it changes; each time it does, the box will flash briefly yellow. You can remove a watch expression by clicking the "x" icon next to it, and, of course, you can have more than one watch expression at a time.</p>

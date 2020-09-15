@@ -1,0 +1,86 @@
+---
+title: Number.isFinite()
+slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
+tags:
+  - JavaScript
+  - Method
+  - Number
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>Number.isFinite()</code></strong> method determines whether the passed value is a finite number.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">Number.isFinite(v<var>alue</var>)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code>value</code></dt>
+ <dd>The value to be tested for finiteness.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A {{jsxref("Boolean")}} indicating whether or not the given value is a finite number.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't forcibly convert the parameter to a number. This means only values of the type number, that are also finite, return <code>true</code>.</p>
+
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<pre class="brush: js">if (Number.isFinite === undefined) Number.isFinite = function(value) {
+    return typeof value === 'number' &amp;&amp; isFinite(value);
+}
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_isFinite">Using isFinite</h3>
+
+<pre class="brush: js">Number.isFinite(Infinity);  // false
+Number.isFinite(NaN);       // false
+Number.isFinite(-Infinity); // false
+
+Number.isFinite(0);         // true
+Number.isFinite(2e64);      // true
+
+Number.isFinite('0');       // false, would've been true with
+                            // global isFinite('0')
+Number.isFinite(null);      // false, would've been true with
+                            // global isFinite(null)
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Number.isFinite")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The {{jsxref("Number")}} object it belongs to.</li>
+ <li>The global function {{jsxref("isFinite")}}.</li>
+</ul>

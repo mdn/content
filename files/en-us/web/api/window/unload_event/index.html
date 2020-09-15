@@ -1,0 +1,125 @@
+---
+title: 'Window: unload event'
+slug: Web/API/Window/unload_event
+tags:
+  - Event
+  - Reference
+  - Window
+  - events
+---
+<div>{{APIRef}}</div>
+
+<p><span class="seoSummary">The <strong><code>unload</code></strong> event is fired when the document or a child resource is being unloaded.</span></p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref("WindowEventHandlers/onunload", "onunload")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>It is fired after:</p>
+
+<ul>
+ <li>{{domxref("Window/beforeunload_event", "beforeunload")}} (cancelable event)</li>
+ <li>{{domxref("Window/pagehide_event", "pagehide")}}</li>
+</ul>
+
+<p>The document is in the following state:</p>
+
+<ul>
+ <li>All the resources still exist (img, iframe etc.)</li>
+ <li>Nothing is visible anymore to the end user</li>
+ <li>UI interactions are ineffective ({{domxref("window.open")}}, {{domxref("window.alert", "alert")}}, {{domxref("window.confirm", "confirm")}}, etc.)</li>
+ <li>An error won't stop the unloading workflow</li>
+</ul>
+
+<p>Please note that the unload event also follows the document tree: parent frame unload will happen <strong>before</strong> child frame <code>unload</code> (see example below).</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Parent Frame&lt;/title&gt;
+    &lt;script&gt;
+      window.addEventListener('beforeunload', function(event) {
+        console.log('I am the 1st one.');
+      });
+      window.addEventListener('unload', function(event) {
+        console.log('I am the 3rd one.');
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;iframe src="child-frame.html"&gt;&lt;/iframe&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Below, the content of <code>child-frame.html</code>:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Child Frame&lt;/title&gt;
+    &lt;script&gt;
+      window.addEventListener('beforeunload', function(event) {
+        console.log('I am the 2nd one.');
+      });
+      window.addEventListener('unload', function(event) {
+        console.log('I am the 4th and last one…');
+      });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      ☻
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>When the parent frame is unloaded, events will be fired in the order described by the <code>console.log()</code> messages.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('UI Events', '#event-type-unload', 'unload')}}</td>
+   <td>{{Spec2('UI Events')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Window.unload_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}</li>
+ <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents">Unloading Documents — unload a document</a></li>
+</ul>

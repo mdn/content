@@ -1,0 +1,64 @@
+---
+title: WebGLBuffer
+slug: Web/API/WebGLBuffer
+tags:
+  - API
+  - Reference
+  - WebGL
+---
+<div>{{APIRef("WebGL")}}</div>
+
+<p>The <strong>WebGLBuffer</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents an opaque buffer object storing data such as vertices or colors.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>The <code>WebGLBuffer</code> object does not define any methods or properties of its own and its content is not directly accessible. When working with <code>WebGLBuffer</code> objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:</p>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Creating_a_buffer">Creating a buffer</h3>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
+var gl = canvas.getContext('webgl');
+var buffer = gl.createBuffer();
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebGL', "#5.4", "WebGLBuffer")}}</td>
+   <td>{{Spec2('WebGL')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.WebGLBuffer")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
+ <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
+ <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
+</ul>

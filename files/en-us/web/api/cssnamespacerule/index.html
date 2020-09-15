@@ -1,0 +1,65 @@
+---
+title: CSSNamespaceRule
+slug: Web/API/CSSNamespaceRule
+tags:
+  - API
+  - CSSOM
+  - Interface
+  - Reference
+---
+<p>{{APIRef("CSSOM")}} {{SeeCompatTable}}</p>
+
+<p>The <strong><code>CSSNamespaceRule</code></strong> interface describes an object representing a single CSS {{ cssxref("@namespace") }} <a href="/en-US/docs/CSS/At-rule" title="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{ domxref("CSSRule") }} interface, with a type value of <code>10</code> (<code>CSSRule.NAMESPACE_RULE</code>).</p>
+
+<h2 id="Properties" name="Properties">Syntax</h2>
+
+<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+
+<pre>interface CSSNamespaceRule : CSSRule {
+    readonly attribute DOMString namespaceURI;
+    readonly attribute DOMString? prefix;
+};
+</pre>
+
+<h2 id="Properties" name="Properties">Properties</h2>
+
+<p>As a {{ domxref("CSSRule") }}, <code>CSSNamespaceRule</code> also implements the properties of that interface. It has some specific properties:</p>
+
+<dl>
+ <dt id="cssRules">{{domxref("CSSNamespaceRule.namespaceURI")}}</dt>
+ <dd>Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.</dd>
+ <dt>{{domxref("CSSNamespaceRule.prefix")}}</dt>
+ <dd>Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns  <code>null</code>.</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<p>As a {{ domxref("CSSRule") }}, <code>CSSNamespaceRule</code> also implements the methods of that interface. It has <em>no </em>specific methods:</p>
+
+<dl>
+</dl>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM', '#the-cssnamespacerule-interface', 'CSSNamespaceRule') }}</td>
+   <td>{{ Spec2('CSSOM') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.CSSNamespaceRule")}}</p>

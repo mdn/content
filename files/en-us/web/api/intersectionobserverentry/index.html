@@ -1,0 +1,60 @@
+---
+title: IntersectionObserverEntry
+slug: Web/API/IntersectionObserverEntry
+tags:
+  - API
+  - Interface
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserverEntry
+  - Reference
+---
+<div>{{APIRef("Intersection Observer API")}}</div>
+
+<p><span class="seoSummary">The <code><strong>IntersectionObserverEntry</strong></code> interface of the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> describes the intersection between the target element and its root container at a specific moment of transition.</span> Instances of <code>IntersectionObserverEntry</code> are delivered to an {{domxref("IntersectionObserver")}} callback in its <code>entries</code> parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}</dt>
+ <dd>Returns the bounds rectangle of the target element as a {{domxref("DOMRectReadOnly")}}. The bounds are computed as described in the documentation for {{domxref("Element.getBoundingClientRect()")}}.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}</dt>
+ <dd>Returns the ratio of the <code>intersectionRect</code> to the <code>boundingClientRect</code>.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}</dt>
+ <dd>Returns a {{domxref("DOMRectReadOnly")}} representing the target's visible area.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}</dt>
+ <dd>A Boolean value which is <code>true</code> if the target element intersects with the intersection observer's root. If this is <code>true</code>, then, the <code>IntersectionObserverEntry</code> describes a transition into a state of intersection; if it's <code>false</code>, then you know the transition is from intersecting to not-intersecting.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}</dt>
+ <dd>Returns a {{domxref("DOMRectReadOnly")}} for the intersection observer's root.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}</dt>
+ <dd>The {{domxref("Element")}} whose intersection with the root changed.</dd>
+ <dt>{{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}</dt>
+ <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the <code>IntersectionObserver</code>'s <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>This interface has no methods.</em></p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}}</td>
+   <td>{{Spec2('IntersectionObserver')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.IntersectionObserverEntry")}}</p>

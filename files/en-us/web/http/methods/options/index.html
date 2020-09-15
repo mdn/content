@@ -1,0 +1,123 @@
+---
+title: OPTIONS
+slug: Web/HTTP/Methods/OPTIONS
+tags:
+  - HTTP
+  - Reference
+  - Request method
+---
+<div>{{HTTPSidebar}}</div>
+
+<p>The <strong>HTTP <code>OPTIONS</code> method</strong> is used to describe the communication options for the target resource. The client can specify a URL for the <code>OPTIONS</code> method, or an asterisk (*) to refer to the entire server.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Request has body</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Successful response has body</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Safe")}}</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Idempotent")}}</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Cacheable")}}</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Allowed in HTML forms</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">OPTIONS /index.html HTTP/1.1
+OPTIONS * HTTP/1.1
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Identifying_allowed_request_methods">Identifying allowed request methods</h3>
+
+<p>To find out which request methods a server supports, one can use <code>curl</code> and issue an <code>OPTIONS</code> request:</p>
+
+<pre>curl -X OPTIONS http://example.org -i</pre>
+
+<p>The response then contains an {{HTTPHeader("Allow")}} header with the allowed methods:</p>
+
+<pre>HTTP/1.1 204 No Content
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Thu, 13 Oct 2016 11:45:00 GMT
+Expires: Thu, 20 Oct 2016 11:45:00 GMT
+Server: EOS (lax004/2813)
+x-ec-custom-error: 1
+</pre>
+
+<h3 id="Preflighted_requests_in_CORS">Preflighted requests in CORS</h3>
+
+<p>In <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, a preflight request with the <code>OPTIONS</code> method is sent, so that the server can respond whether it is acceptable to send the request with these parameters. The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will be sent with a {{HTTPMethod("POST")}} request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will be sent with a <code>X-PINGOTHER</code> and <code>Content-Type</code> custom headers. The server now has an opportunity to determine whether it wishes to accept a request under these circumstances.</p>
+
+<pre>OPTIONS /resources/post-here/ HTTP/1.1
+Host: bar.other
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Connection: keep-alive
+Origin: http://foo.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+
+<p>The server responds with {{HTTPHeader("Access-Control-Allow-Methods")}} and says that {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, and <code>OPTIONS</code> are viable methods to query the resource in question. This header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>.</p>
+
+<pre>HTTP/1.1 204 No Content
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2.0.61 (Unix)
+Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+Vary: Accept-Encoding, Origin
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "OPTIONS", "4.3.7")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("http.methods.OPTIONS")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Allow")}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a></li>
+</ul>

@@ -1,0 +1,76 @@
+---
+title: Math.asinh()
+slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
+tags:
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>Math.asinh()</code></strong> function returns the hyperbolic arcsine of a number, that is</p>
+
+<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \; \sinh(y) = x</annotation></semantics></math></p>
+
+<div>{{EmbedInteractiveExample("pages/js/math-asinh.html")}}</div>
+
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><code>Math.asinh(<var>x</var>)</code></pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><var>x</var></dt>
+ <dd>A number.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The hyperbolic arcsine of the given number.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Because <code>asinh()</code> is a static method of <code>Math</code>, you always use it as <code>Math.asinh()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Math.asinh">Using <code>Math.asinh()</code></h3>
+
+<pre class="brush: js">Math.asinh(1);  // 0.881373587019543
+Math.asinh(0);  // 0
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Math.asinh")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Math.acosh()")}}</li>
+ <li>{{jsxref("Math.atanh()")}}</li>
+ <li>{{jsxref("Math.cosh()")}}</li>
+ <li>{{jsxref("Math.sinh()")}}</li>
+ <li>{{jsxref("Math.tanh()")}}</li>
+</ul>

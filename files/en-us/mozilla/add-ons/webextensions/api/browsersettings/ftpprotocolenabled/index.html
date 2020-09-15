@@ -1,0 +1,46 @@
+---
+title: browserSettings.ftpProtocolEnabled
+slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Property
+  - Reference
+  - WebExtensions
+  - browserSettings
+  - contextMenuShowEvent
+  - ftpProtocolEnabled
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determines whether the FTP protocol is enabled in the browser.</p>
+
+<p>The underlying value is a boolean.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("webextensions.api.browserSettings.ftpProtocolEnabled")}}</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Toggle the setting:</p>
+
+<pre class="brush: js">function toggleAllowFtp() {
+
+  function toggle(current) {
+    console.log(`Current value: ${current.value}`);
+    browser.browserSettings.ftpProtocolEnabled.set({value: !current.value});
+  }
+
+  browser.browserSettings.ftpProtocolEnabled.get({}).then(toggle);
+}
+
+browser.browserAction.onClicked.addListener(() =&gt; {
+  toggleAllowFtp();
+});
+</pre>
+
+<p>{{WebExtExamples}}</p>

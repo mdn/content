@@ -1,0 +1,108 @@
+---
+title: Navigator.sendBeacon()
+slug: Web/API/Navigator/sendBeacon
+tags:
+  - API
+  - Beacon
+  - Method
+  - Navigator
+  - Networking
+  - Reference
+  - Web Performance
+  - sendBeacon
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><span class="seoSummary">The <code><strong>navigator.sendBeacon()</strong></code> method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data over {{Glossary("HTTP")}} to a web server.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">navigator.sendBeacon(<var>url</var>, <var>data</var>);
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+ <dt><code><var>url</var></code></dt>
+ <dd>The URL that will receive the <var>data</var>. Can be relative or absolute.</dd>
+ <dt><code><var>data</var></code></dt>
+ <dd>A {{domxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}} object containing the data to send.</dd>
+</dl>
+
+<h3 id="Return_values">Return values</h3>
+
+<p>The <code><strong>sendBeacon()</strong></code> method returns <code>true</code> if the {{glossary("user agent")}} successfully queued the <code>data</code> for transfer. Otherwise, it returns <code>false</code>.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>This method is for analytics and diagnostics that send data to a server before the document is unloaded, where sending the data any sooner may miss some possible data collection. For example, which link the user clicked before navigating away and unloading the page.</p>
+
+<p>Ensuring that data has been sent during the unloading of a document has traditionally been difficult, because user agents typically ignore asynchronous {{domxref("XMLHttpRequest")}}s made in an {{domxref("Window/unload_event", "unload")}} handler.</p>
+
+<p>Historically, this was addressed with some of the following workarounds to delay the page unload long enough to send data to some URL:</p>
+
+<ul>
+ <li>Submitting the data with a blocking synchronous <code>XMLHttpRequest</code> call in <code>unload</code> or {{domxref("Window/beforeunload_event", "beforeunload")}} event handlers.</li>
+ <li>Creating an {{HTMLElement("img")}} element and setting its <code>src</code> in the <code>unload</code> handler. Most user agents will delay the unload to load the image.</li>
+ <li>Creating a no-op loop for several seconds in the <code>unload</code> handler.</li>
+</ul>
+
+<p>All of these methods block unloading the document, which slows down the next navigation. There is nothing the next page can do to avoid this, so the new page seems slow, even though it's the previous page's fault.</p>
+
+<p>The following example shows theoretical analytics code that attempts to submit data to a server with a synchronous <code>XMLHttpRequest</code> in an <code>unload</code> handler. This results in the next page load to be delayed.</p>
+
+<pre class="brush: js">window.addEventListener("unload", function logData() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/log", false); // third parameter of `false` means synchronous
+  xhr.send(analyticsData);
+});
+</pre>
+
+<p>This is what <code><strong>sendBeacon()</strong></code> replaces. With the <code>sendBeacon()</code> method, the data is transmitted asynchronously when the User Agent has an opportunity to do so, without delaying unload or the next navigation. <strong>This solves all of the problems with submission of analytics data:</strong></p>
+
+<ul>
+ <li>The data is sent reliably</li>
+ <li>It's sent asynchronously</li>
+ <li>It doesn't impact the loading of the next page</li>
+ <li>In addition, the code is simpler to write than any of the older techniques!</li>
+</ul>
+
+<p>The following example shows a theoretical analytics code pattern that submits data to a server using the <code>sendBeacon()</code> method.</p>
+
+<pre class="brush: js">window.addEventListener("unload", function logData() {
+  navigator.sendBeacon("/log", analyticsData);
+});
+</pre>
+
+<p>The beacon sends an HTTP request via the POST method, with all relevant cookies available when called.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Beacon', '#sendbeacon-method', 'sendBeacon()')}}</td>
+   <td>{{Spec2('Beacon')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.Navigator.sendBeacon")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("navigator", "navigator")}}</li>
+</ul>

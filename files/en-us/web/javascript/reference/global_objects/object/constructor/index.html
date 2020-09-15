@@ -1,0 +1,262 @@
+---
+title: Object.prototype.constructor
+slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+tags:
+  - JavaScript
+  - Object
+  - Property
+  - Prototype
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>constructor</code></strong> property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to <em>the function itself</em>, not a string containing the function's name.</p>
+
+<p>The value is only read-only for primitive values such as <code>1</code>, <code>true</code>, and <code>"test"</code>.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>All objects (with the exception of objects created with <code>Object.create(null)</code>) will have a <code>constructor</code> property. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a <code>constructor</code> property that points to the Fundamental Object constructor type for that object.</p>
+
+<pre class="brush: js">let o = {}
+o.constructor === Object // true
+
+let o = new Object
+o.constructor === Object // true
+
+let a = []
+a.constructor === Array // true
+
+let a = new Array
+a.constructor === Array // true
+
+let n = new Number(3)
+n.constructor === Number // true
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Displaying_the_constructor_of_an_object">Displaying the constructor of an object</h3>
+
+<p>The following example creates a constructor (<code>Tree</code>) and an object of that type (<code>theTree</code>). The example then displays the <code>constructor</code> property for the object <code>theTree</code>.</p>
+
+<pre class="brush: js">function Tree(name) {
+  this.name = name
+}
+
+let theTree = new Tree('Redwood')
+console.log('theTree.constructor is ' + theTree.constructor)
+</pre>
+
+<p>This example displays the following output:</p>
+
+<pre class="brush: js">theTree.constructor is function Tree(name) {
+  this.name = name
+}
+</pre>
+
+<h3 id="Changing_the_constructor_of_an_object">Changing the constructor of an object</h3>
+
+<p>The following example shows how to modify the constructor value of generic objects. Only <code>true</code>, <code>1</code>, and <code>"test"</code> will not be affected (as they have read-only native constructors).</p>
+
+<p>This example shows that it is not always safe to rely on the <code>constructor</code> property of an object.</p>
+
+<pre class="brush:js">function Type () {}
+
+let types = [
+  new Array(),
+  [],
+  new Boolean(),
+  true,             // remains unchanged
+  new Date(),
+  new Error(),
+  new Function(),
+  function () {},
+  Math,
+  new Number(),
+  1,                // remains unchanged
+  new Object(),
+  {},
+  new RegExp(),
+  /(?:)/,
+  new String(),
+  'test'            // remains unchanged
+]
+
+for (let i = 0; i &lt; types.length; i++) {
+  types[i].constructor = Type
+  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()]
+}
+
+console.log(types.join('\n'))
+</pre>
+
+<p>This example displays the following output (comments added for reference):</p>
+
+<pre class="brush: js">function Type() {},false,                                     // new Array()
+function Type() {},false,                                     // []
+function Type() {},false,false                                // new Boolean()
+function Boolean() {
+    [native code]
+},false,true                                                  // true
+function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600    // new Date()
+function Type() {},false,Error                                // new Error()
+function Type() {},false,function anonymous() {
+
+}                                                             // new Function()
+function Type() {},false,function () {}                       // function () {}
+function Type() {},false,[object Math]                        // Math
+function Type() {},false,0                                    // new Number()
+function Number() {
+    [native code]
+},false,1                                                     // 1
+function Type() {},false,[object Object]                      // new Object()
+function Type() {},false,[object Object]                      // {}
+function Type() {},false,/(?:)/                               // new Regexp()
+function Type() {},false,/(?:)/                               // /(?:)/
+function Type() {},false,                                     // new String()
+function String() {
+    [native code]
+},false,test                                                  // 'test'
+</pre>
+
+<h3 id="Changing_the_constructor_of_a_function">Changing the constructor of a function</h3>
+
+<p>Mostly this property is used for defining a function as a <strong>function-constructor</strong> with further calling it with <strong>new</strong> and prototype-inherits chain.</p>
+
+<pre class="brush: js">function Parent() { /* ... */ }
+Parent.prototype.parentMethod = function parentMethod() {}
+
+function Child() {
+   Parent.call(this) // Make sure everything is initialized properly
+}
+Child.prototype = Object.create(Parent.prototype) // re-define child prototype to Parent prototype
+
+Child.prototype.constructor = Child // return original constructor to Child</pre>
+
+<p>But when do we need to perform the last line here? Unfortunately, the answer is: <em>it depends</em>.</p>
+
+<p>Let's try to define the cases in which re-assignment of the original constructor will play a major role, and when it will be one superfluous line of code.</p>
+
+<p>Take the following case: the object has the <code>create()</code><strong> </strong>method to create itself.</p>
+
+<pre class="brush: js">function Parent() { /* ... */ }
+function CreatedConstructor() {
+   Parent.call(this)
+}
+
+CreatedConstructor.prototype = Object.create(Parent.prototype)
+
+CreatedConstructor.prototype.create = function create() {
+  return new this.constructor()
+}
+
+new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent</pre>
+
+<p>In the example above the exception will be shown since the constructor links to Parent.</p>
+
+<p>To avoid this, just assign the necessary constructor you are going to use.</p>
+
+<pre class="brush: js">function Parent() { /* ... */ }
+function CreatedConstructor() { /* ... */ }
+
+CreatedConstructor.prototype = Object.create(Parent.prototype)
+CreatedConstructor.prototype.constructor = CreatedConstructor // sets the correct constructor for future use
+
+CreatedConstructor.prototype.create = function create() {
+  return new this.constructor()
+}
+
+new CreatedConstructor().create().create() // it's pretty fine</pre>
+
+<p>Ok, now it's pretty clear why changing the constructor can be useful.</p>
+
+<p>Let's consider one more case.</p>
+
+<pre class="brush: js">function ParentWithStatic() {}
+
+ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
+ParentWithStatic.getStartPosition = function getStartPosition() {
+  return this.startPosition
+}
+
+function Child(x, y) {
+  this.position = {
+    x: x,
+    y: y
+  }
+}
+
+Child = Object.assign(ParentWithStatic)
+Child.prototype = Object.create(ParentWithStatic.prototype)
+Child.prototype.constructor = Child
+
+Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
+  let position = this.position
+  let startPosition = this.constructor.getStartPosition() // error undefined is not a function, since the constructor is Child
+
+  return {
+    offsetX: startPosition.x - position.x,
+    offsetY: startPosition.y - position.y
+  }
+};</pre>
+
+<p>For this example we need either to stay parent constructor to continue to work properly or  reassign static properties to child's constructor:</p>
+
+<pre class="brush: js">...
+Child = Object.assign(ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
+Child.prototype = Object.create(ParentWithStatic.prototype)
+...
+</pre>
+
+<p>or assign parent constructor identifier to a separate property on the Child constructor function and access it via that property: </p>
+
+<pre class="brush: js">...
+Child.parentConstructor = ParentWithStatic
+Child.prototype = Object.create(ParentWithStatic.prototype)
+...
+   let startPosition = this.constructor.parentConstructor.getStartPosition()
+...
+</pre>
+
+
+
+<div class="blockIndicator note">
+<p><strong>Summary</strong>: Manually updating or setting the constructor can lead to differrent and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
+</div>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Object.constructor")}}</p>
+
+
+
+
+
+<h2 id="See_also">See also</h2>
+
+<div class="hidden">
+<p>The curly braces here invoke standard macroses defined by the MDN wiki. Checkout here for more info: <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros</a></p>
+</div>
+
+<ul>
+ <li>{{jsxref("statements/class","Class declaration",1)}} </li>
+ <li>{{jsxref("Classes/constructor","Class constructor",1)}} </li>
+ <li>Glossary: {{Glossary("constructor", "", 1)}}</li>
+</ul>

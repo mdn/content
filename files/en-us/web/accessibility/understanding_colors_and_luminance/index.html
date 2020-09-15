@@ -1,0 +1,290 @@
+---
+title: 'Web Accessibility: Understanding Colors and Luminance'
+slug: Web/Accessibility/Understanding_Colors_and_Luminance
+tags:
+  - Accessibility
+  - Photosensitve Epilepsy Analysis Tool
+  - color
+  - epilepsy
+  - photosensitivity
+  - reflex epilepsy
+  - saturation
+  - seizure disorders
+  - seizures
+---
+<p>Understaning color, luminance, and saturation is important in meeting <a href="/en-US/docs/Glossary/WCAG">WCAG 2 accessibility guidelines</a> in terms of ensuring enough <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">color contrast</a> for sighted users with color blindness or reduced vision and <a href="/en-US/docs/Web/Accessibility/Seizure_disorders">preventing seizures and other physical reactions</a> in people with vestibular disorders.</p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>Colors, and how they are used, are a major component of accessibility.  At the surface, the subject seems simple, but it is actually a complex subject because color is as much about the physiology of the eye and human perception as it is about light emitting from a computer screen.  Environment matters.  Perception of color in a well-lit room will be different than perception of that same color on that same computer screen in a dark room.  In terms of accessibility, the use of certain color-combinations have more impact than others. Font size, font style (some fonts are so thin or fancy that they present accessibility problems on their own), background color, the size of the background space around the text, even pixel densities and more all affect how color is delivered from the screen. (See <strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Understanding Success Criterion 1.4.3: Contrast</a></strong>)  A viewer's distance from the screen, the ambient background, the health of his eyes, and more all affect how that color is received by the viewer.  How the viewer perceives color after it gets to his eyes is yet another matter, and can be affected by overall health.  Luckily, <strong><a href="https://drafts.csswg.org/mediaqueries-5/">CSS Media Queries Level 5</a> </strong>will be a game-changer in accessibility initiatives, because it will allow users to select settings that accomodate their needs best.</p>
+
+<p>Color, contrast, and luminance are among the most central and critical concepts to creating accessible web content with color.  Luminance is of particular importance, however, because at the end of the day, understanding of what it is and how it is employed enables accessibility for those who are <strong><em>color-blind</em></strong>, as well as those who can perceive color.  It is the<em><strong> luminance contrast </strong></em>that enable the color-blind to distinguish dark against light.</p>
+
+<p>Luminance must be established before the contrast may be.  When speaking of color contrast, W3C formulas are actually incorporating luminance, not just the colors ("hues") themselves. </p>
+
+<p>Terminology can be confusing, because different terms are often used to describe the same thing. "Luminance" and "Saturation" are particularly important to get right.  For example, "saturation" is known as "chroma" in some circles. In others, "chroma" and "saturation" are two different concepts.  The "<strong>L</strong>" in the <strong>HSL </strong>color space is sometimes referred to as "luminosity," other times as "lightness."  Even something seemingly simple like naming common colors can be open to debate.  For example, the color "crimson red" may be described in hex values as <strong>#990000 </strong>by some and <strong>#DC143C</strong> by others.  For the purposes of this document, we'll use terminlogy as it is defined in the W3C, in the <strong><a href="https://www.w3.org/TR/css-color-3/">CSS Color Module Level 3</a></strong></p>
+
+<p dir="ltr">When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems. Currently, the <strong>RGB</strong> color space predominates as the space web developers work in.  <strong>HEX</strong>, <strong>RGB</strong> and <strong>HSL</strong> color spaces all are measured differently.  Conversions between the color spaces are usually needed. Because of the current domination of the <strong>RGB</strong> color space in measuring color output, most calculations in this document are presumed to be in the <strong>RGB </strong>color space, and very specifically, in the <strong>sRGB </strong>color space. </p>
+
+<h2 dir="ltr" id="The_sRGB_color_space"><strong>The sRGB color space </strong></h2>
+
+<p dir="ltr">The MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> notes "<em>The  <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types">data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB color space</a>.</em>"</strong>  Color has many ways of being defined, including <strong>RGB</strong>, <strong>RGB decimal</strong>, <strong>RGB percent</strong>, <strong>HSL</strong>, <strong>CMYK</strong> among others.</p>
+
+<p dir="ltr">For digital concerns, much of the technology has historically resided in the <strong>RGB </strong>color space.  This is because the companies behind the evolution of digital technology set the standards, and these standards still retain a powerful presence today.  This is evolving, and new methods for measuring color involve measurements using other color spaces, but color measurements in the <strong>RGB</strong> color space still predominates, and this includes video production.  The <strong>RGB </strong>color model is extended to include “alpha” -- <strong>RGBA</strong> -- to allow specification of the <em>opacity </em>of a color.</p>
+
+<p dir="ltr">There's movement towards adopting the use of HSL color values rather than <strong>RGB</strong> values is <strong><a href="https://www.w3.org/TR/css-color-3/">CSS Color Module 3</a></strong> (see <strong><a href="https://www.w3.org/TR/2018/REC-css-color-3-20180619/#hsl-color">section 4.2.4</a></strong>), the rationale being that <strong>RGB</strong> is hardware-oriented, reflecting the use of CRTs, and that RGB is non-intuitive.  That said, <strong>HSL</strong> colors incorporate lightness, not luminance, and this is a significant consideration.  Note that in that same section of the <strong><a href="https://www.w3.org/TR/css-color-3">CSS Color Module 3</a></strong>, there are algorigthms available to translate the <strong>HSL</strong> to <strong>RGB</strong>.</p>
+
+<p dir="ltr">Newer technologies, such as <strong><a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Direct3D">Direct3D</a></strong> incorporate support for the <strong>sRGB </strong>gamma curve, although some articles for OpenGL reference use of <strong>RGBA</strong> rather than <strong>sRGB</strong>. WebGL is usually in the <strong>RGBA </strong>format; see an example of how it is used in "<strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Clearing_with_colors">Clearing with colors</a></strong>".  </p>
+
+<p dir="ltr">Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the <strong>sRGB</strong> color space, especially as it applies to color contrast ratios.  In speaking specifically to relative luminance, <strong><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">WCAG's definition of relative luminance</a></strong> notes:</p>
+
+<p dir="ltr"><em>"Note 2: Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, see Understanding Success Criterion 1.4.3."</em></p>
+
+<p dir="ltr"><strong><a href="https://drafts.csswg.org/css-color-4/">CSS Color Module Level 4</a></strong> will likely change the domination of the sRGB color space in the future.</p>
+
+<h3 dir="ltr" id="Conversions"><strong>Conversions</strong></h3>
+
+<p dir="ltr">It's important to know that there are variations even within one color space, such as the <strong>RGB </strong>color space.  For example, variations of the <strong>RGB</strong> color space include <strong>RGB</strong>, <strong>sRGB</strong>, <strong>Adobe RGB</strong>, <strong>Adobe Wide Gamut RGB</strong>, and <strong>RGBA</strong>, among others  And, one color within the same color space may be expressed in different ways.  Looking at how the <strong>RGB</strong> color space is used to describe a  color "red", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to a rgb value, as a full six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.</p>
+
+<pre>em { color: #f00; }              /* #rgb */
+em { color: #ff0000; }           /* #rrggbb */
+em { color: #ff0000ff; }         /* #rrggbbaa */
+em { color: rgb(255, 0, 0); }
+em { color: rgb(100%, 0%, 0%); }
+em { color: rgb(255, 0, 0, 1); }
+em { color: rgba(100%, 0%, 0%, 100%); }
+
+</pre>
+
+<p>Conversions are not casual.   See the Stack Exchange article,  "<strong><a href="https://stackoverflow.com/questions/596216/formula-to-determine-brightness-of-rgb-color">Formula to Determine the Brightness of RGB Color</a></strong>".   There are many online tools that can convert RGB to HSL for you, with both the RGB hexidecimal and CSS function syntax.   A great example of a tool that converts colors for you is Tom Jewett's "<strong><a href="http://colortutorial.design/miniColors.html">mini color selector</a></strong>" with <strong>HSL, RGB, Hex</strong> options for checking contrast in the browser. </p>
+
+<p dir="ltr"><img alt="Functional in Firefox, Chrome, and Opera browsers" src="https://mdn.mozillademos.org/files/16756/TomJewettMiniColorPicker.PNG" style="height: 255px; width: 520px;"></p>
+
+<h2 dir="ltr" id="Luminance_and_Contrast">Luminance and Contrast</h2>
+
+<h3 dir="ltr" id="Contrast"><strong>Contrast</strong></h3>
+
+<p dir="ltr">Contrast between colors ("hues") is a critical component, but the use of color ("hues") alone is not enough to create accessible content.  As mentioned before, any calculation of contrast must include luminance in the calculation. </p>
+
+<p dir="ltr">In addition, the "shape" of the text itself will matter.  Thin letters will be harder to read than thick ones; all type faces need space to "breathe" for human perception.  In general, for accessibility purposes, the more contrast the better.  That changes with animation.  "Safer" animation means images with less contrast, not more. For more on color contrast in animation, see <strong><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">Three Flashes or Below Threshold Understanding SC 2.3.1</a></strong></p>
+
+<p dir="ltr">Icons also need sufficient contrast for perception.  See <strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">WCAG 2.1 technique G207</a></strong></p>
+
+<h3 dir="ltr" id="Luminance"><strong>Luminance</strong></h3>
+
+<p dir="ltr">It is the difference in the<em> luminance</em> of a color that enables us to see contrast.  Here is the definition of <strong><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">Relative luminance</a></strong> as defined by the W3C:</p>
+
+<p>"<em>the relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white"</em></p>
+
+<p>This statement is of course accurate, but may be confusing when used in reference to the <strong>RGB </strong>color space, which is an integer between <strong>0</strong> and <strong>255</strong>.  White has 100% relative luminance, black has 0% relative luminance (in most but not all literature).  Interpreting for the W3C standard above, that would mean that white, normalized to 1, would have an <strong>RGB</strong> value of <strong>rgb(255, 255, 255)</strong> and black, normalized to 0, would have an <strong>RGB</strong> value of <strong>rgb(0,0,0)</strong></p>
+
+<p>Where do these numbers of 0 to 255 come from?  Historically, graphics engines store the color channels as a single byte; that means a range of integers between 0 and 255. </p>
+
+<p>The luminances of the primary colors are different.  Yellow has a greater luminance than blue, for example.  This was done by way of design, "<em>to achieve white alignment of the monito</em>r" according to the NASA document, "<strong><a href="https://colorusage.arc.nasa.gov/design_lum_1.php">Luminance Contrast in Color Graphics</a></strong>"</p>
+
+<p>Once luminance is established, the color contrast ratio can be established.  A color contrast ratio is meaningless without its luminance component.</p>
+
+<p dir="ltr">Where human perception is concerned, a difference in luminance matters more than a difference in color.  This is important, luminance contrast enables the development of content that even those with color-blindness can see. With this understanding, luminance may be manipulated so that colors that are diffucult to see because of their low luminance could be made more legible by placing these colors against another that had contrasting luminance.  An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if "<em>care was taken to acheive adequate luminance contrast</em>"  (From the article, <strong><a href="https://colorusage.arc.nasa.gov/blue_2.php">Designing With Blue</a></strong>)</p>
+
+<p dir="ltr">WCAG 2.1 defines <strong><a href="https://www.w3.org/TR/WCAG21/#dfn-relative-luminance">relative luminance</a></strong> as follows (as of July 2019):</p>
+
+<div class="blockIndicator note">
+<p dir="ltr"></p>
+
+<p>For the sRGB colorspace, the relative luminance of a color is defined as L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong>+ 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
+
+<ul>
+ <li>if RsRGB &lt;= 0.03928 then <strong>R</strong> = RsRGB/12.92 else <strong>R</strong> = ((RsRGB+0.055)/1.055) ^ 2.4</li>
+ <li>if GsRGB &lt;= 0.03928 then <strong>G</strong> = GsRGB/12.92 else <strong>G</strong> = ((GsRGB+0.055)/1.055) ^ 2.4</li>
+ <li>if BsRGB &lt;= 0.03928 then <strong>B</strong> = BsRGB/12.92 else <strong>B</strong> = ((BsRGB+0.055)/1.055) ^ 2.4</li>
+</ul>
+
+<p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
+
+<ul>
+ <li>RsRGB = R8bit/255</li>
+ <li>GsRGB = G8bit/255</li>
+ <li>BsRGB = B8bit/255</li>
+</ul>
+
+<p>The "^" character is the exponentiation operator. (Formula taken from [<cite><a href="https://www.w3.org/TR/WCAG21/#bib-sRGB">sRGB</a></cite>] and [<cite><a href="https://www.w3.org/TR/WCAG21/#bib-IEC-4WD">IEC-4WD</a></cite>]).</p>
+
+<p dir="ltr"></p>
+</div>
+
+<h2 dir="ltr" id="Colors_Perception">Colors Perception</h2>
+
+<p dir="ltr">When it comes to "perceiving" colors, not all colors are created equal.  Our eyes are tuned to perceive certain colors, Red, Blue, and Green, but we do not perceive these colors with equal strength.  According to the article, <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html">Hypersensitive cones</a>, the authors note that  "<em>By population, about 64% of the cones are red-sensitive, about 32% green sensitive, and about 2% are blue sensitive</em>."  Surprisingly, although cones that are blue-sensitive typically make up the fewest number of cones, they are also the most "sensitive" to color.</p>
+
+<p dir="ltr">Put another way, as humans, the color blue is perceived differently than other colors, for multiple reasons.  First, because the blue cones are actually the most sensitive of the three, second, we have fewer blue cones than red or green, and third, it so happens that these "blue sensitive" cones tend to be located at the rims of our eyeballs, away from the center (<a href="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/retina.html#c2">fovea centralis</a>) of the back of the eyeball, where the red and green cones tend to cluster. There is software that actually takes advantage of that fact.  Because we do not perceive the color "blue" as well as other colors, for example, some algorithms for compressing image sizes remove the parts of the image with "blue" in them more heavily than other parts of an image. This fact is also used by televsion signals to allocate less bandwidth to the yellow-blue part of their signal, thus saving bandwidth.</p>
+
+<p dir="ltr">Another important point to consider is the ambience of light surrounding the color.  The color will appear differently if the background lighting is dark, or light.  One of the greatest gifts to accessibility now in development is the <strong><a href="https://drafts.csswg.org/mediaqueries-5/">CSS Media Queries Level 5.</a> </strong>These queries will allow users to choose contrast levels that is right for them, and enable them to adjust these levels depending upon where they are, and what kind of screen they are using.  The MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Ambient_Light_Events">Ambient Light Events</a></strong>, describes an experimental technology worth watching; this technology would enable a web page to be aware of any change in the light intensity, and consquently, adjust the text accordingly.  This would be a great boon to those with motor skills problems, or do not have the use of their hands.</p>
+
+<p dir="ltr">To summarize, color is as much about human physiology and perception in the brain as it is the measurement of light coming from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast.  Light, and its measurements, are linear, but human vision and human perception are not.</p>
+
+<h2 dir="ltr" id="Color_Combinations"><strong>Color Combinations</strong></h2>
+
+<p dir="ltr">Contrast alone is not enough when it comes to accessibility considerations.  In the case of animation, certain color combinations are more likely to cause photosensitive seizures to those who are susceptible to them than others.  For example, alternating flashes between red and blue is more problematic than alternating flashes between green and blue. It has been theorized that this is because the "red" sensitive cones of our eyes, which tend to cluster around the fovea (near the center) are physically located at a different location than the "blue" sensitive cones of our eyes, which are located away from the fovea and towards the rims. The electrical signals that go from eye to brain have much to resolve between them as the information is processed in our brains.</p>
+
+<p dir="ltr">In the article,<strong> <a href="https://www.sciencedaily.com/releases/2009/09/090925092858.htm">Certain Colors More Likely To Cause Epileptic Fits, Researchers Find</a>,</strong> the authors noted that <em>"..complexities underlying brain dynamics could be modulated by certain color combinations more than the other, for example, red-blue flickering stimulus causes larger cortical excitation than red-green or blue-green stimulus.."</em></p>
+
+<h2 dir="ltr" id="Adaption">Adaption</h2>
+
+<p dir="ltr">Our eyes don't adapt equally, in the same way, going from light areas to dark ones, and vice versa.  This is due to the physiological ways our eye are built.   This affects the ability of a user to read text against a background.  There's (at least) two kinds of adaptation that take place: local adaptation, and adaptation to an ambient environment. </p>
+
+<p dir="ltr">Local adaptation takes place right on the "page" a reader is looking at.  For example, if you have blue text within a gray "highlighted" area, your eyes will perceive that same blue text with a gray highlight differently if it is in a black div, or a white one.  This is called <em>local</em> adaptation.  This difference in the ability to perceive the text is affected even though the ambient lighting of the room does not change.  </p>
+
+<p dir="ltr">The implication is that web developers who seek to improve legibility of text against a background can take advantage of the principles of local adaptation.</p>
+
+<p dir="ltr"><em>Dark adaptation</em>, to low luminance, is slow. When you come in from outside where the sun was bright, and walk into a dark room, you are experiencing dark adaptation.  It can take a few minutes to adjust to this.</p>
+
+<p dir="ltr"><em>Light adaptation</em> is the reverse.  Going from a dark room into bright sunlight is quicker, but it can also hurt.</p>
+
+<p dir="ltr">The implication is that web developers who seek to improve legibility of text in which the ambient conditions of a room have changed can take advantage of <strong><a href="https://drafts.csswg.org/mediaqueries-5/#mf-environment">CSS Media Queries 5 Environment Media Features</a></strong>, when these features become available.</p>
+
+<h2 dir="ltr" id="Saturation">Saturation</h2>
+
+<p dir="ltr">Saturation deserves special mention in discussions about color ("hues") and accessibility. Generally speaking, most of the focus is on luminance when attempting to ensure that there is enough contrast between text and its background, or, in evaluating for the possibility of inducing seizures in those sensitive to photosensitive seizures. There is one aspect about color ("hues"), however, independent of luminance, that deserves special attention as it applies to accessibility, and that is the concept of saturation.  This is because of its ability to cause seizures in those susceptible to photosensitive seizures, no matter what the luminance of the color.</p>
+
+<p dir="ltr">The expert consensus of the Epilepsy Foundation noted the following in their publication, <strong><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&amp;rep=rep1&amp;type=pdf">Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group</a></strong></p>
+
+<p dir="ltr"><strong><em>"Irrespective of luminance, a transition to or from a saturated red is also considered a risk"</em></strong></p>
+
+<p dir="ltr">Saturation is sometimes described as the "purity" or "intensity" of a color, and although these are good definitions for "pigments" in an artist's paint set, they are not quite accurate as definitions for color from a computer screen. When it comes to color on a monitor, saturated colors are of a particular wavelength.  While the definition of saturation for each of the color spaces may differ, saturation is readily <em>measured</em>.  The key is to know which color space you are working in, and be ready to convert it, if necessary.  The color spaces that come up most frequently when discussing photosensitivity are the <strong>RGB</strong>, the <strong>HSL</strong>, and <strong>HSV </strong>color spaces. It's important to know what color space you're working with.  For example, saturated colors have lightness<strong> 0.5</strong> in <strong>HSL</strong>, while in <strong>HSV </strong>they have value <strong>1</strong>.  Saturation in the RGB color space is usually indicated by an RGB value of 255 for the color in question.  For example, a saturated red of hex value <strong>#ff3300</strong> has an <strong>RGB </strong>value of <strong>rgb(255, 51,0).  </strong>A different saturated red with a hex value of #ff0000 has an <strong>RGB</strong> value of <strong>rgb(255, 0,0). </strong> Both are "saturated" reds.  They are two different "hues", but are both considered to be a saturated color.</p>
+
+<p dir="ltr">Saturation is not brightness.  Brightness refers to how much white or black is mixed in with a color.  One can decrease saturation by adding white, black, or gray to the color; to take the example further, brightness can be increased by adding the color white, which also reduces saturation.  A common example is to add white to red to get the color pink. Pink is considered a desaturated red.</p>
+
+<h3 dir="ltr" id="Saturation_and_Luminance"><strong>Saturation and Luminance</strong></h3>
+
+<p dir="ltr">There is a loss of saturation at the extremes of luminance, at the extremes of black and white.  NASA's article, <strong><a href="https://colorusage.arc.nasa.gov/design_lum_1.php">Luminance Contrast in Color Graphics</a></strong>, in the section titled, <strong>"The effect of luminance on saturation", </strong>points out that there is a loss of saturation at low luminances. and also, "<em>..the loss of saturation at high luminances--the colors converge on white.</em>"</p>
+
+<h2 dir="ltr" id="The_Special_Case_of_Red"><strong>The Special Case of "Red" </strong></h2>
+
+<p dir="ltr">Not all colors ("hue") are processed the same way by our brains.  Human physiology and psychology are affected by the color "red" generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that <strong><a href="https://www.sciencedaily.com/releases/2009/09/090925092858.htm">some colors are more likely to cause epileptic fits than others</a></strong>; There is an interesting observation in a discussion thread, "<strong><a href="https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options">What is the “grayscale” setting for in accessibility options?</a>"</strong> in which one of the participants states: "<em>I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me</em>."</p>
+
+<ul>
+ <li><strong>Red Desaturation tests </strong> The human eye is so sensitively "tuned" to red, that opthamolegists set up a test using it.  The Red desaturation test assesses the integrity of the optic nerve.  For more information as to how an opthamologist uses this test, see <strong><a href="https://www.smart-optometry.com/red-desaturation/">Red Desaturation</a></strong></li>
+ <li><strong>Red Environment:</strong> Studies have shown that for those who suffer Traumatic Brain Injury, <strong><a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">cognitive function is reduced in a red environment</a></strong>. </li>
+</ul>
+
+<h3 id="Saturated_Red"><strong>Saturated Red</strong></h3>
+
+<p><strong>"Saturated Red" is a special, dangerous case, and there are special tests for it.</strong></p>
+
+<p>The concept of color saturation is a difficult one to understand when only looking at numbers and terminology, so consider looking at the image below to illustrate the concept of saturation in a color.  Wikimedia Commons provides a great image for <strong><a href="https://commons.wikimedia.org/wiki/File:Red_saturations.svg">illustrating red saturation</a></strong>.  It's the same "color" going from least saturated on the left hand side to most saturated on the right hand side.  (Thanks to the author, Datumizer, for this example)</p>
+
+<p><img alt="Red Saturation from Wikimedia Commons svg saved as png Attribution: Datumizer [CC0]" src="https://mdn.mozillademos.org/files/16745/320px-Red_saturations.svg.png" style="height: 53px; width: 320px;"></p>
+
+<p><strong>More than one "red" color may be considered a "saturated" red.</strong> For example, in addition to the color <strong>#990000</strong> described above, the color <strong>#8b0000</strong>  also has a saturation of 100%.  Not all saturated reds may be represented well in the RGB spectrum, or other spectrums commonly used in web development.  According to Wikipedia's page on "Shades of Red", the color "Carmine" is a saturated red in which, in its pigment form, mostly contains the red light with wavelengths longer than 600nm; the article makes the special note that "Carmine"  <strong>is close to the extreme spectrum.  This places it far beyond standard gamuts (both RGB and CMYK), and its given RGB value is a poor approximation only."</strong></p>
+
+<h4 id="Saturated_Red_Flashing"><strong>Saturated Red Flashing:</strong></h4>
+
+<p>In addition to a red environment affecting the cognitive function of those with traumatic brain Injury, color in the red spectrum wavelength requires special attention and tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted seizure rates were much higher than expected.  They found that we are much more sensitive to saturated red flashing.   (See the video,<strong><a href="https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/"> The Photosensitive Epilepsy Analysis Tool</a></strong><a href="https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/">)</a></p>
+
+<h2 dir="ltr" id="Measuring_Color_Luminance">Measuring Color &amp; Luminance</h2>
+
+<h3 dir="ltr" id="Methods_that_measures_color">Methods that measures color</h3>
+
+<p dir="ltr">Exploring the <strong>RGB </strong>color space further, as it is the color space used by the data type<strong><code> &lt;color&gt;</code></strong>, note that there are actually multiple "versions" of the <strong>RGB</strong> color space, such as <strong>sRGB</strong>, <strong>scRGB</strong>, and <strong>RGBA</strong>. There are also different ways to refrence <strong>RGB</strong>:  <strong>RGB</strong> <strong>Decimal </strong>reference: 153, 0, 0 and an <strong>RGB</strong> <strong>Percent</strong> reference: 60, 0, 0.  {{domxref('Window.getComputedStyle()')}} returns values using <strong>RGB Decimal Reference scale.</strong>   For example, calling <strong><code>Window.getComputedStyle()</code></strong> on a div with a <strong><code>background-color: #990000;</code></strong> set  returns the computed background color as <strong>rgb(153, 0, 0)</strong> -- the <strong>RGB Decimal</strong> reference.</p>
+
+<p><strong><code>Window.getComputedStyle()</code></strong> measures color in terms of <strong>RGB</strong>. <strong><a href="https://www.w3.org/TR/css-color-3/">CSS Color Module Level 3</a></strong> added HSL color values, stating  "CSS3 adds numerical hue-saturation-lightness <strong>(HSL)</strong> colors as a complement to numerical <strong>RGB </strong>colors. It has been observed that <strong>RGB</strong> colors have ... limitations".  One of those limitations is that RGB is tied to computer hardware, rather than how the human eye perceives color. </p>
+
+<h3 id="Measuring_Relative_Luminance">Measuring Relative Luminance</h3>
+
+<p>When evaluating luminance, bear in mind the W3C's <strong><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">wiki on relative luminance</a></strong> "<em>Almost all systems used today to view Web content assume <strong>sRGB </strong>encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using <strong>sRGB </strong>colorspace. If using other color spaces, see <strong><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast">Understanding Success Criterion 1.4.3</a></strong></em>.". </p>
+
+<p>The "math" for the calculations is spelled out in WCAG 2.1 in the definition for <strong><a href="https://www.w3.org/TR/WCAG21/#dfn-relative-luminance">relative luminance</a></strong>, and is as follows: </p>
+
+<p>For the sRGB colorspace, the relative luminance of a color is defined as L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong>+ 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:</p>
+
+<ul>
+ <li>if RsRGB &lt;= 0.03928 then <strong>R</strong> = RsRGB/12.92 else <strong>R</strong> = ((RsRGB+0.055)/1.055) ^ 2.4</li>
+ <li>if GsRGB &lt;= 0.03928 then <strong>G</strong> = GsRGB/12.92 else <strong>G</strong> = ((GsRGB+0.055)/1.055) ^ 2.4</li>
+ <li>if BsRGB &lt;= 0.03928 then <strong>B</strong> = BsRGB/12.92 else <strong>B</strong> = ((BsRGB+0.055)/1.055) ^ 2.4</li>
+</ul>
+
+<p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
+
+<ul>
+ <li>RsRGB = R8bit/255</li>
+ <li>GsRGB = G8bit/255</li>
+ <li>BsRGB = B8bit/255</li>
+</ul>
+
+<p>There is active discussion and investigation underway concerning relative luminance, contrast, and more.  See <a href="https://github.com/w3c/wcag/issues/360">W3C/WCAG issue #360</a>.</p>
+
+<p>R, G, and B have distinct weights in the relative luminance formula.</p>
+
+<p>Calculations for relative luminance are not casual ones, luckily, there are tools that will do it for you. Here are a few.</p>
+
+<ul>
+ <li><strong><a href="https://planetcalc.com/7779/">Relative luminance calculation.</a></strong></li>
+ <li><strong><a href="https://www.topster.net/relative-luminance/">Calculate relative luminance</a></strong></li>
+ <li><strong><a href="http://juicystudio.com/services/luminositycontrastratio.php">Analyze Luminosity Contrast Ratio</a></strong></li>
+</ul>
+
+<p><strong>Some notes:</strong></p>
+
+<p>Luma and luminance are not the same.  From <strong><a href="https://www.iso.org/obp/ui/#iso:std:iec:61966:-2-2:ed-1:v1:en">IEC 61966-2-2:2003(en)</a></strong>, "<em>Video systems approximate the lightness response of vision by computing a luma component Y′ as a weighted sum of nonlinear R′G′B′ primary components: Each RGB signal is, comparable to the 1/3 power function with an offset defined by L*. Luma is often incorrectly referred to as luminance.</em>"</p>
+
+<p>Luminosity and Luminance are not the same, but sometimes, in the <strong>HSL</strong> color spectrum, they are sometimes used interchangably.  Sometimes the "<strong>L</strong>" in HSL stands for luminance, and sometimes, for luminosity -- and also, has been referred to as "lightness"</p>
+
+<p>Luminance and brightness are not the same.  Brightness is a perception.</p>
+
+<p>Luminance and lightness are not the same.</p>
+
+<p>Luminance and reflected light are not the same.</p>
+
+<h2 id="See_Also">See Also</h2>
+
+<h4 id="MDN"><strong>MDN</strong></h4>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Accessibility">Accessibilty</a></li>
+ <li><a href="/en-US/docs/Learn/Accessibility">Accessibility learning path</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Seizure_disorders">Web accessibility for seizures and physical reactions</a></li>
+ <li>Color blindness</li>
+</ul>
+
+<h4 id="Discussions_General"> Discussions (General)</h4>
+
+<ul>
+ <li><a href="https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options">What is the “grayscale” setting for in accessibility options?</a></li>
+</ul>
+
+<h4 id="The_Color_Red">The Color Red</h4>
+
+<ul>
+ <li><a href="https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/">How the Color Red Influences Our Behavior</a> Scientific American By Susana Martinez-Conde, Stephen L. Macknik on <time>November 1, 2014</time></li>
+</ul>
+
+<h4 id="Scientific_Papers"><time>Scientific Papers</time></h4>
+
+<ul>
+ <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&amp;rep=rep1&amp;type=pdf">Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group</a></li>
+</ul>
+
+<h4 id="W3C_Issues_and_Discussions"><strong>W3C Issues and Discussions</strong></h4>
+
+<ul>
+ <li><a href="https://github.com/w3c/wcag/issues/695">Contrast Ratio Math and Related Visual Issues #695</a></li>
+ <li><a href="https://github.com/w3c/wcag/issues/236">Luminance / Luma confusion #236</a></li>
+ <li><a href="https://github.com/w3c/wcag/issues/308">Outdated threshold for sRGB companding in the "relative luminance" definition #308</a></li>
+ <li><a href="https://github.com/w3c/wcag/issues/360">Non-sRGB color spaces, outdated sRGB threshold, and other issues in the "relative luminance" definition #360</a></li>
+</ul>
+
+<h4 id="W3C_Resources">W3C Resources</h4>
+
+<ul>
+ <li><a href="https://www.w3.org/TR/css-color-3/">CSS Color Module Level 3</a></li>
+ <li><a href="https://drafts.csswg.org/css-color-4/">CSS Color Module Level 4</a></li>
+ <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">Ensuring that a contrast ratio of 3:1 is provided for icons</a></li>
+ <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Understanding Success Criterion 1.4.3: Contrast (Minimum)</a></li>
+ <li><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">WCAG Working Group's Wiki page on Relative Luminance</a></li>
+</ul>
+
+<h4 id="Contributers">Contributers</h4>
+
+<p>Many, many thanks to Wayne Dick of the <a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/" rel="noopener">Low Vision Task Force of the W3C</a> and the intense discussions on luminance; to <a href="https://developer.mozilla.org/en-US/profiles/tealdev">Teal</a> for his help and discussions on human perception of the color blue and how software companies create algorithms for image output based on it; and to Tom Jewett from <a href="https://knowbility.org/" rel="noopener">Knowbility;</a> for the tools and educational resources he developed, that help us all.</p>

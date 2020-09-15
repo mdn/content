@@ -1,0 +1,166 @@
+---
+title: Add-ons in the enterprise
+slug: Mozilla/Add-ons/WebExtensions/Distribution_options/Add-ons_in_the_enterprise
+tags:
+  - Add-ons
+  - Guide
+  - Installation
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>As an enterprise IT administrator you may wish to install add-ons for your users automatically, this page discusses the options.</p>
+
+<h2 id="Signed_versus_unsigned_extensions">Signed versus unsigned extensions</h2>
+
+<p>From Firefox 43 all add-ons have to be signed before they can be installed into the standard or beta versions of Firefox. Unsigned add-ons can be installed in the<a href="/en-US/docs/Mozilla/Firefox/Developer_Edition"> Developer Edition</a>, <a href="/en-US/docs/Mozilla/Firefox#Firefox_Nightly">Nightly</a>, and<a href="/en-US/docs/Mozilla/Firefox/Enterprise_deployment#Extended_Support_Release_(ESR)"> ESR</a> versions of Firefox, after toggling the <code>xpinstall.signatures.required</code> preference in <code>about:config</code>.</p>
+
+<p>If you want to install unsigned add-ons, deploying an <a href="/en-US/docs/Mozilla/Firefox/Enterprise_deployment#Extended_Support_Release_(ESR)">ESR</a> version of Firefox is the recommended approach. Once that is done, unsigned add-ons can be installed using any method, including opening the add-on file from a web page.</p>
+
+<p>The alternative, and recommended, approach is to use the option for unlisted add-ons on <a href="http://addons.mozilla.org" rel="noreferrer">addons.mozilla.org</a> (AMO). This option means that you can get a signed add-on without it being listed in the public add-ons directory. This feature provides a signed add-on immediately. This signed add-on can then be installed from a web page behind the firewall, or installed using one of the options described here.</p>
+
+<h2 id="Sideloading">Sideloading</h2>
+
+<p>You can sideload an add-on using one of the standard extensions folders, as described in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Sideloading_add-ons#Installation_using_the_standard_extension_folders">Installation using standard extension folders</a>.</p>
+
+<h2 id="Installation_using_the_Windows_registry">Installation using the Windows registry</h2>
+
+<p>This section explains how to install add-ons into Firefox using the Windows Registry.</p>
+
+<div class="warning">
+<p>Before Firefox 62 it was possible to load unpacked extensions by making the Windows registry key point to a directory containing an unpackaged extension.</p>
+
+<p>From Firefox 62 this is no longer possible, and the key must point to a packaged XPI file, as described in this section.</p>
+</div>
+
+<div class="note">
+<p>It is safe to modify the Registry keys while Firefox is running.</p>
+</div>
+
+<ol>
+ <li>Ensure the add-on has an add-on ID, by including the following to its manifest.json file, replacing <em>your-add-on-name@your-domain.com</em> with a suitable ID for your add-on:
+
+  <pre>"applications": {
+   "gecko": {
+     "id": "your-add-on-name@your-domain.com"
+   }
+  }</pre>
+  An email address style ID is recommended.</li>
+ <li>Sign your add-on in AMO using the unlisted option. For more details, see <a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distributing your add-on</a>.</li>
+ <li>Download the signed XPI file and ensure the file name is the add-on ID plus the extension <code>.xpi</code>.  For example, <code>c:/webext/borderify@example.com.xpi</code></li>
+ <li>Open Regedit and add keys as follows:
+  <ul>
+   <li>For all users of the computer, add to the following registry keys:
+    <pre>HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions</pre>
+
+    <p>or</p>
+
+    <pre>HKEY_LOCAL_MACHINE\Software\Wow6432Node\Mozilla\Firefox\Extensions</pre>
+
+    <div class="note">
+    <p dir="ltr"><code>HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions</code> is not available when running 32-bit Firefox on a 64-bit machine, you can only install for all users using the <code>Wow6432Node</code> key.</p>
+    </div>
+   </li>
+   <li>For the current user, add to the following registry key:
+    <pre>HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions</pre>
+   </li>
+  </ul>
+ </li>
+ <li>Create a new string value Registry entry with its name equal to the add-on ID, for example, borderify@example.com, and a value equal to the location where the add-on is stored, for example, <code>c:/webext/borderify@example.com.xpi</code>.</li>
+ <li>Restart Firefox. The add-on is detected, but the user may be presented with an interstitial or need to enable the add-on in Add-on manager before it can be used. See <a href="#Firefox_settings">Firefox settings</a>.)</li>
+</ol>
+
+<p>If the same add-on appears under both <code>HKEY_CURRENT_USER</code> and <code>HKEY_LOCAL_MACHINE</code>, then the instance under <code>HKEY_CURRENT_USER</code> will be used. If the same add-on appears in the user's profile directory (for example, if they have already manually installed it), then that version will take precedence over any instances found in the Registry.</p>
+
+<p>To remove an add-on installed using the Windows Registry simply remove the Registry entry. After the Registry entry is removed, Firefox will detect the change the next time it is launched. It is safe to modify the Registry keys while Firefox is running.</p>
+
+<p>If you install using the Windows Registry, Firefox will not automatically update your add-on. You will have to arange to update the add-on using whatever installation process you choose external to Firefox.</p>
+
+<h2 id="Firefox_settings">Firefox settings</h2>
+
+<p>There are two settings that affect the use of alternative installation options. The <code>extensions.autoDisableScopes</code> preference controls whether add-ons are installed automatically or after user confirmation. The <code>extensions.enabledScopes</code> preference is used to disable installation from most locations. In addition to these options, the method of setting these preferences programmatically is discussed.</p>
+
+<h3 id="Controlling_automatic_installation">Controlling automatic installation</h3>
+
+<p>The standard downloads of Firefox are configured so that sideloads using the standard extensions folder or the Windows Registry, don’t install automatically. Depending on the version of Firefox:</p>
+
+<ul>
+ <li>the user has displayed an interstitial warning:<br>
+  <img alt="An interstitial warning about the installation of the add-on" src="https://mdn.mozillademos.org/files/15209/interstitial_windows.png" style="height: 441px; width: 630px;"></li>
+ <li>the add-on is installed but disabled, and the user should enable it from Add-on manager:<br>
+  <img alt="An add-on is installed but disabled " src="https://mdn.mozillademos.org/files/15207/add_on_disabled.png" style="height: 61px; width: 707px;"></li>
+</ul>
+
+<p>The use of interstitial and silent disabled installs varies between versions of Firefox, for example, version 54 uses the interstitial message.</p>
+
+<p>The availability of automatic installation is controlled by the <code>extensions.</code><code>autoDisableScopes</code> preference and  behavior are defined by the following values:</p>
+
+<div>
+<table>
+ <colgroup>
+  <col>
+  <col>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td>Value</td>
+   <td>Install scope</td>
+  </tr>
+  <tr>
+   <td>1 (or '0b0001')</td>
+   <td>The current user’s profile.</td>
+  </tr>
+  <tr>
+   <td>2 (or '0b0010')</td>
+   <td>All profiles of the logged-in user.</td>
+  </tr>
+  <tr>
+   <td>4 (or '0b0100')</td>
+   <td>Installed and owned by Firefox.</td>
+  </tr>
+  <tr>
+   <td>8 (or '0b1000')</td>
+   <td>Installed for all users of the computer.</td>
+  </tr>
+  <tr>
+   <td>15 (or '0b1111')</td>
+   <td>The combination of all scopes.</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>By default, <code>extensions.autoDisableScopes</code> is set to 15 so that automatic installs are disabled from all locations. To disable only a subset of locations, set the preference to the sum of the values for the locations you want to disable. For example, 3 will disable “The current user’s profile.” and “All profiles of the logged-in user.” Setting the value to 0 disables this feature and means all add-ons will be installed without user confirmation.</p>
+
+<h3 id="Disabling_install_locations">Disabling install locations</h3>
+
+<p>In some circumstances, you may want Firefox to ignore some or all of the additional install locations listed above. In this case, use the preference <code>extensions.enabledScopes</code>. By default, this preference is not included in the standard downloads of Firefox, so will need to be added. You can add the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox#w_adding-changing-and-resetting-preferences">preference manually</a> or do it programmatically using the instructions in the next section.</p>
+
+<div class="note">
+<p>It is impossible to disable loading add-ons from the profile directory.</p>
+</div>
+
+<h3 id="Settings_scope_preferences_programmatically">Settings scope preferences programmatically</h3>
+
+<p>Use the following logic to set the values of <code>extensions.autoDisableScopes</code> and <code>extensions.enabledScopes</code> programmatically to ensure add-ons are installed automatically:</p>
+
+<ol>
+ <li>Edit <a href="/en-US/Firefox/Enterprise_deployment#Configuration">the administrative config</a> file.</li>
+ <li>Check for the presence of lines that set the <code>extensions.autoDisableScopes</code> and/or <code>extensions.enabledScopes</code> preferences and replace/add them as needed.</li>
+ <li>These preference lines should be used like below, with values of your choice as explained in the top of this section:
+  <pre class="brush: js">defaultPref("extensions.autoDisableScopes", 0);
+defaultPref("extensions.enabledScopes", 15);
+// Or use binary value like this
+defaultPref("extensions.enabledScopes", 0b1111);</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p>According to <a href="http://www.favbrowser.com/how-to-create-a-new-default-firefox-experience-in-your-enterprise/">this page</a>: <small>(Dated: September 28, 2012)</small><br>
+ “<em>You cannot set this preference remotely using autoconfig files.</em>”<br>
+ Which recommends you only set these preference in a local autoconfig file.<br>
+ If this is wrong info please adjust or remove this note.</p>
+</div>
+
+<h2 id="Bundling_add-ons_with_a_custom_Firefox">Bundling add-ons with a custom Firefox</h2>
+
+<p>You can bundle add-ons within a customized Firefox, and they will be installed automatically when the user starts up the application for the first time. See <a href="https://support.mozilla.org/en-US/kb/deploying-firefox-with-extensions">Deploying Firefox with extensions</a> for details.</p>
