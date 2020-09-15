@@ -56,6 +56,8 @@ jobs:
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          # TODO: Is this correct?! We wanna make sure it's the yarn.lock
+          # from ./yari/ and not ./ which is just the content.
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
@@ -69,6 +71,7 @@ jobs:
       - name: Build changed content
         if: steps.git_diff_content.outputs.diff
         run: |
+          export CONTENT_ROOT=$(pwd)/files
           # Need to run from the yari we've cleanly cloned.
           cd yari
 
