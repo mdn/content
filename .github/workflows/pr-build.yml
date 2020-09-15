@@ -35,12 +35,6 @@ jobs:
           repository: mdn/yari
           path: yari
 
-      - name: Debug what was checked out
-        run: |
-          pwd
-          ls -l
-          echo ${{ env.GIT_DIFF }}
-
       - name: Setup Node.js environment
         if: steps.git_diff_content.outputs.diff
         uses: actions/setup-node@v2.1.1
