@@ -66,42 +66,45 @@ jobs:
           cd yari
           yarn --frozen-lockfile
 
-      # - name: Build changed content
-      #   if: steps.git_diff_content.outputs.diff
-      #   run: |
-      #     # Some day, when our number of flaws have reached 0 we'll change
-      #     # this to "*:error" which means the slightest flaw in the build
-      #     # will break the build.
-      #     # See https://github.com/mdn/yari/issues/715
-      #     export BUILD_FLAW_LEVELS="*:ignore"
+      - name: Build changed content
+        if: steps.git_diff_content.outputs.diff
+        run: |
+          # Need to run from the yari we've cleanly cloned.
+          cd yari
 
-      #     # Note, it might be interesting to explore building *some*
-      #     # pages in a PR build if the diff doesn't have any index.html
-      #     # files changed.
-      #     # Instead of building the git diff, you build some known typical
-      #     # folders that you know don't take too long and do cover a lot
-      #     # of interesting macros etc.
-      #     # This way, when an edit to the source code comes in, perhaps the
-      #     # functional tests have a gap in them but actually building
-      #     # real content exposes it.
+          # Some day, when our number of flaws have reached 0 we'll change
+          # this to "*:error" which means the slightest flaw in the build
+          # will break the build.
+          # See https://github.com/mdn/yari/issues/715
+          export BUILD_FLAW_LEVELS="*:ignore"
 
-      #     # Setting this to an empty string effectively means that the
-      #     # <iframe> src will end up being the relative URL of the current
-      #     # document as a base.
-      #     # I.e. like this, if the current document is '/en-US/docs/Foo':
-      #     #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
-      #     # ...for example.
-      #     # Yes, it's potentially "insecure" because the iframe will execute
-      #     # whatever code is inserted into the code example. But since the
-      #     # whole (possible) domain for PR builds will never be somewhere
-      #     # where there are interesting cookies, it's a safe choice.
-      #     export BUILD_LIVE_SAMPLES_BASE_URL=
+          # Note, it might be interesting to explore building *some*
+          # pages in a PR build if the diff doesn't have any index.html
+          # files changed.
+          # Instead of building the git diff, you build some known typical
+          # folders that you know don't take too long and do cover a lot
+          # of interesting macros etc.
+          # This way, when an edit to the source code comes in, perhaps the
+          # functional tests have a gap in them but actually building
+          # real content exposes it.
 
-      #     # In these builds we never care for or need the ability to sign in.
-      #     # This environment variable will disable that functionality entirely.
-      #     export REACT_APP_DISABLE_AUTH=true
+          # Setting this to an empty string effectively means that the
+          # <iframe> src will end up being the relative URL of the current
+          # document as a base.
+          # I.e. like this, if the current document is '/en-US/docs/Foo':
+          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
+          # ...for example.
+          # Yes, it's potentially "insecure" because the iframe will execute
+          # whatever code is inserted into the code example. But since the
+          # whole (possible) domain for PR builds will never be somewhere
+          # where there are interesting cookies, it's a safe choice.
+          export BUILD_LIVE_SAMPLES_BASE_URL=
 
-      #     export BUILD_NO_PROGRESSBAR=true
-      #     export BUILD_FILES="${{ env.GIT_DIFF }}"
-      #     yarn prepare-build
-      #     yarn build
+          # In these builds we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          export REACT_APP_DISABLE_AUTH=true
+
+          export BUILD_NO_PROGRESSBAR=true
+          export BUILD_FILES="${{ env.GIT_DIFF }}"
+          yarn prepare-build
+          yarn build
