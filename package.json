@@ -1,0 +1,18 @@
+{
+  "name": "content",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "https://github.com/mdn/yari/issues/408",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "cd node_modules/@mdn/yari && cross-env REACT_APP_DISABLE_AUTH=true yarn start:server"
+  },
+  "dependencies": {
+    "@mdn/yari": "0.1.20"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2"
+  }
+}
