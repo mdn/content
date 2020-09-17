@@ -1,5 +1,10 @@
 # MDN Content
 
+## THIS IS NOT *YET* THE SOURCE OF TRUTH FOR [MDN](https://developer.mozilla.org).
+
+## For now, the source of truth is still the centralized MySQL database behind [wiki.developer.mozilla.org](https://wiki.developer.mozilla.org)
+--
+
 MDN Content is all the source documents for
 [MDN Web Docs](https://developer.mozilla.org).
 
