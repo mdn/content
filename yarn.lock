@@ -1346,10 +1346,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mdn/yari@0.1.25":
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.25.tgz#6e4f32eb76e261089956a259133b783fdcd35ff8"
-  integrity sha512-E8so7QtfGSR9LvjwPj7z1C+xXJsDEE0pP5Y1GWCPviPLjWWZx4zahty4OS1hUQsn9ttB2+809LIakQwXDFA4Zw==
+"@mdn/yari@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.26.tgz#4126e0cb87da8ac4b02aff63275bb9740d05c998"
+  integrity sha512-THyfathw6lbUEtYkAzPP0D05KBKtVavhjihVuSsc+DkEqMGdkJEHOTi68vz9Vy+O9JK1BDxxG3yqmXiKQC6cqA==
   dependencies:
     "@types/react" "^16.9.49"
     "@types/react-dom" "^16.9.8"
