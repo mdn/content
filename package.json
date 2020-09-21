@@ -10,7 +10,7 @@
     "start": "cd node_modules/@mdn/yari && cross-env CONTENT_ROOT=../../../files REACT_APP_DISABLE_AUTH=true yarn start:server"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.30"
+    "@mdn/yari": "0.1.33"
   },
   "devDependencies": {
     "cross-env": "7.0.2"

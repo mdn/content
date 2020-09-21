@@ -16,10 +16,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.30":
-  version "0.1.30"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.30.tgz#1966a146523da7ef754363a26afaac87434945e4"
-  integrity sha512-HDhuczjaHrnbEpDFh70PuLjEEXxoJi8isPqGuGzxdOgL9zxSBBEs1E95IC1Es3W7pZbIol9Be7POKOKdff/0Pw==
+"@mdn/yari@0.1.33":
+  version "0.1.33"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.33.tgz#2b18bb8d22ca8fd0660b96a8c305674c18c821e8"
+  integrity sha512-Y8ow+rZkVhvEumNkmssh3+b4RCRx8LodXuZhvFh/il4xG3apSYRhxGb40KfToP05ZjMeNj2am5BxxJrdV6IXOw==
   dependencies:
     "@mdn/browser-compat-data" "2.0.0-1"
     chalk "4.1.0"
@@ -39,7 +39,7 @@
     front-matter "4.0.2"
     fs-extra "9.0.1"
     glob "^7.1.6"
-    got "11.6.2"
+    got "11.7.0"
     ignore-loader "0.1.2"
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
@@ -57,7 +57,7 @@
     sanitize-filename "^1.6.3"
     sockette "^2.0.6"
     source-map-support "0.5.19"
-    swr "0.3.2"
+    swr "0.3.3"
     typeface-zilla-slab "0.0.72"
     use-debounce "^3.4.3"
     webpack-cli "3.3.12"
@@ -1883,10 +1883,10 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-got@11.6.2:
-  version "11.6.2"
-  resolved "https://registry.yarnpkg.com/got/-/got-11.6.2.tgz#79d7bb8c11df212b97f25565407a1f4ae73210ec"
-  integrity sha512-/21qgUePCeus29Jk7MEti8cgQUNXFSWfIevNIk4H7u1wmXNDrGPKPY6YsPY+o9CIT/a2DjCjRz0x1nM9FtS2/A==
+got@11.7.0:
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.7.0.tgz#a386360305571a74548872e674932b4ef70d3b24"
+  integrity sha512-7en2XwH2MEqOsrK0xaKhbWibBoZqy+f1RSUoIeF1BLcnf+pyQdDsljWMfmOh+QKJwuvDIiKx38GtPh5wFdGGjg==
   dependencies:
     "@sindresorhus/is" "^3.1.1"
     "@szmarczak/http-timer" "^4.0.5"
@@ -4136,10 +4136,10 @@ svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swr@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.2.tgz#1197e06553f71afbc42dba758459f12daea96805"
-  integrity sha512-Bs5Bihq1hQ66O5bdKaL47iZ2nlAaBsd8tTLRLkw9stZeuBEfH7zSuQI95S2TpchL0ybsMq3isWwuso2uPvCfHA==
+swr@0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.3.tgz#8e820360e3fece26df6f30ca09c478f70bf1f880"
+  integrity sha512-UxjfbvLdk4CzdchQBKmthUc1rO7KaCXdNL69oW7V/I2BOMv905rsL+kJdpO19OYwOPOpWZPvffTEE7yACwXc8w==
   dependencies:
     fast-deep-equal "2.0.1"
 
