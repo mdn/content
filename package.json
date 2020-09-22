@@ -7,11 +7,12 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "start": "cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
-    "filecheck": "cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)"
+    "start": "env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
+    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.36"
+    "@mdn/yari": "0.1.36",
+    "env-cmd": "10.1.0"
   },
   "devDependencies": {
     "cross-env": "7.0.2"
