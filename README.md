@@ -36,3 +36,31 @@ When you start a new piece of work, always remember to first run:
 This will upgrade everything to the latest and greatest. From this,
 you create your `git` topic branches, which is what you'll push to your
 fork and make pull requests from.
+
+## Setting your editor
+
+When you preview pages you can press a button to open the source file
+in your preferred editor. For this to work, you need to have set an
+environment variable called `EDITOR`. Suppose you prefer VS Code as your
+editor to edit content. Type this:
+
+    export EDITOR=code
+    yarn start
+
+Note, this is how you do it on terminals with `bash` (macOS and Linux)
+and you have to do it differently on Windows.
+
+Now, when you're previewing a page and press the "Edit in your editor"
+button, it will open the same as running:
+
+    code files/en-us/web/the/page/you/used/index.html
+
+Instead of having to type `export EDITOR=code` every time before you type
+`yarn start` you can store this in your personal `.env` file. It might
+not exist so you might need to create one. For example:
+
+    echo 'EDITOR=code' >> .env
+    yarn start
+
+Now, it should be set like that even after you've close and started a new
+terminal window.
