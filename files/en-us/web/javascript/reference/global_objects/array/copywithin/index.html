@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>arr</var>.copyWithin(<var>target[, start[, end]]</var>)
+<pre class="syntaxbox notranslate"><var>arr</var>.copyWithin(<var>target[, start[, end]]</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -49,10 +49,9 @@ tags:
 
 <p>The <code>copyWithin</code> method is a mutable method. It does not alter the length of <code>this</code>, but it will change its content and create new properties, if necessary.</p>
 
-
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js">if (!Array.prototype.copyWithin) {
+<pre class="brush: js notranslate">if (!Array.prototype.copyWithin) {
   Object.defineProperty(Array.prototype, 'copyWithin', {
     value: function(target, start/*, end*/) {
     // Steps 1-2.
@@ -124,7 +123,7 @@ tags:
 
 <h3 id="Using_copyWithin">Using copyWithin</h3>
 
-<pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(-2)
+<pre class="brush: js notranslate">[1, 2, 3, 4, 5].copyWithin(-2)
 // [1, 2, 3, 1, 2]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3)
@@ -149,7 +148,6 @@ i32a.copyWithin(0, 2)
 [].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
 // Int32Array [4, 2, 3, 4, 5]
 </pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 

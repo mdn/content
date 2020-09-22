@@ -3,17 +3,15 @@ title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 tags:
   - API
-  - Draft
   - Interface
   - Offline
   - Reference
   - Service Workers
   - ServiceWorkerGlobalScope
-  - Workers
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <code>ServiceWorkerGlobalScope</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> represents the global execution context of a service worker.</p>
+<p>The <strong><code>ServiceWorkerGlobalScope</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> represents the global execution context of a service worker.</p>
 
 <p>Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.</p>
 
@@ -28,12 +26,12 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
+ <dt>{{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}</dt>
+ <dd>Contains the {{domxref("CacheStorage")}} object associated with the service worker.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}</dt>
  <dd>Contains the {{domxref("Clients")}} object associated with the service worker.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}</dt>
  <dd>Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}</dt>
- <dd>Contains the {{domxref("CacheStorage")}} object associated with the service worker.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -42,6 +40,9 @@ tags:
  <dt>{{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}</dt>
  <dd>Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property.</dd>
+ <dt>{{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}}</dt>
+ <dd>Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.<br>
+ Also available via the {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}} property.</dd>
  <dt><code>fetch</code></dt>
  <dd>Occurs when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onfetch")}} property.</dd>
@@ -88,7 +89,7 @@ tags:
 
 <p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
@@ -145,5 +146,4 @@ tags:
  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
 </ul>

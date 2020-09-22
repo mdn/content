@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing context on the canvas, or {{jsxref("null")}} if the context identifier is not supported.</span></p>
+<p><span class="seoSummary">The <strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing context on the canvas, or {{jsxref("null")}} if the context identifier is not supported, or the canvas has already been set to a different context mode.</span></p>
 
-<p>Later calls to this method on the same canvas element return the same drawing context instance as was returned the last time the method was invoked with the same <code>contextType</code> argument. To get a different drawing context object you need to pass a different <code>contextType</code> or call the method on a different canvas element. </p>
+<p>Later calls to this method on the same canvas element, with the same <code>contextType</code> argument, will always return the same drawing context instance as was returned the first time the method was invoked. It is not possible to get a different drawing context object on a given canvas element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>);
+<pre class="syntaxbox notranslate">var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>);
 var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextAttributes</em>);
 </pre>
 
@@ -40,7 +40,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
  <dd>
  <p>You can use several context attributes when creating your rendering context, for example:</p>
 
- <pre class="brush: js">const gl = canvas.getContext('webgl', {
+ <pre class="brush: js notranslate">const gl = canvas.getContext('webgl', {
   antialias: false,
   depth: false
 });</pre>
@@ -85,18 +85,18 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
  <li>{{domxref("ImageBitmapRenderingContext")}} for <code>"bitmaprenderer"</code>.</li>
 </ul>
 
-<p>If the <code>contextType</code> doesn't match a possible drawing context, <code>null</code> is returned.</p>
+<p>If the <code>contextType</code> doesn't match a possible drawing context, or differs from the first <code>contextType</code> requested, <code>null</code> is returned.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Given this {{HTMLElement("canvas")}} element:</p>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
+<pre class="brush: html notranslate">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
 <p>You can get a <code>2d</code> context of the canvas with the following code:</p>
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { ... }
 </pre>

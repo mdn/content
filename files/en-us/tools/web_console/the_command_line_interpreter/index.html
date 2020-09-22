@@ -24,7 +24,7 @@ tags:
 
 <p>For example, if you type:</p>
 
-<pre class="brush: js">function foo() {</pre>
+<pre class="brush: js notranslate">function foo() {</pre>
 
 <p>and then <kbd>Enter</kbd>, the Console does not immediately execute the input, but behaves as if you had pressed <kbd>Shift</kbd>+<kbd>Enter</kbd> , so you can finish entering the function definition.</p>
 
@@ -122,30 +122,34 @@ tags:
 
 <h2 id="Working_with_iframes">Working with iframes</h2>
 
+<div class="blockIndicator warning">
+<p>Deprecated since Firefox 74 ({{Bug(1605327)}}); see <a href="/en-US/docs/Tools/Working_with_iframes">Working with iframes</a> for the newer, more-reliable technique. (<code>cd()</code> apparently never worked well cross-origin.)</p>
+</div>
+
 <p>If a page contains embedded <a href="/en-US/docs/Web/HTML/Element/iframe">iframes</a>, you can use the <code>cd()</code> function to change the console's scope to a specific iframe, and then you can execute functions defined in the document hosted by that iframe. There are three ways to select an iframe using <code>cd()</code>:</p>
 
 <p>You can pass the iframe DOM element:</p>
 
-<pre class="brush: js">var frame = document.getElementById("frame1");
+<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
 cd(frame);</pre>
 
 <p>You can pass a CSS selector that matches the iframe:</p>
 
-<pre class="brush: js">cd("#frame1");</pre>
+<pre class="brush: js notranslate">cd("#frame1");</pre>
 
 <p>You can pass the iframe's global window object:</p>
 
-<pre class="brush: js">var frame = document.getElementById("frame1");
+<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
 cd(frame.contentWindow);
 </pre>
 
 <p>To switch the context back to the top-level window, call <code>cd()</code> with no arguments:</p>
 
-<pre class="brush: js">cd();</pre>
+<pre class="brush: js notranslate">cd();</pre>
 
 <p>For example, suppose we have a document that embeds an iframe:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -157,7 +161,7 @@ cd(frame.contentWindow);
 
 <p>The iframe defines a new function:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -173,7 +177,7 @@ cd(frame.contentWindow);
 
 <p>You can switch context to the iframe like this:</p>
 
-<pre class="brush: js">cd("#frame1");</pre>
+<pre class="brush: js notranslate">cd("#frame1");</pre>
 
 <p>Now you'll see that the global window's document is the iframe:</p>
 

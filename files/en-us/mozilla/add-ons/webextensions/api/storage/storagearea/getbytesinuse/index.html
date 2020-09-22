@@ -30,7 +30,7 @@ tags:
 )
 </pre>
 
-<p><code>&lt;storageType&gt;</code> will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.</p>
+<p><code>&lt;storageType&gt;</code> can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1385832">this bug</a>.</p>
 
 <h3 id="Parameters">Parameters</h3>
 

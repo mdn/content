@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>serviceWorkerRegistration</em>.update();</pre>
+<pre class="syntaxbox notranslate"><em>serviceWorkerRegistration</em>.update();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,9 +31,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following simple example registers a service worker example, an then adds an event handler to a button so you can explicitly update the service worker whenever desired:</p>
+<p>The following simple example registers a service worker example then adds an event handler to a button so you can explicitly update the service worker whenever desired:</p>
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');

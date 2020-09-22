@@ -29,11 +29,13 @@ content: url("http://www.example.com/test.png") / "This is the alt text";
 /* &lt;string&gt; value */
 content: "prefix";
 
-/* &lt;counter&gt; values */
+/* <a href="/en-US/docs/Web/CSS/counter">&lt;counter&gt;</a> values, optionally with <a href="/en-US/docs/Web/CSS/list-style-type">&lt;list-style-type&gt; </a>*/
 content: counter(chapter_counter);
+content: counter(chapter_counter, upper-roman);
 content: counters(section_counter, ".");
+content: counters(section_counter, ".", <code>decimal-leading-zero</code>);
 
-/* attr() value linked to the HTML attribute value */
+/* <a href="/en-US/docs/Web/CSS/attr">attr()</a> value linked to the HTML attribute value */
 content: attr(value string);
 
 /* Language- and position-dependent keywords */
@@ -65,11 +67,11 @@ content: unset;
  <dt>{{cssxref("&lt;image&gt;")}}</dt>
  <dd>An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("&lt;url&gt;")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.</dd>
  <dt>{{cssxref("&lt;counter&gt;")}}</dt>
- <dd>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number. It can be displayed using either the {{cssxref("counter")}} or {{cssxref("counters")}} function.</dd>
+ <dd>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properies. It can be displayed using either the {{cssxref("counter")}} or {{cssxref("counters")}} function.</dd>
  <dd>
- <p>The {{cssxref("counter")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, <var>style</var>)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified style (<code>decimal</code> by default).</p>
+ <p>The {{cssxref("counter")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
 
- <p>The {{cssxref("counters")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated style (<code>decimal</code> by default).</p>
+ <p>The {{cssxref("counters")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
  </dd>
  <dt><code>attr(x)</code></dt>
  <dd>The value of the element's attribute <code>x</code> as a string. If there is no attribute <code>x</code>, an empty string is returned. The case-sensitivity of attribute names depends on the document language.</dd>
@@ -78,7 +80,6 @@ content: unset;
  <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
  <dd>Introduces no content, but increments (decrements) the level of nesting for quotes.</dd>
 </dl>
-
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -258,7 +259,6 @@ li {
 <h4 id="Result_5">Result</h4>
 
 <p>{{EmbedLiveSample('Element_replacement', '100%', 200)}}</p>
-
 
 <h2 id="Specifications">Specifications</h2>
 

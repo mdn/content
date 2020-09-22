@@ -3,14 +3,14 @@ title: Navigator
 slug: Web/API/Navigator
 tags:
   - API
-  - DOM4
+  - DOM
   - Interface
   - Navigator
   - Reference
   - Web
   - Web Performance
 ---
-<div>{{APIRef("DOM4")}}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <p>The <code><strong>Navigator</strong></code> interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.</p>
 
@@ -20,148 +20,135 @@ tags:
 
 <p><em>Doesn't inherit any properties, but implements those defined in {{domxref("NavigatorID")}}, {{domxref("NavigatorLanguage")}}, {{domxref("NavigatorOnLine")}}, {{domxref("NavigatorContentUtils")}}, {{domxref("NavigatorStorage")}}, {{domxref("NavigatorStorageUtils")}}, {{domxref("NavigatorConcurrentHardware")}}, {{domxref("NavigatorPlugins")}}, and {{domxref("NavigatorUserMedia")}}.</em></p>
 
-<h3 id="Standard">Standard</h3>
+<h3 id="Standard_properties">Standard properties</h3>
 
 <dl>
- <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is <code>true</code>).</dd>
- <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the internal "code" name of the current browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} with the official name of the browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("Navigator.battery")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("BatteryManager")}} object you can use to get information about the battery charging status.</dd>
- <dt>{{domxref("Navigator.connection")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.connection")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.</dd>
  <dt>{{domxref("Navigator.cookieEnabled")}} {{readonlyinline}}</dt>
  <dd>Returns false if setting a cookie will be ignored and true otherwise.</dd>
+ <dt>{{domxref("Navigator.credentials")}} {{readonlyInline}}</dt>
+ <dd>Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out. </dd>
+ <dt>{{domxref("Navigator.deviceMemory")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.</dd>
+ <dt>{{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
  <dt>{{domxref("Navigator.geolocation")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.</dd>
- <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
- <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} flag indicating whether the host browser is Java-enabled or not.</dd>
  <dt>{{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.</dd>
  <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The <code>null</code> value is returned when this is unknown.</dd>
- <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.</dd>
- <dt>{{domxref("Navigator.locks")}} {{readonlyinline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object</dd>
- <dt>{{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.</dd>
  <dt>{{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}</dt>
  <dd>Returns the maximum number of simultaneous touch contact points are supported by the current device.</dd>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}} {{experimental_inline}}</dt>
+ <dd>Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.</dd>
+ <dt>{{domxref("Navigator.mediaDevices")}} {{readonlyinline}}</dt>
+ <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
+ <dt>{{domxref("Navigator.mediaSession")}} {{readonlyinline}} {{experimental_inline}}</dt>
+ <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
+ <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}</dt>
  <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
  <dt>{{domxref("Navigator.onLine")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
- <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
- <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.</dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
- <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
+ <dt>{{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
  <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
  <dt>{{domxref("NavigatorStorage.storage")}} {{readonlyinline}}</dt>
  <dd>Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.</dd>
  <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
  <dd>Returns the user agent string for the current browser.</dd>
+ <dt>{{domxref("Navigator.vendor")}} {{readonlyInline}}</dt>
+ <dd>Returns the vendor name of the current browser (e.g., "Netscape6").</dd>
  <dt>{{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Indicates whether the user agent is controlled by automation.</dd>
  <dt>{{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns {{domxref("XR")}} object, which represents the entry point into the <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>.</dd>
 </dl>
 
-<h3 id="Methods" name="Methods">Non-standard</h3>
+<h3 id="Non-standard_properties">Non-standard properties</h3>
 
 <dl>
  <dt>{{domxref("Navigator.buildID")}} {{non-standard_inline}}</dt>
  <dd>Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. <code>20181001000000</code> in Firefox 64 onwards.</dd>
- <dt>{{domxref("Navigator.credentials")}} {{non-standard_inline}}</dt>
- <dd>Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out. </dd>
- <dt>{{domxref("Navigator.deviceMemory")}} {{readonlyInline}} {{non-standard_inline}}</dt>
- <dd>Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.</dd>
- <dt>{{domxref("Navigator.doNotTrack")}} {{non-standard_inline}}</dt>
- <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
- <dt>{{domxref("Navigator.mediaDevices")}} {{non-standard_inline}}</dt>
- <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
- <dt>{{domxref("Navigator.mediaSession")}}</dt>
- <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
- <dt>{{domxref("Navigator.mozNotification")}} {{obsolete_inline}} {{deprecated_inline("22")}} {{non-standard_inline}}</dt>
- <dd>...</dd>
- <dt>{{domxref("Navigator.wakeLock")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.</dd>
- <dt>{{domxref("Navigator.webkitNotification")}} {{obsolete_inline}}</dt>
- <dd>Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.</dd>
- <dt>{{domxref("Navigator.mozSocial")}} {{non-standard_inline}}</dt>
- <dd>The Object, returned by the <code>navigator.mozSocial</code> property, is available within the social media provider's panel to provide functionality it may need.</dd>
- <dt>{{domxref("Navigator.oscpu")}} {{non-standard_inline}}</dt>
- <dd>Returns a string that represents the current operating system.</dd>
- <dt>{{domxref("Navigator.presentation")}} {{non-standard_inline}}</dt>
- <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
- <dt>{{domxref("Navigator.productSub")}} {{non-standard_inline}}</dt>
- <dd>Returns the build number of the current browser (e.g., "20060909").</dd>
  <dt>{{domxref("Navigator.securitypolicy")}} {{non-standard_inline}}</dt>
  <dd>Returns an empty string. In Netscape 4.7x, returns "US &amp; CA domestic policy" or "Export policy".</dd>
  <dt>{{domxref("Navigator.standalone")}} {{non-standard_inline}}</dt>
  <dd>Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.</dd>
- <dt>{{domxref("Navigator.storageQuota")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Returns a {{domxref('StorageQuota')}} interface which provides means to query and request storage usage and quota information.</dd>
- <dt>{{domxref("Navigator.vendor")}} {{non-standard_inline}}</dt>
- <dd>Returns the vendor name of the current browser (e.g., "Netscape6").</dd>
- <dt>{{domxref("Navigator.vendorSub")}} {{non-standard_inline}}</dt>
- <dd>Returns the vendor version number (e.g. "6.1").</dd>
- <dt>{{domxref("Navigator.webkitPointer")}} {{non-standard_inline}}</dt>
- <dd>Returns a PointerLock object for the <a href="/en-US/docs/API/Pointer_Lock_API" title="Mouse Lock API">Mouse Lock API</a>.</dd>
+ <dt>{{domxref("Navigator.wakeLock")}} {{readonlyInline}} {{non-standard_inline}}</dt>
+ <dd>Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="Deprecated_properties">Deprecated properties</h3>
+
+<dl>
+ <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns the internal "code" name of the current browser. Do not rely on this property to return the correct value.</dd>
+ <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("DOMString")}} with the official name of the browser. Do not rely on this property to return the correct value.</dd>
+ <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.</dd>
+ <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is <code>true</code>).</dd>
+ <dt>{{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("BatteryManager")}} object you can use to get information about the battery charging status.</dd>
+ <dt>{{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns a string that represents the current operating system.</dd>
+ <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.</dd>
+ <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
+ <dt>{{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns the build number of the current browser (e.g., "20060909").</dd>
+ <dt>{{domxref("Navigator.storageQuota")}} {{readonlyinline}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref('StorageQuota')}} interface which provides means to query and request storage usage and quota information.</dd>
+ <dt>{{domxref("Navigator.vendorSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns the vendor version number (e.g. "6.1").</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
 
 <p><em>Doesn't inherit any method, but implements those defined in {{domxref("NavigatorID")}}, {{domxref("NavigatorContentUtils")}}, <em>{{domxref("NavigatorUserMedia")}}, </em>and {{domxref("NavigatorStorageUtils")}}.</em></p>
 
-<h3 id="Standard_2">Standard</h3>
-
 <dl>
- <dt>{{domxref("Navigator.canShare()")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.canShare()")}}</dt>
  <dd>Returns <code>true</code> if a call to <code>Navigator.share()</code> would succeed.</dd>
- <dt>{{domxref("Navigator.getVRDisplays()")}} {{experimental_inline}}</dt>
- <dd>Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.</dd>
- <dt>{{domxref("Navigator.getUserMedia", "Navigator.getUserMedia()")}} {{experimental_inline}}</dt>
- <dd>After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.</dd>
- <dt>{{domxref("Navigator.registerContentHandler()")}} {{Obsolete_inline(59)}}</dt>
- <dd>Allows web sites to register themselves as a possible handler for a given MIME type.</dd>
  <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
  <dd>Allows web sites to register themselves as a possible handler for a given protocol.</dd>
- <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}}</dt>
  <dd>Returns a <span style="line-height: 19.0909080505371px;">{{jsxref("Promise")}} for a MediaKeySystemAccess object.</span></dd>
- <dt>{{domxref("Navigator.sendBeacon()")}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.sendBeacon()")}}</dt>
  <dd>Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.</dd>
- <dt>{{domxref("Navigator.share()")}}{{experimental_inline}}</dt>
+ <dt>{{domxref("Navigator.share()")}}</dt>
  <dd>Invokes the native sharing mechanism of the current platform.</dd>
- <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}</dt>
- <dd>Returns <code>false</code>. JavaScript taint/untaint functions removed in JavaScript 1.2.</dd>
- <dt>{{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}</dt>
+ <dt>{{domxref("Navigator.vibrate()")}}</dt>
  <dd>Causes vibration on devices with support for it. Does nothing if vibration support isn't available.</dd>
 </dl>
 
-<h3 id="Non-standard">Non-standard</h3>
-
-<div class="note">
-<p>Firefox OS devices adds more non-standard methods. You can consult them on the <a href="/en-US/docs/Mozilla/Firefox_OS/API/Navigator">Firefox OS Navigator extensions article</a>.</p>
-</div>
+<h3 id="Deprecated_methods">Deprecated methods</h3>
 
 <dl>
- <dt>{{domxref("Navigator.mozIsLocallyAvailable()")}} {{non-standard_inline}}</dt>
- <dd>Lets code check to see if the document at a given URI is available without using the network.</dd>
- <dt>{{domxref("Navigator.mozPay()")}} {{non-standard_inline}}</dt>
- <dd>Allows in-app payment.</dd>
+ <dt>{{domxref("Navigator.getVRDisplays()")}} {{deprecated_inline}}</dt>
+ <dd>Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.</dd>
+ <dt>{{domxref("Navigator.getUserMedia()")}} {{deprecated_inline}}</dt>
+ <dd>After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.</dd>
+ <dt>{{domxref("Navigator.registerContentHandler()")}} {{deprecated_inline}}</dt>
+ <dd>Allows web sites to register themselves as a possible handler for a given MIME type.</dd>
+ <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}}</dt>
+ <dd>Returns <code>false</code>. JavaScript taint/untaint functions removed in JavaScript 1.2.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -184,5 +171,7 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <div>{{Compat("api.Navigator")}}</div>

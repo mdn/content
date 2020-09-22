@@ -4,21 +4,27 @@ slug: Web/API/Node
 tags:
   - API
   - DOM
+  - Document
+  - Element
   - Interface
   - Node
   - Reference
+  - Structure
+  - hierarchy
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is a key base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.</span> Key among the interfaces which inherit the features of <code>Node</code> are {{domxref("Document")}} and {{domxref("Element")}}. However, all of the following also inherit methods and properties from <code>Node</code>: {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, and {{DOMxRef("CDATASection")}} are all based on), {{DOMxRef("ProcessingInstruction")}}, {{DOMxRef("DocumentFragment")}}, {{DOMxRef("DocumentType")}}, {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
+<p><span class="seoSummary">The {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.</span> As an abstract class, there is no such thing as a plain <code>Node</code> object. All objects that implement <code>Node</code> functionality are based on one of its subclasses. Most notable are {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.</p>
 
-<p>In some cases, a particular feature of <code>Node</code> may not apply to a particular interface based on it; in that case, the inheriting node may return <code>null</code> or throw an exception, depending on circumstances. For example, attempting to add children to a node type that cannot have children will throw an exception.</p>
+<p>In addition, every kind of DOM node is represented by an interface based on <code>Node</code>. These include {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, and {{DOMxRef("CDATASection")}} are all based on), {{DOMxRef("ProcessingInstruction")}}, {{DOMxRef("DocumentType")}}, {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
+
+<p>In some cases, a particular feature of the base <code>Node</code> interface may not apply to one of its child interfaces; in that case, the inheriting node may return <code>null</code> or throw an exception, depending on circumstances. For example, attempting to add children to a node type that cannot have children will throw an exception.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{DOMxRef("EventTarget")}}</em>.<sup>[1]</sup></p>
+<p><em>In addition to the properties below, <code>Node</code> inherits properties from its parent, {{DOMxRef("EventTarget")}}</em>.</p>
 
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
@@ -137,7 +143,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{DOMxRef("EventTarget")}}</em>.<sup>[1]</sup></p>
+<p><em>In addition to the properties below, <code>Node</code> inherits methods from its parent, {{DOMxRef("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("Node.appendChild()", "Node.appendChild(<var>childNode</var>)")}}</dt>
@@ -178,8 +184,6 @@ tags:
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
- <dt>{{DOMxRef("Node.getFeature()")}} {{Obsolete_Inline}}</dt>
- <dd></dd>
  <dt>{{DOMxRef("Node.getUserData()")}} {{Obsolete_Inline}}</dt>
  <dd>Allows a user to get some {{DOMxRef("DOMUserData")}} from the node.</dd>
  <dt>{{DOMxRef("Node.hasAttributes()")}} {{Obsolete_Inline}}</dt>
@@ -194,7 +198,7 @@ tags:
 
 <h3 id="Remove_all_children_nested_within_a_node">Remove all children nested within a node</h3>
 
-<pre class="brush: js">function removeAllChildren(element) {
+<pre class="brush: js notranslate">function removeAllChildren(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild)
   }
@@ -202,14 +206,14 @@ tags:
 
 <h4 id="Sample_usage">Sample usage</h4>
 
-<pre class="brush: js;">/* ... an alternative to document.body.innerHTML = "" ... */
+<pre class="brush: js; notranslate">/* ... an alternative to document.body.innerHTML = "" ... */
 removeAllChildren(document.body)</pre>
 
 <h3 id="Recurse_through_child_nodes">Recurse through child nodes</h3>
 
 <p>The following function recursively calls a callback function for each node contained by a root node (including the root itself):</p>
 
-<pre class="brush: js;">function eachNode(rootNode, callback) {
+<pre class="brush: js; notranslate">function eachNode(rootNode, callback) {
 	if (!callback) {
 		const nodes = []
 		eachNode(rootNode, function(node) {
@@ -235,7 +239,7 @@ removeAllChildren(document.body)</pre>
 
 <h4 id="Syntax">Syntax</h4>
 
-<pre class="syntaxbox">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
+<pre class="syntaxbox notranslate">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
 
 <h4 id="Description">Description</h4>
 
@@ -258,13 +262,13 @@ removeAllChildren(document.body)</pre>
 
 <p>The following example prints the <a href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> properties of each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named <code>"box"</code>:</p>
 
-<pre class="brush: html;">&lt;div id="box"&gt;
+<pre class="brush: html; notranslate">&lt;div id="box"&gt;
   &lt;span&gt;Foo&lt;/span&gt;
   &lt;span&gt;Bar&lt;/span&gt;
   &lt;span&gt;Baz&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js;">const box = document.getElementById("box")
+<pre class="brush: js; notranslate">const box = document.getElementById("box")
 eachNode(box, function(node) {
   if (null != node.textContent) {
     console.log(node.textContent)
@@ -273,7 +277,7 @@ eachNode(box, function(node) {
 
 <p>The above will result in the following strings printing to the user's console:</p>
 
-<pre class="brush: js;">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
+<pre class="brush: js; notranslate">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Whitespace forms part of a {{DOMxRef("Text")}} node, meaning indentation and newlines form separate <code>Text</code> between the <code>Element</code> nodes.</p>
@@ -285,7 +289,7 @@ eachNode(box, function(node) {
 
 <p>We use a wrapper function named <code>grep</code> to do the searching:</p>
 
-<pre class="brush: js;">function grep(parentNode, pattern) {
+<pre class="brush: js; notranslate">function grep(parentNode, pattern) {
 	const matches = []
 	let endScan = false
 
@@ -320,7 +324,7 @@ eachNode(box, function(node) {
 
 <p>For example, to find {{DOMxRef("Text")}} nodes that contain typos:</p>
 
-<pre class="brush: js;">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
+<pre class="brush: js; notranslate">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
 const pattern = new RegExp("\\b(" + typos.join("|") + ")\\b", "gi")
 const mistakes = grep(document.body, pattern)
 console.log(mistakes)

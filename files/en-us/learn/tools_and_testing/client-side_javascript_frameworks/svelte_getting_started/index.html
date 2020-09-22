@@ -10,7 +10,7 @@ tags:
   - Svelte
   - client-side
 ---
-<div>{{LearnSidebar}}{{draft}}<br>
+<div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <p class="summary">In this article we'll provide a quick introduction to the <a href="https://svelte.dev/">Svelte framework</a>. We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.</p>
@@ -264,7 +264,7 @@ npm run dev</pre>
   }
 &lt;/style&gt;</pre>
 
-<p>We are applying a style to our <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element. What will happen other components with <code>&lt;h1&gt;</code> elements in them?</p>
+<p>We are applying a style to our <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element. What will happen to other components with <code>&lt;h1&gt;</code> elements in them?</p>
 
 <p>In Svelte, CSS inside a component's <code>&lt;style&gt;</code> block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.</p>
 

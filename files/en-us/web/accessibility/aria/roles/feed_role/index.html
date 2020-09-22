@@ -11,7 +11,7 @@ tags:
 
 <p><span class="seoSummary">A <code>feed</code> is a dynamic scrollable <code>list</code> of <code>articles</code> in which articles are added to or removed from either end of the list as the user scrolls. A <code>feed</code> enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.</span></p>
 
-<pre class="brush: html">&lt;section role="feed" <a class="state-reference" href="https://w3c.github.io/aria/#aria-busy">aria-busy</a>="false"&gt;
+<pre class="brush: html notranslate">&lt;section role="feed" <a class="state-reference" href="https://w3c.github.io/aria/#aria-busy">aria-busy</a>="false"&gt;
   ...
   &lt;article aria-posinset="427" aria-setsize="-1"&gt;...&lt;/article&gt;
   &lt;article aria-posinset="428" aria-setsize="-1"&gt;...&lt;/article&gt;
@@ -69,7 +69,7 @@ tags:
 <h3 id="WAI-ARIA_roles_states_and_properties"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties</h3>
 
 <dl>
- <dt>aria-labelled</dt>
+ <dt>aria-label</dt>
  <dd>If the feed has no visible title, the <code>feed</code> element has a label specified with <a class="property-reference" href="https://w3c.github.io/aria/#aria-label">aria-label</a>. If it does, see aria-labelledby.</dd>
  <dt>aria-labelledby</dt>
  <dd>If the feed has a visible title, the <code>feed</code> element has <a class="property-reference" href="https://w3c.github.io/aria/#aria-labelledby">aria-labelledby</a> referring to the element containing the title. If not, add an aria-label.</dd>

@@ -63,13 +63,13 @@ tags:
 
 <p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
-<div class="note">
+<div class="blockIndicator note">
 <p><strong>Note:</strong> the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the <code>&lt;meta&gt;</code> element, and the {{htmlattrxref("itemprop")}} attribute must not be set on the same <code>&lt;meta&gt;</code> element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.</p>
 </div>
 
 <dl>
  <dt>{{htmlattrdef("charset")}}</dt>
- <dd>This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "<code>utf-8</code>".</dd>
+ <dd>This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "<code>utf-8</code>", because UTF-8 is the only valid encoding for HTML5 documents. <code>meta</code> elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.</dd>
  <dt>{{htmlattrdef("content")}}</dt>
  <dd>This attribute contains the value for the {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("name", "meta")}} attribute, depending on which is used.</dd>
  <dt>{{htmlattrdef("http-equiv")}}</dt>
@@ -82,7 +82,7 @@ tags:
    <p>Allows page authors to define a <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">content policy</a> for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.</p>
   </li>
   <li><code>content-type</code>
-   <p>If specified, the <code>content</code> attribute must have the value "<code>text/html; charset=utf-8</code>". <strong>Note: </strong> Can only be used in documents served with a <code>text/html</code> <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> — not in documents served with an XML MIME type.</p>
+   <p>Declares the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> and character encoding of the document. If specified, the <code>content</code> attribute must have the value "<code>text/html; charset=utf-8</code>". This is equivalent to a <code>meta</code> element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. <strong>Note: </strong> Can only be used in documents served with a <code>text/html</code> — not in documents served with an XML MIME type.</p>
   </li>
   <li><code>default-style</code>
    <p>Sets the name of the default <a href="/en-US/docs/Web/CSS">CSS style sheet</a> set.</p>
@@ -122,7 +122,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;meta charset="utf-8"&gt;
+<pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;
 
 &lt;!-- Redirect page after 3 seconds --&gt;
 &lt;meta http-equiv="refresh" content="3;url=https://www.mozilla.org"&gt;

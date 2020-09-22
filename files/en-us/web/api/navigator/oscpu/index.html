@@ -3,14 +3,12 @@ title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 tags:
   - API
-  - CPU
+  - Deprecated
   - HTML DOM
   - Navigator
   - NavigatorID
   - Property
   - Reference
-  - oscpu
-  - processor
 ---
 <p>{{ ApiRef("HTML DOM") }}</p>
 
@@ -18,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="eval"><em>oscpuInfo</em> = navigator.oscpu
+<pre class="eval notranslate"><var>oscpuInfo</var> = navigator.oscpu
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -37,7 +35,7 @@ tags:
   </tr>
   <tr>
    <td>Windows CE</td>
-   <td>WindowsCE x.y<sup>1</sup></td>
+   <td>WindowsCE x.y<sup>1</sup></td>
   </tr>
   <tr>
    <td>Windows 64-bit (64-bit build)</td>
@@ -49,19 +47,19 @@ tags:
   </tr>
   <tr>
    <td>Windows 32-bit</td>
-   <td>Windows NT x.y</td>
+   <td>Windows NT x.y</td>
   </tr>
   <tr>
-   <td>Mac OS X (PPC build)</td>
-   <td>PowerPC Mac OS X version x.y</td>
+   <td>Mac OS X (PPC build)</td>
+   <td>PowerPC Mac OS X version x.y</td>
   </tr>
   <tr>
-   <td>Mac OS X (i386/x64 build)</td>
-   <td>Intel Mac OS X or macOS version x.y</td>
+   <td>Mac OS X (i386/x64 build)</td>
+   <td>Intel Mac OS X or macOS version x.y</td>
   </tr>
   <tr>
    <td>Linux 64-bit (32-bit build)</td>
-   <td>Output of <code>uname -s plus "i686 on x86_64"</code></td>
+   <td>Output of <code>uname -s</code> plus <code>i686 on x86_64</code></td>
   </tr>
   <tr>
    <td>Linux</td>
@@ -76,7 +74,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function osInfo() {
+<pre class="brush: js notranslate">function osInfo() {
   alert(window.navigator.oscpu);
 }
 

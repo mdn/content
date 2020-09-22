@@ -86,11 +86,18 @@ while (true) {
 
   ob_end_flush();
   flush();
+
+  // Break the loop if the client aborted the connection (closed the page)
+
+  if ( connection_aborted() ) break;
+
   sleep(1);
 }
 </pre>
 
-<p>The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.</p>
+<p>The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.<br>
+The loop will keep running independent of the connection status, so a check is included<br>
+to break the loop if the connection has been closed (e.g. client closes the page).</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find a full example that uses the code shown in this article on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
@@ -124,14 +131,14 @@ while (true) {
 <p>Each message received has some combination of the following fields, one per line:</p>
 
 <dl>
- <dt><code>event</code></dt>
- <dd>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</dd>
- <dt><code>data</code></dt>
- <dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
- <dt><code>id</code></dt>
- <dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
- <dt><code>retry</code></dt>
- <dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
+	<dt><code>event</code></dt>
+	<dd>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</dd>
+	<dt><code>data</code></dt>
+	<dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
+	<dt><code>id</code></dt>
+	<dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
+	<dt><code>retry</code></dt>
+	<dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
 </dl>
 
 <p>All other field names are ignored.</p>

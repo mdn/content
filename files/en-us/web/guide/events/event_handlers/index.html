@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Registering_onevent_handlers">Registering onevent handlers</h2>
 
-<p>The <strong><code>on<em>event</em></code></strong> handlers are properties on certain DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and so forth) or non-interactive (such as the base <code>&lt;body&gt;</code> element). Events are actions like:</p>
+<p>The <strong><code>on<em>event</em></code></strong> handlers are properties on certain DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and so forth) or non-interactive (such as the base <code>&lt;body&gt;</code> element). Events are actions like:</p>
 
 <ul>
  <li>Being clicked</li>
@@ -20,7 +20,7 @@ tags:
  <li>Getting focus</li>
 </ul>
 
-<p>The on-event handler is usually named with the event it reacts to, like <code>on<em>click</em></code>, <code>on<em>keypress</em></code>, <code>on<em>focus</em></code>, etc.</p>
+<p>The <code>on<em>event</em></code> handler is usually named with the event it reacts to, like <code>on<em>click</em></code>, <code>on<em>keypress</em></code>, <code>on<em>focus</em></code>, etc.</p>
 
 <p>You can specify an <code>on<em>&lt;…&gt;</em></code> event handler for a particular event (such as {{event("click")}}) for a given object in different ways:</p>
 
@@ -31,31 +31,31 @@ tags:
   <code>document.querySelector("button")<strong>.onclick = function(event) { … }</strong></code>.</li>
 </ul>
 
-<p>An <code>on<em>event</em></code> event handler property serves as a placeholder of sorts, to which a single event handler can be assigned. In order to allow multiple handlers to be installed for the same event on a given object, you can call its {{domxref("EventTarget.addEventListener", "addEventListener()")}} method, which manages a list of handlers for the given event on the object. A handler can then be removed from the object by calling its {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} function.</p>
+<p>An <code>on<em>event</em></code> event handler property serves as a placeholder of sorts, to which a single event handler can be assigned. In order to allow multiple handlers to be installed for the same event on a given object, you can call its {{domxref("EventTarget.addEventListener", "addEventListener()")}} method, which manages a list of handlers for the given event on the object. A handler can then be removed from the object by calling its {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} function.</p>
 
-<p>When an event occurs that applies to an element, each of its event handlers is called to allow them to handle the event, one after another. You don't need to call them yourself, although you can do so in many cases to easily simulate an event taking place. For example, given a button object <code>myButton</code>, you can do <code>myButton.onclick(myEventObject)</code> to call the event handler directly. If the event handler doesn't access any data form the event object, you can leave out the event when calling <code>onclick()</code>.</p>
+<p>When an event occurs that applies to an element, each of its event handlers is called to allow them to handle the event, one after another. You don't need to call them yourself, although you can do so in many cases to easily simulate an event taking place. For example, given a button object <code>myButton</code>, you can do <code>myButton.onclick(myEventObject)</code> to call the event handler directly. If the event handler doesn't access any data from the event object, you can leave out the event when calling <code>onclick()</code>.</p>
 
-<p>This continues until every handler has been called, unless one of the event handlers explicitly halts the processing of the event by calling {{domxref("Event.stopPropagation", "stopPropagation()")}} on the event object itself.</p>
+<p>This continues until every handler has been called, unless one of the event handlers explicitly halts the processing of the event by calling {{domxref("Event.stopPropagation", "stopPropagation()")}} on the event object itself.</p>
 
 <h3 id="Non-element_objects">Non-element objects</h3>
 
 <p>Event handlers can also be set with properties on non-element objects that generate events, like {{ domxref("window") }}, {{ domxref("document") }}, {{ domxref("XMLHttpRequest") }}, and others. For example, for the <code>progress</code> event on instances of <code>XMLHttpRequest</code>:</p>
 
-<pre class="brush: js">const xhr = new XMLHttpRequest();
+<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
 xhr.onprogress = function() { … };</pre>
 
 <h2 id="HTML_onevent_attributes">HTML onevent attributes</h2>
 
-<p>HTML elements have attributes named <code>on<em>event</em></code> which can be used to register a handler for an event directly within the HTML code. When the element is built from the HTML, the value of its <code>on<em>event</em></code> attributes are copied to the DOM object that represents the element, so that accessing the attributes' values using JavaScript will get the value set in the HTML.</p>
+<p>HTML elements have attributes named <code>on<em>event</em></code> which can be used to register a handler for an event directly within the HTML code. When the element is built from the HTML, the value of its <code>on<em>event</em></code> attributes are copied to the DOM object that represents the element, so that accessing the attributes' values using JavaScript will get the value set in the HTML.</p>
 
-<p>Further changes to the HTML attribute value can be done via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"><code>setAttribute</code> </a>method; Making changes to the JavaScript property will have no effect.</p>
+<p>Further changes to the HTML attribute value can be done via the {{domxref("Element/setAttribute", "setAttribute")}} method; Making changes to the JavaScript property will have no effect.</p>
 
 <h3 id="HTML">HTML</h3>
 
 <p>Given this HTML document:</p>
 
-<pre class="brush: html">&lt;p&gt;Demonstrating quirks of &lt;code&gt;on&lt;em&gt;event&lt;/em&gt;&lt;/code&gt; HTML attributes on
-   &lt;a onclick="log('Click!')"&gt;these three words&lt;/a&gt;.
+<pre class="brush: html notranslate">&lt;p&gt;Demonstrating quirks of &lt;code&gt;on&lt;em&gt;event&lt;/em&gt;&lt;/code&gt; HTML attributes on
+   &lt;a onclick="log('Click!')"&gt;these three words&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;div&gt;&lt;/div&gt;</pre>
@@ -64,7 +64,7 @@ xhr.onprogress = function() { … };</pre>
 
 <p>Then this JavaScript demonstrates that the value of the HTML attribute is unaffected by changes to the JavaScript object's property.</p>
 
-<pre class="brush: js">let logElement = document.querySelector('div');
+<pre class="brush: js notranslate">let logElement = document.querySelector('div');
 let el = document.querySelector("a");
 
 function log(msg) { logElement.innerHTML += `${msg}&lt;br&gt;` };
@@ -92,9 +92,9 @@ log(`Now even the HTML attribute has changed: &lt;code&gt; ${el.getAttribute("on
 
 <p>{{ EmbedLiveSample('HTML_onevent_attributes', '', '', '', 'Web/Guide/Events/Event_handlers') }}</p>
 
-<p>For historical reasons, some attributes/properties on the {{HTMLElement("body")}} and {{HTMLElement("frameset")}} elements instead set event handlers on their parent {{domxref("Window")}} object. (The HTML specification names these: <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur">onblur</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onerror">onerror</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus">onfocus</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onload">onload</a></code>, and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onscroll">onscroll</a></code>.)</p>
+<p>For historical reasons, some attributes/properties on the {{HTMLElement("body")}} and {{HTMLElement("frameset")}} elements instead set event handlers on their parent {{domxref("Window")}} object. (The HTML specification names these: {{domxref("GlobalEventHandlers/onblur", "onblur")}}, {{domxref("GlobalEventHandlers/onerror", "onerror")}}, {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}, {{domxref("GlobalEventHandlers/onload", "onload")}}, and {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}.)</p>
 
-<h3 id="Event_handlers_parameters_this_binding_and_the_return_value">Event handler's parameters, <code>this</code> binding, and the return value</h3>
+<h3 id="Event_handlers_parameters_this_binding_and_the_return_value">Event handler's parameters, this binding, and the return value</h3>
 
 <p>When the event handler is specified as <strong>an HTML attribute</strong>, the specified code is wrapped into a function with <strong>the following parameters</strong>:</p>
 
@@ -157,9 +157,9 @@ log(`Now even the HTML attribute has changed: &lt;code&gt; ${el.getAttribute("on
 
 <h4 id="Detecting_the_presence_of_event_handler_properties">Detecting the presence of event handler properties</h4>
 
-<p>You can detect the presence of an event handler property with the JavaScript <a href="/en-US/JavaScript/Reference/Operators/in" title="en/JavaScript/Reference/Operators/in"><code>in</code></a> operator. For example:</p>
+<p>You can detect the presence of an event handler property with the JavaScript {{jsxref("Operators/in", "in")}} operator. For example:</p>
 
-<pre class="brush: js">if ("onsomenewfeature" in window) {
+<pre class="brush: js notranslate">if ("onsomenewfeature" in window) {
   /* do something amazing */
 }
 </pre>

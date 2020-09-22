@@ -80,7 +80,7 @@ tags:
 
 <h3 id="Why_do_we_need_structure">Why do we need structure?</h3>
 
-<p>To answer this question, let's take a look at <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content—they aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).</p>
+<p>To answer this question, let's take a look at <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).</p>
 
 <p>However, when you open the document in your browser, you'll see that the text appears as a big chunk!</p>
 
@@ -89,13 +89,13 @@ tags:
 <p>This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:</p>
 
 <ul>
- <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings to begin with. (We usually <a class="external external-icon" href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
+ <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
  <li>Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of {{glossary("SEO")}} (Search Engine Optimization).</li>
  <li>Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a <a class="external external-icon" href="http://en.wikipedia.org/wiki/Screen_reader" title="screen readers">screen reader</a>. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.</li>
  <li>To style content with {{glossary("CSS")}}, or make it do interesting things with {{glossary("JavaScript")}}, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.</li>
 </ul>
 
-<p>We therefore need to give our content structural markup.</p>
+<p>Therefore, we need to give our content structural markup.</p>
 
 <h3 id="Active_learning_Giving_our_content_structure">Active learning: Giving our content structure</h3>
 
@@ -228,7 +228,7 @@ textarea.onkeyup = function(){
 
 <p>Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? I hope not.)</p>
 
-<p>In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
+<p>In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
 
@@ -246,7 +246,7 @@ textarea.onkeyup = function(){
 
 <h3 id="Unordered">Unordered</h3>
 
-<p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter—let's take a shopping list as an example.</p>
+<p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
 
 <pre class="notranslate">milk
 eggs
@@ -399,7 +399,7 @@ textarea.onkeyup = function(){
 
 <h3 id="Ordered">Ordered</h3>
 
-<p>Ordered lists are lists in which the order of the items <em>does</em> matter—let's take a set of directions as an example:</p>
+<p>Ordered lists are lists in which the order of the items <em>does</em> matter. Let's take a set of directions as an example:</p>
 
 <pre class="notranslate">Drive to the end of the road
 Turn right
@@ -546,7 +546,7 @@ textarea.onkeyup = function(){
 
 <h3 id="Active_learning_Marking_up_our_recipe_page">Active learning: Marking up our recipe page</h3>
 
-<p>So at this point in the article, you have all the information you need to mark up our recipe page example. You can choose to either save a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> starting file and do the work there, or do it in the editable example below. Doing it locally will probably be better, as then you'll get to save the work you are doing, whereas if you fill it in to the editable example, it will be lost the next time you open the page. Both have pros and cons.</p>
+<p>So at this point in the article, you have all the information you need to mark up our recipe page example. You can choose to either save a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a> starting file and do the work there or do it in the editable example below. Doing it locally will probably be better, as then you'll get to save the work you are doing, whereas if you fill it in to the editable example, it will be lost the next time you open the page. Both have pros and cons.</p>
 
 <div class="hidden">
 <h6 id="Playable_code_4">Playable code</h6>
@@ -713,7 +713,7 @@ textarea.onkeyup = function(){
   &lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;
 &lt;/ol&gt;</pre>
 
-<p>Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list, and put that list inside the current fourth bullet. This would look like so:</p>
+<p>Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list and put that list inside the current fourth bullet. This would look like so:</p>
 
 <pre class="brush: html notranslate">&lt;ol&gt;
   &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
@@ -731,11 +731,11 @@ textarea.onkeyup = function(){
 
 <h2 id="Emphasis_and_importance">Emphasis and importance</h2>
 
-<p>In human language, we often emphasise certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.</p>
+<p>In human language, we often emphasize certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.</p>
 
 <h3 id="Emphasis">Emphasis</h3>
 
-<p>When we want to add emphasis in spoken language, we <em>stress</em> certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.</p>
+<p>When we want to add emphasis in spoken language, we <em>stress</em> certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.</p>
 
 <p>I am glad you weren't late.</p>
 
@@ -743,7 +743,7 @@ textarea.onkeyup = function(){
 
 <p>The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.</p>
 
-<p>In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognised by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).</p>
+<p>In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;</pre>
 
@@ -898,7 +898,7 @@ textarea.onkeyup = function(){
 
 <h3 id="Italic_bold_underline...">Italic, bold, underline...</h3>
 
-<p>The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as <strong>presentational elements</strong> and should no longer be used, because as we've seen before, semantics is so important to accessibility, SEO, etc.</p>
+<p>The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as <strong>presentational elements</strong> and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.</p>
 
 <p>HTML5 redefined <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, and <code>&lt;u&gt;</code> with new, somewhat confusing, semantic roles.</p>
 
@@ -911,7 +911,7 @@ textarea.onkeyup = function(){
 </ul>
 
 <div class="note">
-<p>A kind warning about underline: <strong>People strongly associate underlining with hyperlinks.</strong> Therefore, on the web, it's best to underline only links. Use the <code>&lt;u&gt;</code> element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.</p>
+<p>A kind warning about underline: <strong>People strongly associate underlining with hyperlinks.</strong> Therefore, on the web, it's best to underline only links. Use the <code>&lt;u&gt;</code> element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.</p>
 </div>
 
 <pre class="brush: html notranslate">&lt;!-- scientific names --&gt;
@@ -948,7 +948,7 @@ textarea.onkeyup = function(){
 
 <h2 id="Summary">Summary</h2>
 
-<p>That's it for now! This article should have given you a good idea of how to start marking up text in HTML, and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a> article, later on in the course. In the next article, we'll be looking in detail at how to <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">create hyperlinks</a>, possibly the most important element on the web.</p>
+<p>That's it for now! This article should have given you a good idea of how to start marking up text in HTML and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a> article later on in the course. In the next article, we'll be looking in detail at how to <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">create hyperlinks</a>, possibly the most important element on the web.</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</p>
 

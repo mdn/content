@@ -37,9 +37,9 @@ tags:
 
 <h2 id="Keep_me_in_the_loop">Keep me in the loop</h2>
 
-<p>Loops, loops, loops. As well as being associated with <a href="https://en.wikipedia.org/wiki/Froot_Loops">popular breakfast cereals</a>, <a href="https://en.wikipedia.org/wiki/Vertical_loop">roller coasters</a>, and <a href="https://en.wikipedia.org/wiki/Loop_(music)">musical production</a>, they are also a critical concept in programming. Programming loops are all to do with doing the same thing over and over again — which is termed <strong>iteration</strong> in programming speak.</p>
+<p>Loops, loops, loops. As well as being associated with <a href="https://en.wikipedia.org/wiki/Froot_Loops">popular breakfast cereals</a>, <a href="https://en.wikipedia.org/wiki/Vertical_loop">roller coasters</a>, and <a href="https://en.wikipedia.org/wiki/Loop_(music)">musical production</a>, they are also a critical concept in programming. Programming loops are all to do with doing the same thing over and over again, which is termed <strong>iteration</strong> in programming speak.</p>
 
-<p>Let's consider the case of a farmer that is making sure he has enough food to feed his family for the week. He might use the following loop to achieve this:</p>
+<p>Let's consider the case of a farmer who is making sure he has enough food to feed his family for the week. He might use the following loop to achieve this:</p>
 
 <p><br>
  <img alt="" src="https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
@@ -48,8 +48,8 @@ tags:
 
 <ul>
  <li> A <strong>counter</strong>, which is initialized with a certain value — this is the starting point of the loop ("Start: I have no food", above).</li>
- <li>A<strong> condition</strong>, which is a true/false test to determine whether the loop continues to run, or stops — usually when the counter reaches a certain value. This is illustrated by "Have I got enough food?", above. Let's say he needs 10 portions of food to feed his family.</li>
- <li>An <strong>iterator</strong>, which generally increments the counter by a small amount on each successive loop, until the condition is no longer <code>true</code>. We haven't explicitly illustrated this above, but we could think about the farmer being able to collect say 2 portions of food per hour. After each hour, the amount of food he has collected is incremented by two, and he checks whether he has enough food. If he has reached 10 portions (the point where the condition is no longer true, so the loop exits), he can stop collecting and go home.</li>
+ <li>A<strong> condition</strong>, which is a true/false test to determine whether the loop continues to run, or stops — usually when the counter reaches a certain value. This is illustrated by "Have I got enough food?" above. Let's say he needs 10 portions of food to feed his family.</li>
+ <li>An <strong>iterator</strong>, which generally increments the counter by a small amount on each successive loop until the condition is no longer <code>true</code>. We haven't explicitly illustrated this above, but we could think about the farmer being able to collect say 2 portions of food per hour. After each hour, the amount of food he has collected is incremented by two, and he checks whether he has enough food. If he has reached 10 portions (the point where the condition is no longer true, so the loop exits), he can stop collecting and go home.</li>
 </ul>
 
 <p>In {{glossary("pseudocode")}}, this would look something like the following:</p>
@@ -64,13 +64,13 @@ tags:
   }
 }</pre>
 
-<p>So the amount of food needed is set at 10, and the amount the farmer currently has is set at 0. In each iteration of the loop, we check whether the amount of food the farmer has is larger or equal to the amount he needs. If so, we can exit the loop. If not, the farmer spends an hour collecting two portions of food, and the loop runs again.</p>
+<p>So the amount of food needed is set at 10, and the amount the farmer currently has is set at 0. In each iteration of the loop, we check whether the amount of food the farmer has is larger or equal to the amount he needs. If so, we can exit the loop. If not, the farmer spends an hour collecting two portions of food and the loop runs again.</p>
 
 <h3 id="Why_bother">Why bother?</h3>
 
 <p>At this point, you probably understand the high-level concepts behind loops, but you are probably thinking "OK, great, but how does this help me write better JavaScript code?" As we said earlier, <strong>loops are all to do with doing the same thing over and over again</strong>, which is great for <strong>rapidly completing repetitive tasks</strong>.</p>
 
-<p>Often, the code will be slightly different on each successive iteration of the loop, which means that you can complete a whole load of tasks that are similar but slightly different — if you've got a lot of different calculations to do, you want to do each different one, not the same one over and over again!</p>
+<p>Often, the code will be slightly different on each successive iteration of the loop, which means that you can complete a whole load of tasks that are similar but slightly different; if you've got a lot of different calculations to do, you want to do each different one, not the same one over and over again!</p>
 
 <p>Let's look at an example to perfectly illustrate why loops are such a good thing. Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the <em>Update</em> button to run the example again and again to see different random sets):</p>
 
@@ -173,7 +173,7 @@ ctx.fill();</pre>
 
 <h2 id="The_standard_for_loop">The standard for loop</h2>
 
-<p>Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop — this has the following syntax:</p>
+<p>Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop. This has the following syntax:</p>
 
 <pre class="notranslate">for (initializer; condition; final-expression) {
   // code to run
@@ -296,7 +296,7 @@ para.textContent = info;</pre>
 
 <h2 id="Exiting_loops_with_break">Exiting loops with break</h2>
 
-<p>If you want to exit a loop before all the iterations have been completed, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> statement. We already met this in the previous article when we looked at <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch statements</a> — when a case is met in a switch statement that matches the input expression, the <code>break</code> statement immediately exits the switch statement and moves onto the code after it.</p>
+<p>If you want to exit a loop before all the iterations have been completed, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> statement. We already met this in the previous article when we looked at <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch statements</a> — when a case is met in a switch statement that matches the input expression, the <code>break</code> statement immediately exits the switch statement and moves on to the code after it.</p>
 
 <p>It's the same with loops — a <code>break</code> statement will immediately exit the loop and make the browser move on to any code that follows it.</p>
 
@@ -379,10 +379,10 @@ btn.addEventListener('click', function() {
 <p>{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <ol>
- <li>First of all we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.</li>
- <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code is run to perform the search and return the results.</li>
+ <li>First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.</li>
+ <li>Next, we attach an event listener to the button (<code>btn</code>) so that when it is pressed some code is run to perform the search and return the results.</li>
  <li>We store the value entered into the text input in a variable called <code>searchName</code>, before then emptying the text input and focusing it again, ready for the next search. Note that we also run the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> method on the string, so that searches will be case-insensitive.</li>
- <li>Now onto the interesting part, the for loop:
+ <li>Now on to the interesting part, the for loop:
   <ol>
    <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
    <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon character, and store the resulting two values in an array called <code>splitContact</code>.</li>
@@ -466,10 +466,10 @@ for (let i = 1; i &lt;= num; i++) {
 <p>{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <ol>
- <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
- <li>Inside the loop, we find the square root of each number using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a> does to the number it is passed).</li>
+ <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
+ <li>Inside the loop, we find the square root of each number using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a> does to the number it is passed).</li>
  <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the <code>continue</code> statement to skip on to the next loop iteration without recording the number anywhere.</li>
- <li>If the square root is an integer, we skip past the if block entirely so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
+ <li>If the square root is an integer, we skip past the if block entirely, so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
 </ol>
 
 <div class="note">
@@ -489,9 +489,9 @@ while (condition) {
   final-expression
 }</pre>
 
-<p>This works in a very similar way to the <code>for</code> loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run — rather than these two items being included inside the parentheses. The condition is included inside the parentheses, which are preceded by the <code>while</code> keyword rather than <code>for</code>.</p>
+<p>This works in a very similar way to the <code>for</code> loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run, rather than these two items being included inside the parentheses. The condition is included inside the parentheses, which are preceded by the <code>while</code> keyword rather than <code>for</code>.</p>
 
-<p>The same three items are still present, and they are still defined in the same order as they are in the for loop — this makes sense, as you still have to have an initializer defined before you can check whether it has reached the point where the condition is no longer true; the final-expression is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the condition is still true.</p>
+<p>The same three items are still present, and they are still defined in the same order as they are in the for loop. This makes sense, as you still have to have an initializer defined before you can check whether it has reached the point where the condition is no longer true; the final-expression is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the condition is still true.</p>
 
 <p>Let's have a look again at our cats list example, but rewritten to use a while loop:</p>
 

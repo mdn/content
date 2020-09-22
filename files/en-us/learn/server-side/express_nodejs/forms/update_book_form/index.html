@@ -14,7 +14,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_update_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display book update form on GET.</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Display book update form on GET.</span>
 exports<span class="punctuation token">.</span>book_update_get <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
     <span class="comment token">// Get book, authors and genres for form.</span>
@@ -63,7 +63,7 @@ exports<span class="punctuation token">.</span>book_update_get <span class="oper
 
 <p>Find the exported <code>book_update_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Handle book update on POST.</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Handle book update on POST.</span>
 exports<span class="punctuation token">.</span>book_update_post <span class="operator token">=</span> <span class="punctuation token">[</span>
 
     <span class="comment token">// Convert the genre to an array</span>
@@ -147,9 +147,10 @@ exports<span class="punctuation token">.</span>book_update_post <span class="ope
 
 <p>Open <strong>/views/book_form.pug</strong> and update the section where the author form control is set to have the conditional code shown below.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">    div.form-group
+<pre class="line-numbers  language-html notranslate"><code class="language-html">    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
+        - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
         for author in authors
           if book
             //- Handle GET form, where book.author is an object, and POST form, where it is a string.
@@ -171,7 +172,7 @@ exports<span class="punctuation token">.</span>book_update_post <span class="ope
 
 <p>Open the <strong>book_detail.pug</strong> view and make sure there are links for both deleting and updating books at the bottom of the page, as shown below.</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">  hr
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">  hr
   p
     a(href=book.url+'/delete') Delete Book
   p
@@ -194,5 +195,5 @@ exports<span class="punctuation token">.</span>book_update_post <span class="ope
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
+	<li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</li>
 </ul>

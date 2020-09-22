@@ -6,13 +6,13 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p id="Summary">A <strong>falsy</strong> (sometimes written <strong>falsey</strong>) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.</p>
+<p id="Summary">A <strong>falsy</strong> (sometimes written <strong>falsey</strong>) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.</p>
 
 <p>{{Glossary("JavaScript")}} uses {{Glossary("Type_Conversion", "type conversion")}} to coerce any value to a Boolean in contexts that require it, such as {{Glossary("Conditional", "conditionals")}} and {{Glossary("Loop", "loops")}}.</p>
 
 <p>There are 8 falsy values:</p>
 
-<table class="standard-table" style="height: 249px; width: 1345px;">
+<table class="standard-table">
  <tbody>
   <tr>
    <td><code>false</code></td>
@@ -24,7 +24,7 @@ tags:
   </tr>
   <tr>
    <td><code>-0</code></td>
-   <td>The number negative <a href="/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
+   <td>The number negative <a href="/en-US/docs/Web/JavaScript/Data_structures#Number_type">zero</a></td>
   </tr>
   <tr>
    <td><code>0n</code></td>
@@ -52,14 +52,14 @@ tags:
 </table>
 
 <div class="note">
-<p>Objects are falsy if and only if they have the <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal slot</a>. This slot only exists in <a href="/en-US/docs/Web/API/Document/all"><code>document.all</code></a> and cannot be set using JavaScript.</p>
+<p>Objects are falsy if and only if they have the <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal slot</a>. This slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Examples of <em>falsy</em> values in JavaScript (which are coerced to false in Boolean contexts, and thus <em>bypass</em> the <code>if</code> block):</p>
 
-<pre class="brush: js">if (false)
+<pre class="brush: js notranslate">if (false)
 if (null)
 if (undefined)
 if (0)
@@ -73,7 +73,7 @@ if ("")
 
 <p>If the first object is falsy, it returns that object</p>
 
-<pre class="brush: js">false &amp;&amp; "dog"
+<pre class="brush: js notranslate">false &amp;&amp; "dog"
 // ↪ false
 
 0 &amp;&amp; "dog"

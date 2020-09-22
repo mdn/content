@@ -10496,6 +10496,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onpause	/en-US/docs/Web/API/GlobalEventHandlers/onpause
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay	/en-US/docs/Web/API/GlobalEventHandlers/onplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ontouchend	/en-US/docs/Web/API/GlobalEventHandlers/ontouchend
+/en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
@@ -10578,6 +10579,7 @@
 /en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
 /en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
+/en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
 /en-US/docs/Web/API/HTMLElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
@@ -11207,6 +11209,9 @@
 /en-US/docs/Web/API/PerformanceTiming.secureConnectionStart	/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart
 /en-US/docs/Web/API/PerformanceTiming.unloadEventEnd	/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd
 /en-US/docs/Web/API/PerformanceTiming.unloadEventStart	/en-US/docs/Web/API/PerformanceTiming/unloadEventStart
+/en-US/docs/Web/API/PeriodicSyncManager/getTags()	/en-US/docs/Web/API/PeriodicSyncManager/getTags
+/en-US/docs/Web/API/PeriodicSyncManager/register()	/en-US/docs/Web/API/PeriodicSyncManager/register
+/en-US/docs/Web/API/PeriodicSyncManager/unregister()	/en-US/docs/Web/API/PeriodicSyncManager/unregister
 /en-US/docs/Web/API/PermissionStatus/status	/en-US/docs/Web/API/PermissionStatus/state
 /en-US/docs/Web/API/Position	/en-US/docs/Web/API/GeolocationPosition
 /en-US/docs/Web/API/Position.coords	/en-US/docs/Web/API/GeolocationPosition/coords
@@ -11312,6 +11317,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIdentityErrorEvent	/en-US/docs/Web/API/RTCIdentityErrorEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent	/en-US/docs/Web/API/RTCIdentityEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent.assertion	/en-US/docs/Web/API/RTCIdentityEvent/assertion
+/en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSessionDescription.RTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription

@@ -10,7 +10,7 @@ tags:
   - Svelte
   - client-side
 ---
-<div>{{LearnSidebar}}{{draft}}<br>
+<div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <p class="summary">In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte — <a href="https://svelte.dev/tutorial/writable-stores">Stores</a>. Stores are global global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.</p>
@@ -544,7 +544,7 @@ function myStore() {
  <li>Whenever the value is modified, updates the store itself and also the data in local storage.</li>
 </ul>
 
-<p>Moreover, because web storage only supports saving string values, we will have to convert from string to object when saving, and vice versa when we are loading the value from local storage.</p>
+<p>Moreover, because web storage only supports saving string values, we will have to convert from object to string when saving, and vice versa when we are loading the value from local storage.</p>
 
 <ol>
  <li>

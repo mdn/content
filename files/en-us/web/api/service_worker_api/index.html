@@ -18,12 +18,12 @@ tags:
 
 <p>A service worker is an event-driven <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">worker</a> registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).</p>
 
-<p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a> can't be used inside a service worker.</p>
+<p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> and <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> can't be used inside a service worker.</p>
 
 <p>Service workers only run over HTTPS, for security reasons. Having modified network requests, wide open to <em>man in the middle</em> attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Service Workers win over previous attempts in this area such as; <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> because they don't make assumptions about what you are trying to do, and then break when those assumptions are not exactly right; you have granular control over everything.</p>
+<p><strong>Note</strong>: Service workers win over previous attempts in this area such as; <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> because they don't make assumptions about what you are trying to do, and then break when those assumptions are not exactly right; you have granular control over everything.</p>
 </div>
 
 <div class="note">
@@ -59,14 +59,14 @@ tags:
 
 <p>If there is an existing service worker available, the new version is installed in the background, but not yet activated — at this point it is called the <em>worker in waiting</em>. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more pages to be loaded, the new service worker activates (becoming the <em>active worker</em>). Activation can happen sooner using {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} and existing pages can be claimed by the active worker using {{DOMxRef("Clients.claim()")}}.</p>
 
-<p>You can listen for the {{DOMxRef("InstallEvent")}}; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built in storage API, and placing assets inside it that you'll want for running your app offline.</p>
+<p>You can listen for the {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built in storage API, and placing assets inside it that you'll want for running your app offline.</p>
 
-<p>There is also an <code>activate</code> event. The point where this event fires is generally a good time to clean up old caches and other things associated with the previous version of your service worker.</p>
+<p>There is also an {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} event. The point where this event fires is generally a good time to clean up old caches and other things associated with the previous version of your service worker.</p>
 
-<p>Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} event. You can modify the response to these requests in any way you want, using the {{DOMxRef("FetchEvent.respondWith")}} method.</p>
+<p>Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} event. You can modify the response to these requests in any way you want, using the {{DOMxRef("FetchEvent.respondWith()")}} method.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Because <code>oninstall</code>/<code>onactivate</code> could take a while to complete, the service worker spec provides a <code>waitUntil</code> method, once this is called <code>oninstall</code> or <code>onactivate</code>, it passes a promise. Functional events are not dispatched to the service worker until the promise is successfully resolved.</p>
+<p><strong>Note</strong>: Because <code>install</code>/<code>activate</code> events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on <code>install</code> or <code>activate</code> events with a promise, functional events such as <code>fetch</code> and <code>push</code> will wait until the promise is successfully resolved.</p>
 </div>
 
 <p>For a complete tutorial to show how to build up your first basic example, read <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a>.</p>
@@ -108,7 +108,7 @@ tags:
  <dt>{{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}</dt>
  <dd>Extends the lifetime of the <code>install</code> and <code>activate</code> events dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}}, as part of the service worker lifecycle. This ensures that any functional events (like {{DOMxRef("FetchEvent")}}) are not dispatched to the {{DOMxRef("ServiceWorker")}}, until it upgrades database schemas, and deletes outdated cache entries, etc.</dd>
  <dt>{{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}</dt>
- <dd>The event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.</dd>
+ <dd>The event object of a {{domxref("ServiceWorkerGlobalScope/message_event")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.</dd>
  <dt>{{DOMxRef("FetchEvent")}} {{Experimental_Inline}}</dt>
  <dd>The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onfetch")}} handler, <code>FetchEvent</code> represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.</dd>
  <dt>{{DOMxRef("InstallEvent")}} {{Experimental_Inline}}</dt>
@@ -130,7 +130,7 @@ tags:
  <dt>{{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}</dt>
  <dd>Represents a service worker registration.</dd>
  <dt>{{DOMxRef("ServiceWorkerState")}} {{Experimental_Inline}}</dt>
- <dd>Associated with its <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>'s state.</dd>
+ <dd>Associated with its {{domxref("ServiceWorker")}}'s state.</dd>
  <dt>{{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}</dt>
  <dd>
  <p>The SyncEvent interface represents a sync action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a ServiceWorker.</p>
@@ -167,7 +167,5 @@ tags:
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
- <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Best Practices for using the VARY header</a></li>
+ <li>{{jsxref("Promise")}}</li>
 </ul>

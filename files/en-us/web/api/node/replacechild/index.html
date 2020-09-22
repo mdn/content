@@ -16,16 +16,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
+<pre class="syntaxbox notranslate"><em>let oldChild = parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><strong>newChild</strong></dt>
- <dd>The new node to replace <code>oldChild</code>. If it already exists in the DOM, it is first removed.</dd>
- <dt><strong>oldChild</strong></dt>
- <dd>The child to be replaced.</dd>
+	<dt><strong>newChild</strong></dt>
+	<dd>The new node to replace <code>oldChild</code>. If it already exists in the DOM, it is first removed.</dd>
+	<dt><strong>oldChild</strong></dt>
+	<dd>The child to be replaced.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js">// Given:
+<pre class="brush:js notranslate">// Given:
 // &lt;div&gt;
 //  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
 // &lt;/div&gt;
@@ -68,20 +68,20 @@ parentDiv.replaceChild(sp1, sp2);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}</td>
+			<td>{{Spec2("DOM WHATWG")}}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,6 +93,6 @@ parentDiv.replaceChild(sp1, sp2);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("ChildNode.replaceWith")}}</li>
+	<li>{{domxref("Node.removeChild")}}</li>
+	<li>{{domxref("ChildNode.replaceWith")}}</li>
 </ul>

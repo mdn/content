@@ -16,12 +16,16 @@ tags:
 
 <p>A space-delimited list of one or more of the following values:</p>
 
-<ul>
- <li><code>additions</code> Element nodes added to the accessibility tree within the live region; should be considered relevant.</li>
- <li><code>removals</code> are deletion of nodes in the accessiblity tree; should be considered relevant.</li>
- <li><code>text</code> are changes to the textual content of existing nodes; should be considered relevant.</li>
- <li><code>all</code> is equivalent to additions removals text.</li>
-</ul>
+<dl>
+ <dt><code>additions</code></dt>
+ <dd>Additions of Element Nodes within the live region should be considered relevant.</dd>
+ <dt><code>removals</code></dt>
+ <dd>Deletion of Nodes from the live region should be considered relevant.</dd>
+ <dt><code>text</code></dt>
+ <dd>Changes to the textual content of existing nodes should be considered relevant.</dd>
+ <dt><code>all</code></dt>
+ <dd>Equivalent to <code>additions removals text</code>.</dd>
+</dl>
 
 <p><code>aria-relevant="additions text"</code> is the default value on a live region.</p>
 

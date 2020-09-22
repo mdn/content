@@ -10,11 +10,13 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>Enables an extension to resolve domain names.</div>
+<p>Enables an extension to resolve domain names.</p>
 
-<div> </div>
+<p>To use this API, an extension must request the "dns" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
 
-<div>To use this API, an extension must request the "dns" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</div>
+<div class="blockIndicator note">
+<p>DNS will fail with NS_ERROR_UNKNOWN_PROXY_HOST if proxying DNS over socks is enabled.</p>
+</div>
 
 <h2 id="Functions">Functions</h2>
 

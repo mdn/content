@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
+<pre class="syntaxbox notranslate">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
   // ...
 }</pre>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>Only the last parameter can be a "rest parameter".</p>
 
-<pre class="brush: js">function myFun(<var>a</var>, <var>b</var>, ...<var>manyMoreArgs</var>) {
+<pre class="brush: js notranslate">function myFun(a,  b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -47,16 +47,16 @@ myFun("one", "two", "three", "four", "five", "six")
 <p>There are three main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:</p>
 
 <ul>
-	<li>rest parameters are only the ones that haven't been given a separate name (i.e. formally defined in function expression), while the <code>arguments</code> object contains <em>all</em> arguments passed to the function;</li>
-	<li>the <code>arguments</code> object is not a real array, while rest parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be applied on it directly;</li>
-	<li>the <code>arguments</code> object has additional functionality specific to itself (like the <code>callee</code> property).</li>
+ <li>rest parameters are only the ones that haven't been given a separate name (i.e. formally defined in function expression), while the <code>arguments</code> object contains <em>all</em> arguments passed to the function;</li>
+ <li>the <code>arguments</code> object is not a real array, while rest parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be applied on it directly;</li>
+ <li>the <code>arguments</code> object has additional functionality specific to itself (like the <code>callee</code> property).</li>
 </ul>
 
 <h3 id="From_arguments_to_an_array">From arguments to an array</h3>
 
 <p>Rest parameters have been introduced to reduce the boilerplate code that was induced by the arguments</p>
 
-<pre class="brush: js">// Before rest parameters, "arguments" could be converted to a normal array using:
+<pre class="brush: js notranslate">// Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
 
@@ -86,7 +86,7 @@ function f(...args) {
 
 <p>However, the third argument, <code>manyMoreArgs</code>, will be an array that contains the 3<sup>rd</sup>, 4<sup>th</sup>, 5<sup>th</sup>, 6<sup>th</sup> ... <var>n</var><sup>th</sup> — as many arguments that the user includes.</p>
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -101,7 +101,7 @@ myFun("one", "two", "three", "four", "five", "six")
 
 <p>Below... even though there is just one value, the last argument still gets put into an array.</p>
 
-<pre class="brush: js">// using the same function definition from example above
+<pre class="brush: js notranslate">// using the same function definition from example above
 
 myFun("one", "two", "three")
 
@@ -111,7 +111,7 @@ myFun("one", "two", "three")
 
 <p>Below, the third argument isn't provided, but <code>manyMoreArgs</code> is still an array (albeit an empty one).</p>
 
-<pre class="brush: js">// using the same function definition from example above
+<pre class="brush: js notranslate">// using the same function definition from example above
 
 myFun("one", "two")
 
@@ -123,7 +123,7 @@ myFun("one", "two")
 
 <p>Since <code>theArgs</code> is an array, a count of its elements is given by the <code>length</code> property:</p>
 
-<pre class="brush: js">function fun1(...theArgs) {
+<pre class="brush: js notranslate">function fun1(...theArgs) {
   console.log(theArgs.length)
 }
 
@@ -136,7 +136,7 @@ fun1(5, 6, 7)  // 3
 
 <p>In the next example, a rest parameter is used to collect all parameters after the first into an array. Each one of them is then multiplied by the first parameter, and the array is returned:</p>
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
+<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
   return theArgs.map(element =&gt; {
     return multiplier * element
   })
@@ -150,7 +150,7 @@ console.log(arr)  // [2, 4, 6]
 
 <p><code>Array</code> methods can be used on rest parameters, but not on the <code>arguments</code> object:</p>
 
-<pre class="brush: js">function sortRestArgs(...theArgs) {
+<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
   let sortedArgs = theArgs.sort()
   return sortedArgs
 }
@@ -169,7 +169,7 @@ console.log(sortArguments(5, 3, 7, 1))
 
 <p>To use <code>Array</code> methods on the <code>arguments</code> object, it must be converted to a real array first.</p>
 
-<pre class="brush: js">function sortArguments() {
+<pre class="brush: js notranslate">function sortArguments() {
   let args = Array.from(arguments)
   let sortedArgs = args.sort()
   return sortedArgs
@@ -180,16 +180,16 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -201,11 +201,11 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread syntax</a> (also ‘<code>...</code>’)</li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a></li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
-	<li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
-	<li><a class="external" href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread syntax</a> (also ‘<code>...</code>’)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
+ <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
+ <li><a class="external" href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
 </ul>

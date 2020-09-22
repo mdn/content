@@ -7,34 +7,29 @@ tags:
   - Navigator
   - Reference
   - Share
-  - canShare()
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{securecontext_header}}</div>
+<div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
-<p class="summary">The <strong><code>Navigator.canShare()</code></strong> method of the Web Share API returns <code>true</code> if a call to <code><a href="/en-US/docs/Web/API/Navigator/share">Navigator.share()</a></code> would succeed.</p>
+<p class="summary">The <strong><code>Navigator.canShare()</code></strong> method of the Web Share API returns <code>true</code> if a call to {{domxref("navigator.share()")}} would succeed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var canShare = <em>navigator</em>.canShare(<em>data</em>);</pre>
+<pre class="syntaxbox notranslate">const <em>canShare</em> = navigator.canShare(<em>data</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>data</code> {{optional_inline}}</dt>
- <dd>An object containing data to share that matches what you would pass to {{domxref("Navigator.share()")}}.</dd>
+ <dd>An object containing data to share that matches what you would pass to {{domxref("navigator.share()")}}.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <p>A {{jsxref('Boolean')}}. True if data can be shared with {{domxref("Navigator.share()")}}.</p>
 
-<h3 id="Exceptions">Exceptions</h3>
-
-<p>None.</p>
-
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">if(navigator.canShare(data)) {
+<pre class="brush: js notranslate">if(navigator.canShare(data)) {
   // We can use share() to share the data! Woop!
 }</pre>
 
@@ -63,4 +58,4 @@ tags:
 
 <h2 id="See_Also">See Also</h2>
 
-<p>{{domxref('navigator.share', 'navigator.share()')}}</p>
+<p>{{domxref("navigator.share()")}}</p>

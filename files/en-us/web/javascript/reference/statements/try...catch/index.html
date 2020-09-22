@@ -20,12 +20,8 @@ tags:
 <pre class="syntaxbox notranslate">try {
   <em>try_statements</em>
 }
-[catch (<em>exception_var_1</em> if <em>condition_1</em>) { // non-standard
-  <em>catch_statements_1</em>
-}]
-...
-[catch (<em>exception_var_2</em>) {
-  <em>catch_statements_2</em>
+[catch (<em>exception_var</em>) {
+  <em>catch_statements</em>
 }]
 [finally {
   <em>finally_statements</em>
@@ -38,22 +34,18 @@ tags:
 </dl>
 
 <dl>
- <dt><code><em>catch_statements_1</em></code>, <code><em>catch_statements_2</em></code></dt>
- <dd>Statements that are executed if an exception is thrown in the <code>try</code>-block.</dd>
+ <dt><code><em>catch_statements</em></code></dt>
+ <dd>Statement that is executed if an exception is thrown in the <code>try</code>-block.</dd>
 </dl>
 
 <dl>
- <dt><code><em>exception_var_1</em></code>, <code><em>exception_var_2</em></code></dt>
+ <dt><code><em>exception_var</em></code></dt>
  <dd>An identifier to hold an exception object for the associated <code>catch</code>-block.</dd>
 </dl>
 
-<dl>
- <dt><code><em>condition_1</em></code></dt>
- <dd>A conditional expression.</dd>
-</dl>
+<p><code><em>finally_statements</em></code></p>
 
 <dl>
- <dt><code><em>finally_statements</em></code></dt>
  <dd>Statements that are executed after the <code>try</code> statement completes. These statements execute regardless of whether an exception was thrown or caught.</dd>
 </dl>
 

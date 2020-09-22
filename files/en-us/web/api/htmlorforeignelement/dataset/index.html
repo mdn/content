@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property of the {{DOMxRef("HTMLOrForeignElement")}} interface provides read/write access to all the <a href="/en-US/docs/Web/HTML/Global_attributes/data-*" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-data-*">custom data attributes</a> (<code>data-<var>*</var></code>) set on the element.</span> This access is available both in HTML and within the DOM. It is a map of {{domxref("DOMString")}}s ({{domxref("DOMStringMap")}}) with one entry for each custom data attribute. Note that the <code>dataset</code> property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the <code>dataset</code>, which in turn represent the data attributes. Note also that an HTML <code>data-</code><var>attribute</var> and its corresponding DOM<strong> </strong><code>dataset.</code><var>property</var> do not share the same name, but they are always similar:</p>
+<p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property of the {{DOMxRef("HTMLOrForeignElement")}} interface provides read/write access to all the <a href="/en-US/docs/Web/HTML/Global_attributes/data-*" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-data-*">custom data attributes</a> (<code>data-<var>*</var></code>) set on the element.</span> This access is available both in HTML and within the DOM. It is a map of {{domxref("DOMString")}}s ({{domxref("DOMStringMap")}}) with one entry for each custom data attribute. Note that the <code>dataset</code> property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the <code>dataset</code>, which in turn represent the data attributes. Note also that an HTML <code>data-</code><var>attribute</var> and its corresponding DOM<strong> </strong><code>dataset</code>.<var>property</var> do not share the same name, but they are always similar:</p>
 
 <ul>
  <li><strong>In HTML,</strong> the name of a custom data attribute begins with <code>data-</code>. It must contain only letters, numbers, and the following characters: dash (<code>-</code>), dot (<code>.</code>), colon (<code>:</code>), underscore (<code>_</code>)—but NOT any ASCII capital letters (<code>A</code> to <code>Z</code>).</li>
@@ -44,7 +44,7 @@ tags:
  <p>The opposite transformation, which maps a key to an attribute name, uses the following rules:</p>
 
  <ol>
-  <li><strong>Restriction:</strong> Before the transformation, a dash <em>must not</em> be immediately followed by an ASCII lowercase letter <code>a</code> to <code>z;</code></li>
+  <li><strong>Restriction:</strong> Before the transformation, a dash <em>must not</em> be immediately followed by an ASCII lowercase letter <code>a</code> to <code>z</code>;</li>
   <li>The prefix <code>data-</code> is added;</li>
   <li>Any ASCII uppercase letter <code>A</code> to <code>Z</code> is transformed into a dash, followed by its lowercase counterpart;</li>
   <li>Other characters are left unchanged.</li>

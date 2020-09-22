@@ -35,11 +35,12 @@ tags:
 
 <h2 id="Intersection_observer_concepts_and_usage">Intersection observer concepts and usage</h2>
 
-<p>The Intersection Observer API allows you to configure a callback that is called:</p>
+<p>The Intersection Observer API allows you to configure a callback that is called when either of these circumstances occur:</p>
 
-<p>(1) whenever one element, called the <strong>target</strong>, intersects either the device viewport or a specified element; for the purpose of this API, this is called the <strong>root element</strong> or <strong>root</strong></p>
-
-<p>(2) and whenever the observer is asked to watch a target for the very first time</p>
+<ul>
+ <li>A <strong>target</strong> element intersects either the device's viewport or a specified element. That specified element is called the <strong>root element</strong> or <strong>root</strong> for the purposes of the Intersection Observer API.</li>
+ <li>The first time the observer is initially asked to watch a target element.</li>
+</ul>
 
 <p>Typically, you'll want to watch for intersection changes with regard to the element's closest scrollable ancestor, or, if the element isn't a descendant of a scrollable element, the viewport. To watch for intersection relative to the root element, specify <code>null</code>.</p>
 
@@ -326,7 +327,7 @@ startup();
 
 <p>Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry")}} object describing one threshold that was crossed; that is, each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, and the direction in which the transition occurred.</p>
 
-<p>The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. It checks {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} before looking at the </p>
+<p>The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called <a href="https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting">approximately</a> upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.</p>
 
 <pre class="brush: js notranslate">intersectionCallback(entries) =&gt; {
   entries.forEach(entry =&gt; {

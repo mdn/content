@@ -27,11 +27,11 @@ tags:
 
 <dl>
  <dt>{{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
+ <dd>A {{domxref("Boolean")}} flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
  <dt>{{domxref("ProgressEvent.loaded")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and <code>ProgressEvent.total</code>. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead.</dd>
+ <dd>A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing <code>total</code> by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.</dd>
  <dt>{{domxref("ProgressEvent.total")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead.</dd>
+ <dd>A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the <code>Content-Length</code> (the size of the body of the message), and doesn't include the headers and other overhead.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -50,7 +50,7 @@ tags:
 
 <p>The following example adds a <code>ProgressEvent</code> to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.</p>
 
-<pre class="brush: js">var progressBar = document.getElementById("p"),
+<pre class="brush: js notranslate">var progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {
@@ -76,7 +76,7 @@ client.send()</pre>
   <tr>
    <td>{{SpecName('XMLHttpRequest', '#interface-progressevent', 'ProgressEvent')}}</td>
    <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

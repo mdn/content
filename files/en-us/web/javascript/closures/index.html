@@ -52,7 +52,7 @@ myFunc();
 
 <p>At first glance, it might seem unintuitive that this code still works. In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once <code>makeFunc()</code> finishes executing, you might expect that the name variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.</p>
 
-<p>The reason is that functions in JavaScript form closures. A <em>closure</em> is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, <code>myFunc</code> is a reference to the instance of the function <code>displayName</code> created when <code>makeFunc</code> is run. The instance of <code>displayName</code> maintains a reference to its lexical environment, within which the variable <code>name</code> exists. For this reason, when <code>myFunc</code> is invoked, the variable <code>name</code> remains available for use, and "Mozilla" is passed to <code>alert</code>.</p>
+<p>The reason is that functions in JavaScript form closures. A <em>closure</em> is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, <code>myFunc</code> is a reference to the instance of the function <code>displayName</code> that is created when <code>makeFunc</code> is run. The instance of <code>displayName</code> maintains a reference to its lexical environment, within which the variable <code>name</code> exists. For this reason, when <code>myFunc</code> is invoked, the variable <code>name</code> remains available for use, and "Mozilla" is passed to <code>alert</code>.</p>
 
 <p>Here's a slightly more interesting example—a <code>makeAdder</code> function:</p>
 
@@ -392,7 +392,7 @@ setupHelp();</pre>
 
 <p>This example uses <code>let</code> instead of <code>var</code>, so every closure binds the block-scoped variable, meaning that no additional closures are required.</p>
 
-<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href="/en-US/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph."><code>&lt;p&gt;</code></a>, as shown:</p>
+<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href="/en-US/docs/Web/HTML/Element/input" title="The HTML &lt;input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."><code>&lt;input&gt;</code></a>, as shown:</p>
 
 <pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;

@@ -20,13 +20,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Math.log1p(<var>x</var>)</code></pre>
+<pre class="syntaxbox notranslate"><code>Math.log1p(<var>x</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>x</code></dt>
- <dd>A number.</dd>
+	<dt><code>x</code></dt>
+	<dd>A number.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -47,8 +47,16 @@ tags:
 
 <p>This can be emulated with the following function:</p>
 
-<pre class="brush: js">Math.log1p = Math.log1p || function(x) {
-  return Math.log(1 + x);
+<pre class="brush: js notranslate">Math.log1p = Math.log1p || function(x) {
+  x = Number(x);
+  if (x &lt; -1 || x !== x)
+    return NaN;
+  if (x === 0 || x === Infinity)
+    return x;
+
+  var nearX = (x + 1) - 1;
+
+  return nearX === 0 ? x : x * (Math.log(x + 1) / nearX);
 };
 </pre>
 
@@ -56,25 +64,23 @@ tags:
 
 <h3 id="Using_Math.log1p">Using <code>Math.log1p()</code></h3>
 
-<pre class="brush: js">Math.log1p(1);  // 0.6931471805599453
+<pre class="brush: js notranslate">Math.log1p(1);  // 0.6931471805599453
 Math.log1p(0);  // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
 </pre>
 
-
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}}</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,10 +92,10 @@ Math.log1p(-2); // NaN
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.expm1()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
+	<li>{{jsxref("Math.exp()")}}</li>
+	<li>{{jsxref("Math.log()")}}</li>
+	<li>{{jsxref("Math.expm1()")}}</li>
+	<li>{{jsxref("Math.log10()")}}</li>
+	<li>{{jsxref("Math.log2()")}}</li>
+	<li>{{jsxref("Math.pow()")}}</li>
 </ul>

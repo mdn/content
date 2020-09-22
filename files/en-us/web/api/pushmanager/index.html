@@ -10,9 +10,9 @@ tags:
   - Reference
   - Service Workers
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+<p>{{ApiRef("Push API")}}</p>
 
-<p>The <code>PushManager</code> interface of the <a href="/en-US/docs/Web/API/Push_API">Push API</a> provides a way to receive notifications from third-party servers as well as request URLs for push notifications.</p>
+<p>The <strong><code>PushManager</code></strong> interface of the <a href="/en-US/docs/Web/API/Push_API">Push API</a> provides a way to receive notifications from third-party servers as well as request URLs for push notifications.</p>
 
 <p>This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.</p>
 
@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">this.onpush = function(event) {
+<pre class="brush: js notranslate">this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.

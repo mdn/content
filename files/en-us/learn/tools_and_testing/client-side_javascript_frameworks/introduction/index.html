@@ -15,16 +15,16 @@ tags:
 <p class="summary">We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand how client-side JavaScript frameworks came to exist, what problems they solve, what alternatives there are, and how to go about choosing one.</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="row">Prerequisites:</th>
+			<td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.</td>
+		</tr>
+		<tr>
+			<th scope="row">Objective:</th>
+			<td>To understand how client-side JavaScript frameworks came to exist, what problems they solve, what alternatives there are, and how to go about choosing one.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="A_brief_history">A brief history</h2>
@@ -99,7 +99,7 @@ tags:
   const span = document.createElement('span');
   const textContent = document.createTextNode(name);
 
-  span.appendChild(textContent)
+  span.appendChild(textContent);
 
   item.id = id;
   item.appendChild(span);
@@ -148,12 +148,12 @@ tags:
 <p>Read more about the JavaScript used in this section:</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Document/createTextNode">document.createTextNode()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Document/createDocumentFragment">document.createDocumentFragment()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">eventTarget.addEventListener()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Node/appendChild">node.appendChild()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/Document/createTextNode">document.createTextNode()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/Document/createDocumentFragment">document.createDocumentFragment()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">eventTarget.addEventListener()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/Node/appendChild">node.appendChild()</a></code></li>
+	<li><code><a href="/en-US/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
 </ul>
 
 <h2 id="Another_way_to_build_UIs">Another way to build UIs</h2>
@@ -240,9 +240,9 @@ tags:
 <p>Each of the frameworks discussed in this module take different approaches to web application development. Each is regularly improving or changing, and each has its pros and cons. Choosing the right framework is a team- and project-dependent process, and you should do your own research to uncover what suits your needs. That said, we've identified a few questions you can ask in order to research your options more effectively:</p>
 
 <ol>
- <li>What browsers does the framework support?</li>
- <li>What domain-specific languages does the framework utilize?</li>
- <li>Does the framework have a strong community and good docs (and other support) available?</li>
+	<li>What browsers does the framework support?</li>
+	<li>What domain-specific languages does the framework utilize?</li>
+	<li>Does the framework have a strong community and good docs (and other support) available?</li>
 </ol>
 
 <p>The table in this section provides a glanceable summary of the current <em>browser support</em> offered by each framework, as well as the <strong>domain-specific languages</strong> with which it can be used.</p>
@@ -252,40 +252,40 @@ tags:
 <p>You should seriously consider the support matrix and DSLs of a framework when making a choice for any new project. Mismatched browser support can be a barrier to your users; mismatched DSL support can be a barrier to you and your teammates.</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Framework</th>
-   <th scope="col">Browser support</th>
-   <th scope="col">Preferred DSL</th>
-   <th scope="col">Supported DSLs</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Angular</td>
-   <td>IE9+</td>
-   <td>TypeScript</td>
-   <td>HTML-based; TypeScript</td>
-  </tr>
-  <tr>
-   <td>React</td>
-   <td>Modern (IE9+ with Polyfills)</td>
-   <td>JSX</td>
-   <td>JSX; TypeScript</td>
-  </tr>
-  <tr>
-   <td>Vue</td>
-   <td>IE9+</td>
-   <td>HTML-based</td>
-   <td>HTML-based, JSX, Pug</td>
-  </tr>
-  <tr>
-   <td>Ember</td>
-   <td>Modern (IE9+ in Ember version 2.18)</td>
-   <td>Handlebars</td>
-   <td>Handlebars, TypeScript</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Framework</th>
+			<th scope="col">Browser support</th>
+			<th scope="col">Preferred DSL</th>
+			<th scope="col">Supported DSLs</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Angular</td>
+			<td>IE9+</td>
+			<td>TypeScript</td>
+			<td>HTML-based; TypeScript</td>
+		</tr>
+		<tr>
+			<td>React</td>
+			<td>Modern (IE9+ with Polyfills)</td>
+			<td>JSX</td>
+			<td>JSX; TypeScript</td>
+		</tr>
+		<tr>
+			<td>Vue</td>
+			<td>IE9+</td>
+			<td>HTML-based</td>
+			<td>HTML-based, JSX, Pug</td>
+		</tr>
+		<tr>
+			<td>Ember</td>
+			<td>Modern (IE9+ in Ember version 2.18)</td>
+			<td>Handlebars</td>
+			<td>Handlebars, TypeScript</td>
+		</tr>
+	</tbody>
 </table>
 
 <div class="blockIndicator note">
@@ -295,9 +295,9 @@ tags:
 <p>Citations for this table:</p>
 
 <ul>
- <li><a href="https://reactjs.org/docs/react-dom.html#browser-support">React browser support: official docs</a></li>
- <li><a href="https://blog.emberjs.com/2018/02/14/ember-3-0-released.html">Ember browser support: Ember 3.0 release announcement</a></li>
- <li><a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/">Ember templating language (official docs)</a></li>
+	<li><a href="https://reactjs.org/docs/react-dom.html#browser-support">React browser support: official docs</a></li>
+	<li><a href="https://blog.emberjs.com/2018/02/14/ember-3-0-released.html">Ember browser support: Ember 3.0 release announcement</a></li>
+	<li><a href="https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/">Ember templating language (official docs)</a></li>
 </ul>
 
 <h3 id="Does_the_framework_have_a_strong_community">Does the framework have a strong community?</h3>
@@ -317,9 +317,9 @@ tags:
 <p>If you’re looking for tools to expedite the web development process, and you know your project isn’t going to require intensive client-side JavaScript, you could reach for one of a handful of other solutions for building the web:</p>
 
 <ul>
- <li>A content management system</li>
- <li>Server-side rendering</li>
- <li>A static site generator</li>
+	<li>A content management system</li>
+	<li>Server-side rendering</li>
+	<li>A static site generator</li>
 </ul>
 
 <h3 id="Content_management_systems">Content management systems</h3>
@@ -359,52 +359,52 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
+	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+	<li>React
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+	</ul>
+	</li>
+	<li>Ember
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+	</ul>
+	</li>
+	<li>Vue
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+	</ul>
+	</li>
+	<li>Svelte
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+	</ul>
+	</li>
 </ul>

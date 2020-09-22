@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const nodeIterator = document.createNodeIterator(<var>root</var>[, <var>whatToShow</var>[, <var>filter</var>]]);
+<pre class="syntaxbox notranslate">const nodeIterator = document.createNodeIterator(<var>root</var>[, <var>whatToShow</var>[, <var>filter</var>]]);
 </pre>
 
 <h3 id="Values">Values</h3>
@@ -109,11 +109,9 @@ tags:
  <dd>An object implementing the {{ domxref("NodeFilter") }} interface. Its <code>acceptNode()</code> method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes (a simple callback function may also be used instead). The method should return one of <code>NodeFilter.FILTER_ACCEPT</code>, <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code>. See the {{ anch("Example") }}.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Prior to Gecko 12.0 {{ geckoRelease("12.0") }}, this method accepted an optional fourth parameter (<code>entityReferenceExpansion</code>) that is not part of the DOM4 specification, and has therefore been removed. This parameter indicated whether or not the children of entity reference nodes were visible to the iterator. Since such nodes were never created in browsers, this paramater had no effect.</div>
-
 <h2 id="Example" name="Example">Example</h2>
 
-<pre class="brush: js">const nodeIterator = document.createNodeIterator(
+<pre class="brush: js notranslate">const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     {

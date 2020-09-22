@@ -11,7 +11,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Promise</code></strong> object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.</p>
+<div></div>
+
+<p>The <strong><code>Promise</code></strong> object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
 
 <p>To learn about the way promises work and how you can use them, we advise you to read <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> first.</p>
 
@@ -23,11 +25,11 @@ tags:
 
 <ul>
  <li><em>pending</em>: initial state, neither fulfilled nor rejected.</li>
- <li><em>fulfilled</em>: meaning that the operation completed successfully.</li>
+ <li><em>fulfilled</em>: meaning that the operation was completed successfully.</li>
  <li><em>rejected</em>: meaning that the operation failed.</li>
 </ul>
 
-<p>A pending promise can either be <em>fulfilled</em> with a value, or <em>rejected</em> with a reason (error). When either of these options happens, the associated handlers queued up by a promise's <code>then</code> method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.</p>
+<p>A pending promise can either be <em>fulfilled</em> with a value or <em>rejected</em> with a reason (error). When either of these options happens, the associated handlers queued up by a promise's <code>then</code> method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.</p>
 
 <p>As the <code>{{JSxRef("Promise.then", "Promise.prototype.then()")}}</code> and <code>{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}</code> methods return promises, they can be chained.</p>
 
@@ -38,7 +40,7 @@ tags:
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contains more details about promise terminology.</p>
+<p><strong>Note</strong>: A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
 </div>
 
 <h3 id="Chained_Promises">Chained Promises</h3>
@@ -64,9 +66,9 @@ const myPromise =
  </dd>
 </dl>
 
-<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. (See <code>throw -999</code> in the example, below, for a technique to handle the consequences.) On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final .catch() statement.</p>
+<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately. (See <code>throw -999</code> in the example, below, for a technique to handle the consequences.) On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final .catch() statement.</p>
 
-<p>The signatures of these two functions are simple, they accept a single parameter of any type. These functions are written by you, the programmer. The termination condition of these functions determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state, while terminating with a <code>throw</code> creates a "rejected" state.</p>
+<p>The signatures of these two functions are simple, they accept a single parameter of any type. These functions are written by you, the programmer. The termination condition of these functions determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
 
 <pre class="brush: js notranslate">handleFulfilled(value)       { /*...*/; return nextValue;  }
 handleRejection(reason)  { /*...*/; throw  nextReason; }
@@ -74,7 +76,7 @@ handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
 <p>The returned <code>nextValue</code> can be another promise object, in which case the promise gets dynamically inserted into the chain.</p>
 
-<p>When a <code>.then()</code> lacks the appropriate function that return a Promise object, processing simply continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
+<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing simply continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
@@ -84,14 +86,14 @@ handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
 <pre class="notranslate">(promise D, (promise C, (promise X) ) )</pre>
 
-<p>A promise can participate in more than one nesting. For the following code, the transiton of <code>promiseA</code> into a "settled" state will cause both instances of <code>.then()</code> to be invoked.</p>
+<p>A promise can participate in more than one nesting. For the following code, the transition of <code>promiseA</code> into a "settled" state will cause both instances of <code>.then()</code> to be invoked.</p>
 
 <pre class="brush: js notranslate">const promiseA = new Promise(myExecutorFunc);
 const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 </pre>
 
-<p>An action can be assigned to an already "settled" promise. In that case the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of <code>setTimeout(action,10)</code>.</p>
+<p>An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of <code>setTimeout(action,10)</code>.</p>
 
 <pre class="brush: js notranslate">const promiseA = new Promise( (resolutionFunc,rejectionFunc) =&gt; {
     resolutionFunc(777);
@@ -117,13 +119,13 @@ console.log("immediate logging");
 <dl>
  <dt>{{JSxRef("Promise.all", "Promise.all(iterable)")}}</dt>
  <dd>Wait for all promises to be resolved, or for any to be rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises ,in the same order as defined in the iterable of multiple promises.</dd>
+ <dd>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</dd>
  <dd>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</dd>
  <dt>{{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
  <dd>Wait until all promises have settled (each may resolve or reject).</dd>
- <dd>Returns a promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</dd>
+ <dd>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</dd>
  <dt>{{JSxRef("Promise.any", "Promise.any(iterable)")}}</dt>
- <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfils, returns a single promise that resolves with the value from that promise.</dd>
+ <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.</dd>
  <dt>{{JSxRef("Promise.race", "Promise.race(iterable)")}}</dt>
  <dd>Wait until any of the promises is resolved or rejected.</dd>
  <dd>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</dd>
@@ -131,7 +133,7 @@ console.log("immediate logging");
  <dt>{{JSxRef("Promise.reject", "Promise.reject(reason)")}}</dt>
  <dd>Returns a new <code>Promise</code> object that is rejected with the given reason.</dd>
  <dt>{{JSxRef("Promise.resolve", "Promise.resolve(value)")}}</dt>
- <dd>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value.</dd>
+ <dd>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</dd>
  <dd>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</dd>
 </dl>
 
@@ -169,11 +171,11 @@ myFirstPromise.then((successMessage) =&gt; {
 
 <h3 id="Example_with_diverse_situations">Example with diverse situations</h3>
 
-<p>This example shows diverse techniques for using Promise capabilities, and diverse situations that can occur. To understand this, start by scrolling to the bottom of the code block, and examine the promise chain. Upon provision of an initial promise, a chain of promises can follow. The chain is composed of <code>.then()</code> calls, and typically (but not necessarily) has a single <code>.catch()</code> at the end, optionally followed by <code>.finally()</code>. In this example, the promise chain is initiated by a custom written <code>new Promise()</code> construct; but in actual practice, promise chains more typically start with an API function (written by someone else) that returns a promise.</p>
+<p>This example shows diverse techniques for using Promise capabilities and diverse situations that can occur. To understand this, start by scrolling to the bottom of the code block, and examine the promise chain. Upon provision of an initial promise, a chain of promises can follow. The chain is composed of <code>.then()</code> calls, and typically (but not necessarily) has a single <code>.catch()</code> at the end, optionally followed by <code>.finally()</code>. In this example, the promise chain is initiated by a custom-written <code>new Promise()</code> construct; but in actual practice, promise chains more typically start with an API function (written by someone else) that returns a promise.</p>
 
-<p>The example function <code>tetheredGetNumber()</code> shows that a promise generator will utilize <code>reject()</code> while setting up an asynchronous call, or within the call-back, or both. The function <code>promiseGetWord()</code> illustrates how an API function might generate and return a promise in a self contained manner.</p>
+<p>The example function <code>tetheredGetNumber()</code> shows that a promise generator will utilize <code>reject()</code> while setting up an asynchronous call, or within the call-back, or both. The function <code>promiseGetWord()</code> illustrates how an API function might generate and return a promise in a self-contained manner.</p>
 
-<p>Note that function <code>troubleWithGetNumber()</code> ends with a <code>throw()</code>. That is forced because an ES6 promise chain goes through all the <code>.then()</code> promises, even after an error, and without the "throw()", the error would seem "fixed". This is a hassle, and for this reason, it is common to omit <code>rejectionFunc</code> throughout the chain of <code>.then()</code> promises, and just have a single <code>rejectionFunc</code> in the final <code>catch()</code>. The alternative is to throw a special value (in this case "-999", but a custom Error type would be more appropriate).</p>
+<p>Note that the function <code>troubleWithGetNumber()</code> ends with a <code>throw()</code>. That is forced because an ES6 promise chain goes through all the <code>.then()</code> promises, even after an error, and without the "throw()", the error would seem "fixed". This is a hassle, and for this reason, it is common to omit <code>rejectionFunc</code> throughout the chain of <code>.then()</code> promises, and just have a single <code>rejectionFunc</code> in the final <code>catch()</code>. The alternative is to throw a special value (in this case "-999", but a custom Error type would be more appropriate).</p>
 
 <p>This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the <code>threshold</code> values.</p>
 
@@ -271,13 +273,11 @@ function testPromise() {
   let thisPromiseCount = ++promiseCount;
   let log = document.getElementById('log');
   // begin
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started (<small>Sync code started</small>)
-');
+  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Started (<small>Sync code started</small>)');
   // We make a new promise: we promise a numeric count of this promise, starting from 1 (after waiting 3s)
   let p1 = new Promise((resolve, reject) =&gt; {
     // The executor function is called with the ability to resolve or reject the promise
-    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise started (<small>Async code started</small>)
-');
+    log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise started (<small>Async code started</small>)');
     // This is only an example to create asynchronism
     window.setTimeout(function() {
         // We fulfill the promise !
@@ -289,15 +289,13 @@ function testPromise() {
   // and what to do when the promise is rejected with the catch() call
   p1.then(function(val) {
     // Log the fulfillment value
-    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled (<small>Async code terminated</small>)
-');
+    log.insertAdjacentHTML('beforeend', val + ') Promise fulfilled (<small>Async code terminated</small>)');
   }).catch((reason) =&gt; {
     // Log the rejection reason
     console.log(`Handle rejected promise (${reason}) here.`);
   });
   // end
-  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made (<small>Sync code terminated</small>)
-');
+  log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made (<small>Sync code terminated</small>)');
 }
 
 </pre>
@@ -321,7 +319,7 @@ function testPromise() {
 
 <h3 id="Loading_an_image_with_XHR">Loading an image with XHR</h3>
 
-<p>Another simple example using <code>Promise</code> and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub <a href="https://github.com/mdn/js-examples/tree/master/promises-test">js-examples</a> repository. You can also <a href="https://mdn.github.io/js-examples/promises-test/">see it in action</a>. Each step is commented and allows you to follow the Promise and XHR architecture closely.</p>
+<p>Another simple example using <code>Promise</code> and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub <a href="https://github.com/mdn/js-examples/tree/master/promises-test">js-examples</a> repository. You can also <a href="https://mdn.github.io/js-examples/promises-test/">see it in action</a>. Each step is commented on and allows you to follow the Promise and XHR architecture closely.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

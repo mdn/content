@@ -20,10 +20,15 @@ tags:
 <dl>
  <dt>{{domxref("RTCRtpReceiver.track")}} {{readonlyinline}}</dt>
  <dd>Returns the {{domxref("MediaStreamTrack")}} associated with the current <code>RTCRtpReceiver</code> instance. </dd>
- <dt>{{domxref("RTCRtpReceiver.rtcpTransport")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("RTCDtlsTransport")}} instance over which RTCP is sent and received.</dd>
  <dt>{{domxref("RTCRtpReceiver.transport")}} {{readonlyinline}}</dt>
  <dd>Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.</dd>
+</dl>
+
+<h3 id="Obsolete_properties">Obsolete properties</h3>
+
+<dl>
+ <dt><code>rtcpTransport</code> {{obsolete_inline}}</dt>
+ <dd>This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpReceiver.transport", "transport")}} property instead.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

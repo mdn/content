@@ -78,7 +78,7 @@ if (!Array.from) {
             symbolIterator = Symbol.iterator
                 ? Symbol.iterator
                 : 'Symbol(Symbol.iterator)';
-        } catch {
+        } catch (e) {
             symbolIterator = 'Symbol(Symbol.iterator)';
         }
 

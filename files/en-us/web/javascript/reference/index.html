@@ -19,274 +19,354 @@ tags:
 <p>This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more <a href="/en-US/docs/Web/JavaScript/Reference/About">about this reference</a>.</p>
 
 <h2 id="Built-ins">Built-ins</h2>
-
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">JavaScript standard built-in objects</a>, along with their methods and properties.</p>
-
 <ul class="card-grid">
- <li><span>Value properties</span>
-
-  <p>{{JSxRef("Infinity")}}<br>
-   {{JSxRef("NaN")}}<br>
-   {{JSxRef("undefined")}}<br>
-   {{JSxRef("globalThis")}}</p>
- </li>
- <li><span>Function properties</span>
-  <p>{{JSxRef("Global_Objects/eval", "eval()")}}<br>
-   {{JSxRef("Global_Objects/isFinite", "isFinite()")}}<br>
-   {{JSxRef("Global_Objects/isNaN", "isNaN()")}}<br>
-   {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}<br>
-   {{JSxRef("Global_Objects/parseInt", "parseInt()")}}<br>
-   {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}<br>
-   {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}<br>
-   {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}<br>
-   {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</p>
- </li>
- <li><span>Fundamental objects</span>
-  <p>{{JSxRef("Object")}}<br>
-   {{JSxRef("Function")}}<br>
-   {{JSxRef("Boolean")}}<br>
-   {{JSxRef("Symbol")}}</p>
- </li>
- <li><span>Error objects</span>
-  <p>{{JSxRef("Error")}}<br>
-   {{JSxRef("AggregateError")}}<br>
-   {{JSxRef("EvalError")}}<br>
-   {{JSxRef("InternalError")}}<br>
-   {{JSxRef("RangeError")}}<br>
-   {{JSxRef("ReferenceError")}}<br>
-   {{JSxRef("SyntaxError")}}<br>
-   {{JSxRef("TypeError")}}<br>
-   {{JSxRef("URIError")}}</p>
- </li>
+	<li>
+		<h4 id="Value_properties">Value properties</h4>
+		<ul>
+			<li>{{JSxRef("Infinity")}}</li>
+			<li>{{JSxRef("NaN")}}</li>
+			<li>{{JSxRef("undefined")}}</li>
+			<li>{{JSxRef("globalThis")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Function_properties">Function properties</h4>
+		<ul>
+			<li>{{JSxRef("Global_Objects/eval",               "eval()")}}</li>
+			<li>{{JSxRef("Global_Objects/isFinite",           "isFinite()")}}</li>
+			<li>{{JSxRef("Global_Objects/isNaN",              "isNaN()")}}</li>
+			<li>{{JSxRef("Global_Objects/parseFloat",         "parseFloat()")}}</li>
+			<li>{{JSxRef("Global_Objects/parseInt",           "parseInt()")}}</li>
+			<li>{{JSxRef("Global_Objects/decodeURI",          "decodeURI()")}}</li>
+			<li>{{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
+			<li>{{JSxRef("Global_Objects/encodeURI",          "encodeURI()")}}</li>
+			<li>{{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Fundamental_objects">Fundamental objects</h4>
+		<ul>
+			<li>{{JSxRef("Object")}}</li>
+			<li>{{JSxRef("Function")}}</li>
+			<li>{{JSxRef("Boolean")}}</li>
+			<li>{{JSxRef("Symbol")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Error_objects">Error objects</h4>
+		<ul>
+			<li>{{JSxRef("Error")}}</li>
+			<li>{{JSxRef("AggregateError")}}</li>
+			<li>{{JSxRef("EvalError")}}</li>
+			<li>{{JSxRef("InternalError")}}</li>
+			<li>{{JSxRef("RangeError")}}</li>
+			<li>{{JSxRef("ReferenceError")}}</li>
+			<li>{{JSxRef("SyntaxError")}}</li>
+			<li>{{JSxRef("TypeError")}}</li>
+			<li>{{JSxRef("URIError")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>Numbers &amp; dates</span>
-
-  <p>{{JSxRef("Number")}}<br>
-   {{JSxRef("BigInt")}}<br>
-   {{JSxRef("Math")}}<br>
-   {{JSxRef("Date")}}</p>
- </li>
- <li><span>Text processing</span>
-  <p>{{JSxRef("String")}}<br>
-   {{JSxRef("RegExp")}}</p>
- </li>
- <li><span>Indexed Collections</span><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers"> </a>{{JSxRef("Array")}}<br>
-  {{JSxRef("Int8Array")}}<br>
-  {{JSxRef("Uint8Array")}}<br>
-  {{JSxRef("Uint8ClampedArray")}}<br>
-  {{JSxRef("Int16Array")}}<br>
-  {{JSxRef("Uint16Array")}}<br>
-  {{JSxRef("Int32Array")}}<br>
-  {{JSxRef("Uint32Array")}}<br>
-  {{JSxRef("Float32Array")}}<br>
-  {{JSxRef("Float64Array")}}<br>
-  {{JSxRef("BigInt64Array")}}<br>
-  {{JSxRef("BigUint64Array")}}</li>
- <li><span>Keyed collections</span>
-  <p>{{JSxRef("Map")}}<br>
-   {{JSxRef("Set")}}<br>
-   {{JSxRef("WeakMap")}}<br>
-   {{JSxRef("WeakSet")}}</p>
- </li>
+	<li>
+		<h4 id="Numbers_dates">Numbers &amp; dates</h4>
+		<ul>
+			<li>{{JSxRef("Number")}}</li>
+			<li>{{JSxRef("BigInt")}}</li>
+			<li>{{JSxRef("Math")}}</li>
+			<li>{{JSxRef("Date")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Text_processing">Text processing</h4>
+		<ul>
+			<li>{{JSxRef("String")}}</li>
+			<li>{{JSxRef("RegExp")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Indexed_Collections">Indexed Collections</h4>
+		<ul>
+			<li>{{JSxRef("Array")}}</li>
+			<li>{{JSxRef("Int8Array")}}</li>
+			<li>{{JSxRef("Uint8Array")}}</li>
+			<li>{{JSxRef("Uint8ClampedArray")}}</li>
+			<li>{{JSxRef("Int16Array")}}</li>
+			<li>{{JSxRef("Uint16Array")}}</li>
+			<li>{{JSxRef("Int32Array")}}</li>
+			<li>{{JSxRef("Uint32Array")}}</li>
+			<li>{{JSxRef("Float32Array")}}</li>
+			<li>{{JSxRef("Float64Array")}}</li>
+			<li>{{JSxRef("BigInt64Array")}}</li>
+			<li>{{JSxRef("BigUint64Array")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Keyed_collections">Keyed collections</h4>
+		<ul>
+			<li>{{JSxRef("Map")}}</li>
+			<li>{{JSxRef("Set")}}</li>
+			<li>{{JSxRef("WeakMap")}}</li>
+			<li>{{JSxRef("WeakSet")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>Structured data</span>
-
-  <p>{{JSxRef("ArrayBuffer")}}<br>
-   {{JSxRef("SharedArrayBuffer")}}<br>
-   {{JSxRef("Atomics")}}<br>
-   {{JSxRef("DataView")}}<br>
-   {{JSxRef("JSON")}}</p>
- </li>
- <li><span>Control abstraction</span>
-  <p>{{JSxRef("Promise")}}<br>
-   {{JSxRef("Generator")}}<br>
-   {{JSxRef("GeneratorFunction")}}<br>
-   {{JSxRef("AsyncFunction")}}</p>
- </li>
- <li><span>Reflection</span>
-  <p>{{JSxRef("Reflect")}}<br>
-   {{JSxRef("Proxy")}}</p>
- </li>
- <li><span>Internationalization</span>
-  <p>{{JSxRef("Intl")}}<br>
-   {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}<br>
-   {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}<br>
-   {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}<br>
-   {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}<br>
-   {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}<br>
-   {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}<br>
-   {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}<br>
-   {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</p>
- </li>
+	<li>
+		<h4 id="Structured_data">Structured data</h4>
+		<ul>
+			<li>{{JSxRef("ArrayBuffer")}}</li>
+			<li>{{JSxRef("SharedArrayBuffer")}}</li>
+			<li>{{JSxRef("Atomics")}}</li>
+			<li>{{JSxRef("DataView")}}</li>
+			<li>{{JSxRef("JSON")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Control_abstraction">Control abstraction</h4>
+		<ul>
+			<li>{{JSxRef("GeneratorFunction")}}</li>
+			<li>{{JSxRef("AsyncGeneratorFunction")}}</li>
+			<li>{{JSxRef("Generator")}}</li>
+			<li>{{JSxRef("AsyncGenerator")}}</li>
+			<li>{{JSxRef("AsyncFunction")}}</li>
+			<li>{{JSxRef("Promise")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Reflection">Reflection</h4>
+		<ul>
+			<li>{{JSxRef("Reflect")}}</li>
+			<li>{{JSxRef("Proxy")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Internationalization">Internationalization</h4>
+		<ul>
+			<li>{{JSxRef("Intl")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/Collator",           "Intl.Collator")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/DateTimeFormat",     "Intl.DateTimeFormat")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/DisplayNames",       "Intl.DisplayNames")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/ListFormat",         "Intl.ListFormat")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/Locale",             "Intl.Locale")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/NumberFormat",       "Intl.NumberFormat")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/PluralRules",        "Intl.PluralRules")}}</li>
+			<li>{{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>WebAssembly</span>
-
-  <p>{{JSxRef("WebAssembly")}}<br>
-   {{JSxRef("WebAssembly.Module")}}<br>
-   {{JSxRef("WebAssembly.Instance")}}<br>
-   {{JSxRef("WebAssembly.Memory")}}<br>
-   {{JSxRef("WebAssembly.Table")}}<br>
-   {{JSxRef("WebAssembly.CompileError")}}<br>
-   {{JSxRef("WebAssembly.LinkError")}}<br>
-   {{JSxRef("WebAssembly.RuntimeError")}}</p>
- </li>
+	<li>
+		<h4 id="WebAssembly">WebAssembly</h4>
+		<ul>
+			<li>{{JSxRef("WebAssembly")}}</li>
+			<li>{{JSxRef("WebAssembly.Module")}}</li>
+			<li>{{JSxRef("WebAssembly.Instance")}}</li>
+			<li>{{JSxRef("WebAssembly.Memory")}}</li>
+			<li>{{JSxRef("WebAssembly.Table")}}</li>
+			<li>{{JSxRef("WebAssembly.CompileError")}}</li>
+			<li>{{JSxRef("WebAssembly.LinkError")}}</li>
+			<li>{{JSxRef("WebAssembly.RuntimeError")}}</li>
+		</ul>
+	</li>
 </ul>
 
 <h2 id="Statements">Statements</h2>
-
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements and declarations</a></p>
-
 <ul class="card-grid">
- <li><span>Control flow</span>{{jsxref("Statements/block", "Block")}}<br>
-  {{jsxref("Statements/break", "break")}}<br>
-  {{jsxref("Statements/continue", "continue")}}<br>
-  {{jsxref("Statements/Empty", "Empty")}}<br>
-  {{jsxref("Statements/if...else", "if...else")}}<br>
-  {{jsxref("Statements/switch", "switch")}}<br>
-  {{jsxref("Statements/throw", "throw")}}<br>
-  {{jsxref("Statements/try...catch", "try...catch")}}</li>
- <li><span>Declarations</span>
-  <p>{{jsxref("Statements/var", "var")}}<br>
-   {{jsxref("Statements/let", "let")}}<br>
-   {{jsxref("Statements/const", "const")}}</p>
- </li>
- <li><span>Functions and classes</span>
-  <p>{{jsxref("Statements/function", "function")}}<br>
-   {{jsxref("Statements/function*", "function*")}}<br>
-   {{jsxref("Statements/async_function", "async function")}}<br>
-   {{jsxref("Statements/return", "return")}}<br>
-   {{jsxref("Statements/class", "class")}}</p>
- </li>
- <li><span>Iterations</span>
-  <p>{{jsxref("Statements/do...while", "do...while")}}<br>
-   {{jsxref("Statements/for", "for")}}<br>
-   {{jsxref("Statements/for_each...in", "for each...in")}}<br>
-   {{jsxref("Statements/for...in", "for...in")}}<br>
-   {{jsxref("Statements/for...of", "for...of")}}<br>
-   {{jsxref("Statements/for-await...of", "for await...of")}}<br>
-   {{jsxref("Statements/while", "while")}}</p>
- </li>
+	<li>
+		<h4 id="Control_flow">Control flow</h4>
+		<ul>
+			<li>{{jsxref("Statements/block",       "Block")}}</li>
+			<li>{{jsxref("Statements/break",       "break")}}</li>
+			<li>{{jsxref("Statements/continue",    "continue")}}</li>
+			<li>{{jsxref("Statements/Empty",       "Empty")}}</li>
+			<li>{{jsxref("Statements/if...else",   "if...else")}}</li>
+			<li>{{jsxref("Statements/switch",      "switch")}}</li>
+			<li>{{jsxref("Statements/throw",       "throw")}}</li>
+			<li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Declarations">Declarations</h4>
+		<ul>
+			<li>{{jsxref("Statements/var",   "var")}}</li>
+			<li>{{jsxref("Statements/let",   "let")}}</li>
+			<li>{{jsxref("Statements/const", "const")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Functions_and_classes">Functions and classes</h4>
+		<ul>
+			<li>{{jsxref("Statements/function", "function")}}</li>
+			<li>{{jsxref("Statements/function*", "function*")}}</li>
+			<li>{{jsxref("Statements/async_function", "async function")}}</li>
+			<li>{{jsxref("Statements/return", "return")}}</li>
+			<li>{{jsxref("Statements/class", "class")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Iterations">Iterations</h4>
+		<ul>
+			<li>{{jsxref("Statements/do...while",     "do...while")}}</li>
+			<li>{{jsxref("Statements/for",            "for")}}</li>
+			<li>{{jsxref("Statements/for_each...in",  "for each...in")}}</li>
+			<li>{{jsxref("Statements/for...in",       "for...in")}}</li>
+			<li>{{jsxref("Statements/for...of",       "for...of")}}</li>
+			<li>{{jsxref("Statements/for-await...of", "for await...of")}}</li>
+			<li>{{jsxref("Statements/while",          "while")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>Other</span>
-
-  <p>{{jsxref("Statements/debugger", "debugger")}}<br>
-   {{jsxref("Statements/import", "import")}}<br>
-   {{jsxref("Statements/label", "label")}}<br>
-   {{jsxref("Statements/with", "with")}}</p>
- </li>
+	<li>
+		<h4 id="Other">Other</h4>
+		<ul>
+			<li>{{jsxref("Statements/debugger", "debugger")}}</li>
+			<li>{{jsxref("Statements/import",   "import")}}</li>
+			<li>{{jsxref("Statements/label",    "label")}}</li>
+			<li>{{jsxref("Statements/with",     "with")}}</li>
+		</ul>
+	</li>
 </ul>
 
 <h2 id="Expressions_and_operators">Expressions and operators</h2>
-
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">JavaScript expressions and operators</a>. </p>
-
-<div>
 <ul class="card-grid">
- <li><span>Primary expressions</span>{{JSxRef("Operators/this", "this")}}<br>
-  {{JSxRef("Operators/function", "function")}}<br>
-  {{JSxRef("Operators/class", "class")}}<br>
-  {{JSxRef("Operators/function*", "function*")}}<br>
-  {{JSxRef("Operators/yield", "yield")}}<br>
-  {{JSxRef("Operators/yield*", "yield*")}}<br>
-  {{JSxRef("Operators/async_function", "async function")}}<br>
-  {{JSxRef("Operators/await", "await")}}<br>
-  {{JSxRef("Global_Objects/Array", "[]")}}<br>
-  {{JSxRef("Operators/Object_initializer", "{}")}}<br>
-  {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}<br>
-  {{JSxRef("Operators/Grouping", "( )")}}<br>
-  {{JSxRef("null")}}</li>
- <li><span>Left-hand-side expressions</span>
-  <p>{{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}<br>
-   {{JSxRef("Operators/new", "new")}}<br>
-   {{JSxRef("Operators/new%2Etarget", "new.target")}}<br>
-   {{JSxRef("Operators/super", "super")}}<br>
-   {{JSxRef("Operators/Spread_syntax", "...obj")}}</p>
- </li>
- <li><span>Increment &amp; decrement</span>
-  <p>{{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}</p>
- </li>
- <li><span>Unary operators</span>
-  <p>{{JSxRef("Operators/delete", "delete")}}<br>
-   {{JSxRef("Operators/void", "void")}}<br>
-   {{JSxRef("Operators/typeof", "typeof")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}<br>
-   {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}<br>
-   {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}</p>
- </li>
+	<li>
+		<h4 id="Primary_expressions">Primary expressions</h4>
+		<ul>
+			<li>{{JSxRef("Operators/this",               "this")}}</li>
+			<li>{{JSxRef("Operators/function",           "function")}}</li>
+			<li>{{JSxRef("Operators/class",              "class")}}</li>
+			<li>{{JSxRef("Operators/function*",          "function*")}}</li>
+			<li>{{JSxRef("Operators/yield",              "yield")}}</li>
+			<li>{{JSxRef("Operators/yield*",             "yield*")}}</li>
+			<li>{{JSxRef("Operators/async_function",     "async function")}}</li>
+			<li>{{JSxRef("Operators/await",              "await")}}</li>
+			<li>{{JSxRef("Global_Objects/Array",         "[]")}}</li>
+			<li>{{JSxRef("Operators/Object_initializer", "{}")}}</li>
+			<li>{{JSxRef("Global_Objects/RegExp",        "/ab+c/i")}}</li>
+			<li>{{JSxRef("Operators/Grouping",           "( )")}}</li>
+			<li>{{JSxRef("null")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Left-hand-side_expressions">Left-hand-side expressions</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}</li>
+			<li>{{JSxRef("Operators/new",           "new")}}</li>
+			<li>{{JSxRef("Operators/new%2Etarget",  "new.target")}}</li>
+			<li>{{JSxRef("Operators/super",         "super")}}</li>
+			<li>{{JSxRef("Operators/Spread_syntax", "...obj")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Increment_decrement">Increment &amp; decrement</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Unary_operators">Unary operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/delete", "delete")}}</li>
+			<li>{{JSxRef("Operators/void",   "void")}}</li>
+			<li>{{JSxRef("Operators/typeof", "typeof")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}</li>
+			<li>{{JSxRef("Operators/Bitwise_Operators",    "~", "#Bitwise_NOT")}}</li>
+			<li>{{JSxRef("Operators/Logical_Operators",    "!", "#Logical_NOT")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>Arithmetic operators</span>
-
-  <p>{{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}<br>
-   {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}</p>
- </li>
- <li><span>Relational operators</span>
-  <p>{{JSxRef("Operators/in", "in")}}<br>
-   {{JSxRef("Operators/instanceof", "instanceof")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</p>
- </li>
- <li><span>Equality operators</span>
-  <p>{{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}<br>
-   {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}</p>
- </li>
- <li><span>Bitwise shift operators</span>
-  <p>{{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}<br>
-   {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}<br>
-   {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}</p>
- </li>
+	<li>
+		<h4 id="Arithmetic_operators">Arithmetic operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "+",  "#Addition")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "-",  "#Subtraction")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "/",  "#Division")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "*",  "#Multiplication")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "%",  "#Remainder")}}</li>
+			<li>{{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Relational_operators">Relational operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/in",         "in")}}</li>
+			<li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "&lt;",  "#Less_than_operator")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "&gt;",  "#Greater_than_operator")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Equality_operators">Equality operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Comparison_Operators", "==",  "#Equality")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "!=",  "#Inequality")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}</li>
+			<li>{{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Bitwise_shift_operators">Bitwise shift operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;",     "#Left_shift")}}</li>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;",     "#Right_shift")}}</li>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}</li>
+		</ul>
+	</li>
 </ul>
-
 <ul class="card-grid">
- <li><span>Binary bitwise operators</span>{{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}<br>
-  {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}<br>
-  {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}</li>
- <li><span>Binary logical operators</span>
-  <p>{{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}<br>
-   {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}</p>
- </li>
- <li><span>Conditional (ternary) operator</span>
-  <p>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</p>
- </li>
- <li><span>Assignment operators</span>
-  <p>{{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}<br>
-   {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}<br>
-   {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}<br>
-   {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</p>
- </li>
+	<li>
+		<h4 id="Binary_bitwise_operators">Binary bitwise operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}</li>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}</li>
+			<li>{{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Binary_logical_operators">Binary logical operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}</li>
+			<li>{{JSxRef("Operators/Logical_Operators", "||",         "#Logical_OR")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Conditional_ternary_operator">Conditional (ternary) operator</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</li>
+		</ul>
+	</li>
+	<li>
+		<h4 id="Assignment_operators">Assignment operators</h4>
+		<ul>
+			<li>{{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}</li>
+			<li>{{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}</li>
+			<li>{{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}</li>
+			<li>{{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</li>
+		</ul>
+	</li>
 </ul>
-</div>
 
 <h2 id="Functions">Functions</h2>
 

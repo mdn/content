@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">CSS.registerProperty(<em>PropertyDefinition</em>);</pre>
+<pre class="syntaxbox notranslate">CSS.registerProperty(<em>PropertyDefinition</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -24,7 +24,7 @@ tags:
  <dt><code>name</code></dt>
  <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> indicating the name of the property being defined.</dd>
  <dt><code>syntax</code> {{optional_inline}}</dt>
- <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> representing the expected syntax of the defined property. Defaults to "*".</dd>
+ <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> representing the expected syntax of the defined property. Defaults to <code>"*"</code>.</dd>
  <dt><code>inherits</code></dt>
  <dd>A boolean value defining whether the defined property should be inherited (<code>true</code>), or not (<code>false</code>). Defaults to <code>false</code>.</dd>
  <dt><code>initialValue</code> {{optional_inline}}</dt>
@@ -33,12 +33,12 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Void.</p>
+<p><code>undefined</code>.</p>
 
 <dl>
 </dl>
 
-<h3 id="Errors">Errors</h3>
+<h3 id="Exceptions">Exceptions</h3>
 
 <dl>
  <dt><code>InvalidModificationError</code></dt>
@@ -53,7 +53,7 @@ tags:
 
 <p>The following will register a {{cssxref('--*', 'custom property')}}, <code>--my-color</code>, using <code>registerProperty()</code>, as a color, give it a default value, and have it not inherit its value:</p>
 
-<pre class="brush: js">window.CSS.registerProperty({
+<pre class="brush: js notranslate">window.CSS.registerProperty({
   name: '--my-color',
   syntax: '&lt;color&gt;',
   inherits: false,
@@ -63,7 +63,7 @@ tags:
 
 <p>In this example, the custom property <code>--my-color</code> has been registered using the syntax <code>&lt;color&gt;</code> . We can now use that property to transition a gradient on hover or focus. Notice that with the registered property the transition works, but that it doesn't with the unregistered property!</p>
 
-<pre class="brush: css">.registered {
+<pre class="brush: css notranslate">.registered {
   --my-color: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--my-color));
   transition: --my-color 1s ease-in-out;
@@ -90,7 +90,7 @@ button {
 
 <p>We can add these styles to some buttons:</p>
 
-<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
+<pre class="brush: html notranslate">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
 &lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
 </pre>
 
@@ -107,7 +107,7 @@ button {
   </tr>
   <tr>
    <td>{{SpecName('CSS Properties and Values API', '#the-registerproperty-function', 'The registerProperty() function')}}</td>
-   <td>{{Spec2('CSS Properties and Values API Level 1')}}</td>
+   <td>{{Spec2('CSS Properties and Values API')}}</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>

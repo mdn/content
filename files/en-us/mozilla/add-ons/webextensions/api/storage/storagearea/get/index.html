@@ -135,6 +135,11 @@ gettingItem.then(onGot, onError);
   console.log(items.kitten); // -&gt; {name:"Mog", eats:"mice"}
 });</pre>
 
+<p>Or using a Promise</p>
+
+<pre class="brush: js notranslate">let gettingItem = new Promise(resolve =&gt; chrome.storage.local.get("kitten", resolve));
+<code class="language-js">gettingItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onGot<span class="punctuation token">)</span><span class="punctuation token">; </span></code><code class="language-js"><span class="comment token">// -&gt; Object { kitten: Object }</span></code></pre>
+
 <div class="note"><strong>Acknowledgements</strong>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>

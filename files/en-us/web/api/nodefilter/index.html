@@ -64,7 +64,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">const nodeIterator = document.createNodeIterator(
+<pre class="brush: js notranslate">const nodeIterator = document.createNodeIterator(
   // Node to use as root
   document.getElementById('someId'),
 
@@ -73,11 +73,12 @@ tags:
 
   // Object containing the function to use for the acceptNode method
   // of the NodeFilter
-    { acceptNode: function(node) {
+  {
+    acceptNode: function(node) {
       // Logic to determine whether to accept, reject or skip node
       // In this case, only accept nodes that have content
       // other than whitespace
-      if ( ! /^\s*$/.test(node.data) ) {
+      if (/\S/.test(node.data)) {
         return NodeFilter.FILTER_ACCEPT
       }
     }

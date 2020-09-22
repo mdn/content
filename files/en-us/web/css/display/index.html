@@ -11,18 +11,16 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<div></div>
+<p class="summary">The <strong><code>display</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an element is treated as a <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout" rel="nofollow">block or inline element</a> and the layout used for its children, such as <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>, <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout" rel="nofollow">grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" rel="nofollow">flex</a>.</p>
 
-<p class="summary">The <strong><code>display</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an element is treated as a <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout" rel="nofollow">block or inline element</a> and the layout used for its children, such as <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>, <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout" rel="nofollow">grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" rel="nofollow">flex</a>.</p>
-
-<p>Formally, the <strong><code>display</code></strong> property sets an element's inner and outer <em>display types</em>. The outer type sets an element's participation in <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>; the inner type sets the layout of children. Some values of <code>display</code> are fully defined in their own individual specifications; for example the detail of what happens when <code>display: flex</code> is declared is defined in the CSS Flexible Box Model specification. See the table at the end of this document for all of the individual specifications.</p>
+<p>Formally, the <strong><code>display</code></strong> property sets an element's inner and outer <em>display types</em>. The outer type sets an element's participation in <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>; the inner type sets the layout of children. Some values of <code>display</code> are fully defined in their own individual specifications; for example the detail of what happens when <code>display: flex</code> is declared is defined in the CSS Flexible Box Model specification. See <a href="#Specifications">the table at the end of this document</a> for all of the individual specifications.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The CSS <code>display</code> property is specified using keyword values. Keyword values are grouped into six value categories:</p>
+<p>The CSS <code>display</code> property is specified using keyword values. Keyword values are grouped into six value categories:</p>
 
 <pre class="brush: css notranslate">.container {
-  display:  [ &lt;display-outside&gt; || &lt;display-inside&gt; ] | &lt;display-listitem&gt; | &lt;display-internal&gt; | &lt;display-box&gt; | &lt;display-legacy&gt; ;
+  display:  [ &lt;display-outside&gt; | &lt;display-inside&gt; ] | &lt;display-listitem&gt; | &lt;display-internal&gt; | &lt;display-box&gt; | &lt;display-legacy&gt; ;
 }
 </pre>
 
@@ -114,7 +112,7 @@ display: unset;
  <li><a href="/en-US/docs/Web/CSS/display/two-value_syntax_of_display">Adapting to the new two-value syntax of display</a></li>
 </ul>
 
-<h3 id="CSS_Flow_Layout_display_block_display_inline">CSS Flow Layout (<code>display: block</code>, <code>display: inline</code>)</h3>
+<h3 id="CSS_Flow_Layout_display_block_display_inline">CSS Flow Layout (display: block, display: inline)</h3>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a></li>
@@ -124,7 +122,7 @@ display: unset;
  <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a></li>
 </ul>
 
-<h3 id="display_flex"><code>display: flex</code></h3>
+<h3 id="display_flex">display: flex</h3>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of flexbox</a></li>
@@ -138,7 +136,7 @@ display: unset;
  <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">Typical use cases of Flexbox</a></li>
 </ul>
 
-<h3 id="display_grid"><code>display: grid</code></h3>
+<h3 id="display_grid">display: grid</h3>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic Concepts of Grid Layout</a></li>
@@ -156,15 +154,15 @@ display: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<h3 id="display_none"><code>display: none</code></h3>
+<h3 id="display_none">display: none</h3>
 
 <p>Using a <code>display</code> value of <code>none</code> on an element will remove it from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a>. This will cause the element and all its descendant elements to no longer be announced by screen reading technology.</p>
 
 <p>If you want to visually hide the element, a more accessible alternative is to use <a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">a combination of properties</a> to remove it visually from the screen but keep it parseable by assistive technology such as screen readers.</p>
 
-<h3 id="display_contents"><code>display: contents</code></h3>
+<h3 id="display_contents">display: contents</h3>
 
-<p>Current implementations in most browsers will remove from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> any element with a <code>display</code> value of <code>contents</code> (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the <a href="https://drafts.csswg.org/css-display/#valdef-display-contents">CSS specification</a>.</p>
+<p>Current implementations in most browsers will remove from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> any element with a <code>display</code> value of <code>contents</code> (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the <a href="https://drafts.csswg.org/css-display/#valdef-display-contents">CSS specification</a>.</p>
 
 <ul>
  <li><a class="external" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
@@ -190,13 +188,13 @@ display: unset;
 
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
-<h2 id="Specifications" name="Specifications">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <h3 id="display_value_comparison">display value comparison</h3>
 
 <p>In this example we have two block-level container elements, each one with three inline children. Below that, we have a select menu that allows you to apply different <code>display</code> values to the containers, allowing you to compare and contrast how the different values affect the element's layout, and that of their children.</p>
 
-<p>We've included <code><a href="/en-US/docs/Web/CSS/padding">padding</a></code> and <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code> on the containers and their children, so that it is easier to see the effect the display values are having.</p>
+<p>We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: We've not included any of the modern two-value syntax, as support for that is still fairly limited.</p>

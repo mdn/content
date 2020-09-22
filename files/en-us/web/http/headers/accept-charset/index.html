@@ -16,9 +16,8 @@ tags:
 
 <div class="note">
 <p>In early versions of HTTP/1.1, a default character encoding was defined: ISO-8859-1. This is no longer recommended, and now each content-type may have its own default.</p>
-UTF-8 is now well-supported and the overwhelmingly preferred character encoding. To <a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">guarantee better privacy through less configuration-based entropy</a>, all browsers omit the <code>Accept-Charset</code> header: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ and Chrome 27+ no longer send it.
 
-
+<p>UTF-8 is now well-supported and the overwhelmingly preferred character encoding. To <a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">guarantee better privacy through less configuration-based entropy</a>, all browsers omit the <code>Accept-Charset</code> header: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ and Chrome 27+ no longer send it.</p>
 </div>
 
 <table class="properties">
@@ -36,7 +35,7 @@ UTF-8 is now well-supported and the overwhelmingly preferred character encoding.
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Accept-Charset: &lt;charset&gt;
+<pre class="syntaxbox notranslate">Accept-Charset: &lt;charset&gt;
 
 // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
 Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
@@ -54,7 +53,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre>Accept-Charset: iso-8859-1
+<pre class="notranslate">Accept-Charset: iso-8859-1
 
 Accept-Charset: utf-8, iso-8859-1;q=0.5
 

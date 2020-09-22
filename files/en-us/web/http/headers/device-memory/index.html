@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>Device-Memory</strong></code> header is a <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a> header that works like <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> header which represents the approximate amount of RAM client device has.</p>
+<p>The <strong><code>Device-Memory</code></strong> header is a <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a> header that works like <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> header which represents the approximate amount of RAM client device has.</p>
 
 <table class="properties">
  <tbody>
@@ -32,31 +32,33 @@ tags:
 
 <p>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse. The header takes on the following values: <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>.</p>
 
-<pre class="syntaxbox">Device-Memory: &lt;number&gt;
+<pre class="syntaxbox notranslate">Device-Memory: &lt;number&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Server first needs to opt in to receive <code>Device-Memory</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Device-Memory</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
 
-<pre>Accept-CH: Device-Memory
+<pre class="notranslate">Accept-CH: Device-Memory
 Accept-CH-Lifetime: 86400
 </pre>
 
 <p>Then on subsequent requests the client might send <code>Device-Memory</code> header back:</p>
 
-<pre>Device-Memory: 1
+<pre class="notranslate">Device-Memory: 1
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}}</td>
    <td>{{Spec2('Device Memory')}}</td>
@@ -67,7 +69,7 @@ Accept-CH-Lifetime: 86400
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("http.headers.Device-Memory")}}</p>
 

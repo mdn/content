@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>document</em>.createTreeWalker(<em>root</em>, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]);
+<pre class="syntaxbox notranslate"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -113,7 +113,7 @@ tags:
 
 <p>The following example goes through all nodes in the body, reduces the set of nodes to elements, simply passes through as acceptable each node (it could reduce the set in the <code>acceptNode()</code> method instead), and then makes use of tree walker iterator that is created to advance through the nodes (now all elements) and push them into an array.</p>
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+<pre class="brush: js notranslate">var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },

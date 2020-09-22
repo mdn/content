@@ -39,24 +39,24 @@ right: unset;
 <h3 id="Values" name="Values">Values</h3>
 
 <dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
- <ul>
-  <li>for <em>absolutely positioned elements</em>, the distance to the right edge of the containing block.</li>
-  <li>for <em>relatively positioned elements</em>, the distance that the element is moved to the left of its normal position.</li>
- </ul>
- </dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.</dd>
- <dt><code>auto</code></dt>
- <dd>Specifies that:
- <ul>
-  <li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("left")}} property, while <code>width: auto</code> is treated as a width based on the content; or if <code>left</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
-  <li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if <code>left</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the <code>auto</code> keyword.</dd>
+	<dt>{{cssxref("&lt;length&gt;")}}</dt>
+	<dd>A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
+	<ul>
+		<li>for <em>absolutely positioned elements</em>, the distance to the right edge of the containing block.</li>
+		<li>for <em>relatively positioned elements</em>, the distance that the element is moved to the left of its normal position.</li>
+	</ul>
+	</dd>
+	<dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+	<dd>A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.</dd>
+	<dt><code>auto</code></dt>
+	<dd>Specifies that:
+	<ul>
+		<li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("left")}} property, while <code>width: auto</code> is treated as a width based on the content; or if <code>left</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
+		<li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if <code>left</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
+	</ul>
+	</dd>
+	<dt><code>inherit</code></dt>
+	<dd>Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the <code>auto</code> keyword.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -64,10 +64,10 @@ right: unset;
 <p>The effect of <code>right</code> depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):</p>
 
 <ul>
- <li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>right</code> property specifies the distance between the element's right edge and the right edge of its containing block.</li>
- <li>When <code>position</code> is set to <code>relative</code>, the <code>right</code> property specifies the distance the element's right edge is moved to the left from its normal position.</li>
- <li>When <code>position</code> is set to <code>sticky</code>, the <code>right</code> property is used to compute the sticky-constraint rectangle.</li>
- <li>When <code>position</code> is set to <code>static</code>, the <code>right</code> property has <em>no effect</em>.</li>
+	<li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>right</code> property specifies the distance between the element's right edge and the right edge of its containing block.</li>
+	<li>When <code>position</code> is set to <code>relative</code>, the <code>right</code> property specifies the distance the element's right edge is moved to the left from its normal position.</li>
+	<li>When <code>position</code> is set to <code>sticky</code>, the <code>right</code> property is used to compute the sticky-constraint rectangle.</li>
+	<li>When <code>position</code> is set to <code>static</code>, the <code>right</code> property has <em>no effect</em>.</li>
 </ul>
 
 <p>When both {{cssxref("left")}} and <code>right</code> are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both -- for example, if a <code>width</code> is declared -- the position of the element is<em> over-constrained</em>. When this is the case, the <code>left</code> value has precedence when the container is left-to-right; the <code>right</code> value has precedence when the container is right-to-left.</p>
@@ -163,25 +163,25 @@ right: unset;
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning', '#propdef-right', 'right')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>Adds behavior for sticky positioning.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-right', 'right')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Positioning', '#propdef-right', 'right')}}</td>
+			<td>{{Spec2('CSS3 Positioning')}}</td>
+			<td>Adds behavior for sticky positioning.</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('CSS2.1', 'visuren.html#propdef-right', 'right')}}</td>
+			<td>{{Spec2('CSS2.1')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
@@ -193,7 +193,7 @@ right: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}</li>
- <li>The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
- <li>{{cssxref("position")}}</li>
+	<li>{{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}</li>
+	<li>The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
+	<li>{{cssxref("position")}}</li>
 </ul>

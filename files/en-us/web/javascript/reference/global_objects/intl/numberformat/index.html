@@ -15,12 +15,12 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code></a></dt>
+ <dt>{{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}</dt>
  <dd>Creates a new <code>NumberFormat</code> object.</dd>
 </dl>
 
@@ -54,7 +54,7 @@ console.log(new Intl.NumberFormat().format(number));
 // → '3,500' if in US English locale
 </pre>
 
-<h3 id="Using_locales">Using <code>locales</code></h3>
+<h3 id="Using_locales">Using locales</h3>
 
 <p>This example shows some of the variations in localized number formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
 
@@ -82,7 +82,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
 </pre>
 
-<h3 id="Using_options">Using <code>options</code></h3>
+<h3 id="Using_options">Using options</h3>
 
 <p>The results can be customized using the <code>options</code> argument:</p>
 
@@ -101,7 +101,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 // → 1,23,000
 </pre>
 
-<h3 id="Using_style_and_unit">Using <code>style</code> and <code>unit</code></h3>
+<h3 id="Using_style_and_unit">Using style and unit</h3>
 
 <pre class="brush: js notranslate">console.log(new Intl.NumberFormat("pt-PT",  {
     style: 'unit',
@@ -120,10 +120,12 @@ console.log((16).toLocaleString('en-GB', {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}}</td>
   </tr>
@@ -141,5 +143,5 @@ console.log((16).toLocaleString('en-GB', {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+ <li>{{jsxref("Intl")}}</li>
 </ul>

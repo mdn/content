@@ -150,6 +150,29 @@ tags:
  </tbody>
 </table>
 
+<h4 id="Return_value_and_chaining">Return value and chaining</h4>
+
+<p>Like most expressions, assignments like <code>x = y</code> have a return value. It can be retrieved by e.g. assigning the expression or logging it:</p>
+
+<pre class="notranslate">const z = (x = y); // Or equivalently: const z = x = y;
+
+console.log(z); // Log the return value of the assignment x = y.
+console.log(x = y); // Or log the return value directly.
+</pre>
+
+<p>The return value matches the expression to the right of the <code>=</code> sign in the “Meaning” column of the table above. That means that <code>(x = y)</code> returns <code>y</code>, <code>(x += y)</code> returns the resulting sum <code>x + y</code>, <code>(x **= y)</code> returns the resulting power <code>x ** y</code>, and so on.</p>
+
+<p>In the case of logical assignments, <code>(x &amp;&amp;= y)</code>, <code>(x ||= y)</code>, and <code>(x ??= y)</code>, the return value is that of the logical operation without the assignment, so <code>x &amp;&amp; y</code>, <code>x || y</code>, and <code>x ?? y</code>, respectively.</p>
+
+<p>Note that the return values are always based on the operands’ values <em>before</em> the operation.</p>
+
+<p>When chaining these expressions, each assignment is evaluated <strong>right-to-left</strong>. Consider these examples:</p>
+
+<ul>
+ <li><code>w = z = x = y</code> is equivalent to <code>w = (z = (x = y))</code> or <code>x = y; z = y; w = y</code></li>
+ <li><code>z += x *= y</code> is equivalent to <code>z += (x *= y)</code> or <code>tmp = x * y; x *= y; z += tmp</code> (except without the <code>tmp</code>).</li>
+</ul>
+
 <h4 id="Destructuring">Destructuring</h4>
 
 <p>For more complex assignments, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring assignment</a> syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.</p>
@@ -245,7 +268,7 @@ var var2 = 4;
 1 / 2 == 1.0 / 2.0; // this is true
 </pre>
 
-<p>In addition to the standard arithmetic operations (+, -, * /), JavaScript provides the arithmetic operators listed in the following table:</p>
+<p>In addition to the standard arithmetic operations (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), JavaScript provides the arithmetic operators listed in the following table:</p>
 
 <table class="fullwidth-table">
  <caption>Arithmetic operators</caption>
@@ -570,6 +593,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
 
 <pre class="brush: js notranslate">delete object.property;
 delete object[propertyKey];
+delete objectName[index];
 delete property; // legal only within a with statement
 </pre>
 

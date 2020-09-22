@@ -47,7 +47,7 @@ tags:
   var isUnique = true;
   var i;
 
-  for (i=0; i&lt;connectionArray.length; i++) {
+  for (i=0; i &lt; connectionArray.length; i++) {
     if (connectionArray[i].username === target) {
       connectionArray[i].send(msgString);
       break;
@@ -63,10 +63,10 @@ tags:
   var msgString = JSON.stringify(msg);
   var i;
 
-  if (msg.target &amp;&amp; msg.target !== undefined &amp;&amp; msg.target.length !== 0) {
+  if (msg.target &amp;&amp; msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i&lt;connectionArray.length; i++) {
+    for (i=0; i &lt; connectionArray.length; i++) {
       connectionArray[i].send(msgString);
     }
   }

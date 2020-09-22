@@ -25,7 +25,7 @@ tags:
 
 <dl>
  <dt>{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} {{ReadOnlyInline}}</dt>
- <dd>A string from the enum {{domxref("RTCRtpTransceiverDirection")}} which indicates the transceiver's current directionality, or <code>null</code> if the transceiver is stopped or has never participated in an exchange of offers and answers.</dd>
+ <dd>A read-only string from the enum {{domxref("RTCRtpTransceiverDirection")}} which indicates the transceiver's current directionality, or <code>null</code> if the transceiver is stopped or has never participated in an exchange of offers and answers. To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.</dd>
  <dt>{{domxref("RTCRtpTransceiver.direction", "direction")}}</dt>
  <dd>A string from the enum {{domxref("RTCRtpTransceiverDirection")}} which is used to set the transceiver's desired direction.</dd>
  <dt>{{domxref("RTCRtpTransceiver.mid", "mid")}} {{ReadOnlyInline}}</dt>

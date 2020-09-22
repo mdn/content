@@ -15,13 +15,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
+<pre class="syntaxbox notranslate">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt>{mode} {{optional_inline}}</dt>
- <dd>An object containing a property <code>mode</code>, which takes as its value a {{domxref("DOMString")}} specifying the type of reader to create.  Values can be:
+ <dd>An object containing a property <code>mode</code>, specifying the type of reader to create.  Values can be:
  <ul>
   <li><code>"byob"</code>, which results in a {{domxref("ReadableStreamBYOBReader")}} being created that can read readable byte streams (i.e. can handle "bring your own buffer" reading).</li>
   <li><code>undefined</code> (or not specified at all — this is the default), which results in a {{domxref("ReadableStreamDefaultReader")}} being created that can read individual chunks from a stream.</li>
@@ -46,7 +46,7 @@ tags:
 
 <p>In the following simple example, a previously-created custom <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}} created using <code>getReader()</code>. (see our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream example</a> for the full code). Each chunk is read sequentially and output to the UI, until the stream has finished being read, at which point we return out of the recursive function and print the entire stream to another part of the UI.</p>
 
-<pre class="brush: js">function fetchStream() {
+<pre class="brush: js notranslate">function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 

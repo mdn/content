@@ -61,7 +61,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;footer&gt;
+<pre class="brush: html notranslate">&lt;footer&gt;
   Some copyright info or perhaps some author
   info for an &amp;lt;article&amp;gt;?
 &lt;/footer&gt;
@@ -69,10 +69,10 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where the footer <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">landmark role</a> is not announced in the landmark rotor. To address this, add <code>role="contentinfo"</code> to the <code>footer</code> element.</p>
+<p>Prior to the release of Safari 13, the <code>contentinfo</code> <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">landmark role</a> was not properly exposed by <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a>. If needing to support legacy Safari browsers, add <code>role="contentinfo"</code> to the <code>footer</code> element to ensure the landmark will be properly exposed.</p>
 
 <ul>
- <li><a href="https://bugs.webkit.org/show_bug.cgi?id=146930">WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't</a></li>
+ <li>Related: <a href="https://bugs.webkit.org/show_bug.cgi?id=146930">WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't</a></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>

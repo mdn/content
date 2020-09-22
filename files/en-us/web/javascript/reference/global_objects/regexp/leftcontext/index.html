@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>leftContext</code> property is static, it is not a property of an individual regular expression object. Instead, you always use it as <code>RegExp.leftContext</code> or <code>RegExp['$`'].</code></p>
+<p>The <code>leftContext</code> property is static, it is not a property of an individual regular expression object. Instead, you always use it as <code>RegExp.leftContext</code> or <code>RegExp['$`']</code>.</p>
 
 <p>The value of the <code>leftContext</code> property is read-only and modified whenever a successful match is made.</p>
 
@@ -24,9 +24,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_leftContext_and">Using <code>leftContext</code> and <code>$`</code></h3>
+<h3 id="Using_leftContext_and">Using leftContext and $`</h3>
 
-<pre class="brush: js">var re = /world/g;
+<pre class="brush: js notranslate">var re = /world/g;
 re.test('hello world!');
 RegExp.leftContext; // "hello "
 RegExp['$`'];       // "hello "

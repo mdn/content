@@ -11,9 +11,10 @@ tags:
   - list
 ---
 <div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
+
 <p><span class="seoSummary">The ARIA <code>list</code> role can be used to identify a list of items. It is normally used in conjunction with the <code>listitem</code> role, which is used to identify a list item contained inside the list.</span></p>
 
-<pre class="brush: html">&lt;section role="list"&gt;
+<pre class="brush: html notranslate">&lt;section role="list"&gt;
   &lt;div role="listitem"&gt;List item 1&lt;/div&gt;
   &lt;div role="listitem"&gt;List item 2&lt;/div&gt;
   &lt;div role="listitem"&gt;List item 3&lt;/div&gt;
@@ -30,7 +31,7 @@ tags:
 <p><strong>Warning</strong>:<span class="ILfuVd yZ8quc"> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{htmlelement("ul")}}/{{htmlelement("ol")}} and {{htmlelement("li")}}. See {{anch("Best practices")}} for a full example.</span></p>
 </div>
 
-<p> </p>
+
 
 <h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">Associated WAI-ARIA Roles, States, and Properties</h3>
 
@@ -63,7 +64,7 @@ tags:
 
 <p>Unlike the HTML<span class="ILfuVd yZ8quc"> {{htmlelement("ol")}} and {{htmlelement("ul")}}, </span>the ARIA <code>list</code> roles doesn't distinguish between ordered and unordered lists. If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate semantic HTML elements to mark up a list ({{htmlelement("ol")}} and {{htmlelement("ul")}}) and list items ({{htmlelement("li")}}). </span><span class="ILfuVd yZ8quc"> For example, our above example should be rewritten as follows:</span></p>
 
-<pre class="brush: html">&lt;ul&gt;
+<pre class="brush: html notranslate">&lt;ul&gt;
   &lt;li&gt;List item 1&lt;/li&gt;
   &lt;li&gt;List item 2&lt;/li&gt;
   &lt;li&gt;List item 3&lt;/li&gt;
@@ -71,7 +72,7 @@ tags:
 
 <p>or use an ordered list if the order of the list items matters:</p>
 
-<pre class="brush: html">&lt;ol&gt;
+<pre class="brush: html notranslate">&lt;ol&gt;
   &lt;li&gt;List item 1&lt;/li&gt;
   &lt;li&gt;List item 2&lt;/li&gt;
   &lt;li&gt;List item 3&lt;/li&gt;
@@ -81,7 +82,7 @@ tags:
 <p><strong>Note</strong>: The ARIA list/listitem roles don't distinguish between ordered and unordered lists.</p>
 </div>
 
-<p>As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of <a href="/en-US/docs/">presentation</a>, each child <code>li</code> element inherits the <code>presentation</code> role because ARIA requires the <code>listitem</code> elements to have the parent <code>list</code> element. So, the <code>li</code> elements are not exposed to assistive technologies, but elements contained inside of those <code>li</code> elements, including nested lists, are visible to assistive technologies.</p>
+<p>As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role">presentation</a>, each child <code>li</code> element inherits the <code>presentation</code> role because ARIA requires the <code>listitem</code> elements to have the parent <code>list</code> element. So, the <code>li</code> elements are not exposed to assistive technologies, but elements contained inside of those <code>li</code> elements, including nested lists, are visible to assistive technologies.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the <code>tab</code>, <code>tabpanel</code>, and <code>tablist</code> roles.</p>

@@ -7,9 +7,11 @@ tags:
   - Guide
   - Understanding_CSS_z-index
 ---
-<p>« <a href="/en/CSS" title="CSS">CSS</a> « <a href="/en/CSS/Understanding_z-index" title="Understanding CSS z-index">Understanding CSS z-index</a></p>
+<div>{{cssref}}</div>
 
-<h3 id="Stacking_context_example_1">Stacking context example 1</h3>
+<p>« <a href="/en-US/docs/Web/CSS">CSS</a> « <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index" title="Understanding CSS z-index">Understanding CSS z-index</a></p>
+
+<h2 id="Stacking_context_example_1">Stacking context example 1</h2>
 
 <p>Let's start with a basic example. In the root stacking context we have two DIVs (DIV #1 and DIV #3), both relatively positioned, but without z-index properties. Inside DIV #1 there is an absolutely positioned DIV #2, while in DIV #3 there is an absolutely positioned DIV #4, both without z-index properties.</p>
 
@@ -40,9 +42,9 @@ tags:
 
 <div class="note"><strong>Note:</strong> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.</div>
 
-<h2 id="Example"><strong>Example</strong></h2>
+<h2 id="Example">Example</h2>
 
-<h3 id="HTML"><strong>HTML</strong></h3>
+<h3 id="HTML">HTML</h3>
 
 <pre class="brush: html notranslate">&lt;div id="div1"&gt;
 &lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
@@ -113,23 +115,23 @@ tags:
 
 <p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}</p>
 
-<h3 id="See_also">See also</h3>
+<h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a> : Default stacking rules</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
- <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="en/CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level<span id="cke_bm_89E" style="display: none;"> </span></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, <code>z-index</code> on all levels</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): Paolo Lombardi</li>
- <li>This article is the english translation of an article I wrote in italian for <a class="external" href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
- <li>Last Updated Date: July 9th, 2005</li>
+ <li>This article is the English translation of an article I wrote in Italian for <a class="external" href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under the <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a>.</li>
+ <li>Last Updated Date: July 9, 2005</li>
 </ul>
 </div>

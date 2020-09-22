@@ -34,22 +34,29 @@ tags:
  <dd>The {{domxref("RTCDtlsTransport")}} over which the sender is exchanging the RTP and RTCP packets used to manage transmission of media and control data. This value is <code>null</code> until the transport is established. When bundling is in use, more than transceiver may be sharing the same transport object.</dd>
 </dl>
 
+<h3 id="Obsolete_properties">Obsolete properties</h3>
+
+<dl>
+ <dt><code>rtcpTransport</code> {{obsolete_inline}}</dt>
+ <dd>This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpSender.transport", "transport")}} property instead.</dd>
+</dl>
+
 <h2 id="methods" name="methods">Methods</h2>
 
-<p>
- </p><dl id="method_definitions">
-  <dt>{{domxref("RTCRtpSender.getParameters()")}}</dt>
-  <dd>Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the <code>track</code>.</dd>
-  <dt>{{domxref("RTCRtpSender.getStats()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this <code>RTCRtpSender</code>.</dd>
-  <dt>{{domxref("RTCRtpSender.setParameters()")}}</dt>
-  <dd>Applies changes to parameters which configure how the <code>track</code> is encoded and transmitted to the remote peer.</dd>
-  <dt>{{domxref("RTCRtpSender.setStreams()")}}</dt>
-  <dd>Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.</dd>
-  <dt>{{domxref("RTCRtpSender.replaceTrack()")}}</dt>
-  <dd>Attempts to replace the track currently being sent by the <code>RTCRtpSender</code> with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.</dd>
- </dl>
 
+
+<dl id="method_definitions">
+ <dt>{{domxref("RTCRtpSender.getParameters()")}}</dt>
+ <dd>Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the <code>track</code>.</dd>
+ <dt>{{domxref("RTCRtpSender.getStats()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this <code>RTCRtpSender</code>.</dd>
+ <dt>{{domxref("RTCRtpSender.setParameters()")}}</dt>
+ <dd>Applies changes to parameters which configure how the <code>track</code> is encoded and transmitted to the remote peer.</dd>
+ <dt>{{domxref("RTCRtpSender.setStreams()")}}</dt>
+ <dd>Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.</dd>
+ <dt>{{domxref("RTCRtpSender.replaceTrack()")}}</dt>
+ <dd>Attempts to replace the track currently being sent by the <code>RTCRtpSender</code> with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.</dd>
+</dl>
 
 <h2 id="Static_methods">Static methods</h2>
 

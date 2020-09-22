@@ -5,14 +5,14 @@ tags:
   - API
   - Battery
   - Battery API
+  - Deprecated
   - Device API
   - Navigator
   - Non-standard
-  - Obsolete
   - Property
   - Reference
 ---
-<div>{{ApiRef("Battery API")}}</div>
+<div>{{ApiRef("Battery API")}}{{deprecated_header}}</div>
 
 <p><span class="seoSummary">The <strong><code>battery</code></strong> read-only property returns a {{DOMxRef("BatteryManager")}} which provides information about the system's battery charge level and whether the device is charging and exposes events that fire when these parameters change. This interface was introduced in early drafts of the <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> and but has been replaced with {{JSxRef("Promise")}}-based {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}}.</span></p>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var battery = navigator.battery;</pre>
+<pre class="syntaxbox notranslate">var battery = navigator.battery;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

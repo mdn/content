@@ -8,9 +8,9 @@ tags:
   - Function
   - Reference
 ---
-<div>{{CSSRef}}</div>
+<p>{{CSSRef}}</p>
 
-<p>The <code><strong>counters()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> function enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <code>counters()</code> function has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <code>decimal</code> if no style is specified.</p>
+<p>The <strong><code>counters()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <code>counters()</code> function has two forms: <code>counters(<var>name</var>, <var>string</var>)</code> or <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <code>decimal</code> if no style is specified.</p>
 
 <pre class="brush: css notranslate">/* Simple usage  - style defaults to decimal */
 counters(countername, '-');
@@ -18,7 +18,7 @@ counters(countername, '-');
 /* changing the counter display */
 counters(countername, '.', upper-roman)</pre>
 
-<p>A <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">counter</a> has no visible effect by itself. The <code>counters()</code> function (and <code><a href="/en-US/docs/Web/CSS/counter_function">counter()</a></code> function) is what makes it useful by returning developer defined content.</p>
+<p>A <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">counter</a> has no visible effect by itself. The <code>counters()</code> function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> The <code>counters()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
@@ -92,7 +92,7 @@ li::before {
 
 <p>{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}</p>
 
-<h3 id="decimal-leading-zero_compared_to_lower-alpha"><dfn>decimal-leading-zero</dfn> compared to lower-alpha</h3>
+<h3 id="decimal-leading-zero_compared_to_lower-alpha">decimal-leading-zero compared to lower-alpha</h3>
 
 <h4 id="HTML_2">HTML</h4>
 

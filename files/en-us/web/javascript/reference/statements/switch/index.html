@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">switch (<var>expression</var>) {
+<pre class="syntaxbox notranslate">switch (<var>expression</var>) {
   case <var>value1</var>:
     //Statements executed when the
     //result of expression matches value1
@@ -53,7 +53,7 @@ tags:
 
 <p>If no matching <code>case</code> clause is found, the program looks for the optional <code>default</code> clause, and if found, transfers control to that clause, executing the associated statements. If no <code>default</code> clause is found, the program continues execution at the statement following the end of <code>switch</code>. By convention, the <code>default</code> clause is the last clause, but it does not need to be so.</p>
 
-<p>The optional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> statement associated with each <code>case</code> label ensures that the program breaks out of <code>switch</code> once the matched statement is executed and continues execution at the statement following <code>switch</code>. If <code>break</code> is omitted, the program continues execution at the next statement in the <code>switch</code> statement.</p>
+<p>The optional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> statement associated with each <code>case</code> label ensures that the program breaks out of <code>switch</code> once the matched statement is executed and continues execution at the statement following <code>switch</code>. If <code>break</code> is omitted, the program continues execution at the next statement in the <code>switch</code> statement. The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> statement is not required if a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> statement precedes it.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>In the following example, if <code>expr</code> evaluates to <code>Bananas</code>, the program matches the value with case <code>case 'Bananas'</code> and executes the associated statement. When <code>break</code> is encountered, the program breaks out of <code>switch</code> and executes the statement following <code>switch</code>. If <code>break</code> were omitted, the statement for the <code>case 'Cherries'</code> would also be executed.</p>
 
-<pre class="brush: js">switch (expr) {
+<pre class="brush: js notranslate">switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -91,7 +91,7 @@ console.log("Is there anything else you'd like?");
 
 <p>See example here:</p>
 
-<pre class="brush: js">var foo = 0;
+<pre class="brush: js notranslate">var foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -113,7 +113,7 @@ switch (foo) {
 
 <p>Yes, you can! JavaScript will drop you back to the <code>default</code> if it can't find a match:</p>
 
-<pre class="brush: js">var foo = 5;
+<pre class="brush: js notranslate">var foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -140,7 +140,7 @@ switch (foo) {
 
 <p>This is an example of a single operation sequential <code>case</code> statement, where four different values perform exactly the same.</p>
 
-<pre class="brush: js">var Animal = 'Giraffe';
+<pre class="brush: js notranslate">var Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
@@ -157,7 +157,7 @@ switch (Animal) {
 
 <p>This is an example of a multiple-operation sequential <code>case</code> clause, where, depending on the provided integer, you can receive different output. This shows you that it will traverse in the order that you put the <code>case</code> clauses, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these <code>case</code> statements as well.</p>
 
-<pre class="brush: js">var foo = 1;
+<pre class="brush: js notranslate">var foo = 1;
 var output = 'Output: ';
 switch (foo) {
   case 0:
@@ -171,7 +171,6 @@ switch (foo) {
     output += 'Name';
   case 4:
     output += '?';
-    console.log(output);
     break;
   case 5:
     output += '!';
@@ -228,7 +227,7 @@ switch (foo) {
 
 <p>Take a look at this example:</p>
 
-<pre class="brush: js">const action = 'say_hello';
+<pre class="brush: js notranslate">const action = 'say_hello';
 switch (action) {
   case 'say_hello':
     let message = 'hello';
@@ -249,7 +248,7 @@ switch (action) {
 
 <p>We can easily fix this by wrapping our <code>case</code> clauses with brackets:</p>
 
-<pre class="brush: js">const action = 'say_hello';
+<pre class="brush: js notranslate">const action = 'say_hello';
 switch (action) {
   case 'say_hello': <strong>{ // added brackets</strong>
     let message = 'hello';

@@ -51,34 +51,34 @@ tags:
 
 <dl>
  <dt>{{httpheader('Feature-Policy/accelerometer','accelerometer')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the acceleration of the device through the {{DOMxRef("Accelerometer")}} interface.</dd>
+ <dd>Controls whether the current document is allowed to gather information about the acceleration of the device through the {{DOMxRef("Accelerometer")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.</dd>
+ <dd>Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/autoplay','autoplay')}}</dt>
- <dd>Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{domxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</dd>
+ <dd>Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</dd>
  <dt>{{httpheader('Feature-Policy/battery','battery')}}</dt>
- <dd>Controls whether the use of the <a href="/docs/Web/API/Battery_Status_API">Battery Status API</a> is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
+ <dd>Controls whether the use of the <a href="/docs/Web/API/Battery_Status_API">Battery Status API</a> is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
- <dd>Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
+ <dd>Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
  <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>
- <dd>Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by <code>getDisplayMedia()</code> will reject with a <code>NotAllowedError</code> if permission is not obtained to capture the display's contents.</dd>
+ <dd>Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by <code>getDisplayMedia()</code> will reject with a {{Exception("NotAllowedError")}} if permission is not obtained to capture the display's contents.</dd>
  <dt>{{httpheader('Feature-Policy/document-domain','document-domain')}}</dt>
- <dd>Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{DOMxRef("SecurityError")}} {{domxref("DOMException")}} to be be thrown.</dd>
+ <dd>Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be be thrown.</dd>
  <dt>{{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is disabled, the {{domxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}</dt>
- <dd>Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> or <code>display: none</code>).</dd>
+ <dd>Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is <code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> or <code>display: none</code>).</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}</dt>
  <dd>Controls whether tasks should execute in frames while they're outside of the visible viewport.</dd>
 </dl>
 
 <dl>
  <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
- <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}} {{DOMxRef("DOMException")}}.</dd>
+ <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.</dd>
  <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
- <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('PositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
+ <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('PositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
  <dt>{{httpheader('Feature-Policy/gyroscope','gyroscope')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.</dd>
+ <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/layout-animations','layout-animations')}}</dt>
  <dd>Controls whether the current document is allowed to show layout animations.</dd>
 </dl>
@@ -90,9 +90,9 @@ tags:
 
 <dl>
  <dt>{{httpheader('Feature-Policy/magnetometer','magnetometer')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.</dd>
+ <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.</dd>
  <dt>{{httpheader('Feature-Policy/microphone','microphone')}}</dt>
- <dd>Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a <code>NotAllowedError</code>.</dd>
+ <dd>Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}}.</dd>
  <dt>{{httpheader('Feature-Policy/midi', 'midi')}}</dt>
  <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a>. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/navigation-override','navigation-override')}}</dt>
@@ -100,11 +100,11 @@ tags:
  <dt>{{httpheader('Feature-Policy/oversized-images','oversized-images')}}</dt>
  <dd>Controls whether the current document is allowed to download and display large images.</dd>
  <dt>{{httpheader('Feature-Policy/payment', 'payment')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>. When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a <code>SecurityError</code> {{domxref("DOMException")}}.</dd>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>. When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a {{Exception("SecurityError")}} {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}</dt>
  <dd>Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</dd>
  <dt>{{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retreive already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retreive already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
  <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
  <dd>Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.</dd>
  <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>

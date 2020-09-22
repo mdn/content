@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>Document.location</code></strong> read-only property returns a {{domxref("Location")}} object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.</p>
 
-<p>Though <code>Document.location</code> is a <em>read-only</em> <code>Location</code> object, you can also assign a {{domxref("DOMString")}} to it. This means that you can work with document.location as if it were a string in most cases: <code>document.location = 'http://www.example.com'</code> is a synonym of <code>document.location.href = 'http://www.example.com'</code>.</p>
+<p>Though <code>Document.location</code> is a <em>read-only</em> <code>Location</code> object, you can also assign a {{domxref("DOMString")}} to it. This means that you can work with document.location as if it were a string in most cases: <code>document.location = 'http://www.example.com'</code> is a synonym of <code>document.location.href = 'http://www.example.com'</code>.If you assign another string to it, browser will load the website you assigned.</p>
 
 <p>To retrieve just the URL as a string, the read-only {{domxref("document.URL")}} property can also be used.</p>
 

@@ -13,6 +13,10 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>Set-Cookie</code></strong> HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple <strong><code>Set-Cookie</code></strong></span> headers should be sent in the same response.</p>
 
+<div class="blockIndicator warning">
+<p>Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
+</div>
+
 <p>For more information, see the <a href="/en-US/docs/Web/HTTP/Cookies">guide on HTTP cookies</a>.</p>
 
 <table class="properties">
@@ -26,7 +30,7 @@ tags:
    <td>no</td>
   </tr>
   <tr>
-   <th scope="row"><a href="https://fetch.spec.whatwg.org/#forbidden-header-name">Forbidden response-header name</a></th>
+   <th scope="row"><a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">Forbidden response-header name</a></th>
    <td>yes</td>
   </tr>
  </tbody>

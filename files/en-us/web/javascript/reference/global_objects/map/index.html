@@ -58,18 +58,18 @@ tags:
   <tr>
    <th scope="row">Key Order</th>
    <td>
-    <p>The keys in <code>Map</code> are ordered. Thus, when iterating over it, a <code>Map</code> object returns keys in order of insertion.</p>
+    <p>The keys in <code>Map</code> are ordered in a simple, straightforward way: A <code>Map</code> object iterates entries, keys, and values in the order of entry insertion.</p>
    </td>
    <td>
-    <p>The keys of an <code>Object</code> are not ordered.</p>
+    <p>Although the keys of an ordinary <code>Object</code> are ordered now, they didn't used to be, and the order is complex. As a result, it's best not to rely on property order.</p>
 
-    <div class="blockIndicator note">
-    <p><strong>Note:</strong> Since ECMAScript 2015, objects <em>do</em> preserve creation order for string and <code>Symbol</code> keys. In JavaScript engines that comply with the ECMAScript 2015 spec, iterating over an object with only string keys will yield the keys in order of insertion.</p>
-    </div>
+    <p>The order was first defined for own properties only in ECMAScript 2015; ECMAScript 2020 defines order for inherited properties as well. See the <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> and <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties">EnumerateObjectProperties</a> abstract specification operations. But note that no single mechanism iterates <strong>all</strong> of an object's properties; the various mechanisms each include different subsets of properties. (<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for-in</a></code> includes only enumerable string-keyed properties; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code> includes only own, enumerable, string-keyed properties; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">Object.getOwnPropertyNames</a></code> includes own, string-keyed properties even if non-enumerable; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">Object.getOwnPropertySymbols</a></code> does the same for just <code>Symbol</code>-keyed properties, etc.)</p>
    </td>
   </tr>
   <tr>
-   <th scope="row">Size</th>
+   <th scope="row">
+    <p>Size</p>
+   </th>
    <td>The number of items in a <code>Map</code> is easily retrieved from its {{jsxref("Map.prototype.size", "size")}} property.</td>
    <td>The number of items in an <code>Object</code> must be determined manually.</td>
   </tr>

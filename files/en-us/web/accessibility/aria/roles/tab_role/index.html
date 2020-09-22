@@ -12,7 +12,7 @@ tags:
 
 <p><span class="seoSummary">The ARIA <code>tab</code> role indicates an interactive element inside a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_Role">tablist</a> that, when activated, displays its associated <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role">tabpanel</a>.</span></p>
 
-<pre class="brush: html">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
+<pre class="brush: html notranslate">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -20,46 +20,46 @@ tags:
 
 <p>Elements with the role <code>tab</code> <em>must</em> either be a child of an element with the <code>tablist</code> role, or have their <code>id</code> part of the <code>aria-owns</code> property of a <code>tablist</code>. This combination identifies to assistive technology that the element is part of a group of related elements. Some assistive technology will provide a count of the number of <code>tab</code> role elements inside a <code>tablist</code>, and inform users of which <code>tab</code> they currently have targeted. They <em>should</em> contain the <code>aria-controls</code> property identifying an element with the <code>tabpanel</code> role. When an element with the <code>tabpanel</code> role has focus, or a child of it has focus, that indicates that the connected element with the <code>tab</code> role is the active tab in a <code>tablist</code>.</p>
 
-<p>When working with elements with the <code>tab</code> role, when they are selected or active, they should have their <code>aria-selected</code> attribute set to <code>true</code>, otherwise it should be set to <code>false</code>. When a <code>tab</code> is selected or active, its controlled <code>tabpanel</code> should have its <code>aria-expanded</code> and <code>hidden</code> attributes set to <code>true</code>, otherwise they should be set to <code>false</code>.</p>
+<p>When working with elements with the <code>tab</code> role, when they are selected or active, they should have their <code>aria-selected</code> attribute set to <code>true</code>, otherwise it should be set to <code>false</code>. When a <code>tab</code> is selected or active, its controlled <code>tabpanel</code> should have its <code>aria-expanded</code> attribute set to true and its <code>hidden</code> attribute set to <code>false</code>, otherwise the reverse.</p>
 
 <h3 id="Associated_Roles_and_Attributes">Associated Roles and Attributes</h3>
 
 <dl>
- <dt>aria-selected</dt>
- <dd>boolean</dd>
- <dt>aria-controls</dt>
- <dd><code>id</code> of element with <code>tabpanel</code> role</dd>
- <dt>id</dt>
- <dd>content</dd>
+	<dt>aria-selected</dt>
+	<dd>boolean</dd>
+	<dt>aria-controls</dt>
+	<dd><code>id</code> of element with <code>tabpanel</code> role</dd>
+	<dt>id</dt>
+	<dd>content</dd>
 </dl>
 
 <h3 id="Keyboard_interaction">Keyboard interaction</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Key</th>
-   <th scope="col">Action</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><kbd>Tab</kbd></td>
-   <td>When focus is outside of the <code>tablist</code> moves focus to the active tab. If focus is on the active tab moves focus to the next element in the keyboard focus order, ideally the active tab's associated <code>tabpanel</code>.</td>
-  </tr>
-  <tr>
-   <td><kbd>→</kbd></td>
-   <td>Focuses and optionally activates the next tab in the tab list. If the current tab is the last tab in the tab list it activates the first tab.</td>
-  </tr>
-  <tr>
-   <td><kbd>←</kbd></td>
-   <td>Focuses and optionally activates the previous tab in the tab list. If the current tab is the first tab in the tab list it activates the last tab.</td>
-  </tr>
-  <tr>
-   <td><kbd>Delete</kbd></td>
-   <td>When allowed removes the currently selected tab from the tab list.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Key</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><kbd>Tab</kbd></td>
+			<td>When focus is outside of the <code>tablist</code> moves focus to the active tab. If focus is on the active tab moves focus to the next element in the keyboard focus order, ideally the active tab's associated <code>tabpanel</code>.</td>
+		</tr>
+		<tr>
+			<td><kbd>→</kbd></td>
+			<td>Focuses and optionally activates the next tab in the tab list. If the current tab is the last tab in the tab list it activates the first tab.</td>
+		</tr>
+		<tr>
+			<td><kbd>←</kbd></td>
+			<td>Focuses and optionally activates the previous tab in the tab list. If the current tab is the first tab in the tab list it activates the last tab.</td>
+		</tr>
+		<tr>
+			<td><kbd>Delete</kbd></td>
+			<td>When allowed removes the currently selected tab from the tab list.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h3 id="Required_JavaScript_features">Required JavaScript features </h3>
@@ -72,7 +72,7 @@ tags:
 
 <p>This example combines the role <code>tab</code> with <code>tablist</code> and elements with <code>tabpanel</code> to create an interactive group of tabbed content. Here we are enclosing our group of content in a <code>div</code>, with our <code>tablist</code> having an <code>aria-label</code> to label it for assistive technology. Each <code>tab</code> is a <code>button</code> with the attributes previously mentioned. The first <code>tab</code> has <code>tabindex=0</code> on it, which we will later change to whatever tab has <code>aria-selected=true</code>. All of the <code>tabpanel</code> elements have <code>tabindex=0</code> to make them tabbable, and all but the currently active one have the <code>hidden</code> attribute, which we will change with JavaScript. There is some basic styling applied that restyles the buttons and changes the <code><a href="/en-US/docs/Web/CSS/z-index">z-index</a></code> to of <code>tab</code> elements to give the illusion of it connecting to the <code>tabpanel</code> for active elements, and the illusion that inactive elements are behind the active <code>tabpanel</code>.</p>
 
-<pre class="brush: html">&lt;div class="tabs"&gt;
+<pre class="brush: html notranslate">&lt;div class="tabs"&gt;
   &lt;div role="tablist" aria-label="Sample Tabs"&gt;
     &lt;button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"&gt;
           First Tab
@@ -96,7 +96,7 @@ tags:
 &lt;/div&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css">.tabs {
+<pre class="brush: css notranslate">.tabs {
   padding: 1em;
 }
 
@@ -139,7 +139,7 @@ tags:
 
 <p>To handle changing the active <code>tab</code> and <code>tabpanel</code>, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with <code>aria-selected=true</code> inside the parent element and sets it to <code>false</code>, then sets the triggering element's <code>aria-selected</code> to <code>true</code>. After that, we find all <code>tabpanel</code> elements in the grandparent element, make them all <code>hidden</code>, and finally select the element whose <code>id</code> is equal to the triggering <code>tab</code>'s <code>aria-controls</code> and removes the <code>hidden</code> attribute, making it visible.</p>
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", () =&gt; {
+<pre class="brush: js notranslate">window.addEventListener("DOMContentLoaded", () =&gt; {
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
 
@@ -209,20 +209,20 @@ function changeTabs(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA","#tab","tab")}}</td>
-   <td>{{Spec2('ARIA')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ARIA Authoring Practices","#tabpanel","tabs")}}</td>
-   <td>{{Spec2('ARIA Authoring Practices')}}</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+		</tr>
+		<tr>
+			<td>{{SpecName("ARIA","#tab","tab")}}</td>
+			<td>{{Spec2('ARIA')}}</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("ARIA Authoring Practices","#tabpanel","tabs")}}</td>
+			<td>{{Spec2('ARIA Authoring Practices')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Precedence_order">Precedence order</h2>

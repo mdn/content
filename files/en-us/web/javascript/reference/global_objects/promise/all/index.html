@@ -42,11 +42,11 @@ tags:
 
 <h3 id="Fulfillment">Fulfillment</h3>
 
-<p>The returned promise is fulfilled with an array containing <strong>all </strong>the values of the <var>iterable</var> passed as argument (also non-promise values).</p>
+<p>The returned promise is fulfilled with an array containing <strong>all </strong>the resolved values (including non-promise values) in the <var>iterable</var> passed as the argument.</p>
 
 <ul>
- <li>If an empty <var>iterable</var> is passed, then this method returns (synchronously) an already resolved promise.</li>
- <li>If all of the passed-in promises fulfill, or are not promises, the promise returned by <code>Promise.all</code> is fulfilled asynchronously.</li>
+ <li>If an empty <var>iterable</var> is passed, then the promise returned by this method is fulfilled synchronously. The resolved value is an empty array.</li>
+ <li>If a nonempty <em>iterable</em> is passed, and <strong>all</strong> of the promises fulfill, or are not promises, then the promise returned by this method is fulfilled asynchronously.</li>
 </ul>
 
 <h3 id="Rejection">Rejection</h3>

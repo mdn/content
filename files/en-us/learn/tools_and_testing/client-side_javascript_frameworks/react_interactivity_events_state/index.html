@@ -251,13 +251,17 @@ function Form(props) {
 
 export default Form;</pre>
 
+<div class="blockIndicator note">
+<p><strong>Note</strong>: One thing you'll notice is that you are able to submit empty tasks by just pressing the Add button without entering a task name. Can you think of a way to disallow empty tasks from being added? As a hint, you probably need to add some kind of check into the <code>handleSubmit()</code> function.</p>
+</div>
+
 <h2 id="Putting_it_all_together_Adding_a_task">Putting it all together: Adding a task</h2>
 
 <p>Now that we've practiced with events, callback props, and hooks we're ready to write functionality that will allow a user to add a new task from their browser.</p>
 
 <h3 id="Tasks_as_state">Tasks as state</h3>
 
-<p>Import <code>useState</code> into <kbd>App.js</kbd>, so that we can store our tasks in state — update your <code>React</code> import line to the following:</p>
+<p>Import <code>useState</code> into <code>App.js</code>, so that we can store our tasks in state — update your <code>React</code> import line to the following:</p>
 
 <pre class="brush: js notranslate">import React, { useState } from "react";</pre>
 

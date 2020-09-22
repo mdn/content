@@ -158,7 +158,7 @@ const viewTemplate = (
 
 <p>Now we'll add the same <code>onClick</code> handler to the "Cancel" button in the <code>editingTemplate</code>, but this time we'll set <code>isEditing</code> to <code>false</code> so that it switches us back to the view template.</p>
 
-<p>Update the "Cancel" button in the <code>editTemplate</code> like so:</p>
+<p>Update the "Cancel" button in the <code>editingTemplate</code> like so:</p>
 
 <pre class="brush: js notranslate">&lt;button
   type="button"
@@ -318,7 +318,7 @@ const viewTemplate = (
  <li>Add an <code>onClick</code> handler that calls <code>props.setFilter()</code> with the filter’s name.</li>
 </ul>
 
-<p>With all of that done, your <code>Filter()</code> function should read like this:</p>
+<p>With all of that done, your <code>FilterButton()</code> function should read like this:</p>
 
 <pre class="brush: js notranslate">function FilterButton(props) {
   return (
@@ -348,18 +348,18 @@ const viewTemplate = (
 <p>Update your <code>taskList</code> like so:</p>
 
 <pre class="brush: js notranslate">const taskList = tasks
-  .filter(FILTER_MAP[filter])
-  .map(task =&gt; (
-    &lt;Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-      toggleTaskCompleted={toggleTaskCompleted}
-      deleteTask={deleteTask}
-      editTask={editTask}
-    /&gt;
-  ));</pre>
+.filter(task =&gt; FILTER_MAP[filter](task))
+.map(task =&gt; (
+  &lt;Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
+    deleteTask={deleteTask}
+    editTask={editTask}
+  /&gt;
+));</pre>
 
 <p>In order to decide which callback function to use in <code>Array.prototype.filter()</code>, we access the value in <code>FILTER_MAP</code> that corresponds to the key of our filter state. When filter is <code>All</code>, for example, <code>FILTER_MAP[filter]</code> will evaluate to <code>() =&gt; true</code>.</p>
 

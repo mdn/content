@@ -25,23 +25,33 @@ foo     = true;  // foo is now a boolean
 <p>The latest ECMAScript standard defines nine types:</p>
 
 <ul>
- <li>Six <strong>Data Types</strong> that are <a href="/en-US/docs/Glossary/Primitive">primitives</a>, checked by <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> operator:
+	<li>Six <strong>Data Types</strong> that are <a href="/en-US/docs/Glossary/Primitive">primitives</a>, checked by <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> operator:
 
-  <ul>
-   <li><a href="/en-US/docs/Glossary/Undefined">undefined</a> : <code>typeof instance === "undefined"</code></li>
-   <li><a href="/en-US/docs/Glossary/Boolean">Boolean</a> : <code>typeof instance === "boolean"</code></li>
-   <li><a href="/en-US/docs/Glossary/Number">Number</a> : <code>typeof instance === "number"</code></li>
-   <li><a href="/en-US/docs/Glossary/String">String</a> : <code>typeof instance === "string"</code></li>
-   <li><a href="/en-US/docs/Glossary/BigInt">BigInt</a><span> : </span><code>typeof instance === "bigint"</code></li>
-   <li><a href="/en-US/docs/Glossary/Symbol">Symbol</a><span> : </span><code>typeof instance === "symbol"</code></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Glossary/Null">null</a><span> : </span><code>typeof instance === "object"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
- <li><a href="/en-US/docs/Glossary/Object">Object</a><span> : </span><code>typeof instance === "object"</code>. Special non-data but structural type for any <a href="/en-US/docs/Learn/JavaScript/Objects#The_Constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("Set")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
- <li><a href="/en-US/docs/Glossary/Function">Function</a><span> : a non-data structure, though it also answers for <code>typeof</code> operator: </span><code>typeof instance === "function"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
+	<ul>
+		<li><a href="/en-US/docs/Glossary/Undefined">undefined</a> : <code>typeof instance === "<strong>undefined</strong>"</code></li>
+		<li><a href="/en-US/docs/Glossary/Boolean">Boolean</a> : <code>typeof instance === "boolean"</code></li>
+		<li><a href="/en-US/docs/Glossary/Number">Number</a> : <code>typeof instance === "number"</code></li>
+		<li><a href="/en-US/docs/Glossary/String">String</a> : <code>typeof instance === "string"</code></li>
+		<li><a href="/en-US/docs/Glossary/BigInt">BigInt</a><span> : </span><code>typeof instance === "bigint"</code></li>
+		<li><a href="/en-US/docs/Glossary/Symbol">Symbol</a><span> : </span><code>typeof instance === "symbol"</code></li>
+	</ul>
+	</li>
+	<li><strong>Structural</strong> <strong>Types</strong>:
+	<ul>
+		<li><a href="/en-US/docs/Glossary/Object">Object</a><span> : </span><code>typeof instance === "<strong>object</strong>"</code>. Special non-data but <strong>Structural</strong> <strong>type</strong> for any <a href="/en-US/docs/Learn/JavaScript/Objects#The_Constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
+		<li><a href="/en-US/docs/Glossary/Function">Function</a><span> : a non-data structure, though it also answers for <code>typeof</code> operator: </span><code>typeof instance === "<strong>function</strong>"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
+	</ul>
+	</li>
+	<li><strong>Structural Root</strong> Primitive:
+	<ul>
+		<li><strong><a href="/en-US/docs/Glossary/Null">null</a></strong><span> : </span><code>typeof instance === "<strong>object</strong>"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
+	</ul>
+	</li>
 </ul>
 
 <p>Keep in mind the only valuable purpose of <code>typeof</code> operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use <code>typeof</code> for that, as we will always receive <code>"object"</code>. The indeed proper way to check what sort of Object we are using is {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.</p>
+
+<p>As we can see the meaning of every primitive type is obvious except of undefined and null which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exists or does not exists anymore: <strong>undefined</strong>. But when we wish to be able to represent something that exist being empty, we have to invent another keyword. And that is what <strong>null</strong> stands for: the beginning of structural meaning.</p>
 
 <h2 id="Primitive_values">Primitive values</h2>
 
@@ -122,8 +132,8 @@ Infinity
 <p>However, it is still possible to create another string based on an operation on the original string. For example:</p>
 
 <ul>
- <li>A substring of the original by picking individual letters or using {{jsxref("String.substr()")}}.</li>
- <li>A concatenation of two strings using the concatenation operator (<code>+</code>) or {{jsxref("String.concat()")}}.</li>
+	<li>A substring of the original by picking individual letters or using {{jsxref("String.substr()")}}.</li>
+	<li>A concatenation of two strings using the concatenation operator (<code>+</code>) or {{jsxref("String.concat()")}}.</li>
 </ul>
 
 <h4 id="Beware_of_stringly-typing_your_code!">Beware of "stringly-typing" your code!</h4>
@@ -131,9 +141,9 @@ Infinity
 <p>It can be tempting to use strings to represent complex data. Doing this comes with short-term benefits:</p>
 
 <ul>
- <li>It is easy to build complex strings with concatenation.</li>
- <li>Strings are easy to debug (what you see printed is always what is in the string).</li>
- <li>Strings are the common denominator of a lot of APIs (<a href="/en-US/docs/Web/API/HTMLInputElement" title="HTMLInputElement">input fields</a>, <a href="/en-US/docs/Storage" title="Storage">local storage</a> values, <a href="/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> responses when using <code>responseText</code>, etc.) and it can be tempting to only work with strings.</li>
+	<li>It is easy to build complex strings with concatenation.</li>
+	<li>Strings are easy to debug (what you see printed is always what is in the string).</li>
+	<li>Strings are the common denominator of a lot of APIs (<a href="/en-US/docs/Web/API/HTMLInputElement" title="HTMLInputElement">input fields</a>, <a href="/en-US/docs/Storage" title="Storage">local storage</a> values, <a href="/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> responses when using <code>responseText</code>, etc.) and it can be tempting to only work with strings.</li>
 </ul>
 
 <p>With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.</p>
@@ -167,72 +177,72 @@ Infinity
 <p>Associates a key with a value, and has the following attributes:</p>
 
 <table class="standard-table">
- <caption>Attributes of a data property</caption>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-   <th scope="col">Default value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>[[Value]]</td>
-   <td>Any JavaScript type</td>
-   <td>The value retrieved by a get access of the property.</td>
-   <td><code>undefined</code></td>
-  </tr>
-  <tr>
-   <td>[[Writable]]</td>
-   <td>Boolean</td>
-   <td>If <code>false</code>, the property's [[Value]] cannot be changed.</td>
-   <td><code>false</code></td>
-  </tr>
-  <tr>
-   <td>[[Enumerable]]</td>
-   <td>Boolean</td>
-   <td>
-    <p>If <code>true</code>, the property will be enumerated in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops.<br>
-     See also <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a>.</p>
-   </td>
-   <td><code>false</code></td>
-  </tr>
-  <tr>
-   <td>[[Configurable]]</td>
-   <td>Boolean</td>
-   <td>If <code>false</code>, the property cannot be deleted, cannot be changed to an accessor property, and attributes other than [[Value]] and [[Writable]] cannot be changed.</td>
-   <td><code>false</code></td>
-  </tr>
- </tbody>
+	<caption>Attributes of a data property</caption>
+	<thead>
+		<tr>
+			<th scope="col">Attribute</th>
+			<th scope="col">Type</th>
+			<th scope="col">Description</th>
+			<th scope="col">Default value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[[Value]]</td>
+			<td>Any JavaScript type</td>
+			<td>The value retrieved by a get access of the property.</td>
+			<td><code>undefined</code></td>
+		</tr>
+		<tr>
+			<td>[[Writable]]</td>
+			<td>Boolean</td>
+			<td>If <code>false</code>, the property's [[Value]] cannot be changed.</td>
+			<td><code>false</code></td>
+		</tr>
+		<tr>
+			<td>[[Enumerable]]</td>
+			<td>Boolean</td>
+			<td>
+			<p>If <code>true</code>, the property will be enumerated in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops.<br>
+			See also <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a>.</p>
+			</td>
+			<td><code>false</code></td>
+		</tr>
+		<tr>
+			<td>[[Configurable]]</td>
+			<td>Boolean</td>
+			<td>If <code>false</code>, the property cannot be deleted, cannot be changed to an accessor property, and attributes other than [[Value]] and [[Writable]] cannot be changed.</td>
+			<td><code>false</code></td>
+		</tr>
+	</tbody>
 </table>
 
 <table class="standard-table">
- <caption>Obsolete attributes (as of ECMAScript 3, renamed in ECMAScript 5)</caption>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Read-only</td>
-   <td>Boolean</td>
-   <td>Reversed state of the ES5 [[Writable]] attribute.</td>
-  </tr>
-  <tr>
-   <td>DontEnum</td>
-   <td>Boolean</td>
-   <td>Reversed state of the ES5 [[Enumerable]] attribute.</td>
-  </tr>
-  <tr>
-   <td>DontDelete</td>
-   <td>Boolean</td>
-   <td>Reversed state of the ES5 [[Configurable]] attribute.</td>
-  </tr>
- </tbody>
+	<caption>Obsolete attributes (as of ECMAScript 3, renamed in ECMAScript 5)</caption>
+	<thead>
+		<tr>
+			<th scope="col">Attribute</th>
+			<th scope="col">Type</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Read-only</td>
+			<td>Boolean</td>
+			<td>Reversed state of the ES5 [[Writable]] attribute.</td>
+		</tr>
+		<tr>
+			<td>DontEnum</td>
+			<td>Boolean</td>
+			<td>Reversed state of the ES5 [[Enumerable]] attribute.</td>
+		</tr>
+		<tr>
+			<td>DontDelete</td>
+			<td>Boolean</td>
+			<td>Reversed state of the ES5 [[Configurable]] attribute.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h4 id="Accessor_property">Accessor property</h4>
@@ -240,43 +250,43 @@ Infinity
 <p>Associates a key with one of two accessor functions (<code>get</code> and <code>set</code>) to retrieve or store a value, and has the following attributes:</p>
 
 <table class="standard-table">
- <caption>Attributes of an accessor property</caption>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-   <th scope="col">Default value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>[[Get]]</td>
-   <td>Function object or <code>undefined</code></td>
-   <td>The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed.<br>
-    See also <a href="/en-US/docs/Web/JavaScript/Reference/Operators/get"><code>get</code></a>.</td>
-   <td><code>undefined</code></td>
-  </tr>
-  <tr>
-   <td>[[Set]]</td>
-   <td>Function object or <code>undefined</code></td>
-   <td>The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed.<br>
-    See also <a href="/en-US/docs/Web/JavaScript/Reference/Operators/set"><code>set</code></a>.</td>
-   <td><code>undefined</code></td>
-  </tr>
-  <tr>
-   <td>[[Enumerable]]</td>
-   <td>Boolean</td>
-   <td>If <code>true</code>, the property will be enumerated in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops.</td>
-   <td><code>false</code></td>
-  </tr>
-  <tr>
-   <td>[[Configurable]]</td>
-   <td>Boolean</td>
-   <td>If <code>false</code>, the property can't be deleted and can't be changed to a data property.</td>
-   <td><code>false</code></td>
-  </tr>
- </tbody>
+	<caption>Attributes of an accessor property</caption>
+	<thead>
+		<tr>
+			<th scope="col">Attribute</th>
+			<th scope="col">Type</th>
+			<th scope="col">Description</th>
+			<th scope="col">Default value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[[Get]]</td>
+			<td>Function object or <code>undefined</code></td>
+			<td>The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed.<br>
+			See also <a href="/en-US/docs/Web/JavaScript/Reference/Operators/get"><code>get</code></a>.</td>
+			<td><code>undefined</code></td>
+		</tr>
+		<tr>
+			<td>[[Set]]</td>
+			<td>Function object or <code>undefined</code></td>
+			<td>The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed.<br>
+			See also <a href="/en-US/docs/Web/JavaScript/Reference/Operators/set"><code>set</code></a>.</td>
+			<td><code>undefined</code></td>
+		</tr>
+		<tr>
+			<td>[[Enumerable]]</td>
+			<td>Boolean</td>
+			<td>If <code>true</code>, the property will be enumerated in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops.</td>
+			<td><code>false</code></td>
+		</tr>
+		<tr>
+			<td>[[Configurable]]</td>
+			<td>Boolean</td>
+			<td>If <code>false</code>, the property can't be deleted and can't be changed to a data property.</td>
+			<td><code>false</code></td>
+		</tr>
+	</tbody>
 </table>
 
 <h3 id="Normal_objects_and_functions">"Normal" objects, and functions</h3>
@@ -298,106 +308,106 @@ Infinity
 <p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a> are new to JavaScript with ECMAScript 2015, and present an array-like view of an underlying binary data buffer. The following table helps determine the equivalent C data types:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">Type</th>
-   <th class="header" scope="col">Value Range</th>
-   <th class="header" scope="col">Size in bytes</th>
-   <th class="header" scope="col">Description</th>
-   <th class="header" scope="col">Web IDL type</th>
-   <th class="header" scope="col">Equivalent C type</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("Int8Array")}}</td>
-   <td><code>-128</code> to <code>127</code></td>
-   <td>1</td>
-   <td>8-bit two's complement signed integer</td>
-   <td><code>byte</code></td>
-   <td><code>int8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8Array")}}</td>
-   <td><code>0</code> to <code>255</code></td>
-   <td>1</td>
-   <td>8-bit unsigned integer</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8ClampedArray")}}</td>
-   <td><code>0</code> to <code>255</code></td>
-   <td>1</td>
-   <td>8-bit unsigned integer (clamped)</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int16Array")}}</td>
-   <td><code>-32768</code> to <code>32767</code></td>
-   <td>2</td>
-   <td>16-bit two's complement signed integer</td>
-   <td><code>short</code></td>
-   <td><code>int16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint16Array")}}</td>
-   <td><code>0</code> to <code>65535</code></td>
-   <td>2</td>
-   <td>16-bit unsigned integer</td>
-   <td><code>unsigned short</code></td>
-   <td><code>uint16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int32Array")}}</td>
-   <td><code>-2147483648</code> to <code>2147483647</code></td>
-   <td>4</td>
-   <td>32-bit two's complement signed integer</td>
-   <td><code>long</code></td>
-   <td><code>int32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint32Array")}}</td>
-   <td><code>0</code> to <code>4294967295</code></td>
-   <td>4</td>
-   <td>32-bit unsigned integer</td>
-   <td><code>unsigned long</code></td>
-   <td><code>uint32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code><span>×</span><code>10<sup>-38</sup></code> to <code>3.4</code><span>×</span><code>10<sup>38</sup></code></td>
-   <td>4</td>
-   <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
-   <td><code>unrestricted float</code></td>
-   <td><code>float</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code><span>×</span><code>10<sup>-324</sup></code> to <code>1.8</code><span>×</span><code>10<sup>308</sup></code></td>
-   <td>8</td>
-   <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
-   <td><code>unrestricted double</code></td>
-   <td><code>double</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
-   <td>8</td>
-   <td>64-bit two's complement signed integer</td>
-   <td><code>bigint</code></td>
-   <td><code>int64_t (signed long long)</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
-   <td>8</td>
-   <td>64-bit unsigned integer</td>
-   <td><code>bigint</code></td>
-   <td><code>uint64_t (unsigned long long)</code></td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th class="header" scope="col">Type</th>
+			<th class="header" scope="col">Value Range</th>
+			<th class="header" scope="col">Size in bytes</th>
+			<th class="header" scope="col">Description</th>
+			<th class="header" scope="col">Web IDL type</th>
+			<th class="header" scope="col">Equivalent C type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{jsxref("Int8Array")}}</td>
+			<td><code>-128</code> to <code>127</code></td>
+			<td>1</td>
+			<td>8-bit two's complement signed integer</td>
+			<td><code>byte</code></td>
+			<td><code>int8_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Uint8Array")}}</td>
+			<td><code>0</code> to <code>255</code></td>
+			<td>1</td>
+			<td>8-bit unsigned integer</td>
+			<td><code>octet</code></td>
+			<td><code>uint8_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Uint8ClampedArray")}}</td>
+			<td><code>0</code> to <code>255</code></td>
+			<td>1</td>
+			<td>8-bit unsigned integer (clamped)</td>
+			<td><code>octet</code></td>
+			<td><code>uint8_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Int16Array")}}</td>
+			<td><code>-32768</code> to <code>32767</code></td>
+			<td>2</td>
+			<td>16-bit two's complement signed integer</td>
+			<td><code>short</code></td>
+			<td><code>int16_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Uint16Array")}}</td>
+			<td><code>0</code> to <code>65535</code></td>
+			<td>2</td>
+			<td>16-bit unsigned integer</td>
+			<td><code>unsigned short</code></td>
+			<td><code>uint16_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Int32Array")}}</td>
+			<td><code>-2147483648</code> to <code>2147483647</code></td>
+			<td>4</td>
+			<td>32-bit two's complement signed integer</td>
+			<td><code>long</code></td>
+			<td><code>int32_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Uint32Array")}}</td>
+			<td><code>0</code> to <code>4294967295</code></td>
+			<td>4</td>
+			<td>32-bit unsigned integer</td>
+			<td><code>unsigned long</code></td>
+			<td><code>uint32_t</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Float32Array")}}</td>
+			<td><code>1.2</code><span>×</span><code>10<sup>-38</sup></code> to <code>3.4</code><span>×</span><code>10<sup>38</sup></code></td>
+			<td>4</td>
+			<td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
+			<td><code>unrestricted float</code></td>
+			<td><code>float</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("Float64Array")}}</td>
+			<td><code>5.0</code><span>×</span><code>10<sup>-324</sup></code> to <code>1.8</code><span>×</span><code>10<sup>308</sup></code></td>
+			<td>8</td>
+			<td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
+			<td><code>unrestricted double</code></td>
+			<td><code>double</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("BigInt64Array")}}</td>
+			<td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+			<td>8</td>
+			<td>64-bit two's complement signed integer</td>
+			<td><code>bigint</code></td>
+			<td><code>int64_t (signed long long)</code></td>
+		</tr>
+		<tr>
+			<td>{{jsxref("BigUint64Array")}}</td>
+			<td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+			<td>8</td>
+			<td>64-bit unsigned integer</td>
+			<td><code>bigint</code></td>
+			<td><code>uint64_t (unsigned long long)</code></td>
+		</tr>
+	</tbody>
 </table>
 
 <h3 id="Keyed_collections_Maps_Sets_WeakMaps_WeakSets">Keyed collections: Maps, Sets, WeakMaps, WeakSets</h3>
@@ -431,21 +441,21 @@ Infinity
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'ECMAScript Data Types and Values')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'ECMAScript Data Types and Values')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="link-https" href="https://github.com/nzakas/computer-science-in-javascript/">Nicholas Zakas collection of common data structure and common algorithms in JavaScript.</a></li>
- <li><a href="https://github.com/monmohan/DataStructures_In_Javascript" title="https://github.com/monmohan/DataStructures_In_Javascript">Search Tre(i)es implemented in JavaScript</a></li>
+	<li><a class="link-https" href="https://github.com/nzakas/computer-science-in-javascript/">Nicholas Zakas collection of common data structure and common algorithms in JavaScript.</a></li>
+	<li><a href="https://github.com/monmohan/DataStructures_In_Javascript" title="https://github.com/monmohan/DataStructures_In_Javascript">Search Tre(i)es implemented in JavaScript</a></li>
 </ul>

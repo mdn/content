@@ -66,7 +66,7 @@ var header = React.createElement("header", null,
 
 <h3 id="Handlebars">Handlebars</h3>
 
-<p>The <a href="https://handlebarsjs.com/">Handlebars</a> templating language is not specific to Ember applications, but it is heavily utilized in Ember apps. Handlebars code resembles HTML, but it has the option of pulling data in from elsewhere. This data can be used influence the HTML that an application ultimately builds.</p>
+<p>The <a href="https://handlebarsjs.com/">Handlebars</a> templating language is not specific to Ember applications, but it is heavily utilized in Ember apps. Handlebars code resembles HTML, but it has the option of pulling data in from elsewhere. This data can be used to influence the HTML that an application ultimately builds.</p>
 
 <p>Like JSX, Handlebars uses curly braces to inject the value of a variable. Handlebars uses a double-pair of curly braces, instead of a single pair.</p>
 
@@ -116,7 +116,7 @@ var header = React.createElement("header", null,
 
 <h3 id="Properties">Properties</h3>
 
-<p>Properties, or <strong>props</strong>, are external data that a component needs in order to render. Suppose you're building a website for an online magazine, and you need to be sure that each contributing writer gets credit for their work. You might create an <code>AuthorCredit</code> component to go with each article. This component needs to display a portrait of the author and a short byline about them. In order to know what image to render, and what byline to print, <code>AuthorCredit</code> needs accept some props.</p>
+<p>Properties, or <strong>props</strong>, are external data that a component needs in order to render. Suppose you're building a website for an online magazine, and you need to be sure that each contributing writer gets credit for their work. You might create an <code>AuthorCredit</code> component to go with each article. This component needs to display a portrait of the author and a short byline about them. In order to know what image to render, and what byline to print, <code>AuthorCredit</code> needs to accept some props.</p>
 
 <p>A React representation of this <code>AuthorCredit</code> component might look something like this:</p>
 
@@ -151,7 +151,7 @@ var header = React.createElement("header", null,
 
 <h3 id="State">State</h3>
 
-<p>We talked about the concept of <strong>state</strong> in the previous chapter — a robust state-handling mechanism is key to an effective framework, and each component may have data to control the state of. This stage will persist in some way as long as the component is in use. Like props, state can be used to affect how a component is rendered.</p>
+<p>We talked about the concept of <strong>state</strong> in the previous chapter — a robust state-handling mechanism is key to an effective framework, and each component may have data that needs its state controlled. This state will persist in some way as long as the component is in use. Like props, state can be used to affect how a component is rendered.</p>
 
 <p>As an example, consider a button that counts how many times it has been clicked. This component should be responsible for tracking its own <em>count</em> state, and could be written like this:</p>
 
@@ -263,7 +263,7 @@ var header = React.createElement("header", null,
 
 <p><a href="https://testing-library.com/">Testing Library</a> is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular.  The Ember docs cover the <a href="https://guides.emberjs.com/release/testing/">testing of Ember apps</a>.</p>
 
-<p>Here’s a quick test for our <code>CounterButton</code> written with the help of React Testing Library — it tests a number of things, such as the button's existance, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:</p>
+<p>Here’s a quick test for our <code>CounterButton</code> written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:</p>
 
 <pre class="brush: js notranslate">import React from "react";
 import { render, fireEvent } from "@testing-library/react";

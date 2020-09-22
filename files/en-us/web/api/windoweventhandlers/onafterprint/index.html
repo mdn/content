@@ -14,11 +14,11 @@ tags:
 
 <p>The <code><strong>onafterprint</strong></code> property of the {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for processing {{event("afterprint")}} events for the current window. These events are raised after the user prints, or if they abort the print dialog.</p>
 
-<p>The {{event("beforeprint")}} and <code>afterprint</code> events allow pages to change their content before printing starts (perhaps to remove a banner, for example) and then revert those changes after printing has completed. In general, you should prefer the use of an <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types">@media print</a></code> CSS at-rule, but it may be necessary to use these events in some cases.</p>
+<p>The {{event("beforeprint")}} and <code>afterprint</code> events allow pages to change their content before printing starts (perhaps to remove a banner, for example) and then revert those changes after printing has completed. In general, you should prefer the use of a <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types">@media print</a></code> CSS at-rule, but it may be necessary to use these events in some cases.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.addEventListener("afterprint", function(event) { ... });
+<pre class="syntaxbox notranslate">window.addEventListener("afterprint", function(event) { ... });
 window.onafterprint = function(event) { ... };</pre>
 
 <h2 id="Specification">Specification</h2>

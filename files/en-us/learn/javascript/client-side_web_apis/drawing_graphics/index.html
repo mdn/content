@@ -635,13 +635,13 @@ let posX = 0;</pre>
 
   <pre class="brush: js notranslate">  if(posX &gt; width/2) {
     newStartPos = -((width/2) + 102);
-    posX = Math.ceil(newStartPos / 13) * 13;
+    posX = Math.ceil(newStartPos);
     console.log(posX);
   } else {
     posX += 2;
   }</pre>
 
-  <p>We are using another <code>if ... else</code> statement to see if the value of <code>posX</code> has become greater than <code>width/2</code>, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen, and then set <code>posX</code> to equal the multiple of 13 closest to that number. This has to be a multiple of 13 because otherwise the previous code block won't work, since <code>posX</code> would never equal a multiple of 13!</p>
+  <p>We are using another <code>if ... else</code> statement to see if the value of <code>posX</code> has become greater than <code>width/2</code>, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.</p>
 
   <p>If our character hasn't yet walked off the edge of the screen, we simply increment <code>posX</code> by 2. This will make him move a little bit to the right the next time we draw him.</p>
  </li>

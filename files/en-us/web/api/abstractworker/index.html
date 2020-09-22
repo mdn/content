@@ -37,14 +37,14 @@ tags:
 
 <p>This code snippet demonstrates the creation of a new <code>Worker</code> using the {{domxref("Worker.Worker", "Worker()")}} constructor; it also shows how to then send a message to the worker.</p>
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+<pre class="brush: js notranslate">var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }</pre>
 
-<p>The worker's code is loaded from the file <code>"worker.js"</code>. This code assumes that there's an {{HTMLElement("input")}} element represented by <code>first</code>; an event handler for the {{domxref("change")}} event is established so that when the user changes the value of <code>first</code>, a message is posted to the worker to let it know.</p>
+<p>The worker's code is loaded from the file <code>"worker.js"</code>. This code assumes that there's an {{HTMLElement("input")}} element represented by <code>first</code>; an event handler for the {{event("change")}} event is established so that when the user changes the value of <code>first</code>, a message is posted to the worker to let it know.</p>
 
 <p>You can find more examples on the MDN Web Docs GitHub repository:</p>
 

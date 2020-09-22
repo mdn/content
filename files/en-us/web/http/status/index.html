@@ -49,7 +49,7 @@ tags:
   <li><code>GET</code>: The resource has been fetched and is transmitted in the message body.</li>
   <li><code>HEAD</code>: The entity headers are in the message body.</li>
   <li><code>PUT</code> or <code>POST</code>: The resource describing the result of the action is transmitted in the message body.</li>
-  <li><code>TRACE</code>: The message body contains the request message as received by the server</li>
+  <li><code>TRACE</code>: The message body contains the request message as received by the server.</li>
  </ul>
  </dd>
  <dt>{{HTTPStatus(201, "201 Created")}}</dt>
@@ -144,7 +144,7 @@ tags:
  <dd>The resource that is being accessed is locked.</dd>
  <dt>{{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})</dt>
  <dd>The request failed due to failure of a previous request.</dd>
- <dt>{{HTTPStatus(425, "425 Too Early")}}</dt>
+ <dt>{{HTTPStatus(425, "425 Too Early")}} {{experimental_inline}}</dt>
  <dd>Indicates that the server is unwilling to risk processing a request that might be replayed.</dd>
  <dt>{{HTTPStatus(426, "426 Upgrade Required")}}</dt>
  <dd>The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol. The server sends an {{HTTPHeader("Upgrade")}} header in a 426 response to indicate the required protocol(s).</dd>
@@ -195,5 +195,5 @@ tags:
 
 <ul>
  <li><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">List of HTTP status codes on Wikipedia</a></li>
- <li><a href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">IANA official registry of HTTP status codes</a></li>
+ <li><a href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">IANA official registry of HTTP status codes </a></li>
 </ul>

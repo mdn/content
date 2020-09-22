@@ -49,17 +49,17 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css notranslate">tabbed-custom-element::part(tab) {
-  color: #0c0c0dcc;
+  color: #0c0dcc;
   border-bottom: transparent solid 2px;
 }
 
 tabbed-custom-element::part(tab):hover {
-  background-color: #0c0c0d19;
-  border-color: #0c0c0d33;
+  background-color: #0c0d19;
+  border-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0c0d33;
+  background-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):focus {
@@ -94,20 +94,20 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Shadow Parts", "#part", "::part")}}</td>
-   <td>{{Spec2("CSS Shadow Parts")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS Shadow Parts", "#part", "::part")}}</td>
+			<td>{{Spec2("CSS Shadow Parts")}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -119,7 +119,7 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the <code>::part()</code> selector</li>
- <li>The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</li>
- <li><a href="https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md">Explainer: CSS Shadow ::part and ::theme</a></li>
+	<li>The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the <code>::part()</code> selector</li>
+	<li>The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</li>
+	<li><a href="https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md">Explainer: CSS Shadow ::part and ::theme</a></li>
 </ul>

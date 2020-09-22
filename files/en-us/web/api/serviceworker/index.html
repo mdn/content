@@ -3,18 +3,16 @@ title: ServiceWorker
 slug: Web/API/ServiceWorker
 tags:
   - API
-  - Draft
   - Interface
   - Offline
+  - Reference
   - Service Workers
   - ServiceWorker
   - Workers
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<div></div>
-
-<p>The <code>ServiceWorker</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique <code>ServiceWorker</code> object.</p>
+<p>The <strong><code>ServiceWorker</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique <code>ServiceWorker</code> object.</p>
 
 <p>A <code>ServiceWorker</code> object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)</p>
 
@@ -46,7 +44,7 @@ tags:
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -105,8 +103,8 @@ tags:
 <ul>
  <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service worker basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise", "Promises")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
 </ul>

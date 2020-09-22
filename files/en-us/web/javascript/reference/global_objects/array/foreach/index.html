@@ -31,7 +31,7 @@ tags:
   <dt><code><var>currentValue</var></code></dt>
   <dd>The current element being processed in the array.</dd>
   <dt><code><var>index</var></code> {{optional_inline}}</dt>
-  <dd>The index <code><var>currentValue</var></code> in the array.</dd>
+  <dd>The index of <code><var>currentValue</var></code> in the array.</dd>
   <dt><code><var>array</var></code> {{optional_inline}}</dt>
   <dd>The array <code>forEach()</code> was called upon.</dd>
  </dl>
@@ -104,6 +104,70 @@ console.log(sum)
 // Actual output: 0
 </pre>
 </div>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><code>forEach()</code> was added to the ECMA-262 standard in the 5<sup>th</sup> edition, and it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>forEach<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">()</span></font></code> in implementations which do not natively support it.</p>
+
+<p>This algorithm is exactly the one specified in ECMA-262, 5<sup>th</sup> edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that <code><var>fun</var>.call</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}.</p>
+
+<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.18
+// Reference: http://es5.github.io/#x15.4.4.18
+
+if (!Array.prototype['forEach']) {
+
+  Array.prototype.forEach = function(callback, thisArg) {
+
+    if (this == null) { throw new TypeError('Array.prototype.forEach called on null or undefined'); }
+
+    var T, k;
+    // 1. Let O be the result of calling toObject() passing the
+    // |this| value as the argument.
+    var O = Object(this);
+
+    // 2. Let lenValue be the result of calling the Get() internal
+    // method of O with the argument "length".
+    // 3. Let len be toUint32(lenValue).
+    var len = O.length &gt;&gt;&gt; 0;
+
+    // 4. If isCallable(callback) is false, throw a TypeError exception.
+    // See: http://es5.github.com/#x9.11
+    if (typeof callback !== "function") { throw new TypeError(callback + ' is not a function'); }
+
+    // 5. If thisArg was supplied, let T be thisArg; else let
+    // T be undefined.
+    if (arguments.length &gt; 1) { T = thisArg; }
+
+    // 6. Let k be 0
+    k = 0;
+
+    // 7. Repeat, while k &lt; len
+    while (k &lt; len) {
+
+      var kValue;
+
+      // a. Let Pk be ToString(k).
+      //    This is implicit for LHS operands of the in operator
+      // b. Let kPresent be the result of calling the HasProperty
+      //    internal method of O with argument Pk.
+      //    This step can be combined with c
+      // c. If kPresent is true, then
+      if (k in O) {
+
+        // i. Let kValue be the result of calling the Get internal
+        // method of O with argument Pk.
+        kValue = O[k];
+
+        // ii. Call the Call internal method of callback with T as
+        // the this value and argument list containing kValue, k, and O.
+        callback.call(T, kValue, k, O);
+      }
+      // d. Increase k by 1.
+      k++;
+    }
+    // 8. return undefined
+  };
+}</pre>
 
 <h2 id="Examples">Examples</h2>
 

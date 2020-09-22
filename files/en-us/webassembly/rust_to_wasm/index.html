@@ -16,8 +16,8 @@ tags:
 <p>There are two main use cases for Rust and WebAssembly:</p>
 
 <ul>
-	<li>To build an entire application — an entire web app based in Rust.</li>
-	<li>To build a part of an application — using Rust in an existing JavaScript frontend.</li>
+ <li>To build an entire application — an entire web app based in Rust.</li>
+ <li>To build a part of an application — using Rust in an existing JavaScript frontend.</li>
 </ul>
 
 <p>For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like <a href="https://github.com/DenisKolodin/yew"><code>yew</code></a>.</p>
@@ -103,7 +103,7 @@ pub fn greet(name: &amp;str) {
 
 <p>Get it? <em>Cargo</em> ships <em>crates</em>.</p>
 
-<p>The third line contains a <code>use</code> command, which imports code from a library into your code. In this case, we're importing everything in the <code>wasm_bindgen::prelude</code> module. We use these features in the next section.</p>
+<p>The first line contains a <code>use</code> command, which imports code from a library into your code. In this case, we're importing everything in the <code>wasm_bindgen::prelude</code> module. We use these features in the next section.</p>
 
 <p>Before we move on to the next section, we should talk a bit more about <code>wasm-bindgen</code>.</p>
 
@@ -180,11 +180,11 @@ wasm-bindgen = "0.2"</pre>
 <p>This does a number of things (and they take a lot of time, especially the first time you run <code>wasm-pack</code>). To learn about them in detail, check out <a href="https://hacks.mozilla.org/2018/04/hello-wasm-pack/">this blog post on Mozilla Hacks</a>. In short, <code>wasm-pack build</code>:</p>
 
 <ol>
-	<li>Compiles your Rust code to WebAssembly.</li>
-	<li>Runs <code>wasm-bindgen</code> on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module npm can understand.</li>
-	<li>Creates a <code>pkg</code> directory and move that JavaScript file and your WebAssembly code into it.</li>
-	<li>Reads your <code>Cargo.toml</code> and produces an equivalent <code>package.json</code>.</li>
-	<li>Copies your <code>README.md</code> (if you have one) into the package.</li>
+ <li>Compiles your Rust code to WebAssembly.</li>
+ <li>Runs <code>wasm-bindgen</code> on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module npm can understand.</li>
+ <li>Creates a <code>pkg</code> directory and move that JavaScript file and your WebAssembly code into it.</li>
+ <li>Reads your <code>Cargo.toml</code> and produces an equivalent <code>package.json</code>.</li>
+ <li>Copies your <code>README.md</code> (if you have one) into the package.</li>
 </ol>
 
 <p>The end result? You have an npm package inside of the <code>pkg</code> directory.</p>
@@ -213,8 +213,6 @@ $ mkdir site
 $ cd site
 $ npm link hello-wasm
 </pre>
-
-
 
 <p>Create a new file, <code>package.json</code>, and put the following code in it:</p>
 

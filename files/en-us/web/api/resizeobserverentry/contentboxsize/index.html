@@ -12,11 +12,11 @@ tags:
 ---
 <div>{{APIRef("Resize Observer API")}}{{seecompattable}}</div>
 
-<p class="summary">The <strong><code>contentBoxSize</code></strong> read-only property of the {{domxref("ResizeObserverEntry")}} interface returns an object containing the new content box size of the observed element when the callback is run.</p>
+<p class="summary">The <strong><code>contentBoxSize</code></strong> read-only property of the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new content box size of the observed element when the callback is run.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myContentBoxSize = ResizeObserverEntry.contentBoxSize;
+<pre class="syntaxbox notranslate">var myContentBoxSize = ResizeObserverEntry.contentBoxSize;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -38,7 +38,7 @@ tags:
 
 <p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html">resize-observer-border-radius.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html">see source</a>) example. This example includes a green box, sized as a percentage of the viewport size. When the viewport size is changed, the box's rounded corners change in proportion to the size of the box. We could just implement this using {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking elliptical corners; this solution gives you nice square corners that scale with the box size.</p>
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +

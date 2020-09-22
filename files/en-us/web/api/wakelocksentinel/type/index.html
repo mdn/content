@@ -15,18 +15,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>type</var> = WakeLockSentinel.type;</pre>
+<pre class="syntaxbox notranslate">var <var>type</var> = <em>sentinel</em>.type;</pre>
 
 <h3 id="Value">Value</h3>
+
 <p>A {{jsxref("String")}} representation of the currently acquired wake lock type.</p>
 
 <dl>
-  <dt><em>type</em> {{ReadOnlyInline}}</dt>
-  <dd>Return values are:
-  <ul>
-   <li><code>'screen'</code>: A screen wake lock. Prevents devices from dimming or locking the screen.</li>
-  </ul>
-  </dd>
+	<dt><em>type</em> {{ReadOnlyInline}}</dt>
+	<dd>Return values are:
+	<ul>
+		<li><code>'screen'</code>: A screen wake lock. Prevents devices from dimming or locking the screen.</li>
+	</ul>
+	</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -44,18 +45,18 @@ requestWakeLock();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Screen Wake Lock','#the-wakelocktype-enum','WakeLockType')}}</td>
-   <td>{{Spec2('Screen Wake Lock API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Screen Wake Lock','#the-wakelocktype-enum','WakeLockType')}}</td>
+			<td>{{Spec2('Screen Wake Lock')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

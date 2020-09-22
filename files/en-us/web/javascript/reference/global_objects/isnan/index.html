@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>isNaN(v<em>alue</em>)</code></pre>
+<pre class="syntaxbox notranslate"><code>isNaN(v<em>alue</em>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,11 +29,11 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<h3 id="The_necessity_of_an_isNaN_function">The necessity of an <code>isNaN</code> function</h3>
+<h3 id="The_necessity_of_an_isNaN_function">The necessity of an isNaN function</h3>
 
 <p>Unlike all other possible values in JavaScript, it is not possible to rely on the equality operators (== and ===) to determine whether a value <em>is</em> {{jsxref("NaN")}} or not, because both <code>NaN == NaN</code> and <code>NaN === NaN</code> evaluate to <code>false</code>. Hence, the necessity of an <code>isNaN</code> function.</p>
 
-<h3 id="Origin_of_NaN_values">Origin of <code>NaN</code> values</h3>
+<h3 id="Origin_of_NaN_values">Origin of NaN values</h3>
 
 <p><code>NaN</code> values are generated when arithmetic operations result in <em>undefined</em> or <em>unrepresentable</em> values. Such values do not necessarily represent overflow conditions. A <code>NaN</code> also results from attempted coercion to numeric values of non-numeric values for which no primitive numeric value is available.</p>
 
@@ -47,14 +47,14 @@ tags:
 
 <p>A polyfill for <code>isNaN</code> would be (the polyfill leverages the unique never-equal-to-itself characteristic of <code>NaN</code>):</p>
 
-<pre class="brush: js">var isNaN = function(value) {
+<pre class="brush: js notranslate">var isNaN = function(value) {
     var n = Number(value);
     return n !== n;
 };</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">isNaN(NaN);       // true
+<pre class="brush: js notranslate">isNaN(NaN);       // true
 isNaN(undefined); // true
 isNaN({});        // true
 
@@ -88,10 +88,12 @@ isNaN('blabla');   // true: "blabla" is converted to a number.
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}}</td>
   </tr>

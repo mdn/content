@@ -6,8 +6,11 @@ tags:
   - Clipboard
   - Clipboard API
   - ClipboardItem
+  - Cut
   - Interface
   - Reference
+  - copy
+  - paste
 ---
 <div>{{draft}}{{DefaultAPISidebar("Clipboard API")}}</div>
 
@@ -28,8 +31,8 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
-	<dt>{{domxref("ClipboardItem.ClipboardItem()")}}</dt>
-	<dd>Creates a new <strong><code>ClipboardItem</code></strong> object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value</dd>
+ <dt>{{domxref("ClipboardItem.ClipboardItem()")}}</dt>
+ <dd>Creates a new <strong><code>ClipboardItem</code></strong> object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -37,8 +40,8 @@ tags:
 <p><em>This interface provides the following properties.</em></p>
 
 <dl>
-	<dt>{{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}</dt>
-	<dd>Returns an {{jsxref("Array")}} of MIME types available within the <strong><code>ClipboardItem</code></strong>.</dd>
+ <dt>{{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns an {{jsxref("Array")}} of MIME types available within the <strong><code>ClipboardItem</code></strong>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -46,8 +49,8 @@ tags:
 <p><em>This interface defines the following methods.</em></p>
 
 <dl>
-	<dt>{{domxref("ClipboardItem.getType", "getType()")}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.</dd>
+ <dt>{{domxref("ClipboardItem.getType", "getType()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -100,18 +103,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Clipboard API','#clipboarditem','ClipboardItem')}}</td>
-			<td>{{Spec2('Clipboard API')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Clipboard API','#clipboarditem','ClipboardItem')}}</td>
+   <td>{{Spec2('Clipboard API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -127,7 +130,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{domxref("Clipboard")}}</li>
-	<li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</a></li>
-	<li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async Clipboard article</a></li>
+ <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
+ <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</a></li>
+ <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async Clipboard article</a></li>
 </ul>

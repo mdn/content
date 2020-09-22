@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>DPR</strong></code> header is a <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> headers which represents the client device pixel ratio ({{Glossary("DPR")}}), which is the the number of physical device pixels corresponding to every CSS pixel.</p>
+<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> headers which represents the client device pixel ratio ({{Glossary("DPR")}}), which is the the number of physical device pixels corresponding to every CSS pixel.</p>
 
 <table class="properties">
  <tbody>
@@ -29,20 +29,20 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">DPR: &lt;number&gt;
+<pre class="syntaxbox notranslate">DPR: &lt;number&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Server first needs to opt in to receive <code>DPR</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>DPR</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
 
-<pre>Accept-CH: DPR
+<pre class="notranslate">Accept-CH: DPR
 Accept-CH-Lifetime: 86400
 </pre>
 
 <p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
 
-<pre>DPR: 1.0
+<pre class="notranslate">DPR: 1.0
 </pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

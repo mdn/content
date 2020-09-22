@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var storing = browser.sessions.setWindowValue(
+<pre class="syntaxbox brush:js notranslate">var storing = browser.sessions.setWindowValue(
   windowId,    // integer
   key,         // string
   value        // string or object
@@ -32,7 +32,7 @@ tags:
 
 <dl>
  <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of the window with which you want to associate the data.</dd>
+ <dd><code>integer</code>. ID of the window with which you want to associate the data. Error is thrown if ID is invalid.</dd>
  <dt><code>key</code></dt>
  <dd><code>string</code>. Key that you can later use to retrieve this particular data value.</dd>
  <dt><code>value</code></dt>
@@ -53,7 +53,7 @@ tags:
 
 <p>Set a value on the active window when the user selects a menu item. Note that you'll need the "menus" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">permission</a> to run this example:</p>
 
-<pre class="brush: js">async function setOnActiveWindow() {
+<pre class="brush: js notranslate">async function setOnActiveWindow() {
   let currentWindow = await browser.windows.getLastFocused();
   await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
 }

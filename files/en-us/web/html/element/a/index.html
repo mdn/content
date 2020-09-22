@@ -45,7 +45,18 @@ tags:
 
  <ul>
   <li><code>download</code> only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
-  <li>If <code>Content-Disposition</code> has a different <code>filename</code> than <code>download</code>, the header takes priority. (If <code>Content-Disposition: inline</code>, Firefox prefers the header while Chrome prefers <code>download</code>.)</li>
+  <li>
+   <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behaviour may differ:</p>
+
+   <ul>
+    <li>
+     <p>If the header specifies a <code>filename</code>, it takes priority over the attribute.</p>
+    </li>
+    <li>
+     <p>If the header specifies a disposition of <code>inline</code> but no filename, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content.</p>
+    </li>
+   </ul>
+  </li>
  </ul>
  </div>
  </dd>

@@ -58,13 +58,23 @@ tags:
 
 <pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
+
+ta[0];
+// 0
 ta[0] = 5;
+// 5
 
 Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12
+// 5
+
+Atomics.load(ta, 0);
+// 17 ✅
+// 12 ❌
 
 Atomics.and(ta, 0, 1);
-Atomics.load(ta, 0);  // 1
+// 17
+Atomics.load(ta, 0);
+// 1
 
 Atomics.compareExchange(ta, 0, 5, 12);
 Atomics.load(ta, 0); // 12
@@ -139,3 +149,7 @@ Atomics.notify(int32, 0, 1);</pre>
  <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
  <li><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks</a></li>
 </ul>
+
+<div id="gtx-trans" style="position: absolute; left: 25px; top: 2197px;">
+<div class="gtx-trans-icon"></div>
+</div>

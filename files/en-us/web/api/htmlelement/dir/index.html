@@ -20,9 +20,13 @@ tags:
 
 <p>When an element has its dir set to "<code>auto</code>", the direction of the element is determined based on its first strong directionality character, or default to the directionality of its parent element.</p>
 
+<div class="note">
+<p>Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the <code><strong>dir</strong></code> attribute value.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em><var>currentWritingDirection</var></em> = <em>elementNodeReference</em>.dir;
+<pre class="syntaxbox notranslate">var <em><var>currentWritingDirection</var></em> = <em>elementNodeReference</em>.dir;
 <em>elementNodeReference</em>.dir = <em><var>newWritingDirection</var></em>;
 </pre>
 
@@ -35,7 +39,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var parg = document.getElementById("para1");
+<pre class="brush: js notranslate">var parg = document.getElementById("para1");
 parg.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
 </pre>

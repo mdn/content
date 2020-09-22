@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>doneLoading</em> = <em>htmlImageElement</em>.complete;</pre>
+<pre class="syntaxbox notranslate">let <em>doneLoading</em> = <em>htmlImageElement</em>.complete;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -27,16 +27,16 @@ tags:
 <p>The image is considered completely loaded if any of the following are true:</p>
 
 <ul>
-	<li>Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}} attribute is specified.</li>
-	<li>The <code>srcset</code> attribute is absent and the <code>src</code> attribute, while specified, is the empty string (<code>""</code>).</li>
-	<li>The image resource has been fully fetched and has been queued for rendering/compositing.</li>
-	<li>The image element has previously determined that the image is fully available and ready for use.</li>
-	<li>The image is "broken;" that is, the image failed to load due to an error or because image loading is disabled.</li>
+ <li>Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}} attribute is specified.</li>
+ <li>The <code>srcset</code> attribute is absent and the <code>src</code> attribute, while specified, is the empty string (<code>""</code>).</li>
+ <li>The image resource has been fully fetched and has been queued for rendering/compositing.</li>
+ <li>The image element has previously determined that the image is fully available and ready for use.</li>
+ <li>The image is "broken;" that is, the image failed to load due to an error or because image loading is disabled.</li>
 </ul>
 
 <p>It's worth noting that due to the image potentially being received asynchronously, the value of <code>complete</code> may change while your script is running.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>Consider a photo library app that provides the ability to open images into a lightbox mode for improved viewing as well as editing of the image. These photos may be very large, so you don't want to wait for them to load, so your code uses <code>async</code>/<code>await</code> to load the images in the background.</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>So the <code>fixRedEyeCommand()</code> function, which is called by the button that triggers red-eye removal, checks the value of the lightbox image's <code>complete</code> property before attempting to do its work. This is demonstrated in the code below.</p>
 
-<pre class="brush: js">let lightboxElem = document.querySelector("#lightbox");
+<pre class="brush: js notranslate">let lightboxElem = document.querySelector("#lightbox");
 let lightboxImgElem = lightboxElem.querySelector("img");
 let lightboxControlsElem = lightboxElem.querySelector(".toolbar");
 
@@ -52,7 +52,7 @@ async function loadImage(url, elem) {
   return new Promise((resolve, reject) =&gt; {
     elem.onload = () =&gt; resolve(elem);
     elem.onerror = reject;
-    elem.src = src;
+    elem.src = url;
   });
 }
 
@@ -76,20 +76,20 @@ function fixRedEyeCommand() {
 <h2 id="Specifications">Specifications</h2>
 
 <table>
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', '#dom-img-complete', 'HTMLImageElement.complete')}}</td>
-			<td>{{Spec2('HTML DOM')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-img-complete', 'HTMLImageElement.complete')}}</td>
+   <td>{{Spec2('HTML DOM')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>

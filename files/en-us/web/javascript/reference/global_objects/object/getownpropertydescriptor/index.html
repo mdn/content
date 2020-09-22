@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Object.getOwnPropertyDescriptor()</strong></code> method returns a property descriptor for an <dfn>own property</dfn> (that is, one directly present on an object and not in the object's prototype chain) of a given object.</p>
+<p>The <code><strong>Object.getOwnPropertyDescriptor()</strong></code> method returns an object describing the configuration of a specific property on a given object (that is, one directly present on an object and not in the object's prototype chain). The object returned is mutable but mutating it has no effect on the original property's configuration. </p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}</div>
 
@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</code></pre>
+<pre class="syntaxbox notranslate"><code>Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="Using_Object.getOwnPropertyDescriptor">Using Object.getOwnPropertyDescriptor</h3>
 
-<pre class="brush: js">var o, d;
+<pre class="brush: js notranslate">var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
@@ -105,7 +105,7 @@ d = Object.getOwnPropertyDescriptor(o, 'qux');
 
 <p>In ES5, if the first argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument will be coerced to an object at first.</p>
 
-<pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
+<pre class="brush: js notranslate">Object.getOwnPropertyDescriptor('foo', 0);
 // TypeError: "foo" is not an object  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">aPromise = <em>RTCPeerConnection</em>.setLocalDescription(<em>sessionDescription</em>);
+<pre class="syntaxbox notranslate">aPromise = <em>RTCPeerConnection</em>.setLocalDescription(<em>sessionDescription</em>);
 
 <em>pc</em>.setLocalDescription(<em>sessionDescription</em>, <em>successCallback</em>, <em>errorCallback</em>); {{deprecated_inline}}
 </pre>
@@ -42,14 +42,14 @@ tags:
 
 <p>The description is of type <code>RTCSessionDescriptionInit</code>, which is a serialized version of a {{domxref("RTCSessionDescription")}} browser object. They're interchangeable:</p>
 
-<pre class="brush: js">myPeerConnection.createOffer().then(function(offer) {
+<pre class="brush: js notranslate">myPeerConnection.createOffer().then(function(offer) {
   return myPeerConnection.setLocalDescription(offer);
 });
 </pre>
 
 <p>This is equivalent to:</p>
 
-<pre class="brush: js">myPeerConnection.createOffer().then(function(offer) {
+<pre class="brush: js notranslate">myPeerConnection.createOffer().then(function(offer) {
   return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
 });
 </pre>
@@ -92,11 +92,11 @@ tags:
 
 <h3 id="Implicit_descriptions">Implicit descriptions</h3>
 
-<p>One of the advantages of the parameter-free form of <code>setLocalDescription()</code> is that it lets you simplify your negotiation code substantially. The following essentially represents complete negotiation, other than the implementation of the communication for the signaling server:</p>
+<p>One of the advantages of the parameter-free form of <code>setLocalDescription()</code> is that it lets you simplify your negotiation code substantially. This is all your {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event handler needs to look like, for the most part. Just add the signaling server code, which here is represented by the call to <code>signalRemotePeer()</code>.</p>
 
-<pre class="brush: js">myPeerConnection.addEventListener("negotiationneeded", event =&gt; {
-  await myPeerConnection.setLocalDescription();
-  signalRemotePeer({ description: myPeerConnection.localDescription });
+<pre class="brush: js notranslate">pc.addEventListener("negotiationneeded", async (event) =&gt; {
+  await pc.setLocalDescription();
+  signalRemotePeer({ description: pc.localDescription });
 });
 </pre>
 
@@ -106,17 +106,17 @@ tags:
 
 <p>The example below shows the implementation of a handler for the {{event("negotiationneeded")}} event that explicitly creates an offer, rather than letting <code>setLocalDescription()</code> do it.</p>
 
-<pre class="brush: js">function handleNegotiationNeededEvent() {
-  pc.createOffer().then(function(offer) {
-    return pc.setLocalDescription(offer);
-  })
-  .then(function() {
-    // Send the offer to the remote peer using the signaling server
-  })
-  .catch(reportError);
+<pre class="brush: js notranslate">async function handleNegotiationNeededEvent() {
+  try {
+    await offer = pc.createOffer();
+    pc.setLocalDescription(offer);
+    signalRemotePeer({ description: pc.localDescription });
+  } catch(err) {
+    reportError(err);
+  }
 }</pre>
 
-<p>This begins by creating an offer by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}; when that succeeds, we call <code>setLocalDescription()</code>. The fulfillment handler for that promise can then send the newly-created offer along to the other peer using the signaling server.</p>
+<p>This begins by creating an offer by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}; when that succeeds, we call <code>setLocalDescription()</code>. We can then send the newly-created offer along to the other peer using the signaling server, which here is done by calling a function called <code>signalRemotePeer()</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

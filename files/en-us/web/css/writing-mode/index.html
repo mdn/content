@@ -35,26 +35,28 @@ writing-mode: unset;</pre>
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>horizontal-tb</code></dt>
- <dd>For <code>ltr</code> scripts, content flows horizontally from left to right. For <code>rtl</code> scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.</dd>
- <dt><code>vertical-rl</code></dt>
- <dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.</dd>
- <dt><code>vertical-lr</code></dt>
- <dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.</dd>
- <dt><code>sideways-rl</code> {{experimental_inline}}</dt>
- <dd>For <code>ltr</code> scripts, content flows vertically from bottom to top. For <code>rtl</code> scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.</dd>
- <dt><code>sideways-lr</code> {{experimental_inline}}</dt>
- <dd>For <code>ltr</code> scripts, content flows vertically from top to bottom. For <code>rtl</code> scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.</dd>
- <dt><code>lr</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
- <dt><code>lr-tb</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
- <dt><code>rl</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
- <dt><code>tb</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-lr</code> instead.</dd>
- <dt><code>tb-rl</code> {{deprecated_inline}}</dt>
- <dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-rl</code> instead.</dd>
+	<dt><code>horizontal-tb</code></dt>
+	<dd>For <code>ltr</code> scripts, content flows horizontally from left to right. For <code>rtl</code> scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.</dd>
+	<dt><code>vertical-rl</code></dt>
+	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.</dd>
+	<dt><code>vertical-lr</code></dt>
+	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.</dd>
+	<dt><code>sideways-rl</code> {{experimental_inline}}</dt>
+	<dd>For <code>ltr</code> scripts, content flows vertically from bottom to top. For <code>rtl</code> scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.</dd>
+	<dt><code>sideways-lr</code> {{experimental_inline}}</dt>
+	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom. For <code>rtl</code> scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.</dd>
+	<dt><code>lr</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
+	<dt><code>lr-tb</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
+	<dt><code>rl</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
+	<dt><code>tb</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-lr</code> instead.</dd>
+	<dt><code>tb-lr</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-lr</code> instead.</dd>
+	<dt><code>tb-rl</code> {{deprecated_inline}}</dt>
+	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-rl</code> instead.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -185,25 +187,25 @@ th {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS4 Writing Modes")}}</td>
-   <td>Add <code>sideways-lr</code> and <code>sideways-rl</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS3 Writing Modes")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}}</td>
+			<td>{{Spec2("CSS4 Writing Modes")}}</td>
+			<td>Add <code>sideways-lr</code> and <code>sideways-rl</code></td>
+		</tr>
+		<tr>
+			<td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
+			<td>{{Spec2("CSS3 Writing Modes")}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -215,12 +217,12 @@ th {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>SVG <code><a href="/en-US/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
- <li>{{Cssxref("direction")}}</li>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("text-orientation")}}</li>
- <li>{{Cssxref("text-combine-upright")}}</li>
- <li><a href="/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
- <li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinse, Japanese, Korean and Mongolian)</a></li>
- <li>Extensive browsers support test results: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
+	<li>SVG <code><a href="/en-US/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
+	<li>{{Cssxref("direction")}}</li>
+	<li>{{Cssxref("unicode-bidi")}}</li>
+	<li>{{Cssxref("text-orientation")}}</li>
+	<li>{{Cssxref("text-combine-upright")}}</li>
+	<li><a href="/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
+	<li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinse, Japanese, Korean and Mongolian)</a></li>
+	<li>Extensive browsers support test results: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
 </ul>

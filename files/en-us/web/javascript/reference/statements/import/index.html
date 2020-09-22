@@ -64,7 +64,7 @@ var promise = import("<em>module-name</em>");
 
 <h3 id="Import_a_single_export_from_a_module">Import a single export from a module</h3>
 
-<p>Given an object or value named <code>myExport</code> which has been exported from the module <code>my-module</code> either implicitly (because the entire module is exported) or explicitly (using the {{JSxRef("Statements/export", "export")}} statement), this inserts <code>myExport</code> into the current scope.</p>
+<p>Given an object or value named <code>myExport</code> which has been exported from the module <code>my-module</code> either implicitly (because the entire module is exported, for example using <code>export * from 'another.js'</code>) or explicitly (using the {{JSxRef("Statements/export", "export")}} statement), this inserts <code>myExport</code> into the current scope.</p>
 
 <pre class="brush: js notranslate">import {myExport} from '/modules/my-module.js';</pre>
 

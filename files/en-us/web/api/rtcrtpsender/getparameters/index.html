@@ -12,13 +12,13 @@ tags:
   - WebRTC API
   - getParameters()
 ---
-<p>{{APIRef("WebRTC API")}}</p>
+<p>{{DefaultAPISidebar("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>getParameters()</code></strong> method of the {{domxref("RTCRtpSender")}} interface returns an {{domxref("RTCRtpSendParameters")}} object describing the current configuration for the encoding and transmission of media on the {{domxref("RTCRtpSender.track")}} property.</span></p>
+<p><span class="seoSummary">The <strong><code>getParameters()</code></strong> method of the {{domxref("RTCRtpSender")}} interface returns an {{domxref("RTCRtpSendParameters")}} object describing the current configuration for the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.track", "track")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
+<pre class="syntaxbox notranslate">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,6 +27,16 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>An {{domxref("RTCRtpSendParameters")}} object indicating the current configuration of the sender.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example gets the sender's current transaction ID; the transaction ID uniquely identifies the current set of parameters, to ensure that calls to {{domxref("RTCRtpSender.setParameters", "setParameters()")}} are always handled in the correct order, avoiding inadvertently overwriting parameters with older parameters.</p>
+
+<pre class="brush: js notranslate">function getSenderTransactionID(sender) {
+  let parameters = sender.getParameters();
+
+  return parameters.transactionId;
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

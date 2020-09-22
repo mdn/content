@@ -8,7 +8,7 @@ tags:
   - Forms
   - required
 ---
-<p><span class="seoSummary">The Boolean <code><strong>required</strong></code> attribute</span> which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The <code>required</code> attribute is supported by  <code>{{HTMLElement("input/text","text")}}</code>, <code>{{HTMLElement("input/search","search")}}</code>, <code>{{HTMLElement("input/url","url")}}</code>, <code>{{HTMLElement("input/tel","tel")}}</code>, <code>{{HTMLElement("input/email","email")}}</code>, <code>{{HTMLElement("input/password","password")}}</code>, <code>{{HTMLElement("input/date","date")}}</code>, <code>{{HTMLElement("input/month","month")}}</code>, <code>{{HTMLElement("input/week","week")}}</code>, <code>{{HTMLElement("input/time","time")}}</code>, <code>{{HTMLElement("input/datetime-local","datetime-local")}}</code>, <code>{{HTMLElement("input/number","number")}}</code>, <code>{{HTMLElement("input/checkbox","checkbox")}}</code>, <code>{{HTMLElement("input/radio","radio")}}</code>, <code>{{HTMLElement("input/file","file")}}<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">, </span></font></code><code>{{HTMLElement("input")}}</code> types along with the <code>{{HTMLElement("select")}}</code> and <code>{{HTMLElement("textarea")}}</code> form control elements. If present on any of these input types and elements, the <code>{{cssxref(':required')}}</code> pseudo class will match. If the attribute is not included, the <code>{{cssxref(':optional')}}</code> pseudo class will match.</p>
+<p><span class="seoSummary">The Boolean <code><strong>required</strong></code> attribute</span> which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The <code>required</code> attribute is supported by  <code>{{HTMLElement("input/text","text")}}</code>, <code>{{HTMLElement("input/search","search")}}</code>, <code>{{HTMLElement("input/url","url")}}</code>, <code>{{HTMLElement("input/tel","tel")}}</code>, <code>{{HTMLElement("input/email","email")}}</code>, <code>{{HTMLElement("input/password","password")}}</code>, <code>{{HTMLElement("input/date","date")}}</code>, <code>{{HTMLElement("input/month","month")}}</code>, <code>{{HTMLElement("input/week","week")}}</code>, <code>{{HTMLElement("input/time","time")}}</code>, <code>{{HTMLElement("input/datetime-local","datetime-local")}}</code>, <code>{{HTMLElement("input/number","number")}}</code>, <code>{{HTMLElement("input/checkbox","checkbox")}}</code>, <code>{{HTMLElement("input/radio","radio")}}</code>, <code>{{HTMLElement("input/file","file")}}<font face="Arial, x-locale-body, sans-serif"><span style="">, </span></font></code><code>{{HTMLElement("input")}}</code> types along with the <code>{{HTMLElement("select")}}</code> and <code>{{HTMLElement("textarea")}}</code> form control elements. If present on any of these input types and elements, the <code>{{cssxref(':required')}}</code> pseudo class will match. If the attribute is not included, the <code>{{cssxref(':optional')}}</code> pseudo class will match.</p>
 
 <p>The attribute is not supported or relevant to {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including <code>image</code>.</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Usability">Usability</h3>
 
-<p>When including the <code>required</code> attribute, provide a visible indication near the control informing the user that the input, select or textarea is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sited user. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">aria-required</a>="true"</code> doesn't hurt, in case the browser / screen reader combination does not support required yet.</p>
+<p>When including the <code>required</code> attribute, provide a visible indication near the control informing the user that the input, select or textarea is required. In addition, target required form controls with the {{cssxref(':required')}} pseudo-class, styling them in a way to indicate they are required. This improves usability for sighted users. Assistive technology should inform the user that the form control in mandatory based on the required attribute, but adding <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">aria-required</a>="true"</code> doesn't hurt, in case the browser / screen reader combination does not support required yet.</p>
 
 <h3 id="Constraint_validation">Constraint validation</h3>
 
@@ -75,7 +75,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div class="group"&gt;
     &lt;input type="text"&gt;
     &lt;label&gt;Normal&lt;/label&gt;

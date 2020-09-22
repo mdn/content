@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+<pre class="syntaxbox notranslate"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,24 +58,26 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js">if (!Object.is) {
-  Object.is = function(x, y) {
-    // SameValue algorithm
-    if (x === y) { // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x &amp;&amp; y !== y;
-    }
-  };
+<pre class="brush: js notranslate">if (!Object.is) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
+      // SameValue algorithm
+      if (x === y) { // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+      } else {
+        // Step 6.a: NaN == NaN
+        return x !== x &amp;&amp; y !== y;
+      }
+    }
+  });
 }</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Object.is">Using Object.is</h3>
 
-<pre class="brush: js">Object.is('foo', 'foo');     // true
+<pre class="brush: js notranslate">Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -93,8 +95,6 @@ Object.is(0, -0);            // false
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
 </pre>
-
-
 
 <h2 id="Specifications">Specifications</h2>
 

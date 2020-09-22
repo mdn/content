@@ -13,7 +13,7 @@ tags:
 
 <p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
-<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords, which are listed in the following table. Every keyword within a space seperated value should be unique within that value.</p>
+<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords, which are listed in the following table. Every keyword within a space-separated value should be unique within that value.</p>
 
 <table class="standard-table">
  <caption>Values for the <code>rel</code> attribute, and the elements for which each is relevant</caption>
@@ -28,28 +28,28 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("alternate")}}</code></td>
+   <td><code>{{anch("attr-alternate", "alternate")}}</code></td>
    <td>Alternate representations of the current document.</td>
    <td>Link</td>
    <td>Link</td>
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("author")}}</code></td>
+   <td><code>{{anch("attr-author", "author")}}</code></td>
    <td>Author of the current document or article.</td>
    <td>Link</td>
    <td>Link</td>
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("bookmark")}}</code></td>
+   <td><code>{{anch("attr-bookmark", "bookmark")}}</code></td>
    <td>Permalink for the nearest ancestor section.</td>
    <td class="not-allowed">Not allowed</td>
    <td>Link</td>
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("canonical")}}</code></td>
+   <td><code>{{anch("attr-canonical", "canonical")}}</code></td>
    <td>Preferred URL for the current document.</td>
    <td>Link</td>
    <td class="not-allowed">Not allowed</td>
@@ -63,28 +63,28 @@ tags:
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("external")}}</code></td>
-   <td>Referenced document is not part of the same site as the current document.</td>
+   <td><code>{{anch("attr-external", "external")}}</code></td>
+   <td>The referenced document is not part of the same site as the current document.</td>
    <td class="not-allowed">Not allowed</td>
    <td>Annotation</td>
    <td>Annotation</td>
   </tr>
   <tr>
-   <td><code>{{anch("help")}}</code></td>
+   <td><code>{{anch("attr-help", "help")}}</code></td>
    <td>Link to context-sensitive help.</td>
    <td>Link</td>
    <td>Link</td>
    <td>Link</td>
   </tr>
   <tr>
-   <td><code>{{anch("icon")}}</code></td>
-   <td>Icon representing the current document.</td>
+   <td><code>{{anch("attr-icon", "icon")}}</code></td>
+   <td>An icon representing the current document.</td>
    <td>External Resource</td>
    <td class="not-allowed">Not allowed</td>
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("license")}}</code></td>
+   <td><code>{{anch("attr-license", "license")}}</code></td>
    <td>Indicates that the main content of the current document is covered by the copyright license described by the referenced document.</td>
    <td>Link</td>
    <td>Link</td>
@@ -105,14 +105,14 @@ tags:
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("next")}}</code></td>
-   <td>Indicates that the current document is a part of a series, and that the next document in the series is the referenced document.</td>
+   <td><code>{{anch("attr-next", "next")}}</code></td>
+   <td>Indicates that the current document is a part of a series and that the next document in the series is the referenced document.</td>
    <td>Link</td>
    <td>Link</td>
    <td>Link</td>
   </tr>
   <tr>
-   <td><code>{{anch("nofollow")}}</code></td>
+   <td><code>{{anch("attr-nofollow", "nofollow")}}</code></td>
    <td>Indicates that the current document's original author or publisher does not endorse the referenced document.</td>
    <td class="not-allowed">Not allowed</td>
    <td>Annotation</td>
@@ -120,27 +120,27 @@ tags:
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Link_types/noopener">noopener</a></code></td>
-   <td>Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate<code> target </code>attribute value).</td>
+   <td>Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate<code> target </code>attribute value).</td>
    <td class="not-allowed">Not allowed</td>
    <td>Annotation</td>
    <td>Annotation</td>
   </tr>
   <tr>
-   <td><code>{{anch("noreferrer")}}</code></td>
+   <td><code>{{anch("attr-noreferrer", "noreferrer")}}</code></td>
    <td>No <code>Referer</code> header will be included. Additionally, has the same effect as <code>noopener</code>.</td>
    <td class="not-allowed">Not allowed</td>
    <td>Annotation</td>
    <td>Annotation</td>
   </tr>
   <tr>
-   <td><code>{{anch("opener")}}</code></td>
-   <td>Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not anauxiliary browsing context (i.e., has "<code>_blank</code>" as <code>target</code> attribute value).</td>
+   <td><code>{{anch("attr-opener", "opener")}}</code></td>
+   <td>Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "<code>_blank</code>" as <code>target</code> attribute value).</td>
    <td class="not-allowed">Not allowed</td>
    <td>Annotation</td>
    <td>Annotation</td>
   </tr>
   <tr>
-   <td><code>{{anch("pingback")}}</code></td>
+   <td><code>{{anch("attr-pingback", "pingback")}}</code></td>
    <td>Gives the address of the pingback server that handles pingbacks to the current document.</td>
    <td>External Resource</td>
    <td class="not-allowed">Not allowed</td>
@@ -175,28 +175,28 @@ tags:
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("prev")}}</code></td>
-   <td>Indicates that the current document is a part of a series, and that the previous document in the series is the referenced document.</td>
+   <td><code>{{anch("attr-prev", "prev")}}</code></td>
+   <td>Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.</td>
    <td>Link</td>
    <td>Link</td>
    <td>Link</td>
   </tr>
   <tr>
-   <td><code>{{anch("search")}}</code></td>
+   <td><code>{{anch("attr-search", "search")}}</code></td>
    <td>Gives a link to a resource that can be used to search through the current document and its related pages.</td>
    <td>Link</td>
    <td>Link</td>
    <td>Link</td>
   </tr>
   <tr>
-   <td><code>{{anch("stylesheet")}}</code></td>
+   <td><code>{{anch("attr-stylesheet", "stylesheet")}}</code></td>
    <td>Imports a style sheet.</td>
    <td>External Resource</td>
    <td class="not-allowed">Not allowed</td>
    <td class="not-allowed">Not allowed</td>
   </tr>
   <tr>
-   <td><code>{{anch("tag")}}</code></td>
+   <td><code>{{anch("attr-tag", "tag")}}</code></td>
    <td>Gives a tag (identified by the given address) that applies to the current document.</td>
    <td class="not-allowed">Not allowed</td>
    <td>Link</td>
@@ -209,13 +209,13 @@ tags:
 
 <p>The <code>rel</code> attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the <code>rel</code> attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still created links, but without a defined relationship.</p>
 
-<p>Like all HTML keyword attribute values, these values are case-insenstive.</p>
+<p>Like all HTML keyword attribute values, these values are case-insensitive.</p>
 
 <h2 id="Values">Values</h2>
 
-<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
+<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a> and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example, because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
-<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
+<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead, it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
 
 <p class="note">The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</p>
 
@@ -317,7 +317,7 @@ tags:
  <dd>
  <p>Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The <code><a href="type">type</a></code> attribute is not needed as it's a <code>text/css</code> stylesheet, as that is the default value. If it's not a stylesheet of type <code>text/css</code> it is best to declare the type.</p>
 
- <p>While this attribute defines the link as being a stylesheet, the interaction with other attributes and other keyterms within the rel value impact whether the stylesheet is downloaded and / or used.</p>
+ <p>While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.</p>
 
  <p>When used with the {{anch('alternate')}} keyword, it defines an alternative style sheet. In this case, include a non-empty <code><a href="type">title</a></code>.</p>
 
@@ -326,7 +326,7 @@ tags:
  <p>Requires the use of the CORS protocol for cross-origin fetching.</p>
  </dd>
  <dt>{{htmlattrdef("tag")}}</dt>
- <dd>Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is locatated. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the <code>tag</code> value of the <code>rel</code> attribute is for a single document.</dd>
+ <dd>Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is located. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the <code>tag</code> value of the <code>rel</code> attribute is for a single document.</dd>
 </dl>
 
 <h3 id="Non-standard_values">Non-standard values</h3>

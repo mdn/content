@@ -21,9 +21,9 @@ tags:
 <p>This property is a shorthand for the following CSS properties:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/flex-grow"><code>flex-grow</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/flex-shrink"><code>flex-shrink</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/flex-basis"><code>flex-basis</code></a></li>
+ <li>{{cssxref("flex-grow")}}</li>
+ <li>{{cssxref("flex-shrink")}}</li>
+ <li>{{cssxref("flex-basis")}}</li>
 </ul>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
@@ -86,15 +86,15 @@ flex: unset;
 <dl>
  <dt><code>initial</code></dt>
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting "<code>flex: 0 1 auto</code>".</dd>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
+ <dt id="auto"><code>auto</code></dt>
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "<code>flex: 1 1 auto</code>".</dd>
- <dt><a id="none" name="none"><code>none</code></a></dt>
+ <dt id="none"><code>none</code></dt>
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "<code>flex: 0 0 auto</code>".</dd>
- <dt><a id="&lt;'flex-grow'>" name="&lt;'flex-grow'>"><code>&lt;'flex-grow'&gt;</code></a></dt>
+ <dt id="&lt;'flex-grow'>"><code>&lt;'flex-grow'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
- <dt><a id="&lt;'flex-shrink'>" name="&lt;'flex-shrink'>"><code id="&lt;'flex-shrink'>">&lt;'flex-shrink'&gt;</code></a></dt>
+ <dt id="&lt;'flex-shrink'>"><code>&lt;'flex-shrink'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
- <dt><a id="&lt;'flex-basis'>" name="&lt;'flex-basis'>"><code id="&lt;'flex-basis'>">&lt;'flex-basis'&gt;</code></a></dt>
+ <dt id="&lt;'flex-basis'>"><code>&lt;'flex-basis'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of <code>0</code> must have a unit to avoid being interpreted as a flexibility. Defaults to <code>0</code> when omitted.</dd>
 </dl>
 

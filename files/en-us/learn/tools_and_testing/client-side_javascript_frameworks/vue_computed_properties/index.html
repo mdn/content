@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Using_computed_properties">Using computed properties</h2>
 
-<p>The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "3 items completed out of 5".  While it might be tempting to do something like this:</p>
+<p>The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:</p>
 
 <pre class="brush: js notranslate">&lt;h2&gt;\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed&lt;/h2&gt;</pre>
 

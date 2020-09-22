@@ -17,7 +17,7 @@ tags:
 
 <p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a>.</p>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">To deliver video and audio, the general workflow is usually something like this:</span></p>
+<p><span style="">To deliver video and audio, the general workflow is usually something like this:</span></p>
 
 <ol>
  <li>Check what format the browser supports via feature detection (usually a choice of two, as stated above).</li>
@@ -28,10 +28,10 @@ tags:
 
 <h3 id="HTML_Audio">HTML Audio</h3>
 
-<pre class="brush: html">&lt;audio controls preload="auto"&gt;
+<pre class="brush: html notranslate">&lt;audio controls preload="auto"&gt;
   &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
 
-  &lt;!-- fallback for browsers that don't suppport mp3 --&gt;
+  &lt;!-- fallback for browsers that don't support mp3 --&gt;
   &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
 
   &lt;!-- fallback for browsers that don't support audio tag --&gt;
@@ -48,10 +48,10 @@ tags:
 
 <h3 id="HTML_Video">HTML Video</h3>
 
-<pre class="brush: html">&lt;video controls width="640" height="480" poster="initialimage.png" autoplay muted&gt;
+<pre class="brush: html notranslate">&lt;video controls width="640" height="480" poster="initialimage.png" autoplay muted&gt;
   &lt;source src="videofile.mp4" type="video/mp4"&gt;
 
-  &lt;!-- fallback for browsers that don't suppport mp4 --&gt;
+  &lt;!-- fallback for browsers that don't support mp4 --&gt;
   &lt;source src="videofile.webm" type="video/webm"&gt;
 
   &lt;!-- specifying subtitle files --&gt;
@@ -74,7 +74,7 @@ tags:
 
 <p>You can create a more comprehensive Fallback using Flash. <a href="https://github.com/johndyer/mediaelement/blob/master/build/flashmediaelement.swf">Using flashmediaelement.swf</a> is one way.</p>
 
-<pre class="brush: html">&lt;audio controls&gt;
+<pre class="brush: html notranslate">&lt;audio controls&gt;
   &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
   &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
   &lt;!-- fallback for non supporting browsers goes here --&gt;
@@ -91,7 +91,7 @@ tags:
 
 <h3 id="JavaScript_Audio">JavaScript Audio</h3>
 
-<pre class="brush: js">var myAudio = document.createElement('audio');
+<pre class="brush: js notranslate">var myAudio = document.createElement('audio');
 
 if (myAudio.canPlayType('audio/mpeg')) {
   myAudio.setAttribute('src','audiofile.mp3');
@@ -110,13 +110,13 @@ myAudio.play();</pre>
 
 <p>It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:</p>
 
-<pre class="brush: html">&lt;audio id="player" src="data:audio/x-wav;base64,UklGRvC..."&gt;&lt;/audio&gt;</pre>
+<pre class="brush: html notranslate">&lt;audio id="player" src="data:audio/x-wav;base64,UklGRvC..."&gt;&lt;/audio&gt;</pre>
 
 <p><a href="https://github.com/kripken/speak.js/">Speak.js</a> employs this technique. <a href="http://speak-demo.herokuapp.com">Try the demo</a>.</p>
 
 <h3 id="JavaScript_Video">JavaScript Video</h3>
 
-<pre class="brush: js">var myVideo = document.createElement('video');
+<pre class="brush: js notranslate">var myVideo = document.createElement('video');
 
 if (myVideo.canPlayType('video/mp4')) {
   myVideo.setAttribute('src','videofile.mp4');
@@ -131,7 +131,7 @@ myVideo.height = 320;</pre>
 
 <h2 id="Web_Audio_API">Web Audio API</h2>
 
-<pre class="brush: js">  var context;
+<pre class="brush: js notranslate">  var context;
   var request;
   var source;
 
@@ -165,11 +165,11 @@ myVideo.height = 320;</pre>
 
 <p>To grab the stream from your webcam, first set up a {{htmlelement("video")}} element:</p>
 
-<pre class="brush: html">&lt;video id="webcam" width="480" height="360"&gt;&lt;/video&gt;</pre>
+<pre class="brush: html notranslate">&lt;video id="webcam" width="480" height="360"&gt;&lt;/video&gt;</pre>
 
 <p>Next, if supported connect the webcam source to the video element:</p>
 
-<pre class="brush: js">if (navigator.mediaDevices) {
+<pre class="brush: js notranslate">if (navigator.mediaDevices) {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
   .then(function onSuccess(stream) {
     var video = document.getElementById('webcam');
@@ -192,7 +192,7 @@ myVideo.height = 320;</pre>
  <br>
  The main mechanism is outlined below:</p>
 
-<pre class="brush: js">navigator.mediaDevices.getUserMedia({audio:true})
+<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({audio:true})
   .then(function onSuccess(stream) {
     var recorder = new MediaRecorder(stream);
 
@@ -258,12 +258,12 @@ myVideo.height = 320;</pre>
 
 <p>A quick example — first set up your audio and custom controls in HTML:</p>
 
-<pre class="brush: html">  &lt;audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"&gt;&lt;/audio&gt;
+<pre class="brush: html notranslate">  &lt;audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"&gt;&lt;/audio&gt;
   &lt;button id="my-control"&gt;play&lt;/button&gt;</pre>
 
 <p>add a bit of JavaScript to detect events to play and pause the audio:</p>
 
-<pre class="brush: js">window.onload = function() {
+<pre class="brush: js notranslate">window.onload = function() {
 
   var myAudio = document.getElementById('my-audio');
   var myControl = document.getElementById('my-control');
@@ -301,7 +301,7 @@ myVideo.height = 320;</pre>
 
 <p>Here's a trick that stops the download at once:</p>
 
-<pre class="brush: js">var mediaElement = document.querySelector("#myMediaElementID");
+<pre class="brush: js notranslate">var mediaElement = document.querySelector("#myMediaElementID");
 mediaElement.<code>removeAttribute("src");</code>
 mediaElement.<code>load();</code>
 </pre>
@@ -316,7 +316,7 @@ mediaElement.<code>load();</code>
 
 <p>You can use the element's <code>seekable</code> property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.</p>
 
-<pre class="brush: js">var mediaElement = document.querySelector('#mediaElementID');
+<pre class="brush: js notranslate">var mediaElement = document.querySelector('#mediaElementID');
 mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
 mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
 mediaElement.currentTime = 122; // Seek to 122 seconds
@@ -329,7 +329,7 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 
 <p>A time range is specified using the syntax:</p>
 
-<pre>#t=[starttime][,endtime]</pre>
+<pre class="notranslate">#t=[starttime][,endtime]</pre>
 
 <p>The time can be specified as a number of seconds (as a floating-point value) or as an hours/minutes/seconds time separated with colons (such as 2:05:01 for 2 hours, 5 minutes, and 1 second).</p>
 
@@ -356,7 +356,7 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 
 <p>This lets you detect which sources failed to load, which may be useful. Consider this HTML:</p>
 
-<pre class="brush: html">&lt;video&gt;
+<pre class="brush: html notranslate">&lt;video&gt;
 &lt;source id="mp4_src"
   src="video.mp4"
   type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;
@@ -394,7 +394,7 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 
 <p>Although this is usually supported, you may need to add the following to your media server's <code>.htaccess</code> file.</p>
 
-<pre># AddType TYPE/SUBTYPE EXTENSION
+<pre class="notranslate"># AddType TYPE/SUBTYPE EXTENSION
 
 AddType audio/mpeg mp3
 AddType audio/mp4 m4a
@@ -432,7 +432,7 @@ AddType video/webm webmv</pre>
 
 <p>Another way to show the fallback content of a video, when none of the sources could be decoded in the current browser, is to add an error handler on the last source element. Then you can replace the video with its fallback content:</p>
 
-<pre class="brush: html">&lt;video controls&gt;
+<pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="dynamicsearch.mp4" type="video/mp4"&gt;&lt;/source&gt;
   &lt;a href="dynamicsearch.mp4"&gt;
     &lt;img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS"&gt;
@@ -442,7 +442,7 @@ AddType video/webm webmv</pre>
 
 </pre>
 
-<pre class="brush: js">var v = document.querySelector('video'),
+<pre class="brush: js notranslate">var v = document.querySelector('video'),
     sources = v.querySelectorAll('source'),
     lastsource = sources[sources.length-1];
 lastsource.addEventListener('error', function(ev) {

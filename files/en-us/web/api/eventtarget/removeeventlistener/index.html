@@ -24,24 +24,24 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>type</var></code></dt>
-	<dd>A string which specifies the type of event for which to remove an event listener.</dd>
-	<dt><code><var>listener</var></code></dt>
-	<dd>The {{domxref("EventListener")}} function of the event handler to remove from the event target.</dd>
-	<dt><code><var>options</var></code> {{optional_inline}}</dt>
-	<dd>
-	<p>An options object that specifies characteristics about the event listener.</p>
+ <dt><code><var>type</var></code></dt>
+ <dd>A string which specifies the type of event for which to remove an event listener.</dd>
+ <dt><code><var>listener</var></code></dt>
+ <dd>The {{domxref("EventListener")}} function of the event handler to remove from the event target.</dd>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
+ <dd>
+ <p>An options object that specifies characteristics about the event listener.</p>
 
-	<p>The available options are:</p>
+ <p>The available options are:</p>
 
-	<ul>
-		<li><code><var>capture</var></code>: A {{jsxref("Boolean")}} which indicates that events of this type will be dispatched to the registered <code><var>listener</var></code> before being dispatched to any {{domxref("EventTarget")}} beneath it in the DOM tree.</li>
-		<li>{{non-standard_inline}} <code><var>mozSystemGroup</var></code>: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.</li>
-	</ul>
-	</dd>
-	<dt><code>useCapture</code> {{optional_inline}}</dt>
-	<dd>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of <code>false</code> is assumed.</dd>
-	<dd>If a listener is registered twice, one with capture and one without, remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</dd>
+ <ul>
+  <li><code><var>capture</var></code>: A {{jsxref("Boolean")}} which indicates that events of this type will be dispatched to the registered <code><var>listener</var></code> before being dispatched to any {{domxref("EventTarget")}} beneath it in the DOM tree.</li>
+  <li>{{non-standard_inline}} <code><var>mozSystemGroup</var></code>: A {{jsxref("Boolean")}} available only for code running in XBL or in Firefox's chrome which indicates if the listener will be added to the system group.</li>
+ </ul>
+ </dd>
+ <dt><code>useCapture</code> {{optional_inline}}</dt>
+ <dd>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of <code>false</code> is assumed.</dd>
+ <dd>If a listener is registered twice, one with capture and one without, remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -127,30 +127,30 @@ mouseOverTarget.addEventListener('mouseover', function () {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th>Specification</th>
-			<th>Status</th>
-			<th>Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-			<td>{{Spec2("DOM WHATWG")}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
-			<td>{{Spec2("DOM4")}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}}</td>
-			<td>{{Spec2("DOM2 Events")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th>Specification</th>
+   <th>Status</th>
+   <th>Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}}</td>
+   <td>{{Spec2("DOM2 Events")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -217,6 +217,6 @@ mouseOverTarget.addEventListener('mouseover', function () {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{domxref("EventTarget.addEventListener()")}}</li>
-	<li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}</li>
+ <li>{{domxref("EventTarget.addEventListener()")}}</li>
+ <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}</li>
 </ul>

@@ -14,105 +14,105 @@ tags:
 <p>The JavaScript command line provided by the Web Console offers a few built-in helper functions that make certain tasks easier.</p>
 
 <dl>
- <dt id="$"><code>$(selector, element)</code></dt>
- <dd>
- <p>Looks up a CSS selector string <code>selector</code> , returning the first node descended from <code>element</code> that matches. If unspecified, <code>element</code> defaults to <code>document</code>. Equivalent to {{ domxref("document.querySelector()") }} or calls the $ function in the page, if it exists.</p>
+	<dt id="$"><code>$(selector, element)</code></dt>
+	<dd>
+	<p>Looks up a CSS selector string <code>selector</code> , returning the first node descended from <code>element</code> that matches. If unspecified, <code>element</code> defaults to <code>document</code>. Equivalent to {{ domxref("document.querySelector()") }} or calls the $ function in the page, if it exists.</p>
 
- <p>See the <a href="/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector">QuerySelector code snippet</a>.</p>
- </dd>
- <dt id="$$"><code>$$(selector, element)</code></dt>
- <dd>Looks up a CSS selector string <code>selector</code>, returning an array of DOM nodes descended from <code>element</code> that match. If unspecified, <code>element</code> defaults to <code>document</code>. This is like for {{ domxref("document.querySelectorAll()") }}, but returns an array instead of a {{ domxref("NodeList") }}.</dd>
- <dt id="$0"><code>$0</code></dt>
- <dd>The currently-inspected element in the page.</dd>
- <dt id="$_"><code>$_</code></dt>
- <dd>Stores the result of the last expression executed in the console's command line. For example, if you type "2+2 &lt;enter&gt;", then "$_ &lt;enter&gt;", the console will print 4.</dd>
- <dt id="$x"><code>$x(xpath, element, resultType)</code></dt>
- <dd>Evaluates the <a href="/en-US/docs/XPath">XPath</a> <code>xpath</code> expression in the context of <code>element</code> and returns an array of matching nodes. If unspecified, <code>element</code> defaults to <code>document</code>. The resultType parameter specifies the type of result to return; it can be an <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult#Constants">XPathResult constant</a>, or a corresponding string: <code>"number"</code>, <code>"string"</code>, <code>"bool"</code>, <code>"node"</code>, or <code>"nodes"</code>; if not provided, <code>ANY_TYPE</code> is used.</dd>
- <dt><code>:block</code></dt>
- <dd>(Starting in Firefox 80) Followed by an unquoted string, blocks requests where the URL contains that string. In the <strong><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></strong>, the string now appears and is selected in the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs"><strong>Request Blocking</strong> sidebar</a>.  Unblock with <code>:unblock</code>.</dd>
- <dt id="help"><code>cd()</code></dt>
- <dd>
- <p>Switches JavaScript evaluation context to a different iframe in the page. This helper accepts multiple different ways of identifying the frame to switch to. You can supply any of the following:</p>
+	<p>See the <a href="/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector">QuerySelector code snippet</a>.</p>
+	</dd>
+	<dt id="$$"><code>$$(selector, element)</code></dt>
+	<dd>Looks up a CSS selector string <code>selector</code>, returning an array of DOM nodes descended from <code>element</code> that match. If unspecified, <code>element</code> defaults to <code>document</code>. This is like for {{ domxref("document.querySelectorAll()") }}, but returns an array instead of a {{ domxref("NodeList") }}.</dd>
+	<dt id="$0"><code>$0</code></dt>
+	<dd>The currently-inspected element in the page.</dd>
+	<dt id="$_"><code>$_</code></dt>
+	<dd>Stores the result of the last expression executed in the console's command line. For example, if you type "2+2 &lt;enter&gt;", then "$_ &lt;enter&gt;", the console will print 4.</dd>
+	<dt id="$x"><code>$x(xpath, element, resultType)</code></dt>
+	<dd>Evaluates the <a href="/en-US/docs/XPath">XPath</a> <code>xpath</code> expression in the context of <code>element</code> and returns an array of matching nodes. If unspecified, <code>element</code> defaults to <code>document</code>. The resultType parameter specifies the type of result to return; it can be an <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult#Constants">XPathResult constant</a>, or a corresponding string: <code>"number"</code>, <code>"string"</code>, <code>"bool"</code>, <code>"node"</code>, or <code>"nodes"</code>; if not provided, <code>ANY_TYPE</code> is used.</dd>
+	<dt><code>:block</code></dt>
+	<dd>(Starting in Firefox 80) Followed by an unquoted string, blocks requests where the URL contains that string. In the <strong><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></strong>, the string now appears and is selected in the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs"><strong>Request Blocking</strong> sidebar</a>.  Unblock with <code>:unblock</code>.</dd>
+	<dt id="help"><code>cd()</code> {{deprecated_inline("gecko74")}}</dt>
+	<dd>
+	<p>Switches JavaScript evaluation context to a different iframe in the page. This helper accepts multiple different ways of identifying the frame to switch to. You can supply any of the following:</p>
 
- <ul>
-  <li>a selector string to be passed to <code>document.querySelector</code> to locate the iframe element</li>
-  <li>the iframe element itself</li>
-  <li>the content window inside the iframe</li>
- </ul>
+	<ul>
+		<li>a selector string to be passed to <code>document.querySelector</code> to locate the iframe element</li>
+		<li>the iframe element itself</li>
+		<li>the content window inside the iframe</li>
+	</ul>
 
- <p>See <a href="/en-US/docs/Tools/Working_with_iframes">working with iframes</a>.</p>
- </dd>
- <dt><code>clear()</code></dt>
- <dd>Clears the console output area.</dd>
- <dt id="clearHistory"><code>clearHistory()</code></dt>
- <dd>Just like a normal command line, the console command line <a href="/en-US/docs/Tools/Web_Console#Command_history">remembers the commands you've typed</a>. Use this function to clear the console's command history.</dd>
- <dt><code>copy()</code></dt>
- <dd>Copies the argument to the clipboard. If the argument is a string, it's copied as-is. If the argument is a DOM node, its <code><a href="/en-US/docs/Web/API/Element/outerHTML">outerHTML</a></code> is copied. Otherwise, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify</a></code> will be called on the argument, and the result will be copied to the clipboard.</dd>
- <dt><code>help()</code>{{Deprecated_Inline(62)}}<br>
- <code style="margin-right: 1ch;">:help</code>{{Gecko_MinVersion_Inline(62)}}</dt>
- <dd>Displays help text. Actually, in a delightful example of recursion, it brings you to this page.</dd>
- <dt><code>inspect()</code></dt>
- <dd>Given an object, generates <a href="/en-US/docs/Tools/Web_Console/Rich_output">rich output</a> for that object. Once you select the object in the output area, you can use the arrow keys to navigate the object.</dd>
- <dt><code>keys()</code></dt>
- <dd>Given an object, returns a list of the keys (or property names) on that object. This is a shortcut for <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a>.</dd>
- <dt id="pprint"><code>pprint() {{Obsolete_Inline(74)}}</code></dt>
- <dd>Formats the specified value in a readable way; this is useful for dumping the contents of objects and arrays.</dd>
- <dt id="screenshot"><code>:screenshot</code></dt>
- <dd>Creates a screenshot of the current page with the supplied filename. If you don't supply a filename, the image file will be named with the following format:<br>
- <br>
- <code>Screen Shot yyy-mm-dd at hh.mm.ss.png</code><br>
- <br>
- The command has the following optional parameters:<br>
+	<p>See <a href="/en-US/docs/Tools/Working_with_iframes">working with iframes</a>.</p>
+	</dd>
+	<dt><code>clear()</code></dt>
+	<dd>Clears the console output area.</dd>
+	<dt id="clearHistory"><code>clearHistory()</code></dt>
+	<dd>Just like a normal command line, the console command line <a href="/en-US/docs/Tools/Web_Console#Command_history">remembers the commands you've typed</a>. Use this function to clear the console's command history.</dd>
+	<dt><code>copy()</code></dt>
+	<dd>Copies the argument to the clipboard. If the argument is a string, it's copied as-is. If the argument is a DOM node, its <code><a href="/en-US/docs/Web/API/Element/outerHTML">outerHTML</a></code> is copied. Otherwise, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify</a></code> will be called on the argument, and the result will be copied to the clipboard.</dd>
+	<dt><code>help()</code>{{Deprecated_Inline(62)}}<br>
+	<code style="margin-right: 1ch;">:help</code>{{Gecko_MinVersion_Inline(62)}}</dt>
+	<dd>Displays help text. Actually, in a delightful example of recursion, it brings you to this page.</dd>
+	<dt><code>inspect()</code></dt>
+	<dd>Given an object, generates <a href="/en-US/docs/Tools/Web_Console/Rich_output">rich output</a> for that object. Once you select the object in the output area, you can use the arrow keys to navigate the object.</dd>
+	<dt><code>keys()</code></dt>
+	<dd>Given an object, returns a list of the keys (or property names) on that object. This is a shortcut for <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a>.</dd>
+	<dt id="pprint"><code>pprint() {{Obsolete_Inline(74)}}</code></dt>
+	<dd>Formats the specified value in a readable way; this is useful for dumping the contents of objects and arrays.</dd>
+	<dt id="screenshot"><code>:screenshot</code></dt>
+	<dd>Creates a screenshot of the current page with the supplied filename. If you don't supply a filename, the image file will be named with the following format:<br>
+	<br>
+	<code>Screen Shot yyy-mm-dd at hh.mm.ss.png</code><br>
+	<br>
+	The command has the following optional parameters:<br>
 
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th>Command</th>
-    <th>Type</th>
-    <th>Description</th>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--clipboard</code></td>
-    <td>boolean</td>
-    <td>When present, this parameter will cause the screenshot to be copied to the clipboard.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--delay</code></td>
-    <td>number</td>
-    <td>The number of seconds to delay before taking the screenshot.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--dpr</code></td>
-    <td>number</td>
-    <td>The device pixel ratio to use when taking the screenshot.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--file</code></td>
-    <td>boolean</td>
-    <td>When present, the screenshot will be saved to a file, even if other options (e.g. <code style="white-space: nowrap;">--clipboard</code>) are included.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--filename</code></td>
-    <td>string</td>
-    <td>The name to use in saving the file. The file should have a ".png" extension.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--fullpage</code></td>
-    <td>boolean</td>
-    <td>If included, the full webpage will be saved. With this parameter, even the parts of the webpage which are outside the current bounds of the window will be included in the screenshot. When used, "<span style="white-space: nowrap;">-fullpage</span>" will be appended to the file name.</td>
-   </tr>
-   <tr>
-    <td><code style="white-space: nowrap;">--selector</code></td>
-    <td>string</td>
-    <td>The CSS query selector for a single element on the page. When supplied, only this element will be included in the screenshot.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>:unblock</code></dt>
- <dd>(Starting in Firefox 80) Followed by an unquoted string, removes blocking for URLs containing that string. In the <strong><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></strong>, the string is removed from the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs"><strong>Request Blocking</strong> sidebar</a>. No error is given if the string was not previously blocked.</dd>
- <dt id="values"><code>values()</code></dt>
- <dd>Given an object, returns a list of the values on that object; serves as a companion to <code>keys()</code>.</dd>
+	<table class="standard-table">
+		<tbody>
+			<tr>
+				<th>Command</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--clipboard</code></td>
+				<td>boolean</td>
+				<td>When present, this parameter will cause the screenshot to be copied to the clipboard.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--delay</code></td>
+				<td>number</td>
+				<td>The number of seconds to delay before taking the screenshot.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--dpr</code></td>
+				<td>number</td>
+				<td>The device pixel ratio to use when taking the screenshot.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--file</code></td>
+				<td>boolean</td>
+				<td>When present, the screenshot will be saved to a file, even if other options (e.g. <code style="white-space: nowrap;">--clipboard</code>) are included.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--filename</code></td>
+				<td>string</td>
+				<td>The name to use in saving the file. The file should have a ".png" extension.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--fullpage</code></td>
+				<td>boolean</td>
+				<td>If included, the full webpage will be saved. With this parameter, even the parts of the webpage which are outside the current bounds of the window will be included in the screenshot. When used, "<span style="white-space: nowrap;">-fullpage</span>" will be appended to the file name.</td>
+			</tr>
+			<tr>
+				<td><code style="white-space: nowrap;">--selector</code></td>
+				<td>string</td>
+				<td>The CSS query selector for a single element on the page. When supplied, only this element will be included in the screenshot.</td>
+			</tr>
+		</tbody>
+	</table>
+	</dd>
+	<dt><code>:unblock</code></dt>
+	<dd>(Starting in Firefox 80) Followed by an unquoted string, removes blocking for URLs containing that string. In the <strong><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></strong>, the string is removed from the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs"><strong>Request Blocking</strong> sidebar</a>. No error is given if the string was not previously blocked.</dd>
+	<dt id="values"><code>values()</code></dt>
+	<dd>Given an object, returns a list of the values on that object; serves as a companion to <code>keys()</code>.</dd>
 </dl>
 
 <p>Please refer to the <a href="/en-US/docs/Web/API/console">Console API</a> for more information about logging from content.</p>
@@ -120,8 +120,8 @@ tags:
 <h2 id="Variables">Variables</h2>
 
 <dl>
- <dt id="tempN">temp<em>N</em></dt>
- <dd>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Use in Console">"Use in Console"</a> option in the Inspector generates a variable for a node named <code>temp0</code>, <code>temp1</code>, <code>temp2</code>, etc. referencing the node.</dd>
+	<dt id="tempN">temp<em>N</em></dt>
+	<dd>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Use in Console">"Use in Console"</a> option in the Inspector generates a variable for a node named <code>temp0</code>, <code>temp1</code>, <code>temp2</code>, etc. referencing the node.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -135,3 +135,9 @@ tags:
 <pre class="brush: js; no-line-numbers notranslate">inspect($("#title"))</pre>
 
 <p>This automatically generates rich output for the object, showing you the contents of the DOM node that matches the CSS selector <code>"#title"</code>, which is of course the element with ID <code>"title"</code>. You can use the up- and down-arrow keys to navigate through the output, the right-arrow key to expand an item, and the left-arrow key to collapse it.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li><a href="/en-US/docs/Web/API/Console">console</a></li>
+</ul>

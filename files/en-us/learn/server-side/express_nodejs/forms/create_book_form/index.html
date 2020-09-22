@@ -14,14 +14,14 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>, and add the following lines at the top of the file:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');</code></pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
 <p>Find the exported <code>book_create_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display book create form on GET.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Display book create form on GET.
 exports.book_create_get = function(req, res, next) {
 
     // Get all authors and genres, which we can use for adding to our book.
@@ -45,7 +45,7 @@ exports.book_create_get = function(req, res, next) {
 
 <p>Find the exported <code>book_create_post()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle book create on POST.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Handle book create on POST.
 exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) =&gt; {
@@ -66,6 +66,7 @@ exports.book_create_post = [
 
     // Sanitize fields (using wildcard).
     sanitizeBody('*').escape(),
+    sanitizeBody('genre.*').escape(),
 
     // Process request after validation and sanitization.
     (req, res, next) =&gt; {
@@ -121,11 +122,11 @@ exports.book_create_post = [
 
 <p>The first main difference with respect to the other form handling code is that we use a wildcard to escape all fields in one go (rather than sanitising them individually):</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">sanitizeBody('*').escape(),</code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">sanitizeBody('*').escape(),</code></pre>
 
 <p>The next main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Convert the genre to an array.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Convert the genre to an array.
 (req, res, next) =&gt; {
     if(!(req.body.genre instanceof Array)){
         if(typeof req.body.genre==='undefined')
@@ -138,11 +139,11 @@ exports.book_create_post = [
 
 <p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">sanitizeBody('genre.*').escape(),</code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">sanitizeBody('genre.*').escape(),</code></pre>
 
 <p>The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form. In order to mark the genres that were checked by the user we iterate through all the genres and add the <code>checked='true'</code> parameter to those that were in our post data (as reproduced in the code fragment below).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Mark our selected genres as checked.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Mark our selected genres as checked.
 for (let i = 0; i &lt; results.genres.length; i++) {
     if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
         // Current genre is selected. Set "checked" flag.
@@ -154,7 +155,7 @@ for (let i = 0; i &lt; results.genres.length; i++) {
 
 <p>Create <strong>/views/book_form.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">extends layout
+<pre class="line-numbers  language-html notranslate"><code class="language-html">extends layout
 
 block content
   h1= title

@@ -25,11 +25,11 @@ tags:
  <li><strong>The constructor function's</strong> parameters are not enclosed between slashes but do use quotation marks.</li>
 </ul>
 
-<p>The following three expressions create the same regular expression:</p>
+<p>The following three expressions create the same regular expression object:</p>
 
-<pre class="brush: js notranslate">/ab+c/i
-new RegExp(/ab+c/, 'i') // literal notation
-new RegExp('ab+c', 'i') // constructor
+<pre class="brush: js notranslate">let re = /ab+c/i; // literal notation
+let re = new RegExp('ab+c', 'i') // constructor with string pattern as first argument
+let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 </pre>
 
 <p>The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.</p>

@@ -12,7 +12,7 @@ tags:
   - client-side
   - props
 ---
-<div>{{LearnSidebar}}{{draft}}<br>
+<div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <p class="summary">Now that we have our markup and styles ready we can start developing the required features for our Svelte To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, mark them as complete, and filter them by status.</p>
@@ -254,7 +254,7 @@ let completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 <p>We can tell Svelte that we want our <code>totalTodos</code> and <code>completedTodos</code> variables to be reactive by prefixing them with <code>$:</code>. Svelte will generate the code to automatically update them whenever data they depend on is changed.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Svelte uses the <code>$:</code> <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">JavaScript label statement syntax</a> to mark reactive statements. Just like the <code>export</code> keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.</p>
+<p><strong>Note</strong>: Svelte uses the <code>$:</code> <a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">JavaScript label statement syntax</a> to mark reactive statements. Just like the <code>export</code> keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.</p>
 </div>
 
 <p>Update your <code>totalTodos</code> and <code>completedTodos</code> variable definitions inside <code>src/components/Todos.svelte</code> to look like so:</p>
@@ -304,7 +304,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
   <p>Now try going back to <code>localhost:5000</code>, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive <code>console.log()</code> if you wish.</p>
  </li>
  <li>
-  <p>Next up we'll create a function to add the new todo — <code>addTodo()</code> — which will push a new <code>todo</code> object onto the <code>todos</code> array. Add this to the bottom of your <code>&lt;script&gt;</code> block inside <code>src/components/Todo.svelte</code>:</p>
+  <p>Next up we'll create a function to add the new todo — <code>addTodo()</code> — which will push a new <code>todo</code> object onto the <code>todos</code> array. Add this to the bottom of your <code>&lt;script&gt;</code> block inside <code>src/components/Todos.svelte</code>:</p>
 
   <pre class="brush: js notranslate">function addTodo() {
   todos.push({ id: 999, name: newTodoName, completed: false })

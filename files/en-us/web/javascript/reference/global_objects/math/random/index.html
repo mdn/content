@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Math.random()</pre>
+<pre class="syntaxbox notranslate">Math.random()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Getting_a_random_number_between_0_inclusive_and_1_exclusive">Getting a random number between 0 (inclusive) and 1 (exclusive)</h3>
 
-<pre class="brush: js">function getRandom() {
+<pre class="brush: js notranslate">function getRandom() {
   return Math.random();
 }
 </pre>
@@ -42,7 +42,7 @@ tags:
 
 <p>This example returns a random number between the specified values. The returned value is no lower than (and may possibly equal) <code>min</code>, and is less than (and not equal) <code>max</code>.</p>
 
-<pre class="brush: js">function getRandomArbitrary(min, max) {
+<pre class="brush: js notranslate">function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 </pre>
@@ -51,10 +51,10 @@ tags:
 
 <p>This example returns a random <em>integer</em> between the specified values. The value is no lower than <code>min</code> (or the next integer greater than <code>min</code> if <code>min</code> isn't an integer), and is less than (but not equal to) <code>max</code>.</p>
 
-<pre class="brush: js">function getRandomInt(min, max) {
+<pre class="brush: js notranslate">function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 </pre>
 
@@ -66,23 +66,23 @@ tags:
 
 <p>While the <code>getRandomInt()</code> function above is inclusive at the minimum, it's exclusive at the maximum. What if you need the results to be inclusive at both the minimum and the maximum? The <code>getRandomIntInclusive()</code> function below accomplishes that.</p>
 
-<pre class="brush: js">function getRandomIntInclusive(min, max) {
+<pre class="brush: js notranslate">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -94,5 +94,5 @@ tags:
 <h2 class="countTop" id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>
+	<li><a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>
 </ul>

@@ -17,7 +17,6 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-
 <pre class="brush: css no-line-numbers notranslate">/* Keyword values */
 system: cyclic;
 system: numeric;
@@ -30,7 +29,6 @@ system: fixed;
 system: fixed 3;
 system: extends decimal;
 </pre>
-
 
 <p>This may take one of three forms:</p>
 
@@ -65,7 +63,7 @@ system: extends decimal;
  <dd>Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the <code>extends</code> system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.<br>
  <br>
  It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one more more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
- <dt>
+</dl>
 <h2 id="Formal_definition">Formal definition</h2>
 
 <p>{{cssinfo}}</p>
@@ -95,13 +93,13 @@ system: extends decimal;
 </div>
 
 <pre class="brush: css notranslate">@counter-style fisheye {
-  system: cyclic;
-  symbols: ◉;
-  suffix: " ";
+ system: cyclic;
+ symbols: ◉;
+ suffix: " ";
 }
 
 ul {
-  list-style: fisheye;
+ list-style: fisheye;
 }
 </pre>
 
@@ -122,22 +120,22 @@ ul {
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
 
 <pre class="brush: css notranslate">@counter-style circled-digits {
-  system: fixed;
-  symbols: ➀ ➁ ➂;
-  suffix: ' ';
+ system: fixed;
+ symbols: ➀ ➁ ➂;
+ suffix: ' ';
 }
 
 ul {
-  list-style: circled-digits;
+ list-style: circled-digits;
 }
 </pre>
 
@@ -161,25 +159,25 @@ ul {
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-  &lt;li&gt;Six&lt;/li&gt;
-  &lt;li&gt;Seven&lt;/li&gt;
-  &lt;li&gt;Eight&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;Six&lt;/li&gt;
+ &lt;li&gt;Seven&lt;/li&gt;
+ &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
 
 <pre class="brush: css notranslate">@counter-style abc {
-  system: symbolic;
-  symbols: a b c;
-  suffix: ". ";
+ system: symbolic;
+ symbols: a b c;
+ suffix: ". ";
 }
 
 ul {
-  list-style: abc;
+ list-style: abc;
 }
 </pre>
 
@@ -203,26 +201,26 @@ ul {
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-  &lt;li&gt;Six&lt;/li&gt;
-  &lt;li&gt;Seven&lt;/li&gt;
-  &lt;li&gt;Eight&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;Six&lt;/li&gt;
+ &lt;li&gt;Seven&lt;/li&gt;
+ &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 </div>
 
 <pre class="brush: css notranslate">@counter-style abc {
-  system: alphabetic;
-  symbols: a b c;
-  suffix: ". ";
+ system: alphabetic;
+ symbols: a b c;
+ suffix: ". ";
 }
 
 ul {
-  list-style: abc;
+ list-style: abc;
 }
 </pre>
 
@@ -250,25 +248,25 @@ ul {
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-  &lt;li&gt;Six&lt;/li&gt;
-  &lt;li&gt;Seven&lt;/li&gt;
-  &lt;li&gt;Eight&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;Six&lt;/li&gt;
+ &lt;li&gt;Seven&lt;/li&gt;
+ &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
 
 <pre class="brush: css notranslate">@counter-style abc {
-  system: numeric;
-  symbols: a b c;
-  suffix: ". ";
+ system: numeric;
+ symbols: a b c;
+ suffix: ". ";
 }
 
 ul {
-  list-style: abc;
+ list-style: abc;
 }</pre>
 
 <h4 id="Result_5">Result</h4>
@@ -283,27 +281,27 @@ ul {
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-  &lt;li&gt;Six&lt;/li&gt;
-  &lt;li&gt;Seven&lt;/li&gt;
-  &lt;li&gt;Eight&lt;/li&gt;
-  &lt;li&gt;Nine&lt;/li&gt;
-  &lt;li&gt;Ten&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;Six&lt;/li&gt;
+ &lt;li&gt;Seven&lt;/li&gt;
+ &lt;li&gt;Eight&lt;/li&gt;
+ &lt;li&gt;Nine&lt;/li&gt;
+ &lt;li&gt;Ten&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
 
 <pre class="brush: css notranslate">@counter-style numbers {
-  system: numeric;
-  symbols: 0 1 2 3 4 5 6 7 8 9;
-  suffix: ": ";
+ system: numeric;
+ symbols: 0 1 2 3 4 5 6 7 8 9;
+ suffix: ": ";
 }
 
 ul {
-  list-style: numbers;
+ list-style: numbers;
 }</pre>
 
 <h4 id="Result_6">Result</h4>
@@ -317,24 +315,24 @@ ul {
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
 <h4 id="CSS_7">CSS</h4>
 
 <pre class="brush: css notranslate">@counter-style upper-roman {
-  system: additive;
-  range: 1 3999;
-  additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
+ system: additive;
+ range: 1 3999;
+ additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
 }
 
 ul {
-  list-style: upper-roman;
+ list-style: upper-roman;
 }</pre>
 
 <h4 id="Result_7">Result</h4>
@@ -348,24 +346,24 @@ ul {
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
+ &lt;li&gt;One&lt;/li&gt;
+ &lt;li&gt;Two&lt;/li&gt;
+ &lt;li&gt;Three&lt;/li&gt;
+ &lt;li&gt;Four&lt;/li&gt;
+ &lt;li&gt;Five&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
 <h4 id="CSS_8">CSS</h4>
 
 <pre class="brush: css notranslate">@counter-style alpha-modified {
-  system: extends lower-alpha;
-  prefix: "(";
-  suffix: ") ";
+ system: extends lower-alpha;
+ prefix: "(";
+ suffix: ") ";
 }
 
 ul {
-  list-style: alpha-modified;
+ list-style: alpha-modified;
 }
 </pre>
 
@@ -403,4 +401,4 @@ ul {
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
  <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
-</ul></dt></dl>
+</ul>

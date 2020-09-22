@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>document</var>.execCommand(<var>aCommandName</var>, <var>aShowDefaultUI</var>, <var>aValueArgument</var>)
+<pre class="syntaxbox notranslate"><var>document</var>.execCommand(<var>aCommandName</var>, <var>aShowDefaultUI</var>, <var>aValueArgument</var>)
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -115,7 +115,7 @@ tags:
  <dt><code>outdent</code></dt>
  <dd>Outdents the line containing the selection or insertion point.</dd>
  <dt><code>paste</code></dt>
- <dd>Pastes the clipboard contents at the insertion point (replaces current selection). Disabled for web content. See [1].</dd>
+ <dd>Pastes the clipboard contents at the insertion point (replaces current selection). Disabled for web content.</dd>
  <dt><code>redo</code></dt>
  <dd>Redoes the previous undo command.</dd>
  <dt><code>removeFormat</code></dt>
@@ -138,7 +138,8 @@ tags:
  <dd>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.</dd>
  <dd>NOTE: This argument is logically backwards (i.e. use <code>false</code> to use CSS, <code>true</code> to use HTML) and unsupported by Internet Explorer. This has been deprecated in favor of <code>styleWithCSS</code>.</dd>
  <dt><code>styleWithCSS</code></dt>
- <dd>Replaces the <code>useCSS</code> command. <code>true</code> modifies/generates <code>style</code> attributes in markup, false generates presentational elements.</dd>
+ <dd>Replaces the <code>useCSS</code> command. <code>true</code> modifies/generates <code>style</code> attributes in markup, false generates presentational elements.<br>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -155,7 +156,7 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://w3c.github.io/editing/ActiveDocuments/execCommand.html#execcommand()">execCommand</a></td>
+   <td><a href="https://w3c.github.io/editing/docs/execCommand/">execCommand</a></td>
    <td>Unofficial Draft</td>
    <td></td>
   </tr>

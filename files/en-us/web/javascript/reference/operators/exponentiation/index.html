@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The exponentiation operator (<code>**</code>) returns the result of raising the first operand to the power of the second operand.</p>
+<p>The exponentiation operator (<code>**</code>) returns the result of raising the first operand to the power of the second operand. It is equivalent to <code>Math.pow</code>, except it also accepts BigInts as operands.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}</div>
 
@@ -22,11 +22,11 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The exponentiation operator is right-associative. <code><var>a</var> ** <var>b</var> ** <var>c</var></code> is equal to <code><var>a</var> ** (<var>b</var> ** <var>c</var>)</code>.</p>
+<p>The exponentiation operator is right-associative: <code><var>a</var> ** <var>b</var> ** <var>c</var></code> is equal to <code><var>a</var> ** (<var>b</var> ** <var>c</var>)</code>.</p>
 
 <p>In most languages, such as PHP, Python, and others that have an exponentiation operator (<code>**</code>), the exponentiation operator is defined to have a higher precedence than unary operators, such as unary <code>+</code> and unary <code>-</code>, but there are a few exceptions. For example, in Bash, the <code>**</code> operator is defined to have a lower precedence than unary operators.</p>
 
-<p>In JavaScript, it is impossible to write an ambiguous exponentiation expression; that is, you cannot put a unary operator (<code>+/-/~/!/delete/void/typeof</code>) immediately before the base number.</p>
+<p>In JavaScript, it is impossible to write an ambiguous exponentiation expression. That is, you cannot put a unary operator (<code>+/-/~/!/delete/void/typeof</code>) immediately before the base number; doing so will cause a SyntaxError.</p>
 
 <pre class="brush: js notranslate">-2 ** 2;
 // 4 in Bash, -4 in other languages.

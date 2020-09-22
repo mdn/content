@@ -57,7 +57,7 @@ tags:
 <pre class="brush: js notranslate">window.addEventListener('beforeunload', (event) =&gt; {
   // Cancel the event as stated by the standard.
   event.preventDefault();
-  // Chrome requires returnValue to be set.
+  // Older browsers supported custom message
   event.returnValue = '';
 });
 </pre>

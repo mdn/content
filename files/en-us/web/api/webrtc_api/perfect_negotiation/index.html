@@ -1,5 +1,5 @@
 ---
-title: 'Establishing a connection: The perfect negotiation pattern'
+title: 'Establishing a connection: The WebRTC perfect negotiation pattern'
 slug: Web/API/WebRTC_API/Perfect_negotiation
 tags:
   - API
@@ -147,7 +147,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <pre class="brush: js notranslate">let ignoreOffer = false;
 
-signaler.onmessage = async ({ data: { description, candidate }}) =&gt; {
+signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
   try {
     if (description) {
       const offerCollision = (description.type == "offer") &amp;&amp;
@@ -159,9 +159,9 @@ signaler.onmessage = async ({ data: { description, candidate }}) =&gt; {
       }
 
       await pc.setRemoteDescription(description);
-      if (description.type =="offer") {
+      if (description.type == "offer") {
         await pc.setLocalDescription();
-        signaler.send(description: pc.localDescription)
+        signaler.send({ description: pc.localDescription })
       }
     } else if (candidate) {
       try {
@@ -306,7 +306,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <pre class="brush: js example-good notranslate">let ignoreOffer = false;
 
-signaler.onmessage = async ({ data: { description, candidate }}) =&gt; {
+signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
   try {
     if (description) {
       const offerCollision = (description.type == "offer") &amp;&amp;
@@ -320,7 +320,7 @@ signaler.onmessage = async ({ data: { description, candidate }}) =&gt; {
       await pc.setRemoteDescription(description);
       if (description.type == "offer") {
         await pc.setLocalDescription();
-        signaler.send(description: pc.localDescription);
+        signaler.send({ description: pc.localDescription });
       }
     } else if (candidate) {
       try {

@@ -23,17 +23,19 @@ tags:
 
 <p>It is this process that online/offline events help to simplify.</p>
 
+<p>Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+
 <h2 id="API" name="API">API</h2>
 
 <h3 id="navigator.onLine" name="navigator.onLine"><code>navigator.onLine</code></h3>
 
-<p><code><a href="/en/DOM/window.navigator.onLine" title="en/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline). This property is updated whenever the user switches into "Offline Mode" by selecting the corresponding menu item (File -&gt; Work Offline in Firefox).</p>
+<p><code><a href="/en/DOM/window.navigator.onLine" title="en/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
 
-<p>Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the specification:</p>
+<p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the specification:</p>
 
 <blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/#offline">The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
 
-<p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="https://developer.mozilla.org/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
+<p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="https://developer.mozilla.org/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
 
 <p>This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.</p>
 
@@ -57,7 +59,7 @@ tags:
 
 <p>Here's the JavaScript part:</p>
 
-<pre class="brush: js">window.addEventListener('load', function() {
+<pre class="brush: js notranslate">window.addEventListener('load', function() {
   var status = document.getElementById("status");
   var log = document.getElementById("log");
 
@@ -76,7 +78,7 @@ tags:
 
 <p>A touch of CSS</p>
 
-<pre class="brush: css">#status {
+<pre class="brush: css notranslate">#status {
   position: fixed;
   width: 100%;
   font: bold 1em sans-serif;
@@ -100,7 +102,7 @@ tags:
 
 <p>And the corresponding HTML<span class="comment">XXX When mochitests for this are created, point to those instead and update this example -nickolay</span></p>
 
-<pre class="brush: html">&lt;div id="status"&gt;&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div id="status"&gt;&lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 &lt;p&gt;This is a test&lt;/p&gt;
 </pre>

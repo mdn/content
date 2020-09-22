@@ -27,7 +27,7 @@ tags:
 
 <p>Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. <span class="seoSummary">This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.</span></p>
 
-<p>Before you can render the virtual environment, you need to establish a WebXR session by creating an {{domxref("XRSession")}} using the <code><a href="/en-US/docs/Web/API/XRSystem/requestSession">navigator.xr.requestSession()</a></code> method; you also need to associate the session with a framebuffer and perform other setup tasks. These setup tasks are described in the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Setting up and shutting down a WebXR session</a>.</p>
+<p>Before you can render the virtual environment, you need to establish a WebXR session by creating an {{domxref("XRSession")}} using the <code><a href="/en-US/docs/Web/API/XRSystem/requestSession">navigator.xr.requestSession()</a></code> method; you also need to associate the session with a framebuffer and perform other setup tasks. These setup tasks are described in the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Startup_and_shutdown">Starting up and shutting down a WebXR session</a>.</p>
 
 <h2 id="Preparing_the_renderer">Preparing the renderer</h2>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>Kicking off the renderer thus looks like this:</p>
 
-<pre class="brush: js">let worldRefSpace;
+<pre class="brush: js notranslate">let worldRefSpace;
 
 async function runXR(xrSession) {
   worldRefSpace = await xrSession.requestReferenceSpace("immersive-vr");
@@ -56,20 +56,19 @@ async function runXR(xrSession) {
 
 <h2 id="Refresh_rate_and_frame_rate">Refresh rate and frame rate</h2>
 
-<p>Assuming you've called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} since the last time the screen refreshed, the browser will call your frame renderer callback every time it's ready to repaint your app or site window. In this context, "repaint" simply means the process of ensuring that the screen's displayed content matches what the DOM and the elements within are trying to present at the moment.</p>
+<p>Assuming you've called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} since the last time the screen refreshed, the browser will call your frame rendering callback every time it's ready to repaint your app or site window. In this context, "repaint" simply means the process of ensuring that the screen's displayed content matches what the DOM and the elements within are trying to present at the moment.</p>
 
-<h3 id="Hardare_vertical_refresh_rate">Hardare vertical refresh rate</h3>
+<h3 id="Hardware_vertical_refresh_rate">Hardware vertical refresh rate</h3>
 
 <p>When the browser is ready to refresh the {{HTMLElement("canvas")}} within which your WebXR content is displayed, it calls your frame rendering callback, which uses the specified timestamp and any other relevant data, such as models and textures, as well as application state, to render the scene—as it should appear at the specified time—into the WebGL backbuffer. When your callback returns, the browser transfers that backbuffer to the display or XR device, along with anything else that's changed since the last time the screen was refreshed.</p>
 
 <p>Historically, displays have refreshed 60 times per second. This is due to early displays using the AC electrical grid's current flow waveform, which cycles 60 times per second in the United States (50 in Europe), for timing purposes. This figure goes by a number of different names, but they're all equivalent or nearly so:</p>
 
 <ul>
-	<li>Refresh rate</li>
-	<li>Vertical refresh rate</li>
-	<li>Vertical blanking rate (VBL)</li>
-	<li>Vertical sync rate</li>
-	<li>Vertical refresh rate</li>
+ <li>Refresh rate</li>
+ <li>Vertical refresh rate</li>
+ <li>Vertical blanking rate (VBL)</li>
+ <li>Vertical sync rate</li>
 </ul>
 
 <p>There are other similar terms used as well, but regardless of what it's called, the unit of measurement applied is the Hertz, or Hz. A display that refreshes 60 times per second has a 60 Hz refresh rate. That means that the maximum number of frames it can display in a second is 60. No matter how many frames per second you render beyond that, only 60 of them will make it to the screen in the course of a second.</p>
@@ -86,7 +85,7 @@ async function runXR(xrSession) {
 
 <div style="width: 42em; text-align: center;"><img alt="Renderer execution time per frame period" src="https://mdn.mozillademos.org/files/17117/dropped-frames-timing.svg" style="height: 198px; padding-bottom: 1em; width: 881px;"></div>
 
-<p>In the diagram above, frame 3 is dropped because frame 2 did not complete rendering until after frame 3 was due to be painted. The next frame drawn will be frame 4 instead. This is another reason the timestamp passed into your render callback is useful. By configuring the scene based on time rather than frame number, you can ensure your rendered frames match what's expected instead of falling behind.</p>
+<p>In the diagram above, frame 3 is dropped because frame 2 did not complete rendering until after frame 3 was due to be painted. The next frame drawn will be frame 4 instead. This is another reason the timestamp passed into your rendering callback is useful. By configuring the scene based on time rather than frame number, you can ensure your rendered frames match what's expected instead of falling behind.</p>
 
 <p>When a frame is dropped, the contents of the affected display area simply don't change for that pass through the frame loop. For that reason, the occasional dropped frame isn't usually particularly noticeable, but if it starts to happen a lot—especially if several frames are dropped in a very short span of time—it can become jarring or even leave your display unusable.</p>
 
@@ -104,7 +103,7 @@ async function runXR(xrSession) {
 
 <p>For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By simply having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.</p>
 
-<p>Fortunately, there are some tricks you can use to further reduce your impact and optimize performance if your renderering needs are particularly heavy. See the <a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a> for recommendations and tips that will help you ensure your performance is as good as it can be.</p>
+<p>Fortunately, there are some tricks you can use to further reduce your impact and optimize performance if your rendering needs are particularly heavy. See the <a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a> for recommendations and tips that will help you ensure your performance is as good as it can be.</p>
 
 <h2 id="WebXR_frames">WebXR frames</h2>
 
@@ -116,7 +115,7 @@ async function runXR(xrSession) {
 
 <p>To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better able we are to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.</p>
 
-<p>The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at <code>[0.0, 2.0, 0.0]</code> (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, <code>[-0.032, 2.0, 0.0]</code> (32mm to the left of center) and then render it again at <code>[0.032, 2.0, 0.0]</code>. (32mm right of center) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.</p>
+<p>The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at <code>[0.0, 2.0, 0.0]</code> (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, <code>[-0.032, 2.0, 0.0]</code> (32mm to the left of center) and then render it again at <code>[0.032, 2.0, 0.0]</code> (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.</p>
 
 <p>That distance (or whatever pupillary distance the XR system is configured to use) is enouigh to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to percieve three dimensions despite our retinas only being 2D surfaces.</p>
 
@@ -146,9 +145,9 @@ async function runXR(xrSession) {
 
 <h3 id="A_basic_renderer">A basic renderer</h3>
 
-<p>In this version of the WebXR renderering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:</p>
+<p>In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:</p>
 
-<pre class="brush: js">for each view in the pose's views list:
+<pre class="brush: js notranslate">for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
   for each object in the scene
@@ -165,11 +164,11 @@ async function runXR(xrSession) {
 
 <p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
 
-<h4 id="Sample_renderer_callback">Sample renderer callback</h4>
+<h4 id="Sample_rendering_callback">Sample rendering callback</h4>
 
 <p>Let's take a look at some real code that follows this basic pattern. Since in the example above we gave this function the name <code>myDrawFrame()</code>, we'll continue to use that here.</p>
 
-<pre class="brush: js">let lastFrameTime = 0;
+<pre class="brush: js notranslate">let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
   let session = frame.session;
@@ -199,7 +198,7 @@ function myDrawFrame(currentFrameTime, frame) {
     // rate you intend.
 
     const deltaTime = currentFrameTime - lastFrameTime;
-    lastFrameTime = time;
+    lastFrameTime = currentFrameTime;
 
     // Now call the scene rendering code once for each of
     // the session's views.
@@ -215,7 +214,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The <code>myDrawFrame()</code> function grabs the {{domxref("XRSession")}} from the {{domxref("XRFrame")}} object specified by the <code>frame</code> parameter, then calls the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to immediately schedule the rendering of the next frame. This ensures we get into the queue right away, allowing the rest of the time spent in this iteration of the <code>myDrawFrame()</code> function to count toward the timing of drawing the next frame.</p>
 
-<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href="en-US/docs/Web/API/WebXR_Device_API/Rendering#A_basic_XR_renderer_process">while setting up the WebXR session</a>.</p>
+<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Preparing_the_renderer">while setting up the WebXR session</a>.</p>
 
 <p>With the viewer's pose in hand, we can then begin to render the frame. The first step is to obtain access to the framebuffer into which the WebXR device wants the frame drawn; this is done by getting the target WebGL layer from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property, then getting the {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} from that {{domxref("XRWebGLLayer")}} object. We then call <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">gl.bindFrameBuffer()</a></code> to bind that framebuffer as the target for all upcoming drawing commands.</p>
 
@@ -231,7 +230,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>Finally, we call our method <code>myDrawSceneIntoView()</code> to actually use WebGL to render the scene. Into this, we pass the {{domxref("XRView")}} representing the eye we're drawing for (in order to perform perspective mapping and the like) and <code>deltaTime</code>, so the scene drawing code can accurately represent the elapsed time when determining the positions of objects moving over time.</p>
 
-<p>When the loop that's iterating over the views ends, every image required to represent the scene to the viewer has been rendered, and upon return, the framebuffer makes its way through the GPU and eventually to the XR device's display or displays. Since we called {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} at thee top of the function, our callback will be invoked once again when it's time to render the next frame of the scene's animation.</p>
+<p>When the loop that's iterating over the views ends, every image required to represent the scene to the viewer has been rendered, and upon return, the framebuffer makes its way through the GPU and eventually to the XR device's display or displays. Since we called {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} at the top of the function, our callback will be invoked once again when it's time to render the next frame of the scene's animation.</p>
 
 <h4 id="Drawbacks_to_this_approach">Drawbacks to this approach</h4>
 
@@ -243,7 +242,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The resulting pseudocode looks like this:</p>
 
-<pre class="brush: js">for each object in the scene
+<pre class="brush: js notranslate">for each object in the scene
   bindProgram()
   bindUniforms()
   bindBuffers()
@@ -264,7 +263,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>For example, to reduce the frame rate by 50%, just skip every other frame:</p>
 
-<pre class="brush: js">let tick = 0;
+<pre class="brush: js notranslate">let tick = 0;
 
 function drawFrame(time, frame) {
   animationFrameRequestID = frame.session.requestAnimationFrame(drawFrame);
@@ -275,17 +274,17 @@ function drawFrame(time, frame) {
   tick++;
 }</pre>
 
-<p>This version of the frame callback maintains a <code>tick</code> counter. The frame is only rendered if <code>tick</code> is an odd value. This way, only every other frame gets rendered.</p>
+<p>This version of the rendering callback maintains a <code>tick</code> counter. The frame is only rendered if <code>tick</code> is an even number value. This way, only every other frame gets rendered.</p>
 
 <p>You can similarly render every fourth frame using <code>!(tick % 4)</code>, and so forth.</p>
 
 <h3 id="Matching_your_animation_to_the_elapsed_time">Matching your animation to the elapsed time</h3>
 
-<p>The frame callback receives a <code>time</code> parameter for a good reason. This {{domxref("DOMHighResTimeStamp")}} value is a floating-point value indicating the time at which the frame was scheduled for rendering. Because the execution of your callback is not going to happen at precise 1/60th of a second intervals—and, indeed, could happen at other rates if the user's display has a different framer ate—you can't rely on the simple fact that your code is running to assume that it's been 1/60th of a second since the last frame.</p>
+<p>The rendering callback receives a <code>time</code> parameter for a good reason. This {{domxref("DOMHighResTimeStamp")}} value is a floating-point value indicating the time at which the frame was scheduled for rendering. Because the execution of your callback is not going to happen at precise 1/60th of a second intervals—and, indeed, could happen at other rates if the user's display has a different frame rate—you can't rely on the simple fact that your code is running to assume that it's been 1/60th of a second since the last frame.</p>
 
 <p>For that reason, you need to use the timestamp provided to ensure your animation renders at precisely the desired speed. To do so, the first thing you need to do is to compute the time that has elapsed since the last frame was rendered:</p>
 
-<pre class="brush: js">let lastFrameTime = 0;
+<pre class="brush: js notranslate">let lastFrameTime = 0;
 
 function drawFrame(time, frame) {
   /* ... schedule next frame, prepare the buffer, etc ... */
@@ -303,7 +302,7 @@ function drawFrame(time, frame) {
 
 <p>With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:</p>
 
-<pre class="brush: js">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+<pre class="brush: js notranslate">const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
 </pre>
@@ -312,7 +311,7 @@ const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaT
 
 <p>The same concept applied for objects that are moving rather than simply rotating:</p>
 
-<pre class="brush: js">const xDistanceMoved = xSpeedPerSecond * deltaTime;
+<pre class="brush: js notranslate">const xDistanceMoved = xSpeedPerSecond * deltaTime;
 const yDistanceMoved = ySpeedPerSecond * deltaTime;
 const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 </pre>
@@ -334,9 +333,9 @@ const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 <p>Orientation and position information that can be collected from the XR hardware directly is applied automatically. Thus it's the other kinds of input that you need to handle yourself:</p>
 
 <ul>
-	<li>Pointing device target and button presses</li>
-	<li>Gamepad inputs</li>
-	<li>Non-XR input device inputs</li>
+ <li>Pointing device target and button presses</li>
+ <li>Gamepad inputs</li>
+ <li>Non-XR input device inputs</li>
 </ul>
 
 <p>To learn more about how to handle user inputs while presenting a scene using WebXR, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a>.</p>
@@ -358,9 +357,9 @@ const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras">Viewpoints and viewers: Simulating cameras in WebXR</a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion: A WebXR example</a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a></li>
 </ul>

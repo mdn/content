@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Although unary negation (<code>-</code>) also can convert non-numbers, unary plus is the fastest and preferred way of converting something into a number, because it does not perform any other operations on the number. It can convert string representations of integers and floats, as well as the non-string values <code>true</code>, <code>false</code>, and <code>null</code>. Integers in both decimal and hexadecimal (<code>0x</code>-prefixed) formats are supported. Negative numbers are supported (though not for hex). If it cannot parse a particular value, it will evaluate to {{jsxref("NaN")}}.</p>
+<p>Although unary negation (<code>-</code>) also can convert non-numbers, unary plus is the fastest and preferred way of converting something into a number, because it does not perform any other operations on the number. It can convert string representations of integers and floats, as well as the non-string values <code>true</code>, <code>false</code>, and <code>null</code>. Integers in both decimal and hexadecimal (<code>0x</code>-prefixed) formats are supported. Negative numbers are supported (though not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse a particular value, it will evaluate to {{jsxref("NaN")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -42,6 +42,7 @@ console.log(+y);
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
++1n    // throws TypeError: Cannot convert BigInt value to number
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

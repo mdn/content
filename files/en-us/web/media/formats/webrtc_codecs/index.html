@@ -38,26 +38,26 @@ tags:
 <p>Below are the video codecs which are <em>required</em> in any fully WebRTC-compliant browser, as well as the profiles which are required and the browsers which actually meet the requirement.</p>
 
 <table class="standard-table">
-	<caption>Mandatory video codecs</caption>
-	<thead>
-		<tr>
-			<th scope="row">Codec name</th>
-			<th scope="col">Profile(s)</th>
-			<th scope="col">Browser compatibility</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">{{anch("VP8")}}</th>
-			<td>—</td>
-			<td>Chrome, Edge, Firefox, Safari (12.1+)</td>
-		</tr>
-		<tr>
-			<th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
-			<td>Constrained Baseline (CB)</td>
-			<td>Chrome (52+), Edge, Firefox<sup><a href="#supported-foot-1">[1]</a></sup>, Safari</td>
-		</tr>
-	</tbody>
+ <caption>Mandatory video codecs</caption>
+ <thead>
+  <tr>
+   <th scope="row">Codec name</th>
+   <th scope="col">Profile(s)</th>
+   <th scope="col">Browser compatibility</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">{{anch("VP8")}}</th>
+   <td>—</td>
+   <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
+  </tr>
+  <tr>
+   <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
+   <td>Constrained Baseline (CB)</td>
+   <td>Chrome (52+), Edge, Firefox<sup><a href="#supported-foot-1">[1]</a></sup>, Safari</td>
+  </tr>
+ </tbody>
 </table>
 
 <p><a name="supported-foot-1">[1]</a> Firefox for Android 68 and later do not support AVC (H.264) anymore. This is due to a change in Google Play store requirements that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections. See <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> for details.</p>
@@ -73,21 +73,21 @@ tags:
 <p>In addition to the mandatory codecs, some browsers support additional codecs as well. Those are listed in the following table.</p>
 
 <table class="standard-table">
-	<caption>Other video codecs</caption>
-	<thead>
-		<tr>
-			<th scope="row">Codec name</th>
-			<th scope="col">Profile(s)</th>
-			<th scope="col">Browser compatibility</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">VP9</th>
-			<td>—</td>
-			<td>Chrome (48+), Firefox</td>
-		</tr>
-	</tbody>
+ <caption>Other video codecs</caption>
+ <thead>
+  <tr>
+   <th scope="row">Codec name</th>
+   <th scope="col">Profile(s)</th>
+   <th scope="col">Browser compatibility</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">VP9</th>
+   <td>—</td>
+   <td>Chrome (48+), Firefox</td>
+  </tr>
+ </tbody>
 </table>
 
 <h3 id="VP8">VP8</h3>
@@ -115,18 +115,18 @@ tags:
 <p>These parameters don't have to be supported by the WebRTC endpoint, and their use is not required either. Their use can improve the user experience in various ways, but don't have to be used. Indeed, some of these are pretty complicated to use.</p>
 
 <dl>
-	<dt><code>max-br</code></dt>
-	<dd>If specified and supported by the software, the <code>max-br</code> parameter specifies the maximum video bit rate in units of 1,000 bps for VCL and 1,200 bps for NAL. You'll find details about this on <a href="https://tools.ietf.org/html/rfc6184#page-47">page 47 of RFC 6184</a>.</dd>
-	<dt><code>max-cpb</code></dt>
-	<dd>If specified and supported by the software, <code>max-cpb</code> specifies the maximum coded picture buffer size. This is a fairly complicated parameter whose unit size can vary. See <a href="https://tools.ietf.org/html/rfc6184#page-45">page 45 of RFC 6184</a> for details.</dd>
-	<dt><code>max-dpb</code></dt>
-	<dd>If specified and supported, <code>max-dpb</code> indicates the maximum decoded picture buffer size, given in units of 8/3 macroblocks. See <a href="https://tools.ietf.org/html/rfc6184#page-46">RFC 6184, page 46</a> for further details.</dd>
-	<dt><code>max-fs</code></dt>
-	<dd>If specified and supported by the software, <code>max-fs</code> specifies the maximum size of a single video frame, given as a number of macroblocks.</dd>
-	<dt><code>max-mbps</code></dt>
-	<dd>If specified and supported by the software, this value is an integer specifying the maximum rate at which macroblocks should be processed per second (in macroblocks per second).</dd>
-	<dt><code>max-smbps</code></dt>
-	<dd>If specified and supported by the software, this specifies an integer stating the maximum static macroblock processing rate in static macroblocks per second (using the hypothetical assumption that all macroblocks are static macroblocks).</dd>
+ <dt><code>max-br</code></dt>
+ <dd>If specified and supported by the software, the <code>max-br</code> parameter specifies the maximum video bit rate in units of 1,000 bps for VCL and 1,200 bps for NAL. You'll find details about this on <a href="https://tools.ietf.org/html/rfc6184#page-47">page 47 of RFC 6184</a>.</dd>
+ <dt><code>max-cpb</code></dt>
+ <dd>If specified and supported by the software, <code>max-cpb</code> specifies the maximum coded picture buffer size. This is a fairly complicated parameter whose unit size can vary. See <a href="https://tools.ietf.org/html/rfc6184#page-45">page 45 of RFC 6184</a> for details.</dd>
+ <dt><code>max-dpb</code></dt>
+ <dd>If specified and supported, <code>max-dpb</code> indicates the maximum decoded picture buffer size, given in units of 8/3 macroblocks. See <a href="https://tools.ietf.org/html/rfc6184#page-46">RFC 6184, page 46</a> for further details.</dd>
+ <dt><code>max-fs</code></dt>
+ <dd>If specified and supported by the software, <code>max-fs</code> specifies the maximum size of a single video frame, given as a number of macroblocks.</dd>
+ <dt><code>max-mbps</code></dt>
+ <dd>If specified and supported by the software, this value is an integer specifying the maximum rate at which macroblocks should be processed per second (in macroblocks per second).</dd>
+ <dt><code>max-smbps</code></dt>
+ <dd>If specified and supported by the software, this specifies an integer stating the maximum static macroblock processing rate in static macroblocks per second (using the hypothetical assumption that all macroblocks are static macroblocks).</dd>
 </dl>
 
 <h5 id="Parameters_with_specific_requirements">Parameters with specific requirements</h5>
@@ -134,10 +134,10 @@ tags:
 <p>These parameters may or may not be required, but have some special requirement when used.</p>
 
 <dl>
-	<dt><code>packetization-mode</code></dt>
-	<dd>All endpoints are required to support mode 1 (non-interleaved mode). Support for other packetization modes is optional, and the parameter itself is not required to be specified.</dd>
-	<dt><code>sprop-parameter-sets</code></dt>
-	<dd>Sequence and picture information for AVC can be sent either in-band or out-of-band. When AVC is used with WebRTC, this information <em>must</em> be signaled in-band; the <code>sprop-parameter-sets</code> parameter must therefore <em>not</em> be included in the SDP.</dd>
+ <dt><code>packetization-mode</code></dt>
+ <dd>All endpoints are required to support mode 1 (non-interleaved mode). Support for other packetization modes is optional, and the parameter itself is not required to be specified.</dd>
+ <dt><code>sprop-parameter-sets</code></dt>
+ <dd>Sequence and picture information for AVC can be sent either in-band or out-of-band. When AVC is used with WebRTC, this information <em>must</em> be signaled in-band; the <code>sprop-parameter-sets</code> parameter must therefore <em>not</em> be included in the SDP.</dd>
 </dl>
 
 <h5 id="Parameters_which_must_be_specified">Parameters which must be specified</h5>
@@ -145,8 +145,8 @@ tags:
 <p>These parameters must be specified whenever using AVC in a WebRTC connection.</p>
 
 <dl>
-	<dt><code>profile-level-id</code></dt>
-	<dd>All WebRTC implementations are <em>required</em> to specify and interpret this parameter in their SDP, identifying the sub-profile used by the codec. The specific value that is set is not defined; what matters is that the parameter be used at all. This is useful to note, since in {{RFC(6184)}} ("RTP Payload Format for H.264 Video"), <code>profile-level-id</code> is entirely optional.</dd>
+ <dt><code>profile-level-id</code></dt>
+ <dd>All WebRTC implementations are <em>required</em> to specify and interpret this parameter in their SDP, identifying the sub-profile used by the codec. The specific value that is set is not defined; what matters is that the parameter be used at all. This is useful to note, since in {{RFC(6184)}} ("RTP Payload Format for H.264 Video"), <code>profile-level-id</code> is entirely optional.</dd>
 </dl>
 
 <h4 id="Other_requirements">Other requirements</h4>
@@ -164,27 +164,27 @@ tags:
 <p>The audio codecs which {{RFC(7874)}} mandates that all WebRTC-compatible browsers must support are shown in the table below.</p>
 
 <table class="standard-table">
-	<caption>Mandatory audio codecs</caption>
-	<thead>
-		<tr>
-			<th scope="row">Codec name</th>
-			<th scope="col">Browser compatibility</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a></th>
-			<td>Chrome, Edge, Firefox, Safari</td>
-		</tr>
-		<tr>
-			<th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (A-law)</a></th>
-			<td>Chrome, Firefox, Safari</td>
-		</tr>
-		<tr>
-			<th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (µ-law)</a></th>
-			<td>Chrome, Firefox, Safari</td>
-		</tr>
-	</tbody>
+ <caption>Mandatory audio codecs</caption>
+ <thead>
+  <tr>
+   <th scope="row">Codec name</th>
+   <th scope="col">Browser compatibility</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a></th>
+   <td>Chrome, Edge, Firefox, Safari</td>
+  </tr>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (A-law)</a></th>
+   <td>Chrome, Firefox, Safari</td>
+  </tr>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711 PCM (µ-law)</a></th>
+   <td>Chrome, Firefox, Safari</td>
+  </tr>
+ </tbody>
 </table>
 
 <p>See below for more details about any WebRTC-specific considerations that exist for each codec listed above.</p>
@@ -198,27 +198,27 @@ tags:
 <p>In addition to the mandatory audio codecs, some browsers support additional codecs as well. Those are listed in the following table.</p>
 
 <table class="standard-table">
-	<caption>Other audio codecs</caption>
-	<thead>
-		<tr>
-			<th scope="row">Codec name</th>
-			<th scope="col">Browser compatibility</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">G.722</th>
-			<td>Chrome, Firefox, Safari</td>
-		</tr>
-		<tr>
-			<th scope="row">iLBC<sup><a href="#other-audio-foot-1">[1]</a></sup></th>
-			<td>Chrome, Safari</td>
-		</tr>
-		<tr>
-			<th scope="row">iSAC<sup><a href="#other-audio-foot-2">[2]</a></sup></th>
-			<td>Chrome, Safari</td>
-		</tr>
-	</tbody>
+ <caption>Other audio codecs</caption>
+ <thead>
+  <tr>
+   <th scope="row">Codec name</th>
+   <th scope="col">Browser compatibility</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">G.722</th>
+   <td>Chrome, Firefox, Safari</td>
+  </tr>
+  <tr>
+   <th scope="row">iLBC<sup><a href="#other-audio-foot-1">[1]</a></sup></th>
+   <td>Chrome, Safari</td>
+  </tr>
+  <tr>
+   <th scope="row">iSAC<sup><a href="#other-audio-foot-2">[2]</a></sup></th>
+   <td>Chrome, Safari</td>
+  </tr>
+ </tbody>
 </table>
 
 <p><a id="other-audio-foot-1" name="other-audio-foot-1">[1]</a> <strong>{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}</strong> (<strong>iLBC</strong>) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC, but it is not available in all browsers and is not one of the mandatory codecs.</p>
@@ -244,34 +244,34 @@ tags:
 <p>Given a 20 millisecond frame size, the following table shows the recommended bit rates for various forms of media.</p>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Media type</th>
-			<th scope="col">Recommended bit rate range</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Narrow-band speech (NB)</td>
-			<td>8 to 12 kbps</td>
-		</tr>
-		<tr>
-			<td>Wide-band speech (WB)</td>
-			<td>16 to 20 kbps</td>
-		</tr>
-		<tr>
-			<td>Full-band speech (FB)</td>
-			<td>28 to 40 kbps</td>
-		</tr>
-		<tr>
-			<td>Full-band monaural music (FB mono)</td>
-			<td>48 to 64 kbps</td>
-		</tr>
-		<tr>
-			<td>Full-band stereo music (FB stereo)</td>
-			<td>64 to 128 kbps</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Media type</th>
+   <th scope="col">Recommended bit rate range</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Narrow-band speech (NB)</td>
+   <td>8 to 12 kbps</td>
+  </tr>
+  <tr>
+   <td>Wide-band speech (WB)</td>
+   <td>16 to 20 kbps</td>
+  </tr>
+  <tr>
+   <td>Full-band speech (FB)</td>
+   <td>28 to 40 kbps</td>
+  </tr>
+  <tr>
+   <td>Full-band monaural music (FB mono)</td>
+   <td>48 to 64 kbps</td>
+  </tr>
+  <tr>
+   <td>Full-band stereo music (FB stereo)</td>
+   <td>64 to 128 kbps</td>
+  </tr>
+ </tbody>
 </table>
 
 <p>The bit rate may be adjusted at any time. In order to avoid network congestion, the average audio bit rate should not exceed the available network bandwidth (minus any other known or anticipated added bandwidth requirements).</p>
@@ -294,13 +294,13 @@ tags:
 
 <p>There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:</p>
 
-<pre class="brush: js">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
+<pre class="brush: js notranslate">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
 
 <p>Now <code>codecList</code> is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).</p>
 
 <p>If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.</p>
 
-<pre class="brush: js">let codecList = null;
+<pre class="brush: js notranslate">let codecList = null;
 
 peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
   if (peerConnection.iceGatheringState === "complete") {
@@ -333,7 +333,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Once you have a list of the available codecs, you can alter it and then send the revised list to {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to rearrange the codec list. This changes the order of preference of the codecs, letting you tell WebRTC to prefer a different codec over all others.</p>
 
-<pre class="brush: js">function changeVideoCodec(mimeType) {
+<pre class="brush: js notranslate">function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
   transceivers.forEach(transceiver =&gt; {
@@ -364,7 +364,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>The <code>preferCodec()</code> function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):</p>
 
-<pre class="brush: js">function preferCodec(codecs, mimeType) {
+<pre class="brush: js notranslate">function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
   let count = codecs.length;
@@ -387,42 +387,42 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 <p>Unless otherwise specified, the default—or, more accurately, preferred—codecs requested by each browser's implementation of WebRTC are shown in the table below.</p>
 
 <table class="standard-table">
-	<caption>Preferred codecs for WebRTC in major web browsers</caption>
-	<thead>
-		<tr>
-			<th scope="col"></th>
-			<th scope="col">Audio</th>
-			<th scope="col">Video</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">Chrome</th>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th scope="row">Edge</th>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th scope="row">Firefox</th>
-			<td></td>
-			<td>VP9 (Firefox 46 and later)<br>
-			VP8</td>
-		</tr>
-		<tr>
-			<th scope="row">Opera</th>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th scope="row">Safari</th>
-			<td></td>
-			<td></td>
-		</tr>
-	</tbody>
+ <caption>Preferred codecs for WebRTC in major web browsers</caption>
+ <thead>
+  <tr>
+   <th scope="col"></th>
+   <th scope="col">Audio</th>
+   <th scope="col">Video</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Chrome</th>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <th scope="row">Edge</th>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox</th>
+   <td></td>
+   <td>VP9 (Firefox 46 and later)<br>
+    VP8</td>
+  </tr>
+  <tr>
+   <th scope="row">Opera</th>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <th scope="row">Safari</th>
+   <td></td>
+   <td></td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Choosing_the_right_codec">Choosing the right codec</h2>
@@ -465,14 +465,20 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>For more about security considerations when using AVC in WebRTC, see {{RFC(6184, "RTP Payload Format for H.264 Video: Security Considerations", 9)}}.</p>
 
+<h2 id="RTP_payload_format_media_types">RTP payload format media types</h2>
+
+<p>It may be useful to refer to the {{Glossary("IANA")}}'s list of {{Glossary("RTP")}} payload format media types; this is a complete list of the MIME media types defined for <em>potential</em> use in RTP streams, such as those used in WebRTC. Most of these are not used in WebRTC contexts, but the list may still be useful.</p>
+
+<p>See also {{RFC(4855)}}, which covers the registry of media types.</p>
+
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-	<li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
-	<li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
-	<li><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Guide to video codecs used on the web</a></li>
-	<li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Guide to audio codecs used on the web</a></li>
-	<li><a href="/en-US/docs/Web/Media/Formats/Video_concepts">Digital video concepts</a></li>
-	<li><a href="/en-US/docs/Web/Media/Formats/Audio_concepts">Digital audio concepts</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Guide to video codecs used on the web</a></li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Guide to audio codecs used on the web</a></li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Video_concepts">Digital video concepts</a></li>
+ <li><a href="/en-US/docs/Web/Media/Formats/Audio_concepts">Digital audio concepts</a></li>
 </ul>

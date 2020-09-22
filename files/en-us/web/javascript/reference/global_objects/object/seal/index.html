@@ -24,8 +24,8 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object which should be sealed.</dd>
+	<dt><code><var>obj</var></code></dt>
+	<dd>The object which should be sealed.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>By default, objects are {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (new properties can be added to them). Sealing an object prevents new properties from being added and marks all existing properties as non-configurable. This has the effect of making the set of properties on the object fixed and immutable. Making all properties non-configurable also prevents them from being converted from data properties to accessor properties and vice versa, but it does not prevent the values of data properties from being changed. Attempting to delete or add properties to a sealed object, or to convert a data property to accessor or vice versa, will fail, either silently or by throwing a {{jsxref("TypeError")}} (most commonly, although not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}} code).</p>
+<p>By default, objects are {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (new properties can be added to them). Sealing an object prevents new properties from being added and marks all existing properties as non-configurable. This has the effect of making the set of properties on the object fixed. Making all properties non-configurable also prevents them from being converted from data properties to accessor properties and vice versa, but it does not prevent the values of data properties from being changed. Attempting to delete or add properties to a sealed object, or to convert a data property to accessor or vice versa, will fail, either silently or by throwing a {{jsxref("TypeError")}} (most commonly, although not exclusively, when in {{jsxref("Strict_mode", "strict mode", "", 1)}} code).</p>
 
 <p>The prototype chain remains untouched. However, the {{jsxref("Object.proto", "__proto__")}} property is sealed as well.</p>
 
@@ -112,16 +112,16 @@ Object.seal(1);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -133,9 +133,9 @@ Object.seal(1);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
+	<li>{{jsxref("Object.isSealed()")}}</li>
+	<li>{{jsxref("Object.preventExtensions()")}}</li>
+	<li>{{jsxref("Object.isExtensible()")}}</li>
+	<li>{{jsxref("Object.freeze()")}}</li>
+	<li>{{jsxref("Object.isFrozen()")}}</li>
 </ul>

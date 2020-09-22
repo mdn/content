@@ -21,11 +21,11 @@ tags:
 ---
 <p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property <code><strong>framebuffer</strong></code> is an opaque {{domxref("WebGLFramebuffer")}} which is used to buffer the rendered image if the <a href="en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor">XR compositor</a> is being used. Otherwise, this property's value is <code>null</code>.</span> The opaque framebuffer is functionally nearly the same as a standard WebGL framebuffer, except for the differences covered in the section {{anch("How opaque framebuffers are special")}} below.</p>
+<p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property <code><strong>framebuffer</strong></code> is an opaque {{domxref("WebGLFramebuffer")}} which is used to buffer the rendered image if the <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor">XR compositor</a> is being used. Otherwise, this property's value is <code>null</code>.</span> The opaque framebuffer is functionally nearly the same as a standard WebGL framebuffer, except for the differences covered in the section {{anch("How opaque framebuffers are special")}} below.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>framebuffer</em> = <em>xrWebGLLayer</em>.framebuffer;</pre>
+<pre class="syntaxbox notranslate">let <em>framebuffer</em> = <em>xrWebGLLayer</em>.framebuffer;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>This example gets the <code>XRWebGLLayer</code> for a session and then passes its framebuffer into the WebGL context's {{domxref("WebGLRenderingContext.bindFramebuffer", "bindFramebuffer()")}} function.</p>
 
-<pre class="brush: js">let glLayer = xrSession.renderState.baselayer;
+<pre class="brush: js notranslate">let glLayer = xrSession.renderState.baselayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 </pre>
 

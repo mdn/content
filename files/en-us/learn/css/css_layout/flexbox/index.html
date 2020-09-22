@@ -35,21 +35,21 @@ tags:
 
 <h2 id="Why_Flexbox">Why Flexbox?</h2>
 
-<p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>. These are fine and they work, but in some ways they are also rather limiting and frustrating.</p>
+<p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>. These are fine, and they work, but in some ways they are also rather limiting and frustrating.</p>
 
 <p>The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:</p>
 
 <ul>
  <li>Vertically centering a block of content inside its parent.</li>
  <li>Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
- <li>Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.</li>
+ <li>Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.</li>
 </ul>
 
 <p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!</p>
 
 <h2 id="Introducing_a_simple_example">Introducing a simple example</h2>
 
-<p>In this article we are going to get you to work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> from our github repo — load it in a modern browser (like Firefox or Chrome), and have a look at the code in your code editor. You can <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">see it live here</a> also.</p>
+<p>In this article we are going to get you to work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a> from our github repo — load it in a modern browser (like Firefox or Chrome), and have a look at the code in your code editor. You can also <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">see it live here</a>.</p>
 
 <p>You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it, and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We are going to use these to create a fairly standard three column layout.</p>
 
@@ -67,9 +67,9 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
-<p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.</p>
+<p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.</p>
 
-<p>To be clear, let's reiterate what is happening here. The element we've given a   {{cssxref("display")}} value of <code>flex</code> to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are being laid out as flex items — the next section will explain in more detail what this means. Note also that you can use a <code>display</code> value of <code>inline-flex</code> if you wish to lay out an element's children as flex items, but have that element behave like an inline element.</p>
+<p>To be clear, let's reiterate what is happening here. The element we've given a   {{cssxref("display")}} value of <code>flex</code> to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are being laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a <code>display</code> value of <code>inline-flex</code> if you wish to lay out an element's children as flex items, but have that element behave like an inline element.</p>
 
 <h2 id="The_flex_model">The flex model</h2>
 
@@ -88,7 +88,7 @@ tags:
 
 <h2 id="Columns_or_rows">Columns or rows?</h2>
 
-<p>Flexbox provides a property called {{cssxref("flex-direction")}} that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to <code>row</code>, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
+<p>Flexbox provides a property called {{cssxref("flex-direction")}} that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to <code>row</code>, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
 
 <p>Try adding the following declaration to your {{htmlelement("section")}} rule:</p>
 
@@ -116,7 +116,7 @@ tags:
 
 <p>Try this now; you'll see that the layout looks much better with this included:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">We now have multiple rows — as many flexbox children are fitted onto each row as makes sense, and any overflow is moved down to the next line. The <code>flex: 200px</code> declaration set on the articles means that each will be at least 200px wide; we'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">We now have multiple rows — as many flexbox children are fitted onto each row as makes sense, and any overflow is moved down to the next line. The <code>flex: 200px</code> declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.</p>
 
 <p>But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to <code>row-reverse</code> — now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.</p>
 
@@ -149,7 +149,7 @@ flex-wrap: wrap;</pre>
   flex: 2;
 }</pre>
 
-<p>Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two — there are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each so they take 1/4 of the available space each. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
+<p>Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they take 1/4 of the available space each. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
 
 <p>You can also specify a minimum size value inside the flex value. Try updating your existing article rules like so:</p>
 
@@ -161,7 +161,7 @@ article:nth-of-type(3) {
   flex: 2 200px;
 }</pre>
 
-<p>This basically states "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." Try refreshing and you'll see a difference in how the space is shared out.</p>
+<p>This basically states "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
@@ -181,7 +181,7 @@ article:nth-of-type(3) {
 
 <h2 id="Horizontal_and_vertical_alignment">Horizontal and vertical alignment</h2>
 
-<p>You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">see it live also</a>) — which we are going to turn into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar, with some buttons jammed into the top left hand corner.</p>
+<p>You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">see it live also</a>) — which we are going to turn into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar, with some buttons jammed into the top left-hand corner.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
@@ -202,7 +202,7 @@ article:nth-of-type(3) {
 <p>{{cssxref("align-items")}} controls where the flex items sit on the cross axis.</p>
 
 <ul>
- <li>By default, the value is <code>stretch</code>, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items. This is how our first example got equal height columns by default.</li>
+ <li>By default, the value is <code>stretch</code>, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example got equal height columns by default.</li>
  <li>The <code>center</code> value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.</li>
  <li>You can also have values like <code>flex-start</code> and <code>flex-end</code>, which will align all items at the start and end of the cross axis respectively. See {{cssxref("align-items")}} for the full details.</li>
 </ul>
@@ -233,7 +233,7 @@ article:nth-of-type(3) {
 
 <p>Flexbox also has a feature for changing the layout order of flex items, without affecting the source order. This is another thing that is impossible to do with traditional layout methods.</p>
 
-<p>The code for this is simple: try adding the following CSS to your button bar example code:</p>
+<p>The code for this is simple; try adding the following CSS to your button bar example code:</p>
 
 <pre class="brush: css  notranslate">button:first-child {
   order: 1;
@@ -291,7 +291,7 @@ article:nth-of-type(3) {
 }
 </pre>
 
-<p>Next, we select the first {{htmlelement("div")}}. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space like we did in the individual button example we saw earlier.</p>
+<p>Next, we select the first {{htmlelement("div")}}. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space, as we did in the individual button example we saw earlier.</p>
 
 <pre class="brush: css  notranslate">article:nth-of-type(3) div:first-child {
   flex:1 100px;
@@ -301,7 +301,7 @@ article:nth-of-type(3) {
   justify-content: space-around;
 }</pre>
 
-<p>Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.</p>
+<p>Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can, and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.</p>
 
 <pre class="brush: css  notranslate">button {
   flex: 1 auto;
@@ -310,15 +310,15 @@ article:nth-of-type(3) {
   line-height: 1.5;
 }</pre>
 
-<h2 id="Cross_browser_compatibility">Cross browser compatibility</h2>
+<h2 id="Cross-browser_compatibility">Cross-browser compatibility</h2>
 
-<p>Flexbox support is available in most new browsers — Firefox, Chrome, Opera, Microsoft Edge and IE 11, newer versions of Android/iOS, etc. However you should be aware that there are still older browsers in use that don't support Flexbox (or do, but support a really old, out-of-date version of it.)</p>
+<p>Flexbox support is available in most new browsers — Firefox, Chrome, Opera, Microsoft Edge, and IE 11, newer versions of Android/iOS, etc. However, you should be aware that there are still older browsers in use that don't support Flexbox (or do, but support a really old, out-of-date version of it.)</p>
 
-<p>While you are just learning and experimenting, this doesn't matter too much; however if you are considering using flexbox in a real website you need to do testing and make sure that your user experience is still acceptable in as many browsers as possible.</p>
+<p>While you are just learning and experimenting, this doesn't matter too much; however, if you are considering using flexbox in a real website you need to do testing and make sure that your user experience is still acceptable in as many browsers as possible.</p>
 
 <p>Flexbox is a bit trickier than some CSS features. For example, if a browser is missing a CSS drop shadow, then the site will likely still be usable. Not supporting flexbox features however will probably break a layout completely, making it unusable.</p>
 
-<p>We discuss strategies for overcoming cross browser support issues in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a> module.</p>
+<p>We discuss strategies for overcoming cross-browser support issues in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a> module.</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
@@ -326,7 +326,7 @@ article:nth-of-type(3) {
 
 <h2 id="Summary">Summary</h2>
 
-<p>That concludes our tour of the basics of flexbox. We hope you had fun, and will have a good play around with it as you travel forward with your learning. Next we'll have a look at another important aspect of CSS layouts — CSS Grids.</p>
+<p>That concludes our tour of the basics of flexbox. We hope you had fun, and will have a good play around with it as you travel forward with your learning. Next, we'll have a look at another important aspect of CSS layouts — CSS Grids.</p>
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</div>
 

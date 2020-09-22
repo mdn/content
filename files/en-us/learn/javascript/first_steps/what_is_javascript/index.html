@@ -347,7 +347,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>You can't rely on the order the scripts will load in. <code>jquery.js</code> may load before or after <code>script2.js</code> and <code>script3.js</code> and if this is the case, any functions in those scripts depending on <code>jquery</code> will produce an error because <code>jquery</code> will not be defined at the time the script runs.</p>
 
-<p><code>async</code> should be used when you have a bunch of background scripts to load in, and you just want to get them in place asap. For example, maybe you have some game data files to load, which will be needed when the game actually begins, but for now you just want to get on with showing the game intro, titles, and lobby, without them being blocked by script loading.</p>
+<p><code>async</code> should be used when you have a bunch of background scripts to load in, and you just want to get them in place as soon as possible. For example, maybe you have some game data files to load, which will be needed when the game actually begins, but for now you just want to get on with showing the game intro, titles, and lobby, without them being blocked by script loading.</p>
 
 <p>Scripts loaded using the <code>defer</code> attribute (see below) will run in the order they appear in the page and execute them as soon as the script and content are downloaded:</p>
 

@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
-<p>The <strong><code>navigator.share()</code></strong> method of the Web Share API invokes the native sharing mechanism of the device.</p>
+<p>The <strong><code>navigator.share()</code></strong> method of the Web Share API invokes the native sharing mechanism of the device.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var sharePromise = navigator.share(<var>data</var>);
+<pre class="syntaxbox notranslate">const <em>sharePromise</em> = navigator.share(<var>data</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -28,7 +28,7 @@ tags:
  <li><code>url</code>: A {{domxref("USVString")}} representing a URL to be shared.</li>
  <li><code>text</code>: A {{domxref("USVString")}} representing text to be shared.</li>
  <li><code>title</code>: A {{domxref("USVString")}} representing the title to be shared.</li>
- <li><code>files</code>: A " FrozenArray" representing the array of file to be shared.</li>
+ <li><code>files</code>: A "FrozenArray" representing the array of file to be shared.</li>
 </ul>
 
 <dl>
@@ -63,9 +63,9 @@ btn.addEventListener('click', async () =&gt; {
 
 <h4 id="Sharing_Files"><strong>Sharing Files</strong></h4>
 
-<p>To share files, first test for and call <code>navigator.canShare()</code>. Then include an array of files in the call to <code>navigator.share():</code> </p>
+<p>To share files, first test for and call <code>navigator.canShare()</code>. Then include an array of files in the call to <code>navigator.share():</code></p>
 
-<p>Notice: That the sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>. The data object passed to <code>canShare()</code> only supports the <code>files</code> property. Image, video, audio, and text files can be shared. </p>
+<p>Notice: That the sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>. The data object passed to <code>canShare()</code> only supports the <code>files</code> property. Image, video, audio, and text files can be shared.</p>
 
 <pre class="brush: js notranslate">if (navigator.canShare &amp;&amp; navigator.canShare({ files: filesArray })) {
   navigator.share({
@@ -81,7 +81,7 @@ btn.addEventListener('click', async () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Specification</th>
@@ -107,5 +107,5 @@ btn.addEventListener('click', async () =&gt; {
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li>{{domxref('navigator.canShare', 'navigator.canShare()')}}</li>
+ <li>{{domxref("navigator.canShare()")}}</li>
 </ul>

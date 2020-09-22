@@ -42,11 +42,10 @@ tags:
  </dd>
  <dt><code><var>limit</var></code> {{optional_inline}}</dt>
  <dd>
- <p>A non-negative integer limiting the number of pieces. If provided, splits the string at each occurrence of the specified <code><var>separator</var></code>, but stops when <code><var>limit</var></code> entries have been placed in the array. Any leftover text is not included in the array at all.</p>
+ <p>A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified <code><var>separator</var></code>, but stops when <code><var>limit</var></code> entries have been placed in the array. Any leftover text is not included in the array at all.</p>
 
  <ul>
   <li>The array may contain fewer entries than <code>limit</code> if the end of the string is reached before the limit is reached.</li>
-  <li>If <code><var>limit</var></code> is <code>1</code>, <code><var>str</var>.split(<var>separator</var>)[0]</code> is returned</li>
   <li>If <code><var>limit</var></code> is <code>0</code>, <code>[]</code> is returned.</li>
  </ul>
  </dd>

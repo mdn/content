@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
+<pre class="syntaxbox notranslate">Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,25 +41,25 @@ tags:
 
 <p>Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors. A <em><dfn>data descriptor</dfn></em> is a property that has a value, which may or may not be writable. An <em><dfn>accessor descriptor</dfn></em> is a property described by a getter-setter pair of functions. A descriptor must be one of these two flavors; it cannot be both.</p>
 
-<p>Both data and accessor descriptors are objects. They share the following optional keys (note: the default value is in the case of defining properties using <code>Object.defineProperty()</code>):</p>
+<p>Both data and accessor descriptors are objects. They share the following optional keys (please note: the <strong>Defaults</strong> mentioned here are in the case of defining properties using <code>Object.defineProperty()</code>):</p>
 
 <dl>
  <dt><code>configurable</code></dt>
- <dd><code>true</code> if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
+ <dd><code>true</code> if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
  <strong>Defaults to <code>false</code>.</strong></dd>
  <dt><code>enumerable</code></dt>
  <dd><code>true</code> if and only if this property shows up during enumeration of the properties on the corresponding object.<br>
  <strong>Defaults to <code>false</code>.</strong></dd>
 </dl>
 
-<p>A data descriptor also has the following optional keys:</p>
+<p>A <strong>data descriptor</strong> also has the following optional keys:</p>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
  <strong>Defaults to {{jsxref("undefined")}}.</strong></dd>
  <dt><code>writable</code></dt>
- <dd><code>true</code> if and only if the value associated with the property may be changed with an {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.<br>
+ <dd><code>true</code> if the value associated with the property may be changed with an {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.<br>
  <strong>Defaults to <code>false</code>.</strong></dd>
 </dl>
 
@@ -74,11 +74,11 @@ tags:
  <strong>Defaults to {{jsxref("undefined")}}.</strong></dd>
 </dl>
 
-<p>If a descriptor has neither of <code>value</code>, <code>writable</code>, <code>get</code> and <code>set</code> keys, it is treated as a data descriptor. If a descriptor has both <code>value</code> or <code>writable</code> and <code>get</code> or <code>set</code> keys, an exception is thrown.</p>
+<p>If a descriptor has neither of <code>value</code>, <code>writable</code>, <code>get</code> and <code>set</code> keys, it is treated as a data descriptor. If a descriptor has both [<code>value</code> or <code>writable</code>] and [<code>get</code> or <code>set</code>] keys, an exception is thrown.</p>
 
 <p>Bear in mind that these attributes are not necessarily the descriptor's own properties. Inherited properties will be considered as well. In order to ensure these defaults are preserved, you might freeze the {{jsxref("Object.prototype")}} upfront, specify all options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create", "Object.create(null)")}}.</p>
 
-<pre class="brush: js">// using __proto__
+<pre class="brush: js notranslate">// using __proto__
 var obj = {};
 var descriptor = Object.create(null); // no inherited properties
 descriptor.value = 'static';
@@ -127,7 +127,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 <p>When the property specified doesn't exist in the object, <code>Object.defineProperty()</code> creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are inputted.</p>
 
-<pre class="brush: js">var o = {}; // Creates a new object
+<pre class="brush: js notranslate">var o = {}; // Creates a new object
 
 // Example of an object property added
 // with defineProperty with a data property descriptor
@@ -177,7 +177,7 @@ Object.defineProperty(o, 'conflict', {
 
 <p>When the <code>writable</code> property attribute is set to <code>false</code>, the property is said to be “non-writable”. It cannot be reassigned.</p>
 
-<pre class="brush: js">var o = {}; // Creates a new object
+<pre class="brush: js notranslate">var o = {}; // Creates a new object
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -209,7 +209,7 @@ console.log(o.a); // logs 37. The assignment didn't work.
 
 <p>The <code>enumerable</code> property attribute defines whether the property is picked by {{jsxref("Object.assign()")}} or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread </a>operator. For non-{{jsxref("Symbols")}} properties it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not.</p>
 
-<pre class="brush: js">var o = {};
+<pre class="brush: js notranslate">var o = {};
 Object.defineProperty(o, 'a', {
   value: 1,
   enumerable: true
@@ -259,7 +259,7 @@ p[Symbol.for('f')] // undefined
 
 <p>The <code>configurable</code> attribute controls at the same time whether the property can be deleted from the object and whether its attributes (other than <code>value</code> and <code>writable</code>) can be changed.</p>
 
-<pre class="brush: js">var o = {};
+<pre class="brush: js notranslate">var o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -293,7 +293,7 @@ console.log(o.a); // logs 1
 
 <p>It is important to consider the way default values of attributes are applied. There is often a difference between simply using dot notation to assign a value and using <code>Object.defineProperty()</code>, as shown in the example below.</p>
 
-<pre class="brush: js">var o = {};
+<pre class="brush: js notranslate">var o = {};
 
 o.a = 1;
 // is equivalent to:
@@ -319,7 +319,7 @@ Object.defineProperty(o, 'a', {
 
 <p>The example below shows how to implement a self-archiving object. When <code>temperature</code> property is set, the <code>archive</code> array gets a log entry.</p>
 
-<pre class="brush: js">function Archiver() {
+<pre class="brush: js notranslate">function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -346,7 +346,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 
 <p>In this example, a getter always returns the same value.</p>
 
-<pre class="brush: js">var pattern = {
+<pre class="brush: js notranslate">var pattern = {
     get() {
         return 'I always return this string, ' +
                'whatever you have assigned';
@@ -372,7 +372,7 @@ console.log(instance.myname); // this is my name string
 
 <p>If an accessor property is inherited, its <code>get</code> and <code>set</code> methods will be called when the property is accessed and modified on descendant objects. If these methods use a variable to store the value, this value will be shared by all objects.</p>
 
-<pre class="brush: js">function myclass() {
+<pre class="brush: js notranslate">function myclass() {
 }
 
 var value;
@@ -393,7 +393,7 @@ console.log(b.x); // 1
 
 <p>This can be fixed by storing the value in another property. In <code>get</code> and <code>set</code> methods, <code>this</code> points to the object which is used to access or modify the property.</p>
 
-<pre class="brush: js">function myclass() {
+<pre class="brush: js notranslate">function myclass() {
 }
 
 Object.defineProperty(myclass.prototype, "x", {
@@ -413,7 +413,7 @@ console.log(b.x); // undefined
 
 <p>Unlike accessor properties, value properties are always set on the object itself, not on a prototype. However, if a non-writable value property is inherited, it still prevents from modifying the property on the object.</p>
 
-<pre class="brush: js">function myclass() {
+<pre class="brush: js notranslate">function myclass() {
 }
 
 myclass.prototype.x = 1;

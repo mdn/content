@@ -10,7 +10,7 @@ tags:
 
 <p>The <strong><code>Content-Language</code></strong> {{Glossary("entity header")}} is used to <strong>describe the language(s) intended for the audience</strong>, so that it allows a user to differentiate according to the users' own preferred language.</p>
 
-<p>For example, if "<code>Content-Language: de-DE</code>" is set, it says that the document is intended for German language speakers (however, it doesn't indicate the document is written in German. For example, it might be written in English as part of a language course for German speakers. If you want to indicate which language the document is written in, use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"><code>lang</code> attribute</a> instead).</p>
+<p>For example, if "<code>Content-Language: de-DE</code>" is set, it says that the document is intended for German language speakers (however, it doesn't indicate the document is written in German. For example, it might be written in English as part of a language course for German speakers. If you want to indicate which language the document is written in, use the <a href="/en-US/docs/Web/HTML/Global_attributes/lang"><code>lang</code> attribute</a> instead).</p>
 
 <p>If no <code>Content-Language</code> is specified, the default is that the content is intended for all language audiences. Multiple language tags are also possible, as well as applying the <code>Content-Language</code> header to various media types and not only to textual documents.</p>
 
@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Content-Language: de-DE
+<pre class="syntaxbox notranslate">Content-Language: de-DE
 Content-Language: en-US
 Content-Language: de-DE, en-CA
 </pre>
@@ -59,27 +59,29 @@ Content-Language: de-DE, en-CA
 
 <p>The global <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> attribute is used on HTML elements to indicate the language of an entire <a href="/en-US/docs/Web/HTML">HTML</a> document or parts of it.</p>
 
-<pre class="brush: html">&lt;html lang="de"&gt;</pre>
+<pre class="brush: html notranslate">&lt;html lang="de"&gt;</pre>
 
 <p>Do <strong>not</strong> use this meta element like this for stating a document language:</p>
 
-<pre class="brush: html example-bad">&lt;!-- /!\ This is bad practice --&gt;
+<pre class="brush: html example-bad notranslate">&lt;!-- /!\ This is bad practice --&gt;
 &lt;meta http-equiv="content-language" content="de"&gt;</pre>
 
 <h3 id="Indicating_a_target_audience_for_a_resource">Indicating a target audience for a resource</h3>
 
 <p>The <code>Content-Language</code> header is used to specify the <strong> intended audience of the page</strong>, and can indicate that this is more than one language.</p>
 
-<pre>Content-Language: de, en</pre>
+<pre class="notranslate">Content-Language: de, en</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Title</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{RFC("7231", "Content-Language", "3.1.3.2")}}</td>
    <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
@@ -98,5 +100,5 @@ Content-Language: de-DE, en-CA
 <ul>
  <li>{{HTTPHeader("Accept-Language")}}</li>
  <li><a href="https://www.w3.org/International/questions/qa-http-and-lang.en">HTTP headers, meta elements and language information</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">HTML <code>lang</code> attribute</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Global_attributes/lang">HTML <code>lang</code> attribute</a></li>
 </ul>

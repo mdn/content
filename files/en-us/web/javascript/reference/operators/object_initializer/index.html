@@ -51,7 +51,7 @@ let o = {
 }
 
 // Computed property names (ES2015)
-let prop = 'foo'
+let prop = 'foo';
 let o = {
   [prop]: 'hey',
   ['b' + 'ar']: 'there'
@@ -59,7 +59,7 @@ let o = {
 
 <h2 id="Description">Description</h2>
 
-<p>An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of <em>properties</em>, which are used to describe an object. Values of object properties can either contain <a href="/en-US/docs/Glossary/primitive">primitive</a> data types or other objects.</p>
+<p>An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of <em>properties</em>, which are used to describe an object. The values of object properties can either contain <a href="/en-US/docs/Glossary/primitive">primitive</a> data types or other objects.</p>
 
 <h3 id="Object_literal_notation_vs_JSON">Object literal notation vs JSON</h3>
 
@@ -203,6 +203,15 @@ let a = {
 console.log(a.foo1) // 1
 console.log(a.foo2) // 2
 console.log(a.foo3) // 3
+
+const items = ["A","B","C"];
+const obj = {
+[items]: "Hello"
+}
+console.log(obj); // A,B,C: "Hello"
+console.log(obj["A,B,C"]) // "Hello"
+
+
 
 let param = 'size'
 let config = {

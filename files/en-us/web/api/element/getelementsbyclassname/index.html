@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
+<pre class="syntaxbox notranslate"><var>var <em>elements</em></var> = <em>element</em>.getElementsByClassName(<em>names</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,23 +46,23 @@ tags:
 
 <p>To look for elements that include among their classes a single specified class, we just provide that class name when calling <code>getElementsByClassName()</code>:</p>
 
-<pre class="brush: js">element.getElementsByClassName('test');</pre>
+<pre class="brush: js notranslate">element.getElementsByClassName('test');</pre>
 
 <p>This example finds all elements that have a class of <code>test</code>, which are also a descendant of the element that has the <code>id</code> of <code>main</code>:</p>
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+<pre class="brush: js notranslate">document.getElementById('main').getElementsByClassName('test');</pre>
 
 <h3 id="Matching_multiple_classes">Matching multiple classes</h3>
 
 <p>To find elements whose class lists include both the <code>red</code> and <code>test</code> classes:</p>
 
-<pre class="brush: js">element.getElementsByClassName('red test');</pre>
+<pre class="brush: js notranslate">element.getElementsByClassName('red test');</pre>
 
 <h3 id="Examining_the_results">Examining the results</h3>
 
-<p>You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned <code>HTMLCollection</code> or standard array syntax to examine individual elements in the collection. However<u><strong> the following code will not work</strong></u> as one might expect because <code>"matches" </code>will change as soon as any <code>"colorbox"</code> class is removed.</p>
+<p>You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned <code>HTMLCollection</code> or standard array syntax to examine individual elements in the collection. However <u><strong>the following code will not work</strong></u> as one might expect because <code>"matches"</code> will change as soon as any <code>"colorbox"</code> class is removed.</p>
 
-<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
+<pre class="brush: js notranslate">var matches = element.getElementsByClassName('colorbox');
 
 for (var i=0; i&lt;matches.length; i++) {
   matches[i].classList.remove('colorbox');
@@ -72,7 +72,7 @@ for (var i=0; i&lt;matches.length; i++) {
 
 <p>Instead, use another method, such as:</p>
 
-<pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
+<pre class="brush: js notranslate">var matches = element.getElementsByClassName('colorbox');
 
 while (matches.length &gt; 0) {
   matches.item(0).classList.add('hueframe');
@@ -85,7 +85,7 @@ while (matches.length &gt; 0) {
 
 <p>We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's <code>this</code> value. Here we'll find all {{HTMLElement("div")}} elements that have a class of <code>test</code>:</p>
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+<pre class="brush: js notranslate">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
   return testElement.nodeName === 'DIV';
 });</pre>

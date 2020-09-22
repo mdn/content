@@ -15,7 +15,7 @@ tags:
   - WebXR API
   - WebXR Device API
 ---
-<p>{{DefaultAPISidebar("WebXR Device API")}}{{draft}}</p>
+<p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
 <p>At a fundamental level, rendering of scenes for <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> presentation in either augmented reality or virtual reality contexts is performed using <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, so the two APIs share much of the same design language. However, in order to provide the ability to present scenes in true 3D using XR headsets and other such equipment, WebXR has additional concepts that must be understood.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>Angles are specified using <strong>{{interwiki("wikipedia", "radians")}}</strong>. To convert degrees to radians, simply multiply the value in degrees by <code>π/180</code>. The following code snippet shows two simple functions, <code>degreesToRadians()</code> and <code>radiansToDegrees()</code>, which convert back and forth between the two units for measuring angles.</p>
 
-<pre class="brush: js">const RADIANS_PER_DEGREE = Math.PI / 180.0;
+<pre class="brush: js notranslate">const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 let degreesToRadians = (deg) =&gt; deg * RADIANS_PER_DEGREE;
 let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
@@ -145,7 +145,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>To represent a large area—potentially involving multiple rooms or beyond—you can use the <code>unbounded</code> reference space type, which specifies no constraints on the viewer's movement. If you wish to prevent the user from moving into certain areas, you must handle that yourself.</p>
 
-<p><span style="">The <code>bounded-floor</code> reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a </span><code style="">bounded-floor</code><span style=""> reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article </span><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces" style="">Using bounded reference spaces</a><span style=""> to learn more about the use of bounded reference spaces.</span></p>
+<p><span>The <code>bounded-floor</code> reference space type doesn't have a corresponding one that isn't floor-bound. If the user's XR hardware permits them to move about their real-world space, and you are able to do so, it may be useful to use a </span><code>bounded-floor</code><span> reference space, which lets you specifically define the boundaries of the area in which passage is allowed and safe. See the article </span><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces">Using bounded reference spaces</a><span> to learn more about the use of bounded reference spaces.</span></p>
 
 <p>By using a reference space to describe the position and orientation of objects, WebXR is able to standardize the form of the data you use to describe these things, regardless of the underlying XR hardware. The reference space's configuration is then able to provide you with the view matrices and object poses needed to correctly render the contents of the space.</p>
 

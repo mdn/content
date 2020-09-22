@@ -17,12 +17,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">history.go([<em>delta</em>])</pre>
+<pre class="syntaxbox notranslate">history.go([<var>delta</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>delta</code> {{optional_inline}}</dt>
+ <dt><code><var>delta</var></code> {{optional_inline}}</dt>
  <dd>The position in the history to which you want to move, relative to the current page. A negative value moves backwards, a positive value moves forwards. So, for example, <code>history.go(2)</code> moves forward two pages and <code>history.go(-2)</code> moves back two pages. If no value is passed or if <code>delta</code> equals 0, it has the same result as calling <code>location.reload()</code>.</dd>
 </dl>
 
@@ -30,34 +30,36 @@ tags:
 
 <p>To move back one page (the equivalent of calling {{domxref("History.back", "back()")}}):</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js notranslate">history.go(-1)</pre>
 
 <p>To move forward a page, just like calling {{domxref("History.forward", "forward()")}}:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js notranslate">history.go(1)</pre>
 
 <p>To move forward two pages:</p>
 
-<pre class="brush: js">history.go(2);</pre>
+<pre class="brush: js notranslate">history.go(2);</pre>
 
 <p>To move backwards by two pages:</p>
 
-<pre class="brush: js">history.go(-2);</pre>
+<pre class="brush: js notranslate">history.go(-2);</pre>
 
 <p>And, finally either of the following statements will reload the current page:</p>
 
-<pre class="brush: js">history.go();
+<pre class="brush: js notranslate">history.go();
 history.go(0);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName("HTML WHATWG", "history.html#dom-history-go", "History.go()")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>

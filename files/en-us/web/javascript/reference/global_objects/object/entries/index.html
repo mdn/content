@@ -61,7 +61,6 @@ tags:
 
 <p>For the above polyfill code snippet, if you need support for IE&lt;9, then you will also need an <code>Object.keys()</code> polyfill (such as the one found on the {{jsxref("Object.keys")}} page).</p>
 
-
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: js notranslate">const obj = { foo: 'bar', baz: 42 };
@@ -83,7 +82,7 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 // non-object argument will be coerced to an object
 console.log(Object.entries('foo')); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-// returns an empty array for any primitive type, since primitives have no own properties
+// returns an empty array for any primitive type except for strings (see the above example), since primitives have no own properties
 console.log(Object.entries(100)); // [ ]
 
 // iterate through key-value gracefully
@@ -114,7 +113,6 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 <pre class="brush: js notranslate">const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
 </pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 

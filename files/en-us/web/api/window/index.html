@@ -51,20 +51,18 @@ tags:
 <p>Note that properties which are objects (e.g.,. for overriding the prototype of built-in elements) are listed in a separate section below.</p>
 
 <dl>
- <dt>{{domxref("Window.closed")}} {{Non-standard_inline}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("Window.closed")}} {{readOnlyInline}}</dt>
  <dd>This property indicates whether the current window is closed or not.</dd>
  <dt>{{domxref("Window.console")}} {{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the console object which provides access to the browser's debugging console.</dd>
- <dt>{{domxref("Window.controllers")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.controllers")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>Returns the XUL controller objects for the current chrome window.</dd>
  <dt>{{domxref("Window.customElements")}} {{ReadOnlyInline}}</dt>
- <dd>returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> and get information about previously registered custom elements.</dd>
+ <dd>Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> and get information about previously registered custom elements.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>Returns the browser crypto object.</dd>
- <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the ratio between physical pixels and device independent pixels in the current display.</dd>
- <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
- <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the document that the window contains.</dd>
  <dt>{{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}</dt>
@@ -81,7 +79,7 @@ tags:
  <dd>Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.</dd>
  <dt>{{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a reference to a {{domxref("DOMRectReadOnly")}} object, which represents a rectangle.</dd>
- <dt>{{domxref("Window.event")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.event")}} {{readOnlyInline}}</dt>
  <dd>Returns the <strong>current event</strong>, which is the event currently being handled by the JavaScript code's context, or <code>undefined</code> if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.</dd>
  <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
  <dd>Returns the element in which the window is embedded, or null if the window is not embedded.</dd>
@@ -89,7 +87,7 @@ tags:
  <dd>Returns an array of the subframes in the current window.</dd>
  <dt>{{domxref("Window.fullScreen")}}</dt>
  <dd>This property indicates whether the window is displayed in full screen or not.</dd>
- <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.history")}} {{readOnlyInline}}</dt>
  <dd>Returns a reference to the history object.</dd>
  <dt>{{domxref("Window.innerHeight")}} {{readOnlyInline}}</dt>
  <dd>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</dd>
@@ -107,7 +105,7 @@ tags:
  <dd>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</dd>
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the menubar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.messageManager")}}</dt>
+ <dt>{{domxref("Window.messageManager")}} {{non-standard_inline}}</dt>
  <dd>Returns the <a href="/en-US/docs/The_message_manager">message manager</a> object for this window.</dd>
  <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.</dd>
@@ -119,8 +117,6 @@ tags:
  <dd>Returns a reference to the navigator object.</dd>
  <dt>{{domxref("Window.opener")}}</dt>
  <dd>Returns a reference to the window that opened this current window.</dd>
- <dt>{{domxref("Window.orientation")}} {{non-standard_inline}} {{deprecated_inline}} {{readOnlyInline}}</dt>
- <dd>Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.</dd>
  <dt>{{domxref("Window.outerHeight")}} {{readOnlyInline}}</dt>
  <dd>Gets the height of the outside of the browser window.</dd>
  <dt>{{domxref("Window.outerWidth")}} {{readOnlyInline}}</dt>
@@ -167,7 +163,7 @@ tags:
  <dd>Returns the toolbar object, whose visibility can be toggled in the window.</dd>
  <dt>{{domxref("Window.top")}} {{readOnlyInline}}</dt>
  <dd>Returns a reference to the topmost window in the window hierarchy. This property is read only.</dd>
- <dt>{{domxref("Window.visualViewport")}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("Window.visualViewport")}} {{readOnlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.</dd>
  <dt>{{domxref("Window.window")}} {{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the current window.</dd>
@@ -188,24 +184,28 @@ tags:
  <dd>Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)</dd>
 </dl>
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+<h3 id="Deprecated_properties">Deprecated properties</h3>
 
 <dl>
- <dt>{{domxref("Window.content")}} and <code>Window._content</code> {{Non-standard_inline}} {{obsolete_inline}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.content")}} and <code>Window._content</code> {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.</dd>
- <dt>{{domxref("Window.defaultStatus")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.defaultStatus")}} {{deprecated_inline}}</dt>
  <dd>Gets/sets the status bar text for the given window.</dd>
- <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}</dt>
+ <dd>Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an {{Interface("nsIArray")}}.</dd>
+ <dt>{{domxref("Window.directories")}} {{deprecated_inline}}</dt>
  <dd>Synonym of {{domxref("window.personalbar")}}</dd>
- <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Multiple storage objects that were used for storing data across multiple pages.</dd>
- <dt>{{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.</dd>
- <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
- <dt>{{domxref("Window.pkcs11")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.</dd>
+ <dt>{{domxref("Window.pkcs11")}} {{deprecated_inline}}</dt>
  <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
- <dt>{{domxref("Window.returnValue")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.returnValue")}} {{deprecated_inline}}</dt>
  <dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd>
 </dl>
 
@@ -276,8 +276,6 @@ tags:
  <dd>Scrolls the current document by the specified number of pages.</dd>
  <dt>{{domxref("Window.scrollTo()")}}</dt>
  <dd>Scrolls to a particular set of coordinates in the document.</dd>
- <dt>{{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)</dt>
- <dd>Changes the cursor for the current window</dd>
  <dt>{{domxref("Window.setImmediate()")}}</dt>
  <dd>Executes a function after the browser has finished other heavy tasks</dd>
  <dt>{{domxref("Window.setResizable()")}} {{Non-standard_inline}}</dt>
@@ -317,24 +315,24 @@ tags:
  <dd>Schedules a function to execute in a given amount of time.</dd>
 </dl>
 
-<h3 id="Obsolete_methods">Obsolete methods</h3>
+<h3 id="Deprecated_methods">Deprecated methods</h3>
 
 <dl>
- <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Moves back one in the window history. This method is obsolete; you should instead use {{domxref("History.back", "window.history.back()")}}.</dd>
- <dt>{{domxref("Window.captureEvents()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
+ <dd>Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "window.history.back()")}}.</dd>
+ <dt>{{domxref("Window.captureEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Registers the window to capture all events of the specified type.</dd>
- <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Moves the window one document forward in the history. This method is obsolete; you should instead use {{domxref("History.forward", "window.history.forward()")}}.</dd>
- <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
+ <dd>Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.</dd>
+ <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Flashes the application icon.</dd>
- <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns the browser to the home page.</dd>
- <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Opens a new dialog window.</dd>
- <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Releases the window from trapping events of a specific type.</dd>
- <dt>{{domxref("Window.showModalDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.showModalDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Displays a modal dialog.</dd>
 </dl>
 
@@ -343,10 +341,6 @@ tags:
 <p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
 
 <p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}.</em></p>
-
-<div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, you can now use the syntax <code>if ("onabort" in window)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a href="/en-US/docs/DOM/DOM_event_handlers">DOM event handlers</a> for details.</p>
-</div>
 
 <dl>
  <dt>{{domxref("Window.onappinstalled")}}</dt>
@@ -371,7 +365,7 @@ tags:
  <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
  <dt>{{domxref("Window.onpaint")}}</dt>
  <dd>An event handler property for paint events on the window.</dd>
- <dt>{{domxref("Window.onrejectionhandled")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("Window.onrejectionhandled")}}</dt>
  <dd>An event handler for handled {{jsxref("Promise")}} rejection events.</dd>
  <dt>{{domxref("Window.onuserproximity")}}</dt>
  <dd>An event handler property for user proximity events.</dd>
@@ -418,7 +412,7 @@ tags:
  <dd>Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Called after the window receives or regains focus. See {{event("focus")}} events.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
  <dd>An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
  <dt>{{domxref("GlobalEventHandlers.oninput")}}</dt>
  <dd>Called when the value of an &lt;input&gt; element changes</dd>
@@ -494,10 +488,10 @@ tags:
  <dd>Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.</dd>
  <dt>{{domxref("Window/deviceorientation_event", "deviceorientation")}}</dt>
  <dd>Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.</dd>
- <dt><code>{{domxref("Document/defaultView/resize_event", "resize")}}</code></dt>
+ <dt>{{domxref("Document/defaultView/resize_event", "resize")}}</dt>
  <dd>Fired when the window has been resized.<br>
  Also available via the {{domxref("GlobalEventHandlers/onresize", "onresize")}} property.</dd>
- <dt><code>{{domxref("Document/defaultView/storage_event", "storage")}}</code></dt>
+ <dt>{{domxref("Document/defaultView/storage_event", "storage")}}</dt>
  <dd>Fired when a storage area (<code>localStorage</code> or <code>sessionStorage</code>) has been modified in the context of another document.<br>
  Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.</dd>
 </dl>

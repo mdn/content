@@ -16,7 +16,7 @@ tags:
 <p>The added security is provided only if the user accessing the document is using a browser that supports <code>X-Frame-Options</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a <code><a href="/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">frame-ancestors</a></code> directive which <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoletes</a> this header for supporting browsers.</p>
+<p><strong>Note:</strong> The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoletes</a> this header for supporting browsers.</p>
 </div>
 
 <table class="properties">
@@ -36,7 +36,7 @@ tags:
 
 <p>There are two possible directives for <code>X-Frame-Options</code>:</p>
 
-<pre class="syntaxbox">X-Frame-Options: DENY
+<pre class="syntaxbox notranslate">X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 </pre>
 
@@ -50,7 +50,7 @@ X-Frame-Options: SAMEORIGIN
  <dt><code>SAMEORIGIN</code></dt>
  <dd>The page can only be displayed in a frame on the same origin as the page itself. The spec leaves it up to browser vendors to decide whether this option applies to the top level, the parent, or the whole chain, although it is argued that the option is not very useful unless all ancestors are also in the same origin (see {{bug(725490)}}). Also see {{anch("Browser compatibility")}} for support details.</dd>
  <dt><code>ALLOW-FROM <em>uri</em></code><em> </em>{{obsolete_inline()}}</dt>
- <dd>This is an obsolete directive that no longer works in modern browsers. Don't use it. In supporting legacy browsers, a page can be displayed in a frame only on the specified origin <em>uri</em>. Note that in the legacy Firefox implementation this still suffered from the same problem as <code>SAMEORIGIN</code> did — it doesn't check the frame ancestors to see if they are in the same origin. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a <code>frame-ancestors</code> directive which you can use instead.</dd>
+ <dd>This is an obsolete directive that no longer works in modern browsers. Don't use it. In supporting legacy browsers, a page can be displayed in a frame only on the specified origin <em>uri</em>. Note that in the legacy Firefox implementation this still suffered from the same problem as <code>SAMEORIGIN</code> did — it doesn't check the frame ancestors to see if they are in the same origin. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -63,26 +63,26 @@ X-Frame-Options: SAMEORIGIN
 
 <p>To configure Apache to send the <code>X-Frame-Options</code> header for all pages, add this to your site's configuration:</p>
 
-<pre>Header always set X-Frame-Options "SAMEORIGIN"
+<pre class="notranslate">Header always set X-Frame-Options "SAMEORIGIN"
 </pre>
 
 <p>To configure Apache to set the <code>X-Frame-Options</code> DENY, add this to your site's configuration:</p>
 
-<pre>Header set X-Frame-Options "DENY"
+<pre class="notranslate">Header set X-Frame-Options "DENY"
 </pre>
 
 <h3 id="Configuring_nginx">Configuring nginx</h3>
 
 <p>To configure nginx to send the <code>X-Frame-Options</code> header, add this either to your http, server or location configuration:</p>
 
-<pre>add_header X-Frame-Options SAMEORIGIN always;
+<pre class="notranslate">add_header X-Frame-Options SAMEORIGIN always;
 </pre>
 
 <h3 id="Configuring_IIS">Configuring IIS</h3>
 
 <p>To configure IIS to send the <code>X-Frame-Options</code> header, add this to your site's <code>Web.config</code> file:</p>
 
-<pre class="brush: xml">&lt;system.webServer&gt;
+<pre class="brush: xml notranslate">&lt;system.webServer&gt;
   ...
 
   &lt;httpProtocol&gt;
@@ -101,26 +101,26 @@ X-Frame-Options: SAMEORIGIN
 
 <p>To configure HAProxy to send the <code>X-Frame-Options</code> header, add this to your front-end, listen, or backend configuration:</p>
 
-<pre>rspadd X-Frame-Options:\ SAMEORIGIN
+<pre class="notranslate">rspadd X-Frame-Options:\ SAMEORIGIN
 </pre>
 
 <p>Alternatively, in newer versions:</p>
 
-<pre>http-response set-header X-Frame-Options SAMEORIGIN
+<pre class="notranslate">http-response set-header X-Frame-Options SAMEORIGIN
 </pre>
 
 <h3 id="Configuring_Express">Configuring Express</h3>
 
 <p>To configure Express to send the <code>X-Frame-Options</code> header, you can use <a href="https://helmetjs.github.io/">helmet</a> which uses <a href="https://helmetjs.github.io/docs/frameguard/">frameguard</a> to set the header. Add this to your server configuration:</p>
 
-<pre class="brush: js">const helmet = require('helmet');
+<pre class="brush: js notranslate">const helmet = require('helmet');
 const app = express();
 app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
 </pre>
 
 <p>Alternatively, you can use frameguard directly:</p>
 
-<pre class="brush: js">const frameguard = require('frameguard')
+<pre class="brush: js notranslate">const frameguard = require('frameguard')
 app.use(frameguard({ action: 'SAMEORIGIN' }))
 </pre>
 
@@ -150,8 +150,8 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code> (CSP)</a></li>
+ <li>{{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}</li>
  <li><a href="https://tools.ietf.org/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
- <li><a class="external" href="https://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx">ClickJacking Defenses - IEBlog</a></li>
- <li><a href="https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
+ <li><a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
 </ul>

@@ -31,27 +31,32 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li>An <strong>already resolved</strong> {{JSxRef("Promise")}} if the <var>iterable</var> passed is empty.</li>
+ <li>An <strong>already rejected</strong> {{JSxRef("Promise")}} if the <var>iterable</var> passed is empty.</li>
  <li>An <strong>asynchronously resolved</strong> {{JSxRef("Promise")}} if the <var>iterable</var> passed contains no promises.</li>
  <li>A <strong>pending</strong> {{JSxRef("Promise")}} in all other cases. This returned promise is then resolved/rejected <strong>asynchronously</strong> (as soon as the stack is empty) when any of the promises in the given <var>iterable</var> resolve, or if all the promises have rejected.</li>
 </ul>
 
 <h2 id="Description">Description</h2>
 
-<p>This method is useful for returning the first promise that fulfils. It short-circuits after a promise fulfils, so it does not wait for the other promises to complete once it finds one. Unlike {{JSxRef("Promise.all()")}}, which returns an <em>array</em> of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills). This can be beneficial if we need only one promise to fulfil but we do not care which one does. Also, unlike {{JSxRef("Promise.race()")}}, which returns the first <em>settled</em> value (either fulfillment or rejection), this method returns the first <em>fulfilled</em> value. This method will ignore all rejected promises up until the first promise that fulfils.</p>
+<p>This method is useful for returning the first promise that fulfills. It short-circuits after a promise fulfills, so it does not wait for the other promises to complete once it finds one. Unlike {{JSxRef("Promise.all()")}}, which returns an <em>array</em> of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills). This can be beneficial if we need only one promise to fulfill but we do not care which one does. Note another difference: This method rejects upon receiving an <em>empty iterable</em>, since, truthfully, the iterable contains no items that fulfill.</p>
 
-<h3 id="Fulfilment">Fulfilment</h3>
+<p>Also, unlike {{JSxRef("Promise.race()")}}, which returns the first <em>settled</em> value (either fulfillment or rejection), this method returns the first <em>fulfilled</em> value. This method will ignore all rejected promises up until the first promise that fulfils.</p>
 
-<p>If any of the passed-in promises fulfil, the returned promise asynchronously fulfils with the value of the promise that fulfilled, whether or not the other promises have fulfilled or rejected.</p>
+<h3 id="Fulfillment">Fulfillment</h3>
+
+<p>The returned promise is fulfilled with <strong>the first</strong> resolved value (or non-promise value) in the <var>iterable</var> passed as the argument, whether or not the other promises have rejected.</p>
 
 <ul>
- <li>If an empty <var>iterable</var> is passed, then this method returns (synchronously) an already resolved promise.</li>
- <li>If any of the passed-in promises fulfill or are not promises, the promise returned by <code>Promise.any</code> is fulfilled asynchronously.</li>
+ <li>If a nonempty <em>iterable</em> is passed, and <strong>any</strong> of the promises fulfill, or are not promises, then the promise returned by this method is fulfilled asynchronously.</li>
 </ul>
 
 <h3 id="Rejection">Rejection</h3>
 
 <p>If all of the passed-in promises reject, <code>Promise.any</code> asynchronously rejects with an {{JSxRef("AggregateError")}} object, which extends {{JSxRef("Error")}}, and contains an <code>errors</code> property with an array of rejection values.</p>
+
+<ul>
+ <li>If an empty <var>iterable</var> is passed, then the promise returned by this method is rejected synchronously. The rejected reason is an <code>AggregateError</code> object whose <code>errors</code> property is an empty array.</li>
+</ul>
 
 <h2 id="Examples">Examples</h2>
 

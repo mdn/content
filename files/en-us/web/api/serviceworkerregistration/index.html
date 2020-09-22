@@ -30,18 +30,20 @@ tags:
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}</dt>
  <dd>Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.installing")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
+ <dt>{{domxref("ServiceWorkerRegistration.installing")}} {{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is <code>installing</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.waiting")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
+ <dt>{{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is <code>installed</code>. This is initially set to <code>null</code>.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.active")}} <strong style="font-weight: bold;">{{readonlyinline}}</strong></dt>
- <dd>Returns a service worker whose state is <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
+ <dt>{{domxref("ServiceWorkerRegistration.active")}} {{readonlyinline}}</dt>
+ <dd>Returns a service worker whose state is <code>activating</code> or <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
  <dt>{{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}</dt>
  <dd>Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
  <dd>Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.</dd>
- <dt>{{domxref("ServiceWorkerRegistration.sync")}} <strong style="font-weight: bold; line-height: 19.0909080505371px;">{{non-standard_inline}} </strong>{{readonlyinline}} </dt>
+ <dt>{{domxref("ServiceWorkerRegistration.sync")}} {{non-standard_inline}} {{readonlyinline}} </dt>
  <dd>Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.</dd>
+ <dt>{{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}} </dt>
+ <dd>Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.</dd>
 </dl>
 
 <h3 id="Unimplemented_properties">Unimplemented properties</h3>

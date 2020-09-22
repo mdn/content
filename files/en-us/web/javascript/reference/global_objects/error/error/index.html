@@ -12,16 +12,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+<pre class="syntaxbox notranslate">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code><var>message</var></code>{{Optional_Inline}}</dt>
  <dd>A human-readable description of the error.</dd>
- <dt><code><var>fileName</var></code> {{Optional_Inline}}</dt>
+ <dt><code><var>fileName</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
  <dd>The value for the <code><var>fileName</var></code> property on the created <code>Error</code> object. Defaults to the name of the file containing the code that called the <code>Error()</code> constructor.</dd>
- <dt><code><var>lineNumber</var></code> {{Optional_Inline}}</dt>
+ <dt><code><var>lineNumber</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
  <dd>The value for the <code><var>lineNumber</var></code> property on the created <code>Error</code> object. Defaults to the line number containing the <code>Error()</code> constructor invocation.</dd>
 </dl>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>When <code>Error</code> is used like a function -- without {{JSxRef("Operators/new", "new")}}, it will return an <code>Error</code> object. Therefore, a mere call to <code>Error</code> will produce the same output that constructing an <code>Error</code> object via the <code>new</code> keyword would.</p>
 
-<pre class="brush: js;">// this...
+<pre class="brush: js; notranslate">// this...
 const x = Error('I was created using a function call!')
 
 ​​​​// ...has the same functionality as this.

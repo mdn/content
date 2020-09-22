@@ -19,12 +19,12 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>type</em></dt>
- <dd>Options are as follows:
- <ul>
-  <li><code>'screen'</code>: Requests a screen wake lock. Prevents devices from dimming or locking the screen.</li>
- </ul>
- </dd>
+	<dt><em>type</em></dt>
+	<dd>Options are as follows:
+	<ul>
+		<li><code>'screen'</code>: Requests a screen wake lock. Prevents devices from dimming or locking the screen.</li>
+	</ul>
+	</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,15 +34,15 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>NotAllowedError</code></dt>
- <dd>Thrown when wake lock is not available, which can happen because:
- <ul>
-  <li>Document is not allowed to use screen wake lock due to screen-wake-lock policy.</li>
-  <li>Document is not fully active.</li>
-  <li>Document is hidden.</li>
-  <li>{{Glossary("User Agent")}} could not acquire platform's wake lock.</li>
- </ul>
- </dd>
+	<dt><code>NotAllowedError</code></dt>
+	<dd>Thrown when wake lock is not available, which can happen because:
+	<ul>
+		<li>Document is not allowed to use screen wake lock due to screen-wake-lock policy.</li>
+		<li>Document is not fully active.</li>
+		<li>Document is hidden.</li>
+		<li>{{Glossary("User Agent")}} could not acquire platform's wake lock.</li>
+	</ul>
+	</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -67,18 +67,18 @@ requestWakeLock();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Screen Wake Lock','#the-request-method','request()')}}</td>
-   <td>{{Spec2('Screen Wake Lock API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Screen Wake Lock','#the-request-method','request()')}}</td>
+			<td>{{Spec2('Screen Wake Lock')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -90,6 +90,6 @@ requestWakeLock();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{DOMxRef("WakeLock")}}</li>
- <li>{{DOMxRef("Navigator.wakeLock")}}</li>
+	<li>{{DOMxRef("WakeLock")}}</li>
+	<li>{{DOMxRef("Navigator.wakeLock")}}</li>
 </ul>

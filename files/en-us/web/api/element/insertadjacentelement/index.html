@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
+<pre class="syntaxbox notranslate"><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Visualization_of_position_names">Visualization of position names</h3>
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
+<pre class="notranslate">&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
 <code style="font-weight: bold;">&lt;p&gt;</code>
   &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
   foo
@@ -73,7 +73,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+<pre class="brush: js notranslate">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
@@ -107,7 +107,7 @@ afterBtn.addEventListener('click', function() {
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}}</td>
    <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
@@ -125,6 +125,6 @@ afterBtn.addEventListener('click', function() {
 <ul>
  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
  <li>{{domxref("Element.insertAdjacentText()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
+ <li>{{domxref("Node.insertBefore()")}} (similar to <code>beforebegin</code>, with different arguments)</li>
  <li>{{domxref("Node.appendChild()")}} (same effect as <code>beforeend</code>)</li>
 </ul>

@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">August 25, 2020</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -30,7 +30,9 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<p><em>No changes</em></p>
+<ul>
+ <li>The standard, unprefixed {{CSSxRef("appearance", "appearance")}} property is now supported; existing <code>-moz-appearance</code> and <code>-webkit-appearance</code> will be the aliases of the unprefixed property ({{bug(1620467)}}).</li>
+</ul>
 
 <h4 id="Removals_2">Removals</h4>
 
@@ -77,6 +79,15 @@ tags:
 
 <ul>
  <li>Atomic operations are now allowed on non-shared memories ({{bug(1619196)}}).</li>
+</ul>
+
+<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+ <li>Using <code>WebDriver:NewWindow</code> to open a new tab returned too early when running tests in headless mode ({{bug(1653281)}}).</li>
+ <li>Removed <code>name</code> argument for <code>WebDriver:SwitchToWindow</code>, which is not supported for W3C-compatible mode, and shouldn't be used anymore ({{bug(1588424)}}).</li>
+ <li>Started to add Fission support for the following commands: <code>WebDriver:FindElement</code>, <code>WebDriver:FindElements</code>, <code>WebDriver:GetElementAttribute</code>, <code>WebDriver:GetElementProperty</code>.</li>
+ <li><strong>Known issue</strong>: Opening a new tab by using <code>WebDriver:NewWindow</code>, or by an arbitrary script that calls <code>window.open()</code>, will automatically switch to that new window ({{bug(1661495)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>

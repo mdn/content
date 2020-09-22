@@ -12,11 +12,11 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>WeakMap</code></strong> object is a collection of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.</span></p>
 
-<p>You can learn more about <code>WeakMap</code>s in the <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object" title="This chapter introduces collections of data which are ordered by a key; Map and Set objects contain elements which are iterable in the order of insertion.">WeakMap object</a> guide (under <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections" title="This chapter introduces collections of data which are ordered by a key; Map and Set objects contain elements which are iterable in the order of insertion.">Keyed collections</a>).</p>
+<p>You can learn more about <code>WeakMap</code>s in the <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap object</a> guide (under <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed collections</a>).</p>
 
 <h2 id="Description">Description</h2>
 
-<p>Keys of WeakMaps are of the type <code>Object</code> only. <a href="/en-US/docs/Glossary/Primitive">Primitive data types</a> as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a <code>WeakMap</code> key).</p>
+<p>Keys of WeakMaps are of the type <code>Object</code> only. {{Glossary("Primitive", "Primitive data types")}} as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a <code>WeakMap</code> key).</p>
 
 <h3 id="Why_WeakMap">Why <em>Weak</em>Map?</h3>
 
@@ -31,12 +31,12 @@ tags:
 
 <p>By contrast, native <code>WeakMap</code>s hold "weak" references to key objects, which means that they do not prevent garbage collection in case there would be no other reference to the key object. This also avoids preventing garbage collection of values in the map. Native WeakMaps can be particularly useful constructs when mapping keys to information about the key that is valuable only if the key has not been garbage collected.</p>
 
-<p><strong>Because the references are weak, <code>WeakMap</code> keys are not enumerable.</strong> There is no method to obtain a list of the keys. If they were, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.</p>
+<p><strong>Because the references are weak, <code>WeakMap</code> keys are not enumerable.</strong> There is no method to obtain a list of the keys. If they were, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap"><code>WeakMap()</code></a></dt>
+ <dt>{{jsxref("WeakMap/WeakMap", "WeakMap()")}}</dt>
  <dd>Creates a new <code>WeakMap</code> object.</dd>
 </dl>
 
@@ -55,9 +55,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_WeakMap">Using <code>WeakMap</code></h3>
+<h3 id="Using_WeakMap">Using WeakMap</h3>
 
-<pre class="brush: js">const wm1 = new WeakMap(),
+<pre class="brush: js notranslate">const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -86,9 +86,9 @@ wm1.delete(o1);
 wm1.has(o1); // false
 </pre>
 
-<h3 id="Implementing_a_WeakMap-like_class_with_a_.clear_method">Implementing a <code>WeakMap</code>-like class with a .clear() method</h3>
+<h3 id="Implementing_a_WeakMap-like_class_with_a_.clear_method">Implementing a WeakMap-like class with a .clear() method</h3>
 
-<pre class="brush: js">class ClearableWeakMap {
+<pre class="brush: js notranslate">class ClearableWeakMap {
   constructor(init) {
     this._wm = new WeakMap(init);
   }

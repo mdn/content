@@ -80,12 +80,14 @@ tags:
  <dt>{{domxref("Body.formData()")}}</dt>
  <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("FormData")}} object.</dd>
  <dt>{{domxref("Body.json()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}.</dd>
+ <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.</dd>
  <dt>{{domxref("Body.text()")}}</dt>
  <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="Fetching_an_image">Fetching an image</h3>
 
 <p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/basic-fetch">basic fetch example</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) we use a simple <code>fetch()</code> call to grab an image and display it in an {{htmlelement("img")}} element. The <code>fetch()</code> call returns a promise, which resolves to the <code>Response</code> object associated with the resource fetch operation.</p>
 
@@ -102,6 +104,25 @@ fetch('flowers.jpg').then(function(response) {
 <p>You can also use the {{domxref("Response.Response()")}} constructor to create your own custom <code>Response</code> object:</p>
 
 <pre class="brush: js notranslate">const response = new Response();</pre>
+
+<h3 id="An_Ajax_Call">An Ajax Call</h3>
+
+<p>Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.</p>
+
+<pre class="brush: js notranslate">// Function to do an Ajax call
+const doAjax = async () =&gt; {
+    const response = await fetch('Ajax.php'); // Generate the Response object
+    if (response.ok) {
+        const jVal = await response.json(); // Get JSON value from the response body
+        return Promise.resolve(jVal);
+        }
+    else
+        return Promise.reject('*** PHP file not found');
+    } // doAjax function
+
+// Call the function and output value or error message to console
+doAjax().then(console.log).catch(console.log);
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

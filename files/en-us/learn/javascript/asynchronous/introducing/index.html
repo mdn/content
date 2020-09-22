@@ -83,7 +83,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Why is this difficult to get to work using synchronous code? Let's look at a quick example. When you fetch an image from a server, you can't return the result immediately. That means that the following (pseudocode) wouldn't work:</p>
 
-<pre class="brush: js notranslate">let response = fetch('myImage.png');
+<pre class="brush: js notranslate">let response = fetch('myImage.png'); // fetch is asynchronous
 let blob = response.blob();
 // display your image blob in the UI somehow</pre>
 

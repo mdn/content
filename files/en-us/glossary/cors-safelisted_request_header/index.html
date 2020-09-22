@@ -24,7 +24,7 @@ tags:
 
 <ul>
  <li>For {{HTTPHeader("Accept-Language")}} and {{HTTPHeader("Content-Language")}}: can only have values consisting of <code>0-9</code>, <code>A-Z</code>, <code>a-z</code>, space or <code>*,-.;=</code>.</li>
- <li>For {{HTTPHeader("Accept")}} and {{HTTPHeader("Content-Type")}}: can't contain a <em>CORS-unsafe request header byte</em>: 0x00-0x1F (except 0x08 (tab)), <code>"():&lt;&gt;?@[\]{}</code>, and 0x7F (delete).</li>
+ <li>For {{HTTPHeader("Accept")}} and {{HTTPHeader("Content-Type")}}: can't contain a <em>CORS-unsafe request header byte</em>: 0x00-0x1F (except 0x09 (HT)), <code>"():&lt;&gt;?@[\]{}</code>, and 0x7F (DEL).</li>
  <li>For {{HTTPHeader("Content-Type")}}: needs to have a MIME type of its parsed value (ignoring parameters) of either <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code>.</li>
  <li>For any header: the value’s length can't be greater than 128.</li>
 </ul>

@@ -12,6 +12,7 @@ tags:
   - Reference
   - Scrap
   - copy
+  - paste
   - write
 ---
 <div>{{APIRef("Clipboard API")}}</div>
@@ -54,7 +55,7 @@ tags:
 }
 </pre>
 
-<p>The code begins by creating a new {{domxref("ClipboardItem")}} object into which the text will be placed for sending to the clipboard. The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. The content could be a text or even a Blob (e.g. for copying images to the clipboard). Then <code>write()</code> is called, specifying both a fulfillment function and an error function.</p>
+<p>The code begins by creating a new {{domxref("ClipboardItem")}} object into which the text will be placed for sending to the clipboard. The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. The content could be a text or even a Blob (e.g. for copying images to the clipboard). Then <code>write()</code> is called, specifying both a fulfilment function and an error function.</p>
 
 <h3 id="Example_of_copying_canvas_contents_to_the_clipboard">Example of copying canvas contents to the clipboard</h3>
 
@@ -96,3 +97,11 @@ tags:
 
 
 <p>{{Compat("api.Clipboard.write")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
+ <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</a></li>
+ <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async Clipboard article</a></li>
+</ul>

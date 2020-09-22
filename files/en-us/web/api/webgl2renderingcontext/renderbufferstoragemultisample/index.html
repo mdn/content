@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <var>gl</var>.renderbufferStorageMultisample(<var>target</var>, <var>samples</var>, <var>internalFormat</var>, <var>width</var>, <var>height</var>);
+<pre class="syntaxbox notranslate">void <var>gl</var>.renderbufferStorageMultisample(<var>target</var>, <var>samples</var>, <var>internalFormat</var>, <var>width</var>, <var>height</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -30,7 +30,7 @@ tags:
  <dt>samples</dt>
  <dd>A {{domxref("GLsizei")}} specifying the number of samples to be used for the renderbuffer storage.</dd>
  <dt>internalFormat</dt>
- <dd>A {{domxref("GLenum")}} specifying the internal format of the renderbuffer. Possible values:
+ <dd>A {{domxref("GLenum")}} specifying the internal format of the renderbuffer. Possible values (`gl.DEPTH_STENCIL` is not supported):
  <ul>
   <li><code>gl.R8</code></li>
   <li><code>gl.R8UI</code></li>
@@ -81,7 +81,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+<pre class="brush: js notranslate">gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

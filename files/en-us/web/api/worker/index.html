@@ -17,11 +17,7 @@ tags:
 
 <p>Workers may themselves spawn new workers, as long as those workers are hosted at the same <a href="/en-US/docs/Web/Security/Same-origin_policy">origin</a> as the parent page. (Note: <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">nested workers are not yet implemented in WebKit</a>).</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" title="Functions and classes available to Web Workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> is also available, with no such restrictions.)</p>
-
-<div class="blockIndicator note">
-<p>In Firefox extensions, if you want to use workers with access to <a href="/en/js-ctypes" title="en/js-ctypes">js-ctypes</a>, use {{ domxref("ChromeWorker") }} object instead.</p>
-</div>
+<p><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" title="Functions and classes available to Web Workers">Not all interfaces and functions are available</a> to scripts inside a <code>Worker</code>. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its <code>responseXML</code> and <code>channel</code> attributes are always <code>null</code>. (<code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> is also available, with no such restrictions.)</p>
 
 <h2 id="Constructors">Constructors</h2>
 
@@ -79,13 +75,11 @@ tags:
  Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> event handler property.</dd>
 </dl>
 
-
-
 <h2 id="Example">Example</h2>
 
 <p>The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:</p>
 
-<pre class="brush: js">var myWorker = new Worker('/worker.js');
+<pre class="brush: js notranslate">var myWorker = new Worker('/worker.js');
 var first = document.querySelector('input#number1');
 var second = document.querySelector('input#number2');
 
@@ -128,8 +122,7 @@ first.onchange = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en/Using_web_workers" title="en/Using DOM workers">Using web workers</a></li>
- <li><a href="/en/DOM/Worker/Functions_available_to_workers" title="https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers">Functions available to workers</a></li>
- <li>Other kind of workers: {{ domxref("SharedWorker") }} and <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>.</li>
- <li>Non-standard, Gecko-specific workers, used by extensions: {{ domxref("ChromeWorker") }}.</li>
+ <li><a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="en/Using DOM workers">Using Web Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a></li>
+ <li>Other kind of workers: {{domxref("SharedWorker")}} and <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.</li>
 </ul>

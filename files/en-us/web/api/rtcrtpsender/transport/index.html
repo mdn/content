@@ -21,6 +21,8 @@ tags:
 
 <p>The read-only <code><strong>transport</strong></code> property of an {{domxref("RTCRtpSender")}} object provides the {{domxref("RTCDtlsTransport")}} object used to interact with the underlying transport over which the sender is exchanging Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.</p>
 
+<p>This transport is responsible for receiving the data for the media on the sender's {{domxref("RTCRtpReceiver.track", "track")}}.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">let <em>transport</em> = <em>rtcRtpSender</em>.transport;</pre>

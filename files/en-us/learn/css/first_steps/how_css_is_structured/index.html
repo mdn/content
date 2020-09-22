@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</div>
 
-<p class="summary">Now that you are beginning to understanding the purpose and use of CSS, let's examine the structure of CSS.</p>
+<p class="summary">Now that you are beginning to understand the purpose and use of CSS, let's examine the structure of CSS.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -110,7 +110,7 @@ p {
 
 <p>In some circumstances, internal stylesheets can be useful. For example, perhaps you're working with a content management system where you are blocked from modifying external CSS files.</p>
 
-<p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of working. To apply uniform CSS styling to multiple pages using internal stylesheets, you must have an internal stylesheet in every web page that will use the styling. The efficiency penalty carries over to site maintenance too. With CSS in internal stylesheets, there is the risk that even one simple styling change may require edits to multiple web pages.</p>
+<p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of working. To apply uniform CSS styling to multiple pages using internal stylesheets, you must have an internal stylesheet in every web page that will use the styling. The efficiency penalty carries over to site maintenance too. With CSS in internal stylesheets, there is the risk that even one simple styling change may require edits to multiple web pages.</p>
 
 <h3 id="Inline_styles">Inline styles</h3>
 
@@ -128,7 +128,7 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Avoid using CSS in this way when possible.</strong> It is the opposite of a best practice. First, it is the least efficient implementation of CSS for maintenance. One styling change might require multiple edits within in a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML and content, making everything more difficult to read and understand. Separating code and content makes maintenance easier for all who work on the the website.</p>
+<p><strong>Avoid using CSS in this way, when possible.</strong> It is the opposite of a best practice. First, it is the least efficient implementation of CSS for maintenance. One styling change might require multiple edits within a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML and content, making everything more difficult to read and understand. Separating code and content makes maintenance easier for all who work on the website.</p>
 
 <p>There are a few circumstances where inline styles are more common. You might have to resort to using inline styles if your working environment is very restrictive. For example, perhaps your CMS only allows you to edit the HTML body. You may also see a lot of inline styles in HTML email to achieve compatibility with as many email clients as possible.</p>
 
@@ -162,7 +162,7 @@ p {
 
 <p>When you find CSS that you want to experiment with, replace the HTML <code>&lt;body&gt;</code> contents with some HTML to style, and then add your test CSS code to your CSS file.</p>
 
-<p>As an altenative, you can also use the interactive editor below.</p>
+<p>As an alternative, you can also use the interactive editor below.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
 
@@ -170,9 +170,9 @@ p {
 
 <h2 id="Selectors">Selectors</h2>
 
-<p>A selector targets HTML to apply styles to content. We have already discovered a variety of selectors in the <a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> tutorial. If CSS is not applying to content as-expected, your selector may not match the way you think it should match.</p>
+<p>A selector targets HTML to apply styles to content. We have already discovered a variety of selectors in the <a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> tutorial. If CSS is not applying to content as expected, your selector may not match the way you think it should match.</p>
 
-<p>Each CSS rule starts with a selector—or a list of selectors—in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors, or lists of selectors.</p>
+<p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
 
 <pre class="brush: css notranslate">h1
 a:link
@@ -236,7 +236,7 @@ p {
 
 <p><img alt="A declaration highlighted in the CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
 
-<p>When a property is paired with a value, this pairing is called a <em>CSS declaration</em>. CSS declarations are found within <em>CSS Declaration Blocks</em>. In the example below, highlighting identifies the CSS declaration block..</p>
+<p>When a property is paired with a value, this pairing is called a <em>CSS declaration</em>. CSS declarations are found within <em>CSS Declaration Blocks</em>. In the example below, highlighting identifies the CSS declaration block.</p>
 
 <p><img alt="A highlighted declaration block" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
 
@@ -247,7 +247,7 @@ p {
 <p>Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which declarations apply to every single element of a page.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Important: </strong>CSS properties and values are case-sensitive. The property and value in each pair is separated by a colon. (<code>:</code>)</p>
+<p><strong>Important: </strong>CSS properties and values are case-sensitive. The property and value in each pair are separated by a colon. (<code>:</code>)</p>
 </div>
 
 <p><strong>Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements: </strong></p>
@@ -270,7 +270,7 @@ p {
 
 <h3 id="Functions">Functions</h3>
 
-<p>While most values are relatively simple keywords or numeric values, there are some values which take the form of a function. An example would be the <code>calc()</code> function, which can do simple math within CSS:</p>
+<p>While most values are relatively simple keywords or numeric values, there are some values that take the form of a function. An example would be the <code>calc()</code> function, which can do simple math within CSS:</p>
 
 <div id="calc_example">
 <pre class="brush: html notranslate">&lt;div class="outer"&gt;&lt;div class="box"&gt;The inner box is 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>

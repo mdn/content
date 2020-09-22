@@ -55,7 +55,7 @@ tags:
  <p>If the <code>autocomplete</code> attribute is not specified on a <code>&lt;textarea&gt;</code> element, then the browser uses the <code>autocomplete</code> attribute value of the <code>&lt;textarea&gt;</code> element's form owner. The form owner is either the {{HTMLElement("form")}} element that this <code>&lt;textarea&gt;</code> element is a descendant of or the form element whose <code>id</code> is specified by the <code>form</code> attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
- <dd>This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified. </dd>
+ <dd>This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</dd>
  <dt>{{ htmlattrdef("cols") }}</dt>
  <dd>The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is <code>20</code>.</dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
@@ -106,13 +106,13 @@ tags:
 
 <h3 id="Baseline_inconsistency">Baseline inconsistency</h3>
 
-<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea's first line, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
+<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
 
 <h3 id="Controlling_whether_a_textarea_is_resizable">Controlling whether a textarea is resizable</h3>
 
 <p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
 
-<pre class="brush: html">textarea {
+<pre class="brush: html notranslate">textarea {
   resize: none;
 }
 </pre>
@@ -121,7 +121,7 @@ tags:
 
 <p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
 
-<pre class="brush: css">textarea:invalid {
+<pre class="brush: css notranslate">textarea:invalid {
   border: 2px dashed red;
 }
 
@@ -135,7 +135,7 @@ textarea:valid {
 
 <p>The following example show a very simple textarea, with a set numbers of rows and columns and some default content.</p>
 
-<pre class="brush: html">&lt;textarea name="textarea"
+<pre class="brush: html notranslate">&lt;textarea name="textarea"
    rows="10" cols="50"&gt;Write something here&lt;/textarea&gt;</pre>
 
 <p>{{ EmbedLiveSample('Basic_example','600','150') }}</p>
@@ -144,7 +144,7 @@ textarea:valid {
 
 <p>This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.</p>
 
-<pre class="brush: html">&lt;textarea name="textarea"
+<pre class="brush: html notranslate">&lt;textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20"&gt;Write something here&lt;/textarea&gt;</pre>
 
@@ -156,7 +156,7 @@ textarea:valid {
 
 <p>This example has a placeholder set. Notice how it disappears when you start typing into the box.</p>
 
-<pre class="brush: html">&lt;textarea name="textarea"
+<pre class="brush: html notranslate">&lt;textarea name="textarea"
    rows="5" cols="30"
    placeholder="Comment text."&gt;&lt;/textarea&gt;</pre>
 
@@ -174,7 +174,7 @@ textarea:valid {
 <p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
 </div>
 
-<pre class="brush: html">&lt;textarea name="textarea"
+<pre class="brush: html notranslate">&lt;textarea name="textarea"
    rows="5" cols="30"
    disabled&gt;I am a disabled textarea&lt;/textarea&gt;
 &lt;textarea name="textarea"
@@ -189,8 +189,8 @@ textarea:valid {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/HTML/Content_categories#Form-associated_">form-associated</a> element.</td>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_">form-associated</a> element.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -248,7 +248,7 @@ textarea:valid {
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

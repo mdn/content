@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clip()</code></strong> method of the Canvas 2D API turns the current or given path into the current clipping region. It replaces any previous clipping region.</p>
+<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clip()</code></strong> method of the Canvas 2D API turns the current or given path into the current clipping region. The previous clipping region, if any, is intersected with the current or given path to create the new clipping region.</p>
 
 <p>In the image below, the red outline represents a clipping region shaped like a star. Only those parts of the checkerboard pattern that are within the clipping region get drawn.</p>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>ctx</em>.clip([<em>fillRule</em>]);
+<pre class="syntaxbox notranslate">void <em>ctx</em>.clip([<em>fillRule</em>]);
 void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 </pre>
 
@@ -48,14 +48,14 @@ void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <p>The clipping region is a full circle, with its center at (100, 75), and a radius of 50.</p>
 
-<pre class="brush: js; highlight:[7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[7] notranslate">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circular clipping region
@@ -80,12 +80,12 @@ ctx.fillRect(0, 0, 100, 100);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[8]">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[8] notranslate">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create clipping path
@@ -103,6 +103,38 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 <p>{{ EmbedLiveSample('Specifying_a_path_and_a_fillRule', 700, 180) }}</p>
 
+<h3 id="Creating_a_complex_clipping_region">Creating a complex clipping region</h3>
+
+<p>This example uses two paths, a rectangle and a square to create a complex clipping region. The <code>clip()</code> method is called twice, first to set the current clipping region to the circle using a <code>Path2D</code> object, then again to intersect the circle clipping region with a square. The final clipping region is a shape representing the intersection of the circle and the square.</p>
+
+<h4 id="HTML_3">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+
+<h4 id="JavaScript_3">JavaScript</h4>
+
+<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Create two clipping paths
+let circlePath = new Path2D();
+circlePath.arc( 150, 75, 75, 0, 2 * Math.PI );
+let squarePath = new Path2D();
+squarePath.rect( 85, 10, 130, 130 );
+
+// Set the clip to the circle
+ctx.clip(circlePath);
+// Set the clip to be the intersection of the circle and the square
+ctx.clip(squarePath);
+
+// Draw stuff that gets clipped
+ctx.fillStyle = 'blue';
+ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
+
+<h4 id="Result_3">Result</h4>
+
+<p>{{ EmbedLiveSample('Creating_a_complex_clipping_region', 300, 150) }}</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -115,7 +147,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clip", "CanvasRenderingContext2D.clip")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

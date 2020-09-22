@@ -12,7 +12,7 @@ tags:
   - conditional rendering
   - passing data
 ---
-<div>{{LearnSidebar}}{{draft}}<br>
+<div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <p class="summary">In the last article we started developing our Todo list app. The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.</p>
@@ -302,7 +302,7 @@ const dispatch = createEventDispatcher()</pre>
   <p>Our handler receives the <code>e</code> parameter (the event object), which as described before holds the todo being deleted in the <code>detail</code> property.</p>
  </li>
  <li>
-  <p>At this point, if you try out your app again, you should see that the <em>Delete</em> functionality now works again! So our custom event has worked as we hoped. In addition, the <code>remove</code> event listener is sending the daa change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.</p>
+  <p>At this point, if you try out your app again, you should see that the <em>Delete</em> functionality now works again! So our custom event has worked as we hoped. In addition, the <code>remove</code> event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when todos are deleted.</p>
  </li>
 </ol>
 
@@ -512,10 +512,12 @@ function onToggle() {
   <p>Next we have to listen for the <code>update</code> event on our <code>&lt;Todo&gt;</code> component call, and run our <code>updateTodo()</code> function when this occurs to change the <code>name</code> and <code>completed</code> status. Update your &lt;Todo&gt; call like this:</p>
 
   <pre class="brush: js notranslate">{#each filterTodos(filter, todos) as todo (todo.id)}
-  &lt;Todo {todo}
-    on:update={e =&gt; updateTodo(e.detail)}
-    on:remove={e =&gt; removeTodo(e.detail)}
-  /&gt;</pre>
+  &lt;li class="todo"&gt;
+    &lt;Todo {todo}
+      on:update={e =&gt; updateTodo(e.detail)}
+      on:remove={e =&gt; removeTodo(e.detail)}
+    /&gt;
+  &lt;/li&gt;</pre>
  </li>
  <li>
   <p>Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of todos! And our "x out of y items completed" status heading will now update appropriately when todos are completed.</p>
@@ -559,7 +561,7 @@ function onToggle() {
  <li>Passing information from child to parent using a handler received as a prop.</li>
  <li>Passing information from child to parent using the <code>bind</code> directive.</li>
  <li>Conditionally rendering blocks of markup using the <code>if</code> block.</li>
- <li>Implementing the "props-up, events-down" communication pattern.</li>
+ <li>Implementing the "props-down, events-up" communication pattern.</li>
  <li>Creating and listening to custom events.</li>
 </ul>
 

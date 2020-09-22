@@ -17,7 +17,6 @@ tags:
 clip: auto;
 
 /* &lt;shape&gt; values */
-clip: rect(1px 10em 3rem 2ch);
 clip: rect(1px, 10em, 3rem, 2ch);
 
 /* Global values */
@@ -31,12 +30,11 @@ clip: unset;</pre>
 <p><strong>Note:</strong> Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.</p>
 </div>
 
-
 <h3 id="Values">Values</h3>
 
 <dl>
  <dt>{{cssxref("&lt;shape&gt;")}}</dt>
- <dd>A rectangular {{cssxref("&lt;shape&gt;")}} of the form <code>rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values are offsets from the <em>inside top border edge</em> of the box, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> are offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.</dd>
+ <dd>A rectangular {{cssxref("&lt;shape&gt;")}} of the form <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values are offsets from the <em>inside top border edge</em> of the box, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> are offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.</dd>
  <dd>The <code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;left&gt;</code> values may be either a {{cssxref("&lt;length&gt;")}} or <code>auto</code>. If any side's value is <code>auto</code>, the element is clipped to that side's <em>inside border edge</em>.</dd>
  <dt><code>auto</code></dt>
  <dd>The element does not clip (default). This is different from <code>rect(auto, auto, auto, auto)</code>, which clips to the element’s inside border edges.</dd>
@@ -72,18 +70,18 @@ clip: unset;</pre>
 
 #top-left {
   left: 360px;
-  clip: rect(0 175px 113px 0);
+  clip: rect(0, 175px, 113px, 0);
 }
 
 
 #middle {
   left: 280px;
-  clip: rect(119px 255px 229px 80px);
+  clip: rect(119px, 255px, 229px, 80px);
 }
 
 #bottom-right {
   left: 200px;
-  clip: rect(235px 335px 345px 160px);
+  clip: rect(235px, 335px, 345px, 160px);
 }</pre>
 
 <h4 id="HTML">HTML</h4>

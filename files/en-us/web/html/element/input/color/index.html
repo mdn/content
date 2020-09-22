@@ -56,10 +56,6 @@ tags:
 <p><strong>Note</strong>: Setting the value to anything that isn't a valid, fully-opaque, RGB color <em>in hexadecimal notation</em> will result in the value being set to <code>#000000</code>. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. <code>#009900aa</code>) will also result in the color being set to <code>#000000</code>.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: Any web browser that doesn't support an <code>input</code> of type <code>color</code> will naturally fall back to the type <code>text</code>. Because users can write colors in many different ways (such as <code>rgb(255, 255, 0)</code>), one way to work around this is to set a <code>pattern</code> attribute equal to either <code>#[0-9a-f]{6}</code> or <code>#[0-9A-Fa-f]{6}</code> (preferably the latter because some users may not expect a different result with just a letter-case change) and set a <code>placeholder</code> attribute equal to a color representing the expected format of the user's input, such as <code>#ff0000</code>.</p>
-</div>
-
 <h2 id="Using_color_inputs">Using color inputs</h2>
 
 <p>Inputs of type <code>color</code> are simple, due to the limited number of attributes they support.</p>

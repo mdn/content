@@ -12,11 +12,11 @@ tags:
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
-<p>The non-standard <strong>lastParen </strong>property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. <code>RegExp.$+</code> is an alias for this property.</p>
+<p>The non-standard <strong><code>lastParen</code></strong> property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. <code>RegExp.$+</code> is an alias for this property.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>lastParen</code> property is static, it is not a property of an individual regular expression object. Instead, you always use it as <code>RegExp.lastParen</code> or <code>RegExp['$+'].</code></p>
+<p>The <code>lastParen</code> property is static, it is not a property of an individual regular expression object. Instead, you always use it as <code>RegExp.lastParen</code> or <code>RegExp['$+']</code>.</p>
 
 <p>The value of the <code>lastParen</code> property is read-only and modified whenever a successful match is made.</p>
 
@@ -24,9 +24,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_lastParen_and">Using <code>lastParen</code> and <code>$+</code></h3>
+<h3 id="Using_lastParen_and">Using lastParen and $+</h3>
 
-<pre class="brush: js">var re = /(hi)/g;
+<pre class="brush: js notranslate">var re = /(hi)/g;
 re.test('hi there!');
 RegExp.lastParen; // "hi"
 RegExp['$+'];     // "hi"
