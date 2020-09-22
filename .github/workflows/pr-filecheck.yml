@@ -4,7 +4,7 @@
 # If you want to do what this workflow does on your laptop you can simulate
 # it like this:
 #
-#    yarn filecheck $(git diff master... '--diff-filter=AM' --name-only | rg '\.(png|svg|jpe?g|svg|gif|webp)')
+#    yarn filecheck $(git diff main... '--diff-filter=AM' --name-only | rg '\.(png|svg|jpe?g|svg|gif|webp)')
 #
 # That way, you can behave on your laptop like, this action behaves here.
 
@@ -12,8 +12,6 @@ name: PR Filecheck
 
 on:
   pull_request:
-    branches:
-      - master
 
 jobs:
   build:
