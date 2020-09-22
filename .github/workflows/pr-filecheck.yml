@@ -4,7 +4,7 @@
 # If you want to do what this workflow does on your laptop you can simulate
 # it like this:
 #
-#    yarn filecheck $(git diff main... '--diff-filter=AM' --name-only | rg '\.(png|svg|jpe?g|svg|gif|webp)')
+#    yarn filecheck $(git diff main... '--diff-filter=AM' --name-only | rg '\.(png|svg|jpe?g|gif|webp)')
 #
 # That way, you can behave on your laptop like, this action behaves here.
 
@@ -29,7 +29,8 @@ jobs:
             .jpg
             .gif
             .svg
-          PREFIX_FILTER: content/files/
+            .webp
+          PREFIX_FILTER: files/
           ABSOLUTE: true
 
       - uses: actions/checkout@v2
