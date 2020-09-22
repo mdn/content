@@ -4,7 +4,7 @@
 # If you want to do what this workflow does on your laptop you can simulate
 # it like this:
 #
-#    export GIT_DIFF=`git diff --name-only master... | grep 'content/files' | grep '\.html$'`
+#    export GIT_DIFF=`git diff --name-only main... | grep 'files/' | grep '\.html$'`
 #    node content build --no-progressbar --files="${GIT_DIFF}"
 #
 # That way, you can behave on your laptop like, this action behaves here.
@@ -31,6 +31,7 @@ jobs:
           PREFIX_FILTER: files/
 
       - uses: actions/checkout@v2
+        if: steps.git_diff_content.outputs.diff
         with:
           repository: mdn/yari
           path: yari
