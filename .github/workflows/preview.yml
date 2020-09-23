@@ -57,5 +57,5 @@ jobs:
 
           # TODO Do something with puppeteer here maybe
 
-          curl --fail http://localhost:5000/en-US/docs/Web/HTML/Element/video > /dev/null
-          curl --fail http://localhost:5000/en-US/docs/Web/HTML/Element/video/index.json > /dev/null
+          curl --fail http://localhost:5000/en-US/docs/MDN/Kitchensink > /dev/null
+          curl --fail http://localhost:5000/en-US/docs/MDN/Kitchensink/index.json > /dev/null
