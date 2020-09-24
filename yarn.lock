@@ -16,10 +16,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.42":
-  version "0.1.42"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.42.tgz#6c11a5f02cbcb3b175a1917faa9947ee7d4a56d3"
-  integrity sha512-A/58jX+xremaZBIQ/RGGsYVDricO6jSt0vEY90Bp07Bg9LI+CTMPDqNRneIghEoh4fUd3KJUNo5W+MUMvU8i7A==
+"@mdn/yari@0.1.44":
+  version "0.1.44"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.44.tgz#ea1f3417cadb9a49358646246d1ae088a3a54b26"
+  integrity sha512-+T3fQ6wQ8Ogfbjp2/2w8XJ7Yvkjb3ZHVV4tLXnulW1C0/hsoD8QoQkpDaVAjWUJHXoimYm6uDSEkyof7ihQf7w==
   dependencies:
     "@mdn/browser-compat-data" "2.0.0-1"
     caporal "1.4.0"
@@ -58,7 +58,7 @@
     sanitize-filename "^1.6.3"
     sockette "^2.0.6"
     source-map-support "0.5.19"
-    swr "0.3.3"
+    swr "0.3.4"
     tempy "0.7.0"
     typeface-zilla-slab "0.0.72"
     use-debounce "^3.4.3"
@@ -1220,6 +1220,11 @@ depd@~1.1.2:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
+dequal@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.2.tgz#85ca22025e3a87e65ef75a7a437b35284a7e319d"
+  integrity sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
+
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -1673,11 +1678,6 @@ eyes@0.1.x:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/eyes/-/eyes-0.1.8.tgz#62cf120234c683785d902348a800ef3e0cc20bc0"
   integrity sha1-Ys8SAjTGg3hdkCNIqADvPgzCC8A=
-
-fast-deep-equal@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
-  integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
 
 fast-glob@^3.0.3:
   version "3.2.4"
@@ -4518,12 +4518,12 @@ svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swr@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.3.tgz#8e820360e3fece26df6f30ca09c478f70bf1f880"
-  integrity sha512-UxjfbvLdk4CzdchQBKmthUc1rO7KaCXdNL69oW7V/I2BOMv905rsL+kJdpO19OYwOPOpWZPvffTEE7yACwXc8w==
+swr@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.4.tgz#921a48b4caedd06a972791232e1f0597d734f8d0"
+  integrity sha512-i1fmnADcwZxETcmdyr0w2VGLggLHHEUH61FuBDxl2fxBmp8gNg5GFd+tVp00pc5oOUunKKzWp4UrlI1rc8gjuw==
   dependencies:
-    fast-deep-equal "2.0.1"
+    dequal "2.0.2"
 
 tabtab@^2.2.2:
   version "2.2.2"
