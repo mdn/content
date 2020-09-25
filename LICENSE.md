@@ -1,14 +1,15 @@
-# Licenses for MDN Content
+# Licenses for MDN content
 
-MDN's content is entirely available under various open source licenses.
-This section covers the types of content we provide and what licenses
-are in effect for each.
+MDN's content (including prose and code examples) is entirely available
+under various open source licenses. This file covers the types of
+content we provide and what licenses are in effect for each.
 
-## License for All Documents
+## License for all prose content
 
-https://creativecommons.org/licenses/by-sa/2.5/
+All prose content is available under
+([CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)).
 
-### Text of CC-BY-SA-2.5 License
+### Text of CC-BY-SA-2.5 license
 
 ```
 Creative Commons Attribution-ShareAlike 2.5
@@ -66,20 +67,18 @@ Except for the limited purpose of indicating to the public that the Work is lice
 Creative Commons may be contacted at http://creativecommons.org/.
 ```
 
-## Licenses for Code Samples and Snippets within Documents
+## Licenses for code examples and snippets
 
-### Added On or After August 20, 2010
+### Added on or after August 20, 2010
 
-https://creativecommons.org/publicdomain/zero/1.0/legalcode
-
-Code samples and snippets added on or after August 20, 2010 are in the public domain
+Code examples and snippets added on or after August 20, 2010 are in the public domain
 ([CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)). No licensing notice
 is necessary, but if you need one, you can use:
 ```
 Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
 ```
 
-#### Text of CC0 License
+#### Text of CC0 license
 
 ```
 Creative Commons Legal Code
@@ -205,18 +204,16 @@ express Statement of Purpose.
     this CC0 or use of the Work.
 ```
 
-### Added Before August 20, 2010
+### Added before August 20, 2010
 
-https://opensource.org/licenses/MIT
-
-Code samples added to this wiki before August 20, 2010 are available under the [MIT license]
-(https://opensource.org/licenses/MIT). You should insert the following attribution
-information into the MIT license template:
+Code examples and snippets added before August 20, 2010 are available under
+the [MIT license](https://opensource.org/licenses/MIT). You should insert
+the following attribution information into the MIT license template:
 ```
 © <date of last page revision> <name of person who created it>
 ```
 
-#### Text of MIT License Template
+#### Text of MIT license template
 
 ```
 Copyright <YEAR> <COPYRIGHT HOLDER>
