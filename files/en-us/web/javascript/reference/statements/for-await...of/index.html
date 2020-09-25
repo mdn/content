@@ -122,7 +122,7 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
 
 <h3 id="Iterating_over_sync_iterables_and_generators">Iterating over sync iterables and generators</h3>
 
-<p><code>for await...of</code> loop also consumes sync iterables and generators. In that case it internally awaits emitted values before assign them to the loop control variable.</p>
+<p><code>for await...of</code> loop also consumes sync iterables and generators. In that case it internally awaits emitted values before assigning them to the loop control variable.</p>
 
 <pre class="brush: js notranslate">function* generator() {
   yield 0;
