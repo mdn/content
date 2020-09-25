@@ -9,19 +9,19 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@mdn/browser-compat-data@2.0.0-1":
-  version "2.0.0-1"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-2.0.0-1.tgz#7ed0f7871cbceee25c71d64bc394dbe9c2ceb467"
-  integrity sha512-bvLlIwAmnzVcoKPhgR5WGQAZYHdbA71IDZpJ8CwlHYgoaV6ZIcym498z5WTKt3le9WdtpezVUIchAzEZXSdLpQ==
+"@mdn/browser-compat-data@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-2.0.0.tgz#b3e17c343de02886e0dac353c5c53bac94f2e193"
+  integrity sha512-roBXuLIX2HQ6BP+UuoXekJ9yENSE4JbeA9NpBgfg+zjSU4tnG2MpHeKaNsM48gj3gnhdBhi7wBjggE55zwCDAg==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.44":
-  version "0.1.44"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.44.tgz#ea1f3417cadb9a49358646246d1ae088a3a54b26"
-  integrity sha512-+T3fQ6wQ8Ogfbjp2/2w8XJ7Yvkjb3ZHVV4tLXnulW1C0/hsoD8QoQkpDaVAjWUJHXoimYm6uDSEkyof7ihQf7w==
+"@mdn/yari@0.1.49":
+  version "0.1.49"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.49.tgz#427f3dad011750c6526bfeb06aa1b02e9d091592"
+  integrity sha512-vaE340XGBnrA9Pv3BOnX0//cugmgjgl/2kPvdK6tg7Z3nlaGlZMTYemSBEVqnfB5+8dVydlYsrIQHIzS6jSIqg==
   dependencies:
-    "@mdn/browser-compat-data" "2.0.0-1"
+    "@mdn/browser-compat-data" "2.0.0"
     caporal "1.4.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.3"
