@@ -716,7 +716,7 @@ let hatSize = form.elements["hat-size"];
 	<div id="step-include">
 	<p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
-	<p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+	<p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types. The value must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
 
 	<p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping - the <code>{{anch("min")}}</code> value and increments of the step value, up to the <code>{{anch("max")}}</code> value, if specified.</p>
 
