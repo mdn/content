@@ -50,9 +50,13 @@ tags:
 
 <p>Please note that the unload event also follows the document tree: parent frame unload will happen <strong>before</strong> child frame <code>unload</code> (see example below).</p>
 
+<div class="blockIndicator warning">
+<p>The <code>unload</code> event (and <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunload">onunload</a></code> event handler) are not the right features to use with <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon</a></code>. Instead for <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon</a>,</code> use the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> and <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> events. See discussion in the comments for the blog post <a href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is broken</a>.</p>
+</div>
+
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Parent Frame&lt;/title&gt;
@@ -72,7 +76,7 @@ tags:
 
 <p>Below, the content of <code>child-frame.html</code>:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Child Frame&lt;/title&gt;
@@ -104,9 +108,9 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('UI Events', '#event-type-unload', 'unload')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td> </td>
+   <td>{{SpecName('HTML WHATWG', '#event-unload', 'unload')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
   </tr>
  </tbody>
 </table>

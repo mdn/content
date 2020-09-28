@@ -17,7 +17,7 @@ tags:
 
 <p>An <strong>anonymous function</strong> is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:</p>
 
-<pre class="brush: js">// When used as a function expression
+<pre class="brush: js notranslate">// When used as a function expression
 (function () {});
 // or using the ECMAScript 2015 arrow notation
 () =&gt; {};
@@ -27,7 +27,7 @@ tags:
 
 <p>A <strong>named function</strong> is a function with a function name:</p>
 
-<pre class="brush: js">// Function declaration
+<pre class="brush: js notranslate">// Function declaration
 function foo() {};
 // Named function expression
 (function bar() {});
@@ -37,7 +37,7 @@ const foo = () =&gt; {};
 
 <p>An <strong>inner function</strong> is a function inside another function (<code>square</code> in this case). An <strong>outer function</strong> is a function containing a function (<code>addSquares</code> in this case):</p>
 
-<pre class="brush: js">function addSquares(a,b) {
+<pre class="brush: js notranslate">function addSquares(a,b) {
    function square(x) {
       return x * x;
    }
@@ -52,7 +52,7 @@ const addSquares = (a,b) =&gt; {
 
 <p>A <strong>recursive function</strong> is a function that calls itself. See {{Glossary("Recursion", "recursion")}}.</p>
 
-<pre class="brush: js">function loop(x) {
+<pre class="brush: js notranslate">function loop(x) {
    if (x &gt;= 10)
       return;
    loop(x + 1);
@@ -65,9 +65,9 @@ const loop = x =&gt; {
 };
 </pre>
 
-<p>An <strong>Immediately Invoked Function Expressions </strong>({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser’s compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function’s definition.</p>
+<p>An <strong>Immediately Invoked Function Expressions </strong> ({{glossary("IIFE")}}) is a function that is called directly after the function is loaded into the browser’s compiler. The way to identify an IIFE is by locating the extra left and right parenthesis at the end of the function’s definition.</p>
 
-<pre class="brush: js">// Declared functions can't be called immediately this way
+<pre class="brush: js notranslate">// Declared functions can't be called immediately this way
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
 ​function foo() {
@@ -94,6 +94,6 @@ const loop = x =&gt; {
 <h3 id="Technical_reference">Technical reference</h3>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" title="en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a></li>
 </ul>

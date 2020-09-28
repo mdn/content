@@ -121,11 +121,12 @@ npm init</pre>
  <li>Now create a new file inside your project directory called <code>gulpfile.js</code>. This is the file that will run all our tasks. Inside this file, put the following:
   <pre class="brush: js notranslate">const gulp = require('gulp');
 
-gulp.task('default', function() {
+exports.default = function(cb) {
   console.log('Gulp running');
-});</pre>
-  This requires the <code>gulp</code> module we installed earlier, and then runs a basic task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is written in the same basic format — <code>gulp</code>'s <code>task()</code> method is run, and given two parameters — the name of the task, and a callback function containing the actual code to run to complete the task.</li>
- <li>You can run your gulp task with the following commands — try this now:
+  cb();
+};</pre>
+  This requires the <code>gulp</code> module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — <code>exports.taskName = taskFunction</code>. Each function takes one parameter — a callback to run when the task is completed.</li>
+ <li>You can run your gulp's default task with the following command — try this now:
   <pre class="brush: bash notranslate">gulp
 </pre>
  </li>
@@ -143,7 +144,7 @@ gulp.task('default', function() {
 
 <p>See the links above for full instructions on the different gulp packages we are using.</p>
 
-<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally add the name of your task inside the <code>default</code> task.</p>
+<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally export the name of your task to be availabe via gulp's command.</p>
 
 <h4 id="html-tidy">html-tidy</h4>
 
@@ -166,6 +167,14 @@ gulp.task('default', function() {
         .pipe(gulp.dest('build'));
     cb();
 }
+</pre>
+ </li>
+ <li>Export the html task using:
+  <pre class="brush: js notranslate">exports.html = html;
+</pre>
+ </li>
+ <li>Change the default export to:
+  <pre class="brush: js notranslate">exports.default = html;
 </pre>
  </li>
 </ol>
@@ -193,12 +202,29 @@ const csslint = require('gulp-csslint');</pre>
         .pipe(csslint())
         .pipe(csslint.formatter('compact'))
         .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('build'));
     cb();
 }
+</pre>
+ </li>
+ <li>Add the following property to <code>package.json</code>:
+  <pre class="brush: js notranslate">"browserslist": [
+  "last 5 versions"
+]
+</pre>
+ </li>
+ <li>Add this line after the const definitions:
+  <pre class="brush: js notranslate">const { series } = require('gulp');
+</pre>
+ </li>
+ <li>Export the css task using:
+  <pre class="brush: js notranslate">exports.css = css;
+</pre>
+ </li>
+ <li>Change the default task to:
+  <pre class="brush: js notranslate">exports.default = series(html, css);
 </pre>
  </li>
 </ol>
@@ -232,23 +258,17 @@ npm install --save-dev @babel/core
 }
 </pre>
  </li>
+ <li>Export the js task using:
+  <pre class="brush: js notranslate">exports.js = js;
+</pre>
+ </li>
+ <li>Change the default task to:
+  <pre class="brush: js notranslate">exports.default = series(html, css, js);
+</pre>
+ </li>
 </ol>
 
 <p>Here we grab our <code>main.js</code> file, run <code>jshint</code> on it and output the results to the terminal using <code>jshint.reporter</code>; we then pass the file to babel, which converts it to old style syntax and outputs the result into the <code>build</code> directory. Our original code included a <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">fat arrow function</a>, which babel has modified into an old style function.</p>
-
-<p>To set up each and the option to run all above add this to the end of the gulpfile.js file.</p>
-
-<pre class="notranslate">var build = gulp.parallel(html,css,js);
-
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.build = build;
-
-/*
- * Define default task that can be called by just running `gulp` from cli
- */
-exports.default = build;</pre>
 
 <h4 id="Further_ideas">Further ideas</h4>
 

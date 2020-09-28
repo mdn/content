@@ -23,16 +23,16 @@ tags:
 <p class="summary">With the basics out of the way, we'll now focus on object-oriented JavaScript (OOJS) — this article presents a basic view of object-oriented programming (OOP) theory, then explores how JavaScript emulates object classes via constructor functions, and how to create object instances.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the basic theory behind object-oriented programming, how this relates to JavaScript ("everything is an object"), and how to create constructors and object instances.</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="row">Prerequisites:</th>
+			<td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+		</tr>
+		<tr>
+			<th scope="row">Objective:</th>
+			<td>To understand the basic theory behind object-oriented programming, how this relates to JavaScript ("everything is an object"), and how to create constructors and object instances.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Object-oriented_programming_—_the_basics">Object-oriented programming — the basics</h2>
@@ -84,9 +84,9 @@ tags:
 <h3 id="A_simple_example">A simple example</h3>
 
 <ol>
- <li>Let's start by looking at how you could define a person with a normal function. Add this function within the <code>script</code> element:
+	<li>Let's start by looking at how you could define a person with a normal function. Add this function within the <code>script</code> element:
 
-  <pre class="brush: js">function createNewPerson(name) {
+	<pre class="brush: js notranslate">function createNewPerson(name) {
   const obj = {};
   obj.name = name;
   obj.greeting = function() {
@@ -94,20 +94,20 @@ tags:
   };
   return obj;
 }</pre>
- </li>
- <li>You can now create a new person by calling this function — try the following lines in your browser's JavaScript console:
-  <pre class="brush: js">const salva = createNewPerson('Salva');
+	</li>
+	<li>You can now create a new person by calling this function — try the following lines in your browser's JavaScript console:
+	<pre class="brush: js notranslate">const salva = createNewPerson('Salva');
 salva.name;
 salva.greeting();</pre>
-  This works well enough, but it is a bit long-winded; if we know we want to create an object, why do we need to explicitly create a new empty object and return it? Fortunately, JavaScript provides us with a handy shortcut, in the form of constructor functions — let's make one now!</li>
- <li>Replace your previous function with the following:
-  <pre class="brush: js">function Person(name) {
+	This works well enough, but it is a bit long-winded; if we know we want to create an object, why do we need to explicitly create a new empty object and return it? Fortunately, JavaScript provides us with a handy shortcut, in the form of constructor functions — let's make one now!</li>
+	<li>Replace your previous function with the following:
+	<pre class="brush: js notranslate">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
   };
 }</pre>
- </li>
+	</li>
 </ol>
 
 <p>The constructor function is JavaScript's version of a class. Notice that it has all the features you'd expect in a function, although it doesn't return anything or explicitly create an object — it basically just defines properties and methods. Notice also the <code>this</code> keyword being used here as well — it is basically saying that whenever one of these object instances is created, the object's <code>name</code> property will be equal to the name value passed to the constructor call, and the <code>greeting()</code> method will use the name value passed to the constructor call too.</p>
@@ -119,28 +119,28 @@ salva.greeting();</pre>
 <p>So how do we call a constructor to create some objects?</p>
 
 <ol>
- <li>Add the following lines below your previous code addition:
-  <pre class="brush: js">let person1 = new Person('Bob');
+	<li>Add the following lines below your previous code addition:
+	<pre class="brush: js notranslate">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
- </li>
- <li>Save your code and reload it in the browser, and try entering the following lines into your JS console:
-  <pre class="brush: js">person1.name
+	</li>
+	<li>Save your code and reload it in the browser, and try entering the following lines into your JS console:
+	<pre class="brush: js notranslate">person1.name
 person1.greeting()
 person2.name
 person2.greeting()</pre>
- </li>
+	</li>
 </ol>
 
 <p>Cool! You can now see that we have two new objects on the page, each of which is stored under a different namespace — when you access their properties and methods, you have to start calls with <code>person1</code> or <code>person2</code>; the functionality contained within is neatly packaged away so it won't clash with other functionality. They do, however, have the same <code>name</code> property and <code>greeting()</code> method available. Note that they are using their own <code>name</code> value that was assigned to them when they were created; this is one reason why it is very important to use <code>this</code>, so each one uses its own value, and not some other value.</p>
 
 <p>Let's look at the constructor calls again:</p>
 
-<pre class="brush: js">let person1 = new Person('Bob');
+<pre class="brush: js notranslate">let person1 = new Person('Bob');
 let person2 = new Person('Sarah');</pre>
 
 <p>In each case, the <code>new</code> keyword is used to tell the browser we want to create a new object instance, followed by the function name with its required parameters contained in parentheses, and the result is stored in a variable — very similar to how a standard function is called. Each instance is created according to this definition:</p>
 
-<pre class="brush: js">function Person(name) {
+<pre class="brush: js notranslate">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -149,7 +149,7 @@ let person2 = new Person('Sarah');</pre>
 
 <p>After the new objects have been created, the <code>person1</code> and <code>person2</code> variables contain the following objects:</p>
 
-<pre class="brush: js">{
+<pre class="brush: js notranslate">{
   name: 'Bob',
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -170,8 +170,8 @@ let person2 = new Person('Sarah');</pre>
 <p>The example we looked at above was only a simple example to get us started. Let's now get on and create our final <code>Person()</code> constructor function.</p>
 
 <ol>
- <li>Remove the code you inserted so far, and add in this replacement constructor — this is exactly the same as the simple example in principle, with just a bit more complexity:
-  <pre class="brush: js">function Person(first, last, age, gender, interests) {
+	<li>Remove the code you inserted so far, and add in this replacement constructor — this is exactly the same as the simple example in principle, with just a bit more complexity:
+	<pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
   this.name = {
      first : first,
      last : last
@@ -186,15 +186,15 @@ let person2 = new Person('Sarah');</pre>
     alert('Hi! I\'m ' + this.name.first + '.');
   };
 }</pre>
- </li>
- <li>Now add in the following line below it, to create an object instance from it:
-  <pre class="brush: js">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
- </li>
+	</li>
+	<li>Now add in the following line below it, to create an object instance from it:
+	<pre class="brush: js notranslate">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+	</li>
 </ol>
 
 <p>You can now see that you can access the properties and methods just like we did previously — try these in your JS console:</p>
 
-<pre class="brush: js">person1['age']
+<pre class="brush: js notranslate">person1['age']
 person1.interests[1]
 person1.bio()
 // etc.</pre>
@@ -224,44 +224,44 @@ person1.bio()
 <p>First of all, you can use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object()</a></code> constructor to create a new object. Yes, even generic objects have a constructor, which generates an empty object.</p>
 
 <ol>
- <li>Try entering this into your browser's JavaScript console:
-  <pre class="brush: js">let person1 = new Object();</pre>
- </li>
- <li>This stores an empty object in the <code>person1</code> variable. You can then add properties and methods to this object using dot or bracket notation as desired; try these examples in your console:
-  <pre class="brush: js">person1.name = 'Chris';
+	<li>Try entering this into your browser's JavaScript console:
+	<pre class="brush: js notranslate">let person1 = new Object();</pre>
+	</li>
+	<li>This stores an empty object in the <code>person1</code> variable. You can then add properties and methods to this object using dot or bracket notation as desired; try these examples in your console:
+	<pre class="brush: js notranslate">person1.name = 'Chris';
 person1['age'] = 38;
 person1.greeting = function() {
   alert('Hi! I\'m ' + this.name + '.');
 };</pre>
- </li>
- <li>You can also pass an object literal to the <code>Object()</code> constructor as a parameter, to prefill it with properties/methods. Try this in your JS console:
-  <pre class="brush: js">let person1 = new Object({
+	</li>
+	<li>You can also pass an object literal to the <code>Object()</code> constructor as a parameter, to prefill it with properties/methods. Try this in your JS console:
+	<pre class="brush: js notranslate">let person1 = new Object({
   name: 'Chris',
   age: 38,
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
   }
 });</pre>
- </li>
+	</li>
 </ol>
 
 <h3 id="Using_the_create_method">Using the create() method</h3>
 
 <p>Constructors can help you give your code order—you can create constructors in one place, then create instances as needed, and it is clear where they came from.</p>
 
-<p>However, some people prefer to create object instances without first creating constructors, especially if they are creating only a few instances of an object. JavaScript has a built-in method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> that allows you to do that. With it, you can create a new object based on any existing object.</p>
+<p>However, some people prefer to create object instances without first creating constructors, especially if they are creating only a few instances of an object. JavaScript has a built-in method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> that allows you to do that. With it, you can create a new object, using an existing object as the prototype of the newly created object.</p>
 
 <ol>
- <li>With your finished exercise from the previous sections loaded in the browser, try this in your JavaScript console:
-  <pre class="brush: js">let person2 = Object.create(person1);</pre>
- </li>
- <li>Now try these:
-  <pre class="brush: js">person2.name;
+	<li>With your finished exercise from the previous sections loaded in the browser, try this in your JavaScript console:
+	<pre class="brush: js notranslate">let person2 = Object.create(person1);</pre>
+	</li>
+	<li>Now try these:
+	<pre class="brush: js notranslate">person2.name;
 person2.greeting();</pre>
- </li>
+	</li>
 </ol>
 
-<p>You'll see that <code>person2</code> has been created based on <code>person1</code>—it has the same properties and method available to it.</p>
+<p>You'll see that <code>person2</code> has been created based on <code>person1</code> as its prototype —it has the same properties and method available to it.</p>
 
 <p>One limitation of <code>create()</code> is that IE8 does not support it. So constructors may be more effective if you want to support older browsers.</p>
 
@@ -284,11 +284,11 @@ person2.greeting();</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
 </ul>

@@ -7,15 +7,13 @@ tags:
   - Constraint validation
   - min
 ---
-<div id="step-include">
-<p><span class="seoSummary">The <strong><code>min</code></strong> attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> of the element is less than this, the element fails <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. This value must be less than or equal to the value of the <code>max</code> attribute. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</span></p>
+<p>{{HTMLSidebar}}</p>
 
-<p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the <code>min</code> attribute is a number that specifies the most negative value a form control to be considered valid.</p>
+<p><span class="seoSummary">The <strong><code>min</code></strong> attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-value">value</a></code> of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. This value must be less than or equal to the value of the <code>max</code> attribute. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</span></p>
+
+<p>Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the <code>min</code> attribute is a number that specifies the most negative value a form control to be considered valid.</p>
 
 <h3 id="Syntax">Syntax</h3>
-
-<div id="step-include">
-<p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping - the <code>min</code> value and increments of the step value, up to the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> value, if specified. For example, if we have <code>&lt;input type="number" min="10" step="2"&gt;</code> any even integer, 10 or great, is valid. If omitted, <code>&lt;input type="number"&gt;</code>, any integer is valid, but floats, like 4.2, are not valid, as <code>step</code> defaults to 1. For 4.2 to be valid, <code>step</code> would have had to be set to <code>any</code>, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as <code>&lt;input type="number" min="-5.2"&gt;</code></p>
 
 <table class="standard-table">
  <caption>Syntax for <code>min</code> values by input <code>type</code></caption>
@@ -66,13 +64,12 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the :invalid pseudoclass</p>
-</div>
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} pseudoclass</p>
 </div>
 
 <p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Client-side validation</a> and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.</p>
 
-<p>For the  {{htmlelement('meter')}} element, the <code>min</code> attribute defines the lower numeric bound of the measured range. This must be less than the minimum value (<code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
+<p>For the {{htmlelement('meter')}} element, the <code>min</code> attribute defines the lower numeric bound of the measured range. This must be less than the minimum value (<code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute), if specified. In both cases, if omitted, the value defaults to 1.</p>
 
 <table class="standard-table">
  <caption>Syntax for <code>min</code> values for other elements</caption>
@@ -92,32 +89,29 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Impact_on_step">Impact on <code>step</code></h3>
+<h3 id="Impact_on_step">Impact on step</h3>
 
 <p>The value of <code>min</code> and <code>step</code> define what are valid values, even if the <code>step</code> attribute is not included, as <code>step</code> defaults to <code>0</code>.</p>
 
 <p>We add a big red border around invalid inputs:</p>
 
-<pre class="brush: css">input:invalid {
+<pre class="brush: css notranslate">input:invalid {
   border: solid red 3px;
 }</pre>
 
 <p>Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.</p>
 
-<pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
 
 <p>Because <code>step</code> defaults to 1, valid values include <code>7.2</code>, <code>8.2</code>, <code>9.2</code>, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.</p>
 
 <p>{{EmbedLiveSample("Impact_on_step",200,55)}}</p>
 
 <p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types.</p>
-</div>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-
-
-<p>{{Compat("html.elements.attributes.min")}}</p>
+<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -143,9 +137,11 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using  <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+
+
+<p>{{Compat("html.elements.attributes.min")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -157,5 +153,5 @@ tags:
  <li>{{domxref('validityState.rangeUnderflow')}}</li>
  <li>{{cssxref(':out-of-range')}}</li>
  <li>{{htmlelement('input')}}</li>
- <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
+ <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
 </ul>

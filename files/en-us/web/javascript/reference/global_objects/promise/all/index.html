@@ -36,9 +36,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>This method can be useful for aggregating the results of multiple promises. It is typically used when there are multiple asynchronous tasks that are dependent on one another to complete successfully, as it does not wait and will reject immediately upon <strong>any </strong>of the input promises rejecting.<br>
- <br>
- In comparison, the promise returned by {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete, regardless of whether or not one rejects. Consequently, it will always return the final result of every promise and function from the input iterable.</p>
+<p>This method can be useful for aggregating the results of multiple promises. It is typically used when there are multiple related asynchronous tasks that the overall code relies on to work successfully — all of whom we want to fulfill before the code execution continues.</p>
+
+<p><code>Promise.all()</code> will reject immediately upon <strong>any </strong>of the input promises rejecting. In comparison, the promise returned by {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete, regardless of whether or not one rejects. Consequently, it will always return the final result of every promise and function from the input iterable.</p>
 
 <h3 id="Fulfillment">Fulfillment</h3>
 

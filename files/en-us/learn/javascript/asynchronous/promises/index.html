@@ -196,7 +196,7 @@ tags:
   return response.blob();
 }</pre>
 
-  <p>Unfortunately, we need to do slightly more than this. Fetch promises do not fail on 404 or 500 errors — only on something catasrophic like a network failure. Instead, they succeed, but with the <code><a href="/en-US/docs/Web/API/Response/ok">response.ok</a></code> property set to <code>false</code>. To produce an error on a 404, for example, we need to check the value of <code>response.ok</code>, and if <code>false</code>, throw an error, only returning the blob if it is <code>true</code>. This can be done like so — add the following lines below your first line of JavaScript.</p>
+  <p>Unfortunately, we need to do slightly more than this. Fetch promises do not fail on 404 or 500 errors — only on something catastrophic like a network failure. Instead, they succeed, but with the <code><a href="/en-US/docs/Web/API/Response/ok">response.ok</a></code> property set to <code>false</code>. To produce an error on a 404, for example, we need to check the value of <code>response.ok</code>, and if <code>false</code>, throw an error, only returning the blob if it is <code>true</code>. This can be done like so — add the following lines below your first line of JavaScript.</p>
 
   <pre class="brush: js notranslate">let promise2 = promise.then(response =&gt; {
   if (!response.ok) {

@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><code>Promise.any()</code> takes an iterable of {{JSxRef("Promise")}} objects and, as soon as one of the promises in the iterable fulfils, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfil (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors. Essentially, this method is the opposite of {{JSxRef("Promise.all()")}}.</p>
+<p><code>Promise.any()</code> takes an iterable of {{JSxRef("Promise")}} objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors. Essentially, this method is the opposite of {{JSxRef("Promise.all()")}}.</p>
 
 <div class="blockIndicator warning">
 <p><strong>Warning!</strong> The <code>Promise.any()</code> method is experimental and not fully supported by all browsers and platforms. It is currently in <a href="https://github.com/tc39/proposal-promise-any">stage 4 of the TC39 process</a>.</p>

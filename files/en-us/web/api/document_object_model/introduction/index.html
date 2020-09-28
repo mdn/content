@@ -20,9 +20,9 @@ tags:
 
 <p>The <a class="external" href="http://www.w3.org/DOM/">W3C DOM</a> and <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
 
-<p>For example, the standard DOM specifies that the <code>getElementsByTagName</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
+<p>For example, the standard DOM specifies that the <code>querySelectorAll</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
 
-<pre class="brush: js notranslate">const paragraphs = document.getElementsByTagName("p");
+<pre class="brush: js notranslate">const paragraphs = document.querySelectorAll("p");
 // paragraphs[0] is the first &lt;p&gt; element
 // paragraphs[1] is the second &lt;p&gt; element, etc.
 alert(paragraphs[0].nodeName);
@@ -167,8 +167,8 @@ table.summary = "note: increased border";
 <p>The following is a brief list of common APIs in web and XML page scripting using the DOM.</p>
 
 <ul>
- <li><code>{{domxref("document.getElementById", "", "", "1")}}(id)</code></li>
- <li><code>document.{{domxref("Element.getElementsByTagName", "getElementsByTagName", "", "1")}}(name)</code></li>
+ <li><code>{{domxref("document.querySelector", "", "", "1")}}(selector)</code></li>
+ <li><code>document.{{domxref("Element.querySelectorAll", "querySelectorAll", "", "1")}}(name)</code></li>
  <li><code>{{domxref("document.createElement", "", "", "1")}}(name)</code></li>
  <li><code>parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)</code></li>
  <li><code>element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}</code></li>

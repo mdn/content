@@ -13,33 +13,33 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-or.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Atomics.or(typedArray, index, value)
+<pre class="syntaxbox notranslate">Atomics.or(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>typedArray</code></dt>
+ <dt><code><var>typedArray</var></code></dt>
  <dd>An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>The position in the <code>typedArray</code> to compute the bitwise OR.</dd>
- <dt><code>value</code></dt>
+ <dt><code><var>index</var></code></dt>
+ <dd>The position in the <code><var>typedArray</var></code> to compute the bitwise OR.</dd>
+ <dt><code><var>value</var></code></dt>
  <dd>The number to compute the bitwise OR with.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The old value at the given position (<code>typedArray[index]</code>).</p>
+<p>The old value at the given position (<code><var>typedArray</var>[<var>index</var>]</code>).</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <ul>
- <li>Throws a {{jsxref("TypeError")}}, if <code>typedArray</code> is not one of the allowed integer types.</li>
- <li>Throws a {{jsxref("RangeError")}}, if <code>index</code> is out of bounds in the <code>typedArray</code>.</li>
+ <li>Throws a {{jsxref("TypeError")}}, if <code><var>typedArray</var></code> is not one of the allowed integer types.</li>
+ <li>Throws a {{jsxref("RangeError")}}, if <code><var>index</var></code> is out of bounds in the <code><var>typedArray</var></code>.</li>
 </ul>
 
 <h2 id="Description">Description</h2>
@@ -78,7 +78,7 @@ tags:
  </tbody>
 </table>
 
-<p>For example, a bitwise OR of <code>5 &amp; 1</code> results in <code>0101</code> which is 5 in decimal.</p>
+<p>For example, a bitwise OR of <code>5 | 1</code> results in <code>0101</code> which is 5 in decimal.</p>
 
 <pre class="notranslate">5  0101
 1  0001
@@ -100,10 +100,12 @@ Atomics.load(ta, 0);  // 3</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-atomics.or', 'Atomics.or')}}</td>
   </tr>

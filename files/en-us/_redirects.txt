@@ -10199,7 +10199,7 @@
 /en-US/docs/Web/API/DynamicsCompressorNode.reduction	/en-US/docs/Web/API/DynamicsCompressorNode/reduction
 /en-US/docs/Web/API/DynamicsCompressorNode.release	/en-US/docs/Web/API/DynamicsCompressorNode/release
 /en-US/docs/Web/API/DynamicsCompressorNode.threshold	/en-US/docs/Web/API/DynamicsCompressorNode/threshold
-/en-US/docs/Web/API/Element.accessKey	/en-US/docs/Web/API/Element/accessKey
+/en-US/docs/Web/API/Element.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/Web/API/Element.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
 /en-US/docs/Web/API/Element.childElementCount	/en-US/docs/Web/API/ParentNode/childElementCount
@@ -10240,7 +10240,7 @@
 /en-US/docs/Web/API/Element.matrches	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element.mozMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element.mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
-/en-US/docs/Web/API/Element.name	/en-US/docs/Web/API/Element/name
+/en-US/docs/Web/API/Element.name	/en-US/docs/Web/API
 /en-US/docs/Web/API/Element.nextElementSibling	/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling
 /en-US/docs/Web/API/Element.offsetHeight	/en-US/docs/Web/API/HTMLElement/offsetHeight
 /en-US/docs/Web/API/Element.offsetLeft	/en-US/docs/Web/API/HTMLElement/offsetLeft
@@ -10300,6 +10300,7 @@
 /en-US/docs/Web/API/Element/Element.localName	/en-US/docs/Web/API/Element/localName
 /en-US/docs/Web/API/Element/Element:_fullscreenerror_event	/en-US/docs/Web/API/Element/fullscreenerror_event
 /en-US/docs/Web/API/Element/Element:touchend_event	/en-US/docs/Web/API/Element/touchend_event
+/en-US/docs/Web/API/Element/accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element/animationcancel_event	/en-US/docs/Web/API/HTMLElement/animationcancel_event
 /en-US/docs/Web/API/Element/animationend_event	/en-US/docs/Web/API/HTMLElement/animationend_event
 /en-US/docs/Web/API/Element/animationiteration_event	/en-US/docs/Web/API/HTMLElement/animationiteration_event
@@ -10315,6 +10316,7 @@
 /en-US/docs/Web/API/Element/lostpointercapture_event	/en-US/docs/Web/API/HTMLElement/lostpointercapture_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/Element/msMatchesSelector	/en-US/docs/Web/API/Element/matches
+/en-US/docs/Web/API/Element/name	/en-US/docs/Web/API
 /en-US/docs/Web/API/Element/nextElementSibling	/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling
 /en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture

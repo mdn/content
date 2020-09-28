@@ -23,7 +23,7 @@ tags:
   </tr>
   <tr>
    <td><strong>Default value</strong></td>
-   <td><code>50%, 50%</code></td>
+   <td><code>0, 0</code></td>
   </tr>
   <tr>
    <td><strong>Animatable</strong></td>
@@ -31,6 +31,10 @@ tags:
   </tr>
  </tbody>
 </table>
+
+<div class="blockIndicator note">
+<p>The default value of <code>transform-origin</code> is <code>0 0</code> for all SVG elements except for root <code>&lt;svg&gt;</code> elements and <code>&lt;svg&gt;</code> elements that are a direct child of a <a href="/en-US/docs/Web/SVG/Element/foreignObject">foreignObject</a>, and whose transform-origin is <code>50% 50%</code>, like other CSS elements.</p>
+</div>
 
 <p>The <code>transform-origin</code> property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/initial_value">initial values</a>.</p>
 

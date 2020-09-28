@@ -24,7 +24,7 @@ tags:
 
 <p>If no {{HTTPHeader("Accept")}} header has been set using this, an <code>Accept</code> header with the type <code>"*/*"</code> is sent with the request when {{domxref("XMLHttpRequest.send", "send()")}} is called.</p>
 
-<p>For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p>For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 
 <div class="note">
 <p><strong>Note:</strong> For your custom fields, you may encounter a "<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>" exception when you send requests across domains. In this situation, you need to set up the {{HTTPHeader("Access-Control-Allow-Headers")}} in your response header at server side.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.setRequestHeader(<var>header</var>, <var>value</var>)
+<pre class="syntaxbox notranslate"><var>XMLHttpRequest</var>.setRequestHeader(<var>header</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -51,12 +51,14 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('XMLHttpRequest', '#the-setrequestheader()-method', 'setRequestHeader()')}}</td>
    <td>{{Spec2('XMLHttpRequest')}}</td>

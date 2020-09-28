@@ -34,7 +34,7 @@ tags:
 
 <p>In the following example, a transform stream passes through all chunks it receives as {{domxref("Uint8Array")}} values.</p>
 
-<pre class="brush: js">const transformContent = {
+<pre class="brush: js notranslate">const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
     chunk = await chunk
@@ -73,7 +73,7 @@ class AnyToU8Stream extends TransformStream {
 
 <p>Note that this is deprecated by the native constructors. This is intended as a polyfill for unsupported platforms.</p>
 
-<pre class="brush: js">const tes = {
+<pre class="brush: js notranslate">const tes = {
   start(){this.encoder = new TextEncoder()},
   transform(chunk, controller) {
     controller.enqueue(this.encoder.encode(chunk))
@@ -93,12 +93,12 @@ class JSTextEncoderStream extends TransformStream {
 
 <p>Similarly, TextDecoderStream can be written as such:</p>
 
-<pre class="brush: js">const tes = {
+<pre class="brush: js notranslate">const tes = {
   start(){
     this.decoder = new TextDecoder(this.encoding, this.options)
   },
   transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk))
+    controller.enqueue(this.decoder.decode(chunk, { stream: true }))
   }
 }
 let _jstds_wm = new WeakMap(); /* info holder */
@@ -119,7 +119,7 @@ class JSTextDecoderStream extends TransformStream {
 
 <p>This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.</p>
 
-<pre class="brush: js">let responses = [ /* conjoined response tree */ ]
+<pre class="brush: js notranslate">let responses = [ /* conjoined response tree */ ]
 let {readable, writable} = new TransformStream
 
 responses.reduce(
@@ -158,5 +158,5 @@ responses.reduce(
 <h2 id="See_Also">See Also</h2>
 
 <ul>
-<li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
+ <li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
 </ul>

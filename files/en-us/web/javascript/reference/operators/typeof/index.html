@@ -27,8 +27,8 @@ typeof(<var>operand</var>)
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>operand</var></code></dt>
-	<dd>An expression representing the object or <a href="/en-US/docs/Glossary/Primitive">primitive</a> whose type is to be returned.</dd>
+ <dt><code><var>operand</var></code></dt>
+ <dd>An expression representing the object or <a href="/en-US/docs/Glossary/Primitive">primitive</a> whose type is to be returned.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -36,50 +36,50 @@ typeof(<var>operand</var>)
 <p>The following table summarizes the possible return values of <code>typeof</code>. For more information about types and primitives, see also the <a href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data structure</a> page.</p>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Type</th>
-			<th scope="col">Result</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Undefined">Undefined</a></td>
-			<td><code>"undefined"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Null">Null</a></td>
-			<td><code>"object"</code> (see <a href="#null">below</a>)</td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Boolean">Boolean</a></td>
-			<td><code>"boolean"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Number">Number</a></td>
-			<td><code>"number"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/BigInt">BigInt</a> (new in ECMAScript 2020)</td>
-			<td><code>"bigint"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/String">String</a></td>
-			<td><code>"string"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Symbol">Symbol</a> (new in ECMAScript 2015)</td>
-			<td><code>"symbol"</code></td>
-		</tr>
-		<tr>
-			<td><a href="/en-US/docs/Glossary/Function">Function</a> object (implements [[Call]] in ECMA-262 terms)</td>
-			<td><code>"function"</code></td>
-		</tr>
-		<tr>
-			<td>Any other object</td>
-			<td><code>"object"</code></td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Type</th>
+   <th scope="col">Result</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Undefined">Undefined</a></td>
+   <td><code>"undefined"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Null">Null</a></td>
+   <td><code>"object"</code> (see <a href="#null">below</a>)</td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Boolean">Boolean</a></td>
+   <td><code>"boolean"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Number">Number</a></td>
+   <td><code>"number"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/BigInt">BigInt</a> (new in ECMAScript 2020)</td>
+   <td><code>"bigint"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/String">String</a></td>
+   <td><code>"string"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Symbol">Symbol</a> (new in ECMAScript 2015)</td>
+   <td><code>"symbol"</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Glossary/Function">Function</a> object (implements [[Call]] in ECMA-262 terms)</td>
+   <td><code>"function"</code></td>
+  </tr>
+  <tr>
+   <td>Any other object</td>
+   <td><code>"object"</code></td>
+  </tr>
+ </tbody>
 </table>
 
 <div class="blockIndicator note">
@@ -218,19 +218,44 @@ class newClass{};</pre>
 
 <p>Although the specification allows custom type tags for non-standard exotic objects, it requires those type tags to be different from the predefined ones. The case of <code>document.all</code> having type <code>'undefined'</code> is classified in the web standards as a "willful violation" of the original ECMA JavaScript standard.</p>
 
+<h3 id="Real-world_usage">Real-world usage</h3>
+
+<p><code>typeof</code> is very useful, but it's not as versatile as might be required. For example, <code>typeof([])</code> , is <code>'object'</code>, as well as <code>typeof(new Date())</code>, <code>typeof(/abc/)</code>, etc.</p>
+
+<p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in production-level code would be as follows (provided <code>obj</code> exists):</p>
+
+<pre class="brush: js notranslate">  function type(obj) {
+
+    // get toPrototypeString() of obj (handles all types)
+    // Early JS environments can return '[object Object]' for null, so it's best to directly check for it.
+
+    if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
+
+    var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
+
+    // prevent overspecificity (for example, [object HTMLDivElement], etc).
+    // account for functionish Regexp (Android &lt;=2.3), functionish &lt;object&gt; element (Chrome &lt;=57, Firefox &lt;=52)
+    // String.prototype.match has universal browser support.
+
+    return deepType.match(/array|date|error|function|regexp//*|number|string|symbol|bigint|boolean/*/) ? deepType :
+      (typeof obj === 'object' || typeof obj === 'function') ? 'object' : deepType;
+  }</pre>
+
+<p>For checking non-existent variables that would otherwise throw a {{JSxRef("ReferenceError")}}, use <code>typeof nonExistentVar === 'undefined'</code>.</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-typeof-operator', 'The typeof Operator')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-typeof-operator', 'The typeof Operator')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -253,6 +278,6 @@ typeof window.external.IsSearchProviderInstalled === "unknown";</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
-	<li><a href="https://github.com/tc39/ecma262/issues/668"><code>document.all</code> willful violation of the standard</a></li>
+ <li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
+ <li><a href="https://github.com/tc39/ecma262/issues/668"><code>document.all</code> willful violation of the standard</a></li>
 </ul>

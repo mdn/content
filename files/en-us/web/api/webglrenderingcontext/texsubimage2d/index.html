@@ -15,16 +15,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">// WebGL 1:
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>width</var>, <var>height</var>, <var>format</var>, <var>type</var>, ArrayBufferView? <var>pixels</var>);
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, ImageData? <var>pixels</var>);
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, HTMLImageElement? <var>pixels</var>);
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, HTMLCanvasElement? <var>pixels</var>);
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, HTMLVideoElement? <var>pixels</var>);
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, ImageBitmap? <var>pixels</var>);
+<pre class="syntaxbox notranslate">// WebGL 1:
+void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, ArrayBufferView? pixels);
+void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, ImageData? pixels);
+void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLImageElement? pixels);
+void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLCanvasElement? pixels);
+void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, HTMLVideoElement? pixels);
+void gl.texSubImage2D(target, level, xoffset, yoffset, format, type, ImageBitmap? pixels);
 
 // WebGL 2:
-void <var>gl</var>.texSubImage2D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>format</var>, <var>type</var>, GLintptr <var>offset</var>);
+void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, GLintptr offset);
 void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLCanvasElement source);
 void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLImageElement source);
 void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, HTMLVideoElement source);
@@ -150,7 +150,7 @@ void gl.texSubImage2D(target, level, xoffset, yoffset, width, height, format, ty
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
+<pre class="brush: js notranslate">gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

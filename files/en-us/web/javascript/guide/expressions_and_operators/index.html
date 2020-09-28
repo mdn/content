@@ -607,7 +607,7 @@ delete property; // legal only within a with statement
 var y = 43;
 var myobj = {h: 4}; // create object with property h
 
-delete x;       // returns true (can delete if created implicitly)
+delete x;       // returns false (cannot delete if created implicitly)
 delete y;       // returns false (cannot delete if declared with var)
 delete Math.PI; // returns false (cannot delete non-configurable properties)
 delete myobj.h; // returns true (can delete user-defined properties)

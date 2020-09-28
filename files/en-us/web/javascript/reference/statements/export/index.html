@@ -80,7 +80,10 @@ export { myFunction as default };
 
 // export individual features as default
 export default function () { ... }
-export default class { .. }</pre>
+export default class { .. }
+
+// each export overwrites the previous one
+</pre>
 
 <p>Named exports are useful to export several values. During the import, it is mandatory to use the same name of the corresponding object.</p>
 

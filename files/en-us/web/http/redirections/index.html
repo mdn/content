@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Principle">Principle</h2>
 
-<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href="/en-US/docs/Web/HTTP/Status">status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
+<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href="/en-US/docs/Web/HTTP/Status">status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
 
 <p>When browsers receive a redirect, they immediately load the new URL provided in the <code>Location</code> header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.</p>
 
@@ -63,7 +63,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="attr1" name="attr1"></a>[1] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("308")}} was created to remove the ambiguity of the behavior when using non-<code>GET</code> methods.</p>
+<p id="attr1">[1] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("308")}} was created to remove the ambiguity of the behavior when using non-<code>GET</code> methods.</p>
 
 <h3 id="Temporary_redirections">Temporary redirections</h3>
 
@@ -104,7 +104,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="attr2" name="attr2"></a>[2] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("307")}} was created to remove the ambiguity of the behavior when using non-<code>GET</code> methods.</p>
+<p id="attr2">[2] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("307")}} was created to remove the ambiguity of the behavior when using non-<code>GET</code> methods.</p>
 
 <h3 id="Special_redirections">Special redirections</h3>
 
@@ -145,7 +145,7 @@ tags:
 
 <p>HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its {{htmlattrxref("http-equiv", "meta")}} attribute set to <code>Refresh</code> in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.</p>
 
-<pre class="brush: html">&lt;head&gt;
+<pre class="brush: html notranslate">&lt;head&gt;
   &lt;meta http-equiv="Refresh" content="0; URL=https://example.com/"&gt;
 &lt;/head&gt;
 </pre>
@@ -158,7 +158,7 @@ tags:
 
 <p>Redirections in JavaScript are performed by setting a URL string to the {{domxref("window.location")}} property, loading the new page:</p>
 
-<pre class="brush: js">window.location = "https://example.com/";</pre>
+<pre class="brush: js notranslate">window.location = "https://example.com/";</pre>
 
 <p>Like HTML redirections, this can't work on all resources, and obviously, this will only work on clients that execute JavaScript. On the other hand, there are more possibilities: for example, you can trigger the redirect only if some conditions are met.</p>
 
@@ -221,7 +221,7 @@ tags:
 
 <p>The <code><a href="https://httpd.apache.org/docs/current/mod/mod_alias.html">mod_alias</a></code> module has <code>Redirect</code> and <code>RedirectMatch</code> directives that set up {{HTTPStatus("302")}} redirects by default:</p>
 
-<pre>&lt;VirtualHost *:443&gt;
+<pre class="notranslate">&lt;VirtualHost *:443&gt;
 	ServerName example.com
 	Redirect / https://www.example.com
 &lt;/VirtualHost&gt;
@@ -229,15 +229,15 @@ tags:
 
 <p>The URL <code>https://example.com/</code> will be redirected to <code>https://www.example.com/</code>, as will any files or directories under it (<code>https://example.com/some-page</code> will be redirected to <code>https://www.example.com/some-page</code>)</p>
 
-<p><code>RedirectMatch</code> does the same, but takes a <a href="/en-US/docs/Glossary/Regular_expression">regular expression</a> to define a collection of affected URLs:</p>
+<p><code>RedirectMatch</code> does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:</p>
 
-<pre>RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
+<pre class="notranslate">RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
 
 <p>All documents in the <code>images/</code> directory will redirect to a different domain.</p>
 
 <p>If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the <code>permanent</code> keyword) can be used to set up a different redirect:</p>
 
-<pre>Redirect permanent / https://www.example.com
+<pre class="notranslate">Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
 </pre>
@@ -248,7 +248,7 @@ Redirect 301 / https://www.example.com
 
 <p>In Nginx, you create a specific server block for the content you want to redirect:</p>
 
-<pre>server {
+<pre class="notranslate">server {
 	listen 80;
 	server_name example.com;
 	return 301 $scheme://www.example.com$request_uri;
@@ -256,7 +256,7 @@ Redirect 301 / https://www.example.com
 
 <p>To apply a redirect to a directory or only certain pages, use the <code>rewrite</code> directive:</p>
 
-<pre>rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+<pre class="notranslate">rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 </pre>
 

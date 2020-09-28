@@ -7,14 +7,13 @@ tags:
   - CSS
   - CSS Basic User Interface
   - CSS Property
-  - Experimental
   - Reference
   - appearance
   - 'recipe:css-property'
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+<div>{{CSSRef}}</div>
 
-<p>The <code><strong>appearance</strong></code> CSS property is used to display an element using platform-native styling, based on the operating system's theme. The <strong><code>-moz-appearance</code></strong> and <strong><code>-webkit-appearance</code></strong> properties are non-standard versions of this propery, used (respectively) by Gecko (Firefox) and by WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome, Opera) browsers to achieve the same thing. Note that Firefox and Edge also support <code>-webkit-appearance</code>, for compatibility reasons.</p>
+<p>The <code><strong>appearance</strong></code> CSS property is used to display an element using platform-native styling, based on the operating system's theme. The <strong><code>-moz-appearance</code></strong> and <strong><code>-webkit-appearance</code></strong> properties are non-standard versions of this propery, used (respectively) by Gecko (Firefox) and by WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome, Opera) browsers to achieve the same thing. Note that Firefox and Edge also support <strong><code>-webkit-appearance</code></strong>, for compatibility reasons.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/appearance.html")}}</div>
 
@@ -23,7 +22,7 @@ tags:
 <p>The <strong><code>-moz-appearance</code></strong> property was used in <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial">XUL</a> stylesheets to design custom widgets with platform-appropriate styling. It was also used in the <a href="/en-US/docs/XBL">XBL</a> implementations of the widgets that ship with the Mozilla platform. Starting with Gecko/Firefox 80, these uses were changed to <code><strong>-moz-default-appearance</strong></code>, which should never be used outside of internal stylesheets.</p>
 
 <div class="note">
-<p><strong>Compatibility note</strong>: If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
+<p><strong>Compatibility note</strong>: If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword <code>none</code> does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -87,7 +86,7 @@ appearance:none; }</pre>
    <td>No special styling is applied. This is the default.</td>
   </tr>
   <tr>
-   <td><code>auto</code> {{Experimental_Inline}}</td>
+   <td><code>auto</code></td>
    <td>
     <div class="hidden" id="sampleAuto">
     <pre class="brush: css notranslate">
@@ -100,7 +99,7 @@ appearance:auto; }</pre>
 &lt;div&gt;Lorem&lt;/div&gt;</pre>
     </div>
     {{EmbedLiveSample("sampleAuto",100,50,"","", "nobutton")}}</td>
-   <td>None</td>
+   <td>Firefox Chrome</td>
    <td>The user agent selects the appropriate special styling based on the element. Acts as <code>none</code> on elements with no special styling.</td>
   </tr>
   <tr>

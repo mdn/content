@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The static <code><strong>Reflect</strong></code><strong><code>.has()</code></strong> method works like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> as a function.</p>
+<p>The static <strong><code>Reflect.has()</code></strong> method works like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> as a function.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-has.html")}}</div>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Reflect.has(<var>target</var>, <var>propertyKey</var>)
+<pre class="syntaxbox notranslate">Reflect.has(<var>target</var>, <var>propertyKey</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,9 +44,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Reflect.has">Using <code>Reflect.has()</code></h3>
+<h3 id="Using_Reflect.has">Using Reflect.has()</h3>
 
-<pre class="brush: js">Reflect.has({x: 0}, 'x')  // true
+<pre class="brush: js notranslate">Reflect.has({x: 0}, 'x')  // true
 Reflect.has({x: 0}, 'y')  // false
 
 // returns true for properties in the prototype chain
@@ -62,7 +62,7 @@ Reflect.has(obj, 'dormitory')  // false
 
 <p><code>Reflect.has</code> returns <code>true</code> for any inherited properties, like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a>:</p>
 
-<pre class="brush: js">const a = {foo: 123}
+<pre class="brush: js notranslate">const a = {foo: 123}
 const b = {__proto__: a}
 const c = {__proto__: b}
 // The prototype chain is: c -&gt; b -&gt; a
@@ -72,10 +72,12 @@ Reflect.has(c, 'foo') // true
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}}</td>
   </tr>

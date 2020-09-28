@@ -11,20 +11,17 @@ tags:
   - Reference
   - typography
 ---
-<div><a href="https://mdn.mozillademos.org/files/17385/MuseoSansCyrl_500-webfont.svg">https://mdn.mozillademos.org/files/17385/MuseoSansCyrl_500-webfont.svg</a>{{CSSRef}}</div>
+<div>{{CSSRef}}</div>
 
 <p><span class="seoSummary">The <strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">@font-face {
-    font-family: 'MyMuseoSans';
-         url('MuseoSansCyrl_500-webfont.woff2') format('woff2'),
-         url('MuseoSansCyrl_500-webfont.woff') format('woff'),
-         url('MuseoSansCyrl_500-webfont.ttf') format('truetype'),
-    font-weight: normal;
-    font-style: normal;
-</pre>
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}</pre>
 
 <h3 id="Descriptors">Descriptors</h3>
 
@@ -118,13 +115,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">@font-face {
-    font-family: 'MyMuseoSans';
-         url('MuseoSansCyrl_500-webfont.woff2') format('woff2'),
-         url('MuseoSansCyrl_500-webfont.woff') format('woff'),
-         url('MuseoSansCyrl_500-webfont.ttf') format('truetype'),
-    font-weight: normal;
-    font-style: normal;</pre>
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 

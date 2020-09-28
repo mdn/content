@@ -197,14 +197,14 @@ tags:
 
 <p>Other than this, <code>&lt;audio&gt;</code> supports all the same features as <code>&lt;video&gt;</code> — review the above sections for more information about them.</p>
 
-<h3 id="Restarting_media_playback">Restarting media playback</h3>
+<h3 id="Restarting_media_playback_requires_JavaScript">Restarting media playback (requires JavaScript)</h3>
 
 <p>At any time, you can reset the media to the beginning—including the process of selecting the best media source, if more than one is specified using {{HTMLElement("source")}} elements—by calling the element's {{domxref("HTMLMediaElement.load", "load()")}} method:</p>
 
 <pre class="brush: js notranslate">const mediaElem = document.getElementById("my-media-element");
 mediaElem.load();</pre>
 
-<h3 id="Detecting_track_addition_and_removal">Detecting track addition and removal</h3>
+<h3 id="Detecting_track_addition_and_removal_requires_JavaScript">Detecting track addition and removal (requires JavaScript)</h3>
 
 <p>You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:</p>
 

@@ -17,7 +17,7 @@ tags:
 
 <p>All objects (with the exception of objects created with <code>Object.create(null)</code>) will have a <code>constructor</code> property. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a <code>constructor</code> property that points to the Fundamental Object constructor type for that object.</p>
 
-<pre class="brush: js">let o = {}
+<pre class="brush: js notranslate">let o = {}
 o.constructor === Object // true
 
 let o = new Object
@@ -39,7 +39,7 @@ n.constructor === Number // true
 
 <p>The following example creates a constructor (<code>Tree</code>) and an object of that type (<code>theTree</code>). The example then displays the <code>constructor</code> property for the object <code>theTree</code>.</p>
 
-<pre class="brush: js">function Tree(name) {
+<pre class="brush: js notranslate">function Tree(name) {
   this.name = name
 }
 
@@ -49,7 +49,7 @@ console.log('theTree.constructor is ' + theTree.constructor)
 
 <p>This example displays the following output:</p>
 
-<pre class="brush: js">theTree.constructor is function Tree(name) {
+<pre class="brush: js notranslate">theTree.constructor is function Tree(name) {
   this.name = name
 }
 </pre>
@@ -60,7 +60,7 @@ console.log('theTree.constructor is ' + theTree.constructor)
 
 <p>This example shows that it is not always safe to rely on the <code>constructor</code> property of an object.</p>
 
-<pre class="brush:js">function Type () {}
+<pre class="brush:js notranslate">function Type () {}
 
 let types = [
   new Array(),
@@ -92,7 +92,7 @@ console.log(types.join('\n'))
 
 <p>This example displays the following output (comments added for reference):</p>
 
-<pre class="brush: js">function Type() {},false,                                     // new Array()
+<pre class="brush: js notranslate">function Type() {},false,                                     // new Array()
 function Type() {},false,                                     // []
 function Type() {},false,false                                // new Boolean()
 function Boolean() {
@@ -123,7 +123,7 @@ function String() {
 
 <p>Mostly this property is used for defining a function as a <strong>function-constructor</strong> with further calling it with <strong>new</strong> and prototype-inherits chain.</p>
 
-<pre class="brush: js">function Parent() { /* ... */ }
+<pre class="brush: js notranslate">function Parent() { /* ... */ }
 Parent.prototype.parentMethod = function parentMethod() {}
 
 function Child() {
@@ -133,13 +133,13 @@ Child.prototype = Object.create(Parent.prototype) // re-define child prototype t
 
 Child.prototype.constructor = Child // return original constructor to Child</pre>
 
-<p>But when do we need to perform the last line here? Unfortunately, the answer is: <em>it depends</em>.</p>
+<p>But when do we need to perform the last line here? Unfortunately, the answer is: <em>it depends</em>.</p>
 
 <p>Let's try to define the cases in which re-assignment of the original constructor will play a major role, and when it will be one superfluous line of code.</p>
 
-<p>Take the following case: the object has the <code>create()</code><strong> </strong>method to create itself.</p>
+<p>Take the following case: the object has the <code>create()</code> method to create itself.</p>
 
-<pre class="brush: js">function Parent() { /* ... */ }
+<pre class="brush: js notranslate">function Parent() { /* ... */ }
 function CreatedConstructor() {
    Parent.call(this)
 }
@@ -156,7 +156,7 @@ new CreatedConstructor().create().create() // TypeError undefined is not a funct
 
 <p>To avoid this, just assign the necessary constructor you are going to use.</p>
 
-<pre class="brush: js">function Parent() { /* ... */ }
+<pre class="brush: js notranslate">function Parent() { /* ... */ }
 function CreatedConstructor() { /* ... */ }
 
 CreatedConstructor.prototype = Object.create(Parent.prototype)
@@ -172,7 +172,7 @@ new CreatedConstructor().create().create() // it's pretty fine</pre>
 
 <p>Let's consider one more case.</p>
 
-<pre class="brush: js">function ParentWithStatic() {}
+<pre class="brush: js notranslate">function ParentWithStatic() {}
 
 ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
@@ -200,25 +200,23 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
   }
 };</pre>
 
-<p>For this example we need either to stay parent constructor to continue to work properly or  reassign static properties to child's constructor:</p>
+<p>For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:</p>
 
-<pre class="brush: js">...
+<pre class="brush: js notranslate">...
 Child = Object.assign(ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 </pre>
 
-<p>or assign parent constructor identifier to a separate property on the Child constructor function and access it via that property: </p>
+<p>or assign parent constructor identifier to a separate property on the Child constructor function and access it via that property:</p>
 
-<pre class="brush: js">...
+<pre class="brush: js notranslate">...
 Child.parentConstructor = ParentWithStatic
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
    let startPosition = this.constructor.parentConstructor.getStartPosition()
 ...
 </pre>
-
-
 
 <div class="blockIndicator note">
 <p><strong>Summary</strong>: Manually updating or setting the constructor can lead to differrent and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
@@ -245,18 +243,14 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 
 <p>{{Compat("javascript.builtins.Object.constructor")}}</p>
 
-
-
-
-
 <h2 id="See_also">See also</h2>
 
 <div class="hidden">
-<p>The curly braces here invoke standard macroses defined by the MDN wiki. Checkout here for more info: <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros</a></p>
+<p>The curly braces here invoke standard macroses defined by the MDN wiki. Checkout here for more info: <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros</a></p>
 </div>
 
 <ul>
- <li>{{jsxref("statements/class","Class declaration",1)}} </li>
- <li>{{jsxref("Classes/constructor","Class constructor",1)}} </li>
+ <li>{{jsxref("statements/class","Class declaration","",1)}}</li>
+ <li>{{jsxref("Classes/constructor","Class constructor","",1)}}</li>
  <li>Glossary: {{Glossary("constructor", "", 1)}}</li>
 </ul>

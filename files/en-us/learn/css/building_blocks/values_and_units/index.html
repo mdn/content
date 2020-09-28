@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Every property used in CSS has a value or set of values that are allowed for that property.  Taking a look at any property page on MDN will help you understand the values that are valid for any particular property. In this lesson we will take a look at some of the most common values and units in use.</p>
+<p>Every property used in CSS has a value type defining the set of values that are allowed for that property.  Taking a look at any property page on MDN will help you understand the values associated with a value type that are valid for any particular property. In this lesson we will take a look at some of the most frequently used value types, and their most common values and units.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -34,14 +34,14 @@ tags:
 
 <h2 id="What_is_a_CSS_value">What is a CSS value?</h2>
 
-<p>In CSS specifications and on the property pages here on MDN you will be able to spot values as they will be surrounded by angle brackets, such as <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> or <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. When you see the value <code>&lt;color&gt;</code> as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> reference page.</p>
+<p>In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> or <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. When you see the value type <code>&lt;color&gt;</code> as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> reference page.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: You'll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value.</p>
+<p><strong>Note</strong>: You'll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term <em>value</em> refers to any particular expression supported by a value type that you choose to use.</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
+<p><strong>Note</strong>: Yes, CSS value types tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
 </div>
 
 <p>In the following example, we have set the color of our heading using a keyword, and the background using the <code>rgb()</code> function:</p>
@@ -52,13 +52,13 @@ tags:
 } </code>
 </pre>
 
-<p>A value in CSS is a way to define a collection of allowable sub-values. This means that if you see <code>&lt;color&gt;</code> as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, <code>rgb()</code> functions, etc. You can use <em>any</em> available <code>&lt;color&gt;</code> values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> you will see that the browser compatibility section lists different types of color value and support for them.</p>
+<p>A value type in CSS is a way to define a collection of allowable values. This means that if you see <code>&lt;color&gt;</code> as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, <code>rgb()</code> functions, etc. You can use <em>any</em> available <code>&lt;color&gt;</code> values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> you will see that the browser compatibility section lists different types of color value and support for them.</p>
 
 <p>Let's have a look at some of the types of values and units you may frequently encounter, with examples so that you can try out different possible values.</p>
 
 <h2 id="Numbers_lengths_and_percentages">Numbers, lengths, and percentages</h2>
 
-<p>There are various numeric data types that you might find yourself using in CSS. The following are all classed as numeric:</p>
+<p>There are various numeric value types that you might find yourself using in CSS. The following are all classed as numeric:</p>
 
 <table class="standard-table">
  <thead>
@@ -142,7 +142,7 @@ tags:
  </tbody>
 </table>
 
-<p>Most of these values are more useful when used for print, rather than screen output. For example, we don't typically use <code>cm</code> (centimeters) on screen. The only value that you will commonly use is <code>px</code> (pixels).</p>
+<p>Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use <code>cm</code> (centimeters) on screen. The only value that you will commonly use is <code>px</code> (pixels).</p>
 
 <h4 id="Relative_length_units">Relative length units</h4>
 
@@ -239,11 +239,11 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
 
-<p>Note that, while many values accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> then you can use a length or a percentage. If the allowed value only includes <code>&lt;length&gt;</code>, it is not possible to use a percentage.</p>
+<p>Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> then you can use a length or a percentage. If the allowed value only includes <code>&lt;length&gt;</code>, it is not possible to use a percentage.</p>
 
 <h3 id="Numbers">Numbers</h3>
 
-<p>Some values accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the <code>opacity</code> property, which controls the opacity of an element (how transparent it is). This property accepts a number between <code>0</code> (fully transparent) and <code>1</code> (fully opaque).</p>
+<p>Some value types accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the <code>opacity</code> property, which controls the opacity of an element (how transparent it is). This property accepts a number between <code>0</code> (fully transparent) and <code>1</code> (fully opaque).</p>
 
 <p><strong>In the below example, try changing the value of <code>opacity</code> to various decimal values between <code>0</code> and <code>1</code> and see how the box and its contents become more or less opaque.</strong></p>
 
@@ -265,7 +265,7 @@ tags:
 
 <h3 id="Color_keywords">Color keywords</h3>
 
-<p>Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> value.</p>
+<p>Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> value type.</p>
 
 <p><strong>Try playing with different color values in the live examples below, to get more of an idea how they work.</strong></p>
 
@@ -325,7 +325,7 @@ tags:
 
 <h2 id="Images">Images</h2>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> data type is used wherever an image is a valid value. This can be an actual image file pointed to via a <code>url()</code> function, or a gradient.</p>
+<p>The <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> value type is used wherever an image is a valid value. This can be an actual image file pointed to via a <code>url()</code> function, or a gradient.</p>
 
 <p>In the example below, we have demonstrated an image and a gradient in use as a value for the CSS <code>background-image</code> property.</p>
 
@@ -337,7 +337,7 @@ tags:
 
 <h2 id="Position">Position</h2>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> data type represents a set of 2D coordinates, used to position an item such as a background image (via <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>). It can take keywords such as <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, and <code>center</code> to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.</p>
+<p>The <code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> value type represents a set of 2D coordinates, used to position an item such as a background image (via <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>). It can take keywords such as <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, and <code>center</code> to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.</p>
 
 <p>A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to <code>center</code>.</p>
 
@@ -373,7 +373,7 @@ tags:
 
 <p>This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and units</a> reference page; you will encounter many of these in use as you work through these lessons.</p>
 
-<p>The key thing to remember is that each property has a defined list of allowed values, and each value has a definition explaining what the sub-values are. You can then look up the specifics here on MDN.</p>
+<p>The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN.</p>
 
 <p>For example, understanding that <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!</p>
 

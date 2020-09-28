@@ -39,6 +39,10 @@ tags:
 
 <p>The event doesn't include the document's updated visibility status, but you can get that information from the document's {{domxref("Document.visibilityState", "visibilityState")}} property.</p>
 
+<div class="blockIndicator warning">
+<p>Safari doesn’t fire <code>visibilitychange</code> as expected when the value of the <code><a href="/en-US/docs/Web/API/Document/visibilityState">visibilityState</a></code> property transitions to <code>hidden</code>; so for that case, you need to also include code to listen for the <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> event.</p>
+</div>
+
 <h2 id="Examples">Examples</h2>
 
 <p>This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.</p>

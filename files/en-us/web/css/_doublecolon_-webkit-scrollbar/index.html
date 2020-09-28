@@ -47,20 +47,20 @@ tags:
   height: 2em;
 }
 
-.invisible-scrollbar::-webkit-scrollbar {
+.invisible-scrollbar ::-webkit-scrollbar {
   display: none;
 }
 
 /* Demonstrate a "mostly customized" scrollbar
  * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
+.mostly-customized-scrollbar ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
   background-color: #aaa; /* or add it to the track */
 }
 
 /* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+.mostly-customized-scrollbar ::-webkit-scrollbar-thumb {
     background: #000;
 }
 </pre>

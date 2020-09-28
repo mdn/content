@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Definition_of_an_origin">Definition of an origin</h2>
 
-<p>Two URLs have the <em>same origin</em> if the {{Glossary("protocol")}}, {{Glossary("port")}} (if specified), and {{Glossary("host")}} are the same for both. You may see this referenced as the "scheme/host/port tuple", or just "tuple". (A "tuple" is a set of items that together comprise a whole — a generic form for double/triple/quadruple/quintuple/etc.)</p>
+<p>Two URLs have the <em>same origin</em> if the {{Glossary("protocol")}}, {{Glossary("port")}} (if specified), and {{Glossary("host")}} are the same for both. You may see this referenced as the "scheme/host/port tuple", or just "tuple". (A "tuple" is a set of items that together comprise a whole — a generic form for double/triple/quadruple/quintuple/etc.)</p>
 
 <p>The following table gives examples of origin comparisons with the URL <code>http://store.company.com/dir/page.html</code>:</p>
 
@@ -112,7 +112,7 @@ tags:
 
 <ul>
  <li>JavaScript with <code>&lt;script src="…"&gt;&lt;/script&gt;</code>. Error details for syntax errors are only available for same-origin scripts.</li>
- <li>CSS applied with <code>&lt;link rel="stylesheet" href="…"&gt;</code>. Due to the <a class="external" href="https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html">relaxed syntax rules</a> of CSS, cross-origin CSS requires a correct <code>Content-Type</code> header. Restrictions vary by browser: <a class="external" href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN">Internet Explorer</a>, <a class="external" href="https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/">Firefox</a>, <a class="external" href="https://bugs.chromium.org/p/chromium/issues/detail?id=9877">Chrome</a>, <a class="external" href="https://support.apple.com/kb/HT4070">Safari</a> (scroll down to CVE-2010-0051) and <a class="external" href="https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/">Opera</a>.</li>
+ <li>CSS applied with <code>&lt;link rel="stylesheet" href="…"&gt;</code>. Due to the <a class="external" href="https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html">relaxed syntax rules</a> of CSS, cross-origin CSS requires a correct <code>Content-Type</code> header. Restrictions vary by browser: <a class="external" href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)?redirectedfrom=MSDN">Internet Explorer</a>, <a class="external" href="https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/">Firefox</a>, <a class="external" href="https://bugs.chromium.org/p/chromium/issues/detail?id=9877">Chrome</a> , <a class="external" href="https://support.apple.com/kb/HT4070">Safari</a> (scroll down to CVE-2010-0051) and <a class="external" href="https://security.opera.com/cross-domain-data-theft-with-css-load-opera-security-advisories/">Opera</a>.</li>
  <li>Images displayed by {{htmlelement("img")}}.</li>
  <li>Media played by {{htmlelement("video")}} and {{htmlelement("audio")}}.</li>
  <li>External resources embedded with {{htmlelement("object")}} and {{htmlelement("embed")}}.</li>

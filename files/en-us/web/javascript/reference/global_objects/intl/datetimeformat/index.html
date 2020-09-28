@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>Intl.DateTimeFormat</code></strong> object is a constructor for objects that enable language-sensitive date and time formatting.</span> </p>
+<p><span class="seoSummary">The <strong><code>Intl.DateTimeFormat</code></strong> object is a constructor for objects that enable language-sensitive date and time formatting.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}</div>
 
@@ -20,7 +20,7 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code></a></dt>
+ <dt>{{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
  <dd>Creates a new <code>DateTimeFormat</code> object.</dd>
 </dl>
 
@@ -48,11 +48,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_DateTimeFormat">Using <code>DateTimeFormat</code></h3>
+<h3 id="Using_DateTimeFormat">Using DateTimeFormat</h3>
 
 <p>In basic use without specifying a locale, <code>DateTimeFormat</code> uses the default locale and default options.</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -60,11 +60,11 @@ console.log(new Intl.DateTimeFormat().format(date));
 // → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 </pre>
 
-<h3 id="Using_locales">Using <code>locales</code></h3>
+<h3 id="Using_locales">Using locales</h3>
 
 <p>This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
 
@@ -95,11 +95,11 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "19/12/2012"
 </pre>
 
-<h3 id="Using_options">Using <code>options</code></h3>
+<h3 id="Using_options">Using options</h3>
 
 <p>The date and time formats can be customized using the <code>options</code> argument:</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -115,7 +115,7 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // sometimes you want to be more precise
 options = {
   hour: 'numeric', minute: 'numeric', second: 'numeric',
-  timeZone: 'Australia/Sydney',
+  timeZone: 'Australia/Sydney',
   timeZoneName: 'short'
 };
 console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
@@ -132,7 +132,7 @@ options = {
   year: 'numeric', month: 'numeric', day: 'numeric',
   hour: 'numeric', minute: 'numeric', second: 'numeric',
   hour12: false,
-  timeZone: 'America/Los_Angeles'
+  timeZone: 'America/Los_Angeles'
 };
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → "12/19/2012, 19:00:00"
@@ -148,9 +148,9 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → 10 at night
 </pre>
 
-<p>The used calendar and numbering formats can also be set independently via <code>options</code> arguments:</p>
+<p>The used calendar and numbering formats can also be set independently via <code>options</code> arguments:</p>
 
-<pre class="brush: js">var options = {calendar: 'chinese', numberingSystem: 'arab'};
+<pre class="brush: js notranslate">var options = {calendar: 'chinese', numberingSystem: 'arab'};
 var dateFormat = new Intl.DateTimeFormat('default', options);
 var usedOptions = dateFormat.resolvedOptions();
 
@@ -190,5 +190,5 @@ console.log(usedOptions.timeZone);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+ <li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
 </ul>

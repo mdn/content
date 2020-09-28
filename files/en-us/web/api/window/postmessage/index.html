@@ -43,16 +43,14 @@ tags:
 
 <h2 id="The_dispatched_event">The dispatched event</h2>
 
-<p><code>otherWindow</code> can listen for dispatched messages by executing the following JavaScript:</p>
+<p>A <code>window</code> can listen for dispatched messages by executing the following JavaScript:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("message", receiveMessage, false);
-
-function receiveMessage(event) {
+<pre class="brush: js notranslate">window.addEventListener("message", (event) =&gt; {
   if (event.origin !== "http://example.org:8080")
     return;
 
   // ...
-}
+}, false);
 </pre>
 
 <p>The properties of the dispatched message are:</p>
@@ -115,8 +113,7 @@ popup.postMessage("The user is 'bob' and the password is 'secret'",
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-function receiveMessage(event)
-{
+window.addEventListener("message", (event) =&gt; {
   // Do we trust the sender of this message?  (might be
   // different from what we originally opened, for example).
   if (event.origin !== "http://example.com")
@@ -124,8 +121,7 @@ function receiveMessage(event)
 
   // event.source is popup
   // event.data is "hi there yourself!  the secret response is: rheeeeet!"
-}
-window.addEventListener("message", receiveMessage, false);
+}, false);
 </pre>
 
 <pre class="brush: js notranslate">/*
@@ -133,8 +129,7 @@ window.addEventListener("message", receiveMessage, false);
  */
 
 // Called sometime after postMessage is called
-function receiveMessage(event)
-{
+window.addEventListener("message", (event) =&gt; {
   // Do we trust the sender of this message?
   if (event.origin !== "http://example.com:8080")
     return;
@@ -149,9 +144,7 @@ function receiveMessage(event)
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}
-
-window.addEventListener("message", receiveMessage, false);
+}, false);
 </pre>
 
 <h3 id="Notes">Notes</h3>

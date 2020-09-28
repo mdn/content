@@ -14,7 +14,7 @@ tags:
 <div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}</div>
 
 <div class="summary">
-<p>JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.</p>
+<p>JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.</p>
 </div>
 
 <h2 id="What_is_JavaScript">What is JavaScript?</h2>
@@ -26,7 +26,7 @@ tags:
 <p>JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:</p>
 
 <ul>
- <li>Browser Application Programming Interfaces ({{Glossary("API","APIs")}}) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+ <li>Browser Application Programming Interfaces ({{Glossary("API","APIs")}}) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
  <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
  <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
 </ul>
@@ -66,7 +66,7 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <h3 id="What_happened">What happened?</h3>
 
-<p>The heading text changed to <em>Hello world!</em> using JavaScript. You did this by using a function called <code>{{domxref("Document.querySelector", "querySelector()")}}</code> to grab a reference to your heading, and then store it in a variable called <code>myHeading</code>. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.</p>
+<p>The heading text changed to <em>Hello world!</em> using JavaScript. You did this by using a function called <code>{{domxref("Document.querySelector", "querySelector()")}}</code> to grab a reference to your heading, and then store it in a variable called <code>myHeading</code>. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.</p>
 
 <p>Following that, the code set the value of the <code>myHeading</code> variable's <code>{{domxref("Node.textContent", "textContent")}}</code> property (which represents the content of the heading) to <em>Hello world!</em>.</p>
 
@@ -84,12 +84,12 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <h3 id="Variables">Variables</h3>
 
-<p>{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (less recommended, dive deeper for the explanation) or the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword, followed by the name you give to the variable:</p>
+<p>{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (less recommended, dive deeper for the explanation) or the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword, followed by the name you give to the variable:</p>
 
 <pre class="brush: js notranslate">let myVariable;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a>.</p>
+<p><strong>Note</strong>: A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a>.</p>
 </div>
 
 <div class="note">
@@ -164,7 +164,7 @@ myVariable = 'Steve';</pre>
  </tbody>
 </table>
 
-<p>So why do we need variables? Variables are necessary to do anything interesting in programming. If values couldn't change, then you couldn't do anything dynamic, like personalize a greeting message or change an image displayed in an image gallery.</p>
+<p>So why do we need variables? Variables are necessary to do anything interesting in programming. If values couldn't change, then you couldn't do anything dynamic, like personalize a greeting message or change an image displayed in an image gallery.</p>
 
 <h3 id="Comments">Comments</h3>
 
@@ -174,14 +174,14 @@ myVariable = 'Steve';</pre>
 Everything in between is a comment.
 */</pre>
 
-<p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+<p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
 
 <pre class="brush: js notranslate" style="font-size: 14px;">// This is a comment
 </pre>
 
 <h3 id="Operators">Operators</h3>
 
-<p>An <code>{{Glossary("operator")}}</code> is a mathematical symbol which produces a result based on two values (or variables). In the following table you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+<p>An <code>{{Glossary("operator")}}</code> is a mathematical symbol which produces a result based on two values (or variables). In the following table you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
 
 <table class="standard-table">
  <thead>
@@ -218,7 +218,7 @@ Everything in between is a comment.
    <th scope="row">Equality</th>
    <td>This performs a test to see if two values are equal. It returns a <code>true</code>/<code>false</code> (Boolean) result.</td>
    <td><code>===</code></td>
-   <td><code>let myVariable = 3;<br>
+   <td><code>let myVariable = 3;<br>
     myVariable === 4;</code></td>
   </tr>
   <tr>
@@ -228,12 +228,12 @@ Everything in between is a comment.
    <td>
     <p>For "Not", the basic expression is <code>true</code>, but the comparison returns <code>false</code> because we negate it:</p>
 
-    <p><code>let myVariable = 3;<br>
+    <p><code>let myVariable = 3;<br>
      !(myVariable === 3);</code></p>
 
     <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing "is <code>myVariable</code> NOT equal to 3". This returns<code> false</code> because <code>myVariable</code> IS equal to 3:</p>
 
-    <p><code>let <code>myVariable = 3;</code><br>
+    <p><code>let <code>myVariable = 3;</code><br>
      myVariable !== 3;</code></p>
    </td>
   </tr>
@@ -243,12 +243,12 @@ Everything in between is a comment.
 <p>There are a lot more operators to explore, but this is enough for now. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators">Expressions and operators</a> for a complete list.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter, <code>35 + 25</code> you'll get the total of the two numbers.</p>
+<p><strong>Note</strong>: Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
 </div>
 
 <h3 id="Conditionals">Conditionals</h3>
 
-<p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the <code>if ... else</code> statement. For example:</p>
+<p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the <code>if ... else</code> statement. For example:</p>
 
 <pre class="brush: js notranslate"><code>let </code>iceCream = 'chocolate';
 if(iceCream === 'chocolate') {
@@ -261,7 +261,7 @@ if(iceCream === 'chocolate') {
 
 <h3 id="Functions">Functions</h3>
 
-<p>{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:</p>
+<p>{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:</p>
 
 <ol>
  <li>
@@ -274,9 +274,9 @@ if(iceCream === 'chocolate') {
 
 <p>These functions, <code>document.querySelector</code> and <code>alert</code>, are built into the browser.</p>
 
-<p>If you see something which looks like a variable name, but it's followed by parentheses— <code>()</code> —it is likely a function. Functions often take {{Glossary("Argument", "arguments")}}: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.</p>
+<p>If you see something which looks like a variable name, but it's followed by parentheses— <code>()</code> —it is likely a function. Functions often take {{Glossary("Argument", "arguments")}}: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.</p>
 
-<p>For example, the <code>alert()</code> function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
+<p>For example, the <code>alert()</code> function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
 
 <p>You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:</p>
 
@@ -303,7 +303,7 @@ multiply(0.5, 3);</pre>
     alert('Ouch! Stop poking me!');
 }</pre>
 
-<p>There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its <code><a href="/en-US/docs/Web/API/GlobalEventHandlers.onclick">onclick</a></code> handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
+<p>There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its <code><a href="/en-US/docs/Web/API/GlobalEventHandlers.onclick">onclick</a></code> handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
 
 <p>Note that</p>
 
@@ -343,7 +343,7 @@ myImage.onclick = function() {
  <li>Save all files and load <code>index.html</code> in the browser. Now when you click the image, it should change to the other one.</li>
 </ol>
 
-<p>This is what happened. You stored a reference to your {{htmlelement("img")}} element in the <code>myImage</code> variable. Next, you made this variable's <code>onclick</code> event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:</p>
+<p>This is what happened. You stored a reference to your {{htmlelement("img")}} element in the <code>myImage</code> variable. Next, you made this variable's <code>onclick</code> event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:</p>
 
 <ol>
  <li>The code retrieves the value of the image's <code>src</code> attribute.</li>
@@ -374,7 +374,7 @@ myImage.onclick = function() {
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Mozilla is cool, ' + myName;
 }</pre>
-  The <code>setUserName()</code> function contains a <a href="/en-US/docs/Web/API/Window.prompt"><code>prompt()</code></a> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <em>OK.</em> In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</li>
+  The <code>setUserName()</code> function contains a <a href="/en-US/docs/Web/API/Window.prompt"><code>prompt()</code></a> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <em>OK.</em> In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</li>
  <li>Add the <code>if ... else</code> block (below). We could call this initialization code, as it structures the app when it first loads.
   <pre class="brush: js notranslate">if(!localStorage.getItem('name')) {
   setUserName();
@@ -382,10 +382,10 @@ myImage.onclick = function() {
   <code>let </code>storedName = localStorage.getItem('name');
   myHeading.textContent = 'Mozilla is cool, ' + storedName;
 }</pre>
-  This first line of this block uses the negation operator (logical NOT, represented by the <code>!</code>) to check whether the <code>name</code> data exists. If not, the <code>setUserName()</code> function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using <code>getItem()</code> and set the <code>textContent</code> of the heading to a string, plus the user's name, as we did inside <code>setUserName()</code>.</li>
+  This first line of this block uses the negation operator (logical NOT, represented by the <code>!</code>) to check whether the <code>name</code> data exists. If not, the <code>setUserName()</code> function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using <code>getItem()</code> and set the <code>textContent</code> of the heading to a string, plus the user's name, as we did inside <code>setUserName()</code>.</li>
  <li>Put this <code>onclick</code> event handler (below) on the button. When clicked, <code>setUserName()</code> runs. This allows the user to enter a different name by pressing the button.
   <pre class="brush: js notranslate">myButton.onclick = function() {
-  setUserName();
+  setUserName();
 }
 </pre>
  </li>
@@ -397,7 +397,7 @@ myImage.onclick = function() {
 
 <p>Also, try clicking <em>OK</em> without entering a name. You should end up with a title that reads <em>Mozilla is cool,</em> for fairly obvious reasons.</p>
 
-<p>To avoid these problems, you could check that the user hasn't entered a blank name. Update your <code>setUserName()</code> function to this:</p>
+<p>To avoid these problems, you could check that the user hasn't entered a blank name. Update your <code>setUserName()</code> function to this:</p>
 
 <pre class="brush: js notranslate">function setUserName() {
   let myName = prompt('Please enter your name.');

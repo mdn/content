@@ -25,12 +25,12 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>arrayLike</var></code></dt>
-	<dd>An array-like or iterable object to convert to an array.</dd>
-	<dt><code><var>mapFn</var></code> {{Optional_inline}}</dt>
-	<dd>Map function to call on every element of the array.</dd>
-	<dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-	<dd>Value to use as <code>this</code> when executing <code><var>mapFn</var></code>.</dd>
+ <dt><code><var>arrayLike</var></code></dt>
+ <dd>An array-like or iterable object to convert to an array.</dd>
+ <dt><code><var>mapFn</var></code> {{Optional_inline}}</dt>
+ <dd>Map function to call on every element of the array.</dd>
+ <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
+ <dd>Value to use as <code>this</code> when executing <code><var>mapFn</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -42,21 +42,115 @@ tags:
 <p><code>Array.from()</code> lets you create <code>Array</code>s from:</p>
 
 <ul>
-	<li>array-like objects (objects with a <code>length</code> property and indexed elements); or</li>
-	<li><a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable objects</a> (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}).</li>
+ <li>array-like objects (objects with a <code>length</code> property and indexed elements); or</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable objects</a> (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}).</li>
 </ul>
 
 <p><code>Array.from()</code> has an optional parameter <code><var>mapFn</var></code>, which allows you to execute a {{jsxref("Array.prototype.map()", "map()")}} function on each element of the array being created.</p>
 
 <p>More clearly, <code>Array.from(<var>obj</var>, <var>mapFn</var>, <var>thisArg</var>)</code><br>
-has the same result as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
-except that it does not create an intermediate array.</p>
+ has the same result as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
+ except that it does not create an intermediate array.</p>
 
 <div class="note">This is especially important for certain array subclasses, like <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>, since the intermediate array would necessarily have values truncated to fit into the appropriate type.</div>
 
 <p>The <code>length</code> property of the <code>from()</code> method is <code>1</code>.</p>
 
 <p>In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as <code>Array.from()</code> are "inherited" by subclasses of <code>Array</code>, and create new instances <em>of the subclass</em>, not <code>Array</code>.</p>
+
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Array_from_a_String">Array from a <code>String</code></h3>
+
+<pre class="brush: js notranslate">Array.from('foo');
+// [ "f", "o", "o" ]</pre>
+
+<h3 id="Array_from_a_Set">Array from a <code>Set</code></h3>
+
+<pre class="brush: js notranslate">const set = new Set(['foo', 'bar', 'baz', 'foo']);
+Array.from(set);
+// [ "foo", "bar", "baz" ]</pre>
+
+<h3 id="Array_from_a_Map">Array from a <code>Map</code></h3>
+
+<pre class="brush: js notranslate">const map = new Map([[1, 2], [2, 4], [4, 8]]);
+Array.from(map);
+// [[1, 2], [2, 4], [4, 8]]
+
+const mapper = new Map([['1', 'a'], ['2', 'b']]);
+Array.from(mapper.values());
+// ['a', 'b'];
+
+Array.from(mapper.keys());
+// ['1', '2'];
+</pre>
+
+<h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object (arguments)</h3>
+
+<pre class="brush: js notranslate">function f() {
+  return Array.from(arguments);
+}
+
+f(1, 2, 3);
+
+// [ 1, 2, 3 ]</pre>
+
+<h3 id="Using_arrow_functions_and_Array.from">Using arrow functions and <code>Array.from()</code></h3>
+
+<pre class="brush: js notranslate">// Using an arrow function as the map function to
+// manipulate the elements
+Array.from([1, 2, 3], x =&gt; x + x);
+// [2, 4, 6]
+
+
+// Generate a sequence of numbers
+// Since the array is initialized with `undefined` on each position,
+// the value of `v` below will be `undefined`
+Array.from({length: 5}, (v, i) =&gt; i);
+// [0, 1, 2, 3, 4]
+</pre>
+
+<h3 id="Sequence_generator_range">Sequence generator (range)</h3>
+
+<pre class="brush: js notranslate">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
+
+// Generate numbers range 0..4
+range(0, 4, 1);
+// [0, 1, 2, 3, 4]
+
+// Generate numbers range 1..10 with step of 2
+range(1, 10, 2);
+// [1, 3, 5, 7, 9]
+
+// Generate the alphabet using Array.from making use of it being ordered as a sequence
+range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x));
+// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Initial publication</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
+   <td>ECMAScript 2015</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Array.from")}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -206,103 +300,10 @@ if (!Array.from) {
     })();
 }</pre>
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Array_from_a_String">Array from a <code>String</code></h3>
-
-<pre class="brush: js notranslate">Array.from('foo');
-// [ "f", "o", "o" ]</pre>
-
-<h3 id="Array_from_a_Set">Array from a <code>Set</code></h3>
-
-<pre class="brush: js notranslate">const set = new Set(['foo', 'bar', 'baz', 'foo']);
-Array.from(set);
-// [ "foo", "bar", "baz" ]</pre>
-
-<h3 id="Array_from_a_Map">Array from a <code>Map</code></h3>
-
-<pre class="brush: js notranslate">const map = new Map([[1, 2], [2, 4], [4, 8]]);
-Array.from(map);
-// [[1, 2], [2, 4], [4, 8]]
-
-const mapper = new Map([['1', 'a'], ['2', 'b']]);
-Array.from(mapper.values());
-// ['a', 'b'];
-
-Array.from(mapper.keys());
-// ['1', '2'];
-</pre>
-
-<h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object (arguments)</h3>
-
-<pre class="brush: js notranslate">function f() {
-  return Array.from(arguments);
-}
-
-f(1, 2, 3);
-
-// [ 1, 2, 3 ]</pre>
-
-<h3 id="Using_arrow_functions_and_Array.from">Using arrow functions and <code>Array.from()</code></h3>
-
-<pre class="brush: js notranslate">// Using an arrow function as the map function to
-// manipulate the elements
-Array.from([1, 2, 3], x =&gt; x + x);
-// [2, 4, 6]
-
-
-// Generate a sequence of numbers
-// Since the array is initialized with `undefined` on each position,
-// the value of `v` below will be `undefined`
-Array.from({length: 5}, (v, i) =&gt; i);
-// [0, 1, 2, 3, 4]
-</pre>
-
-<h3 id="Sequence_generator_range">Sequence generator (range)</h3>
-
-<pre class="brush: js notranslate">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
-const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
-
-// Generate numbers range 0..4
-range(0, 4, 1);
-// [0, 1, 2, 3, 4]
-
-// Generate numbers range 1..10 with step of 2
-range(1, 10, 2);
-// [1, 3, 5, 7, 9]
-
-// Generate the alphabet using Array.from making use of it being ordered as a sequence
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x));
-// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Initial publication</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
-			<td>ECMAScript 2015</td>
-		</tr>
-	</tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
-
-<p>{{Compat("javascript.builtins.Array.from")}}</p>
-
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("Array")}}</li>
-	<li>{{jsxref("Array.prototype.map()")}}</li>
-	<li>{{jsxref("TypedArray.from()")}}</li>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Array.prototype.map()")}}</li>
+ <li>{{jsxref("TypedArray.from()")}}</li>
 </ul>

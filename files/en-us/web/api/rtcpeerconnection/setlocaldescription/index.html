@@ -108,7 +108,7 @@ tags:
 
 <pre class="brush: js notranslate">async function handleNegotiationNeededEvent() {
   try {
-    await offer = pc.createOffer();
+    const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
   } catch(err) {

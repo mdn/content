@@ -53,7 +53,7 @@ background-position: unset;
 <h3 id="Values" name="Values">Values</h3>
 
 <dl>
- <dt><a id="&lt;position>" name="&lt;position>"><code>&lt;position&gt;</code></a></dt>
+ <dt id="&lt;position>"><code>&lt;position&gt;</code></dt>
  <dd>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).</dd>
  <dd>
  <p><strong>1-value syntax:</strong> the value may be:</p>
@@ -69,7 +69,7 @@ background-position: unset;
  <ul>
   <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X and the other given value defines Y. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other value defines X.</li>
   <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is <code>left</code> or <code>right</code>, then this value defines Y, relative to the top edge. If the other value is <code>top</code> or <code>bottom</code>, then this value defines X, relative to the left edge. If both values are <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code> values, then the first defines X and the second Y.</li>
-  <li>Note that: If one value is <code>top</code> or <code>bottom</code>, then the other value may not be <code>top</code> or <code>bottom</code>. If one value is <code>left</code> or <code>right</code>, then the other value may not be <code>left</code> or <code>right</code>. This means, e.g., that <code>top top</code> and <code>left right</code> are not valid.</li>
+  <li>Note that: If one value is <code>top</code> or <code>bottom</code>, then the other value may not be <code>top</code> or <code>bottom</code>. If one value is <code>left</code> or <code>right</code>, then the other value may not be <code>left</code> or <code>right</code>. This means, e.g., that <code>top top</code> and <code>left right</code> are not valid.</li>
   <li>The default value is <code>top left</code> or <code>0% 0%</code>.</li>
  </ul>
  </dd>
@@ -91,41 +91,37 @@ background-position: unset;
  </ul>
  </dd>
  <dd>
- <ul>
- </ul>
- </dd>
- <dd>
  <p><strong>Regarding Percentages:</strong></p>
  </dd>
- <dd>The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the <em>right</em> (or <em>bottom)</em> edge of the background image is aligned with the <em>right</em> (or <em>bottom)</em> edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, <code>background-position: 25% 75%</code> means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.</dd>
+ <dd>The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the <em>right</em> (or <em>bottom</em>) edge of the background image is aligned with the <em>right</em> (or <em>bottom</em>) edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, <code>background-position: 25% 75%</code> means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.</dd>
  <dd>Essentially what happens is the background image dimension is <em>subtracted</em> from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.</dd>
  <dd>
- <p><code>(container width - image width) * (position x%) = (x offset value)<br>
+ <p><code>(container width - image width) * (position x%) = (x offset value)<br>
   (container height - image height) * (position y%) = (y offset value)</code></p>
 
- <p>Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:</p>
+ <p>Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:</p>
 
  <p><code>100px - 300px = -200px <em>(container &amp; image difference)</em></code></p>
 
- <p>So that with position percentages of -25%, 0%, 50%, 100%, 125%,  we get these image-to-container edge offset values:</p>
+ <p>So that with position percentages of -25%, 0%, 50%, 100%, 125%,  we get these image-to-container edge offset values:</p>
 
- <p><code> -200px * -25% = 50px <br>
-   -200px * 0% = 0px <br>
-   -200px * 50% = -100px <br>
-   -200px * 100% = -200px </code><br>
-  <code> -200px * 125% = -250px </code></p>
+ <p><code> -200px * -25% = 50px <br>
+   -200px * 0% = 0px <br>
+   -200px * 50% = -100px <br>
+   -200px * 100% = -200px </code><br>
+  <code> -200px * 125% = -250px </code></p>
 
- <p>So with these resultant values for our example, the <strong>left edge</strong> of the <strong>image</strong> is offset from the <strong>left edge</strong> of the <strong>container</strong> by:</p>
+ <p>So with these resultant values for our example, the <strong>left edge</strong> of the <strong>image</strong> is offset from the <strong>left edge</strong> of the <strong>container</strong> by:</p>
 
  <ul>
   <li>+ 50px (putting the left image edge in the center of the 100-pixel-wide container)</li>
-  <li>0px (left image edge coincident with the left container edge)</li>
-  <li>-100px (left image edge 100px to the left of the container, in this example that means the middle 100px image area is centered in the container)</li>
-  <li>-200px (left image edge 200px to the left of the container, in this example that means the right image edge is coincident with the right container edge)</li>
-  <li>-250px (left image edge 250px to the left of the container, in this example that puts the right edge of the 300px-wide image in the center of the container)</li>
+  <li>0px (left image edge coincident with the left container edge)</li>
+  <li>-100px (left image edge 100px to the left of the container, in this example that means the middle 100px image area is centered in the container)</li>
+  <li>-200px (left image edge 200px to the left of the container, in this example that means the right image edge is coincident with the right container edge)</li>
+  <li>-250px (left image edge 250px to the left of the container, in this example that puts the right edge of the 300px-wide image in the center of the container)</li>
  </ul>
 
- <p>It's worth mentioning that if your background-size is equal to the container size for a given axis, then a <em>percentage</em> position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.</p>
+ <p>It's worth mentioning that if your background-size is equal to the container size for a given axis, then a <em>percentage</em> position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.</p>
  </dd>
 </dl>
 

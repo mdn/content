@@ -9,17 +9,17 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary"><strong>HTTP</strong> (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web.</span> Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has seen many changes, keeping most of the simplicity and further shaping its flexibility.<span class="seoSummary"> HTTP has evolved from an early protocol to exchange files in a semi-trusted laboratory environment, to the modern maze of the Internet, now carrying images, videos in high resolution and 3D.</span></p>
+<p class="summary"><span class="seoSummary"><strong>HTTP</strong> (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web.</span> Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has seen many changes, keeping most of the simplicity and further shaping its flexibility.<span class="seoSummary"> HTTP has evolved from an early protocol to exchange files in a semi-trusted laboratory environment, to the modern maze of the Internet, now carrying images, videos in high resolution and 3D.</span></p>
 
 <h2 id="Invention_of_the_World_Wide_Web">Invention of the World Wide Web</h2>
 
-<p>In 1989, while he was working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the Internet. Initially calling it the <em>Mesh</em>, it was later renamed to <em>World Wide Web</em> during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:</p>
+<p>In 1989, while he was working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the Internet. Initially calling it the <em>Mesh</em>, it was later renamed to <em>World Wide Web</em> during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:</p>
 
 <ul>
-	<li>A textual format to represent hypertext documents, the <em><a href="/en-US/docs/Web/HTML">HyperText Markup Language</a></em> (HTML).</li>
-	<li>A simple protocol to exchange these documents, the <em>HypertText Transfer Protocol </em>(HTTP).</li>
-	<li>A client to display (and accidentally edit) these documents, the first Web browser called <em>WorldWideWeb</em>.</li>
-	<li>A server to give access to the document, an early version of <em>httpd</em>.</li>
+ <li>A textual format to represent hypertext documents, the <em><a href="/en-US/docs/Web/HTML">HyperText Markup Language</a></em> (HTML).</li>
+ <li>A simple protocol to exchange these documents, the <em>HypertText Transfer Protocol </em>(HTTP).</li>
+ <li>A client to display (and accidentally edit) these documents, the first Web browser called <em>WorldWideWeb</em>.</li>
+ <li>A server to give access to the document, an early version of <em>httpd</em>.</li>
 </ul>
 
 <p>These four building blocks were completed by the end of 1990, and the first servers were already running outside of CERN by early 1991. On August 6<sup>th</sup> 1991, Tim Berners-Lee's <a href="https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt">post</a> on the public <em>alt.hypertext</em> newsgroup is now considered as the official start of the World Wide Web as a public project.</p>
@@ -45,10 +45,10 @@ A very simple HTML page
 <p>HTTP/0.9 was very limited and both browsers and servers quickly extended it to be more versatile:</p>
 
 <ul>
-	<li>Versioning information is now sent within each request (<code>HTTP/1.0</code> is appended to the <code>GET</code> line)</li>
-	<li>A status code line is also sent at the beginning of the response, allowing the browser itself to understand the success or failure of the request and to adapt its behavior in consequence (like in updating or using its local cache in a specific way)</li>
-	<li>The notion of HTTP headers has been introduced, both for the requests and the responses, allowing metadata to be transmitted and making the protocol extremely flexible and extensible.</li>
-	<li>With the help of the new HTTP headers, the ability to transmit other documents than plain HTML files has been added (thanks to the {{HTTPHeader("Content-Type")}} header).</li>
+ <li>Versioning information is now sent within each request (<code>HTTP/1.0</code> is appended to the <code>GET</code> line)</li>
+ <li>A status code line is also sent at the beginning of the response, allowing the browser itself to understand the success or failure of the request and to adapt its behavior in consequence (like in updating or using its local cache in a specific way)</li>
+ <li>The notion of HTTP headers has been introduced, both for the requests and the responses, allowing metadata to be transmitted and making the protocol extremely flexible and extensible.</li>
+ <li>With the help of the new HTTP headers, the ability to transmit other documents than plain HTML files has been added (thanks to the {{HTTPHeader("Content-Type")}} header).</li>
 </ul>
 
 <p>At this point, a typical request and response looked like this:</p>
@@ -65,7 +65,7 @@ A page with an image
   &lt;IMG SRC="/myimage.gif"&gt;
 &lt;/HTML&gt;</pre>
 
-<p>Followed by a second connection and request to fetch the image (followed by a response to  that request):</p>
+<p>Followed by a second connection and request to fetch the image (followed by a response to that request):</p>
 
 <pre class="notranslate">GET /myimage.gif HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
@@ -85,12 +85,12 @@ Content-Type: text/gif
 <p>HTTP/1.1 clarified ambiguities and introduced numerous improvements:</p>
 
 <ul>
-	<li>A connection can be reused, saving the time to reopen it numerous times to display the resources embedded into the single original document retrieved.</li>
-	<li>Pipelining has been added, allowing to send a second request before the answer for the first one is fully transmitted, lowering the latency of the communication.</li>
-	<li>Chunked responses are now also supported.</li>
-	<li>Additional cache control mechanisms have been introduced.</li>
-	<li>Content negotiation, including language, encoding, or type, has been introduced, and allows a client and a server to agree on the most adequate content to exchange.</li>
-	<li>Thanks to the {{HTTPHeader("Host")}} header, the ability to host different domains at the same IP address now allows server colocation.</li>
+ <li>A connection can be reused, saving the time to reopen it numerous times to display the resources embedded into the single original document retrieved.</li>
+ <li>Pipelining has been added, allowing to send a second request before the answer for the first one is fully transmitted, lowering the latency of the communication.</li>
+ <li>Chunked responses are now also supported.</li>
+ <li>Additional cache control mechanisms have been introduced.</li>
+ <li>Content negotiation, including language, encoding, or type, has been introduced, and allows a client and a server to agree on the most adequate content to exchange.</li>
+ <li>Thanks to the {{HTTPHeader("Host")}} header, the ability to host different domains at the same IP address now allows server colocation.</li>
 </ul>
 
 <p>A typical flow of requests, all through one single connection is now looking like this:</p>
@@ -152,15 +152,15 @@ Server: Apache
 
 <h3 id="Using_HTTP_for_complex_applications">Using HTTP for complex applications</h3>
 
-<p>The original vision of Tim Berners-Lee for the Web wasn't a read-only medium. He envisioned a Web where people can add and move documents remotely, a kind of distributed file system. Around 1996, HTTP has been extended to allow authoring, and a standard called WebDAV was created. It has been further extended for specific applications like CardDAV to handle address book entries and CalDAV to deal with calendars. But all these *DAV extensions had a flaw: they had to be implemented by the servers to be used, which was quite complex. Their use on Web realms stayed confidential.</p>
+<p>The original vision of Tim Berners-Lee for the Web wasn't a read-only medium. He envisioned a Web where people can add and move documents remotely, a kind of distributed file system. Around 1996, HTTP has been extended to allow authoring, and a standard called WebDAV was created. It has been further extended for specific applications like CardDAV to handle address book entries and CalDAV to deal with calendars. But all these *DAV extensions had a flaw: they had to be implemented by the servers to be used, which was quite complex. Their use on Web realms stayed confidential.</p>
 
-<p>In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The actions induced by the API were no more conveyed by new HTTP methods, but only by accessing specific URIs with basic HTTP/1.1 methods. This allowed any Web application to provide an API to allow retrieval and modification of its data without having to update the browsers or the servers: all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1. The drawback of the REST model resides in the fact that each website defines its own non-standard RESTful API and has total control on it; unlike the *DAV extensions were clients and servers are interoperable. RESTful APIs became very common in the 2010s.</p>
+<p>In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The actions induced by the API were no more conveyed by new HTTP methods, but only by accessing specific URIs with basic HTTP/1.1 methods. This allowed any Web application to provide an API to allow retrieval and modification of its data without having to update the browsers or the servers: all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1. The drawback of the REST model resides in the fact that each website defines its own non-standard RESTful API and has total control on it; unlike the *DAV extensions were clients and servers are interoperable. RESTful APIs became very common in the 2010s.</p>
 
 <p>Since 2005, the set of APIs available to Web pages greatly increased and several of these APIs created extensions, mostly new specific HTTP headers, to the HTTP protocol for specific purposes:</p>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, where the server can push occasional messages to the browser.</li>
-	<li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
+ <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, where the server can push occasional messages to the browser.</li>
+ <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
 </ul>
 
 <h3 id="Relaxing_the_security-model_of_the_Web">Relaxing the security-model of the Web</h3>
@@ -171,17 +171,17 @@ Server: Apache
 
 <h2 id="HTTP2_–_A_protocol_for_greater_performance">HTTP/2 – A protocol for greater performance</h2>
 
-<p>Over the years, Web pages have become much more complex, even becoming applications in their own right. The amount of visual media displayed, the volume and size of  scripts adding interactivity, has also increased: much more data is transmitted over significantly more HTTP requests. HTTP/1.1 connections need requests sent in the correct order. Theoretically, several parallel connections could be used (typically between 5 and 8), bringing considerable overhead and complexity. For example, HTTP pipelining has emerged as a resource burden in Web development.</p>
+<p>Over the years, Web pages have become much more complex, even becoming applications in their own right. The amount of visual media displayed, the volume and size of scripts adding interactivity, has also increased: much more data is transmitted over significantly more HTTP requests. HTTP/1.1 connections need requests sent in the correct order. Theoretically, several parallel connections could be used (typically between 5 and 8), bringing considerable overhead and complexity. For example, HTTP pipelining has emerged as a resource burden in Web development.</p>
 
 <p>In the first half of the 2010s, Google demonstrated an alternative way of exchanging data between client and server, by implementing an experimental protocol SPDY. This amassed interest from developers working on both browsers and servers. Defining an increase in responsiveness, and solving the problem of duplication of data transmitted, SPDY served as the foundations of the HTTP/2 protocol.</p>
 
 <p>The HTTP/2 protocol has several prime differences from the HTTP/1.1 version:</p>
 
 <ul>
-	<li>It is a binary protocol rather than text. It can no longer be read and created manually.  Despite this hurdle, improved optimization techniques can now be implemented.</li>
-	<li>It is a multiplexed protocol. Parallel requests can be handled over the same connection, removing the order and blocking constraints of the HTTP/1.x protocol.</li>
-	<li>It compresses headers. As these are often similar among a set of requests, this removes duplication and overhead of data transmitted.</li>
-	<li>It allows a server to populate data in a client cache, in advance of it being required, through a mechanism called the server push.</li>
+ <li>It is a binary protocol rather than text. It can no longer be read and created manually. Despite this hurdle, improved optimization techniques can now be implemented.</li>
+ <li>It is a multiplexed protocol. Parallel requests can be handled over the same connection, removing the order and blocking constraints of the HTTP/1.x protocol.</li>
+ <li>It compresses headers. As these are often similar among a set of requests, this removes duplication and overhead of data transmitted.</li>
+ <li>It allows a server to populate data in a client cache, in advance of it being required, through a mechanism called the server push.</li>
 </ul>
 
 <p>Officially standardized, in May 2015, HTTP/2 has had much success. By July 2016, 8.7% of all Web sites<sup><a href="https://w3techs.com/technologies/details/ce-http2/all/all">[1]</a></sup> were already using it, representing more than 68% of all requests<sup><a href="https://www.keycdn.com/blog/http2-statistics/">[2]</a></sup>. High-traffic Web sites showed the most rapid adoption, saving considerably on data transfer overheads and subsequent budgets.</p>
@@ -193,12 +193,12 @@ Server: Apache
 <p>HTTP didn't stop evolving upon the release of HTTP/2. Like with HTTP/1.x previously, HTTP's extensibility is still being used to add new features. Notably, we can cite new extensions of the HTTP protocol appearing in 2016:</p>
 
 <ul>
-	<li>Support of {{HTTPHeader("Alt-Svc")}} allows the dissociation of the identification and the location of a given resource, allowing for a smarter {{Glossary("CDN")}} caching mechanism.</li>
-	<li>The introduction of {{HTTPHeader("Client-Hints")}} allows the browser, or client, to proactively communicate information about its requirements, or hardware constraints, to the server.</li>
-	<li>The introduction of security-related prefixes in the {{HTTPHeader("Cookie")}} header, now helps guarantee a secure cookie has not been altered.</li>
+ <li>Support of {{HTTPHeader("Alt-Svc")}} allows the dissociation of the identification and the location of a given resource, allowing for a smarter {{Glossary("CDN")}} caching mechanism.</li>
+ <li>The introduction of {{HTTPHeader("Client-Hints")}} allows the browser, or client, to proactively communicate information about its requirements, or hardware constraints, to the server.</li>
+ <li>The introduction of security-related prefixes in the {{HTTPHeader("Cookie")}} header, now helps guarantee a secure cookie has not been altered.</li>
 </ul>
 
-<p>This evolution of HTTP proves its extensibility and simplicity, liberating creation of many applications and compelling the adoption of the protocol. The environment in which HTTP is used today is quite different from that seen in the early 1990s. HTTP's original design proved to be a masterpiece, allowing the Web to evolve over a quarter of a century, without the need of a mutiny. By healing flaws, yet retaining the flexibility and extensibility which made HTTP such a success, the adoption of HTTP/2 hints at a bright future for the protocol.</p>
+<p>This evolution of HTTP proves its extensibility and simplicity, liberating creation of many applications and compelling the adoption of the protocol. The environment in which HTTP is used today is quite different from that seen in the early 1990s. HTTP's original design proved to be a masterpiece, allowing the Web to evolve over a quarter of a century, without the need of a mutiny. By healing flaws, yet retaining the flexibility and extensibility which made HTTP such a success, the adoption of HTTP/2 hints at a bright future for the protocol.</p>
 
 <h2 id="HTTP3_-_HTTP_over_QUIC">HTTP/3 - HTTP over QUIC</h2>
 

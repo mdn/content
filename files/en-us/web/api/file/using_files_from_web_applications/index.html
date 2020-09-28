@@ -31,7 +31,7 @@ tags:
 
 <h3 id="Accessing_selected_files_on_a_change_event">Accessing selected file(s) on a change event</h3>
 
-<p>It is also possible (but not mandatory) to access the {{DOMxRef("FileList")}} through the <code>change</code> event. You need to use {{DOMxRef("EventTarget.addEventListener()")}} to add the <code>change</code> event listener, like this:</p>
+<p>It is also possible (but not mandatory) to access the {{DOMxRef("FileList")}} through the <code>change</code> event. You need to use {{DOMxRef("EventTarget.addEventListener()")}} to add the <code>change</code> event listener, like this:</p>
 
 <pre class="brush: js notranslate">const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
@@ -127,7 +127,7 @@ function handleFiles() {
   fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
+  if (fileElem) {
     fileElem.click();
   }
 }, false);
@@ -290,18 +290,18 @@ function handleFiles() {
       const li = document.createElement("li");
       list.appendChild(li);
 
-      const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
-      img.height = 60;
-      img.onload = function() {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(this.files[i]);
+      img.height = 60;
+      img.onload = function() {
         URL.revokeObjectURL(this.src);
-      }
-      li.appendChild(img);
-      const info = document.createElement("span");
-      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
-      li.appendChild(info);
-    }
-  }
+      }
+      li.appendChild(img);
+      const info = document.createElement("span");
+      info.innerHTML = this.files[i].name + ": " + this.files[i].size + " bytes";
+      li.appendChild(info);
+    }
+  }
 }
 </pre>
 
@@ -399,54 +399,54 @@ function handleFiles() {
 <pre class="brush: js notranslate">&lt;?php
 if (isset($_FILES['myFile'])) {
     // Example:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
+    exit;
 }
 ?&gt;&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;dnd binary upload&lt;/title&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-    &lt;script type="application/javascript"&gt;
-        function sendFile(file) {
-            const uri = "/index.php";
-            const xhr = new XMLHttpRequest();
-            const fd = new FormData();
+    &lt;title&gt;dnd binary upload&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;script type="application/javascript"&gt;
+        function sendFile(file) {
+            const uri = "/index.php";
+            const xhr = new XMLHttpRequest();
+            const fd = new FormData();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
-                    alert(xhr.responseText); // handle response.
-                }
-            };
-            fd.append('myFile', file);
-            // Initiate a multipart/form-data upload
-            xhr.send(fd);
-        }
-
-        window.onload = function() {
-            const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-            }
-
-            dropzone.ondrop = function(event) {
-                event.stopPropagation();
-                event.preventDefault();
-
-                const filesArray = event.dataTransfer.files;
-                for (let i=0; i&lt;filesArray.length; i++) {
-                    sendFile(filesArray[i]);
-                }
-            }
+            xhr.open("POST", uri, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
+                    alert(xhr.responseText); // handle response.
+                }
+            };
+            fd.append('myFile', file);
+            // Initiate a multipart/form-data upload
+            xhr.send(fd);
         }
-    &lt;/script&gt;
+
+        window.onload = function() {
+            const dropzone = document.getElementById("dropzone");
+            dropzone.ondragover = dropzone.ondragenter = function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+
+            dropzone.ondrop = function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                const filesArray = event.dataTransfer.files;
+                for (let i=0; i&lt;filesArray.length; i++) {
+                    sendFile(filesArray[i]);
+                }
+            }
+        }
+    &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;div&gt;
-        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;"&gt;Drag &amp; drop your file here...&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -509,5 +509,5 @@ URL.revokeObjectURL(obj_url);</pre>
  <li>{{DOMxRef("FileReader")}}</li>
  <li>{{DOMxRef("URL")}}</li>
  <li>{{DOMxRef("XMLHttpRequest")}}</li>
- <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
 </ul>

@@ -6,6 +6,7 @@ tags:
   - Beacon
   - Method
   - Navigator
+  - NeedsExample
   - Networking
   - Reference
   - Web Performance
@@ -13,11 +14,11 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>navigator.sendBeacon()</strong></code> method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data over {{Glossary("HTTP")}} to a web server.</span></p>
+<p><span class="seoSummary">The <code><strong>navigator.sendBeacon()</strong></code> method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data over {{Glossary("HTTP")}} to a web server.</span> It’s intended to be used in combination with the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> event (but not with the <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code> and <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code> events).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">navigator.sendBeacon(<var>url</var>, <var>data</var>);
+<pre class="syntaxbox notranslate">navigator.sendBeacon(<var>url</var>, <var>data</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -51,7 +52,7 @@ tags:
 
 <p>The following example shows theoretical analytics code that attempts to submit data to a server with a synchronous <code>XMLHttpRequest</code> in an <code>unload</code> handler. This results in the next page load to be delayed.</p>
 
-<pre class="brush: js">window.addEventListener("unload", function logData() {
+<pre class="brush: js notranslate">window.addEventListener("unload", function logData() {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "/log", false); // third parameter of `false` means synchronous
   xhr.send(analyticsData);
@@ -67,14 +68,13 @@ tags:
  <li>In addition, the code is simpler to write than any of the older techniques!</li>
 </ul>
 
-<p>The following example shows a theoretical analytics code pattern that submits data to a server using the <code>sendBeacon()</code> method.</p>
+<div class="blockIndicator warning">
+<p><code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code> and <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code> aren’t the right events to use with <code>sendBeacon</code>. Instead, use <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code>. See discussion in the comments at <a href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is broken</a> — and especially see the article at <a href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don't lose user and app state, use Page Visibility</a>, which explains: <em>Use Page Visibility API and execute its session save-and-restore logic whenever <code>visibilitychange</code> state changes… forget that the other events even exist. Treat every transition to visible as a new session: restore previous state, reset your analytics counters, and so on. Then, when the application transitions to <code>hidden</code>, end the session: save user and app state, beacon your analytics, and perform all other necessary work.</em></p>
 
-<pre class="brush: js">window.addEventListener("unload", function logData() {
-  navigator.sendBeacon("/log", analyticsData);
-});
-</pre>
+<p>You can use the <a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a> library to deal with with current cross-browser inconsistencies in handling of the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> event and other related behavior; that library normalizes cross-browser differences in event-firing order so that state changes always occur exactly as expected, consistently in all browsers.</p>
 
-<p>The beacon sends an HTTP request via the POST method, with all relevant cookies available when called.</p>
+<p>For additional best-practices guidance in detail, see the <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</a> how-to article.</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -104,5 +104,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("navigator", "navigator")}}</li>
+ <li><a href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don't lose user and app state, use Page Visibility</a> is an article which explains in detail why you should use <code>visibilitychange</code>, not <code>beforeunload</code>/<code>unload</code>:<br>
+  <em>Use Page Visibility API and execute its session save-and-restore logic whenever <code>visibilitychange</code> state changes. This is the only event your application can count on… forget that the other events even exist. Treat every transition to visible as a new session: restore previous state, reset your analytics counters, and so on. Then, when the application transitions to <code>hidden</code>, end the session: save user and app state, beacon your analytics, and perform all other necessary work.</em></li>
+ <li><a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</a> is a how-to article that gives best-practices guidance on handling page-lifecyle behavior in your web applications.</li>
+ <li><a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a> is a JavaScript library (&lt;1K gzipped) that deals with cross-browser inconsistencies in page-lifecyle behavior, enabling you to focus on following the best-practices guidance in the <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</a> article. It normalizes cross-browser differences in event-firing order so that state changes always occur exactly as outlined in the chart and tables in that article (and do so consistently in all browsers).</li>
 </ul>

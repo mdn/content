@@ -171,7 +171,7 @@ let bob = a =&gt; a + 100;</pre>
 function Person() {
   this.age = 42; // &lt;-- notice me?
   setTimeout(function () { // &lt;-- Traditional function is executing on the window scope
-    console.log("this.age", this.age); // yeilds "10" because the function executes on the window scope
+    console.log("this.age", this.age); // yields "10" because the function executes on the window scope
   }, 100);
 }
 
@@ -185,7 +185,7 @@ var p = new Person();
 function Person() {
   this.age = 42; // &lt;-- notice me?
   setTimeout(() =&gt; { // &lt;-- Arrow function executing in the "p" (an instance of Person) scope
-    console.log("this.age", this.age); // yeilds "42" because the function executes on the Person scope
+    console.log("this.age", this.age); // yields "42" because the function executes on the Person scope
   }, 100);
 }
 

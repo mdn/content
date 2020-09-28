@@ -15,17 +15,17 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, labelable content, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, labelable content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but there must be no <code>&lt;meter&gt;</code> element among its descendants.</td>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but there must be no <code>&lt;meter&gt;</code> element among its descendants.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -33,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -41,7 +41,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
+   <td>No <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -52,7 +52,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("value")}}</dt>
@@ -70,7 +70,7 @@ tags:
  <dt>{{htmlattrdef("optimum")}}</dt>
  <dd>This attribute indicates the optimal numeric value. It must be within the range (as defined by the <code>min</code> attribute and <code>max</code> attribute). When used with the <code>low</code> attribute and <code>high</code> attribute, it gives an indication where along the range is considered preferable. For example, if it is between the <code>min</code> attribute and the <code>low</code> attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.</dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the <code>&lt;meter&gt;</code> element with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any. This attribute is only used if the <code>&lt;meter&gt;</code> element is being used as a form-associated element, such as one displaying a range corresponding to an <a href="/en-US/docs/Web/HTML/Element/input/number"><code>&lt;input type="number"&gt;</code></a>.</dd>
+ <dd>The {{HTMLElement("form")}} element to associate the <code>&lt;meter&gt;</code> element with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. If this attribute is not set, the <code>&lt;meter&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any. This attribute is only used if the <code>&lt;meter&gt;</code> element is being used as a form-associated element, such as one displaying a range corresponding to an <a href="/en-US/docs/Web/HTML/Element/input/number"><code>&lt;input type="number"&gt;</code></a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

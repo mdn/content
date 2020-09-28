@@ -12,15 +12,15 @@ tags:
 
 <p>The <strong><code>toUTCString()</code></strong> method converts a date to a string, using the UTC time zone.</p>
 
-<p>Based on <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.1">rfc7231</a> and modified according to <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring">ecma-262 toUTCString</a>, it can have negative values in the <a href="https://tc39.es/ecma262/#sec-date.prototype.toutcstring">2021 version</a></p>
+<p>Based on <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.1">rfc7231</a> and modified according to <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring">ecma-262 toUTCString</a>, it can have negative values in the <a href="https://tc39.es/ecma262/#sec-date.prototype.toutcstring">2021 version</a></p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.toUTCString()</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.toUTCString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -28,12 +28,12 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The value returned by <code>toUTCString()</code> is a string in the form <code><var>Www</var>, <var>dd</var> <var>Mmm</var> <var>yyyy</var> <var>hh</var>:<var>mm</var>:<var>ss</var> GMT</code>, Where:</p>
+<p>The value returned by <code>toUTCString()</code> is a string in the form <code><var>Www</var>, <var>dd</var> <var>Mmm</var> <var>yyyy</var> <var>hh</var>:<var>mm</var>:<var>ss</var> GMT</code>, Where:</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Format Sring</th>
+   <th scope="col">Format String</th>
    <th scope="col">Description</th>
   </tr>
  </thead>
@@ -69,13 +69,13 @@ tags:
  </tbody>
 </table>
 
-<p>Prior to ECMAScript 2018, the format of the return value varied according to the platform. The most common return value was an RFC-1123 formatted date stamp, which is a slightly updated version of RFC-822 date stamps.</p>
+<p>Prior to ECMAScript 2018, the format of the return value varied according to the platform. The most common return value was an RFC-1123 formatted date stamp, which is a slightly updated version of RFC-822 date stamps.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_toUTCString">Using <code>toUTCString()</code></h3>
+<h3 id="Using_toUTCString">Using toUTCString()</h3>
 
-<pre class="brush: js">let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+<pre class="brush: js notranslate">let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 </pre>
 
@@ -96,7 +96,7 @@ let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.toUTCString")}}</p>
 

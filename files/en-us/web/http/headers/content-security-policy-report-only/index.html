@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
+<pre class="syntaxbox notranslate">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -46,11 +46,11 @@ tags:
 
 <p>This header reports violations that would have occurred. You can use this to iteratively work on your content security policy. You observe how your site behaves, watching for violation reports, or <a href="https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/">malware redirects</a>, then choose the desired policy enforced by the {{HTTPHeader("Content-Security-Policy")}} header.</p>
 
-<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre class="notranslate">Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <p>If you still want to receive reporting, but also want to enforce a policy, use the {{HTTPHeader("Content-Security-Policy")}} header with the {{CSP("report-uri")}} directive.</p>
 
-<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre class="notranslate">Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <h2 id="Violation_report_syntax">Violation report syntax</h2>
 
@@ -59,11 +59,11 @@ tags:
 <dl>
  <dt><code>blocked-uri</code></dt>
  <dd>The URI of the resource that was blocked from loading by the Content Security Policy. If the blocked URI is from a different origin than the document-uri, then the blocked URI is truncated to contain just the scheme, host, and port.</dd>
- <dt><code><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>disposition</span></code></dt>
+ <dt><code>disposition</code></dt>
  <dd>Either <code>"enforce"</code> or <code>"report"</code> depending on whether the {{HTTPHeader("Content-Security-Policy")}} header or the <code>Content-Security-Policy-Report-Only</code> header is used.</dd>
  <dt><code>document-uri</code></dt>
  <dd>The URI of the document in which the violation occurred.</dd>
- <dt><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>effective-directive</span></dt>
+ <dt><code>effective-directive</code></dt>
  <dd>The directive whose enforcement caused the violation.</dd>
  <dt><code>original-policy</code></dt>
  <dd>The original policy as specified by the <code>Content-Security-Policy-Report-Only</code> HTTP header.</dd>
@@ -82,12 +82,12 @@ tags:
 <div>Let's consider a page located at <code>http://example.com/signup.html</code>. It uses the following policy, disallowing everything but stylesheets from <code>cdn.example.com</code>.</div>
 
 <div>
-<pre>Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
+<pre class="notranslate">Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 </div>
 
 <div>The HTML of <code>signup.html</code> looks like this:</div>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Sign Up&lt;/title&gt;
@@ -100,7 +100,7 @@ tags:
 
 <div>Can you spot the violation? Stylesheets are only allowed to be loaded from <code>cdn.example.com</code>, yet the website tries to load one from its own origin (<code>http://example.com</code>). A browser capable of enforcing CSP will send the following violation report as a POST request to <code>http://example.com/_/csp-reports</code>, when the document is visited:</div>
 
-<pre class="brush: js">{
+<pre class="brush: js notranslate">{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",
