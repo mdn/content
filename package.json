@@ -2,7 +2,7 @@
   "name": "content",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "https://github.com/mdn/yari/issues/408",
+  "license": "SEE LICENSE IN LICENSE.md",
   "engines": {
     "node": ">=12.0.0"
   },
@@ -11,7 +11,7 @@
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.49",
+    "@mdn/yari": "0.1.53",
     "env-cmd": "10.1.0"
   },
   "devDependencies": {
