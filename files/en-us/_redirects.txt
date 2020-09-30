@@ -1,12 +1,16 @@
 # FROM-URL	TO-URL
-/en-US/docs/"Mozilla-JSS"_JCA_Provider_notes	/en-US/docs/JSS/%22Mozilla-JSS%22_JCA_Provider_notes
+/en-US/docs/%3Cimg%3E	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/%7B%7Bdomxref(%22/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
+/en-US/docs/%7B%7Bdomxref(%22/TouchList.item	/en-US/docs/Web/API/TouchList/item
+/en-US/docs/%D9%88%D8%A7%D8%B5%D9%81%D8%A9_SpellCheck_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9_%D9%81%D9%8A_HTML5	/ar/docs/واصفة_SpellCheck_الجديدة_في_HTML5
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
-/en-US/docs//HTML/Forms/Advanced_styling_for_HTML_forms	/en-US/docs/Learn/Forms/Advanced_form_styling
-/en-US/docs//Scripting_Plugins_Adobe_Flash	/en-US/docs/Add-ons/Plugins/Scripting_Plugins_Adobe_Flash
-/en-US/docs//en-US/docs/Project:MDN/Tools/Feeds	/en-US/docs/Project:MDN/Tools/Feeds
-/en-US/docs//en-US/docs_en-US/docs/SpiderMonkey/JSAPI_Reference/JSValue	/en-US/docs//en-US/docs/SpiderMonkey/JSAPI_Reference/JS::Value
-/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/img
+/en-US/docs//HTML/Forms/Advanced_styling_for_HTML_forms	undefined
+/en-US/docs//Scripting_Plugins_Adobe_Flash	undefined
+/en-US/docs//en-US/docs/LiveConnect/Overview	undefined
+/en-US/docs//en-US/docs/Project:MDN/Tools/Feeds	undefined
+/en-US/docs//en-US/docs_en-US/docs/SpiderMonkey/JSAPI_Reference/JSValue	undefined
+/en-US/docs//nsIPlacesView	undefined
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
 /en-US/docs/AJAX/Community	/en-US/docs/Web/Guide/AJAX/Community
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Web/Guide/AJAX/Getting_Started
@@ -22,8 +26,8 @@
 /en-US/docs/AJAX:WAI_ARIA_Live_Regions_API_Support	/en-US/docs/AJAX/WAI_ARIA_Live_Regions//API_Support
 /en-US/docs/AJAX_Patterns:_Design_Patterns_for_AJAX_Usability_(external)	/en-US/docs/AJAX_Patterns/Design_Patterns_for_AJAX_Usability_(external)
 /en-US/docs/API	/en-US/docs/Web/API
-/en-US/docs/API/File/Basic_Concepts_About_the_File_API	/en-US/docs/Web/Guide/API/File%20System/Introduction
-/en-US/docs/API/File/Basic_concepts_about_file_api	/en-US/docs/Web/Guide/API/File%20System/Introduction
+/en-US/docs/API/File/Basic_Concepts_About_the_File_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/API/File/Basic_concepts_about_file_api	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/API/Full_Screen_API	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/API/Fullscreen	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/API/Fullscreen_API	/en-US/docs/Web/API/Fullscreen_API
@@ -179,16 +183,19 @@
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /en-US/docs/Add-ons	/en-US/docs/Mozilla/Add-ons
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_Extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Introduction_to_Extensions
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/License_authors	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/License_authors
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
-/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Using_XPCOM%E2%80%94Implementing_advanced_processes
+/en-US/docs/Add-ons/Bootstrapped_extensions	undefined
+/en-US/docs/Add-ons/How_to_convert_an_overlay_extension_to_restartless	undefined
+/en-US/docs/Add-ons/Overlay_Extensions	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_Extensions	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/License_authors	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions	undefined
+/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Using_XPCOM%E2%80%94Implementing_advanced_processes	undefined
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Components	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Adding_XPCOM_components_to_Mozilla_build_system
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	/en-US/docs/Mozilla/Add-ons/WebExtensions/Distribution_options
@@ -229,11 +236,11 @@
 /en-US/docs/Animation/reverse	/en-US/docs/Web/API/Animation/reverse
 /en-US/docs/Animation/startTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/AppLinks/WebConsoleHelp	/en-US/docs/Tools/Web_Console/Helpers
-/en-US/docs/Appendix_2:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses
+/en-US/docs/Appendix_2:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses
 /en-US/docs/Application/Http-index-format_specification	/en-US/docs/application//http-index-format_specification
 /en-US/docs/Applying_SVG_effects_to_HTML_content	/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
 /en-US/docs/Apps	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Apps/APP_基于firefox开发应用软件起始页	/en-US/docs/Web/Apps/APP_%E5%9F%BA%E4%BA%8Efirefox%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E8%B5%B7%E5%A7%8B%E9%A1%B5
+/en-US/docs/Apps/APP_%E5%9F%BA%E4%BA%8Efirefox%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E8%B5%B7%E5%A7%8B%E9%A1%B5	/en-US/docs/Web/Apps/APP_%E5%9F%BA%E4%BA%8Efirefox%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E8%B5%B7%E5%A7%8B%E9%A1%B5
 /en-US/docs/Apps/Adding_a_subdomain	/en-US/docs/Marketplace/Adding_a_subdomain
 /en-US/docs/Apps/Adding_a_subdomain-redirect-1	/en-US/docs/Marketplace/Adding_a_subdomain
 /en-US/docs/Apps/After_the_purchase	/en-US/docs/Web/Apps/After_the_purchase
@@ -270,25 +277,25 @@
 /en-US/docs/Apps/CSP	/en-US/docs/Apps/Build/installable_apps_for_Firefox_OS/CSP
 /en-US/docs/Apps/Creating_a_store	/en-US/docs/Marketplace/Creating_a_store
 /en-US/docs/Apps/Custom_Elements	/en-US/docs/Apps/Build/Custom_elements
+/en-US/docs/Apps/D%C3%A9tails_sp%C3%A9cifique_%C3%A0_la_plateforme	/en-US/docs/Web/Apps/D%C3%A9tails_sp%C3%A9cifique_%C3%A0_la_plateforme
 /en-US/docs/Apps/Design/Custom_elements	/en-US/docs/Apps/Build/Custom_elements
 /en-US/docs/Apps/Design/Guidelines/Building_blocks_(x-tags)	/en-US/docs/Apps/Build/x-tags
 /en-US/docs/Apps/Design/Guidelines/Design_Principles	/en-US/docs/Apps/Design/Design_Principles
-/en-US/docs/Apps/Design/Guidelines/What is responsive design?	/en-US/docs/Web/Apps/Design/Guidelines/What%20is%20responsive%20design?
+/en-US/docs/Apps/Design/Guidelines/What%20is%20responsive%20design?	/en-US/docs/Web/Apps/Design/Guidelines/What%20is%20responsive%20design?
 /en-US/docs/Apps/Design_Guidelines/Building_blocks_(x-tags)	/en-US/docs/Apps/Build/x-tags
 /en-US/docs/Apps/Design_Guidelines/Design_Principles	/en-US/docs/Apps/Design/Design_Principles
-/en-US/docs/Apps/Design_Guidelines/Design_patterns	/en-US/docs/Apps/Design_Guidelines/What%20is%20responsive%20design?
-/en-US/docs/Apps/Design_Guidelines/What is responsive design?	/en-US/docs/Apps/Design/Guidelines/What%20is%20responsive%20design?
+/en-US/docs/Apps/Design_Guidelines/Design_patterns	/en-US/docs/Web/Apps/Design/Guidelines/What%20is%20responsive%20design?
+/en-US/docs/Apps/Design_Guidelines/What%20is%20responsive%20design?	/en-US/docs/Web/Apps/Design/Guidelines/What%20is%20responsive%20design?
 /en-US/docs/Apps/Developing	/en-US/docs/Web/Apps/Developing
 /en-US/docs/Apps/Developing/Optimizing_startup_performance	/en-US/docs/Apps/Developing/Performance/Optimizing_startup_performance
 /en-US/docs/Apps/Developing_game_apps	/en-US/docs/Apps/Build/Games
-/en-US/docs/Apps/Détails_spécifique_à_la_plateforme	/en-US/docs/Web/Apps/D%C3%A9tails_sp%C3%A9cifique_%C3%A0_la_plateforme
 /en-US/docs/Apps/FAQs	/en-US/docs/Web/Apps/FAQs
 /en-US/docs/Apps/FAQs/About_app_manifests	/en-US/docs/Apps/Build/About_app_manifests
 /en-US/docs/Apps/FAQs/About_apps	/en-US/docs/Web/Apps/FAQs/About_apps
 /en-US/docs/Apps/FAQs/Basics	/en-US/docs/Web/Apps/FAQs/Basics
 /en-US/docs/Apps/FAQs/General	/en-US/docs/Web/Apps/FAQs/General
-/en-US/docs/Apps/FAQs/General/General_FAQs_for_apps_（mozilla开发应用软件的一般问题解答）中文对应翻译	/en-US/docs/Web/Apps/FAQs/General/General_FAQs_for_apps_%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%80%E8%88%AC%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89%E4%B8%AD%E6%96%87%E5%AF%B9%E5%BA%94%E7%BF%BB%E8%AF%91
-/en-US/docs/Apps/FAQs/General/General_FAQs_for_apps（mozilla开发应用软件的问题解答）	/en-US/docs/Web/Apps/FAQs/General/General_FAQs_for_apps%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89
+/en-US/docs/Apps/FAQs/General/General_FAQs_for_apps%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89	/en-US/docs/Web/Apps/FAQs/General/General_FAQs_for_apps%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89
+/en-US/docs/Apps/FAQs/General/General_FAQs_for_apps_%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%80%E8%88%AC%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89%E4%B8%AD%E6%96%87%E5%AF%B9%E5%BA%94%E7%BF%BB%E8%AF%91	/en-US/docs/Web/Apps/FAQs/General/General_FAQs_for_apps_%EF%BC%88mozilla%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%80%E8%88%AC%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94%EF%BC%89%E4%B8%AD%E6%96%87%E5%AF%B9%E5%BA%94%E7%BF%BB%E8%AF%91
 /en-US/docs/Apps/FAQs/Known_issues	/en-US/docs/Web/Apps/FAQs/Known_issues
 /en-US/docs/Apps/FAQs/Market	/en-US/docs/Web/Apps/FAQs/Market
 /en-US/docs/Apps/FAQs/Marketing	/en-US/docs/Web/Apps/FAQs/Marketing
@@ -412,7 +419,7 @@
 /en-US/docs/CN_MDN	/zh-CN/docs
 /en-US/docs/CN_MDN/JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 /en-US/docs/CN_MDN/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
-/en-US/docs/CN_MDN/JavaScript/JavaScript_参考	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed
+/en-US/docs/CN_MDN/JavaScript/JavaScript_%E5%8F%82%E8%80%83	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed
 /en-US/docs/CN_MDN/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 /en-US/docs/CN_MDN/JavaScript/Reference/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 /en-US/docs/CN_MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
@@ -622,6 +629,7 @@
 /en-US/docs/CSS/-webkit-transition-duration	/en-US/docs/Web/CSS/transition-duration
 /en-US/docs/CSS/-webkit-transition-property	/en-US/docs/Web/CSS/transition-property
 /en-US/docs/CSS/-webkit-transition-timing-function	/en-US/docs/Web/CSS/transition-timing-function
+/en-US/docs/CSS/:%5BProperty_Name%5D/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
 /en-US/docs/CSS/:-moz-any	/en-US/docs/Web/CSS/:is
 /en-US/docs/CSS/:-moz-broken	/en-US/docs/Web/CSS/:-moz-broken
 /en-US/docs/CSS/:-moz-drag-over	/en-US/docs/Web/CSS/:-moz-drag-over
@@ -660,7 +668,6 @@
 /en-US/docs/CSS/::first-line	/en-US/docs/Web/CSS/::first-line
 /en-US/docs/CSS/::selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
-/en-US/docs/CSS/:[Property_Name]/:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
 /en-US/docs/CSS/:active	/en-US/docs/Web/CSS/:active
 /en-US/docs/CSS/:after	/en-US/docs/Web/CSS/::after
 /en-US/docs/CSS/:any	/en-US/docs/Web/CSS/:is
@@ -770,6 +777,7 @@
 /en-US/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS-redirect-1	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
+/en-US/docs/CSS/Getting_Started/Why_use_CSS?	undefined
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
@@ -1243,6 +1251,7 @@
 /en-US/docs/CSS:Getting_Started:What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS:Getting_Started:What_is_CSS?	/en-US/docs/CSS/Getting_Started/What_is_CSS?
 /en-US/docs/CSS:Getting_Started:Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
+/en-US/docs/CSS:Getting_Started:Why_use_CSS?	/en-US/docs/CSS/Getting_Started/Why_use_CSS?
 /en-US/docs/CSS:Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Media:Visual	/en-US/docs/CSS/Media/Visual
 /en-US/docs/CSS:Other_Resources	/en-US/docs/Web/CSS
@@ -1591,6 +1600,7 @@
 /en-US/docs/Core_JavaScript_1.5_Guide/Iterators_and_Generators	/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /en-US/docs/Core_JavaScript_1.5_Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
 /en-US/docs/Core_JavaScript_1.5_Guide/Literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+/en-US/docs/Core_JavaScript_1.5_Guide/LiveConnect_Overview	/en-US/docs//en-US/docs/LiveConnect/Overview
 /en-US/docs/Core_JavaScript_1.5_Guide/Loop_Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Core_JavaScript_1.5_Guide/Loop_Statements/break_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Core_JavaScript_1.5_Guide/Loop_Statements/continue_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -1771,6 +1781,7 @@
 /en-US/docs/Core_JavaScript_1.5_Guide:Iterators_and_Generators	/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /en-US/docs/Core_JavaScript_1.5_Guide:JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
 /en-US/docs/Core_JavaScript_1.5_Guide:Literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+/en-US/docs/Core_JavaScript_1.5_Guide:LiveConnect_Overview	/en-US/docs//en-US/docs/LiveConnect/Overview
 /en-US/docs/Core_JavaScript_1.5_Guide:Loop_Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Core_JavaScript_1.5_Guide:Loop_Statements:break_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Core_JavaScript_1.5_Guide:Loop_Statements:continue_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -3155,7 +3166,7 @@
 /en-US/docs/DOM/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/DOM/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/DOM/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
-/en-US/docs/DOM/File_API/File_System_API	/en-US/docs/Web/Guide/API/File%20System
+/en-US/docs/DOM/File_API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/DOM/File_API/File_System_API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync	/en-US/docs/Web/API/DirectoryEntrySync
 /en-US/docs/DOM/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
@@ -3164,13 +3175,13 @@
 /en-US/docs/DOM/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/DOM/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/DOM/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
-/en-US/docs/DOM/File_API/File_System_API/FileError	/en-US/docs/Web/Guide/API/File%20System/FileError
+/en-US/docs/DOM/File_API/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/DOM/File_API/File_System_API/FileException	/en-US/docs/Web/API/FileException
 /en-US/docs/DOM/File_API/File_System_API/FileSystem	/en-US/docs/Web/API/FileSystem
 /en-US/docs/DOM/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
 /en-US/docs/DOM/File_API/File_System_API/LocalFileSystem	/en-US/docs/Web/API/LocalFileSystem
 /en-US/docs/DOM/File_API/File_System_API/LocalFileSystemSync	/en-US/docs/Web/API/LocalFileSystemSync
-/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/Guide/API/File%20System/Introduction
+/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/DOM/GainNode	/en-US/docs/Web/API/GainNode
 /en-US/docs/DOM/HTMLAnchorElement	/en-US/docs/Web/API/HTMLAnchorElement
 /en-US/docs/DOM/HTMLAreaElement	/en-US/docs/Web/API/HTMLAreaElement
@@ -3624,17 +3635,17 @@
 /en-US/docs/DOM/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/DOM/Using_the_Telephony_API	/en-US/docs/Web/Guide/API/Telephony/Using_the_Telephony_API
 /en-US/docs/DOM/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
-/en-US/docs/DOM/Using_web_workers/_فن_البيع_والشراء_عبر_الانترنت	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
-/en-US/docs/DOM/Using_web_workers/_فن_البيع_والشراء_عبر_الانترنت/كيف_تربح_المال_عن_طريق_الانترنت_من_خلال_العمل_من_ا	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7
-/en-US/docs/DOM/Using_web_workers/_فن_البيع_والشراء_عبر_الانترنت/كيف_تربح_المال_عن_طريق_الانترنت_من_خلال_العمل_من_ا/_كيفية_تحصيل_الارباح_عن_طريق_الانترنت	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7/_%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%AA%D8%AD%D8%B5%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%A7%D8%AD_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
-/en-US/docs/DOM/Using_web_workers/_فن_البيع_والشراء_عبر_الانترنت/كيفية_الربح_من_النت_وتسويق_المنتجات_	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%A7%D9%84%D8%B1%D8%A8%D8%AD_%D9%85%D9%86_%D8%A7%D9%84%D9%86%D8%AA_%D9%88%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_
+/en-US/docs/DOM/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
+/en-US/docs/DOM/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%A7%D9%84%D8%B1%D8%A8%D8%AD_%D9%85%D9%86_%D8%A7%D9%84%D9%86%D8%AA_%D9%88%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%A7%D9%84%D8%B1%D8%A8%D8%AD_%D9%85%D9%86_%D8%A7%D9%84%D9%86%D8%AA_%D9%88%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_
+/en-US/docs/DOM/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7
+/en-US/docs/DOM/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7/_%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%AA%D8%AD%D8%B5%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%A7%D8%AD_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA	/en-US/docs/Web/Guide/Performance/Using_web_workers/_%D9%81%D9%86_%D8%A7%D9%84%D8%A8%D9%8A%D8%B9_%D9%88%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A1_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D9%83%D9%8A%D9%81_%D8%AA%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%85%D9%86_%D8%AE%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%B9%D9%85%D9%84_%D9%85%D9%86_%D8%A7/_%D9%83%D9%8A%D9%81%D9%8A%D8%A9_%D8%AA%D8%AD%D8%B5%D9%8A%D9%84_%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%A7%D8%AD_%D8%B9%D9%86_%D8%B7%D8%B1%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
 /en-US/docs/DOM/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/DOM/WheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Window.XPCSafeJSObjectWrapper	/en-US/docs/XPConnect_wrappers#XPCSafeJSObjectWrapper
 /en-US/docs/DOM/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/DOM/Worker	/en-US/docs/Web/API/Worker
-/en-US/docs/DOM/Worker/Functions_available_to_workers	/en-US/docs/Web/Reference/Functions_and%20classes_available_to_workers
+/en-US/docs/DOM/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/DOM/XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/DOM/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
@@ -4882,7 +4893,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/Document_Object_Model_(DOM)/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/Document_Object_Model_(DOM)/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
-/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API	/en-US/docs/Web/Guide/API/File%20System
+/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryEntrySync	/en-US/docs/Web/API/DirectoryEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
@@ -4891,11 +4902,11 @@
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/EntrySync	/en-US/docs/Web/API/FileSystemEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileEntrySync	/en-US/docs/Web/API/FileEntrySync
-/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileError	/en-US/docs/Web/Guide/API/File%20System/FileError
+/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileException	/en-US/docs/Web/API/FileException
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystem	/en-US/docs/Web/API/FileSystem
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
-/en-US/docs/Document_Object_Model_(DOM)/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/Guide/API/File%20System/Introduction
+/en-US/docs/Document_Object_Model_(DOM)/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAnchorElement	/en-US/docs/Web/API/HTMLAnchorElement
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAreaElement	/en-US/docs/Web/API/HTMLAreaElement
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAudioElement	/en-US/docs/Web/API/HTMLAudioElement
@@ -5140,7 +5151,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Document_Object_Model_(DOM)/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Document_Object_Model_(DOM)/Worker	/en-US/docs/Web/API/Worker
-/en-US/docs/Document_Object_Model_(DOM)/Worker/Functions_available_to_workers	/en-US/docs/Web/Reference/Functions_and%20classes_available_to_workers
+/en-US/docs/Document_Object_Model_(DOM)/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Document_Object_Model_(DOM)/createEvent	/en-US/docs/Web/API/Document/createEvent
 /en-US/docs/Document_Object_Model_(DOM)/cssMediaRule	/en-US/docs/DOM/cssMediaRule
 /en-US/docs/Document_Object_Model_(DOM)/dispatchEvent_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
@@ -5649,7 +5660,7 @@
 /en-US/docs/FirebugInternals	/en-US/docs/Firebug_internals
 /en-US/docs/Firebug_Firefox_extension_(external)	https://addons.mozilla.org/extensions/moreinfo.php?id=1843&application=firefox
 /en-US/docs/Firefox	/en-US/docs/Mozilla/Firefox
-/en-US/docs/Firefox 11 for developers	/en-US/docs/Mozilla/Firefox/Releases/11
+/en-US/docs/Firefox%2011%20for%20developers	/en-US/docs/Mozilla/Firefox/Releases/11
 /en-US/docs/Firefox/Updating_add-ons_for_Firefox_10	/en-US/docs/Firefox/Releases/10/Updating_add-ons
 /en-US/docs/Firefox/Updating_add-ons_for_Firefox_5	/en-US/docs/Firefox/Releases/5/Updating_add-ons
 /en-US/docs/Firefox/Updating_add-ons_for_Firefox_6	/en-US/docs/Firefox/Releases/6/Updating_add-ons
@@ -5691,21 +5702,21 @@
 /en-US/docs/Firefox_7_for_developers	/en-US/docs/Mozilla/Firefox/Releases/7
 /en-US/docs/Firefox_8_for_developers	/en-US/docs/Mozilla/Firefox/Releases/8
 /en-US/docs/Firefox_9_for_developers	/en-US/docs/Mozilla/Firefox/Releases/9
-/en-US/docs/Firefox_Addons_Dev_Guide	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide
-/en-US/docs/Firefox_Addons_Dev_Guide/Introduction_to_Extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Introduction_to_Extensions
-/en-US/docs/Firefox_Addons_Dev_Guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI	/en-US/docs/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI
-/en-US/docs/Firefox_Addons_Dev_Guide/Technologies_used_in_developing_extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
+/en-US/docs/Firefox_Addons_Dev_Guide	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide
+/en-US/docs/Firefox_Addons_Dev_Guide/Introduction_to_Extensions	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_Extensions
+/en-US/docs/Firefox_Addons_Dev_Guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI
+/en-US/docs/Firefox_Addons_Dev_Guide/Technologies_used_in_developing_extensions	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
 /en-US/docs/Firefox_User_Agent_String_Reference	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
-/en-US/docs/Firefox_addons_developer_guide	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide
-/en-US/docs/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses
-/en-US/docs/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses
-/en-US/docs/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications
-/en-US/docs/Firefox_addons_developer_guide/Introduction_to_Extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Introduction_to_Extensions
-/en-US/docs/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI
-/en-US/docs/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension
-/en-US/docs/Firefox_addons_developer_guide/License_authors	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/License_authors
-/en-US/docs/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions	/en-US/docs/Add-ons/Overlay_Extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
-/en-US/docs/Firefox_addons_developer_guide/Using_XPCOM—Implementing_advanced_processes	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Using_XPCOM%E2%80%94Implementing_advanced_processes
+/en-US/docs/Firefox_addons_developer_guide	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide
+/en-US/docs/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix:_What_you_should_know_about_open-source_software_licenses
+/en-US/docs/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Appendix_2:_What_you_should_know_about_open-source_software_licenses
+/en-US/docs/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Firefox_extensions_and_XUL_applications
+/en-US/docs/Firefox_addons_developer_guide/Introduction_to_Extensions	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_Extensions
+/en-US/docs/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Introduction_to_XUL%E2%80%94How_to_build_a_more_intuitive_UI
+/en-US/docs/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Let's_build_a_Firefox_extension
+/en-US/docs/Firefox_addons_developer_guide/License_authors	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/License_authors
+/en-US/docs/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
+/en-US/docs/Firefox_addons_developer_guide/Using_XPCOM%E2%80%94Implementing_advanced_processes	/en-US/docs/Add-ons/Overlay_extensions/Firefox_addons_developer_guide/Using_XPCOM%E2%80%94Implementing_advanced_processes
 /en-US/docs/Firefox_for_developers	/en-US/docs/Mozilla/Firefox/Releases/20
 /en-US/docs/Fixing_common_validation_problems	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Flash/AJAX_Integration_Kit_(external)	/en-US/docs/Flash_//_AJAX_Integration_Kit_(external)
@@ -6251,6 +6262,7 @@
 /en-US/docs/How_comm-central's_build_system_works	/en-US/docs/Mozilla/Developer_guide/The_comm-central_build_system
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
 /en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
+/en-US/docs/How_to_convert_an_overlay_extension_to_restartless	/en-US/docs/Add-ons/How_to_convert_an_overlay_extension_to_restartless
 /en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Getting_started
 /en-US/docs/Http:_wiki.codetalks.org/Wiki/Index.php/Web_2.0_Accessibility_with_WAI-ARIA_FAQ/Web_2.0_Accessibility_with_WAI-ARIA_FAQ	/en-US/docs/Web_2.0_Accessibility_with_WAI-ARIA_FAQ
@@ -6351,7 +6363,7 @@
 /en-US/docs/Introduction_(alternate)	/en-US/docs/Mozilla/Developer_guide/Introduction
 /en-US/docs/Introduction_to_DOM_Inspector	/en-US/docs/Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector
 /en-US/docs/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn/JavaScript/Objects
-/en-US/docs/Introduction_to_Object-Oriented_JavaScript/面向对象JavaScript入门	/en-US/docs/Introduction_to_Object-Oriented_JavaScript/%5BError%5D_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1JavaScript%E5%85%A5%E9%97%A8
+/en-US/docs/Introduction_to_Object-Oriented_JavaScript/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1JavaScript%E5%85%A5%E9%97%A8	/en-US/docs/Introduction_to_Object-Oriented_JavaScript/%5BError%5D_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1JavaScript%E5%85%A5%E9%97%A8
 /en-US/docs/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/JAR_Manifests	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/JAR_Manifests
 /en-US/docs/JAR_Packaging	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/JAR_Packaging
@@ -6442,6 +6454,11 @@
 /en-US/docs/JSREG_STICKY	/en-US/docs/JS_NewRegExpObject
 /en-US/docs/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/JavaScript,_the_DOM_and_the_BOM	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
+/en-US/docs/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
+/en-US/docs/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3
+/en-US/docs/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7
+/en-US/docs/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89
+/en-US/docs/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89/%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89/%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
 /en-US/docs/JavaScript/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /en-US/docs/JavaScript/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/JavaScript/Advancing_JavaScript_with_Libraries_(Presentation)	/en-US/docs/Web/JavaScript/Advancing_JavaScript_with_Libraries_(Presentation)
@@ -6462,6 +6479,8 @@
 /en-US/docs/JavaScript/Guide/Inheritance_constructor_prototype	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/JavaScript/Guide/Iterators_and_Generators	/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /en-US/docs/JavaScript/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
+/en-US/docs/JavaScript/Guide/LiveConnect_Overview	/en-US/docs//en-US/docs/LiveConnect/Overview
+/en-US/docs/JavaScript/Guide/LiveConnect_Overview_-_test	/en-US/docs//en-US/docs/LiveConnect/Overview
 /en-US/docs/JavaScript/Guide/Obsolete_Pages	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/JavaScript/Guide/Obsolete_Pages/Block_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/JavaScript/Guide/Obsolete_Pages/Calling_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
@@ -6885,7 +6904,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/valueOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/valueOf-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /en-US/docs/JavaScript/Reference/Global_Objects/Proxy	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-/en-US/docs/JavaScript/Reference/Global_Objects/Proxy{{template("Non-standard_heade	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+/en-US/docs/JavaScript/Reference/Global_Objects/Proxy%7B%7Btemplate(%22Non-standard_heade	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 /en-US/docs/JavaScript/Reference/Global_Objects/RangeError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/JavaScript/Reference/Global_Objects/RangeError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
@@ -7127,11 +7146,6 @@
 /en-US/docs/JavaScript/Typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript/Typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/JavaScript/Typed_arrays/Uint8ClampedArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/JavaScript/اهم_طرق_ربح_الانترنت	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
-/en-US/docs/JavaScript/اهم_طرق_ربح_الانترنت/التجارة_الالكترونية_و_دورها_في_تخفيض_التكاليف_التس	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3
-/en-US/docs/JavaScript/اهم_طرق_ربح_الانترنت/التجارة_الالكترونية_و_دورها_في_تخفيض_التكاليف_التس/_طرق_تسويق_المنتجات_عبر_الانترنت_لحظة_الوصول_الى_ا	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7
-/en-US/docs/JavaScript/اهم_طرق_ربح_الانترنت/التجارة_الالكترونية_و_دورها_في_تخفيض_التكاليف_التس/_طرق_تسويق_المنتجات_عبر_الانترنت_لحظة_الوصول_الى_ا/اهمية_شركات_التسويق_الالكترونى	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89
-/en-US/docs/JavaScript/اهم_طرق_ربح_الانترنت/التجارة_الالكترونية_و_دورها_في_تخفيض_التكاليف_التس/_طرق_تسويق_المنتجات_عبر_الانترنت_لحظة_الوصول_الى_ا/اهمية_شركات_التسويق_الالكترونى/طرق_تسويق_المنتجات_عبر_الانترنت	/en-US/docs/Web/JavaScript/%D8%A7%D9%87%D9%85_%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA/%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9_%D9%88_%D8%AF%D9%88%D8%B1%D9%87%D8%A7_%D9%81%D9%8A_%D8%AA%D8%AE%D9%81%D9%8A%D8%B6_%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81_%D8%A7%D9%84%D8%AA%D8%B3/_%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D9%84%D8%AD%D8%B8%D8%A9_%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84_%D8%A7%D9%84%D9%89_%D8%A7/%D8%A7%D9%87%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%89/%D8%B7%D8%B1%D9%82_%D8%AA%D8%B3%D9%88%D9%8A%D9%82_%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA_%D8%B9%D8%A8%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA
 /en-US/docs/JavaScript:Getting_Started	/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /en-US/docs/JavaScriptREAPI	/en-US/docs
 /en-US/docs/JavaScript_API	/en-US/docs/Apps/Build/JavaScript_API
@@ -7172,6 +7186,7 @@
 /en-US/docs/JavaScript_Documention/Guide/Inheritance_and_the_prototype_chain	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/JavaScript_Documention/Guide/Iterators_and_Generators	/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /en-US/docs/JavaScript_Documention/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
+/en-US/docs/JavaScript_Documention/Guide/LiveConnect_Overview	/en-US/docs//en-US/docs/LiveConnect/Overview
 /en-US/docs/JavaScript_Documention/Guide/Obsolete_Pages	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/JavaScript_Documention/Guide/Obsolete_Pages/Block_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/JavaScript_Documention/Guide/Obsolete_Pages/Calling_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
@@ -7670,7 +7685,7 @@
 /en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn/Common_questions/Available_text_editors
 /en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn/JavaScript/Client-side_web_APIs
 /en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn
-/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine﻿	/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
+/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine%EF%BB%BF	/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 /en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment	/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server
 /en-US/docs/Learn/Composing_for_the_web	/en-US/docs/Learn/Common_questions
 /en-US/docs/Learn/Design_and_Accessibility	/en-US/docs/Learn/Common_questions
@@ -7681,7 +7696,7 @@
 /en-US/docs/Learn/Drafts	/en-US/docs/Learn
 /en-US/docs/Learn/Drafts/Python	/en-US/docs/Learn/Server-side/Django
 /en-US/docs/Learn/Drafts/Python/First_steps	/en-US/docs/Learn/Server-side/Django
-/en-US/docs/Learn/Dynamic_Websites_–_Server-side_website_programming	/en-US/docs/Learn/Server-side
+/en-US/docs/Learn/Dynamic_Websites_%E2%80%93_Server-side_website_programming	/en-US/docs/Learn/Server-side
 /en-US/docs/Learn/Forms/Advanced_styling_for_HTML_forms	/en-US/docs/Learn/Forms/Advanced_form_styling
 /en-US/docs/Learn/Forms/How_to_build_custom_form_widgets	/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
 /en-US/docs/Learn/Forms/How_to_build_custom_form_widgets/Example_1	/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1
@@ -7859,7 +7874,7 @@
 /en-US/docs/Linux_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Linux_Prerequisites
 /en-US/docs/Linux_Cheat_Sheet_for_Mac_and_Windows_Programmers	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Linux_Cheat_Sheet_For_Mac_and_Windows_Programmers
 /en-US/docs/Linux_compatibility_reference	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Linux_compatibility_reference
-/en-US/docs/Lista_artykułów_-_Sprint_MDC_-_JavaScript	/pl/docs/Lista_artyku%C5%82%C3%B3w_-_Sprint_MDC_-_JavaScript
+/en-US/docs/Lista_artyku%C5%82%C3%B3w_-_Sprint_MDC_-_JavaScript	/pl/docs/Lista_artyku%C5%82%C3%B3w_-_Sprint_MDC_-_JavaScript
 /en-US/docs/Listening_to_events_on_all_tabs	/en-US/docs/Mozilla/Developer_guide/Listening_to_events_on_all_tabs
 /en-US/docs/Load_your_app	/en-US/docs/Marketplace/Publishing/Submit/Load_your_app
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
@@ -7965,7 +7980,6 @@
 /en-US/docs/MDN/Contribute/Tools_with_restricted_access	/en-US/docs/MDN/Contribute/Tools/Template_editing
 /en-US/docs/MDN/Contribute/Topic_driver_role	/en-US/docs/MDN/Community/Roles/Topic_driver_role
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
-/en-US/docs/MDN/JavaScript/JavaScript_参考	/en-US/docs/MDN-old-stuff/JavaScript/JavaScript_%E5%8F%82%E8%80%83
 /en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Contribute/Tools/Document_parameters
 /en-US/docs/MDN/Kuma/Changelog	/en-US/docs/MDN/Kuma
 /en-US/docs/MDN/Kuma/Contributing	/en-US/docs/MDN/Kuma
@@ -8181,7 +8195,7 @@
 /en-US/docs/Mozilla_developer_guide	/en-US/docs/Mozilla/Developer_guide
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
+/en-US/docs/Mozilla_event_reference/DOMContentLoading%20(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
@@ -8291,7 +8305,7 @@
 /en-US/docs/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
 /en-US/docs/Mozilla_event_reference/readystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /en-US/docs/Mozilla_event_reference/repeatEvent	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
-/en-US/docs/Mozilla_event_reference/reset (event)	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Mozilla_event_reference/reset%20(event)	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Mozilla_event_reference/reset_(event)	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Mozilla_event_reference/resize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Mozilla_event_reference/scroll	/en-US/docs/Web/API/Document/scroll_event
@@ -8302,7 +8316,7 @@
 /en-US/docs/Mozilla_event_reference/stalled	/en-US/docs/Web/API/HTMLMediaElement/stalled_event
 /en-US/docs/Mozilla_event_reference/storage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Mozilla_event_reference/submit	/en-US/docs/Web/API/HTMLFormElement/submit_event
-/en-US/docs/Mozilla_event_reference/submit (event)	/en-US/docs/Web/API/HTMLFormElement/submit_event
+/en-US/docs/Mozilla_event_reference/submit%20(event)	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Mozilla_event_reference/submit_(event)	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Mozilla_event_reference/success_indexedDB	/en-US/docs/Web/API/IDBRequest/success_event
 /en-US/docs/Mozilla_event_reference/success_indexedDB-redirect-1	/en-US/docs/Web/API/IDBRequest/success_event
@@ -8416,8 +8430,12 @@
 /en-US/docs/NP_Port	/en-US/docs/Add-ons/Plugins/Reference/NP_Port
 /en-US/docs/NP_Shutdown	/en-US/docs/Add-ons/Plugins/Reference/NP_Shutdown
 /en-US/docs/NSDISTMODE	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
+/en-US/docs/NSPR_API_Reference/I//O_Functions	undefined
+/en-US/docs/NSPR_API_Reference/I//O_Types	undefined
 /en-US/docs/NSPR_API_Reference:I/O_Functions	/en-US/docs/NSPR_API_Reference:I//O_Functions
 /en-US/docs/NSPR_API_Reference:I/O_Types	/en-US/docs/NSPR_API_Reference:I//O_Types
+/en-US/docs/NSPR_API_Reference:I_O_Functions	/en-US/docs/NSPR_API_Reference/I//O_Functions
+/en-US/docs/NSPR_API_Reference:I_O_Types	/en-US/docs/NSPR_API_Reference/I//O_Types
 /en-US/docs/NaN	/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /en-US/docs/Namespaces_in_IMSC	/en-US/docs/Related/IMSC/Namespaces
 /en-US/docs/Navigation_timing	/en-US/docs/Web/API/Navigation_timing_API
@@ -8591,6 +8609,7 @@
 /en-US/docs/STATIC_DIRS	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/SVG	/en-US/docs/Web/SVG
 /en-US/docs/SVG-TEST	/en-US/docs/Web/SVG
+/en-US/docs/SVG/%E6%95%99%E7%A8%8B	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/SVG/Attribute	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/SVG/Attribute/From	/en-US/docs/Web/SVG/Attribute/From
 /en-US/docs/SVG/Attribute/To	/en-US/docs/Web/SVG/Attribute/To
@@ -8877,7 +8896,6 @@
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/SVG/教程	/en-US/docs/Web/SVG/%E6%95%99%E7%A8%8B
 /en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
@@ -9036,8 +9054,8 @@
 /en-US/docs/TIERS	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/Tamarin/Tamarin_Build_Documentation/Tamarin_Build_Documentation	/en-US/docs/Tamarin_Build_Documentation
 /en-US/docs/Temp_input	/en-US/docs/Web/HTML/Element/input
-/en-US/docs/Temp_input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/input/%3Cinput_type=_col_%3E
-/en-US/docs/Temp_input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/input/%3Cinput_type=_colgroup_%3E
+/en-US/docs/Temp_input/%3Cinput_type=_col_%3E	/en-US/docs/Web/HTML/Element/col
+/en-US/docs/Temp_input/%3Cinput_type=_colgroup_%3E	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Temp_input/button	/en-US/docs/Web/HTML/Element/input/button
 /en-US/docs/Temp_input/checkbox	/en-US/docs/Web/HTML/Element/input/checkbox
 /en-US/docs/Temp_input/color	/en-US/docs/Web/HTML/Element/input/color
@@ -9417,7 +9435,7 @@
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Functions	/en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT//XPath_Reference/Functions
 /en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /en-US/docs/URI	/en-US/docs/Glossary/URI
-/en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+/en-US/docs/URI/www%20and%20non-www%20URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/URLUtilsReadOnly.origin	/en-US/docs/Web/API/URLUtilsReadOnly/origin
@@ -10651,7 +10669,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/Web_audio:_ended_event	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLObjectElement.typeMustMatch	/en-US/docs/Web/API/HTMLObjectElement/typeMustMatch
-/en-US/docs/Web/API/HTMLObjectElement/\validity	/en-US/docs/Web/API/HTMLObjectElement/validity
+/en-US/docs/Web/API/HTMLObjectElement/%5Cvalidity	/en-US/docs/Web/API/HTMLObjectElement/validity
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
@@ -11434,7 +11452,7 @@
 /en-US/docs/Web/API/ServiceWorkerClients.getAll(options)	/en-US/docs/Web/API/Clients/matchAll
 /en-US/docs/Web/API/ServiceWorkerClients/getAll	/en-US/docs/Web/API/Clients/matchAll
 /en-US/docs/Web/API/ServiceWorkerContainer.controller	/en-US/docs/Web/API/ServiceWorkerContainer/controller
-/en-US/docs/Web/API/ServiceWorkerContainer.getRegistration([scope])	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
+/en-US/docs/Web/API/ServiceWorkerContainer.getRegistration(%5Bscope%5D)	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
 /en-US/docs/Web/API/ServiceWorkerContainer.register	/en-US/docs/Web/API/ServiceWorkerContainer/register
 /en-US/docs/Web/API/ServiceWorkerGlobalScope.skipWaiting	/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch
@@ -12014,7 +12032,7 @@
 /en-US/docs/Web/API/Worker.postMessage	/en-US/docs/Web/API/Worker/postMessage
 /en-US/docs/Web/API/Worker.terminate	/en-US/docs/Web/API/Worker/terminate
 /en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-/en-US/docs/Web/API/Worker/Functions_available_to_workers	/en-US/docs/Web/Reference/Functions_and%20classes_available_to_workers
+/en-US/docs/Web/API/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/API/Worker/onerror	/en-US/docs/Web/API/AbstractWorker/onerror
 /en-US/docs/Web/API/WorkerConsole	/en-US/docs/Web/API/Console
 /en-US/docs/Web/API/WorkerConsole.info()	/en-US/docs/Web/API/Console/info
@@ -13070,6 +13088,8 @@
 /en-US/docs/Web/Apps/app_layout/Responsive_design_versus_adaptive_design	/en-US/docs/Apps/Design/UI_layout_basics/Responsive_design_versus_adaptive_design
 /en-US/docs/Web/Apps/app_layout/responsive_design_building_blocks	/en-US/docs/Apps/Design/UI_layout_basics/responsive_design_building_blocks
 /en-US/docs/Web/Apps_clone	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/CSS/%3Cbasic-shape%3E	/en-US/docs/Web/CSS/basic-shape
+/en-US/docs/Web/CSS/%3Cfilter-function%3E	/en-US/docs/Web/CSS/filter-function
 /en-US/docs/Web/CSS/-epub-caption-side	/en-US/docs/Web/CSS/caption-side
 /en-US/docs/Web/CSS/-epub-text-transform	/en-US/docs/Web/CSS/text-transform
 /en-US/docs/Web/CSS/-moz-alias	/en-US/docs/Web/CSS/cursor
@@ -13292,8 +13312,6 @@
 /en-US/docs/Web/CSS/:nth-last-child()	/en-US/docs/Web/CSS/:nth-last-child
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
-/en-US/docs/Web/CSS/<basic-shape>	/en-US/docs/Web/CSS/basic-shape
-/en-US/docs/Web/CSS/<filter-function>	/en-US/docs/Web/CSS/filter-function
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
@@ -13501,8 +13519,8 @@
 /en-US/docs/Web/CSS_Typed_OM_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Documentation_status	/en-US/docs/MDN/Doc_status/Overview
-/en-US/docs/Web/Events/<audio>:_pause_event	/en-US/docs/Web/HTML/Element/audio/pause_event
-/en-US/docs/Web/Events/<audio>:_play_event	/en-US/docs/Web/HTML/Element/audio/play_event
+/en-US/docs/Web/Events/%3Caudio%3E:_pause_event	/en-US/docs/Web/HTML/Element/audio/pause_event
+/en-US/docs/Web/Events/%3Caudio%3E:_play_event	/en-US/docs/Web/HTML/Element/audio/play_event
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
 /en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
@@ -13802,9 +13820,9 @@
 /en-US/docs/Web/Guide/API/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
-/en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/Web/Guide/API/File System/FileError	/en-US/docs/Web/API/FileError
-/en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/API/File%20System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/API/File%20System/FileError	/en-US/docs/Web/API/FileError
+/en-US/docs/Web/Guide/API/File%20System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
@@ -13881,9 +13899,9 @@
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/Guide/API/File%20System
-/en-US/docs/Web/Guide/File_System_API/FileError	/en-US/docs/Web/Guide/API/File%20System/FileError
-/en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/Guide/API/File%20System/Introduction
+/en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/File_System_API/FileError	/en-US/docs/Web/API/FileError
+/en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
 /en-US/docs/Web/Guide/HTML/A_basic_ray-caster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
@@ -13940,7 +13958,7 @@
 /en-US/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
-/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/Reference/Functions_and%20classes_available_to_workers
+/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
 /en-US/docs/Web/Guide/Prefixes	/en-US/docs/Glossary/Vendor_Prefix
 /en-US/docs/Web/Guide/Responsive_design	/en-US/docs/Web/Progressive_web_apps
@@ -13966,16 +13984,16 @@
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Documentation_status	/en-US/docs/MDN/Doc_status/HTML
-/en-US/docs/Web/HTML/Documentation_status/Statut_de_la_traduction_en_français	/en-US/docs/MDN/Doc_status/HTML/Statut_de_la_traduction_en_fran%C3%A7ais
-/en-US/docs/Web/HTML/Element/<picture>	/en-US/docs/Web/HTML/Element/picture
-/en-US/docs/Web/HTML/Element/<rb>:_The_Ruby_Base_element	/en-US/docs/Web/HTML/Element/rb
-/en-US/docs/Web/HTML/Element/<slot>	/en-US/docs/Web/HTML/Element/slot
+/en-US/docs/Web/HTML/Documentation_status/Statut_de_la_traduction_en_fran%C3%A7ais	/en-US/docs/MDN/Doc_status/HTML/Statut_de_la_traduction_en_fran%C3%A7ais
+/en-US/docs/Web/HTML/Element/%3Cpicture%3E	/en-US/docs/Web/HTML/Element/picture
+/en-US/docs/Web/HTML/Element/%3Crb%3E:_The_Ruby_Base_element	/en-US/docs/Web/HTML/Element/rb
+/en-US/docs/Web/HTML/Element/%3Cslot%3E	/en-US/docs/Web/HTML/Element/slot
 /en-US/docs/Web/HTML/Element/ContextMenu	/en-US/docs/HTML/Using_HTML_context_menus/ContextMenu
-/en-US/docs/Web/HTML/Element/Input/<input_type=_checkbox_>	/en-US/docs/Web/HTML/Element/Input/checkbox
-/en-US/docs/Web/HTML/Element/Input/<input_type=_color_>	/en-US/docs/Web/HTML/Element/Input/color
-/en-US/docs/Web/HTML/Element/Input/<input_type=_datetime_>	/en-US/docs/Web/HTML/Element/Input/datetime
-/en-US/docs/Web/HTML/Element/Input/<input_type=_image_>	/en-US/docs/Web/HTML/Element/Input/image
-/en-US/docs/Web/HTML/Element/The_<noembed>_element	/en-US/docs/Web/HTML/Element/noembed
+/en-US/docs/Web/HTML/Element/Input/%3Cinput_type=_checkbox_%3E	/en-US/docs/Web/HTML/Element/Input/checkbox
+/en-US/docs/Web/HTML/Element/Input/%3Cinput_type=_color_%3E	/en-US/docs/Web/HTML/Element/Input/color
+/en-US/docs/Web/HTML/Element/Input/%3Cinput_type=_datetime_%3E	/en-US/docs/Web/HTML/Element/Input/datetime
+/en-US/docs/Web/HTML/Element/Input/%3Cinput_type=_image_%3E	/en-US/docs/Web/HTML/Element/Input/image
+/en-US/docs/Web/HTML/Element/The_%3Cnoembed%3E_element	/en-US/docs/Web/HTML/Element/noembed
 /en-US/docs/Web/HTML/Element/Using_HTML_context_menus	/en-US/docs/HTML/Using_HTML_context_menus
 /en-US/docs/Web/HTML/Element/Using_HTML_context_menus/ContextMenu	/en-US/docs/HTML/Using_HTML_context_menus/ContextMenu
 /en-US/docs/Web/HTML/Element/Video/emptied_event	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
@@ -13983,14 +14001,14 @@
 /en-US/docs/Web/HTML/Element/Video/loadeddata_event	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/HTML/Element/audio/playing_event	/en-US/docs/Web/API/HTMLMediaElement/playing_event
 /en-US/docs/Web/HTML/Element/h1	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/Web/HTML/Element/h1–h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/h1%E2%80%93h6	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h2	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h3	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
-/en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
+/en-US/docs/Web/HTML/Element/input/%3Cinput_type=_col_%3E	/en-US/docs/Web/HTML/Element/col
+/en-US/docs/Web/HTML/Element/input/%3Cinput_type=_colgroup_%3E	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
 /en-US/docs/Web/HTML/Element/math	/en-US/docs/Web/MathML/Element/math
 /en-US/docs/Web/HTML/Element/s_ource	/en-US/docs/Web/HTML/Element/source
@@ -14027,7 +14045,7 @@
 /en-US/docs/Web/HTTP/Basic_access_authentication	/en-US/docs/Web/HTTP/Authentication
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Introduction_to_www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-/en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+/en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_%E2%80%98Origin%E2%80%99_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
 /en-US/docs/Web/HTTP/Controlling_DNS_prefetching	/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /en-US/docs/Web/HTTP/Cookies/Cookie_Prefixes	/en-US/docs/Web/HTTP/Cookies#Cookie_prefixes
@@ -14568,8 +14586,9 @@
 /en-US/docs/Web/Reference/Events/waiting	/en-US/docs/Web/API/HTMLMediaElement/waiting_event
 /en-US/docs/Web/Reference/Events/wheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/Reference/Functions_and%20classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/%E6%95%99%E7%A8%8B	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/SVG/Documentation_status	/en-US/docs/MDN/Doc_status/SVG
 /en-US/docs/Web/SVG/Help-out	/en-US/docs/SVG//help-out
@@ -14583,7 +14602,6 @@
 /en-US/docs/Web/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/Web/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/Web/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/Web/SVG/教程	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/Web/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Web/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -15073,9 +15091,9 @@
 /en-US/docs/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/Yasm/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/YouCompleteMe	/en-US/docs/Mozilla/Developer_guide/YouCompleteMe
-/en-US/docs/aaaaa&quot;>bbbbbbb	/en-US/docs/http:google.com"%3Ebbbbbbb
-/en-US/docs/aaaaa<button type="button">Click Me!<button>	/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3E
-/en-US/docs/aadddddd&quot;>bbbbbbb	/en-US/docs/aadddddd"%3Ebbbbbbb%0d%0asdfsdfsdsdfsdf
+/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3EClick%20Me!%3Cbutton%3E	/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3E
+/en-US/docs/aaaaa&quot;%3Ebbbbbbb	/en-US/docs/http:google.com"%3Ebbbbbbb
+/en-US/docs/aadddddd&quot;%3Ebbbbbbb	/en-US/docs/aadddddd"%3Ebbbbbbb%0d%0asdfsdfsdsdfsdf
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/action	/en-US/docs/Document_Object_Model_(DOM)/form.action
 /en-US/docs/adData	/en-US/docs/Web/API/BluetoothDevice/adData
@@ -15114,6 +15132,7 @@
 /en-US/docs/azsdfvg/Guide/Inheritance_and_the_prototype_chain	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/azsdfvg/Guide/Iterators_and_Generators	/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 /en-US/docs/azsdfvg/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
+/en-US/docs/azsdfvg/Guide/LiveConnect_Overview	/en-US/docs//en-US/docs/LiveConnect/Overview
 /en-US/docs/azsdfvg/Guide/Obsolete_Pages	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/azsdfvg/Guide/Obsolete_Pages/Block_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/azsdfvg/Guide/Obsolete_Pages/Calling_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
@@ -15529,7 +15548,7 @@
 /en-US/docs/background-position_Keyword_Order	/en-US/docs/Web/CSS/background-position
 /en-US/docs/bfcache	/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /en-US/docs/bgColor	/en-US/docs/Web/API/HTMLTableElement/bgColor
-/en-US/docs/blablablabla"><img src='1.jpg'onerror=javascript:alert("XSS")>	/en-US/docs/blablablabla
+/en-US/docs/blablablabla%22%3E%3Cimg%20src='1.jpg'onerror=javascript:alert(%22XSS%22)%3E	/en-US/docs/blablablabla
 /en-US/docs/blur	/en-US/docs/Document_Object_Model_(DOM)/element.blur
 /en-US/docs/border	/en-US/docs/Document_Object_Model_(DOM)/table.border
 /en-US/docs/bubbles	/en-US/docs/Web/API/Event/bubbles
@@ -15700,9 +15719,10 @@
 /en-US/docs/hasChildNodes	/en-US/docs/Web/API/Node/hasChildNodes
 /en-US/docs/href	/en-US/docs/DOM/stylesheet/href
 /en-US/docs/http:__www.erdogduemlak.com	/en-US/docs/http/////www.erdogduemlak.com
-/en-US/docs/http:google.com&quot;>bbbbbbb	/en-US/docs/aa%0d%0adddddd"%3Ebbbbbbb
+/en-US/docs/http:google.com&quot;%3Ebbbbbbb	/en-US/docs/aa%0d%0adddddd"%3Ebbbbbbb
+/en-US/docs/https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace/FAQ	undefined
 /en-US/docs/id	/en-US/docs/Document_Object_Model_(DOM)/element.id
-/en-US/docs/index.php?title=pt/Documentação_de_compilação/Instruções_de_compilação/Instruções_de_Compilação	/en-US/docs/User:clauber.halic/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o
+/en-US/docs/index.php?title=pt/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o	/en-US/docs/User:clauber.halic/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o
 /en-US/docs/indexOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 /en-US/docs/initEvent	/en-US/docs/Web/API/event.initEvent
 /en-US/docs/initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
@@ -15835,7 +15855,7 @@
 /en-US/docs/screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/screenY	/en-US/docs/Web/API/MouseEvent/screenY
 /en-US/docs/scrollbar-color	/en-US/docs/Web/CSS/scrollbar-color
-/en-US/docs/sdfsdf"><img src='1.jpg'onerror=javascript:alert("XSS")>	/en-US/docs/blablablabla
+/en-US/docs/sdfsdf%22%3E%3Cimg%20src='1.jpg'onerror=javascript:alert(%22XSS%22)%3E	/en-US/docs/blablablabla
 /en-US/docs/selectorText	/en-US/docs/Web/API/CSSStyleRule/selectorText
 /en-US/docs/setAttribute	/en-US/docs/Web/API/element.setAttribute
 /en-US/docs/setAttributeNS	/en-US/docs/Web/API/element.setAttributeNS
@@ -15898,7 +15918,7 @@
 /en-US/docs/trace.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.js
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/translation-value	/en-US/docs/Web/CSS/translation-value
-/en-US/docs/ttttttt&quot;>bbbbbbb	/en-US/docs/aaaaa"%3Ebbbbbbb
+/en-US/docs/ttttttt&quot;%3Ebbbbbbb	/en-US/docs/aaaaa"%3Ebbbbbbb
 /en-US/docs/tx.py.txt_here	/en-US/docs/Tx.py.txt
 /en-US/docs/type	/en-US/docs/Document_Object_Model_(DOM)/event.type
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
@@ -15979,12 +15999,9 @@
 /en-US/docs/window.unescape	/en-US/docs/Web/API/window.unescape
 /en-US/docs/window.window	/en-US/docs/Web/API/window.window
 /en-US/docs/wpcapi.h	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/wpcapi.h
-/en-US/docs/www_vs_non-www_URLs	/en-US/docs/URI/www%20and%20non-www%20URLs
+/en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/xml/base	/en-US/docs/Web/XML/xml:base
 /en-US/docs/xml:base	/en-US/docs/XML/base
 /en-US/docs/xml:id	/en-US/docs/xml/id
 /en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
 /en-US/docs/zh_cn	/zh-CN/docs
-/en-US/docs/{{domxref("/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
-/en-US/docs/{{domxref("/TouchList.item	/en-US/docs/Web/API/TouchList/item
-/en-US/docs/واصفة_SpellCheck_الجديدة_في_HTML5	/ar/docs/واصفة_SpellCheck_الجديدة_في_HTML5
