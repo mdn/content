@@ -15988,3 +15988,15 @@
 /en-US/docs/{{domxref("/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/{{domxref("/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/واصفة_SpellCheck_الجديدة_في_HTML5	/ar/docs/واصفة_SpellCheck_الجديدة_في_HTML5
+
+# More than one whitespace
+bla bla bla
+
+# Imperfect but realistic,
+# Yari should spot it can go straight from Foo Buzz
+/en-US/docs/Foo /en-US/docs/Bar
+/en-US/docs/Bar /en-US/docs/Buzz
+
+# Circular loop
+/en-US/docs/A /en-US/docs/B
+/en-US/docs/B /en-US/docs/A
