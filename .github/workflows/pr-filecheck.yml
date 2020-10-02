@@ -41,7 +41,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.git_diff_content.outputs.diff
-        uses: actions/setup-node@v2.1.1
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: "12"
 
