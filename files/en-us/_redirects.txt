@@ -16005,15 +16005,3 @@
 /en-US/docs/xml:id	/en-US/docs/xml/id
 /en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
 /en-US/docs/zh_cn	/zh-CN/docs
-
-# More than one whitespace
-bla bla bla
-
-# Imperfect but realistic,
-# Yari should spot it can go straight from Foo Buzz
-/en-US/docs/Foo /en-US/docs/Bar
-/en-US/docs/Bar /en-US/docs/Buzz
-
-# Circular loop
-/en-US/docs/A /en-US/docs/B
-/en-US/docs/B /en-US/docs/A
