@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
-    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)"
+    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)",
+    "redirects": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/redirects/cli.js"
   },
   "dependencies": {
     "@mdn/yari": "0.1.77",
