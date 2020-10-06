@@ -17,11 +17,6 @@ jobs:
             yarn.lock
             preview.yml
 
-      - name: Debug GIT_DIFF
-        run: |
-          echo ${{ env.GIT_DIFF }}
-          echo ${{ env.MATCHED_FILES }}
-
       - name: Setup Node.js environment
         if: env.MATCHED_FILES
         uses: actions/setup-node@v2.1.2
