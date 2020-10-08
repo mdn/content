@@ -31,11 +31,11 @@ tags:
 <p>HTTP caching is optional, but reusing a cached resource is usually desirable. However, common HTTP caches are typically limited to caching responses to {{HTTPMethod("GET")}} and may decline other methods. The primary cache key consists of the request method and target URI (oftentimes only the URI is used as only GET requests are caching targets). Common forms of caching entries are:</p>
 
 <ul>
- <li>Successful results of a retrieval request: a {{HTTPStatus(200)}} (OK) response to a {{HTTPMethod("GET")}} request containing a resource like HTML documents, images or files.</li>
- <li>Permanent redirects: a {{HTTPStatus(301)}} (Moved Permanently) response.</li>
- <li>Error responses: a {{HTTPStatus(404)}} (Not Found) result page.</li>
- <li>Incomplete results: a {{HTTPStatus(206)}} (Partial Content) response.</li>
- <li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
+	<li>Successful results of a retrieval request: a {{HTTPStatus(200)}} (OK) response to a {{HTTPMethod("GET")}} request containing a resource like HTML documents, images or files.</li>
+	<li>Permanent redirects: a {{HTTPStatus(301)}} (Moved Permanently) response.</li>
+	<li>Error responses: a {{HTTPStatus(404)}} (Not Found) result page.</li>
+	<li>Incomplete results: a {{HTTPStatus(206)}} (Partial Content) response.</li>
+	<li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
 </ul>
 
 <p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#Varying_responses">below</a>.</p>
@@ -96,7 +96,7 @@ Cache-Control: public
 <p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
 
 <p>The freshness lifetime is calculated based on several headers. If a "<code>Cache-Control: max-age=N</code>" header is specified, then the freshness lifetime is equal to N. If this header is not present, which is very often the case, it is checked if an {{HTTPHeader("Expires")}} header is present. If an <code>Expires</code> header exists, then its value minus the value of the {{HTTPHeader("Date")}} header determines the freshness lifetime. Finally, if neither header is present, look for a {{HTTPHeader("Last-Modified")}} header. If this header is present, then the cache's freshness lifetime is equal to the value of the <code>Date</code> header minus the value of the <code>Last-modified</code> header divided by 10.<br>
- The expiration time is computed as follows:</p>
+The expiration time is computed as follows:</p>
 
 <pre class="notranslate">expirationTime = responseTime + freshnessLifetime - currentAge
 </pre>
@@ -125,6 +125,8 @@ Cache-Control: public
 
 <p>The {{HTTPHeader("ETag")}} response header is an <em>opaque-to-the-useragent</em> value that can be used as a strong validator. That means that a HTTP user-agent, such as the browser, does not know what this string represents and can't predict what its value would be. If the <code>ETag</code> header was part of the response for a resource, the client can issue an {{HTTPHeader("If-None-Match")}} in the header of future requests – in order to validate the cached resource.</p>
 
+<h3 id="Last-Modified">Last-Modified</h3>
+
 <p>The {{HTTPHeader("Last-Modified")}} response header can be used as a weak validator. It is considered weak because it only has 1-second resolution. If the <code>Last-Modified</code> header is present in a response, then the client can issue an {{HTTPHeader("If-Modified-Since")}} request header to validate the cached document.</p>
 
 <p>When a validation request is made, the server can either ignore the validation request and response with a normal {{HTTPStatus(200)}} <code>OK</code>, or it can return {{HTTPStatus(304)}} <code>Not Modified</code> (with an empty body) to instruct the browser to use its cached copy. The latter response can also include headers that update the expiration time of the cached document.</p>
@@ -146,8 +148,8 @@ Cache-Control: public
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://tools.ietf.org/html/rfc7234">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching</a></li>
- <li><a href="https://www.mnot.net/cache_docs">Caching Tutorial – Mark Nottingham</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP caching – Ilya Grigorik</a></li>
- <li><a href="https://redbot.org/">RedBot</a>, a tool to check your cache-related HTTP headers.</li>
+	<li><a href="https://tools.ietf.org/html/rfc7234">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching</a></li>
+	<li><a href="https://www.mnot.net/cache_docs">Caching Tutorial – Mark Nottingham</a></li>
+	<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP caching – Ilya Grigorik</a></li>
+	<li><a href="https://redbot.org/">RedBot</a>, a tool to check your cache-related HTTP headers.</li>
 </ul>

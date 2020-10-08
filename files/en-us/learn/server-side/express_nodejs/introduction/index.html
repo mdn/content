@@ -52,16 +52,15 @@ tags:
 
 <ol>
  <li>Open Terminal (on Windows, open the command line utility)</li>
- <li>Create the folder where you want to save the program, for example, <code>test-node</code> and then enter it by entering the following command into your terminal:</li>
+ <li>Create the folder where you want to save the program, for example, <code>test-node</code> and then enter it by entering the following command into your terminal:
+  <pre class="notranslate">cd test-node</pre>
+ </li>
 </ol>
-
-<pre>cd test-node</pre>
 
 <ol start="3">
- <li>Using your favorite text editor, create a file called <code>hello.js</code> and paste the following code into it:</li>
-</ol>
+ <li>Using your favorite text editor, create a file called <code>hello.js</code> and paste the following code into it:<br>
 
-<pre class="brush: js">// Load HTTP module
+  <pre class="brush: js notranslate">// Load HTTP module
 const http = require("http");
 
 const hostname = "127.0.0.1";
@@ -82,13 +81,15 @@ server.listen(port, hostname, () =&gt; {
    console.log(`Server running at http://${hostname}:${port}/`);
 })
 </pre>
+ </li>
+</ol>
 
 <ol start="4">
  <li>Save the file in the folder you created above.</li>
- <li>Go back to the terminal and type the following command:</li>
+ <li>Go back to the terminal and type the following command:
+  <pre class="brush: bash notranslate">node hello.js</pre>
+ </li>
 </ol>
-
-<pre class="brush: bash">node hello.js</pre>
 
 <p>Finally, navigate to <code>http://localhost:8000</code> in your web browser; you should see the text "<strong>Hello World</strong>" in the upper left of an otherwise empty web page.</p>
 
@@ -115,9 +116,9 @@ server.listen(port, hostname, () =&gt; {
 
 <h2 id="Where_did_Node_and_Express_come_from">Where did Node and Express come from?</h2>
 
-<p>Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. The current LTS release is Node v12.16.1 while the latest release is Node 13.11.0. This is a tiny snapshot of a rich history; delve into <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a> if you want to know more.</p>
+<p>Node was initially released, for Linux only, in 2009. The NPM package manager was released in 2010, and native Windows support was added in 2012. At time of writing the current LTS release is Node v12.18.4 while the latest release is Node 14.13.0. This is a tiny snapshot of a rich history; delve into <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a> if you want to know more.</p>
 
-<p>Express was initially released in November 2010 and is currently on version 4.17.1 of the API. You can check out the <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> for information about changes in the current release, and <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> for more detailed historical release notes.</p>
+<p>Express was initially released in November 2010 and is currently on version 4.17.1 of the API (with 5.0 in "alpha"). You can check out the <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> for information about changes in the current release, and <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> for more detailed historical release notes.</p>
 
 <h2 id="How_popular_are_Node_and_Express">How popular are Node and Express?</h2>
 
@@ -155,15 +156,16 @@ server.listen(port, hostname, () =&gt; {
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
 
-<pre class="brush: js">var express = require('express');
-var app = express();
+<pre class="brush: js notranslate">const express = require('express');
+const app = express();
+const port = 3000;
 
-<strong>app.get('/', function(req, res) {
-  res.send('Hello World!');
+<strong>app.get('/', (req, res) =&gt; {
+  res.send('Hello World!')
 });</strong>
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+app.listen(port, () =&gt; {
+  console.log('Example app listening on port ${port}!')
 });
 </pre>
 
@@ -171,7 +173,7 @@ app.listen(3000, function() {
 
 <p>The middle part of the code (the three lines starting with <code>app.get</code>) shows a <em>route definition</em>. The <code>app.get()</code> method specifies a callback function that will be invoked whenever there is an HTTP <code>GET</code> request with a path (<code>'/'</code>) relative to the site root. The callback function takes a request and a response object as arguments, and simply calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!"</p>
 
-<p>The final block starts up the server on port '3000' and prints a log comment to the console. With the server running, you could go to <code>localhost:3000</code> in your browser to see the example response returned.</p>
+<p>The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to <code>localhost:3000</code> in your browser to see the example response returned.</p>
 
 <h3 id="Importing_and_creating_modules">Importing and creating modules</h3>
 
@@ -179,8 +181,8 @@ app.listen(3000, function() {
 
 <p>The code below shows how we import a module by name, using the <em>Express</em> framework as an example. First we invoke the <code style="font-style: normal; font-weight: normal;">require()</code> function, specifying the name of the module as a string (<code>'express'</code>), and calling the returned object to create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. We can then access the properties and functions of the application object.</p>
 
-<pre class="brush: js">var express = require('express');
-var app = express();
+<pre class="brush: js notranslate">const express = require('express');
+const app = express();
 </pre>
 
 <p>You can also create your own modules that can be imported in the same way.</p>
@@ -191,13 +193,13 @@ var app = express();
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
 
-<pre class="brush: js">exports.area = function(width) { return width * width; };
+<pre class="brush: js notranslate">exports.area = function(width) { return width * width; };
 exports.perimeter = function(width) { return 4 * width; };
 </pre>
 
 <p>We can import this module using <code>require()</code>, and then call the exported method(s) as shown:</p>
 
-<pre class="brush: js">var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
+<pre class="brush: js notranslate">const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
 console.log('The area of a square with a width of 4 is ' + square.area(4));</pre>
 
 <div class="note">
@@ -206,7 +208,7 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p>If you want to export a complete object in one assignment instead of building it one property at a time, assign it to <code>module.exports</code> as shown below (you can also do this to make the root of the exports object a constructor or other function):</p>
 
-<pre class="brush: js">module.exports = {
+<pre class="brush: js notranslate">module.exports = {
   area: function(width) {
     return width * width;
   },
@@ -227,13 +229,13 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p>JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operation must complete before the next operation can start. For example, the following log functions are synchronous, and will print the text to the console in order (First, Second).</p>
 
-<pre class="brush: js">console.log('First');
+<pre class="brush: js notranslate">console.log('First');
 console.log('Second');
 </pre>
 
 <p>By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though <code>setTimeout()</code> method is called first, and returns immediately, the operation doesn't complete for several seconds.</p>
 
-<pre class="brush: js">setTimeout(function() {
+<pre class="brush: js notranslate">setTimeout(function() {
    console.log('First');
    }, 3000);
 console.log('Second');
@@ -255,8 +257,8 @@ console.log('Second');
 
 <p>In our <em>Hello World</em> Express example (see above), we defined a (callback) route handler function for HTTP <code>GET</code> requests to the site root (<code>'/'</code>).</p>
 
-<pre class="brush: js">app.<strong>get</strong>('/', function(req, res) {
-  res.send('Hello World!');
+<pre class="brush: js notranslate">app.get('/', (req, res) =&gt; {
+  res.send('Hello World!')
 });
 </pre>
 
@@ -272,7 +274,7 @@ console.log('Second');
 
 <p>There is a special routing method, <code>app.all()</code>, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to <code>/secret</code> irrespective of the HTTP verb used (provided it is supported by the <a href="https://nodejs.org/api/http.html#http_http_methods">http module</a>).</p>
 
-<pre class="brush: js">app.all('/secret', function(req, res, next) {
+<pre class="brush: js notranslate">app.all('/secret', function(req, res, next) {
   console.log('Accessing the secret section ...');
   next(); // pass control to the next handler
 });</pre>
@@ -281,10 +283,10 @@ console.log('Second');
 
 <p>Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of <em>/wiki/</em>). In <em>Express</em> this is achieved by using the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> object. For example, we can create our wiki route in a module named <strong>wiki.js</strong>, and then export the <code>Router</code> object, as shown below:</p>
 
-<pre class="brush: js">// wiki.js - Wiki route module
+<pre class="brush: js notranslate">// wiki.js - Wiki route module
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 // Home page route
 router.get('/', function(req, res) {
@@ -305,7 +307,7 @@ module.exports = router;
 
 <p>To use the router in our main app file we would then <code>require()</code> the route module (<strong>wiki.js</strong>), then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path. The two routes will then be accessible from <code style="font-style: normal; font-weight: normal;">/wiki/</code> and <code style="font-style: normal; font-weight: normal;">/wiki/about/</code>.</p>
 
-<pre class="brush: js">var wiki = require('./wiki.js');
+<pre class="brush: js notranslate">const wiki = require('./wiki.js');
 // ...
 app.use('/wiki', wiki);</pre>
 
@@ -323,14 +325,14 @@ app.use('/wiki', wiki);</pre>
 
 <p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="http://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
 
-<pre class="brush: bash"><code>$ npm install morgan
+<pre class="brush: bash notranslate"><code>$ npm install morgan
 </code></pre>
 
 <p>You could then call <code>use()</code> on the <em>Express application object</em> to add the middleware to the stack:</p>
 
-<pre class="brush: js">var express = require('express');
-<strong>var logger = require('morgan');</strong>
-var app = express();
+<pre class="brush: js notranslate">const express = require('express');
+const <strong>logger = require('morgan');</strong>
+const app = express();
 <strong>app.use(logger('dev'));</strong>
 ...</pre>
 
@@ -340,15 +342,15 @@ var app = express();
 
 <p>You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The <strong>only</strong> difference between a middleware function and a route handler callback is that middleware functions have a third argument <code>next</code>, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the <em>next</em> function that must be called).</p>
 
-<p>You can add a middleware function to the processing chain with either <code>app.use()</code> or <code>app.add()</code>, depending on whether you want to apply the middleware to all responses or to responses with a particular HTTP verb (<code>GET</code>, <code>POST</code>, etc). You specify routes the same in both cases, though the route is optional when calling <code>app.use()</code>.</p>
+<p>You can add a middleware function to the processing chain for <em>all responses</em> with <code>app.use()</code>, or for a specific HTTP verb using the associated method: <code>app.get()</code>, <code>app.post()</code>, etc. Routes are specified in the same way for both cases, though the route is optional when calling <code>app.use()</code>.</p>
 
-<p>The example below shows how you can add the middleware function using both methods, and with/without a route.</p>
+<p>The example below shows how you can add the middleware function using both approaches, and with/without a route.</p>
 
-<pre class="brush: js">var express = require('express');
-var app = express();
+<pre class="brush: js notranslate">const express = require('express');
+const app = express();
 
 // An example middleware function
-var a_middleware_function = function(req, res, <em>next</em>) {
+let a_middleware_function = function(req, res, <em>next</em>) {
   // ... perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
@@ -374,12 +376,12 @@ app.listen(3000);</pre>
 
 <p>You can use the <a href="http://expressjs.com/en/4x/api.html#express.static">express.static</a> middleware to serve static files, including your images, CSS and JavaScript (<code>static()</code> is the only middleware function that is actually <strong>part</strong> of <em>Express</em>). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '<strong>public'</strong> at the same level as where you call node:</p>
 
-<pre class="brush: js">app.use(express.static('public'));
+<pre class="brush: js notranslate">app.use(express.static('public'));
 </pre>
 
 <p>Any files in the public directory are served by adding their filename (<em>relative</em> to the base "public" directory) to the base URL. So for example:</p>
 
-<pre><code>http://localhost:3000/images/dog.jpg
+<pre class="notranslate"><code>http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
@@ -387,18 +389,18 @@ http://localhost:3000/about.html
 
 <p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
 
-<pre class="brush: js">app.use(express.static('public'));
+<pre class="brush: js notranslate">app.use(express.static('public'));
 app.use(express.static('media'));
 </pre>
 
 <p>You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we <a href="http://expressjs.com/en/4x/api.html#app.use">specify a mount path</a> so that the files are loaded with the prefix "/media":</p>
 
-<pre class="brush: js">app.use('/media', express.static('public'));
+<pre class="brush: js notranslate">app.use('/media', express.static('public'));
 </pre>
 
 <p>Now, you can load the files that are in the <code>public</code> directory from the <code>/media</code> path prefix.</p>
 
-<pre><code>http://localhost:3000/media/images/dog.jpg
+<pre class="notranslate"><code>http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
 http://localhost:3000/media/cry.mp3</code>
 </pre>
@@ -411,7 +413,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: <code>(err, req, res, next)</code>. For example:</p>
 
-<pre class="brush: js">app.use(function(err, req, res, next) {
+<pre class="brush: js notranslate">app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
@@ -437,13 +439,13 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:</p>
 
-<pre class="brush: bash"><code>$ npm install mongodb
+<pre class="brush: bash notranslate"><code>$ npm install mongodb
 </code></pre>
 
 <p>The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.</p>
 
-<pre class="brush: js">//this works with older versions of  mongodb version ~ 2.2.33
-var MongoClient = require('mongodb').MongoClient;
+<pre class="brush: js notranslate">//this works with older versions of  mongodb version ~ 2.2.33
+const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
   if (err) throw err;
@@ -457,7 +459,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
 
 
 //for mongodb version 3.0 and up
-let MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
    if(err) throw err;
 
@@ -480,7 +482,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
 
 <p>In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)</p>
 
-<pre class="brush: js">const express = require('express');
+<pre class="brush: js notranslate">const express = require('express');
 const path = require('path');
 const app = express();
 
@@ -493,7 +495,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <p>The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.&lt;template_extension&gt;" that contains placeholders for data variables named 'title' and "message", you would call <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> in a route handler function to create and send the HTML response:</p>
 
-<pre class="brush: js">app.get('/', function(req, res) {
+<pre class="brush: js notranslate">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
 });</pre>
 

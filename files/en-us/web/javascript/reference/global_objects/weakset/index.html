@@ -13,20 +13,16 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>WeakSet</code> objects are collections of objects. Just as with {{jsxref("Set")}}s, each object in a <code>WeakSet</code> may occur only once; all objects in a <code>WeakSet</code>'s collection are unique.</p>
+<p><code>WeakSet</code> objects are collections of objects. Just as with {{jsxref("Set")}}s, each object in a <code>WeakSet</code> may occur only once; all objects in a <code>WeakSet</code>'s collection are unique.</p>
 
 <p>The main differences to the {{jsxref("Set")}} object are:</p>
 
 <ul>
- <li><code>WeakSets</code> are collections of <strong>objects only</strong>.  They cannot contain arbitrary values of any type, as {{jsxref("Set")}}s can.</li>
- <li>The <code>WeakSet</code> is <em>weak,</em> meaning references to objects in a <code>WeakSet</code> are held <em>weakly</em>. If no other references to an object stored in the <code>WeakSet</code> exist, those objects can be garbage collected.
-  <ul>
-   <li>
-    <div class="blockIndicator note">
-    <p><strong>Note:</strong> This also means that there is no list of current objects stored in the collection. <code>WeakSets</code> are not enumerable.</p>
-    </div>
-   </li>
-  </ul>
+ <li><code>WeakSet</code>s are collections of <strong>objects only</strong>. They cannot contain arbitrary values of any type, as {{jsxref("Set")}}s can.</li>
+ <li>The <code>WeakSet</code> is <em>weak</em>, meaning references to objects in a <code>WeakSet</code> are held <em>weakly</em>. If no other references to an object stored in the <code>WeakSet</code> exist, those objects can be garbage collected.
+  <div class="blockIndicator note">
+  <p><strong>Note:</strong> This also means that there is no list of current objects stored in the collection. <code>WeakSets</code> are not enumerable.</p>
+  </div>
  </li>
 </ul>
 
@@ -36,28 +32,28 @@ tags:
 
 <p><code>WeakSet</code>s are ideal for this purpose:</p>
 
-<pre class="brush: js">// Execute a callback on everything stored inside an object
+<pre class="brush: js notranslate">// Execute a callback on everything stored inside an object
 function execRecursively(fn, subject, _refs = null){
-	if(!_refs)
-		_refs = new WeakSet();
+  if(!_refs)
+    _refs = new WeakSet();
 
-	// Avoid infinite recursion
-	if(_refs.has(subject))
-		return;
+  // Avoid infinite recursion
+  if(_refs.has(subject))
+    return;
 
-	fn(subject);
-	if("object" === typeof subject){
-		_refs.add(subject);
-		for(let key in subject)
-			execRecursively(fn, subject[key], _refs);
-	}
+  fn(subject);
+  if("object" === typeof subject){
+    _refs.add(subject);
+    for(let key in subject)
+      execRecursively(fn, subject[key], _refs);
+  }
 }
 
 const foo = {
-	foo: "Foo",
-	bar: {
-		bar: "Bar"
-	}
+  foo: "Foo",
+  bar: {
+    bar: "Bar"
+  }
 };
 
 foo.bar.baz = foo; // Circular reference!
@@ -71,7 +67,7 @@ execRecursively(obj =&gt; console.log(obj), foo);
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet"><code>WeakSet()</code></a></dt>
+ <dt>{{jsxref("WeakSet/WeakSet", "WeakSet()")}}</dt>
  <dd>Creates a new <code>WeakSet</code> object.</dd>
 </dl>
 
@@ -79,18 +75,18 @@ execRecursively(obj =&gt; console.log(obj), foo);
 
 <dl>
  <dt>{{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}</dt>
- <dd>Appends <code><var>value</var></code> to the <code>WeakSet</code> object.</dd>
+ <dd>Appends <code><var>value</var></code> to the <code>WeakSet</code> object.</dd>
  <dt>{{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}</dt>
- <dd>Removes <code><var>value</var></code> from the <code>WeakSet</code>.  <code>WeakSet.prototype.has(<var>value</var>)</code> will return <code>false</code> afterwards.</dd>
+ <dd>Removes <code><var>value</var></code> from the <code>WeakSet</code>. <code>WeakSet.prototype.has(<var>value</var>)</code> will return <code>false</code> afterwards.</dd>
  <dt>{{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}</dt>
  <dd>Returns a boolean asserting whether <code><var>value</var></code> is present in the <code>WeakSet</code> object or not.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_WeakSet_object">Using the WeakSet object</h3>
+<h3 id="Using_the_WeakSet_object">Using the WeakSet object</h3>
 
-<pre class="brush: js">const ws = new WeakSet();
+<pre class="brush: js notranslate">const ws = new WeakSet();
 const foo = {};
 const bar = {};
 

@@ -150,7 +150,7 @@ var mongoose = require('mongoose');
 
 //Set up default mongoose connection
 var mongoDB = 'mongodb://127.0.0.1/my_database';
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Get the default connection
 var db = mongoose.connection;
@@ -569,9 +569,10 @@ SomeModel.find(callback_function);</pre>
  <li>From the Cluster0 Overview screen click the <strong>Connect</strong> button.<br>
   <img alt="Configure a connection when after setting up a cluster in MongoDB Atlas." src="https://mdn.mozillademos.org/files/16512/MongoDB_Atlas_-_Connectbutton.jpg" style="border-style: solid; border-width: 1px; height: 308px; width: 742px;"></li>
  <li>This will open the Connect to Cluster screen.<br>
-  <img alt="Setup a connection when using MongoDB Atlas." src="https://mdn.mozillademos.org/files/16513/MongoDB_Atlas_-_ConnectCluster.jpg" style="border-style: solid; border-width: 1px; height: 771px; width: 690px;">
+  <img alt="Choose a connection type when connecting with MongoDB Atlas." src="https://mdn.mozillademos.org/files/17398/connect_to_cluster_allowanywhere.png" style="height: 940px; width: 859px;">
   <ul>
-   <li>Click the <strong>Add a Different IP Address</strong> button, enter <code>0.0.0.0/0</code> for the IP Address and click <strong>Add IP Address</strong> button.
+   <li>Click the <strong>Allow Access from Anywhere</strong> button.<br>
+    This will open a form with <code>0.0.0.0/0</code> pre-seeded for the IP Address. Click the <strong>Add IP Address</strong> button.
     <div class="blockIndicator note">
     <p><strong>Note:</strong> It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.</p>
     </div>
@@ -596,7 +597,7 @@ SomeModel.find(callback_function);</pre>
   <ul>
    <li>Click the <strong>Copy</strong> button to copy the connection string.</li>
    <li>Save this string somewhere safe.</li>
-   <li>Update the password with your users password.</li>
+   <li>Update the password with your user's password.</li>
    <li>Replace test with <code>local_library</code>.</li>
   </ul>
  </li>
@@ -803,13 +804,6 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  </li>
  <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here </em>placeholder with, inside <code>app.js</code> earlier): Be sure to pass it  as  a string by wrapping it with <code>''</code>.
   <pre class="brush: bash notranslate">node populatedb &lt;your mongodb url&gt;​​​​</pre>
- </li>
- <li>
-  <div class="blockIndicator note">
-  <p><strong>Note for Windows operating system users</strong>: If the above command results in the error <code>DeprecationWarning: current URL string parser is deprecated</code>, change the <code>mongoose.connect(mongoDB);</code> line in <code>populatedb.js</code> file with <code>mongoose.connect(mongoDB, { useNewUrlParser:true });</code></p>
-
-  <p>Also, if you encounter problem with your MongoDb connection(e.g. <strong>MongoDb connection error: TypeError: Cannot read property 'split' of null</strong>) you should try the command above, only WITHOUT wrapping mongodb url as a string with ' ';</p>
-  </div>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>
 </ol>

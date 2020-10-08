@@ -178,22 +178,22 @@ tags:
 
 <h3 id="Audio_processing_in_JavaScript">Audio processing in JavaScript</h3>
 
-<p>Using audio worklets, you can define custom audio nodes written in JavaScript or <a href="/en-US/docs/WebAssembly">WebAssembly</a>. Audio worklets implement the {{domxref("Worklet")}} interface, a lightweight version of the {{domxref("Worker")}} interface. Audio worklets are enabled by default for Chrome 66 or later.</p>
+<p>Using audio worklets, you can define custom audio nodes written in JavaScript or <a href="/en-US/docs/WebAssembly">WebAssembly</a>. Audio worklets implement the {{domxref("Worklet")}} interface, a lightweight version of the {{domxref("Worker")}} interface.</p>
 
 <dl>
-	<dt>{{domxref("AudioWorklet")}} {{experimental_inline}}</dt>
+	<dt>{{domxref("AudioWorklet")}}</dt>
 	<dd>The <code>AudioWorklet</code> interface is available through the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}}, and lets you add modules to the audio worklet to be executed off the main thread.</dd>
-	<dt>{{domxref("AudioWorkletNode")}} {{experimental_inline}}</dt>
+	<dt>{{domxref("AudioWorkletNode")}}</dt>
 	<dd>The <code>AudioWorkletNode</code> interface represents an {{domxref("AudioNode")}} that is embedded into an audio graph and can pass messages to the corresponding <code>AudioWorkletProcessor</code>.</dd>
-	<dt>{{domxref("AudioWorkletProcessor")}} {{experimental_inline}}</dt>
+	<dt>{{domxref("AudioWorkletProcessor")}}</dt>
 	<dd>The <code>AudioWorkletProcessor</code> interface represents audio processing code running in a <code>AudioWorkletGlobalScope</code> that generates, processes, or analyses audio directly, and can pass messages to the corresponding <code>AudioWorkletNode</code>.</dd>
-	<dt>{{domxref("AudioWorkletGlobalScope")}} {{experimental_inline}}</dt>
+	<dt>{{domxref("AudioWorkletGlobalScope")}}</dt>
 	<dd>The <code>AudioWorkletGlobalScope</code> interface is a <code>WorkletGlobalScope</code>-derived object representing a worker context in which an audio processing script is run; it is designed to enable the generation, processing, and analysis of audio data directly using JavaScript in a worklet thread rather than on the main thread.</dd>
 </dl>
 
 <h4 id="Obsolete_script_processor_nodes">Obsolete: script processor nodes</h4>
 
-<p>Before audio worklets were defined, the Web Audio API used the <code>ScriptProcessorNode</code>  for JavaScript-based audio processing. Because the code runs in the main thread, they have bad performance. The <code>ScriptProcessorNode</code> is kept for historic reasons but is marked as deprecated and will be removed in a future version of the specification.</p>
+<p>Before audio worklets were defined, the Web Audio API used the <code>ScriptProcessorNode</code>  for JavaScript-based audio processing. Because the code runs in the main thread, they have bad performance. The <code>ScriptProcessorNode</code> is kept for historic reasons but is marked as deprecated.</p>
 
 <dl>
 	<dt>{{domxref("ScriptProcessorNode")}} {{deprecated_inline}}</dt>

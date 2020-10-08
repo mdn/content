@@ -15,11 +15,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>Valid <code>&lt;display-box&gt;</code> values:</p>
-
-<p><code>contents</code><strong> {{Experimental_Inline}}</strong></p>
+<p>Valid <code>&lt;display-box&gt;</code> values:</p>
 
 <dl>
+ <dt><code>contents</code> {{Experimental_Inline}}</dt>
  <dd>These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the <code>contents</code> value should affect "unusual elements" — elements that aren’t rendered purely by CSS box concepts such as replaced elements. See <a href="https://drafts.csswg.org/css-display/#unbox">Appendix B: Effects of display: contents on Unusual Elements</a> for more details.<br>
  <br>
  <em>Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the <a href="#Accessibility_concerns">Accessibility concerns</a> section below for more details.</em></dd>
@@ -30,7 +29,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Current implementations in most browsers will remove from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> any element with a <code>display</code> value of <code>contents</code>. This will cause the element — and in some browser versions, its descendant elements — to no longer be announced by screen reading technology. This is incorrect behavior according to the <a href="https://drafts.csswg.org/css-display/#the-display-properties">CSSWG specification</a>.</p>
+<p>Current implementations in most browsers will remove from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> any element with a <code>display</code> value of <code>contents</code>. This will cause the element — and in some browser versions, its descendant elements — to no longer be announced by screen reading technology. This is incorrect behavior according to the <a href="https://drafts.csswg.org/css-display/#the-display-properties">CSSWG specification</a>.</p>
 
 <ul>
  <li><a class="external" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
@@ -107,7 +106,7 @@ tags:
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<h3 id="Support_of_contents">Support of <code>contents</code></h3>
+<h3 id="Support_of_contents">Support of contents</h3>
 
 <p>{{Compat("css.properties.display.contents", 10)}}</p>
 
@@ -123,6 +122,6 @@ tags:
    <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
   </ul>
  </li>
- <li><a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
+ <li><a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
  <li><a href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents — hiddedevries.nl</a></li>
 </ul>

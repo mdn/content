@@ -14,7 +14,7 @@ tags:
 
 <p>The <code><strong>addListener()</strong></code> method of the {{DOMxRef("MediaQueryList")}} interface adds a listener to the <code>MediaQueryListener</code> that will run a custom callback function in response to the media query status changing.</p>
 
-<p>This is basically an alias for {{DOMxRef("EventTarget.addEventListener()")}}, for backwards compatibility purposes. Older browsers should use <code>addListener</code> instead of <code>addEventListener</code> since MediaQueryList only inherits from EventTarget in newer browsers.</p>
+<p>This is basically an alias of {{DOMxRef("EventTarget.addEventListener()")}}, for backwards compatibility purposes. Older browsers should use <code>addListener</code> instead of <code>addEventListener</code> since <code>MediaQueryList</code> only inherits from <code>EventTarget</code> in newer browsers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,24 +31,24 @@ tags:
 
 <p>Void.</p>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var para = document.querySelector('p');
-var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js notranslate">var paragraph = document.querySelector('p');
+var mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
+    document.body.style.backgroundColor = 'pink';
   } else {
     /* the viewport is more than than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
+    document.body.style.backgroundColor = 'aquamarine';
   }
 }
 
-mql.addListener(screenTest);</pre>
+mediaQueryList.addListener(screenTest);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

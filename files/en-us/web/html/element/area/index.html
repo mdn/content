@@ -13,7 +13,9 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML <code>&lt;area&gt;</code> element</strong> defines a hot-spot region on an image, and optionally associates it with a {{Glossary("Hyperlink", "hypertext link")}}. This element is used only within a {{HTMLElement("map")}} element.</p>
+<p>The <strong>HTML <code>&lt;area&gt;</code> tag</strong> defines an area inside an image map that has predefined clickable areas. An <dfn>image map</dfn> allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext link")}}.</p>
+
+<p>This tag is used only within a {{HTMLElement("map")}} element.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
 
@@ -63,12 +65,20 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("coords")}}</dt>
- <dd>A set of values specifying the coordinates of the hot-spot region. The number and meaning of the values depend upon the value specified for the {{htmlattrxref("shape", "area")}} attribute.</dd>
+ <dd>The <code>coords</code> attribute details the coordinates of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-shape">shape</a> attribute in size, shape, and placement of an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-shape">&lt;area&gt;</a>.</dd>
  <dd>
  <ul>
-  <li><code>rect</code> or rectangle: the value is two x,y pairs: left, top, right, bottom.</li>
-  <li><code>circle</code>: the value is <code>x,y,r</code> where <code>x,y</code> is a pair specifying the center of the circle and <code>r</code> is a value for the radius.</li>
-  <li><code>poly</code> or polygon: the value is a set of x,y pairs for each point in the polygon: <code>x1,y1,x2,y2,x3,y3,</code> and so on.</li>
+  <li><code>rect</code>: the value is <em><code>x1,y1,x2,y2</code>. </em><em>Value </em>specifies<em> </em>the coordinates of the top-left and bottom-right corner of the rectangle.</li>
+ </ul>
+
+ <p>For example: </p>
+
+ <p><code>&lt;area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla"&gt;</code>  The coords in the above example specify: 0,0 as the top-left corner and 253,27 as the bottom-right corner of the rectangle</p>
+
+ <ul>
+  <li><code>circle</code>: the value is <code><em>x,y,radius</em></code><em>. Value </em>specifies the coordinates of the circle center and the radius. For example: <code>&lt;area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN"&gt;</code></li>
+  <li><code>poly</code> : the value is <em>x1,y1,x2,y2,..,xn,yn. Value </em>specifies the coordinates of the edges of the polygon. If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon</li>
+  <li><code>default</code>: defines the entire region</li>
  </ul>
  The values are numbers of CSS pixels.</dd>
  <dt>{{htmlattrdef("download")}}</dt>

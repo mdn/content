@@ -29,12 +29,14 @@ tags:
 
 <h3 id="allowlist">allowlist</h3>
 
-<p>An allowlist is a list of origins that takes one or more of the following values, separated by spaces:</p>
+<p>An <code>allowlist</code> is a list of origins that takes one or more of the following values, separated by spaces:</p>
 
 <ul>
  <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
  <li><code>'self'</code>: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin.</li>
- <li><code>'src'</code>: (In an iframe allow attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.</li>
+ <li><code>'src'</code>: (In an iframe <code>allow</code> attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
+  <div class="note">The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value. </div>
+ </li>
  <li><code>'none'</code>: The feature is disabled in top-level and nested browsing contexts.</li>
  <li>&lt;origin(s)&gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</li>
 </ul>
@@ -89,7 +91,7 @@ Feature-Policy: camera *;
 
 <pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
 
-<p>This is equivalent to:</p>
+<p>The default <code>&lt;iframe&gt;</code> <a href="#allowlist">allowlist</a> value is <code>'src'</code>, so this is equivalent to:</p>
 
 <pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen 'src'"&gt;&lt;/iframe&gt;</pre>
 

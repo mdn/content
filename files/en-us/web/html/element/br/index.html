@@ -19,7 +19,7 @@ tags:
 <p>As you can see from the above example, a <code>&lt;br&gt;</code> element is included at each point where we want the text to break. The text after the <code>&lt;br&gt;</code> begins again at the start of the next line of the text block.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Do not use <code>&lt;br&gt;</code> to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the <a href="/en-US/docs/CSS">CSS</a> {{cssxref('margin')}} property to control their size.</p>
+<p><strong>Note</strong>: Do not use <code>&lt;br&gt;</code> to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('margin')}} property to control their size.</p>
 </div>
 
 <h2 id="Attributes">Attributes</h2>
@@ -29,8 +29,8 @@ tags:
 <h3 id="Deprecated_attributes">Deprecated attributes</h3>
 
 <dl>
-	<dt>{{htmlattrdef("clear")}}</dt>
-	<dd>Indicates where to begin the next line after the break.</dd>
+ <dt>{{htmlattrdef("clear")}}</dt>
+ <dd>Indicates where to begin the next line after the break.</dd>
 </dl>
 
 <h2 id="Styling_with_CSS">Styling with CSS</h2>
@@ -45,7 +45,7 @@ tags:
 
 <p>In the following example we use <code>&lt;br&gt;</code> elements to create line breaks between the different lines of a postal address:</p>
 
-<pre class="brush: html">Mozilla&lt;br&gt;
+<pre class="brush: html notranslate">Mozilla&lt;br&gt;
 331 E. Evelyn Avenue&lt;br&gt;
 Mountain View, CA&lt;br&gt;
 94041&lt;br&gt;
@@ -65,65 +65,65 @@ USA&lt;br&gt;
 <h2 id="Technical_summary">Technical summary</h2>
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-			<td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Permitted content</th>
-			<td>None, it is an {{Glossary("empty element")}}.</td>
-		</tr>
-		<tr>
-			<th scope="row">Tag omission</th>
-			<td>Must have a start tag, and must not have an end tag. In XHTML documents, write this element as <code>&lt;br /&gt;</code>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Permitted parents</th>
-			<td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Implicit ARIA role</th>
-			<td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
-		</tr>
-		<tr>
-			<th scope="row">Permitted ARIA roles</th>
-			<td>{{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">DOM interface</th>
-			<td>{{domxref("HTMLBRElement")}}</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td>None, it is an {{Glossary("empty element")}}.</td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>Must have a start tag, and must not have an end tag. In XHTML documents, write this element as <code>&lt;br /&gt;</code>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parents</th>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Implicit ARIA role</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>{{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLBRElement")}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', 'semantics.html#the-br-element', '&lt;br&gt;')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-br-element', '&lt;br&gt;')}}</td>
-			<td>{{Spec2('HTML5 W3C')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}</td>
-			<td>{{Spec2('HTML4.01')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-br-element', '&lt;br&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-br-element', '&lt;br&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -135,7 +135,7 @@ USA&lt;br&gt;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{HTMLElement("address")}} element</li>
-	<li>{{HTMLElement("p")}} element</li>
-	<li>{{HTMLElement("wbr")}} element</li>
+ <li>{{HTMLElement("address")}} element</li>
+ <li>{{HTMLElement("p")}} element</li>
+ <li>{{HTMLElement("wbr")}} element</li>
 </ul>

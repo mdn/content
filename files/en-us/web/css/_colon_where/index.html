@@ -14,11 +14,44 @@ tags:
   - Selectors
   - Web
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>:where()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.</p>
 
+<pre class="brush: css notranslate"><code>/* Selects any paragraph inside a header, main
+   or footer element that is being hovered */
+:where(header, main, footer) p:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/* The above is equivalent to the following */
+header p:hover,
+main p:hover,
+footer p:hover {
+  color: red;
+  cursor: pointer;
+}</code></pre>
+
 <p>The difference between <code>:where()</code> and {{CSSxRef(":is", ":is()")}} is that <code>:where()</code> always has 0 <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>, whereas <code>:is()</code> takes on the specificity of the most specific selector in its arguments.</p>
+
+<h3 id="Forgiving_Selector_Parsing">Forgiving Selector Parsing</h3>
+
+<p>The specification defines <code>:is()</code> and <code>:where()</code> as accepting a <a href="https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list">forgiving selector list</a>.</p>
+
+<p>In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using <code>:is()</code> or <code>:where() </code>instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.</p>
+
+<pre class="brush: css notranslate">:where(:valid, :unsupported) {
+  ...
+}</pre>
+
+<p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
+
+<pre class="brush: css notranslate">:valid, :unsupported {
+  ...
+}</pre>
+
+<p>Will be ignored in browsers which don't support <code>:unsupported</code> even if they support <code>:valid</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -85,8 +118,6 @@ tags:
 
 <p>However, selectors inside <code>:where()</code> have specificity 0, so the orange footer link will be overidden by our simple selector.</p>
 
-<p>You can see the result below (although bear in mind that currently <code>:is()</code> and <code>:where()</code> are currently only enabled by default in Firefox Nightly, version 77+. In other versions of Firefox it is behind a pref — <code>layout.css.is-where-selectors.enabled</code>).</p>
-
 <p><strong>Note</strong>: You can also find this example on GitHub; see <a href="https://mdn.github.io/css-examples/is-where/">is-where</a>.</p>
 
 <p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
@@ -125,7 +156,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
+ <li>{{CSSxRef(":is", ":is()")}}</li>
  <li><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a></li>
  <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
 </ul>

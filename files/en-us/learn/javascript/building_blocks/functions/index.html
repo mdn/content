@@ -120,6 +120,10 @@ console.log(madeAString);
 myFunction();
 // calls the function once</pre>
 
+<div class="blockIndicator note">
+<p>This form of creating a function is also known as <em>function declaration</em>. It is always hoisted, so you can call function above function definition and it will work fine.</p>
+</div>
+
 <h2 id="Anonymous_functions">Anonymous functions</h2>
 
 <p>You may see functions defined and invoked in slightly different ways. So far we have just created a function like so:</p>
@@ -149,6 +153,10 @@ myButton.onclick = function() {
 <pre class="brush: js  notranslate">const myGreeting = function() {
   alert('hello');
 }</pre>
+
+<div class="blockIndicator note">
+<p>This form of creating a function is also known as <em>function expression</em>. Unlike function declaration, function expressions are not hoisted.</p>
+</div>
 
 <p>This function could now be invoked using:</p>
 

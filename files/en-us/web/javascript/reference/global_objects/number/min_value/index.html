@@ -20,7 +20,7 @@ tags:
 
 <p>The <code>MIN_VALUE</code> property is the number closest to 0, not the most negative number, that JavaScript can represent.</p>
 
-<p><code>MIN_VALUE</code> has a value of approximately <code>5e-324</code>. Values smaller than <code>MIN_VALUE</code> ("underflow values") are converted to 0.</p>
+<p><code>Number.MIN_VALUE</code> is <code>5e-324</code>, i.e. the smallest positive number that can be represented within float precision, i.e. that's as close as you can get to zero. Values smaller than <code>MIN_VALUE</code> ("underflow values") are converted to 0.</p>
 
 <p>Because <code>MIN_VALUE</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.MIN_VALUE</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>The following code divides two numeric values. If the result is greater than or equal to <code>MIN_VALUE</code>, the <code>func1</code> function is called; otherwise, the <code>func2</code> function is called.</p>
 
-<pre class="brush: js">if (num1 / num2 &gt;= Number.MIN_VALUE) {
+<pre class="brush: js notranslate">if (num1 / num2 &gt;= Number.MIN_VALUE) {
   func1();
 } else {
   func2();
@@ -40,16 +40,16 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -61,5 +61,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Number.MAX_VALUE")}}</li>
+	<li>{{jsxref("Number.MAX_VALUE")}}</li>
 </ul>

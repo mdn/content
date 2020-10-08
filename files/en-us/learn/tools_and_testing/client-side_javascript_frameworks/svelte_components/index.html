@@ -373,7 +373,7 @@ function onToggle() {
 
 <p>Now we need to update our <code>Todo</code> component's markup to call the above functions when the appropriate actions are taken.</p>
 
-<p>To handle the the editing mode we are using the <code>editing</code> variable, which is a boolean. When it's <code>true</code>, it should display the <code>&lt;input&gt;</code> field for editing the todo name, and the <em>Cancel</em> and <em>Save</em> buttons. When it's not in editing mode it will display the checkbox, the todo name and the buttons to edit and delete the todo.</p>
+<p>To handle the editing mode we are using the <code>editing</code> variable, which is a boolean. When it's <code>true</code>, it should display the <code>&lt;input&gt;</code> field for editing the todo name, and the <em>Cancel</em> and <em>Save</em> buttons. When it's not in editing mode it will display the checkbox, the todo name and the buttons to edit and delete the todo.</p>
 
 <p>To achieve this we will use an <a href="https://svelte.dev/docs#if"><code>if</code> block</a>. The <code>if</code> block conditionally renders some markup. Take into account that it won't just show or hide the markup based on the condition — it will dynamically add and remove the elements from the DOM, depending on the condition.</p>
 
@@ -527,7 +527,7 @@ function onToggle() {
 <p>As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components <code>bind</code> can be a good choice; Svelte will let you choose.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Svelte provides more advanced mechanisms to share information among components: the <a href="https://svelte.dev/docs#setContext">Context API</a> and <a href="https://svelte.dev/docs#svelte_store">Stores</a>. The Context API provides a mechanism for a components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.</p>
+<p><strong>Note</strong>: Svelte provides more advanced mechanisms to share information among components: the <a href="https://svelte.dev/docs#setContext">Context API</a> and <a href="https://svelte.dev/docs#svelte_store">Stores</a>. The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.</p>
 </div>
 
 <h2 id="The_code_so_far">The code so far</h2>

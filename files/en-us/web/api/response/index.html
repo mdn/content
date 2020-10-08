@@ -118,7 +118,8 @@ const doAjax = async () =&gt; {
         }
     else
         return Promise.reject('*** PHP file not found');
-    } // doAjax function
+    }
+}
 
 // Call the function and output value or error message to console
 doAjax().then(console.log).catch(console.log);

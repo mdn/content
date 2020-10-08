@@ -40,7 +40,9 @@ tags:
 
 <h3 id="Using___proto__">Using __proto__</h3>
 
-<pre class="brush: js notranslate">function Circle() {}
+<pre class="brush: js notranslate">
+
+function Circle() {}
 const shape = {};
 const circle = new Circle();
 
@@ -49,32 +51,32 @@ const circle = new Circle();
 shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle); // true
+console.log(shape.__proto__ === Circle);  // false
 
-const Shape = function () {};
-const p = {
+const ShapeA = function () {};
+const ShapeB = {
     a() {
         console.log('aaa');
     }
 };
-Shape.prototype.__proto__ = p;
+console.log(ShapeA.prototype.__proto__ = ShapeB);
 
-const circle = new Shape();
-circle.a(); // aaa
-console.log(Shape.prototype === circle.__proto__); // true
+const shapea = new ShapeA();
+shapea.a(); // aaa
+console.log(ShapeA.prototype === shapea.__proto__); // true
 
 // or
-const Shape = function () {};
-const p = {
+const ShapeC = function () {};
+const ShapeD = {
     a() {
         console.log('a');
     }
 };
 
-const circle = new shape();
-circle.__proto__ = p;
-circle.a(); // a
-console.log(Shape.prototype === circle.__proto__); // false
+const shapeC = new ShapeC();
+shapeC.__proto__ = ShapeD;
+shapeC.a(); // a
+console.log(ShapeC.prototype === shapeC.__proto__); // false
 
 // or
 function Test() {}
@@ -83,7 +85,7 @@ Test.prototype.myname = function () {
 };
 
 const a = new Test();
-console.log(a.__proto__ === test.prototype); // true
+console.log(a.__proto__ === Test.prototype); // true
 a.myname(); // myname
 
 // or
@@ -97,7 +99,13 @@ var obj = {
 };
 
 obj.myname(); // myname
-</pre>
+
+ </pre>
+
+
+
+
+
 
 <h2 id="Specifications">Specifications</h2>
 

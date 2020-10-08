@@ -30,9 +30,9 @@ tags:
 <p>The quickest way to build Mozilla is to use the instructions at the simple build pages:</p>
 
 <ul>
- <li><a class="internal" href="/en-US/Simple_Firefox_build" title="En/Simple_build">Simple Firefox build</a></li>
- <li><a class="internal" href="/en-US/Simple_Thunderbird_build" title="en/Simple Thunderbird build">Simple Thunderbird build</a></li>
- <li><a class="internal" href="/en-US/Simple_SeaMonkey_build" title="en/Simple SeaMonkey build">Simple SeaMonkey build</a></li>
+	<li><a class="internal" href="/en-US/Simple_Firefox_build" title="En/Simple_build">Simple Firefox build</a></li>
+	<li><a class="internal" href="/en-US/Simple_Thunderbird_build" title="en/Simple Thunderbird build">Simple Thunderbird build</a></li>
+	<li><a class="internal" href="/en-US/Simple_SeaMonkey_build" title="en/Simple SeaMonkey build">Simple SeaMonkey build</a></li>
 </ul>
 
 <p>For more detail, see below.</p>
@@ -44,25 +44,25 @@ tags:
 <p>Before you try to build, make sure you have the correct tools, and have configured these tools correctly.</p>
 
 <ul>
- <li><a href="https://firefox-source-docs.mozilla.org/setup/linux_build.html" title="en/Linux_Build_Prerequisites">Unix/Linux</a></li>
- <li><a href="https://firefox-source-docs.mozilla.org/setup/windows_build.html" title="en/Windows_Build_Prerequisites">Windows</a></li>
- <li><a href="https://firefox-source-docs.mozilla.org/setup/macos_build.html" title="en/Mac_OS_X_Build_Prerequisites">Mac OS X</a></li>
- <li><a href="/en-US/Developer_Guide/Build_Instructions/Solaris_Prerequisites" title="en/Solaris_Build_Prerequisites">Solaris</a></li>
- <li><a href="/en-US/Developer_Guide/Build_Instructions/OS2_Build_Prerequisites" title="En/OS/2_Build_Prerequisites">OS/2 and eComStation</a></li>
- <li><a href="/en-US/Developer_Guide/Build_Instructions/Building_JavaXPCOM" title="en/Building_JavaXPCOM">JavaXPCOM Build Requirements</a></li>
+	<li><a href="https://firefox-source-docs.mozilla.org/setup/linux_build.html" title="en/Linux_Build_Prerequisites">Unix/Linux</a></li>
+	<li><a href="https://firefox-source-docs.mozilla.org/setup/windows_build.html" title="en/Windows_Build_Prerequisites">Windows</a></li>
+	<li><a href="https://firefox-source-docs.mozilla.org/setup/macos_build.html" title="en/Mac_OS_X_Build_Prerequisites">macOS</a></li>
+	<li><a href="/en-US/Developer_Guide/Build_Instructions/Solaris_Prerequisites" title="en/Solaris_Build_Prerequisites">Solaris</a></li>
+	<li><a href="/en-US/Developer_Guide/Build_Instructions/OS2_Build_Prerequisites" title="En/OS/2_Build_Prerequisites">OS/2 and eComStation</a></li>
+	<li><a href="/en-US/Developer_Guide/Build_Instructions/Building_JavaXPCOM" title="en/Building_JavaXPCOM">JavaXPCOM Build Requirements</a></li>
 </ul>
 
 <h3 id="Get_the_source" name="Get_the_source">Get the source</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Developer_Guide/Source_Code/Downloading_Source_Archives" title="en/Mozilla_Source_Code_(HTTP//FTP)">Download Mozilla Source Code</a></dt>
- <dd>Source code for releases is available for download. Use this if you're a Linux distribution.</dd>
- <dt><a href="https://firefox-source-docs.mozilla.org/contributing/vcs/mercurial.html#using-hg-clone" title="en/Mozilla_Source_Code_(Mercurial)">Mozilla Source Code via Mercurial</a></dt>
- <dd>Get the latest source code using Mercurial. Use this if you're casually interested in Firefox development or you want to work on Firefox.</dd>
- <dt><a href="https://firefox-source-docs.mozilla.org/mobile/android/geckoview/contributor/mc-quick-start.html">Mozilla Source Code via Git</a></dt>
- <dd>Get the latest source code using Git. (The steps may seem a little weird. You'll have to install a Git extension, git-cinnabar, so that <code>git</code> knows how to clone and pull commits from our Mercurial repository.)</dd>
- <dt><a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central" title="en/Comm-central_source_code_(Mercurial)">Comm-central Source Code via Mercurial</a></dt>
- <dd>Those doing active development on Thunderbird/SeaMonkey/Firefox can check out the latest source using Mercurial. This method includes all the code for the applications mentioned, so you can work on Firefox development, and still build Thunderbird or SeaMonkey as well.</dd>
+	<dt><a href="/en-US/docs/Developer_Guide/Source_Code/Downloading_Source_Archives" title="en/Mozilla_Source_Code_(HTTP//FTP)">Download Mozilla Source Code</a></dt>
+	<dd>Source code for releases is available for download. Use this if you're a Linux distribution.</dd>
+	<dt><a href="https://firefox-source-docs.mozilla.org/contributing/vcs/mercurial.html#using-hg-clone" title="en/Mozilla_Source_Code_(Mercurial)">Mozilla Source Code via Mercurial</a></dt>
+	<dd>Get the latest source code using Mercurial. Use this if you're casually interested in Firefox development or you want to work on Firefox.</dd>
+	<dt><a href="https://firefox-source-docs.mozilla.org/mobile/android/geckoview/contributor/mc-quick-start.html">Mozilla Source Code via Git</a></dt>
+	<dd>Get the latest source code using Git. (The steps may seem a little weird. You'll have to install a Git extension, git-cinnabar, so that <code>git</code> knows how to clone and pull commits from our Mercurial repository.)</dd>
+	<dt><a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central" title="en/Comm-central_source_code_(Mercurial)">Comm-central Source Code via Mercurial</a></dt>
+	<dd>Those doing active development on Thunderbird/SeaMonkey/Firefox can check out the latest source using Mercurial. This method includes all the code for the applications mentioned, so you can work on Firefox development, and still build Thunderbird or SeaMonkey as well.</dd>
 </dl>
 
 <h3 id="Configuring_build_options" name="Configuring_build_options">Configuring build options</h3>
@@ -74,39 +74,39 @@ tags:
 <p>After setting up your environment, downloading the source, and configuring the build, refer to the following per-app instructions on how to build:</p>
 
 <ul>
- <li><a class="internal" href="/en-US/Simple_Firefox_build#Building" title="En/Simple_build">Building Firefox</a></li>
- <li><a class="internal" href="/en-US/Simple_Thunderbird_build#Building_Thunderbird" title="en/Simple Thunderbird build">Building Thunderbird</a></li>
- <li><a class="internal" href="/en-US/Simple_SeaMonkey_build#Building_SeaMonkey" title="en/Simple SeaMonkey build">Building SeaMonkey</a></li>
+	<li><a class="internal" href="/en-US/Simple_Firefox_build#Building" title="En/Simple_build">Building Firefox</a></li>
+	<li><a class="internal" href="/en-US/Simple_Thunderbird_build#Building_Thunderbird" title="en/Simple Thunderbird build">Building Thunderbird</a></li>
+	<li><a class="internal" href="/en-US/Simple_SeaMonkey_build#Building_SeaMonkey" title="en/Simple SeaMonkey build">Building SeaMonkey</a></li>
 </ul>
 
 <h2 id="Random_FAQs_and_Developer_Documentation" name="Random_FAQs_and_Developer_Documentation">Random FAQs and Developer Documentation</h2>
 
 <ul>
- <li><a href="/en/Developer_Guide/Mozilla_build_FAQ" title="en/Mozilla_Build_FAQ">Mozilla Build FAQ</a></li>
- <li><a href="/en/Adding_Files_to_the_Build" title="en/Adding_Files_to_the_Build">Adding Files to the Build</a></li>
- <li><a href="/en/Adding_XPCOM_components_to_Mozilla_build_system" title="en/Adding_XPCOM_components_to_Mozilla_build_system">Adding Components</a></li>
- <li><a href="/en/Creating_a_Release_Tag" title="en/Creating_a_Release_Tag">Creating a Release Tag</a></li>
- <li><a href="/en/Cross-Compiling_Mozilla" title="en/Cross-Compiling_Mozilla">Cross-Compiling Mozilla</a></li>
- <li><a href="/en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS" title="en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS">Compiling 32-bit Firefox on a Linux 64-bit OS</a></li>
- <li><a href="/en/Mozilla_Release_Checklist" title="en/Mozilla_Release_Checklist">Mozilla Release Checklist</a></li>
- <li><a href="/en/Clang_Static_Analysis" title="Clang Static Analysis">Clang Static Analysis</a></li>
- <li><a href="/en/Package_Filename_Convention" title="en/Package_Filename_Convention">Package Filename Convention</a></li>
- <li><a href="/en/Building_with_Profile-Guided_Optimization" title="en/Building_with_Profile-Guided_Optimization">Building with Profile-Guided Optimization</a></li>
- <li><a href="/en-US/docs/Building_Firefox_with_Debug_Symbols" title="/en-US/docs/Building_Firefox_with_Debug_Symbols">Building Firefox with Debug Symbols</a></li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation" title="en/Building_only_SpiderMonkey">Building only SpiderMonkey</a></li>
- <li><a href="/en-US/Firefox/Building_Firefox_with_Rust_code">Building Firefox with Rust Code</a></li>
- <li><a href="/en/Mozilla_Release_Build_Notes" title="en/Mozilla_Release_Build_Notes">Notes on how mozilla.org does release builds</a> (circa 2007)</li>
- <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_Firefox_on_Windows_with_clang-cl" title="Building Firefox on Windows with clang-cl">Building Firefox on Windows with clang-cl</a></li>
+	<li><a href="/en/Developer_Guide/Mozilla_build_FAQ" title="en/Mozilla_Build_FAQ">Mozilla Build FAQ</a></li>
+	<li><a href="/en/Adding_Files_to_the_Build" title="en/Adding_Files_to_the_Build">Adding Files to the Build</a></li>
+	<li><a href="/en/Adding_XPCOM_components_to_Mozilla_build_system" title="en/Adding_XPCOM_components_to_Mozilla_build_system">Adding Components</a></li>
+	<li><a href="/en/Creating_a_Release_Tag" title="en/Creating_a_Release_Tag">Creating a Release Tag</a></li>
+	<li><a href="/en/Cross-Compiling_Mozilla" title="en/Cross-Compiling_Mozilla">Cross-Compiling Mozilla</a></li>
+	<li><a href="/en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS" title="en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS">Compiling 32-bit Firefox on a Linux 64-bit OS</a></li>
+	<li><a href="/en/Mozilla_Release_Checklist" title="en/Mozilla_Release_Checklist">Mozilla Release Checklist</a></li>
+	<li><a href="/en/Clang_Static_Analysis" title="Clang Static Analysis">Clang Static Analysis</a></li>
+	<li><a href="/en/Package_Filename_Convention" title="en/Package_Filename_Convention">Package Filename Convention</a></li>
+	<li><a href="/en/Building_with_Profile-Guided_Optimization" title="en/Building_with_Profile-Guided_Optimization">Building with Profile-Guided Optimization</a></li>
+	<li><a href="/en-US/docs/Building_Firefox_with_Debug_Symbols" title="/en-US/docs/Building_Firefox_with_Debug_Symbols">Building Firefox with Debug Symbols</a></li>
+	<li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation" title="en/Building_only_SpiderMonkey">Building only SpiderMonkey</a></li>
+	<li><a href="/en-US/Firefox/Building_Firefox_with_Rust_code">Building Firefox with Rust Code</a></li>
+	<li><a href="/en/Mozilla_Release_Build_Notes" title="en/Mozilla_Release_Build_Notes">Notes on how mozilla.org does release builds</a> (circa 2007)</li>
+	<li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_Firefox_on_Windows_with_clang-cl" title="Building Firefox on Windows with clang-cl">Building Firefox on Windows with clang-cl</a></li>
 </ul>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/tag/Build documentation" title="All articles tagged as build documentation.">All build documentation</a></li>
+	<li><a class="internal" href="/en-US/docs/tag/Build documentation" title="All articles tagged as build documentation.">All build documentation</a></li>
 </ul>
 
 <h2 id="Hacking_the_Build_System" name="Hacking_the_Build_System">Hacking the Build System</h2>
 
 <ul>
- <li><a href="/en/How_Mozilla's_build_system_works" title="en/How_Mozilla's_build_system_works">How Mozilla's build system works</a></li>
- <li><a class="internal" href="/Special:Tags?tag=Build_Glossary" title="Special:Tags?tag=Build Glossary">Build Glossary</a> <a class="external" href="http://www.mozilla.org/build/glossary.html" title="http://www.mozilla.org/build/glossary.html">(old glossary)</a></li>
- <li><a href="/en/JAR_Manifests" title="en/JAR_Manifests">Build and Register Chrome JARs with JAR Manifests</a></li>
+	<li><a href="/en/How_Mozilla's_build_system_works" title="en/How_Mozilla's_build_system_works">How Mozilla's build system works</a></li>
+	<li><a class="internal" href="/Special:Tags?tag=Build_Glossary" title="Special:Tags?tag=Build Glossary">Build Glossary</a> <a class="external" href="http://www.mozilla.org/build/glossary.html" title="http://www.mozilla.org/build/glossary.html">(old glossary)</a></li>
+	<li><a href="/en/JAR_Manifests" title="en/JAR_Manifests">Build and Register Chrome JARs with JAR Manifests</a></li>
 </ul>

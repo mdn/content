@@ -20,11 +20,11 @@ tags:
 <p>Associating a <code>&lt;label&gt;</code> with an {{htmlelement("input")}} element offers some major advantages:</p>
 
 <ul>
- <li>The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screenreader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.</li>
+ <li>The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.</li>
  <li>You can click the associated label to focus/activate the input, as well as the input itself. This increased hit area provides an advantage to anyone trying to activate the input, including those using a touch-screen device.</li>
 </ul>
 
-<p>To associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, you need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>.</p>
+<p>To associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, you need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> an attribute whose value is the same as the input's <code>id</code>.</p>
 
 <p>Alternatively, you can nest the <code>&lt;input&gt;</code> directly inside the <code>&lt;label&gt;</code>, in which case the <code>for</code> and <code>id</code> attributes are not needed because the association is implicit:</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element, if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements which also match the <code>id</code> value, later in the document, they are not considered.
+ <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
  <div class="note"><strong>Note</strong>: A <code>&lt;label&gt;</code> element can have both a <code>for</code> attribute and a contained control element, as long as the <code>for</code> attribute points to the contained control element.</div>
  </dd>
 </dl>

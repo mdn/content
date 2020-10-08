@@ -25,12 +25,14 @@ tags:
 
 <h3 id="Using_division_assignment">Using division assignment</h3>
 
-<pre class="brush: js notranslate">// Assuming the following variable
+<pre class="brush: js notranslate">// Assuming the following variable and that all operations are run in order
 //  bar = 5
 
 bar /= 2     // 2.5
+bar /= 2     // 1.25
+bar /= 0     // Infinity
 bar /= 'foo' // NaN
-bar /= 0     // Infinity</pre>
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -44,7 +44,7 @@ tags:
 
 <p>To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer:</p>
 
-<pre class="brush: html notranslate">  const vsSource = `
+<pre class="brush: js notranslate">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
 
@@ -66,7 +66,7 @@ tags:
 
 <p>As a refresher, here's what our fragment shader looked like previously:</p>
 
-<pre class="brush: html notranslate">  const fsSource = `
+<pre class="brush: js notranslate">  const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
@@ -75,7 +75,7 @@ tags:
 
 <p>In order to pick up the interpolated color for each pixel, we need to change this to fetch the value from the <code>vColor</code> varying:</p>
 
-<pre class="brush: html notranslate">  const fsSource = `
+<pre class="brush: js notranslate">  const fsSource = `
     varying lowp vec4 vColor;
 
     void main(void) {

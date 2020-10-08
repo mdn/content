@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>WebGLActiveInfo</em> <em>WebGLRenderingContext</em>.getActiveUniform(<em>program</em>, <em>index</em>);
+<pre class="syntaxbox notranslate"><em>WebGLActiveInfo</em> <em>WebGLRenderingContext</em>.getActiveUniform(<em>program</em>, <em>index</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -62,9 +62,7 @@ tags:
    <li><code>gl.FLOAT_MAT3x4</code></li>
    <li><code>gl.FLOAT_MAT4x2</code></li>
    <li><code>gl.FLOAT_MAT4x3</code></li>
-   <li><code>gl.SAMPLER_2D</code></li>
    <li><code>gl.SAMPLER_3D</code></li>
-   <li><code>gl.SAMPLER_CUBE</code></li>
    <li><code>gl.SAMPLER_2D_SHADOW</code></li>
    <li><code>gl.SAMPLER_2D_ARRAY</code></li>
    <li><code>gl.SAMPLER_2D_ARRAY_SHADOW</code></li>
@@ -109,7 +107,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
+<pre class="brush: js notranslate">const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 for (let i = 0; i &lt; numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
   console.log('name:', info.name, 'type:', info.type, 'size:', info.size);

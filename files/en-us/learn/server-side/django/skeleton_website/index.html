@@ -19,16 +19,16 @@ tags:
 <p class="summary">This second article in our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a> shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.</p>
 
 <table class="learn-box standard-table">
-	<tbody>
-		<tr>
-			<th scope="row">Prerequisites:</th>
-			<td><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Set up a Django development environment</a>. Review the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Objective:</th>
-			<td>To be able to use Django's tools to start your own new website projects.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Set up a Django development environment</a>. Review the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To be able to use Django's tools to start your own new website projects.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Overview">Overview</h2>
@@ -38,20 +38,20 @@ tags:
 <p>To get started:</p>
 
 <ol>
-	<li><span style="line-height: 1.5;">Use the </span><code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code><span style="line-height: 1.5;"> tool to generate a project folder, the basic file templates, and <strong>manage.py, </strong>which serves as your project management script.</span></li>
-	<li><span style="line-height: 1.5;">Use </span><strong style="line-height: 1.5;">manage.py</strong><span style="line-height: 1.5;"> to create one or more </span><em>applications</em><span style="line-height: 1.5;">.</span>
-	<div class="note">
-	<p><strong>Note</strong>: A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate <em>applications</em>, which could then be re-used in different projects if desired. </p>
-	</div>
-	</li>
-	<li><span style="line-height: 1.5;">Register the new applications to include them in the project. </span></li>
-	<li><span style="line-height: 1.5;">Hook up the <strong>url/path</strong> mapper for each application.</span></li>
+ <li><span style="line-height: 1.5;">Use the </span><code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code><span style="line-height: 1.5;"> tool to generate a project folder, the basic file templates, and <strong>manage.py, </strong>which serves as your project management script.</span></li>
+ <li><span style="line-height: 1.5;">Use </span><strong style="line-height: 1.5;">manage.py</strong><span style="line-height: 1.5;"> to create one or more </span><em>applications</em><span style="line-height: 1.5;">.</span>
+  <div class="note">
+  <p><strong>Note</strong>: A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate <em>applications</em>, which could then be re-used in different projects if desired. </p>
+  </div>
+ </li>
+ <li><span style="line-height: 1.5;">Register the new applications to include them in the project. </span></li>
+ <li><span style="line-height: 1.5;">Hook up the <strong>url/path</strong> mapper for each application.</span></li>
 </ol>
 
 <p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
 
 <pre class="brush: bash notranslate"><em>locallibrary/         # Website folder</em>
-    <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
+    <strong>manage.py         </strong><em># Script to run Django tools for this project</em> (created using django-admin)
     <em>locallibrary/     # Website/project folder </em>(created using django-admin)
     <em>catalog/          # Application folder </em>(created using manage.py)
 </pre>
@@ -61,8 +61,8 @@ tags:
 <h2 id="Creating_the_project">Creating the project</h2>
 
 <ol>
-	<li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">virtual environment</a>. </li>
-	<li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:</li>
+ <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">virtual environment</a>. </li>
+ <li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:</li>
 </ol>
 
 <pre class="brush: bash notranslate">mkdir django_projects
@@ -91,11 +91,11 @@ cd locallibrary</pre>
 <p>The <em>locallibrary</em> project sub-folder is the entry point for the website:</p>
 
 <ul>
-	<li><strong>__init__.py </strong>is an empty file that instructs Python to treat this directory as a Python package.</li>
-	<li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
-	<li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all </em>the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
-	<li><strong style="line-height: 1.5;">wsgi.py</strong><span style="line-height: 1.5;"> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</span></li>
-	<li><strong>asgi.py</strong> is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.</li>
+ <li><strong>__init__.py </strong>is an empty file that instructs Python to treat this directory as a Python package.</li>
+ <li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
+ <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all </em>the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
+ <li><strong style="line-height: 1.5;">wsgi.py</strong><span style="line-height: 1.5;"> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</span></li>
+ <li><strong>asgi.py</strong> is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.</li>
 </ul>
 
 <p>The <strong>manage.py</strong> script is used to create applications, work with databases, and start the development web server. </p>
@@ -136,8 +136,8 @@ cd locallibrary</pre>
 <p>In addition we now have:</p>
 
 <ul>
-	<li>A <em>migrations</em> folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models. </li>
-	<li><strong>__init__.py</strong> — an empty file created here so that Django/Python will recognize the folder as a <a href="https://docs.python.org/3/tutorial/modules.html#packages">Python Package</a> and allow you to use its objects within other parts of the project.</li>
+ <li>A <em>migrations</em> folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models. </li>
+ <li><strong>__init__.py</strong> — an empty file created here so that Django/Python will recognize the folder as a <a href="https://docs.python.org/3/tutorial/modules.html#packages">Python Package</a> and allow you to use its objects within other parts of the project.</li>
 </ul>
 
 <div class="note">
@@ -191,8 +191,8 @@ cd locallibrary</pre>
 <p>There are two other settings you won't change now, but that you should be aware of:</p>
 
 <ul>
-	<li><code>SECRET_KEY</code>. This is a secret key that is used as part of Django's website security strategy. If you're not protecting this code in development, you'll need to use a different code (perhaps read from an environment variable or file) when putting it into production. </li>
-	<li><code>DEBUG</code>. This enables debugging logs to be displayed on error, rather than HTTP status code responses. This should be set to <code>False</code> in production as debug information is useful for attackers, but for now we can keep it set to <code>True</code>.</li>
+ <li><code>SECRET_KEY</code>. This is a secret key that is used as part of Django's website security strategy. If you're not protecting this code in development, you'll need to use a different code (perhaps read from an environment variable or file) when putting it into production. </li>
+ <li><code>DEBUG</code>. This enables debugging logs to be displayed on error, rather than HTTP status code responses. This should be set to <code>False</code> in production as debug information is useful for attackers, but for now we can keep it set to <code>True</code>.</li>
 </ul>
 
 <h2 id="Hooking_up_the_URL_mapper">Hooking up the URL mapper</h2>
@@ -382,8 +382,8 @@ python3 manage.py migrate
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
-	<li><a href="https://docs.djangoproject.com/en/2.1/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</p>
@@ -391,19 +391,19 @@ python3 manage.py migrate
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

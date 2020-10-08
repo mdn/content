@@ -15,6 +15,10 @@ tags:
 
 <p>Most commands affect the document's <a href="/en-US/docs/Web/API/Selection">selection</a> (bold, italics, etc.), while others insert new elements (adding a link), or affect an entire line (indenting). When using <code>contentEditable</code>, <code>execCommand()</code> affects the currently active editable element.</p>
 
+<div class="note">
+<p><strong>Note</strong>: From Firefox 82 <code>execCommand()</code> cannot be called recursively (returns <code>false</code> in this case).</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>document</var>.execCommand(<var>aCommandName</var>, <var>aShowDefaultUI</var>, <var>aValueArgument</var>)
@@ -25,7 +29,12 @@ tags:
 <p>A {{jsxref('Boolean')}} that is <code>false</code> if the command is unsupported or disabled.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Only returns <code>true</code> if part of a user interaction. Don't try using the return value to verify browser support before calling a command.</p>
+<p><strong>Note</strong>:</p>
+
+<ul>
+ <li>Only returns <code>true</code> if part of a user interaction. Don't try using the return value to verify browser support before calling a command.</li>
+ <li>From Firefox 82, nested calls will return <code>false</code>. </li>
+</ul>
 </div>
 
 <h3 id="Parameters">Parameters</h3>

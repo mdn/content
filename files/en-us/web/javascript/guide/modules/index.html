@@ -59,21 +59,21 @@ modules/
 <p>The modules directory's two modules are described below:</p>
 
 <ul>
- <li><code>canvas.js</code> — contains functions related to setting up the canvas:
+	<li><code>canvas.js</code> — contains functions related to setting up the canvas:
 
-  <ul>
-   <li><code>create()</code> — creates a canvas with a specified <code>width</code> and <code>height</code> inside a wrapper <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (&lt;div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.</li>
-   <li><code>createReportList()</code> — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.</li>
-  </ul>
- </li>
- <li><code>square.js</code> — contains:
-  <ul>
-   <li><code>name</code> — a constant containing the string 'square'.</li>
-   <li><code>draw()</code> — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.</li>
-   <li><code>reportArea()</code> — writes a square's area to a specific report list, given its length.</li>
-   <li><code>reportPerimeter()</code> — writes a square's perimeter to a specific report list, given its length.</li>
-  </ul>
- </li>
+	<ul>
+		<li><code>create()</code> — creates a canvas with a specified <code>width</code> and <code>height</code> inside a wrapper <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (&lt;div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.</li>
+		<li><code>createReportList()</code> — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.</li>
+	</ul>
+	</li>
+	<li><code>square.js</code> — contains:
+	<ul>
+		<li><code>name</code> — a constant containing the string 'square'.</li>
+		<li><code>draw()</code> — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.</li>
+		<li><code>reportArea()</code> — writes a square's area to a specific report list, given its length.</li>
+		<li><code>reportPerimeter()</code> — writes a square's perimeter to a specific report list, given its length.</li>
+	</ul>
+	</li>
 </ul>
 
 <h2 id="Aside_—_.mjs_versus_.js">Aside — <code>.mjs</code> versus <code>.js</code></h2>
@@ -81,8 +81,8 @@ modules/
 <p>Throughout this article, we've used <code>.js</code> extensions for our module files, but in other resources you may see the <code>.mjs</code> extension used instead. <a href="https://v8.dev/features/modules#mjs">V8's documentation recommends this</a>, for example. The reasons given are:</p>
 
 <ul>
- <li>It is good for clarity, i.e. it makes it clear which files are modules, and which are regular JavaScript.</li>
- <li>It ensures that your module files are parsed as a module by runtimes such as <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, and build tools such as <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
+	<li>It is good for clarity, i.e. it makes it clear which files are modules, and which are regular JavaScript.</li>
+	<li>It ensures that your module files are parsed as a module by runtimes such as <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, and build tools such as <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
 </ul>
 
 <p>However, we decided to keep to using <code>.js</code>, at least for the moment. To get modules to work correctly in a browser, you need to make sure that your server is serving them with a <code>Content-Type</code> header that contains a JavaScript MIME type such as <code>text/javascript</code>. If you don't, you'll get a strict MIME type checking error along the lines of "The server responded with a non-JavaScript MIME type" and the browser won't run your JavaScript. Most servers already set the correct type for <code>.js</code> files, but not yet for <code>.mjs</code> files. Servers that already serve <code>.mjs</code> files correctly include <a href="https://pages.github.com/">GitHub Pages</a> and <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> for Node.js.</p>
@@ -96,8 +96,8 @@ modules/
 <p>It is also worth noting that:</p>
 
 <ul>
- <li>Some tools may never support <code>.mjs</code>, such as <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
- <li>The <code>&lt;script type="module"&gt;</code> attribute is used to denote when a module is being pointed to, as you'll see below.</li>
+	<li>Some tools may never support <code>.mjs</code>, such as <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
+	<li>The <code>&lt;script type="module"&gt;</code> attribute is used to denote when a module is being pointed to, as you'll see below.</li>
 </ul>
 
 <h2 id="Exporting_module_features">Exporting module features</h2>
@@ -147,7 +147,7 @@ export function draw(ctx, length, x, y, color) {
 <p>You can see such lines in action in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: In some module systems, you can omit the file extension and the dot (e.g. <code>'/modules/square'</code>). This doesn't work in native JavaScript modules.</p>
+<p><strong>Note</strong>: In some module systems, you can omit the file extension and the leading <code>/</code>, <code>./</code>, or <code>../</code> (e.g. <code>'modules/square'</code>). This doesn't work in native JavaScript modules.</p>
 </div>
 
 <p>Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in <code>main.js</code>, below the import lines:</p>
@@ -185,11 +185,11 @@ reportPerimeter(square1.length, reportList);
 <h2 id="Other_differences_between_modules_and_standard_scripts">Other differences between modules and standard scripts</h2>
 
 <ul>
- <li>You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.</li>
- <li>Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.</li>
- <li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
- <li>Modules are only executed once, even if they have been referenced in multiple <code>&lt;script&gt;</code> tags.</li>
- <li>Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.</li>
+	<li>You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.</li>
+	<li>Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.</li>
+	<li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
+	<li>Modules are only executed once, even if they have been referenced in multiple <code>&lt;script&gt;</code> tags.</li>
+	<li>Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.</li>
 </ul>
 
 <h2 id="Default_exports_versus_named_exports">Default exports versus named exports</h2>
@@ -439,18 +439,18 @@ import { Triangle } from './modules/triangle.js';</pre>
 <p>Here are a few tips that may help you if you are having trouble getting your modules to work. Feel free to add to the list if you discover more!</p>
 
 <ul>
- <li>We mentioned this before, but to reiterate: <code>.js</code> files need to be loaded with a MIME-type of <code>text/javascript</code> (or another JavaScript-compatible MIME-type, but <code>text/javascript</code> is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".</li>
- <li>If you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves <code>.js</code> files with the correct MIME type.</li>
- <li>Because <code>.mjs</code> is a non-standard file extension, some operating systems might not recognise it, or try to replace it with something else. For example, we found that macOS was silently adding on <code>.js</code> to the end of <code>.mjs</code> files and then automatically hiding the file extension. So all of our files were actually coming out as <code>x.mjs.js</code>. Once we turned off automatically hiding file extensions, and trained it to accept <code>.mjs</code>, it was OK.</li>
+	<li>We mentioned this before, but to reiterate: <code>.js</code> files need to be loaded with a MIME-type of <code>text/javascript</code> (or another JavaScript-compatible MIME-type, but <code>text/javascript</code> is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".</li>
+	<li>If you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves <code>.js</code> files with the correct MIME type.</li>
+	<li>Because <code>.mjs</code> is a non-standard file extension, some operating systems might not recognise it, or try to replace it with something else. For example, we found that macOS was silently adding on <code>.js</code> to the end of <code>.mjs</code> files and then automatically hiding the file extension. So all of our files were actually coming out as <code>x.mjs.js</code>. Once we turned off automatically hiding file extensions, and trained it to accept <code>.mjs</code>, it was OK.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developers.google.com/web/fundamentals/primers/modules#mjs">Using JavaScript modules on the web</a>, by Addy Osmani and Mathias Bynens</li>
- <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li>Axel Rauschmayer's book <a href="http://exploringjs.com/es6/ch_modules.html">Exploring JS: Modules</a></li>
+	<li><a href="https://developers.google.com/web/fundamentals/primers/modules#mjs">Using JavaScript modules on the web</a>, by Addy Osmani and Mathias Bynens</li>
+	<li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
+	<li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
+	<li>Axel Rauschmayer's book <a href="http://exploringjs.com/es6/ch_modules.html">Exploring JS: Modules</a></li>
 </ul>
 
 <p>{{Previous("Web/JavaScript/Guide/Meta_programming")}}</p>

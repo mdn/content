@@ -2,18 +2,71 @@
 title: inert
 slug: Web/API/HTMLElement/inert
 ---
-<p>The boolean <code>inert</code> attribute, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
+<p>{{ APIRef("HTML DOM") }}</p>
 
-<p>According to the <a href="https://html.spec.whatwg.org/multipage/interaction.html#inert">spec</a>:</p>
+<p>The {{domxref("HTMLElement")}} property <strong><code>inert</code></strong> is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
 
-<blockquote>
-<p>When a node is inert, then the user agent must act as if the node was absent for the purposes of targeting user interaction events, may ignore the node for the purposes of text search user interfaces (commonly known as "find in page"), and may prevent the user from selecting text in that node.</p>
-</blockquote>
+<h2 id="Syntax">Syntax</h2>
 
-<h4 id="Polyfills">Polyfills</h4>
+<pre class="notranslate"><em>isInert</em> = <em>HTMLElement</em>.inert;
 
-<p>Currently, browser support is lacking. Check out the following polyfills:</p>
+<em>HTMLElement</em>.inert = true | false;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A Boolean which is <code>true</code> if the element is inert; otherwise, the value is <code>false</code>.</p>
+
+<h2 id="Example">Example</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;div&gt;
+  &lt;label for="button1"&gt;Button 1&lt;/label&gt;
+  &lt;button id="button1"&gt;I am not inert&lt;/button&gt;
+&lt;/div&gt;
+&lt;div inert&gt;
+  &lt;label for="button2"&gt;Button 1&lt;/label&gt;
+  &lt;button id="button2"&gt;I am inert&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css notranslate">[inert] &gt; * {
+  opacity: .5;
+}
+</pre>
+
+<p>{{ EmbedLiveSample('Example', 560, 200) }}</p>
+
+<div class="blockIndicator note">
+<p>Note that the attribute will not cause any visual change to the content as displayed in the browser. In the example above I have made any elements which are a child of an element with inert semi-opaque.</p>
+</div>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "interaction.html#inert-subtrees", "HTMLElement.inert")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("api.HTMLElement.inert")}}</p>
+
+<h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><a href="https://github.com/WICG/inert">Inert </a></li>
+ <li><a href="https://github.com/WICG/inert">Inert Polyfill</a></li>
 </ul>

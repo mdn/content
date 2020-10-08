@@ -299,7 +299,8 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <p>In modern browsers, <code>setTimeout()</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals. Take this example:</p>
 
-<pre class="brush: js notranslate">function cb() { f(); setTimeout(cb, 0); }
+<pre class="brush: js notranslate">function cb() { setTimeout(cb, 0); }
+function f() { setInterval(f, 0); }
 setTimeout(cb, 0);
 setInterval(f, 0);</pre>
 

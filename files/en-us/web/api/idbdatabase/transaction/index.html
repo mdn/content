@@ -22,14 +22,10 @@ tags:
 
 <pre class="syntaxbox notranslate"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
 <em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode</em>);
+<em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode, options</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
-
-<ul>
- <li><code>"durability"</code> -- the durability constrints for the transction.<br>
-  Valid values are: <code>"default"</code>, <code>"strict"</code>, and <code>"relaxed"</code>.</li>
-</ul>
 
 <dl>
  <dt><code>storeNames</code></dt>
@@ -54,8 +50,12 @@ var transaction = db.transaction('my-store-name');</pre>
  <p><strong>Note</strong>: In Firefox, if you wish to ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.) This is currently experimental, and can only be used if the <code>dom.indexedDB.experimental</code> pref is set to <code>true</code> in <code>about:config</code>.</p>
  </div>
  </dd>
- <dt><code>details</code> {{optional_inline}}</dt>
- <dd>Dictionary of other settings, supported only by Chrome:</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>Dictionary of other options. Available options are:
+ <ul>
+  <li><code>durability</code>: <code>"default"</code>, <code>"strict"</code>, or <code>"relaxed"</code>. The default is <code>"default"</code>. Using <code>"relaxed"</code> provides better performance, but with fewer guarantees. Web applications are encouraged to use <code>"relaxed"</code> for ephemeral data such as caches or quickly changing records, and <code>"strict"</code> in cases where reducing the risk of data loss outweighs the impact to performance and power.</li>
+ </ul>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

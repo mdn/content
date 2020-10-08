@@ -63,18 +63,6 @@ tags:
  <dd>A {{domxref("DOMString")}} that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.</dd>
  <dt>{{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("MediaKeys")}} object or <code>null</code>. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.</dd>
- <dt>{{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}</dt>
- <dd>Returns a {{jsxref('Boolean')}}. Related to audio stream capture.</dd>
- <dt>{{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}</dt>
- <dd>Is a <code>double</code> that provides access to the fragment end time if the media element has a fragment URI for <code>currentSrc</code>, otherwise it is equal to the media duration.</dd>
- <dt>{{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>
- <p>Is a <code>unsigned long</code> that indicates the number of samples that will be returned in the framebuffer of each <code>MozAudioAvailable</code> event. This number is a total for all channels, and by default is set to be the number of channels * 1024 (e.g., 2 channels * 1024 samples = 2048 total).</p>
-
- <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
- </dd>
- <dt>{{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns a <code>double</code> representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.</dd>
  <dt>{{domxref("HTMLMediaElement.muted")}}</dt>
  <dd>Is a {{jsxref('Boolean')}} that determines whether audio is muted. <code>true</code> if the audio is muted and <code>false</code> otherwise.</dd>
  <dt>{{domxref("HTMLMediaElement.networkState")}} {{readonlyinline}}</dt>
@@ -125,8 +113,20 @@ tags:
 <dl>
  <dt>{{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Returns a <code>double</code> that indicates the initial playback position in seconds.</dd>
+ <dt>{{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}</dt>
+ <dd>Returns a {{jsxref('Boolean')}}. Related to audio stream capture.</dd>
  <dt>{{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns a <code>double</code> representing the number of channels in the audio resource (e.g., <code>2</code> for stereo).</dd>
+ <dt>{{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}</dt>
+ <dd>Is a <code>double</code> that provides access to the fragment end time if the media element has a fragment URI for <code>currentSrc</code>, otherwise it is equal to the media duration.</dd>
+ <dt>{{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
+ <dd>
+ <p>Is a <code>unsigned long</code> that indicates the number of samples that will be returned in the framebuffer of each <code>MozAudioAvailable</code> event. This number is a total for all channels, and by default is set to be the number of channels * 1024 (e.g., 2 channels * 1024 samples = 2048 total).</p>
+
+ <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
+ </dd>
+ <dt>{{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
+ <dd>Returns a <code>double</code> representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.</dd>
 </dl>
 
 <h3 id="Obsolete_event_handlers">Obsolete event handlers</h3>
@@ -153,12 +153,6 @@ tags:
  <dd>Directly seeks to the given time.</dd>
  <dt>{{domxref("HTMLMediaElement.load()")}}</dt>
  <dd>Resets the media to the beginning and selects the best available source from the sources provided using the {{htmlattrxref("src", "video")}} attribute or the {{HTMLElement("source")}} element.</dd>
- <dt>{{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}</dt>
- <dd>[enter description]</dd>
- <dt>{{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}</dt>
- <dd>[enter description]</dd>
- <dt>{{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}</dt>
- <dd>Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as <code>{key: value}</code> pairs. A separate copy of the data is returned each time the method is called. This method must be called after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires.</dd>
  <dt>{{domxref("HTMLMediaElement.pause()")}}</dt>
  <dd>Pauses the media playback.</dd>
  <dt>{{domxref("HTMLMediaElement.play()")}}</dt>
@@ -176,6 +170,12 @@ tags:
 <p><em>These methods are obsolete and should not be used, even if a browser still supports them.</em></p>
 
 <dl>
+ <dt>{{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}</dt>
+ <dd>[enter description]</dd>
+ <dt>{{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}</dt>
+ <dd>[enter description]</dd>
+ <dt>{{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}</dt>
+ <dd>Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as <code>{key: value}</code> pairs. A separate copy of the data is returned each time the method is called. This method must be called after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires.</dd>
  <dt>{{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>This method, available only in Mozilla's implementation, loads data from another media element. This works similarly to <code>load()</code> except that instead of running the normal resource selection algorithm, the source is simply set to the <code>other</code> element's <code>currentSrc</code>. This is optimized so this element gets access to all of the <code>other</code> element's cached and buffered data; in fact, the two elements share downloaded data, so data downloaded by either element is available to both.</dd>
 </dl>

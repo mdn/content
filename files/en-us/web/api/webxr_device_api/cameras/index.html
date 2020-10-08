@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Composing_multiple_transforms">Composing multiple transforms</h3>
 
-<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="https://glmatrix.net/">glMatrix</a> to do the work.</p>
+<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
 
 <p>It's crucial to remember that unlike typical arithmetic, where multiplication is commutative (that is, you get the same answer whether you multiply left to right or right to left), matrix multiplication <em>is not commutative!</em> This is because each transform affects the position of the object and possibly the very coordinate system itself, which can dramatically change the results of the next operation performed. So you need to be careful about the order in which you apply your transforms when building your composite transform (or directly applying transforms in sequence).</p>
 
@@ -172,7 +172,7 @@ tags:
 <p>The following function returns a projection perspective matrix that integrates the specified field of view angle as well as the given near and far clipping plane distances:</p>
 
 <pre class="brush: js notranslate">function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
-  const fovRadians = fov * (Math.PI / 180.0);
+  const fovRadians = fovDegrees * (Math.PI / 180.0);
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
@@ -247,9 +247,9 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p><strong>Panning</strong> or <strong>yaw</strong> is the rotation of the camera left to right or right to left, with its base otherwise fixed in place. The position of the camera in space does not change, only the direction in which it's looking. And that direction does not change other than horizontally. Panning is great for establishing a setting or providing a sense of scope in a vast space or on a vast object. Or just for looking left and right, like simulating the player turning their head in an immersive or VR scenario.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing how a camera moves for a dolly shot" src="https://mdn.mozillademos.org/files/17091/Camera-Pan.png" style="height: 311px; width: 317px;"></div>
+<div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera panning left or right" src="https://mdn.mozillademos.org/files/17091/Camera-Pan.png" style="height: 311px; width: 317px;"></div>
 
-<p>To do this, then, we need to rotate around the Y axis, to simulate the left and right rotation of the camera. Using the <a href="https://glmatrix.net/">glMatrix</a> library we've used previously, this can be performed using the <code>rotateY()</code> method on the <code>mat4</code> class, which represents a standard 4x4 matrix. To rotate the viewpoint defined by the matrix <code>viewMatrix</code> by <code>panAngle</code> radians:</p>
+<p>To do this, then, we need to rotate around the Y axis, to simulate the left and right rotation of the camera. Using the <a href="http://glmatrix.net/">glMatrix</a> library we've used previously, this can be performed using the <code>rotateY()</code> method on the <code>mat4</code> class, which represents a standard 4x4 matrix. To rotate the viewpoint defined by the matrix <code>viewMatrix</code> by <code>panAngle</code> radians:</p>
 
 <pre class="brush: js notranslate">mat4.rotateY(viewMatrix, viewMatrix, panAngle);
 </pre>
@@ -326,15 +326,15 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>Translating along multiple axes is quite easy. Previously, we performed our translations like this:</p>
 
-<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-trackDistance, 0, 0]);
+<pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);
 mat4.translate(viewMatrix, viewMatrix, [0, -pedestalDistance, 0]);
-mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 </pre>
 
 <p>The solution here is obvious. SInce the translation is expressed as a vector providing the distance to move along each axis, we can combine them like this:</p>
 
 <pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix,
-     [-trackDistance, -pedestalDistance, dollyDistance]);</pre>
+     [-truckDistance, -pedestalDistance, dollyDistance]);</pre>
 
 <p>This will shift the origin of the matrix <code>viewMatrix</code> by the specified amount along each axis.</p>
 
@@ -413,13 +413,13 @@ mat4.multiply(viewMatrix, viewMatrix, rotateMatrix);</pre>
 }
 </pre>
 
-<p>The callback begins by calling a custom function, <code>applyPositionOffsets()</code>, which takes a reference space and applies to its transform matrix any changes that need to be made to take into account things such as user inputs from devices not controlled by WebXR, such as the keyboard and mouse. The adjusted domxref("XRReferenceSpace")}} returned by this function is then passed into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} to get the {{domxref("XRViewerPose")}} representing the viewer's position and viewing angle.</p>
+<p>The callback begins by calling a custom function, <code>applyPositionOffsets()</code>, which takes a reference space and applies to its transform matrix any changes that need to be made to take into account things such as user inputs from devices not controlled by WebXR, such as the keyboard and mouse. The adjusted {{domxref("XRReferenceSpace")}} returned by this function is then passed into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} to get the {{domxref("XRViewerPose")}} representing the viewer's position and viewing angle.</p>
 
 <p>Next, we go ahead and queue up the request to render the next frame of video, so we don't have to worry about doing it later, by simply calling <code>requestAnimationFrame()</code> again.</p>
 
 <p>Now it's time to render the scene. If we did successfully obtain a pose, we get the {{domxref("XRWebGLLayer")}} we need to use for rendering from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property. We bind this to WebGL's <code>gl.FRAMEBUFFER</code> target using the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.bindFrameBuffer", "gl.bindFrameBuffer()")}}.</p>
 
-<p>Then we clear the framebuffer to ensure we're starting with a known state, since our renderer will not be touching every pixel. We set the clear color to opaque black using {{domxref("WebGLRenderingContext.clearColor", "gl.clearColor()")}} and the value to clear the depth buffer to to 1.0 by calling the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.clearDepth", "gl.clearDepth()")}}. Then we call the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.clear", "gl.clear()")}}, which clears the framebuffer (since we include <code>gl.COLOR_BUFFER_BIT</code> in the mask parameter) and the depth buffer (because we include <code>gl.DEPTH_BUFFER_BIT</code>).</p>
+<p>Then we clear the framebuffer to ensure we're starting with a known state, since our renderer will not be touching every pixel. We set the clear color to opaque black using {{domxref("WebGLRenderingContext.clearColor", "gl.clearColor()")}} and the value to clear the depth buffer to 1.0 by calling the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.clearDepth", "gl.clearDepth()")}}. Then we call the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.clear", "gl.clear()")}}, which clears the framebuffer (since we include <code>gl.COLOR_BUFFER_BIT</code> in the mask parameter) and the depth buffer (because we include <code>gl.DEPTH_BUFFER_BIT</code>).</p>
 
 <p>Then we determine how much time has elapsed since the previous frame was rendered by comparing the frame's desired render time with the time at which the last frame was drawn. Since this value is in microseconds, we convert it to seconds by multiplying by 0.001 (or diiding by 1000)..</p>
 

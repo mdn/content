@@ -10,9 +10,9 @@ tags:
 
 <p>The <strong>labeled statement</strong> can be used with {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements. It is prefixing a statement with an identifier which you can refer to.</p>
 
-<div>    {{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div class="note">
 <p><strong>Note:</strong> Labeled loops or blocks are very uncommon. Usually function calls can be used instead of loop jumps.</p>
@@ -21,14 +21,14 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><em>label</em> :
-   <em>statement</em>
+  <em>statement</em>
 </pre>
 
 <dl>
-	<dt><code>label</code></dt>
-	<dd>Any JavaScript identifier that is not a reserved word.</dd>
-	<dt><code>statement</code></dt>
-	<dd>A JavaScript statement. <code>break</code> can be used with any labeled statement, and <code>continue</code> can be used with looping labeled statements.</dd>
+ <dt><code><em>label</em></code></dt>
+ <dd>Any JavaScript identifier that is not a reserved word.</dd>
+ <dt><code><em>statement</em></code></dt>
+ <dd>A JavaScript statement. <code>break</code> can be used with any labeled statement, and <code>continue</code> can be used with looping labeled statements.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -41,7 +41,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_a_labeled_continue_with_for_loops">Using a labeled <code>continue</code> with <code>for</code> loops</h3>
+<h3 id="Using_a_labeled_continue_with_for_loops">Using a labeled continue with for loops</h3>
 
 <pre class="brush: js notranslate">var i, j;
 
@@ -67,7 +67,7 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
 </pre>
 
-<h3 id="Using_a_labeled_continue_statement">Using a labeled <code>continue</code> statement</h3>
+<h3 id="Using_a_labeled_continue_statement">Using a labeled continue statement</h3>
 
 <p>Given an array of items and an array of tests, this example counts the number of items that passes all the tests.</p>
 
@@ -85,7 +85,7 @@ for (i = 0; i &lt; items.length; i++) {
   itemsPassed++;
 }</pre>
 
-<h3 id="Using_a_labeled_break_with_for_loops">Using a labeled <code>break</code> with <code>for</code> loops</h3>
+<h3 id="Using_a_labeled_break_with_for_loops">Using a labeled break with for loops</h3>
 
 <pre class="brush: js notranslate">var i, j;
 
@@ -107,7 +107,7 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 1, j = 0"
 // Notice the difference with the previous continue example</pre>
 
-<h3 id="Using_a_labeled_break_statement">Using a labeled <code>break</code> statement</h3>
+<h3 id="Using_a_labeled_break_statement">Using a labeled break statement</h3>
 
 <p>Given an array of items and an array of tests, this example determines whether all items pass all tests.</p>
 
@@ -120,13 +120,11 @@ for (i = 0; i &lt; items.length; i++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
       break top;
-    }
-  }
+    }
+  }
 }</pre>
 
-
-
-<h3 id="Using_a_labeled_block_with_break">Using a labeled block with <code>break</code></h3>
+<h3 id="Using_a_labeled_block_with_break">Using a labeled block with break</h3>
 
 <p>You can use labels within simple blocks, but only <code>break</code> statements can make use of non-loop labels.</p>
 
@@ -163,14 +161,16 @@ L: function F() {}
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -182,6 +182,6 @@ L: function F() {}
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("Statements/break", "break")}}</li>
-	<li>{{jsxref("Statements/continue", "continue")}}</li>
+ <li>{{jsxref("Statements/break", "break")}}</li>
+ <li>{{jsxref("Statements/continue", "continue")}}</li>
 </ul>

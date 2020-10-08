@@ -12,15 +12,15 @@ tags:
 
 <p>The <strong><code>scrollingElement</code></strong> read-only property of the {{domxref("Document")}} interface returns a reference to the {{domxref("Element")}} that scrolls the document. In standards mode, this is the root element of the document, {{domxref("document.documentElement")}}.</p>
 
-<p>When in quirks mode, the <code>scrollingElement</code> attribute returns the HTML <code>body</code> element if it exists and is not <a href="https://drafts.csswg.org/cssom-view/#potentially-scrollable">potentially scrollable</a>, otherwise it returns null.</p>
+<p>When in quirks mode, the <code>scrollingElement</code> attribute returns the HTML <code>body</code> element if it exists and is <a href="https://drafts.csswg.org/cssom-view/#potentially-scrollable">potentially scrollable</a>, otherwise it returns null.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>element</var> = document.scrollingElement;</pre>
+<pre class="syntaxbox notranslate">var <var>element</var> = document.scrollingElement;</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var scrollElm = document.scrollingElement;
+<pre class="brush: js notranslate">var scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 </pre>
 

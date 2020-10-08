@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/HTML_basics
 tags:
   - Beginner
   - CodingScripting
+  - Doctype html
   - HTML
   - Learn
   - Web
@@ -39,7 +40,7 @@ tags:
  <li><strong>The opening tag:</strong> This consists of the name of the element (in this case, p), wrapped in opening and closing <strong>angle brackets</strong>. This states where the element begins or starts to take effect — in this case where the paragraph begins.</li>
  <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a <em>forward slash</em> before the element name. This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.</li>
  <li><strong>The content:</strong> This is the content of the element, which in this case, is just text.</li>
- <li><strong>The element:</strong> The opening tag, the closing tag and the content together comprise the element.</li>
+ <li><strong>The element:</strong> The opening tag, the closing tag, and the content together comprise the element.</li>
 </ol>
 
 <p>Elements can also have attributes that look like the following:</p>
@@ -98,12 +99,12 @@ tags:
 <p>Here, we have the following:</p>
 
 <ul>
- <li><code>&lt;!DOCTYPE html&gt;</code> — the doctype. It is required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much, and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.</li>
+ <li><code>&lt;!DOCTYPE html&gt;</code> — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.</li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code> — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the root element.</li>
- <li><code>&lt;head&gt;&lt;/head&gt;</code> — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that <em>isn't</em> the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations and more.</li>
+ <li><code>&lt;head&gt;&lt;/head&gt;</code> — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that <em>isn't</em> the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.</li>
  <li><code>&lt;meta charset="utf-8"&gt;</code> — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.</li>
- <li><code>&lt;title&gt;&lt;/title&gt;</code> — the {{htmlelement("title")}} element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favourite it.</li>
- <li><code>&lt;body&gt;&lt;/body&gt;</code> — the {{htmlelement("body")}} element. This contains <em>all</em> the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks or whatever else.</li>
+ <li><code>&lt;title&gt;&lt;/title&gt;</code> — the {{htmlelement("title")}} element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.</li>
+ <li><code>&lt;body&gt;&lt;/body&gt;</code> — the {{htmlelement("body")}} element. This contains <em>all</em> the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
 </ul>
 
 <h2 id="Images">Images</h2>
@@ -137,7 +138,7 @@ tags:
 
 <h3 id="Headings">Headings</h3>
 
-<p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("h1")}}–{{htmlelement("h6")}}, although you'll commonly only use 3 to 4 at most:</p>
+<p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("h1")}}–{{htmlelement("h6")}}, although you'll commonly only use 3 to 4 at most:</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;My main title&lt;/h1&gt;
 &lt;h2&gt;My top level heading&lt;/h2&gt;
@@ -160,7 +161,7 @@ tags:
 
 <h3 id="Lists">Lists</h3>
 
-<p>A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consist of at least 2 elements. The most common list types are ordered and unordered lists:</p>
+<p>A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:</p>
 
 <ol>
  <li><strong>Unordered lists</strong> are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a {{htmlelement("ul")}} element.</li>

@@ -28,7 +28,7 @@ tags:
  <dd>The target of the split operation.</dd>
  <dt><code><var>limit</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Integer specifying a limit on the number of splits to be found. The <code>[@@split]()</code> method still splits on every match of <code>this</code> RegExp pattern (or, in the Syntax above, <code><var>regexp</var></code>), until the number of split items match the <code><var>limit</var></code> or the string falls short of <code>this</code> pattern.</p>
+ <p>Integer specifying a limit on the number of splits to be found. The <code>[@@split]()</code> method still splits on every match of <code>this</code> RegExp pattern (or, in the Syntax above, <code><var>regexp</var></code>), until the number of split items match the <code><var>limit</var></code> or the string falls short of <code>this</code> pattern.</p>
  </dd>
 </dl>
 
@@ -44,7 +44,7 @@ tags:
 
 /-/[Symbol.split]('a-b-c');</pre>
 
-<p>This method exists for customizing the behavior of <code>split()</code> in <code>RegExp</code> subclass.</p>
+<p>This method exists for customizing the behavior of <code>split()</code> in <code>RegExp</code> subclass.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,7 +58,7 @@ let result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
 </pre>
 
-<h3 id="Using_split_in_subclasses">Using <code>@@split</code> in subclasses</h3>
+<h3 id="Using_split_in_subclasses">Using @@split in subclasses</h3>
 
 <p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@split]()</code> method to modify the default behavior.</p>
 

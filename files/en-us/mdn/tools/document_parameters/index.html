@@ -1,0 +1,94 @@
+---
+title: URL parameters and document metadata
+slug: MDN/Tools/Document_parameters
+tags:
+  - Documentation
+  - Kuma
+  - MDN Meta
+  - Page-level
+  - Reference
+  - Tools
+---
+<div>{{MDNSidebar}}</div>
+
+<section id="intro">
+<p id="Introduction"><span class="seoSummary">MDN's Kuma wiki platform doesn't have a central API. Instead, our general approach is to offer ways to turn human-accessible resources into machine-friendly data.</span></p>
+</section>
+
+<section id="params">
+<h2 id="URL_GET_parameters">URL GET parameters</h2>
+
+<p>We support several useful query parameter options on every Kuma wiki document URL, when fetched via HTTP GET or viewed in a browser.</p>
+
+<p>Multiple query parameters are separated by <kbd>&amp;</kbd> instead of the initial <kbd>?</kbd>. (See macros example.)</p>
+
+<dl>
+ <dt><code>summary</code></dt>
+ <dd>
+ <p>Directs Kuma to return only the page summary. If there is content on the page marked with the class "SEO summary", that content is returned. If there is no such content, the contents of a section entitled "Summary" are returned. Failing that, the contents of the first block are returned.</p>
+
+ <div class="note"><strong>Bug notice:</strong> There is currently a bug that causes the <code>summary</code> parameter to return the entire document if you don't also specify the <code>raw</code> parameter. Note that you can also get the summary from the JSON returned using the <a href="#json-view"><code>$json</code> alternate view</a>.</div>
+ </dd>
+ <dt><code>raw</code></dt>
+ <dd>Instructs Kuma to return the raw content of the page, without any of the skin material, such as the headers, footers, and so forth. This does not execute templates or scripts, which is handy for building editors.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?raw">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?raw</a></code></dd>
+ <dt><code>macros</code></dt>
+ <dd>Instructs Kuma to execute all the templates in the page. When combined with <code>?raw</code>, this offers fully-rendered MDN content without the site wrapper. Defaults to on without <code>?raw</code> (ie. during normal site views), defaults to off when <code>?raw</code> is present.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?raw&amp;macros">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?raw&amp;macros</a></code></dd>
+ <dt><code>nomacros</code></dt>
+ <dd>Instructs Kuma not to execute the KumaScript templates in the page. Since <code>?macros</code> defaults to "on" during a normal site view, this option turns it off.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?nomacros">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5?nomacros</a></code></dd>
+ <dt><code>include</code></dt>
+ <dd>Tells Kuma to strip out any blocks that have the class <code>noinclude</code> on them. This is useful to get the output as it would appear when included in another page, rather than as a standalone page. Often this will remove sample code and the like (although not always).</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/XUL/Attribute/align?raw&amp;macros&amp;include">https://developer.mozilla.org/en-US/docs/XUL/Attribute/align?raw&amp;macros&amp;include</a></code></dd>
+ <dt><code>section=id</code></dt>
+ <dd>Instructs Kuma to return the content from only the section with the specified anchor name.</dd>
+ <dd><strong>Example:</strong>
+ <ul>
+  <li><code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;section=params">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;section=params</a></code><br>
+   (...and the more interesting...)</li>
+  <li><code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;macros&amp;section=params">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;macros&amp;section=params</a></code></li>
+ </ul>
+
+ <div class="note"><strong>Bug notice:</strong> There is currently a bug that causes the <code>section</code> parameter to return the entire document if you don't also specify the <code>raw</code> parameter.</div>
+ </dd>
+ <dt><code>expand</code></dt>
+ <dd>
+ <p>Combined with the <code>$children</code> view, it expands the JSON response with detailed information per subpage. It works like a combination of <code>$children</code> and <code>$json</code> on each subpage. This way, one can learn about the tags for a subpage.</p>
+
+ <p><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$children?expand">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$children?expand</a></code></p>
+ </dd>
+</dl>
+</section>
+
+<section id="metadata">
+<h2 id="Document_metadata_resources">Document metadata resources</h2>
+
+<p>Along with parameters to tweak the response of a document URL, there are also some alternate views on documents specified by URL suffix:</p>
+
+<dl>
+ <dt><code>$toc</code></dt>
+ <dd>Tells Kuma to return only the table of contents for the page in HTML. It's returned as an ordered list (that is, {{HTMLElement("ol")}}).</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$toc">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$toc</a></code></dd>
+ <dt id="json-view"><code>$json</code></dt>
+ <dd>Tells Kuma to describe the page in a JSON object. This object is essentially the same one you would get using the KumaScript routine <code>wiki.getPage()</code>.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$json">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$json</a></code></dd>
+ <dt><code>$children</code></dt>
+ <dd>Tells Kuma to list the topic children of the page in JSON. This object is essentially the same one you would get using the KumaScript routine <code>pages.subpages()</code>.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$children
+">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5$children</a></code>.</dd>
+ <dd>(This can be used with the <code>?expand</code> parameter in order to have a more detailed response.)</dd>
+ <dt><code>$compare</code></dt>
+ <dd>Presents the source text line differences between revisions specified in required query parameters <code>?from</code> and <code>?to</code>.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$compare?to=911697&amp;from=911067">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$compare?to=911697&amp;from=911067</a></code></dd>
+ <dt><code>$edit</code></dt>
+ <dd>Edits the current revision given document instead of displaying it.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$edit">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$edit</a></code></dd>
+ <dt><code>$history</code></dt>
+ <dd>Displays revision history of the newest ten revisions of given document instead of its contents. The full history can be requested with the <code>?limit=all</code> query parameter value.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$history?limit=all">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$history?limit=all</a></code></dd>
+ <dt><code>$revision</code></dt>
+ <dd>Displays the document revision number which must be specified after a "<code>/</code>" separator.</dd>
+ <dd><strong>Example:</strong> <code><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$revision/915141">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Document_parameters$revision/915141</a></code></dd>
+</dl>
+</section>

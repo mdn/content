@@ -14,7 +14,7 @@ tags:
 
 <p>The <code><strong>removeListener()</strong></code> method of the {{DOMxRef("MediaQueryList")}} interface removes a listener from the <code>MediaQueryListener</code>.</p>
 
-<p>This is basically an alias for {{DOMxRef("EventTarget.removeEventListener()")}}, for backwards compatibility purposes — in older browsers you could use <code>removeEventListener()</code> instead.</p>
+<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, for backwards compatibility purposes — in older browsers you could use <code>removeEventListener()</code> instead.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,27 +31,27 @@ tags:
 
 <p>Void.</p>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js notranslate">var paragraph = document.querySelector('p');
+var mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
+    document.body.style.backgroundColor = 'pink';
   } else {
     /* the viewport is more than than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
+    document.body.style.backgroundColor = 'aquamarine';
   }
 }
 
-mql.addListener(screenTest);
+mediaQueryList.addListener(screenTest);
 
 // Later on, when it is no longer needed
-mql.removeListener(screenTest);
-</pre>
+mediaQueryList.removeListener(screenTest);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

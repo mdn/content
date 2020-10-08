@@ -77,11 +77,10 @@ tags:
 
 <ul>
  <li><strong>WebP </strong>— created by Google and nowadays supported by all major browsers except Safari. Supports transparency and also animation, but not progressive display. </li>
- <li><strong>JPEG-XR </strong>— created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is <a href="Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.">not hardware accellerated and therefore resource intensive on the browser's main thread</a>.</li>
+ <li><strong>JPEG-XR </strong>— created by Microsoft and only available in Internet Explorer and EdgeHTML based Edge. Doesn't support progressive display and the image decoding is <a href="Progressive JPEG above-the-fold is that they render progressively (hence the name), meaning the user sees a low-resolution version that gains clarity as the image downloads, rather than the image loading at full resolution top-to-bottom or even only rendering once completely downloaded.">not hardware accelerated and therefore resource-intensive on the browser's main thread</a>.</li>
  <li><strong>JPEG2000 </strong>— once to be successor to JPEG but only supported in Safari. Doesn't support progressive display either.</li>
+ <li><strong>AVIF </strong>— created by  <a href="https://aomedia.org/">Alliance for Open Media (AOMedia)</a> is an image format created from the AV1 video frames in the <a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format">HEIF</a> format. AVIF is designed for efficient compression that is known to be better than the late <strong>WebP</strong>. It is now supported from <a href="https://www.google.com/chrome/">Chrome 85</a>, while other browsers tend to add full support for it soon. See also <a href="https://avif-converter.online">an online tool to convert previous image formats to AVIF</a>.</li>
 </ul>
-
-<p>In the future browsers might add support for even more advanced formats like <strong>High Efficiency Image File Format</strong> (<strong>HEIF</strong>) or <strong>AV1 Still Image File Format (AVIF)</strong>.</p>
 
 <p>Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG today is WebP. Which is why you could consider offering your images in that flavor, too, for the browsers that support it. This can be done via the <code>&lt;picture&gt;</code> element with the help of a <code>&lt;source&gt;</code> element equipped with a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture#The_type_attribute">type attribute</a>.</p>
 
@@ -89,7 +88,7 @@ tags:
 
 <p>And finally, should you want to include animated images into your page, then know that Safari allows using video files within <code>&lt;img&gt;</code> and <code>&lt;picture&gt;</code> elements. These also allow you to add in an <strong>Animated WebP</strong> for all other modern browsers.</p>
 
-<pre>&lt;picture&gt;
+<pre class="notranslate">&lt;picture&gt;
    &lt;source type="video/mp4" src="giphy.mp4"&gt;
    &lt;source type="image/webp" src="giphy.webp"&gt;
    &lt;img src="giphy.gif"&gt;

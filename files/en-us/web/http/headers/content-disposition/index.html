@@ -38,6 +38,12 @@ tags:
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
+<div class="note">
+<p><strong>Notes:</strong></p>
+
+<p>Chrome, and Firefox 82 and later, prioritize the HTML <a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element's</a> <code>download</code> attribute over the <code>Content-Disposition</code> <code>inline</code> parameter (for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Earlier Firefox versions prioritize the header and will display the content inline.</p>
+</div>
+
 <h3 id="As_a_header_for_a_multipart_body">As a header for a multipart body</h3>
 
 <p>The first parameter in the HTTP context is always <code>form-data</code>. Additional parameters are case-insensitive and have arguments that use quoted-string syntax after the <code>'='</code> sign. Multiple parameters are separated by a semi-colon (<code>';'</code>).</p>

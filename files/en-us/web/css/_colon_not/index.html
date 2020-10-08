@@ -37,8 +37,8 @@ tags:
 <p>There are several unusual effects and outcomes when using <code>:not()</code> that you should keep in mind when using it:</p>
 
 <ul>
- <li>The <code>:not</code> pseudo-class may not be nested, which means that <code>:not(:not(...))</code> is invalid.</li>
- <li>Since pseudo-elements are not simple selectors, they are not valid arguments to <code>:not()</code>; thus, selectors like <code>:not(p::before)</code> will not work.</li>
+ <li>The <code>:not</code> pseudo-class may not be nested, which means that <code>:not(:not(...))</code> is invalid.</li>
+ <li>Since pseudo-elements are not simple selectors, they are not valid arguments to <code>:not()</code>; thus, selectors like <code>:not(p::before)</code> will not work.</li>
  <li>Useless selectors can be written using this pseudo-class. For example, <code>:not(*)</code> matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.</li>
  <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
  <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
@@ -123,9 +123,9 @@ body :not(.crazy, .fancy) {
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
  <li>Related CSS pseudo-classes:
   <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/:has">:has()</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/:is">:is()</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code></li>
+   <li>{{cssxref(":has", ":has()")}}</li>
+   <li>{{cssxref(":is", ":is()")}}</li>
+   <li>{{cssxref(":where", ":where()")}}</li>
   </ul>
  </li>
 </ul>

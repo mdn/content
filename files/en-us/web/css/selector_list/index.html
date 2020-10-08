@@ -55,7 +55,7 @@ h3 { font-family: sans-serif }</pre>
 
 <p>This is because a single unsupported selector in a selector list invalidates the whole rule.</p>
 
-<p>A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} selector, which simply ignores invalid selectors in its arguments, but at the cost of all selectors having the same specificity, because of how {{CSSxRef(":is", ":is()")}} calculates specificity.</p>
+<p>A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.</p>
 
 <pre class="brush: css notranslate">h1 { font-family: sans-serif }
 h2:maybe-unsupported { font-family: sans-serif }
@@ -96,5 +96,5 @@ h3 { font-family: sans-serif }</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which don't have the legacy mistake that is selector list invalidation.</li>
+ <li>The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.</li>
 </ul>

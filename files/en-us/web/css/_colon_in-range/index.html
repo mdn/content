@@ -34,7 +34,7 @@ input:in-range {
 <pre class="brush: html notranslate">&lt;form action="" id="form1"&gt;
   &lt;ul&gt;Values between 1 and 10 are valid.
     &lt;li&gt;
-      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
+      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required&gt;
       &lt;label for="value1"&gt;Your value is &lt;/label&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
@@ -71,7 +71,11 @@ input:out-of-range + label::after {
 <h3 id="Result">Result</h3>
 </div>
 
-<div>{{EmbedLiveSample('Examples', 600, 140)}}</div>
+<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: An empty <code>&lt;input&gt;</code> does not count as out of range, and will not be selected using the <code>:out-of-range</code> pseudo-class selector. The <code><a href="/en-US/docs/Web/CSS/:blank">:blank</a></code> pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the <code>required</code> attribute and the <code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code> pseudo-class to provide more general logic and styling for making inputs mandatory (<code>:invalid</code> will style blank <em>and</em> out-of-range inputs).</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

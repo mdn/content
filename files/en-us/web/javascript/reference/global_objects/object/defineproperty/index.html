@@ -41,7 +41,7 @@ tags:
 
 <p>Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors. A <em><dfn>data descriptor</dfn></em> is a property that has a value, which may or may not be writable. An <em><dfn>accessor descriptor</dfn></em> is a property described by a getter-setter pair of functions. A descriptor must be one of these two flavors; it cannot be both.</p>
 
-<p>Both data and accessor descriptors are objects. They share the following optional keys (please note: the <strong>Defaults</strong> mentioned here are in the case of defining properties using <code>Object.defineProperty()</code>):</p>
+<p>Both data and accessor descriptors are objects. They share the following optional keys (please note: the <strong>defaults</strong> mentioned here are in the case of defining properties using <code>Object.defineProperty()</code>):</p>
 
 <dl>
  <dt><code>configurable</code></dt>
@@ -63,7 +63,7 @@ tags:
  <strong>Defaults to <code>false</code>.</strong></dd>
 </dl>
 
-<p>An accessor descriptor also has the following optional keys:</p>
+<p>An <strong>accessor descriptor</strong> also has the following optional keys:</p>
 
 <dl>
  <dt><code>get</code></dt>

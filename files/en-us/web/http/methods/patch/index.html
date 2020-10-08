@@ -16,7 +16,7 @@ tags:
 
 <p>A <code>PATCH</code> is not necessarily idempotent, although it can be. Contrast this with {{HTTPMethod("PUT")}}; which is always idempotent. The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. For example if an auto-incrementing counter field is an integral part of the resource, then a {{HTTPMethod("PUT")}} will naturally overwrite it (since it overwrites everything), but not necessarily so for <code>PATCH</code>.</p>
 
-<p><code>PATCH</code> (like {{HTTPMethod("PUT")}}) <em>may</em> have side-effects on other resources.</p>
+<p><code>PATCH</code> (like {{HTTPMethod("POST")}}) <em>may</em> have side-effects on other resources.</p>
 
 <p>To find out whether a server supports <code>PATCH</code>, a server can advertise its support by adding it to the list in the {{HTTPHeader("Allow")}} or {{HTTPHeader("Access-Control-Allow-Methods")}} (for <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) response headers.</p>
 
@@ -53,14 +53,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">PATCH /file.txt HTTP/1.1
+<pre class="syntaxbox notranslate">PATCH /file.txt HTTP/1.1
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="Request">Request</h3>
 
-<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
+<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -74,7 +74,7 @@ Content-Length: 100
 
 <p>In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.</p>
 
-<pre class="newpage">HTTP/1.1 204 No Content
+<pre class="newpage notranslate">HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

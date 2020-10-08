@@ -15,8 +15,8 @@ tags:
 <div class="note">
 <ul>
  <li>Chrome has <a href="https://www.chromestatus.com/feature/5021976655560704">removed their XSS Auditor</a></li>
- <li>Firefox have not, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528661">will not implement <code>X-XSS-Protection</code></a></li>
- <li>Edge have <a href="https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/">retired their XSS filter</a></li>
+ <li>Firefox has not, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528661">will not implement <code>X-XSS-Protection</code></a></li>
+ <li>Edge has <a href="https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/">retired their XSS filter</a></li>
 </ul>
 
 <p>This means that if you do not need to support legacy browsers, it is recommended that you use <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a></code> without allowing <code>unsafe-inline</code> scripts instead.</p>
@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">X-XSS-Protection: 0
+<pre class="syntaxbox notranslate">X-XSS-Protection: 0
 X-XSS-Protection: 1
 X-XSS-Protection: 1; mode=block
 X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
@@ -58,21 +58,21 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
 
 <p>Block pages from loading when they detect reflected XSS attacks:</p>
 
-<pre class="brush: bash">X-XSS-Protection: 1; mode=block</pre>
+<pre class="brush: bash notranslate">X-XSS-Protection: 1; mode=block</pre>
 
 <p>PHP</p>
 
-<pre class="brush: php">header("X-XSS-Protection: 1; mode=block");</pre>
+<pre class="brush: php notranslate">header("X-XSS-Protection: 1; mode=block");</pre>
 
 <p>Apache (.htaccess)</p>
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+<pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
   Header set X-XSS-Protection "1; mode=block"
 &lt;/IfModule&gt;</pre>
 
 <p>Nginx</p>
 
-<pre class="brush: bash">add_header "X-XSS-Protection" "1; mode=block";</pre>
+<pre class="brush: bash notranslate">add_header "X-XSS-Protection" "1; mode=block";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

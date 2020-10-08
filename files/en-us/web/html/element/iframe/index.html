@@ -68,7 +68,9 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("allow")}}</dt>
- <dd>Specifies a <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a> for the <code>&lt;iframe&gt;</code>. See the article <a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a> for details on security issues and how <code>&lt;iframe&gt;</code> works with Feature Policy to keep systems safe.</dd>
+ <dd>Specifies a <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a> for the <code>&lt;iframe&gt;</code>. The policy defines what features are available to the <code>&lt;iframe&gt;</code> based on the origin of the request (e.g. access to the microphone, camera, battery, web-share API, etc.).<br>
+ <br>
+ For more information and examples see: <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> &gt; <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#The_iframe_allow_attribute">The iframe allow attribute</a>.</dd>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
  <dd>Set to <code>true</code> if the <code>&lt;iframe&gt;</code> can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.</dd>
  <dd>
@@ -120,7 +122,7 @@ tags:
  <dd>Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
  <ul>
   <li><code>allow-downloads-without-user-activation</code> {{experimental_inline}}: Allows for downloads to occur without a gesture from the user.</li>
-  <li><code>allow-downloads</code> {{experimental_inline}}: Allows for downloads to occur with a gesture from the user.</li>
+  <li><code>allow-downloads</code>: Allows for downloads to occur with a gesture from the user.</li>
   <li><code>allow-forms</code>: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.</li>
   <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
   <li><code>allow-orientation-lock</code>: Lets the resource <a href="/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>

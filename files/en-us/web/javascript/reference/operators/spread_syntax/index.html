@@ -44,27 +44,27 @@ tags:
 <p>It is common to use {{jsxref("Function.prototype.apply()")}} in cases where you want to use the elements of an array as arguments to a function.</p>
 
 <pre class="brush: js notranslate">function myFunction(x, y, z) { }
-const args = [0, 1, 2];
+let args = [0, 1, 2];
 myFunction.apply(null, args);</pre>
 
 <p>With spread syntax the above can be written as:</p>
 
 <pre class="brush: js notranslate">function myFunction(x, y, z) { }
-const args = [0, 1, 2];
+let args = [0, 1, 2];
 myFunction(...args);</pre>
 
 <p>Any argument in the argument list can use spread syntax, and the spread syntax can be used multiple times.</p>
 
 <pre class="brush: js notranslate">function myFunction(v, w, x, y, z) { }
-const args = [0, 1];
+let args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);</pre>
 
 <h4 id="Apply_for_new_operator">Apply for new operator</h4>
 
 <p>When calling a constructor with {{jsxref("Operators/new", "new")}} it's not possible to <strong>directly</strong> use an array and <code>apply()</code> (<code>apply()</code> does a <code>[[Call]]</code> and not a <code>[[Construct]]</code>). However, an array can be easily used with <code>new</code> thanks to spread syntax:</p>
 
-<pre class="brush: js notranslate">const dateFields = [1970, 0, 1];  // 1 Jan 1970
-const d = new Date(...dateFields);
+<pre class="brush: js notranslate">let dateFields = [1970, 0, 1];  // 1 Jan 1970
+let d = new Date(...dateFields);
 </pre>
 
 <p>To use <code>new</code> with an array of parameters without spread syntax, you would have to do it <strong>indirectly</strong> through partial application:</p>
@@ -87,8 +87,8 @@ function myConstructor () {
    this.prop2="val2";
 };
 
-const myArguments = ["hi", "how", "are", "you", "mr", null];
-const myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
+let myArguments = ["hi", "how", "are", "you", "mr", null];
+let myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 
 console.log(new myConstructorWithArguments);
 //  (internal log of myConstructor):           arguments.length: 6
@@ -101,8 +101,8 @@ console.log(new myConstructorWithArguments);
 
 <p>Without spread syntax, to create a new array using an existing array as one part of it, the array literal syntax is no longer sufficient and imperative code must be used instead using a combination of {{jsxref("Array.prototype.push", "push()")}}, {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. With spread syntax this becomes much more succinct:</p>
 
-<pre class="brush: js notranslate">const parts = ['shoulders', 'knees'];
-const lyrics = ['head', ...parts, 'and', 'toes'];
+<pre class="brush: js notranslate">let parts = ['shoulders', 'knees'];
+let lyrics = ['head', ...parts, 'and', 'toes'];
 //  ["head", "shoulders", "knees", "and", "toes"]
 </pre>
 
@@ -110,8 +110,8 @@ const lyrics = ['head', ...parts, 'and', 'toes'];
 
 <h4 id="Copy_an_array">Copy an array</h4>
 
-<pre class="brush: js notranslate">const arr = [1, 2, 3];
-const arr2 = [...arr]; // like arr.slice()
+<pre class="brush: js notranslate">let arr = [1, 2, 3];
+let arr2 = [...arr]; // like arr.slice()
 
 arr2.push(4);
 //  arr2 becomes [1, 2, 3, 4]
@@ -121,8 +121,8 @@ arr2.push(4);
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays, as the following example shows. (The same is true with {{jsxref("Object.assign()")}} and spread syntax.)</p>
 
-<pre class="brush: js example-bad notranslate">const a = [[1], [2], [3]];
-const b = [...a];
+<pre class="brush: js example-bad notranslate">let a = [[1], [2], [3]];
+let b = [...a];
 
 b.shift().shift();
 //  1
@@ -137,8 +137,8 @@ a
 
 <p>{{jsxref("Array.prototype.concat()")}} is often used to concatenate an array to the end of an existing array. Without spread syntax, this is done as:</p>
 
-<pre class="brush: js notranslate">const arr1 = [0, 1, 2];
-const arr2 = [3, 4, 5];
+<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+let arr2 = [3, 4, 5];
 
 //  Append all items from arr2 onto arr1
 arr1 = arr1.concat(arr2);</pre>
@@ -155,8 +155,8 @@ arr1 = [...arr1, ...arr2];
 
 <p>{{jsxref("Array.prototype.unshift()")}} is often used to insert an array of values at the start of an existing array. Without spread syntax, this is done as:</p>
 
-<pre class="brush: js notranslate">const arr1 = [0, 1, 2];
-const arr2 = [3, 4, 5];
+<pre class="brush: js notranslate">let arr1 = [0, 1, 2];
+let arr2 = [3, 4, 5];
 
 //  Prepend all items from arr2 onto arr1
 Array.prototype.unshift.apply(arr1, arr2)
@@ -182,13 +182,13 @@ arr1 = [...arr2, ...arr1];
 
 <p>Shallow-cloning (excluding prototype) or merging of objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.</p>
 
-<pre class="brush: js notranslate">const obj1 = { foo: 'bar', x: 42 };
-const obj2 = { foo: 'baz', y: 13 };
+<pre class="brush: js notranslate">let obj1 = { foo: 'bar', x: 42 };
+let obj2 = { foo: 'baz', y: 13 };
 
-const clonedObj = { ...obj1 };
+let clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
-const mergedObj = { ...obj1, ...obj2 };
+let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }</pre>
 
 <p>Note that {{jsxref("Object.assign()")}} triggers {{jsxref("Functions/set", "setters")}}, whereas spread syntax doesn't.</p>
@@ -213,8 +213,8 @@ let mergedObj2 = merge ({}, obj1, obj2);
 
 <p>Spread syntax (other than in the case of spread properties) can be applied only to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterable</a> objects:</p>
 
-<pre class="brush: js notranslate">const obj = {'key1': 'value1'};
-const array = [...obj]; // TypeError: obj is not iterable
+<pre class="brush: js notranslate">let obj = {'key1': 'value1'};
+let array = [...obj]; // TypeError: obj is not iterable
 </pre>
 
 <h3 id="Spread_with_many_values">Spread with many values</h3>

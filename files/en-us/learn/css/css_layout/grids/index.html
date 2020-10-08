@@ -248,7 +248,7 @@ tags:
 
 <h3 id="The_implicit_and_explicit_grid">The implicit and explicit grid</h3>
 
-<p>We have only specified column tracks so far, and yet rows are being created to hold our content. This is an example of the explicit versus the implicit grid. The explicit grid is the one that you create using <code>grid-template-columns</code> or <code>grid-template-rows</code>. The implicit grid is created when content is placed outside of that grid — such as into our rows. The explicit and implicit grids are analogous to the main and cross flexbox axes.</p>
+<p>We have only specified column tracks so far, and yet rows are being created to hold our content. This is an example of the explicit versus the implicit grid. The explicit grid is the one that you create using <code>grid-template-columns</code> or <code>grid-template-rows</code>. The implicit grid is created when content is placed outside of that grid — such as into our rows.</p>
 
 <p>By default, tracks created in the implicit grid are <code>auto</code> sized, which in general means that they are large enough to fit their content. If you wish to give implicit grid tracks a size you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add <code>grid-auto-rows</code> with a value of <code>100px</code> to your CSS, you will see that those created rows are now 100 pixels tall.</p>
 
@@ -470,7 +470,7 @@ aside {
 <p>{{ EmbedLiveSample('Grid_6', '100%', 400) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: you can also use the value <code>-1</code> to target the end column or row line, and count inwards from the end using negative values. However this only works for the explicit grid. The value <code>-1</code> will not target the end line of the <a href="/en-US/docs/Glossary/Grid">implicit grid</a>.</p>
+<p><strong>Note</strong>: you can also use the value <code>-1</code> to target the end column or row line, and count inwards from the end using negative values. Note that lines count always from the edges of the explicit grid, not the <a href="/en-US/docs/Glossary/Grid">implicit grid</a>.</p>
 </div>
 
 <h2 id="Positioning_with_grid-template-areas">Positioning with grid-template-areas</h2>

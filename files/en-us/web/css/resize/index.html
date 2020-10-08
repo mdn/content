@@ -16,6 +16,13 @@ tags:
 
 
 
+<p><code>resize</code> does not apply to the following:</p>
+
+<ul>
+ <li>Inline elements</li>
+ <li>Block elements for which the {{cssxref("overflow")}} property is set to <code>visible</code></li>
+</ul>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword values */
@@ -49,13 +56,6 @@ resize: unset;  </pre>
  <dt><code>inline</code> {{experimental_inline}}</dt>
  <dd>The element displays a mechanism for allowing the user to resize it in the <em>inline</em> direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).</dd>
 </dl>
-
-<p><code>resize</code> does not apply to the following:</p>
-
-<ul>
- <li>Inline elements</li>
- <li>Block elements for which the {{cssxref("overflow")}} property is set to <code>visible</code></li>
-</ul>
 
 <h2 id="Formal_definition">Formal definition</h2>
 

@@ -193,32 +193,29 @@ tags:
 
 <h4 id="Learn_and_recognize_the_patterns">Learn and recognize the patterns</h4>
 
-<p>As we said before, web design/programming is mostly about problem solving and patterns. Once you have written out what you'll need to do to solve a specific problem, you can start to figure out what technology features to use to solve it. For example, professional web developers have created lots of horizontal navigation menus, so they'll immediately start thinking of a solution like this:</p>
+<p>As we said before, web design/programming is mostly about problem solving and patterns. Once you have written out what you'll need to do to solve a specific problem, you can start to figure out what code to use. For example, professional web developers may have created lots of horizontal navigation menus, so they could start thinking of a solution like this:</p>
 
-<p>A nav menu is usually created from a list of links, something like:</p>
+<p>A navigation menu is usually created from a list of links, something like:</p>
 
 <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;First menu item&lt;/li&gt;
-  &lt;li&gt;Second menu item&lt;/li&gt;
-  &lt;li&gt;Third menu item&lt;/li&gt;
-  &lt;li&gt;etc.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/html/"&gt;HTML&lt;/a&gt;|&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/css/"&gt;CSS&lt;/a&gt;|&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/js/"&gt;JavaScript&lt;/a&gt;|&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/python/"&gt;Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-<p>To make all the items sit horizontally on a line, the easiest modern way is to use flexbox:</p>
+<p>Instead of using all of these &lt;li&gt; tags, why don't I simply use the &lt;nav&gt; tag ?  There will be less CSS involved and it is a major block of navigation links. </p>
 
-<pre class="brush: css notranslate">ul {
-  display: flex;
-}</pre>
+<pre class="brush: css notranslate">&lt;nav&gt;
+  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+  &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+  &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+  &lt;a href="/python/"&gt;Python&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
 
-<p>To remove unneeded spacing and bullet points, we can do this:</p>
-
-<pre class="brush: css notranslate">ul {
-  list-style-type: none;
-  padding: 0;
-}</pre>
-
-<p>etc.</p>
+<p>Every developer has their own way of doing things and has their preferred style. Expereince is a great lesson!  The main thing is to keep it simple, the less code the better. The goal is to be efficient.</p>
 
 <p>If you are a complete beginner to web development, you'll have to do some study and web searches and lookup solutions to such problems. If you are a professional web developer you'll probably remember the last time you solved a similar problem, and only have to look up a few bits of the syntax that you forgot since then.</p>
 

@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">October 20, 2020</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">October 20, 2020</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -27,6 +27,7 @@ tags:
 
 <ul>
  <li>The color picker used for <code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code> is now keyboard accessible on Windows. ({{bug(1526820)}})</li>
+ <li>Enables the <code>allow-downloads</code> flag for the <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe sandbox&gt;</a></code> attribute.  ({{bug(1656212)}})</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
@@ -34,10 +35,16 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Support for the new <code>::file-selector-button</code> pseudo-element has been added. This pseudo-element represent a button inside <a href="/en-US/docs/Web/HTML/Element/input/file"><code>&lt;input type="file"&gt;</code></a> element. ({{bug(1635675)}}) ({{bug(1662478)}})</li>
+ <li>Support for the new {{CSSxRef("::file-selector-button", "::file-selector-button")}} pseudo-element has been added. This pseudo-element represents a button inside <a href="/en-US/docs/Web/HTML/Element/input/file"><code>&lt;input type="file"&gt;</code></a> element. ({{bug(1635675)}}) ({{bug(1662478)}})</li>
+ <li>Improving error recovery for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes. These pseudo-classes should accept a forgiving selextor list, where an invalid selector in the list will not render the entire list invalid. ({{bug(1664718)}})</li>
+ <li>Change <code>appearance: button</code> to only apply to buttons, the button value of  {{CSSxRef("appearance")}} will therefore behave as <code>auto</code>. ({{bug(1662703)}})</li>
 </ul>
 
 <h4 id="Removals_2">Removals</h4>
+
+<ul>
+ <li>Remove <code>-moz-user-disabled</code> ({{bug(1664432)}})</li>
+</ul>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -47,7 +54,9 @@ tags:
 
 <h3 id="HTTP">HTTP</h3>
 
-<p><em>No changes</em></p>
+<ul>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition</a> header <code>inline</code> directive will now be ignored if the HTML <a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element</a>'s <code>download</code> attribute is specified (for <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Note that if specified the <code>Content-Disposition</code> header <code>filename</code> will be used in preference to a filename specified with the <code>download</code> attribute. ({{bug(1658877)}})</li>
+</ul>
 
 <h4 id="Removals_4">Removals</h4>
 
@@ -56,6 +65,11 @@ tags:
 <p><em>No changes</em></p>
 
 <h4 id="DOM">DOM</h4>
+
+<ul>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">Document.execCommand()</a></code> is no longer supported for nested/recursive calls (returns <code>false</code>). ({{bug(1634262)}})</li>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture">Element.setPointerCapture()</a></code> throws the <code>NotFoundError</code> exception if the pointer id is invalid (instead of <code>InvalidPointerId</code>) — as defined in the <a href="https://w3c.github.io/pointerevents/#setting-pointer-capture">specification</a>.  ({{bug(1662124)}})</li>
+</ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 

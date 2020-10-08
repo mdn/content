@@ -93,7 +93,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>The forward slash (<code>/</code>) character is interpreted as a directory separator, and subdirectories will be matched as well: for <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, and <code>/docs/Web/HTTP</code> will all match.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
  <dd>A secure cookie is only sent to the server when a request is made with the <code>https:</code> scheme. (However, confidential information should never be stored in HTTP Cookies, as the entire mechanism is inherently insecure and doesn't encrypt any information.)
- <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52).</p>
+ <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
  </dd>
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>
  <dd>Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}. This mitigates attacks against cross-site scripting ({{Glossary("XSS")}}).</dd>

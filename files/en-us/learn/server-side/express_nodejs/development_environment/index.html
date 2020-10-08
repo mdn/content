@@ -70,7 +70,7 @@ tags:
 
 <h2 id="Installing_Node">Installing Node</h2>
 
-<p>In order to use <em>Express</em> you will first have to install <em>Nodejs</em> and the <a href="https://docs.npmjs.com/">Node Package Manager (NPM)</a> on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 18.04, macOS, and Windows 10.</p>
+<p>In order to use <em>Express</em> you will first have to install <em>Nodejs</em> and the <a href="https://docs.npmjs.com/">Node Package Manager (NPM)</a> on your operating system. The following sections explain the easiest way to install the Long Term Supported (LTS) version of Nodejs on Ubuntu Linux 20.04, macOS, and Windows 10.</p>
 
 <div class="note">
 <p><strong>Tip:</strong> The sections below show the easiest way to install <em>Node</em> and <em>NPM</em> on our target OS platforms. If you're using another OS or just want to see some of the other approaches for the current platforms then see <a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> (nodejs.org).</p>
@@ -90,11 +90,11 @@ tags:
  <li>Install Node by double-clicking on the downloaded file and following the installation prompts.</li>
 </ol>
 
-<h3 id="Ubuntu_18.04">Ubuntu 18.04</h3>
+<h3 id="Ubuntu_20.04">Ubuntu 20.04</h3>
 
-<p>The easiest way to install the most recent LTS version of Node 10.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done very simply by running the following two commands on your terminal:</p>
+<p>The easiest way to install the most recent LTS version of Node 12.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done very simply by running the following two commands on your terminal:</p>
 
-<pre class="brush: bash">curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+<pre class="notranslate">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 </pre>
 
@@ -109,20 +109,20 @@ sudo apt-get install -y nodejs
 
 <p>The easiest way to test that node is installed is to run the "version" command in your terminal/command prompt and check that a version string is returned:</p>
 
-<pre class="brush: bash">&gt; node -v
-v10.16.0</pre>
+<pre class="brush: bash notranslate">&gt; node -v
+v12.18.4</pre>
 
 <p>The <em>Nodejs</em> package manager <em>NPM</em> should also have been installed, and can be tested in the same way:</p>
 
-<pre class="brush: bash">&gt; npm -v
-6.9.0</pre>
+<pre class="brush: bash notranslate">&gt; npm -v
+6.14.6</pre>
 
 <p>As a slightly more exciting test let's create a very basic "pure node" server that simply prints out "Hello World" in the browser when you visit the correct URL in your browser:</p>
 
 <ol>
  <li>Copy the following text into a file named <strong>hellonode.js</strong>. This uses pure <em>Node</em> features (nothing from Express) and some ES6 syntax:
 
-  <pre class="brush: js">//Load HTTP module
+  <pre class="brush: js notranslate">//Load HTTP module
 const http = require("http");
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -149,7 +149,7 @@ server.listen(port, hostname, () =&gt; {
   </div>
  </li>
  <li>Start the server by navigating into the same directory as your <code>hellonode.js</code> file in your command prompt, and calling <code>node</code> along with the script name, like so:
-  <pre class="brush: bash">&gt;node hellonode.js
+  <pre class="brush: bash notranslate">&gt;node hellonode.js
 Server running at http://127.0.0.1:3000/
 </pre>
  </li>
@@ -176,15 +176,15 @@ Server running at http://127.0.0.1:3000/
 
 <ol>
  <li>First create a directory for your new application and navigate into it:
-  <pre class="brush: bash">mkdir myapp
+  <pre class="brush: bash notranslate">mkdir myapp
 cd myapp</pre>
  </li>
  <li>Use the npm <code>init</code> command to create a <strong>package.json</strong> file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is <strong>index.js</strong>). For now, just accept the defaults:
-  <pre class="brush: bash">npm init</pre>
+  <pre class="brush: bash notranslate">npm init</pre>
 
   <p>If you display the <strong>package.json</strong> file (<code>cat package.json</code>), you will see the defaults that you accepted, ending with the license.</p>
 
-  <pre class="brush: json">{
+  <pre class="brush: json notranslate">{
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
@@ -199,11 +199,11 @@ cd myapp</pre>
  </li>
  <li>Now install Express in the <code>myapp</code> directory and save it in the dependencies list of your <strong>package.json</strong> file</li>
  <li>
-  <pre class="brush: bash">npm install express</pre>
+  <pre class="brush: bash notranslate">npm install express</pre>
 
   <p>The dependencies section of your <strong>package.json</strong> will now appear at the end of the <strong>package.json</strong> file and will include <em>Express</em>.</p>
 
-  <pre class="brush: json">{
+  <pre class="brush: json notranslate">{
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
@@ -214,28 +214,33 @@ cd myapp</pre>
   "author": "",
   "license": "ISC",
 <strong>  "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.1"
   }</strong>
 }
 </pre>
  </li>
  <li>To use the Express library you call the <code>require()</code> function in your index.js file to include it in your application. Create this file now, in the root of the "myapp" application directory, and give it the following contents:
-  <pre class="brush: js">const express = require('express')
+  <pre class="brush: js notranslate">const express = require('express')
 const app = express();
+const port = 8000;
 
 app.get('/', (req, res) =&gt; {
-  res.send('Hello World!')
+  res.send('Hello World!')
 });
 
-app.listen(8000, () =&gt; {
-  console.log('Example app listening on port 8000!')
+app.listen(port, () =&gt; {
+  console.log(`Example app listening on port ${port}!`)
 });
 </pre>
 
   <p>This code shows a minimal "HelloWorld" Express web application. This imports the "express" module using <code>require()</code> and uses it to create a server (<code>app</code>) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The <code>app.get()</code> function only responds to HTTP <code>GET</code> requests with the specified URL path ('/'), in this case by calling a function to send our <em>Hello World!</em> message.</p>
+
+  <div class="note">
+  <p><strong>JavaScript Note:</strong> The backticks in the <code>`Example app listening on port ${port}!`</code> let us interpolate the value of <code>$port</code> into the string.</p>
+  </div>
  </li>
  <li>You can start the server by calling node with the script in your command prompt:
-  <pre class="brush: bash">&gt;node index.js
+  <pre class="brush: bash notranslate">&gt;node index.js
 Example app listening on port 8000
 </pre>
  </li>
@@ -246,12 +251,12 @@ Example app listening on port 8000
 
 <p>If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool <a href="http://eslint.org/">eslint</a> you would call NPM as shown:</p>
 
-<pre class="brush: bash"><code>npm install eslint --save-dev</code></pre>
+<pre class="brush: bash notranslate"><code>npm install eslint --save-dev</code></pre>
 
 <p>The following entry would then be added to your application's <strong>package.json</strong>:</p>
 
-<pre class="brush: js">  "devDependencies": {
-    "eslint": "^4.12.1"
+<pre class="brush: js notranslate">  "devDependencies": {
+    "eslint": "^7.10.0"
   }
 </pre>
 
@@ -269,7 +274,7 @@ Example app listening on port 8000
 
 <p>For example, to define a script to run the <em>eslint</em> development dependency that we specified in the previous section we might add the following script block to our <strong>package.json</strong> file (assuming that our application source is in a folder /src/js):</p>
 
-<pre class="brush: js">"scripts": {
+<pre class="brush: js notranslate">"scripts": {
   ...
   "lint": "eslint src/js"
   ...
@@ -280,7 +285,7 @@ Example app listening on port 8000
 
 <p>We would then be able to run <em>eslint</em> using NPM by calling:</p>
 
-<pre class="brush: bash"><code>npm run-script lint
+<pre class="brush: bash notranslate"><code>npm run-script lint
 # OR (using the alias)
 npm run lint</code>
 </pre>
@@ -289,18 +294,22 @@ npm run lint</code>
 
 <h2 id="Installing_the_Express_Application_Generator">Installing the Express Application Generator</h2>
 
-<p>The <a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> tool generates an Express application "skeleton". Install the generator using NPM as shown (the <code>-g</code> flag installs the tool globally so that you can call it from anywhere):</p>
+<p>The <a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> tool generates an Express application "skeleton". Install the generator using NPM as shown:</p>
 
-<pre><code>npm install express-generator -g</code></pre>
+<pre class="notranslate"><code>npm install express-generator -g</code></pre>
+
+<div class="note">
+<p><strong>Note: </strong>You may need to prefix this line with <code>sudo</code> on Ubuntu or macOS. The <code>-g</code> flag installs the tool globally so that you can call it from anywhere.</p>
+</div>
 
 <p>To create an <em>Express</em> app named "helloworld" with the default settings, navigate to where you want to create it and run the app as shown:</p>
 
-<pre class="brush: bash">express helloworld</pre>
+<pre class="brush: bash notranslate">express helloworld</pre>
 
 <div class="note">
 <p><strong>Note: </strong>You can also specify the template library to use and a number of other settings. Use the <code>help</code> command to see all the options:</p>
 
-<pre class="brush: bash">express --help
+<pre class="brush: bash notranslate">express --help
 </pre>
 </div>
 
@@ -309,7 +318,7 @@ npm run lint</code>
 <div class="note">
 <p>The new app will have a <strong>package.json</strong> file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:</p>
 
-<pre class="brush: js">{
+<pre class="brush: js notranslate">{
   "name": "helloworld",
   "version": "0.0.0",
   "private": true,
@@ -330,13 +339,13 @@ npm run lint</code>
 
 <p>Install all the dependencies for the helloworld app using NPM as shown:</p>
 
-<pre class="brush: bash">cd helloworld
+<pre class="brush: bash notranslate">cd helloworld
 npm install
 </pre>
 
 <p>Then run the app (the commands are slightly different for Windows and Linux/macOS), as shown below:</p>
 
-<pre class="brush: bash"># Run helloworld on Windows with Command Prompt
+<pre class="brush: bash notranslate"># Run helloworld on Windows with Command Prompt
 SET DEBUG=helloworld:* &amp; npm start
 
 # Run helloworld on Windows with PowerShell
@@ -348,7 +357,7 @@ DEBUG=helloworld:* npm start
 
 <p>The DEBUG command creates useful logging, resulting in an output like that shown below.</p>
 
-<pre class="brush: bash">&gt;SET DEBUG=helloworld:* &amp; npm start
+<pre class="brush: bash notranslate">&gt;SET DEBUG=helloworld:* &amp; npm start
 
 &gt; helloworld@0.0.0 start D:\Github\expresstests\helloworld
 &gt; node ./bin/www

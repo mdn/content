@@ -13,7 +13,7 @@ tags:
 
 <p>The deprecated, non-standard and internal only <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawWindow()</code></strong> method of the Canvas 2D API renders a region of a window into the <code>canvas</code>. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling.</p>
 
-<p>This API cannot be used by Web content. It is synchronous, and as such can't be compatible with Fission.  If you're using it from an extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}}.  If you're writing chrome code, you probably want <a href="https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98">WindowGlobalParent.drawSnapshot</a> from the parent process.</p>
+<p>This API cannot be used by Web content. It is synchronous, and as such can't capture cross-origin (out of process) iframes with Fission.  If you're using it from an extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}}.  If you're writing chrome code, you probably want <a href="https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98">WindowGlobalParent.drawSnapshot</a> from the parent process.</p>
 
 <h2 id="Syntax">Syntax</h2>
 

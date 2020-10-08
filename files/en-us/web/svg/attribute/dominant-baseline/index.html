@@ -28,7 +28,7 @@ tags:
 
 <div id="topExample">
 <div class="hidden">
-<pre class="brush: css">html, body, svg {
+<pre class="brush: css notranslate">html, body, svg {
   height: 100%;
 }
 
@@ -37,10 +37,10 @@ text {
 }</pre>
 </div>
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html notranslate">&lt;svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"&gt;
     &lt;path d="M20,20 L180,20 M20,50 L180,50 M20,80 L180,80" stroke="grey" /&gt;
 
-    &lt;text dominant-baseline="baseline" x="30" y="20"&gt;Baseline&lt;/text&gt;
+    &lt;text dominant-baseline="auto" x="30" y="20"&gt;Auto&lt;/text&gt;
     &lt;text dominant-baseline="middle" x="30" y="50"&gt;Middle&lt;/text&gt;
     &lt;text dominant-baseline="hanging" x="30" y="80"&gt;Hanging&lt;/text&gt;
 &lt;/svg&gt;</pre>
@@ -110,7 +110,7 @@ text {
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: html">&lt;svg width="400" height="300" viewBox="0 0 300 300"
+<pre class="brush: html notranslate">&lt;svg width="400" height="300" viewBox="0 0 300 300"
     xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;!-- Materialization of anchors --&gt;
@@ -125,7 +125,6 @@ text {
     &lt;!-- Anchors in action --&gt;
     &lt;text dominant-baseline="auto" x="70" y="20"&gt;auto&lt;/text&gt;
     &lt;text dominant-baseline="middle" x="70" y="70"&gt;middle&lt;/text&gt;
-    &lt;text dominant-baseline="baseline" x="70" y="120"&gt;baseline&lt;/text&gt;
     &lt;text dominant-baseline="hanging" x="70" y="170"&gt;hanging&lt;/text&gt;
     &lt;text dominant-baseline="mathematical" x="70" y="220"&gt;mathematical&lt;/text&gt;
     &lt;text dominant-baseline="text-top" x="70" y="270"&gt;text-top&lt;/text&gt;

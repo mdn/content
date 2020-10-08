@@ -55,6 +55,7 @@ tags:
         break
       case 'undefined':
         controller.error("Cannot send undefined as a chunk part")
+        break
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break

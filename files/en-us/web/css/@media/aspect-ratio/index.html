@@ -20,6 +20,8 @@ tags:
 
 <p>The example below is contained in an {{htmlElement("iframe")}}, which creates its own viewport. Resize the <code>&lt;iframe&gt;</code> to see <code>aspect-ratio</code> in action.</p>
 
+<p>Note that, when none of the media query conditions are true, the background will turn white because none of the below rules will be applied to the <code>&lt;div&gt;</code> inside the <code>&lt;iframe&gt;</code>. See if you can find which width and height values trigger this!</p>
+
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html notranslate">&lt;div id='inner'&gt;

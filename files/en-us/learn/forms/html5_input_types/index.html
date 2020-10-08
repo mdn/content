@@ -18,16 +18,16 @@ tags:
 <p class="summary">In the <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">previous article</a> we looked at the {{htmlelement("input")}} element, covering the original values of the <code>type</code> attribute available since the early days of HTML. Now we'll look at the functionality of newer form controls in detail, including some new input types, which were added in HTML5 to allow collection of specific types of data.</p>
 
 <table class="learn-box standard-table">
-	<tbody>
-		<tr>
-			<th scope="row">Prerequisites:</th>
-			<td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Objective:</th>
-			<td>To understand the newer input type values available to create native form controls, and how to implement them using HTML.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To understand the newer input type values available to create native form controls, and how to implement them using HTML.</td>
+  </tr>
+ </tbody>
 </table>
 
 <div class="blockIndicator note">
@@ -50,7 +50,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
 
-<p>On some devices — notably, touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the <code>@</code> key. See the Firefox for Android keyboard screenshot below for an example:</p>
+<p>On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the <code>@</code> key. See the Firefox for Android keyboard screenshot below for an example:</p>
 
 <p><img alt="firefox for android email keyboard, with ampersand displayed by default." src="https://mdn.mozillademos.org/files/17054/fx-android-email-type-keyboard.jpg" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0 auto; width: 400px;"></p>
 
@@ -58,11 +58,11 @@ tags:
 <p><strong>Note</strong>: You can find examples of the basic text input types at <a href="https://mdn.github.io/learning-area/html/forms/basic-input-examples/">basic input examples</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html">source code</a> also).</p>
 </div>
 
-<p>This is another good reason for using these newer input types — improving the user experience for users of these devices.</p>
+<p>This is another good reason for using these newer input types, improving the user experience for users of these devices.</p>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
-<p>As you can see above, <code>email</code>, along with other newer <code>input</code> types, provides built-in <em>client-side</em> error validation — performed by the browser before the data gets sent to the server. It <em>is</em> a helpful aid to guide users to fill out a form accurately, and it can save time — it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.</p>
+<p>As you can see above <code>email</code> — along with other newer <code>input</code> types — provides built-in <em>client-side</em> error validation, performed by the browser before the data gets sent to the server. It <em>is</em> a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.</p>
 
 <p>But it <em>should not be considered </em>an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
 
@@ -78,13 +78,13 @@ tags:
 
 <pre class="brush: html notranslate">&lt;input type="search" id="search" name="search"&gt;</pre>
 
-<p>The main difference between a <code>text</code> field and a <code>search</code> field is how the browser styles its appearance. Often, <code>search</code> fields are rendered with rounded corners; they also sometimes display an "Ⓧ", which clears the field of any value when clicked). Additionally, on devices with dynamic keyboards, the keyboard's enter key may read "<strong>search</strong>", or display a magnifying glass icon.</p>
+<p>The main difference between a <code>text</code> field and a <code>search</code> field is how the browser styles its appearance. Often, <code>search</code> fields are rendered with rounded corners; they also sometimes display an "Ⓧ", which clears the field of any value when clicked. Additionally, on devices with dynamic keyboards, the keyboard's enter key may read "<strong>search</strong>", or display a magnifying glass icon.</p>
 
 <p>The below screenshots show a non-empty search field in Firefox 71, Safari 13, and Chrome 79 on macOS, and Edge 18 and Chrome 79 on Windows 10. Note that the clear icon only appears if the field has a value, and, apart from Safari, it is only displayed when the field is focused.</p>
 
 <p><img alt="Screenshots of search fields on several platforms." src="https://mdn.mozillademos.org/files/17028/search_focus.png" style="height: 179px; width: 549px;"></p>
 
-<p>Another feature worth noting is that the values of a <code>search</code> field can be automatically saved and re-used to offer auto-completion across multiple pages of the same website; this tends to happen automatically in most modern browsers.</p>
+<p>Another worth-noting feature is that the values of a <code>search</code> field can be automatically saved and re-used to offer auto-completion across multiple pages of the same website; this tends to happen automatically in most modern browsers.</p>
 
 <h2 id="Phone_number_field">Phone number field</h2>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).</p>
 
-<p>As we mentioned earlier, The <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute can be used to enforce constraints, which you'll learn about in <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a>.</p>
+<p>As we mentioned earlier, the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute can be used to enforce constraints, which you'll learn about in <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a>.</p>
 
 <h2 id="URL_field">URL field</h2>
 
@@ -162,7 +162,7 @@ tags:
 
 <p>This example creates a slider whose value may range between <code>50000</code> and <code>500000</code>, which increments/decrements by 100 at a time. We've given it default value of <code>250000</code>, using the <code>value</code> attribute.</p>
 
-<p>One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element — to contain the current value (we'll also look at this element in the next article). You could display an input value or the output of a calculation inside any element, but <code>&lt;output&gt;</code> is special — like <code>&lt;label&gt;</code>, it can take a <code>for</code> attribute that allows you to associate it with the element or elements that the output value came from.</p>
+<p>One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value (we'll also look at this element in the next article). You could display an input value or the output of a calculation inside any element, but <code>&lt;output&gt;</code> is special — like <code>&lt;label&gt;</code> — and it can take a <code>for</code> attribute that allows you to associate it with the element or elements that the output value came from.</p>
 
 <p>To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:</p>
 
@@ -215,7 +215,7 @@ price.addEventListener('input', function() {
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code> creates a widget to display and pick a week number and its year.</p>
 
-<p>Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year—which may not include the first day of the year, or may include the last few days of the previous year.</p>
+<p>Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.</p>
 
 <pre class="brush: html notranslate">&lt;input type="week" name="week" id="week"&gt;</pre>
 
@@ -267,22 +267,22 @@ price.addEventListener('input', function() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
 </ul>
 
 <h3 id="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
-	<li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
 </ul>
