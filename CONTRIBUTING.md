@@ -61,7 +61,7 @@ represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/ja
 - **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html))).
 - **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
 - **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
-- **A document's `index.html` starts with `front-matter`** -- Each document's `index.html` file must begin with some YAML called `front-matter` that defines some important information about the document: `title`, `slug`, and `tags` (if any). Here's an example that shows the `front-matter` from the [Javascript landing page](files/en-us/web/javascript/index.html):
+- **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
     ```yaml
     ---
     title: JavaScript
@@ -79,7 +79,7 @@ represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/ja
 
 If you just want to make a simple change to a single file, like fixing a typo, the
 GitHub UI is the simplest way to do that. For example, if you've found
-a typo within the [Javascript landing page](files/en-us/web/javascript/index.html),
+a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
 you can sign into GitHub, go to https://github.com/mdn/content, navigate to
 `files/en-us/web/javascript/index.html`, and then click on the edit (pencil) button. From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
@@ -116,17 +116,19 @@ would do something like the following:
 
     ```sh
     cd ~/repos
-    git clone git@github.com:octocat/content.git
+    git clone git@github.com:octocat/content.git mdn/content
     ```
 
 1. You'll also want to create a
 [`remote`](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
-to the main repository (https://github.com/mdn/content), which you'll use to keep your
+to the main repository
+([https://github.com/mdn/content](https://github.com/mdn/content)),
+which you'll use to keep your
 local clone as well as your fork (`https://github.com/octocat/content`) up-to-date. For these examples, we'll name
 it `mdn`, but you can name it anything you'd like.
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git remote add mdn git@github.com:mdn/content.git
     git remote -v
     ```
@@ -136,8 +138,7 @@ it `mdn`, but you can name it anything you'd like.
 fork (`https://github.com/octocat/content`).
 
 1. Once you've created your local clone, there's no need to to do that again next time
-you want to make a contribution. However, each time before you start a new chunk of work
-make sure you update your local clone. The following checks-out your local clone's
+you want to make a contribution. However, each time before you start a new chunk of work make sure you update your local clone. The following checks-out your local clone's
 `main` branch, fetches the latest content from the `main` branch of the `mdn`
 repository and merges it into your local `main` branch, and finally checks out
 a new branch called `my-work` (you can call it anything you'd like) for
@@ -145,7 +146,7 @@ you to work within. When you're ready, you'll push your `my-work` branch to your
 and use it to make a pull request.
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git checkout main
     git pull mdn main
     git checkout -b my-work
@@ -153,11 +154,11 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see the changes
 you'll make as they would look in production. Once started, this local preview
-service is available at http://localhost:3000 within your browser.
+service is available at http://localhost:5000 within your browser.
 
     ```sh
     # Switch to a separate terminal.
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     yarn
     yarn start
     ```
@@ -207,10 +208,10 @@ important to keep the following in mind:**
 
 1. Once you've made and saved your changes, open a browser, and navigate to the page(s)
 you've changed. For example, if you changed `files/en-us/web/javascript/index.html`,
-open http://localhost:3000/en-us/docs/web/javascript in your browser.
+open http://localhost:5000/en-us/docs/web/javascript in your browser.
 
 1. You might have noticed that at the top of each page that you preview, for example
-the http://localhost:3000/en-us/docs/web/javascript page, there is a `Show flaws` button.
+the http://localhost:5000/en-us/docs/web/javascript page, there is a `Show flaws` button.
 Click on that button to see if your changes have introduced flaws on the page.
 
 1. Once you're happy with your changes, add and commit them to your branch, and then
@@ -218,7 +219,7 @@ push the branch to your fork. Remember, the default name that `git` assigned to 
 that represents your fork is `origin`.
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git add .
     git commit
     git push -u origin my-work
@@ -226,12 +227,15 @@ that represents your fork is `origin`.
 
 1. You're now ready to create a [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-1. Once you've created your pull-request, sit back, relax, and wait for a review. Your
-pull-request will have to be reviewed and eventually approved before it's merged into
+1. Once you've created your pull-request, sit back, relax, and wait for a review.
+**You do not need to request a review. We triage all incoming pull requests periodically.**
+Your pull-request will have to be reviewed and eventually approved before it's merged into
 the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
-common and natural part of the process.
+common and natural part of the process. **When you submit a pull-request, a number of**
+**tests are automatically run. If one or more of these tests fail, it is your**
+**responsibility to try and resolve the underlying issue(s).**
 
 ### Adding a new document
 
@@ -241,18 +245,21 @@ the `index.html` of a similar document. There are only a few things to keep in m
 - Determine where in the document hierarchy your document belongs. For example, if you're
 creating a new CSS document for a new property `foo`, you'll want to create a new folder
 `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` file must start with `front-matter` that defines
+- Remember that a document's `index.html` file must start with front-matter that defines
 the `title`, `slug`, and
 [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
 (if any) for the document. You might find it helpful to refer
-to the `front-matter` within a similar document's `index.html`.
+to the front-matter within a similar document's `index.html`.
 
 As we outlined above, the step-by-step process in general would be:
 1. Start a fresh, up-to-date branch to work within:
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git checkout main
     git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
     git checkout -b my-add
     ```
 
@@ -260,7 +267,8 @@ As we outlined above, the step-by-step process in general would be:
 
 1. Add and commit your new files, as well as push your new branch to your fork:
     ```sh
-    git commit -a
+    git add files/en-us/folder/you/created
+    git commit
     git push -u origin my-add
     ```
 
@@ -280,9 +288,12 @@ to `files/en-us/discover`.
 1. First, as we've outlined above, you'll start a fresh branch to work within:
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git checkout main
     git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
     git checkout -b my-move
     ```
 
@@ -315,9 +326,12 @@ will delete the entire tree. For example, let's say you want to delete the entir
 1. First, as we've outlined above, you'll start a fresh branch to work within:
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git checkout main
     git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
     git checkout -b my-delete
     ```
 
@@ -350,9 +364,12 @@ Make sure you start with a fresh working branch updated with the latest content 
 the `main` branch of the `mdn` remote.
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     git checkout main
     git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
     git checkout -b my-images
     ```
 
@@ -360,8 +377,16 @@ the `main` branch of the `mdn` remote.
 a new image to the `files/en-us/web/css` document.
 
     ```sh
-    cd ~/repos/content
+    cd ~/repos/mdn/content
     cp /some/path/my-cool-image.png files/en-us/web/css/
+    ```
+
+1. Run our `filecheck` command on each image you add. It'll complain if something's wrong.
+We'll automatically run this as one of the tests we run when your new pull-request is created,
+but why wait to fix any possible issues later?
+
+    ```sh
+    yarn filecheck files/en-us/web/css/my-cool-image.png
     ```
 
 1. Use your image within the document. For example, add the following `<img>` element
@@ -389,9 +414,8 @@ for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
 is generated from the `npm` package created from the https://github.com/mdn/browser-compat-data
 repository. If you'd like to make or suggest a change to the content of the browser-compatibility
-table on any given MDN document page, you can either use the `Update compatibility data on GitHub`
-link in the upper-right corner of the table on the page itself to create an issue, or simply go to
-https://github.com/mdn/browser-compat-data and
+table on any given MDN document page, you can either use the `Report problems with this data on GitHub` link in the upper-right corner of the table on the page itself to create an issue,
+or simply go to https://github.com/mdn/browser-compat-data and
 [read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
 
 ### Adding examples
