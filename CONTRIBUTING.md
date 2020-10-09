@@ -1,9 +1,10 @@
 # Notice
-**This repository is not yet active.** It will go active on Monday December 14, 2020,
-when we make the switch from content contributions made via the
-[MDN Web Docs Wiki](https://wiki.developer.mozilla.org) to content contributions made
-via this GitHub repository. Until then the [Wiki](https://wiki.developer.mozilla.org)
-remains the way to contribute.
+**This repository is not yet active.**
+
+To contribute to MDN Web Docs, [use the wiki](https://wiki.developer.mozilla.org).
+
+Contributions to this repository will not be acccepted or reflected in MDN Web Docs before Monday, December 14, 2020.
+
 
 # Contributing to the content of MDN Web Docs
 
