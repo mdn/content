@@ -5,7 +5,6 @@ To contribute to MDN Web Docs, [use the wiki](https://wiki.developer.mozilla.org
 
 Contributions to this repository will not be acccepted or reflected in MDN Web Docs before Monday, December 14, 2020.
 
-
 # Contributing to the content of MDN Web Docs
 
 :tada: First of all, thanks for taking the time to contribute to
@@ -58,8 +57,8 @@ If you choose an option other than the GitHub UI, you want to install
 These are some important things to keep in mind about the MDN content.
 - **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)), and that folder will contain the content of that specific document as an
-`index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html))).
-- **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html))).
+`index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html)).
+- **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
 - **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
 - **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
 - **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
@@ -336,14 +335,13 @@ will delete the entire tree. For example, let's say you want to delete the entir
     git checkout -b my-delete
     ```
 
-1. Perform the move (which will delete and modify existing files, as well as create
-new files):
+1. Perform the delete:
 
     ```sh
     yarn delete files/en-us/learn
     ```
 
-1. Add and commit all of the deleted, created, and modified files, as well as
+1. Add and commit all of the deleted files, as well as
 push your branch to your fork:
 
     ```sh
