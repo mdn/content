@@ -15,14 +15,7 @@ jobs:
           FILES: |
             package.json
             yarn.lock
-
-      - name: DEBUG get-diff-action
-        run: |
-          echo "GIT_DIFF"
-          echo ${{ env.GIT_DIFF }}
-          echo "MATCH_ED FILES"
-          echo ${{ env.MATCHED_FILES }}
-
+            preview.yml
 
       - name: Setup Node.js environment
         if: env.MATCHED_FILES
