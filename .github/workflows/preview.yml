@@ -15,7 +15,6 @@ jobs:
           FILES: |
             package.json
             yarn.lock
-            preview.yml
 
       - name: DEBUG get-diff-action
         run: |
