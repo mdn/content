@@ -912,10 +912,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.95":
-  version "0.1.95"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.95.tgz#266b3ae90b5b8c094310c011f348df1ccd6b205f"
-  integrity sha512-tB55h4ZxxqJwF+/3taRLo+SJd4iVOE375ArsUFahJ8Q/1oU8vaQBBvrtaPleGb8AzHL9Tx5fcaA9UFDRXLJP3w==
+"@mdn/yari@0.1.98":
+  version "0.1.98"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.98.tgz#ed0c4856dee30b58848c137e0cdd01fe5ed22601"
+  integrity sha512-GFTdl6biqBnPsE4UfTCJQ5eG7TXC04PCf0OzfE4mCejd6PUYZa0E7IweQHajUApPmjAdhaKobiP6Uzgd1+4SuA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.2"
