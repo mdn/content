@@ -912,17 +912,17 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.98":
-  version "0.1.98"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.98.tgz#ed0c4856dee30b58848c137e0cdd01fe5ed22601"
-  integrity sha512-GFTdl6biqBnPsE4UfTCJQ5eG7TXC04PCf0OzfE4mCejd6PUYZa0E7IweQHajUApPmjAdhaKobiP6Uzgd1+4SuA==
+"@mdn/yari@0.1.104":
+  version "0.1.104"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.104.tgz#9761ab54ae0cde1bbc9ef56293725111716fed13"
+  integrity sha512-3HMhWO3U83JrcYxpvzcxPY0vX/UV1LC0qaZOJVRoGo0o0nUS57LnRw3JFLdF3enfH/fidxTpYRuXHHYo3IzvoA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.2"
     braces "^3.0.2"
     chalk "4.1.0"
     cheerio "1.0.0-rc.3"
-    chokidar "^3.4.2"
+    chokidar "^3.4.3"
     clean-webpack-plugin "3.0.0"
     cli-progress "^3.8.2"
     cross-env "^7.0.2"
@@ -956,7 +956,7 @@
     sockette "^2.0.6"
     source-map-support "0.5.19"
     swr "0.3.5"
-    tempy "0.7.1"
+    tempy "1.0.0"
     typeface-zilla-slab "0.0.72"
     use-debounce "^3.4.3"
     webpack-cli "4.0.0"
@@ -1855,10 +1855,10 @@ cheerio@1.0.0-rc.3:
     lodash "^4.15.0"
     parse5 "^3.0.1"
 
-chokidar@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
-  integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
+chokidar@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.3.tgz#c1df38231448e45ca4ac588e6c79573ba6a57d5b"
+  integrity sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -1866,7 +1866,7 @@ chokidar@^3.4.2:
     is-binary-path "~2.1.0"
     is-glob "~4.0.1"
     normalize-path "~3.0.0"
-    readdirp "~3.4.0"
+    readdirp "~3.5.0"
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -5855,10 +5855,10 @@ readable-web-to-node-stream@^2.0.0:
   resolved "https://registry.yarnpkg.com/readable-web-to-node-stream/-/readable-web-to-node-stream-2.0.0.tgz#751e632f466552ac0d5c440cc01470352f93c4b7"
   integrity sha512-+oZJurc4hXpaaqsN68GoZGQAQIA3qr09Or4fqEsargABnbe5Aau8hFn6ISVleT3cpY/0n/8drn7huyyEvTbghA==
 
-readdirp@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada"
-  integrity sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
+readdirp@~3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.5.0.tgz#9ba74c019b15d365278d2e91bb8c48d7b4d42c9e"
+  integrity sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
   dependencies:
     picomatch "^2.2.1"
 
@@ -6784,10 +6784,10 @@ tempfile@^2.0.0:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
 
-tempy@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/tempy/-/tempy-0.7.1.tgz#5a654e6dbd1747cdd561efb112350b55cd9c1d46"
-  integrity sha512-vXPxwOyaNVi9nyczO16mxmHGpl6ASC5/TVhRRHpqeYHvKQm58EaWNvZXxAhR0lYYnBOQFjXjhzeLsaXdjxLjRg==
+tempy@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tempy/-/tempy-1.0.0.tgz#4f192b3ee3328a2684d0e3fc5c491425395aab65"
+  integrity sha512-eLXG5B1G0mRPHmgH2WydPl5v4jH35qEn3y/rA/aahKhIa91Pn119SsU7n7v/433gtT9ONzC8ISvNHIh2JSTm0w==
   dependencies:
     del "^6.0.0"
     is-stream "^2.0.0"
