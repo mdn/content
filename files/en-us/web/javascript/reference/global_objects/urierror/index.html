@@ -15,7 +15,7 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/URIError"><code>URIError()</code></a></dt>
+ <dt>{{jsxref("Global_Objects/URIError/URIError", "URIError()")}}</dt>
  <dd>Creates a new <code>URIError</code> object.</dd>
 </dl>
 
@@ -38,9 +38,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Catching_an_URIError">Catching an <code>URIError</code></h3>
+<h3 id="Catching_an_URIError">Catching an URIError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -53,9 +53,9 @@ tags:
 }
 </pre>
 
-<h3 id="Creating_an_URIError">Creating an <code>URIError</code></h3>
+<h3 id="Creating_an_URIError">Creating an URIError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -71,10 +71,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}}</td>
   </tr>

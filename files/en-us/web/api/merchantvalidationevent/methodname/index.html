@@ -18,34 +18,17 @@ tags:
   - methodName
   - payment
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
 <p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} property <code><strong>methodName</strong></code> is a read-only value which returns a string indicating the payment method identifier which represents the payment handler that requires merchant validation.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>methodID</em> = <em>merchantValidationEvent</em>.methodName;</pre>
+<pre class="syntaxbox notranslate"><em>methodID</em> = <em>merchantValidationEvent</em>.methodName;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler which is requesting merchant validation. See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for more information on the process.</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-merchantvalidationeventinit-methodname','MerchantValidationEvent.methodName')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

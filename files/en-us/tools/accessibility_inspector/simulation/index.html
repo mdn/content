@@ -10,6 +10,8 @@ tags:
   - Simulation
   - Tools
 ---
+<div>{{toolssidebar}}</div>
+
 <p><span class="seoSummary">The simulator in the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a> in Firefox Developer Tools lets you see what a web page would look like to users with various forms of <em>color vision deficiency</em> (better known as "color blindness"), as well as <em>contrast sensitivity loss</em>.</span></p>
 
 <p>"Color blindness" is a bit of a misnomer, since most people with these disorders can see colors, but do not see all of the distinctions that people with normal color vision can see; color vision deficiencies affect perception across the color spectrum, not only of specific colors like red or green. Color vision deficiencies affect about 8% of men, and 0.5% of women. The most common forms of color blindness (commonly lumped together as "red-green color blindness") affect more men than women, because they are due to a mutation in a gene in the X chromosome, which men usually have only one copy of.</p>
@@ -20,24 +22,12 @@ tags:
 <p>To enable this feature, you must have webrender enabled; it may be enabled by default, depending on your configuration of Firefox. In the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a>, make sure the <strong>gfx.webrender.all</strong> option is set to <code>true</code>.</p>
 </div>
 
-<p>In the <strong>Simulate</strong> menu, you can choose one option at a time from the following list:</p>
+<p>The current color simulation option may be selected from the <strong>Simulate</strong> menu as shown.<br>
+ <img alt="Simulate menu in Accessibility panel. Used for selecting the simulation mode: None, Protanopia (no red), Deuteranopia (no green), Tritanopia (no blue), Achromatopsia (no color), Contrast loss" src="https://mdn.mozillademos.org/files/17415/accessibily_color_simulation_menu.jpg" style="height: 295px; width: 458px;"></p>
 
-<ul>
- <li>None — choose this to return to normal display</li>
- <li>Protanomaly (low red)</li>
- <li>Deuteranomaly (low green)</li>
- <li>Tritanomaly (low blue)</li>
- <li>Protanopia (no red)</li>
- <li>Deuteranopia (no green)</li>
- <li>Tritanopia (no blue)</li>
- <li>Contrast loss</li>
-</ul>
+<div class="blockIndicator note"></div>
 
-<div class="blockIndicator note">
-<p>These simulations are not completely medically accurate. However, they can give you a sense of what your web site looks like to users with vision problems, and therefore help you judge whether you need to make adjustments in your color or contrast choices.</p>
-</div>
-
-<p>The following table shows a colorful image of a cat's face, and what it looks like in the various simulations.</p>
+<p>The following table shows a colorful image of a cat's face, and what it looks like in the each of the simulations.</p>
 
 <table>
  <thead>
@@ -48,20 +38,9 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>None</td>
+   <td>None<br>
+    (Choose this to return to normal display)</td>
    <td><img alt="Colorful image of a cat's face, without modification" src="https://mdn.mozillademos.org/files/16876/28369550088_617db0d6f2_m.jpg" style="height: 240px; width: 240px;"></td>
-  </tr>
-  <tr>
-   <td>Protanomaly (low red)</td>
-   <td><img alt="Colorful image of a cat's face, with deuteranomaly simulation" src="https://mdn.mozillademos.org/files/16877/colorcat_protanomaly.png" style="height: 250px; width: 250px;"></td>
-  </tr>
-  <tr>
-   <td>Deuteranomaly (low green)</td>
-   <td><img alt="Colorful image of a cat's face, with deuteranomaly simulation" src="https://mdn.mozillademos.org/files/16878/colorcat_deuteranomaly.png" style="height: 250px; width: 250px;"></td>
-  </tr>
-  <tr>
-   <td>Tritanomaly (low blue)</td>
-   <td><img alt="Colorful image of a cat's face, with tritanomaly simulation" src="https://mdn.mozillademos.org/files/16879/colorcat_tritanomaly.png" style="height: 250px; width: 250px;"></td>
   </tr>
   <tr>
    <td>Protanopia (no red)</td>
@@ -69,18 +48,32 @@ tags:
   </tr>
   <tr>
    <td>Deuteranopia (no green)</td>
-   <td><img alt="Colorful image of a cat's face, with deuteranopia simulation" src="https://mdn.mozillademos.org/files/16881/colorcat_deuteranopia.png" style="height: 250px; width: 250px;"></td>
+   <td><img alt="Colorful image of a cat's face, with deuteranopia simulation" src="https://mdn.mozillademos.org/files/17416/colorcat_deuteranopia.png" style="height: 241px; width: 242px;"></td>
   </tr>
   <tr>
    <td>Tritanopia (no blue)</td>
    <td><img alt="Colorful image of a cat's face, with tritanopia simulation" src="https://mdn.mozillademos.org/files/16882/colorcat_tritanopia.png" style="height: 250px; width: 250px;"></td>
   </tr>
   <tr>
+   <td>Achromatopsia (no color)</td>
+   <td><img alt="Colorful image of a cat's face, with achromatopsia simulation" src="https://mdn.mozillademos.org/files/17414/colorcat_achromatopsia.png" style="height: 240px; width: 241px;"></td>
+  </tr>
+  <tr>
    <td>Contrast loss</td>
-   <td><img alt="Colorful image of a cat's face, with contrast loss simulation" src="https://mdn.mozillademos.org/files/16883/colorcat_contrastloss.png" style="height: 250px; width: 250px;"></td>
+   <td>
+    <p><img alt="Colorful image of a cat's face, with contrast loss simulation" src="https://mdn.mozillademos.org/files/16883/colorcat_contrastloss.png" style="height: 250px; width: 250px;"></p>
+   </td>
   </tr>
  </tbody>
 </table>
+
+<div class="blockIndicator note">
+<p>The simulation transformation matrices are based on the paper: <a href="https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html">A Physiologically-based Model for Simulation of Color Vision Deficiency</a>, Gustavo M. Machado, Manuel M. Oliveira Leandro A. F. Fernandes, IEEE Transactions on Visualization and Computer Graphics, Volume 15 (2009).</p>
+</div>
+
+<div class="blockIndicator note">
+<p>Firefox 81 removed unnecessary simulations for <em>protanomaly</em>, <em>deuteranomaly</em>, and <em>tritanomaly</em>, and added a simulation for <em>achromatopsia</em> (no color).</p>
+</div>
 
 <h2 id="See_also">See also</h2>
 

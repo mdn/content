@@ -9,25 +9,37 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict usage of known DOM XSS sinks to a predefined set of functions that <span>only accept non-spoofable, typed values in place of strings. This allows authors to</span><span> define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</span> This directive declares a white-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
+<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build<span> non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings. </span></p>
+
+<p><span>Together with <code><strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></strong></code> directive, this allows authors to</span><span> define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</span> This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre>Content-Security-Policy: trusted-types;
+<pre class="notranslate">Content-Security-Policy: trusted-types;
+Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types &lt;policyName&gt;;
 Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
 </pre>
 
 <dl>
- <dt>&lt;DOMString&gt;</dt>
- <dd>Any string can be a Trusted Type policy name.</dd>
+ <dt>&lt;policyName&gt;</dt>
+ <dd>A valid policy name consists only of alphanumeric characters, or one of "<code>-#=_/@.%</code>".  A star (<code>*</code>) as a policy name instructs the user agent to allow any unique policy name ('<code>allow-duplicates</code>' may relax that further).</dd>
+ <dt><code>'none'</code></dt>
+ <dd>Disallows creating any Trusted Type policy (same as not specifying any <em>&lt;policyName&gt;</em>).</dd>
  <dt><code>'allow-duplicates'</code></dt>
- <dd>Allows for creating policies with a name that was already used</dd>
+ <dd>Allows for creating policies with a name that was already used.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>TODO</p>
+<pre class="brush: js notranslate">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+
+if (typeof trustedTypes !== 'undefined') {
+  const policyFoo = trustedTypes.createPolicy('foo', {});
+  const policyFoo2 = trustedTypes.createPolicy('foo', {});
+  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+}
+</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -63,6 +75,6 @@ Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'al
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
  <li><a href="/en-US/docs/Glossary/Cross-site_scripting">Cross-Site Scripting (XSS)</a></li>
- <li><a href="https://developers.google.com/web/updates/2019/02/trusted-types">Google Developers: Intro to Trusted-Types</a></li>
+ <li><a href="https://web.dev/trusted-types">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
  <li>Trusted Types with <a href="https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types">DOMPurify</a> XSS sanitizer</li>
 </ul>

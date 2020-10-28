@@ -34,13 +34,6 @@ tags:
 
 <p><img alt="24-hour Chrome time input" src="https://mdn.mozillademos.org/files/15399/chrome-time.png" style="height: 30px; width: 79px;"> 24-hour</p>
 
-<h3 id="Chrome_83">Chrome 83</h3>
-
-<p>In Chrome 83, the UI controls have been updated with a <a href="https://developers.google.com/web/updates/2020/05/nic83#forms">new look and feel</a>. The new element is functionally identical to the old one, but has a similar UI to Edge.</p>
-
-<p><img alt="24-hour version of Chrome 83's new time control" src="https://mdn.mozillademos.org/files/17272/Chrome_83_24_hour.png" style="height: 293px; width: 122px;"><br>
- 24-hour</p>
-
 <h3 id="Firefox">Firefox</h3>
 
 <p>Firefox's <code>time</code> control is very similar to Chrome's, except that it doesn't have the up and down arrows. It also uses a 12- or 24-hour format for inputting times, based on system locale. An "X" button is provided to clear the control's value.</p>
@@ -505,7 +498,7 @@ function populateHours() {
 }
 
 function populateMinutes() {
-  // populate the minutes &lt;select&gt; with the 60 minutes of each hour
+  // populate the minutes &lt;select&gt; with the 60 hours of each minute
   for(var i = 0; i &lt;= 59; i++) {
     var option = document.createElement('option');
     option.textContent = (i &lt; 10) ? ("0" + i) : i;
@@ -556,5 +549,5 @@ function populateMinutes() {
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
  <li><a href="/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

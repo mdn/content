@@ -17,9 +17,13 @@ tags:
 <p><strong>Note:</strong> To combat unwanted pop-ups, some browsers don't display prompts created in <code>beforeunload</code> event handlers unless the page has been interacted with. Moreover, some don't display them at all.</p>
 </div>
 
+<div class="blockIndicator note">
+<p><strong>Note</strong>: You shouldn't use the <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code> event with <code>sendBeacon()</code>. See the <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon()</a></code> page for more details and best practices.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.addEventListener("beforeunload", function(event) { ... });
+<pre class="syntaxbox notranslate">window.addEventListener("beforeunload", function(event) { ... });
 window.onbeforeunload = function(event) { ... };</pre>
 
 <p>Typically, it is better to use {{domxref("EventTarget.addEventListener", "window.addEventListener()")}} and the {{event("beforeunload")}} event, instead of <code>onbeforeunload</code>.</p>
@@ -30,7 +34,7 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <p>The HTML specification states that authors should use the {{domxref("Event.preventDefault()")}} method instead of using {{domxref("Event.returnValue")}} to prompt the user.</p>
 
-<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
   // Cancel the event
   e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
   // Chrome requires returnValue to be set
@@ -40,7 +44,7 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <p>Guarantee the browser unload by removing the <em>returnValue</em> property of the event</p>
 
-<pre class="brush:js">window.addEventListener('beforeunload', function (e) {
+<pre class="brush:js notranslate">window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
   delete e['returnValue'];
 });</pre>

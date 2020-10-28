@@ -303,7 +303,7 @@ p {
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }</pre>
 </div>
 
@@ -386,7 +386,7 @@ background-attachment: fixed;</pre>
 
 <p>As with any coding work, it is best practice to write comments along with CSS. This helps you to remember how the code works as you come back later for fixes or enhancement. It also helps others understand the code.</p>
 
-<p>CSS Comments begin with <code>/*</code> and end with <code>*/</code>. In the example below, comments mark the start of distinct sections of code. This helps to navigate the codebase as it gets larger. With this kind of commenting in place, searching for comments in your code editor becomes a way to efficiently find a section of code.</p>
+<p>CSS comments begin with <code>/*</code> and end with <code>*/</code>. In the example below, comments mark the start of distinct sections of code. This helps to navigate the codebase as it gets larger. With this kind of commenting in place, searching for comments in your code editor becomes a way to efficiently find a section of code.</p>
 
 <pre class="brush: css notranslate">/* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
@@ -398,8 +398,8 @@ body {
 }
 
 @media (min-width: 70em) {
-  /* Let's special case the global font size. On large screen or window,
-     we increase the font size for better readability */
+  /* Increase the global font size on larger screens or windows
+     for better readability */
   body {
     font-size: 130%;
   }

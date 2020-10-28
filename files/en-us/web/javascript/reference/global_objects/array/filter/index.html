@@ -20,29 +20,31 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>element</var>[, <var>index</var>, [<var>array</var>]])[, <var>thisArg</var>])
+<pre class="notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>, [<var>array</var>]]) {
+  // return element for <var>newArray,</var> if true
+}[, <var>thisArg</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p>Function is a predicate, to test each element of the array. Return a value that coerces to <code>true</code> to keep the element, or to <code>false</code> otherwise.</p>
+	<dt><code><var>callback</var></code></dt>
+	<dd>
+	<p>Function is a predicate, to test each element of the array. Return a value that coerces to <code>true</code> to keep the element, or to <code>false</code> otherwise.</p>
 
- <p>It accepts three arguments:</p>
+	<p>It accepts three arguments:</p>
 
- <dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>The current element being processed in the array.</dd>
-  <dt><code><var>index</var></code>{{optional_inline}}</dt>
-  <dd>The index of the current element being processed in the array.</dd>
-  <dt><code><var>array</var></code>{{optional_inline}}</dt>
-  <dd>The array <code>filter</code> was called upon.</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
- <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
+	<dl>
+		<dt><code><var>currentValue</var></code></dt>
+		<dd>The current element being processed in the array.</dd>
+		<dt><code><var>index</var></code>{{optional_inline}}</dt>
+		<dd>The index of the current element being processed in the array.</dd>
+		<dt><code><var>array</var></code>{{optional_inline}}</dt>
+		<dd>The array <code>filter</code> was called upon.</dd>
+	</dl>
+	</dd>
+	<dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
+	<dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -56,9 +58,9 @@ tags:
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 
 <ol>
- <li>the value of the element</li>
- <li>the index of the element</li>
- <li>the Array object being traversed</li>
+	<li>the value of the element</li>
+	<li>the index of the element</li>
+	<li>the Array object being traversed</li>
 </ol>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter</code>, it will be used as the callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
@@ -254,16 +256,16 @@ console.log(deleteWords)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -277,9 +279,9 @@ console.log(deleteWords)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
+	<li>{{jsxref("Array.prototype.forEach()")}}</li>
+	<li>{{jsxref("Array.prototype.every()")}}</li>
+	<li>{{jsxref("Array.prototype.some()")}}</li>
+	<li>{{jsxref("Array.prototype.reduce()")}}</li>
+	<li>{{jsxref("Array.prototype.find()")}}</li>
 </ul>

@@ -17,66 +17,68 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property of the {{DOMxRef("HTMLOrForeignElement")}} interface provides read/write access to all the <a href="/en-US/docs/Web/HTML/Global_attributes/data-*" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-data-*">custom data attributes</a> (<code>data-<var>*</var></code>) set on the element.</span> This access is available both in HTML and within the DOM. It is a map of {{domxref("DOMString")}}s ({{domxref("DOMStringMap")}}) with one entry for each custom data attribute. Note that the <code>dataset</code> property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the <code>dataset</code>, which in turn represent the data attributes. Note also that an HTML <code>data-</code><var>attribute</var> and its corresponding DOM<strong> </strong><code>dataset</code>.<var>property</var> do not share the same name, but they are always similar:</p>
+<p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property of the {{DOMxRef("HTMLOrForeignElement")}} interface provides read/write access to <a href="/en-US/docs/Web/HTML/Global_attributes/data-*" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-data-*">custom data attributes</a> (<code>data-<var>*</var></code>) on elements.</span> It exposes a map of strings ({{domxref("DOMStringMap")}}) with an entry for each <code>data-*</code> attribute.</p>
 
-<ul>
- <li><strong>In HTML,</strong> the name of a custom data attribute begins with <code>data-</code>. It must contain only letters, numbers, and the following characters: dash (<code>-</code>), dot (<code>.</code>), colon (<code>:</code>), underscore (<code>_</code>)—but NOT any ASCII capital letters (<code>A</code> to <code>Z</code>).</li>
- <li><strong>In JavaScript,</strong> the name of a custom data attribute is the name of the same HTML attribute, but in camelCase and with no dashes, dots, etc.</li>
-</ul>
+<div class="blockIndicator note">
+<p>The <code>dataset</code> property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the <code>dataset</code>, which in turn represent the data attributes.</p>
+</div>
 
-<p>In addition to the information below, you'll find a how-to guide for using HTML data attributes in our article <a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data attributes.</a></p>
+<p>An HTML <code>data-*</code><var> attribute</var> and its corresponding DOM<strong> </strong><code>dataset.<var>property</var></code> modify their shared name according to where they are read or written:</p>
+
+<dl>
+ <dt><strong>In H</strong>T<strong>ML</strong></dt>
+ <dd>The attribute name begins with <code>data-</code>. It can contain only letters, numbers, dashes (<code>-</code>), periods (<code>.</code>), colons (<code>:</code>), and underscores (<code>_</code>). Any ASCII capital letters (<code>A</code> to <code>Z</code>) are ignored and converted to lowercase.</dd>
+ <dt>In JavaScript</dt>
+ <dd>The property name of a custom data attribute is the same as the HTML attribute without the <code>data-</code> prefix, and removes single dashes (<code>-</code>) for when to capitalize the property’s “camelCased” name.</dd>
+</dl>
+
+<p>In addition to the information below, you'll find a how-to guide for using HTML data attributes in our article <a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes"><em>Using data attributes</em>.</a></p>
 
 <h3 id="Name_conversion">Name conversion</h3>
 
 <dl>
  <dt><code>dash-style</code> to <code>camelCase</code> conversion</dt>
  <dd>
- <p>A custom data attribute name is transformed to a key for the {{ domxref("DOMStringMap") }} entry with the following rules</p>
+ <p>A custom data attribute name is transformed to a key for the {{ domxref("DOMStringMap") }} entry by the following:</p>
 
  <ol>
-  <li>The prefix <code>data-</code> is removed (including the dash);</li>
-  <li>For any dash (<code>U+002D</code>) followed by an ASCII lowercase letter <code>a</code> to <code>z</code>, the dash is removed, and the letter is transformed into its uppercase counterpart;</li>
+  <li>Remove the prefix <code>data-</code> (including the dash);</li>
+  <li>For any dash (<code>U+002D</code>) followed by an ASCII lowercase letter <code>a</code> to <code>z</code>, remove the dash and uppercase the letter;</li>
   <li>Other characters (including other dashes) are left unchanged.</li>
  </ol>
  </dd>
  <dt><code>camelCase</code> to <code>dash-style</code> conversion</dt>
  <dd>
- <p>The opposite transformation, which maps a key to an attribute name, uses the following rules:</p>
+ <p>The opposite transformation, which maps a key to an attribute name, uses the following:</p>
 
  <ol>
-  <li><strong>Restriction:</strong> Before the transformation, a dash <em>must not</em> be immediately followed by an ASCII lowercase letter <code>a</code> to <code>z</code>;</li>
-  <li>The prefix <code>data-</code> is added;</li>
-  <li>Any ASCII uppercase letter <code>A</code> to <code>Z</code> is transformed into a dash, followed by its lowercase counterpart;</li>
+  <li><strong>Restriction:</strong> Before transformation, a dash <em>must not</em> be immediately followed by an ASCII lowercase letter <code>a</code> to <code>z</code>;</li>
+  <li>Add the <code>data-</code> prefix;</li>
+  <li>Add a dash before any ASCII uppercase letter <code>A</code> to <code>Z</code>, then lowercase the letter;</li>
   <li>Other characters are left unchanged.</li>
  </ol>
  </dd>
 </dl>
 
-<p>The restriction in the rules above ensures that the two transformations are the inverse one of the other.</p>
-
-<p>For example, the attribute named <code>data-abc-def</code> corresponds to the key <code>abcDef</code>.</p>
+<p>For example, a <code>data-abc-def</code> attribute corresponds to <code>dataset.abcDef</code>.</p>
 
 <h3 id="Accessing_values">Accessing values</h3>
 
 <ul>
- <li>Attributes can be set and read by using the camelCase name (the key) like an object property of the dataset, as in <code><var>element</var>.dataset.<var>keyname</var></code></li>
- <li>Attributes can also be set and read using the bracket syntax, as in <code><var>element</var>.dataset[<var>keyname</var>]</code></li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> can be used to check whether a given attribute exists.</li>
+ <li>Attributes can be set and read by the camelCase name/key as an object property of the dataset: <code><var>element</var>.dataset.<var>keyname</var></code></li>
+ <li>Attributes can also be set and read using bracket syntax: <code><var>element</var>.dataset['<var>keyname</var>']</code></li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> can check if a given attribute exists: <code>'keyname' in element.dataset</code></li>
 </ul>
 
 <h3 id="Setting_values">Setting values</h3>
 
 <ul>
- <li>When an attribute is set, its value is always converted into a string.
+ <li>When the attribute is set, its value is always converted to a string.
   <div class="blockIndicator note">
-  <ul>
-   <li>
-    <p><strong>For example:</strong> <code>null</code> is converted into the string <code>"null"</code>.</p>
-   </li>
-  </ul>
+  <p><strong>For example:</strong> <code>element.dataset.example = null</code> is converted into <code>data-example="null"</code>.</p>
   </div>
  </li>
- <li>To remove an attribute, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a>.</li>
+ <li>To remove an attribute, you can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a>: <code>delete element.dataset.<em>keyname</em></code></li>
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
@@ -99,16 +101,17 @@ tags:
 // el.dataset.user === 'johndoe'
 // el.dataset.dateOfBirth === ''
 
-// set the data attribute
+// set a data attribute
 el.dataset.dateOfBirth = '1960-10-03';
-// Result: el.dataset.dateOfBirth === 1960-10-03
+// Result: el.dataset.dateOfBirth === '1960-10-03'
 
 delete el.dataset.dateOfBirth;
 // Result: el.dataset.dateOfBirth === undefined
 
-// 'someDataAttr' in el.dataset === false
-el.dataset.someDataAttr = 'mydata';
-// Result: 'someDataAttr' in el.dataset === true
+if ('someDataAttr' in el.dataset === false) {
+  el.dataset.someDataAttr = 'mydata';
+  // Result: 'someDataAttr' in el.dataset === true
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

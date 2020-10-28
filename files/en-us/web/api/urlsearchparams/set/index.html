@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">URLSearchParams.set(<em>name</em>, <em>value</em>)</pre>
+<pre class="syntaxbox notranslate">URLSearchParams.set(<em>name</em>, <em>value</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,16 +35,14 @@ tags:
 
 <p>Let's start with a simple example:</p>
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
-let params = new URLSearchParams(url.search.slice(1));
+<pre class="brush: js notranslate">let url = new URL('https://example.com?foo=1&amp;bar=2');
+let params = new URLSearchParams(url.search);
 
 //Add a third parameter.
 params.set('baz', 3);
 params.toString(); // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">"foo=1&amp;bar=2&amp;baz=3"</span></span></span></span>
 
 </pre>
-
-
 
 <p>Below is a real-life example demonstrating how to create a {{domxref("URL")}} and set some search parameters.</p>
 
@@ -56,7 +54,7 @@ params.toString(); // <span class="message-body-wrapper"><span class="message-fl
  <li>line #44: Tries to automatically open a new window/tab with the generated URL (when uncommented).</li>
 </ul>
 
-<pre class="brush: js;highlight:[41,43,44]" id="genurl">'use strict'
+<pre class="brush: js;highlight:[41,43,44] notranslate" id="genurl">'use strict'
 
 function genURL(rExp, aText, bDebug=false){
 	let theURL

@@ -10,20 +10,20 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>ArrayBuffer.isView()</strong></code> method determines whether the passed value is one of the <code>ArrayBuffer</code> views, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}.</p>
+<p>The <strong><code>ArrayBuffer.isView()</code></strong> method determines whether the passed value is one of the <code>ArrayBuffer</code> views, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html","shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">ArrayBuffer.isView(<em>value</em>)</pre>
+<pre class="syntaxbox notranslate">ArrayBuffer.isView(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>value</code></dt>
+ <dt><code><var>value</var></code></dt>
  <dd>The value to be checked.</dd>
 </dl>
 
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Using_isView">Using isView</h3>
 
-<pre class="brush: js">ArrayBuffer.isView();                    // false
+<pre class="brush: js notranslate">ArrayBuffer.isView();                    // false
 ArrayBuffer.isView([]);                  // false
 ArrayBuffer.isView({});                  // false
 ArrayBuffer.isView(null);                // false
@@ -54,10 +54,12 @@ ArrayBuffer.isView(dv); // true
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}}</td>
   </tr>
@@ -73,5 +75,5 @@ ArrayBuffer.isView(dv); // true
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="en/JavaScript typed arrays">JavaScript typed arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
 </ul>

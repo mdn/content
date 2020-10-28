@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new Date()
+<pre class="syntaxbox notranslate">new Date()
 new Date(<var>value</var>)
 new Date(<var>dateString</var>)
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]])
@@ -50,7 +50,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 
   <dl>
    <dt><code><var>dateString</var></code></dt>
-   <dd>A string value representing a date, specified in a format recognized by the {{jsxref("Date.parse()")}} method. (These formats are <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a>, and also strings in a <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>.)
+   <dd>A string value representing a date, specified in a format recognized by the {{jsxref("Date.parse()")}} method. (These formats are <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a>, and also strings in a <a href="https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse">version of ISO8601</a>.)
    <div class="note">
    <p><strong>Note:</strong> Parsing of date strings with the <code>Date</code> constructor (and <code>Date.parse()</code>, which works the same way) is <em>strongly discouraged</em> due to browser differences and inconsistencies.</p>
 
@@ -100,7 +100,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <p><strong>Note:</strong> Parsing of date strings with the <code>Date</code> constructor (and <code>Date.parse</code>, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.</p>
 </div>
 
-<pre class="brush: js">let today = new Date()
+<pre class="brush: js notranslate">let today = new Date()
 let birthday = new Date('December 17, 1995 03:24:00')
 let birthday = new Date('1995-12-17T03:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed

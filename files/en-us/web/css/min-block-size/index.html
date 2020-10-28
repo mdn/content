@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>min-block-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
+<p><span class="seoSummary">The <strong><code>min-block-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</span></p>
+
+<p>If the writing mode is vertically oriented, the value of <code>min-block-size</code> relates to the minimum width of the element; otherwise, it relates to the minimum height of the element. A related property is {{cssxref("min-inline-size")}}, which defines the other dimension of the element.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/min-block-size.html")}}</div>
 
@@ -37,9 +39,6 @@ min-block-size: inherit;
 min-block-size: initial;
 min-block-size: unset;
 </pre>
-
-<p>If the writing mode is vertically oriented, the value of <code>min-block-size</code> relates to the minimum width of the element; otherwise, it relates to the minimum height of the element. A related property is {{cssxref("min-inline-size")}}, which defines the other dimension of the element.</p>
-
 
 <h3 id="Values">Values</h3>
 

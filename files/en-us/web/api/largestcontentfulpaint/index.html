@@ -10,30 +10,32 @@ tags:
   - Reference
   - Web Performance
 ---
+<div>{{seecompattable}}</div>
+
 <p>The <code>LargestContentfulPaint</code> interface of the Largest Contentful Paint API provides details about the largest image or text paint before user input on a web page. The timing of this paint is a good heuristic for when the main page content is available during load.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.element")}}</code></strong></dt>
-	<dd>The element that is the current largest contentful paint.</dd>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.renderTime")}}</code></strong></dt>
-	<dd>The time the element was rendered to the screen. May not be available if the element is a cross-origin image loaded without the <code>Timing-Allow-Origin</code> header.</dd>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.loadTime")}}</code></strong></dt>
-	<dd>The time the element was loaded.</dd>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.size")}}</code></strong></dt>
-	<dd>The intrinsic size of the element returned as the area (width * height).</dd>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.id")}}</code></strong></dt>
-	<dd>The id of the element. This property returns an empty string when there is no id.</dd>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.url")}}</code></strong></dt>
-	<dd>If the element is an image, the request url of the image.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.element")}}</code></strong></dt>
+ <dd>The element that is the current largest contentful paint.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.renderTime")}}</code></strong></dt>
+ <dd>The time the element was rendered to the screen. May not be available if the element is a cross-origin image loaded without the <code>Timing-Allow-Origin</code> header.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.loadTime")}}</code></strong></dt>
+ <dd>The time the element was loaded.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.size")}}</code></strong></dt>
+ <dd>The intrinsic size of the element returned as the area (width * height).</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.id")}}</code></strong></dt>
+ <dd>The id of the element. This property returns an empty string when there is no id.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.url")}}</code></strong></dt>
+ <dd>If the element is an image, the request url of the image.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
-	<dt><strong><code>{{domxref("LargestContentfulPaint.toJSON()")}}</code></strong></dt>
-	<dd>Returns the above properties as JSON.</dd>
+ <dt><strong><code>{{domxref("LargestContentfulPaint.toJSON()")}}</code></strong></dt>
+ <dd>Returns the above properties as JSON.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -44,7 +46,7 @@ tags:
 
 <p>Note that in this example data is only sent to the server when the user leaves the tab.</p>
 
-<pre class="brush: js">// Catch errors since some browsers throw when using the new `type` option.
+<pre class="brush: js notranslate">// Catch errors since some browsers throw when using the new `type` option.
 // https://bugs.webkit.org/show_bug.cgi?id=209216
 try {
   let lcp;
@@ -76,18 +78,18 @@ try {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Largest Contentful Paint','#sec-largest-contentful-paint-interface','LargestContentfulPaint')}}</td>
-			<td>{{Spec2('Largest Contentful Paint')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Largest Contentful Paint','#sec-largest-contentful-paint-interface','LargestContentfulPaint')}}</td>
+   <td>{{Spec2('Largest Contentful Paint')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

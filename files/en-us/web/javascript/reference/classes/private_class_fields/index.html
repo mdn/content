@@ -8,15 +8,7 @@ tags:
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<div class="note">
-<p><strong>This page describes experimental features.</strong></p>
-
-<p>Both Public and private field declarations are an <a href="https://github.com/tc39/proposal-class-fields">experimental feature (stage 3)</a> proposed at <a href="https://tc39.github.io/beta/">TC39</a>, the JavaScript standards committee.</p>
-
-<p>Support in browsers is limited, but the feature can be used through a build step with systems like <a href="https://babeljs.io/">Babel</a>. See the <a href="#Browser_compatibility">compat information</a> below.</p>
-</div>
-
-<p>Class properties are public by default and can be examined or modified outside the class. There is however <a href="https://github.com/tc39/proposal-class-fields">an experimental proposal</a> to allow defining private class fields using a hash <code>#</code> prefix is added.</p>
+<p>Class properties are public by default and can be examined or modified outside the class. There is however <a href="https://github.com/tc39/proposal-class-fields">an experimental proposal</a> to allow defining private class fields using a hash <code>#</code> prefix.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -27,7 +19,7 @@ tags:
 class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
- }
+  }
 }
 
 class ClassWithPrivateStaticField {
@@ -99,7 +91,7 @@ const instance = new ClassWithPrivateField()
 instance.#privateField === 42 // Syntax error
 </pre>
 
-<h3 id="Private_Methods">Private Methods</h3>
+<h3 id="Private_methods">Private methods</h3>
 
 <h4 id="Private_static_methods">Private static methods</h4>
 

@@ -19,25 +19,27 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.forEach(<var>callback(currentValue [, index [, array]])</var>[, <var>thisArg</var>])</pre>
+<pre class="syntaxbox notranslate"><var>arr</var>.forEach(<var>callback(currentValue[, index[, array]]) {
+</var>  // execute something
+<var>}</var>[, <var>thisArg</var>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code></dt>
- <dd>Function to execute on each element. It accepts between one and three arguments:</dd>
- <dd>
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd>The current element being processed in the array.</dd>
-  <dt><code><var>index</var></code> {{optional_inline}}</dt>
-  <dd>The index of <code><var>currentValue</var></code> in the array.</dd>
-  <dt><code><var>array</var></code> {{optional_inline}}</dt>
-  <dd>The array <code>forEach()</code> was called upon.</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
- <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
+	<dt><code><var>callback</var></code></dt>
+	<dd>Function to execute on each element. It accepts between one and three arguments:</dd>
+	<dd>
+	<dl>
+		<dt><code><var>currentValue</var></code></dt>
+		<dd>The current element being processed in the array.</dd>
+		<dt><code><var>index</var></code> {{optional_inline}}</dt>
+		<dd>The index of <code><var>currentValue</var></code> in the array.</dd>
+		<dt><code><var>array</var></code> {{optional_inline}}</dt>
+		<dd>The array <code>forEach()</code> was called upon.</dd>
+	</dl>
+	</dd>
+	<dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
+	<dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -51,9 +53,9 @@ tags:
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 
 <ol>
- <li>the value of the element</li>
- <li>the index of the element</li>
- <li>the Array object being traversed</li>
+	<li>the value of the element</li>
+	<li>the index of the element</li>
+	<li>the Array object being traversed</li>
 </ol>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value. The <code><var>thisArg</var></code> value ultimately observable by <code><var>callback</var></code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
@@ -70,12 +72,12 @@ tags:
 <p>Early termination may be accomplished with:</p>
 
 <ul>
- <li>A simple <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> / <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
+	<li>A simple <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop</li>
+	<li>A <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> / <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops</li>
+	<li>{{jsxref("Array.prototype.every()")}}</li>
+	<li>{{jsxref("Array.prototype.some()")}}</li>
+	<li>{{jsxref("Array.prototype.find()")}}</li>
+	<li>{{jsxref("Array.prototype.findIndex()")}}</li>
 </ul>
 
 <p>Array methods: {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}}, and {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the array elements with a predicate returning a truthy value to determine if further iteration is required.</p>
@@ -327,16 +329,16 @@ flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -350,12 +352,12 @@ flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.filter()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
+	<li>{{jsxref("Array.prototype.find()")}}</li>
+	<li>{{jsxref("Array.prototype.findIndex()")}}</li>
+	<li>{{jsxref("Array.prototype.map()")}}</li>
+	<li>{{jsxref("Array.prototype.filter()")}}</li>
+	<li>{{jsxref("Array.prototype.every()")}}</li>
+	<li>{{jsxref("Array.prototype.some()")}}</li>
+	<li>{{jsxref("Map.prototype.forEach()")}}</li>
+	<li>{{jsxref("Set.prototype.forEach()")}}</li>
 </ul>

@@ -14,19 +14,21 @@ tags:
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
-	<dt id="attr-class-id-style">class, id, style</dt>
-	<dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
-	<dt id="attr-href">href</dt>
-	<dd>Used to set a hyperlink to a specified URI.</dd>
-	<dt id="attr-mathbackground">mathbackground</dt>
-	<dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
-	<dt id="attr-mathcolor">mathcolor</dt>
-	<dd>The text color and also the fraction line color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dt id="attr-class-id-style">class, id, style</dt>
+ <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dt id="attr-displaystyle"><code>displaystyle</code></dt>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
+ <dt id="attr-href">href</dt>
+ <dd>Used to set a hyperlink to a specified URI.</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dt id="attr-mathcolor">mathcolor</dt>
+ <dd>The text color and also the fraction line color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;math&gt;
+<pre class="brush: html notranslate">&lt;math&gt;
 
 &lt;merror&gt;
   &lt;mrow&gt;
@@ -44,33 +46,36 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }}</td>
-			<td>{{ Spec2('MathML3') }}</td>
-			<td>Current specification</td>
-		</tr>
-		<tr>
-			<td>{{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }}</td>
-			<td>{{ Spec2('MathML2') }}</td>
-			<td>Initial specification</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("MathMLCore", "#error-message-merror", "merror")}}</td>
+   <td>{{Spec2("MathMLCore")}}</td>
+   <td>Draft specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }}</td>
+   <td>{{ Spec2('MathML3') }}</td>
+   <td>Current specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }}</td>
+   <td>{{ Spec2('MathML2') }}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p> </p>
+
 
 
 
 <p>{{Compat("mathml.elements.merror")}}</p>
-
-<p> </p>

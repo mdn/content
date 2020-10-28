@@ -14,13 +14,13 @@ tags:
   - Reset Button
   - reset
 ---
-<p>{{HTMLRef}}</p>
+<div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>"reset"</code></strong>  are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>reset</code></strong> are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div class="note">
 <p>You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the <a href="/en-US/docs/Web/HTML/Element/input/submit">submit button</a>).</p>
@@ -34,7 +34,7 @@ tags:
   </tr>
   <tr>
    <td><strong>Events</strong></td>
-   <td>{{event("click")}}</td>
+   <td>{{domxref("Element/click_event", "click")}}</td>
   </tr>
   <tr>
    <td><strong>Supported common attributes</strong></td>
@@ -56,7 +56,7 @@ tags:
 <p>An <code>&lt;input type="reset"&gt;</code> element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as <code>reset</code> don't have a value otherwise.</p>
 
 <div id="summary-example3">
-<pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="reset" value="Reset the form"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
@@ -64,7 +64,7 @@ tags:
 <p>If you don't specify a <code>value</code>, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):</p>
 
 <div id="summary-example1">
-<pre class="brush: html">&lt;input type="reset"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="reset"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
@@ -77,7 +77,7 @@ tags:
 
 <p>We'll begin by creating a simple reset button:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
     &lt;input id="example" type="text"&gt;
@@ -96,11 +96,11 @@ tags:
 
 <h3 id="Adding_a_reset_keyboard_shortcut">Adding a reset keyboard shortcut</h3>
 
-<p>To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.</p>
+<p>To add a keyboard shortcut to a reset button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.</p>
 
 <p>In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see {{htmlattrxref("accesskey")}} for a useful list of those).</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
     &lt;input id="example" type="text"&gt;
@@ -120,7 +120,7 @@ tags:
 <p>To disable a reset button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
 
 <div id="disable-example1">
-<pre class="brush: html">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
 </div>
 
 <p>You can enable and disable buttons at run time by simply setting <code>disabled</code> to <code>true</code> or <code>false</code>; in JavaScript this looks like <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
@@ -140,11 +140,13 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
-   <td>Specification</td>
-   <td>Status</td>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
@@ -166,9 +168,9 @@ tags:
 
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms_and_buttons">Forms and buttons</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons">Forms and buttons</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms (accessibility)</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
  <li>The {{HTMLElement("button")}} element</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

@@ -35,6 +35,27 @@ tags:
 
 <p>All descendents of {{jsxref("Object")}} inherit the <code>hasOwnProperty</code> method. This method can be used to determine whether an object has the specified property as a direct property of that object; unlike the {{jsxref("Operators/in", "in")}} operator, this method does not check for a property in the object's prototype chain. If an {{jsxref("Object")}} is an {{jsxref("Array")}}, <code>hasOwnProperty</code> method can check whether an index exists.</p>
 
+<h2 id="Polyfill">Polyfill</h2>
+
+<pre class="brush: js notranslate">;(function(hasOwnProp) { // IIFE with guarding semicolon
+  function hasOwnProperty(name) {
+    if (this == null) { throw new TypeError("Cannot convert undefined or null to object!") }
+    var O = Object(this), key = String(name);
+    var _proto = O.__proto__ || O.constructor.prototype || {}; // Object.prototype
+    return key in O &amp;&amp; ( !(key in _proto) || O[key] !== _proto[key] );
+  }
+  if (!hasOwnProp) {
+    try {
+      Object.defineProperty( Object.prototype, 'hasOwnProperty', {
+        enumerable: false, configurable: true, writable: true,
+        value: hasOwnProperty
+      });
+    } catch (e) { // Object.defineProperty isn't supported
+      Object.prototype['hasOwnProperty'] = hasOwnProperty;
+    }
+  }
+})(Object.prototype.hasOwnProperty);</pre>
+
 <h2 id="Note">Note</h2>
 
 <p><code>hasOwnProperty</code> returns true even if the value of the property is <code>null</code> or <code>undefined</code>.</p>

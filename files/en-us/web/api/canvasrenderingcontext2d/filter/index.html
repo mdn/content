@@ -85,14 +85,14 @@ ctx.fillText('Hello world', 50, 100);
 
 <h3 id="Applying_multiple_filters">Applying multiple filters</h3>
 
-<p>You can combine as many filters as you like. This example applies the <code>contrast</code>, <code>sepia</code>, and <code>drop-shadow</code> filters to a photo of a gecko.</p>
+<p>You can combine as many filters as you like. This example applies the <code>contrast</code>, <code>sepia</code>, and <code>drop-shadow</code> filters to a photo of a rhino.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
 &lt;div style="display:none;"&gt;
-  &lt;img id="source"
-       src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg"&gt;
+  &lt;img id="source"
+       src="https://mdn.mozillademos.org/files/5397/rhino.jpg"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
@@ -102,8 +102,12 @@ const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
 image.addEventListener('load', e =&gt; {
-  ctx.filter = 'contrast(1.4) sepia(1) drop-shadow(9px 9px 2px #e81)';
-  ctx.drawImage(image, 10, 10, 180, 120);
+  // Draw unfiltered image
+  ctx.drawImage(image, 0, 0, image.width * .6, image.height * .6);
+
+  // Draw image with filter
+  ctx.filter = 'contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)';
+  ctx.drawImage(image, 400, 0, -image.width * .6, image.height * .6);
 });</pre>
 
 <h4 id="Result_2">Result</h4>

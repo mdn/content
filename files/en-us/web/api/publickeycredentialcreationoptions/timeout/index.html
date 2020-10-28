@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>timeout </em>= <em>publicKeyCredentialCreationOptions</em>.timeout</pre>
+<pre class="syntaxbox notranslate"><em>timeout </em>= <em>publicKeyCredentialCreationOptions</em>.timeout</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,8 +29,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">var publicKey = {
-  timeout: 6000, // Accepting to wait for a minute before giving up.
+<pre class="brush: js notranslate">var publicKey = {
+  timeout: 60000, // Accepting to wait for a minute before giving up.
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",

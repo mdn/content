@@ -37,13 +37,15 @@ tags:
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>&lt;custom-property-name&gt;</code></dt>
- <dd>A custom property’s name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.</dd>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. <code>)</code>, <code>]</code>, or <code>}</code>, top-level semicolons, or exclamation marks.</dd>
+	<dt><code>&lt;custom-property-name&gt;</code></dt>
+	<dd>A custom property’s name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.</dd>
+	<dt><code>&lt;declaration-value&gt;</code></dt>
+	<dd>The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. <code>)</code>, <code>]</code>, or <code>}</code>, top-level semicolons, or exclamation marks.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="Using_a_custom_property_set_on_root">Using a custom property set on :root</h3>
 
 <pre class="brush: css notranslate">:root {
   --main-bg-color: pink;
@@ -53,6 +55,8 @@ body {
   background-color: var(--main-bg-color);
 }
 </pre>
+
+<h3 id="Custom_properties_with_fallbacks_for_use_when_the_property_has_not_been_set">Custom properties with fallbacks for use when the property has not been set</h3>
 
 <pre class="brush: css notranslate">/* Fallback */
 /* In the component’s style: */
@@ -73,20 +77,20 @@ body {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Variables', '#using-variables', 'var()')}}</td>
-   <td>{{Spec2('CSS3 Variables')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Variables', '#using-variables', 'var()')}}</td>
+			<td>{{Spec2('CSS3 Variables')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -98,6 +102,6 @@ body {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("env","env(…)")}} – read‑only environment variables controlled by the user‑agent.</li>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS variables</a></li>
+	<li>{{cssxref("env","env(…)")}} – read‑only environment variables controlled by the user‑agent.</li>
+	<li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS variables</a></li>
 </ul>

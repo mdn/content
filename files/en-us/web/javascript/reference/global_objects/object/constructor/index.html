@@ -56,68 +56,36 @@ console.log('theTree.constructor is ' + theTree.constructor)
 
 <h3 id="Changing_the_constructor_of_an_object">Changing the constructor of an object</h3>
 
-<p>The following example shows how to modify the constructor value of generic objects. Only <code>true</code>, <code>1</code>, and <code>"test"</code> will not be affected (as they have read-only native constructors).</p>
+<p>One can assign the <code>constructor</code> property for any value except <code>null</code> and <code>undefined</code> since those don't have a corresponding constructor function (like <code>String</code>, <code>Number</code>, <code>Boolean</code> etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except <code>null</code> and <code>undefined</code>) with no effect. namely wherenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.</p>
 
-<p>This example shows that it is not always safe to rely on the <code>constructor</code> property of an object.</p>
+<pre class="brush: js notranslate">let val = null;
+val.constructor = 1; //<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">var is null</span></span></span></span></span>
 
-<pre class="brush:js notranslate">function Type () {}
+<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val = 'abc';</span></span></span></span></span>
+<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.constructor = Number; //val.constructor === String</span></span></span></span></span>
 
-let types = [
-  new Array(),
-  [],
-  new Boolean(),
-  true,             // remains unchanged
-  new Date(),
-  new Error(),
-  new Function(),
-  function () {},
-  Math,
-  new Number(),
-  1,                // remains unchanged
-  new Object(),
-  {},
-  new RegExp(),
-  /(?:)/,
-  new String(),
-  'test'            // remains unchanged
-]
+<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.foo = 'bar';</span></span></span></span></span> //An implicit instance of <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">String('abc') was created and assigned the prop foo</span></span></span></span></span>
+<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property</span></span></span></span></span></pre>
 
-for (let i = 0; i &lt; types.length; i++) {
-  types[i].constructor = Type
-  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()]
-}
+<p>So basically one can change the value of the <code>constructor</code> property for anything, except the primitives mentioned above, <strong>note that changing the </strong><code>constructor</code><strong> property does not affect the instanceof operator</strong>:</p>
 
-console.log(types.join('\n'))
-</pre>
+<pre class="brush: js notranslate">let a = [];
+a.constructor = String
+a.constructor === String // true
+a instanceof String //false
+a instanceof Array //true
 
-<p>This example displays the following output (comments added for reference):</p>
+a = new Foo();
+a.constructor = 'bar'
+a.constructor === 'bar' // true
 
-<pre class="brush: js notranslate">function Type() {},false,                                     // new Array()
-function Type() {},false,                                     // []
-function Type() {},false,false                                // new Boolean()
-function Boolean() {
-    [native code]
-},false,true                                                  // true
-function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600    // new Date()
-function Type() {},false,Error                                // new Error()
-function Type() {},false,function anonymous() {
+//etc.</pre>
 
-}                                                             // new Function()
-function Type() {},false,function () {}                       // function () {}
-function Type() {},false,[object Math]                        // Math
-function Type() {},false,0                                    // new Number()
-function Number() {
-    [native code]
-},false,1                                                     // 1
-function Type() {},false,[object Object]                      // new Object()
-function Type() {},false,[object Object]                      // {}
-function Type() {},false,/(?:)/                               // new Regexp()
-function Type() {},false,/(?:)/                               // /(?:)/
-function Type() {},false,                                     // new String()
-function String() {
-    [native code]
-},false,test                                                  // 'test'
-</pre>
+<p>If the object is sealed/frozen then the change has no effect and no exception is thrown:</p>
+
+<pre class="brush: js notranslate">let a = Object.seal({});
+a.constructor = Number;
+a.constructor === Object; //true</pre>
 
 <h3 id="Changing_the_constructor_of_a_function">Changing the constructor of a function</h3>
 

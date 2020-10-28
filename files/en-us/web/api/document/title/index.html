@@ -21,10 +21,10 @@ tags:
 
 <p><var>docTitle</var> is a string containing the <var>document</var>'s title. If the title was overridden by setting <code>document.title</code>, it contains that value. Otherwise, it contains the title specified in the markup (see the {{Anch("Notes")}} below).</p>
 
-<pre class="syntaxbox notranslate"><em>document</em>.title = <em>newTitle</em>;
+<pre class="syntaxbox notranslate"><var>document</var>.title = <var>newTitle</var>;
 </pre>
 
-<p><code>newTitle</code> is the new title of the document. The assignment affects the return value of <code>document.title</code>, the title displayed for the document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the document (e.g. the content of the <code>&lt;title&gt;</code> element in an HTML document).</p>
+<p><code><var>newTitle</var></code> is the new title of the document. The assignment affects the return value of <code>document.title</code>, the title displayed for the document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the document (e.g. the content of the <code>&lt;title&gt;</code> element in an HTML document).</p>
 
 <h2 id="Example">Example</h2>
 
@@ -56,12 +56,14 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('HTML WHATWG','#document.title','document.title')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>

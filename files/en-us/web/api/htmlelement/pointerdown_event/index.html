@@ -37,7 +37,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.addEventListener('pointerdown', (event) =&gt; {
   console.log('Pointer down event');
@@ -45,7 +45,7 @@ para.addEventListener('pointerdown', (event) =&gt; {
 
 <p>Using the <code>onpointerdown</code> event handler property:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.onpointerdown = (event) =&gt; {
   console.log('Pointer down event');
@@ -58,6 +58,10 @@ para.onpointerdown = (event) =&gt; {
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#the-pointerdown-event')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
   </tr>
   <tr>
    <td>{{SpecName('Pointer Events', '#the-pointerdown-event')}}</td>

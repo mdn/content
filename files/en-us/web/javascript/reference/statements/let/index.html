@@ -31,6 +31,11 @@ tags:
  <dd>For each variable declared, you may optionally specify its initial value to any legal JavaScript expression.</dd>
 </dl>
 
+<p> Alternatively, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment </a>syntax can also be used to declare variables.</p>
+
+<pre class="syntaxbox notranslate">let <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
+/* This creates a variable with the name 'bar', which has a value of 10 */</pre>
+
 <h2 id="Description">Description</h2>
 
 <p><strong><code>let</code></strong> allows you to declare variables that are limited to the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which declares a variable globally, or locally to an entire function regardless of block scope. The other difference between {{jsxref("statements/var", "var")}} and <code>let</code> is that the latter is initialized to a value only when a <a href="#Temporal_dead_zone">parser evaluates it (see below)</a>.</p>

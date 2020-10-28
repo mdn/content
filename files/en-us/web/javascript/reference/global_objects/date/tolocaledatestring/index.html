@@ -16,17 +16,17 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>dateObj</var>.toLocaleDateString([<var>locales</var> [, <var>options</var>]])</pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.toLocaleDateString([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <p>The <code>locales</code> and <code>options</code> arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used. In implementations, which ignore the <code>locales</code> and <code>options</code> arguments, the locale used and the form of the string returned are entirely implementation dependent.</p>
 
-<p>See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> for details on these parameters and how to use them.</p>
+<p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor for details on these parameters and how to use them.</p>
 
 <p>The default value for each date-time component property is {{jsxref("undefined")}}, but if the <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code> properties are all {{jsxref("undefined")}}, then <code>year</code>, <code>month</code>, and <code>day</code> are assumed to be <code>"numeric"</code>.</p>
 
@@ -38,14 +38,13 @@ tags:
 
 <p>When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.</p>
 
-
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_toLocaleDateString">Using <code>toLocaleDateString()</code></h3>
+<h3 id="Using_toLocaleDateString">Using toLocaleDateString()</h3>
 
 <p>In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleDateString() without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -53,25 +52,25 @@ console.log(date.toLocaleDateString());
 // → "12/11/2012" if run in en-US locale with time zone America/Los_Angeles
 </pre>
 
-<h3 id="Checking_for_support_for_locales_and_options_arguments">Checking for support for <code>locales</code> and <code>options</code> arguments</h3>
+<h3 id="Checking_for_support_for_locales_and_options_arguments">Checking for support for locales and options arguments</h3>
 
 <p>The <code>locales</code> and <code>options</code> arguments are not supported in all browsers yet. To check whether an implementation supports them already, you can use the requirement that illegal language tags are rejected with a {{jsxref("RangeError")}} exception:</p>
 
-<pre class="brush: js">function toLocaleDateStringSupportsLocales() {
+<pre class="brush: js notranslate">function toLocaleDateStringSupportsLocales() {
   try {
     new Date().toLocaleDateString('i');
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name !== 'RangeError';
   }
-  return false;
+  return true;
 }
 </pre>
 
-<h3 id="Using_locales">Using <code>locales</code></h3>
+<h3 id="Using_locales">Using locales</h3>
 
 <p>This example shows some of the variations in localized date formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -107,11 +106,11 @@ console.log(date.toLocaleDateString(['ban', 'id']));
 // → "20/12/2012"
 </pre>
 
-<h3 id="Using_options">Using <code>options</code></h3>
+<h3 id="Using_options">Using options</h3>
 
 <p>The results provided by <code>toLocaleDateString()</code> can be customized using the <code>options</code> argument:</p>
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -122,16 +121,18 @@ console.log(date.toLocaleDateString('de-DE', options));
 options.timeZone = 'UTC';
 options.timeZoneName = 'short';
 console.log(date.toLocaleDateString('en-US', options));
-// → "Thursday, December 20, 2012, GMT"
+// → "Thursday, December 20, 2012, UTC"
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}</td>
   </tr>
@@ -143,7 +144,7 @@ console.log(date.toLocaleDateString('en-US', options));
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.toLocaleDateString")}}</p>
 

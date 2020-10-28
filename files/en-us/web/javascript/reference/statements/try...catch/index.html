@@ -20,7 +20,7 @@ tags:
 <pre class="syntaxbox notranslate">try {
   <em>try_statements</em>
 }
-[catch (<em>exception_var</em>) {
+[catch [(<em>exception_var</em>)] {
   <em>catch_statements</em>
 }]
 [finally {
@@ -31,21 +31,14 @@ tags:
 <dl>
  <dt><code><em>try_statements</em></code></dt>
  <dd>The statements to be executed.</dd>
-</dl>
 
-<dl>
  <dt><code><em>catch_statements</em></code></dt>
  <dd>Statement that is executed if an exception is thrown in the <code>try</code>-block.</dd>
-</dl>
 
-<dl>
  <dt><code><em>exception_var</em></code></dt>
- <dd>An identifier to hold an exception object for the associated <code>catch</code>-block.</dd>
-</dl>
+ <dd>An optional identifier to hold an exception object for the associated <code>catch</code>-block.</dd>
 
-<p><code><em>finally_statements</em></code></p>
-
-<dl>
+ <dt><code><em>finally_statements</em></code></dt>
  <dd>Statements that are executed after the <code>try</code> statement completes. These statements execute regardless of whether an exception was thrown or caught.</dd>
 </dl>
 
@@ -73,8 +66,7 @@ tags:
 
 <pre class="brush: js notranslate">try {
   throw 'myException'; // generates an exception
-}
-catch (e) {
+} catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler
 }
@@ -117,7 +109,7 @@ catch (e) {
 
 <h3 id="The_exception_identifier">The exception identifier</h3>
 
-<p>When an exception is thrown in the <code>try</code>-block, <em><code>exception_var</code></em> (i.e., the <code>e</code> in <code>catch (e)</code>) holds the exception value. You can use this identifier to get information about the exception that was thrown. This identifier is only available in the <code>catch</code>-block's {{Glossary("Scope", "scope")}}.</p>
+<p>When an exception is thrown in the <code>try</code>-block, <em><code>exception_var</code></em> (i.e., the <code>e</code> in <code>catch (e)</code>) holds the exception value. You can use this identifier to get information about the exception that was thrown. This identifier is only available in the <code>catch</code>-block's {{Glossary("Scope", "scope")}}. If you don't need the exception value, it could be omitted.</p>
 
 <pre class="brush: js notranslate">function isValidJSON(text) {
   try {
@@ -154,12 +146,10 @@ finally {
 <pre class="brush: js notranslate">try {
   try {
     throw new Error('oops');
-  }
-  finally {
+  } finally {
     console.log('finally');
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error('outer', ex.message);
 }
 
@@ -173,15 +163,12 @@ catch (ex) {
 <pre class="brush: js notranslate">try {
   try {
     throw new Error('oops');
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error('inner', ex.message);
-  }
-  finally {
+  } finally {
     console.log('finally');
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error('outer', ex.message);
 }
 
@@ -195,16 +182,13 @@ catch (ex) {
 <pre class="brush: js notranslate">try {
   try {
     throw new Error('oops');
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error('inner', ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log('finally');
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error('outer', ex.message);
 }
 
@@ -224,17 +208,14 @@ catch (ex) {
   try {
     try {
       throw new Error('oops');
-    }
-    catch (ex) {
+    } catch (ex) {
       console.error('inner', ex.message);
       throw ex;
-    }
-    finally {
+    } finally {
       console.log('finally');
       return;
     }
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error('outer', ex.message);
   }
 })();

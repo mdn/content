@@ -87,11 +87,28 @@ slug: Tools/Debugger/UI_Tour
 
 <p>The third column shows more information about the breakpoints. For example, the logpoint at line 85 logs the value of the tableRow variable to the console and the conditional breakpoint at line 100 breaks if the contents of the todoList is undefined.</p>
 
+<p>The source pane provides the following context menu options:</p>
+
+<p><img alt="Debugger Source Pane Context Menu v2" src="https://mdn.mozillademos.org/files/17412/firefox_source_pane_context_menu.jpg" style="height: 463px; width: 658px;"></p>
+
+<ul>
+ <li><strong>Jump to generated location</strong> is used when you have a sourcemap in a project and are currently viewing the original file. Selecting it takes you to the generated file where the selected item was placed.</li>
+ <li><strong>Continue to here</strong> causes the debugger to continue execution to the currently selected line (execution will stop before it gets there if there is a breakpoint "on the way").</li>
+ <li><strong>Copy to clipboard</strong> copies selected text in the pane into the system clipboard.</li>
+ <li><strong>Copy source text</strong> copies all text in the file into the clipboard.</li>
+ <li><strong>Copy source URI</strong> copies the file location into the clipboard.</li>
+ <li><strong>Download file</strong> opens a file dialog so you can save the file locally.</li>
+ <li><strong>Reveal in tree</strong> highlights the file in the source pane list hierarchy.</li>
+ <li><strong>Ignore source</strong> causes the debugger to skip the file when "stepping into" functions; this can be helpful for avoiding stepping into libraries used by your code.</li>
+ <li><strong>Show inline preview</strong> toggles the inline preview feature, which displays the value of the variable right next to the source when execution is paused.</li>
+ <li><strong>Wrap lines</strong>/<strong>Unwap lines</strong> toggles the wrapping of long lines in the pane.</li>
+</ul>
+
 <h2 id="Toolbar"><a name="toolbar">Toolbar</a></h2>
 
 <p>At the top of the right-hand pane, there's a toolbar:</p>
 
-<p><img alt="Screenshot of the Debugger toolbar, showing the Options menu" src="https://mdn.mozillademos.org/files/17327/debugger-toolbar-settings-Fx79.png" style="border-style: solid; border-width: 1px; display: block; height: 183px; margin-left: auto; margin-right: auto; width: 294px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/17413/debugger_toolbar_with_settings_menu_four_items.jpg" style="height: 253px; width: 373px;"></p>
 
 <p>The toolbar consists of:</p>
 
@@ -110,6 +127,7 @@ slug: Tools/Debugger/UI_Tour
   <ul>
    <li><strong>Disable JavaScript</strong>: disables JavaScript for this tab. This option enables you to see how your web page looks if the user has disabled JavaScript via an extension or a configuration setting. The setting is reset when the Developer Tools are closed (except in Firefox 77, see {{bug("1640318")}}).</li>
    <li><strong>Inline Variable Preview</strong>: enabled by default, this option displays variable values within the source pane when the debugger is paused.</li>
+   <li><strong>Wrap Lines</strong>: Toggles wrapping of long lines in the <a href="#Source_pane">source pane</a>.</li>
    <li><strong>Source Maps</strong>: enabled by default, this option directs the Debugger to load the original versions of files, and map them to the generated ones loaded in a page, to ease debugging of translformed sources. See <a href="/en-US/docs/Tools/Debugger/How_to/Use_a_source_map">Use a source map</a> for details.</li>
   </ul>
  </li>

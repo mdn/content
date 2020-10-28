@@ -10,25 +10,25 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>slice()</strong></code> method returns a new <code>ArrayBuffer</code> whose contents are a copy of this <code>ArrayBuffer</code>'s bytes from <code>begin</code>, inclusive, up to <code>end</code>, exclusive.</p>
+<p>The <strong><code>slice()</code></strong> method returns a new <code>ArrayBuffer</code> whose contents are a copy of this <code>ArrayBuffer</code>'s bytes from <code>begin</code>, inclusive, up to <code>end</code>, exclusive.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">arraybuffer.slice(<em>begin</em>[, <em>end</em>])</pre>
+<pre class="syntaxbox notranslate">arraybuffer.slice(<var>begin</var>[, <var>end</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>begin</code></dt>
+ <dt><code><var>begin</var></code></dt>
  <dd>Zero-based byte index at which to begin slicing.</dd>
 </dl>
 
 <dl>
- <dt><code>end</code> {{optional_inline}}</dt>
+ <dt><code><var>end</var></code> {{optional_inline}}</dt>
  <dd>Byte index before which to end slicing. If end is unspecified, the new <code>ArrayBuffer</code> contains all bytes from begin to the end of this <code>ArrayBuffer</code>.</dd>
 </dl>
 
@@ -44,9 +44,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Copying_an_ArrayBuffer">Copying an <code>ArrayBuffer</code></h3>
+<h3 id="Copying_an_ArrayBuffer">Copying an ArrayBuffer</h3>
 
-<pre class="brush: js">const buf1 = new ArrayBuffer(8);
+<pre class="brush: js notranslate">const buf1 = new ArrayBuffer(8);
 const buf2 = buf1.slice(0);
 </pre>
 

@@ -65,7 +65,7 @@ tags:
 
 <p>There is an ellipsis shown between the opening and closing tag of an element when the node is collapsed if it has larger contents. Now children are indicated in the tree with this icon: <img alt="" src="https://mdn.mozillademos.org/files/14925/child-node-indicator.png" style="height: 24px; width: 32px;"></p>
 
-<p>At the right side of some nodes there are markers shown indicating different pieces of information related to it:</p>
+<p>Markers ("badges") are displayed to the right of some nodes. The table below explains the meaning of each badge:</p>
 
 <table class="standard-table" id="node-markers">
  <tbody>
@@ -75,7 +75,17 @@ tags:
   </tr>
   <tr>
    <td><code>scroll</code></td>
-   <td>The element is a {{Glossary("scroll container")}}, i.e. it has <code>overflow: scroll</code> or <code>overflow: auto</code> applied to it, and it has scrollable overflow.</td>
+   <td>The element is a {{Glossary("scroll container")}}, i.e. it has either <code>overflow: scroll</code> applied, or <code>overflow: auto</code> and sufficient content to cause <a href="/en-US/docs/Web/CSS/CSS_Overflow">scrollable overflow</a>.<br>
+    <br>
+    If preference <code>devtools.overflow.debugging.enabled</code> is <code>true</code>, toggling the <code>scroll</code> badge will highlight any elements causing the overflow, and these nodes will additionally display the <code>overflow</code> badge.</td>
+  </tr>
+  <tr>
+   <td><code>overflow</code></td>
+   <td>The element is causing <a href="/en-US/docs/Web/CSS/CSS_Overflow">scrollable overflow</a> in a {{Glossary("scroll container")}} (either the current node or a parent node—the affected node will display the <code>scroll</code> badge).
+    <div class="note">
+    <p><strong>Note</strong>: The <code>overflow</code> badge is introduced in Firefox 83. In earlier versions it can be enabled using the preference <code>devtools.overflow.debugging.enabled</code> is <code>true</code>.</p>
+    </div>
+   </td>
   </tr>
   <tr>
    <td><code>grid</code></td>

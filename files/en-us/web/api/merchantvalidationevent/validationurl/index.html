@@ -15,7 +15,7 @@ tags:
   - Reference
   - validationURL
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
 <p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} property <strong><code>validationURL</code></strong> is a read-only string value providing the URL from which to fetch the payment handler-specific data needed to validate the merchant.</span></p>
 
@@ -23,30 +23,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>validationURL</em> = <em>merchantValidationEvent</em>.validationURL;</pre>
+<pre class="syntaxbox notranslate"><em>validationURL</em> = <em>merchantValidationEvent</em>.validationURL;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A read-only {{domxref("USVString")}} giving the URL from which to load payment handler specific data needed to complete the merchant verification process. Once this has been loaded, it should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}}, either directly or using a promise.</p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for more information on the merchant validation process.</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-merchantvalidationeventinit-validationurl','MerchantValidationEvent.validationURL')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

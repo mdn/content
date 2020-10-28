@@ -37,11 +37,11 @@ tags:
 <p>This <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">cross-origin sharing standard</a> can enable cross-site HTTP requests for:</p>
 
 <ul>
-	<li>Invocations of the {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch APIs</a>, as discussed above.</li>
-	<li>Web Fonts (for cross-domain font usage in <code>@font-face</code> within CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.</a></li>
-	<li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>.</li>
-	<li>Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.</li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">CSS Shapes from images.</a></li>
+ <li>Invocations of the {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch APIs</a>, as discussed above.</li>
+ <li>Web Fonts (for cross-domain font usage in <code>@font-face</code> within CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.</a></li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>.</li>
+ <li>Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">CSS Shapes from images.</a></li>
 </ul>
 
 <p>This article is a general discussion of Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.</p>
@@ -65,35 +65,35 @@ tags:
 <p>Some requests don’t trigger a <a href="#Preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
 
 <ul>
-	<li>One of the allowed methods:
-	<ul>
-		<li>{{HTTPMethod("GET")}}</li>
-		<li>{{HTTPMethod("HEAD")}}</li>
-		<li>{{HTTPMethod("POST")}}</li>
-	</ul>
-	</li>
-	<li>Apart from the headers automatically set by the user agent (for example, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, or <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">the other headers defined in the Fetch spec as a “forbidden header name”</a>), the only headers which are allowed to be manually set are <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">those which the Fetch spec defines as a “CORS-safelisted request-header”</a>, which are:
-	<ul>
-		<li>{{HTTPHeader("Accept")}}</li>
-		<li>{{HTTPHeader("Accept-Language")}}</li>
-		<li>{{HTTPHeader("Content-Language")}}</li>
-		<li>{{HTTPHeader("Content-Type")}} (but note the additional requirements below)</li>
-		<li><code><a href="http://httpwg.org/http-extensions/client-hints.html#dpr">DPR</a></code></li>
-		<li>{{HTTPHeader("Downlink")}}</li>
-		<li><code><a href="http://httpwg.org/http-extensions/client-hints.html#save-data">Save-Data</a></code></li>
-		<li><code><a href="http://httpwg.org/http-extensions/client-hints.html#viewport-width">Viewport-Width</a></code></li>
-		<li><code><a href="http://httpwg.org/http-extensions/client-hints.html#width">Width</a></code></li>
-	</ul>
-	</li>
-	<li>The only allowed values for the {{HTTPHeader("Content-Type")}} header are:
-	<ul>
-		<li><code>application/x-www-form-urlencoded</code></li>
-		<li><code>multipart/form-data</code></li>
-		<li><code>text/plain</code></li>
-	</ul>
-	</li>
-	<li>No event listeners are registered on any {{domxref("XMLHttpRequestUpload")}} object used in the request; these are accessed using the {{domxref("XMLHttpRequest.upload")}} property.</li>
-	<li>No {{domxref("ReadableStream")}} object is used in the request.</li>
+ <li>One of the allowed methods:
+  <ul>
+   <li>{{HTTPMethod("GET")}}</li>
+   <li>{{HTTPMethod("HEAD")}}</li>
+   <li>{{HTTPMethod("POST")}}</li>
+  </ul>
+ </li>
+ <li>Apart from the headers automatically set by the user agent (for example, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, or <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">the other headers defined in the Fetch spec as a “forbidden header name”</a>), the only headers which are allowed to be manually set are <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">those which the Fetch spec defines as a “CORS-safelisted request-header”</a>, which are:
+  <ul>
+   <li>{{HTTPHeader("Accept")}}</li>
+   <li>{{HTTPHeader("Accept-Language")}}</li>
+   <li>{{HTTPHeader("Content-Language")}}</li>
+   <li>{{HTTPHeader("Content-Type")}} (but note the additional requirements below)</li>
+   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#dpr">DPR</a></code></li>
+   <li>{{HTTPHeader("Downlink")}}</li>
+   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#save-data">Save-Data</a></code></li>
+   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#viewport-width">Viewport-Width</a></code></li>
+   <li><code><a href="http://httpwg.org/http-extensions/client-hints.html#width">Width</a></code></li>
+  </ul>
+ </li>
+ <li>The only allowed values for the {{HTTPHeader("Content-Type")}} header are:
+  <ul>
+   <li><code>application/x-www-form-urlencoded</code></li>
+   <li><code>multipart/form-data</code></li>
+   <li><code>text/plain</code></li>
+  </ul>
+ </li>
+ <li>No event listeners are registered on any {{domxref("XMLHttpRequestUpload")}} object used in the request; these are accessed using the {{domxref("XMLHttpRequest.upload")}} property.</li>
+ <li>No {{domxref("ReadableStream")}} object is used in the request.</li>
 </ul>
 
 <div class="note"><strong>Note:</strong> These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.</div>
@@ -102,9 +102,9 @@ tags:
 <p><strong>Note:</strong> WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have ”nonstandard” values, WebKit/Safari does not consider the request to be a “simple request”. What values WebKit/Safari consider “nonstandard” is not documented, except in the following WebKit bugs:</p>
 
 <ul>
-	<li><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></li>
-	<li><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></li>
-	<li><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></li>
+ <li><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></li>
+ <li><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></li>
+ <li><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></li>
 </ul>
 
 <p>No other browsers implement these extra restrictions, because they’re not part of the spec.</p>
@@ -275,15 +275,15 @@ Access-Control-Max-Age: 86400</pre>
 <p>Until browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:</p>
 
 <ul>
-	<li>Change the server-side behavior to avoid the preflight and/or to avoid the redirect</li>
-	<li>Change the request such that it is a <a href="#Simple_requests">simple request</a> that doesn’t cause a preflight</li>
+ <li>Change the server-side behavior to avoid the preflight and/or to avoid the redirect</li>
+ <li>Change the request such that it is a <a href="#Simple_requests">simple request</a> that doesn’t cause a preflight</li>
 </ul>
 
 <p>If that's not possible, then another way is to:</p>
 
 <ol>
-	<li>Make a <a href="#Simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
-	<li>Make another request (the “real” request) using the URL you obtained from <code>Response.url</code> or <code>XMLHttpRequest.responseURL</code> in the first step.</li>
+ <li>Make a <a href="#Simple_requests">simple request</a> (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.</li>
+ <li>Make another request (the “real” request) using the URL you obtained from <code>Response.url</code> or <code>XMLHttpRequest.responseURL</code> in the first step.</li>
 </ol>
 
 <p>However, if the request is one that triggers a preflight due to the presence of the <code>Authorization</code> header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.</p>
@@ -379,7 +379,7 @@ Vary: Origin</pre>
 
 <h3 id="Access-Control-Expose-Headers">Access-Control-Expose-Headers</h3>
 
-<p>The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that browsers are allowed to access.</p>
+<p>The {{HTTPHeader("Access-Control-Expose-Headers")}} header lets a server whitelist headers that Javascript (such as {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}) in browsers are allowed to access.</p>
 
 <pre class="brush: none notranslate">Access-Control-Expose-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
@@ -463,18 +463,18 @@ Vary: Origin</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Fetch', '#cors-protocol', 'CORS')}}</td>
-			<td>{{Spec2('Fetch')}}</td>
-			<td>New definition; supplants <a href="https://www.w3.org/TR/cors/">W3C CORS</a> specification.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch', '#cors-protocol', 'CORS')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>New definition; supplants <a href="https://www.w3.org/TR/cors/">W3C CORS</a> specification.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -490,18 +490,18 @@ Vary: Origin</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
-	<li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
-	<li>{{domxref("XMLHttpRequest")}}</li>
-	<li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-	<li><a href="https://httptoolkit.tech/will-it-cors">Will it CORS?</a> - an interactive CORS explainer &amp; generator</li>
-	<li><a href="https://www.telerik.com/blogs/using-cors-with-all-modern-browsers">Using CORS with All (Modern) Browsers</a></li>
-	<li><a href="https://alfilatov.com/posts/run-chrome-without-cors/">How to run Chrome browser without CORS</a></li>
-	<li><a href="https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141">Stack Overflow answer with “how to” info for dealing with common problems</a>:
-	<ul>
-		<li>How to avoid the CORS preflight</li>
-		<li>How to use a CORS proxy to get around <em>“No Access-Control-Allow-Origin header”</em></li>
-		<li>How to fix <em>“Access-Control-Allow-Origin header must not be the wildcard”</em></li>
-	</ul>
-	</li>
+ <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
+ <li><a href="https://enable-cors.org/server.html">Enable CORS: I want to add CORS support to my server</a></li>
+ <li>{{domxref("XMLHttpRequest")}}</li>
+ <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
+ <li><a href="https://httptoolkit.tech/will-it-cors">Will it CORS?</a> - an interactive CORS explainer &amp; generator</li>
+ <li><a href="https://www.telerik.com/blogs/using-cors-with-all-modern-browsers">Using CORS with All (Modern) Browsers</a></li>
+ <li><a href="https://alfilatov.com/posts/run-chrome-without-cors/">How to run Chrome browser without CORS</a></li>
+ <li><a href="https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141">Stack Overflow answer with “how to” info for dealing with common problems</a>:
+  <ul>
+   <li>How to avoid the CORS preflight</li>
+   <li>How to use a CORS proxy to get around <em>“No Access-Control-Allow-Origin header”</em></li>
+   <li>How to fix <em>“Access-Control-Allow-Origin header must not be the wildcard”</em></li>
+  </ul>
+ </li>
 </ul>

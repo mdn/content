@@ -87,6 +87,8 @@ tags:
  <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#Variable_scope">Variable scope</a> below.)</li>
 </ul>
 
+<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
+
 <p>You can also simply assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#Description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
 
 <h3 id="Evaluating_variables">Evaluating variables</h3>

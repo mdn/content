@@ -4,7 +4,7 @@ slug: Web/API/HTMLElement/accessKeyLabel
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>The <strong><code>HTMLElement.accessKeyLabel</code></strong> read-only property returns a {{jsxref("String")}} that represents the element's assigned access key (if any); otherwise it returns an empty string.</p>
+<p><span class="seoSummary">The <strong><code>HTMLElement.accessKeyLabel</code></strong> read-only property returns a {{jsxref("String")}} containing the element's browser-assigned access key (if any); otherwise it returns an empty string.</span></p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -15,17 +15,14 @@ slug: Web/API/HTMLElement/accessKeyLabel
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var node = document.getElementById('btn1');
-if (node.accessKeyLabel) {
-  node.title += ' [' + node.accessKeyLabel + ']';
-} else {
-  node.title += ' [' + node.accessKey + ']';
-}
+<pre class="brush: js notranslate">var btn = document.getElementById('btn1');
+var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
+btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
 
-node.onclick = function () {
-  var p = document.createElement('p');
-  p.textContent = 'Clicked!';
-  node.parentNode.appendChild(p);
+btn.onclick = function () {
+  var feedback = document.createElement('output');
+  feedback.textContent = 'Pressed!';
+  btn.insertAdjacentElement('afterend', feedback);
 };
 </pre>
 

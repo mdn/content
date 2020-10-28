@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>for...in</code> statement</strong> iterates over all <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">enumerable properties</a> of an object that are keyed by strings (ignoring ones keyed by <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>s), including inherited enumerable properties.</p>
+<p>The <strong><code>for...in</code> statement</strong> iterates over all <a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">enumerable properties</a> of an object that are keyed by strings (ignoring ones keyed by <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>s), including inherited enumerable properties.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-forin.html")}}</div>
 
@@ -20,15 +20,15 @@ tags:
   statement</pre>
 
 <dl>
- <dt><code>variable</code></dt>
- <dd>A different property name is assigned to <em>variable</em> on each iteration.</dd>
- <dt><code>object</code></dt>
+ <dt><code><var>variable</var></code></dt>
+ <dd>A different property name is assigned to <code><var>variable</var></code> on each iteration.</dd>
+ <dt><code><var>object</var></code></dt>
  <dd>Object whose non-Symbol enumerable properties are iterated over.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>A <code>for...in</code> loop only iterates over enumerable, non-Symbol properties. Objects created from built–in constructors like <code>Array</code> and <code>Object</code> have inherited non–enumerable properties from <code>Object.prototype</code> and <code>String.prototype</code>, such as {{jsxref("String")}}'s {{jsxref("String.indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object.toString", "toString()")}} method. The loop will iterate over all enumerable properties of the object itself and those the object inherits from its prototype chain (properties of nearer prototypes take precedence over those of prototypes further away from the object in its prototype chain).</p>
+<p>A <code>for...in</code> loop only iterates over enumerable, non-Symbol properties. Objects created from built–in constructors like <code>Array</code> and <code>Object</code> have inherited non–enumerable properties from <code>Object.prototype</code> and <code>String.prototype</code>, such as {{jsxref("String")}}'s {{jsxref("String.indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object.toString", "toString()")}} method. The loop will iterate over all enumerable properties of the object itself and those the object inherits from its prototype chain (properties of nearer prototypes take precedence over those of prototypes further away from the object in its prototype chain).</p>
 
 <h3 id="Deleted_added_or_modified_properties">Deleted, added, or modified properties</h3>
 
@@ -44,7 +44,7 @@ tags:
 <p><strong>Note:</strong> <code>for...in</code> should not be used to iterate over an {{jsxref("Array")}} where the index order is important.</p>
 </div>
 
-<p>Array indexes are just enumerable properties with integer names and are otherwise identical to general object properties. There is no guarantee that <code>for...in</code> will return the indexes in any particular order. The <code>for...in</code> loop statement will return all enumerable properties, including those with non–integer names and those that are inherited.</p>
+<p>Array indexes are just enumerable properties with integer names and are otherwise identical to general object properties. There is no guarantee that <code>for...in</code> will return the indexes in any particular order. The <code>for...in</code> loop statement will return all enumerable properties, including those with non–integer names and those that are inherited.</p>
 
 <p>Because the order of iteration is implementation-dependent, iterating over an array may not visit elements in a consistent order. Therefore, it is better to use a {{jsxref("Statements/for", "for")}} loop with a numeric index (or {{jsxref("Array.prototype.forEach()")}} or the {{jsxref("Statements/for...of", "for...of")}} loop) when iterating over arrays where the order of access is important.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Using_for...in">Using for...in</h3>
 
-<p>The <code>for...in</code> loop below iterates over all of the object's enumerable, non-Symbol properties and logs a string of the property names and their values.</p>
+<p>The <code>for...in</code> loop below iterates over all of the object's enumerable, non-Symbol properties and logs a string of the property names and their values.</p>
 
 <pre class="brush: js notranslate">var obj = {a: 1, b: 2, c: 3};
 
@@ -131,7 +131,7 @@ for (var i = 0 in obj) {
 // 3
 </pre>
 
-<p>This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>") error in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=748550">bug 748550</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1164741">bug 1164741</a>).</p>
+<p>This nonstandard behavior is now ignored in version 40 and later, and will present a {{jsxref("SyntaxError")}} ("<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>") error in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=748550">bug 748550</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1164741">bug 1164741</a>).</p>
 
 <p>Other engines such as v8 (Chrome), Chakra (IE/Edge), and JSC (WebKit/Safari) are investigating whether to remove the nonstandard behavior as well.</p>
 

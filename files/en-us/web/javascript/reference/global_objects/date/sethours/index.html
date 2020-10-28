@@ -14,27 +14,27 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-sethours.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</pre>
 
 <h3 id="Versions_prior_to_JavaScript_1.3">Versions prior to JavaScript 1.3</h3>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setHours(<var>hoursValue</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setHours(<var>hoursValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>hoursValue</code></dt>
+ <dt><code><var>hoursValue</var></code></dt>
  <dd>Ideally, an integer between 0 and 23, representing the hour. If a value greater than 23 is provided, the datetime will be incremented by the extra hours.</dd>
- <dt><code>minutesValue</code></dt>
+ <dt><code><var>minutesValue</var></code></dt>
  <dd>Optional. Ideally, an integer between 0 and 59, representing the minutes. If a value greater than 59 is provided, the datetime will be incremented by the extra minutes.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>Optional. Ideally, an integer between 0 and 59, representing the seconds. If a value greater than 59 is provided, the datetime will be incremented by the extra seconds. If you specify the <code>secondsValue</code> parameter, you must also specify the <code>minutesValue</code>.</dd>
- <dt><code>msValue</code></dt>
- <dd>Optional. Ideally, a number between 0 and 999, representing the milliseconds. If a value greater than 999 is provided, the datetime will be incremented by the extra milliseconds. If you specify the <code>msValue</code> parameter, you must also specify the <code>minutesValue</code> and <code>secondsValue</code>.</dd>
+ <dt><code><var>secondsValue</var></code></dt>
+ <dd>Optional. Ideally, an integer between 0 and 59, representing the seconds. If a value greater than 59 is provided, the datetime will be incremented by the extra seconds. If you specify the <code><var>secondsValue</var></code> parameter, you must also specify the <code><var>minutesValue</var></code>.</dd>
+ <dt><code><var>msValue</var></code></dt>
+ <dd>Optional. Ideally, a number between 0 and 999, representing the milliseconds. If a value greater than 999 is provided, the datetime will be incremented by the extra milliseconds. If you specify the <code><var>msValue</var></code> parameter, you must also specify the <code><var>minutesValue</var></code> and <code>secondsValue</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -43,25 +43,27 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>If you do not specify the <code>minutesValue</code>, <code>secondsValue</code>, and <code>msValue</code> parameters, the values returned from the {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}, and {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} methods are used.</p>
+<p>If you do not specify the <code><var>minutesValue</var></code>, <code><var>secondsValue</var></code>, and <code><var>msValue</var></code> parameters, the values returned from the {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}, {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}, and {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} methods are used.</p>
 
-<p>If a parameter you specify is outside of the expected range, <code>setHours()</code> attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for <code>secondsValue</code>, the minutes will be incremented by 1 (<code>minutesValue + 1</code>), and 40 will be used for seconds.</p>
+<p>If a parameter you specify is outside of the expected range, <code>setHours()</code> attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for <code><var>secondsValue</var></code>, the minutes will be incremented by 1 (<code><var>minutesValue</var> + 1</code>), and 40 will be used for seconds.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_setHours">Using <code>setHours()</code></h3>
+<h3 id="Using_setHours">Using setHours()</h3>
 
-<pre class="brush:js">var theBigDay = new Date();
+<pre class="brush: js notranslate">var theBigDay = new Date();
 theBigDay.setHours(7);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}}</td>
   </tr>
@@ -70,7 +72,7 @@ theBigDay.setHours(7);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.setHours")}}</p>
 

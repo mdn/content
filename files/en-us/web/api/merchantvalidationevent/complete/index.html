@@ -14,13 +14,13 @@ tags:
   - Reference
   - complete
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
 <p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} method <code><strong>complete()</strong></code> takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.</span> All you have to do is call <code>complete()</code> from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the <code>validationURL</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>merchantValidationEvent</em>.complete(<em>validationData</em>);
+<pre class="syntaxbox notranslate"><em>merchantValidationEvent</em>.complete(<em>validationData</em>);
 <em>merchantValidationEvent</em>.complete(<em>merchantSessionPromise</em>);
 </pre>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>In this example, we see the client-side code needed to support merchant validation for a payment request called <code>payRequest</code>:</p>
 
-<pre class="brush: js">payRequest.onmerchantvalidation = event =&gt; {
+<pre class="brush: js notranslate">payRequest.onmerchantvalidation = event =&gt; {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
 }
@@ -59,23 +59,6 @@ function getValidationData(url) {
 </pre>
 
 <p>This code sets up a handler for the {{event("merchantvalidation")}} event. The event handler calls a function, <code>getValidationData()</code>, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into <code>complete()</code>.</p>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-merchantvalidationevent-complete','MerchantValidationEvent.complete()')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

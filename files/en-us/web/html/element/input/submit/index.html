@@ -16,12 +16,12 @@ tags:
   - submit
   - submit button
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>submit</code></strong> are rendered as buttons. When the {{event("click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>submit</code></strong> are rendered as buttons. When the {{domxref("Element/click_event", "click")}} event occurs (typically because the user clicked the button), the {{Glossary("user agent")}} attempts to submit the form to the server.</span></p>
 
 <div id="summary-example2">
-<pre class="brush: html">&lt;input type="submit" value="Send Request"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="submit" value="Send Request"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example2", 650, 30)}}</p>
@@ -56,7 +56,7 @@ tags:
 <p>An <code>&lt;input type="submit"&gt;</code> element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is displayed as the button's label. Buttons do not have a true value otherwise.</p>
 
 <div id="summary-example3">
-<pre class="brush: html">&lt;input type="submit" value="Send Request"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="submit" value="Send Request"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
@@ -64,7 +64,7 @@ tags:
 <p>If you don't specify a <code>value</code>, the button will have a default label, chosen by the user agent. This label is likely to be something along the lines of "Submit" or "Submit Query." Here's an example of a submit button with a default label in your browser:</p>
 
 <div id="summary-example1">
-<pre class="brush: html">&lt;input type="submit"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="submit"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
@@ -177,7 +177,7 @@ tags:
 
 <p>We'll begin by creating a form with a simple submit button:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Let's submit some text&lt;/label&gt;
     &lt;input id="example" type="text" name="text"&gt;
@@ -204,7 +204,7 @@ tags:
 
 <p>Here's the previous example with the <kbd>s</kbd> access key added:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Let's submit some text&lt;/label&gt;
     &lt;input id="example" type="text" name="text"&gt;
@@ -226,7 +226,7 @@ tags:
 <p>To disable a submit button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
 
 <div id="disable-example1">
-<pre class="brush: html">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
+<pre class="brush: html notranslate">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
 </div>
 
 <p>You can enable and disable buttons at run time by simply setting <code>disabled</code> to <code>true</code> or <code>false</code>; in JavaScript this looks like <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
@@ -250,7 +250,7 @@ tags:
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
-   <th scope="col">Comments</th>
+   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
@@ -277,9 +277,9 @@ tags:
 
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms_and_buttons">Forms and buttons</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons">Forms and buttons</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms (accessibility)</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
  <li>The {{HTMLElement("button")}} element</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

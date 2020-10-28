@@ -302,7 +302,7 @@ console.log(b.a); // print 5
 delete b.a;
 console.log(a.a); // print 1
 console.log(b.a); // print 1(b.a value 5 is deleted but it showing value from its prototype chain)
-delete a.a;
+delete a.a;       // This can also be done via 'delete b.__proto__.a'
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
@@ -385,17 +385,17 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 <p>Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting <code>inst</code> object (thus logging the same results to the console), except in different ways for the purpose of illustration.</p>
 
 <table class="standard-table" style="text-align: top;">
- <tbody>
-  <tr>
-   <td style="width: 1%;">Name</td>
-   <td style="vertical-align: top; width: 1%;">Example(s)</td>
-   <td style="vertical-align: top;">Pro(s)</td>
-   <td style="vertical-align: top; width: 60%;">Con(s)</td>
-  </tr>
-  <tr>
-   <td>New-initialization</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+	<tbody>
+		<tr>
+			<td style="width: 1%;">Name</td>
+			<td style="vertical-align: top; width: 1%;">Example(s)</td>
+			<td style="vertical-align: top;">Pro(s)</td>
+			<td style="vertical-align: top; width: 60%;">Con(s)</td>
+		</tr>
+		<tr>
+			<td>New-initialization</td>
+			<td style="vertical-align: top;">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -408,14 +408,14 @@ var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
-   </td>
-   <td style="vertical-align: top;">Supported in every browser imaginable (support goes all the way back to IE 5.5!). Also, it is very fast, very standard, and very JIT-optimizable.</td>
-   <td style="vertical-align: top;">In order to use this method, the function in question must be initialized. During this initialization, the constructor may store unique information that must be generated per-object. However, this unique information would only be generated once, potentially leading to problems. Additionally, the initialization of the constructor may put unwanted methods onto the object. However, both these are generally not problems at all (in fact, usually beneficial) if it is all your own code and you know what does what where.</td>
-  </tr>
-  <tr>
-   <td>Object.create</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+			</td>
+			<td style="vertical-align: top;">Supported in every browser imaginable (support goes all the way back to IE 5.5!). Also, it is very fast, very standard, and very JIT-optimizable.</td>
+			<td style="vertical-align: top;">In order to use this method, the function in question must be initialized. During this initialization, the constructor may store unique information that must be generated per-object. However, this unique information would only be generated once, potentially leading to problems. Additionally, the initialization of the constructor may put unwanted methods onto the object. However, both these are generally not problems at all (in fact, usually beneficial) if it is all your own code and you know what does what where.</td>
+		</tr>
+		<tr>
+			<td>Object.create</td>
+			<td style="vertical-align: top;">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -431,7 +431,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -449,16 +449,16 @@ bar.prototype = proto;
 var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the direct setting of __proto__ in a way that is one-time-only so that the browser can better optimize the object. Also allows the creation of objects without a prototype via <code>Object.create(null)</code>.</td>
-   <td style="vertical-align: top;">Not supported in IE8 and below. However, as Microsoft has discontinued extended support for systems running these old browsers, this should not be a concern for most applications. Additionally, the slow object initialization can be a performance black hole if using the second argument because each object-descriptor property has its own separate descriptor object. When dealing with hundreds of thousands of object descriptors in the form of object, there can arise a serious issue with lag.</td>
-  </tr>
-  <tr>
-   <td>
-    <p>Object.setPrototypeOf</p>
-   </td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+			</td>
+			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the direct setting of __proto__ in a way that is one-time-only so that the browser can better optimize the object. Also allows the creation of objects without a prototype via <code>Object.create(null)</code>.</td>
+			<td style="vertical-align: top;">Not supported in IE8 and below. However, as Microsoft has discontinued extended support for systems running these old browsers, this should not be a concern for most applications. Additionally, the slow object initialization can be a performance black hole if using the second argument because each object-descriptor property has its own separate descriptor object. When dealing with hundreds of thousands of object descriptors in the form of object, there can arise a serious issue with lag.</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Object.setPrototypeOf</p>
+			</td>
+			<td style="vertical-align: top;">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -476,7 +476,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -491,14 +491,14 @@ bar.prototype = proto;
 var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the dynamic manipulation of an objects prototype and can even force a prototype on a prototype-less object created with <code>Object.create(null)</code>.</td>
-   <td style="vertical-align: top;">Should-be-deprecated and ill-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE8 and below.</td>
-  </tr>
-  <tr>
-   <td>__proto__</td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+			</td>
+			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the dynamic manipulation of an objects prototype and can even force a prototype on a prototype-less object created with <code>Object.create(null)</code>.</td>
+			<td style="vertical-align: top;">Should-be-deprecated and ill-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE8 and below.</td>
+		</tr>
+		<tr>
+			<td>__proto__</td>
+			<td style="vertical-align: top;">
+			<pre class="brush: js notranslate">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -514,7 +514,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+			<pre class="brush: js notranslate">
 var inst = {
   __proto__: {
     bar_prop: "bar val",
@@ -526,11 +526,11 @@ var inst = {
 };
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE11 and up. Setting __proto__ to something that is not an object only fails silently. It does not throw an exception.</td>
-   <td style="vertical-align: top;">Grossly deprecated and non-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE10 and below.</td>
-  </tr>
- </tbody>
+			</td>
+			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE11 and up. Setting __proto__ to something that is not an object only fails silently. It does not throw an exception.</td>
+			<td style="vertical-align: top;">Grossly deprecated and non-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE10 and below.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="prototype_and_Object.getPrototypeOf"><code>prototype</code> and <code>Object.getPrototypeOf</code></h2>

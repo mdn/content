@@ -21,9 +21,9 @@ tags:
 <p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function" title="function"><code>function</code></a> keyword, followed by:</p>
 
 <ul>
- <li>The name of the function.</li>
- <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
- <li>The JavaScript statements that define the function, enclosed in curly brackets, <code>{...}</code>.</li>
+	<li>The name of the function.</li>
+	<li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+	<li>The JavaScript statements that define the function, enclosed in curly brackets, <code>{...}</code>.</li>
 </ul>
 
 <p>For example, the following code defines a simple function named <code>square</code>:</p>
@@ -147,7 +147,7 @@ const square = function(n) {
 </pre>
 </div>
 
-<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>show_props()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
+<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
 
 <p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
 
@@ -213,9 +213,9 @@ getScore(); // Returns "Chamahk scored 5"
 <p>A function can refer to and call itself. There are three ways for a function to refer to itself:</p>
 
 <ol>
- <li>The function's name</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code></li>
- <li>An in-scope variable that refers to the function</li>
+	<li>The function's name</li>
+	<li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code></li>
+	<li>An in-scope variable that refers to the function</li>
 </ol>
 
 <p>For example, consider the following function definition:</p>
@@ -228,9 +228,9 @@ getScore(); // Returns "Chamahk scored 5"
 <p>Within the function body, the following are all equivalent:</p>
 
 <ol>
- <li><code>bar()</code></li>
- <li><code>arguments.callee()</code></li>
- <li><code>foo()</code></li>
+	<li><code>bar()</code></li>
+	<li><code>arguments.callee()</code></li>
+	<li><code>foo()</code></li>
 </ol>
 
 <p>A function that calls itself is called a <em>recursive function</em>. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).</p>
@@ -304,11 +304,11 @@ foo(3);
 <p>To summarize:</p>
 
 <ul>
- <li>The inner function can be accessed only from statements in the outer function.</li>
+	<li>The inner function can be accessed only from statements in the outer function.</li>
 </ul>
 
 <ul>
- <li>The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.</li>
+	<li>The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.</li>
 </ul>
 
 <p>The following example shows nested functions:</p>
@@ -350,9 +350,9 @@ result1 = outside(3)(5); // returns 8
 <p>Functions can be multiply-nested.  For example:</p>
 
 <ul>
- <li>A function (<code>A</code>) contains a function (<code>B</code>), which itself contains a function (<code>C</code>).</li>
- <li>Both functions <code>B</code> and <code>C</code> form closures here. So, <code>B</code> can access <code>A</code>, and <code>C</code> can access <code>B</code>.</li>
- <li>In addition, since <code>C</code> can access <code>B</code> which can access <code>A</code>, <code>C</code> can also access <code>A</code>.</li>
+	<li>A function (<code>A</code>) contains a function (<code>B</code>), which itself contains a function (<code>C</code>).</li>
+	<li>Both functions <code>B</code> and <code>C</code> form closures here. So, <code>B</code> can access <code>A</code>, and <code>C</code> can access <code>B</code>.</li>
+	<li>In addition, since <code>C</code> can access <code>B</code> which can access <code>A</code>, <code>C</code> can also access <code>A</code>.</li>
 </ul>
 
 <p>Thus, the closures can contain multiple scopes; they recursively contain the scope of the functions containing it. This is called <em>scope chaining</em>. (The reason it is called "chaining" is explained later.)</p>
@@ -376,9 +376,9 @@ A(1); // logs 6 (1 + 2 + 3)
 <p>This can be done because:</p>
 
 <ol>
- <li><code>B</code> forms a closure including <code>A</code> (i.e. <code>B</code> can access <code>A</code>'s arguments and variables).</li>
- <li><code>C</code> forms a closure including <code>B</code>.</li>
- <li>Because <code>B</code>'s closure includes <code>A</code>, <code>C</code>'s closure includes <code>A</code>, <code>C</code> can access <em>both</em> <code>B</code> <em>and</em> <code>A</code>'s arguments and variables. In other words, <code>C</code> <em>chains</em> the scopes of <code>B</code> and <code>A</code>, <em>in that order</em>.</li>
+	<li><code>B</code> forms a closure including <code>A</code> (i.e. <code>B</code> can access <code>A</code>'s arguments and variables).</li>
+	<li><code>C</code> forms a closure including <code>B</code>.</li>
+	<li>Because <code>B</code>'s closure includes <code>A</code>, <code>C</code>'s closure includes <code>A</code>, <code>C</code> can access <em>both</em> <code>B</code> <em>and</em> <code>A</code>'s arguments and variables. In other words, <code>C</code> <em>chains</em> the scopes of <code>B</code> and <code>A</code>, <em>in that order</em>.</li>
 </ol>
 
 <p>The reverse, however, is not true. <code>A</code> cannot access <code>C</code>, because <code>A</code> cannot access any argument or variable of <code>B</code>, which <code>C</code> is a variable of. Thus, <code>C</code> remains private to only <code>B</code>.</p>
@@ -651,54 +651,54 @@ var p = new Person();</pre>
 <p>JavaScript has several top-level, built-in functions:</p>
 
 <dl>
- <dt>{{jsxref("Global_Objects/eval", "eval()")}}</dt>
- <dd>
- <p>The <code><strong>eval()</strong></code> method evaluates JavaScript code represented as a string.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/uneval", "uneval()")}}</dt>
- <dd>
- <p>The <code><strong>uneval()</strong></code> method creates a string representation of the source code of an {{jsxref("Object")}}.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</dt>
- <dd>
- <p>The global <code><strong>isFinite()</strong></code> function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
- <dd>
- <p>The <code><strong>isNaN()</strong></code> function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the <code>isNaN</code> function has <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">interesting</a> rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> to determine if the value is Not-A-Number.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
- <dd>
- <p>The <code><strong>parseFloat()</strong></code> function parses a string argument and returns a floating point number.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</dt>
- <dd>
- <p>The <code><strong>parseInt()</strong></code> function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).</p>
- </dd>
- <dt>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</dt>
- <dd>
- <p>The <code><strong>decodeURI()</strong></code> function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a similar routine.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</dt>
- <dd>
- <p>The <code><strong>decodeURIComponent()</strong></code> method decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} or by a similar routine.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</dt>
- <dd>
- <p>The <code><strong>encodeURI()</strong></code> method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
- </dd>
- <dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
- <dd>
- <p>The <code><strong>encodeURIComponent()</strong></code> method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
- </dd>
- <dt>{{jsxref("Global_Objects/escape", "escape()")}}</dt>
- <dd>
- <p>The deprecated <code><strong>escape()</strong></code> method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.</p>
- </dd>
- <dt>{{jsxref("Global_Objects/unescape", "unescape()")}}</dt>
- <dd>
- <p>The deprecated <code><strong>unescape()</strong></code> method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because <code>unescape()</code> is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.</p>
- </dd>
+	<dt>{{jsxref("Global_Objects/eval", "eval()")}}</dt>
+	<dd>
+	<p>The <code><strong>eval()</strong></code> method evaluates JavaScript code represented as a string.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/uneval", "uneval()")}}</dt>
+	<dd>
+	<p>The <code><strong>uneval()</strong></code> method creates a string representation of the source code of an {{jsxref("Object")}}.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</dt>
+	<dd>
+	<p>The global <code><strong>isFinite()</strong></code> function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
+	<dd>
+	<p>The <code><strong>isNaN()</strong></code> function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the <code>isNaN</code> function has <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">interesting</a> rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> to determine if the value is Not-A-Number.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
+	<dd>
+	<p>The <code><strong>parseFloat()</strong></code> function parses a string argument and returns a floating point number.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</dt>
+	<dd>
+	<p>The <code><strong>parseInt()</strong></code> function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</dt>
+	<dd>
+	<p>The <code><strong>decodeURI()</strong></code> function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a similar routine.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</dt>
+	<dd>
+	<p>The <code><strong>decodeURIComponent()</strong></code> method decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} or by a similar routine.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</dt>
+	<dd>
+	<p>The <code><strong>encodeURI()</strong></code> method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
+	<dd>
+	<p>The <code><strong>encodeURIComponent()</strong></code> method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/escape", "escape()")}}</dt>
+	<dd>
+	<p>The deprecated <code><strong>escape()</strong></code> method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.</p>
+	</dd>
+	<dt>{{jsxref("Global_Objects/unescape", "unescape()")}}</dt>
+	<dd>
+	<p>The deprecated <code><strong>unescape()</strong></code> method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because <code>unescape()</code> is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.</p>
+	</dd>
 </dl>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</p>

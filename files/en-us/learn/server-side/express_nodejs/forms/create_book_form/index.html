@@ -12,10 +12,10 @@ tags:
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
-<p>Open <strong>/controllers/bookController.js</strong>, and add the following lines at the top of the file:</p>
+<p>Open <strong>/controllers/bookController.js</strong>, and add the following line at the top of the file:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');</code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const { body,validationResult } = require('express-validator');
+</code></pre>
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
@@ -50,23 +50,20 @@ exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) =&gt; {
         if(!(req.body.genre instanceof Array)){
-            if(typeof req.body.genre==='undefined')
-            req.body.genre=[];
+            if(typeof req.body.genre ==='undefined')
+            req.body.genre = [];
             else
-            req.body.genre=new Array(req.body.genre);
+            req.body.genre = new Array(req.body.genre);
         }
         next();
     },
 
-    // Validate fields.
-    body('title', 'Title must not be empty.').trim().isLength({ min: 1 }),
-    body('author', 'Author must not be empty.').trim().isLength({ min: 1 }),
-    body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }),
-    body('isbn', 'ISBN must not be empty').trim().isLength({ min: 1 }),
-
-    // Sanitize fields (using wildcard).
-    sanitizeBody('*').escape(),
-    sanitizeBody('genre.*').escape(),
+    // Validate and sanitise fields.
+    body('title', 'Title must not be empty.').trim().isLength({ min: 1 }).escape(),
+    body('author', 'Author must not be empty.').trim().isLength({ min: 1 }).escape(),
+    body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }).escape(),
+    body('isbn', 'ISBN must not be empty').trim().isLength({ min: 1 }).escape(),
+    body('genre.*').escape(),
 
     // Process request after validation and sanitization.
     (req, res, next) =&gt; {
@@ -120,26 +117,22 @@ exports.book_create_post = [
 
 <p>The structure and behaviour of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
 
-<p>The first main difference with respect to the other form handling code is that we use a wildcard to escape all fields in one go (rather than sanitising them individually):</p>
-
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">sanitizeBody('*').escape(),</code></pre>
-
-<p>The next main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
+<p>The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Convert the genre to an array.
 (req, res, next) =&gt; {
     if(!(req.body.genre instanceof Array)){
-        if(typeof req.body.genre==='undefined')
-        req.body.genre=[];
+        if(typeof req.body.genre === 'undefined')
+        req.body.genre = [];
         else
-        req.body.genre=new Array(req.body.genre);
+        req.body.genre = new Array(req.body.genre);
     }
     next();
 },</code></pre>
 
 <p>We then use a wildcard (<code>*</code>) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key <code>genre</code>".</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">sanitizeBody('genre.*').escape(),</code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">body('genre.*').escape(),</code></pre>
 
 <p>The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form. In order to mark the genres that were checked by the user we iterate through all the genres and add the <code>checked='true'</code> parameter to those that were in our post data (as reproduced in the code fragment below).</p>
 
@@ -147,7 +140,7 @@ exports.book_create_post = [
 for (let i = 0; i &lt; results.genres.length; i++) {
     if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
         // Current genre is selected. Set "checked" flag.
-        results.genres[i].checked='true';
+        results.genres[i].checked = 'true';
     }
 }</code></pre>
 
@@ -170,12 +163,12 @@ block content
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
         for author in authors
           if book
-            option(value=author._id selected=(author._id.toString()==book.author ? 'selected' : false) ) #{author.name}
+            option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
           else
             option(value=author._id) #{author.name}
     div.form-group
       label(for='summary') Summary:
-      textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' rows='3' required='true') #{undefined===book ? '' : book.summary}
+      textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' required='true') #{undefined===book ? '' : book.summary}
     div.form-group
       label(for='isbn') ISBN:
       input#isbn.form-control(type='text', placeholder='ISBN13' name='isbn' value=(undefined===book ? '' : book.isbn) required='true')
@@ -201,7 +194,7 @@ block content
  <li>The set of genres are displayed as checkboxes, using the <code>checked</code> value we set in the controller to determine whether or not the box should be selected.</li>
  <li>The set of authors are displayed as a single-selection alphabetically ordered drop-down list. In this case we determine what author to display by comparing the id of the current author option with the value previously entered by the user (passed in as the <code>book</code> variable). This is highlighted above!
   <div class="note">
-  <p><strong>Note:</strong> If there is an error in the submitted form, then, when the form is to be re-rendered, the new book's author is identified only with a string (the value of the selected option in the list of authors). By contrast, the existing books' authors have <code>_id</code> properties that are not strings. So to compare the new with the existing we must cast each existing book's author's <code>_id</code> to a string, as shown above.</p>
+  <p><strong>Note:</strong> If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type <code>Schema.Types.ObjectId</code>. So to compare them we must convent them to strings first.</p>
   </div>
  </li>
 </ul>

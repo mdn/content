@@ -70,7 +70,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -86,7 +86,7 @@ tags:
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css notranslate">html {
   font-family: sans-serif;
 }
 
@@ -106,7 +106,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js notranslate">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -193,7 +193,7 @@ textarea.onkeyup = function(){
 
 <p>There are some serious {{anch("Security concerns")}} to consider with <code>&lt;iframe&gt;</code>s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:</p>
 
-<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+<pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox&gt;
   &lt;p&gt;
@@ -207,7 +207,7 @@ textarea.onkeyup = function(){
 
 <dl>
  <dt>{{htmlattrxref('allowfullscreen','iframe')}}</dt>
- <dd>If set, the <code>&lt;iframe&gt;</code> is able to be placed in fullscreen mode using the <a href="/en-US/docs/Web/API/Fullscreen_API">Full Screen API</a> (somewhat beyond scope for this article.)</dd>
+ <dd>If set, the <code>&lt;iframe&gt;</code> is able to be placed in fullscreen mode using the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> (somewhat beyond the scope of this article.)</dd>
  <dt>{{htmlattrxref('frameborder','iframe')}}</dt>
  <dd>If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behaviour. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}<code>: none;</code> in your {{Glossary('CSS')}}.</dd>
  <dt>{{htmlattrxref('src','iframe')}}</dt>
@@ -234,7 +234,7 @@ textarea.onkeyup = function(){
 <p>{{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.</p>
 </div>
 
-<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on Github</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) You won't actually see anything displayed on the page, and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told <em>Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
+<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) You won't actually see anything displayed on the page, and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told <em>Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
 
 <h4 id="Only_embed_when_necessary">Only embed when necessary</h4>
 
@@ -258,7 +258,7 @@ textarea.onkeyup = function(){
 <p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or Youtube, for example.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">Github pages</a> allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.</p>
+<p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
 </div>
 
 <h4 id="Always_use_the_sandbox_attribute">Always use the <code>sandbox</code> attribute</h4>
@@ -336,9 +336,9 @@ textarea.onkeyup = function(){
 <p><strong>Note</strong>: <code>&lt;object&gt;</code> requires a <code>data</code> attribute, a <code>type</code> attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox and Chrome, as of this writing). <code>typemustmatch</code> keeps the embedded file from running unless the <code>type</code> attribute provides the correct media type. <code>typemustmatch</code> can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).</p>
 </div>
 
-<p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on Github</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
+<p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
 
-<pre class="brush: html">&lt;embed src="whoosh.swf" quality="medium"
+<pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
        name="whoosh" align="middle" allowScriptAccess="sameDomain"
        allowFullScreen="false" type="application/x-shockwave-flash"
@@ -348,7 +348,7 @@ textarea.onkeyup = function(){
 
 <p>Now let's look at an <code>&lt;object&gt;</code> example that embeds a PDF into a page (see the <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> and the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
-<pre class="brush: html">&lt;object data="mypdf.pdf" type="application/pdf"
+<pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can
     &lt;a href="mypdf.pdf"&gt;download the PDF file.

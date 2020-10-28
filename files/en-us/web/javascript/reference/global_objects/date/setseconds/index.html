@@ -14,22 +14,22 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setSeconds(<var>secondsValue</var>[, <var>msValue</var>])</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setSeconds(<var>secondsValue</var>[, <var>msValue</var>])</pre>
 
 <h3 id="Versions_prior_to_JavaScript_1.3">Versions prior to JavaScript 1.3</h3>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setSeconds(<var>secondsValue</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setSeconds(<var>secondsValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>secondsValue</code></dt>
+ <dt><code><var>secondsValue</var></code></dt>
  <dd>An integer between 0 and 59, representing the seconds.</dd>
- <dt><code>msValue</code></dt>
+ <dt><code><var>msValue</var></code> {{Optional_inline}}</dt>
  <dd>Optional. A number between 0 and 999, representing the milliseconds.</dd>
 </dl>
 
@@ -39,25 +39,27 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>If you do not specify the <code>msValue</code> parameter, the value returned from the {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} method is used.</p>
+<p>If you do not specify the <code><var>msValue</var></code> parameter, the value returned from the {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} method is used.</p>
 
-<p>If a parameter you specify is outside of the expected range, <code>setSeconds()</code> attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for <code>secondsValue</code>, the minutes stored in the {{jsxref("Date")}} object will be incremented by 1, and 40 will be used for seconds.</p>
+<p>If a parameter you specify is outside of the expected range, <code>setSeconds()</code> attempts to update the date information in the {{jsxref("Date")}} object accordingly. For example, if you use 100 for <code><var>secondsValue</var></code>, the minutes stored in the {{jsxref("Date")}} object will be incremented by 1, and 40 will be used for seconds.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_setSeconds">Using <code>setSeconds()</code></h3>
+<h3 id="Using_setSeconds">Using setSeconds()</h3>
 
-<pre class="brush: js">var theBigDay = new Date();
+<pre class="brush: js notranslate">var theBigDay = new Date();
 theBigDay.setSeconds(30);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}</td>
   </tr>
@@ -66,7 +68,7 @@ theBigDay.setSeconds(30);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.setSeconds")}}</p>
 

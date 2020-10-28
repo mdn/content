@@ -90,6 +90,10 @@ postData('https://example.com/answer', { answer: 42 })
 
 <p>To cause browsers to send a request with credentials included, even for a cross-origin call, add <code>credentials: 'include'</code> to the <code>init</code> object you pass to the <code>fetch()</code> method.</p>
 
+<div class="note">
+<p><strong>Note</strong>: <code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
+</div>
+
 <pre class="brush: js notranslate">fetch('https://example.com', {
   credentials: 'include'
 });
@@ -108,7 +112,8 @@ fetch('https://example.com', {
 
 <pre class="brush: js notranslate">fetch('https://example.com', {
   credentials: 'omit'
-})</pre>
+})
+</pre>
 
 <h3 id="Uploading_JSON_data">Uploading JSON data</h3>
 

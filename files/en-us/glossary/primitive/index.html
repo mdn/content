@@ -36,51 +36,6 @@ bar = bar.toUpperCase();       // BAZ
 
 <p>A primitive can be replaced, but it can't be directly altered.</p>
 
-<h2 id="Another_Example_Step-by-step">Another Example [ Step-by-step ]</h2>
-
-<p>The following example will help you go through how JavaScript deals with primitives.</p>
-
-<h3 class="highlight-spanned" id="JavaScript_2"><span class="highlight-span">JavaScript</span></h3>
-
-<pre class="brush: js line-numbers  language-js notranslate">// The primitive
-let foo = 5;
-
-// Defining a function that should change the primitive value
-function addTwo(num) {
-   num += 2;
-}
-// Another function trying to do the same thing
-function addTwo_v2(foo) {
-   foo += 2;
-}
-
-// Calling our first function while passing our primitive as an argument
-addTwo(foo);
-// Getting the current primitive value
-console.log(foo);   // 5
-
-// Trying again with our second function...
-addTwo_v2(foo);
-console.log(foo);   // 5
-</pre>
-
-<p>Did you expect it to be <code>7</code> instead of <code>5</code>? If so, read how this code runs:</p>
-
-<ul>
- <li>For both the <code>addTwo</code> and <code>addTwo_v2</code> functions calls, JavaScript looks up the value for the identifier <code>foo</code>. It correctly finds our variable instantiated with our first statement</li>
- <li>After finding it, the expression is evaluated, <code>foo</code> is replaced by 5 and the JavaScript engine passes that value to the functions as an argument</li>
- <li>Before executing the statements inside the functions' bodies, <strong>JavaScript takes a copy of the originally passed argument</strong> (which is a primitive) and creates a local copy. These copies, existing only inside the functions' scopes, are accessible via the identifiers we specified in the functions' definitions (<code>num</code> for <code>addTwo</code>, <code>foo</code> for <code>addTwo_v2</code>)</li>
- <li>Then, the functions' statements are executed:
-  <ul>
-   <li>In the first function, a local <code>num</code> variable had been created. We are increasing its value by 2, not the original <code>foo</code>'s value!</li>
-   <li>In the second function, a local <code>foo</code> variable had been created. We are increasing its value by 2, not the original (external) <code>foo</code>'s value! Also, in this situation, the external <code>foo</code> variable cannot be accessed directly. This is because of JavaScript's lexical scoping and the resulting variable shadowing. The local <code>foo</code> hides the external <code>foo</code>. For more information, see <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>. (Note that <code>window.foo</code> could still be used to access the external <code>foo</code> variable.)</li>
-  </ul>
- </li>
- <li>In conclusion, any changes inside our functions <strong>won't</strong> affect the original <code>foo</code> at all, as we are modifying <strong>copies</strong> of it</li>
-</ul>
-
-<p>That's why primitives are immutable - instead of changing them directly, we're modifying a <em>copy, without affecting the original</em>.</p>
-
 <h2 id="Primitive_wrapper_objects_in_JavaScript">Primitive wrapper objects in JavaScript</h2>
 
 <p>Except for <code>null</code> and <code>undefined</code>, all primitive values have object equivalents that wrap around the primitive values:</p>

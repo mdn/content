@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Constants are block-scoped, much like variables declared using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.</p>
+<p>Constants are block-scoped, much like variables declared using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-const.html")}}</div>
 
@@ -26,6 +26,14 @@ tags:
  <dd>The constant's name, which can be any legal {{Glossary("identifier")}}.</dd>
  <dt><code><var>valueN</var></code></dt>
  <dd>The constant's value. This can be any legal <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">expression</a>, including a function expression.</dd>
+</dl>
+
+<p> The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment </a>syntax can also be used to declare variables.</p>
+
+<pre class="syntaxbox notranslate">const <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
+/* This creates a constant with the name 'bar', which has a value of 10 */</pre>
+
+<dl>
 </dl>
 
 <h2 id="Description">Description</h2>

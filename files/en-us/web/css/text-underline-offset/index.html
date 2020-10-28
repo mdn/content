@@ -39,12 +39,12 @@ text-underline-offset: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>auto</code></dt>
- <dd>The browser chooses the appropriate offset for underlines.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Specifies the offset of underlines as a {{cssxref('length')}}, overriding the font file suggestion and the browser default. It is recommended to use <code>em</code> units so the offset scales with the font size.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Specifies the offset of underlines as a {{cssxref('percentage')}} of <strong>1 em</strong> in the element's font. A percentage inherits as a relative value, and so therefore scales with changes in the font. For a given application of this property, the offset is constant across the whole box that the underline is applied to, even if there are child elements with different font sizes or vertical alignment.</dd>
+	<dt><code>auto</code></dt>
+	<dd>The browser chooses the appropriate offset for underlines.</dd>
+	<dt><code>&lt;length&gt;</code></dt>
+	<dd>Specifies the offset of underlines as a {{cssxref('length')}}, overriding the font file suggestion and the browser default. It is recommended to use <code>em</code> units so the offset scales with the font size.</dd>
+	<dt><code>&lt;percentage&gt;</code></dt>
+	<dd>Specifies the offset of underlines as a {{cssxref('percentage')}} of <strong>1 em</strong> in the element's font. A percentage inherits as a relative value, and so therefore scales with changes in the font. For a given application of this property, the offset is constant across the whole box that the underline is applied to, even if there are child elements with different font sizes or vertical alignment.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -56,6 +56,8 @@ text-underline-offset: unset;
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="Demonstration_of_text-underline-offset">Demonstration of text-underline-offset</h3>
 
 <pre class="brush: html notranslate">&lt;p class="oneline"&gt;Here's some text with an offset wavy red underline!&lt;/p&gt;
 &lt;br&gt;
@@ -76,20 +78,20 @@ text-underline-offset: unset;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration', '#underline-offset', 'text-underline-offset')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS4 Text Decoration', '#underline-offset', 'text-underline-offset')}}</td>
+			<td>{{Spec2('CSS4 Text Decoration')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -101,6 +103,6 @@ text-underline-offset: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-thickness")}}</li>
+	<li>{{cssxref("text-decoration")}}</li>
+	<li>{{cssxref("text-decoration-thickness")}}</li>
 </ul>

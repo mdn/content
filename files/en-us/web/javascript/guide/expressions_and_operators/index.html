@@ -615,7 +615,7 @@ delete myobj.h; // returns true (can delete user-defined properties)
 
 <h5 id="Deleting_array_elements">Deleting array elements</h5>
 
-<p>Since arrays are just objects, it's technically possible to <code>delete</code> elements from them. This is however regarded as a bad practice, try to avoid it. When you delete an array property, the array length is not affected and other elements are no re-indexed. To achieve that behavior, it is much better to just overwrite the element with the value <code>undefined</code>. To actually manipulate the array, use the various array methods such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a></code>.</p>
+<p>Since arrays are just objects, it's technically possible to <code>delete</code> elements from them. This is however regarded as a bad practice, try to avoid it. When you delete an array property, the array length is not affected and other elements are not re-indexed. To achieve that behavior, it is much better to just overwrite the element with the value <code>undefined</code>. To actually manipulate the array, use the various array methods such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a></code>.</p>
 
 <h4 id="typeof" name="typeof"><code>typeof</code></h4>
 

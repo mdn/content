@@ -9,11 +9,11 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Array[@@species]</strong></code> accessor property returns the <code>Array</code> constructor.</p>
+<p>The <strong><code>Array[@@species]</code></strong> accessor property returns the <code>Array</code> constructor.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Array[Symbol.species]
+<pre class="syntaxbox notranslate">Array[Symbol.species]
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -30,13 +30,13 @@ tags:
 
 <p>The <code>species</code> property returns the default constructor function, which is the <code>Array</code> constructor for <code>Array</code> objects:</p>
 
-<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
+<pre class="brush: js notranslate">Array[Symbol.species]; // function Array()</pre>
 
 <h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
 <p>In a derived collection object (e.g. your custom array <code>MyArray</code>), the <code>MyArray</code> species is the <code>MyArray</code> constructor. However, you might want to overwrite this, in order to return parent <code>Array</code> objects in your derived class methods:</p>
 
-<pre class="brush: js">class MyArray extends Array {
+<pre class="brush: js notranslate">class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }</pre>
@@ -44,10 +44,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
   </tr>

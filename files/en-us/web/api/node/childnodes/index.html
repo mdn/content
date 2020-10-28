@@ -16,14 +16,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
+<pre class="syntaxbox notranslate">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Simple_usage">Simple usage</h3>
 
-<pre class="brush:js">// parg is an object reference to a &lt;p&gt; element
+<pre class="brush:js notranslate">// parg is an object reference to a &lt;p&gt; element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
@@ -37,7 +37,7 @@ if (parg.hasChildNodes()) {
 
 <h3 id="Remove_all_children_from_a_node">Remove all children from a node</h3>
 
-<pre class="brush:js">// This is one way to remove all children from a node
+<pre class="brush:js notranslate">// This is one way to remove all children from a node
 // box is an object reference to an element
 
 while (box.firstChild) {
@@ -47,7 +47,7 @@ while (box.firstChild) {
 
 <h2 id="Notes">Notes</h2>
 
-<p>The items in the collection of nodes are objects, not strings. To get data from node objects, use their properties. (For example, to get the name of the first childNode: <code><var>elementNodeReference</var>.childNodes[1].nodeName</code>.)</p>
+<p>The items in the collection of nodes are objects, not strings. To get data from node objects, use their properties. (For example, to get the name of the first childNode: <code><var>elementNodeReference</var>.childNodes[0].nodeName</code>.)</p>
 
 <p>The <code>document</code> object itself has 2 children: the Doctype declaration and the root element, typically referred to as <code>documentElement</code>. (In (X)HTML documents this is the <code>HTML</code> element.)</p>
 

@@ -9,24 +9,23 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">November 17, 2020</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">November 17, 2020</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
-<p><em>No changes</em></p>
-
-<h4 id="Console">Console</h4>
-
-<h4 id="Debugger">Debugger</h4>
-
-<h4 id="Other_tools"><span>Other tools</span></h4>
+<ul>
+ <li>When using the <code>:screenshot</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">helper command</a> in the Web Console the <code>--dpr</code> parameter is no longer ignored when taking a fullscreen screenshot using <code>--fullpage</code>. ({{bug(1645284)}})</li>
+ <li>Developers can use the <code>scroll</code> badge in page inspector to <a href="/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow">Debug scrollable overflow</a>. Selecting the badge highlights elements that are <em>causing</em> overflow (and marks them with the <code>overflow</code> badge). ({{bug(1669129)}})</li>
+</ul>
 
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li></li>
+ <li>The global attribute <code><a href="/en-US/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code> has been implemented. ({{bug(1425291)}})</li>
+ <li>The <code>crossorigin</code> attribute is now supported for <code>&lt;link rel=icon&gt;</code>. ({{bug(1661075)}})</li>
+ <li>The <code>displaystyle</code> <a href="/en-US/docs/Web/MathML/Attribute">attribute</a> is implemented for all MathML elements. ({{bug(1666075)}})</li>
 </ul>
 
 <h4 id="Removals">Removals</h4>
@@ -34,14 +33,17 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li></li>
+ <li>The vendor prefixed <code>:-moz-any()</code> is now aliased to the {{CSSxRef(":is", ":is()")}} CSS Pseudo-class function ({{bug(1666086)}}).</li>
+ <li>Adds support for <a href="/en-US/docs/Web/CSS/conic-gradient">CSS Conic Gradients</a> ({{bug(1632351)}}) and ({{bug(1175958)}}).</li>
 </ul>
 
 <h4 id="Removals_2">Removals</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p><em>No changes</em></p>
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag">Intl[@@toStringTag]</a> was added, returning default value "Intl" (recent addition to the ECMA spec). ({{bug(1670053)}})</li>
+</ul>
 
 <h4 id="Removals_3">Removals</h4>
 
@@ -74,12 +76,6 @@ tags:
 <p><em>No changes</em></p>
 
 <h4 id="Removals_7">Removals</h4>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/83/">Site compatibility for Firefox 83</a></li>
-</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

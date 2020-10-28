@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>CDATASectionNode</var> = <var>document</var>.createCDATASection(<var>data</var>);
+<pre class="syntaxbox notranslate">var <var>CDATASectionNode</var> = <var>document</var>.createCDATASection(<var>data</var>);
 </pre>
 
 <ul>
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;', 'application/xml')
+<pre class="brush:js notranslate">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;', 'application/xml')
 
 var cdata = docu.createCDATASection('Some &lt;CDATA&gt; data &amp; then some');
 
@@ -40,7 +40,7 @@ alert(new XMLSerializer().serializeToString(docu));
  <li>Will throw a <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code> exception if one tries to submit the closing CDATA sequence ("<code>]]&gt;</code>") as part of the data, so unescaped user-provided data cannot be safely used without with this method getting this exception ({{domxref("document.createTextNode","createTextNode()")}} can often be used in its place).</li>
 </ul>
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>

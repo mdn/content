@@ -100,6 +100,10 @@ tags:
 <p><strong>Note</strong>: We want to reiterate that the methods and properties are <strong>not</strong> copied from one object to another in the prototype chain. They are <em>accessed</em> by <em>walking up the chain</em> as described above.</p>
 </div>
 
+<div class="blockIndicator note">
+<p><strong>Note</strong>: The prototype chain is traversed only while retrieving properties. If properties are set or <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>d directly on the object, the prototype chain is not traversed.</p>
+</div>
+
 <div class="note">
 <p><strong>Note</strong>: Before ECMAScript 2015, there wasn't officially a way to access an object's <code>prototype</code> directly — the "links" between the items in the chain are defined in an internal property, referred to as <code>[[prototype]]</code> in the specification for the JavaScript language (see {{glossary("ECMAScript")}}).</p>
 
@@ -240,6 +244,12 @@ Person.prototype.farewell = function() {
 };</pre>
 
 <p>But the <code>farewell()</code> method is <em>still</em> available on the <code>person1</code> object instance — its members have been automatically updated to include the newly defined <code>farewell()</code> method.</p>
+
+<div class="note"><strong>Note</strong>: Conversely, deleting properties defined on the constructor's prototype using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator removes the respective properties from all other class instances too.<br>
+<br>
+In the above example, performing <code>delete person1.__proto__.farewell</code> or <code>delete Person.prototype.farewell</code> would remove the <code>farewell()</code> method from all <code>Person</code> instances.<br>
+<br>
+In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> instead.</div>
 
 <div class="note">
 <p><strong>Note</strong>: If you are having trouble getting this example to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> example (see it <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a> also).</p>

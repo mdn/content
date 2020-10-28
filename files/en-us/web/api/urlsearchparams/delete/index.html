@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">URLSearchParams.delete(<em>name</em>)</pre>
+<pre class="syntaxbox notranslate">URLSearchParams.delete(<em>name</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,8 +31,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2&amp;foo=3');
-let params = new URLSearchParams(url.search.slice(1));
+<pre class="brush: js notranslate">let url = new URL('https://example.com?foo=1&amp;bar=2&amp;foo=3');
+let params = new URLSearchParams(url.search);
 
 // Delete the foo parameter.
 params.delete('foo'); //Query string is now: 'bar=2'</pre>

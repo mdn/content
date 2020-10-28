@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>toLocaleString()</strong></code> method returns a string representing the elements of the array. The elements are converted to Strings using their <code>toLocaleString</code> methods and these Strings are separated by a locale-specific String (such as a comma “,”).</p>
+<p>The <strong><code>toLocaleString()</code></strong> method returns a string representing the elements of the array. The elements are converted to Strings using their <code>toLocaleString</code> methods and these Strings are separated by a locale-specific String (such as a comma “,”).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
+<pre class="syntaxbox notranslate"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -32,10 +32,9 @@ tags:
 
 <p>A string representing the elements of the array.</p>
 
-
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+<pre class="brush: js notranslate">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -120,10 +119,9 @@ if (!Array.prototype.toLocaleString) {
 
 <p>If you need to support truly obsolete JavaScript engines that don't support <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, it's best not to polyfill <code>Array.prototype</code> methods at all, as you can't make them non-enumerable.</p>
 
-
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_locales_and_options">Using <code>locales</code> and <code>options</code></h3>
+<h3 id="Using_locales_and_options">Using locales and options</h3>
 
 <p>The elements of the array are converted to strings using their <code>toLocaleString</code> methods.</p>
 
@@ -135,7 +133,7 @@ if (!Array.prototype.toLocaleString) {
 
 <p>Always display the currency for the strings and numbers in the <code>prices</code> array:</p>
 
-<pre class="brush: js">var prices = ['￥7', 500, 8123, 12];
+<pre class="brush: js notranslate">var prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 // "￥7,￥500,￥8,123,￥12"
@@ -146,10 +144,12 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
   </tr>

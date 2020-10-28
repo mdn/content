@@ -5,6 +5,7 @@ tags:
   - Attribute
   - Attributes
   - Constraint Validation API
+  - HTML
   - Reference
 ---
 <p>The <code><strong>pattern</strong></code> attribute specifies a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> the form control's value should match. If a non-<code>null</code> value doesn't conform to the constraints set by the <code>pattern</code> value, the  <code>{{domxref('ValidityState')}}</code> object's read-only <code>{{domxref('ValidityState.patternMismatch','patternMismatch')}}</code> property will be true.</p>
@@ -17,7 +18,7 @@ tags:
 <p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
+<p><strong>Tip:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You <strong>must not</strong> rely on the tooltip alone for an explanation. See below for more information on usability.</p>
 </div>
 </div>
 

@@ -14,6 +14,10 @@ tags:
 
 
 
+<div class="blockIndicator note">
+<p><strong>Note</strong>: Edge and Internet Explorer also feature support for an alias of <code>grid-template-columns</code> — <code>-ms-grid-columns</code>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword value */
@@ -49,6 +53,8 @@ grid-template-columns: unset;
 <dl>
  <dt><code>none</code></dt>
  <dd>Indicates that there is no explicit grid. Any columns will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-columns")}} property.</dd>
+ <dt><code>[linename]</code></dt>
+ <dd>A <a href="/en-US/docs/Web/CSS/custom-ident">custom-ident</a> giving a name for the line in that location. The ident may be any valid string, other then the reserved words <code>span</code> or <code>auto</code>. Lines may have multiple names separated by a space inside the square brackets. For example <code>[line-name-a line-name-b]</code>.</dd>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>A non-negative length, giving the width of the column.</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
@@ -80,6 +86,7 @@ grid-template-columns: unset;
 <div class="blockIndicator warning">
 <p>The subgrid value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
 </div>
+
 <h2 id="Formal_definition">Formal definition</h2>
 
 <p>{{cssinfo}}</p>
@@ -142,7 +149,6 @@ grid-template-columns: unset;
   </tr>
  </tbody>
 </table>
-
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

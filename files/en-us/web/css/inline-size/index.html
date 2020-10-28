@@ -12,9 +12,11 @@ tags:
 
 <p>The <strong><code>inline-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("width")}} or the {{cssxref("height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
 
+<p>If the writing mode is vertically oriented, the value of <code>inline-size</code> relates to the height of the element; otherwise, it relates to the width of the element. A related property is {{cssxref("block-size")}}, which defines the other dimension of the element.</p>
+
 <div>{{EmbedInteractiveExample("pages/css/inline-size.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,8 +38,6 @@ inline-size: inherit;
 inline-size: initial;
 inline-size: unset;
 </pre>
-
-<p>If the writing mode is vertically oriented, the value of <code>inline-size</code> relates to the height of the element; otherwise, it relates to the width of the element. A related property is {{cssxref("block-size")}}, which defines the other dimension of the element.</p>
 
 <h3 id="Values">Values</h3>
 
@@ -91,7 +91,7 @@ inline-size: unset;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility </h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

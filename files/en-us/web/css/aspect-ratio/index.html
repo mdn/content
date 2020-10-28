@@ -11,13 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>aspect-ratio</code></strong><code>{{experimental_inline}}</code>  <a href="/en-US/docs/CSS">CSS</a> property sets a <strong>preferred aspect ratio</strong> for the box, which will be used in the calculation of auto sizes and some other layout functions.</p>
-
-<div class="blockIndicator warning">
-<p>This property is not yet implemented in browsers, however some browsers are implementing this internally in order to provide the aspect ratio mapping described below.</p>
-</div>
-
-<h2 id="Syntax">Syntax</h2>
+<p>The <strong><code>aspect-ratio</code></strong>  <a href="/en-US/docs/CSS">CSS</a> property sets a <strong>preferred aspect ratio</strong> for the box, which will be used in the calculation of auto sizes and some other layout functions.</p>
 
 <pre class="brush:css no-line-numbers notranslate">aspect-ratio: 1 / 1;
 
@@ -46,15 +40,23 @@ aspect-ratio: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Mapping_width_and_height_to_aspect-ratio">Mapping width and height to aspect-ratio</h3>
+<h3 id="Examples_of_values_for_aspect-ratio">Examples of values for aspect-ratio</h3>
 
-<p>Firefox has added an internal <code>aspect-ratio</code> property (in version 69 onwards) that applies to replaced elements and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. Chrome is also <a href="https://chromestatus.com/feature/5695266130755584">shipping this feature</a>. </p>
+<pre class="brush: css notranslate">aspect-ratio: 1 / 1;
+aspect-ratio: 16 / 9;
+</pre>
+
+<h2 id="Mapping_width_and_height_to_aspect-ratio">Mapping width and height to aspect-ratio</h2>
+
+<p>Browsers have added an internal <code>aspect-ratio</code> property that applies to replaced elements and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. </p>
 
 <p>In Firefox, the internal stylesheet rule looks like this:</p>
 
 <pre class="brush: css notranslate">img, input[type="image"], video, embed, iframe, marquee, object, table {
   aspect-ratio: attr(width) / attr(height);
 }</pre>
+
+<p>You can read more about this feature in <a href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">Setting Height And Width On Images Is Important Again</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

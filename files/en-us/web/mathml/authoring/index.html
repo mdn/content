@@ -18,7 +18,7 @@ tags:
 
 <p>You can use Presentation MathML inside HTML5 documents:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
  &lt;title&gt;MathML in HTML5&lt;/title&gt;
@@ -45,19 +45,19 @@ tags:
 
 <p>Unfortunately, some browsers are not able to render MathML equations or only have a limited support. Hence you will need to use a MathML polyfill to provide some fallback rendering. If you need only basic mathematical constructions such as those used on this MDN wiki then a small <a href="https://github.com/fred-wang/mathml.css">mathml.css</a> stylesheet might be enough. To use it, just insert one line in your document header:</p>
 
-<pre class="brush: html">&lt;script src="https://fred-wang.github.io/mathml.css/mspace.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html notranslate">&lt;script src="https://fred-wang.github.io/mathml.css/mspace.js"&gt;&lt;/script&gt;</pre>
 
 <p>If you need more complex constructions, you might instead consider using the heavier <a href="http://www.mathjax.org" title="http://www.mathjax.org">MathJax</a> library as a MathML polyfill:</p>
 
-<pre class="brush: html">&lt;script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html notranslate">&lt;script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
 <p>Note that these two scripts perform feature detection of the <a href="/en-US/docs/Web/MathML/Element/mspace">mspace</a> or <a href="/en-US/docs/Web/MathML/Element/mpadded">mpadded</a> elements (see the browser compatibility table on these pages). There is also a similar script to display a warning at the top of the page for browsers without good MathML support and let the users choose between one of the fallback above:</p>
 
-<pre class="brush: html">&lt;script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html notranslate">&lt;script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"&gt;&lt;/script&gt;</pre>
 
 <p>If you don't want to use this link to GitHub but instead to integrate these polyfills or others in your own project, you might need the detection scripts to verify the level of MathML support. For example the following function verifies the MathML support by testing the mspace element (you may replace <code>mspace</code> with <code>mpadded</code>):</p>
 
-<pre class="brush: js"> function hasMathMLSupport() {
+<pre class="brush: js notranslate"> function hasMathMLSupport() {
   var div = document.createElement("div"), box;
   div.innerHTML = "&lt;math&gt;&lt;mspace height='23px' width='77px'/&gt;&lt;/math&gt;";
   document.body.appendChild(div);
@@ -68,7 +68,7 @@ tags:
 
 <p>Alternatively, the following UA string sniffing will allow to detect the rendering engines with native MathML support (Gecko and WebKit). Note that UA string sniffing is not the most reliable method and might break from version to version:</p>
 
-<pre class="brush: js">var ua = navigator.userAgent;
+<pre class="brush: js notranslate">var ua = navigator.userAgent;
 var isGecko = ua.indexOf("Gecko") &gt; -1 &amp;&amp; ua.indexOf("KHTML") === -1 &amp;&amp; ua.indexOf('Trident') === -1;
 var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome') === -1;
 </pre>
@@ -79,7 +79,7 @@ var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome')
 
 <p>Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the <a href="/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS">font instructions for Mozilla 2.0</a>. For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:</p>
 
-<pre class="brush: css">@namespace url('http://www.w3.org/1999/xhtml');
+<pre class="brush: css notranslate">@namespace url('http://www.w3.org/1999/xhtml');
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 body, m|mtext {
@@ -96,7 +96,7 @@ m|math {
 <p>If for some reason you need to use MathML in XML documents, be sure to satisfy the usual requirements: well-formed document, use of correct MIME type, MathML namespace <code>"http://www.w3.org/1998/Math/MathML"</code> on <code>&lt;math&gt;</code> roots. For example, the XHTML version of the previous example looks like this:<br>
   </p>
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="brush: xml notranslate">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
   "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
@@ -169,13 +169,13 @@ m|math {
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> has an <a href="https://github.com/fred-wang/x-tex">&lt;x-tex&gt;</a> custom element, that can be used to write things like</p>
 
-<pre><span class="brush: html">&lt;<span class="start-tag">x-tex</span>&gt;</span><span>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span><span class="brush: html">&lt;/<span class="end-tag">x-tex</span>&gt;</span></pre>
+<pre class="notranslate"><span class="brush: html">&lt;<span class="start-tag">x-tex</span>&gt;</span><span>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span><span class="brush: html">&lt;/<span class="end-tag">x-tex</span>&gt;</span></pre>
 
 <p>and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript parsing of expressions at load time</a> as all the other tools in this section do.</p>
 
 <p>One simple client-side conversion tools is <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html" title="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Just download the <a href="http://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js" title="http://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> script and copy it to your Web site. Then on your Web pages, add a <code>&lt;script&gt;</code> tag to load ASCIIMathML and the mathematical expressions delimited by <code>`</code> (grave accent) will be automatically parsed and converted to MathML:</p>
 
-<pre class="brush: html">&lt;html&gt;
+<pre class="brush: html notranslate">&lt;html&gt;
 &lt;head&gt;
 ...
 &lt;script type="text/javascript" src="ASCIIMathML.js"&gt;&lt;/script&gt;
@@ -189,7 +189,7 @@ m|math {
 
 <p><a href="http://math.etsu.edu/LaTeXMathML/" title="http://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> is a similar script that allows to parse more LaTeX commands. The installation is similar: copy <a href="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> and <a href="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css" title="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:</p>
 
-<pre class="brush: html"><span>&lt;<span class="start-tag">head</span>&gt;</span>
+<pre class="brush: html notranslate"><span>&lt;<span class="start-tag">head</span>&gt;</span>
 <span>...
 </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value">LaTeXMathML.js</a>"&gt;</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
 </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">href</span>="<a class="attribute-value">LaTeXMathML.standardarticle.css</a>" <span>/</span>&gt;</span><span>
@@ -219,7 +219,7 @@ This is a sample LaTeXML document.
 &lt;/div&gt;
 ...</pre>
 
-<p><a href="http://mathscribe.com/author/jqmath.html" title="http://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip" title="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
+<p><a href="http://mathscribe.com/author/jqmath.html" title="http://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π²</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π²</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip" title="http://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
 
 <h3 id="Command-line_Programs">Command-line Programs</h3>
 
@@ -246,7 +246,7 @@ This is a sample LaTeXML document.
 
 <p>If you only want to parse simple LaTeX mathematical expressions, you might want to try tools like <a href="http://golem.ph.utexas.edu/~distler/blog/itex2MML.html" title="http://golem.ph.utexas.edu/~distler/blog/itex2MML.html">itex2MML</a> or <a href="http://gva.noekeon.org/blahtexml/" title="http://gva.noekeon.org/blahtexml/">Blahtex</a>. The latter is often available on Linux distributions. Let's consider the former, which was originally written by Paul Gartside at the beginning of the Mozilla MathML project and has been maintained by Jacques Distler since then. It's a small stream filter written in C/C++ and generated with flex and bison ; in particular it is very fast. Install flex/bison as well as the classical compiler and make tools. On Unix, you can then download itex2MML, build and install it:</p>
 
-<pre class="brush: bash">wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
+<pre class="brush: bash notranslate">wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
 tar -xzf itexToMML.tar.gz; \
 cd itex2MML/itex-src;
 make
@@ -255,7 +255,7 @@ sudo make install
 
 <p>Now suppose that you have a HTML page with TeX fragments delimited by dollars:</p>
 
-<pre class="brush: html">input.html
+<pre class="brush: html notranslate">input.html
 
 ...
 &lt;/head&gt;
@@ -268,11 +268,11 @@ sudo make install
 
 <p>Then to generate the HTML page input.html with TeX expressions replaced by MathML expressions, just do</p>
 
-<pre>cat input.html | itex2MML &gt; output.html</pre>
+<pre class="notranslate">cat input.html | itex2MML &gt; output.html</pre>
 
 <p>There are even more sophisticated tools to convert arbitrary LaTeX documents into HTML+MathML. For example <a href="https://www.tug.org/tex4ht/">TeX4ht</a> is often included in TeX distributions and has an option to use MathML instead of PNG images. This command will generate an XHTML+MathML document foo.xml from a foo.tex LaTeX source:</p>
 
-<pre>   mk4ht mzlatex foo.tex # Linux/Mac platforms
+<pre class="notranslate">   mk4ht mzlatex foo.tex # Linux/Mac platforms
    mzlatex foo.tex       # Windows platform
 </pre>
 
@@ -280,18 +280,18 @@ sudo make install
 
 <p><a href="http://dlmf.nist.gov/LaTeXML/" name="LaTeXML">LaTeXML</a> is another tool that can generate HTML5 and EPUB documents. Windows users can watch this <a href="https://www.youtube.com/watch?v=Dg881w2e-lI">video tutorial</a>. Given a foo.tex LaTeX file, you can use these simple commands:</p>
 
-<pre>  latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
+<pre class="notranslate">  latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
   latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub</pre>
 
 <p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#Fallback_for_Browsers_without_MathML_support">fallback scripts</a>:</p>
 
-<pre>  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">https://fred-wang.github.io/mathml.css/mspace.js</span></span></span></code> foo.tex  # Add the CSS fallback
+<pre class="notranslate">  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">https://fred-wang.github.io/mathml.css/mspace.js</span></span></span></code> foo.tex  # Add the CSS fallback
   latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">https://fred-wang.github.io/mathjax.js/mpadded-min.js</span></span></span></code> foo.tex # Add the MathJax fallback
 </pre>
 
 <p>If your LaTeX document is big, you might want to split it into several small pages rather than putting everything in a single large page. For example, this will split the pages at the <code>\section</code> level:</p>
 
-<pre>  latexmlc --dest foo.html --splitat=section foo.tex
+<pre class="notranslate">  latexmlc --dest foo.html --splitat=section foo.tex
 </pre>
 
 <h3 id="Server-side_Conversion">Server-side Conversion</h3>

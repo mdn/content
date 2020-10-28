@@ -10,15 +10,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The static <code><strong>Reflect</strong></code><strong><code>.set()</code></strong> method works like setting a property on an object.</p>
+<p>The static <strong><code>Reflect.set()</code></strong> method works like setting a property on an object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-set.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])
+<pre class="syntaxbox notranslate">Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -48,9 +48,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Reflect.set">Using <code>Reflect.set()</code></h3>
+<h3 id="Using_Reflect.set">Using Reflect.set()</h3>
 
-<pre class="brush: js">// Object
+<pre class="brush: js notranslate">// Object
 let obj = {}
 Reflect.set(obj, 'prop', 'value')  // true
 obj.prop  // "value"
@@ -74,10 +74,12 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}}</td>
   </tr>

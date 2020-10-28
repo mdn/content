@@ -29,7 +29,7 @@ tags:
 
 <p>First of all, create a new directory called "modify-page". In that directory, create a file called "manifest.json", with the following contents:</p>
 
-<pre class="brush: json">{
+<pre class="brush: json notranslate">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -56,7 +56,7 @@ tags:
 
 <p>Next, create a file called "page-eater.js" inside the "modify-page" directory, and give it the following contents:</p>
 
-<pre class="brush: js">document.body.textContent = "";
+<pre class="brush: js notranslate">document.body.textContent = "";
 
 var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
@@ -76,7 +76,7 @@ document.body.appendChild(header);</pre>
 
 <p>First, update "manifest.json" so it has the following contents:</p>
 
-<pre class="brush: json">{
+<pre class="brush: json notranslate">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -97,12 +97,12 @@ document.body.appendChild(header);</pre>
 
 <ul>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>: To inject scripts into pages we need permissions for the page we're modifying. The <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a> is a way to get this temporarily for the currently active tab. We also need the <code>contextMenus</code> permission to be able to add context menu items.</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code>: We're using this to load a persistent <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> called "background.js", in which we'll set up the context menu and inject the content script.</li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></code>: We're using this to load a persistent <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">"background script"</a> called <code>background.js</code>, in which we'll set up the context menu and inject the content script.</li>
 </ul>
 
-<p>Let's create this file. Create a new file called "background.js" in the "modify-page" directory, and give it the following contents:</p>
+<p>Let's create this file. Create a new file called <code>background.js</code> in the <code>modify-page</code> directory, and give it the following contents:</p>
 
-<pre class="brush: js">browser.contextMenus.create({
+<pre class="brush: js notranslate">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -120,7 +120,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>At this point the extension should look like this:</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">modify-page/
+<pre class="line-numbers  language-html notranslate"><code class="language-html">modify-page/
     background.js
     manifest.json
     page-eater.js</code></pre>
@@ -163,9 +163,9 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>Let's update our example to show how to send a message from the background script.</p>
 
-<p>First, edit "background.js" so that it has these contents:</p>
+<p>First, edit <code>background.js</code> so that it has these contents:</p>
 
-<pre class="brush: js">browser.contextMenus.create({
+<pre class="brush: js notranslate">browser.contextMenus.create({
   id: "eat-page",
   title: "Eat this page"
 });
@@ -177,7 +177,7 @@ function messageTab(tabs) {
 }
 
 function onExecuted(result) {
-    var querying = browser.tabs.query({
+    let querying = browser.tabs.query({
         active: true,
         currentWindow: true
     });
@@ -194,30 +194,32 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 </pre>
 
-<p>Now, after injecting "page-eater.js", we use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> to get the currently active tab, and then use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code> to send a message to the content scripts loaded into that tab. The message has the payload <code>{replacement: "Message from the extension!"}</code>.</p>
+<p>Now, after injecting <code>page-eater.js</code>, we use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> to get the currently active tab, and then use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code> to send a message to the content scripts loaded into that tab. The message has the payload <code>{replacement: "Message from the extension!"}</code>.</p>
 
-<p>Next, update "page-eater.js" like this:</p>
+<p>Next, update <code>page-eater.js</code> like this:</p>
 
-<pre class="brush: js">function eatPageReceiver(request, sender, sendResponse) {
+<pre class="brush: js notranslate">function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-  var header = document.createElement('h1');
+  let header = document.createElement('h1');
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
 browser.runtime.onMessage.addListener(eatPageReceiver);
 </pre>
 
-<p>Now instead of just eating the page right away, the content script listens for a message using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>. When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from <code>request.replacement</code>.</p>
+<p>Now, instead of just eating the page right away, the content script listens for a message using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>. When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from <code>request.replacement</code>.</p>
 
-<p>Since <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code> is an asynchronous function, and to ensure we send message only after listener has been added in "page-eater.js", we use <code>onExecuted</code> which will be called after "page-eater.js" executed.</p>
+<p>Since <code><a href="/en-US/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code> is an asynchronous function, and to ensure we send message only after listener has been added in <code>page-eater.js</code>, we use <code>onExecuted()</code> which will be called after <code>page-eater.js</code> executed.</p>
 
 <div class="note">
-<p>Press Ctrl+Shift+J (or Cmd+Shift+J on a Mac) OR <code>web-ext run --bc</code> to open <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> to view <code>console.log</code> in background script. Alternatively use <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a>  which allows you set breakpoint. There is currently no way to <a href="https://github.com/mozilla/web-ext/issues/759">start Add-on Debugger directly from web-ext</a>.</p>
+<p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR <code>web-ext run --bc</code> to open <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> to view <code>console.log</code> in background script.</p>
+
+<p>Alternatively, use <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a>  which allows you set breakpoint. There is currently no way to <a href="https://github.com/mozilla/web-ext/issues/759">start Add-on Debugger directly from web-ext</a>.</p>
 </div>
 
 <p>If we want send messages back from the content script to the background page,  we would use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> instead of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code>, e.g.:</p>
 
-<pre class="brush: js">browser.runtime.sendMessage({
+<pre class="brush: js notranslate">browser.runtime.sendMessage({
     title: "from page-eater.js"
 });</pre>
 

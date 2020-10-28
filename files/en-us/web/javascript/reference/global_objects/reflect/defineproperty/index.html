@@ -10,15 +10,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The static <code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> method is like {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.</p>
+<p>The static <strong><code>Reflect.defineProperty()</code></strong> method is like {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
+<pre class="syntaxbox notranslate">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -50,20 +50,20 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Reflect.defineProperty">Using <code>Reflect.defineProperty()</code></h3>
+<h3 id="Using_Reflect.defineProperty">Using Reflect.defineProperty()</h3>
 
-<pre class="brush: js">let obj = {}
+<pre class="brush: js notranslate">let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7
 </pre>
 
 <h3 id="Checking_if_property_definition_has_been_successful">Checking if property definition has been successful</h3>
 
-<p>With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block to catch any error that occurred while defining a property. ]</p>
+<p>With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block to catch any error that occurred while defining a property.</p>
 
 <p>Because <code>Reflect.defineProperty</code> returns a Boolean success status, you can just use an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> block here:</p>
 
-<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
+<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
@@ -72,10 +72,12 @@ obj.x                                         // 7
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}</td>
   </tr>

@@ -53,6 +53,13 @@ tags:
    <td>Chrome, Edge, Firefox, Opera, Safari</td>
   </tr>
   <tr>
+   <th scope="row">{{anch("AVIF")}}</th>
+   <th scope="row">AV1 Image File Format</th>
+   <td><code>image/avif</code></td>
+   <td><code>.avif</code></td>
+   <td>Chrome, Opera, Firefox (feature flag)</td>
+  </tr>
+  <tr>
    <th scope="row">{{anch("BMP")}}</th>
    <th scope="row">Bitmap file</th>
    <td><code>image/bmp</code></td>
@@ -200,12 +207,77 @@ tags:
  </tbody>
 </table>
 
-<h3 id="BMP_Bitmap_file"><a id="BMP" name="BMP">BMP</a> (Bitmap file)</h3>
+<h3 id="AVIF_image"><a id="AVIF" name="AVIF">AVIF image</a></h3>
+
+<p>AV1 Image File Format (AVIF) is a powerful new, open source, royalty-free file format that encodes <dfn>AV1 bitstreams in the High Efficiency Image File Format (HEIF) container. </dfn></p>
+
+<div class="note">
+<p><strong>Note:</strong> AVIF has potential to become the "next big thing" for sharing images in web content. It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.</p>
+</div>
+
+<p><dfn>AV1 is a coding format that was originally designed for video transmission over the Internet. The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering. However it also has disadvantages for some cases, as video and image encoding have some different requirements.</dfn></p>
+
+<p>The format offers:</p>
+
+<ul>
+ <li>Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images). Good compression relative to WebP, which compresses the same images to around 30% of the JPEG size.</li>
+ <li>Lossless compression.</li>
+ <li>Animation/multi-image storage (similar to animated GIFs, but with much better compression)</li>
+ <li>Alpha channel support (i.e. for transparency).</li>
+ <li><em>High Dynamic Range</em> (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image. </li>
+ <li>Wide Color Gamut: Support for images that can contain a larger range of colours.</li>
+</ul>
+
+<p>AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed. This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster. For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.</p>
+
+<p>AVIF is supported on desktop in Chrome 85, Opera 71 and Firefox 77 (requires the feature flag <code>image.avif.enable</code> set <code>true</code>). As support is not yet comprehensive (and has no historical depth) you should provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format using <a href="/en-US/docs/Web/HTML/Element/picture">the <code>&lt;picture&gt;</code> element</a> (or some other approach).</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">MIME type</th>
+   <td><code>image/avif</code></td>
+  </tr>
+  <tr>
+   <th scope="row">File extension(s)</th>
+   <td><code>.avif</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Specification</th>
+   <td>
+    <p><a href="https://aomediacodec.github.io/av1-avif/">AV1 Image File Format (AVIF)</a></p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Browser compatibility</th>
+   <td>Chrome 85, Opera 71, and Firefox 77 (requires the preference <code>image.avif.enable</code> set <code>true</code>).</td>
+  </tr>
+  <tr>
+   <th scope="row">Maximum dimensions</th>
+   <td></td>
+  </tr>
+  <tr>
+   <th scope="row">Supported color modes</th>
+   <td></td>
+  </tr>
+  <tr>
+   <th scope="row">Compression</th>
+   <td>Lossy or lossless.</td>
+  </tr>
+  <tr>
+   <th scope="row">Licensing</th>
+   <td>Royalty free. Licensing information is available at http://aomedia.org/license/ </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="BMP_Bitmap_file"><a id="BMP" name="BMP"><br>
+ BMP</a> (Bitmap file)</h3>
 
 <p>The <strong>BMP</strong> (<strong>Bitmap image</strong>) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Note:</strong> You should typically avoid using BMP for web site content, as it's not a generally-accepted use of the format.</p>
+<p><strong>Note:</strong> You should typically avoid using BMP files for web site content. The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image tpes.  More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.</p>
 </div>
 
 <p>BMP theoretically supports a variety of internal data representations. The simplest, and most commonly used, form of BMP file is an uncompressed raster image, with each pixel occupying 3 bytes representing its red, green, and blue components, and each row padded with <code>0x00</code> bytes to a multiple of 4 bytes wide.</p>
@@ -1044,7 +1116,7 @@ tags:
 </table>
 
 <div class="blockIndicator note">
-  <p><strong>Note:</strong> Despite having <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">announced support</a> for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.</p>
+<p><strong>Note:</strong> Despite having <a href="https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174">announced support</a> for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.</p>
 </div>
 
 <h3 id="XBM_X_Window_System_Bitmap_file"><a id="XBM" name="XBM">XBM</a> (X Window System Bitmap file)</h3>

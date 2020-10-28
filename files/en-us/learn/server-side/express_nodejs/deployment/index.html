@@ -18,16 +18,16 @@ tags:
 <p class="summary">Now you've created (and tested) an awesome <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.</p>
 
 <table class="learn-box standard-table">
-	<tbody>
-		<tr>
-			<th scope="row">Prerequisites:</th>
-			<td>Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Objective:</th>
-			<td>To learn where and how you can deploy an Express app to production.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To learn where and how you can deploy an Express app to production.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Overview">Overview</h2>
@@ -37,9 +37,9 @@ tags:
 <p>Up to now, you've been working in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">development environment</a>, using Express/Node as a web server to share your site to the local browser/network, and running your website with (insecure) development settings that expose debugging and other private information. Before you can host a website externally you're first going to have to:</p>
 
 <ul>
-	<li>Choose an environment for hosting the Express app.</li>
-	<li>Make a few changes to your project settings.</li>
-	<li>Set up a production-level infrastructure for serving your website.</li>
+ <li>Choose an environment for hosting the Express app.</li>
+ <li>Make a few changes to your project settings.</li>
+ <li>Set up a production-level infrastructure for serving your website.</li>
 </ul>
 
 <p>This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a worked example of how to install the LocalLibrary website onto the <a href="https://www.heroku.com/">Heroku</a> cloud hosting service.</p>
@@ -51,11 +51,11 @@ tags:
 <p>The production environment is the environment provided by the server computer where you will run your website for external consumption. The environment includes:</p>
 
 <ul>
-	<li>Computer hardware on which the website runs.</li>
-	<li>Operating system (e.g. Linux or Windows).</li>
-	<li>Programming language runtime and framework libraries on top of which your website is written.</li>
-	<li>Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.</li>
-	<li>Databases on which your website is dependent.</li>
+ <li>Computer hardware on which the website runs.</li>
+ <li>Operating system (e.g. Linux or Windows).</li>
+ <li>Programming language runtime and framework libraries on top of which your website is written.</li>
+ <li>Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.</li>
+ <li>Databases on which your website is dependent.</li>
 </ul>
 
 <p>The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.</p>
@@ -85,15 +85,15 @@ tags:
 <p>Some of the things to consider when choosing a host:</p>
 
 <ul>
-	<li>How busy your site is likely to be and the cost of data and computing resources required to meet that demand.</li>
-	<li>Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.</li>
-	<li>Where the supplier has data centers, and hence where access is likely to be the fastest.</li>
-	<li>The host's historical uptime and downtime performance.</li>
-	<li>Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs FTP).</li>
-	<li>Inbuilt frameworks for monitoring your server.</li>
-	<li>Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.</li>
-	<li>Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.</li>
-	<li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
+ <li>How busy your site is likely to be and the cost of data and computing resources required to meet that demand.</li>
+ <li>Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.</li>
+ <li>Where the supplier has data centers, and hence where access is likely to be the fastest.</li>
+ <li>The host's historical uptime and downtime performance.</li>
+ <li>Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs FTP).</li>
+ <li>Inbuilt frameworks for monitoring your server.</li>
+ <li>Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.</li>
+ <li>Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.</li>
+ <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
 <p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> provide free credit when you first join.</p>
@@ -230,17 +230,17 @@ var app = express();
 <p>We are choosing to use Heroku for several reasons:</p>
 
 <ul>
-	<li>Heroku has a <a href="https://www.heroku.com/pricing">free tier</a> that is <em>really</em> free (albeit with some limitations).</li>
-	<li>As a PaaS, Heroku takes care of a lot of the web infrastructure for us. This makes it much easier to get started because you don't worry about servers, load balancers, reverse proxies, restarting your website on a crash, or any of the other web infrastructure that Heroku provides.</li>
-	<li>While it does have limitations, they will not affect this particular application. For example:
-	<ul>
-		<li>Heroku's free-tier only provides short-lived storage. User-uploaded files are not safely stored on Heroku itself.</li>
-		<li>The free tier will sleep an inactive web app if there are no requests within a half-hour period. The site may take several seconds to respond if the dyno is asleep.</li>
-		<li>The free tier limits your site to a certain amount of hours of runtime each month (time "asleep" is not used in the calculation). This is fine for a low use or demonstration site. It's not suitable if 100% uptime is required.</li>
-		<li>Other limitations are listed in <a href="https://devcenter.heroku.com/articles/limits">Limits</a> (Heroku docs).</li>
-	</ul>
-	</li>
-	<li>If it works and you end up loving it, you'll want to upgrade. Scaling your app on Heroku is very easy.</li>
+ <li>Heroku has a <a href="https://www.heroku.com/pricing">free tier</a> that is <em>really</em> free (albeit with some limitations).</li>
+ <li>As a PaaS, Heroku takes care of a lot of the web infrastructure for us. This makes it much easier to get started because you don't worry about servers, load balancers, reverse proxies, restarting your website on a crash, or any of the other web infrastructure that Heroku provides.</li>
+ <li>While it does have limitations, they will not affect this particular application. For example:
+  <ul>
+   <li>Heroku's free-tier only provides short-lived storage. User-uploaded files are not safely stored on Heroku itself.</li>
+   <li>The free tier will sleep an inactive web app if there are no requests within a half-hour period. The site may take several seconds to respond if the dyno is asleep.</li>
+   <li>The free tier limits your site to a certain amount of hours of runtime each month (time "asleep" is not used in the calculation). This is fine for a low use or demonstration site. It's not suitable if 100% uptime is required.</li>
+   <li>Other limitations are listed in <a href="https://devcenter.heroku.com/articles/limits">Limits</a> (Heroku docs).</li>
+  </ul>
+ </li>
+ <li>If it works and you end up loving it, you'll want to upgrade. Scaling your app on Heroku is very easy.</li>
 </ul>
 
 <p>While Heroku is perfect for hosting this demonstration it may not be perfect for your real website. Heroku makes things easy to set up and scale. If you need more speed or uptime or add-on features, expect to pay for them.</p>
@@ -270,58 +270,57 @@ var app = express();
 <p>There are a lot of ways of to work with git. One easy workflow is to first set up an account on <a href="https://github.com/">GitHub</a>, create a new repository there and then clone it to your local machine:</p>
 
 <ol>
-	<li>Visit <a href="https://github.com/">https://github.com/</a> and create an account.</li>
-	<li>Once you are logged in, click the <strong>+</strong> link in the top toolbar and select <strong>New repository</strong>.</li>
-	<li>Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-	<ul>
-		<li>Enter a new repository name (e.g. <em>express-locallibrary-tutorial</em>), and description (e.g. "Local Library website written in Express (Node)".</li>
-		<li>Choose <strong>Node</strong> in the <em>Add .gitignore</em> selection list.</li>
-		<li>Choose your preferred license in the <em>Add license</em> selection list.</li>
-		<li>Check <strong>Initialize this repository with a README</strong>.</li>
-	</ul>
-	</li>
-	<li>Press <strong>Create repository</strong>.</li>
-	<li>Click the green "<strong>Clone or download</strong>" button on your new repo page.</li>
-	<li>Copy the URL value from the text field inside the dialog box that appears (it should be something like: <strong>https://github.com/<em>&lt;your_git_user_id&gt;</em>/express-locallibrary-tutorial.git</strong>).</li>
+ <li>Visit <a href="https://github.com/">https://github.com/</a> and create an account.</li>
+ <li>Once you are logged in, click the <strong>+</strong> link in the top toolbar and select <strong>New repository</strong>.</li>
+ <li>Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+  <ul>
+   <li>Enter a new repository name (e.g. <em>express-locallibrary-tutorial</em>), and description (e.g. "Local Library website written in Express (Node)".</li>
+   <li>Choose <strong>Node</strong> in the <em>Add .gitignore</em> selection list.</li>
+   <li>Choose your preferred license in the <em>Add license</em> selection list.</li>
+   <li>Check <strong>Initialize this repository with a README</strong>.</li>
+  </ul>
+ </li>
+ <li>Press <strong>Create repository</strong>.</li>
+ <li>Click the green "<strong>Clone or download</strong>" button on your new repo page.</li>
+ <li>Copy the URL value from the text field inside the dialog box that appears (it should be something like: <strong>https://github.com/<em>&lt;your_git_user_id&gt;</em>/express-locallibrary-tutorial.git</strong>).</li>
 </ol>
 
 <p>Now that the repository ("repo") is created we are going to want to clone it on our local computer:</p>
 
 <ol>
-	<li>Install <em>git</em> for your local computer (you can find versions for different platforms <a href="https://git-scm.com/downloads">here</a>).</li>
-	<li>Open a command prompt/terminal and clone your repository using the URL you copied above:
-	<pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/express-locallibrary-tutorial.git
+ <li>Install <em>git</em> for your local computer (you can find versions for different platforms <a href="https://git-scm.com/downloads">here</a>).</li>
+ <li>Open a command prompt/terminal and clone your repository using the URL you copied above:
+  <pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/express-locallibrary-tutorial.git
 </pre>
-	This will create the repository below the current point.</li>
-	<li>Navigate into the new repo.
-	<pre class="brush: bash notranslate">cd express-locallibrary-tutorial</pre>
-	</li>
+  This will create the repository below the current point.</li>
+ <li>Navigate into the new repo.
+  <pre class="brush: bash notranslate">cd express-locallibrary-tutorial</pre>
+ </li>
 </ol>
 
 <p>The final step is to copy in your application and then add the files to your repo using git:</p>
 
 <ol>
-	<li>Copy your Express application into this folder (excluding <strong>/node_modules</strong>, which contains dependency files that you should fetch from NPM as needed).</li>
-	<li>Open a command prompt/terminal and use the <code>add</code> command to add all files to git.</li>
-	<li>
-	<pre class="brush: bash notranslate">git add -A
+ <li>Copy your Express application into this folder (excluding <strong>/node_modules</strong>, which contains dependency files that you should fetch from NPM as needed).</li>
+ <li>Open a command prompt/terminal and use the <code>add</code> command to add all files to git.
+  <pre class="brush: bash notranslate">git add -A
 </pre>
-	</li>
-	<li>Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
-	<pre class="notranslate">&gt; git status
+ </li>
+ <li>Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+  <pre class="notranslate">&gt; git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
   (use "git reset HEAD &lt;file&gt;..." to unstage)
 
         new file:   ...</pre>
-	</li>
-	<li>When you're satisfied, commit the files to your local repository:
-	<pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
-	</li>
-	<li>Then synchronize your local repository to the Github website, using the following:
-	<pre class="brush: bash notranslate">git push origin master</pre>
-	</li>
+ </li>
+ <li>When you're satisfied, commit the files to your local repository:
+  <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
+ </li>
+ <li>Then synchronize your local repository to the Github website, using the following:
+  <pre class="brush: bash notranslate">git push origin master</pre>
+ </li>
 </ol>
 
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
@@ -345,7 +344,7 @@ Changes to be committed:
 <p>The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
 
 <pre class="brush: bash notranslate">&gt;node --version
-v10.15.1</pre>
+v12.18.4</pre>
 
 <p>Open <strong>package.json</strong>, and add this information as an <strong>engines &gt; node</strong> section as shown (using the version number for your system).</p>
 
@@ -353,7 +352,7 @@ v10.15.1</pre>
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
 <strong>  "engines": {
-    "node": "10.15.1"
+    "node": "12.18.4"
   },</strong>
   "private": true,
   ...
@@ -400,11 +399,11 @@ git push origin master</pre>
 <p>To start using Heroku you will first need to create an account (skip ahead to <a href="#Create_and_upload_the_website">Create and upload the website</a> if you've already got an account and installed the Heroku client):</p>
 
 <ul>
-	<li>Go to <a href="https://www.heroku.com/">www.heroku.com</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
-	<li>Enter your details and then press <strong>CREATE FREE ACCOUNT</strong>. You'll be asked to check your account for a sign-up email.</li>
-	<li>Click the account activation link in the signup email. You'll be taken back to your account on the web browser.</li>
-	<li>Enter your password and click <strong>SET PASSWORD AND LOGIN</strong>.</li>
-	<li>You'll then be logged in and taken to the Heroku dashboard: <a href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a>.</li>
+ <li>Go to <a href="https://www.heroku.com/">www.heroku.com</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
+ <li>Enter your details and then press <strong>CREATE FREE ACCOUNT</strong>. You'll be asked to check your account for a sign-up email.</li>
+ <li>Click the account activation link in the signup email. You'll be taken back to your account on the web browser.</li>
+ <li>Enter your password and click <strong>SET PASSWORD AND LOGIN</strong>.</li>
+ <li>You'll then be logged in and taken to the Heroku dashboard: <a href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a>.</li>
 </ul>
 
 <h3 id="Install_the_client">Install the client</h3>
@@ -493,26 +492,26 @@ heroku ps   #Display dyno status
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li id="production-best-practices-performance-and-reliability"><a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> (Express docs)</li>
-	<li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
-	<li>Heroku
-	<ul>
-		<li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node.js Applications on Heroku</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/nodejs-support">Heroku Node.js Support</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/config-vars">Configuration and Config Vars</a> (Heroku docs)</li>
-		<li><a href="https://devcenter.heroku.com/articles/limits">Limits</a> (Heroku docs)</li>
-	</ul>
-	</li>
-	<li>Digital Ocean
-	<ul>
-		<li><a href="https://www.digitalocean.com/community/tutorials?q=express">Express</a> tutorials</li>
-		<li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
-	</ul>
-	</li>
+ <li id="production-best-practices-performance-and-reliability"><a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
+ <li>Heroku
+  <ul>
+   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node.js Applications on Heroku</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/nodejs-support">Heroku Node.js Support</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/config-vars">Configuration and Config Vars</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/limits">Limits</a> (Heroku docs)</li>
+  </ul>
+ </li>
+ <li>Digital Ocean
+  <ul>
+   <li><a href="https://www.digitalocean.com/community/tutorials?q=express">Express</a> tutorials</li>
+   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
+  </ul>
+ </li>
 </ul>
 
 <p>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</p>
@@ -520,13 +519,13 @@ heroku ps   #Display dyno status
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
-	<li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>

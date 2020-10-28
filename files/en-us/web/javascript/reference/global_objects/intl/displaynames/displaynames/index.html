@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new Intl.DisplayNames([<var>locales</var>[, <var>options</var>]])
+<pre class="syntaxbox notranslate">new Intl.DisplayNames(<var>locales</var>, <var>options</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -33,7 +33,7 @@ tags:
   <dd>The numbering system to be used. Possible values include: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
  </dl>
  </dd>
- <dt><code>options</code> {{optional_inline}}</dt>
+ <dt><code>options</code></dt>
  <dd>
  <p>An object with some or all of the following properties:</p>
 
@@ -49,7 +49,7 @@ tags:
   </ul>
   </dd>
   <dt><code>type</code></dt>
-  <dd>The type to use, the default is <code>"language"</code>.
+  <dd>The type to use.
   <ul>
    <li><code>"language"</code></li>
    <li><code>"region"</code></li>
@@ -74,7 +74,7 @@ tags:
 
 <p>In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.</p>
 
-<pre class="brush: js notranslate">console.log((new Intl.DisplayNames()).of('US'));
+<pre class="brush: js notranslate">console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 // Expected output: 'us'
 </pre>
 

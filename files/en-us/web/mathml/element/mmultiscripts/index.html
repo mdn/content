@@ -13,7 +13,7 @@ tags:
 
 <p>MathML uses a special syntax to describe subscripts and superscripts for both, postscripts and prescripts, attached to a base expression:</p>
 
-<pre class="syntaxbox">&lt;mmultiscripts&gt;
+<pre class="syntaxbox notranslate">&lt;mmultiscripts&gt;
     <em>base</em>
      (<em>subscript superscript</em>)*
      [ &lt;mprescripts/&gt; (<em>presubscript presuperscript</em>)* ]
@@ -27,6 +27,8 @@ tags:
 <dl>
  <dt id="attr-class-id-style"><code>class</code>, <code>id</code>, <code>style</code></dt>
  <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dt id="attr-displaystyle"><code>displaystyle</code></dt>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-href"><code>href</code></dt>
  <dd>Used to set a hyperlink to a specified URI.</dd>
  <dt id="attr-mathbackground"><code>mathbackground</code></dt>
@@ -49,7 +51,7 @@ tags:
 
 <p>Rendering in your browser: <math> <mmultiscripts> <mi>X</mi> <mi>d</mi> <mi>c</mi> <mprescripts></mprescripts> <mi>b</mi> <mi>a</mi> </mmultiscripts> </math></p>
 
-<pre class="brush: html">&lt;math&gt;
+<pre class="brush: html notranslate">&lt;math&gt;
 
     &lt;mmultiscripts&gt;
 
@@ -73,7 +75,7 @@ tags:
 
 <p>Rendering in your browser: <math> <mmultiscripts> <mi>X</mi> <none></none> <mi>c</mi> <mprescripts></mprescripts> <mi>b</mi> <none></none> </mmultiscripts> </math></p>
 
-<pre class="brush: html">&lt;math&gt;
+<pre class="brush: html notranslate">&lt;math&gt;
 
     &lt;mmultiscripts&gt;
 
@@ -102,6 +104,11 @@ tags:
   </tr>
  </thead>
  <tbody>
+  <tr>
+   <td>{{SpecName("MathMLCore", "#prescripts-and-tensor-indices-mmultiscripts", "mmultiscripts")}}</td>
+   <td>{{Spec2("MathMLCore")}}</td>
+   <td>Draft specification</td>
+  </tr>
   <tr>
    <td>{{ SpecName('MathML3', 'chapter3.html#presm.mmultiscripts', 'mmultiscripts') }}</td>
    <td>{{ Spec2('MathML3') }}</td>

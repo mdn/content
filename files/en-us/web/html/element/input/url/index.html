@@ -16,13 +16,13 @@ tags:
   - URL
   - control
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>url</strong></code> are used to let the user enter and edit a URL.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.</p>
 
@@ -180,7 +180,7 @@ tags:
 
 <p>Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"&gt;</pre>
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"&gt;</pre>
 
 <p>{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}</p>
 
@@ -194,7 +194,7 @@ tags:
 
 <p>Here, we have a <code>url</code> input with the placeholder <code>http://www.example.com</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        placeholder="http://www.example.com"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
@@ -207,7 +207,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>url</code> edit box is 30 characters wide:</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        size="30"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
@@ -218,7 +218,7 @@ tags:
 
 <p>The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        size="30" minlength="10" maxlength="80"&gt;
 </pre>
 
@@ -233,7 +233,7 @@ tags:
 <p>As always, you can provide a default value for a <code>url</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
 <div id="Default_value">
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        value="http://www.example.com"&gt;</pre>
 </div>
 
@@ -243,7 +243,7 @@ tags:
 
 <p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
@@ -262,7 +262,7 @@ tags:
 
 <p>You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your <code>&lt;option&gt;</code> elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.</p>
 
-<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
@@ -280,7 +280,7 @@ tags:
 <p>There are two levels of content validation available for <code>url</code> inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Basic_validation">Basic validation</h3>
@@ -294,7 +294,7 @@ tags:
 <p>As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.</p>
 
 <div id="Default_value">
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;input id="myURL" name="myURL" type="url" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
@@ -313,7 +313,7 @@ tags:
 <p>Since inputs of type <code>url</code> validate against both the standard URL validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
 
 <div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css notranslate">div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -338,7 +338,7 @@ tags:
   }</pre>
 </div>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="myURL"&gt;Enter the problem website address:&lt;/label&gt;
     &lt;input id="myURL" name="myURL" type="url"
@@ -422,5 +422,5 @@ tags:
  <li>{{HTMLElement("input")}}</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

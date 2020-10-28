@@ -15,7 +15,7 @@ tags:
   - Time
   - datetime-local
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>datetime-local</code></strong> create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.</span></p>
 
@@ -299,7 +299,7 @@ input:valid+span:after {
   &lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;
 &lt;/form&gt;</pre>
 
-<p>{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}</p>
+<p>{{EmbedLiveSample('Handling_browser_support', 600, 100)}}</p>
 
 <p>If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern <code>nnnn-nn-nnTnn:nn</code>, where <code>n</code> is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates and times.</p>
 
@@ -348,7 +348,7 @@ input:valid + span:after {
 <p>The problem is with the client side of things: parsing of dates with more than 4 digits in the year.</p>
 
 <pre class="brush: html notranslate">&lt;!--midnight of January 1st, 10000: the exact time of Y10K--&gt;
-&lt;input type="datetime-local" value="<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">"+010000-01-01T05:00</span></span></span></span>"/&gt;</pre>
+&lt;input type="datetime-local" value="+010000-01-01T05:00"/&gt;</pre>
 
 <p>It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:</p>
 
@@ -363,7 +363,7 @@ input:valid + span:after {
 
 <p>In this example we create two sets of UI elements for choosing datetimes — a native <code>&lt;input type="datetime-local"&gt;</code> picker, and a set of five {{htmlelement("select")}} elements for choosing dates and times in older browsers that don't support the native input.</p>
 
-<p>{{ EmbedLiveSample('Examples', 600, 140) }}</p>
+<p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
 
 <p>The HTML looks like so:</p>
 
@@ -632,6 +632,6 @@ daySelect.onchange = function() {
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code></li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

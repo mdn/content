@@ -58,7 +58,6 @@ tags:
 
 <p>In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as <code>Array.from()</code> are "inherited" by subclasses of <code>Array</code>, and create new instances <em>of the subclass</em>, not <code>Array</code>.</p>
 
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Array_from_a_String">Array from a <code>String</code></h3>
@@ -85,6 +84,13 @@ Array.from(mapper.values());
 Array.from(mapper.keys());
 // ['1', '2'];
 </pre>
+
+<h3 id="Array_from_a_NodeList">Array from a <code>NodeList</code></h3>
+
+<pre class="brush: js notranslate">// Create an array based on a property of DOM Elements
+const images = document.getElementsByTagName('img');
+const sources = Array.from(images, image =&gt; image.src);
+const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</pre>
 
 <h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object (arguments)</h3>
 

@@ -37,7 +37,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.addEventListener('pointerout', (event) =&gt; {
   console.log('Pointer moved out');
@@ -45,7 +45,7 @@ para.addEventListener('pointerout', (event) =&gt; {
 
 <p>Using the <code>onpointerout</code> event handler property:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.onpointerout = (event) =&gt; {
   console.log('Pointer moved out');
@@ -58,6 +58,10 @@ para.onpointerout = (event) =&gt; {
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#the-pointerout-event')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
   </tr>
   <tr>
    <td>{{SpecName('Pointer Events', '#the-pointerout-event')}}</td>

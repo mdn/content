@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>ArrayBuffer[@@species]</strong></code> accessor property returns the <code>ArrayBuffer</code> constructor.</p>
+<p>The <strong><code>ArrayBuffer[@@species]</code></strong> accessor property returns the <code>ArrayBuffer</code> constructor.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -17,17 +17,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 class="highlight-spanned" id="Species_in_ordinary_objects"><span class="highlight-span">Species in ordinary objects</span></h3>
+<h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
 
 <p>The species property returns the default constructor function, which is the <code>ArrayBuffer</code> constructor for <code>ArrayBuffer</code> objects:</p>
 
-<pre class="brush: js">ArrayBuffer[Symbol.species]; // function ArrayBuffer()</pre>
+<pre class="brush: js notranslate">ArrayBuffer[Symbol.species]; // function ArrayBuffer()</pre>
 
-<h3 class="highlight-spanned" id="Species_in_derived_objects"><span class="highlight-span">Species in derived objects</span></h3>
+<h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
 <p>In a derived collection object (e.g. your custom array buffer <code>MyArrayBuffer</code>), the <code>MyArrayBuffer</code> species is the <code>MyArrayBuffer</code> constructor. However, you might want to overwrite this, in order to return parent <code>ArrayBuffer</code> objects in your derived class methods:</p>
 
-<pre class="brush: js">class MyArrayBuffer extends ArrayBuffer {
+<pre class="brush: js notranslate">class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
   static get [Symbol.species]() { return ArrayBuffer; }
 }</pre>
@@ -35,10 +35,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}</td>
   </tr>

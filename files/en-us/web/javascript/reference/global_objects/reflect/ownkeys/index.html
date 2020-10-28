@@ -10,15 +10,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The static <code><strong>Reflect.ownKeys()</strong></code> method returns an array of the <code>target</code> object's own property keys.</p>
+<p>The static <strong><code>Reflect.ownKeys()</code></strong> method returns an array of the <code>target</code> object's own property keys.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}</div>
 
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
+<h2 id="Syntax">Syntax</h2>
 
-<h2 id="Syntax"> Syntax</h2>
-
-<pre class="syntaxbox">Reflect.ownKeys(<var>target</var>)
+<pre class="syntaxbox notranslate">Reflect.ownKeys(<var>target</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -42,9 +42,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Reflect.ownKeys">Using <code>Reflect.ownKeys()</code></h3>
+<h3 id="Using_Reflect.ownKeys">Using Reflect.ownKeys()</h3>
 
-<pre class="brush: js">Reflect.ownKeys({z: 3, y: 2, x: 1})  // [ "z", "y", "x" ]
+<pre class="brush: js notranslate">Reflect.ownKeys({z: 3, y: 2, x: 1})  // [ "z", "y", "x" ]
 Reflect.ownKeys([])                  // ["length"]
 
 let sym = Symbol.for('comet')
@@ -61,10 +61,12 @@ Reflect.ownKeys(obj)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}}</td>
   </tr>

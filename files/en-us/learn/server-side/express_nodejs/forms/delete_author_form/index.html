@@ -7,7 +7,7 @@ tags:
   - Node
   - server-side
 ---
-<p> This subarticle shows how to define a page to delete <code>Author</code> objects.</p>
+<p>This subarticle shows how to define a page to delete <code>Author</code> objects.</p>
 
 <p>As discussed in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
 
@@ -15,7 +15,7 @@ tags:
 
 <p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_delete_get()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display Author delete form on GET.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Display Author delete form on GET.
 exports.author_delete_get = function(req, res, next) {
 
     async.parallel({
@@ -41,7 +41,7 @@ exports.author_delete_get = function(req, res, next) {
 <div class="note">
 <p><strong>Note:</strong> If  <code>findById()</code><strong> </strong>returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors. </p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">}, function(err, results) {
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">}, function(err, results) {
     if (err) { return next(err); }
     if (results.author==null) { // No results.
         res.redirect('/catalog/authors')
@@ -52,7 +52,7 @@ exports.author_delete_get = function(req, res, next) {
 
 <p>Find the exported <code>author_delete_post()</code> controller method, and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle Author delete on POST.
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// Handle Author delete on POST.
 exports.author_delete_post = function(req, res, next) {
 
     async.parallel({
@@ -91,7 +91,7 @@ exports.author_delete_post = function(req, res, next) {
 
 <p>Create <strong>/views/author_delete.pug</strong> and copy in the text below.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">extends layout
+<pre class="line-numbers  language-html notranslate"><code class="language-html">extends layout
 
 block content
   h1 #{title}: #{author.name}
@@ -137,7 +137,7 @@ block content
 
 <p>Open the <strong>author_detail.pug</strong> view and add the following lines at the bottom.</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">hr
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">hr
 p
   a(href=author.url+'/delete') Delete author</code></pre>
 

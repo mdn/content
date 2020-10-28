@@ -41,21 +41,21 @@ tags:
 <p>The process for identifying the containing block depends entirely on the value of the element's {{cssxref("position")}} property:</p>
 
 <ol start="1">
- <li>If the <code>position</code><strong> </strong>property is <code><strong>static</strong></code>, <code><strong>relative</strong></code>, or <strong><code>sticky</code></strong>, the containing block is formed by the edge of the <em>content box</em> of the nearest ancestor element that is either <strong>a block container</strong> (such as an inline-block, block, or list-item element) or <strong>establishes a formatting context</strong> (such as a table container, flex container, grid container, or the block container itself).</li>
- <li>If the <code>position</code><strong> </strong>property is <code><strong>absolute</strong></code>, the containing block is formed by the edge of the <em>padding box</em> of the nearest ancestor element that has a <code>position</code><strong> </strong>value other than <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code>, or <code>sticky</code>).</li>
- <li>If the <code>position</code><strong> </strong>property is <code><strong>fixed</strong></code>, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).</li>
- <li>If the <code>position</code><strong> </strong>property is <code><strong>absolute</strong></code> or <code><strong>fixed</strong></code>, the containing block may also be formed by the edge of the <em>padding box</em> of the nearest ancestor element that has the following:
+ <li>If the <code>position</code> property is <code><strong>static</strong></code>, <code><strong>relative</strong></code>, or <strong><code>sticky</code></strong>, the containing block is formed by the edge of the <em>content box</em> of the nearest ancestor element that is either <strong>a block container</strong> (such as an inline-block, block, or list-item element) or <strong>establishes a formatting context</strong> (such as a table container, flex container, grid container, or the block container itself).</li>
+ <li>If the <code>position</code> property is <code><strong>absolute</strong></code>, the containing block is formed by the edge of the <em>padding box</em> of the nearest ancestor element that has a <code>position</code> value other than <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code>, or <code>sticky</code>).</li>
+ <li>If the <code>position</code> property is <code><strong>fixed</strong></code>, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).</li>
+ <li>If the <code>position</code> property is <code><strong>absolute</strong></code> or <code><strong>fixed</strong></code>, the containing block may also be formed by the edge of the <em>padding box</em> of the nearest ancestor element that has the following:
   <ol start="1">
-   <li>A {{cssxref("transform")}} or {{cssxref("perspective")}}<strong> </strong>value other than <code>none</code></li>
+   <li>A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than <code>none</code></li>
    <li>A {{cssxref("will-change")}} value of <code>transform</code> or <code>perspective</code></li>
-   <li>A {{cssxref("filter")}}<strong> </strong> value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox).</li>
+   <li>A {{cssxref("filter")}} value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox).</li>
    <li>A {{cssxref("contain")}} value of <code>paint</code> (e.g. <code>contain: paint;</code>)</li>
   </ol>
  </li>
 </ol>
 
 <div class="note">
-<p><strong>Note: </strong>The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the <strong>initial containing block</strong>. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).</p>
+<p><strong>Note:</strong> The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the <strong>initial containing block</strong>. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).</p>
 </div>
 
 <h2 id="Calculating_percentage_values_from_the_containing_block">Calculating percentage values from the containing block</h2>
@@ -63,15 +63,15 @@ tags:
 <p>As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
 
 <ol start="1">
- <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code><strong> </strong>of the containing block.</li>
- <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code><strong> </strong>of the containing block.</li>
+ <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code> of the containing block.</li>
+ <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code> of the containing block.</li>
 </ol>
 
 <h2 id="Some_examples">Some examples</h2>
 
 <p>The HTML code for all our examples is:</p>
 
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -85,7 +85,7 @@ tags:
 <p>In this example, the paragraph is statically positioned, so its containing block is {{HTMLElement("section")}} because it's the nearest ancestor that is a block container.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -93,7 +93,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   background: beige;
 }
 
@@ -117,10 +117,10 @@ p {
 
 <h3 id="Example_2">Example 2</h3>
 
-<p>In this example, the paragraph's containing block is the {{HTMLElement("body")}}<strong> </strong>element, because <code>&lt;section&gt;</code> is not a block container (because of <code>display: inline</code>) and doesn’t establish a formatting context.</p>
+<p>In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because <code>&lt;section&gt;</code> is not a block container (because of <code>display: inline</code>) and doesn’t establish a formatting context.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -128,7 +128,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   background: beige;
 }
 
@@ -151,7 +151,7 @@ p {
 <p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were <code>border-box</code> this would not be the case.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -159,7 +159,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   background: beige;
 }
 
@@ -190,7 +190,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>fixed</code>, so its containing block is the initial containing block (on screens, the viewport). Thus, the paragraph's dimensions change based on the size of the browser window.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -198,7 +198,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   background: beige;
 }
 
@@ -227,7 +227,7 @@ p {
 <p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't <code>none</code>.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;body&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;This is a paragraph!&lt;/p&gt;
   &lt;/section&gt;
@@ -235,7 +235,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   background: beige;
 }
 

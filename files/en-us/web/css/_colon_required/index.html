@@ -30,7 +30,48 @@ input:required {
 
 <h2 id="Examples">Examples</h2>
 
-<p>See {{cssxref(":invalid")}} for an example.</p>
+<h3 id="The_required_field_has_a_red_border">The required field has a red border</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;div class="field"&gt;
+    &lt;label for="url_input"&gt;Enter a URL:&lt;/label&gt;
+    &lt;input type="url" id="url_input"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="field"&gt;
+    &lt;label for="email_input"&gt;Enter an email address:&lt;/label&gt;
+    &lt;input type="email" id="email_input" required&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css notranslate">label {
+  display: block;
+  margin: 1px;
+  padding: 1px;
+}
+
+.field {
+  margin: 1px;
+  padding: 1px;
+}
+
+input:required {
+  border-color: #800000;
+  border-width: 3px;
+}
+
+input:required:invalid {
+  border-color: #c00000;
+}
+</pre>
+
+<h4 id="Result">Result</h4>
+
+<p>{{EmbedLiveSample('Examples', 600, 120)}}</p>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -39,37 +80,37 @@ input:required {
 <p>If the form also contains <a href="/en-US/docs/Web/CSS/:optional">optional</a> inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html" rel="noopener">Understanding Success Criterion 3.3.2  | W3C Understanding WCAG 2.0</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
+	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html" rel="noopener">Understanding Success Criterion 3.3.2  | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-required', ':required') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-required', ':required') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Defines the semantics of HTML and constraint validation.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>No change.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ SpecName('HTML WHATWG', '#selector-required', ':required') }}</td>
+			<td>{{ Spec2('HTML WHATWG') }}</td>
+			<td>No change.</td>
+		</tr>
+		<tr>
+			<td>{{ SpecName('HTML5 W3C', '#selector-required', ':required') }}</td>
+			<td>{{ Spec2('HTML5 W3C') }}</td>
+			<td>Defines the semantics of HTML and constraint validation.</td>
+		</tr>
+		<tr>
+			<td>{{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}</td>
+			<td>{{ Spec2('CSS4 Selectors') }}</td>
+			<td>No change.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -81,6 +122,6 @@ input:required {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+	<li>Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
+	<li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
 </ul>

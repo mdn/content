@@ -32,23 +32,23 @@ tags:
 <p><img alt="rect.png" class="internal rwrap" src="/@api/deki/files/5730/=rect.png" style="float: right;"></p>
 
 <dl>
- <dt><em>top</em></dt>
- <dd>Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.</dd>
+	<dt><em>top</em></dt>
+	<dd>Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.</dd>
 </dl>
 
 <dl>
- <dt><em>right</em></dt>
- <dd>Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.</dd>
+	<dt><em>right</em></dt>
+	<dd>Is a {{cssxref("length")}} representing the offset for the right of the rectangle relative to the left border of the element's box.</dd>
 </dl>
 
 <dl>
- <dt><em>bottom</em></dt>
- <dd>Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.</dd>
+	<dt><em>bottom</em></dt>
+	<dd>Is a {{cssxref("length")}} representing the offset for the bottom of the rectangle relative to the top border of the element's box.</dd>
 </dl>
 
 <dl>
- <dt><em>left</em></dt>
- <dd>Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.</dd>
+	<dt><em>left</em></dt>
+	<dd>Is a {{cssxref("length")}} representing the offset for the left of the rectangle relative to the left border of the element's box.</dd>
 </dl>
 
 <h2 id="Interpolation">Interpolation</h2>
@@ -56,6 +56,8 @@ tags:
 <p>When animated, values of the <code>&lt;shape&gt;</code> data type are interpolated over their <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> components, each treated as a real, floating-point number. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function" title="timing-function">timing function</a> associated with the animation.</p>
 
 <h2 id="Examples" name="Examples">Example</h2>
+
+<h3 id="Example_demonstrating_correct_use_of_the_rect_function">Example demonstrating correct use of the rect() function</h3>
 
 <pre class="brush: css notranslate">img.clip04 {
   clip: rect(10px, 20px, 20px, 10px);
@@ -65,20 +67,20 @@ tags:
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visufx.html#value-def-shape', '&lt;shape&gt;') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Defines with the {{ cssxref("clip") }} property.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ SpecName('CSS2.1', 'visufx.html#value-def-shape', '&lt;shape&gt;') }}</td>
+			<td>{{ Spec2('CSS2.1') }}</td>
+			<td>Defines with the {{ cssxref("clip") }} property.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
@@ -90,6 +92,6 @@ tags:
 <h2 id="See_also" name="See_also">See also</h2>
 
 <ul>
- <li>Related CSS property: {{ cssxref("clip") }}</li>
- <li>The <code><a href="/en/CSS/-moz-image-rect" title="en/CSS/-moz-image-rect">-moz-image-rect()</a></code> function has similar coordinate values to <code>rect()</code>.</li>
+	<li>Related CSS property: {{ cssxref("clip") }}</li>
+	<li>The <code><a href="/en/CSS/-moz-image-rect" title="en/CSS/-moz-image-rect">-moz-image-rect()</a></code> function has similar coordinate values to <code>rect()</code>.</li>
 </ul>

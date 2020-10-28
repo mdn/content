@@ -39,7 +39,7 @@ myFun("one", "two", "three", "four", "five", "six")
 // Console Output:
 // a, one
 // b, two
-// manyMoreArgs, [three, four, five, six]
+// manyMoreArgs, ["three", "four", "five", "six"]
 </pre>
 
 <h3 id="Difference_between_rest_parameters_and_the_arguments_object">Difference between rest parameters and the <code>arguments</code> object</h3>
@@ -96,7 +96,7 @@ myFun("one", "two", "three", "four", "five", "six")
 
 // a, one
 // b, two
-// manyMoreArgs, [three, four, five, six]
+// manyMoreArgs, ["three", "four", "five", "six"]
 </pre>
 
 <p>Below... even though there is just one value, the last argument still gets put into an array.</p>
@@ -107,7 +107,7 @@ myFun("one", "two", "three")
 
 // a, one
 // b, two
-// manyMoreArgs, [three]</pre>
+// manyMoreArgs, ["three"]</pre>
 
 <p>Below, the third argument isn't provided, but <code>manyMoreArgs</code> is still an array (albeit an empty one).</p>
 

@@ -28,7 +28,7 @@ tags:
  <dt>{{domxref("PerformanceEntry.name")}}</dt>
  <dd>Returns either <code>"first-paint"</code> or <code>"first-contentful-paint"</code>.</dd>
  <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint ocurred.</dd>
+ <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.</dd>
  <dt>{{domxref("PerformanceEntry.duration")}}</dt>
  <dd>Returns 0.</dd>
 </dl>
@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function showPaintTimings() {
+<pre class="brush: js notranslate">function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
     let performanceEntries = performance.getEntriesByType('paint');
@@ -53,7 +53,7 @@ tags:
 
 <p>The code above produces console output something like the following:</p>
 
-<pre>The time to first-paint was 2785.915 milliseconds.
+<pre class="notranslate">The time to first-paint was 2785.915 milliseconds.
 The time to first-contentful-paint was 2787.460 milliseconds.</pre>
 
 <h2 id="Specifications">Specifications</h2>

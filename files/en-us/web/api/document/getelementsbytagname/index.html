@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<var>name</var>);</pre>
+<pre class="syntaxbox notranslate">var <var>elements</var> = document.getElementsByTagName(<var>name</var>);</pre>
 
 <ul>
  <li><var>elements</var> is a live {{domxref("HTMLCollection")}} (but see the note below) of found elements in the order they appear in the tree.</li>
@@ -28,7 +28,7 @@ tags:
 
 <p>Clicking the buttons uses <code>getElementsByTagName()</code> to count the descendant paragraph elements of a particular parent (either the document itself or one of two nested {{HTMLElement("div")}} elements).</p>
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -95,12 +95,14 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('DOM WHATWG','#dom-document-getelementsbytagname','document.getElementsByTagName')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>

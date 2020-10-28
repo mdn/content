@@ -45,12 +45,12 @@ transition-property: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>none</code></dt>
- <dd>No properties will transition.</dd>
- <dt><code>all</code></dt>
- <dd>All properties that can transition will.</dd>
- <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>A string identifying the property to which a transition effect should be applied when its value changes.</dd>
+	<dt><code>none</code></dt>
+	<dd>No properties will transition.</dd>
+	<dt><code>all</code></dt>
+	<dd>All properties that can transition will.</dd>
+	<dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
+	<dd>A string identifying the property to which a transition effect should be applied when its value changes.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -63,25 +63,48 @@ transition-property: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<p>There are several examples of CSS transitions included in the main <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a> article.</p>
+<h3 id="Simple_example">Simple example</h3>
+
+<p>This example performs a four-second font size transition when the user hovers over the element, the <code>transition-property</code> is the <code>font-size</code>.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;a class="target"&gt;Hover over me&lt;/a&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css notranslate">.target {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+}
+
+.target:hover {
+  font-size: 36px;
+}
+</pre>
+
+<p>{{EmbedLiveSample('Simple_example', 600, 100)}}</p>
+
+<p>You will find more examples of <code>transition-property</code> included in the main <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a> article.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}}</td>
+			<td>{{Spec2('CSS3 Transitions')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,10 +116,10 @@ transition-property: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{cssxref('transition')}}</li>
- <li>{{cssxref('transition-duration')}}</li>
- <li>{{cssxref('transition-timing-function')}}</li>
- <li>{{cssxref('transition-delay')}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
+	<li>{{cssxref('transition')}}</li>
+	<li>{{cssxref('transition-duration')}}</li>
+	<li>{{cssxref('transition-timing-function')}}</li>
+	<li>{{cssxref('transition-delay')}}</li>
+	<li>{{domxref("TransitionEvent")}}</li>
 </ul>

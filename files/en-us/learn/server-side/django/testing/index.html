@@ -310,27 +310,27 @@ class AuthorModelTest(TestCase):
     def test_first_name_label(self):
         author = Author.objects.get(id=1)
         field_label = author._meta.get_field('first_name').verbose_name
-        self.assertEquals(field_label, 'first name')
+        self.assertEqual(field_label, 'first name')
 
     def test_date_of_death_label(self):
         author=Author.objects.get(id=1)
         field_label = author._meta.get_field('date_of_death').verbose_name
-        self.assertEquals(field_label, 'died')
+        self.assertEqual(field_label, 'died')
 
     def test_first_name_max_length(self):
         author = Author.objects.get(id=1)
         max_length = author._meta.get_field('first_name').max_length
-        self.assertEquals(max_length, 100)
+        self.assertEqual(max_length, 100)
 
     def test_object_name_is_last_name_comma_first_name(self):
         author = Author.objects.get(id=1)
         expected_object_name = f'{author.last_name}, {author.first_name}'
-        self.assertEquals(expected_object_name, str(author))
+        self.assertEqual(expected_object_name, str(author))
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
         # This will also fail if the urlconf is not defined.
-        self.assertEquals(author.get_absolute_url(), '/catalog/author/1')</pre>
+        self.assertEqual(author.get_absolute_url(), '/catalog/author/1')</pre>
 
 <p>The field tests check that the values of the field labels (<code>verbose_name</code>) and that the size of the character fields are as expected. These methods all have descriptive names, and follow the same pattern:</p>
 
@@ -341,13 +341,13 @@ author = Author.objects.get(id=1)
 field_label = author._meta.get_field('first_name').verbose_name
 
 # Compare the value to the expected result
-self.assertEquals(field_label, 'first name')</pre>
+self.assertEqual(field_label, 'first name')</pre>
 
 <p>The interesting things to note are:</p>
 
 <ul>
  <li>We can't get the <code>verbose_name</code> directly using <code>author.first_name.verbose_name</code>, because <code>author.first_name</code> is a <em>string</em> (not a handle to the <code>first_name</code> object that we can use to access its properties). Instead we need to use the author's <code>_meta</code> attribute to get an instance of the field and use that to query for the additional information.</li>
- <li>We chose to use <code>assertEquals(field_label,'first name')</code> rather than <code>assertTrue(field_label == 'first name')</code>. The reason for this is that if the test fails the output for the former tells you what the label actually was, which makes debugging the problem just a little easier.</li>
+ <li>We chose to use <code>assertEqual(field_label,'first name')</code> rather than <code>assertTrue(field_label == 'first name')</code>. The reason for this is that if the test fails the output for the former tells you what the label actually was, which makes debugging the problem just a little easier.</li>
 </ul>
 
 <div class="note">
@@ -359,12 +359,12 @@ self.assertEquals(field_label, 'first name')</pre>
 <pre class="brush: python notranslate">def test_object_name_is_last_name_comma_first_name(self):
     author = Author.objects.get(id=1)
     expected_object_name = f'{author.last_name}, {author.first_name}'
-    self.assertEquals(expected_object_name, str(author))
+    self.assertEqual(expected_object_name, str(author))
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
     # This will also fail if the urlconf is not defined.
-    self.assertEquals(author.get_absolute_url(), '/catalog/author/1')</pre>
+    self.assertEqual(author.get_absolute_url(), '/catalog/author/1')</pre>
 
 <p>Run the tests now. If you created the Author model as we described in the models tutorial it is quite likely that you will get an error for the <code>date_of_death</code> label as shown below. The test is failing because it was written expecting the label definition to follow Django's convention of not capitalising the first letter of the label (Django does this for you).</p>
 
@@ -373,7 +373,7 @@ FAIL: test_date_of_death_label (catalog.tests.test_models.AuthorModelTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "D:\...\locallibrary\catalog\tests\test_models.py", line 32, in test_date_of_death_label
-    self.assertEquals(field_label,'died')
+    self.assertEqual(field_label,'died')
 AssertionError: 'Died' != 'died'
 - Died
 ? ^

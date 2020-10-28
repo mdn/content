@@ -1,0 +1,65 @@
+---
+title: content-visibility
+slug: Web/CSS/content-visibility
+---
+<p>{{CSSRef}}{{Draft}}</p>
+
+<p><span class="seoSummary">The <strong><code>content-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed.</span> Basically it enables the user agent to skip an element's rendering work, including layout and painting, until it is needed, makes the initial page load much faster.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+content-visibility: visible;
+content-visibility: hidden;
+content-visibility: auto;
+
+/* Global values */
+content-visibility: initial;
+content-visibility: unset;
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code>visible</code></dt>
+ <dd>No effect. The element’s contents are laid out and rendered as normal.</dd>
+ <dt><code>hidden</code></dt>
+ <dd>The element skips its contents. The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents <code>display: none</code>.</dd>
+ <dt><code>auto</code></dt>
+ <dd>The element turns on layout containment, style containment, and paint containment. If the element is not relevant to the user, it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.</dd>
+</dl>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{CSSInfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Containment Module Level 2', '#content-visibility')}}</td>
+   <td>{{Spec2('CSS Containment Module Level 2')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.properties.content-visibility")}}</p>

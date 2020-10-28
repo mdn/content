@@ -13,9 +13,11 @@ tags:
 
 <p>The <strong><code>block-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("width")}} or the {{cssxref("height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/block-size.html")}} </div>
+<p>If the writing mode is vertically oriented, the value of <code>block-size</code> relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.</p>
 
+<div>{{EmbedInteractiveExample("pages/css/block-size.html")}}</div>
 
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,12 +39,6 @@ block-size: inherit;
 block-size: initial;
 block-size: unset;
 </pre>
-
-<p>If the writing mode is vertically oriented, the value of <code>block-size</code> relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.</p>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Syntax_2">Syntax</h2>
 
 <h3 id="Values">Values</h3>
 
@@ -96,7 +92,7 @@ block-size: unset;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility </h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

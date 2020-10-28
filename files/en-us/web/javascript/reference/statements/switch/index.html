@@ -39,12 +39,12 @@ tags:
 }</pre>
 
 <dl>
- <dt><code><var>expression</var></code></dt>
- <dd>An expression whose result is matched against each <code>case</code> clause.</dd>
- <dt><code>case <var>valueN</var></code> {{optional_inline}}</dt>
- <dd>A <code>case</code> clause used to match against <code><var>expression</var></code>. If the <code><var>expression</var></code> matches the specified <code><var>valueN</var></code>, the statements inside the <code>case</code> clause are executed until either the end of the <code>switch</code> statement or a <code>break</code>.</dd>
- <dt><code>default</code> {{optional_inline}}</dt>
- <dd>A <code>default</code> clause; if provided, this clause is executed if the value of <code><var>expression</var></code> doesn't match any of the <code>case</code> clauses.</dd>
+	<dt><code><var>expression</var></code></dt>
+	<dd>An expression whose result is matched against each <code>case</code> clause.</dd>
+	<dt><code>case <var>valueN</var></code> {{optional_inline}}</dt>
+	<dd>A <code>case</code> clause used to match against <code><var>expression</var></code>. If the <code><var>expression</var></code> matches the specified <code><var>valueN</var></code>, the statements inside the <code>case</code> clause are executed until either the end of the <code>switch</code> statement or a <code>break</code>.</dd>
+	<dt><code>default</code> {{optional_inline}}</dt>
+	<dd>A <code>default</code> clause; if provided, this clause is executed if the value of <code><var>expression</var></code> doesn't match any of the <code>case</code> clauses.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -171,6 +171,7 @@ switch (foo) {
     output += 'Name';
   case 4:
     output += '?';
+    console.log(output);
     break;
   case 5:
     output += '!';
@@ -183,42 +184,42 @@ switch (foo) {
 <p>The output from this example:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Log text</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>foo</code> is <code>NaN</code> or not <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, or <code>0</code></td>
-   <td>Please pick a number from 0 to 5!</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td>Output: So What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td>Output: What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td>Output: Your Name?</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td>Output: Name?</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td>Output: ?</td>
-  </tr>
-  <tr>
-   <td><code>5</code></td>
-   <td>Output: !</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Value</th>
+			<th scope="col">Log text</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>foo</code> is <code>NaN</code> or not <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, or <code>0</code></td>
+			<td>Please pick a number from 0 to 5!</td>
+		</tr>
+		<tr>
+			<td><code>0</code></td>
+			<td>Output: So What Is Your Name?</td>
+		</tr>
+		<tr>
+			<td><code>1</code></td>
+			<td>Output: What Is Your Name?</td>
+		</tr>
+		<tr>
+			<td><code>2</code></td>
+			<td>Output: Your Name?</td>
+		</tr>
+		<tr>
+			<td><code>3</code></td>
+			<td>Output: Name?</td>
+		</tr>
+		<tr>
+			<td><code>4</code></td>
+			<td>Output: ?</td>
+		</tr>
+		<tr>
+			<td><code>5</code></td>
+			<td>Output: !</td>
+		</tr>
+	</tbody>
 </table>
 
 <h3 id="Block-scope_variables_within_switch_statements">Block-scope variables within <code>switch</code> statements</h3>
@@ -271,16 +272,16 @@ switch (action) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -292,5 +293,5 @@ switch (action) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/if...else", "if...else")}}</li>
+	<li>{{jsxref("Statements/if...else", "if...else")}}</li>
 </ul>

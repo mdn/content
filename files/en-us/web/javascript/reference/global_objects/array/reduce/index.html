@@ -22,40 +22,42 @@ tags:
 <p>The <strong>reducer</strong> function takes four arguments:</p>
 
 <ol>
-	<li>Accumulator (<code><var>acc</var></code>)</li>
-	<li>Current Value (<code><var>cur</var></code>)</li>
-	<li>Current Index (<code><var>idx</var></code>)</li>
-	<li>Source Array (<code><var>src</var></code>)</li>
+ <li>Accumulator (<code><var>acc</var></code>)</li>
+ <li>Current Value (<code><var>cur</var></code>)</li>
+ <li>Current Index (<code><var>idx</var></code>)</li>
+ <li>Source Array (<code><var>src</var></code>)</li>
 </ol>
 
 <p>Your <strong>reducer</strong> function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array, and ultimately becomes the final, single resulting value.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.reduce(<var>callback</var>( <var>accumulator</var>, <var>currentValue, </var>[, <var>index</var>[, <var>array</var>]] )[, <var>initialValue</var>])</pre>
+<pre class="syntaxbox notranslate"><var>arr</var>.reduce(<var>callback</var>( <var>accumulator</var>, <var>currentValue</var>[, <var>index</var>[, <var>array</var>]] ) {
+  // return result from executing something for <var>accumulator</var> or <var>currentValue</var>
+}[, <var>initialValue</var>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>callback</var></code></dt>
-	<dd>
-	<p>A function to execute on each element in the array (except for the first, if no <code><var>initialValue</var></code> is supplied).</p>
+ <dt><code><var>callback</var></code></dt>
+ <dd>
+ <p>A function to execute on each element in the array (except for the first, if no <code><var>initialValue</var></code> is supplied).</p>
 
-	<p>It takes four arguments:</p>
+ <p>It takes four arguments:</p>
 
-	<dl>
-		<dt><code><var>accumulator</var></code></dt>
-		<dd>The accumulator accumulates <var>callback</var>'s return values. It is the accumulated value previously returned in the last invocation of the callback—or <code><var>initialValue</var></code>, if it was supplied (see below).</dd>
-		<dt><code><var>currentValue</var></code></dt>
-		<dd>The current element being processed in the array.</dd>
-		<dt><code><var>index</var></code> {{optional_inline}}</dt>
-		<dd>The index of the current element being processed in the array. Starts from index <code>0</code> if an <code>initialValue</code> is provided. Otherwise, it starts from index <code>1</code>.</dd>
-		<dt><code><var>array</var></code> {{optional_inline}}</dt>
-		<dd>The array <code>reduce()</code> was called upon.</dd>
-	</dl>
-	</dd>
-	<dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
-	<dd>A value to use as the first argument to the first call of the <code><var>callback</var></code>. If no <code><var>initialValue</var></code> is supplied, the first element in the array will be used as the initial <code><var>accumulator</var></code> value and skipped as <code><var>currentValue</var></code>. Calling <code>reduce()</code> on an empty array without an <code><var>initialValue</var></code> will throw a {{jsxref("TypeError")}}.</dd>
+ <dl>
+  <dt><code><var>accumulator</var></code></dt>
+  <dd>The accumulator accumulates <var>callback</var>'s return values. It is the accumulated value previously returned in the last invocation of the callback—or <code><var>initialValue</var></code>, if it was supplied (see below).</dd>
+  <dt><code><var>currentValue</var></code></dt>
+  <dd>The current element being processed in the array.</dd>
+  <dt><code><var>index</var></code> {{optional_inline}}</dt>
+  <dd>The index of the current element being processed in the array. Starts from index <code>0</code> if an <code>initialValue</code> is provided. Otherwise, it starts from index <code>1</code>.</dd>
+  <dt><code><var>array</var></code> {{optional_inline}}</dt>
+  <dd>The array <code>reduce()</code> was called upon.</dd>
+ </dl>
+ </dd>
+ <dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
+ <dd>A value to use as the first argument to the first call of the <code><var>callback</var></code>. If no <code><var>initialValue</var></code> is supplied, the first element in the array will be used as the initial <code><var>accumulator</var></code> value and skipped as <code><var>currentValue</var></code>. Calling <code>reduce()</code> on an empty array without an <code><var>initialValue</var></code> will throw a {{jsxref("TypeError")}}.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -67,10 +69,10 @@ tags:
 <p>The <code>reduce()</code> method executes the <code><var>callback</var></code> once for each assigned value present in the array, taking four arguments:</p>
 
 <ol>
-	<li><code><var>accumulator</var></code></li>
-	<li><code><var>currentValue</var></code></li>
-	<li><code><var>currentIndex</var></code></li>
-	<li><code><var>array</var></code></li>
+ <li><code><var>accumulator</var></code></li>
+ <li><code><var>currentValue</var></code></li>
+ <li><code><var>currentIndex</var></code></li>
+ <li><code><var>array</var></code></li>
 </ol>
 
 <p>The first time the callback is called, <code><var>accumulator</var></code> and <code><var>currentValue</var></code> can be one of two values. If <code><var>initialValue</var></code> is provided in the call to <code>reduce()</code>, then <code><var>accumulator</var></code> will be equal to <code><var>initialValue</var></code>, and <code><var>currentValue</var></code> will be equal to the first value in the array. If no <code><var>initialValue</var></code> is provided, then <code><var>accumulator</var></code> will be equal to the first value in the array, and <code><var>currentValue</var></code> will be equal to the second.</p>
@@ -85,12 +87,12 @@ tags:
 
 <p>It is almost always safer to provide an <code><var>initialValue</var></code>, because there can be up to <em>four</em> possible output types without <code><var>initialValue</var></code>, as shown in the following example:</p>
 
-<pre class="brush: js notranslate">let maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
+<pre class="brush: js notranslate">let maxCallback = ( acc, cur ) =&gt; {return { x: Math.max( acc.x, cur.x )}};
 let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 
 // reduce without initialValue
-[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( maxCallback ); // NaN
-[ { x: 2 }, { x: 22 }            ].reduce( maxCallback ); // 22
+[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( maxCallback ); // { x: 42 }
+[ { x: 2 }, { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
 [ { x: 2 }                       ].reduce( maxCallback ); // { x: 2 }
 [                                ].reduce( maxCallback ); // TypeError
 
@@ -111,50 +113,50 @@ let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 <p>The callback would be invoked four times, with the arguments and return values in each call being as follows:</p>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col"><code><var>callback</var></code> iteration</th>
-			<th scope="col"><code><var>accumulator</var></code></th>
-			<th scope="col"><code><var>currentValue</var></code></th>
-			<th scope="col"><code><var>currentIndex</var></code></th>
-			<th scope="col"><code><var>array</var></code></th>
-			<th scope="col">return value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">first call</th>
-			<td><code>0</code></td>
-			<td><code>1</code></td>
-			<td><code>1</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">second call</th>
-			<td><code>1</code></td>
-			<td><code>2</code></td>
-			<td><code>2</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>3</code></td>
-		</tr>
-		<tr>
-			<th scope="row">third call</th>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>6</code></td>
-		</tr>
-		<tr>
-			<th scope="row">fourth call</th>
-			<td><code>6</code></td>
-			<td><code>4</code></td>
-			<td><code>4</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>10</code></td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col"><code><var>callback</var></code> iteration</th>
+   <th scope="col"><code><var>accumulator</var></code></th>
+   <th scope="col"><code><var>currentValue</var></code></th>
+   <th scope="col"><code><var>currentIndex</var></code></th>
+   <th scope="col"><code><var>array</var></code></th>
+   <th scope="col">return value</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">first call</th>
+   <td><code>0</code></td>
+   <td><code>1</code></td>
+   <td><code>1</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>1</code></td>
+  </tr>
+  <tr>
+   <th scope="row">second call</th>
+   <td><code>1</code></td>
+   <td><code>2</code></td>
+   <td><code>2</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>3</code></td>
+  </tr>
+  <tr>
+   <th scope="row">third call</th>
+   <td><code>3</code></td>
+   <td><code>3</code></td>
+   <td><code>3</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>6</code></td>
+  </tr>
+  <tr>
+   <th scope="row">fourth call</th>
+   <td><code>6</code></td>
+   <td><code>4</code></td>
+   <td><code>4</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>10</code></td>
+  </tr>
+ </tbody>
 </table>
 
 <p>The value returned by <code>reduce()</code> would be that of the last callback invocation (<code>10</code>).</p>
@@ -172,58 +174,58 @@ let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 </pre>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col"><code><var>callback</var></code> iteration</th>
-			<th scope="col"><code><var>accumulator</var></code></th>
-			<th scope="col"><code><var>currentValue</var></code></th>
-			<th scope="col"><code><var>currentIndex</var></code></th>
-			<th scope="col"><code><var>array</var></code></th>
-			<th scope="col">return value</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">first call</th>
-			<td><code>10</code></td>
-			<td><code>0</code></td>
-			<td><code>0</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>10</code></td>
-		</tr>
-		<tr>
-			<th scope="row">second call</th>
-			<td><code>10</code></td>
-			<td><code>1</code></td>
-			<td><code>1</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>11</code></td>
-		</tr>
-		<tr>
-			<th scope="row">third call</th>
-			<td><code>11</code></td>
-			<td><code>2</code></td>
-			<td><code>2</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>13</code></td>
-		</tr>
-		<tr>
-			<th scope="row">fourth call</th>
-			<td><code>13</code></td>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>16</code></td>
-		</tr>
-		<tr>
-			<th scope="row">fifth call</th>
-			<td><code>16</code></td>
-			<td><code>4</code></td>
-			<td><code>4</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>20</code></td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col"><code><var>callback</var></code> iteration</th>
+   <th scope="col"><code><var>accumulator</var></code></th>
+   <th scope="col"><code><var>currentValue</var></code></th>
+   <th scope="col"><code><var>currentIndex</var></code></th>
+   <th scope="col"><code><var>array</var></code></th>
+   <th scope="col">return value</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">first call</th>
+   <td><code>10</code></td>
+   <td><code>0</code></td>
+   <td><code>0</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>10</code></td>
+  </tr>
+  <tr>
+   <th scope="row">second call</th>
+   <td><code>10</code></td>
+   <td><code>1</code></td>
+   <td><code>1</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>11</code></td>
+  </tr>
+  <tr>
+   <th scope="row">third call</th>
+   <td><code>11</code></td>
+   <td><code>2</code></td>
+   <td><code>2</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>13</code></td>
+  </tr>
+  <tr>
+   <th scope="row">fourth call</th>
+   <td><code>13</code></td>
+   <td><code>3</code></td>
+   <td><code>3</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>16</code></td>
+  </tr>
+  <tr>
+   <th scope="row">fifth call</th>
+   <td><code>16</code></td>
+   <td><code>4</code></td>
+   <td><code>4</code></td>
+   <td><code>[0, 1, 2, 3, 4]</code></td>
+   <td><code>20</code></td>
+  </tr>
+ </tbody>
 </table>
 
 <p>The value returned by <code>reduce()</code> in this case would be <code>20</code>.</p>
@@ -561,16 +563,16 @@ multiply24(10) // 240
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -584,5 +586,5 @@ multiply24(10) // 240
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("Array.prototype.reduceRight()")}}</li>
+ <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
 </ul>

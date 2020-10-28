@@ -44,22 +44,28 @@ font-stretch: unset;
  <dt><code>normal</code></dt>
  <dd>Specifies a normal font face.</dd>
  <dt><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code></dt>
- <dd>Specifies a more condensed font face than normal, with ultra-condensed as the most condensed.</dd>
+ <dd>Specifies a more condensed font face than normal, with <code>ultra-condensed</code> as the most condensed.</dd>
  <dt><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code></dt>
- <dd>Specifies a more expanded font face than normal, with ultra-expanded as the most expanded.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.</dd>
+ <dd>Specifies a more expanded font face than normal, with <code>ultra-expanded</code> as the most expanded.</dd>
+ <dt><code><var>&lt;percentage&gt;</var></code></dt>
+ <dd>
+ <p>A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.</p>
+
+ <div class="note">
+ <p>In earlier versions of the <code>font-stretch</code> specification, the property accepts only the nine keyword values.</p>
+
+ <p><strong>The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec</strong> extends the syntax to accept a <code><var>&lt;percentage&gt;</var></code> value as well. This enables variable fonts to offer something more like a <em>continuum</em> of character widths. For TrueType or OpenType variable fonts, the "<code>wdth</code>" variation is used to implement varying widths.</p>
+
+ <p>However, note that the <code><var>&lt;percentage&gt;</var></code> syntax is not yet supported by all browsers: check the <a href="#Browser_compatibility">Browser compatibility</a> table for details.</p>
+ </div>
+ </dd>
 </dl>
-
-<p>In earlier versions of the <code>font-stretch</code> specification, the property accepts only the nine keyword values. CSS Fonts Level 4 extends the syntax to accept a <code>&lt;percentage&gt;</code> value as well. This enables variable fonts to offer something more like a continuum of character widths. For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying widths.</p>
-
-<p>However, note that the <code>&lt;percentage&gt;</code> syntax is not yet supported by all browsers: check the <a href="#Browser_compatibility">Browser compatibility</a> table for details.</p>
 
 <h3 id="Keyword_to_numeric_mapping">Keyword to numeric mapping</h3>
 
 <p>The table below shows the mapping between keyword values and numeric percentages:</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Keyword</th>
@@ -106,13 +112,11 @@ font-stretch: unset;
  </tbody>
 </table>
 
-
 <h2 id="Description">Description</h2>
 
 <p>Some font families offer additional faces in which the characters are narrower than the normal face (<em>condensed</em> faces) or wider than the normal face (<em>expanded</em> faces).</p>
 
 <p>You can use <code>font-stretch</code> to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.</p>
-
 
 <h3 id="Font_face_selection">Font face selection</h3>
 
@@ -164,8 +168,8 @@ font-stretch: unset;
 </table>
 
 <ul>
- <li>Helvetica Neue, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of <code>font-stretch</code> less than 100% select the condensed face, while all other values select the normal face.</li>
- <li><a href="http://tylerfinck.com/leaguemonovariable/">League Mono Variable</a> is a variable font that offers something like a continuous range of widths for different percentage values of <code>font-stretch</code>.</li>
+ <li><strong>Helvetica Neue</strong>, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of <code>font-stretch</code> less than 100% select the condensed face, while all other values select the normal face.</li>
+ <li><strong><a href="http://tylerfinck.com/leaguemonovariable/">League Mono Variable</a></strong> is a variable font that offers something like a continuous range of widths for different percentage values of <code>font-stretch</code>.</li>
 </ul>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -180,7 +184,9 @@ font-stretch: unset;
 
 <h3 id="Setting_font_stretch_percentages">Setting font stretch percentages</h3>
 
-<p>Note that this example will only work in browsers that support <code>&lt;percentage&gt;</code> values.</p>
+<div class="blockIndicator note">
+<p><strong>Note:</strong> This example will only work in browsers that support <code><var>&lt;percentage&gt;</var></code> values.</p>
+</div>
 
 <h4 id="HTML">HTML</h4>
 
@@ -245,7 +251,7 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
   <tr>
    <td>{{ SpecName('CSS4 Fonts', '#propdef-font-stretch', 'font-stretch') }}</td>
    <td>{{ Spec2('CSS4 Fonts') }}</td>
-   <td>Adds the <code>&lt;percentage&gt;</code> syntax for variable fonts.</td>
+   <td>Adds the <code><var>&lt;percentage&gt;</var></code> syntax for variable fonts.</td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS3 Fonts', '#propdef-font-stretch', 'font-stretch') }}</td>

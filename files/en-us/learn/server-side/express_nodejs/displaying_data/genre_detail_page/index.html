@@ -8,19 +8,19 @@ tags:
   - part 5
   - server-side
 ---
-<p>The genre <em>detail</em> page needs to display the information for the particular genre instance using its automatically generated <code>_id</code> field value as the identifier. The page should display the genre name and a list of all books in the genre with links to each book's details page.</p>
+<p>The genre <em>detail</em> page needs to display the information for a particular genre instance, using its automatically generated <code>_id</code> field value as the identifier. The page should display the genre name and a list of all books in the genre with links to each book's details page.</p>
 
 <h2 id="Controller">Controller</h2>
 
 <p>Open <strong>/controllers/genreController.js</strong> and import the <em>async</em> and <em>Book</em> modules at the top of the file.</p>
 
-<pre class="brush: js">var Book = require('../models/book');
+<pre class="brush: js notranslate">var Book = require('../models/book');
 var async = require('async');
 </pre>
 
 <p>Find the exported <code>genre_detail</code><code>()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js">// Display detail page for a specific Genre.
+<pre class="brush: js notranslate">// Display detail page for a specific Genre.
 exports.genre_detail = function(req, res, <strong>next</strong>) {
 
 <strong>    async.parallel({
@@ -55,7 +55,7 @@ exports.genre_detail = function(req, res, <strong>next</strong>) {
 <div class="note">
 <p><strong>Note:</strong> If the genre does not exist in the database (i.e. it may have been deleted) then <code>findById()</code>  will return successfully with no results. In this case we want to display a "not found" page, so we create an <code>Error</code> object and pass it to the <code>next</code> middleware function in the chain. </p>
 
-<pre class="brush: js"><strong>if (results.genre==null) { // No results.
+<pre class="brush: js notranslate"><strong>if (results.genre==null) { // No results.
     var err = new Error('Genre not found');
     err.status = 404;
     return next(err);
@@ -71,7 +71,7 @@ exports.genre_detail = function(req, res, <strong>next</strong>) {
 
 <p>Create <strong>/views/genre_detail.pug</strong> and fill it with the text below:</p>
 
-<pre class="brush: js">extends layout
+<pre class="brush: js notranslate">extends layout
 
 block content
 
@@ -102,17 +102,17 @@ block content
 <div class="note">
 <p>You might get an error similar to this:</p>
 
-<pre class="brush: bash">Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
+<pre class="brush: bash notranslate">Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
 </pre>
 
 <p>This is a mongoose error coming from the <strong>req.params.id</strong>. To solve this problem, first you need to require mongoose on the <strong>genreController.js</strong> page like this:</p>
 
-<pre class="brush: js"> var mongoose = require('mongoose');
+<pre class="brush: js notranslate"> var mongoose = require('mongoose');
 </pre>
 
 <p>Then use <strong>mongoose.Types.ObjectId() </strong>to convert the id to a type that can be used. For example:</p>
 
-<pre class="brush: js">exports.genre_detail = function(req, res, next) {
+<pre class="brush: js notranslate">exports.genre_detail = function(req, res, next) {
     var id = mongoose.Types.ObjectId(req.params.id);
     ...
 </pre>

@@ -16,7 +16,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;span id="href" title="href"&gt;&lt;span id="protocol" title="protocol"&gt;http:&lt;/span&gt;//&lt;span id="host" title="host"&gt;&lt;span id="hostname" title="hostname"&gt;example.org&lt;/span&gt;:&lt;span id="port" title="port"&gt;8888&lt;/span&gt;&lt;/span&gt;&lt;span id="pathname" title="pathname"&gt;/foo/bar&lt;/span&gt;&lt;span id="search" title="search"&gt;?q=baz&lt;/span&gt;&lt;span id="hash" title="hash"&gt;#bang&lt;/span&gt;&lt;/span&gt;</pre>
+<pre class="brush: html notranslate">&lt;span id="href" title="href"&gt;&lt;span id="origin title="origin"&gt;&lt;span id="protocol" title="protocol"&gt;http:&lt;/span&gt;//&lt;span id="host" title="host"&gt;&lt;span id="hostname" title="hostname"&gt;example.org&lt;/span&gt;:&lt;span id="port" title="port"&gt;8888&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span id="pathname" title="pathname"&gt;/foo/bar&lt;/span&gt;&lt;span id="search" title="search"&gt;?q=baz&lt;/span&gt;&lt;span id="hash" title="hash"&gt;#bang&lt;/span&gt;&lt;/span&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
@@ -32,6 +32,7 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
 
 [title] [title]:before {margin-top:1.5em;}
 [title] [title] [title]:before {margin-top:3em;}
+[title] [title] [title] [title]:before {margin-top:4.5em;}
 
 [title]:hover,
 :target {position:relative; z-index:1; outline:50em solid rgba(255,255,255,.8);}</pre>
@@ -42,10 +43,10 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
   node.addEventListener("click", function(e) {
     e.preventDefault();
     e.stopPropagation();
-    window.location.hash = '#' + $(this).attr('id');
+    window.location.hash = '#' + e.target.getAttribute('id');
   });
 });
-[].forEach.call(document.querySelectorAll('[title]'), function (node) {
+[].forEach.call(document.querySelectorAll('[title]:not([id])'), function (node) {
   node.addEventListener("click", function(e) {
     e.preventDefault();
     e.stopPropagation();

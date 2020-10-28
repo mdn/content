@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Promise&lt;&gt; customElements.whenDefined(<em>name</em>);</pre>
+<pre class="syntaxbox notranslate">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}} when the custom element is defined. If the custom element is already defined, the promise is resolved immediately.</p>
+<p>A {{jsxref("Promise")}} that will be fulfilled with the <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-4">custom element</a>'s constructor when a <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-5">custom element</a> becomes defined with the given name. (If such a <a href="/docs/Web/API/Window/customElements" id="custom-elements-api:custom-element-6">custom element</a> is already defined, the returned promise will be immediately fulfilled.)</p>
 
 <dl>
 </dl>
@@ -53,7 +53,7 @@ tags:
 
 <p>This example uses <code>whenDefined()</code> to detect when the custom elements that make up a menu are defined. The menu displays placeholder content until the actual menu content is ready to display.</p>
 
-<pre class="brush: html">&lt;nav id="menu-container"&gt;
+<pre class="brush: html notranslate">&lt;nav id="menu-container"&gt;
   &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
   &lt;nav-menu&gt;
     &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
@@ -64,7 +64,7 @@ tags:
 &lt;/nav&gt;
 </pre>
 
-<pre class="brush: js">const container = document.getElementById('menu-container');
+<pre class="brush: js notranslate">const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');

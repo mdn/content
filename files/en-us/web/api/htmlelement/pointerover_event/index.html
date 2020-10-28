@@ -34,7 +34,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.addEventListener('pointerover', (event) =&gt; {
   console.log('Pointer moved in');
@@ -42,7 +42,7 @@ para.addEventListener('pointerover', (event) =&gt; {
 
 <p>Using the <code>onpointerover</code> event handler property:</p>
 
-<pre class="brush: js">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.onpointerover = (event) =&gt; {
   console.log('Pointer moved in');
@@ -55,6 +55,10 @@ para.onpointerover = (event) =&gt; {
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#the-pointerover-event')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
   </tr>
   <tr>
    <td>{{SpecName('Pointer Events', '#the-pointerover-event')}}</td>

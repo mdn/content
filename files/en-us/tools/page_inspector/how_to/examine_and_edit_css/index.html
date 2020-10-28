@@ -28,9 +28,29 @@ tags:
 
 <p><img alt="Toolbar buttons of the Rules view, as of Fx 72" src="https://mdn.mozillademos.org/files/17039/rules_view_buttons_Fx_72.png" style="display: block; height: 141px; margin: 0px auto; width: 220px;"></p>
 
+<h3 id="Invalid_value_warnings">Invalid value warnings</h3>
+
 <p>A warning icon appears next to unsupported CSS properties or rules that have invalid values. This can help you understand why certain styles are not being applied. In the following example, a spelling error, "background-colour" instead of "background-color" has made the rule invalid:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16730/invalid_property.png" style="border: 1px solid black; display: block; height: 298px; margin-left: auto; margin-right: auto; width: 486px;"></p>
+
+<h3 id="Browser_compat_warnings">Browser compat warnings</h3>
+
+<p>CSS properties have varied level of support across different browsers. From Firefox 81, compatibility tooltips may be displayed next to any CSS properties that have known compatibility issues, as shown below.</p>
+
+<div class="note">
+<p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
+</div>
+
+<p><img alt="Tooltip displayed next to CSS element. Hover to find out browsers with compatibility issues." src="https://mdn.mozillademos.org/files/17410/firefox_compatibility_tootips.jpg" style="height: 303px; width: 616px;"></p>
+
+<p>The tooltips, which are populated from the MDN <a href="https://github.com/mdn/browser-compat-data">browser compatibility project</a>, identify the <em>reason</em> for the incompatibility (not supported, deprecated, experimental etc.), display icons for incompatible browsers, and provide a link to the associated property page for more information.</p>
+
+<h3 id="CSS_Compatibility">CSS Compatibility</h3>
+
+<p>In addition to compatibility tooltips, the <em>CSS Compatibility View</em> shows any CSS compatibility issues for both the selected element and for the current page (as a whole).<img alt="Screenshot of the Compatibility view" src="https://mdn.mozillademos.org/files/17219/compat_view.png"></p>
+
+<p>For more information see:  <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Compatibility_view">Page Inspector &gt; CSS Compatibility View</a>.</p>
 
 <h3 id="Rule_display">Rule display</h3>
 
@@ -147,7 +167,7 @@ tags:
 
 <ul>
  <li>You can clear the checkbox for a particular class name, to see how the element would appear without that class applied to it.</li>
- <li>You can add a class to the element by typing a name in the<em> Add new class</em> field below the Rules toolbar. Autocompletions based on existing classes are suggested as you type.</li>
+ <li>You can add a class to the element by typing a name in the<em> Add new class</em> field below the Rules toolbar. From Firefox 81, autocompletions based on existing classes are suggested as you type.</li>
 </ul>
 
 <h3 id="Link_to_CSS_file">Link to CSS file</h3>

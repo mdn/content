@@ -66,9 +66,9 @@ const myPromise =
  </dd>
 </dl>
 
-<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately. (See <code>throw -999</code> in the example, below, for a technique to handle the consequences.) On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final .catch() statement.</p>
+<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
 
-<p>The signatures of these two functions are simple, they accept a single parameter of any type. These functions are written by you, the programmer. The termination condition of these functions determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
+<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
 
 <pre class="brush: js notranslate">handleFulfilled(value)       { /*...*/; return nextValue;  }
 handleRejection(reason)  { /*...*/; throw  nextReason; }

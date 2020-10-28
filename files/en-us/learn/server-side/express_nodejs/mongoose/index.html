@@ -111,7 +111,7 @@ tags:
 <p>The diagram also shows the relationships between the models, including their <em>multiplicities</em>. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that <code>Book</code> and a <code>Genre</code> are related. The numbers close to the <code>Book</code> model show that a <code>Genre</code> must have zero or more <code>Book</code>s (as many as you like), while the numbers on the other end of the line next to the <code>Genre</code> show that a book can have zero or more associated <code>Genre</code>s.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As discussed in our <a href="#related_documents">Mongoose primer</a> below it is often better to have the field that defines the relationship between the documents/models in just <em>one</em> model (you can still find the reverse relationship by searching for the associated <code>_id</code> in the other model). Below we have chosen to define the relationship between Book/Genre and Book/Author in the Book schema, and the relationship between the Book/BookInstance in the BookInstance Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.</p>
+<p><strong>Note</strong>: As discussed in our <a href="#related_documents">Mongoose primer</a> below it is often better to have the field that defines the relationship between the documents/models in just <em>one</em> model (you can still find the reverse relationship by searching for the associated <code>_id</code> in the other model). Below we have chosen to define the relationship between <code>Book</code>/<code>Genre</code> and <code>Book</code>/<code>Author</code> in the Book schema, and the relationship between the <code>Book</code>/<code>BookInstance</code> in the <code>BookInstance</code> Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.</p>
 </div>
 
 <p><img alt="Mongoose Library Model  with correct cardinality" src="https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png" style="height: 620px; width: 737px;"></p>
@@ -496,8 +496,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-  a_string          : String,
-  a_date            : Date,
+  a_string: String,
+  a_date: Date,
 });
 
 <strong>//Export function to create "SomeModel" model class
@@ -603,7 +603,7 @@ SomeModel.find(callback_function);</pre>
  </li>
 </ol>
 
-<p>You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: <code>mongodb+srv://your_user_name:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true</code></p>
+<p>You have now created the database, and have a URL (with username and password) that can be used to access it. This will look something like: <code>mongodb+srv://your_user_name:your_password@cluster0.a9azn.mongodb.net/local_library?retryWrites=true</code></p>
 
 <h2 id="Install_Mongoose">Install Mongoose</h2>
 
@@ -658,19 +658,7 @@ var AuthorSchema = new Schema(
 AuthorSchema
 .virtual('name')
 .get(function () {
-
-// To avoid errors in cases where an author does not have either a family name or first name
-// We want to make sure we handle the exception by returning an empty string for that case
-
-  var fullname = '';
-  if (this.first_name &amp;&amp; this.family_name) {
-    fullname = this.family_name + ', ' + this.first_name
-  }
-  if (!this.first_name || !this.family_name) {
-    fullname = '';
-  }
-
-  return fullname;
+  return this.family_name + ', ' + this.first_name;
 });
 
 // Virtual for author's lifespan
@@ -802,7 +790,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li>Enter the following commands in the project root to install the <em>async</em> module that is required by the script (we'll discuss this in later tutorials, )
   <pre class="brush: bash notranslate">npm install async</pre>
  </li>
- <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here </em>placeholder with, inside <code>app.js</code> earlier): Be sure to pass it  as  a string by wrapping it with <code>''</code>.
+ <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here </em>placeholder with, inside <code>app.js</code> earlier): Be sure to pass it as a string by wrapping it with <code>''</code>.
   <pre class="brush: bash notranslate">node populatedb &lt;your mongodb url&gt;​​​​</pre>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>

@@ -18,6 +18,8 @@ tags:
  <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
  <dt id="attr-dir">dir</dt>
  <dd>The text direction. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
+ <dt id="attr-displaystyle"><code>displaystyle</code></dt>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-lquote">lquote</dt>
  <dd>The opening quote character (depends on <code><a href="#attr-dir">dir</a></code>) to enclose the content. The default value is "<code>&amp;quot;".</code></dd>
  <dt id="attr-href">href</dt>
@@ -67,7 +69,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;math&gt;
+<pre class="brush: html notranslate">&lt;math&gt;
 
   &lt;ms lquote="„" rquote="“"&gt; abc &lt;/ms&gt;
 
@@ -85,6 +87,11 @@ tags:
   </tr>
  </thead>
  <tbody>
+  <tr>
+   <td>{{SpecName("MathMLCore", "#string-literal-ms", "ms")}}</td>
+   <td>{{Spec2("MathMLCore")}}</td>
+   <td>Draft specification</td>
+  </tr>
   <tr>
    <td>{{ SpecName('MathML3', 'chapter3.html#presm.ms', 'ms') }}</td>
    <td>{{ Spec2('MathML3') }}</td>

@@ -7,13 +7,11 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Accept-Patch</code></strong> response HTTP header advertises which media-type the server is able to understand.</p>
+<p>The <strong><code>Accept-Patch</code></strong> response HTTP header advertises which media-type the server is able to understand.</p>
 
 <p><strong><code>Accept-Patch</code></strong> in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:</p>
 
-<p>A server receiving a PATCH request with an unsupported media type could reply with  {{HTTPStatus("415")}} <code>Unsupported Media Type</code> and an Accept-Patch header referencing one or more supported media types.</p>
-
-
+<p>A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} <code>Unsupported Media Type</code> and an Accept-Patch header referencing one or more supported media types.</p>
 
 <div class="note"><strong>Notes:</strong>
 
@@ -40,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+<pre class="syntaxbox notranslate">Accept-Patch: application/example, text/example
 Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
 </pre>
@@ -51,7 +49,7 @@ Accept-Patch: application/merge-patch+json
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="syntaxbox">Accept-Patch: application/example, text/example
+<pre class="syntaxbox notranslate">Accept-Patch: application/example, text/example
 
 Accept-Patch: text/example;charset=utf-8
 
@@ -61,11 +59,13 @@ Accept-Patch: application/merge-patch+json
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Title</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{RFC("5789", "Accept-Patch", "3.1")}}</td>
    <td>HTTP PATCH</td>

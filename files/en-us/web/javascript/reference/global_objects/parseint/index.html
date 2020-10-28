@@ -25,7 +25,7 @@ tags:
  <dt><code><var>string</var></code></dt>
  <dd>The value to parse. If this argument is not a string, then it is converted to one using the <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code> abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.</dd>
  <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
- <dd>An integer between <code>2</code> and <code>36</code> that represents the <em>radix</em> (the base in mathematical numeral systems) of the <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong> default to <code>10</code>!</dd>
+ <dd>An integer between <code>2</code> and <code>36</code> that represents the <em>radix</em> (the base in mathematical numeral systems) of the <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong> default to <code>10</code>! If the radix value is not of the <code>Number</code> type it will be coerced to a <code>Number</code></dd>
  <dd class="blockIndicator warning">The <a href="#Description">description below</a> explains in more detail what happens when <code><var>radix</var></code> is not provided.</dd>
 </dl>
 
@@ -54,7 +54,7 @@ tags:
 
 <p><code>parseInt</code> understands exactly two signs: <code>+</code> for positive, and <code>-</code> for negative (since ECMAScript 1). It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.</p>
 
-<p>If <code><var>radix</var></code> is <code>undefined</code>, <code>0</code>, or unspecified, JavaScript assumes the following:</p>
+<p>A value passed as the radix argument is coerced to a Number (if necessary), then if the value is 0, <code>NaN</code> or <code>Infinity</code> (undefined is coerced to <code>NaN</code>), JavaScript assumes the following:</p>
 
 <ol>
  <li>If the input <code>string</code> begins with "<code>0x</code>" or "<code>0X</code>" (a zero, followed by lowercase or uppercase X), <code><var>radix</var></code> is assumed to be <code>16</code> and the rest of the string is parsed as a hexidecimal number.</li>
@@ -62,7 +62,9 @@ tags:
  <li>If the input <code>string</code> begins with any other value, the radix is <code>10</code> (decimal).</li>
 </ol>
 
-<p>If the first character cannot be converted to a number, <code>parseInt</code> returns <code>NaN</code>.</p>
+<p>Else if the radix value (coerced if necessary) is not in range [2, 36] (inclusive) <code>parseInt</code> returns <code>NaN</code>.</p>
+
+<p>If the first character cannot be converted to a number with the radix in use, <code>parseInt</code> returns <code>NaN</code>.</p>
 
 <p>For arithmetic purposes, the <code>NaN</code> value is not a number in any radix. You can call the {{jsxref("isNaN")}} function to determine if the result of <code>parseInt</code> is <code>NaN</code>. If <code>NaN</code> is passed on to arithmetic operations, the operation result will also be <code>NaN</code>.</p>
 
@@ -188,6 +190,19 @@ parseInt(1e+21,10);
 <pre class="brush: js notranslate">parseInt('123_456')
 // 123
 </pre>
+
+<p>The radix is coerced to a <code>Number</code>:</p>
+
+<pre class="brush: js notranslate">const obj = {
+  valueOf() {return 8}
+};
+parseInt('11', obj); // 9
+
+obj.valueOf = function() {return 1};
+parseInt('11', obj); // NaN
+
+obj.valueOf = function() {return Infinity};
+parseInt('11', obj); // 11</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

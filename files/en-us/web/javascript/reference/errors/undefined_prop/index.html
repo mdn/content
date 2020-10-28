@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
+<pre class="syntaxbox notranslate">ReferenceError: reference to undefined property "x" (Firefox)
 </pre>
 
 <h2 id="Error_type">Error type</h2>
@@ -31,15 +31,15 @@ tags:
 
 <p>In this case, the property <code>bar</code> is an undefined property, so a <code>ReferenceError</code> will occur.</p>
 
-<pre class="brush: js example-bad">var foo = {};
+<pre class="brush: js example-bad notranslate">var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
 </pre>
 
 <h3 id="Valid_cases">Valid cases</h3>
 
-<p>To avoid the error, you need to either add a definition for <code>bar</code> to the object or check for the existence of the <code>bar</code> property before trying to access it; one way to do that is to use the {{jsxref("Object.prototype.hasOwnProperty()")}} method), like this:</p>
+<p>To avoid the error, you need to either add a definition for <code>bar</code> to the object or check for the existence of the <code>bar</code> property before trying to access it; ways to do that include using the {{jsxref("Operators/in", "in")}} operator, or the {{jsxref("Object.prototype.hasOwnProperty()")}} method, like this:</p>
 
-<pre class="brush: js example-good">var foo = {};
+<pre class="brush: js example-good notranslate">var foo = {};
 
 // Define the bar property
 

@@ -18,42 +18,42 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
+<pre class="syntaxbox notranslate">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>url</var></code></dt>
- <dd>A {{domxref("USVString")}} representing an absolute or relative URL. If <code><var>url</var></code> is a relative URL, <code><var>base</var></code> is required, and will be used as the base URL. If <code><var>url</var></code> is an absolute URL, a given <code><var>base</var></code> will be ignored.</dd>
- <dt><code><var>base</var></code> {{optional_inline}}</dt>
- <dd>A {{domxref("USVString")}} representing the base URL to use in case <code><var>url</var></code> is a relative URL. If not specified, it defaults to <code>''</code>.</dd>
+	<dt><code><var>url</var></code></dt>
+	<dd>A {{domxref("USVString")}} representing an absolute or relative URL. If <code><var>url</var></code> is a relative URL, <code><var>base</var></code> is required, and will be used as the base URL. If <code><var>url</var></code> is an absolute URL, a given <code><var>base</var></code> will be ignored.</dd>
+	<dt><code><var>base</var></code> {{optional_inline}}</dt>
+	<dd>A {{domxref("USVString")}} representing the base URL to use in cases where <code><var>url</var></code> is a relative URL. If not specified, it defaults to <code>undefined</code>.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: You can still use an existing {{domxref("URL")}} object for the <code><var>base</var></code>, which stringifies itself to the object's {{domxref("URL.href", "href")}} property.</p>
+<p><strong>Note</strong>: The <code>url</code> and <code>base</code> arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept {{domxref("USVString")}}. In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will stringify to the object's {{domxref("URL.href", "href")}} property.</p>
 </div>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("TypeError")}}</td>
-   <td><code><var>url</var></code> (in the case of absolute URLs) or <code><var>base</var></code> + <code><var>url</var></code> (in the case of relative URLs) is not a valid URL.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Exception</th>
+			<th scope="col">Explanation</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{jsxref("TypeError")}}</td>
+			<td><code><var>url</var></code> (in the case of absolute URLs) or <code><var>base</var></code> + <code><var>url</var></code> (in the case of relative URLs) is not a valid URL.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">// Base urls
+<pre class="brush: js notranslate">// Base urls
 let m = 'https://developer.mozilla.org';
 let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
 let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
@@ -77,20 +77,20 @@ let d = new URL('/en-US/docs', b);                     // =
 <h2 id="Specification">Specification</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
+			<td>{{Spec2('URL')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -102,5 +102,5 @@ let d = new URL('/en-US/docs', b);                     // =
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface it belongs to: {{domxref("URL")}}.</li>
+	<li>The interface it belongs to: {{domxref("URL")}}.</li>
 </ul>

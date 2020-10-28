@@ -52,8 +52,8 @@ tags:
 
 <ol>
  <li>An empty string ("") indicating that the user did not enter a value or that the value was removed.</li>
- <li>A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means <code>username@domain</code> or <code>username@domain.tld</code>. There's more to it than that, of course; see {{anch("Validation")}} for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.</li>
- <li>If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.</li>
+ <li>A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means <code>username@domain</code> or <code>username@domain.tld</code>. There's more to it than that, of course; see {{anch("Validation")}} for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.</li>
+ <li>If and only if the {{htmlattrxref("multiple", "input")}} attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.</li>
 </ol>
 
 <p>See {{anch("Validation")}} for details on how e-mail addresses are validated to ensure that they're formatted properly.</p>
@@ -121,7 +121,7 @@ tags:
 
 <h3 id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</h3>
 
-<p>A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See {{anch("Allowing multiple e-mail addresses")}} for an example, or  <a href="/en-US/docs/Web/HTML/Attributes/multiple">HTML attribute: multiple</a> for more details.</p>
+<p>A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See {{anch("Allowing multiple e-mail addresses")}} for an example, or <a href="/en-US/docs/Web/HTML/Attributes/multiple">HTML attribute: multiple</a> for more details.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid e-mail address for the field to be considered valid. However, if you add the <code>multiple</code> attribute, a list of zero e-mail addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one e-mail address when <code>multiple</code> is specified, regardless of the value of <code>required</code>.</p>
@@ -259,7 +259,7 @@ tags:
 <p>There are two levels of content validation available for <code>email</code> inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid e-mail address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Basic_validation">Basic validation</h3>
@@ -267,10 +267,10 @@ tags:
 <p>Browsers that support the <code>email</code> input type automatically provide validation to ensure that only text that matches the standard format for Internet e-mail addresses is entered into the input box. Browsers that implement the specification should be using an algorithm equivalent to the following regular expression:</p>
 
 <pre class="brush: js notranslate">/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
-  [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 </pre>
 
-<p>To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a>.</p>
+<p>Tolearn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489">W3C bug 15489</a> for details.</p>
@@ -335,7 +335,7 @@ label::after {
 
 <p>If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "<em>username</em>@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set <code>pattern</code> to <code>.+@beststartupever.com</code>. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".</p>
 
-<p>Note that this is not even close to an adequate filter for valid e-mail addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard e-mail address filter <em>and</em> our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid e-mail address, and if it is, make sure it's also a beststartupever.com address."</p>
+<p>Note that this is not even close to an adequate filter for valid e-mail addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard e-mail address filter <em>and</em> our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid e-mail address, and if it is, make sure it's also a beststartupever.com address."</p>
 
 <p>It's advisable to use the {{htmlattrxref("title")}} attribute along with <code>pattern</code>. If you do, the <code>title</code> <em>must</em> describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the <code>title</code> may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified <code>title</code>. If your <code>title</code> is something like "E-mail address", the result would be the message "The entered text doesn't match the required pattern. E-mail address", which isn't very good.</p>
 

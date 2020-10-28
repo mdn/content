@@ -20,20 +20,20 @@ tags:
 <p class="summary">In the last article we added more features to our To-Do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. To avoid common pitfalls, we'll have to dig a little deeper into Svelte's reactivity system. We'll also look at solving some accessibility focus issues, and more besides.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+	<tbody>
+		<tr>
+			<th scope="row">Prerequisites:</th>
+			<td>
+			<p>At minimum, it is recommended that you are familiar with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and have knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
 
-    <p>You'll need a terminal with node + npm installed to compile and build your app.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn some advanced Svelte techniques involving solving reactivity issues, keyboard accessibility problems to do with component lifecycle, and more.</td>
-  </tr>
- </tbody>
+			<p>You'll need a terminal with node + npm installed to compile and build your app.</p>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">Objective:</th>
+			<td>Learn some advanced Svelte techniques involving solving reactivity issues, keyboard accessibility problems to do with component lifecycle, and more.</td>
+		</tr>
+	</tbody>
 </table>
 
 <p>We'll focus on some accessibility issues involving focus management. To do so, we'll utilize some techniques for accessing DOM nodes and executing methods like <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also see how to declare and clean-up event listeners on DOM elements.</p>
@@ -45,9 +45,9 @@ tags:
 <p>The following new components will be developed throughout the course of this article:</p>
 
 <ul>
- <li><code>MoreActions</code>: Displays the <em>Check All</em> and <em>Remove Completed</em> buttons, and emits the corresponding events required to handle their functionality.</li>
- <li><code>NewTodo</code>: Displays the <code>&lt;input&gt;</code> field and <em>Add</em> button for adding a new todo.</li>
- <li><code>TodosStatus</code>: Displays the "x out of y items completed" status heading.</li>
+	<li><code>MoreActions</code>: Displays the <em>Check All</em> and <em>Remove Completed</em> buttons, and emits the corresponding events required to handle their functionality.</li>
+	<li><code>NewTodo</code>: Displays the <code>&lt;input&gt;</code> field and <em>Add</em> button for adding a new todo.</li>
+	<li><code>TodosStatus</code>: Displays the "x out of y items completed" status heading.</li>
 </ul>
 
 <h2 id="Code_along_with_us">Code along with us</h2>
@@ -79,13 +79,13 @@ tags:
 <p>Now we'll tackle the <em>Check All</em> and <em>Remove Completed</em> buttons. Let's create a component that will be in charge of displaying the buttons and emitting the corresponding events.</p>
 
 <ol>
- <li>
-  <p>Create a new file — <code>components/MoreActions.svelte</code>.</p>
- </li>
- <li>
-  <p>When the first button is clicked, we'll emit a <code>checkAll</code> event to signal that all the todos should be checked/unchecked. When the second button is clicked, we'll emit a <code>removeCompleted</code> event to signal that all of the completed todos should be removed. Put the following content into your <code>MoreActions.svelte</code> file:</p>
+	<li>
+	<p>Create a new file — <code>components/MoreActions.svelte</code>.</p>
+	</li>
+	<li>
+	<p>When the first button is clicked, we'll emit a <code>checkAll</code> event to signal that all the todos should be checked/unchecked. When the second button is clicked, we'll emit a <code>removeCompleted</code> event to signal that all of the completed todos should be removed. Put the following content into your <code>MoreActions.svelte</code> file:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+	<pre class="brush: html notranslate">&lt;script&gt;
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -105,34 +105,34 @@ tags:
   &lt;button type="button" class="btn btn__primary" on:click={removeCompleted}&gt;Remove completed&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-  <p>We've also included a <code>completed</code> variable to toggle between checking and unchecking all tasks.</p>
- </li>
- <li>
-  <p>Back over in <code>Todos.svelte</code>, we are going to import our <code>MoreActions</code> component and create two functions to handle the events emitted by the <code>MoreActions</code> component.</p>
+	<p>We've also included a <code>completed</code> variable to toggle between checking and unchecking all tasks.</p>
+	</li>
+	<li>
+	<p>Back over in <code>Todos.svelte</code>, we are going to import our <code>MoreActions</code> component and create two functions to handle the events emitted by the <code>MoreActions</code> component.</p>
 
-  <p>Add the following import statement below the existing ones:</p>
+	<p>Add the following import statement below the existing ones:</p>
 
-  <pre class="brush: js notranslate">import MoreActions from './MoreActions.svelte'</pre>
- </li>
- <li>
-  <p>Then add the described functions at the end of the <code>&lt;script&gt;</code> section:</p>
+	<pre class="brush: js notranslate">import MoreActions from './MoreActions.svelte'</pre>
+	</li>
+	<li>
+	<p>Then add the described functions at the end of the <code>&lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate">const checkAllTodos = (completed) =&gt; todos.forEach(t =&gt; t.completed = completed)
+	<pre class="brush: js notranslate">const checkAllTodos = (completed) =&gt; todos.forEach(t =&gt; t.completed = completed)
 
 const removeCompletedTodos = () =&gt; todos = todos.filter(t =&gt; !t.completed)</pre>
- </li>
- <li>
-  <p>Now go to the bottom of the <code>Todos.svelte</code> markup section and replace the <code>btn-group</code> <code>&lt;div&gt;</code> that we copied into <code>MoreActions.svelte</code> with a call to the <code>MoreActions</code> component, like so:</p>
+	</li>
+	<li>
+	<p>Now go to the bottom of the <code>Todos.svelte</code> markup section and replace the <code>btn-group</code> <code>&lt;div&gt;</code> that we copied into <code>MoreActions.svelte</code> with a call to the <code>MoreActions</code> component, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;!-- MoreActions --&gt;
+	<pre class="brush: html notranslate">&lt;!-- MoreActions --&gt;
 &lt;MoreActions
   on:checkAll={e =&gt; checkAllTodos(e.detail)}
   on:removeCompleted={removeCompletedTodos}
 /&gt;</pre>
- </li>
- <li>
-  <p>OK, let's go back into the app and try it out! You'll find that the <em>Remove Completed</em> button works fine, but the <em>Check All</em>/<em>Uncheck All</em> button just silently fails.</p>
- </li>
+	</li>
+	<li>
+	<p>OK, let's go back into the app and try it out! You'll find that the <em>Remove Completed</em> button works fine, but the <em>Check All</em>/<em>Uncheck All</em> button just silently fails.</p>
+	</li>
 </ol>
 
 <p>To find out what is happening here, we'll have to dig a little deeper into Svelte reactivity.</p>
@@ -142,17 +142,17 @@ const removeCompletedTodos = () =&gt; todos = todos.filter(t =&gt; !t.completed)
 <p>To see what's happening we can log the <code>todos</code> array from the <code>checkAllTodos()</code> function to the console.</p>
 
 <ol>
- <li>
-  <p>Update your existing <code>checkAllTodos()</code> function to the following:</p>
+	<li>
+	<p>Update your existing <code>checkAllTodos()</code> function to the following:</p>
 
-  <pre class="brush: js notranslate">const checkAllTodos = (completed) =&gt; {
+	<pre class="brush: js notranslate">const checkAllTodos = (completed) =&gt; {
   todos.forEach(t =&gt; t.completed = completed)
   console.log('todos', todos)
 }</pre>
- </li>
- <li>
-  <p>Go back to your browser, open your DevTools console, and click <em>Check All</em>/<em>Uncheck All</em> a few times.</p>
- </li>
+	</li>
+	<li>
+	<p>Go back to your browser, open your DevTools console, and click <em>Check All</em>/<em>Uncheck All</em> a few times.</p>
+	</li>
 </ol>
 
 <p>You'll notice that the array is successfully updated every time you press the button (the <code>todo</code> objects' <code>completed</code> properties are toggled between <code>true</code> and <code>false</code>), but Svelte is not aware of that. This also means that in this case, a reactive statement like <code>$: console.log('todos', todos)</code> won't be very useful.</p>
@@ -201,7 +201,7 @@ foo.bar = 'baz'</pre>
   todos.forEach( (t,i) =&gt; todos[i].completed = completed)
 }</pre>
 
-<p>Assignments to properties of arrays and objects — e.g. <code>obj.foo += 1</code> or <code>array[i] = x</code> — work the same way as assignments to the values themselves. When Svelte analyzes this code, if can detect that the <code>todos</code> array is being modified.</p>
+<p>Assignments to properties of arrays and objects — e.g. <code>obj.foo += 1</code> or <code>array[i] = x</code> — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the <code>todos</code> array is being modified.</p>
 
 <p>Another solution is to assign a new array to <code>todos</code> containing a copy of all the todos with the <code>completed</code> property updated accordingly, like this:</p>
 
@@ -226,10 +226,10 @@ foo.bar = 'baz'</pre>
 <p>We will add one usability detail to our component. We'll disable the buttons when there are no tasks to be processed. To create this we'll receive the <code>todos</code> array as a prop, and set the <code>disabled</code> property of each button accordingly.</p>
 
 <ol>
- <li>
-  <p>Update your <code>MoreActions.svelte</code> component like this:</p>
+	<li>
+	<p>Update your <code>MoreActions.svelte</code> component like this:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+	<pre class="brush: html notranslate">&lt;script&gt;
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -254,16 +254,16 @@ foo.bar = 'baz'</pre>
     disabled={completedTodos === 0} on:click={removeCompleted}&gt;Remove completed&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-  <p>We've also declared a reactive <code>completedTodos</code> variable to enable or disable the <em>Remove Completed</em> button.</p>
- </li>
- <li>
-  <p>Don't forget to pass the prop into <code>MoreActions</code> from inside <code>Todos.svelte</code>, where the component is called:</p>
+	<p>We've also declared a reactive <code>completedTodos</code> variable to enable or disable the <em>Remove Completed</em> button.</p>
+	</li>
+	<li>
+	<p>Don't forget to pass the prop into <code>MoreActions</code> from inside <code>Todos.svelte</code>, where the component is called:</p>
 
-  <pre class="brush: js notranslate">&lt;MoreActions {todos}
+	<pre class="brush: js notranslate">&lt;MoreActions {todos}
     on:checkAll={e =&gt; checkAllTodos(e.detail)}
     on:removeCompleted={removeCompletedTodos}
   /&gt;</pre>
- </li>
+	</li>
 </ol>
 
 <h2 id="Working_with_the_DOM_focusing_on_the_details">Working with the DOM: focusing on the details</h2>
@@ -295,13 +295,13 @@ foo.bar = 'baz'</pre>
 <p>Let's begin by extracting our new todo form out to its own component. With what we know so far we can create a new component file and adjust the code to emit an <code>addTodo</code> event, passing the name of the new todo in with the additional details.</p>
 
 <ol>
- <li>
-  <p>Create a new file — <code>components/NewTodo.svelte</code>.</p>
- </li>
- <li>
-  <p>Put the following contents inside it:</p>
+	<li>
+	<p>Create a new file — <code>components/NewTodo.svelte</code>.</p>
+	</li>
+	<li>
+	<p>Put the following contents inside it:</p>
 
-  <pre class="brush: js notranslate">&lt;script&gt;
+	<pre class="brush: js notranslate">&lt;script&gt;
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -324,34 +324,34 @@ foo.bar = 'baz'</pre>
   &lt;button type="submit" disabled={!name} class="btn btn__primary btn__lg"&gt;Add&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-  <p>Here we are binding the <code>&lt;input&gt;</code> to the <code>name</code> variable with <code>bind:value={name}</code> and disabling the <em>Add</em> button when it is empty (i.e. no text content) using <code>disabled={!name}</code>. We are also taking care of the <kbd>Escape</kbd> key with <code>on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}</code>. Whenever the <kbd>Escape</kbd> key is pressed we run <code>onCancel()</code>, which just clears up the <code>name</code> variable.</p>
- </li>
- <li>
-  <p>Now we have to <code>import</code> and use it from inside the <code>Todos</code> component, and update the <code>addTodo()</code> function to receive the name of the new todo.</p>
+	<p>Here we are binding the <code>&lt;input&gt;</code> to the <code>name</code> variable with <code>bind:value={name}</code> and disabling the <em>Add</em> button when it is empty (i.e. no text content) using <code>disabled={!name}</code>. We are also taking care of the <kbd>Escape</kbd> key with <code>on:keydown={e =&gt; e.key === 'Escape' &amp;&amp; onCancel()}</code>. Whenever the <kbd>Escape</kbd> key is pressed we run <code>onCancel()</code>, which just clears up the <code>name</code> variable.</p>
+	</li>
+	<li>
+	<p>Now we have to <code>import</code> and use it from inside the <code>Todos</code> component, and update the <code>addTodo()</code> function to receive the name of the new todo.</p>
 
-  <p>Add the following <code>import</code> statement below the others inside <code>Todos.svelte</code>:</p>
+	<p>Add the following <code>import</code> statement below the others inside <code>Todos.svelte</code>:</p>
 
-  <pre class="brush: js notranslate">import NewTodo from './NewTodo.svelte'</pre>
- </li>
- <li>
-  <p>And update the <code>addTodo()</code> function like so:</p>
+	<pre class="brush: js notranslate">import NewTodo from './NewTodo.svelte'</pre>
+	</li>
+	<li>
+	<p>And update the <code>addTodo()</code> function like so:</p>
 
-  <pre class="brush: js notranslate">function addTodo(name) {
+	<pre class="brush: js notranslate">function addTodo(name) {
   todos = [...todos, { id: newTodoId, name, completed: false }]
 }</pre>
 
-  <p><code>addTodo()</code> now receives the name of the new todo directly, so we no longer need the <code>newTodoName</code> variable to give it its value. Our <code>NewTodo</code> component takes care of that.</p>
+	<p><code>addTodo()</code> now receives the name of the new todo directly, so we no longer need the <code>newTodoName</code> variable to give it its value. Our <code>NewTodo</code> component takes care of that.</p>
 
-  <div class="blockIndicator note">
-  <p><strong>Note</strong>: the <code>{ name }</code> syntax is just a shorthand for <code>{ name: name }</code>. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.</p>
-  </div>
- </li>
- <li>
-  <p>Finally for this section, replace the NewTodo form markup with a call to <code>NewTodo</code> component, like so:</p>
+	<div class="blockIndicator note">
+	<p><strong>Note</strong>: the <code>{ name }</code> syntax is just a shorthand for <code>{ name: name }</code>. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.</p>
+	</div>
+	</li>
+	<li>
+	<p>Finally for this section, replace the NewTodo form markup with a call to <code>NewTodo</code> component, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;!-- NewTodo --&gt;
+	<pre class="brush: html notranslate">&lt;!-- NewTodo --&gt;
 &lt;NewTodo on:addTodo={e =&gt; addTodo(e.detail)} /&gt;</pre>
- </li>
+	</li>
 </ol>
 
 <h2 id="Working_with_DOM_nodes_using_the_bindthisdom_node_directive">Working with DOM nodes using the <code>bind:this={dom_node}</code> directive</h2>
@@ -397,10 +397,10 @@ foo.bar = 'baz'</pre>
 <p>The next feature will add to our <code>NewTodo</code> component will be an <code>autofocus</code> prop, which will allow us to specify that we want the <code>&lt;input&gt;</code> field to be focused on page load.</p>
 
 <ol>
- <li>
-  <p>Our first attempt is as follows — let's try adding the <code>autofocus</code> prop and just call <code>nameEl.focus()</code> from the <code>&lt;script&gt;</code> block. Update the first part of the <code>NewTodo.svelte</code> <code>&lt;script&gt;</code> section (the first four lines) to look like this:</p>
+	<li>
+	<p>Our first attempt is as follows — let's try adding the <code>autofocus</code> prop and just call <code>nameEl.focus()</code> from the <code>&lt;script&gt;</code> block. Update the first part of the <code>NewTodo.svelte</code> <code>&lt;script&gt;</code> section (the first four lines) to look like this:</p>
 
-  <pre class="brush: js notranslate">&lt;script&gt;
+	<pre class="brush: js notranslate">&lt;script&gt;
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
@@ -411,16 +411,16 @@ foo.bar = 'baz'</pre>
 
   if (autofocus) nameEl.focus()
 </pre>
- </li>
- <li>
-  <p>Now go back to the <code>Todos</code> component, and pass the <code>autofocus</code> prop into the <code>&lt;NewTodo&gt;</code> component call, like so:</p>
+	</li>
+	<li>
+	<p>Now go back to the <code>Todos</code> component, and pass the <code>autofocus</code> prop into the <code>&lt;NewTodo&gt;</code> component call, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;!-- NewTodo --&gt;
+	<pre class="brush: html notranslate">&lt;!-- NewTodo --&gt;
 &lt;NewTodo autofocus on:addTodo={e =&gt; addTodo(e.detail)} /&gt;</pre>
- </li>
- <li>
-  <p>If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: <code>TypeError: nameEl is undefined</code>.</p>
- </li>
+	</li>
+	<li>
+	<p>If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: <code>TypeError: nameEl is undefined</code>.</p>
+	</li>
 </ol>
 
 <p>To understand what's happening here, let's talk some more about that <a href="https://svelte.dev/tutorial/onmount">component lifecycle</a> we mentioned earlier.</p>
@@ -434,38 +434,38 @@ foo.bar = 'baz'</pre>
 <p>The one you'll use most frequently is <code>onMount()</code>, which lets us run a callback as soon as the component has been mounted on the DOM. Let's give it a try and see what happens to the <code>nameEl</code> variable.</p>
 
 <ol>
- <li>
-  <p>To start with, add the following line at the beginning of the <code>NewTodo.svelte</code> <code>&lt;script&gt;</code> section:</p>
+	<li>
+	<p>To start with, add the following line at the beginning of the <code>NewTodo.svelte</code> <code>&lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate"> import { onMount } from 'svelte'</pre>
- </li>
- <li>
-  <p>And these lines at the end of it:</p>
+	<pre class="brush: js notranslate"> import { onMount } from 'svelte'</pre>
+	</li>
+	<li>
+	<p>And these lines at the end of it:</p>
 
-  <pre class="brush: js notranslate">console.log('initializing:', nameEl)
+	<pre class="brush: js notranslate">console.log('initializing:', nameEl)
 onMount( () =&gt; {
   console.log('mounted:', nameEl)
 })</pre>
- </li>
- <li>
-  <p>Now remove the <code>if (autofocus) nameEl.focus()</code> line to avoid throwing the error we were seeing before.</p>
- </li>
- <li>
-  <p>The app will now work again, and you'll see the following in your console:</p>
+	</li>
+	<li>
+	<p>Now remove the <code>if (autofocus) nameEl.focus()</code> line to avoid throwing the error we were seeing before.</p>
+	</li>
+	<li>
+	<p>The app will now work again, and you'll see the following in your console:</p>
 
-  <pre class="notranslate">initializing: undefined
+	<pre class="notranslate">initializing: undefined
 mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete="off"&gt;</pre>
 
-  <p>As you can see, while the component is initializing <code>nameEl</code> is undefined, which makes sense because the node input doesn't even exist yet. After the component has been mounted, Svelte assigned a reference to the <code>&lt;input&gt;</code> DOM node to the <code>nameEl</code> variable, thanks to the <code>bind:this={nameEl} directive</code>.</p>
- </li>
- <li>
-  <p>To get the autofocus functionality working, replace the previous <code>console.log()</code>/<code>onMount()</code> block you added with this:</p>
+	<p>As you can see, while the component is initializing <code>nameEl</code> is undefined, which makes sense because the node input doesn't even exist yet. After the component has been mounted, Svelte assigned a reference to the <code>&lt;input&gt;</code> DOM node to the <code>nameEl</code> variable, thanks to the <code>bind:this={nameEl} directive</code>.</p>
+	</li>
+	<li>
+	<p>To get the autofocus functionality working, replace the previous <code>console.log()</code>/<code>onMount()</code> block you added with this:</p>
 
-  <pre class="brush: js notranslate">onMount(() =&gt; autofocus &amp;&amp; nameEl.focus())    // if autofocus is true, we run nameEl.focus()</pre>
- </li>
- <li>
-  <p>Go to your app again, and you'll now see the <code>&lt;input&gt;</code> field is focused on page load.</p>
- </li>
+	<pre class="brush: js notranslate">onMount(() =&gt; autofocus &amp;&amp; nameEl.focus())    // if autofocus is true, we run nameEl.focus()</pre>
+	</li>
+	<li>
+	<p>Go to your app again, and you'll now see the <code>&lt;input&gt;</code> field is focused on page load.</p>
+	</li>
 </ol>
 
 <div class="blockIndicator note">
@@ -477,27 +477,27 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>Now we will take care of the <code>Todo</code> component's focus management details. First of all, we want a <code>Todo</code> component's edit <code>&lt;input&gt;</code> to receive focus when we enter editing mode by pressing its <em>Edit</em> button. In the same fashion as we saw earlier, we'll create a <code>nameEl</code> variable inside <code>Todo.svelte</code> and call <code>nameEl.focus()</code> after setting the <code>editing</code> variable to <code>true</code>.</p>
 
 <ol>
- <li>
-  <p>Open the file <code>components/Todo.svelte</code> and add a <code>nameEl</code> variable declaration, just below your editing and name declarations:</p>
+	<li>
+	<p>Open the file <code>components/Todo.svelte</code> and add a <code>nameEl</code> variable declaration, just below your editing and name declarations:</p>
 
-  <pre class="brush: js notranslate">let nameEl                              // reference to the name input DOM node</pre>
- </li>
- <li>
-  <p>Now update your <code>onEdit()</code> function like so:</p>
+	<pre class="brush: js notranslate">let nameEl                              // reference to the name input DOM node</pre>
+	</li>
+	<li>
+	<p>Now update your <code>onEdit()</code> function like so:</p>
 
-  <pre class="brush: js notranslate">function onEdit() {
+	<pre class="brush: js notranslate">function onEdit() {
   editing = true                        // enter editing mode
   nameEl.focus()                        // set focus to name input
 }</pre>
- </li>
- <li>
-  <p>And finally, bind <code>nameEl</code> to the <code>&lt;input&gt;</code> field, by updating it like so:</p>
+	</li>
+	<li>
+	<p>And finally, bind <code>nameEl</code> to the <code>&lt;input&gt;</code> field, by updating it like so:</p>
 
-  <pre class="brush: html notranslate">&lt;input bind:value={name} bind:this={nameEl} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" /&gt;</pre>
- </li>
- <li>
-  <p>However, when you try the updated app you'll get an error along the lines of "TypeError: nameEl is undefined" in the console when you press a todo's <em>Edit</em> button.</p>
- </li>
+	<pre class="brush: html notranslate">&lt;input bind:value={name} bind:this={nameEl} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" /&gt;</pre>
+	</li>
+	<li>
+	<p>However, when you try the updated app you'll get an error along the lines of "TypeError: nameEl is undefined" in the console when you press a todo's <em>Edit</em> button.</p>
+	</li>
 </ol>
 
 <p>So, what is happening here? When you update a component's state in Svelte, it doesn't update the DOM immediately. Instead, it waits until the next microtask to see if there are any other changes that need to be applied, including in other components. Doing so avoids unnecessary work and allows the browser to batch things more effectively.</p>
@@ -516,23 +516,23 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>The above solution works, but it is rather inelegant. Svelte provides a better way to handle these cases. The <a href="https://svelte.dev/tutorial/tick"><code>tick()</code> function</a> returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes). Let's try it now.</p>
 
 <ol>
- <li>
-  <p>First of all, import <code>tick</code> at the top of the <code>&lt;script&gt;</code> section alongside your existing import:</p>
+	<li>
+	<p>First of all, import <code>tick</code> at the top of the <code>&lt;script&gt;</code> section alongside your existing import:</p>
 
-  <pre class="brush: js notranslate">import { tick } from 'svelte'</pre>
- </li>
- <li>
-  <p>Next, call <code>tick()</code> with <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> from an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a>; update <code>onEdit()</code> like so:</p>
+	<pre class="brush: js notranslate">import { tick } from 'svelte'</pre>
+	</li>
+	<li>
+	<p>Next, call <code>tick()</code> with <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> from an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a>; update <code>onEdit()</code> like so:</p>
 
-  <pre class="brush: js notranslate">async function onEdit() {
+	<pre class="brush: js notranslate">async function onEdit() {
   editing = true                        // enter editing mode
   await tick()
   nameEl.focus()
 }</pre>
- </li>
- <li>
-  <p>If you try it now you'll see that everything works as expected.</p>
- </li>
+	</li>
+	<li>
+	<p>If you try it now you'll see that everything works as expected.</p>
+	</li>
 </ol>
 
 <div class="blockIndicator note">
@@ -560,10 +560,10 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>In our immediate use case, we will define a function called <code>selectOnFocus()</code> that will receive a node as parameter. The function will add an event listener to that node, so that whenever it gets focused it will select the text. Then it will return an object with a <code>destroy</code> property. The <code>destroy</code> property is what Svelte will execute after removing the node from the DOM. Here we will remove the listener to make sure we don't leave any memory leak behind.</p>
 
 <ol>
- <li>
-  <p>Let's create the function <code>selectOnFocus()</code>. Add the following to the bottom of the <code>Todo.svelte</code> <code>&lt;script&gt;</code> section:</p>
+	<li>
+	<p>Let's create the function <code>selectOnFocus()</code>. Add the following to the bottom of the <code>Todo.svelte</code> <code>&lt;script&gt;</code> section:</p>
 
-  <pre class="brush: js notranslate">function selectOnFocus(node) {
+	<pre class="brush: js notranslate">function selectOnFocus(node) {
   if (node &amp;&amp; typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
     const onFocus = event =&gt; node.select()                        // event handler
     node.addEventListener('focus', onFocus)                       // when node gets focus call onFocus()
@@ -572,23 +572,23 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
     }
   }
 }</pre>
- </li>
- <li>
-  <p>Now we need to tell the <code>&lt;input&gt;</code> to use that function with the <code><a href="https://svelte.dev/docs#use_action">use:action</a></code> directive:</p>
+	</li>
+	<li>
+	<p>Now we need to tell the <code>&lt;input&gt;</code> to use that function with the <code><a href="https://svelte.dev/docs#use_action">use:action</a></code> directive:</p>
 
-  <pre class="brush: html notranslate">&lt;input use:selectOnFocus /&gt;</pre>
+	<pre class="brush: html notranslate">&lt;input use:selectOnFocus /&gt;</pre>
 
-  <p>With this directive we are telling Svelte to run this function, passing the DOM node of the <code>&lt;input&gt;</code> as a parameter, as soon as the component is mounted on the DOM. It will also be in charge of executing the <code>destroy</code> function when the component is removed from DOM. So, with the <code>use</code> directive, Svelte takes care of the component's lifecycle for us.</p>
+	<p>With this directive we are telling Svelte to run this function, passing the DOM node of the <code>&lt;input&gt;</code> as a parameter, as soon as the component is mounted on the DOM. It will also be in charge of executing the <code>destroy</code> function when the component is removed from DOM. So, with the <code>use</code> directive, Svelte takes care of the component's lifecycle for us.</p>
 
-  <p>In our case, our <code>&lt;input&gt;</code> would end up like so — update the component's first label/input pair (inside the edit template) like so:</p>
+	<p>In our case, our <code>&lt;input&gt;</code> would end up like so — update the component's first label/input pair (inside the edit template) like so:</p>
 
-  <pre class="brush: html notranslate">&lt;label for="todo-{todo.id}" class="todo-label"&gt;New name for '{todo.name}'&lt;/label&gt;
+	<pre class="brush: html notranslate">&lt;label for="todo-{todo.id}" class="todo-label"&gt;New name for '{todo.name}'&lt;/label&gt;
 &lt;input bind:value={name} bind:this={nameEl} use:selectOnFocus type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text"
 /&gt;</pre>
- </li>
- <li>
-  <p>Let's try it out. Go to your app, press a todo's <em>Edit</em> button, then <kbd>Tab</kbd> to take focus away from the <code>&lt;input&gt;</code>. Now click on the <code>&lt;input&gt;</code> — you'll see that the entire input text is selected.</p>
- </li>
+	</li>
+	<li>
+	<p>Let's try it out. Go to your app, press a todo's <em>Edit</em> button, then <kbd>Tab</kbd> to take focus away from the <code>&lt;input&gt;</code>. Now click on the <code>&lt;input&gt;</code> — you'll see that the entire input text is selected.</p>
+	</li>
 </ol>
 
 <h3 id="Making_the_action_reusable">Making the action reusable</h3>
@@ -596,13 +596,13 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>Now let's make this function truly reusable across components. <code>selectOnFocus()</code> is just a function without any dependency on the <code>Todo.svelte</code> component, so we can just extract it to a file and use it from there.</p>
 
 <ol>
- <li>
-  <p>Create a new file, <code>actions.js</code>, inside the <code>src</code> folder.</p>
- </li>
- <li>
-  <p>Give it the following content:</p>
+	<li>
+	<p>Create a new file, <code>actions.js</code>, inside the <code>src</code> folder.</p>
+	</li>
+	<li>
+	<p>Give it the following content:</p>
 
-  <pre class="brush: js notranslate">export function selectOnFocus(node) {
+	<pre class="brush: js notranslate">export function selectOnFocus(node) {
   if (node &amp;&amp; typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
     const onFocus = event =&gt; node.select()                        // event handler
     node.addEventListener('focus', onFocus)                       // when node gets focus call onFocus()
@@ -611,15 +611,15 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
     }
   }
 }</pre>
- </li>
- <li>
-  <p>Now import it from inside <code>Todo.svelte</code>; add the following import statement just below the others:</p>
+	</li>
+	<li>
+	<p>Now import it from inside <code>Todo.svelte</code>; add the following import statement just below the others:</p>
 
-  <pre class="brush: js notranslate">import { selectOnFocus } from '../actions.js'</pre>
- </li>
- <li>
-  <p>And remove the <code>selectOnFocus()</code> definition from <code>Todo.svelte</code> — we no longer need it there.</p>
- </li>
+	<pre class="brush: js notranslate">import { selectOnFocus } from '../actions.js'</pre>
+	</li>
+	<li>
+	<p>And remove the <code>selectOnFocus()</code> definition from <code>Todo.svelte</code> — we no longer need it there.</p>
+	</li>
 </ol>
 
 <h3 id="Reusing_our_action">Reusing our action</h3>
@@ -627,18 +627,18 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>To demonstrate our action's reusability, let's make use of it in <code>NewTodo.svelte</code>.</p>
 
 <ol>
- <li>
-  <p>Import <code>selectOnFocus()</code> from <code>actions.js</code> in this file too, as before:</p>
+	<li>
+	<p>Import <code>selectOnFocus()</code> from <code>actions.js</code> in this file too, as before:</p>
 
-  <pre class="brush: js notranslate">import { selectOnFocus } from '../actions.js'</pre>
- </li>
- <li>
-  <p>Add the <code>use:selectOnFocus</code> directive to the <code>&lt;input&gt;</code>, like this:</p>
+	<pre class="brush: js notranslate">import { selectOnFocus } from '../actions.js'</pre>
+	</li>
+	<li>
+	<p>Add the <code>use:selectOnFocus</code> directive to the <code>&lt;input&gt;</code>, like this:</p>
 
-  <pre class="brush: html notranslate">&lt;input bind:value={name} bind:this={nameEl} use:selectOnFocus
+	<pre class="brush: html notranslate">&lt;input bind:value={name} bind:this={nameEl} use:selectOnFocus
   type="text" id="todo-0" autoComplete="off" class="input input__lg"
 /&gt;</pre>
- </li>
+	</li>
 </ol>
 
 <p>With a few lines of code we can add functionality to regular HTML elements, in a very reusable and declarative way. It just takes an <code>import</code> and a short directive like <code>use:selectOnFocus</code> that clearly depicts its purpose. And we can achieve this without the need to create a custom wrapper element like <code>TextInput</code>, <code>MyInput</code> or similar. Moreover, you can add as many <code>use:action</code> directives as you want to an element.</p>
@@ -650,23 +650,23 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>In the previous section, while working with the <code>Todo</code> components, we had to deal with <code>bind:this</code>, <code>tick()</code>, and <code>async</code> functions just to give focus to our <code>&lt;input&gt;</code> as soon as it was added to the DOM.</p>
 
 <ol>
- <li>
-  <p>This is how we can implement it with actions instead:</p>
+	<li>
+	<p>This is how we can implement it with actions instead:</p>
 
-  <pre class="brush: js notranslate">const focusOnInit = (node) =&gt; node &amp;&amp; typeof node.focus === 'function' &amp;&amp; node.focus()</pre>
- </li>
- <li>
-  <p>And then in our markup we just need to add another <code>use:</code> directive:</p>
+	<pre class="brush: js notranslate">const focusOnInit = (node) =&gt; node &amp;&amp; typeof node.focus === 'function' &amp;&amp; node.focus()</pre>
+	</li>
+	<li>
+	<p>And then in our markup we just need to add another <code>use:</code> directive:</p>
 
-  <pre class="brush: html notranslate">&lt;input bind:value={name} use:selectOnFocus use:focusOnInit ...</pre>
- </li>
- <li>
-  <p>Our <code>onEdit()</code> function can now be much simpler:</p>
+	<pre class="brush: html notranslate">&lt;input bind:value={name} use:selectOnFocus use:focusOnInit ...</pre>
+	</li>
+	<li>
+	<p>Our <code>onEdit()</code> function can now be much simpler:</p>
 
-  <pre class="brush: js notranslate">function onEdit() {
+	<pre class="brush: js notranslate">function onEdit() {
   editing = true                        // enter editing mode
 }</pre>
- </li>
+	</li>
 </ol>
 
 <p>As a last example before we move on, let's go back to our <code>Todo.svelte</code> component and give focus to the <em>Edit</em> button after the user presses <em>Save</em> or <em>Cancel</em>.</p>
@@ -676,37 +676,37 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>That's not what we want — we want the <em>Edit</em> button to receive focus only when the user has pressed <em>Save</em> or <em>Cancel</em>.</p>
 
 <ol>
- <li>
-  <p>So, go back to your <code>Todo.svelte</code> file.</p>
- </li>
- <li>
-  <p>First of all we'll create a flag named <code>editButtonPressed</code> and initialize it to <code>false</code>. Add this just below your other variable definitions:</p>
+	<li>
+	<p>So, go back to your <code>Todo.svelte</code> file.</p>
+	</li>
+	<li>
+	<p>First of all we'll create a flag named <code>editButtonPressed</code> and initialize it to <code>false</code>. Add this just below your other variable definitions:</p>
 
-  <pre class="brush: js notranslate">let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save</pre>
- </li>
- <li>
-  <p>Next, we'll modify the <em>Edit</em> button's functionality to save this flag, and create the action for it. Update the <code>onEdit()</code> function like so:</p>
+	<pre class="brush: js notranslate">let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save</pre>
+	</li>
+	<li>
+	<p>Next, we'll modify the <em>Edit</em> button's functionality to save this flag, and create the action for it. Update the <code>onEdit()</code> function like so:</p>
 
-  <pre class="brush: js notranslate">function onEdit() {
+	<pre class="brush: js notranslate">function onEdit() {
   editButtonPressed = true              // user pressed the Edit button, focus will come back to the Edit button
   editing = true                        // enter editing mode
 }</pre>
- </li>
- <li>
-  <p>Below it, add the following definition for <code>focusEditButton()</code>:</p>
+	</li>
+	<li>
+	<p>Below it, add the following definition for <code>focusEditButton()</code>:</p>
 
-  <pre class="brush: js notranslate">const focusEditButton = (node) =&gt; editButtonPressed &amp;&amp; node.focus()</pre>
- </li>
- <li>
-  <p>Finally, we <code>use</code> the <code>focusEditButton</code> action on the <em>Edit</em> button, like so:</p>
+	<pre class="brush: js notranslate">const focusEditButton = (node) =&gt; editButtonPressed &amp;&amp; node.focus()</pre>
+	</li>
+	<li>
+	<p>Finally, we <code>use</code> the <code>focusEditButton</code> action on the <em>Edit</em> button, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;button type="button" class="btn" on:click={onEdit} use:focusEditButton&gt;
+	<pre class="brush: html notranslate">&lt;button type="button" class="btn" on:click={onEdit} use:focusEditButton&gt;
   Edit&lt;span class="visually-hidden"&gt; {todo.name}&lt;/span&gt;
 &lt;/button&gt;</pre>
- </li>
- <li>
-  <p>Go back and try your app again. At this point, every time the <em>Edit</em> button is added to the DOM, the <code>focusEditButton</code> action is executed, but it will only give focus to the button if the <code>editButtonPressed</code> flag is <code>true</code>.</p>
- </li>
+	</li>
+	<li>
+	<p>Go back and try your app again. At this point, every time the <em>Edit</em> button is added to the DOM, the <code>focusEditButton</code> action is executed, but it will only give focus to the button if the <code>editButtonPressed</code> flag is <code>true</code>.</p>
+	</li>
 </ol>
 
 <div class="blockIndicator note">
@@ -724,13 +724,13 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>First we'll extract the status heading to its own component.</p>
 
 <ol>
- <li>
-  <p>Create a new file — <code>components/TodosStatus.svelte</code>.</p>
- </li>
- <li>
-  <p>Add the following contents to it:</p>
+	<li>
+	<p>Create a new file — <code>components/TodosStatus.svelte</code>.</p>
+	</li>
+	<li>
+	<p>Add the following contents to it:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+	<pre class="brush: html notranslate">&lt;script&gt;
   export let todos
 
   $: totalTodos = todos.length
@@ -738,25 +738,25 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 &lt;/script&gt;
 
 &lt;h2 id="list-heading"&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
- </li>
- <li>
-  <p>Import the file at the beginning of <code>Todos.svelte</code>, adding the following <code>import</code> statement below the others:</p>
+	</li>
+	<li>
+	<p>Import the file at the beginning of <code>Todos.svelte</code>, adding the following <code>import</code> statement below the others:</p>
 
-  <pre class="brush: js notranslate">import TodosStatus from './TodosStatus.svelte'</pre>
- </li>
- <li>
-  <p>Replace the <code>&lt;h2&gt;</code> status heading inside <code>Todos.svelte</code> with a call to the <code>TodosStatus</code> component, passing <code>todos</code> to it as a prop, like so:</p>
+	<pre class="brush: js notranslate">import TodosStatus from './TodosStatus.svelte'</pre>
+	</li>
+	<li>
+	<p>Replace the <code>&lt;h2&gt;</code> status heading inside <code>Todos.svelte</code> with a call to the <code>TodosStatus</code> component, passing <code>todos</code> to it as a prop, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;TodosStatus {todos} /&gt;</pre>
- </li>
- <li>
-  <p>You can also do a bit of clean-up, removing the <code>totalTodos</code> and <code>completedTodos</code> variables from <code>Todos.svelte</code>. Just remove the <code>$: totalTodos = ...</code> and the <code>$: completedTodos = ...</code> lines, and also remove the reference to <code>totalTodos</code> when we calculare <code>newTodoId</code> and use <code>todos.length</code>, instead. To do this, replace the block that begins with <code>let newTodoId</code> with this:</p>
+	<pre class="brush: html notranslate">&lt;TodosStatus {todos} /&gt;</pre>
+	</li>
+	<li>
+	<p>You can also do a bit of clean-up, removing the <code>totalTodos</code> and <code>completedTodos</code> variables from <code>Todos.svelte</code>. Just remove the <code>$: totalTodos = ...</code> and the <code>$: completedTodos = ...</code> lines, and also remove the reference to <code>totalTodos</code> when we calculare <code>newTodoId</code> and use <code>todos.length</code>, instead. To do this, replace the block that begins with <code>let newTodoId</code> with this:</p>
 
-  <pre class="brush: js notranslate">$: newTodoId = todos.length ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</pre>
- </li>
- <li>
-  <p>Everything works as expected — we just extracted the last piece of markup to its own component.</p>
- </li>
+	<pre class="brush: js notranslate">$: newTodoId = todos.length ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</pre>
+	</li>
+	<li>
+	<p>Everything works as expected — we just extracted the last piece of markup to its own component.</p>
+	</li>
 </ol>
 
 <p>Now we need to find a way to give focus to the <code>&lt;h2&gt;</code> status label after a todo has been removed.</p>
@@ -785,10 +785,10 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>With this in mind, let's go back to our use case. We'll create a function called <code>focus()</code> that gives focus to the <code>&lt;h2&gt;</code> heading. For that we'll need a <code>headingEl</code> variable to hold the reference to the DOM node and we'll have to bind it to the <code>&lt;h2&gt;</code> element using <code>bind:this={headingEl}</code>. Our focus method will just run <code>headingEl.focus()</code>.</p>
 
 <ol>
- <li>
-  <p>Update the contents of <code>TodosStatus.svelte</code> like so:</p>
+	<li>
+	<p>Update the contents of <code>TodosStatus.svelte</code> like so:</p>
 
-  <pre class="brush: js notranslate">&lt;script&gt;
+	<pre class="brush: js notranslate">&lt;script&gt;
   export let todos
 
   $: totalTodos = todos.length
@@ -803,35 +803,35 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 
 &lt;h2 id="list-heading" bind:this={headingEl} tabindex="-1"&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
 
-  <p>Note that we've added a <code>tabindex</code> attribute to the <code>&lt;h2&gt;</code> to allow the element to receive focus programmatically.</p>
+	<p>Note that we've added a <code>tabindex</code> attribute to the <code>&lt;h2&gt;</code> to allow the element to receive focus programmatically.</p>
 
-  <p>As we saw earlier, using the <code>bind:this={headingEl}</code> directive gives us a reference to the DOM node in the variable <code>headingEl</code>. Then we use <code>export function focus()</code> to expose a function that gives focus to the <code>&lt;h2&gt;</code> heading.</p>
+	<p>As we saw earlier, using the <code>bind:this={headingEl}</code> directive gives us a reference to the DOM node in the variable <code>headingEl</code>. Then we use <code>export function focus()</code> to expose a function that gives focus to the <code>&lt;h2&gt;</code> heading.</p>
 
-  <p>How can we access those exported values from the parent? Just as you can bind to DOM elements with the <code>bind:this={dom_node}</code> directive, you can also bind to component instances themselves with <code>bind:this={component}</code>. So, when you use <code>bind:this</code> on an HTML element, you get a reference to the DOM node, and when you do it on a Svelte component, you get a reference to the instance of that component.</p>
- </li>
- <li>
-  <p>So to bind to the instance of <code>TodosStatus</code> we'll first create a <code>todosStatus</code> variable in <code>Todos.svelte</code>. Add the following line below your <code>import</code> statements:</p>
+	<p>How can we access those exported values from the parent? Just as you can bind to DOM elements with the <code>bind:this={dom_node}</code> directive, you can also bind to component instances themselves with <code>bind:this={component}</code>. So, when you use <code>bind:this</code> on an HTML element, you get a reference to the DOM node, and when you do it on a Svelte component, you get a reference to the instance of that component.</p>
+	</li>
+	<li>
+	<p>So to bind to the instance of <code>TodosStatus</code> we'll first create a <code>todosStatus</code> variable in <code>Todos.svelte</code>. Add the following line below your <code>import</code> statements:</p>
 
-  <pre class="brush: js notranslate">let todosStatus                   // reference to TodosStatus instance</pre>
- </li>
- <li>
-  <p>Next, add a <code>bind:this={todosStatus}</code> directive to the call, as follows:</p>
+	<pre class="brush: js notranslate">let todosStatus                   // reference to TodosStatus instance</pre>
+	</li>
+	<li>
+	<p>Next, add a <code>bind:this={todosStatus}</code> directive to the call, as follows:</p>
 
-  <pre class="brush: html notranslate">&lt;!-- TodosStatus --&gt;
+	<pre class="brush: html notranslate">&lt;!-- TodosStatus --&gt;
 &lt;TodosStatus bind:this={todosStatus} {todos} /&gt;
 </pre>
- </li>
- <li>
-  <p>Now we can call the <code>exported focus()</code> method from our <code>removeTodo()</code> function:</p>
+	</li>
+	<li>
+	<p>Now we can call the <code>exported focus()</code> method from our <code>removeTodo()</code> function:</p>
 
-  <pre class="brush: js notranslate">function removeTodo(todo) {
+	<pre class="brush: js notranslate">function removeTodo(todo) {
   todos = todos.filter(t =&gt; t.id !== todo.id)
   todosStatus.focus()             // give focus to status heading
 }</pre>
- </li>
- <li>
-  <p>Go back to your app — now if you delete any todo, the status heading will be focussed — this is useful to highlight the change in numbers of todos, both to sighted users and screenreader users.</p>
- </li>
+	</li>
+	<li>
+	<p>Go back to your app — now if you delete any todo, the status heading will be focussed — this is useful to highlight the change in numbers of todos, both to sighted users and screenreader users.</p>
+	</li>
 </ol>
 
 <div class="blockIndicator note">
@@ -865,12 +865,12 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <p>In the meantime, we saw a few advanced Svelte techniques, like:</p>
 
 <ul>
- <li>Dealing with reactivity gotchas when updating objects and arrays.</li>
- <li>Working with DOM nodes using <code>bind:this={dom_node}</code> (binding DOM elements).</li>
- <li>Using the component lifecycle <code>onMount()</code> function.</li>
- <li>Forcing Svelte to resolve pending state changes with the <code>tick()</code> function.</li>
- <li>Adding functionality to HTML elements in a reusable and declarative way with the <code>use:action</code> directive.</li>
- <li>Accessing component methods using <code>bind:this={component}</code> (binding components).</li>
+	<li>Dealing with reactivity gotchas when updating objects and arrays.</li>
+	<li>Working with DOM nodes using <code>bind:this={dom_node}</code> (binding DOM elements).</li>
+	<li>Using the component lifecycle <code>onMount()</code> function.</li>
+	<li>Forcing Svelte to resolve pending state changes with the <code>tick()</code> function.</li>
+	<li>Adding functionality to HTML elements in a reusable and declarative way with the <code>use:action</code> directive.</li>
+	<li>Accessing component methods using <code>bind:this={component}</code> (binding components).</li>
 </ul>
 
 <p>In the next article we will see how to use stores to communicate between components, and add animations to our components.</p>
@@ -880,52 +880,52 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
+	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+	<li>React
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+	</ul>
+	</li>
+	<li>Ember
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+	</ul>
+	</li>
+	<li>Vue
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+	</ul>
+	</li>
+	<li>Svelte
+	<ul>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+	</ul>
+	</li>
 </ul>

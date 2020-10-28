@@ -1,0 +1,23 @@
+---
+title: Rsync
+slug: Glossary/Rsync
+---
+<p><a href="https://rsync.samba.org/" rel="nofollow">Rsync</a> is an open source local-to-remote file synchronizing tool that provides fast incremental file transfer, and which can be used over insecure or secure transports (e.g. SSH).  It is available on most Unix-based systems (like macOS and Linux) and Windows. There are also GUI-based tools that use Rsync, e.g. <a href="https://acrosync.com/mac.html" rel="noopener">Acrosync</a>.</p>
+
+<p>A basic command looks like this:</p>
+
+<pre class="notranslate"><code>rsync [-options] SOURCE user@x.x.x.x:DESTINATION</code></pre>
+
+<ul>
+ <li><code>-options</code> is a dash followed by a one or more letters, for example <code>-v</code> for verbose error messages, and <code>-b</code> to make backups. You can see the full list at the <a href="https://linux.die.net/man/1/rsync" rel="noopener">rsync man page</a> (search for "Options summary").</li>
+ <li><code>SOURCE</code> is the path to the local file or directory that you want to copy files over from.</li>
+ <li><code>user@</code> is the credentials of the user on the remote server you want to copy files over to.</li>
+ <li><code>x.x.x.x</code> is the IP address of the remote server.</li>
+ <li><code>DESTINATION</code> is the path to the location you want to copy your directory or files to on the remote server.</li>
+</ul>
+
+<p><span style="">You can also make the connection over SSH using the </span><code style="">-e</code><span style=""> option as shown:</span></p>
+
+<pre class="notranslate"><code>rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</code></pre>
+
+<p>There are numerous examples on the Internet, including the <a href="https://rsync.samba.org/examples.html">official website</a>, and its <a href="https://en.wikipedia.org/wiki/Rsync#Examples">Wikipedia entry</a>.</p>

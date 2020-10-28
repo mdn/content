@@ -24,6 +24,8 @@ tags:
 <dl>
  <dt id="attr-class-id-style">class, id, style</dt>
  <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dt id="attr-displaystyle"><code>displaystyle</code></dt>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-dir">dir</dt>
  <dd>Overall directionality of formulas. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
  <dt id="attr-href">href</dt>
@@ -36,7 +38,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">&lt;math&gt;
+<pre class="brush: html notranslate">&lt;math&gt;
 
   &lt;mrow&gt;
     &lt;mn&gt; 1 &lt;/mn&gt;
@@ -68,6 +70,11 @@ tags:
   </tr>
  </thead>
  <tbody>
+  <tr>
+   <td>{{SpecName("MathMLCore", "#horizontally-group-sub-expressions-mrow", "mrow")}}</td>
+   <td>{{Spec2("MathMLCore")}}</td>
+   <td>Draft specification</td>
+  </tr>
   <tr>
    <td>{{ SpecName('MathML3', 'chapter3.html#presm.mrow', 'mrow') }}</td>
    <td>{{ Spec2('MathML3') }}</td>

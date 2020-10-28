@@ -39,9 +39,9 @@ tags:
 
 <p>The <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which <em>character</em> was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events.</p>
 
-<p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> for more useful details). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
+<p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
 
-<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
+<pre class="brush: js notranslate">eventTarget.addEventListener("keydown", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
@@ -55,10 +55,10 @@ tags:
 
 <p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key.</p>
 
-<pre class="brush: html">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js">document.addEventListener('keydown', logKey);
+<pre class="brush: js notranslate">document.addEventListener('keydown', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
@@ -68,7 +68,7 @@ function logKey(e) {
 
 <h3 id="onkeydown_equivalent">onkeydown equivalent</h3>
 
-<pre class="brush: js">document.onkeydown = logKey;</pre>
+<pre class="brush: js notranslate">document.onkeydown = logKey;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

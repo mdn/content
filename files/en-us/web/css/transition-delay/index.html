@@ -19,9 +19,9 @@ tags:
 <p>The delay may be zero, positive, or negative:</p>
 
 <ul>
- <li>A value of <code>0s</code> (or <code>0ms</code>) will begin the transition effect immediately.</li>
- <li>A positive value will delay the start of the transition effect for the given length of time.</li>
- <li>A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.</li>
+	<li>A value of <code>0s</code> (or <code>0ms</code>) will begin the transition effect immediately.</li>
+	<li>A positive value will delay the start of the transition effect for the given length of time.</li>
+	<li>A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.</li>
 </ul>
 
 <p>You may specify multiple delays, which is useful when transitioning multiple properties. Each delay will be applied to the corresponding property as specified by the {{cssxref("transition-property")}} property, which acts as a master list. If there are fewer delays specified than in the master list, the list of delay values will be repeated until there are enough. If there are more delays, the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.</p>
@@ -41,8 +41,8 @@ transition-delay: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt>{{cssxref("&lt;time&gt;")}}</dt>
- <dd>Denotes the amount of time to wait between a property's value changing and the start of the transition effect.</dd>
+	<dt>{{cssxref("&lt;time&gt;")}}</dt>
+	<dd>Denotes the amount of time to wait between a property's value changing and the start of the transition effect.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -54,6 +54,8 @@ transition-delay: unset;
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="A_series_of_examples_with_different_delays_set">A series of examples with different delays set</h3>
 
 <div>
 <div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -328,20 +330,20 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-delay-property', 'transition-delay')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Transitions', '#transition-delay-property', 'transition-delay')}}</td>
+			<td>{{Spec2('CSS3 Transitions')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -353,6 +355,6 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{domxref("TransitionEvent")}} API</li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
+	<li>{{domxref("TransitionEvent")}} API</li>
 </ul>

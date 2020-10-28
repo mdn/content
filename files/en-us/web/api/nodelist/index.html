@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>NodeList</code></strong> objects are collections of <a href="/en-US/docs/Glossary/Node/DOM">nodes</a>, usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.</span></p>
+<p><span class="seoSummary"><strong><code>NodeList</code></strong> objects are collections of <a href="/en-US/docs/Web/API/Node">nodes</a>, usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.</span></p>
 
 <div class="note">
 <p>Although <code>NodeList</code> is not an <code>Array</code>, it is possible to iterate over it with <code>forEach()</code>. It can also be converted to a real <code>Array</code> using {{jsxref("Array.from()")}}.</p>
@@ -43,24 +43,24 @@ console.log(child_nodes.length); // outputs "3"
 <h2 id="Properties">Properties</h2>
 
 <dl>
-	<dt>{{domxref("NodeList.length")}}</dt>
-	<dd>The number of nodes in the <code>NodeList</code>.</dd>
+ <dt>{{domxref("NodeList.length")}}</dt>
+ <dd>The number of nodes in the <code>NodeList</code>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
-	<dt>{{domxref("NodeList.item()")}}</dt>
-	<dd>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds.</dd>
-	<dd>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</dd>
-	<dt>{{domxref("NodeList.entries()")}}</dt>
-	<dd>Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code> and the values are nodes.)</dd>
-	<dt>{{domxref("NodeList.forEach()")}}</dt>
-	<dd>Executes a provided function once per <code>NodeList</code> element, passing the element as an argument to the function.</dd>
-	<dt>{{domxref("NodeList.keys()")}}</dt>
-	<dd>Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code>.)</dd>
-	<dt>{{domxref("NodeList.values()")}}</dt>
-	<dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.</dd>
+ <dt>{{domxref("NodeList.item()")}}</dt>
+ <dd>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds.</dd>
+ <dd>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</dd>
+ <dt>{{domxref("NodeList.entries()")}}</dt>
+ <dd>Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code> and the values are nodes.)</dd>
+ <dt>{{domxref("NodeList.forEach()")}}</dt>
+ <dd>Executes a provided function once per <code>NodeList</code> element, passing the element as an argument to the function.</dd>
+ <dt>{{domxref("NodeList.keys()")}}</dt>
+ <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code>.)</dd>
+ <dt>{{domxref("NodeList.values()")}}</dt>
+ <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -93,35 +93,35 @@ Array.prototype.forEach.call(list, function (checkbox) {
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
-			<td>{{ Spec2('DOM WHATWG') }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-			<td>{{ Spec2('DOM3 Core') }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-			<td>{{ Spec2('DOM2 Core') }}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}}</td>
-			<td>{{ Spec2('DOM1') }}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
+   <td>{{ Spec2('DOM3 Core') }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
+   <td>{{ Spec2('DOM2 Core') }}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}}</td>
+   <td>{{ Spec2('DOM1') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

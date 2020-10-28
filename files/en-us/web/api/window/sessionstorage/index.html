@@ -41,11 +41,23 @@ tags:
  <dd>The request violates a policy decision, or the origin is not <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">a valid scheme/host/port tuple</a> (this can happen if the origin uses the <code>file:</code> or <code>data:</code> scheme, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>The following snippet accesses the current origin's session {{DOMxRef("Storage")}} object and adds data to it with {{DOMxRef("Storage.setItem()")}}.</p>
+<h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js; notranslate">sessionStorage.setItem('myCat', 'Tom');</pre>
+<pre class="brush: js notranslate">// Save data to sessionStorage
+sessionStorage.setItem('key', 'value');
+
+// Get saved data from sessionStorage
+let data = sessionStorage.getItem('key');
+
+// Remove saved data from sessionStorage
+sessionStorage.removeItem('key');
+
+// Remove all saved data from sessionStorage
+sessionStorage.clear();</pre>
+
+<h3 id="Saving_text_between_refreshes">Saving text between refreshes</h3>
 
 <p>The following example autosaves the contents of a text field, and if the browser is refreshed, restores the text field content so that no writing is lost.</p>
 

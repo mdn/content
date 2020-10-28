@@ -16,7 +16,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>max-inline-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the horizontal or vertical maximum size of an element's block depending on its writing mode. It corresponds to the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property depending on the value defined for {{cssxref("writing-mode")}}.</span> If the writing mode is vertically oriented, the value of <code>max-inline-size</code> relates to the maximal height of the element, otherwise it relates to the maximal width of the element. It relates to {{cssxref("max-block-size")}}, which defines the other dimension of the element.</p>
+<p><span class="seoSummary">The <strong><code>max-inline-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</span></p>
+
+<p>If the writing mode is vertically oriented, the value of <code>max-inline-size</code> relates to the maximal height of the element; otherwise, it relates to the maximal width of the element. A related property is {{cssxref("max-block-size")}}, which defines the other dimension of the element.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}</div>
 
@@ -57,7 +59,7 @@ max-inline-size: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Setting_max_inline_size_in_pixels">Setting max inline size in pixels</h3>
+<h3 id="Setting_maximum_inline_size_in_pixels">Setting maximum inline size in pixels</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -75,7 +77,7 @@ max-inline-size: unset;
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample("Setting_max_inline_size_in_pixels")}}</p>
+<p>{{EmbedLiveSample("Setting_maximum_inline_size_in_pixels")}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -12,7 +12,7 @@ tags:
   - Sensor APIs
   - Sensors
 ---
-<p>{{APIRef("Generic Sensor API")}}</p>
+<p>{{APIRef("Generic Sensor API")}}{{seecompattable}}</p>
 
 <p><span class="seoSummary">The <strong><code>AmbientLightSensor</code></strong> interface of the the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> returns the current light level or illuminance of the ambient light around the hosting device.</span></p>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">if ( 'AmbientLightSensor' in window ) {
+<pre class="brush: js notranslate">if ( 'AmbientLightSensor' in window ) {
   const sensor = new AmbientLightSensor();
   sensor.onreading = () =&gt; {
     console.log('Current light level:', sensor.illuminance);
@@ -64,7 +64,7 @@ tags:
   <tr>
    <td>{{SpecName('AmbientLight','#ambient-light-sensor-interface','AmbientLightSensor')}}</td>
    <td>{{Spec2('AmbientLight')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

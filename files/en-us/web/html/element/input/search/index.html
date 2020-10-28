@@ -10,7 +10,7 @@ tags:
   - Reference
   - Search
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>search</strong></code> are text fields designed for the user to enter search queries into. These are functionally identical to <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code> inputs, but may be styled differently by the {{Glossary("user agent")}}. </span></p>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.</p>
 
-<pre class="brush: js">searchTerms = mySearch.value;
+<pre class="brush: js notranslate">searchTerms = mySearch.value;
 </pre>
 
 <p>If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value can be any text string or an empty string (<code>""</code>).</p>
@@ -192,7 +192,7 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;input type="search" id="mySearch" name="q"&gt;
     &lt;button&gt;Search&lt;/button&gt;
@@ -223,7 +223,7 @@ tags:
 
 <p>You can provide a useful placeholder inside your search input that could give a hint on what to do using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;input type="search" id="mySearch" name="q"
      placeholder="Search the site..."&gt;
@@ -248,7 +248,7 @@ tags:
 
 <p>Let's have a look at an example:</p>
 
-<pre class="brush: html">&lt;form role="search"&gt;
+<pre class="brush: html notranslate">&lt;form role="search"&gt;
   &lt;div&gt;
     &lt;input type="search" id="mySearch" name="q"
      placeholder="Search the site..."
@@ -271,7 +271,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;input type="search" id="mySearch" name="q"
     placeholder="Search the site..." size="30"&gt;
@@ -295,7 +295,7 @@ tags:
 
 <p>There are useful pseudo-classes available for styling valid/invalid form elements: {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) next to inputs containing valid values, and a cross next to inputs containing invalid values.</p>
 
-<pre class="brush: css">input:invalid ~ span:after {
+<pre class="brush: css notranslate">input:invalid ~ span:after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
@@ -313,7 +313,7 @@ input:valid ~ span:after {
 
 <p>You can use the {{htmlattrxref("required", "input")}} attribute as an easy way of making entering a value required before form submission is allowed:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;input type="search" id="mySearch" name="q"
     placeholder="Search the site..." required&gt;
@@ -323,7 +323,7 @@ input:valid ~ span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css notranslate">input {
   margin-right: 10px;
 }
 
@@ -356,7 +356,7 @@ input:valid ~ span:after {
 
 <p>The example below requires that the entered value be 4–8 characters in length.</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="mySearch"&gt;Search for user&lt;/label&gt;
     &lt;input type="search" id="mySearch" name="q"
@@ -368,7 +368,7 @@ input:valid ~ span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css notranslate">input {
   margin-right: 10px;
 }
 
@@ -397,7 +397,7 @@ input:valid ~ span:after {
 
 <p>Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:</p>
 
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="mySearch"&gt;Search for product by ID:&lt;/label&gt;
     &lt;input type="search" id="mySearch" name="q"
@@ -409,7 +409,7 @@ input:valid ~ span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css notranslate">input {
   margin-right: 10px;
 }
 
@@ -470,5 +470,5 @@ input:valid ~ span:after {
  <li><a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

@@ -77,7 +77,7 @@ tags:
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('beforebegin',tempDiv);
+    activeElem.insertAdjacentElement('beforebegin', tempDiv);
   }
   setListener(tempDiv);
 });
@@ -86,12 +86,12 @@ afterBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('afterend',tempDiv);
+    activeElem.insertAdjacentElement('afterend', tempDiv);
   }
   setListener(tempDiv);
 });</pre>
 
-<p>Have a look at our <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> demo on Github (see the <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">source code</a> too.) Here we have a sequence of {{htmlelement("div")}} elements inside a container. When one is clicked, it becomes selected and you can then press the <em>Insert before</em> and <em>Insert after</em> buttons to insert new divs before or after the selected element using <code>insertAdjacentElement()</code>.</p>
+<p>Have a look at our <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> demo on GitHub (see the <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">source code</a> too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a container. When one is clicked, it becomes selected and you can then press the <em>Insert before</em> and <em>Insert after</em> buttons to insert new divs before or after the selected element using <code>insertAdjacentElement()</code>.</p>
 
 <h2 id="Specification">Specification</h2>
 

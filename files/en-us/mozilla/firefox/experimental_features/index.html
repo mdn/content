@@ -122,7 +122,7 @@ tags:
   <tr>
    <th scope="row">Developer Edition</th>
    <td>78</td>
-   <td>Yes</td>
+   <td>No</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
@@ -180,8 +180,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-
 
 <h3 id="Layout_for_input_typesearch">Layout for input type="search"</h3>
 
@@ -309,9 +307,11 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Conic_gradients">Conic gradients</h3>
+<h3 id="Property_aspect-ratio">Property: aspect-ratio</h3>
 
-<p><a href="/en-US/docs/Web/CSS/gradient#Conic_gradient">Conic gradients</a> expand CSS gradients to allow the color transitions to be rendered circling around a center point rather than radiating from it. See {{bug(1175958)}} for more details.</p>
+<p>The {{cssxref("aspect-ratio")}} CSS property is part of the {{SpecName("CSS4 Sizing")}} specification and allows you to create boxes which conform to an aspect ratio.<br>
+ <br>
+ See {{bug(1639963)}} and {{bug(1646096)}} for more details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -324,32 +324,32 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Nightly</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Release</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.conic-gradient.enabled</code> and <code>gfx.webrender.all</code></th>
+   <th colspan="2"><code>layout.css.aspect-ratio.enabled</code></th>
   </tr>
  </tbody>
 </table>
 
-<h3 id="Pseudo-class_focus-visible">Pseudo-class: :focus-visible</h3>
+<h3 id="Pseudo-class_focus-visible"><span>Pseudo-class: :focus-visible</span></h3>
 
 <p>Allows focus styles to be applied to elements like buttons and form controls, only when they are focused using the keyboard (e.g. when tabbing between elements), and not when they are focused using a mouse or other pointing device. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617600">bug 1617600</a> for more details.</p>
 
@@ -544,7 +544,92 @@ tags:
   </tr>
   <tr>
    <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.prefers-contrast.enabled</code></th>
+   <th colspan="2">
+    <p><code>layout.css.prefers-contrast.enabled</code></p>
+   </th>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Property_math-style">Property: math-style </h3>
+
+<p>The {{cssxref("math-style")}} property  indicates whether MathML equations should render with normal or compact height. See {{bug(1665975)}} for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>layout.css.math-style.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="JavaScript">JavaScript</h2>
+
+<h3 id="Private_class_fields">Private class fields</h3>
+
+<p>See <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private class fields</a> for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference names</th>
+   <th colspan="2"><code>javascript.options.experimental.private_fields<br>
+    javascript.options.experimental.private_methods</code></th>
   </tr>
  </tbody>
 </table>
@@ -1087,47 +1172,7 @@ tags:
 
 <h3 id="WebRTC_and_media">WebRTC and media</h3>
 
-<p>The following experimental features include those found in the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a>, the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a>, the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, and the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
-
-<h4 id="Media_Session_API">Media Session API</h4>
-
-<p>The entire Firefox implementation of the Media Session API is currently experimental. This API is used to customize the handling of media-related notifications, to manage events and data useful for presenting a user interface for managing media playback, and to obtain media file metadata. See {{bug(1112032)}} for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>dom.media.mediasession.enabled</code></th>
-  </tr>
- </tbody>
-</table>
+<p>The following experimental features include those found in the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a>, the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, and the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
 
 <h4 id="Asynchronous_SourceBuffer_add_and_remove">Asynchronous SourceBuffer add and remove</h4>
 
@@ -1625,7 +1670,7 @@ tags:
 
 <h4 id="Desktop_zooming">Desktop zooming</h4>
 
-<p>This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. See {{bug(1245183)}} for further details.</p>
+<p>This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. See {{bug(1245183)}} and {{bug(1620055)}} for further details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>

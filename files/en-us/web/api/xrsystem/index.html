@@ -44,34 +44,38 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Thsi interface was previously known as simply <code>XR</code> in earlier versions of the specification; if you see references to <code>XR</code> in code or documentation, simply replace that with <code>XRSystem</code>.</p>
+<p>This interface was previously known as simply <code>XR</code> in earlier versions of the specification; if you see references to <code>XR</code> in code or documentation, simply replace that with <code>XRSystem</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following example shows how to use both {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} and {{domxref("XRSystem.requestSession", "requestSession()")}}.</p>
 
-<pre class="brush: js;">if (navigator.xr) {
-  immersiveButton.addEventListener("click", onButtonClicked);
+<pre class="brush: js; notranslate">if (navigator.xr) {
+  immersiveButton.addEventListener("click", onButtonClicked);
   navigator.xr.isSessionSupported('immersive-vr')
   .then((isSupported) =&gt; {
-    if (isSupported) {
+    if (isSupported) {
       immersiveButton.disabled = false;
-    } else {
-      immersiveButton.disabled = true;
+    } else {
+      immersiveButton.disabled = true;
+    }
   });
 }
 
 function onButtonClicked() {
   if (!xrSession) {
     navigator.xr.requestSession('immersive-vr')
-    .then(() =&gt; {
+    .then((session) =&gt; {
       // onSessionStarted() not shown for reasons of brevity and clarity.
-      onSessionStarted(xrSession);
+      onSessionStarted(session);
     });
   } else {
     // Shut down the already running XRSession
     xrSession.end()
-    .then(() =&gt; xrSession = null);
+    .then(() =&gt; {
+      // Since there are cases where the end event is not sent, call the handler here as well.
+      onSessionEnded();
+    });
   }
 }</pre>
 
@@ -81,7 +85,7 @@ function onButtonClicked() {
 
 <p>The <code>onButtonClicked()</code> function checks to see if there's already a session running. If there isn't, we use <code>requestSession()</code> to start one and, once the returned promise resolves, we call a function <code>onSessionStarted()</code> to set up our session for rendering and so forth.</p>
 
-<p>If, on the other hand, there is already an ongoing XR session, we instead call {{domxref("XRSession.end", "end()")}} to end the current session. When the returned promise resolves, we set <code>xrSession</code> to <code>null</code> to record the fact that we no longer have an ongoing session. That way, if the user clicks the button again, a new session will start.</p>
+<p>If, on the other hand, there is already an ongoing XR session, we instead call {{domxref("XRSession.end", "end()")}} to end the current session. When the current session ends, the {{domxref("XRSession.end_event", "end")}} event is sent, so set <code>xrSession</code> to <code>null</code> in its handler to record the fact that we no longer have an ongoing session. That way, if the user clicks the button again, a new session will start.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -95,7 +99,7 @@ function onButtonClicked() {
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName("WebXR", "#xrsystem-interface", "XR")}}</td>
+   <td>{{SpecName("WebXR", "#xrsystem-interface", "XRSystem")}}</td>
    <td>{{Spec2("WebXR")}}</td>
    <td>Initial definition.</td>
   </tr>

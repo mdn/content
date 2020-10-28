@@ -37,10 +37,10 @@ animation-iteration-count: 2, 0, infinite;</pre>
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>infinite</code></dt>
- <dd>The animation will repeat forever.</dd>
- <dt><code>{{cssxref("&lt;number&gt;")}}</code></dt>
- <dd>The number of times the animation will repeat; this is <code>1</code> by default. You may specify non-integer values to play part of an animation cycle: for example, <code>0.5</code> will play half of the animation cycle. Negative values are invalid.</dd>
+	<dt><code>infinite</code></dt>
+	<dd>The animation will repeat forever.</dd>
+	<dt><code>{{cssxref("&lt;number&gt;")}}</code></dt>
+	<dd>The number of times the animation will repeat; this is <code>1</code> by default. You may specify non-integer values to play part of an animation cycle: for example, <code>0.5</code> will play half of the animation cycle. Negative values are invalid.</dd>
 </dl>
 
 <div class="note">
@@ -57,25 +57,54 @@ animation-iteration-count: 2, 0, infinite;</pre>
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="The_animation_will_run_10_times.">The animation will run 10 times.</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css notranslate">.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: 10;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}</pre>
+
+<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+
 <p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
 
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }}</td>
+			<td>{{ Spec2('CSS3 Animations') }}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -87,6 +116,6 @@ animation-iteration-count: 2, 0, infinite;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
+	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
 </ul>

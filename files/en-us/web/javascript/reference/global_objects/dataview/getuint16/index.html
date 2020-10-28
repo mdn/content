@@ -14,19 +14,19 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>dataview</var>.getUint16(byteOffset [, littleEndian])</pre>
+<pre class="syntaxbox notranslate"><var>dataview</var>.getUint16(<var>byteOffset</var> [, <var>littleEndian</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>byteOffset</dt>
+ <dt><code><var>byteOffset</var></code></dt>
  <dd>The offset, in byte, from the start of the view where to read the data.</dd>
- <dt>littleEndian</dt>
- <dd>{{optional_inline}} Indicates whether the 16-bit int is stored in <a href="/en-US/docs/Glossary/Endianness">little- or big-endian</a> format. If false or undefined, a big-endian value is read.</dd>
+ <dt><code><var>littleEndian</var></code></dt>
+ <dd>{{optional_inline}} Indicates whether the 16-bit int is stored in {{Glossary("Endianness", "little- or big-endian")}} format. If <code>false</code> or <code>undefined</code>, a big-endian value is read.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -46,9 +46,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_getUint16_method">Using the <code>getUint16</code> method</h3>
+<h3 id="Using_the_getUint16_method">Using the getUint16 method</h3>
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getUint16(1); // 0
 </pre>
@@ -56,10 +56,12 @@ dataview.getUint16(1); // 0
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-dataview.prototype.getuint16', 'DataView.prototype.getUint16')}}</td>
   </tr>

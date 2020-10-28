@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">isFinite(<var>testValue</var>)</pre>
+<pre class="syntaxbox notranslate">isFinite(<var>testValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,11 +29,11 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p><strong><code>false</code></strong> if the argument is positive or negative {{jsxref("Infinity")}} or {{jsxref("NaN")}} or {{jsxref("undefined")}}; otherwise, <strong><code>true</code></strong>.</p>
+<p><strong><code>false</code></strong> if the argument is (or will be coerced to) positive or negative {{jsxref("Infinity")}} or {{jsxref("NaN")}} or {{jsxref("undefined")}}; otherwise, <strong><code>true</code></strong>.</p>
 
 <h2 id="Description">Description</h2>
 
-<p><code>isFinite</code> is a top-level function and is not associated with any object.</p>
+<p><code>isFinite</code> is a function property of the global object.</p>
 
 <p>You can use this function to determine whether a number is a finite number. The <code>isFinite</code> function examines the number in its argument. If the argument is <code>NaN</code>, positive infinity, or negative infinity, this method returns <code>false</code>; otherwise, it returns <code>true</code>.</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <h3 id="Using_isFinite">Using isFinite</h3>
 
-<pre class="brush: js">isFinite(Infinity);  // false
+<pre class="brush: js notranslate">isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 

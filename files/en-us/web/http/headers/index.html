@@ -317,6 +317,14 @@ tags:
  <dd>Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.</dd>
  <dt>{{HTTPHeader("Feature-Policy")}}</dt>
  <dd>Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.</dd>
+</dl>
+
+<dl>
+ <dt>{{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}</dt>
+ <dd>Provides a mechanism to allow web applications to isolate their origins.</dd>
+</dl>
+
+<dl>
  <dt>{{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})</dt>
  <dd>Force communication using HTTPS instead of HTTP.</dd>
  <dt>{{HTTPHeader("Upgrade-Insecure-Requests")}}</dt>

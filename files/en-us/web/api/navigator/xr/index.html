@@ -17,27 +17,27 @@ tags:
 ---
 <div>{{APIRef("WebXR Device API")}}</div>
 
-<p><span class="seoSummary">The read-only <code><strong>xr</strong></code> property provided by the {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}} interface returns an {{domxref("XR")}} object which can be used to access the <a href="/en-US/docs/Web/API/WebXR_API">WebXR Device API</a>.</span></p>
+<p><span class="seoSummary">The read-only <code><strong>xr</strong></code> property provided by the {{domxref("Navigator")}} or {{domxref("WorkerNavigator")}} interface returns an {{domxref("XRSystem")}} object which can be used to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>xr</var> = navigator.xr</pre>
+<pre class="syntaxbox notranslate">const <var>xr</var> = navigator.xr</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The {{domxref("XR")}} object used to interface with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> in the current context. This can be used to present augmented and/or virtual reality imagery to the user.</p>
+<p>The {{domxref("XRSystem")}} object used to interface with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> in the current context. This can be used to present augmented and/or virtual reality imagery to the user.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can <span style="font-size: 1rem; letter-spacing: -0.00278rem;">be accessed as {{domxref("Window.navigator")}} or simply as {{domxref("Window.navigator", "navigator")}}. At the same time, a new {{domxref("XR")}} instance is also created and attached to the <code>navigator</code> instance as {{domxref("Navigator.xr", "navigator.xr")}}. If the <code>xr</code> property exists and is non-<code>null</code>, you can use it to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</span></p>
+<p>Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can be accessed as {{domxref("Window.navigator","window.navigator")}} or simply as {{domxref("Window.navigator", "navigator")}}. At the same time, a new {{domxref("XRSystem")}} instance is also created and attached to the <code>navigator</code> instance as {{domxref("Navigator.xr", "navigator.xr")}}. If the <code>xr</code> property exists, you can use it to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
 
-<p><span style="font-size: 1rem; letter-spacing: -0.00278rem;">To determine if WebXR is available, you can do something like this:</span></p>
+<p>To determine if WebXR is available, you can do something like this:</p>
 
-<pre class="brush: js"><span style="font-size: 1rem; letter-spacing: -0.00278rem;">if ("xr" in Window.navigator) {
+<pre class="brush: js notranslate">if ("xr" in window.navigator) {
   /* WebXR can be used! */
 } else {
   /* WebXR isn't available */
-}</span>
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

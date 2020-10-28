@@ -20,21 +20,25 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>object</em>.onselectstart = <em>functionRef</em>;
+<pre class="syntaxbox notranslate"><em>object</em>.onselectstart = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
 <p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole argument.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">document.onselectstart = function() {
+<pre class="brush: js notranslate">document.onselectstart = function() {
   console.log('Selection started!');
 };
 </pre>
 
 <p>For a full example, see our <a href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key quote generator</a> demo.</p>
+
+<pre class="brush: js notranslate">document.onselectstart = () =&gt; {
+  return false; // cancel selection
+};</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

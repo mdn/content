@@ -12,7 +12,7 @@ tags:
   - ServiceWorker
   - Workers
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+<div>{{non-standard_header}}{{obsolete_header}}</div>
 
 <div></div>
 
@@ -52,7 +52,7 @@ tags:
 <p><strong>Note</strong>: Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
 </div>
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+<pre class="brush: js notranslate">var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -78,23 +78,6 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
     })
   );
 });</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>As of May 2015, the install event is an instance of {{domxref("ExtendableEvent")}} rather than a child of it.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

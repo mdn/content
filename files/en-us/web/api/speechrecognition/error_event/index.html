@@ -40,13 +40,13 @@ tags:
 <pre class="brush: js notranslate">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('error', function(event) {
-  console.log('Speech recognition error detected: ' + event.error');
+  console.log('Speech recognition error detected: ' + event.error);
 });</pre>
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onerror">onerror</a></code> event handler property:</p>
 
 <pre class="brush: js notranslate">recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error');
+  console.log('Speech recognition error detected: ' + event.error);
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>

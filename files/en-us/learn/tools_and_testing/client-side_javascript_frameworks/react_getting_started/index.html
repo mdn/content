@@ -12,27 +12,27 @@ tags:
   - jsx
   - props
 ---
-<div>{{LearnSidebar}}</div>
+<div>react{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <p class="summary">In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app — learning a bit about how React works in the process.</p>
 
 <table class="learn-box standard-table">
-	<tbody>
-		<tr>
-			<th scope="row">Prerequisites:</th>
-			<td>
-			<p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>
+    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
 
-			<p>React uses an HTML-in-JavaScript syntax called JSX (JavaScript and XML). Familiarity with both HTML and JavaScript will help you to learn JSX, and better identify whether bugs in your application are related to JavaScript or to the more specific domain of React.</p>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row">Objective:</th>
-			<td>To set up a local React development environment, create a start app, and understand the basics of how it works</td>
-		</tr>
-	</tbody>
+    <p>React uses an HTML-in-JavaScript syntax called JSX (JavaScript and XML). Familiarity with both HTML and JavaScript will help you to learn JSX, and better identify whether bugs in your application are related to JavaScript or to the more specific domain of React.</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To set up a local React development environment, create a start app, and understand the basics of how it works</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Hello_React">Hello React</h2>
@@ -110,9 +110,9 @@ tags:
 <p>Also, see the following for more information:</p>
 
 <ul>
-	<li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm" on nodejs.org</a></li>
-	<li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx" on the npm blog</a></li>
-	<li><a href="https://create-react-app.dev/">The create-react-app documentation</a></li>
+ <li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm" on nodejs.org</a></li>
+ <li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx" on the npm blog</a></li>
+ <li><a href="https://create-react-app.dev/">The create-react-app documentation</a></li>
 </ul>
 
 <h3 id="Initializing_your_app">Initializing your app</h3>
@@ -124,10 +124,10 @@ tags:
 <p>This creates a <code>moz-todo-react</code> directory, and does several things inside it:</p>
 
 <ul>
-	<li>Installs some npm packages essential to the functionality of the app.</li>
-	<li>Writes scripts for starting and serving the application.</li>
-	<li>Creates a structure of files and directories that define the basic app architecture.</li>
-	<li>Initializes the directory as a git repository, if you have git installed on your computer.</li>
+ <li>Installs some npm packages essential to the functionality of the app.</li>
+ <li>Writes scripts for starting and serving the application.</li>
+ <li>Creates a structure of files and directories that define the basic app architecture.</li>
+ <li>Initializes the directory as a git repository, if you have git installed on your computer.</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -285,7 +285,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+ReactDOM.render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -297,8 +302,8 @@ serviceWorker.unregister();</pre>
 <p>Line 7 calls React’s <code>ReactDOM.render()</code> function with two arguments:</p>
 
 <ul>
-	<li>The component we want to render, <code>&lt;App /&gt;</code> in this case.</li>
-	<li>The DOM element inside which we want the component to be rendered, in this case the element with an ID of <code>root</code>. If you look inside <code>public/index.html</code>, you'll see that this is a <code>&lt;div&gt;</code> element just inside the <code>&lt;body&gt;</code>.</li>
+ <li>The component we want to render, <code>&lt;App /&gt;</code> in this case.</li>
+ <li>The DOM element inside which we want the component to be rendered, in this case the element with an ID of <code>root</code>. If you look inside <code>public/index.html</code>, you'll see that this is a <code>&lt;div&gt;</code> element just inside the <code>&lt;body&gt;</code>.</li>
 </ul>
 
 <p>All of this tells React that we want to render our React application with the <code>App</code> component as the root, or first component.</p>
@@ -307,7 +312,7 @@ serviceWorker.unregister();</pre>
 <p><strong>Note</strong>: In JSX, React components and HTML elements must have closing slashes. Writing just <code>&lt;App&gt;</code> or just <code>&lt;img&gt;</code> will cause an error.</p>
 </div>
 
-<p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as lines 9 through 12.</p>
+<p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.</p>
 
 <p>Your final <code>index.js</code> file should look like this:</p>
 
@@ -418,11 +423,11 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 <p>In React:</p>
 
 <ul>
-	<li>Components can import modules they need and must export themselves at the bottom of their files.</li>
-	<li>Component functions are named with <code>PascalCase</code>.</li>
-	<li>You can read JSX variables by putting them between curly braces, like <code>{so}</code>.</li>
-	<li>Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, <code>class</code> in HTML translates to <code>className</code> in JSX. Note that multi-word attributes are camel-cased.</li>
-	<li>Props are written just like attributes inside component calls and are passed into components.</li>
+ <li>Components can import modules they need and must export themselves at the bottom of their files.</li>
+ <li>Component functions are named with <code>PascalCase</code>.</li>
+ <li>You can read JSX variables by putting them between curly braces, like <code>{so}</code>.</li>
+ <li>Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, <code>class</code> in HTML translates to <code>className</code> in JSX. Note that multi-word attributes are camel-cased.</li>
+ <li>Props are written just like attributes inside component calls and are passed into components.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
@@ -430,52 +435,52 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
-	<li>React
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-	</ul>
-	</li>
-	<li>Ember
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-	</ul>
-	</li>
-	<li>Vue
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-	</ul>
-	</li>
-	<li>Svelte
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-	</ul>
-	</li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li>React
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+  </ul>
+ </li>
 </ul>

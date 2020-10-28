@@ -39,14 +39,14 @@ animation-direction: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>normal</code></dt>
- <dd>The animation plays <em>forwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.</dd>
- <dt><code>reverse</code></dt>
- <dd>The animation plays <em>backwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the end state and start over again. Animation steps are performed backwards, and timing functions are also reversed. For example, an <code>ease-in</code> timing function becomes <code>ease-out</code>.</dd>
- <dt><code>alternate</code></dt>
- <dd>The animation reverses direction each cycle, with the first iteration being played <em>forwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
- <dt><code>alternate-reverse</code></dt>
- <dd>The animation reverses direction each cycle, with the first iteration being played <em>backwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
+	<dt><code>normal</code></dt>
+	<dd>The animation plays <em>forwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.</dd>
+	<dt><code>reverse</code></dt>
+	<dd>The animation plays <em>backwards</em> each cycle. In other words, each time the animation cycles, the animation will reset to the end state and start over again. Animation steps are performed backwards, and timing functions are also reversed. For example, an <code>ease-in</code> timing function becomes <code>ease-out</code>.</dd>
+	<dt><code>alternate</code></dt>
+	<dd>The animation reverses direction each cycle, with the first iteration being played <em>forwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
+	<dt><code>alternate-reverse</code></dt>
+	<dd>The animation reverses direction each cycle, with the first iteration being played <em>backwards</em>. The count to determine if a cycle is even or odd starts at one.</dd>
 </dl>
 
 <div class="note">
@@ -63,25 +63,54 @@ animation-direction: unset;
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="The_animation_is_playing_reversed">The animation is  playing reversed</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css notranslate">.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}</pre>
+
+<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+
 <p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS animations</a> for examples.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-direction', 'animation-direction')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Animations', '#animation-direction', 'animation-direction')}}</td>
+			<td>{{Spec2('CSS3 Animations')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
@@ -95,6 +124,6 @@ animation-direction: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
+	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
 </ul>

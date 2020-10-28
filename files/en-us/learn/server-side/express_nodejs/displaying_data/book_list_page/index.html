@@ -16,7 +16,7 @@ tags:
 
 <p>Open <strong>/controllers/bookController.js</strong>. Find the exported <code>book_list()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all Books.</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Display list of all Books.</span>
 exports<span class="punctuation token">.</span>book_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
   Book<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="string token">'title author'</span><span class="punctuation token">)</span>
@@ -37,7 +37,7 @@ exports<span class="punctuation token">.</span>book_list <span class="operator t
 
 <p>Create <strong>/views/book_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
 
 block content
   h1<span class="operator token">=</span> title
@@ -58,7 +58,7 @@ block content
 <p><strong>Note:</strong> We use <code>book.url</code> to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the <code>Book</code> model which uses the model instance's <code>_id</code> field to produce a unique URL path.</p>
 </div>
 
-<p>Of interest here is that each book is defined as two lines, using the pipe for the second line (highlighted above). This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.</p>
+<p>Of interest here is that each book is defined as two lines, using the pipe for the second line. This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.</p>
 
 <h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 

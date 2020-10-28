@@ -13,13 +13,12 @@ tags:
 
 <p>The author list controller function needs to get a list of all <code>Author</code> instances, and then pass these to the template for rendering.</p>
 
-<p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_list()</code> controller method near the top of the file and replace it with the following code (the changed code is shown in bold).</p>
+<p>Open <strong>/controllers/authorController.js</strong>. Find the exported <code>author_list()</code> controller method near the top of the file and replace it with the following code.</p>
 
-<pre class="brush: js">// Display list of all Authors.
+<pre class="brush: js notranslate">// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
-    .populate('author')
     .sort([['family_name', 'ascending']])
     .exec(function (err, list_authors) {
       if (err) { return next(err); }
@@ -35,7 +34,7 @@ exports.author_list = function(req, res, next) {
 
 <p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
 
-<pre class="brush: js">extends layout
+<pre class="brush: js notranslate">extends layout
 
 block content
   h1= title
@@ -54,9 +53,11 @@ block content
 <p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
 
 <div class="note">
-<p><strong>Note:</strong> The appearance of the author <em>lifespan </em>dates is ugly! You can improve this using the <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. <code>moment()</code> returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:</p>
+<p><strong>Note:</strong> The appearance of the author <em>lifespan </em>dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
+ <br>
+ However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:</p>
 
-<p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
+<p><code>return this.date_of_birth ? DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED) : '';</code></p>
 </div>
 
 <h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!" rel="nofollow, noindex">Edit</a></h2>

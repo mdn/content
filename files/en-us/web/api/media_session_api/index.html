@@ -13,13 +13,17 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Media Session API")}}</p>
 
-<p class="summary">The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent of the media your web app is playing, and allows you to create event handlers, to define your own behaviors for a user-agent playback controls. The aim of this is allowing users to know what's playing, and to control it, without opening the specific page that launched it.</p>
+<p class="summary">The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.</p>
+
+<p class="summary">It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices. So you can seamlessly control web-provided media via your device, even when not looking at the web page.</p>
+
+<p class="summary">The aim is to allow users to know what's playing and to control it, without needing to open the specific page that launched it.</p>
 
 <h2 id="Media_Session_concepts_and_usage">Media Session concepts and usage</h2>
 
 <p>The {{domxref("MediaMetadata")}} interface lets a web site provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.</p>
 
-<p>The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers event handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's event handlers. The user agent provides default behaviors, when no page-defined behavior is available.</p>
+<p>The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers action handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors, when no page-defined behavior is available.</p>
 
 <h2 id="Accessing_the_Media_Session_API">Accessing the Media Session API</h2>
 
@@ -49,7 +53,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds event handlers for the user control actions:</p>
+<p>The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:</p>
 
 <pre class="brush: js notranslate">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -68,10 +72,13 @@ tags:
 
   navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
 }</pre>
 
 <p>Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a <code>pointerup</code> event to an on-page play button, which is then used to kick off the media session code:</p>

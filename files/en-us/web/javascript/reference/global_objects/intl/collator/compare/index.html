@@ -15,17 +15,17 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>collator</var>.compare(<var>string1</var>, <var>string2</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>collator</var>.compare(<var>string1</var>, <var>string2</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>string1</code></dt>
- <dt><code>string2</code></dt>
+ <dt><code><var>string1</var></code></dt>
+ <dt><code><var>string2</var></code></dt>
  <dd>The strings to compare against each other.</dd>
 </dl>
 
@@ -35,22 +35,22 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_compare_for_array_sort">Using <code>compare</code> for array sort</h3>
+<h3 id="Using_compare_for_array_sort">Using compare for array sort</h3>
 
 <p>Use the <code>compare</code> getter function for sorting arrays. Note that the function is bound to the collator from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.sort()")}}.</p>
 
-<pre class="brush: js">var a = ['Offenbach', 'Österreich', 'Odenwald'];
+<pre class="brush: js notranslate">var a = ['Offenbach', 'Österreich', 'Odenwald'];
 var collator = new Intl.Collator('de-u-co-phonebk');
 a.sort(collator.compare);
 console.log(a.join(', '));
 // → "Odenwald, Österreich, Offenbach"
 </pre>
 
-<h3 id="Using_compare_for_array_search">Using <code>compare</code> for array search</h3>
+<h3 id="Using_compare_for_array_search">Using compare for array search</h3>
 
 <p>Use the <code>compare</code> getter function for finding matching strings in arrays:</p>
 
-<pre class="brush: js">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
+<pre class="brush: js notranslate">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
 var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
 var s = 'congres';
 var matches = a.filter(v =&gt; collator.compare(v, s) === 0);

@@ -14,18 +14,18 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setUTCSeconds(<var>secondsValue</var>[, <var>msValue</var>])</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setUTCSeconds(<var>secondsValue</var>[, <var>msValue</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>secondsValue</code></dt>
+ <dt><code><var>secondsValue</var></code></dt>
  <dd>An integer between 0 and 59, representing the seconds.</dd>
- <dt><code>msValue</code></dt>
+ <dt><code><var>msValue</var></code></dt>
  <dd>Optional. A number between 0 and 999, representing the milliseconds.</dd>
 </dl>
 
@@ -41,19 +41,21 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_setUTCSeconds">Using <code>setUTCSeconds()</code></h3>
+<h3 id="Using_setUTCSeconds">Using setUTCSeconds()</h3>
 
-<pre class="brush: js">var theBigDay = new Date();
+<pre class="brush: js notranslate">var theBigDay = new Date();
 theBigDay.setUTCSeconds(20);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcseconds', 'Date.prototype.setUTCSeconds')}}</td>
   </tr>
@@ -62,7 +64,7 @@ theBigDay.setUTCSeconds(20);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.setUTCSeconds")}}</p>
 

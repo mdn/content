@@ -46,16 +46,23 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following declarations will match applications that are being displayed in high contrast mode with any color variation, a black-on-white color variation, and a white-on-black color variation, respectively.</p>
+<h3 id="Matching_any_high-contrast_variations">Matching any high-contrast variations</h3>
 
 <pre class="brush: css notranslate">@media screen and (-ms-high-contrast: active) {
   /* All high contrast styling rules */
 }
-@media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+</pre>
+
+<h3 id="Matching_a_black-on-white_variation">Matching a black-on-white variation</h3>
+
+<pre class="brush: css notranslate">@media screen and (-ms-high-contrast: black-on-white) {
+  div { background-image: url('image-bw.png'); }
+}</pre>
+
+<h3 id="Matching_a_white-on-block_variation">Matching a white-on-block variation</h3>
+
+<pre class="brush: css notranslate">@media screen and (-ms-high-contrast: white-on-black) {
+  div { background-image: url('image-wb.png'); }
 }</pre>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>

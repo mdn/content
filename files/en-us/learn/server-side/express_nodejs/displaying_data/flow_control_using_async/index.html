@@ -26,11 +26,11 @@ tags:
 
 <p>Most of the methods we use in <em>Express</em> are asynchronous—you specify an operation to perform, passing a callback. The method returns immediately, and the callback is invoked when the requested operation completes. By convention in <em>Express</em>, callback functions pass an <em>error</em> value as the first parameter (or <code>null</code> on success) and the results from the function (if there are any) as the second parameter.</p>
 
-<p>If a controller only needs to <em>perform <strong>one </strong>asynchronous operation</em> to get the information required to render a page then the implementation is easy—we simply render the template in the callback. The code fragment below shows this for a function that renders the count of a model <code>SomeModel</code> (using the Mongoose <code><a class="external external-icon" href="https://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> method):</p>
+<p>If a controller only needs to <em>perform <strong>one </strong>asynchronous operation</em> to get the information required to render a page then the implementation is easy—we simply render the template in the callback. The code fragment below shows this for a function that renders the count of a model <code>SomeModel</code> (using the Mongoose <code><a href="https://mongoosejs.com/docs/api.html#model_Model.countDocuments">countDocuments</a></code> method):</p>
 
-<pre class="brush: js"><code>exports.some_model_count = function(req, res, next) {
+<pre class="brush: js notranslate"><code>exports.some_model_count = function(req, res, next) {
 
-</code>  SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
+</code>  SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
     // ... do something if there is an err
 
     // On success, render the result by passing count into the render function (here, as the variable 'data').
@@ -53,7 +53,7 @@ tags:
 
 <p>The example below shows how this works when we pass an object as the first argument. As you can see, the results are <em>returned</em> in an object with the same property names as the original functions that were passed in.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">parallel</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
   two<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
   <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
@@ -71,7 +71,7 @@ tags:
 
 <p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
   two<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
   <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
@@ -79,7 +79,7 @@ tags:
   <span class="punctuation token">}</span><span class="punctuation token">,</span>
   <span class="comment token">// optional callback after the last asynchronous function completes.</span>
   <span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> results<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// 'results' is now equals to: {one: 1, two: 2, ..., something_else: some_value} </span>
+    <span class="comment token">// 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value} </span>
   <span class="punctuation token">}</span>
 <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
@@ -87,7 +87,7 @@ tags:
 <p><strong>Note:</strong> The ECMAScript (JavaScript) language specification states that the order of enumeration of an object is undefined, so it is possible that the functions will not be called in the same order as you specify them on all platforms. If the order really is important, then you should pass an array instead of an object, as shown below.</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
   <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="comment token">// do some stuff ...</span>
     <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'one'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -109,7 +109,7 @@ tags:
 
 <p>The callback invoked by each asynchronous function contains <code>null</code> for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the <em>async</em> documentation):</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">waterfall</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">waterfall</span><span class="punctuation token">(</span><span class="punctuation token">[</span>
   <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="function token">callback</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">'one'</span><span class="punctuation token">,</span> <span class="string token">'two'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
   <span class="punctuation token">}</span><span class="punctuation token">,</span>
@@ -130,7 +130,7 @@ tags:
 
 <p>Install the async module using the NPM package manager so that we can use it in our code. You do this in the usual way, by opening a prompt in the root of the <em>LocalLibrary</em> project and entering the following command:</p>
 
-<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">npm install async</code></pre>
+<pre class="brush: bash line-numbers  language-bash notranslate"><code class="language-bash">npm install async</code></pre>
 
 <h2 id="Next_steps">Next steps</h2>
 

@@ -19,15 +19,15 @@ tags:
 <p>The browser may restrict the amount of data that an extension can store in the local storage area:</p>
 
 <ul>
- <li>Chrome limits the extension to 5MB of data using this API unless it has the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage">"unlimitedStorage" permission</a>.</li>
- <li>Firefox enables you to ask for the "unlimitedStorage" permission from version 56 onwards. It does not yet restrict the amount of data your extension can store, but will start doing so in a future release: so it's a good idea to ask for the "unlimitedStorage" permission now, if you intend to store a large amount of data.</li>
+ <li>Chrome limits the extension to 5MB of data using this API unless it has the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage"><code>"unlimitedStorage"</code> permission</a>.</li>
+ <li>Firefox enables you to ask for the <code>"unlimitedStorage"</code> permission from version 56 onwards. It does not yet restrict the amount of data your extension can store, but will start doing so in a future release. Thus, it's a good idea to ask for the <code>"unlimitedStorage"</code> permission now, if you intend to store a large amount of data.</li>
 </ul>
 
 <p>When the extension is uninstalled, its associated local storage is cleared.</p>
 
-<p>Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting "about:config" and setting the following two browser preferences to <code>true</code>: "keepUuidOnUninstall" and "keepStorageOnUninstall". This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.</p>
+<p>Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting <code>about:config</code> and setting the following two browser preferences to <code>true</code>: <code>"keepUuidOnUninstall"</code> and <code>"keepStorageOnUninstall"</code>. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.</p>
 
-<p>Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use <code>Window.localStorage</code> in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the storage.local API will be correctly persisted in these scenarios.</p>
+<p>Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use <code>Window.localStorage</code> in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the <code>storage.local</code> API will be correctly persisted in these scenarios.</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -62,7 +62,7 @@ tags:
 </div>
 
 <div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

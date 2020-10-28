@@ -9,11 +9,11 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>String</code></strong> constructor is used to create a new {{jsxref("String")}} object. It performs type conversion when called as a function, rather than as a constructor, which is usually more useful.</p>
+<p>The <strong><code>String</code></strong> constructor is used to create a new {{jsxref("String")}} object. When called instead as a function, it performs type conversion to a {{Glossary("string", "primitive string")}}, which is usually more useful.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new String(<var>thing</var>)
+<pre class="syntaxbox notranslate">new String(<var>thing</var>)
 String(<var>thing</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -29,7 +29,7 @@ String(<var>thing</var>)</pre>
 
 <p>String function and String constructor produce different results:</p>
 
-<pre class="brush: js">typeof String('Hello world'); // string
+<pre class="brush: js notranslate">typeof String('Hello world'); // string
 typeof new String('Hello world'); // object
 </pre>
 
