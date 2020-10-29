@@ -278,12 +278,19 @@ As we outlined above, the step-by-step process in general would be:
 ### Moving one or more documents
 
 Moving one or more documents, or an entire tree of documents is easy, because we've created
-a special command that takes care of the details for you: `yarn move <from> <to>`. You just
-have to specify the existing document folder that you'd like to move (`<from>`), as well as
-its new location (`<to>`). If the existing document that you'd like to move contains child
-documents (i.e. it represents a document tree), the `yarn move` command will move
-the entire tree. For example, let's say you want to move the entire `files/en-us/learn` tree
-to `files/en-us/discover`.
+a special command that takes care of the details for you:
+
+```sh
+yarn content move <from-slug> <to-slug> [locale]
+```
+
+You just have to specify the slug of the existing document that you'd like to move
+(e.g., `Learn/Accessibility`), as well as the slug of its new location (e.g., `Learn/A11y`),
+optionally followed by the locale of the existing document (defaults to `en-US`).
+If the existing document that you'd like to move has child documents (i.e. it represents
+a document tree), the `yarn content move` command will move the entire tree. For example,
+let's say you want to move the entire `/en-US/Learn/Accessibility` tree to
+`/en-US/Learn/A11y`:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
 
@@ -301,7 +308,7 @@ to `files/en-us/discover`.
 new files):
 
     ```sh
-    yarn move files/en-us/learn files/en-us/discover
+    yarn content move Learn/Accessibility Learn/A11y
     ```
 
 1. Add and commit all of the deleted, created, and modified files, as well as
@@ -317,11 +324,18 @@ push your branch to your fork:
 ### Deleting a document
 
 Deleting one or more documents, or an entire tree of documents is also easy, again because
-we've created a special command that takes care of the details for you: `yarn delete <document-folder>`. You just have to specify the existing document folder that you'd like
-to delete (`<document-folder>`). If the existing document that you'd like to delete
-contains child documents (i.e. it represents a document tree), the `yarn delete` command
-will delete the entire tree. For example, let's say you want to delete the entire
-`files/en-us/learn` tree.
+we've created a special command that takes care of the details for you:
+
+```sh
+yarn content delete <document-slug> [locale]
+```
+
+You just have to specify the slug of the existing document that you'd like to delete
+(e.g., `Learn/Accessibility`), optionally followed by the locale of the existing document
+(defaults to `en-US`). If the existing document that you'd like to delete has child
+documents (i.e. it represents a document tree), you must also specify the
+`-r, --recursive` option, or the command will fail. For example, let's say you want
+to delete the entire `/en-US/Learn/Accessibility` tree:
 
 1. First, as we've outlined above, you'll start a fresh branch to work within:
 
@@ -338,7 +352,7 @@ will delete the entire tree. For example, let's say you want to delete the entir
 1. Perform the delete:
 
     ```sh
-    yarn delete files/en-us/learn
+    yarn content delete Learn/Accessibility --recursive
     ```
 
 1. Add and commit all of the deleted files, as well as
