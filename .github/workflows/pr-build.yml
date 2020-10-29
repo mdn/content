@@ -147,4 +147,4 @@ jobs:
         run: |
           echo ${{ env.GIT_DIFF }}
           echo ${{ env.MATCHED_FILES }}
-          yarn redirects validate
+          yarn content validate-redirects
