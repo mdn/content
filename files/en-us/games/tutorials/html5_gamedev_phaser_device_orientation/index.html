@@ -19,7 +19,7 @@ tags:
 
 <p>By the end of the tutorial you will have a fully functional demo game: <a href="https://orb.enclavegames.com/">Cyber Orb</a>. It will look something like this:</p>
 
-<p><img alt="A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping." src="https://mdn.mozillademos.org/files/10297/cyber-orb.png" style="display: block; height: 450px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping." src="https://mdn.mozillademos.org/files/10297/cyber-orb.png" style="display: block; height: 450px; margin: 0px auto; width: 300px;" loading="lazy"></p>
 
 <h2 id="Phaser_framework">Phaser framework</h2>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>You can see <a href="https://github.com/EnclaveGames/Cyber-Orb">Cyber Orb source code</a> on GitHub. The folder structure is quite straightforward: the starting point is the <code>index.html</code> file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.</p>
 
-<p><img alt="Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure." src="https://mdn.mozillademos.org/files/10357/cyber-orb-github.png" style="height: 423px; width: 620px;"></p>
+<p><img alt="Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure." src="https://mdn.mozillademos.org/files/10357/cyber-orb-github.png" style="height: 423px; width: 620px;" loading="lazy"></p>
 
 <p>You can open the index file in your favourite browser to launch the game and try it. There are also three folders in the directory:</p>
 
@@ -279,7 +279,7 @@ else if(this.keys.down.isDown) {
 
 <p>The more you tilt the device, the more force is applied to the ball, therefore the faster it moves (the velocity is higher).</p>
 
-<p><img alt="An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png" style="height: 480px; width: 620px;"></p>
+<p><img alt="An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png" style="height: 480px; width: 620px;" loading="lazy"></p>
 
 <div class="note">
 <p><strong>Note</strong>: To find more out about implementing device orientation and what raw code would look like, read <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">Keep it level: responding to device orientation changes</a>.</p>
@@ -370,7 +370,7 @@ this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallColli
 
 <p>When collision detection works as expected let's add some special effects with the help from the Vibration API.</p>
 
-<p><img alt="A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png" style="height: 480px; width: 620px;"></p>
+<p><img alt="A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen." src="https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png" style="height: 480px; width: 620px;" loading="lazy"></p>
 
 <p>The best way to use it in our case is to vibrate the phone every time the ball hits the walls — inside the <code>wallCollision</code> function:</p>
 
