@@ -24,7 +24,7 @@ tags:
 
 <p>The process the browser uses to update the page when a CSS property has changed can be described as a waterfall consisting of the following steps:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10821/css-rendering-waterfall.png" style="display: block; height: 203px; margin-left: auto; margin-right: auto; width: 546px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10821/css-rendering-waterfall.png" style="display: block; height: 203px; margin-left: auto; margin-right: auto; width: 546px;" loading="lazy"></p>
 
 <ol>
  <li><strong>Recalculate Style</strong>: every time a CSS property for an element changes, the browser must recalculate computed styles.</li>
@@ -102,19 +102,19 @@ tags:
 
 <p>Open up the first recording. Exactly what you'll see depends a lot on your machine and system load, but it will be something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10853/margin-recording.png" style="display: block; height: 237px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10853/margin-recording.png" style="display: block; height: 237px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>This is showing three distinct views: (a) an overview of the Waterfall, (b) the frame rate, and (c) the timeline details.</p>
 
 <h4 id="Waterfall_overview">Waterfall overview</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10857/margin-timeline-overview.png" style="display: block; height: 58px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10857/margin-timeline-overview.png" style="display: block; height: 58px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>This is showing a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>. The predominance of green is telling us that <a href="/en-US/docs/Tools/Performance/Timeline#timeline-color-coding">we're spending a lot of time painting</a>.</p>
 
 <h4 id="Frame_rate">Frame rate</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10859/margin-frame-rate.png" style="display: block; height: 64px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10859/margin-frame-rate.png" style="display: block; height: 64px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>This is showing <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a>. Average frame rate here is 46.67fps, well below the target of 60fps. Worse, though, is that the frame rate is very jagged, with lots of dips into the twenties and teens. It's unlikely you'll see a smooth animation here, especially when you add in user interaction.</p>
 
@@ -122,7 +122,7 @@ tags:
 
 <p>The rest of the recording shows the Waterfall view. If you scroll through this, you'll see a pattern like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10861/margin-timeline.png" style="display: block; height: 532px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10861/margin-timeline.png" style="display: block; height: 532px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>This is showing us the <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#The_CSS_rendering_waterfall">rendering waterfall</a>. In each animation frame, we recalculate styles for every element, then perform a single layout, then a repaint.</p>
 
@@ -134,17 +134,17 @@ tags:
 
 <p>Now switch the radio button in the web page to "Use transform", and make a new recording. It will look something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10863/transform-recording.png" style="display: block; height: 234px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10863/transform-recording.png" style="display: block; height: 234px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <h4 id="Waterfall_overview_2">Waterfall overview</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10869/transform-timeline-overview.png" style="display: block; height: 57px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10869/transform-timeline-overview.png" style="display: block; height: 57px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview">the version that uses margin</a>, we're seeing a lot less green and a lot more pink, which<a href="/en-US/docs/Tools/Performance/Waterfall#timeline-color-coding"> could be either layout or style recalculation</a>.</p>
 
 <h4 id="Frame_rate_2">Frame rate</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10865/transform-frame-rate.png" style="display: block; height: 62px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10865/transform-frame-rate.png" style="display: block; height: 62px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Frame_rate">the version that uses margin</a>, this is looking pretty good. We're averaging nearly 60fps, and apart from one dip near the start, we're getting a consistently high frame rate.</p>
 
@@ -152,6 +152,6 @@ tags:
 
 <p>The timeline view shows the reason for the improved frame rate. Compared with <a href="/en-US/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall">the version that uses margin</a>, we're not spending any time time in layout or (more importantly in this case) in paint:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>In this case, using <code>transform</code> significantly improved the site's performance, and the performance tools were able to show how and why it did.</p>

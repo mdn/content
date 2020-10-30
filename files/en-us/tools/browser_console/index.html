@@ -37,7 +37,7 @@ tags:
 
 <p>The Browser Console looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16787/browser_console_68.png" style="display: block; height: 339px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16787/browser_console_68.png" style="display: block; height: 339px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>You can see that the Browser Console looks and behaves very much like the <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>:</p>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>Beginning with Firefox 68, the Browser Console allows you to show or hide messages from the content process (i.e. the messages from scripts in all the opened pages) by setting or clearing the checkbox labeled <strong>Show Content Messages</strong>. The following image shows the browser console focused on the same page as above after clicking on the <strong>Show Content Messages</strong> checkbox.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16788/browser_console_68_02.png" style="display: block; height: 339px; margin: 0 auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16788/browser_console_68_02.png" style="display: block; height: 339px; margin: 0 auto; width: 800px;" loading="lazy"></p>
 
 <h2 id="Browser_Console_logging">Browser Console logging</h2>
 
@@ -133,7 +133,7 @@ function logError() {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5937/browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Click the icon. You'll see output like this in the Browser Console:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
 
@@ -147,7 +147,7 @@ function logError() {
 
 <p>But while the Web Console executes code in the scope of the content window it's attached to, the browser console executes code in the scope of the chrome window of the browser. You can confirm this by evaluating <code>window</code>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5867/browser-console-chromewindow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5867/browser-console-chromewindow.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <p>This means you can control the browser: opening, closing tabs and windows and changing the content that they host, and modify the browser's UI by creating, changing and removing XUL elements.</p>
 
@@ -183,4 +183,4 @@ var makeTheTea = gBrowser.ownerDocument.defaultView.document.createElementNS("ht
 makeTheTea.setAttribute("label", "A nice cup of tea?");
 parent.appendChild(makeTheTea);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5861/browser-console-modify-ui-osx.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5861/browser-console-modify-ui-osx.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>

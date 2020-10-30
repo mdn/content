@@ -146,7 +146,7 @@ tags:
  <li>The expanded animation information now includes a lightning bolt icon next to the properties whose animation has been optimized via the compositor.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16359/animation_swoosh_01.png" style="border: 1px solid black; display: block; height: 313px; margin: 0px auto; width: 549px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16359/animation_swoosh_01.png" style="border: 1px solid black; display: block; height: 313px; margin: 0px auto; width: 549px;" loading="lazy"></p>
 
 <p>Let's now look at <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing-silly.html">animation-inspector-compositing-silly.html</a> — this is the same example, except that now once the red rectangle is clicked we animate both the {{cssxref("left")}} and {{cssxref("transform")}} (with a translation) properties at the same time as {{cssxref("opacity")}}. It doesn't make much sense to try to animate a geometric property and a translation at the same time — the two effects won't be synchronized — so the <code>transform</code> property is deliberately not handed over to the compositor to handle. The Animation Inspector will tell you this — look at it now and you'll see that:</p>
 
@@ -156,7 +156,7 @@ tags:
  <li>Properties whose animation is <strong>not</strong> being optimized, but could be if you improved your code, are now given a dotted underline — see transform in the screenshot below. Hovering over this gives you a tooltip that explains why. In this case, the message is "Animations of 'transform' cannot be run on the compositor when geometric properties are animated on the same element at the same time."</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16360/animation_not_optimized.png" style="border: 1px solid black; display: block; height: 375px; margin: 0px auto; width: 549px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16360/animation_not_optimized.png" style="border: 1px solid black; display: block; height: 375px; margin: 0px auto; width: 549px;" loading="lazy"></p>
 
 <h2 id="Edit_keyframes">Edit @keyframes</h2>
 

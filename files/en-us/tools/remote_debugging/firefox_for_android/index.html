@@ -15,7 +15,7 @@ tags:
 
 <p>This guide explains how to use <a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging">remote debugging </a>to inspect or debug code running in <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android </a>over USB.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5833/remote-debugging-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5833/remote-debugging-overview.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <p>This guide's split into two parts: the first part, "Prerequisites" covers stuff you only need to do once, while the second part, "Connecting", covers stuff you need to do each time you connect the device. </p>
 
@@ -72,13 +72,13 @@ tags:
 
 <p>Go to <code>about:config</code> in Firefox for Android, type "devtools" into the search box and press the Search key. You'll see all the devtools preferences. Find the <code>devtools.debugger.remote-enabled</code> preference, and press "Toggle".</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5803/remote-debugger-about-config-toggle.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5803/remote-debugger-about-config-toggle.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <h4 class="note" id="Firefox_for_Android_25_and_later">Firefox for Android 25 and later</h4>
 
 <p>On Firefox for Android 25 and later, there's a menu item to enable remote debugging. Open the menu, select "Settings", then "Developer tools" (on some Android devices you may need to select "More" to see the "Settings" option). Check the "Remote debugging" box:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5829/remote-debugging-device-enable.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5829/remote-debugging-device-enable.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <p>The browser will display a notification reminding you to set up port forwarding, which we'll do later on.</p>
 
@@ -86,13 +86,13 @@ tags:
 
 <p>On the desktop, remote debugging is enabled by a setting in the Toolbox. <a href="/en-US/docs/Tools_Toolbox" title="/en-US/docs/Tools_Toolbox">Open the Toolbox</a>, click the "Settings" button in the <a href="/en-US/docs/Tools_Toolbox#Toolbar" title="/en-US/docs/Tools_Toolbox#Toolbar">toolbar</a>, and check "Enable remote debugging" in the <a href="/en-US/docs/Tools_Toolbox#Settings" title="/en-US/docs/Tools_Toolbox#Settings">Settings </a>tab:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5827/remote-debugger-toolbox-settings.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5827/remote-debugger-toolbox-settings.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <div class="Note">If you're using a version of Firefox older than 27, you'll need to restart the browser for the setting to take effect.</div>
 
 <p>You'll then see a new option in the Web Developer menu labeled "Connect...":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5811/remote-debugging-connect-menuitem.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5811/remote-debugging-connect-menuitem.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <h2 id="Connecting">Connecting</h2>
 
@@ -139,6 +139,6 @@ tags:
 
 <p>Let's choose to attach to the mozilla.org website. The Toolbox will open in its own window, attached to the Firefox for Android tab that's currently hosting mozilla.org:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5821/remote-debugging-console.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5821/remote-debugging-console.png" style="display: block; margin-left: auto; margin-right: auto;" loading="lazy"></p>
 
 <p>The Toolbox, and the tools it hosts, work in just the same way as they do when attached to local content.<img alt="" src="https://mdn.mozillademos.org/files/5823/remote-debugging-debugger.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

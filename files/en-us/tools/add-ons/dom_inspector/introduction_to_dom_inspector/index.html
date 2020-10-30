@@ -12,7 +12,7 @@ tags:
 
 <p>When you first start the DOM Inspector, you are presented with a two-pane application window that looks a little like the main Mozilla browser. Like the browser, the DOM Inspector includes an address bar, and some of the same menus. In SeaMonkey additional global menus will be available.</p>
 
-<p><img alt="domi.png" class="default internal" src="/@api/deki/files/4684/=domi.png"></p>
+<p><img alt="domi.png" class="default internal" src="/@api/deki/files/4684/=domi.png" loading="lazy"></p>
 
 <h2 id="Inspecting_a_Document">Inspecting a Document</h2>
 
@@ -26,7 +26,7 @@ tags:
 
 <p>The Inspect Chrome Document menupopup can be accessed from the File menu , and it will contain the list of currently loaded chrome windows and subdocuments. A browser window and the DOM Inspector are likely be already open and displayed in this list. The DOM Inspector keeps track of all the windows that are open, so to inspect the DOM of a particular window in the DOM Inspector, simply access that window as you would normally and then choose its title from this dynamically updated menulist.</p>
 
-<p><img alt="domi-inspect-chrome-popup.png" class="default internal" src="/@api/deki/files/4689/=domi-inspect-chrome-popup.png"></p>
+<p><img alt="domi-inspect-chrome-popup.png" class="default internal" src="/@api/deki/files/4689/=domi-inspect-chrome-popup.png" loading="lazy"></p>
 
 <h3 id="File_.3E_Inspect_a_URL..." name="File_.3E_Inspect_a_URL...">Inspecting arbitrary URLs</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>You <strong>should not</strong> use this approach to inspect chrome documents. Instead, ensure that the document loads via normal means and use the Inspect Chrome Document menupopup to select it for inspection.</p>
 
-<p><img alt="domi-inspect-chrome-popup.png" class="default internal" src="/@api/deki/files/4693/=domi-inspecting-mozilla.org.png"></p>
+<p><img alt="domi-inspect-chrome-popup.png" class="default internal" src="/@api/deki/files/4693/=domi-inspecting-mozilla.org.png" loading="lazy"></p>
 
 <p>When you inspect a web page with this method, a browser pane at the bottom of the DOM Inspector window will open up, displaying the web page. This allows you to use the DOM Inspector without having to use a separate browser window, or without embedding a browser in your application at all. If you find that the browser pane takes up too much space, you may close it, but you will not be able to observe any of the visual consequences of your actions.</p>
 
@@ -50,11 +50,11 @@ tags:
 
 <p>If you inspect the main browser window, for example, and select nodes in the DOM Nodes viewer (other than the elements which have no visible UI as is the case with the endless list of <code>script</code> elements that are loaded into <code>browser.xul</code>), you will see the various parts of the browser interface being highlighted with a blinking red border. You can traverse the structure and go from the topmost parts parts of the DOM tree to lower level nodes, such as the "search-go-button" icon that lets users perform a query using the selected search engine.</p>
 
-<p><img alt="domi-edit-search-onclick.png" class="default internal" src="/@api/deki/files/4686/=domi-edit-search-onclick.png"></p>
+<p><img alt="domi-edit-search-onclick.png" class="default internal" src="/@api/deki/files/4686/=domi-edit-search-onclick.png" loading="lazy"></p>
 
 <p>Now, once you have selected a node like the "search-go-button" node, you can select any one of several viewers to display information about that node in the object pane of the DOM Inspector application window, all of which are available from the menupopup accessed from the upper left corner of the the object pane.</p>
 
-<p><img alt="domi-object-viewers.png" class="default internal" src="/@api/deki/files/4692/=domi-object-viewers.png"></p>
+<p><img alt="domi-object-viewers.png" class="default internal" src="/@api/deki/files/4692/=domi-object-viewers.png" loading="lazy"></p>
 
 <p>In order to find out what the actual name of the file is being used to provide the search go icon, you can select the CSS Rules viewer from this menu and see the various selectors and rules that have been applied. The rule that applies the search icon to the element uses a class simple selector and uses a <code>list-style-image</code> property to point to a file in the current theme.</p>
 
@@ -80,13 +80,13 @@ tags:
 
 <p>Another way to inspect the DOM is to search for particular elements you're interested in by ID, class, or attribute. When you select <strong>Edit &gt; Find Nodes...</strong> or press <code>Ctrl + F</code>, the DOM Inspector displays a find dialog that lets you find elements in various ways, and that gives you incremental searching by way of the <code>&lt;F3&gt;</code> shortcut key.</p>
 
-<p><img alt="domi-find-appcontent.png" class="default internal" src="/@api/deki/files/4687/=domi-find-appcontent.png"></p>
+<p><img alt="domi-find-appcontent.png" class="default internal" src="/@api/deki/files/4687/=domi-find-appcontent.png" loading="lazy"></p>
 
 <h4 id="Updating_the_DOM_Dynamically">Updating the DOM Dynamically</h4>
 
 <p>Another feature to mention in this introduction is the ability is the ability the DOM Inspector gives you to dynamically update information reflected in the DOM about web pages, user interface, and other elements. Note that when the DOM Inspector displays information about a particular node or subtree, it presents individual nodes and their values (in the DOM, attributes are subnodes of elements, typically) in an active list. You can perform actions on the individual items in this list from the context menu and the Edit menu, both of which contain menutimes that allow you <em>edit</em> the values of those attributes.</p>
 
-<p><img alt="domi-edit-search-onclick.png" class="default internal" src="/@api/deki/files/4686/=domi-edit-search-onclick.png"></p>
+<p><img alt="domi-edit-search-onclick.png" class="default internal" src="/@api/deki/files/4686/=domi-edit-search-onclick.png" loading="lazy"></p>
 
 <p>This interactivity allows you to shrink and grow element size, change icons, and do other layout-tweaking updates—all without actually changing the DOM as it is defined in the file on disk.</p>
 

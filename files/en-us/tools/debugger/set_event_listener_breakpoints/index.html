@@ -44,7 +44,7 @@ tags:
 
 <p>Instead, we can then switch to the console, and whenever we press a key we are given a log of where related events were fired.</p>
 
-<p><img alt="events logged in console" src="https://mdn.mozillademos.org/files/16980/log-events-2.png" style="border-style: solid; border-width: 1px; height: 694px; width: 900px;"></p>
+<p><img alt="events logged in console" src="https://mdn.mozillademos.org/files/16980/log-events-2.png" style="border-style: solid; border-width: 1px; height: 694px; width: 900px;" loading="lazy"></p>
 
 <p>There's an issue here — the console is showing that the <a href="/en-US/docs/Web/API/Document/keypress_event"><code>keypress</code> event</a> is being fired somewhere inside jQuery. Instead, it’d be far more useful if we showed where in our own app code is calling the jQuery that fired the event. This can be done by finding <code>jquery.js</code> in the Sources panel, and choosing the <strong>Ignore source option</strong> from its context menu.</p>
 

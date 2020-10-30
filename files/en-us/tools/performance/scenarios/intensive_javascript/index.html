@@ -18,7 +18,7 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p>The demo website looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11031/js-worker-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;">It has three controls:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/11031/js-worker-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;" loading="lazy">It has three controls:</p>
 
 <ul>
  <li>a radio button group to control how to run the JavaScript: as a single blocking operation in the main thread, as a series of smaller operations in the main thread using <code>requestAnimationFrame()</code>, or in another thread using a worker.</li>
@@ -45,13 +45,13 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p>We can select one of these periods and have a closer look at it in the main Waterfall view:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10895/perf-js-blocking-waterfall.png" style="display: block; height: 306px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10895/perf-js-blocking-waterfall.png" style="display: block; height: 306px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>Here, when we pressed the button, the browser ran a JavaScript function, or series of functions, that blocked the main thread for 71.73ms, or more than four times our frame budget.</p>
 
 <p>Which function, though? By switching to the <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a> view we can find out:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10893/perf-js-blocking-flame-chart.png" style="display: block; height: 230px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10893/perf-js-blocking-flame-chart.png" style="display: block; height: 230px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>This shows us the JS call stack at this point in the execution. At the top of the stack is a function called <code>calculatePrimes()</code>, and we can see its filename and line number. Here's the code, together with its immediate caller:</p>
 
@@ -216,7 +216,7 @@ function calculatePrimes(iterations, multiplier) {
 
 <p>So how does this version perform? Switch the radio button to "Use a worker", and capture a new profile. You should see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10899/perf-js-worker-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10899/perf-js-worker-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;" loading="lazy"></p>
 
 <p>In this profile we pushed the button three times. <a href="#js-blocking-overview">Compared with the original</a>, each button-press is visible in the overview as two very short orange markers:</p>
 
