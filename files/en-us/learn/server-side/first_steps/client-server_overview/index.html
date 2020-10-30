@@ -216,7 +216,7 @@ Content-Length: 0
 
 <p>Let's recap on how this works, by looking again at the static site architecture diagram we looked at in the last article.</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
+<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" loading="lazy"></p>
 
 <p>When a user wants to navigate to a page, the browser sends an HTTP <code>GET</code> request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an <a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a> of "<code>200 OK</code>" (indicating success). The server might return a different status code, for example "<code>404 Not Found</code>" if the file is not present on the server, or "<code>301 Moved Permanently</code>" if the file exists but has been redirected to a different location.</p>
 

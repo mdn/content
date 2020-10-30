@@ -181,7 +181,7 @@ npm run dev                                       # start the app in development
 
 <p>Clicking <em>Install all</em> will install Svelte for VS Code.</p>
 
-<p><img alt="svelte for vs code extension information" src="https://mdn.mozillademos.org/files/17356/02-svelte-for-vscode.png" style="height: 210px; width: 1043px;"></p>
+<p><img alt="svelte for vs code extension information" src="https://mdn.mozillademos.org/files/17356/02-svelte-for-vscode.png" style="height: 210px; width: 1043px;" loading="lazy"></p>
 
 <p>We can also see that the <code>setupTypeScript.js</code> file made a couple of changes to our project. The <code>main.js</code> file has been renamed to <code>main.ts</code>, which means that VS Code can provide hover-information on our svelte components:</p>
 
@@ -264,7 +264,7 @@ export let todo: TodoType</pre>
 
   <p>We will get the following error:</p>
 
-  <p><img alt="type error in vscode, Todo Type object requires an id property." src="https://mdn.mozillademos.org/files/17362/08-vscode-structural-typing.png"></p>
+  <p><img alt="type error in vscode, Todo Type object requires an id property." src="https://mdn.mozillademos.org/files/17362/08-vscode-structural-typing.png" loading="lazy"></p>
  </li>
 </ol>
 
@@ -882,7 +882,7 @@ numberStack.push(1)</pre>
 
 <p>If you open the file <code>Todos.svelte</code> and assign a <code>number</code> type to our <code>$alert</code> store, you'll get the following error:</p>
 
-<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17367/13-vscode-generic-alert-error.png" style="height: 203px; width: 808px;"></p>
+<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17367/13-vscode-generic-alert-error.png" style="height: 203px; width: 808px;" loading="lazy"></p>
 
 <p>That's because when we defined our alert store in the <code>stores.ts</code> file with:</p>
 
@@ -930,7 +930,7 @@ export const localStore = &lt;T extends JsonValue&gt;(key: string, initial: T) =
 
 <p>And thanks to generic type inference, TypeScript already knows that our <code>$todos</code> store should contain an array of <code>TodoType</code>:</p>
 
-<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17368/14-vscode-generic-localstore-error.png" style="height: 147px; width: 1415px;"></p>
+<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17368/14-vscode-generic-localstore-error.png" style="height: 147px; width: 1415px;" loading="lazy"></p>
 
 <p>Once again, if we wanted to be explicit about it, we could do so in the <code>stores.ts</code> file like this:</p>
 

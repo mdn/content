@@ -48,11 +48,11 @@ tags:
 
 <p>Let's look at our personal website, <code>http://demozilla.examplehostingprovider.net/</code>. It's not showing the image we expected!</p>
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/9643/image-missing.png" style="height: 189px; width: 380px;"></p>
+<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/9643/image-missing.png" style="height: 189px; width: 380px;" loading="lazy"></p>
 
 <p>Open Firefox's Network tool (<strong>Tools ➤ Web Developer ➤ Network</strong>) and reload the page:</p>
 
-<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/9645/error404.png" style="height: 304px; width: 562px;"></p>
+<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/9645/error404.png" style="height: 304px; width: 562px;" loading="lazy"></p>
 
 <p>There's the problem, that "404" at the bottom. "404" means "resource not found", and that's why we didn't see the image.</p>
 
@@ -86,15 +86,15 @@ tags:
 
 <p>So what went wrong?</p>
 
-<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/9649/demozilla-images-list.png" style="height: 71px; width: 407px;"></p>
+<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/9649/demozilla-images-list.png" style="height: 71px; width: 407px;" loading="lazy"></p>
 
 <p>At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: <code>unicorn_pics.png</code> rather than <code>unicorn_pic.png</code>. So correct the typo in your code editor by changing the image's <code>src</code> attribute:</p>
 
-<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/9651/code-correct.png" style="height: 125px; width: 775px;"></p>
+<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/9651/code-correct.png" style="height: 125px; width: 775px;" loading="lazy"></p>
 
 <p>Save, <a href="/en-US/Learn/Upload_files_to_a_web_server">push to the server</a>, and reload the page in your browser:</p>
 
-<p><img alt="The image loads corectly in the browser" src="https://mdn.mozillademos.org/files/9655/image-corrected.png" style="height: 554px; width: 565px;"></p>
+<p><img alt="The image loads corectly in the browser" src="https://mdn.mozillademos.org/files/9655/image-corrected.png" style="height: 554px; width: 565px;" loading="lazy"></p>
 
 <p>There you go! Let's look at the {{Glossary("HTTP")}} statuses again:</p>
 
@@ -113,7 +113,7 @@ tags:
 
 <p>We wanted to type <code>http://demozilla.examplehostingprovider.net/</code> but typed too fast and forgot an “l”:</p>
 
-<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/9657/cannot-find-server.png" style="height: 425px; width: 908px;"></p>
+<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/9657/cannot-find-server.png" style="height: 425px; width: 908px;" loading="lazy"></p>
 
 <p>The address cannot be found. Indeed.</p>
 
@@ -127,7 +127,7 @@ tags:
 
 <p>Open the console (<strong>Tools ➤ Web developer ➤ Web Console</strong>) and reload the page:</p>
 
-<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/9659/js-error.png" style="height: 511px; width: 523px;"></p>
+<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/9659/js-error.png" style="height: 511px; width: 523px;" loading="lazy"></p>
 
 <p>In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in <a href="/en-US/Learn/JavaScript">another series </a>of articles).</p>
 
@@ -139,7 +139,7 @@ tags:
 
 <p>Does the page load fast enough? Resources like <a href="http://www.webpagetest.org/">WebPagetest.org</a> or browser add-ons like <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> can tell you a few interesting things:</p>
 
-<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;"></p>
+<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;" loading="lazy"></p>
 
 <p>Grades go from A to F. Our page is just small and meets most criteria. But we can already note it would have been better to use a {{Glossary("CDN")}}. That doesn't matter very much when we're only serving one image, but it would be critical for a high-bandwidth website serving many thousands of images.</p>
 
