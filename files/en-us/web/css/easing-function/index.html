@@ -18,7 +18,7 @@ tags:
 
 <p>The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the animation. They correlate a time ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, <code>0.0</code> represents the initial state, and <code>1.0</code> represents the final state.</p>
 
-<p><img src="/files/3434/TF_with_output_gt_than_1.png" style="float: left;"><img src="/files/3435/TF_with_output_gt_than_1_clipped.png" style="float: left; margin-right: 5px;"></p>
+<p><img src="/files/3434/TF_with_output_gt_than_1.png" style="float: left;" loading="lazy"><img src="/files/3435/TF_with_output_gt_than_1_clipped.png" style="float: left; margin-right: 5px;" loading="lazy"></p>
 
 <p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the animation to go farther than the final state, and then return. For some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.</p>
 
@@ -36,13 +36,13 @@ tags:
 
 <h5 id="linear"><code>linear</code></h5>
 
-<p style="float: left;"><img src="/files/3425/cubic-bezier,linear.png" style="height: 325px; width: 244px;"></p>
+<p style="float: left;"><img src="/files/3425/cubic-bezier,linear.png" style="height: 325px; width: 244px;" loading="lazy"></p>
 
 <p>The animation moves from beginning to end at a constant rate. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>.</p>
 
 <h4 class="cleared" id="The_cubic-bezier_class_of_easing_functions"><a id="cubic-bezier()" name="cubic-bezier()">The <code>cubic-bezier()</code> class of easing functions</a></h4>
 
-<p style="float: left;"><img src="/files/3433/cubic-bezier,%20example.png"></p>
+<p style="float: left;"><img src="/files/3433/cubic-bezier,%20example.png" loading="lazy"></p>
 
 <p>The <code>cubic-bezier()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">cubic Bézier curve</a>. As these curves are continuous, they are often used to smooth down the start and end of the animation and are therefore sometimes called <em>easing functions</em>.</p>
 
@@ -70,25 +70,25 @@ tags:
 
 <h5 class="cleared" id="ease"><code>ease</code></h5>
 
-<p style="float: left;"><img src="/files/3429/cubic-bezier,ease.png" style="height: 332px; width: 244px;"></p>
+<p style="float: left;"><img src="/files/3429/cubic-bezier,ease.png" style="height: 332px; width: 244px;" loading="lazy"></p>
 
 <p>The animation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>. It is similar to <a href="#ease-in-out"><code>ease-in-out</code></a>, though it accelerates more sharply at the beginning.</p>
 
 <h5 class="cleared" id="ease-in"><code>ease-in</code></h5>
 
-<p style="float: left;"><img src="/files/3426/cubic-bezier,ease-in.png" style="height: 325px; width: 244px;"></p>
+<p style="float: left;"><img src="/files/3426/cubic-bezier,ease-in.png" style="height: 325px; width: 244px;" loading="lazy"></p>
 
 <p>The animation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 1.0, 1.0)</code>.</p>
 
 <h5 class="cleared" id="ease-in-out"><code>ease-in-out</code></h5>
 
-<p style="float: left;"><img src="/files/3428/cubic-bezier,ease-in-out.png" style="height: 332px; width: 244px;"></p>
+<p style="float: left;"><img src="/files/3428/cubic-bezier,ease-in-out.png" style="height: 332px; width: 244px;" loading="lazy"></p>
 
 <p>The animation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 0.58, 1.0)</code>. At the beginning, it behaves like the <a href="#ease-in"><code>ease-in</code></a> function; at the end, it is like the <a href="#ease-out"><code>ease-out</code></a> function.</p>
 
 <h5 class="cleared" id="ease-out"><code>ease-out</code></h5>
 
-<p style="float: left;"><img src="/files/3427/cubic-bezer,ease-out.png" style="height: 325px;"></p>
+<p style="float: left;"><img src="/files/3427/cubic-bezer,ease-out.png" style="height: 325px;" loading="lazy"></p>
 
 <p>The animation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function <code>cubic-bezier(</code><code>0.0, 0.0, 0.58, 1.0</code><code>)</code>.</p>
 
@@ -127,17 +127,17 @@ tags:
  <li>
   <p><code>steps(2, jump-start)</code><br>
    <code>steps(2, start)</code></p>
-  <img src="/files/3436/steps(2,start).png" style="float: left; height: 327px; vertical-align: top;"></li>
+  <img src="/files/3436/steps(2,start).png" style="float: left; height: 327px; vertical-align: top;" loading="lazy"></li>
  <li>
   <p><code>steps(4, jump-end)<br>
    steps(4, end)</code></p>
-  <img alt="four steps, with a jump from the fourth step to the final value at the 100% mark" src="/files/3437/steps(4,end).png"></li>
+  <img alt="four steps, with a jump from the fourth step to the final value at the 100% mark" src="/files/3437/steps(4,end).png" loading="lazy"></li>
  <li>
   <p><code>steps(5, jump-none)</code></p>
-  <img alt="five steps, with no jumps, so 20% of the time is at the beginning state or 0% mark and the last 20% is at the final state, or 100% mark" src="/files/16419/step5none.png"></li>
+  <img alt="five steps, with no jumps, so 20% of the time is at the beginning state or 0% mark and the last 20% is at the final state, or 100% mark" src="/files/16419/step5none.png" loading="lazy"></li>
  <li>
   <p><code>steps(3, jump-both)</code></p>
-  <img src="https://mdn.mozillademos.org/files/16420/step3both.png"></li>
+  <img src="https://mdn.mozillademos.org/files/16420/step3both.png" loading="lazy"></li>
 </ul>
 
 <h5 class="cleared" id="step-start"><code>step-start</code></h5>

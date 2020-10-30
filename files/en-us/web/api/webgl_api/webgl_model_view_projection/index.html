@@ -35,7 +35,7 @@ tags:
 
 <p>In a WebGL program, data is typically uploaded to the GPU with its own coordinate system and then the vertex shader transforms those points into a special coordinate system known as <strong>clip space</strong>. Any data which extends outside of the clip space is clipped off and not rendered. However, if a triangle straddles the border of this space then it is chopped up into new triangles, and only the parts of the new triangles that are in clip space are kept.</p>
 
-<p><img alt="A 3d graph showing clip space in WebGL." src="https://mdn.mozillademos.org/files/11371/clip-space-graph.svg" style="height: 432px; width: 500px;"></p>
+<p><img alt="A 3d graph showing clip space in WebGL." src="https://mdn.mozillademos.org/files/11371/clip-space-graph.svg" style="height: 432px; width: 500px;" loading="lazy"></p>
 
 <p>The above graphic is a visualization of the clip space that all of the points must fit into. It is a cube two units on each side, with one corner at (-1,-1,-1) and the opposite corner at (1,1,1). The center of the cube is the point (0,0,0). This 8 cubic meter coordinate system used by clip space is known as normalized device coordinates (NDC). You may encouter that term from time to time while researching and wokring with WebGL code.</p>
 
@@ -193,7 +193,7 @@ void main() {
 
 <p><a href="https://jsfiddle.net/mff99yu5">View on JSFiddle</a></p>
 
-<p><img alt="The results of drawing to clip space using WebGL." src="https://mdn.mozillademos.org/files/11373/part1.png" style="height: 530px; width: 800px;"></p>
+<p><img alt="The results of drawing to clip space using WebGL." src="https://mdn.mozillademos.org/files/11373/part1.png" style="height: 530px; width: 800px;" loading="lazy"></p>
 
 <h4 id="Exercise">Exercise</h4>
 
@@ -381,7 +381,7 @@ void main() {
 
 <p><a href="https://jsfiddle.net/5jofzgsh">View on JSFiddle</a></p>
 
-<p><img alt="Using a model matrix" src="https://mdn.mozillademos.org/files/11377/part3.png" style="height: 530px; width: 800px;"></p>
+<p><img alt="Using a model matrix" src="https://mdn.mozillademos.org/files/11377/part3.png" style="height: 530px; width: 800px;" loading="lazy"></p>
 
 <p>At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.</p>
 
@@ -418,7 +418,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p><a href="https://jsfiddle.net/vk9r8h2c">View on JSFiddle</a></p>
 
-<p><img alt="Filling the W component and creating some projection." src="https://mdn.mozillademos.org/files/11379/part4.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="Filling the W component and creating some projection." src="https://mdn.mozillademos.org/files/11379/part4.png" style="height: 531px; width: 800px;" loading="lazy"></p>
 
 <p>See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See {{anch("Perspective projection matrix")}} below for an introduction to how to use more complex matrices to help control and prevent clipping.</p>
 
@@ -513,7 +513,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/zwyLLcbw">View on JSFiddle</a></p>
 
-<p><img alt="A simple projection matrix" src="https://mdn.mozillademos.org/files/11381/part5.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="A simple projection matrix" src="https://mdn.mozillademos.org/files/11381/part5.png" style="height: 531px; width: 800px;" loading="lazy"></p>
 
 <h2 id="The_viewing_frustum">The viewing frustum</h2>
 
@@ -609,7 +609,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/Lzxw7e1q">View on JSFiddle</a></p>
 
-<p><img alt="A true perspective matrix" src="https://mdn.mozillademos.org/files/11383/part6.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="A true perspective matrix" src="https://mdn.mozillademos.org/files/11383/part6.png" style="height: 531px; width: 800px;" loading="lazy"></p>
 
 <h3 id="Exercises_3">Exercises</h3>
 
@@ -672,7 +672,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/86fd797g">View on JSFiddle</a></p>
 
-<p><img alt="The view matrix" src="https://mdn.mozillademos.org/files/11385/part7.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="The view matrix" src="https://mdn.mozillademos.org/files/11385/part7.png" style="height: 531px; width: 800px;" loading="lazy"></p>
 
 <h3 id="Relating_the_coordinate_systems">Relating the coordinate systems</h3>
 

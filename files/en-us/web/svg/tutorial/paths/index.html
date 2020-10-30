@@ -33,7 +33,7 @@ tags:
 
 <p>In the following example there's only a point at (<code>10</code>,<code>10</code>). Note, though, that it wouldn't show up if a path was just drawn normally. For example:</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/45/=Blank_Path_Area.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/45/=Blank_Path_Area.png" style="float: right;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -64,7 +64,7 @@ tags:
 
 <p>An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a {{SVGElement("rect")}} element). It's composed of horizontal and vertical lines only.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/292/=Path_Line_Commands.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/292/=Path_Line_Commands.png" style="float: right;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -114,7 +114,7 @@ tags:
 
 <p>The last set of coordinates here (<code><var>x</var></code>,<code><var>y</var></code>) specify where the line should end. The other two are control points. (<code><var>x1</var></code>,<code><var>y1</var></code>) is the control point for the start of the curve, and (<code><var>x2</var></code>,<code><var>y2</var></code>) is the control point for the end. The control points essentially describe the slope of the line starting at each point. The Bézier function then creates a smooth curve that transfers from the slope established at the beginning of the line, to the slope at the other end.</p>
 
-<p><img alt="Cubic Bézier Curves with grid" class="internal" src="https://mdn.mozillademos.org/files/10401/Cubic_Bézier_Curves_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
+<p><img alt="Cubic Bézier Curves with grid" class="internal" src="https://mdn.mozillademos.org/files/10401/Cubic_Bézier_Curves_with_grid.png" style="float: right; height: 160px; width: 190px;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -161,7 +161,7 @@ tags:
  <strong>q</strong> <var>dx1</var> <var>dy1</var>, <var>dx</var> <var>dy</var>
 </pre>
 
-<p><img alt="Quadratic Bézier with grid" class="internal" src="https://mdn.mozillademos.org/files/10403/Quadratic_Bézier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
+<p><img alt="Quadratic Bézier with grid" class="internal" src="https://mdn.mozillademos.org/files/10403/Quadratic_Bézier_with_grid.png" style="float: right; height: 160px; width: 190px;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/&gt;
@@ -217,7 +217,7 @@ tags:
 
 <p>For the unrotated ellipse in the image above, there are only two different arcs and not four to choose from because the line drawn from the start and end of the arc goes through the center of the ellipse. In a slightly modified example the two ellipses that form the four different arcs can be seen:</p>
 
-<p><img alt="Show the 4 arcs on the Ellipse example" src="https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png" style="height: 320px; width: 320px;"></p>
+<p><img alt="Show the 4 arcs on the Ellipse example" src="https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png" style="height: 320px; width: 320px;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
   &lt;path d="M 10 315
@@ -239,7 +239,7 @@ tags:
 
 <p>The four different paths mentioned above are determined by the next two parameter flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first parameter is the <code><var>large-arc-flag</var></code>. It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second parameter is the <code><var>sweep-flag</var></code>. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles will be travelled around. The example below shows all four possible combinations, along with the two circles for each case.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/345/=SVGArcs_Flags.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/345/=SVGArcs_Flags.png" style="float: right;" loading="lazy"></p>
 
 <pre class="brush: xml notranslate">&lt;svg width="325" height="325" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M 80 80

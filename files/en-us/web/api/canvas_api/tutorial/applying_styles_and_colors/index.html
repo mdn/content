@@ -239,7 +239,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png" loading="lazy"></p>
 
 <p>If you consider a path from (3,1) to (3,5) with a line thickness of <code>1.0</code>, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the <code>1.0</code> width line in the previous example code.</p>
 
@@ -259,7 +259,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/236/Canvas_linecap.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/236/Canvas_linecap.png" style="float: right; height: 190px; width: 190px;" loading="lazy"></p>
 
 <dl>
  <dt><code>butt</code></dt>
@@ -314,7 +314,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>There are three possible values for this property: <code>round</code>, <code>bevel</code> and <code>miter</code>. By default this property is set to <code>miter</code>. Note that the <code>lineJoin</code> setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;" loading="lazy"></p>
 
 <dl>
  <dt><code>round</code></dt>

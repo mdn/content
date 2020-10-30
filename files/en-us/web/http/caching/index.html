@@ -16,7 +16,7 @@ tags:
 
 <p>There are several kinds of caches: these can be grouped into two main categories: private or shared caches. A <em>shared cache</em> is a cache that stores responses for reuse by more than one user. A <em>private cache</em> is dedicated to a single user. This page will mostly talk about browser and proxy caches, but there are also gateway caches, CDN, reverse proxy caches and load balancers that are deployed on web servers for better reliability, performance and scaling of web sites and web applications.</p>
 
-<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="https://mdn.mozillademos.org/files/13777/HTTPCachtType.png" style="height: 573px; width: 910px;"></p>
+<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="https://mdn.mozillademos.org/files/13777/HTTPCachtType.png" style="height: 573px; width: 910px;" loading="lazy"></p>
 
 <h3 id="Private_browser_caches">Private browser caches</h3>
 
@@ -111,7 +111,7 @@ The expiration time is computed as follows:</p>
 
 <p>This technique has an additional benefit: updating two cached resources at the same time will not lead to the situation where the out-dated version of one resource is used in combination with the new version of the other one. This is very important when web sites have CSS stylesheets or JS scripts that have mutual dependencies, i.e., they depend on each other because they refer to the same HTML elements.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13779/HTTPRevved.png"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/13779/HTTPRevved.png" loading="lazy"></p>
 
 <p>The revision version added to revved resources doesn't need to be a classical revision string like 1.1.3, or even a monotonously growing suite of number. It can be anything that prevent collisions, like a hash or a date.</p>
 
@@ -137,7 +137,7 @@ The expiration time is computed as follows:</p>
 
 <p>When a cache receives a request that can be satisfied by a cached response that has a <code>Vary</code> header field, it must not use that cached response unless all header fields as nominated by the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
 
-<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;"></p>
+<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;" loading="lazy"></p>
 
 <p>This can be useful for serving content dynamically, for example. When using the <code>Vary: User-Agent</code> header, caching servers should consider the user agent when deciding whether to serve the page from cache. If you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. In addition, it can help Google and other search engines to discover the mobile version of a page, and might also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.</p>
 

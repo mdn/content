@@ -94,7 +94,7 @@ tags:
 
 <p>In {{glossary('TCP slow start')}}, after receipt of the initial packet, the server doubles the size of the next packet to around 28Kb. Subsequent packets increase in size until a predetermined threshold is reached, or congestion is experienced.</p>
 
-<p><img alt="TCP slow start" src="https://mdn.mozillademos.org/files/16754/congestioncontrol.jpg" style="height: 412px; width: 729px;"></p>
+<p><img alt="TCP slow start" src="https://mdn.mozillademos.org/files/16754/congestioncontrol.jpg" style="height: 412px; width: 729px;" loading="lazy"></p>
 
 <p>If you’ve ever heard of the 14Kb rule for initial page load, TCP slow start is the reason why the initial response is 14Kb, and why web performance optimization calls for focusing optimizations with this initial 14Kb response in mind. TCP slow start gradually builds up transmission speeds appropriate for the network's capabilities to avoid congestion.</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>The DOM tree describes the content of the document. The <code><a href="/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a></code> element is the first tag and root node of the document tree. The tree reflects the relationships and hierarchies between different tags. Tags nested within other tags are child nodes. The greater the number of DOM nodes, the longer it takes to construct the DOM tree.</p>
 
-<p><img alt="The DOM tree for our sample code, showing all the nodes, including text nodes." src="https://mdn.mozillademos.org/files/16759/DOM.gif" style="height: 689px; width: 754px;"></p>
+<p><img alt="The DOM tree for our sample code, showing all the nodes, including text nodes." src="https://mdn.mozillademos.org/files/16759/DOM.gif" style="height: 689px; width: 754px;" loading="lazy"></p>
 
 <p>When the parser finds non-blocking resources, such as an image, the browser will request those resources and continue parsing. Parsing can continue when a CSS file is encountered, but <code>&lt;script&gt;</code> tags—particularly those without an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> or <code>defer</code> attribute—block rendering, and pause the parsing of HTML. Though the browser's preload scanner hastens this process, excessive scripts can still be a significant bottleneck.</p>
 

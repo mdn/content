@@ -373,7 +373,7 @@ mat4.multiply(viewMatrix, viewMatrix, rotateMatrix);</pre>
 
 <p>For example, consider a device which uses a 2560x1440 pixel frame buffer. Dividing this into two parts—half for each eye—results in each eye's view being drawn at a resolution of 1280x1440 pixels. Here's what that looks like conceptually:</p>
 
-<p><img alt="Diagram showing how a framebuffer is divided between two eyes' viewpoints" src="https://mdn.mozillademos.org/files/17011/TwoViewsOneFramebuffer.svg"></p>
+<p><img alt="Diagram showing how a framebuffer is divided between two eyes' viewpoints" src="https://mdn.mozillademos.org/files/17011/TwoViewsOneFramebuffer.svg" loading="lazy"></p>
 
 <p>Your code tells the WebXR engine that you want to provide the next animation frame by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, providing a callback function that renders a frame of animation. When the browser needs you to render the scene, it invokes the callback, providing as input parameters the current time and an {{domxref("XRFrame")}} encapsulating the data needed to render the correct frame.</p>
 

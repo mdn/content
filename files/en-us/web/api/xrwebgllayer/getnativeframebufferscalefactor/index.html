@@ -59,11 +59,11 @@ tags:
 
 <p>If, on this device, it's determined that due to GPU limitations the browser needs to reduce image quality in order to improve performance to an acceptable level, it might choose to halve the resolution. In this case, the value returned by <code>XRWebGLLayer.getNativeFramebufferScaleFactor()</code> will be 2.0. This method of dividing the frame buffer between views is shown in the following diagram.</p>
 
-<p><img alt="Diagram showing frame buffer as scalled to half resolution" src="https://mdn.mozillademos.org/files/17013/TwoViewsOneFrame-ScaledBy2.svg" style="height: 430px; width: 640px;"></p>
+<p><img alt="Diagram showing frame buffer as scalled to half resolution" src="https://mdn.mozillademos.org/files/17013/TwoViewsOneFrame-ScaledBy2.svg" style="height: 430px; width: 640px;" loading="lazy"></p>
 
 <p>Now the width and height of the frame buffer are 50% what they were before, resulting in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the buffer being 640x720 pixels. Now we can see the coordinates of each of the viewports representing these two views:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17014/TwoViewsViewportCoords-ScaledBy2.svg" style="height: 430px; width: 640px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/17014/TwoViewsViewportCoords-ScaledBy2.svg" style="height: 430px; width: 640px;" loading="lazy"></p>
 
 <p>Since each eye gets half of the frame buffer, the result is that the left eye gets a 640x720 portion of the buffer with the viewport's <code>x</code> and <code>y</code> at 0, the width at 640, and the height set to 720. The right eye gets the other half of the frame buffer, with its viewport's <code>x</code> set at 639.</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <p>That gets us a new {{domxref("XRWebGLLayer")}} object representing a rendering surface we can use for the {{domxref("XRSession")}}; we set it as the rendering surface for <code>xrSession</code> by calling its {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method, passing the new <code>glLayer</code> in using the {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}} property. The result is a rendering context that looks like the diagram below:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17012/TwoViewsViewportCoords.svg" style="height: 504px; width: 751px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/17012/TwoViewsViewportCoords.svg" style="height: 504px; width: 751px;" loading="lazy"></p>
 
 <p>Each time the {{domxref("XRViewerPose")}}'s {{domxref("XRViewerPose.views", "views")}} are iterated over for rendering, the rendering loop obtains an {{domxref("XRView")}} for the left eye which has its top-left corner at (0, 0) with its width and height being 1280x1440 pixels. The right eye it obtains has its top-left corner at 1280, 0 with the same width and height: 1280x1440.</p>
 

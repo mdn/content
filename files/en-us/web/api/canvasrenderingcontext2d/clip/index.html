@@ -14,7 +14,7 @@ tags:
 
 <p>In the image below, the red outline represents a clipping region shaped like a star. Only those parts of the checkerboard pattern that are within the clipping region get drawn.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png"></p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" loading="lazy"></p>
 
 <div class="note">
 <p><strong>Note</strong>: Be aware that the clipping region is only constructed from shapes added to the path. It doesn't work with shape primitives drawn directly to the canvas, such as {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Instead, you'd have to use {{domxref("CanvasRenderingContext2D.rect()","rect()")}} to add a rectangular shape to the path before calling <code>clip()</code>.</p>

@@ -41,7 +41,7 @@ tags:
  <dt><code>linear</code></dt>
  <dd>A constant rate of change, neither accelerating nor deccelerating. </dd>
  <dt><code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code></dt>
- <dd><img alt="A diagram showing the points of a cubic bezier timing function." src="https://www.w3.org/TR/css-timing-1/cubic-bezier-timing-curve.svg" style="height: 150px; width: 400px;"><br>
+ <dd><img alt="A diagram showing the points of a cubic bezier timing function." src="https://www.w3.org/TR/css-timing-1/cubic-bezier-timing-curve.svg" style="height: 150px; width: 400px;" loading="lazy"><br>
  Specifies <a href="https://w3c.github.io/web-animations/#cubic-bzier-timing-function">a cubic Bézier timing function</a>. The four numbers specify points P1 and P2 of the curve as (x1, y1, x2, y2). Both x values must be in the range [0, 1] or the definition is invalid.</dd>
  <dt><code>ease</code></dt>
  <dd>A decelerated rate of change, going from fast to slow. Equivalent to <code>cubic-bezier(0.25, 0.1, 0.25, 1)</code>.</dd>
@@ -54,7 +54,7 @@ tags:
  <dt class="hidden"><code>frames(&lt;integer&gt;)</code></dt>
  <dd class="hidden">Specifies a <a href="https://www.w3.org/TR/css-timing-1/#frames-timing-functions">frames timing function</a>, which breaks the animation down into a number of equal time intervals but also displays the start (0%) and end (100%) states for an equal amount of time to the other intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. See GitHub for a <a href="https://mdn.github.io/css-examples/animation-frames-timing-function/index-waa.html">simple example</a> that illustrates the difference between <code>steps()</code> and <code>frames()</code>.</dd>
  <dt><code>steps(&lt;integer&gt;[, [ start | end ] ]?)</code></dt>
- <dd><img alt="A diagram of the various steps timing functions." src="https://www.w3.org/TR/css-timing-1/step-timing-func-examples.svg" style="height: 238px; width: 500px;"><br>
+ <dd><img alt="A diagram of the various steps timing functions." src="https://www.w3.org/TR/css-timing-1/step-timing-func-examples.svg" style="height: 238px; width: 500px;" loading="lazy"><br>
  Specifies <a href="https://w3c.github.io/web-animations/#step-timing-function">a step timing function</a>, which breaks the animation down into a number of equal time intervals. The browser flips to a different static frame when each interval is reached, rather than animating smoothly. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value end.</dd>
  <dt><code>step-start</code></dt>
  <dd>Equivalent to <code>steps(1, start)</code></dd>

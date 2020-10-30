@@ -51,7 +51,7 @@ tags:
 
 <p><img alt="Three items, one with additional text causing it to be taller than the others." src="https://mdn.mozillademos.org/files/15628/align2.png" style="display: block; height: 131px; margin: 0px auto; width: 509px;"></p>
 
-<p><img alt="Three items stretched to 200 pixels tall" src="https://mdn.mozillademos.org/files/15629/align3.png" style="display: block; height: 207px; margin: 0px auto; width: 637px;"></p>
+<p><img alt="Three items stretched to 200 pixels tall" src="https://mdn.mozillademos.org/files/15629/align3.png" style="display: block; height: 207px; margin: 0px auto; width: 637px;" loading="lazy"></p>
 
 <p>The reason the items become the same height is that the initial value of <code>align-items</code>, the property that controls alignment on the cross axis, is set to <code>stretch</code>.</p>
 
@@ -156,11 +156,11 @@ tags:
 
 <p>Remember that with all of these alignment methods, the values of <code>flex-start</code> and <code>flex-end</code> are writing mode-aware. If the value of <code>justify-content</code> is <code>start</code> and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.</p>
 
-<p><img alt="Three items lined up on the left" src="https://mdn.mozillademos.org/files/15638/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Three items lined up on the left" src="https://mdn.mozillademos.org/files/15638/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;" loading="lazy"></p>
 
 <p>However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.</p>
 
-<p><img alt="Three items lined up from the right" src="https://mdn.mozillademos.org/files/15639/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Three items lined up from the right" src="https://mdn.mozillademos.org/files/15639/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;" loading="lazy"></p>
 
 <p>The live example below has the <code>direction</code> property set to <code>rtl</code> to force a right-to-left flow for our items. You can remove this, or change the values of <code>justify-content</code> to see how flexbox behaves when the start of the inline direction is on the right.</p>
 
