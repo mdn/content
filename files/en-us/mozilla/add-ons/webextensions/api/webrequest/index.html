@@ -17,7 +17,7 @@ tags:
 
 <p>Each event is fired at a particular stage of the request. The typical sequence of events is like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;" loading="lazy"></p>
 
 <p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
 
