@@ -1,6 +1,6 @@
 # Yari beta launch
 
-As of November 2, 2020, The [Yari](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) beta is open. This page tells you how you can get involved, and what kind of feedback we're looking for, and where you can put it.
+As of November 2, 2020, The [Yari](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) beta is open. This page tells you how you can get involved, what kind of feedback we're looking for, and where you can put it.
 
 ## The state of the beta
 
@@ -20,17 +20,17 @@ If you want to find some legitimate changes to make while testing the beta, have
 
 ## Tooling
 
-To begin with, we are keeping the Yari tooling basic, with the intention of improving what's on offer as we get more feedback from. As you'll find out from reading through the README, there are already a few fundamental CLI commands available, such as start (to create a live preview of what your document will look like when rendered on MDN), create (to add a new page), move (to move an existing page), etc.
+To begin with, we are keeping the Yari tooling basic, with the intention of improving what's on offer as we get more feedback. As you'll find out from reading through the README, there are already a few fundamental CLI commands available, such as `start` (to create a live preview of what your document will look like when rendered on MDN), `create` (to add a new page), `move` (to move an existing page), etc.
 
 ## Give us feedback!
 
-We are really grateful for any feedback you can give us to help improve on the new MDN Web Docs platform. We are especially interested in information such as:
+We are really grateful for any feedback you can give us to help improve the new MDN Web Docs platform. We are especially interested in information such as:
 
 * What do you really like or not like about it?
 * What tools do you think are missing?
 * What are you _not_ able to do that you think you _should_ be able to do?
 
-If you want to file a bug or an issue with the new Yari platform, the best place to do so is in [this repo's issues](./issues).
+If you want to file a bug or issue with the new Yari platform, the best place to do so is in [this repo's issues](./issues).
 
 If you want to talk to us about the new platform synchronously, the best place to go is the MDN Web Docs room on Mozilla's Element/Matrix server — read the [Mozilla Matrix page](https://wiki.mozilla.org/Matrix) for instructions. 
 
