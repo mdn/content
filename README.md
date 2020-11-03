@@ -1,9 +1,7 @@
 # Notice
-**This repository is not yet active.**
+**This repo is currently being beta tested. To find out how to contribute to the beta and give feedback, see our [Yari beta launch](BETA.md) document.**
 
-To contribute to MDN Web Docs, [use the wiki](https://wiki.developer.mozilla.org).
-
-Contributions to this repository will not be acccepted or reflected in MDN Web Docs before Monday, December 14, 2020.
+To contribute to the live MDN Web Docs site, [use the wiki](https://wiki.developer.mozilla.org).
 
 # Contributing to the content of MDN Web Docs
 
