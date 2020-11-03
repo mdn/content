@@ -30,7 +30,7 @@ We are really grateful for any feedback you can give us to help improve the new 
 * What tools do you think are missing?
 * What are you _not_ able to do that you think you _should_ be able to do?
 
-If you want to file a bug or issue with the new Yari platform, the best place to do so is in [this repo's issues](/issues).
+If you want to file a bug or issue with the new Yari platform, the best place to do so is in [this repo's issues](../../issues).
 
 If you want to talk to us about the new platform synchronously, the best place to go is the MDN Web Docs room on Mozilla's Element/Matrix server — read the [Mozilla Matrix page](https://wiki.mozilla.org/Matrix) for instructions. 
 
