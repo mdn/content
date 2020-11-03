@@ -1,5 +1,5 @@
 # Notice
-This repo is currently being beta tested. To find out how to contribute to the beta and give feedback, see our [Yari beta launch](BETA.md) document.
+**This repo is currently being beta tested. To find out how to contribute to the beta and give feedback, see our [Yari beta launch](BETA.md) document.**
 
 To contribute to the live MDN Web Docs site, [use the wiki](https://wiki.developer.mozilla.org).
 
