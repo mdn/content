@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.163":
-  version "0.1.163"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.163.tgz#04b4a74d5549f94e72cbcbe0d154f812c21fc357"
-  integrity sha512-xmmuBpyY+DMPunDgwUdLuPOiyX5uPC3KA9XUCVpJupiFc0cZWTKW40PCzcB7xp+llqJC7gbRKW0rXaJUXjRe4w==
+"@mdn/yari@0.1.165":
+  version "0.1.165"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.165.tgz#bf97422f322207134bd82a0c4dd13edc16a70571"
+  integrity sha512-dktxJaqsAfphPeun4IB0MhfHw/X3faJHr0Vvmo4mpiyrrynhkNIX4HsMnbcC6GBaqabo7sYIFaJJCl+udfypVw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.4"
@@ -71,7 +71,7 @@
     include-media "1.4.9"
     is-svg "4.2.1"
     js-yaml "3.14.0"
-    jsesc "3.0.1"
+    jsesc "3.0.2"
     mdn-data "2.0.12"
     open "^7.3.0"
     open-editor "2.0.1"
@@ -2496,10 +2496,10 @@ js-yaml@3.14.0, js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-jsesc@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-3.0.1.tgz#0e10205322721c22716cd5bbdbf80e71fb9c8344"
-  integrity sha512-w+MMxnByppM4jwskitZotEtvtO3a2C7WOz31NxJToGisHuysCAQQU7umb/pA/6soPFe8LGjXFEFbuPuLEPm7Ag==
+jsesc@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-3.0.2.tgz#bb8b09a6597ba426425f2e4a07245c3d00b9343e"
+  integrity sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==
 
 json-buffer@3.0.0:
   version "3.0.0"
