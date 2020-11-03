@@ -20,7 +20,7 @@ If you want to find some legitimate changes to make while testing the beta, have
 
 ## Tooling
 
-To begin with, we are keeping the Yari tooling basic, with the intention of improving what's on offer as we get more feedback. As you'll find out from reading through the README, there are already a few fundamental CLI commands available, such as `start` (to create a live preview of what your document will look like when rendered on MDN), `create` (to add a new page), `move` (to move an existing page), etc.
+To begin with, we are keeping the Yari tooling basic, with the intention of improving what's on offer as we get more feedback. As you'll find out from reading through the README, there are already a few fundamental CLI commands available, such as `yarn start` (to create a live preview of what your document will look like when rendered on MDN), `yarn content create` (to add a new page), `yarn content move` (to move an existing page), etc.
 
 ## Give us feedback!
 
