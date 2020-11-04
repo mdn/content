@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@babel/runtime@^7.10.2":
-  version "7.11.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
-  integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
+"@babel/runtime@^7.11.2":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.165":
-  version "0.1.165"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.165.tgz#bf97422f322207134bd82a0c4dd13edc16a70571"
-  integrity sha512-dktxJaqsAfphPeun4IB0MhfHw/X3faJHr0Vvmo4mpiyrrynhkNIX4HsMnbcC6GBaqabo7sYIFaJJCl+udfypVw==
+"@mdn/yari@0.1.171":
+  version "0.1.171"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.171.tgz#424abd96d30057687557abf647c3aa7d4f83370a"
+  integrity sha512-ubVqvA+2iX7pfNj8jFLpbb5CvnJIbWX6+IaZ4g6R3362dQklBQCdb1e3j4ihOmayWORq8TmDuuOnTLa/yxlnkQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.4"
@@ -52,7 +52,7 @@
     cssesc "^3.0.0"
     diff "4.0.2"
     dotenv "8.2.0"
-    downshift "^5.4.7"
+    downshift "^6.0.6"
     ejs "3.1.5"
     express "4.17.1"
     express-http-proxy "1.6.2"
@@ -83,7 +83,7 @@
     swr "0.3.7"
     tempy "1.0.0"
     typeface-zilla-slab "0.0.72"
-    use-debounce "^3.4.3"
+    use-debounce "^5.0.1"
     webpack-cli "4.1.0"
     webpack-node-externals "2.5.2"
     ws "^7.3.1"
@@ -1295,12 +1295,12 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-downshift@^5.4.7:
-  version "5.4.7"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-5.4.7.tgz#2ab7b0512cad33011ee6f29630f9a7bb74dff2b5"
-  integrity sha512-xaH0RNqwJ5pAsyk9qBmR9XJWmg1OOWMfrhzYv0NH2NjJxn77S3zBcfClw341UfhGyKg5v+qVqg/CQzvAgBNCXQ==
+downshift@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.0.6.tgz#82aee8e2e260d7ad99df8a0969bd002dd523abe8"
+  integrity sha512-tmLab3cXCn6PtZYl9V8r/nB2m+7/nCNrwo0B3kTHo/2lRBHr+1en1VNOQt2wIt0ajanAnxquZ00WPCyxe6cNFQ==
   dependencies:
-    "@babel/runtime" "^7.10.2"
+    "@babel/runtime" "^7.11.2"
     compute-scroll-into-view "^1.0.14"
     prop-types "^15.7.2"
     react-is "^16.13.1"
@@ -4240,10 +4240,10 @@ url-to-options@^1.0.1:
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
   integrity sha1-FQWgOiiaSMvXpDTvuu7FBV9WM6k=
 
-use-debounce@^3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-3.4.3.tgz#5df9322322b3f1b1c263d46413f9facf6d8b56ab"
-  integrity sha512-nxy+opOxDccWfhMl36J5BSCTpvcj89iaQk2OZWLAtBJQj7ISCtx1gh+rFbdjGfMl6vtCZf6gke/kYvrkVfHMoA==
+use-debounce@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.0.1.tgz#b11861bc63970bfc6fd8393a0a3cc3d7cb5944ce"
+  integrity sha512-YHzlVa7qKFRlrMpVRiStGWGE0lumwJiQPvsTMlatsIrck39ycyJkdf0npUYG5MJEVxaJQWwvpmePRYZb534upg==
 
 utf8-byte-length@^1.0.1:
   version "1.0.4"
