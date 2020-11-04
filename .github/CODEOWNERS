@@ -1,38 +1,40 @@
 # ----------------------------------------------------------------------------
 # MDN Content CODEOWNERS
 # ----------------------------------------------------------------------------
-# Order is important. The last matching pattern takes precedence.
+# Order is important. The last matching pattern takes precedence. For more
+# detailed information, see:
+# https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
 # DEFAULT OWNERS
 # ----------------------------------------------------------------------------
-*    @escattone @peterbe
+*    @mdn/core-yari-dev
 
 # ----------------------------------------------------------------------------
 # DEFAULT ENGLISH CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/    @chrisdavidmills
+/files/en-us/    @mdn/core-yari-content
 
 # ----------------------------------------------------------------------------
 # ENGLISH LEARNING CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/learn/    @TBD
+# /files/en-us/learn/    TBD
 
 # ----------------------------------------------------------------------------
 # ENGLISH JAVASCRIPT CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/javascript/    @TBD
+# /files/en-us/web/javascript/    TBD
 
 # ----------------------------------------------------------------------------
 # ENGLISH CSS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/css/    @TBD
+# /files/en-us/web/css/    TBD
 
 # ----------------------------------------------------------------------------
 # ENGLISH HTML CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/html/    @TBD
+# /files/en-us/web/html/    TBD
 
 # ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
@@ -41,6 +43,6 @@
 # tries to change any one or more of these files should be escalated to the
 # owners specified here.
 # ----------------------------------------------------------------------------
-/.github/     @escattone @peterbe
-/*.md         @escattone @peterbe @chrisdavidmills
-/*            @escattone @peterbe
+/.github/     @mdn/core-yari-dev
+/*.md         @mdn/core-yari-dev @mdn/core-yari-content
+/*            @mdn/core-yari-dev
