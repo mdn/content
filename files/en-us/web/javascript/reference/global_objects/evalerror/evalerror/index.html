@@ -12,17 +12,17 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+<pre class="syntaxbox notranslate">new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>message</code></dt>
- <dd>Optional. Human-readable description of the error</dd>
- <dt><code>fileName</code> </dt>
- <dd>Optional. The name of the file containing the code that caused the exception</dd>
- <dt><code>lineNumber</code> </dt>
- <dd>Optional. The line number of the code that caused the exception</dd>
+ <dt><code><var>message</var></code> {{optional_inline}}</dt>
+ <dd>Human-readable description of the error.</dd>
+ <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
+ <dd>The name of the file containing the code that caused the exception</dd>
+ <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
+ <dd>The line number of the code that caused the exception</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -31,7 +31,7 @@ tags:
 
 <h3 id="Creating_an_EvalError">Creating an EvalError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -47,10 +47,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
   </tr>
@@ -60,12 +62,11 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-<div>
 
 
 <p>{{Compat("javascript.builtins.EvalError.EvalError")}}</p>
 </div>
-</div>
+
 
 <h2 id="See_also">See also</h2>
 

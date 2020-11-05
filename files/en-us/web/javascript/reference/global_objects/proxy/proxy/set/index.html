@@ -9,15 +9,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>handler.set()</strong></code> method is a trap for setting a property value.</p>
+<p>The <strong><code>handler.set()</code></strong> method is a trap for setting a property value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
   set: function(<var>target</var>, <var>property</var>, <var>value</var>, <var>receiver</var>) {
   }
 });
@@ -31,8 +31,8 @@ tags:
  <dt><code><var>target</var></code></dt>
  <dd>The target object.</dd>
  <dt><code><var>property</var></code></dt>
- <dd>The name or {{jsxref("Symbol")}}  of the property to set. </dd>
- <dt><code>value</code></dt>
+ <dd>The name or {{jsxref("Symbol")}} of the property to set.</dd>
+ <dt><code><var>value</var></code></dt>
  <dd>The new value of the property to set.</dd>
  <dt><code><var>receiver</var></code></dt>
  <dd>
@@ -50,7 +50,7 @@ tags:
 
 <ul>
  <li>Return <code>true</code> to indicate that assignment succeeded.</li>
- <li>If the <code>set()</code> method returns <code>false</code>, and the assignment happened in strict-mode code, a {{jsxref("TypeError")}} will be thrown.</li>
+ <li>If the <code>set()</code> method returns <code>false</code>, and the assignment happened in strict-mode code, a {{jsxref("TypeError")}} will be thrown.</li>
 </ul>
 
 <h2 id="Description">Description</h2>
@@ -83,7 +83,7 @@ tags:
 
 <p>The following code traps setting a property value.</p>
 
-<pre class="brush: js">const p = new Proxy({}, {
+<pre class="brush: js notranslate">const p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value;
     console.log('property set: ' + prop + ' = ' + value);

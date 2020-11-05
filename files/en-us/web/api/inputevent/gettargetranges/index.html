@@ -4,7 +4,6 @@ slug: Web/API/InputEvent/getTargetRanges
 tags:
   - API
   - DOM Events
-  - Experimental
   - Input
   - InputEvent
   - Method
@@ -12,7 +11,7 @@ tags:
   - events
   - getTargetRanges()
 ---
-<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("DOM Events")}}</p>
 
 <p>The <strong><code>getTargetRanges()</code></strong> method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
 
@@ -27,6 +26,20 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>An array of {{domxref("StaticRange")}} objects.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Basic_usage">Basic usage</h3>
+
+<p>The following example selects a <code>contenteditable</code> element and utilises the <code><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></code> event to log the result of <code>getTargetRanges()</code>.</p>
+
+<pre class="brush: js notranslate">const editableElem = document.querySelector('[contenteditable="true"]');
+
+editableElem.addEventListener('beforeinput', (e) =&gt; {
+    const targetRanges = e.getTargetRanges();
+    console.log(targetRanges);
+})
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

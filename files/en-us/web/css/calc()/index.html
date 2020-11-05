@@ -1,6 +1,6 @@
 ---
 title: calc()
-slug: Web/CSS/calc
+slug: Web/CSS/calc()
 tags:
   - CSS
   - CSS Function
@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>calc()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.</p>
+<p>The <strong><code>calc()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-calc.html")}}</div>
 
@@ -54,7 +54,6 @@ width: calc(100% - 80px);</pre>
 
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
-
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <p>When <code>calc()</code> is used for controlling text size, be sure that one of the values includes a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a>, for example:</p>
@@ -70,7 +69,6 @@ width: calc(100% - 80px);</pre>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
-
 <h2 id="Usage_with_integers">Usage with integers</h2>
 
 <p>When <strong><code>calc()</code></strong> is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:</p>
@@ -82,7 +80,6 @@ width: calc(100% - 80px);</pre>
 <p>This will give <code>.modal</code> a final <code>z-index</code> value of 2.</p>
 
 <p><strong>Note:</strong> The Chrome browser currently won’t accept some values returned by <strong><code>calc()</code></strong> when an integer is expected. This includes any division, even if it results in an integer. ie. <code>z-index: calc(4 / 2);</code> will not be accepted.</p>
-
 
 <h2 id="Examples">Examples</h2>
 
@@ -153,7 +150,6 @@ width: calc(100% - 80px);</pre>
 
 <ul>
 </ul>
-
 
 <h2 id="Specifications">Specifications</h2>
 

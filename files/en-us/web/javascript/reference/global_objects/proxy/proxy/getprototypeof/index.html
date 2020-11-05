@@ -13,11 +13,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>obj</var>, {
+<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>obj</var>, {
   getPrototypeOf(<var>target</var>) {
   ...
   }
@@ -64,7 +64,7 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js">const obj = {};
+<pre class="brush: js notranslate">const obj = {};
 const proto = {};
 const handler = {
     getPrototypeOf(target) {
@@ -80,7 +80,7 @@ console.log(Object.getPrototypeOf(p) === proto);    // true
 
 <h3 id="Five_ways_to_trigger_the_getPrototypeOf_trap">Five ways to trigger the getPrototypeOf trap</h3>
 
-<pre class="brush: js">const obj = {};
+<pre class="brush: js notranslate">const obj = {};
 const p = new Proxy(obj, {
     getPrototypeOf(target) {
         return Array.prototype;
@@ -97,7 +97,7 @@ console.log(
 
 <h3 id="Two_kinds_of_exceptions">Two kinds of exceptions</h3>
 
-<pre class="brush: js example-bad">const obj = {};
+<pre class="brush: js example-bad notranslate">const obj = {};
 const p = new Proxy(obj, {
     getPrototypeOf(target) {
         return 'foo';

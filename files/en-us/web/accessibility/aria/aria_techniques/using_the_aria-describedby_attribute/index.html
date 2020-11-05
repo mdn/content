@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
-<p> </p>
+
 
 <div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>In the example below, an introductory paragraph describes a calendar application. <code>aria-describedby</code> is used to associate the paragraph with the application container.</p>
 
-<pre class="brush: html">&lt;div role="application" aria-labelledby="calendar" aria-describedby="info"&gt;
+<pre class="brush: html notranslate">&lt;div role="application" aria-labelledby="calendar" aria-describedby="info"&gt;
     &lt;h1 id="calendar"&gt;Calendar&lt;/h1&gt;
     &lt;p id="info"&gt;
         This calendar shows the game schedule for the Boston Red Sox.
@@ -45,7 +45,7 @@ tags:
 
 <p>In the example below, a link that functions as a 'close' button on a dialog is described elsewhere in the document. The aria-describedby attribute is used to associate the description with the link.</p>
 
-<pre class="brush: html">&lt;button aria-label="Close" aria-describedby="descriptionClose"
+<pre class="brush: html notranslate">&lt;button aria-label="Close" aria-describedby="descriptionClose"
     onclick="myDialog.close()"&gt;X&lt;/button&gt;
 
 ...
@@ -53,13 +53,6 @@ tags:
 &lt;div id="descriptionClose"&gt;Closing this window will discard any information entered and
 return you back to the main page&lt;/div&gt;
 </pre>
-
-<h3 id="Working_Examples">Working Examples:</h3>
-
-<ul>
- <li><a class="external" href="http://www.oaa-accessibility.org/examplep/checkbox1/" title="http://www.oaa-accessibility.org/examplep/checkbox1/">Checkbox example</a> uses <code>aria-describedby</code></li>
- <li><a class="external" href="http://www.oaa-accessibility.org/examplep/tooltip1/" title="http://www.oaa-accessibility.org/examplep/tooltip1/">Tooltip example</a> uses <code>aria-describedby</code></li>
-</ul>
 
 <h3 id="Notes">Notes </h3>
 

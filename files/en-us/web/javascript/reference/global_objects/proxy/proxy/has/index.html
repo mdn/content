@@ -13,11 +13,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="syntaxbox notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
   has: function(<var>target</var>, <var>prop</var>) {
   }
 });
@@ -68,7 +68,7 @@ tags:
 
 <p>The following code traps the {{jsxref("Operators/in", "in")}} operator.</p>
 
-<pre class="brush: js">const p = new Proxy({}, {
+<pre class="brush: js notranslate">const p = new Proxy({}, {
   has: function(target, prop) {
     console.log('called: ' + prop);
     return true;
@@ -81,7 +81,7 @@ console.log('a' in p); // "called: a"
 
 <p>The following code violates an invariant.</p>
 
-<pre class="brush: js example-bad">const obj = { a: 10 };
+<pre class="brush: js example-bad notranslate">const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {

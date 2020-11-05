@@ -23,7 +23,7 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError"><code>InternalError()</code></a></dt>
+ <dt>{{jsxref("InternalError/InternalError", "InternalError()")}}</dt>
  <dd>Creates a new <code>InternalError</code> object.</dd>
 </dl>
 
@@ -50,7 +50,7 @@ tags:
 
 <p>This recursive function runs 10 times, as per the exit condition.</p>
 
-<pre class="brush: js">function loop(x) {
+<pre class="brush: js notranslate">function loop(x) {
   if (x &gt;= 10) // "x &gt;= 10" is the exit condition
     return;
   // do stuff
@@ -60,7 +60,7 @@ loop(0);</pre>
 
 <p>Setting this condition to an extremely high value, won't work:</p>
 
-<pre class="brush: js example-bad">function loop(x) {
+<pre class="brush: js example-bad notranslate">function loop(x) {
   if (x &gt;= 1000000000000)
     return;
   // do stuff
@@ -74,16 +74,14 @@ loop(0);
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+<p>Not part of any standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-<div>
 
 
 <p>{{Compat("javascript.builtins.InternalError")}}</p>
-</div>
 </div>
 
 <h2 id="See_also">See also</h2>

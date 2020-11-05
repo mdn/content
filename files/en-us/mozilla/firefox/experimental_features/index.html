@@ -804,6 +804,46 @@ tags:
  </tbody>
 </table>
 
+<h4 id="InputEvent.getTargetRanges">InputEvent.getTargetRanges()</h4>
+
+<p>The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.input_events.beforeinput.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
 <h4 id="HTMLMediaElement_method_setSinkId">HTMLMediaElement method: setSinkId()</h4>
 
 <p>{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See {{bug(934425)}} for more details.</p>
@@ -1586,47 +1626,7 @@ tags:
 
 <p>[1] Support for zooming using the double-tap gesture was added in Firefox 76. The other gestures were added for Firefox 79.</p>
 
-<h4 id="Compatibility_panel">Compatibility panel</h4>
-
-<p>A side panel for the Page Inspector that shows you information detailing your app's cross-browser compatibility status. See {{bug(1584464)}} for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>devtools.inspector.compatibility.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Server-sent_events_in_Network_Monitor">Server-sent events in Network Monitor</h4>
+<h4 id="Server-sent_events_in_Network_Monitor"><span>Server-sent events in Network Monitor</span></h4>
 
 <p>The Network Monitor displays information for <a href="/en-US/docs/Web/API/Server-sent_events">server-sent</a> events. See {{bug(1405706)}}.</p>
 
@@ -1662,6 +1662,46 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code>devtools.netmonitor.features.serverSentEvents</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="CSS_browser_compatibility_tooltips">CSS browser compatibility tooltips</h4>
+
+<p>The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Browser_compat_warnings">Examine and edit HTML &gt; Browser Compat Warnings</a>.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code></th>
   </tr>
  </tbody>
 </table>

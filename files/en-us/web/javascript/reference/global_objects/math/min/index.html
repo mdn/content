@@ -16,20 +16,20 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The static function <code><strong>Math.min()</strong></code> returns the lowest-valued number passed into it, or {{jsxref("NaN")}} if any parameter isn't a number and can't be converted into one.</span></p>
+<p><span class="seoSummary">The static function <strong><code>Math.min()</code></strong> returns the lowest-valued number passed into it, or {{jsxref("NaN")}} if any parameter isn't a number and can't be converted into one.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-min.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</code></pre>
+<pre class="syntaxbox notranslate">Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>value1, value2, ...</code></dt>
+ <dt><code><var>value1</var>, <var>value2</var>, ...</code></dt>
  <dd>Zero or more numbers among which the lowest value will be selected and returned.</dd>
 </dl>
 
@@ -47,19 +47,19 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.min">Using <code>Math.min()</code></h3>
+<h3 id="Using_Math.min">Using Math.min()</h3>
 
 <p>This finds the min of <code>x</code> and <code>y</code> and assigns it to <code>z</code>:</p>
 
-<pre class="brush: js">var x = 10, y = -20;
+<pre class="brush: js notranslate">var x = 10, y = -20;
 var z = Math.min(x, y);
 </pre>
 
-<h3 id="Clipping_a_value_with_Math.min">Clipping a value with <code>Math.min()</code></h3>
+<h3 id="Clipping_a_value_with_Math.min">Clipping a value with Math.min()</h3>
 
 <p><code>Math.min()</code> is often used to clip a value so that it is always less than or equal to a boundary. For instance, this</p>
 
-<pre class="brush: js">var x = f(foo);
+<pre class="brush: js notranslate">var x = f(foo);
 
 if (x &gt; boundary) {
   x = boundary;
@@ -68,7 +68,7 @@ if (x &gt; boundary) {
 
 <p>may be written as this</p>
 
-<pre class="brush: js">var x = Math.min(f(foo), boundary);
+<pre class="brush: js notranslate">var x = Math.min(f(foo), boundary);
 </pre>
 
 <p>{{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.</p>
@@ -76,10 +76,12 @@ if (x &gt; boundary) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
   </tr>
@@ -88,7 +90,7 @@ if (x &gt; boundary) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Math.min")}}</p>
 

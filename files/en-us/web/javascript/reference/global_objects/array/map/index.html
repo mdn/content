@@ -28,23 +28,23 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>callback</var></code></dt>
-	<dd>
-	<p>Function that is called for every element of <code><var>arr</var></code>. Each time <code><var>callback</var></code> executes, the returned value is added to <code><var>new_array</var></code>.</p>
+ <dt><code><var>callback</var></code></dt>
+ <dd>
+ <p>Function that is called for every element of <code><var>arr</var></code>. Each time <code><var>callback</var></code> executes, the returned value is added to <code><var>new_array</var></code>.</p>
 
-	<p>The <code><var>callback</var></code> function accepts the following arguments:</p>
+ <p>The <code><var>callback</var></code> function accepts the following arguments:</p>
 
-	<dl>
-		<dt><code><var>currentValue</var></code></dt>
-		<dd>The current element being processed in the array.</dd>
-		<dt><code><var>index</var></code>{{optional_inline}}</dt>
-		<dd>The index of the current element being processed in the array.</dd>
-		<dt><code><var>array</var></code>{{optional_inline}}</dt>
-		<dd>The array <code>map</code> was called upon.</dd>
-	</dl>
-	</dd>
-	<dt><code>thisArg</code>{{optional_inline}}</dt>
-	<dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
+ <dl>
+  <dt><code><var>currentValue</var></code></dt>
+  <dd>The current element being processed in the array.</dd>
+  <dt><code><var>index</var></code>{{optional_inline}}</dt>
+  <dd>The index of the current element being processed in the array.</dd>
+  <dt><code><var>array</var></code>{{optional_inline}}</dt>
+  <dd>The array <code>map</code> was called upon.</dd>
+ </dl>
+ </dd>
+ <dt><code>thisArg</code>{{optional_inline}}</dt>
+ <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -58,9 +58,8 @@ tags:
 <p>It is <em>not</em> called for missing elements of the array; that is:</p>
 
 <ul>
-	<li>indexes that have never been set;</li>
-	<li>which have been deleted; or</li>
-	<li>which have never been assigned a value.</li>
+ <li>indexes that have never been set;</li>
+ <li>indexes which have been deleted.</li>
 </ul>
 
 <h3 id="When_not_to_use_map">When not to use map()</h3>
@@ -70,8 +69,8 @@ tags:
 <p>You shouldn't be using <code>map</code> if:</p>
 
 <ul>
-	<li>you're not using the array it returns; and/or</li>
-	<li>you're not returning a value from the callback.</li>
+ <li>you're not using the array it returns; and/or</li>
+ <li>you're not returning a value from the callback.</li>
 </ul>
 
 <h3 id="Parameters_in_Detail">Parameters in Detail</h3>
@@ -82,7 +81,7 @@ tags:
 
 <p><code>map</code> does not mutate the array on which it is called (although <code><var>callback</var></code>, if invoked, may do so).</p>
 
-<p>The range of elements processed by <code>map</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>map</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed, their value as passed to <code><var>callback</var></code> will be the value at the time <code>map</code> visits them. Elements that are deleted after the call to <code>map</code> begins and before being visited are not visited.</p>
+<p>The range of elements processed by <code>map</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>map</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed after the call to <code>map</code>, their value will be the value at the time <code><var>callback</var></code> visits them. Elements that are deleted after the call to <code>map</code> begins and before being visited are not visited.</p>
 
 <p>Due to the algorithm defined in the specification, if the array which <code>map</code> was called upon is sparse, resulting array will also be sparse keeping same indices blank.</p>
 
@@ -271,9 +270,9 @@ let values = Array.prototype.map.call(elems, function(obj) {
 <p>{{jsxref("parseInt")}} is often used with one argument, but takes two. The first is an expression and the second is the radix to the callback function, <code>Array.prototype.map</code> passes 3 arguments:</p>
 
 <ul>
-	<li>the element</li>
-	<li>the index</li>
-	<li>the array</li>
+ <li>the element</li>
+ <li>the index</li>
+ <li>the array</li>
 </ul>
 
 <p>The third argument is ignored by {{jsxref("parseInt")}}—but <em>not</em> the second one! This is the source of possible confusion.</p>
@@ -336,16 +335,16 @@ let filteredNumbers = numbers.map(function(num, index) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -359,7 +358,7 @@ let filteredNumbers = numbers.map(function(num, index) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("Array.prototype.forEach()")}}</li>
-	<li>{{jsxref("Map")}} object</li>
-	<li>{{jsxref("Array.from()")}}</li>
+ <li>{{jsxref("Array.prototype.forEach()")}}</li>
+ <li>{{jsxref("Map")}} object</li>
+ <li>{{jsxref("Array.from()")}}</li>
 </ul>

@@ -28,7 +28,7 @@ tags:
 
 <p>The following HTML markup demonstrates the use of <code>stack</code> property.</p>
 
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE HTML&gt;
 &lt;meta charset="UTF-8"&gt;
 &lt;title&gt;Stack Trace Example&lt;/title&gt;
 &lt;body&gt;
@@ -55,21 +55,21 @@ a('first call, firstarg');
 
 <p>Starting with Firefox 30 and later containing the column number:</p>
 
-<pre><samp>trace@file:///C:/example.html:9:17
+<pre class="notranslate"><samp>trace@file:///C:/example.html:9:17
 b@file:///C:/example.html:16:13
 a@file:///C:/example.html:19:13
 @file:///C:/example.html:21:9</samp></pre>
 
 <p>Firefox 14 to Firefox 29:</p>
 
-<pre><samp>trace@file:///C:/example.html:9
+<pre class="notranslate"><samp>trace@file:///C:/example.html:9
 b@file:///C:/example.html:16
 a@file:///C:/example.html:19
 @file:///C:/example.html:21</samp></pre>
 
 <p>Firefox 13 and earlier would instead produce the following text:</p>
 
-<pre><samp>Error("myError")@:0
+<pre class="notranslate"><samp>Error("myError")@:0
 trace()@file:///C:/example.html:9
 b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
 a("first call, firstarg")@file:///C:/example.html:19
@@ -79,7 +79,7 @@ a("first call, firstarg")@file:///C:/example.html:19
 
 <p>Starting with Firefox 30, the error stack of code in <code>Function()</code> and <code>eval()</code> calls, now produces stacks with more detailed information about the line and column numbers inside these calls. Function calls are indicated with <code>"&gt; Function"</code> and eval calls with <code>"&gt; eval"</code>.</p>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   new Function('throw new Error()')();
 } catch (e) {
   console.log(e.stack);
@@ -104,16 +104,14 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+<p>Not part of any standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-<div>
 
 
 <p>{{Compat("javascript.builtins.Error.stack")}}</p>
-</div>
 </div>
 
 <h2 id="See_also">See also</h2>
@@ -121,6 +119,6 @@ try {
 <ul>
  <li><a href="/en-US/docs/Components.stack">Components.stack</a></li>
  <li>External projects: <a class="link-https" href="https://github.com/csnover/TraceKit/">TraceKit</a> and <a class="link-https" href="https://github.com/eriwen/javascript-stacktrace">javascript-stacktrace</a></li>
- <li>MSDN: <a href="https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">archived error.stack docs</a></li>
+ <li>MSDN: <a href="https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">archived error.stack docs</a></li>
  <li><a href="https://github.com/v8/v8/wiki/Stack%20Trace%20API">Overview of the V8 JavaScript stack trace API</a></li>
 </ul>

@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>Class properties are public by default and can be examined or modified outside the class. There is however <a href="https://github.com/tc39/proposal-class-fields">an experimental proposal</a> to allow defining private class fields using a hash <code>#</code> prefix.</p>
+<p>Class properties are public by default and can be examined or modified outside the class. There is however <a href="https://github.com/tc39/proposal-class-fields">an experimental proposal</a> to allow defining private class fields using a hash <code>#</code> prefix.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -29,19 +29,19 @@ class ClassWithPrivateStaticField {
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Private_static_fields">Private static fields </h3>
+<h3 id="Private_static_fields">Private static fields</h3>
 
 <p>Private fields are accessible on the class constructor from inside the class declaration itself.</p>
 
-<p>The limitation of static variables being called by only static methods still holds. </p>
+<p>The limitation of static variables being called by only static methods still holds.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
-  }
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+  }
 }
 
 console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
@@ -53,12 +53,12 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 <p>This can lead to unexpected behaviour when using <strong><code>this</code></strong>.</p>
 
 <pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42
+    return this.#PRIVATE_STATIC_FIELD
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -72,19 +72,19 @@ try {
 console.assert(error instanceof TypeError)
 </pre>
 
-<h3 id="Private_instance_fields">Private instance fields</h3>
+<h3 id="Private_instance_fields">Private instance fields</h3>
 
-<p>Private instance fields are declared with <strong># names </strong>(pronounced "<em>hash names</em>"), which are identifiers prefixed with <code>#</code>. The <code>#</code> is a part of the name itself. It is used for declaration and accessing as well.</p>
+<p>Private instance fields are declared with <strong># names</strong> (pronounced "<em>hash names</em>"), which are identifiers prefixed with <code>#</code>. The <code>#</code> is a part of the name itself. It is used for declaration and accessing as well.</p>
 
 <p>The encapsulation is enforced by the language. It is a syntax error to refer to <code>#</code> names from out of scope.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateField {
-  #privateField
+  #privateField
 
-  constructor() {
-    this.#privateField = 42
-    this.#randomField = 444 // Syntax error
-  }
+  constructor() {
+    this.#privateField = 42
+    this.#randomField = 444 // Syntax error
+  }
 }
 
 const instance = new ClassWithPrivateField()
@@ -97,20 +97,20 @@ instance.#privateField === 42 // Syntax error
 
 <p>Like their public equivalent, private static methods are called on the class itself, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.</p>
 
-<p>Private static methods may be generator, async, and async generator functions.</p>
+<p>Private static methods may be generator, async, and async generator functions.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+  static #privateStaticMethod() {
+    return 42
+  }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
@@ -120,15 +120,15 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 <p>This can lead to unexpected behaviour when using <strong><code>this</code></strong>. In the following example <code>this</code> refers to the <code>Derived</code> class (not the <code>Base</code> class) when we try to call <code>Derived.publicStaticMethod2()</code>, and thus exhibits the same "provenance restriction" as mentioned above:</p>
 
 <pre class="brush: js notranslate">class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
+  static publicStaticMethod1() {
+    return Base.#privateStaticMethod();
+  }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 class Derived extends Base {}
@@ -142,13 +142,13 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 <p>Private instance methods are methods available on class instances whose access is restricted in the same manner as private instance fields.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
+  #privateMethod() {
+    return 'hello world'
+  }
 
-  getPrivateMessage() {
-      return this.#privateMethod()
-  }
+  getPrivateMessage() {
+    return this.#privateMethod()
+  }
 }
 
 const instance = new ClassWithPrivateMethod()
@@ -158,19 +158,19 @@ console.log(instance.getPrivateMessage())
 <p>Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible:</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateAccessor {
-  #message
+  #message
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg
-  }
+  get #decoratedMessage() {
+    return `✨${this.#message}✨`
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg
+  }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
-  }
+  constructor() {
+    this.#decoratedMessage = 'hello world'
+    console.log(this.#decoratedMessage)
+  }
 }
 
 new ClassWithPrivateAccessor();

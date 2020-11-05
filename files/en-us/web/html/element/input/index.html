@@ -716,9 +716,16 @@ let hatSize = form.elements["hat-size"];
  <div id="step-include">
  <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
- <p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+ <p>If not explicitly included:</p>
 
- <p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping - the <code>{{anch("min")}}</code> value and increments of the step value, up to the <code>{{anch("max")}}</code> value, if specified.</p>
+ <ul>
+  <li><code>step</code> defaults to 1 for <code>number</code> and <code>range</code>.</li>
+  <li>For the date/time input types, <code>step</code> is expressed in seconds, with the <strong>default step being 60 seconds</strong>. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).</li>
+ </ul>
+
+ <p>The value must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+ <p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping — the <code>{{anch("min")}}</code> value and increments of the step value, up to the <code>{{anch("max")}}</code> value, if specified.</p>
 
  <p>For example, if you have <code>&lt;input type="number" min="10" step="2"&gt;</code>, then any even integer, <code>10</code> or greater, is valid. If omitted, <code>&lt;input type="number"&gt;</code>, any integer is valid, but floats (like <code>4.2</code>) are not valid, because <code>step</code> defaults to <code>1</code>. For <code>4.2</code> to be valid, <code>step</code> would have had to be set to <code>any</code>, 0.1, 0.2, or any the <code>min</code> value would have had to be a number ending in <code>.2</code>, such as <code>&lt;input type="number" min="-5.2"&gt;</code></p>
 
@@ -726,8 +733,6 @@ let hatSize = form.elements["hat-size"];
  <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in contraint validation and will match the <code>:invalid</code> pseudoclass.</p>
  </div>
  </div>
-
- <p>The step attribute is expressed in seconds. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in the other algorithms). The <strong>default step is 60 seconds</strong>.</p>
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
  </dd>

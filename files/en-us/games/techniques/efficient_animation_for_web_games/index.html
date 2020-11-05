@@ -13,7 +13,7 @@ tags:
 <div class="entry-meta"><span class="seoSummary">This article covers techniques and advice for creating efficient animation for web games, with a slant towards supporting lower end devices such as mobile phones. We touch on <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS transitions</a> and <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS animations</a>, and JavaScript loops involving {{ domxref("window.requestAnimationFrame") }}.</span></div>
 </div>
 
-<div class="entry-meta"> </div>
+<div class="entry-meta"></div>
 </header>
 
 <p>There are several techniques worth knowing that will improve the performance of your game or application whilst also using less battery life, especially on low-end devices. It is worth documenting some of these things, as there is evidence to suggest (in popular and widely-used UI libraries, for example) that they aren’t necessarily common knowledge. First off, let us discuss some basic ideas.</p>
@@ -30,7 +30,7 @@ tags:
 
 <p>When you are animating {{ htmlelement("canvas") }} content, or when your DOM animations absolutely must synchronise with canvas content animations, do make sure to use {{ domxref("window.requestAnimationFrame") }}, and not older methods such as {{ domxref("window.setTimeout") }}. Assuming you are running in an arbitrary browsing session, you can never really know how long the browser will take to draw a particular frame. <code>requestAnimationFrame</code> causes the browser to redraw and call your function before that frame gets to the screen. The downside of using this vs. <code>setTimeout</code> is that your animations must be time-based instead of frame-based, i.e. you must keep track of time and set your animation properties based on elapsed time. <code>requestAnimationFrame</code> includes a {{ domxref("DOMHighResTimeStamp") }} in its callback function prototype, which you definitely should use (as opposed to using the {{ domxref("Date") }} object), as this will be the time the frame began rendering, and ought to make your animations look more fluid. You may have a callback that ends up looking something like this:</p>
 
-<pre class="brush: js">var startTime = -1;
+<pre class="brush: js notranslate">var startTime = -1;
 var animationLength = 2000; // Animation length in milliseconds
 
 function doAnimation(timestamp) {
@@ -56,7 +56,7 @@ requestAnimationFrame(doAnimation);</pre>
 
 <p>To save battery life, it is best to only draw when there are things going on, so that would mean calling <code>requestAnimationFrame</code> (or your refresh function, which in turn calls that) in response to events happening in your game. Unfortunately, this makes it very easy to end up drawing things multiple times per frame. We would recommend keeping track of when <code>requestAnimationFrame</code> has been called and only having a single handler for it. There aren’t solid guarantees of what order things will be called in with <em>requestAnimationFrame</em> (though, in our experience, it is in the order in which they were requested), so this also helps cut out any ambiguity. An easy way to do this is to declare your own refresh function that sets a flag when it calls <code>requestAnimationFrame</code>. When the callback is executed, you can unset that flag so that calls to that function will request a new frame again, like this:</p>
 
-<pre class="brush: js">function redraw() {
+<pre class="brush: js notranslate">function redraw() {
   drawPending = false;
   // Do drawing ...
 }
@@ -83,7 +83,7 @@ function requestRedraw() {
 
 <p>To help combat poor animation performance, Chris Lord wrote <a href="https://gitlab.com/Cwiiis/animator-js/blob/master/Animator.js" title="Animator.js">Animator.js</a>, a simple, easy-to-use animation library, heavily influenced by various parts of <a href="http://blogs.gnome.org/clutter/" title="Clutter Project">Clutter</a>, but with a focus on avoiding scope-creep. It does one thing, and it does it well. Animator.js is a fire-and-forget style animation library, designed to be used with games, or other situations where you need many, synchronised, custom animations. It includes a handful of built-in tweening functions, the facility to add your own, and helper functions for animating object properties. Puzzowl uses it to drive all the drawing updates and transitions, by overriding its <code>requestAnimationFrame</code> function with a custom version that makes the request, and appending the game’s drawing function onto the end of the callback like so:</p>
 
-<pre class="brush: js">animator.requestAnimationFrame =
+<pre class="brush: js notranslate">animator.requestAnimationFrame =
   function(callback) {
     requestAnimationFrame(function(t) {
       callback(t);
@@ -95,10 +95,8 @@ function requestRedraw() {
 
 <p>{{EmbedYouTube("hap4iQTMh70")}}</p>
 
-<p> </p>
+
 
 <div class="note">
 <p><strong>Note</strong>: This article was originally written and published by Chris Lord, on his blog — see <a href="http://chrislord.net/index.php/2013/11/29/efficient-animation-for-games-on-the-mobile-web/">Efficient animation for games on the (mobile) web</a>.</p>
 </div>
-
-<p> </p>

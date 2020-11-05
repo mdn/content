@@ -10,13 +10,13 @@ tags:
   - Reference
   - abort()
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>abort()</code></strong> method of the {{domxref("AbortController")}} interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch requests</a>, consumption of any response {{domxref("Body")}}, and streams.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">controller.abort();</pre>
+<pre class="brush: js notranslate">controller.abort();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>When the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (see <code>{signal}</code>, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
 
-<pre class="brush: js">var controller = new AbortController();
+<pre class="brush: js notranslate">var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');

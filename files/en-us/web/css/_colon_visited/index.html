@@ -20,7 +20,7 @@ a:visited {
 
 <p>Styles defined by the <code>:visited</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":active")}}) that has at least equal specificity. To style links appropriately, put the <code>:visited</code> rule after the <code>:link</code> rule but before the <code>:hover</code> and <code>:active</code> rules, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
-<h2 id="Styling_restrictions">Styling restrictions</h2>
+<h2 id="Privacy_restrictions">Privacy restrictions</h2>
 
 <p>For privacy reasons, browsers strictly limit which styles you can apply using this pseudo-class, and how they can be used:</p>
 
@@ -29,6 +29,7 @@ a:visited {
  <li>Allowable SVG attributes are {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.</li>
  <li>The alpha component of the allowed styles will be ignored. The alpha component of the element's non-<code>:visited</code> state will be used instead, except when that component is <code>0</code>, in which case the style set in <code>:visited</code> will be ignored entirely.</li>
  <li>Although these styles can be change the appearance of colors to the end user, the {{domxref("window.getComputedStyle")}} method will lie and always return the value of the non-<code>:visited</code> color.</li>
+ <li>The <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element is never matched by <code>:visited</code>.</li>
 </ul>
 
 <div class="note">

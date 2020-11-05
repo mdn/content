@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">CredentialsContainer.store(Credential).then(function(Credential) { ... } )</pre>
+<pre class="syntaxbox notranslate">CredentialsContainer.store(Credential).then(function(Credential) { ... } )</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,7 +35,25 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<h3 id="Storing_a_password_credential_at_successeful_authentication">Storing a password credential at successeful authentication</h3>
+
+<p>This code would be executed after a user signs up or logs in and the server confirms the credential is correct.</p>
+
+<pre class="brush: js notranslate">// Check if the browser supports password credentials (and the Credential Management API)
+if ("PasswordCredential" in window) {
+  let credential = new PasswordCredential({
+    id: "example-username",
+    name: "John Doe", // In case of a login, the name comes from the server.
+    password: "correct horse battery staple"
+  });
+
+  navigator.credentials.store(credential).then(() =&gt; {
+    console.info("Credential stored in the user agent's credential manager.");
+  }, (err) =&gt; {
+    console.error("Error while storing the credential: ", err);
+  });
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -30,7 +30,7 @@ tags:
 
 <p>Next, we will load the spritesheet — put the following line at the bottom of your <code>preload()</code> function:</p>
 
-<pre class="brush: js">game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
+<pre class="brush: js notranslate">game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
 </pre>
 
 <p>Instead of loading a single image of the ball we can load the whole spritesheet — a collection of different images. We will show the sprites sequentially to create the illusion of animation. The <code>spritesheet()</code> method's two extra paremeters determine the width and height of each single frame in the given spritesheet file, indicating to the program how to chop it up to get the individual frames.</p>
@@ -39,23 +39,23 @@ tags:
 
 <p>Next up, go into your create() function, find the line that loads the ball sprite, and below it put the call to <code>animations.add()</code> seen below:</p>
 
-<pre class="brush: js">ball = game.add.sprite(50, 250, 'ball');
+<pre class="brush: js notranslate">ball = game.add.sprite(50, 250, 'ball');
 ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 </pre>
 
 <p>To add an animation to the object we use the <code>animations.add()</code> method, which contains the following parameters</p>
 
 <ul>
-	<li>The name we chose for the animation</li>
-	<li>An array defining the order in which to display the frames during the animation. If you look again at the <code>wobble.png</code> image, you'll see there are three frames. Phaser extracts these and stores references to them in an array — positions 0, 1, and 2. The above array says that we are displaying frame 0, then 1, then 0, etc.</li>
-	<li>The framerate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.</li>
+ <li>The name we chose for the animation</li>
+ <li>An array defining the order in which to display the frames during the animation. If you look again at the <code>wobble.png</code> image, you'll see there are three frames. Phaser extracts these and stores references to them in an array — positions 0, 1, and 2. The above array says that we are displaying frame 0, then 1, then 0, etc.</li>
+ <li>The framerate, in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.</li>
 </ul>
 
 <h2 id="Applying_the_animation_when_the_ball_hits_the_paddle">Applying the animation when the ball hits the paddle</h2>
 
 <p>In the <code>arcade.collide()</code> method call that handles the collision between the ball and the paddle (the first line inside <code>update()</code>, see below) we can add an extra parameter that specifies a function to be executed every time the collision happens, in the same fashion as the <code>ballHitBrick()</code> function. Update the first line inside <code>update()</code> as shown below:</p>
 
-<pre class="brush: js">function update() {
+<pre class="brush: js notranslate">function update() {
     game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
     paddle.x = game.input.x || game.world.width*0.5;
@@ -64,7 +64,7 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <p>Then we can create the <code>ballHitPaddle()</code> function (having <code>ball</code> and <code>paddle</code> as default parameters), playing the wobble animation when it is called. Add the following function just before your closing <code>&lt;/script&gt;</code> tag:</p>
 
-<pre class="brush: js">function ballHitPaddle(ball, paddle) {
+<pre class="brush: js notranslate">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
 }
 </pre>
@@ -77,7 +77,7 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <p>Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your <code>ballhitBrick()</code> function, find your <code>brick.kill();</code> line, and replace it with the following:</p>
 
-<pre class="brush: js">var killTween = game.add.tween(brick.scale);
+<pre class="brush: js notranslate">var killTween = game.add.tween(brick.scale);
 killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
 killTween.onComplete.addOnce(function(){
     brick.kill();
@@ -88,15 +88,15 @@ killTween.start();
 <p>Let's walk through this so you can see what's happening here:</p>
 
 <ol>
-	<li>When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the <code>add.tween()</code> method, specifying <code>brick.scale</code> as the argument as this is what we want to tween.</li>
-	<li>The <code>to()</code> method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.</li>
-	<li>We will also add the optional <code>onComplete</code> event handler, which defines a function to be executed when the tween finishes.</li>
-	<li>The last thing do to is to start the tween right away using <code>start()</code>.</li>
+ <li>When defining a new tween you have to specify which property will be tweened — in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the <code>add.tween()</code> method, specifying <code>brick.scale</code> as the argument as this is what we want to tween.</li>
+ <li>The <code>to()</code> method defines the state of the object at the end of the tween. It takes an object containing the chosen parameter's desired ending values (scale takes a scale value, 1 being 100% of size, 0 being 0% of size, etc.), the time of the tween in milliseconds and the type of easing to use for the tween.</li>
+ <li>We will also add the optional <code>onComplete</code> event handler, which defines a function to be executed when the tween finishes.</li>
+ <li>The last thing do to is to start the tween right away using <code>start()</code>.</li>
 </ol>
 
 <p>That's the expanded version of the tween definition, but we can also use the shorthand syntax:</p>
 
-<pre class="brush: js">game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
+<pre class="brush: js notranslate">game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
 </pre>
 
 <p>This tween will double the brick's scale in half a second using Elastic easing, will start automatically, and have a delay of 100 miliseconds.</p>

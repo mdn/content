@@ -9,32 +9,32 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Math.atan2()</code></strong> function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0,0) to the point (x,y), for <code>Math.atan2(y,x)</code>.</p>
+<p>The <strong><code>Math.atan2()</code></strong> function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0,0) to the point (x,y), for <code>Math.atan2(y,x)</code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-atan2.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Math.atan2(<var>y</var>, <var>x</var>)</code></pre>
+<pre class="syntaxbox notranslate">Math.atan2(<var>y</var>, <var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>y</code></dt>
+ <dt><code><var>y</var></code></dt>
  <dd>The y coordinate of the point.</dd>
- <dt><code>x</code></dt>
+ <dt><code><var>x</var></code></dt>
  <dd>The x coordinate of the point</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The angle in radians (in <math><semantics><mrow><mo stretchy="false">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="TeX">[-\pi, \pi]</annotation></semantics></math>) between the positive x-axis and the ray from (0,0) to the point <math><semantics><annotation encoding="TeX">(x,y).</annotation></semantics></math></p>
+<p>The angle in radians (in <math><semantics><mrow><mo stretchy="false">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="TeX">[-\pi, \pi]</annotation></semantics></math>) between the positive x-axis and the ray from (0,0) to the point <math><semantics><annotation encoding="TeX">(x,y).</annotation></semantics></math></p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>Math.atan2()</code> method returns a numeric value between -π and π representing the angle theta of an <code>(x, y)</code> point. This is the counterclockwise angle, measured in radians, between the positive X axis, and the point <code>(x, y)</code>. Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.</p>
+<p>The <code>Math.atan2()</code> method returns a numeric value between -π and π representing the angle theta of an <code>(x, y)</code> point. This is the counterclockwise angle, measured in radians, between the positive X axis, and the point <code>(x, y)</code>. Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.</p>
 
 <p><img alt="A simple diagram showing the angle returned by atan2(y, x)" src="https://mdn.mozillademos.org/files/11557/atan2.png" style="height: 300px; width: 300px;"></p>
 
@@ -44,9 +44,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.atan2">Using <code>Math.atan2()</code></h3>
+<h3 id="Using_Math.atan2">Using Math.atan2()</h3>
 
-<pre class="brush: js">Math.atan2(90, 15); // 1.4056476493802699
+<pre class="brush: js notranslate">Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
 
 Math.atan2(±0, -0);               // ±PI.
@@ -65,10 +65,12 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}}</td>
   </tr>
@@ -77,7 +79,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Math.atan2")}}</p>
 

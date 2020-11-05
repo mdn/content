@@ -15,7 +15,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-asinh.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +24,7 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><var>x</var></dt>
+ <dt><code><var>x</var></code></dt>
  <dd>A number.</dd>
 </dl>
 
@@ -36,34 +36,34 @@ tags:
 
 <p>Because <code>asinh()</code> is a static method of <code>Math</code>, you always use it as <code>Math.asinh()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p><math display="block"></math><code>Math.asinh</code> can be emulated with the following function:</p>
-
-<pre class="brush: js notranslate">if (!Math.asinh) Math.asinh = function(x) {
-    var absX = Math.abs(x), w
-    if (absX &lt; 3.725290298461914e-9) // |x| &lt; 2^-28
-        return x
-    if (absX &gt; 268435456) // |x| &gt; 2^28
-        w = Math.log(absX) + Math.LN2
-    else if (absX &gt; 2) // 2^28 &gt;= |x| &gt; 2
-        w = Math.log(2 * absX + 1 / (Math.sqrt(x * x + 1) + absX))
-    else
-        var t = x * x, w = Math.log1p(absX + t / (1 + Math.sqrt(1 + t)))
-
-    return x &gt; 0 ? w : -w
-}
-</pre>
-
-<p><code>Math.log1p</code> may also have to be polyfilled; see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p">Math.log1p</a> for details.</p>
-
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.asinh">Using <code>Math.asinh()</code></h3>
+<h3 id="Using_Math.asinh">Using Math.asinh()</h3>
 
 <pre class="brush: js notranslate">Math.asinh(1);  // 0.881373587019543
 Math.asinh(0);  // 0
 </pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><code>Math.asinh</code> can be emulated with the following function:</p>
+
+<pre class="brush: js notranslate">if (!Math.asinh) Math.asinh = function(x) {
+    var absX = Math.abs(x), w
+    if (absX &lt; 3.725290298461914e-9) // |x| &lt; 2^-28
+        return x
+    if (absX &gt; 268435456) // |x| &gt; 2^28
+        w = Math.log(absX) + Math.LN2
+    else if (absX &gt; 2) // 2^28 &gt;= |x| &gt; 2
+        w = Math.log(2 * absX + 1 / (Math.sqrt(x * x + 1) + absX))
+    else
+        var t = x * x, w = Math.log1p(absX + t / (1 + Math.sqrt(1 + t)))
+
+    return x &gt; 0 ? w : -w
+}
+</pre>
+
+<p><code>Math.log1p</code> may also have to be polyfilled; see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p">Math.log1p</a> for details.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -82,7 +82,7 @@ Math.asinh(0);  // 0
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Math.asinh")}}</p>
 
