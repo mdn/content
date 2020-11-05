@@ -330,7 +330,7 @@
 /en-US/docs/CSS/-moz-box-pack	/en-US/docs/Web/CSS/box-pack
 /en-US/docs/CSS/-moz-box-shadow	/en-US/docs/Web/CSS/box-shadow
 /en-US/docs/CSS/-moz-box-sizing	/en-US/docs/Web/CSS/box-sizing
-/en-US/docs/CSS/-moz-calc	/en-US/docs/Web/CSS/calc
+/en-US/docs/CSS/-moz-calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/CSS/-moz-cell	/en-US/docs/Web/CSS/cursor
 /en-US/docs/CSS/-moz-column-count	/en-US/docs/Web/CSS/column-count
 /en-US/docs/CSS/-moz-column-fill	/en-US/docs/Web/CSS/column-fill
@@ -692,7 +692,7 @@
 /en-US/docs/CSS/animation-name	/en-US/docs/Web/CSS/animation-name
 /en-US/docs/CSS/animation-play-state	/en-US/docs/Web/CSS/animation-play-state
 /en-US/docs/CSS/animation-timing-function	/en-US/docs/Web/CSS/animation-timing-function
-/en-US/docs/CSS/attr	/en-US/docs/Web/CSS/attr
+/en-US/docs/CSS/attr	/en-US/docs/Web/CSS/attr()
 /en-US/docs/CSS/auto	/en-US/docs/Web/CSS/width
 /en-US/docs/CSS/backface-visibility	/en-US/docs/Web/CSS/backface-visibility
 /en-US/docs/CSS/background	/en-US/docs/Web/CSS/background
@@ -756,7 +756,7 @@
 /en-US/docs/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/CSS/break-after	/en-US/docs/Web/CSS/break-after
 /en-US/docs/CSS/break-before	/en-US/docs/Web/CSS/break-before
-/en-US/docs/CSS/calc	/en-US/docs/Web/CSS/calc
+/en-US/docs/CSS/calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/CSS/caption-side	/en-US/docs/Web/CSS/caption-side
 /en-US/docs/CSS/clear	/en-US/docs/Web/CSS/clear
 /en-US/docs/CSS/clip	/en-US/docs/Web/CSS/clip
@@ -2949,7 +2949,7 @@
 /en-US/docs/DOM/Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/DOM/ImageData	/en-US/docs/Web/API/ImageData
 /en-US/docs/DOM/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
-/en-US/docs/DOM/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray
+/en-US/docs/DOM/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/DOM/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/DOM/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
@@ -2959,7 +2959,7 @@
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Example
 /en-US/docs/DOM/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
-/en-US/docs/DOM/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryListListener
+/en-US/docs/DOM/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/DOM/MediaStream	/en-US/docs/Web/API/MediaStream
 /en-US/docs/DOM/MediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/DOM/Media_events	/en-US/docs/Web/Guide/Events/Media_events
@@ -4645,14 +4645,14 @@
 /en-US/docs/Document_Object_Model_(DOM)/HTMLVideoElement	/en-US/docs/DOM/HTMLVideoElement
 /en-US/docs/Document_Object_Model_(DOM)/ImageData	/en-US/docs/Web/API/ImageData
 /en-US/docs/Document_Object_Model_(DOM)/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
-/en-US/docs/Document_Object_Model_(DOM)/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray
+/en-US/docs/Document_Object_Model_(DOM)/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Document_Object_Model_(DOM)/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Document_Object_Model_(DOM)/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Document_Object_Model_(DOM)/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/Document_Object_Model_(DOM)/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
 /en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
-/en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryListListener
+/en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/Media_events	/en-US/docs/Web/Guide/Events/Media_events
 /en-US/docs/Document_Object_Model_(DOM)/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
 /en-US/docs/Document_Object_Model_(DOM)/NameList	/en-US/docs/Web/API/NameList
@@ -9405,6 +9405,8 @@
 /en-US/docs/Web/API/BroadcastChannel.name	/en-US/docs/Web/API/BroadcastChannel/name
 /en-US/docs/Web/API/BroadcastChannel.onmessage	/en-US/docs/Web/API/BroadcastChannel/onmessage
 /en-US/docs/Web/API/BroadcastChannel.postMessage	/en-US/docs/Web/API/BroadcastChannel/postMessage
+/en-US/docs/Web/API/BudgetService/getBudget	/en-US/docs/Web/API/BudgetService
+/en-US/docs/Web/API/BudgetService/getCost	/en-US/docs/Web/API/BudgetService
 /en-US/docs/Web/API/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size
@@ -9676,6 +9678,7 @@
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/Document/fullscreenElement	/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/en-US/docs/Web/API/Document/getAnimations	/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations
 /en-US/docs/Web/API/Document/getSelection	/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/Document/characterSet
 /en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
@@ -9720,6 +9723,8 @@
 /en-US/docs/Web/API/DocumentFragment/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
+/en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot
 /en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureEnabled	/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement
 /en-US/docs/Web/API/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
@@ -10168,16 +10173,18 @@
 /en-US/docs/Web/API/HTMLHTMLElement.version	/en-US/docs/Web/API/HTMLHtmlElement/version
 /en-US/docs/Web/API/HTMLIFrameElement.contentWindow	/en-US/docs/Web/API/HTMLIFrameElement/contentWindow
 /en-US/docs/Web/API/HTMLIFrameElement/referrer	/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy
+/en-US/docs/Web/API/HTMLIFrameElement/setNfcFocus	/en-US/docs/Web/API/HTMLIFrameElement
 /en-US/docs/Web/API/HTMLImageElement.Image	/en-US/docs/Web/API/HTMLImageElement/Image
 /en-US/docs/Web/API/HTMLImageElement/referrer	/en-US/docs/Web/API/HTMLImageElement/referrerPolicy
 /en-US/docs/Web/API/HTMLInputElement.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
-/en-US/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray
+/en-US/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Web/API/HTMLInputElement.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Web/API/HTMLInputElement.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/Web/API/HTMLInputElement/HTMLInputElement.setRangeText()	/en-US/docs/Web/API/HTMLInputElement/setRangeText
 /en-US/docs/Web/API/HTMLInputElement/change_event	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/HTMLInputElement/click	/en-US/docs/Web/API/HTMLElement/click
+/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/HTMLInputElement/stepUp()	/en-US/docs/Web/API/HTMLInputElement/stepUp
 /en-US/docs/Web/API/HTMLLinkElement.rel	/en-US/docs/Web/API/HTMLLinkElement/rel
 /en-US/docs/Web/API/HTMLLinkElement.relList	/en-US/docs/Web/API/HTMLLinkElement/relList
@@ -10370,7 +10377,7 @@
 /en-US/docs/Web/API/IndexedDatabase	/en-US/docs/Web/API/IDBFactorySync
 /en-US/docs/Web/API/InitMSManipulationEvent	/en-US/docs/Web/API/MSManipulationEvent/initMSManipulationEvent
 /en-US/docs/Web/API/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray
-/en-US/docs/Web/API/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray
+/en-US/docs/Web/API/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
 /en-US/docs/Web/API/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Web/API/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
@@ -10439,6 +10446,7 @@
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaMetadata/MediaMetadata.title	/en-US/docs/Web/API/MediaMetadata/title
 /en-US/docs/Web/API/MediaQueryList/addListener()	/en-US/docs/Web/API/MediaQueryList/addListener
+/en-US/docs/Web/API/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Web/API/MediaRecorder.ondataavailable	/en-US/docs/Web/API/MediaRecorder/ondataavailable
 /en-US/docs/Web/API/MediaRecorder.onerror	/en-US/docs/Web/API/MediaRecorder/onerror
 /en-US/docs/Web/API/MediaRecorder.onpause	/en-US/docs/Web/API/MediaRecorder/onpause
@@ -12397,7 +12405,7 @@
 /en-US/docs/Web/CSS/-moz-box-pack	/en-US/docs/Web/CSS/box-pack
 /en-US/docs/Web/CSS/-moz-box-shadow	/en-US/docs/Web/CSS/box-shadow
 /en-US/docs/Web/CSS/-moz-box-sizing	/en-US/docs/Web/CSS/box-sizing
-/en-US/docs/Web/CSS/-moz-calc	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/-moz-calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/Web/CSS/-moz-cell	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/-moz-column-count	/en-US/docs/Web/CSS/column-count
 /en-US/docs/Web/CSS/-moz-column-fill	/en-US/docs/Web/CSS/column-fill
@@ -12596,6 +12604,7 @@
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
+/en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_Functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_In_Grid_Layout	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
@@ -12671,12 +12680,12 @@
 /en-US/docs/Web/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/imagefunction
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
-/en-US/docs/Web/CSS/attr()	/en-US/docs/Web/CSS/attr
+/en-US/docs/Web/CSS/attr	/en-US/docs/Web/CSS/attr()
 /en-US/docs/Web/CSS/auto	/en-US/docs/Web/CSS/width
 /en-US/docs/Web/CSS/bleed	/en-US/docs/Web/CSS/%40page/bleed
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-/en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/conic-gradient()	/en-US/docs/Web/CSS/conic-gradient
@@ -12772,7 +12781,7 @@
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/%40font-face/unicode-range
 /en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url
 /en-US/docs/Web/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
-/en-US/docs/Web/CSS/var()	/en-US/docs/Web/CSS/var
+/en-US/docs/Web/CSS/var	/en-US/docs/Web/CSS/var()
 /en-US/docs/Web/CSS/var-*	/en-US/docs/Web/CSS/--%252A
 /en-US/docs/Web/CSS/visible	/en-US/docs/Web/CSS/visibility
 /en-US/docs/Web/CSS/word-wrap	/en-US/docs/Web/CSS/overflow-wrap
@@ -14669,7 +14678,7 @@
 /en-US/docs/tx.py.txt_here	/en-US/docs/Tx.py.txt
 /en-US/docs/type	/en-US/docs/Document_Object_Model_(DOM)/event.type
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-/en-US/docs/var	/en-US/docs/Web/CSS/var
+/en-US/docs/var	/en-US/docs/Web/CSS/var()
 /en-US/docs/video	/es/docs/Web/HTML/Elemento/video
 /en-US/docs/view	/en-US/docs/Document_Object_Model_(DOM)/event.view
 /en-US/docs/width	/en-US/docs/Web/CSS/width

@@ -5,31 +5,32 @@ tags:
   - Constructor
   - JavaScript
   - Reference
+  - ReferenceError
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>ReferenceError</strong></code> object represents an error when a non-existent variable is referenced.</p>
+<p>The <strong><code>ReferenceError</code></strong> object represents an error when a non-existent variable is referenced.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+<pre class="syntaxbox notranslate">new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>message</var></code> {{optional_inline}}</dt>
- <dd>Optional. Human-readable description of the error.</dd>
+ <dt><code><var>message</var></code> {{optional_inline}}</dt>
+ <dd>Human-readable description of the error.</dd>
  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
- <dd>Optional. The name of the file containing the code that caused the exception.</dd>
+ <dd>The name of the file containing the code that caused the exception.</dd>
  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
- <dd>Optional. The line number of the code that caused the exception.</dd>
+ <dd>The line number of the code that caused the exception</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Catching_a_ReferenceError">Catching a <code>ReferenceError</code></h3>
+<h3 id="Catching_a_ReferenceError">Catching a ReferenceError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -42,9 +43,9 @@ tags:
 }
 </pre>
 
-<h3 id="Creating_a_ReferenceError">Creating a <code>ReferenceError</code></h3>
+<h3 id="Creating_a_ReferenceError">Creating a ReferenceError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -60,10 +61,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
   </tr>

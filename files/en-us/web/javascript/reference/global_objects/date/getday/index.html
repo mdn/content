@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.getDay()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -26,20 +26,20 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_getDay">Using <code>getDay()</code></h3>
+<h3 id="Using_getDay">Using getDay()</h3>
 
 <p>The second statement below assigns the value 1 to <code>weekday</code>, based on the value of the {{jsxref("Date")}} object <code>Xmas95</code>. December 25, 1995, is a Monday.</p>
 
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> If needed, the full name of a day (<code>"Monday"</code> for example) can be obtained by using {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} with an <code>options</code> parameter. Using this method, the internationalization is made easier:</p>
+<p><strong>Note:</strong> If needed, the full name of a day ("<code>Monday</code>" for example) can be obtained by using {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} with an <code>options</code> parameter. Using this method, the internationalization is made easier:</p>
 
-<pre class="brush: js">var options = { weekday: 'long'};
+<pre class="brush: js notranslate">var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 // Monday
 console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));

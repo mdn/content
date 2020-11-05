@@ -16,7 +16,13 @@ tags:
 
 <h2 id="Web_authentication_concepts_and_usage">Web authentication concepts and usage</h2>
 
-<p>The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This resolves significant security problems related to {{interwiki("wikipedia", "Phishing", "phishing")}}, {{interwiki("wikipedia", "Data_breach", "data breaches")}}, and attacks against SMS texts or other second-factor authentication methods while at the same time significantly increasing ease of use (since users don't have to manage dozens of increasingly complicated passwords).</p>
+<p>The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This has some benefits:</p>
+
+<ul>
+ <li><strong>Protection against phising:</strong> An attacker who creates a fake login website can't login as the user because the signature changes with the <a href="/en-US/docs/Glossary/Origin">origin</a> of the website.</li>
+ <li><strong>Reduced impact of data breaches:</strong> Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.</li>
+ <li><strong>Invulnerable to password attacks:</strong> Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are way easier to brute-force than a digital signature.</li>
+</ul>
 
 <p>Many websites already have pages that allow users to register new accounts or sign in to an existing account, and the Web Authentication API acts as a replacement or supplement to those on those existing webpages. Similar to the other forms of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a>, the Web Authentication API has two basic methods that correspond to register and login:</p>
 
@@ -25,15 +31,17 @@ tags:
  <li>{{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - when used with the publicKey option, uses an existing set of credentials to authenticate to a service, either logging a user in or as a form of second-factor authentication.</li>
 </ul>
 
-<p><strong>Please note:</strong> both create() and get() require a <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure Context</a> (e.g. - the server is connected by https or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
+<div class="blockIndicator note">
+<p><strong>Please note:</strong> Both <code>create()</code> and <code>get()</code> require a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.</p>
+</div>
 
-<p>In their most basic forms, both create() and get() receive a very large random number called a challenge from the server and they return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.</p>
+<p>In their most basic forms, both <code>create()</code> and <code>get()</code> receive a very large random number called the "challenge" from the server and they return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.</p>
 
 <p>In order to understand how the create() and get() methods fit into the bigger picture, it is important to understand that they sit between two components that are outside the browser:</p>
 
 <ol>
  <li><strong>Server</strong> - the Web Authentication API is intended to register new credentials on a server (also referred to as a service or a <a href="https://en.wikipedia.org/wiki/Relying_party">relying party</a>) and later use those same credentials on that same server to authenticate a user.</li>
- <li><strong>Authenticator</strong> - the credentials are created and stored in a device called an authenticator. This is a new concept in authentication: when authenticating using passwords, the password is stored in a user's brain and no other device is needed; when authenticating using web authentication, the password is replaced with a key pair that is stored in an authenticator. The authenticator may be embedded into an operating system, such as Windows Hello, or may be a physical token, such as a USB or Bluetooth Security Key.</li>
+ <li><strong>Authenticator</strong> - the credentials are created and stored in a device called an authenticator. This is a new concept in authentication: when authenticating using passwords, the password is stored in a user's brain and no other device is needed; when authenticating using web authentication, the password is replaced with a key pair that is stored in an authenticator. The authenticator may be embedded into the user agent, into an operating system, such as Windows Hello, or it may be a physical token, such as a USB or Bluetooth Security Key.</li>
 </ol>
 
 <h3 id="Registration">Registration</h3>

@@ -12,11 +12,13 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}</p>
 
-<p class="summary">The Credential Management API lets a website store and retrieve user, federated, and public key credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.</p>
+<p class="summary">The Credential Management API lets a website store and retrieve password, public key, and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.</p>
 
 <h2 id="Credential_management_concepts_and_usage">Credential management concepts and usage</h2>
 
-<p>This API lets websites interact with a user agent’s password system so that websites can deal in a uniform way with site credentials and user agents can provide better assistance with the management of their credentials. For example, user agents have a particularly hard time dealing with federated identity providers or esoteric sign-in mechanisms that use more than just a username and password. To address these problems, the Credential Management API provides ways for a website to store and retrieve different types of credentials. This give users capabilities such as seeing the federated account they used to sign on to a site, or resuming a session without the explicit sign-in flow of an expired session.</p>
+<p>This API lets websites interact with a user agent’s password system directly so that websites can deal in a uniform way with site credentials and user agents can provide better assistance with the management of their credentials. For example, user agents have a particularly hard time dealing with federated identity providers or esoteric sign-in mechanisms.</p>
+
+<p>To address these problems, the Credential Management API provides ways for a website to store and retrieve different types of credentials. This gives users capabilities such as seeing the federated account they used to sign on to a site, or resuming a session without the explicit sign-in flow of an expired session.</p>
 
 <div class="note">
 <p>This API is restricted to top-level contexts. Calls to <code>get()</code> and <code>store()</code> within an <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
@@ -38,7 +40,7 @@ tags:
  <dt>{{domxref("PasswordCredential")}}</dt>
  <dd>Provides information about a username/password pair.</dd>
  <dt>{{domxref("PublicKeyCredential")}}</dt>
- <dd>Provides a credential for logging in using an un-phishable and data-breach resistant asymmetric key pair instead of a password.</dd>
+ <dd>Provides a credential for logging in using a more secure system based on asymmetric cryptography instead of a password.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

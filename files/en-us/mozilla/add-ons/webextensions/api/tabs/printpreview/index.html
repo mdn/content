@@ -13,25 +13,24 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>Opens print preview for the active tab.</div>
+<p>Opens print preview for the active tab.</p>
 
-<div> </div>
 
 <div>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</div>
 
-<div> </div>
+<div></div>
 
 <div>An extension can detect when print preview has been closed by listening to the <a href="/en-US/docs/Web/Events/afterprint">afterprint</a> event:</div>
 
-<div> </div>
+<div></div>
 
 <div>
-<pre class="brush: js no-line-numbers" id="ct-13">window.addEventListener("afterprint", resumeFunction, false);</pre>
+<pre class="brush: js no-line-numbers notranslate" id="ct-13">window.addEventListener("afterprint", resumeFunction, false);</pre>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var openingPreview = browser.tabs.printPreview()
+<pre class="syntaxbox brush:js notranslate">var openingPreview = browser.tabs.printPreview()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -46,7 +45,7 @@ tags:
 
 <p>In this example a background script listens for a click on a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a>, then opens print preview for the currently active tab:</p>
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+<pre class="brush: js notranslate">browser.browserAction.onClicked.addListener(() =&gt; {
   browser.tabs.printPreview()
     .then(() =&gt; {
       console.log("Entered print preview");

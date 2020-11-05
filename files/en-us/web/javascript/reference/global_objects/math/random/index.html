@@ -16,7 +16,7 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/math-random.html")}}</div>
 
 <div class="note">
-<p><code>Math.random()</code> <em>does not</em> provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the <a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a> method.</p>
+<p><code>Math.random()</code> <em>does not</em> provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} method.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -75,10 +75,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
   </tr>
@@ -91,8 +93,8 @@ tags:
 
 <p>{{Compat("javascript.builtins.Math.random")}}</p>
 
-<h2 class="countTop" id="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>
+ <li>{{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}}</li>
 </ul>

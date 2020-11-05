@@ -63,7 +63,8 @@ tags:
  <li>Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.</li>
  <li>Avoid using heading tags to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property. Headings use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.</li>
  <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, next use <code>&lt;h2&gt;</code> and so on.</li>
- <li>You should only use one <code>&lt;h1&gt;</code> per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — <code>&lt;h1&gt;</code> is the most important heading, and tells you what the purpose of the overall page is. You wouldn't have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screenreader users, and {{glossary("SEO")}}.</li>
+ <li>If you don't use semantic HTML tags, you should only use one <code>&lt;h1&gt;</code> per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — <code>&lt;h1&gt;</code> is the most important heading, and tells you what the purpose of the overall page is. You wouldn't have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screenreader users, and {{glossary("SEO")}}.</li>
+ <li>From HTML5, if you use semantic HTML (e.g. semantic tags like the <code>&lt;section&gt;</code> tag), you can have multiple <code>&lt;h1&gt;</code> in the same page as long as they are correctly nested in a hierarchy. As an example, you can have the main <code>&lt;h1&gt;</code> which is the page title, but then also another <code>&lt;h1&gt;</code> within a <code>&lt;section&gt;</code> tag somewhere in the page. The semantic of the HTML tags will then create this hierarchy, even if both headings have the same level. (See {{SectionOnPage("/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines","Section_Elements_in_HTML5")}} for more information.)</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -72,7 +73,7 @@ tags:
 
 <p>The following code shows all the heading levels, in use.</p>
 
-<pre class="brush: html">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h2&gt;Heading level 2&lt;/h2&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 &lt;h4&gt;Heading level 4&lt;/h4&gt;
@@ -88,7 +89,7 @@ tags:
 
 <p>The following code shows a few headings with some content under them.</p>
 
-<pre class="brush: html">&lt;h1&gt;Heading elements&lt;/h1&gt;
+<pre class="brush: html notranslate">&lt;h1&gt;Heading elements&lt;/h1&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Some text here...&lt;/p&gt;
 
@@ -107,6 +108,26 @@ tags:
 
 <p>{{ EmbedLiveSample('Example_page', '280', '480', '') }}</p>
 
+<h3 id="Semantical_hierarchy">Semantical hierarchy</h3>
+
+<p>The following code shows how you can have multiple <code>&lt;h1&gt;</code> in the same page by using semantical tags like <code>section</code>, <code>articles</code>, etc. to create the hierarchy.</p>
+
+<pre class="brush: html notranslate">&lt;body&gt;
+  &lt;h1&gt;John Doe's Blog&lt;/h1&gt;
+  &lt;article&gt;
+    &lt;h1&gt;This is my first blog post&lt;/h1&gt;
+    &lt;p&gt;Some text here...&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Another blog post&lt;/h1&gt;
+    &lt;p&gt;Some text here...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/body&gt;</pre>
+
+<p>Here is the result of this code:</p>
+
+<p>{{ EmbedLiveSample('Semantical_hierarchy', '280', '280', '') }}</p>
+
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <h3 id="Navigation">Navigation</h3>
@@ -115,14 +136,14 @@ tags:
 
 <h4 id="Dont">Don't</h4>
 
-<pre class="brush: html example-bad">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html example-bad notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 &lt;h4&gt;Heading level 4&lt;/h4&gt;
 </pre>
 
 <h4 id="Do">Do</h4>
 
-<pre class="brush: html example-good">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html example-good notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h2&gt;Heading level 2&lt;/h2&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 </pre>
@@ -187,7 +208,7 @@ tags:
 
 <h4 id="Example">Example</h4>
 
-<pre class="brush: html">&lt;header&gt;
+<pre class="brush: html notranslate">&lt;header&gt;
   &lt;nav aria-labelledby="primary-navigation"&gt;
     &lt;h2 id="primary-navigation"&gt;Primary navigation&lt;/h2&gt;
     &lt;!-- navigation items --&gt;

@@ -12,13 +12,13 @@ tags:
   - Reference
   - getFile
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}}</p>
+<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
 
 <p>The {{domxref("FileSystemDirectoryEntry")}} interface's method <code><strong>getFile</strong></code><strong><code>()</code></strong> returns a {{domxref("FileSystemFileEntry")}} object corresponding to a file contained somewhere within the directory subtree rooted at the directory on which it's called.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>FileSystemDirectoryEntry</em>.getFile([<em>path</em>][, <em>options</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+<pre class="syntaxbox notranslate"><em>FileSystemDirectoryEntry</em>.getFile([<em>path</em>][, <em>options</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
 
 <h3 class="syntaxbox" id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>In this example, a function is presented whose job it is to locate within a user's app data directory a JSON file containing a user dictionary for a specified language, then load that dictionary.</p>
 
-<pre class="brush: js">let dictionary = null;
+<pre class="brush: js notranslate">let dictionary = null;
 
 function loadDictionaryForLanguage(appDataDirEntry, lang) {
   dictionary = null;

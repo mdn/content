@@ -16,11 +16,17 @@ tags:
 
 
 
+<ul>
+</ul>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
   // ...
 }</pre>
+
+<ul>
+</ul>
 
 <h2 id="Description">Description</h2>
 
@@ -42,14 +48,26 @@ myFun("one", "two", "three", "four", "five", "six")
 // manyMoreArgs, ["three", "four", "five", "six"]
 </pre>
 
+<h4 id="Quick_Reference">Quick Reference:</h4>
+
+<ul>
+ <li>There can be only one ...restParam.<br>
+  <code>   foo(...one, ...wrong, ...wrong)</code></li>
+ <li>Rest parameter must be the last argument.<br>
+  <code>   foo(...wrong, arg2, arg3)</code><br>
+  <code>   foo(arg1, arg2, ...correct)</code></li>
+ <li>Rest parameter can be <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured Arrays</a> (for advanced users only :).<br>
+  <code>   foo(arg1, ...[2,4,6])</code></li>
+</ul>
+
 <h3 id="Difference_between_rest_parameters_and_the_arguments_object">Difference between rest parameters and the <code>arguments</code> object</h3>
 
 <p>There are three main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:</p>
 
 <ul>
- <li>rest parameters are only the ones that haven't been given a separate name (i.e. formally defined in function expression), while the <code>arguments</code> object contains <em>all</em> arguments passed to the function;</li>
- <li>the <code>arguments</code> object is not a real array, while rest parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be applied on it directly;</li>
- <li>the <code>arguments</code> object has additional functionality specific to itself (like the <code>callee</code> property).</li>
+ <li>The <code>arguments</code> object is <strong>not a real array</strong>, while rest parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be applied on it directly;</li>
+ <li>The <code>arguments</code> object has additional functionality specific to itself (like the <code>callee</code> property).</li>
+ <li>The <code>...restParam</code> bundles all the extra parameters into a single array, therefore it does not contain any named argument defined <strong>before</strong> the <code>...restParam</code>. Whereas the <code>arguments</code> object contains all of the parameters -- including all of the stuff in the <code>...restParam</code> -- <strong>un</strong>bundled.</li>
 </ul>
 
 <h3 id="From_arguments_to_an_array">From arguments to an array</h3>
@@ -94,9 +112,9 @@ function f(...args) {
 
 myFun("one", "two", "three", "four", "five", "six")
 
-// a, one
-// b, two
-// manyMoreArgs, ["three", "four", "five", "six"]
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three", "four", "five", "six"] &lt;-- notice it's an array?
 </pre>
 
 <p>Below... even though there is just one value, the last argument still gets put into an array.</p>
@@ -105,9 +123,9 @@ myFun("one", "two", "three", "four", "five", "six")
 
 myFun("one", "two", "three")
 
-// a, one
-// b, two
-// manyMoreArgs, ["three"]</pre>
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three"] &lt;-- notice it's an array, even though there's just one value?</pre>
 
 <p>Below, the third argument isn't provided, but <code>manyMoreArgs</code> is still an array (albeit an empty one).</p>
 
@@ -115,9 +133,9 @@ myFun("one", "two", "three")
 
 myFun("one", "two")
 
-// a, one
-// b, two
-// manyMoreArgs, []</pre>
+// a, "one"
+// b, "two"
+// manyMoreArgs, [] &lt;-- yip, still an array</pre>
 
 <h3 id="Argument_length">Argument length</h3>
 
@@ -142,11 +160,11 @@ fun1(5, 6, 7)  // 3
   })
 }
 
-let arr = multiply(2, 1, 2, 3)
-console.log(arr)  // [2, 4, 6]
+let arr = multiply(2, 15, 25, 42)
+console.log(arr)  // [30, 50, 84]
 </pre>
 
-<h3 id="Use_with_the_arguments_object">Use with the arguments object</h3>
+<h3 id="Rest_param_is_a_real_array_arguments_is_not.">Rest param is a real array, arguments is not.</h3>
 
 <p><code>Array</code> methods can be used on rest parameters, but not on the <code>arguments</code> object:</p>
 

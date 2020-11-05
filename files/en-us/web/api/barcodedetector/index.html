@@ -27,7 +27,6 @@ tags:
  <ul>
   <li><code>boundingBox</code>: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.</li>
   <li><code>cornerPoints</code>: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.</li>
-
   <li><code>format</code>: The detected barcode format. (For a full list of formats see the [landing page])</li>
   <li><code>rawValue</code>: A {{jsxref('String')}} decoded from the barcode data.</li>
  </ul>
@@ -85,8 +84,8 @@ barcodeDetector.getSupportedFormats()
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('','Barcode Detection API','BarcodeDetector')}}</td>
-   <td>{{Spec2('Barcode Detection API')}}</td>
+   <td>{{SpecName('Shape Detection API','#barcodedetector','BarcodeDetector')}}</td>
+   <td>{{Spec2('Shape Detection API')}}</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>

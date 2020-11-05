@@ -17,6 +17,8 @@ tags:
 
 
 
+<p>Note that while in most languages, ‘%’ is a remainder operator, in some (e.g. <a href="https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages">Python, Perl</a>) it is a modulo operator. For positive values, the two are equivalent, but when the dividend and divisor are of different signs, they give different results. To obtain a modulo in JavaScript, in place of <code>a % n</code>, use <code>((a % n ) + n ) % n</code>.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>var1</var> % <var>var2</var>
@@ -42,6 +44,15 @@ tags:
 <h3 id="Remainder_with_NaN">Remainder with NaN</h3>
 
 <pre class="brush: js notranslate">NaN % 2 // NaN</pre>
+
+<h3 id="Remainder_with_Infinity">Remainder with Infinity</h3>
+
+<pre class="brush: js notranslate">Infinity % 2 // NaN
+Infinity % 0 // NaN
+Infinity % Infinity // NaN
+</pre>
+
+
 
 <h2 id="Specifications">Specifications</h2>
 

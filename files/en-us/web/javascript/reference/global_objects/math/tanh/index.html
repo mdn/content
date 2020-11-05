@@ -18,12 +18,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Math.tanh(<var>x</var>)</code></pre>
+<pre class="syntaxbox notranslate">Math.tanh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>x</code></dt>
+ <dt><code><var>x</var></code></dt>
  <dd>A number.</dd>
 </dl>
 
@@ -35,12 +35,11 @@ tags:
 
 <p>Because <code>tanh()</code> is a static method of <code>Math</code>, you always use it as <code>Math.tanh()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
 
-
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js">Math.tanh = Math.tanh || function(x){
+<pre class="brush: js notranslate">Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
@@ -48,21 +47,22 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.tanh">Using <code>Math.tanh()</code></h3>
+<h3 id="Using_Math.tanh">Using Math.tanh()</h3>
 
-<pre class="brush: js">Math.tanh(0);        // 0
+<pre class="brush: js notranslate">Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
 </pre>
 
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}}</td>
   </tr>

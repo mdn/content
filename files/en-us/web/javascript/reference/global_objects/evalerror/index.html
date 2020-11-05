@@ -15,7 +15,7 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError/EvalError"><code>EvalError()</code></a></dt>
+ <dt>{{jsxref("EvalError/EvalError", "EvalError()")}}</dt>
  <dd>Creates a new <code>EvalError</code> object.</dd>
 </dl>
 
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="Creating_an_EvalError">Creating an EvalError</h3>
 
-<pre class="brush: js">try {
+<pre class="brush: js notranslate">try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -58,10 +58,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}</td>
   </tr>
@@ -71,11 +73,9 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-<div>
 
 
 <p>{{Compat("javascript.builtins.EvalError")}}</p>
-</div>
 </div>
 
 <h2 id="See_also">See also</h2>

@@ -136,7 +136,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 <h3 id="Binding_this_with_prototype_and_static_methods">Binding <code>this</code> with prototype and static methods</h3>
 
-<p>When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning a variable to the method and then calling it, the <code>this</code> value will be <code>undefined</code> inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the <code>class</code> body's syntactic boundary is always executed in strict mode.</p>
+<p>When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the <code>this</code> value will be <code>undefined</code> inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the <code>class</code> body's syntactic boundary is always executed in strict mode.</p>
 
 <pre class="brush: js notranslate">class Animal {
   speak() {

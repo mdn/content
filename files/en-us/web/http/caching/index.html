@@ -28,14 +28,16 @@ tags:
 
 <h2 id="Targets_of_caching_operations">Targets of caching operations</h2>
 
-<p>HTTP caching is optional, but reusing a cached resource is usually desirable. However, common HTTP caches are typically limited to caching responses to {{HTTPMethod("GET")}} and may decline other methods. The primary cache key consists of the request method and target URI (oftentimes only the URI is used as only GET requests are caching targets). Common forms of caching entries are:</p>
+<p>HTTP caching is optional but usually desirable. HTTP caches are typically limited to caching responses to {{HTTPMethod("GET")}}; they may decline other methods. The primary cache key consists of the request method and target URI (often only the URI is used — this is because only <code>GET</code> requests are caching targets).</p>
+
+<p>Common forms of caching entries are:</p>
 
 <ul>
-	<li>Successful results of a retrieval request: a {{HTTPStatus(200)}} (OK) response to a {{HTTPMethod("GET")}} request containing a resource like HTML documents, images or files.</li>
-	<li>Permanent redirects: a {{HTTPStatus(301)}} (Moved Permanently) response.</li>
-	<li>Error responses: a {{HTTPStatus(404)}} (Not Found) result page.</li>
-	<li>Incomplete results: a {{HTTPStatus(206)}} (Partial Content) response.</li>
-	<li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
+ <li>Successful results of a retrieval request: a {{HTTPStatus(200)}} (OK) response to a {{HTTPMethod("GET")}} request containing a resource like HTML documents, images or files.</li>
+ <li>Permanent redirects: a {{HTTPStatus(301)}} (Moved Permanently) response.</li>
+ <li>Error responses: a {{HTTPStatus(404)}} (Not Found) result page.</li>
+ <li>Incomplete results: a {{HTTPStatus(206)}} (Partial Content) response.</li>
+ <li>Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.</li>
 </ul>
 
 <p>A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header <a href="#Varying_responses">below</a>.</p>
@@ -71,7 +73,7 @@ Cache-Control: public
 
 <h4 id="Expiration">Expiration</h4>
 
-<p>The most important directive here is "<code>max-age=&lt;seconds&gt;</code>" which is the maximum amount of time a resource will be considered fresh. Contrary to {{HTTPHeader("Expires")}}, this directive is relative to the time of the request. For the files in the application that will not change, you can usually add aggressive caching. This includes static files such as images, CSS files and JavaScript files, for example.</p>
+<p>The most important directive here is <code>max-age=&lt;seconds&gt;</code>, which is the maximum amount of time in which a resource will be considered fresh. This directive is relative to the time of the request, and overrides the {{HTTPHeader("Expires")}} header (if set). For the files in the application that will not change, you can normally use aggressive caching. This includes static files such as images, CSS files, and JavaScript files, for example.</p>
 
 <p>For more details, see also the <a href="#Freshness">Freshness</a> section below.</p>
 
@@ -85,7 +87,9 @@ Cache-Control: public
 
 <h3 id="The_Pragma_header">The <code>Pragma</code> header</h3>
 
-<p>{{HTTPHeader("Pragma")}} is a HTTP/1.0 header, it is not specified for HTTP responses and is therefore not a reliable replacement for the general HTTP/1.1 <code>Cache-Control</code> header, although it does behave the same as <code>Cache-Control: no-cache</code>, if the <code>Cache-Control</code> header field is omitted in a request. Use <code>Pragma</code> only for backwards compatibility with HTTP/1.0 clients.</p>
+<p>{{HTTPHeader("Pragma")}} is an HTTP/1.0 header. <code>Pragma: no-cache</code> is like <code>Cache-Control: no-cache</code> in that it forces caches to submit the request to the origin server for validation, before releasing a cached copy. However, <code>Pragma</code> is not specified for HTTP responses and is therefore not a reliable replacement for the general HTTP/1.1 <code>Cache-Control</code> header.</p>
+
+<p><code>Pragma</code> should only be used for backwards compatibility with HTTP/1.0 caches where the <code>Cache-Control</code> HTTP/1.1 header is not yet present.</p>
 
 <h2 id="Freshness">Freshness</h2>
 
@@ -96,7 +100,7 @@ Cache-Control: public
 <p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
 
 <p>The freshness lifetime is calculated based on several headers. If a "<code>Cache-Control: max-age=N</code>" header is specified, then the freshness lifetime is equal to N. If this header is not present, which is very often the case, it is checked if an {{HTTPHeader("Expires")}} header is present. If an <code>Expires</code> header exists, then its value minus the value of the {{HTTPHeader("Date")}} header determines the freshness lifetime. Finally, if neither header is present, look for a {{HTTPHeader("Last-Modified")}} header. If this header is present, then the cache's freshness lifetime is equal to the value of the <code>Date</code> header minus the value of the <code>Last-modified</code> header divided by 10.<br>
-The expiration time is computed as follows:</p>
+ The expiration time is computed as follows:</p>
 
 <pre class="notranslate">expirationTime = responseTime + freshnessLifetime - currentAge
 </pre>
@@ -133,23 +137,49 @@ The expiration time is computed as follows:</p>
 
 <h2 id="Varying_responses">Varying responses</h2>
 
-<p>The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server.</p>
+<p>The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used, or if a fresh one must be requested from the origin server.</p>
 
-<p>When a cache receives a request that can be satisfied by a cached response that has a <code>Vary</code> header field, it must not use that cached response unless all header fields as nominated by the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
+<p>When a cache receives a request that has a <code>Vary</code> header field, it must not use a cached response by default unless all header fields specified in the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
 
-<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;"></p>
+<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;">This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set <code>Vary: Accept-Encoding</code> to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. <code>Accept-Encoding: gzip,deflate,sdch</code>.</p>
 
-<p>This can be useful for serving content dynamically, for example. When using the <code>Vary: User-Agent</code> header, caching servers should consider the user agent when deciding whether to serve the page from cache. If you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. In addition, it can help Google and other search engines to discover the mobile version of a page, and might also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.</p>
+<pre class="notranslate">Vary: <code>Accept-Encoding</code>
+</pre>
 
-<pre class="notranslate">Vary: User-Agent</pre>
+<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
 
-<p>Because the {{HTTPHeader("User-Agent")}} header value is different ("varies") for mobile and desktop clients, caches will not be used to serve mobile content mistakenly to desktop users or vice versa.</p>
+<p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
+
+<pre class="notranslate">Vary: User-Agent
+</pre>
+
+<h3 id="Normalisation">Normalisation</h3>
+
+<p>As discussed above, caching servers will by default match future requests <em>only</em> to requests with <em>exactly</em> the same headers and header values. That means a request will be made to the origin and a new cache will be created for every slight variant that might be specified by different user-agents.</p>
+
+<p>For example, by default all of the following result in a separate request to the origin and a separate cache entry: <code>Accept-Encoding: gzip,deflate,sdch</code>, <code>Accept-Encoding: gzip,deflate</code>, <code>Accept-Encoding: gzip</code>. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!</p>
+
+<p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization </strong>to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
+
+<pre class="notranslate"><code>// Normalize Accept-Encoding
+if (req.http.Accept-Encoding) {
+  if (req.http.Accept-Encoding ~ "gzip") {
+    set req.http.Accept-Encoding = "gzip";
+  }
+  // elsif other encoding types to check
+else {
+  unset req.http.Accept-Encoding;
+  }
+}</code>
+</pre>
+
+<p><code>User-Agent</code> has even more variation than <code>Accept-Encoding</code>. So if using <code>Vary: User-Agent</code> for caching mobile/desktop variants of files you'd similarly check for the presence of <code>"mobile"</code> and <code>"desktop"</code> in the request <code>User-Agent</code> header, and then clear it.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="https://tools.ietf.org/html/rfc7234">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching</a></li>
-	<li><a href="https://www.mnot.net/cache_docs">Caching Tutorial – Mark Nottingham</a></li>
-	<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP caching – Ilya Grigorik</a></li>
-	<li><a href="https://redbot.org/">RedBot</a>, a tool to check your cache-related HTTP headers.</li>
+ <li><a href="https://tools.ietf.org/html/rfc7234">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching</a></li>
+ <li><a href="https://www.mnot.net/cache_docs">Caching Tutorial – Mark Nottingham</a></li>
+ <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP caching – Ilya Grigorik</a></li>
+ <li><a href="https://redbot.org/">RedBot</a>, a tool to check your cache-related HTTP headers.</li>
 </ul>

@@ -80,20 +80,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="Cacheability">Cacheability</h3>
 
-<p>A response is normally cached by the browser if:</p>
-
-<ul>
- <li>it has a status code of {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}, or {{HTTPStatus("410")}} <strong>and</strong></li>
- <li><code>Cache-Control</code> does not have <code>no-store</code>, or <em>if proxy</em>, does not have <code>private</code> <strong>and</strong></li>
- <li>{{HTTPHeader("Authorization")}} is unset</li>
- <li>either
-  <ul>
-   <li>has a status code of {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}, or {{HTTPStatus("410")}} <strong>or</strong></li>
-   <li>has <code>public</code>, <code>max-age</code> or <code>s-maxage</code> in <code>Cache-Control</code> <strong>or</strong></li>
-   <li>has {{HTTPHeader("Expires")}} set</li>
-  </ul>
- </li>
-</ul>
+<p>Directives that define whether a response/request can be cached, where it may be cached, and whether it must be validated with the origin server before caching.</p>
 
 <dl>
  <dt><code>public</code></dt>

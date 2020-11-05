@@ -10,41 +10,41 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>border-bottom</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all the properties of an element's bottom <a href="/en-US/docs/Web/CSS/border">border</a>.</span></p>
+<p><span class="seoSummary">The <strong><code>border-left</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all the properties of an element's left <a href="/en-US/docs/Web/CSS/border">border</a>.</span></p>
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/css/border-left.html")}}</div>
 
 
 
-<p>As with all shorthand properties, <code>border-bottom</code> always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...</p>
+<p>As with all shorthand properties, <code>border-left</code> always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...</p>
 
-<pre class="brush: css notranslate">border-bottom-style: dotted;
-border-bottom: thick green;
+<pre class="brush: css notranslate">border-left-style: dotted;
+border-left: thick green;
 </pre>
 
 <p>... is actually the same as ...</p>
 
-<pre class="brush: css notranslate">border-bottom-style: dotted;
-border-bottom: none thick green;
+<pre class="brush: css notranslate">border-left-style: dotted;
+border-left: none thick green;
 </pre>
 
-<p>... and the value of {{cssxref("border-bottom-style")}} given before <code>border-bottom</code> is ignored. Since the default value of {{cssxref("border-bottom-style")}} is <code>none</code>, not specifying the <code>border-style</code> part results in no border.</p>
+<p>... and the value of {{cssxref("border-left-style")}} given before <code>border-left</code> is ignored. Since the default value of {{cssxref("border-left-style")}} is <code>none</code>, not specifying the <code>border-style</code> part results in no border.</p>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
 <p>This property is a shorthand for the following CSS properties:</p>
 
 <ul>
- <li>{{cssxref("border-bottom-color")}}</li>
- <li>{{cssxref("border-bottom-style")}}</li>
- <li>{{cssxref("border-bottom-width")}}</li>
+ <li>{{cssxref("border-left-color")}}</li>
+ <li>{{cssxref("border-left-style")}}</li>
+ <li>{{cssxref("border-left-width")}}</li>
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">border-bottom: 1px;
-border-bottom: 2px dotted;
-border-bottom: medium dashed blue;
+<pre class="brush: css no-line-numbers notranslate">border-left: 1px;
+border-left: 2px dotted;
+border-left: medium dashed blue;
 </pre>
 
 <p>The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.</p>
@@ -53,11 +53,11 @@ border-bottom: medium dashed blue;
 
 <dl>
  <dt><code>&lt;br-width&gt;</code></dt>
- <dd>See {{cssxref("border-bottom-width")}}.</dd>
+ <dd>See {{cssxref("border-left-width")}}.</dd>
  <dt><code>&lt;br-style&gt;</code></dt>
- <dd>See {{cssxref("border-bottom-style")}}.</dd>
+ <dd>See {{cssxref("border-left-style")}}.</dd>
  <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>See {{cssxref("border-bottom-color")}}.</dd>
+ <dd>See {{cssxref("border-left-color")}}.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -70,18 +70,18 @@ border-bottom: medium dashed blue;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Applying_a_bottom_border">Applying a bottom border</h3>
+<h3 id="Applying_a_left_border">Applying a left border</h3>
 
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;div&gt;
-  This box has a border on the bottom side.
+  This box has a border on the left side.
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css notranslate">div {
-  border-bottom: 4px dashed blue;
+  border-left: 4px dashed blue;
   background-color: gold;
   height: 100px;
   width: 100px;
@@ -92,7 +92,7 @@ border-bottom: medium dashed blue;
 
 <h4 id="Results">Results</h4>
 
-<p>{{EmbedLiveSample('Applying_a_bottom_border')}}</p>
+<p>{{EmbedLiveSample('Applying_a_left_border')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -106,17 +106,17 @@ border-bottom: medium dashed blue;
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#propdef-border-bottom', 'border-bottom')}}</td>
+   <td>{{SpecName('CSS3 Backgrounds', '#propdef-border-left', 'border-left')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>No direct changes, though the modification of values for the {{cssxref("border-bottom-color")}} do apply to it.</td>
+   <td>No direct changes, though the modification of values for the {{cssxref("border-left-color")}} do apply to it.</td>
   </tr>
   <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}</td>
+   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-left', 'border-left')}}</td>
    <td>{{Spec2('CSS2.1')}}</td>
    <td>No significant changes.</td>
   </tr>
   <tr>
-   <td>{{SpecName('CSS1', '#border-bottom', 'border-bottom')}}</td>
+   <td>{{SpecName('CSS1', '#border-left', 'border-left')}}</td>
    <td>{{Spec2('CSS1')}}</td>
    <td>Initial definition</td>
   </tr>
@@ -127,7 +127,7 @@ border-bottom: medium dashed blue;
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("css.properties.border-bottom")}}</p>
+<p>{{Compat("css.properties.border-left")}}</p>
 
 <h2 id="See_also">See also</h2>
 

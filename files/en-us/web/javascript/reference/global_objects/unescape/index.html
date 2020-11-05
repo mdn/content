@@ -6,23 +6,25 @@ tags:
   - JavaScript
   - Method
 ---
-<div class="warning">Warning: Although <code>unescape()</code> is not strictly deprecated (as in "removed from the Web standards"), it is defined in <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Annex B</a> of the ECMA-262 standard, whose introduction states:
-<blockquote>… All of the language features and behaviours specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification. …<br>
-… Programmers should not use or assume the existence of these features and behaviours when writing new ECMAScript code. …</blockquote>
+<p>{{jsSidebar("Objects")}}</p>
+
+<div class="warning">Warning: Although <code>unescape()</code> is not strictly deprecated (as in "removed from the Web standards"), it is defined in <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Annex B</a> of the ECMA-262 standard, whose introduction states:
+<blockquote>… All of the language features and behaviours specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification. …<br>
+… Programmers should not use or assume the existence of these features and behaviours when writing new ECMAScript code. …</blockquote>
 </div>
 
-<p>The <code><strong>unescape()</strong></code> function computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("escape")}}. Usually, {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} are preferred over <code>unescape</code>.</p>
+<p>The <code><strong>unescape()</strong></code> function computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("escape")}}. Usually, {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} are preferred over <code>unescape</code>.</p>
 
 <div class="note"><strong>Note:</strong> Do not use <code>unescape</code> to decode URIs, use <code>decodeURI</code> instead.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>unescape(str)</code></pre>
+<pre class="syntaxbox notranslate">unescape(<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>str</code></dt>
+ <dt><code><var>str</var></code></dt>
  <dd>A string to be decoded.</dd>
 </dl>
 
@@ -38,7 +40,7 @@ tags:
 
 <h3 id="Using_unescape">Using unescape</h3>
 
-<pre class="brush: js">unescape('abc123');     // "abc123"
+<pre class="brush: js notranslate">unescape('abc123');     // "abc123"
 unescape('%E4%F6%FC');  // "äöü"
 unescape('%u0107');     // "ć"
 </pre>
@@ -46,10 +48,12 @@ unescape('%u0107');     // "ć"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}}</td>
   </tr>
@@ -69,5 +73,3 @@ unescape('%u0107');     // "ć"
  <li>{{jsxref("decodeURIComponent")}}</li>
  <li>{{jsxref("escape")}}</li>
 </ul>
-
-<p>{{jsSidebar("Objects")}}</p>
