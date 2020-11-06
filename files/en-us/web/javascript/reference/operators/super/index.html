@@ -67,14 +67,12 @@ class Square extends Rectangle {
 <p>You are also able to call super on <a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a> methods.</p>
 
 <pre class="brush: js notranslate">class Rectangle {
-  constructor() {}
   static logNbSides() {
     return 'I have 4 sides';
   }
 }
 
 class Square extends Rectangle {
-  constructor() {}
   static logDescription() {
     return super.logNbSides() + ' which are all equal';
   }
@@ -87,11 +85,9 @@ Square.logDescription(); // 'I have 4 sides which are all equal'
 <p>You cannot use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> and <code>super.prop</code> or <code>super[expr]</code> to delete a parent class' property, it will throw a {{jsxref("ReferenceError")}}.</p>
 
 <pre class="brush: js notranslate">class Base {
-  constructor() {}
   foo() {}
 }
 class Derived extends Base {
-  constructor() {}
   delete() {
     delete super.foo; // this is bad
   }
