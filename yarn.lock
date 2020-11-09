@@ -28,20 +28,20 @@
     winston "3.2.1"
     wrap-ansi "^6.2.0"
 
-"@mdn/browser-compat-data@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-2.0.4.tgz#e3cbe84436d07fcf179eac90c016e70303e40eec"
-  integrity sha512-wlOOuQW8tzld2W4MC9Y3HaZC5BUctVjmGNDUQEG1zzketXBKWZYgI0F8YBi+1b2AyMnbjj3nHLSeD2+n1cW4oA==
+"@mdn/browser-compat-data@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-2.0.5.tgz#665decf25b204dce63ae48600198b228ee78a4ab"
+  integrity sha512-JTosoRJrq5E8QYLwPfqB22zZxyBzUEx+1ooOPMcrFYgWplOeS8K8B6VD3WHD+9XV+R1X5vimruSL9ALYuxfD+A==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.182":
-  version "0.1.182"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.182.tgz#8fa17a209bb8801d49bd218f398a9122e1bfbbb3"
-  integrity sha512-QmRoWDvIazH5B34a/7+zTcqAp8awhISrRytRCRLFK7dOA6sstItIflYNFQubE2MUWamMjaL2+CVW53g3+N5Pvw==
+"@mdn/yari@0.1.187":
+  version "0.1.187"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.187.tgz#b6f8ecc6928ad8880427b81bf8d689bb180e7136"
+  integrity sha512-/wbpaIPUG95wGhd6gLz4JAczE6AK+jQysZUO3Rw91MjSOZGDqv2wSmwCn8H8Fe5SjKO2vzFHm/r4hHszpZY0vA==
   dependencies:
     "@caporal/core" "2.0.2"
-    "@mdn/browser-compat-data" "2.0.4"
+    "@mdn/browser-compat-data" "2.0.5"
     braces "^3.0.2"
     chalk "4.1.0"
     cheerio "1.0.0-rc.3"
