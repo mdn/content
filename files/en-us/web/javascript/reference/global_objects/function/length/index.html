@@ -8,11 +8,11 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>length</strong></code> property indicates the number of parameters expected by the function.</p>
+<p>The <strong><code>length</code></strong> property indicates the number of parameters expected by the function.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-length.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0,0,1)}}</div>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Using_function_length">Using function length</h3>
 
-<pre class="brush: js">console.log(Function.length); /* 1 */
+<pre class="brush: js notranslate">console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
@@ -48,10 +48,12 @@ console.log((function(a, b = 1, c) {}).length);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}}</td>
   </tr>

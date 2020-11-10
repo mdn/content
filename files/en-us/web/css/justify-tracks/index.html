@@ -1,10 +1,18 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
+tags:
+  - CSS
+  - Experimental
+  - Property
+  - Reference
+  - grid
+  - justify-tracks
+  - masonry
 ---
 <p>{{SeeCompatTable}}</p>
 
-<p>The <strong><code>justify-tracks</code></strong> CSS property sets the alignment in the masonry axis for grid containers which have masonry in their inline axis.</p>
+<p>The <strong><code>justify-tracks</code></strong> CSS property sets the alignment in the masonry axis for grid containers that have <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a> in their inline axis.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -21,7 +29,7 @@ justify-tracks: unset;
 
 </pre>
 
-<p>The property can take a single value, in which case all tracks are aligned in the same way. If a list of values is used then the first value applies to the first track in the grid axis, the second to the next and so on.</p>
+<p>The property can take a single value, in which case all tracks are aligned in the same way. If a list of values is used then the first value applies to the first track in the grid axis, the second to the next, and so on.</p>
 
 <p>If there are fewer values than tracks, the last value is used for all remaining tracks. If there are more values than tracks, any additional values are ignored.</p>
 
@@ -35,7 +43,7 @@ justify-tracks: unset;
  <dt><code>center</code></dt>
  <dd>The items are packed flush to each other toward the center of the alignment container along the masonry axis.</dd>
  <dt><code>normal</code></dt>
- <dd>Acts as start.</dd>
+ <dd>Acts as <code>start</code>.</dd>
  <dt><code>space-between</code></dt>
  <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.</dd>
  <dt><code>space-around</code></dt>
@@ -91,7 +99,9 @@ justify-tracks: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
+<div class="hidden">
 <p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+</div>
 
 <p>{{Compat("css.properties.align-tracks")}}</p>
 

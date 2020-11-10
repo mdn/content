@@ -22,7 +22,7 @@ tags:
 <dl>
  <dt><code><var>value</var></code></dt>
  <dd>The value to send to the generator.</dd>
- <dd>The value will be assigned as a result of a <code>yield</code> expression. For example, in <code><var>variable</var> = yield <var>expression</var></code>, the value passed to the <code>.next()</code> function will be assigned to <code><var>variable</var></code>.</dd>
+ <dd>The value will be assigned as a result of a <code>yield</code> expression. For example, in <code><var>variable</var> = yield <var>expression</var></code>, the value passed to the <code>.next()</code> function will be assigned to <code><var>variable</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -58,21 +58,21 @@ g.next();      // "Object { value: undefined, done: true }"
 
 <h3 id="Using_next_with_a_list">Using next() with a list</h3>
 
-<pre class="brush: js notranslate">function* getPage(pageSize = 1, list) {
-  let output = [];
-  let index = 0;
+<pre class="notranslate">function* getPage(pageSize = 1, list) {
+    let output = [];
+    let index = 0;
 
-  while (index &lt; list.length) {
-    output = [];
-    for (let i = index; i &lt; index + pageSize; i++) {
-      if (list[i]) {
-        output.push(list[i]);
-      }
+    while (index &lt; list.length) {
+        output = [];
+        for (let i = index; i &lt; index + pageSize; i++) {
+            if (list[i]) {
+                output.push(list[i]);
+            }
+        }
+
+        yield output;
+        index += pageSize;
     }
-
-    yield output;
-    index += pageSize;
-  }
 }
 
 list = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -131,6 +131,6 @@ g.next(2);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
+ <li>{{jsxref("Statements/function*", "function*")}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a></li>
 </ul>

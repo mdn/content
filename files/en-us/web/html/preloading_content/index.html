@@ -116,11 +116,11 @@ tags:
 
 <p>So in this case, browsers that support MP4s will preload and use the MP4, making the video player hopefully smoother/more responsive for users. Browsers that don't support MP4 can still load the WebM version, but don't get the advantages of preloading. This shows how preloading content can be combined with the philosophy of progressive enhancement.</p>
 
-<h2 id="Cross-origin_fetches">Cross-origin fetches</h2>
+<h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
 
-<p>If you've got your sites' <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> settings worked out properly, you can successfully preload cross-origin resources as long as you set a {{htmlattrxref("crossorigin","link")}} attribute on your <code>&lt;link&gt;</code> element.</p>
+<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, event when the fetch is not cross-origin.</p>
 
-<p>One interesting case where this applies, even if the fetch is not cross-origin, is font files. Because of various reasons, these have to be fetched using anonymous mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
+<p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
 
 <p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
 
@@ -137,7 +137,7 @@ tags:
   …
 &lt;/body&gt;</pre>
 
-<p>Not only are we providing the MIME type hints in the <code>type</code> attributes, but we are also providing the <code>crossorigin</code> attribute to handle the CORS issue.</p>
+<p>Not only are we providing the MIME type hints in the <code>type</code> attributes, but we are also providing the <code>crossorigin</code> attribute to make sure the preload's CORS mode matches the eventual font resource request.</p>
 
 <h2 id="Including_media">Including media</h2>
 

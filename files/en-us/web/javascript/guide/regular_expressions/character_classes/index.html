@@ -20,128 +20,128 @@ tags:
 <div class="hidden">The following table is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Characters</th>
-			<th scope="col">Meaning</th>
-		</tr>
-	</thead>
-	<tbody>
-	</tbody>
-	<tbody>
-		<tr>
-			<td><code>.</code></td>
-			<td>
-			<p>Has one of the following meanings:</p>
+ <thead>
+  <tr>
+   <th scope="col">Characters</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+ </tbody>
+ <tbody>
+  <tr>
+   <td><code>.</code></td>
+   <td>
+    <p>Has one of the following meanings:</p>
 
-			<ul>
-				<li>Matches any single character <em>except</em> line terminators: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and "ay", but not "yes", in "yes make my day".</li>
-				<li>Inside a character set, the dot loses its special meaning and matches a literal dot.</li>
-			</ul>
+    <ul>
+     <li>Matches any single character <em>except</em> line terminators: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and "ay", but not "yes", in "yes make my day".</li>
+     <li>Inside a character set, the dot loses its special meaning and matches a literal dot.</li>
+    </ul>
 
-			<p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character set <code>[^]</code> can be used — it will match any character including newlines.</p>
+    <p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character set <code>[^]</code> can be used — it will match any character including newlines.</p>
 
-			<p>ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to also match line terminators.</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\d</code></td>
-			<td>
-			<p>Matches any digit (Arabic numeral). Equivalent to <code>[0-9]</code>. For example, <code>/\d/</code> or <code>/[0-9]/</code> matches "2" in "B2 is the suite number".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\D</code></td>
-			<td>
-			<p>Matches any character that is not a digit (Arabic numeral). Equivalent to <code>[^0-9]</code>. For example, <code>/\D/</code> or <code>/[^0-9]/</code> matches "B" in "B2 is the suite number".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\w</code></td>
-			<td>
-			<p>Matches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to <code>[A-Za-z0-9_]</code>. For example, <code>/\w/</code> matches "a" in "apple", "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\W</code></td>
-			<td>
-			<p>Matches any character that is not a word character from the basic Latin alphabet. Equivalent to <code>[^A-Za-z0-9_]</code>. For example, <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> matches "%" in "50%" and "É" in "Émanuel".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\s</code></td>
-			<td>
-			<p>Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces. Equivalent to <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\S</code></td>
-			<td>
-			<p>Matches a single character other than white space. Equivalent to <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\t</code></td>
-			<td>Matches a horizontal tab.</td>
-		</tr>
-		<tr>
-			<td><code>\r</code></td>
-			<td>Matches a carriage return.</td>
-		</tr>
-		<tr>
-			<td><code>\n</code></td>
-			<td>Matches a linefeed.</td>
-		</tr>
-		<tr>
-			<td><code>\v</code></td>
-			<td>Matches a vertical tab.</td>
-		</tr>
-		<tr>
-			<td><code>\f</code></td>
-			<td>Matches a form-feed.</td>
-		</tr>
-		<tr>
-			<td><code>[\b]</code></td>
-			<td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Boundaries</a>.</td>
-		</tr>
-		<tr>
-			<td><code>\0</code></td>
-			<td>Matches a NUL character. Do not follow this with another digit.</td>
-		</tr>
-		<tr>
-			<td><code>\c<em>X</em></code></td>
-			<td>
-			<p>Matches a control character using <a href="https://en.wikipedia.org/wiki/Caret_notation">caret notation</a>, where "X" is a letter from A–Z (corresponding to codepoints <code>U+0001</code><em>–</em><code>U+001F</code>). For example, <code>/\cM/</code> matches "\r" in "\r\n".</p>
-			</td>
-		</tr>
-		<tr>
-			<td><code>\x<em>hh</em></code></td>
-			<td>Matches the character with the code <code><em>hh</em></code> (two hexadecimal digits).</td>
-		</tr>
-		<tr>
-			<td><code>\u<em>hhhh</em></code></td>
-			<td>Matches a UTF-16 code-unit with the value <code><em>hhhh</em></code> (four hexadecimal digits).</td>
-		</tr>
-		<tr>
-			<td><code>\u<em>{hhhh} </em>or <em>\u{hhhhh}</em></code></td>
-			<td>(Only when the <code>u</code> flag is set.) Matches the character with the Unicode value <code>U+<em>hhhh</em></code> or <code>U+<em>hhhhh</em></code> (hexadecimal digits).</td>
-		</tr>
-		<tr>
-			<td><code>\</code></td>
-			<td>
-			<p>Indicates that the following character should be treated specially, or "escaped". It behaves one of two ways.</p>
+    <p>ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to also match line terminators.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\d</code></td>
+   <td>
+    <p>Matches any digit (Arabic numeral). Equivalent to <code>[0-9]</code>. For example, <code>/\d/</code> or <code>/[0-9]/</code> matches "2" in "B2 is the suite number".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\D</code></td>
+   <td>
+    <p>Matches any character that is not a digit (Arabic numeral). Equivalent to <code>[^0-9]</code>. For example, <code>/\D/</code> or <code>/[^0-9]/</code> matches "B" in "B2 is the suite number".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\w</code></td>
+   <td>
+    <p>Matches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to <code>[A-Za-z0-9_]</code>. For example, <code>/\w/</code> matches "a" in "apple", "5" in "$5.28", "3" in "3D" and "m" in "Émanuel".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\W</code></td>
+   <td>
+    <p>Matches any character that is not a word character from the basic Latin alphabet. Equivalent to <code>[^A-Za-z0-9_]</code>. For example, <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> matches "%" in "50%" and "É" in "Émanuel".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\s</code></td>
+   <td>
+    <p>Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces. Equivalent to <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\S</code></td>
+   <td>
+    <p>Matches a single character other than white space. Equivalent to <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\t</code></td>
+   <td>Matches a horizontal tab.</td>
+  </tr>
+  <tr>
+   <td><code>\r</code></td>
+   <td>Matches a carriage return.</td>
+  </tr>
+  <tr>
+   <td><code>\n</code></td>
+   <td>Matches a linefeed.</td>
+  </tr>
+  <tr>
+   <td><code>\v</code></td>
+   <td>Matches a vertical tab.</td>
+  </tr>
+  <tr>
+   <td><code>\f</code></td>
+   <td>Matches a form-feed.</td>
+  </tr>
+  <tr>
+   <td><code>[\b]</code></td>
+   <td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Boundaries</a>.</td>
+  </tr>
+  <tr>
+   <td><code>\0</code></td>
+   <td>Matches a NUL character. Do not follow this with another digit.</td>
+  </tr>
+  <tr>
+   <td><code>\c<em>X</em></code></td>
+   <td>
+    <p>Matches a control character using <a href="https://en.wikipedia.org/wiki/Caret_notation">caret notation</a>, where "X" is a letter from A–Z (corresponding to codepoints <code>U+0001</code><em>–</em><code>U+001F</code>). For example, <code>/\cM/</code> matches "\r" in "\r\n".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\x<em>hh</em></code></td>
+   <td>Matches the character with the code <code><em>hh</em></code> (two hexadecimal digits).</td>
+  </tr>
+  <tr>
+   <td><code>\u<em>hhhh</em></code></td>
+   <td>Matches a UTF-16 code-unit with the value <code><em>hhhh</em></code> (four hexadecimal digits).</td>
+  </tr>
+  <tr>
+   <td><code>\u<em>{hhhh} </em>or <em>\u{hhhhh}</em></code></td>
+   <td>(Only when the <code>u</code> flag is set.) Matches the character with the Unicode value <code>U+<em>hhhh</em></code> or <code>U+<em>hhhhh</em></code> (hexadecimal digits).</td>
+  </tr>
+  <tr>
+   <td><code>\</code></td>
+   <td>
+    <p>Indicates that the following character should be treated specially, or "escaped". It behaves one of two ways.</p>
 
-			<ul>
-				<li>For characters that are usually treated literally, indicates that the next character is special and not to be interpreted literally. For example, <code>/b/</code> matches the character "b". By placing a backslash in front of "b", that is by using <code>/\b/</code>, the character becomes special to mean match a word boundary.</li>
-				<li>For characters that are usually treated specially, indicates that the next character is not special and should be interpreted literally. For example, "*" is a special character that means 0 or more occurrences of the preceding character should be matched; for example, <code>/a*/</code> means match 0 or more "a"s. To match <code>*</code> literally, precede it with a backslash; for example, <code>/a\*/</code> matches "a*".</li>
-			</ul>
+    <ul>
+     <li>For characters that are usually treated literally, indicates that the next character is special and not to be interpreted literally. For example, <code>/b/</code> matches the character "b". By placing a backslash in front of "b", that is by using <code>/\b/</code>, the character becomes special to mean match a word boundary.</li>
+     <li>For characters that are usually treated specially, indicates that the next character is not special and should be interpreted literally. For example, "*" is a special character that means 0 or more occurrences of the preceding character should be matched; for example, <code>/a*/</code> means match 0 or more "a"s. To match <code>*</code> literally, precede it with a backslash; for example, <code>/a\*/</code> matches "a*".</li>
+    </ul>
 
-			<div class="blockIndicator note">
-			<p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
-			</div>
-			</td>
-		</tr>
-	</tbody>
+    <div class="blockIndicator note">
+    <p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
+    </div>
+   </td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
@@ -190,14 +190,14 @@ console.table(nonEnglishText.match(regexpBMPWord));
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Character classes')}}</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Character classes')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -207,15 +207,14 @@ console.table(nonEnglishText.match(regexpBMPWord));
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular expressions guide</a>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular expressions guide</a>
 
-	<ul>
-		<li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a></li>
-		<li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Quantifiers</a></li>
-		<li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></li>
-		<li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups and ranges</a></li>
-	</ul>
-	</li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">The <code>RegExp()</code> constructor</a></li>
-	<li><a href="https://medium.com/@iris.atlanttida/arrow-symbol-ed58b383e6df">Arrow symbol</a> characters</li>
+  <ul>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Quantifiers</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups and ranges</a></li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">The <code>RegExp()</code> constructor</a></li>
 </ul>

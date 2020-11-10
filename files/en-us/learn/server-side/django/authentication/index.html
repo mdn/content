@@ -626,7 +626,9 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="Views">Views</h3>
 
-<p>Permissions can be tested in function view using the <code>permission_required</code> decorator or in a class-based view using the <code>PermissionRequiredMixin</code>. The pattern and behaviour are the same as for login authentication, though of course, you might reasonably have to add multiple permissions.</p>
+<p>Permissions can be tested in function view using the <code>permission_required</code> decorator or in a class-based view using the <code>PermissionRequiredMixin</code>. The pattern are the same as for login authentication, though of course, you might reasonably have to add multiple permissions.</p>
+
+<div class="note"></div>
 
 <p>Function view decorator:</p>
 
@@ -647,6 +649,24 @@ class MyView(PermissionRequiredMixin, View):
     permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
     # Note that 'catalog.can_edit' is just an example
     # the catalog application doesn't have such permission!</pre>
+
+<div class="note">
+<p><strong>Note</strong>: There is a small default difference in the behaviour above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
+
+<ul>
+ <li><code>@permission_required</code> redirects to login screen (HTTP Status 302).</li>
+ <li><code>PermissionRequiredMixin</code> returns 403 (HTTP Status Forbidden).</li>
+</ul>
+
+<p>Normally you will want the <code>PermissionRequiredMixin</code> behaviour: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
+
+<pre class="syntaxbox notranslate">from django.contrib.auth.decorators import login_required, permission_required
+
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
+def my_view(request):
+    ...</pre>
+</div>
 
 <h3 id="Example">Example</h3>
 

@@ -23,20 +23,20 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>online</em> = <em>window</em>.navigator.onLine;
+<pre class="syntaxbox notranslate"><em>online</em> = <em>window</em>.navigator.onLine;
 </pre>
 
 <h3 id="Value">Value</h3>
 
 <p><code>online</code> is a boolean <code>true</code> or <code>false</code>.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>View <a href="http://html5-demos.appspot.com/static/navigator.onLine.html"> a live example</a>.</p>
+<h3 id="Basic_usage">Basic usage</h3>
 
 <p>To check if you are online, query <code>window.navigator.onLine</code>, as in the following example:</p>
 
-<pre class="brush: js">if (navigator.onLine) {
+<pre class="brush: js notranslate">if (navigator.onLine) {
   console.log('online');
 } else {
   console.log('offline');
@@ -44,9 +44,11 @@ tags:
 
 <p>If the browser doesn't support <code>navigator.onLine</code> the above example will always come out as <code>false</code>/<code>undefined</code>.</p>
 
+<h3 id="Listening_for_changes_in_network_status">Listening for changes in network status</h3>
+
 <p>To see changes in the network state, use <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> to listen for the events on <code>window.online</code> and <code>window.offline</code>, as in the following example:</p>
 
-<pre class="brush: js">window.addEventListener('offline', function(e) { console.log('offline'); });
+<pre class="brush: js notranslate">window.addEventListener('offline', function(e) { console.log('offline'); });
 
 window.addEventListener('online', function(e) { console.log('online'); });
 </pre>

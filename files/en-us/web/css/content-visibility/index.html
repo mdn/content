@@ -2,7 +2,7 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 ---
-<p>{{CSSRef}}{{Draft}}</p>
+<p>{{CSSRef}}</p>
 
 <p><span class="seoSummary">The <strong><code>content-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed.</span> Basically it enables the user agent to skip an element's rendering work, including layout and painting, until it is needed, makes the initial page load much faster.</p>
 
@@ -29,16 +29,6 @@ content-visibility: unset;
  <dd>The element turns on layout containment, style containment, and paint containment. If the element is not relevant to the user, it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.</dd>
 </dl>
 
-<h2 id="Formal_definition">Formal definition</h2>
-
-<p>{{CSSInfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
-
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
-
-<h2 id="Examples">Examples</h2>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -51,9 +41,9 @@ content-visibility: unset;
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('CSS Containment Module Level 2', '#content-visibility')}}</td>
-   <td>{{Spec2('CSS Containment Module Level 2')}}</td>
-   <td></td>
+   <td>{{SpecName('CSS Containment 2', '#content-visibility')}}</td>
+   <td>{{Spec2('CSS Containment 2')}}</td>
+   <td>Initial definition</td>
   </tr>
  </tbody>
 </table>
@@ -63,3 +53,9 @@ content-visibility: unset;
 
 
 <p>{{Compat("css.properties.content-visibility")}}</p>
+
+<h2 id="See_Also">See Also</h2>
+
+<ul>
+ <li><a href="https://web.dev/content-visibility/">content-visibility: the new CSS property that boosts your rendering performance</a> (web.dev)</li>
+</ul>

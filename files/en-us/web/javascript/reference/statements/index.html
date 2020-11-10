@@ -18,13 +18,13 @@ tags:
 <h3 id="Control_flow">Control flow</h3>
 
 <dl>
- <dt>{{jsxref("Statements/block", "Block")}}</dt>
+ <dt>{{jsxref("Statements/block", "Block","",1)}}</dt>
  <dd>A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.</dd>
  <dt>{{jsxref("Statements/break", "break")}}</dt>
  <dd>Terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.</dd>
  <dt>{{jsxref("Statements/continue", "continue")}}</dt>
  <dd>Terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.</dd>
- <dt>{{jsxref("Statements/Empty", "Empty")}}</dt>
+ <dt>{{jsxref("Statements/Empty", "Empty","",1)}}</dt>
  <dd>An empty statement is used to provide no statement, although the JavaScript syntax would expect one.</dd>
  <dt>{{jsxref("Statements/if...else", "if...else")}}</dt>
  <dd>Executes a statement if a specified condition is true. If the condition is false, another statement can be executed.</dd>
@@ -53,7 +53,7 @@ tags:
  <dt>{{jsxref("Statements/function", "function")}}</dt>
  <dd>Declares a function with the specified parameters.</dd>
  <dt>{{jsxref("Statements/function*", "function*")}}</dt>
- <dd>Generator Functions enable writing <a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">iterators</a> more easily.</dd>
+ <dd>Generator Functions enable writing <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterators</a> more easily.</dd>
  <dt>{{jsxref("Statements/async_function", "async function")}}</dt>
  <dd>Declares an async function with the specified parameters.</dd>
  <dt>{{jsxref("Statements/return", "return")}}</dt>
@@ -69,12 +69,12 @@ tags:
  <dd>Creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.</dd>
  <dt>{{jsxref("Statements/for", "for")}}</dt>
  <dd>Creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement executed in the loop.</dd>
- <dt>{{jsxref("Statements/for_each...in", "for each...in")}}  </dt>
+ <dt>{{jsxref("Statements/for_each...in", "for each...in")}}</dt>
  <dd>Iterates a specified variable over all values of object's properties. For each distinct property, a specified statement is executed.</dd>
  <dt>{{jsxref("Statements/for...in", "for...in")}}</dt>
  <dd>Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.</dd>
  <dt>{{jsxref("Statements/for...of", "for...of")}}</dt>
- <dd>Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, <a href="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">iterators and generators</a>), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</dd>
+ <dd>Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterators and generators</a>), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</dd>
  <dt>{{jsxref("Statements/for-await...of", "for await...of")}}</dt>
  <dd>Iterates over async iterable objects, array-like objects, <a href="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">iterators and generators</a>, invoking a custom iteration hook with statements to be executed for the value of each distinct property.</dd>
  <dt>{{jsxref("Statements/while", "while")}}</dt>
@@ -92,7 +92,7 @@ tags:
  <dd>Used to import functions exported from an external module, another script.</dd>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta"><code>import.meta</code></a></dt>
  <dd>An object exposing context-specific metadata to a JavaScript module.</dd>
- <dt>{{jsxref("Statements/label", "label")}}</dt>
+ <dt>{{jsxref("Statements/label", "label", "", 1)}}</dt>
  <dd>Provides a statement with an identifier that you can refer to using a <code>break</code> or <code>continue</code> statement.</dd>
 </dl>
 
@@ -104,10 +104,12 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}}</td>
   </tr>

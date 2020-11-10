@@ -19,11 +19,13 @@ tags:
   - matrix
   - transform
 ---
+<p>{{APIRef("WebXR Device API")}}</p>
+
 <p>The read-only {{domxref("XRRigidTransform")}} property <code><strong>matrix</strong></code> returns the transform matrix represented by the object. The returned matrix can then be premultiplied with a column vector to rotate the vector by the 3D rotation specified by the {{domxref("XRRigidTransform.orientation", "orientation")}}, then translate it by the {{domxref("XRRigidTransform.position", "position")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>matrix</em> = <em>xrRigidTransform</em>.matrix;</pre>
+<pre class="syntaxbox notranslate">let <em>matrix</em> = <em>xrRigidTransform</em>.matrix;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -63,7 +65,7 @@ tags:
 
 <p>In this example, a transform is created to create a matrix which can be used as a transform during rendering of WebGL objects, in order to place objects to match a given offset and orientation. The <code>matrix</code> is then passed into a library function that uses WebGL to render an object matching a given name using the transform matrix specified to position and orient it.</p>
 
-<pre class="brush: js">let transform = new XRRigidTransform(
+<pre class="brush: js notranslate">let transform = new XRRigidTransform(
                       {x: 0, y: 0.5, z: 0.5},
                       {x: 0, y: -0.5, z: -0.5, w: 1});
 drawGLObject("magic-lamp", transform.matrix);

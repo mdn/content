@@ -597,7 +597,7 @@ tags:
 <div>
 <h3 id="Changing_the_angle">Changing the angle</h3>
 
-<p>Like radial gradients, you can position the center of the conic gradient with keyterms, percentage, or absolute lengths, with the keyword "at"</p>
+<p>By default, the different color stops you specify are spaced equidistantly around the circle. You can position the starting angle of the conic gradient using the "from" keyword at the beginning followed by an angle or a length, and you can specify different positions for the colors stops by including an angle or length after them.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
@@ -610,7 +610,7 @@ tags:
 </div>
 
 <pre class="brush: css notranslate">.conic-gradient {
-  background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
+  background: conic-gradient(from 45deg, red, orange 50%, yellow 85%, green);
 }
 </pre>
 

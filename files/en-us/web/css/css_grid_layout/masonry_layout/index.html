@@ -9,10 +9,10 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>Level 3 of the CSS Grid Layout specification includes a <code>masonry</code> value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is, and how to use it.</p>
+<p>Level 3 of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> specification includes a <code>masonry</code> value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is, and how to use it.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Important</strong>: This feature is only implemented in Firefox and is behind the flag <code>layout.css.grid-template-masonry-value.enabled</code> in order that it can be tested and feedback given.</p>
+<p><strong>Important</strong>: This feature is only implemented in Firefox, and can be enabled by setting the flag <code>layout.css.grid-template-masonry-value.enabled</code> to <code>true</code>, in order to allow testing and providing of feedback.</p>
 </div>
 
 <p>Masonry layout is a layout method where one axis uses a typical strict grid layout, of most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.</p>
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="Masonry_layout_with_spanning_items">Masonry layout with spanning items</h3>
 
-<p>In this example two of the items span two tracks, the masonry items work around them.</p>
+<p>In this example two of the items span two tracks, and the masonry items work around them.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/grid/masonry/spanners.html", '100%', 800)}}</p>
 
@@ -53,17 +53,17 @@ tags:
 
 <h2 id="Controlling_the_masonry_axis">Controlling the masonry axis</h2>
 
-<p>The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three addition properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.</p>
+<p>The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three additional properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.</p>
 
 <h3 id="masonry-auto-flow">masonry-auto-flow</h3>
 
-<p>The <code>masonry-auto-flow</code> property gives you a way to change how the masonry algorithm behaves. Give it a value of next and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value positioned will ignore items with definite placement and place items in order-modified document order.</p>
+<p>The <code>masonry-auto-flow</code> property gives you a way to change how the masonry algorithm behaves. Give it a value of <code>next</code> and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value <code>positioned</code> will ignore items with definite placement and place items in order-modified document order.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}</p>
 
 <h3 id="align-tracks">align-tracks</h3>
 
-<p>The <code>align-tracks</code> property allows for the alignment of items in grid containers with masonry in their block axis. The property aligns the items within their track, much in the way flex layout works. The property takes the same values as align-content however you can specify multiple values to have different alignment values per track on the grid axis.</p>
+<p>The <code>align-tracks</code> property allows for the alignment of items in grid containers with masonry in their block axis. The property aligns the items within their track, much in the way flex layout works. The property takes the same values as <code>align-content</code>, however you can specify multiple values to have different alignment values per track on the grid axis.</p>
 
 <p>If you specify more values than tracks the additional values are ignored. If there are more tracks than values any additional tracks will use the last specified value.</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <h3 id="justify-tracks">justify-tracks</h3>
 
-<p>The <code>justify-tracks</code> property works in the same was as align-tracks, however it is used when the masonry axis is the inline axis.</p>
+<p>The <code>justify-tracks</code> property works in the same way as align-tracks, however it is used when the masonry axis is the inline axis.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/grid/masonry/justify-tracks.html", '100%', 1000)}}</p>
 
@@ -82,5 +82,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/">Native CSS Masonry Layout In CSS Grid</a></li>
+ <li><a href="https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/">Native CSS Masonry Layout In CSS Grid</a></li>
 </ul>
