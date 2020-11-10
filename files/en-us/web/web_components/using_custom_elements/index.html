@@ -25,9 +25,9 @@ tags:
 <p>To register a custom element on the page, you use the {{domxref("CustomElementRegistry.define()")}} method. This takes as its arguments:</p>
 
 <ul>
-	<li>A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names <a href="https://html.spec.whatwg.org/#valid-custom-element-name">require a dash to be used in them</a> (kebab-case); they can't be single words.</li>
-	<li>A <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> object that defines the behaviour of the element.</li>
-	<li>Optionally, an options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
+ <li>A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names <a href="https://html.spec.whatwg.org/#valid-custom-element-name">require a dash to be used in them</a> (kebab-case); they can't be single words.</li>
+ <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> object that defines the behaviour of the element.</li>
+ <li>Optionally, an options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
 </ul>
 
 <p>So for example, we can define a custom <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count element</a> like this:</p>
@@ -56,8 +56,8 @@ tags:
 <p>There are two types of custom elements:</p>
 
 <ul>
-	<li><strong>Autonomous custom elements</strong> are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example <code>&lt;popup-info&gt;</code>, or <code>document.createElement("popup-info")</code>.</li>
-	<li><strong>Customized built-in elements</strong> inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example <code>&lt;p is="word-count"&gt;</code>, or <code>document.createElement("p", { is: "word-count" })</code>.</li>
+ <li><strong>Autonomous custom elements</strong> are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example <code>&lt;popup-info&gt;</code>, or <code>document.createElement("popup-info")</code>.</li>
+ <li><strong>Customized built-in elements</strong> inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example <code>&lt;p is="word-count"&gt;</code>, or <code>document.createElement("p", { is: "word-count" })</code>.</li>
 </ul>
 
 <h2 id="Working_through_some_simple_examples">Working through some simple examples</h2>
@@ -187,15 +187,15 @@ shadow.appendChild(linkElem);</pre>
 <p>You can define several different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle:</p>
 
 <ul>
-	<li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
+ <li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
 
-	<div class="note">
-	<p><strong>Note</strong>: <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
-	</div>
-	</li>
-	<li><code>disconnectedCallback</code>: Invoked each time the custom element is disconnected from the document's DOM.</li>
-	<li><code>adoptedCallback</code>: Invoked each time the custom element is moved to a new document.</li>
-	<li><code>attributeChangedCallback</code>: Invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get <code>observedAttributes</code> method</li>
+  <div class="note">
+  <p><strong>Note</strong>: <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
+  </div>
+ </li>
+ <li><code>disconnectedCallback</code>: Invoked each time the custom element is disconnected from the document's DOM.</li>
+ <li><code>adoptedCallback</code>: Invoked each time the custom element is moved to a new document.</li>
+ <li><code>attributeChangedCallback</code>: Invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get <code>observedAttributes</code> method</li>
 </ul>
 
 <p>Let's look at an example of these in use. The code below is taken from the <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">see it running live</a>). This is a trivial example that simply generates a colored square of a fixed size on the page. The custom element looks like this:</p>
@@ -285,4 +285,4 @@ adoptedCallback() {
 
 <h2 id="Libraries">Libraries</h2>
 
-<p>There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are <a href="https://github.com/devpunks/snuggsi" rel="nofollow">snuggsi</a>, <a href="https://x-tag.github.io/" rel="nofollow">X-Tag</a>, <a href="http://slimjs.com/" rel="nofollow">Slim.js</a>, <a href="https://lit-element.polymer-project.org/">LitElement</a>, <a href="https://www.htmlelements.com/">Smart</a>, <a href="https://stenciljs.com">Stencil</a>, <a href="https://github.com/WebReflection/hyperHTML-Element">hyperHTML-Element</a>, and <a href="https://www.dataformsjs.com/">DataFormsJS</a>.</p>
+<p>There are several libraries that are built on Web Components with the aim of increasing the level of abstraction when creating custom elements. Some of these libraries are <a href="https://www.fast.design/docs/fast-element/getting-started" rel="nofollow">FASTElement</a>, <a href="https://github.com/devpunks/snuggsi" rel="nofollow">snuggsi</a>, <a href="https://x-tag.github.io/" rel="nofollow">X-Tag</a>, <a href="http://slimjs.com/" rel="nofollow">Slim.js</a>, <a href="https://lit-element.polymer-project.org/">LitElement</a>, <a href="https://www.htmlelements.com/">Smart</a>, <a href="https://stenciljs.com">Stencil</a>, <a href="https://github.com/WebReflection/hyperHTML-Element">hyperHTML-Element</a>, and <a href="https://www.dataformsjs.com/">DataFormsJS</a>.</p>

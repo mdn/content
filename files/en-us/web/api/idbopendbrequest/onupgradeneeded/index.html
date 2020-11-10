@@ -16,7 +16,7 @@ tags:
 <div>
 <p>The <strong><code>onupgradeneeded</code></strong> property of the {{domxref("IDBOpenDBRequest")}} interface is the event handler for the {{event("upgradeneeded")}} event, triggered when a database of a bigger version number than the existing stored database is loaded.</p>
 
-<p>The event passed to the listener is an {{domxref("IDBVersionChangeEvent")}}.</p>
+<p>The event passed to the handler is an {{domxref("IDBVersionChangeEvent")}}.</p>
 
 <p>Inside the event handler function you can include code to upgrade the database structure, as shown in the example below.</p>
 
@@ -25,13 +25,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>IDBOpenDBRequest</em>.onupgradeneeded = <em>function</em>(event) { ... };</pre>
+<pre class="syntaxbox notranslate"><em>IDBOpenDBRequest</em>.onupgradeneeded = <em>function</em>(event) { ... };</pre>
 
 <h2 id="Example">Example</h2>
 
 <p>In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js; highlight:[17,29,30,32,33,34,35,36,37]">var db;
+<pre class="brush: js; highlight:[17,29,30,32,33,34,35,36,37] notranslate">var db;
 
 // Request version 3 of the database.
 var request = window.indexedDB.open("library", 3);
@@ -90,12 +90,12 @@ request.onsuccess = function(event) {
   <tr>
    <td>{{SpecName('IndexedDB', '#dom-idbopendbrequest-onupgradeneeded', 'onupgradeneeded')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName("IndexedDB 2", "#dom-idbopendbrequest-onupgradeneeded", "onupgradeneeded")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

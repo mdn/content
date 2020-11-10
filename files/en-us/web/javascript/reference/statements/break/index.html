@@ -9,24 +9,24 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong>break statement</strong> terminates the current loop, {{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label")}} statement and transfers program control to the statement following the terminated statement.</p>
+<p>The <strong><code>break</code> statement</strong> terminates the current loop, {{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label", "", 1)}} statement and transfers program control to the statement following the terminated statement.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-break.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code>break [<em>label</em>];</code></pre>
+<pre class="syntaxbox notranslate">break [<var>label</var>];</pre>
 
 <dl>
- <dt><code>label</code> {{optional_inline}}</dt>
+ <dt><code><var>label</var></code> {{optional_inline}}</dt>
  <dd>Identifier associated with the label of the statement. If the statement is not a loop or {{jsxref("Statements/switch", "switch")}}, this is required.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>break</code> statement includes an optional label that allows the program to break out of a labeled statement. The <code>break</code> statement needs to be nested within the referenced label. The labeled statement can be any {{jsxref("Statements/block", "block")}} statement; it does not have to be preceded by a loop statement.</p>
+<p>The <code>break</code> statement includes an optional label that allows the program to break out of a labeled statement. The <code>break</code> statement needs to be nested within the referenced label. The labeled statement can be any {{jsxref("Statements/block", "block", "", 1)}} statement; it does not have to be preceded by a loop statement.</p>
 
 <p>A <code>break</code> statement, with or without a following label, cannot be used within the body of a function that is itself nested within the current loop, switch, or label statement that the <code>break</code> statement is intended to break out of.</p>
 
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="break_in_switch_statements">break in switch statements</h3>
 
-<p>The following code has a <code>break</code> statement that terminates the {{jsxref("Statements/switch", "switch")}} statement when a case is matched and the corresponding code has ran</p>
+<p>The following code has a <code>break</code> statement that terminates the {{jsxref("Statements/switch", "switch")}} statement when a case is matched and the corresponding code has ran</p>
 
 <pre class="brush:js;highlight:[6]; notranslate">const food = "sushi";
 
@@ -129,10 +129,12 @@ testBreak(1); // SyntaxError: Illegal break statement
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}}</td>
   </tr>
@@ -149,6 +151,6 @@ testBreak(1); // SyntaxError: Illegal break statement
 
 <ul>
  <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
+ <li>{{jsxref("Statements/label", "label", "", 1)}}</li>
  <li>{{jsxref("Statements/switch", "switch")}}</li>
 </ul>

@@ -13,9 +13,9 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML <code>&lt;area&gt;</code> tag</strong> defines an area inside an image map that has predefined clickable areas. An <dfn>image map</dfn> allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext link")}}.</p>
+<p>The <strong>HTML <code>&lt;area&gt;</code> element</strong> defines an area inside an image map that has predefined clickable areas. An <dfn>image map</dfn> allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext link")}}.</p>
 
-<p>This tag is used only within a {{HTMLElement("map")}} element.</p>
+<p>This element is used only within a {{HTMLElement("map")}} element.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
 
@@ -24,8 +24,8 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -37,10 +37,10 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>. The <code>&lt;area&gt;</code> element must have an ancestor {{HTMLElement("map")}}, but it need not be a direct parent.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>. The <code>&lt;area&gt;</code> element must have an ancestor {{HTMLElement("map")}}, but it need not be a direct parent.</td>
   </tr>
   <tr>
-   <th scope="row">Implicit ARIA role</th>
+   <th scope="row">Implicit ARIA role</th>
    <td>{{ARIARole("link")}} when {{htmlattrxref("href", "area")}} attribute is present, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
   </tr>
   <tr>
@@ -65,22 +65,17 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("coords")}}</dt>
- <dd>The <code>coords</code> attribute details the coordinates of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-shape">shape</a> attribute in size, shape, and placement of an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area#attr-shape">&lt;area&gt;</a>.</dd>
+ <dd>The <code>coords</code> attribute details the coordinates of the <code><a href="#attr-shape">shape</a></code> attribute in size, shape, and placement of an <code>&lt;area&gt;</code>.</dd>
  <dd>
  <ul>
-  <li><code>rect</code>: the value is <em><code>x1,y1,x2,y2</code>. </em><em>Value </em>specifies<em> </em>the coordinates of the top-left and bottom-right corner of the rectangle.</li>
+  <li><code>rect</code>: the value is <code><var>x1,y1,x2,y2</var></code>. Value specifies the coordinates of the top-left and bottom-right corner of the rectangle.<br>
+   For example: <code>&lt;area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla"&gt;</code> The coords in the above example specify: 0,0 as the top-left corner and 253,27 as the bottom-right corner of the rectangle.</li>
+  <li><code>circle</code>: the value is <code><var>x,y,radius</var></code>. Value specifies the coordinates of the circle center and the radius.<br>
+   For example: <code>&lt;area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN"&gt;</code></li>
+  <li><code>poly</code>: the value is <code><var>x1,y1,x2,y2,..,xn,yn</var></code>. Value specifies the coordinates of the edges of the polygon. If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon</li>
+  <li><code>default</code>: defines the entire region</li>
  </ul>
-
- <p>For example: </p>
-
- <p><code>&lt;area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla"&gt;</code>  The coords in the above example specify: 0,0 as the top-left corner and 253,27 as the bottom-right corner of the rectangle</p>
-
- <ul>
-  <li><code>circle</code>: the value is <code><em>x,y,radius</em></code><em>. Value </em>specifies the coordinates of the circle center and the radius. For example: <code>&lt;area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN"&gt;</code></li>
-  <li><code>poly</code> : the value is <em>x1,y1,x2,y2,..,xn,yn. Value </em>specifies the coordinates of the edges of the polygon. If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon</li>
-  <li><code>default</code>: defines the entire region</li>
- </ul>
- The values are numbers of CSS pixels.</dd>
+ The values are numbers of CSS pixels.</dd>
  <dt>{{htmlattrdef("download")}}</dt>
  <dd>This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource. See {{HTMLElement("a")}} for a full description of the {{htmlattrxref("download", "a")}} attribute.</dd>
  <dt>{{htmlattrdef("href")}}</dt>
@@ -92,11 +87,11 @@ tags:
  <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
  <dd>A string indicating which referrer to use when fetching the resource:
  <ul>
-  <li><code>"no-referrer"</code> meaning that the <code>Referer:</code> header will not be sent.</li>
-  <li>"<code>no-referrer-when-downgrade</code>" meaning that no <code>Referer:</code> header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.</li>
-  <li><code>"origin"</code> meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.</li>
-  <li>"origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path. </li>
-  <li><code>"unsafe-url"</code> meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.</li>
+  <li>"<code>no-referrer</code>" meaning that the <code>Referer:</code> header will not be sent.</li>
+  <li>"<code>no-referrer-when-downgrade</code>" meaning that no <code>Referer:</code> header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.</li>
+  <li>"<code>origin</code>" meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.</li>
+  <li>"<code>origin-when-cross-origin</code>" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.</li>
+  <li>"<code>unsafe-url</code>" meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("rel")}}</dt>

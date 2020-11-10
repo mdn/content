@@ -4,38 +4,38 @@ slug: Web/API/Document/queryCommandSupported
 tags:
   - API
   - DOM
+  - Document
   - Method
   - Reference
   - editor
 ---
 <div>{{ApiRef("DOM")}}{{obsolete_header}}</div>
 
-<p>The <code><strong>Document.queryCommandSupported()</strong></code> method reports whether or not the specified editor command is supported by the browser.</p>
+<p>The <strong><code>Document.queryCommandSupported()</code></strong> method reports whether or not the specified editor command is supported by the browser.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>isSupported</var> = document.queryCommandSupported(<var>command</var>);
+<pre class="syntaxbox notranslate"><var>isSupported</var> = document.queryCommandSupported(<var>command</var>);
 </pre>
 
+<h3 id="Parameters">Parameters</h3>
+
 <dl>
- <dt>
- <h3 id="Parameters">Parameters</h3>
- </dt>
- <dt><code>command</code></dt>
+ <dt><code><var>command</var></code></dt>
  <dd>The command for which to determine support.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns a {{jsxref("Boolean")}} which is <code>true</code> if the command is supported and <code>false</code> if the command isn't<code>.</code></p>
+<p>Returns a {{jsxref("Boolean")}} which is <code>true</code> if the command is supported and <code>false</code> if the command isn't.</p>
 
 <h2 id="Notes">Notes</h2>
 
-<p>The <code>'paste'</code> command return <code>false</code> not only if the feature is unavailable, but also if the script calling it has insufficient privileges to perform the action <a href="#note1">[1]</a></p>
+<p>The <code>'paste'</code> command return <code>false</code> not only if the feature is unavailable, but also if the script calling it has insufficient privileges to perform the action.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<pre class="brush:js">var flg = document.queryCommandSupported("SelectAll");
+<pre class="brush:js notranslate">var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
   // ...Do something
@@ -45,12 +45,14 @@ if(flg) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><a href="https://w3c.github.io/editing/execCommand.html#querycommandsupported()">execCommand</a></td>
    <td></td>

@@ -1,10 +1,18 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
+tags:
+  - CSS
+  - Experimental
+  - Property
+  - Reference
+  - grid
+  - masonry
+  - masonry-auto-flow
 ---
 <p>{{SeeCompatTable}}</p>
 
-<p>The <strong><code>masonry-auto-flow</code></strong> CSS property modifies how items are placed when using masonry in CSS Grid Layout.</p>
+<p>The <strong><code>masonry-auto-flow</code></strong> CSS property modifies how items are placed when using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a> in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,21 +32,21 @@ masonry-auto-flow: unset;
 <p>This property may take one of two forms:</p>
 
 <ul>
-	<li>a single keyword: one of <code>pack</code>, <code>next</code>, <code>definite-first</code>, or <code>ordered</code></li>
-	<li>two keywords, for example <code>next ordered</code></li>
+ <li>A single keyword: one of <code>pack</code>, <code>next</code>, <code>definite-first</code>, or <code>ordered</code></li>
+ <li>Two keywords, for example <code>next ordered</code>.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
 
 <dl>
-	<dt><code>pack</code></dt>
-	<dd>As per the default masonry algorithm, items will be placed into the track with the most room.</dd>
-	<dt><code>next</code></dt>
-	<dd>Items will be placed one after the other in the grid axis.</dd>
-	<dt><code>definite-first</code></dt>
-	<dd>Display as in the default masonry algorithm, placing items with a definite place first before placing other masonry items.</dd>
-	<dt><code>ordered</code></dt>
-	<dd>Ignore any items with a definite placement, and place everything according to order-modified document order.</dd>
+ <dt><code>pack</code></dt>
+ <dd>As per the default masonry algorithm, items will be placed into the track with the most room.</dd>
+ <dt><code>next</code></dt>
+ <dd>Items will be placed one after the other in the grid axis.</dd>
+ <dt><code>definite-first</code></dt>
+ <dd>Display as in the default masonry algorithm, placing items with a definite place first before placing other masonry items.</dd>
+ <dt><code>ordered</code></dt>
+ <dd>Ignore any items with a definite placement, and place everything according to order-modified document order.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -62,7 +70,7 @@ masonry-auto-flow: unset;
   &lt;div id="item4"&gt;&lt;/div&gt;
   &lt;div id="item5"&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;select id="flow" onchange="changeMasonryFlow()"&gt;
+&lt;select id="flow"&gt;
   &lt;option value="pack"&gt;pack&lt;/option&gt;
   &lt;option value="next"&gt;next&lt;/option&gt;
 &lt;/select&gt;
@@ -104,13 +112,18 @@ masonry-auto-flow: unset;
   height: 4em;
 }</pre>
 
-<pre class="brush: js notranslate">function changeMasonryFlow() {
+<pre class="brush: js notranslate">const selectElem = document.querySelector('select');
+
+function changeMasonryFlow() {
   var grid = document.getElementById("grid");
   var direction = document.getElementById("flow");
   var masonryAutoFlow = direction.value === "pack" ? "pack" : "next";
 
   grid.style.masonryAutoFlow = masonryAutoFlow;
-}</pre>
+}
+
+selectElem.addEventListener('change', changeMasonryFlow);
+</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -119,20 +132,20 @@ masonry-auto-flow: unset;
 <h2 id="Specifications">Specifications</h2>
 
 <table>
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS Grid 3", "#propdef-masonry-auto-flow", "masonry-auto-flow")}}</td>
-			<td>{{Spec2("CSS Grid 3")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Grid 3", "#propdef-masonry-auto-flow", "masonry-auto-flow")}}</td>
+   <td>{{Spec2("CSS Grid 3")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -144,61 +157,61 @@ masonry-auto-flow: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>Related CSS properties: {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}</li>
+ <li>Related CSS properties: {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}</li>
 </ul>
 
 <section id="Quick_Links">
 <ol>
-	<li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
-	<li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
-	<li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-	<ol>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-	</ol>
-	</li>
-	<li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-	<ol>
-		<li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-		<li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-	</ol>
-	</li>
-	<li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-	<ol>
-		<li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-		<li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-		<li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-		<li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-		<li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-		<li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-		<li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-	</ol>
-	</li>
+ <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
+ <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
+ <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
+   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
+  </ol>
+ </li>
 </ol>
 </section>

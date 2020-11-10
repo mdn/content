@@ -107,7 +107,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
   );
 });</pre>
 
-<p>There are two things that need an explanation here: what {{domxref("ExtendableEvent.waitUntil")}} does, and what the {{domxref("Caches","caches")}} object is.</p>
+<p>There are two things that need an explanation here: what {{domxref("ExtendableEvent.waitUntil")}} does, and what the {{domxref("Cache","caches")}} object is.</p>
 
 <p>The service worker does not install until the code inside <code>waitUntil</code> is executed. It returns a promise — this approach is needed because installing may take some time, so we have to wait for it to finish.</p>
 

@@ -154,12 +154,12 @@ tags:
 <p>This example basically:</p>
 
 <ul>
- <li>Clones the <code>&lt;select&gt;</code>'s context (the <a href="/en-US/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code>s</a>) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.</li>
+ <li>Clones the <code>&lt;select&gt;</code>'s context (the {{HTMLElement("option")}}) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.</li>
  <li>Maps some standards native <code>attributes</code> to <code>data-attributes</code> of the new elements in order to manage state and CSS.</li>
 </ul>
 
 <div class="blockIndicator note">
-<p>Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.</p>
+<p>Not all native features are supported, it's a Proof of Concept. It starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.</p>
 </div>
 
 <h4 id="HTML">HTML</h4>
@@ -250,8 +250,6 @@ tags:
 &lt;/html&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
-
-
 
 <pre class="brush: css notranslate">body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif

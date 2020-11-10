@@ -8,18 +8,18 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong>continue statement</strong> terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.</p>
+<p>The <strong><code>continue</code> statement</strong> terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-continue.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">continue [<em>label</em>];</pre>
+<pre class="syntaxbox notranslate">continue [<var>label</var>];</pre>
 
 <dl>
- <dt><code>label</code></dt>
+ <dt><code><var>label</var></code></dt>
  <dd>Identifier associated with the label of the statement.</dd>
 </dl>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>The following example shows a {{jsxref("Statements/while", "while")}} loop that has a <code>continue</code> statement that executes when the value of <code>i</code> is 3. Thus, <code>n</code> takes on the values 1, 3, 7, and 12.</p>
 
-<pre class="brush: js">var i = 0;
+<pre class="brush: js notranslate">var i = 0;
 var n = 0;
 
 while (i &lt; 5) {
@@ -63,9 +63,9 @@ while (i &lt; 5) {
 
 <p>If <code>continue</code> had a label of <code>checkiandj</code>, the program would continue at the top of the <code>checkiandj</code> statement.</p>
 
-<p>See also {{jsxref("Statements/label", "label")}}.</p>
+<p>See also {{jsxref("Statements/label", "label", "", 1)}}.</p>
 
-<pre class="brush: js">var i = 0;
+<pre class="brush: js notranslate">var i = 0;
 var j = 8;
 
 checkiandj: while (i &lt; 4) {
@@ -87,7 +87,7 @@ checkiandj: while (i &lt; 4) {
 
 <p>Output:</p>
 
-<pre class="brush: js">i: 0
+<pre class="brush: js notranslate">i: 0
 
 // start checkj
 j: 8
@@ -117,10 +117,12 @@ j = 4
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-continue-statement', 'Continue statement')}}</td>
   </tr>
@@ -137,5 +139,5 @@ j = 4
 
 <ul>
  <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
+ <li>{{jsxref("Statements/label", "label", "", 1)}}</li>
 </ul>

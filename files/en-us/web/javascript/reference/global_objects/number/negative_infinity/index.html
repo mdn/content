@@ -13,7 +13,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
@@ -37,15 +37,15 @@ tags:
 
 <p>You might use the <code>Number.NEGATIVE_INFINITY</code> property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("isFinite")}} would be more appropriate in such a case.</p>
 
-<p>Because <code>NEGATIVE_INFINITY</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.NEGATIVE_INFINITY</code>, rather than as a property of a {{jsxref("Number")}} object you created. </p>
+<p>Because <code>NEGATIVE_INFINITY</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.NEGATIVE_INFINITY</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_NEGATIVE_INFINITY">Using <code>NEGATIVE_INFINITY</code></h3>
+<h3 id="Using_NEGATIVE_INFINITY">Using NEGATIVE_INFINITY</h3>
 
 <p>In the following example, the variable <code>smallNumber</code> is assigned a value that is smaller than the minimum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, <code>smallNumber</code> has the value <code>-Infinity</code>, so <code>smallNumber</code> is set to a more manageable value before continuing.</p>
 
-<pre class="brush: js">var smallNumber = (-Number.MAX_VALUE) * 2;
+<pre class="brush: js notranslate">var smallNumber = (-Number.MAX_VALUE) * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();
@@ -55,10 +55,12 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}}</td>
   </tr>
@@ -67,7 +69,7 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}</p>
 

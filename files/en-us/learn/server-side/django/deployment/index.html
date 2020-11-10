@@ -210,7 +210,7 @@ with open('/etc/secret_key.txt') as f:
 
 <h3 id="Creating_an_application_repository_in_Github">Creating an application repository in Github</h3>
 
-<p>Heroku is closely integrated with the <strong>git</strong> source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named <em>heroku</em> pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your "master" repository. When you want to deploy your site, you sync your changes to the Heroku repository.</p>
+<p>Heroku is closely integrated with the <strong>git</strong> source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named <em>heroku</em> pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.</p>
 
 <div class="note">
 <p><strong>Note:</strong> If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.</p>
@@ -264,8 +264,8 @@ with open('/etc/secret_key.txt') as f:
  </li>
  <li>Use the <code>status</code> command to check that all files you are about to <code>commit</code> are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
   <pre class="notranslate">&gt; git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 Changes to be committed:
   (use "git reset HEAD &lt;file&gt;..." to unstage)
 
@@ -280,9 +280,15 @@ Changes to be committed:
   <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>At this point, the remote repository has not been changed. Synchronise (<code>push</code>) your local repository to the remote Github repository using the following command:
-  <pre class="notranslate">git push origin master</pre>
+  <pre class="notranslate">git push origin main</pre>
  </li>
 </ol>
+
+<div class="blockIndicator warning">
+<p><strong>Warning:</strong> In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
+</div>
+
+<p>When this operation completes, you should be able to go back to the page on Github where</p>
 
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
@@ -483,7 +489,7 @@ whitenoise==5.2.0
 
 <pre class="brush: python notranslate">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
-git push origin master
+git push origin main
 </pre>
 
 <p>We should now be ready to start deploying LocalLibrary on Heroku.</p>
@@ -595,7 +601,7 @@ Setting DJANGO_DEBUG and restarting locallibrary... done, v8</code></pre>
 
 <pre class="brush: bash notranslate">git add -A
 git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
-git push origin master
+git push origin main
 git push heroku master</pre>
 
 <div class="note">

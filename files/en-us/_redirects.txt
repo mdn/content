@@ -777,7 +777,7 @@
 /en-US/docs/CSS/columns	/en-US/docs/Web/CSS/columns
 /en-US/docs/CSS/computed_value	/en-US/docs/Web/CSS/computed_value
 /en-US/docs/CSS/content	/en-US/docs/Web/CSS/content
-/en-US/docs/CSS/counter	/en-US/docs/Web/CSS/counter
+/en-US/docs/CSS/counter	/en-US/docs/Web/CSS/counter()
 /en-US/docs/CSS/counter-increment	/en-US/docs/Web/CSS/counter-increment
 /en-US/docs/CSS/counter-reset	/en-US/docs/Web/CSS/counter-reset
 /en-US/docs/CSS/cursor	/en-US/docs/Web/CSS/cursor
@@ -1129,7 +1129,7 @@
 /en-US/docs/CSS:color_value	/en-US/docs/Web/CSS/color_value
 /en-US/docs/CSS:computed_value	/en-US/docs/Web/CSS/computed_value
 /en-US/docs/CSS:content	/en-US/docs/Web/CSS/content
-/en-US/docs/CSS:counter	/en-US/docs/Web/CSS/counter
+/en-US/docs/CSS:counter	/en-US/docs/Web/CSS/counter()
 /en-US/docs/CSS:counter-increment	/en-US/docs/Web/CSS/counter-increment
 /en-US/docs/CSS:counter-reset	/en-US/docs/Web/CSS/counter-reset
 /en-US/docs/CSS:cursor	/en-US/docs/Web/CSS/cursor
@@ -2671,7 +2671,7 @@
 /en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Current_events	/en-US/docs/Project:en/Current_events
 /en-US/docs/CustomElements	/en-US/docs/Web/Web_Components/Using_custom_elements
-/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video
+/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /en-US/docs/DEPTH	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/DHTML	/en-US/docs/Glossary/DHTML
 /en-US/docs/DHTML_Demonstrations_Using_DOM/Style	/en-US/docs/DHTML_Demonstrations_Using_DOM_Style
@@ -2815,7 +2815,7 @@
 /en-US/docs/DOM/DeviceRotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma
 /en-US/docs/DOM/Document.createNodeIterator	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/DOM/Document.dir	/en-US/docs/Web/API/Document/dir
-/en-US/docs/DOM/Document.domConfig	/en-US/docs/Web/API/Document/domConfig
+/en-US/docs/DOM/Document.domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/DOM/Document.querySelector	/en-US/docs/Web/API/Document.querySelector
 /en-US/docs/DOM/Document.querySelectorAll	/en-US/docs/Web/API/Document/querySelectorAll
 /en-US/docs/DOM/Document.scripts	/en-US/docs/Web/API/Document.scripts
@@ -4545,7 +4545,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DeviceRotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma
 /en-US/docs/Document_Object_Model_(DOM)/Document.createNodeIterator	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Document_Object_Model_(DOM)/Document.dir	/en-US/docs/Web/API/Document/dir
-/en-US/docs/Document_Object_Model_(DOM)/Document.domConfig	/en-US/docs/Web/API/Document/domConfig
+/en-US/docs/Document_Object_Model_(DOM)/Document.domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Document_Object_Model_(DOM)/Document.querySelector	/en-US/docs/Web/API/Document.querySelector
 /en-US/docs/Document_Object_Model_(DOM)/Document.querySelectorAll	/en-US/docs/Web/API/Document/querySelectorAll
 /en-US/docs/Document_Object_Model_(DOM)/Document.scripts	/en-US/docs/Web/API/Document.scripts
@@ -5455,6 +5455,7 @@
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 /en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials/Touch_Event_Horizon
+/en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/Getting_your_patch_in_the_tree	/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /en-US/docs/Gfx	/en-US/docs/User:ryoqun/Gfx
@@ -9050,6 +9051,7 @@
 /en-US/docs/View_Formatted_Source_(external)	https://addons.mozilla.org/en-US/firefox/addon/697
 /en-US/docs/View_source	/en-US/docs/Tools/View_source
 /en-US/docs/Virtual_ARM_Linux_environment	/en-US/docs/Mozilla/Developer_guide/Virtual_ARM_Linux_environment
+/en-US/docs/Vuletube-vue-typescript-threejs-nui-voice-opencvjs	/en-US/docs/Games/
 /en-US/docs/W.M._Bony	/en-US/docs/User:W.M._Bony
 /en-US/docs/WARNINGS_AS_ERRORS	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/WOFF	/en-US/docs/Web/Guide/WOFF
@@ -9655,7 +9657,7 @@
 /en-US/docs/Web/API/Doc_status	/en-US/docs/MDN/Doc_status/API
 /en-US/docs/Web/API/Document.createNodeIterator	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Web/API/Document.dir	/en-US/docs/Web/API/Document/dir
-/en-US/docs/Web/API/Document.domConfig	/en-US/docs/Web/API/Document/domConfig
+/en-US/docs/Web/API/Document.domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document.querySelectorAll	/en-US/docs/Web/API/Document/querySelectorAll
 /en-US/docs/Web/API/Document.registerElement	/en-US/docs/Web/API/Document/registerElement
 /en-US/docs/Web/API/Document.releaseCapture	/en-US/docs/Web/API/Document/releaseCapture
@@ -9674,6 +9676,7 @@
 /en-US/docs/Web/API/Document/defaultView/popstate_event	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/Document/defaultView/resize_event	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
+/en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/Document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
 /en-US/docs/Web/API/Document/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
@@ -11953,7 +11956,7 @@
 /en-US/docs/Web/API/temp_document/documentElement	/en-US/docs/Web/API/Document/documentElement
 /en-US/docs/Web/API/temp_document/documentURI	/en-US/docs/Web/API/Document/documentURI
 /en-US/docs/Web/API/temp_document/documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
-/en-US/docs/Web/API/temp_document/domConfig	/en-US/docs/Web/API/Document/domConfig
+/en-US/docs/Web/API/temp_document/domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/temp_document/domain	/en-US/docs/Web/API/Document/domain
 /en-US/docs/Web/API/temp_document/elementFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /en-US/docs/Web/API/temp_document/elementsFromPoint	/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint
@@ -12686,10 +12689,14 @@
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
+/en-US/docs/Web/CSS/clamp	/en-US/docs/Web/CSS/clamp()
 /en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
-/en-US/docs/Web/CSS/conic-gradient()	/en-US/docs/Web/CSS/conic-gradient
-/en-US/docs/Web/CSS/counter_function	/en-US/docs/Web/CSS/counter
+/en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/conic-gradient()
+/en-US/docs/Web/CSS/counter	/en-US/docs/Web/CSS/counter()
+/en-US/docs/Web/CSS/counter_function	/en-US/docs/Web/CSS/counter()
+/en-US/docs/Web/CSS/counters	/en-US/docs/Web/CSS/counters()
+/en-US/docs/Web/CSS/cross-fade	/en-US/docs/Web/CSS/cross-fade()
 /en-US/docs/Web/CSS/cursor/url	/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /en-US/docs/Web/CSS/default	/en-US/docs/Web/CSS/:default
 /en-US/docs/Web/CSS/document	/en-US/docs/Web/CSS/@document
@@ -12701,6 +12708,9 @@
 /en-US/docs/Web/CSS/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/Web/CSS/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/Web/CSS/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
+/en-US/docs/Web/CSS/filter-function/blur	/en-US/docs/Web/CSS/filter-function/blur()
+/en-US/docs/Web/CSS/filter-function/brightness	/en-US/docs/Web/CSS/filter-function/brightness()
+/en-US/docs/Web/CSS/filter-function/contrast	/en-US/docs/Web/CSS/filter-function/contrast()
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url()
 /en-US/docs/Web/CSS/flex-align	/en-US/docs/Web/CSS/align-items
 /en-US/docs/Web/CSS/flex-item-align	/en-US/docs/Web/CSS/align-self
@@ -13253,6 +13263,7 @@
 /en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
+/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /en-US/docs/Web/HTML/Documentation_status	/en-US/docs/MDN/Doc_status/HTML
 /en-US/docs/Web/HTML/Documentation_status/Statut_de_la_traduction_en_fran%C3%A7ais	/en-US/docs/MDN/Doc_status/HTML/Statut_de_la_traduction_en_fran%C3%A7ais
 /en-US/docs/Web/HTML/Element/%3Cpicture%3E	/en-US/docs/Web/HTML/Element/picture
@@ -14407,7 +14418,7 @@
 /en-US/docs/concat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat
 /en-US/docs/configure.in	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/configure.in
 /en-US/docs/const	/en-US/docs/Web/JavaScript/Reference/Statements/const
-/en-US/docs/counter	/en-US/docs/Web/CSS/counter
+/en-US/docs/counter	/en-US/docs/Web/CSS/counter()
 /en-US/docs/counters	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 /en-US/docs/counters-redirect-1	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 /en-US/docs/createAttribute	/en-US/docs/Web/API/Document/createAttribute

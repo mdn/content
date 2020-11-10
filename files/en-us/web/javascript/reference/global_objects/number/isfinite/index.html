@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Number.isFinite()</code></strong> method determines whether the passed value is a finite number.</p>
+<p><span class="seoSummary">The <strong><code>Number.isFinite()</code></strong> method determines whether the passed value is a finite number — that is, it checks that a number is neither positive nor negative <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a>, since JavaScript has both.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
 
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't forcibly convert the parameter to a number. This means only values of the type number, that are also finite, return <code>true</code>.</p>
+<p>In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't first convert the parameter to a number. This means only values of the type number <em>and</em> are finite return <code>true</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 

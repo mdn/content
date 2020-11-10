@@ -149,11 +149,19 @@ Content-Type: application/xml
 
 […XML Data…]</pre>
 
-<p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header. The use of the {{HTTPHeader("Origin")}} header and of {{HTTPHeader("Access-Control-Allow-Origin")}} show the access control protocol in its simplest use. In this case, the server responds with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> origin. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, they would send:</p>
+<p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> origin.</p>
 
-<pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code></pre>
+<pre class="syntaxbox notranslate"><code class="plain">Access-Control-Allow-Origin: *</code></pre>
 
-<p>Now no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner. To allow access to the resource, the <code>Access-Control-Allow-Origin</code> header should contain the value that was sent in the request's <code>Origin</code> header.</p>
+<p>This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, (i.e no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner) they would send:</p>
+
+<pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
+</pre>
+
+<ul>
+</ul>
+
+<div class="note"><strong>Note:</strong> When responding to a <a href="#Credentialed_requests_and_wildcards">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
@@ -245,14 +253,14 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will be sent with a <code>POST</code> request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will be sent with a <code>X-PINGOTHER</code> and <code>Content-Type</code> custom headers. The server now has an opportunity to determine whether it wishes to accept a request under these circumstances.</p>
 
-<p>Lines 13 - 22 above are the response that the server sends back indicating that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
+<p>Lines 13 - 22 above are the response that the server sends back, which indicate <span style="">that the request method (</span><code style="">POST</code><span style="">) and request headers (</span><code style="">X-PINGOTHER</code><span style="">) are acceptable. In particular, let's look at lines 16-19:</span></p>
 
 <pre class="brush: none notranslate">Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
 
-<p>The server responds with <code>Access-Control-Allow-Methods</code> and says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question. Note that this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control.</p>
+<p>The server responds with <code>Access-Control-Allow-Origin: http://foo.example</code>, restricting access to just the requesting origin domain. It also responds with <code>Access-Control-Allow-Methods</code>, which says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).</p>
 
 <p>The server also sends <code>Access-Control-Allow-Headers</code> with a value of "<code>X-PINGOTHER, Content-Type</code>", confirming that these are permitted headers to be used with the actual request. Like <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> is a comma separated list of acceptable headers.</p>
 

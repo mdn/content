@@ -13,11 +13,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/function-tostring.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>function</var>.toString()</code></pre>
+<pre class="syntaxbox notranslate"><var>function</var>.toString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The {{jsxref("Function")}} object overrides the {{jsxref("Object.prototype.toString", "toString")}} method inherited from {{jsxref("Object")}}; it does not inherit {{jsxref("Object.prototype.toString")}}. For user-defined {{jsxref("Function")}} objects, the <code>toString</code> method returns a string containing the source text segment which was used to define the function.</p>
+<p>The {{jsxref("Function")}} object overrides the {{jsxref("Object.prototype.toString", "toString")}} method inherited from {{jsxref("Object")}}; it does not inherit {{jsxref("Object.prototype.toString")}}. For user-defined {{jsxref("Function")}} objects, the <code>toString</code> method returns a string containing the source text segment which was used to define the function.</p>
 
 <p>JavaScript calls the <code>toString</code> method automatically when a {{jsxref("Function")}} is to be represented as a text value, e.g. when a function is concatenated with a string.</p>
 
@@ -34,12 +34,12 @@ tags:
 <pre class="brush: js example-bad notranslate">Function.prototype.toString.call('foo'); // TypeError
 </pre>
 
-<p>If the <code>toString()</code> method is called on built-in function objects or a function created by <code>Function.prototype.bind</code>, <code>toString()</code> returns a <em>native function string</em> which looks like</p>
+<p>If the <code>toString()</code> method is called on built-in function objects or a function created by <code>Function.prototype.bind</code>, <code>toString()</code> returns a <em>native function string</em> which looks like</p>
 
-<pre class="brush: js notranslate">"function () {\n    [native code]\n}"
+<pre class="brush: js notranslate">"function () {\n    [native code]\n}"
 </pre>
 
-<p>If the <code>toString()</code> method is called on a function created by the <code>Function</code> constructor, <code>toString()</code> returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body.</p>
+<p>If the <code>toString()</code> method is called on a function created by the <code>Function</code> constructor, <code>toString()</code> returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body.</p>
 
 <p>It's also possible to explicitly get the string representation of a function using the <code>+</code> operator:</p>
 
@@ -132,7 +132,7 @@ a =&gt; a</pre>
    <td>
     <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
-    get a(){}
+    get a(){}
 }, "a").get</pre>
    </td>
    <td>
@@ -144,7 +144,7 @@ Object.getOwnPropertyDescriptor({
    <td>
     <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+    set a(x){}
 }, "a").set</pre>
    </td>
    <td>
@@ -188,10 +188,12 @@ Function("a", "b")</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
   </tr>
