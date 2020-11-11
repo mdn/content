@@ -9,7 +9,7 @@ tags:
   - Performance
 ---
 <p>{{CSSRef}}<br>
- The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.</p>
+The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.</p>
 
 <h2 id="Basic_example">Basic example</h2>
 
@@ -56,10 +56,10 @@ tags:
 <p>In addition:</p>
 
 <ul>
- <li><code>float</code> layout will be performed independently.</li>
- <li>Margins won't collapse across a layout containment boundary</li>
- <li>The layout container will be a containing block for <code>absolute</code>/<code>fixed</code> position descendants.</li>
- <li>The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.</li>
+	<li><code>float</code> layout will be performed independently.</li>
+	<li>Margins won't collapse across a layout containment boundary</li>
+	<li>The layout container will be a containing block for <code>absolute</code>/<code>fixed</code> position descendants.</li>
+	<li>The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.</li>
 </ul>
 
 <h3 id="Paint_containment">Paint containment</h3>
@@ -101,8 +101,8 @@ tags:
 <p>There are two special values of contain:</p>
 
 <ul>
- <li><code>content</code></li>
- <li><code>strict</code></li>
+	<li><code>content</code></li>
+	<li><code>strict</code></li>
 </ul>
 
 <p>We encountered the first in the example above. Using <code>contain: content</code> turns on <code>layout</code> and <code>paint</code> containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply <code>size</code> containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.</p>
@@ -117,12 +117,42 @@ contain: strict style;</pre>
 <h3 id="CSS_Properties">CSS Properties</h3>
 
 <ul>
- <li>{{cssxref("contain")}}</li>
+	<li>{{cssxref("contain")}}</li>
+	<li>{{cssxref("content-visibility")}}</li>
 </ul>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS Containment 2', '#contain-property', 'contain')}}</td>
+			<td>{{Spec2('CSS Containment 2')}}</td>
+			<td>Added <code>style</code> keyword</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.properties.contain")}}</p>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("css.properties.content-visibility")}}</p>
 
 <h2 id="External_resources">External resources</h2>
 
 <ul>
- <li><a href="https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/">An Introduction to CSS Containment</a></li>
- <li><a href="https://dev.opera.com/articles/css-will-change-property">Everything You Need to Know About the CSS <code>will-change</code> Property</a></li>
+	<li><a href="https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/">An Introduction to CSS Containment</a></li>
+	<li><a href="https://dev.opera.com/articles/css-will-change-property">Everything You Need to Know About the CSS <code>will-change</code> Property</a></li>
 </ul>

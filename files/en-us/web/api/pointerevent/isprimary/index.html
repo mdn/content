@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>isPrimary</em> = <em>pointerEvent</em>.isPrimary;
+<pre class="syntaxbox notranslate">var <em>isPrimary</em> = <em>pointerEvent</em>.isPrimary;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,12 +35,12 @@ tags:
 
 <p>This example illustrates using the value of <code>isPrimary</code> to call the appropriate processing function.</p>
 
-<pre class="brush: js">target.addEventListener('pointerdown', function(event) {
-   if (event.isPrimary)
-     process_primary_pointer(event);
-   else
-     process_secondary_pointer(event);
- }, false);
+<pre class="brush: js notranslate">target.addEventListener('pointerdown', function(event) {
+  if (event.isPrimary)
+    process_primary_pointer(event);
+  else
+    process_secondary_pointer(event);
+}, false);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

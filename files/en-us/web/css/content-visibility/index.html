@@ -1,6 +1,16 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+tags:
+  - CSS
+  - CSS Containment
+  - CSS Property
+  - Layout
+  - Paint
+  - Reference
+  - Style
+  - Visibility
+  - Web
 ---
 <p>{{CSSRef}}</p>
 
@@ -28,6 +38,49 @@ content-visibility: unset;
  <dt><code>auto</code></dt>
  <dd>The element turns on layout containment, style containment, and paint containment. If the element is not relevant to the user, it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.</dd>
 </dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_auto_to_reduce_rendering_cost_of_long_pages">Using auto to reduce rendering cost of long pages</h3>
+
+<p>The following example shows the use of auto to skip painting and rendering of off-screen sections. This helps with both load and interactions on the page, since the content outside of the viewport is not rendered.</p>
+
+<pre class="brush: html notranslate">&lt;style&gt;
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+&lt;section&gt;...
+&lt;section&gt;...
+&lt;section&gt;...
+&lt;section&gt;...
+...
+</pre>
+
+<h3 id="Using_hidden_to_manually_manage_visibility.">Using hidden to manually manage visibility.</h3>
+
+<p>The following example shows that it is possible to manage visibility in script. The added benefit of using <code>content-visiblity: hidden</code> instead of, for example, <code>display: none</code> is that rendered content when hidden with <code>content-visibility</code> will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.</p>
+
+<pre class="brush: html notranslate">&lt;style&gt;
+.hidden {
+  content-visibility: hidden;
+  /* when hidden, we want the element to size as if it had one child of 0x500px size */
+  contain-intrinsic-size: 0 500px;
+}
+.visible {
+  content-visibility: visible;
+  /* this is here to avoid layout shift when switching between .hidden and .visible */
+  contain: style layout paint;
+}
+
+
+
+&lt;div class=hidden&gt;...
+&lt;div class=visible&gt;...
+&lt;div class=hidden&gt;...
+&lt;div class=hidden&gt;...
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

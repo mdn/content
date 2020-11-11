@@ -343,7 +343,7 @@
 /en-US/docs/CSS/-moz-columns	/en-US/docs/Web/CSS/columns
 /en-US/docs/CSS/-moz-context-menu	/en-US/docs/Web/CSS/cursor
 /en-US/docs/CSS/-moz-copy	/en-US/docs/Web/CSS/cursor
-/en-US/docs/CSS/-moz-element	/en-US/docs/Web/CSS/element
+/en-US/docs/CSS/-moz-element	/en-US/docs/Web/CSS/element()
 /en-US/docs/CSS/-moz-filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/CSS/-moz-float-edge	/en-US/docs/Web/CSS/-moz-float-edge
 /en-US/docs/CSS/-moz-font-feature-settings	/en-US/docs/Web/CSS/font-feature-settings
@@ -790,7 +790,7 @@
 /en-US/docs/CSS/document	/en-US/docs/Web/CSS/@document
 /en-US/docs/CSS/document/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline
-/en-US/docs/CSS/element	/en-US/docs/Web/CSS/element
+/en-US/docs/CSS/element	/en-US/docs/Web/CSS/element()
 /en-US/docs/CSS/empty-cells	/en-US/docs/Web/CSS/empty-cells
 /en-US/docs/CSS/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/CSS/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
@@ -10642,6 +10642,7 @@
 /en-US/docs/Web/API/Node.setUserData	/en-US/docs/Web/API/Node/setUserData
 /en-US/docs/Web/API/Node.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Web/API/Node/innerText	/en-US/docs/Web/API/HTMLElement/innerText
+/en-US/docs/Web/API/Node/outerText	/en-US/docs/Web/API/HTMLElement/outerText
 /en-US/docs/Web/API/NodeFilter.acceptNode	/en-US/docs/Web/API/NodeFilter/acceptNode
 /en-US/docs/Web/API/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
 /en-US/docs/Web/API/NodeIterator.expandEntityReferences	/en-US/docs/Web/API/NodeIterator/expandEntityReferences
@@ -12421,7 +12422,7 @@
 /en-US/docs/Web/CSS/-moz-columns	/en-US/docs/Web/CSS/columns
 /en-US/docs/Web/CSS/-moz-context-menu	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/-moz-copy	/en-US/docs/Web/CSS/cursor
-/en-US/docs/Web/CSS/-moz-element	/en-US/docs/Web/CSS/element
+/en-US/docs/Web/CSS/-moz-element	/en-US/docs/Web/CSS/element()
 /en-US/docs/Web/CSS/-moz-filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/Web/CSS/-moz-font-feature-settings	/en-US/docs/Web/CSS/font-feature-settings
 /en-US/docs/Web/CSS/-moz-font-language-override	/en-US/docs/Web/CSS/font-language-override
@@ -12702,8 +12703,8 @@
 /en-US/docs/Web/CSS/document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/document/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline
-/en-US/docs/Web/CSS/element()	/en-US/docs/Web/CSS/element
-/en-US/docs/Web/CSS/env()	/en-US/docs/Web/CSS/env
+/en-US/docs/Web/CSS/element	/en-US/docs/Web/CSS/element()
+/en-US/docs/Web/CSS/env	/en-US/docs/Web/CSS/env()
 /en-US/docs/Web/CSS/fallback	/en-US/docs/Web/CSS/@counter-style/fallback
 /en-US/docs/Web/CSS/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/Web/CSS/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
@@ -12711,6 +12712,8 @@
 /en-US/docs/Web/CSS/filter-function/blur	/en-US/docs/Web/CSS/filter-function/blur()
 /en-US/docs/Web/CSS/filter-function/brightness	/en-US/docs/Web/CSS/filter-function/brightness()
 /en-US/docs/Web/CSS/filter-function/contrast	/en-US/docs/Web/CSS/filter-function/contrast()
+/en-US/docs/Web/CSS/filter-function/drop-shadow	/en-US/docs/Web/CSS/filter-function/drop-shadow()
+/en-US/docs/Web/CSS/filter-function/grayscale	/en-US/docs/Web/CSS/filter-function/grayscale()
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url()
 /en-US/docs/Web/CSS/flex-align	/en-US/docs/Web/CSS/align-items
 /en-US/docs/Web/CSS/flex-item-align	/en-US/docs/Web/CSS/align-self
