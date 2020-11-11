@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
+<pre class="syntaxbox notranslate"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -36,32 +36,27 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+<pre class="notranslate">const pc = new RTCPeerConnection();
+
+function waitToCompleteIceGathering(pc) {
+    return new Promise(resolve =&gt; {
+        pc.addEventListener('icegatheringstatechange', e =&gt; (e.target.iceGatheringState === 'complete') &amp;&amp; resolve(pc.localDescription));
+    });
+}
+
 // The following code might be used to handle an offer from a peer when
 // it isn't known whether it supports trickle ICE.
-pc.setRemoteDescription(remoteOffer)
-  .then(_ =&gt; pc.createAnswer())
-  .then(answer =&gt; pc.setLocalDescription(answer))
-  .then(_ =&gt;
-    if (pc.canTrickleIceCandidates) {
-      return pc.localDescription;
-    }
-    return new Promise(r =&gt; {
-      pc.addEventListener('icegatheringstatechange', e =&gt; {
-        if (e.target.iceGatheringState === 'complete') {
-          r(pc.localDescription);
-        }
-      });
-    });
-  })
-  .then(answer =&gt; sendAnswerToPeer(answer)) // signaling message
-  .catch(e =&gt; handleError(e));
+async function newPeer(remoteOffer) {
+    await pc.setRemoteDescription(remoteOffer);
+    const offer = await pc.createOffer();
+    await pc.setLocalDescription(offer);
+    if (pc.canTrickleIceCandidates) return pc.localDescription;
+    const answer = await waitToCompleteIceGathering(pc);
+    sendAnswerToPeer(answer); //To peer via signaling channel
+}
+// Handle error with try/catch
 
-pc.addEventListener('icecandidate', e =&gt; {
-  if (pc.canTrickleIceCandidates) {
-    sendCandidateToPeer(e.candidate); // signaling message
-  }
-});
+pc.addEventListener('icecandidate', e =&gt; (pc.canTrickleIceCandidates) &amp;&amp; sendCandidateToPeer(e.candidate));
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

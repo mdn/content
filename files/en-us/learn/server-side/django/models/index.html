@@ -282,7 +282,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <h3 id="Book_model">Book model</h3>
 
-<p>Copy the Book model below and again paste it into the bottom of your file. The book model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a <code>CharField</code> to represent the book's <code>title</code> and <code>isbn</code> (note how the <code>isbn</code> specifies its label as "ISBN" using the first unnamed parameter because the default label would otherwise be "Isbn"). The model uses <code>TextField</code> for the <code>summary</code>, because this text may need to be quite long.</p>
+<p>Copy the <code>Book</code> model below and again paste it into the bottom of your file. The <code>Book</code> model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a <code>CharField</code> to represent the book's <code>title</code> and <code>isbn</code> . For <code>isbn</code>, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise it would default to "Isbn").  We also set parameter <code>unique</code> as <code>true</code> in order to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses <code>TextField</code> for the <code>summary</code>, because this text may need to be quite long.</p>
 
 <pre class="brush: python notranslate">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
@@ -295,7 +295,8 @@ class Book(models.Model):
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
 
     summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
-    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
+    isbn = models.CharField('ISBN', max_length=13, unique=True,
+                             help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
 
     # ManyToManyField used because genre can contain many books. Books can cover many genres.
     # Genre class has already been defined so we can specify the object above.

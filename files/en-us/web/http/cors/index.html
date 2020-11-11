@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary"><strong>Cross-Origin Resource Sharing</strong> ({{Glossary("CORS")}}) is a mechanism that uses additional {{Glossary("HTTP")}} headers to tell browsers to give a web application running at one {{glossary("origin")}}, access to selected resources from a different origin.</span> A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, or port) from its own.</p>
+<p><span class="seoSummary"><strong>Cross-Origin Resource Sharing</strong> ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any other {{glossary("origin")}}s (domain, protocol, or port) than its own from which a browser should permit loading of resources.</span> CORS also relies on a mechanism by which browsers make a “preflight” request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.</p>
 
 <p>An example of a cross-origin request: the front-end JavaScript code served from <code>https://domain-a.com</code> uses {{domxref("XMLHttpRequest")}} to make a request for <code>https://domain-b.com/data.json</code>.</p>
 
@@ -149,15 +149,23 @@ Content-Type: application/xml
 
 […XML Data…]</pre>
 
-<p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header. The use of the {{HTTPHeader("Origin")}} header and of {{HTTPHeader("Access-Control-Allow-Origin")}} show the access control protocol in its simplest use. In this case, the server responds with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> domain. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, they would send:</p>
+<p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> origin.</p>
 
-<pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code></pre>
+<pre class="syntaxbox notranslate"><code class="plain">Access-Control-Allow-Origin: *</code></pre>
 
-<p>Now no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner. To allow access to the resource, the <code>Access-Control-Allow-Origin</code> header should contain the value that was sent in the request's <code>Origin</code> header.</p>
+<p>This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, (i.e no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner) they would send:</p>
+
+<pre class="notranslate"><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
+</pre>
+
+<ul>
+</ul>
+
+<div class="note"><strong>Note:</strong> When responding to a <a href="#Credentialed_requests_and_wildcards">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
-<p>Unlike <a href="#Simple_requests">“simple requests” (discussed above)</a>, "preflighted" requests first send an HTTP request by the {{HTTPMethod("OPTIONS")}} method to the resource on the other domain, to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
+<p>Unlike <a href="#Simple_requests">“simple requests” (discussed above)</a>, for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</p>
 
 <p>The following is an example of a request that will be preflighted:</p>
 
@@ -245,14 +253,14 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will be sent with a <code>POST</code> request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will be sent with a <code>X-PINGOTHER</code> and <code>Content-Type</code> custom headers. The server now has an opportunity to determine whether it wishes to accept a request under these circumstances.</p>
 
-<p>Lines 13 - 22 above are the response that the server sends back indicating that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
+<p>Lines 13 - 22 above are the response that the server sends back, which indicate <span style="">that the request method (</span><code style="">POST</code><span style="">) and request headers (</span><code style="">X-PINGOTHER</code><span style="">) are acceptable. In particular, let's look at lines 16-19:</span></p>
 
 <pre class="brush: none notranslate">Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
 
-<p>The server responds with <code>Access-Control-Allow-Methods</code> and says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question. Note that this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control.</p>
+<p>The server responds with <code>Access-Control-Allow-Origin: http://foo.example</code>, restricting access to just the requesting origin domain. It also responds with <code>Access-Control-Allow-Methods</code>, which says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).</p>
 
 <p>The server also sends <code>Access-Control-Allow-Headers</code> with a value of "<code>X-PINGOTHER, Content-Type</code>", confirming that these are permitted headers to be used with the actual request. Like <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> is a comma separated list of acceptable headers.</p>
 
@@ -289,6 +297,10 @@ Access-Control-Max-Age: 86400</pre>
 <p>However, if the request is one that triggers a preflight due to the presence of the <code>Authorization</code> header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.</p>
 
 <h3 id="Requests_with_credentials">Requests with credentials</h3>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced independent of any setup on the server and the client, as described in this chapter.</p>
+</div>
 
 <p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> and HTTP Authentication information. By default, in cross-site <code>XMLHttpRequest</code> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the <code>XMLHttpRequest</code> object or the {{domxref("Request")}} constructor when it is invoked.</p>
 
@@ -356,6 +368,10 @@ Content-Type: text/plain
 <h4 id="Third-party_cookies">Third-party cookies</h4>
 
 <p>Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from <code>foo.example</code>, but the cookie on line 20 is sent by <code>bar.other</code>, and would thus not be saved if the user has configured their browser to reject all third-party cookies.</p>
+
+<p>Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively prevents you from making credentialed requests whatsoever.</p>
+
+<p>Cookie policy around the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> attribute would apply.</p>
 
 <h2 id="The_HTTP_response_headers">The HTTP response headers</h2>
 

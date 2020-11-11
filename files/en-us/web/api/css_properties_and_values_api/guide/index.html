@@ -10,11 +10,11 @@ tags:
   - JavaScript
   - Learn
 ---
-<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — <span class="seoSummary">allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</span></p>
+<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — <span class="seoSummary">allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</span></p>
 
 <h2 id="Registering_a_custom_property">Registering a custom property</h2>
 
-<p>Registering a custom property allows you to tell the browser how the custom property should behave; what are allowed types, whether the custom property inherits its value, and what the default value of the custom property is. There are two ways to register a property, in JavaScript or in CSS.</p>
+<p>Registering a custom property allows you to tell the browser how the custom property should behave; what are allowed types, whether the custom property inherits its value, and what the default value of the custom property is. There are two ways to register a property, in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> or in <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
 
 <div class="blockIndicator note">
 <p>Note: The JavaScript option has working implementations. The CSS option does not.</p>
@@ -34,7 +34,7 @@ tags:
 
 <h3 id="property">@property</h3>
 
-<p>The same registration can take place in CSS. The following  will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}}, as a color, give it a default value, and have it not inherit its value:</p>
+<p>The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, as a color, give it a default value, and have it not inherit its value:</p>
 
 <pre class="brush: css notranslate">@property --my-prop {
   syntax: '&lt;color&gt;';
@@ -116,10 +116,10 @@ button {
 
 <p>{{EmbedLiveSample("registered", 320, 320)}}</p>
 
-<p>While not functionally accurate, a good way to think about the difference between the unregistered property in the above example and the registered property is the difference between a {{cssxref('custom-ident')}} and a number when trying to animate {{cssxref('height')}}. You cannot transition or animate from <code>auto</code> to a number because the browser doesn't know what the value of <code>auto</code> is until it's calculated. With an unregisterd property, the browser likewise doesn't know what the value <em>may be</em> until it's calculated, and because of that, it can't set up a transition from one value to another. When registered, though, you've told the browser what type of value it should expect, and because it knows that, it can then set up the transitions properly.</p>
+<p>While not functionally accurate, a good way to think about the difference between the unregistered property in the above example and the registered property is the difference between a {{cssxref('custom-ident')}} and a number when trying to animate {{cssxref('height')}}. You cannot transition or animate from <code>auto</code> to a number because the browser doesn't know what the value of <code>auto</code> is until it's calculated. With an unregisterd property, the browser likewise doesn't know what the value <em>may be</em> until it's calculated, and because of that, it can't set up a transition from one value to another. When registered, though, you've told the browser what type of value it should expect, and because it knows that, it can then set up the transitions properly.</p>
 
 <h2 id="Gotchas">Gotchas</h2>
 
-<p>There are two gotchas when registering a property. The first is that, once a property is registered, there's no way to update it, and trying to re-register it with JavaScript will throw an error indicating it's already been defined.</p>
+<p>There are two gotchas when registering a property. The first is that, once a property is registered, there's no way to update it, and trying to re-register it with <a href="/en-US/docs/Web/JavaScript">JavaScript</a> will throw an error indicating it's already been defined.</p>
 
 <p>Second, unlike standard properties, registered properties aren't validated when they're parsed. Rather, they're validated when they're computed. That means both that invalid values won't appear as invalid when inspecting the element's properties, and that including an invalid property after a valid one won't fall back to the valid property. An invalid property will, however, fall back to its registered default.</p>

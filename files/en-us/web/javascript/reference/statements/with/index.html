@@ -15,14 +15,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">with (expression)
-  <em>statement</em>
+<pre class="syntaxbox notranslate">with (<var>expression</var>)
+  <var>statement</var>
 </pre>
 
 <dl>
- <dt><code>expression</code></dt>
+ <dt><code><var>expression</var></code></dt>
  <dd>Adds the given expression to the scope chain used when evaluating the statement. The parentheses around the expression are required.</dd>
- <dt><code>statement</code></dt>
+ <dt><code><var>statement</var></code></dt>
  <dd>Any statement. To execute multiple statements, use a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/block" title="JavaScript/Reference/Statements/block">block</a> statement ({ ... }) to group those statements.</dd>
 </dl>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>JavaScript looks up an unqualified name by searching a scope chain associated with the execution context of the script or function containing that unqualified name. The 'with' statement adds the given object to the head of this scope chain during the evaluation of its statement body. If an unqualified name used in the body matches a property in the scope chain, then the name is bound to the property and the object containing the property. Otherwise a {{jsxref("ReferenceError")}} is thrown.</p>
 
-<div class="note">Using <code>with</code> is not recommended, and is forbidden in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode</a>. The recommended alternative is to assign the object whose properties you want to access to a temporary variable.</div>
+<div class="note">Using <code>with</code> is not recommended, and is forbidden in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. The recommended alternative is to assign the object whose properties you want to access to a temporary variable.</div>
 
 <h3 id="Performance_pro_contra">Performance pro &amp; contra</h3>
 
@@ -42,7 +42,7 @@ tags:
 
 <p><strong>Contra:</strong> The <code>with</code> statement makes it hard for a human reader or JavaScript compiler to decide whether an unqualified name will be found along the scope chain, and if so, in which object. So given this example:</p>
 
-<pre class="brush: js">function f(x, o) {
+<pre class="brush: js notranslate">function f(x, o) {
   with (o) {
     console.log(x);
   }
@@ -53,7 +53,7 @@ tags:
 <p><strong>Contra: </strong>Code using <code>with</code> may not be forward compatible, especially when used with something other than a plain object. Consider this example:</p>
 
 <div>
-<pre class="brush:js">function f(foo, values) {
+<pre class="brush:js notranslate">function f(foo, values) {
   with (foo) {
     console.log(values);
   }
@@ -65,11 +65,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_with">Using <code>with</code></h3>
+<h3 id="Using_with">Using with</h3>
 
-<p>The following <code>with</code> statement specifies that the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math"><code>Math</code></a> object is the default object. The statements following the <code>with</code> statement refer to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI"><code>PI</code></a> property and the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos"><code>cos</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin"><code>sin</code></a> methods, without specifying an object. JavaScript assumes the <code>Math</code> object for these references.</p>
+<p>The following <code>with</code> statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the <code>with</code> statement refer to the {{jsxref("Math.PI", "PI")}} property and the {{jsxref("Math.cos", "cos")}} and {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes the <code>Math</code> object for these references.</p>
 
-<pre class="brush:js">var a, x, y;
+<pre class="brush:js notranslate">var a, x, y;
 var r = 10;
 
 with (Math) {
@@ -81,10 +81,12 @@ with (Math) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-with-statement', 'with statement')}}</td>
   </tr>
@@ -100,7 +102,7 @@ with (Math) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/block", "block")}}</li>
+ <li>{{jsxref("Statements/block", "block", "", 1)}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">Strict mode</a></li>
  <li>{{jsxref("Symbol.unscopables")}}</li>
  <li>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</li>

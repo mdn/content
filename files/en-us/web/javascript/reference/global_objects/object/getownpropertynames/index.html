@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>Object.getOwnPropertyNames()</code> returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object <code><var>obj</var></code>. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. The ordering of the non-enumerable properties in the array and the ordering among the enumerable properties is not defined.</p>
+<p><code>Object.getOwnPropertyNames()</code> returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object <code><var>obj</var></code>. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. According to ES6, the integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.</p>
 
 <p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.</p>
 

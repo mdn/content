@@ -10,13 +10,13 @@ tags:
   - Reference
   - signal
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>signal</code></strong> read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var signal = abortController.signal;</pre>
+<pre class="brush: js notranslate">var signal = abortController.signal;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>When the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (see <code>{signal}</code>, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
 
-<pre class="brush: js">var controller = new AbortController();
+<pre class="brush: js notranslate">var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');

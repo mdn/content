@@ -7,7 +7,13 @@ tags:
   - WebGL
   - WebVR
 ---
-<div>{{GamesSidebar}}</div><p class="summary">The concept of virtual reality in itself isn't new, but now we have the technology to have it working as it should be, and a JavaScript API to make use of it in web applications. This article introduced WebVR from the perspective of its use in games.</p>
+<div>{{GamesSidebar}}</div>
+
+<p class="summary">The concept of virtual reality in itself isn't new, but now we have the technology to have it working as it should be, and a JavaScript API to make use of it in web applications. This article introduced WebVR from the perspective of its use in games.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</p>
+</div>
 
 <h2 id="VR_devices">VR devices</h2>
 
@@ -24,7 +30,7 @@ tags:
 <p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> is the central API for capturing information on VR Devices connected to a computer and headset position/orientation/velocity/acceleration information, and converting that into useful data you can use in your games and other applications.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are of course other APIs useful for creating games, for example <a href="/en-US/docs/Web/API/Gamepad_API">The Gamepad API</a> for control inputs, and the <a href="/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes">Device Orientation API</a> for handling display orientation on mobile.</p>
+<p><strong>Note</strong>: There are of course other APIs useful for creating games, for example <a href="/en-US/docs/Web/API/Gamepad_API">The Gamepad API</a> for control inputs, and the <a href="/en-US/docs/Web/API/Detecting_device_orientation">Device Orientation API</a> for handling display orientation on mobile.</p>
 </div>
 
 <h3 id="Browser_support_and_spec_status">Browser support and spec status</h3>
@@ -41,7 +47,7 @@ tags:
 
 <p>To get information about devices connected to your computer, you can use the {{domxref("Navigator.getVRDevices")}} method:</p>
 
-<pre class="brush: js">navigator.getVRDevices().then(function(devices) {
+<pre class="brush: js notranslate">navigator.getVRDevices().then(function(devices) {
   for (var i = 0; i &lt; devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
@@ -61,7 +67,7 @@ tags:
 
 <p>This code will loop through the available devices and assign proper sensors to the headsets — the first <code>devices</code> array contains the connected devices, and a check is done to find the {{domxref("HMDVRDevice")}}, and assign it to the <code>gHMD</code> variable — using this you can set up the scene, getting the eye parameters, setting the field of view, etc. For example:</p>
 
-<pre class="brush: js">function setCustomFOV(up,right,down,left) {
+<pre class="brush: js notranslate">function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
@@ -69,7 +75,7 @@ tags:
 
 <p>The <code>gPositionSensor</code> variable holds the {{domxref("PositionSensorVRDevice")}} — using this you can get the current position or orientation state (for example to update the scene view on every frame), or reset the sensor. For example, the below code outputs position information on the screen:</p>
 
-<pre class="brush: js">function setView() {
+<pre class="brush: js notranslate">function setView() {
   var posState = gPositionSensor.getState();
 
   if(posState.hasPosition) {

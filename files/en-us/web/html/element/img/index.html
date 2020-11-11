@@ -45,9 +45,13 @@ tags:
 
 <h2 id="Supported_image_formats">Supported image formats</h2>
 
-<p>The HTML standard doesn't list what image formats to support, so each {{glossary("user agent")}} supports different formats. A complete <a href="/en-US/docs/Web/Media/Formats/Image_types">guide to image formats supported by web browsers</a> is available. Below is a list of the image formats that are most commonly used on the web, as well as some older formats that should no longer be used, despite existing content possibly still using them.</p>
+<p>The HTML standard doesn't list what image formats to support, so each {{glossary("user agent")}} supports different formats. Below is a list of the image formats that are most commonly used on the web.</p>
 
-<p>{{page("/en-US/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}</p>
+<p>{{page("/en-US/docs/Web/Media/Formats/Image_types", "Common_image_file_types")}}</p>
+
+<div class="note">
+<p><strong>Note:</strong> See <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> for more comprehensive information about image formats supported by web browsers. This includes image formats that are supported but not recommended for web content (e.g. ICO, BMP, etc.)</p>
+</div>
 
 <h2 id="Image_loading_errors">Image loading errors</h2>
 
@@ -91,9 +95,7 @@ tags:
  <p>If the <code>crossorigin</code> attribute is <em>not</em> specified, then a non-CORS request is sent (without the {{httpheader("Origin")}} request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
 
  <p>If the <code>crossorigin</code> attribute <em>is</em> specified, then a CORS request is sent (with the {{httpheader("Origin")}} request header); but if the server does not opt into allowing cross-origin access to the image data by the origin site (by not sending any {{httpheader("Access-Control-Allow-Origin")}} response header, or by not including the site's origin in any {{httpheader("Access-Control-Allow-Origin")}} response header it does send), then the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
- </dd>
- <dd></dd>
- <dd>
+
  <p>Allowed values:</p>
 
  <dl>

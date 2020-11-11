@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>offsetReferenceSpace</em> = <em>xrReferenceSpace</em>.getOffsetReferenceSpace(<em>originOffset</em>);</pre>
+<pre class="syntaxbox notranslate"><em>offsetReferenceSpace</em> = <em>xrReferenceSpace</em>.getOffsetReferenceSpace(<em>originOffset</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +55,7 @@ tags:
 
 <p>Upon first creating a scene, you may need to set the user's position within the 3D world. You can do that using <code>getOffsetReferenceSpace()</code>.</p>
 
-<pre class="brush: js">xrSession.requestReferenceSpace("local")
+<pre class="brush: js notranslate">xrSession.requestReferenceSpace("local")
 .then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
@@ -63,7 +63,7 @@ tags:
   xrSession.requestAnimationFrame(drawFrame);
 });</pre>
 
-<p>In this code, we obtain a local reference space, then use <code>getOffsetReferenceSpace()</code> to create a new space whose origin is adjusted to a position given by <code>startPosition</code> and whose orientation is looking directly along the Z azis. Then the first animation frame is requested using {{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
+<p>In this code, we obtain a local reference space, then use <code>getOffsetReferenceSpace()</code> to create a new space whose origin is adjusted to a position given by <code>startPosition</code> and whose orientation is looking directly along the Z axis. Then the first animation frame is requested using {{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
 
 <h3 id="Implementing_rotation_based_on_non-XR_inputs">Implementing rotation based on non-XR inputs</h3>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>First, we add an event handler for {{domxref("Element.mousemove_event", "mousemove")}} events, which calls our code to perform the rotation if the right mouse button is down. Note also that we set {{domxref("Element.oncontextmenu", "oncontextmenu")}} up to be ignored by calling {{domxref("Event.preventDefault", "preventDefault()")}} on those events. This prevents the right-clicks from causing the context menu from appearing in the browser.</p>
 
-<pre class="brush: js">canvas.oncontextmenu = (event) =&gt; { event.preventDefault(); };
+<pre class="brush: js notranslate">canvas.oncontextmenu = (event) =&gt; { event.preventDefault(); };
 canvas.addEventListener("mousemove", (event) =&gt; {
   if (event.buttons &amp; 2) {
     rotateViewBy(event.movementX, event.movementY);
@@ -83,7 +83,7 @@ canvas.addEventListener("mousemove", (event) =&gt; {
 
 <p>Next, the <code>rotateViewBy()</code> function, which updates the mouse look direction's yaw and pitch based on the mouse delta values from the <code>mousemove</code> event. The pitch is restricted so that you can't look beyond straight up and straight down. Each time this is called, the new offsets are used to update the current values of <code>mousePitch</code> and <code>mouseYaw</code>.</p>
 
-<pre class="brush: js">let mouseYaw = 0.0;
+<pre class="brush: js notranslate">let mouseYaw = 0.0;
 let mousePitch = 0.0;
 const inverseOrientation = quat.create();
 const MOUSE_SPEED = 0.003;
@@ -101,7 +101,7 @@ function rotateViewBy(dx, dy) {
 
 <p>Finally, we need code that actually applies the computed yaw and pitch to the viewer's orientation. This function, <code>applyMouseMovement()</code>, handles that:</p>
 
-<pre class="brush: js">function applyMouseMovement(refSpace) {
+<pre class="brush: js notranslate">function applyMouseMovement(refSpace) {
   if (!mouseYaw &amp;&amp; !mousePitch) {
     return refSpace;
   }
@@ -121,7 +121,7 @@ function rotateViewBy(dx, dy) {
 
 <p>This new reference space is one in which the viewer's position is unchanged, but their orientation has been altered based on the pitch and yaw values generated from the accumulated mouse inputs. <code>applyMouseMovement()</code> should be called when drawing a frame, immediately before fetching the viewer's pose using {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, and the rendering should be performed in this reference space.</p>
 
-<p>You can see code similar to this in use in our broader WebXR tutorial article called <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a>. In particular, check out the section called <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#Starting_the_WebXR_session">Starting the WebXR session</a>.</p>
+<p>You can see code similar to this in use in our broader WebXR tutorial article called <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion">Movement, orientation, and motion</a>. In particular, check out the section called <a href="/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#Starting_up_the_WebXR_session">Starting up the WebXR session</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

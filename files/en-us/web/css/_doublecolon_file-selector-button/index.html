@@ -62,6 +62,8 @@ input[type=file]::file-selector-button:hover {
 
 <p>Example with fallback for browsers supporting the <code>-webkit</code> prefix. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.</p>
 
+<p>Note that <code>::file-selector-button</code> is a whole element, and as such matches the rules from the UA stylesheet. In particular, fonts and colors won't necessarily inherit from the <code>input</code> element.</p>
+
 <div id="fallback_example">
 <h3 id="HTML_2">HTML</h3>
 

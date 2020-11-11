@@ -9,23 +9,23 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Math.pow()</code></strong> function returns the <code>base</code> to the <code>exponent</code> power, that is, <code>base<sup>exponent</sup></code>.</p>
+<p>The <strong><code>Math.pow()</code></strong> function returns the <code><var>base</var></code> to the <code><var>exponent</var></code> power, that is, <code>base<sup>exponent</sup></code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-pow.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code>Math.pow(<var>base</var>, <var>exponent</var>)</code></pre>
+<pre class="syntaxbox notranslate">Math.pow(<var>base</var>, <var>exponent</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>base</code></dt>
+ <dt><code><var>base</var></code></dt>
  <dd>The base number.</dd>
- <dt><code>exponent</code></dt>
- <dd>The exponent used to raise the <code>base</code>.</dd>
+ <dt><code><var>exponent</var></code></dt>
+ <dd>The exponent used to raise the <code><var>base</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,13 +34,13 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <strong><code>Math.pow()</code></strong> function returns the <code>base</code> to the <code>exponent</code> power, that is, <code>base<sup>exponent</sup></code>, the base and the exponent are in decimal numeral system.</p>
+<p>The <strong><code>Math.pow()</code></strong> function returns the <code><var>base</var></code> to the <code><var>exponent</var></code> power, that is, <code>base<sup>exponent</sup></code>, the <code><var>base</var></code> and the <code><var>exponent</var></code> are in decimal numeral system.</p>
 
 <p>Because <code>pow()</code> is a static method of <code>Math</code>, you always use it as <code>Math.pow()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> has no constructor). If the base is negative and the exponent is not an integer, the result is NaN.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.pow">Using <code>Math.pow()</code></h3>
+<h3 id="Using_Math.pow">Using Math.pow()</h3>
 
 <pre class="brush: js notranslate">// simple
 Math.pow(7, 2);    // 49
@@ -67,10 +67,12 @@ Math.pow(-7, 1/3); // NaN
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.pow', 'Math.pow')}}</td>
   </tr>
@@ -79,7 +81,7 @@ Math.pow(-7, 1/3); // NaN
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Math.pow")}}</p>
 
@@ -90,5 +92,5 @@ Math.pow(-7, 1/3); // NaN
  <li>{{jsxref("Math.exp()")}}</li>
  <li>{{jsxref("Math.log()")}}</li>
  <li>{{jsxref("Math.sqrt()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
 </ul>

@@ -8,9 +8,11 @@ tags:
   - HTML
   - Reference
 ---
-<p>The <code><strong>pattern</strong></code> attribute specifies a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> the form control's value should match. If a non-<code>null</code> value doesn't conform to the constraints set by the <code>pattern</code> value, the  <code>{{domxref('ValidityState')}}</code> object's read-only <code>{{domxref('ValidityState.patternMismatch','patternMismatch')}}</code> property will be true.</p>
+<p>{{HTMLSidebar}}</p>
 
-<p>The <code>pattern</code> attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}},  and {{HTMLElement("input/search", "search")}} input types.</p>
+<p>The <strong><code>pattern</code></strong> attribute specifies a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> the form control's value should match. If a non-<code>null</code> value doesn't conform to the constraints set by the <code>pattern</code> value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.</p>
+
+<p>The <code>pattern</code> attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.</p>
 
 <div id="pattern-include">
 <p>The <code>pattern</code> attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
@@ -22,7 +24,7 @@ tags:
 </div>
 </div>
 
-<p>Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the  <code>{{domxref('ValidityState')}}</code> object's read-only <code>{{domxref('ValidityState.typeMismatch','typeMismatch')}}</code> property will be true.</p>
+<p>Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.</p>
 
 <h3 id="Usability">Usability</h3>
 
@@ -30,8 +32,8 @@ tags:
 
 <h3 id="Constraint_validation">Constraint validation</h3>
 
-<p>If the input’s value is not the empty string and the value does not match the entire regular expression, there is a from a <code>{{domxref('ValidityState.patternMismatch','patternMismatch')}}</code> .<br>
- The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if  a <code>^(?:</code> were implied at the start of the pattern and <code>)$</code> at the end.</p>
+<p>If the input’s value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.<br>
+ The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a <code>^(?:</code> were implied at the start of the pattern and <code>)$</code> at the end.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -112,19 +114,21 @@ input:valid+span:after {
 
 <h3 id="Accessibility_Concerns">Accessibility Concerns</h3>
 
-<p>When a control has a <code>pattern</code> attribute, the <code>title</code> attribute, if used, must describe the pattern.  Relying on the <code>title</code> attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the the control to match the requirements.</p>
+<p>When a control has a <code>pattern</code> attribute, the <code>title</code> attribute, if used, must describe the pattern. Relying on the <code>title</code> attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the the control to match the requirements.</p>
 
 <p>While <code>title</code>s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>

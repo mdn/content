@@ -51,7 +51,7 @@ tags:
 
 <p>The form is defined in HTML as a collection of elements inside <code>&lt;form&gt;...&lt;/form&gt;</code> tags, containing at least one <code>input</code> element of <code>type="submit"</code>.</p>
 
-<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -130,7 +130,7 @@ tags:
 
 <p>Form data is stored in an application's forms.py file, inside the application directory. Create and open the file <strong>locallibrary/catalog/forms.py</strong>. To create a <code>Form</code>, we import the <code>forms</code> library, derive from the <code>Form</code> class, and declare the form's fields. A very basic form class for our library book renewal form is shown below — add this to your new file:</p>
 
-<pre class="brush: python">from django import forms
+<pre class="brush: python notranslate">from django import forms
 
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
@@ -163,7 +163,7 @@ class RenewBookForm(forms.Form):
 
 <p>Update your forms.py file so it looks like this:</p>
 
-<pre class="brush: python"><strong>import datetime</strong>
+<pre class="brush: python notranslate"><strong>import datetime</strong>
 
 from django import forms
 <strong>from django.core.exceptions import ValidationError
@@ -200,7 +200,7 @@ class RenewBookForm(forms.Form):
 
 <p>Before we create our view, let's add a URL configuration for the <em>renew-books</em> page. Copy the following configuration to the bottom of <strong>locallibrary/catalog/urls.py</strong>.</p>
 
-<pre class="brush: python">urlpatterns += [
+<pre class="brush: python notranslate">urlpatterns += [
     path('book/&lt;uuid:pk&gt;/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
@@ -218,7 +218,7 @@ class RenewBookForm(forms.Form):
 
 <p>The book renewal process will be writing to our database, so, by convention, we use the <code>POST</code> request approach. The code fragment below shows the (very standard) pattern for this sort of function view. </p>
 
-<pre class="brush: python">import datetime
+<pre class="brush: python notranslate">import datetime
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -267,7 +267,7 @@ def renew_book_librarian(request, pk):
 
 <p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not </em>a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
 
-<pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python notranslate">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a GET (or any other method) create the default form
     else:
@@ -285,7 +285,7 @@ def renew_book_librarian(request, pk):
 
 <p>However, if this is a <code>POST</code> request, then we create our <code>form</code> object and populate it with data from the request. This process is called "binding" and allows us to validate the form. We then check if the form is valid, which runs all the validation code on all of the fields — including both the generic code to check that our date field is actually a valid date and our specific form's <code>clean_renewal_date()</code> function to check the date is in the right range. </p>
 
-<pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python notranslate">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
     # If this is a POST request then process the Form data
     if request.method == 'POST':
@@ -319,11 +319,11 @@ def renew_book_librarian(request, pk):
 
 <p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>
 
-<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to librarians. We should probably create a new permission setting in <code>BookInstance</code> ("<code>can_renew</code>"), but, to keep things simple here, we just use the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission.</p>
+<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to just librarians who have permission to renew books. We should probably create a new permission setting in <code>BookInstance</code> ("<code>can_renew</code>"), but, to keep things simple here, we just use the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission.</p>
 
 <p>The final view is therefore as shown below. Please copy this into the bottom of <strong>locallibrary/catalog/views.py</strong>.</p>
 
-<pre><strong>import datetime
+<pre class="notranslate"><strong>import datetime
 
 from django.contrib.auth.decorators import permission_required</strong>
 from django.shortcuts import get_object_or_404
@@ -332,7 +332,8 @@ from django.urls import reverse
 
 from catalog.forms import RenewBookForm
 
-<strong>@permission_required('catalog.can_mark_returned')</strong>
+<strong>@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)</strong>
 def renew_book_librarian(request, pk):
     """View function for renewing a specific BookInstance by librarian."""
     book_instance = get_object_or_404(BookInstance, pk=pk)
@@ -369,7 +370,7 @@ def renew_book_librarian(request, pk):
 
 <p>Create the template referenced in the view (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) and copy the code below into it:</p>
 
-<pre class="brush: html">{% extends "base_generic.html" %}
+<pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;h1&gt;Renew: \{{ book_instance.book.title }}&lt;/h1&gt;
@@ -395,7 +396,7 @@ def renew_book_librarian(request, pk):
 
 <p>All that's left is the <code>\{{ form }}</code> template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:</p>
 
-<pre class="brush: html">&lt;tr&gt;
+<pre class="brush: html notranslate">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
   &lt;td&gt;
     &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required&gt;
@@ -411,7 +412,7 @@ def renew_book_librarian(request, pk):
 
 <p>If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (shown in bold below).</p>
 
-<pre class="brush: html">&lt;tr&gt;
+<pre class="brush: html notranslate">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
     &lt;td&gt;
 <strong>      &lt;ul class="errorlist"&gt;
@@ -442,7 +443,7 @@ def renew_book_librarian(request, pk):
 
 <p>If you accepted the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a> you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.</p>
 
-<pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
+<pre class="brush: html notranslate">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
@@ -470,9 +471,9 @@ def renew_book_librarian(request, pk):
 
 <p>However, if you just need a form to map the fields of a <em>single</em> model then your model will already define most of the information that you need in your form: fields, labels, help text and so on. Rather than recreating the model definitions in your form, it is easier to use the <a href="https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/">ModelForm</a> helper class to create the form from your model. This <code>ModelForm</code> can then be used within your views in exactly the same way as an ordinary <code>Form</code>.</p>
 
-<p>A basic <code>ModelForm</code> containing the same field as our original <code>RenewBookForm</code> is shown below. All you need to do to create the form is add <code>class Meta</code> with the associated <code>model</code> (<code>BookInstance</code>) and a list of the model <code>fields</code> to include in the form (you can include all fields using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not </em>to include from the model).</p>
+<p>A basic <code>ModelForm</code> containing the same field as our original <code>RenewBookForm</code> is shown below. All you need to do to create the form is add <code>class Meta</code> with the associated <code>model</code> (<code>BookInstance</code>) and a list of the model <code>fields</code> to include in the form.</p>
 
-<pre class="brush: python">from django.forms import ModelForm
+<pre class="brush: python notranslate">from django.forms import ModelForm
 
 from catalog.models import BookInstance
 
@@ -483,12 +484,18 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="note">
+<p><strong>Note</strong>: You can also include all fields in the form using <code>fields = '__all__'</code>, or you can use <code>exclude</code> (instead of <code>fields</code>) to specify the fields <em>not</em> to include from the model).</p>
+
+<p>Neither approach is recommended because new fields added to the model are then automatically included in the form (without the developer necessarily considering possible security implications).</p>
+</div>
+
+<div class="note">
 <p><strong>Note</strong>: This might not look like all that much simpler than just using a <code>Form</code> (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can reduce the amount of code quite significantly!</p>
 </div>
 
 <p>The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our <code>class Meta</code>, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "<em>Renewal date</em>" (rather than the default based on the field name: <em>Due Back</em>), and we also want our help text to be specific to this use case. The <code>Meta</code> below shows you how to override these fields, and you can similarly set <code>widgets</code> and <code>error_messages</code> if the defaults aren't sufficient.</p>
 
-<pre class="brush: python">class Meta:
+<pre class="brush: python notranslate">class Meta:
     model = BookInstance
     fields = ['due_back']
 <strong>    labels = {'due_back': _('New renewal date')}
@@ -497,7 +504,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>". This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
 
-<pre class="brush: python">from django.forms import ModelForm
+<pre class="brush: python notranslate">from django.forms import ModelForm
 
 from catalog.models import BookInstance
 
@@ -539,19 +546,19 @@ class RenewBookModelForm(ModelForm):
 
 <p>Open the views file (<strong>locallibrary/catalog/views.py</strong>) and append the following code block to the bottom of it:</p>
 
-<pre class="brush: python">from django.views.generic.edit import CreateView, UpdateView, DeleteView
+<pre class="brush: python notranslate">from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from catalog.models import Author
 
 class AuthorCreate(CreateView):
     model = Author
-    fields = '__all__'
-    initial = {'date_of_death': '05/01/2018'}
+    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    initial = {'date_of_death': '11/06/2020'}
 
 class AuthorUpdate(UpdateView):
     model = Author
-    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    fields = '__all__' # Not recommended (potential security issue if more fields added)
 
 class AuthorDelete(DeleteView):
     model = Author
@@ -559,7 +566,7 @@ class AuthorDelete(DeleteView):
 
 <p>As you can see, to create, update, or delete the views you need to derive from <code>CreateView</code>, <code>UpdateView</code>, and <code>DeleteView</code> (respectively) and then define the associated model.</p>
 
-<p>For the "create" and "update" cases you also need to specify the fields to display in the form (using the same syntax as for <code>ModelForm</code>). In this case, we show both the syntax to display "all" fields and how you can list them individually. You can also specify initial values for each of the fields using a dictionary of <em>field_name</em>/<em>value</em> pairs (here we arbitrarily set the date of death for demonstration purposes — you might want to remove that!). By default, these views will redirect on success to a page displaying the newly created/edited model item, which in our case will be the author detail view we created in a previous tutorial. You can specify an alternative redirect location by explicitly declaring parameter <code>success_url</code> (as done for the <code>AuthorDelete</code> class).</p>
+<p>For the "create" and "update" cases you also need to specify the fields to display in the form (using the same syntax as for <code>ModelForm</code>). In this case, we show how to list them individually and the syntax to list "all" fields. You can also specify initial values for each of the fields using a dictionary of <em>field_name</em>/<em>value</em> pairs (here we arbitrarily set the date of death for demonstration purposes — you might want to remove that!). By default, these views will redirect on success to a page displaying the newly created/edited model item, which in our case will be the author detail view we created in a previous tutorial. You can specify an alternative redirect location by explicitly declaring parameter <code>success_url</code> (as done for the <code>AuthorDelete</code> class).</p>
 
 <p>The <code>AuthorDelete</code> class doesn't need to display any of the fields, so these don't need to be specified. You do however need to specify the <code>success_url</code>, because there is no obvious default value for Django to use. In this case, we use the <code><a href="https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code> function to redirect to our author list after an author has been deleted — <code>reverse_lazy()</code> is a lazily executed version of <code>reverse()</code>, used here because we're providing a URL to a class-based view attribute.</p>
 
@@ -569,7 +576,7 @@ class AuthorDelete(DeleteView):
 
 <p>Create the template file <strong>locallibrary/catalog/templates/catalog/author_form.html</strong> and copy in the text below.</p>
 
-<pre class="brush: html">{% extends "base_generic.html" %}
+<pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;form action="" method="post"&gt;
@@ -585,7 +592,7 @@ class AuthorDelete(DeleteView):
 
 <p>The "delete" view expects to find a template named with the format <em>model_name</em><strong>_confirm_delete.html</strong> (again, you can change the suffix using <code>template_name_suffix</code> in your view). Create the template file <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> and copy in the text below.</p>
 
-<pre class="brush: html">{% extends "base_generic.html" %}
+<pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -605,7 +612,7 @@ class AuthorDelete(DeleteView):
 
 <p>Open your URL configuration file (<strong>locallibrary/catalog/urls.py</strong>) and add the following configuration to the bottom of the file:</p>
 
-<pre class="brush: python">urlpatterns += [
+<pre class="brush: python notranslate">urlpatterns += [
     path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
     path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
     path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),

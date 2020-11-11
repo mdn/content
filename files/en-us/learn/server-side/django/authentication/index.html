@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a>, that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for <code>Users</code> and <code>Groups</code> (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.</p>
+<p>Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a>, that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for <code>Users</code> and <code>Groups</code> (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.</p>
 
 <div class="note">
 <p><strong>Note</strong>: According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).</p>
@@ -626,7 +626,9 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="Views">Views</h3>
 
-<p>Permissions can be tested in function view using the <code>permission_required</code> decorator or in a class-based view using the <code>PermissionRequiredMixin</code>. The pattern and behaviour are the same as for login authentication, though of course, you might reasonably have to add multiple permissions.</p>
+<p>Permissions can be tested in function view using the <code>permission_required</code> decorator or in a class-based view using the <code>PermissionRequiredMixin</code>. The pattern are the same as for login authentication, though of course, you might reasonably have to add multiple permissions.</p>
+
+<div class="note"></div>
 
 <p>Function view decorator:</p>
 
@@ -647,6 +649,24 @@ class MyView(PermissionRequiredMixin, View):
     permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
     # Note that 'catalog.can_edit' is just an example
     # the catalog application doesn't have such permission!</pre>
+
+<div class="note">
+<p><strong>Note</strong>: There is a small default difference in the behaviour above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
+
+<ul>
+ <li><code>@permission_required</code> redirects to login screen (HTTP Status 302).</li>
+ <li><code>PermissionRequiredMixin</code> returns 403 (HTTP Status Forbidden).</li>
+</ul>
+
+<p>Normally you will want the <code>PermissionRequiredMixin</code> behaviour: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
+
+<pre class="syntaxbox notranslate">from django.contrib.auth.decorators import login_required, permission_required
+
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
+def my_view(request):
+    ...</pre>
+</div>
 
 <h3 id="Example">Example</h3>
 

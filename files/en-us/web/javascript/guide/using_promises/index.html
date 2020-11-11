@@ -293,6 +293,33 @@ Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
 console.log(1); // 1, 2, 3, 4
 </pre>
 
+<h4 id="Task_queues_vs_microtasks">Task queues vs microtasks</h4>
+
+<p>Promise callbacks are handled as a <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask</a> whereas <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> callbacks are handled as Task queues.</p>
+
+<pre class="brush: js notranslate">const promise = new Promise(function(resolve, reject) {
+  console.log("Promise callback");
+  resolve();
+}).then(function(result) {
+  console.log("Promise callback (.then)");
+});
+
+setTimeout(function() {
+  console.log("event-loop cycle: Promise (fullfilled)", promise)
+}, 0);
+
+console.log("Promise (pending)", promise);
+</pre>
+
+<p>The code above will output:</p>
+
+<pre class="notranslate">Promise callback
+Promise (pending) Promise {&lt;pending&gt;}
+Promise callback (.then)
+event-loop cycle: Promise (fullfilled) Promise {&lt;fulfilled&gt;}</pre>
+
+<p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#Tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
+
 <h2 id="Nesting">Nesting</h2>
 
 <p>Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See <a href="#Common_mistakes">common mistakes</a>.</p>

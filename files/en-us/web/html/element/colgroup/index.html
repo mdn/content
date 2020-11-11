@@ -20,7 +20,7 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
    <td>None.</td>
   </tr>
   <tr>
@@ -54,13 +54,12 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element's attributes include the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
- <dd></dd>
  <dt>{{htmlattrdef("span")}}</dt>
  <dd>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;colgroup&gt;</code> element spans. If not present, its default value is <code>1</code>.
- <div class="note"><strong>Note: </strong>This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.
+ <div class="note"><strong>Note:</strong> This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.
  <ul>
   <li>The <code>span</code> attribute is not permitted if there are one or more <code>&lt;col&gt;</code> elements within the <code>&lt;colgroup&gt;</code>.</li>
  </ul>
@@ -85,7 +84,7 @@ tags:
 
  <p>If this attribute is not set, the <code>left</code> value is assumed. The descendant {{HTMLElement("col")}} elements may override this value using their own {{htmlattrxref("align", "col")}} attribute.</p>
 
- <div class="note"><strong>Note: </strong>
+ <div class="note"><strong>Note:</strong>
 
  <ul>
   <li>Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.</li>

@@ -10,32 +10,43 @@ tags:
 
 <p><span class="seoSummary"><strong>At-rules</strong> are <a href="/en-US/docs/Web/CSS/Syntax#CSS_statements">CSS statements</a> that instructs CSS how to behave. They begin with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and includes everything up to the next semicolon, '<code>;</code>' (<code>U+003B SEMICOLON</code>), or the next <a href="/en-US/docs/Web/CSS/Syntax#CSS_declarations_blocks">CSS block</a>, whichever comes first.</span></p>
 
+<h2 id="Syntax">Syntax</h2>
+
+<h3 id="Regular">Regular</h3>
+
 <pre class="brush: css notranslate">/* General structure */
 @IDENTIFIER (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";</pre>
 
-<p>There are several at-rules, designated by their identifiers, each with a different syntax:</p>
+<p>There are several regular at-rules, designated by their identifiers, each with a different syntax:</p>
 
 <ul>
  <li>{{cssxref("@charset")}} — Defines the character set used by the style sheet.</li>
  <li>{{cssxref("@import")}} — Tells the CSS engine to include an external style sheet.</li>
  <li>{{cssxref("@namespace")}} — Tells the CSS engine that all its content must be considered prefixed with an XML namespace.</li>
- <li><strong><em>Nested at-rules</em></strong> — A subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules:
-  <ul>
-   <li>{{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a <em>media query</em>.</li>
-   <li>{{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.</li>
-   <li>{{cssxref("@document")}} {{experimental_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition. <em>(deferred to Level 4 of CSS Spec)</em></li>
-   <li>{{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.</li>
-   <li>{{cssxref("@font-face")}} — Describes the aspect of an external font to be downloaded.</li>
-   <li>{{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.</li>
-   <li>{{cssxref("@viewport")}} {{experimental_inline}} — Describes the aspects of the viewport for small screen devices. <em>(currently at the Working Draft stage)</em></li>
-   <li>{{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
-   <li>{{cssxref("@font-feature-values")}} (plus <code>@swash</code>, <code>@ornaments</code>, <code>@annotation</code>, <code>@stylistic</code>, <code>@styleset</code> and <code>@character-variant</code>)<br>
-    — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
-  </ul>
- </li>
+</ul>
+
+<h3 id="Nested">Nested</h3>
+
+<pre class="brush: css notranslate">@IDENTIFIER (RULE) {
+
+}</pre>
+
+<p>A subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.</p>
+
+<ul>
+ <li>{{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a <em>media query</em>.</li>
+ <li>{{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.</li>
+ <li>{{cssxref("@document")}} {{experimental_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition. <em>(deferred to Level 4 of CSS Spec)</em></li>
+ <li>{{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.</li>
+ <li>{{cssxref("@font-face")}} — Describes the aspect of an external font to be downloaded.</li>
+ <li>{{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.</li>
+ <li>{{cssxref("@viewport")}} {{Obsolete_Inline}} — Describes the aspects of the viewport for small screen devices. <em>(currently at the Working Draft stage)</em></li>
+ <li>{{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
+ <li>{{cssxref("@font-feature-values")}} (plus <code>@swash</code>, <code>@ornaments</code>, <code>@annotation</code>, <code>@stylistic</code>, <code>@styleset</code> and <code>@character-variant</code>) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
+ <li>{{cssxref("@property")}} {{experimental_inline}} — Describes the aspect of custom properties and variables. <em>(currently at the Working Draft stage)</em></li>
 </ul>
 
 <h2 id="Conditional_group_rules">Conditional group rules</h2>
@@ -51,6 +62,63 @@ tags:
 </ul>
 
 <p>Since each conditional group may also contain nested statements, there may be an unspecified amount of nesting.</p>
+
+<h2 id="Index">Index</h2>
+
+<div class="index"><span>C</span>
+
+<ul>
+ <li>{{cssxref("@charset")}}</li>
+ <li>{{cssxref("@counter-style")}}</li>
+</ul>
+<span>D</span>
+
+<ul>
+ <li>{{cssxref("@document")}} {{experimental_inline}}</li>
+</ul>
+<span>F</span>
+
+<ul>
+ <li>{{cssxref("@font-face")}}</li>
+ <li>{{cssxref("@font-feature-values")}}</li>
+</ul>
+<span>I</span>
+
+<ul>
+ <li>{{cssxref("@import")}}</li>
+</ul>
+<span>K</span>
+
+<ul>
+ <li>{{cssxref("@keyframes")}}</li>
+</ul>
+<span>M</span>
+
+<ul>
+ <li>{{cssxref("@media")}}</li>
+</ul>
+<span>N</span>
+
+<ul>
+ <li>{{cssxref("@namespace")}}</li>
+</ul>
+<span>P</span>
+
+<ul>
+ <li>{{cssxref("@page")}}</li>
+ <li>{{cssxref("@property")}} {{experimental_inline}}</li>
+</ul>
+<span>S</span>
+
+<ul>
+ <li>{{cssxref("@supports")}}</li>
+</ul>
+<span>V</span>
+
+<ul>
+ <li>{{cssxref("@viewport")}} {{experimental_inline}}</li>
+</ul>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

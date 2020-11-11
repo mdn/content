@@ -45,7 +45,7 @@ tags:
 <p><code>slice</code> does not alter the original array. It returns a shallow copy of elements from the original array. Elements of the original array are copied into the returned array as follows:</p>
 
 <ul>
- <li>For object references (and not the actual object), <code>slice</code> copies object references into the new array. Both the original and new array refer to the same object. If a referenced object changes, the changes are visible to both the new and original arrays.</li>
+ <li>For object <code>slice</code> copies object references into the new array. Both the original and new array refer to the same object. If a object changes, the changes are visible to both the new and original arrays.</li>
  <li>For strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Boolean")}} objects), <code>slice</code> copies the values into the new array. Changes to the string, number, or boolean in one array do not affect the other array.</li>
 </ul>
 

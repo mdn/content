@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Multimedia_and_accessibility">Multimedia and accessibility</h2>
 
-<p>So far in this module we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> attributes).</p>
+<p>So far in this module, we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> attributes).</p>
 
 <p>This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, videos, {{htmlelement("canvas")}} elements, Flash movies, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.</p>
 
@@ -85,7 +85,7 @@ tags:
 <p>However, there are problems with these controls:</p>
 
 <ul>
- <li>They are not keyboard accessible in most browsers, i.e. you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.</li>
+ <li>They are not keyboard-accessible in most browsers, i.e. you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.</li>
  <li>Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.</li>
 </ul>
 
@@ -186,7 +186,7 @@ fwdBtn.onclick = function() {
 
 <p>These are very simple, just adding or subtracting 3 seconds to the <code>currentTime</code> each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.</p>
 
-<p>Note that we also check to see if the <code>currentTime</code> is more than the total media <code>duration</code>, or if the media is not playing, when the Fwd button is pressed. If either conditions are true, we simply stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing, or fast forward past the end of the video.</p>
+<p>Note that we also check to see if the <code>currentTime</code> is more than the total media <code>duration</code>, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we simply stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.</p>
 
 <p>Last of all, add the following to the end of the code, to control the time elapsed display:</p>
 
@@ -228,23 +228,23 @@ fwdBtn.onclick = function() {
 
 <h2 id="Audio_transcripts">Audio transcripts</h2>
 
-<p>To provide deaf people with access to audio content, you really need to create text transcripts. These can either be included on the same page as the audio in some way, or included on a separate page and linked to.</p>
+<p>To provide deaf people with access to audio content, you really need to create text transcripts. These can either be included on the same page as the audio in some way or included on a separate page and linked to.</p>
 
 <p>In terms of actually creating the transcript, your options are:</p>
 
 <ul>
- <li>Commercial services — You could pay a professional to do the transcription, see for example companies like <a href="https://scribie.com/">Scribie</a>, <a href="https://castingwords.com/">Casting Words</a>, or <a href="https://www.rev.com/">Rev</a>. Look around and ask advice to make sure you find a reputable company that you'll be able to work with effectively.</li>
- <li>Community/grass roots/self transcription — If you are part of an active community or team in your workplace, then you could ask them for help with doing the translations. You could even have a go at doing them yourself.</li>
- <li>Automated services — There are AI services available, like <a href="https://trint.com">Trint</a> or <a href="https://transcribear.com/index.html">Transcribear</a>. Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly. </li>
+ <li>Commercial services — You could pay a professional to do the transcription, see for example companies like <a href="https://scribie.com/">Scribie</a>, <a href="https://castingwords.com/">Casting Words</a>, or <a href="https://www.rev.com/">Rev</a>. Look around and ask for advice to make sure you find a reputable company that you'll be able to work with effectively.</li>
+ <li>Community/grassroots/self transcription — If you are part of an active community or team in your workplace, then you could ask them for help with doing the translations. You could even have a go at doing them yourself.</li>
+ <li>Automated services — There are AI services available, like <a href="https://trint.com">Trint</a> or <a href="https://transcribear.com/index.html">Transcribear</a>. Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube, you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly. </li>
 </ul>
 
 <p>As with most things in life, you tend to get what you pay for; different services will vary in accuracy and time taken to produce the transcript. If you pay a reputable company or AI service to do the transcription, you will probably get it done rapidly and to a high quality. If you don't want to pay for it, you are likely to get it done at a lower quality, and/or slowly.</p>
 
-<p>It is not OK to publish an audio resource but promise to publish the transcript later on — such promises often aren't kept, which will erode trust between you and your users. If the audio you are presenting is something like a face to face meeting or live spoken performance, it would be acceptable to take notes during the performance, publish them in full along with the audio, then seek help in cleaning up the notes afterwards.</p>
+<p>It is not OK to publish an audio resource but promise to publish the transcript later on — such promises often aren't kept, which will erode trust between you and your users. If the audio you are presenting is something like a face to face meeting or live spoken performance, it would be acceptable to take notes during the performance, publish them in full along with the audio, then seek help in cleaning up the notes afterward.</p>
 
 <h3 id="Transcript_examples">Transcript examples</h3>
 
-<p>If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our <a href="https://www.youtube.com/watch?v=mwF-PpJOjMs">Wait, ARIA Roles Have Categories?</a> video and choose the three dot menu (. . .) <em>&gt; Show Transcript</em>. You'll see the transcript come up in a separate panel.</p>
+<p>If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our <a href="https://www.youtube.com/watch?v=mwF-PpJOjMs">Wait, ARIA Roles Have Categories?</a> video and choose the three-dot menu (. . .) <em>&gt; Show Transcript</em>. You'll see the transcript come up in a separate panel.</p>
 
 <p>If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our <a href="http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/">audio-transcript-ui</a> example (also see the <a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui">source code</a>).</p>
 
@@ -252,7 +252,7 @@ fwdBtn.onclick = function() {
 
 <p>On occasions where there are visuals accompanying your audio, you'll need to provide audio descriptions of some kind to describe that extra content.</p>
 
-<p>In many cases this will simply take the form of video, in which case you can implement captions using the techniques described in the next section of the article.</p>
+<p>In many cases, this will simply take the form of video, in which case you can implement captions using the techniques described in the next section of the article.</p>
 
 <p>However, there are some edge cases. You might for example have an audio recording of a meeting that refers to an accompanying resource such as a spreadsheet or chart. In such cases, you should make sure that the resources are provided along with the audio + transcript, and specifically link to them in the places where they are referred to in the transcript. This of course will help all users, not just people who are deaf.</p>
 
@@ -276,12 +276,12 @@ fwdBtn.onclick = function() {
 
 <p><img alt='An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"' src="https://mdn.mozillademos.org/files/14442/Subtitles_German.jpg" style="display: block; margin: 0 auto;"></p>
 
-<p>There are different types of text track with different purposes. The main ones you'll come across are:</p>
+<p>There are different types of text tracks for different purposes. The main ones you'll come across are:</p>
 
 <ul>
  <li>Captions — There for the benefit of deaf users who can't hear the audio track, including the words being spoken, and contextual information such as who spoke the words, if the people were angry or sad, and what mood the music is currently creating.</li>
  <li>Subtitles — Include translations of the audio dialog, for users that don't understand the language being spoken.</li>
- <li>Descriptions — These include descriptions for blind people who can't see the video, for example what the scene looks like.</li>
+ <li>Descriptions — These include descriptions for blind people who can't see the video, for example, what the scene looks like.</li>
  <li>Chapter titles — Chapter markers intended to help the user navigate the media resource</li>
 </ul>
 
@@ -322,7 +322,7 @@ This is the second.
 
 <p><img alt='Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>For more details, please read <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can find <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
+<p>For more details, please read <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can find <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>
@@ -345,7 +345,7 @@ This is the second.
  <li>If you are embedding video content using a plugin technology like Flash or Silverlight, you can take advantage of captioning/subtitling techniques available to those technologies. For example, see <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://help.adobe.com/en_US/as3/components/WS5b3ccc516d4fbf351e63e3d118a9c65b32-7ee5.html">Using Timed Text Captions</a> (for Flash), or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
 </ul>
 
-<p>However, other multimedia is not so easy to make accessible. If for example you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.</p>
+<p>However, other multimedia is not so easy to make accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.</p>
 
 <p>You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.</p>
 

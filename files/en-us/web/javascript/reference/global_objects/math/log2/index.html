@@ -16,16 +16,16 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-log2.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Math.log2(<var>x</var>)</code></pre>
+<pre class="syntaxbox notranslate">Math.log2(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>x</code></dt>
+ <dt><code><var>x</var></code></dt>
  <dd>A number.</dd>
 </dl>
 
@@ -35,26 +35,26 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>If the value of <code>x</code> is less than 0, the return value is always {{jsxref("NaN")}}.</p>
+<p>If the value of <code><var>x</var></code> is less than 0, the return value is always {{jsxref("NaN")}}.</p>
 
 <p>Because <code>log2()</code> is a static method of <code>Math</code>, you always use it as <code>Math.log2()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
 
-<p>This function is the equivalent of Math.log(x) / Math.log(2).  For log2(e) use the constant {{jsxref("Math.LOG2E")}} which is 1 / {{jsxref("Math.LN2")}}.  </p>
+<p>This function is the equivalent of Math.log(x) / Math.log(2). For log2(e) use the constant {{jsxref("Math.LOG2E")}} which is 1 / {{jsxref("Math.LN2")}}.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>This Polyfill emulates the <code>Math.log2</code> function. Note that it returns imprecise values on some inputs (like 1 &lt;&lt; 29), wrap into {{jsxref("Math.round()")}} if working with bit masks.</p>
 
-<pre class="brush: js">if (!Math.log2) Math.log2 = function(x) {
+<pre class="brush: js notranslate">if (!Math.log2) Math.log2 = function(x) {
   return Math.log(x) * Math.LOG2E;
 };
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Math.log2">Using <code>Math.log2()</code></h3>
+<h3 id="Using_Math.log2">Using Math.log2()</h3>
 
-<pre class="brush: js">Math.log2(3);    // 1.584962500721156
+<pre class="brush: js notranslate">Math.log2(3);    // 1.584962500721156
 Math.log2(2);    // 1
 Math.log2(1);    // 0
 Math.log2(0);    // -Infinity
@@ -62,15 +62,15 @@ Math.log2(-2);   // NaN
 Math.log2(1024); // 10
 </pre>
 
-
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}}</td>
   </tr>
@@ -79,7 +79,7 @@ Math.log2(1024); // 10
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Math.log2")}}</p>
 

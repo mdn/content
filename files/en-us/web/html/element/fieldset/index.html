@@ -27,7 +27,7 @@ tags:
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>If this Boolean attribute is set, all form controls that are descendants of the <code>&lt;fieldset&gt;</code>, are disabled, meaning they are not editable and won't be submitted along with the {{htmlelement("form")}}. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the {{HTMLElement("legend")}} element won't be disabled.</dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>This attribute takes the value of the {{htmlattrxref("id")}} attribute of a {{HTMLElement("form")}} element you want the <code>&lt;fieldset&gt;</code> to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> elements inside the <code>&lt;fieldset&gt;</code> to be associated with the form, you need to use the <code>form</code> attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using <code><a href="/en-US/docs/Web/API/HTMLFormElement/elements">HTMLFormElement.elements</a></code>.</dd>
+ <dd>This attribute takes the value of the {{htmlattrxref("id")}} attribute of a {{HTMLElement("form")}} element you want the <code>&lt;fieldset&gt;</code> to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the {{HTMLElement("input")}} elements inside the <code>&lt;fieldset&gt;</code> to be associated with the form, you need to use the <code>form</code> attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using {{domxref("HTMLFormElement.elements")}}.</dd>
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>The name associated with the group.
  <div class="note"><strong>Note</strong>: The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.</div>
@@ -87,8 +87,8 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/en-US/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -100,7 +100,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

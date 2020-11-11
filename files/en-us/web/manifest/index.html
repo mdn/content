@@ -15,38 +15,28 @@ tags:
 
 <p><strong>Web app manifests</strong> are part of a collection of web technologies called <a href="/en-US/docs/Web/Progressive_web_apps">progressive web apps</a> (PWAs), which are websites that can be installed to a device’s homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular <a href="/en-US/docs/Web/API">Web APIs</a>.</p>
 
-<p>The web app manifest file provides information about a web application in {{Glossary("JSON")}} format.This information is necessary for the web app to be downloaded and presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience), and ensuring discoverability.</p>
-
-<p>PWA manifests include several values such as the application's name, author, icon(s), version, description, a list of all the necessary resources such as app icons, and other things besides.</p>
+<p>The web app manifest provides information about a web application in a {{Glossary("JSON")}} text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience). PWA manifests include its name, author, icon(s), version, description, and list of all the necessary resources (among other things).</p>
 
 <div class="hidden">
 <p>Can PWA manifest contain comments?<br>
  It is a {{Glossary("JSON")}}-formatted file, with one exception: it is allowed to contain "<code>//</code>"-style comments.</p>
 </div>
 
-<h2 id="Creating_a_valid_manifest">Creating a valid manifest</h2>
+<h2 id="Members">Members</h2>
 
-<p>A basic manifest file consists of just the following members:</p>
+<p>Web manifests can contain the following keys. Click on each one to link through to more information about it:</p>
 
-<ul>
- <li><code>name</code>: An identifying name for the app. Can be used by app stores, browsers on startup screens and prompts, or by operating systems on app launchers and settings screens.</li>
- <li><code>short_name</code>: A short name, used to display the name to the user where there is limited display space, such as below the icon on a homescreen or app launcher menu.</li>
- <li><code>description</code>: A paragraph that provides descriptive information and additional context about the app.</li>
- <li><code>display</code>: The preferred display mode for the web app. Available values are <code>fullscreen</code>, <code>standalone</code>, <code>minimal-ui</code>, and <code>browser</code>. For most browsers, <code>standalone</code> is the most compatible value for PWAs.</li>
- <li><code>scope</code>: An origin / path that defines which navigations will happen within the installable app and which navigations will happen in an external web browser. If the user navigates outside this scope, those pages will be opened in a standard web browser.</li>
- <li><code>icons</code>: An array of icons that the browser can choose from to suit different contexts, which includes src, sizes, and type sub-members.</li>
-</ul>
+<p>{{ListSubpages("/en-US/docs/Web/Manifest")}}</p>
 
-<p>There are other fields that you can include — see the {{anch("Members")}} section below.</p>
-
-<p>Below you can see an example of a basic manifest file that is compatible with most browsers:</p>
+<h2 id="Example_manifest">Example manifest</h2>
 
 <pre class="brush: json notranslate">{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
-  "description": "A simply readable Hacker News app.",
+  "start_url": ".",
   "display": "standalone",
-  "scope": "/app/",
+  "background_color": "#fff",
+  "description": "A simply readable Hacker News app.",
   "icons": [{
     "src": "images/touch/homescreen48.png",
     "sizes": "48x48",
@@ -63,14 +53,20 @@ tags:
     "src": "images/touch/homescreen144.png",
     "sizes": "144x144",
     "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen168.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
 }</pre>
-
-<h2 id="Members">Members</h2>
-
-<p>Web manifests can contain the following keys. Click each one for more information about it:</p>
-
-<p>{{ListSubpages("/en-US/docs/Web/Manifest")}}</p>
 
 <h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">Deploying a manifest</h2>
 
@@ -79,11 +75,11 @@ tags:
 <pre class="brush: html notranslate">&lt;link rel="manifest" href="/manifest.webmanifest"&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (the response of the manifest file should return <code>Content-Type: application/manifest+json</code>). Browsers generally support manifests with other extensions such as <code>.json</code> (<code>Content-Type: application/json</code>).</p>
+<p><strong>Note</strong>: The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (the response of the manifest file should return <code>Content-Type: application/manifest+json</code>). Browsers generally support manifests with other appropriate extensions like <code>.json</code> (<code>Content-Type: application/json</code>).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If the manifest requires credentials to fetch, the {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} attribute must be set to <code>use-credentials</code>, even if the manifest file is in the same origin as the current page.</p>
+<p><strong>Note</strong>: If the manifest requires credentials to fetch - the {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} attribute must be set to <code>use-credentials</code>, even if the manifest file is in the same origin as the current page.</p>
 </div>
 
 <h2 id="Splash_screens">Splash screens</h2>

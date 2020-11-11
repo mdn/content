@@ -40,10 +40,6 @@ tags:
 
 <p>The action handler receives as input a single parameter: an object conforming to the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.</p>
 
-<h2 id="Media_session_actions">Media session actions</h2>
-
-<p>{{page("/en-US/docs/Web/API/MediaSessionAction", "Syntax")}}</p>
-
 <dl>
 </dl>
 
@@ -131,6 +127,30 @@ navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
 <p>To remove a media action handler, assign it to null.</p>
 
 <pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
+
+<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions in one handler function</h3>
+
+<p>You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
+
+<pre class="brush: js notranslate">let skipTime = 7;
+
+navigator.mediaSession.setActionHandler("seekforward", handleSeek);
+navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
+
+function handleSeek(details) {
+  switch(details.action) {
+    case "seekforward":
+      audio.currentTime = Math.min(audio.currentTime + skipTime,
+              audio.duration);
+      break;
+    case "seekbackward":
+      audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+      break;
+  }
+}
+</pre>
+
+<p>Here, the <code>handleSeek()</code> function handles both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

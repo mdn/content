@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>translateZ()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+<p>The <strong><code>translateZ()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-translateZ.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>This transformation is defined by a {{cssxref("&lt;length&gt;")}} which specifies how far inward or outward the element or elements move.</p>
 
@@ -27,13 +27,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">translateZ(tz)
+<pre class="syntaxbox notranslate">translateZ(<var>tz</var>)
 </pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>tz</code></dt>
+ <dt><code><var>tz</var></code></dt>
  <dd>A {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. A positive value moves the element towards the viewer, and a negative value farther away.</dd>
 </dl>
 
@@ -84,7 +84,7 @@ tags:
 
 <p>Then, the <code>translateZ()</code> function moves the element 200 pixels "outward" from the screen, toward the user. This has the effect of making the element appear larger when viewed on a 2D display, or closer when viewed using a VR headset or other 3D display device.</p>
 
-<p>Note if the <code>perspective()</code> value is less than the <code>translateZ()</code> value, such as <code>transform: perspective(200px) translateZ(300px);</code> the transformed element will not be visible as it is further than the user's viewport. The smaller the difference between the perspective and transform values, the closer the user is to the element and the larger the translated element will seem.</p>
+<p>Note if the <code>perspective()</code> value is less than the <code>translateZ()</code> value, such as <code>transform: perspective(200px) translateZ(300px);</code> the transformed element will not be visible as it is further than the user's viewport. The smaller the difference between the perspective and translateZ values, the closer the user is to the element and the larger the translated element will seem.</p>
 
 <h3 id="Result">Result</h3>
 

@@ -10,20 +10,20 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>setDate()</code></strong> method sets the day of the {{jsxref("Date")}} object relative to the beginning of the currently set month.</p>
+<p>The <strong><code>setDate()</code></strong> method sets the day of the {{jsxref("Date")}} object relative to the beginning of the currently set month.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-setdate.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.setDate(<var>dayValue</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setDate(<var>dayValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>dayValue</code></dt>
+ <dt><code><var>dayValue</var></code></dt>
  <dd>An integer representing the day of the month.</dd>
 </dl>
 
@@ -33,15 +33,15 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>If the <code>dayValue</code> is outside of the range of date values for the month, <code>setDate()</code> will update the {{jsxref("Date")}} object accordingly.</p>
+<p>If the <code><var>dayValue</var></code> is outside of the range of date values for the month, <code>setDate()</code> will update the {{jsxref("Date")}} object accordingly.</p>
 
-<p>For example, if 0 is provided for <code>dayValue</code>, the date will be set to the last day of the previous month.</p>
+<p>For example, if 0 is provided for <code><var>dayValue</var></code>, the date will be set to the last day of the previous month.</p>
 
-<p>If a negative number is provided for <code>dayValue</code>, the date will be set counting backwards from the last day of the previous month. -1 would result in the date being set to 1 day before the last day of the previous month.</p>
+<p>If a negative number is provided for <code><var>dayValue</var></code>, the date will be set counting backwards from the last day of the previous month. -1 would result in the date being set to 1 day before the last day of the previous month.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_setDate">Using <code>setDate()</code></h3>
+<h3 id="Using_setDate">Using setDate()</h3>
 
 <pre class="brush: js notranslate">var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
 theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
@@ -55,10 +55,12 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}}</td>
   </tr>
@@ -67,7 +69,7 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.Date.setDate")}}</p>
 

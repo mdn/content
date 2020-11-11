@@ -92,7 +92,9 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>A path that must exist in the requested URL, or the browser won't send the <code>Cookie</code> header.</dd>
  <dd>The forward slash (<code>/</code>) character is interpreted as a directory separator, and subdirectories will be matched as well: for <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, and <code>/docs/Web/HTTP</code> will all match.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
- <dd>A secure cookie is only sent to the server when a request is made with the <code>https:</code> scheme. (However, confidential information should never be stored in HTTP Cookies, as the entire mechanism is inherently insecure and doesn't encrypt any information.)
+ <dd>Cookie is only sent to the server when a request is made with the <code>https:</code> scheme (except on localhost), and therefore is more resistent to <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/MitM">man-in-the-middle</a> attacks.
+ <p class="note"><strong>Note:</strong> Do not assume that <code>Secure</code> prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified with access to the client's hard disk, or from JavaScript if the <code>HttpOnly</code> cookie attribute is not set.</p>
+
  <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
  </dd>
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>

@@ -71,11 +71,11 @@ grid-auto-flow: unset;
   &lt;div id="item4"&gt;&lt;/div&gt;
   &lt;div id="item5"&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;select id="direction" onchange="changeGridAutoFlow()"&gt;
+&lt;select id="direction"&gt;
   &lt;option value="column"&gt;column&lt;/option&gt;
   &lt;option value="row"&gt;row&lt;/option&gt;
 &lt;/select&gt;
-&lt;input id="dense" type="checkbox" onchange="changeGridAutoFlow()"&gt;
+&lt;input id="dense" type="checkbox"&gt;
 &lt;label for="dense"&gt;dense&lt;/label&gt;
 </pre>
 
@@ -123,7 +123,13 @@ grid-auto-flow: unset;
   }
 
   grid.style.gridAutoFlow = gridAutoFlow;
-}</pre>
+}
+
+const selectElem = document.querySelector('select');
+const inputElem = document.querySelector('input');
+selectElem.addEventListener('change', changeGridAutoFlow);
+inputElem.addEventListener('change', changeGridAutoFlow);
+</pre>
 
 <h4 id="Result">Result</h4>
 

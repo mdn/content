@@ -111,11 +111,13 @@ article {
   border: 1px solid black;
 }</pre>
 
-<p>{{EmbedLiveSample('Simple_layout', '100%', '300')}}</p>
+<p>{{EmbedGHLiveSample("css-examples/contain/simple-layout.html", '100%', 400)}}</p>
+
+<p>You can immediately see an issue — no effort is made to clear the floating beyond the bottom of the article.</p>
 
 <h3 id="Float_interference">Float interference</h3>
 
-<p>If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would also interfere with the layout of the second article:</p>
+<p>If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would interfere further with the layout of the second article:</p>
 
 <pre class="brush: html notranslate">&lt;h1&gt;My blog&lt;/h1&gt;
 &lt;article&gt;
@@ -142,7 +144,7 @@ article {
 
 <p>As you can see, because of the way floats work, the first image ends up inside the area of the second article:</p>
 
-<p>{{EmbedLiveSample('Float_interference', '100%', '300')}}</p>
+<p>{{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}</p>
 
 <h3 id="Fixing_with_contain">Fixing with contain</h3>
 
@@ -174,7 +176,7 @@ article {
 
 <p>This also means that the first image no longer floats down to the second article, and instead stays inside it's containing element's bounds:</p>
 
-<p>{{EmbedLiveSample('Fixing_with_contain', '100%', '330')}}</p>
+<p>{{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

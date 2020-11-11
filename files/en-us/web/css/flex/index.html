@@ -14,7 +14,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -59,14 +59,14 @@ flex: unset;
 <p>The <code>flex</code> property may be specified using one, two, or three values.</p>
 
 <ul>
- <li><strong>One-value syntax</strong>: the value must be one of:
+ <li><strong>One-value syntax:</strong> the value must be one of:
 
   <ul>
    <li>a <code>&lt;number&gt;</code>: In this case it is interpreted as <code>flex: &lt;number&gt; 1 0</code>; the <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code> value is assumed to be 1 and the <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> value is assumed to be <code>0</code>.</li>
    <li>one of the keywords: <code><a href="#none">none</a></code>, <code><a href="#auto">auto</a></code>, or <code>initial</code>.</li>
   </ul>
  </li>
- <li><strong>Two-value syntax</strong>:
+ <li><strong>Two-value syntax:</strong>
   <ul>
    <li>The first value must be:
     <ul>
@@ -100,11 +100,11 @@ flex: unset;
  <dt id="none"><code>none</code></dt>
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "<code>flex: 0 0 auto</code>".</dd>
  <dt id="&lt;'flex-grow'>"><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
+ <dd>Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted. (initial is <code>0</code>)</dd>
  <dt id="&lt;'flex-shrink'>"><code>&lt;'flex-shrink'&gt;</code></dt>
- <dd>Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted.</dd>
+ <dd>Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted. (initial is <code>1</code>)</dd>
  <dt id="&lt;'flex-basis'>"><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of <code>0</code> must have a unit to avoid being interpreted as a flexibility. Defaults to <code>0</code> when omitted.</dd>
+ <dd>Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of <code>0</code> must have a unit to avoid being interpreted as a flexibility. Defaults to <code>0</code> when omitted. (initial is <code>auto</code>)</dd>
 </dl>
 
 <h2 id="Description">Description</h2>

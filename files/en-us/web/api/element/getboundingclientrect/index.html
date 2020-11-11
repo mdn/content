@@ -25,9 +25,7 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Element.getBoundingClientRect()</strong></code> method returns the size of an element and its position relative to the viewport.</p>
-
-<p>The element's size is equal to its <code>width</code>/<code>height</code> + <code>padding</code> + <code>border-width</code> in the case that the standard box model is being used, or <code>width</code>/<code>height</code> only if <code>box-sizing: border-box</code> has been set on it.</p>
+<p>The <code><strong>Element.getBoundingClientRect()</strong></code> method returns a {{domxref("DOMRect")}} object providing information about the size of an element and its position relative to the <a href="/en-US/docs/Glossary/Viewport">viewport</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -35,9 +33,13 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>The returned value is a {{domxref("DOMRect")}} object which is the union of the rectangles returned by {{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e., the CSS border-boxes associated with the element. The result is the smallest rectangle which contains the entire element, with read-only <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> properties describing the overall border-box in pixels. Properties other than <code>width</code> and <code>height</code> are relative to the top-left of the viewport.</p>
+<p>The returned value is a {{domxref("DOMRect")}} object which is the smallest rectangle which contains the entire element, including its padding and border-width. The <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> properties describe the position and size of the overall rectangle in pixels. Properties other than <code>width</code> and <code>height</code> are relative to the top-left of the viewport.</p>
 
 <p style="display: block;"><img alt="" src="https://mdn.mozillademos.org/files/17155/element-box-diagram.png" style="height: 1099px; width: 1466px;"></p>
+
+<p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}} object returned by the method include the <code>padding</code> and <code>border-width</code>, not only the content width/height. In the standard box model, this would be <code>width</code> or <code>height</code> property of the element + <code>padding</code> + <code>border-width</code>. But if <code><a href="/en-US/docs/Web/CSS/box-sizing">box-sizing: border-box</a></code> is set for the element, this would only be <code>width</code> or <code>height</code>.</p>
+
+<p>The returned value can be thought of as the union of the rectangles returned by {{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e., the CSS border-boxes associated with the element.</p>
 
 <p>Empty border-boxes are completely ignored. If all the element's border-boxes are empty, then a rectangle is returned with a <code>width</code> and <code>height</code> of zero and where the <code>top</code> and <code>left</code> are the top-left of the border-box for the first CSS box (in content order) for the element.</p>
 

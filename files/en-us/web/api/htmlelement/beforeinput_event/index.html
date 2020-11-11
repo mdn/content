@@ -2,15 +2,15 @@
 title: 'HTMLElement: beforeinput event'
 slug: Web/API/HTMLElement/beforeinput_event
 tags:
+  - API
   - Event
-  - Experimental
   - HTML DOM
   - HTMLElement
   - InputEvent
   - Reference
   - beforeinput
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+<div>{{APIRef}}</div>
 
 <p>The DOM <strong><code>beforeinput</code></strong> event fires when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.</p>
 
@@ -51,14 +51,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Simple_logger">Simple logger</h3>
+
 <p>This example logs the current value of the element, immediately before replacing that value with the new one applied to the {{HtmlElement("input")}} element.</p>
 
-<h3 id="HTML">HTML</h3>
+<h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;input placeholder="Enter some text" name="name"/&gt;
 &lt;p id="values"&gt;&lt;/p&gt;</pre>
 
-<h3 id="JavaScript">JavaScript</h3>
+<h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js notranslate">const input = document.querySelector('input');
 const log = document.getElementById('values');
@@ -69,9 +71,9 @@ function updateValue(e) {
   log.textContent = e.target.value;
 }</pre>
 
-<h3 id="Result">Result</h3>
+<h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+<p>{{EmbedLiveSample("Simple_logger")}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

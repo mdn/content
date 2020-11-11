@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> function defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("&lt;url&gt;")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
+<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("&lt;url&gt;")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
 
 <div class="blockIndicator note">
 <p><strong>Disambiguation:</strong> {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.</p>
@@ -62,7 +62,6 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <p>The size of the color swatch can be set with the {{CSSxRef("background-size")}} property. This is different from the <code>background-color</code>, which sets a color to cover the entire element. Both <code>image(color)</code> and <code>background-color</code> placements are impacted by the {{CSSxRef("background-clip")}} and {{CSSxRef("background-origin")}} properties.</p>
 
-
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
@@ -73,7 +72,6 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 </ul>
 
 <p>This feature can help improve accessibility by providing a fallback color when an image fails to load. While this can and should be done by including a background-color on every background image, the CSS <code>image()</code> function allows adding allows only including background colors should an image fail to load, which means you can add a fall back color should a transparent PNG/GIF/WebP not load.</p>
-
 
 <h2 id="Examples" name="Examples">Examples</h2>
 

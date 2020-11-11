@@ -25,14 +25,14 @@ tags:
 
 <ul>
  <li>Specific <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> by the client (<em>server-driven negotiation</em> or <em>proactive negotiation</em>), which is the standard way of negotiating a specific kind of resource.</li>
- <li>The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable) <a href="/en-US/docs/Web/HTTP/Status">HTTP response codes</a> by the server (<em>agent-driven negotiation</em> or <em>reactive negotiation</em>), that are used as fallback mechanisms.</li>
+ <li>The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) <a href="/en-US/docs/Web/HTTP/Status">HTTP response codes</a> by the server (<em>agent-driven negotiation</em> or <em>reactive negotiation</em>), that are used as fallback mechanisms.</li>
 </ul>
 
 <p>Over the years, other content negotiation proposals, like <a href="https://tools.ietf.org/html/rfc2295">transparent content negotiation</a> and the <code>Alternates</code> header, have been proposed. They failed to get traction and got abandoned.</p>
 
 <h2 id="Server-driven_content_negotiation">Server-driven content negotiation</h2>
 
-<p>In <em>server-driven content negotiation</em>, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. The algorithm is server-specific and not defined in the standard. See, for example, the <a class="external" href="http://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm">Apache negotiation algorithm</a>.</p>
+<p>In <em>server-driven content negotiation</em>, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it cannot provide a suitable resource, as a fallback it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g. using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See, for example, the <a class="external" href="http://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm">Apache negotiation algorithm</a>.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
 
@@ -132,11 +132,11 @@ tags:
 
 <h3 id="The_Vary_response_header">The Vary response header</h3>
 
-<p>In opposition to the previous <code>Accept-*</code> headers which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers used by the server during the server-driven content negotiation phase. The header is needed in order to inform the cache of the decision criteria so that it can reproduce it, allowing the cache to be functional while preventing serving erroneous content to the user.</p>
+<p>In contrast to the previous <code>Accept-*</code> headers, which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers used by the server during the server-driven content negotiation phase. The header is needed in order to inform the cache of the decision criteria so that it can reproduce it, allowing the cache to be functional while preventing serving erroneous content to the user.</p>
 
 <p>The special value of '<code>*</code>' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.</p>
 
-<p>The <code>Vary</code> header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '<code>*</code>' prevents caching from occurring, as the cache cannot know what element is behind it.</p>
+<p>The <code>Vary</code> header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '<code>*</code>' prevents caching from occurring, as the cache cannot know what element is behind it. For more information <a href="/en-US/docs/Web/HTTP/Caching#Varying_responses">HTTP caching &gt; Varying responses</a>.</p>
 
 <h2 id="Agent-driven_negotiation">Agent-driven negotiation</h2>
 
@@ -146,4 +146,4 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13795/HTTPNego3.png"></p>
 
-<p>Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the <em>server-driven negotiation</em>, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</p>
+<p>Unfortunately, the HTTP standard does not specify the format of the page for choosing between the available resource, which prevents the process being automated. Besides falling back to the <em>server-driven negotiation</em>, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</p>

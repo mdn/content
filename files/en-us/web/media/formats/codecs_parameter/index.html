@@ -54,7 +54,7 @@ tags:
 <p>As is the case with any MIME type parameter, <code>codecs</code> must be changed to <code>codecs*</code> (note the asterisk character, <code>*</code>) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.</p>
 
 <div class="blockIndicator note">
-<p>When the <code>codecs</code> parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.=</p>
+<p>When the <code>codecs</code> parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.</p>
 </div>
 
 <h2 id="Codec_options_by_container">Codec options by container</h2>
@@ -78,7 +78,7 @@ tags:
 
 <p>The syntax of the <code>codecs</code> parameter for AV1 is defined the <a href="https://aomediacodec.github.io/av1-isobmff">AV1 Codec ISO Media File Format Binding</a> specification, section 5: <a href="https://aomediacodec.github.io/av1-isobmff/#codecsparam">Codecs Parameter String</a>.</p>
 
-<pre>av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]</pre>
+<pre class="notranslate">av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]</pre>
 
 <p>This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.</p>
 
@@ -433,7 +433,7 @@ tags:
 
 <p>When the value of an entry in the <code>codecs</code> list begins with <code>mp4a</code>, the syntax of the value should be:</p>
 
-<pre>mp4a.oo[.A]</pre>
+<pre class="notranslate">mp4a.oo[.A]</pre>
 
 <p>Here, <code>oo</code> is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the <a href="http://mp4ra.org/">MP4 Registration Authority</a>, which maintains a <a href="http://mp4ra.org/#/object_types">list of the possible OTI values</a>. A special value is <code>40</code>; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI <code>40</code> to narrow the type down to a specific subtype of MPEG-4.</p>
 
@@ -735,7 +735,7 @@ tags:
 
 <p>In this format, the <code>codecs</code> parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (<code>.</code>) separated two-digit values.</p>
 
-<pre>cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]</pre>
+<pre class="notranslate">cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]</pre>
 
 <p>The first five components are required; everything from <code>cp</code> (color primaries) onward is optional; you can stop including components at any point from then onward. Each of these components is described in the following table. Following the table are some examples.</p>
 

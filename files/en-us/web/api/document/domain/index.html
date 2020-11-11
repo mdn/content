@@ -76,6 +76,8 @@ tags:
  <li>If used on an origin-isolated page, i.e. one that uses the {{httpheader("Origin-Isolation")}} HTTP header</li>
 </ul>
 
+<p>Finally, setting <code>document.domain</code> does not change the origin used for origin-checks by some Web APIs, preventing sub-domain access via this mechanism. Affected APIs include (but are not limited to): {{domxref("localStorage")}}, {{domxref("indexedDB")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .</p>
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Getting_the_domain">Getting the domain</h3>

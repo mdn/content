@@ -31,7 +31,7 @@ tags:
 
 <p>When printing the document, the navigation area has no purpose. This CSS (below) removes the navigation area when printing the document:</p>
 
-<pre class="brush:css">@media print {
+<pre class="brush:css notranslate">@media print {
   #nav-area {display: none;}
   }
 </pre>
@@ -91,12 +91,12 @@ tags:
 
 <p>This rule sets the page margins to one inch on all four sides:</p>
 
-<pre class="brush:css">@page {margin: 1in;}
+<pre class="brush:css notranslate">@page {margin: 1in;}
 </pre>
 
 <p>This rule ensures that every <small>H1</small> element starts on a new page:</p>
 
-<pre class="brush:css">h1 {page-break-before: always;}
+<pre class="brush:css notranslate">h1 {page-break-before: always;}
 </pre>
 </div>
 
@@ -144,7 +144,7 @@ tags:
 </table>
 
 <div class="note">
-<p><strong>Note: </strong>The information that can be obtained from the :visited selector is restricted in {{gecko("2.0")}}. See <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the : visited selector</a> for more details.</p>
+<p><strong>Note: </strong>The information that can be obtained from the :visited selector is restricted in {{gecko("2.0")}}. See <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a> for more details.</p>
 </div>
 
 <p>The {{CSSxRef("cursor")}} property specifies the shape of the pointer: Some of the common shapes are as follows. Place your mouse over the items in this list to see the actual pointer shapes in your browser:</p>
@@ -185,7 +185,7 @@ tags:
 
 <p>These rules specify styles for a button that changes dynamically as the user interacts with it:</p>
 
-<pre class="brush:css">.green-button {
+<pre class="brush:css notranslate">.green-button {
   background-color:#cec;
   color:#black;
   border:2px outset #cec;
@@ -202,7 +202,7 @@ tags:
   }
 </pre>
 
-<pre class="brush:html">&lt;table&gt;
+<pre class="brush:html notranslate">&lt;table&gt;
  &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td&gt;&lt;button class="green-button" disabled&gt;Click me&lt;/button&gt;&lt;/td&gt;
@@ -237,13 +237,13 @@ tags:
 <h2 id="Action_Printing_a_document">Action: Printing a document</h2>
 
 <div class="note">
-<p><strong>Note:</strong> This snippet only works on Firefox since it erroneously increments the CSS counter for fix-position elemnts. It shouldn not work in other browsers. See <a href="/en-US/docs/">issue on css3-page</a>.</p>
+<p><strong>Note:</strong> This snippet only works on Firefox since it erroneously increments the CSS counter for fix-position elements. It should not work in other browsers. See <a href="/en-US/docs/">issue on css3-page</a>.</p>
 </div>
 
 <ol>
  <li>Make a new HTML document, <code>doc4.html</code>. Copy and paste the content from here:
 
-  <pre class="brush:html">&lt;!DOCTYPE html&gt;
+  <pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Print sample&lt;/title&gt;
@@ -265,7 +265,7 @@ tags:
 </pre>
  </li>
  <li>Make a new stylesheet, <code>style4.css</code>. Copy and paste the content from here:
-  <pre class="brush:css">/*** Print sample ***/
+  <pre class="brush:css notranslate">/*** Print sample ***/
 
 /* defaults  for screen */
 #print-head,

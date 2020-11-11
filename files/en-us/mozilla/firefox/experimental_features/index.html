@@ -13,7 +13,7 @@ tags:
 
 <p class="summary"><span class="seoSummary">This page lists features that are in Nightly versions of Firefox along with information on how to activate them, if necessary.</span> You can test your Web sites and applications before these features get released and ensure everything will still work with the latest Web technology capabilities.</p>
 
-<p>To test these experimental features, you need to download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a>. Which you need is described alongside each feature's description below.</p>
+<p>To test these experimental features, you need to download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a> and set the appropriate preference in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a>. The preference that you need to set is described alongside each feature's description below.</p>
 
 <div class="blockIndicator note">
 <p><strong>Editor's note:</strong> When adding features to these tables, please try to include a link to the relevant bug or bugs using the {{TemplateLink("bug")}} macro: <code>\{{bug(<em>bug-number</em>)}}</code>.</p>
@@ -804,6 +804,46 @@ tags:
  </tbody>
 </table>
 
+<h4 id="InputEvent.getTargetRanges">InputEvent.getTargetRanges()</h4>
+
+<p>The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.input_events.beforeinput.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
 <h4 id="HTMLMediaElement_method_setSinkId">HTMLMediaElement method: setSinkId()</h4>
 
 <p>{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See {{bug(934425)}} for more details.</p>
@@ -1216,7 +1256,7 @@ tags:
 
 <h4 id="AVIF_AV1_Image_File_format_support">AVIF (AV1 Image File format) support</h4>
 
-<p>With this feature enabled, Firefox supports the AV1 Image File (AVIF) format. This is a still image file format that leverages the capabilities of the AV1 video compression algorithms to reduce image size. See {{bug(1443863)}} for more details.</p>
+<p>With this feature enabled, Firefox supports the <a href="/en-US/docs/Web/Media/Formats/Image_types#AVIF">AV1 Image File (AVIF)</a> format. This is a still image file format that leverages the capabilities of the AV1 video compression algorithms to reduce image size. See {{bug(1443863)}} for more details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -1586,47 +1626,7 @@ tags:
 
 <p>[1] Support for zooming using the double-tap gesture was added in Firefox 76. The other gestures were added for Firefox 79.</p>
 
-<h4 id="Compatibility_panel">Compatibility panel</h4>
-
-<p>A side panel for the Page Inspector that shows you information detailing your app's cross-browser compatibility status. See {{bug(1584464)}} for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>devtools.inspector.compatibility.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Server-sent_events_in_Network_Monitor">Server-sent events in Network Monitor</h4>
+<h4 id="Server-sent_events_in_Network_Monitor"><span>Server-sent events in Network Monitor</span></h4>
 
 <p>The Network Monitor displays information for <a href="/en-US/docs/Web/API/Server-sent_events">server-sent</a> events. See {{bug(1405706)}}.</p>
 
@@ -1662,6 +1662,46 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code>devtools.netmonitor.features.serverSentEvents</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="CSS_browser_compatibility_tooltips">CSS browser compatibility tooltips</h4>
+
+<p>The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Browser_compat_warnings">Examine and edit HTML &gt; Browser Compat Warnings</a>.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code></th>
   </tr>
  </tbody>
 </table>
