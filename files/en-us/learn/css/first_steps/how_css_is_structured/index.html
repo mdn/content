@@ -24,7 +24,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a>.</td>
+   <td>Basic computer literacy, <a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -110,7 +110,7 @@ p {
 
 <p>In some circumstances, internal stylesheets can be useful. For example, perhaps you're working with a content management system where you are blocked from modifying external CSS files.</p>
 
-<p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of working. To apply uniform CSS styling to multiple pages using internal stylesheets, you must have an internal stylesheet in every web page that will use the styling. The efficiency penalty carries over to site maintenance too. With CSS in internal stylesheets, there is the risk that even one simple styling change may require edits to multiple web pages.</p>
+<p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of working. To apply uniform CSS styling to multiple pages using internal stylesheets, you must have an internal stylesheet in every web page that will use the styling. The efficiency penalty carries over to site maintenance too. With CSS in internal stylesheets, there is the risk that even one simple styling change may require edits to multiple web pages.</p>
 
 <h3 id="Inline_styles">Inline styles</h3>
 
@@ -128,7 +128,7 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Avoid using CSS in this way, when possible.</strong> It is the opposite of a best practice. First, it is the least efficient implementation of CSS for maintenance. One styling change might require multiple edits within a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML and content, making everything more difficult to read and understand. Separating code and content makes maintenance easier for all who work on the website.</p>
+<p><strong>Avoid using CSS in this way, when possible.</strong> It is the opposite of a best practice. First, it is the least efficient implementation of CSS for maintenance. One styling change might require multiple edits within a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML and content, making everything more difficult to read and understand. Separating code and content makes maintenance easier for all who work on the website.</p>
 
 <p>There are a few circumstances where inline styles are more common. You might have to resort to using inline styles if your working environment is very restrictive. For example, perhaps your CMS only allows you to edit the HTML body. You may also see a lot of inline styles in HTML email to achieve compatibility with as many email clients as possible.</p>
 
@@ -164,7 +164,7 @@ p {
 
 <p>As an alternative, you can also use the interactive editor below.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}</p>
 
 <p>Read on and have fun!</p>
 
@@ -172,7 +172,7 @@ p {
 
 <p>A selector targets HTML to apply styles to content. We have already discovered a variety of selectors in the <a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> tutorial. If CSS is not applying to content as expected, your selector may not match the way you think it should match.</p>
 
-<p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
+<p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
 
 <pre class="brush: css notranslate">h1
 a:link
@@ -228,7 +228,7 @@ p {
 <p>At its most basic level, CSS consists of two components:</p>
 
 <ul>
- <li><strong>Properties</strong>: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code>.</li>
+ <li><strong>Properties</strong>: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, {{cssxref("font-size")}}, {{cssxref("width")}}, {{cssxref("background-color")}}.</li>
  <li><strong>Values</strong>: Each property is assigned a value. This value indicates how to style the property.</li>
 </ul>
 
@@ -247,7 +247,7 @@ p {
 <p>Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which declarations apply to every single element of a page.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Important: </strong>CSS properties and values are case-sensitive. The property and value in each pair are separated by a colon. (<code>:</code>)</p>
+<p><strong>Important:</strong> CSS properties and values are case-sensitive. The property and value in each pair are separated by a colon. (<code>:</code>)</p>
 </div>
 
 <p><strong>Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements: </strong></p>
@@ -321,11 +321,11 @@ p {
 
 <h2 id="rules">@rules</h2>
 
-<p>CSS <code><a href="/en-US/docs/Web/CSS/At-rule">@rules</a></code> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some <code>@rules</code> are simple with just a keyword and a value. For example,  <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
+<p>CSS <a href="/en-US/docs/Web/CSS/At-rule">@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example,  <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
 
 <pre class="brush: css notranslate">@import 'styles2.css';</pre>
 
-<p>One common <code>@rule</code> that you are likely to encounter is <code>@media</code>, which is used to create <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>. Media queries use conditional logic for applying CSS styling.</p>
+<p>One common @rule that you are likely to encounter is <code>@media</code>, which is used to create <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>. Media queries use conditional logic for applying CSS styling.</p>
 
 <p>In the example below, the stylesheet defines a default pink background for the <code>&lt;body&gt;</code> element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.</p>
 
@@ -339,7 +339,7 @@ p {
   }
 }</pre>
 
-<p>You will encounter other <code>@rules</code> throughout these tutorials.</p>
+<p>You will encounter other @rules throughout these tutorials.</p>
 
 <p><strong>See if you can add a media query that changes styles based on the viewport width. Change the width of your browser window to see the result.</strong></p>
 
@@ -374,7 +374,7 @@ background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;</pre>
 
-<p>Later in the course, you will encounter many other examples of shorthand properties. MDN's <a href="/en-US/docs/Web/CSS/Reference">CSS reference </a>is a good resource for more information about any shorthand property.</p>
+<p>Later in the course, you will encounter many other examples of shorthand properties. MDN's <a href="/en-US/docs/Web/CSS/Reference">CSS reference</a> is a good resource for more information about any shorthand property.</p>
 
 <p><strong>Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.</strong></p>
 
@@ -474,7 +474,7 @@ div p + p {
 }
 </pre>
 
-<p id="Very_compact">The next example shows the equivalent CSS  in a more compressed format. Although the two examples work the same, the one below is more difficult to read.</p>
+<p id="Very_compact">The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.</p>
 
 <pre class="brush: css notranslate">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
@@ -489,7 +489,7 @@ div p + p {padding-top: 0;}
 <p>For your own projects, you will format your code according to personal preference. For team projects, you may find that a team or project has its own style guide.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Important:</strong> Though white space separates values in CSS declarations, <strong>property names never have white space</strong>.</p>
+<p><strong>Important:</strong> Though white space separates values in CSS declarations, <strong>property names never have white space</strong>.</p>
 </div>
 
 <p>For example, these declarations are valid CSS:</p>
@@ -502,7 +502,7 @@ padding-left: 10px;</pre>
 <pre class="brush: css notranslate">margin: 0auto;
 padding- left: 10px;</pre>
 
-<p>Do you see the spacing errors? First, <code>0auto</code> is not recognized as a valid value for the <code>margin</code> property. The entry <code>0auto</code> is meant to be two separate values: <code>0</code> and <code>auto</code>. Second, the browser does not recognize <code>padding-</code> as a valid property. The correct property name (<code>padding-left</code>) is separated by an errant space.<br>
+<p>Do you see the spacing errors? First, <code>0auto</code> is not recognized as a valid value for the <code>margin</code> property. The entry <code>0auto</code> is meant to be two separate values: <code>0</code> and <code>auto</code>. Second, the browser does not recognize <code>padding-</code> as a valid property. The correct property name (<code>padding-left</code>) is separated by an errant space.<br>
  <br>
  You should always make sure to separate distinct values from one another by at least one space. Keep property names and property values together as single unbroken strings.</p>
 

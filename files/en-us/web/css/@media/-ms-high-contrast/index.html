@@ -23,21 +23,21 @@ tags:
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>none</code> {{Deprecated_Inline}}</dt>
- <dd>...<br>
- <strong>No longer supported as of Microsoft Edge 18.</strong></dd>
- <dt><code>active</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.</p>
- </dd>
- <dt><code>black-on-white</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a black-on-white color variation.</p>
- </dd>
- <dt><code>white-on-black</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a white-on-black color variation.</p>
- </dd>
+	<dt><code>none</code> {{Deprecated_Inline}}</dt>
+	<dd>...<br>
+	<strong>No longer supported as of Microsoft Edge 18.</strong></dd>
+	<dt><code>active</code></dt>
+	<dd>
+	<p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.</p>
+	</dd>
+	<dt><code>black-on-white</code></dt>
+	<dd>
+	<p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a black-on-white color variation.</p>
+	</dd>
+	<dt><code>white-on-black</code></dt>
+	<dd>
+	<p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a white-on-black color variation.</p>
+	</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -59,7 +59,7 @@ tags:
   div { background-image: url('image-bw.png'); }
 }</pre>
 
-<h3 id="Matching_a_white-on-block_variation">Matching a white-on-block variation</h3>
+<h3 id="Matching_a_white-on-black_variation">Matching a white-on-black variation</h3>
 
 <pre class="brush: css notranslate">@media screen and (-ms-high-contrast: white-on-black) {
   div { background-image: url('image-wb.png'); }
@@ -72,12 +72,12 @@ tags:
 <p>High Contrast Mode's theme colors come from a limited subset of deprecated <a href="https://www.w3.org/TR/2018/REC-css-color-3-20180619/#css2-system">CSS2 system colors</a>. The available color keywords are:</p>
 
 <ul>
- <li><code>windowText</code>: controls the color of text content.</li>
- <li><code>highlightText</code>: controls the color of selected text.</li>
- <li><code>highlight</code>: controls the background color of selected text.</li>
- <li><code>buttonFace</code>: controls the color of a {{HTMLElement("button")}} element's text.</li>
- <li><code>window</code>: controls the color of the background.</li>
- <li>The {{HTMLElement("a")}} element controls the color of links.</li>
+	<li><code>windowText</code>: controls the color of text content.</li>
+	<li><code>highlightText</code>: controls the color of selected text.</li>
+	<li><code>highlight</code>: controls the background color of selected text.</li>
+	<li><code>buttonFace</code>: controls the color of a {{HTMLElement("button")}} element's text.</li>
+	<li><code>window</code>: controls the color of the background.</li>
+	<li>The {{HTMLElement("a")}} element controls the color of links.</li>
 </ul>
 
 <p>Because High Contrast Mode themes are dynamic, use these color keywords in place of other <a href="/en-US/docs/Web/CSS/color">CSS color values</a>. This will ensure that content will always be able to be perceived.</p>
