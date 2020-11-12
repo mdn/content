@@ -17,13 +17,11 @@ tags:
 
 <h3 id="Error_types">Error types</h3>
 
-<p>Besides the generic <code>Error</code> constructor, there are seven other core error constructors in JavaScript. For client-side exceptions, see <a href="/en-US/docs/Web/JavaScript/Guide/Statements#Exception_handling_statements">Exception handling statements</a>.</p>
+<p>Besides the generic <code>Error</code> constructor, there are other core error constructors in JavaScript. For client-side exceptions, see <a href="/en-US/docs/Web/JavaScript/Guide/Statements#Exception_handling_statements">Exception handling statements</a>.</p>
 
 <dl>
  <dt>{{JSxRef("EvalError")}}</dt>
  <dd>Creates an instance representing an error that occurs regarding the global function {{JSxRef("eval", "eval()")}}.</dd>
- <dt>{{JSxRef("InternalError")}} </dt>
- <dd>Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".</dd>
  <dt>{{JSxRef("RangeError")}}</dt>
  <dd>Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.</dd>
  <dt>{{JSxRef("ReferenceError")}}</dt>
@@ -34,6 +32,10 @@ tags:
  <dd>Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.</dd>
  <dt>{{JSxRef("URIError")}}</dt>
  <dd>Creates an instance representing an error that occurs when {{JSxRef("encodeURI", "encodeURI()")}} or {{JSxRef("decodeURI", "decodeURI()")}} are passed invalid parameters.</dd>
+ <dt>{{JSxRef("AggregateError")}}</dt>
+ <dd>Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by {{JSxRef("Promise.any()")}}.</dd>
+ <dt>{{JSxRef("InternalError")}} {{non-standard_inline}}</dt>
+ <dd>Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".</dd>
 </dl>
 
 <h2 id="Constructor">Constructor</h2>
@@ -84,7 +86,7 @@ tags:
 
 <p>Usually you create an <code>Error</code> object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword. You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:</p>
 
-<pre class="brush: js;">try {
+<pre class="brush: js; notranslate">try {
   throw new Error('Whoops!')
 } catch (e) {
   console.error(e.name + ': ' + e.message)
@@ -95,7 +97,7 @@ tags:
 
 <p>You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:</p>
 
-<pre class="brush: js;">try {
+<pre class="brush: js; notranslate">try {
   foo.bar()
 } catch (e) {
   if (e instanceof EvalError) {
@@ -123,7 +125,7 @@ tags:
 <p>Some browsers include the <code>CustomError</code> constructor in the stack trace when using ES2015 classes.</p>
 </div>
 
-<pre class="brush: js">class CustomError extends Error {
+<pre class="brush: js notranslate">class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params)
@@ -155,7 +157,7 @@ try {
 <p><strong>All</strong> browsers include the <code>CustomError</code> constructor in the stack trace when using a prototypal declaration.</p>
 </div>
 
-<pre class="brush: js">function CustomError(foo, message, fileName, lineNumber) {
+<pre class="brush: js notranslate">function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;

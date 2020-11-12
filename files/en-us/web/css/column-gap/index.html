@@ -21,10 +21,6 @@ tags:
 
 <p>Initially a part of <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column Layout</a>, the definition of <code>column-gap</code> has been broadened to include multiple layout methods. Now specified in <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a>, it may be used in Multi-column, Flexible Box, and Grid layouts.</p>
 
-<div class="note">
-<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> initially defined the <code>grid-column-gap</code> property. This prefixed property is being replaced by <code>column-gap</code>. However, in order to support browsers that implemented <code>grid-column-gap</code> and not <code>column-gap</code> for grid, you will need to use the prefixed property.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css; no-line-numbers notranslate">/* Keyword value */
@@ -55,6 +51,7 @@ column-gap: unset;
  <dt>{{CSSxRef("&lt;percentage&gt;")}}</dt>
  <dd>The size of the gap between columns, defined as a {{CSSxRef("&lt;percentage&gt;")}}. The {{CSSxRef("&lt;percentage&gt;")}} property's value must be non-negative.</dd>
 </dl>
+
 <h2 id="Formal_definition">Formal definition</h2>
 
 <p>{{cssinfo}}</p>
@@ -106,12 +103,6 @@ column-gap: unset;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
-
-<div class="hidden">
-<pre class="brush: css notranslate">#grid {
-  grid-column-gap: 20px;
-}</pre>
-</div>
 
 <pre class="brush: css; highlight[6] notranslate">#grid {
   display: grid;

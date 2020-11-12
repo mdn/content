@@ -29,6 +29,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Feature_Detection">Feature Detection</h3>
+
+<p>The following function returns true if <code>beforeinput</code>, and thus <code>getTargetRanges</code>, is supported.</p>
+
+<pre class="brush: js notranslate">function isBeforeInputEventAvailable() {
+  return typeof InputEvent.prototype.getTargetRanges === "function";
+}
+</pre>
+
+
 <h3 id="Basic_usage">Basic usage</h3>
 
 <p>The following example selects a <code>contenteditable</code> element and utilises the <code><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></code> event to log the result of <code>getTargetRanges()</code>.</p>

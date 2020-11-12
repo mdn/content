@@ -14,10 +14,6 @@ tags:
 
 
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Edge and Internet Explorer also feature support for an alias of <code>grid-template-rows</code> — <code>-ms-grid-rows</code>.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword value */
@@ -31,6 +27,7 @@ grid-template-rows: minmax(100px, 1fr);
 grid-template-rows: fit-content(40%);
 grid-template-rows: repeat(3, 200px);
 grid-template-rows: subgrid;
+grid-template-rows: masonry;
 
 /* &lt;auto-track-list&gt; values */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
@@ -70,9 +67,9 @@ grid-template-rows: unset;
  The intrinsic size contributions of the track may be adjusted to the size of the grid container, and increase the final size of the track by the minimum amount that would result in honoring the percentage.</dd>
  <dt>{{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}</dt>
  <dd>Is a non-negative dimension with the unit <code>fr</code> specifying the track’s flex factor. Each <code>&lt;flex&gt;</code>-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a <code>minmax()</code> notation, it implies an automatic minimum (i.e. <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
- <dt><code>max-content</code></dt>
+ <dt>{{cssxref("max-content")}}</dt>
  <dd>Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.</dd>
- <dt><code>min-content</code></dt>
+ <dt>{{cssxref("min-content")}}</dt>
  <dd>Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.</dd>
  <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
  <dd>Is a functional notation that defines a size range, greater than or equal to <em>min</em>, and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. It is invalid as a minimum.</dd>
@@ -81,16 +78,23 @@ grid-template-rows: unset;
  <dd>
  <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
  </dd>
- <dt>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
+ <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
  <dt>{{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}</dt>
  <dd>Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">subgrid</a></dt>
+ <dt></dt>
+ <dt><code><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a></code>{{Experimental_Inline}}</dt>
+ <dd>The masonry value indicates that this axis should be laid out according to the masonry algorithm.</dd>
+ <dt><code><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">subgrid</a></code></dt>
  <dd>The <code><dfn>subgrid</dfn></code> value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid’s definition.</dd>
 </dl>
 
 <div class="blockIndicator warning">
-<p>The subgrid value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
+
+
+<p>The <code>masonry</code> value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.</p>
+
+<p>The <code>subgrid</code> value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -153,6 +157,11 @@ grid-template-rows: unset;
    <td>{{Spec2("CSS Grid 2")}}</td>
    <td>Adds subgrid</td>
   </tr>
+  <tr>
+   <td>{{SpecName("CSS Grid 3", "#masonry-layout", "masonry layout")}}</td>
+   <td>{{Spec2("CSS Grid 3")}}</td>
+   <td>Adds masonry</td>
+  </tr>
  </tbody>
 </table>
 
@@ -189,28 +198,34 @@ grid-template-rows: unset;
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
+   <li></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
