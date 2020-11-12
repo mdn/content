@@ -13,13 +13,13 @@ tags:
 
 <p>If <code>playbackRate</code> is negative, the media is <strong>not</strong> played backwards.</p>
 
-<p>The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range <code>0.25</code> to <code>5.0</code>).</p>
+<p>The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range <code>0.25</code> to <code>4.0</code>).</p>
 
 <p>The pitch of the audio is corrected by default and is the same for every speed. Some browsers implement the non-standard {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} property to control this.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="brush: js">// video
+<pre class="brush: js notranslate">// video
 <var>video</var>.playbackRate = 1.5;
 // audio
 <var>audio</var>.playbackRate = 1.0;
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var obj = document.createElement('video');
+<pre class="brush: js notranslate">var obj = document.createElement('video');
 console.log(obj.playbackRate); // Expected Output: 1</pre>
 
 <h2 id="Specifications">Specifications</h2>

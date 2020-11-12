@@ -5,9 +5,7 @@ tags:
   - CSS
   - CSS Grid
   - CSS Property
-  - Experimental
   - Reference
-  - 'recipe:css-property'
 ---
 <p>The <strong><code>grid-auto-columns</code></strong> CSS property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.</p>
 
@@ -64,21 +62,21 @@ grid-auto-columns: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>&lt;length&gt;</code></dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Is a non-negative length.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value relative to the block size of the grid container. If the block size of the grid container is indefinite, the percentage value is treated like <code>auto</code>.</dd>
- <dt><code>&lt;flex&gt;</code></dt>
+ <dt>{{cssxref("&lt;flex&gt;")}}</dt>
  <dd>Is a non-negative dimension with the unit <code>fr</code> specifying the track’s flex factor. Each <code>&lt;flex&gt;</code>-sized track takes a share of the remaining space in proportion to its flex factor.
  <p>When appearing outside a <code>minmax()</code> notation, it implies an automatic minimum (i.e. <code>minmax(auto, &lt;flex&gt;)</code>).</p>
  </dd>
- <dt><code>max-content</code></dt>
+ <dt>{{cssxref("max-content")}}</dt>
  <dd>Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.</dd>
- <dt><code>min-content</code></dt>
+ <dt>{{cssxref("min-content")}}</dt>
  <dd>Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.</dd>
- <dt><code>minmax(min, max)</code></dt>
+ <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
  <dd>Is a functional notation that defines a size range greater than or equal to <em>min</em> and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).</dd>
- <dt><code>fit-content(<em>argument</em>)</code></dt>
+ <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
  <dt><code>auto</code></dt>
  <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
@@ -113,7 +111,7 @@ grid-auto-columns: unset;
   height: 100px;
   display: grid;
   grid-template-areas: "a a";
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-columns: 200px;
 }
 
@@ -144,7 +142,6 @@ grid-auto-columns: unset;
   </tr>
  </tbody>
 </table>
-
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -178,28 +175,34 @@ grid-auto-columns: unset;
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
+   <li></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>

@@ -52,7 +52,7 @@ tags:
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 .one {
@@ -107,9 +107,9 @@ tags:
 	<li>{{CSSxRef("row-gap")}}</li>
 	<li>{{CSSxRef("column-gap")}}</li>
 	<li>{{CSSxRef("gap")}}</li>
-	<li>{{CSSxRef("masonry-auto-flow")}}</li>
-	<li>{{CSSxRef("align-tracks")}}</li>
-	<li>{{CSSxRef("justify-tracks")}}</li>
+	<li>{{CSSxRef("masonry-auto-flow")}}{{Experimental_Inline}}</li>
+	<li>{{CSSxRef("align-tracks")}}{{Experimental_Inline}}</li>
+	<li>{{CSSxRef("justify-tracks")}}{{Experimental_Inline}}</li>
 </ul>
 </div>
 
@@ -163,7 +163,7 @@ tags:
 	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid and progressive enhancement</a></li>
 	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_">Realising common layouts using CSS Grid</a></li>
 	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry Layout</a></li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry Layout</a>{{Experimental_Inline}}</li>
 </ul>
 </div>
 
@@ -190,6 +190,11 @@ tags:
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td>{{SpecName("CSS Grid 3")}}</td>
+			<td>{{Spec2("CSS Grid 3")}}</td>
+			<td>Adds <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a>.</td>
+		</tr>
 		<tr>
 			<td>{{SpecName("CSS Grid 2")}}</td>
 			<td>{{Spec2("CSS Grid 2")}}</td>
@@ -224,12 +229,15 @@ tags:
 		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
 		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
 		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+		<li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
 	</ol>
 	</details>
 	</li>
 	<li class="toggle">
 	<details open><summary>Properties</summary>
 	<ol>
+		<li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
@@ -247,6 +255,8 @@ tags:
 		<li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+		<li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code></li>
+		<li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code></li>
 		<li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
 	</ol>
 	</details>

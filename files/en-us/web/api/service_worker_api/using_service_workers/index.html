@@ -17,8 +17,8 @@ tags:
 <h2 id="The_premise_of_service_workers">The premise of service workers</h2>
 
 <p>One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can’t download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn’t a good overall control mechanism for asset caching and custom network requests.<br>
-<br>
-The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
+ <br>
+ The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
 
 <div class="note">
 <p><strong>Note</strong>: As of Firefox 44, when <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> is used to provide offline support for a page a warning message is now displayed in the console advising developers to use <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> instead ({{bug("1204581")}}.)</p>
@@ -31,10 +31,10 @@ The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cac
 <p>Many service workers features are now enabled by default in newer versions of supporting browsers. If however you find that demo code is not working in your installed versions, you might need to enable a pref:</p>
 
 <ul>
-	<li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser.</li>
-	<li><strong>Chrome Canary</strong>: Go to <code>chrome://flags</code> and turn on <code>experimental-web-platform-features</code>; restart browser (note that some features are now enabled by default in Chrome.)</li>
-	<li><strong>Opera</strong>: Go to <code>opera://flags</code> and enable <code>Support for ServiceWorker</code>; restart browser.</li>
-	<li><strong>Microsoft Edge</strong>: Go to <code>about:flags</code> and tick <code>Enable service workers</code>; restart browser.</li>
+ <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser.</li>
+ <li><strong>Chrome Canary</strong>: Go to <code>chrome://flags</code> and turn on <code>experimental-web-platform-features</code>; restart browser (note that some features are now enabled by default in Chrome.)</li>
+ <li><strong>Opera</strong>: Go to <code>opera://flags</code> and enable <code>Support for ServiceWorker</code>; restart browser.</li>
+ <li><strong>Microsoft Edge</strong>: Go to <code>about:flags</code> and tick <code>Enable service workers</code>; restart browser.</li>
 </ul>
 
 <p>You’ll also need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, <code>localhost</code> is considered a secure origin by browsers as well.</p>
@@ -44,13 +44,13 @@ The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cac
 <p>With service workers, the following steps are generally observed for basic set up:</p>
 
 <ol>
-	<li>The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}.</li>
-	<li>If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.</li>
-	<li>The service worker is now ready to process events.</li>
-	<li>Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.</li>
-	<li>When the <code>oninstall</code> handler completes, the service worker is considered installed.</li>
-	<li>Next is activation. When the service worker is installed, it then receives an activate event. The primary use of <code>onactivate</code> is for cleanup of resources used in previous versions of a Service worker script.</li>
-	<li>The Service worker will now control pages, but only those opened after the <code>register()</code> is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.</li>
+ <li>The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}.</li>
+ <li>If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.</li>
+ <li>The service worker is now ready to process events.</li>
+ <li>Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.</li>
+ <li>When the <code>oninstall</code> handler completes, the service worker is considered installed.</li>
+ <li>Next is activation. When the service worker is installed, it then receives an activate event. The primary use of <code>onactivate</code> is for cleanup of resources used in previous versions of a Service worker script.</li>
+ <li>The Service worker will now control pages, but only those opened after the <code>register()</code> is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.</li>
 </ol>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12636/sw-lifecycle.png" style="display: block; height: 867px; margin: 0px auto; width: 579px;"></p>
@@ -62,8 +62,8 @@ The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cac
 <h3 id="Promises">Promises</h3>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.<br>
-<br>
-Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach <code>.then()</code> to the end and include callbacks inside it for success cases, or you can insert <code>.catch()</code> on the end if you want to include a failure callback.</p>
+ <br>
+ Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach <code>.then()</code> to the end and include callbacks inside it for success cases, or you can insert <code>.catch()</code> on the end if you want to include a failure callback.</p>
 
 <p>Let’s compare a traditional synchronous callback structure to its asynchronous promise equivalent.</p>
 
@@ -85,10 +85,10 @@ Promises can do a variety of things, but all you need to know for now is that i
 });</pre>
 
 <p>In the first example, we have to wait for <code>myFunction()</code> to run and return <code>value</code> before any more of the code can execute. In the second example, <code>myFunction()</code> returns a promise for <code>value</code>, then the rest of the code can carry on running. When the promise resolves, the code inside <code>then</code> will be run, asynchronously.<br>
-<br>
-Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to want to do, but it can be a bit of a pain. We can use <code>.onload</code> to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using <code>.complete</code>, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.<br>
-<br>
-Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
+ <br>
+ Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to want to do, but it can be a bit of a pain. We can use <code>.onload</code> to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using <code>.complete</code>, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.<br>
+ <br>
+ Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
 
 <p>{{note("A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.")}}</p>
 
@@ -135,7 +135,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <div class="note">
 <p><strong>Note</strong>: You can also chain promise calls together, for example:<br>
-<code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
+ <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
@@ -147,14 +147,14 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <p>To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called <a href="https://github.com/mdn/sw-test">sw-test</a>, which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
-<br>
-<br>
-You can see the <a href="https://github.com/mdn/sw-test/">source code on GitHub</a>, and <a href="https://mdn.github.io/sw-test/">view the example live</a>. The one bit we’ll call out here is the promise (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js lines 22-47</a>), which is a modified version of what you read about above, in the <a href="https://mdn.github.io/js-examples/promises-test/">Promises test demo</a>. It is different in the following ways:</p>
+ <br>
+ <br>
+ You can see the <a href="https://github.com/mdn/sw-test/">source code on GitHub</a>, and <a href="https://mdn.github.io/sw-test/">view the example live</a>. The one bit we’ll call out here is the promise (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js lines 22-47</a>), which is a modified version of what you read about above, in the <a href="https://mdn.github.io/js-examples/promises-test/">Promises test demo</a>. It is different in the following ways:</p>
 
 <ol>
-	<li>In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the <code>for()</code> loop is being iterated through later on, it wouldn’t work, as the promise wouldn’t resolve at the same time as the iterations are being done (that is a synchronous process.)</li>
-	<li>We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34">app.js lines 31-34</a>). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.</li>
-	<li>To access the resolved promise values, we then access this function as you’d then expect (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64">app.js lines 60-64</a>). This may seem a bit odd at first, but this is the way promises work.</li>
+ <li>In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the <code>for()</code> loop is being iterated through later on, it wouldn’t work, as the promise wouldn’t resolve at the same time as the iterations are being done (that is a synchronous process.)</li>
+ <li>We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34">app.js lines 31-34</a>). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.</li>
+ <li>To access the resolved promise values, we then access this function as you’d then expect (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64">app.js lines 60-64</a>). This may seem a bit odd at first, but this is the way promises work.</li>
 </ol>
 
 <h2 id="Enter_service_workers">Enter service workers</h2>
@@ -179,16 +179,16 @@ You can see the <a href="https://github.com/mdn/sw-test/">source code on GitHub<
 }</pre>
 
 <ol>
-	<li>The outer block performs a feature detection test to make sure service workers are supported before trying to register one.</li>
-	<li>Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)</li>
-	<li>The <code>scope</code> parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '<code>/sw-test/'</code>, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.</li>
-	<li>The <code>.then()</code> promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.</li>
-	<li>Finally, we chain a <code>.catch()</code> function onto the end that will run if the promise is rejected.</li>
+ <li>The outer block performs a feature detection test to make sure service workers are supported before trying to register one.</li>
+ <li>Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)</li>
+ <li>The <code>scope</code> parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '<code>/sw-test/'</code>, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.</li>
+ <li>The <code>.then()</code> promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.</li>
+ <li>Finally, we chain a <code>.catch()</code> function onto the end that will run if the promise is rejected.</li>
 </ol>
 
 <p>This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.<br>
-<br>
-A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
+ <br>
+ A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
@@ -203,9 +203,9 @@ A single service worker can control many pages. Each time a page within your sco
 <p>This could be for the following reasons:</p>
 
 <ol>
-	<li>You are not running your application through HTTPS.</li>
-	<li>The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at <code>https://mdn.github.io/sw-test/sw.js</code>, and the app’s root is <code>https://mdn.github.io/sw-test/</code>. But the path needs to be written as <code>/sw-test/sw.js</code>, not <code>/sw.js</code>.</li>
-	<li>It is also not allowed to point to a service worker of a different origin than that of your app.</li>
+ <li>You are not running your application through HTTPS.</li>
+ <li>The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at <code>https://mdn.github.io/sw-test/sw.js</code>, and the app’s root is <code>https://mdn.github.io/sw-test/</code>. But the path needs to be written as <code>/sw-test/sw.js</code>, not <code>/sw.js</code>.</li>
+ <li>It is also not allowed to point to a service worker of a different origin than that of your app.</li>
 </ol>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12630/important-notes.png" style="display: block; height: 277px; margin: 0px auto; width: 574px;"></p>
@@ -213,17 +213,17 @@ A single service worker can control many pages. Each time a page within your sco
 <p>Also note:</p>
 
 <ul>
-	<li>The service worker will only catch requests from clients under the service worker's scope.</li>
-	<li>The max scope for a service worker is the location of the worker.</li>
-	<li>If your service worker is active on a client being served with the <code>Service-Worker-Allowed</code> header, you can specify a list of max scopes for that worker.</li>
-	<li>In Firefox, Service Worker APIs are hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</li>
+ <li>The service worker will only catch requests from clients under the service worker's scope.</li>
+ <li>The max scope for a service worker is the location of the worker.</li>
+ <li>If your service worker is active on a client being served with the <code>Service-Worker-Allowed</code> header, you can specify a list of max scopes for that worker.</li>
+ <li>In Firefox, Service Worker APIs are hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</li>
 </ul>
 
 <h3 id="Install_and_activate_populating_your_cache">Install and activate: populating your cache</h3>
 
 <p>After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.<br>
-<br>
-The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s brand new storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
+ <br>
+ The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s brand new storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The Cache API is not supported in every browser. (See the {{anch("Browser compatibility")}} section for more information.) If you want to use this now, you could consider using a polyfill like the one available in <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, or perhaps store your assets in <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
@@ -251,10 +251,10 @@ The install event is fired when an install is successfully completed. The instal
 });</pre>
 
 <ol>
-	<li>Here we add an <code>install</code> event listener to the service worker (hence <code>self</code>), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside <code>waitUntil()</code> has successfully occurred.</li>
-	<li>Inside <code>waitUntil()</code> we use the <a href="/en-US/docs/Web/API/CacheStorage/open"><code>caches.open()</code></a> method to create a new cache called <code>v1</code>, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls <code>addAll()</code> on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.</li>
-	<li>If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.</li>
-	<li>After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)</li>
+ <li>Here we add an <code>install</code> event listener to the service worker (hence <code>self</code>), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside <code>waitUntil()</code> has successfully occurred.</li>
+ <li>Inside <code>waitUntil()</code> we use the <a href="/en-US/docs/Web/API/CacheStorage/open"><code>caches.open()</code></a> method to create a new cache called <code>v1</code>, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls <code>addAll()</code> on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.</li>
+ <li>If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.</li>
+ <li>After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)</li>
 </ol>
 
 <div class="note">
@@ -294,36 +294,36 @@ The install event is fired when an install is successfully completed. The instal
 <p>Let’s look at a few other options we have when defining our magic (see our <a href="/en-US/docs/Web/API/Fetch_API">Fetch API documentation</a> for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
 
 <ol>
-	<li>
-	<p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
+ <li>
+  <p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
 
-	<pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
-	</li>
-	<li>
-	<p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
+  <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
+ </li>
+ <li>
+  <p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
 
-	<pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 });</pre>
-	</li>
-	<li>
-	<p>If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
+ </li>
+ <li>
+  <p>If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
 
-	<pre class="brush: js notranslate">fetch(event.request);</pre>
-	</li>
-	<li>
-	<p>If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:</p>
+  <pre class="brush: js notranslate">fetch(event.request);</pre>
+ </li>
+ <li>
+  <p>If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:</p>
 
-	<pre class="brush: js notranslate">caches.match('./fallback.html');</pre>
-	</li>
-	<li>
-	<p>You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:</p>
+  <pre class="brush: js notranslate">caches.match('./fallback.html');</pre>
+ </li>
+ <li>
+  <p>You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:</p>
 
-	<pre class="brush: js notranslate">event.request.url
+  <pre class="brush: js notranslate">event.request.url
 event.request.method
 event.request.headers
 event.request.body</pre>
-	</li>
+ </li>
 </ol>
 
 <h2 id="Recovering_failed_requests">Recovering failed requests</h2>
@@ -373,10 +373,10 @@ event.request.body</pre>
         });
 
         return response;
-      });
-    }).catch(() =&gt; {
-      return caches.match('./sw-test/gallery/myLittleVader.jpg');
-    })
+      }).catch(() =&gt; {
+        return caches.match('./sw-test/gallery/myLittleVader.jpg');
+      })
+    });
   );
 });</pre>
 
@@ -437,9 +437,9 @@ event.request.body</pre>
 <p>Firefox has also started to implement some useful tools related to service workers:</p>
 
 <ul>
-	<li>You can navigate to <code><a href="/en-US/docs/Tools/about:debugging">about:debugging</a></code> to see what SWs are registered and update/remove them.</li>
-	<li>When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the <a href="/en-US/docs/Tools/Settings">Firefox Developer Tools settings</a>.</li>
-	<li>The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).</li>
+ <li>You can navigate to <code><a href="/en-US/docs/Tools/about:debugging">about:debugging</a></code> to see what SWs are registered and update/remove them.</li>
+ <li>When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the <a href="/en-US/docs/Tools/Settings">Firefox Developer Tools settings</a>.</li>
+ <li>The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).</li>
 </ul>
 
 <div class="note">
@@ -449,10 +449,10 @@ event.request.body</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="http://blog.88mph.io/2017/07/28/understanding-service-workers/">Understanding Service Workers</a></li>
-	<li><a href="https://serviceworke.rs/">The Service Worker Cookbook</a></li>
-	<li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
-	<li>Download the <a href="https://mdn.mozillademos.org/files/12638/sw101.png">Service Workers 101 cheatsheet</a>.</li>
-	<li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
-	<li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li><a href="http://blog.88mph.io/2017/07/28/understanding-service-workers/">Understanding Service Workers</a></li>
+ <li><a href="https://serviceworke.rs/">The Service Worker Cookbook</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li>Download the <a href="https://mdn.mozillademos.org/files/12638/sw101.png">Service Workers 101 cheatsheet</a>.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
 </ul>

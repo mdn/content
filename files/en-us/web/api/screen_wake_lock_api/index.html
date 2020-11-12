@@ -31,12 +31,12 @@ tags:
 <h2 id="Screen_Wake_Lock_API_Interfaces">Screen Wake Lock API Interfaces</h2>
 
 <dl>
-	<dt>{{domxref("WakeLock")}}</dt>
-	<dd>The <strong><code>WakeLock</code></strong> interface prevents device screens from dimming or locking when an application needs to keep running.</dd>
-	<dt>{{domxref("WakeLockSentinel")}}</dt>
-	<dd>Provides a handle to the underlying platform wake lock and if referenced can be manually released and reacquired. Get an instance of the object by calling {{domxref('WakeLock.request')}}.</dd>
-	<dt>{{domxref("Navigator.wakelock")}}</dt>
-	<dd>Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.</dd>
+ <dt>{{domxref("WakeLock")}}</dt>
+ <dd>The <strong><code>WakeLock</code></strong> interface prevents device screens from dimming or locking when an application needs to keep running.</dd>
+ <dt>{{domxref("WakeLockSentinel")}}</dt>
+ <dd>Provides a handle to the underlying platform wake lock and if referenced can be manually released and reacquired. Get an instance of the object by calling {{domxref('WakeLock.request')}}.</dd>
+ <dt>{{domxref("Navigator.wakelock")}}</dt>
+ <dd>Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -100,15 +100,15 @@ try {
 
 <h3 id="Putting_it_all_together">Putting it all together</h3>
 
-<p>You can find the <a href="https://github.com/mdn/dom-examples/tree/master/screen-wake-lock-api">complete code on GitHub here</a>. The demo uses a button to acquire a wake lock and also release it, which in turn updates the UI. The UI also updates if the wake lock is released automatically for any reason. There's a checkbox which when checked, will automatically reacquire the wake lock if the document's visibility state changes and becomes visible again.</p>
+<p>You can find the <a href="https://github.com/mdn/dom-examples/tree/master/screen-wake-lock-api">complete code on GitHub here</a>. The <a href="https://mdn.github.io/dom-examples/screen-wake-lock-api/">demo</a> uses a button to acquire a wake lock and also release it, which in turn updates the UI. The UI also updates if the wake lock is released automatically for any reason. There's a checkbox which when checked, will automatically reacquire the wake lock if the document's visibility state changes and becomes visible again.</p>
 
 <h3 id="Performance_considerations">Performance considerations</h3>
 
 <ul>
-	<li>Release the screen wake lock when user ends activity that required always-on screen. For example, a ticketing app which uses QR codes to transmit ticket information, might acquire screen wake lock when the QR code is displayed (so that code is successfully scanned) but release afterwards. A presentation app might hold the lock only while a presentation is active, but not when presentation is being edited.</li>
-	<li>If your app is performing long-running downloads, consider using background fetch.</li>
-	<li>If you app is synchronizing data from a remote server, consider using background sync.</li>
-	<li>Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for <a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a> event).</li>
+ <li>Release the screen wake lock when user ends activity that required always-on screen. For example, a ticketing app which uses QR codes to transmit ticket information, might acquire screen wake lock when the QR code is displayed (so that code is successfully scanned) but release afterwards. A presentation app might hold the lock only while a presentation is active, but not when presentation is being edited.</li>
+ <li>If your app is performing long-running downloads, consider using background fetch.</li>
+ <li>If you app is synchronizing data from a remote server, consider using background sync.</li>
+ <li>Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for <a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a> event).</li>
 </ul>
 
 <h2 id="Feature_Policy_integration">Feature Policy integration</h2>
@@ -118,18 +118,18 @@ try {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Screen Wake Lock')}}</td>
-			<td>{{Spec2('Screen Wake Lock')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Screen Wake Lock')}}</td>
+   <td>{{Spec2('Screen Wake Lock')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -142,8 +142,8 @@ try {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="https://web.dev/wakelock/">An introductory article on the Screen Wake Lock API</a></li>
-	<li><a href="https://wake-lock-demo.glitch.me/">A Screen Wake Lock API demo on glitch</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}</li>
+ <li><a href="https://web.dev/wakelock/">An introductory article on the Screen Wake Lock API</a></li>
+ <li><a href="https://wake-lock-demo.glitch.me/">A Screen Wake Lock API demo on glitch</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}</li>
 </ul>
 </div>

@@ -51,6 +51,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Feature_Detection">Feature Detection</h3>
+
+<p>The following function returns true if <code>beforeinput</code> is supported.</p>
+
+<pre class="brush: js notranslate">function isBeforeInputEventAvailable() {
+  return typeof InputEvent.prototype.getTargetRanges === "function";
+}
+</pre>
+
+
 <h3 id="Simple_logger">Simple logger</h3>
 
 <p>This example logs the current value of the element, immediately before replacing that value with the new one applied to the {{HtmlElement("input")}} element.</p>
