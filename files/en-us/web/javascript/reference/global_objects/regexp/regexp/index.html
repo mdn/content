@@ -11,17 +11,17 @@ tags:
 
 <p>The <strong><code>RegExp</code></strong> constructor creates a regular expression object for matching text with a pattern.</p>
 
-<p>For an introduction to regular expressions, read the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions chapter</a> in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>.</p>
+<p>For an introduction to regular expressions, read the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions chapter</a> in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p>Literal, constructor, and factory notations are possible:</p>
 
-<pre class="syntaxbox">/<var>pattern</var>/<var>flags</var>
+<pre class="syntaxbox notranslate">/<var>pattern</var>/<var>flags</var>
 new RegExp(<var>pattern</var>[, <var>flags</var>])
 RegExp(<var>pattern</var>[, <var>flags</var>])
 </pre>
@@ -31,7 +31,7 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 <dl>
  <dt><code><var>pattern</var></code></dt>
  <dd>The text of the regular expression.</dd>
- <dd>As of ES5, this can also be another <code>RegExp</code> object or literal (for the two RegExp constructor notations only). Patterns may include <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a> to match a wider range of values than would a literal string. </dd>
+ <dd>As of ES5, this can also be another <code>RegExp</code> object or literal (for the two RegExp constructor notations only). Patterns may include <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a> to match a wider range of values than would a literal string.</dd>
  <dt><code><var>flags</var></code></dt>
  <dd>
  <p>If specified, <code><var>flags</var></code> is a string that contains the flags to add.</p>
@@ -40,7 +40,7 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
  <p>If <code><var>flags</var></code> is not specified and a regular expressions object is supplied, that object's flags (and <code>lastIndex</code> value) will be copied over.</p>
 
- <p><code>flags</code> may contain any combination of the following characters:</p>
+ <p><code><var>flags</var></code> may contain any combination of the following characters:</p>
 
  <dl>
   <dt><code>g</code> (global match)</dt>
@@ -72,14 +72,14 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <p>The following three expressions create the same regular expression:</p>
 
-<pre class="brush: js">/ab+c/i
+<pre class="brush: js notranslate">/ab+c/i
 new RegExp(/ab+c/, 'i') // literal notation
 new RegExp('ab+c', 'i') // constructor
 </pre>
 
 <p>The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.</p>
 
-<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—results in runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
+<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—results in runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

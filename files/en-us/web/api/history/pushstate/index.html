@@ -56,7 +56,16 @@ tags:
 const title = ''
 const url = 'hello-world.html'
 
-history.pushState(state, title, url)</pre>
+history.pushState(state, title, url)
+</pre>
+
+<h3 id="Change_a_query_parameter">Change a query parameter</h3>
+
+<pre class="brush: js notranslate">const url = new URL(window.location);
+url.searchParams.set('foo', 'bar');
+window.history.pushState({}, '', url);</pre>
+
+
 
 <h2 id="Specifications">Specifications</h2>
 

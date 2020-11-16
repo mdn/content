@@ -120,7 +120,7 @@ tags:
 
 <p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, event when the fetch is not cross-origin.</p>
 
-<p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
+<p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
 
 <p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
 

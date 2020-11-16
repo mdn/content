@@ -18,14 +18,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</pre>
+<pre class="syntaxbox notranslate"><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>prop</code></dt>
+ <dt><code><var>prop</var></code></dt>
  <dd>A string containing the name of the property to bind to the given function.</dd>
- <dt><code>func</code></dt>
+ <dt><code><var>func</var></code></dt>
  <dd>A function to be bound to a lookup of the specified property.</dd>
 </dl>
 
@@ -41,14 +41,14 @@ tags:
 
 <h3 id="Non-standard_and_deprecated_way">Non-standard and deprecated way</h3>
 
-<pre class="brush: js">var o = {};
+<pre class="brush: js notranslate">var o = {};
 o.__defineGetter__('gimmeFive', function() { return 5; });
 console.log(o.gimmeFive); // 5
 </pre>
 
 <h3 id="Standard-compliant_ways">Standard-compliant ways</h3>
 
-<pre class="brush: js">// Using the get operator
+<pre class="brush: js notranslate">// Using the get operator
 var o = { get gimmeFive() { return 5; } };
 console.log(o.gimmeFive); // 5
 
@@ -65,10 +65,12 @@ console.log(o.gimmeFive); // 5
 <h2 id="Specifications">Specifications</h2>
 
 <table class="spectable standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.prototype.__defineGetter__', 'Object.prototype.__defineGetter__()')}}</td>
   </tr>
@@ -93,5 +95,5 @@ console.log(o.gimmeFive); // 5
  <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS Guide: Defining Getters and Setters</a></li>
  <li><a href="https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Blog Post] Deprecation of __defineGetter__ and __defineSetter__</a></li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=647423">bug 647423</a></li>
+ <li>{{bug(647423)}}</li>
 </ul>

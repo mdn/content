@@ -11,15 +11,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>map()</strong></code> method creates a new typed array with the results of calling a provided function on every element in this typed array. This method has the same algorithm as {{jsxref("Array.prototype.map()")}}<em>.</em> <em>TypedArray</em> is one of the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> here.</p>
+<p>The <strong><code>map()</code></strong> method creates a new typed array with the results of calling a provided function on every element in this typed array. This method has the same algorithm as {{jsxref("Array.prototype.map()")}}<em>.</em> <em>TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> here.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-map.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>typedArray</var>.map(<var>mapFn</var>[, <var>thisArg</var>])</pre>
+<pre class="syntaxbox notranslate"><var>typedArray</var>.map(<var>mapFn</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>The following code takes a typed array and creates a new typed array containing the square roots of the numbers in the first typed array.</p>
 
-<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
 const roots = numbers.map(Math.sqrt);
 // roots is now: Uint8Array [1, 2, 3],
 // numbers is still Uint8Array [1, 4, 9]
@@ -73,9 +73,9 @@ const roots = numbers.map(Math.sqrt);
 
 <h3 id="Mapping_a_typed_array_of_numbers_using_a_function_containing_an_argument">Mapping a typed array of numbers using a function containing an argument</h3>
 
-<p>The following code shows how map works when a function requiring one argument is used with it. The argument will automatically be assigned to each element of the typed array as map loops through the original typed array.</p>
+<p>The following code shows how <code>map()</code> works when a function requiring one argument is used with it. The argument will automatically be assigned to each element of the typed array as <code>map()</code> loops through the original typed array.</p>
 
-<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map(function(num) {
   return num * 2;
 });

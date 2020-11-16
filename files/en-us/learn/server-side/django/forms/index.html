@@ -319,9 +319,7 @@ def renew_book_librarian(request, pk):
 
 <p>The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use <code>HttpResponseRedirect</code> and <code>reverse()</code> to redirect to the view named <code>'all-borrowed'</code> (this was created as the "challenge" in <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>). If you didn't create that page consider redirecting to the home page at URL '/').</p>
 
-<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to just librarians who have permission to renew books. We should probably create a new permission setting in <code>BookInstance</code> ("<code>can_renew</code>"), but, to keep things simple here, we just use the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission.</p>
-
-<p>Note we also use <code>@login_required</code> and that we use it before <code>@permission_required</code> (decorators will process a request in order)</p>
+<p>That's everything needed for the form handling itself, but we still need to restrict access to the view to just logged-in librarians who have permission to renew books. We use <code>@login_required</code> to require that the user is logged in, and the <code>@permission_required</code> function decorator with our existing <code>can_mark_returned</code> permission to allow access (decorators are processed in order). Note that we probably should have created a new permission setting in <code>BookInstance</code> ("<code>can_renew</code>"), but we will reuse the existing one to keep the the example simple. </p>
 
 <p>The final view is therefore as shown below. Please copy this into the bottom of <strong>locallibrary/catalog/views.py</strong>.</p>
 

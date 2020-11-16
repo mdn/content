@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
+<pre class="syntaxbox notranslate">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,7 +36,7 @@ tags:
 <dl>
  <dt><code>value</code></dt>
  <dd>The value associated with the property (data descriptors only).</dd>
- <dt><code><strong>writable</strong></code></dt>
+ <dt><code>writable</code></dt>
  <dd><code>true</code> if and only if the value associated with the property may be changed (data descriptors only).</dd>
  <dt><code>get</code></dt>
  <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter (accessor descriptors only).</dd>
@@ -54,7 +54,7 @@ tags:
 
 <p>Whereas the {{jsxref("Object.assign()")}} method will only copy enumerable and own properties from a source object to a target object, you are able to use this method and {{jsxref("Object.create()")}} for a shallow copy between two unknown objects:</p>
 
-<pre class="brush: js">Object.create(
+<pre class="brush: js notranslate">Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
@@ -64,7 +64,7 @@ tags:
 
 <p>A typical way of creating a subclass is to define the subclass, set its prototype to an instance of the superclass, and then define properties on that instance. This can get awkward especially for getters and setters. Instead, you can use this code to set the prototype:</p>
 
-<pre class="brush: js">function superclass() {}
+<pre class="brush: js notranslate">function superclass() {}
 superclass.prototype = {
   // Define your methods and properties here
 };
@@ -80,10 +80,12 @@ subclass.prototype = Object.create(
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}}</td>
   </tr>

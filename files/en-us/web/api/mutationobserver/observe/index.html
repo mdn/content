@@ -37,7 +37,25 @@ tags:
  <dt><code><var>target</var></code></dt>
  <dd>A DOM {{domxref("Node")}} (which may be an {{domxref("Element")}}) within the DOM tree to watch for changes, or to be the root of a subtree of nodes to be watched.</dd>
  <dt><code><var>options</var></code></dt>
- <dd>A {{domxref("MutationObserverInit")}} object providing options that describe which DOM mutations should be reported to <code><var>mutationObserver</var></code>’s <code><var>callback</var></code>.</dd>
+ <dd>A {{domxref("MutationObserverInit")}} object providing options that describe which DOM mutations should be reported to <code><var>mutationObserver</var></code>’s <code><var>callback</var></code>. At a minimum, one of <code>childList</code>, <code>attributes</code>, and/or <code>characterData</code> must be <code>true</code> when you call {{domxref("MutationObserver.observe", "observe()")}}. Otherwise, a <code>TypeError</code> exception will be thrown.</dd>
+ <dd>Options are as follows:
+ <dl>
+  <dt>{{domxref("MutationObserverInit.subtree", "subtree")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to extend monitoring to the entire subtree of nodes rooted at <code>target</code>. All of the other <code>MutationObserverInit</code> properties are then extended to all of the nodes in the subtree instead of applying solely to the <code>target</code> node. The default value is <code>false</code>.</dd>
+  <dt>{{domxref("MutationObserverInit.childList", "childList")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to monitor the target node (and, if <code>subtree</code> is <code>true</code>, its descendants) for the addition of new child nodes or removal of existing child nodes. The default value is <code>false</code>.</dd>
+  <dt>{{domxref("MutationObserverInit.attributes", "attributes")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to watch for changes to the value of attributes on the node or nodes being monitored. The default value is <code>true</code> if either of <code>attributeFilter</code> or <code>attributeOldValue</code> is specified, otherwise the default value is <code>false</code>.</dd>
+  <dt>{{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} {{optional_inline}}</dt>
+  <dd>An array of specific attribute names to be monitored. If this property isn't included, changes to all attributes cause mutation notifications.</dd>
+  <dt>{{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes; see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording. The default value is <code>false</code>.</dd>
+  <dt>{{domxref("MutationObserverInit.characterData", "characterData")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to monitor the specified target node (and, if <code>subtree</code> is <code>true</code>, its descendants) for changes to the character data contained within the node or nodes. The default value is <code>true</code> if <code>characterDataOldValue</code> is specified, otherwise the default value is <code>false</code>.</dd>
+  <dt>{{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}} {{optional_inline}}</dt>
+  <dd>Set to <code>true</code> to record the previous value of a node's text whenever the text changes on nodes being monitored. For details and an example, see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring text content changes")}}. The default value is <code>false</code>.</dd>
+ </dl>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

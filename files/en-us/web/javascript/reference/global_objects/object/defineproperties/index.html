@@ -9,15 +9,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Object.defineProperties()</strong></code> method defines new or modifies existing properties directly on an object, returning the object.</p>
+<p>The <strong><code>Object.defineProperties()</code></strong> method defines new or modifies existing properties directly on an object, returning the object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+<pre class="syntaxbox notranslate">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -67,12 +67,29 @@ tags:
 
 <p>The object that was passed to the function.</p>
 
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_Object.defineProperties">Using Object.defineProperties</h3>
+
+<pre class="brush: js notranslate">var obj = {};
+Object.defineProperties(obj, {
+  'property1': {
+    value: true,
+    writable: true
+  },
+  'property2': {
+    value: 'Hello',
+    writable: false
+  }
+  // etc. etc.
+});
+</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>Assuming a pristine execution environment with all names and properties referring to their initial values, <code>Object.defineProperties</code> is almost completely equivalent (note the comment in <code>isCallable</code>) to the following reimplementation in JavaScript:</p>
 
-<pre class="brush: js;highlight:[8]">function defineProperties(obj, properties) {
+<pre class="brush: js;highlight:[8] notranslate">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -133,25 +150,6 @@ tags:
   return obj;
 }
 </pre>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_Object.defineProperties">Using Object.defineProperties</h3>
-
-<pre class="brush: js">var obj = {};
-Object.defineProperties(obj, {
-  'property1': {
-    value: true,
-    writable: true
-  },
-  'property2': {
-    value: 'Hello',
-    writable: false
-  }
-  // etc. etc.
-});
-</pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 

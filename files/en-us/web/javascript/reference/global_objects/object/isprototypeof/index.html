@@ -15,7 +15,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div class="note">
 <p><code>isPrototypeOf()</code> differs from the {{jsxref("Operators/instanceof", "instanceof")}} operator. In the expression "<code>object instanceof AFunction</code>", the <code>object</code> prototype chain is checked against <code>AFunction.prototype</code>, not against <code>AFunction</code> itself.</p>
@@ -23,12 +23,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>object</code></dt>
+ <dt><code><var>object</var></code></dt>
  <dd>The object whose prototype chain will be searched.</dd>
 </dl>
 
@@ -53,7 +53,7 @@ tags:
 
 <p>This example demonstrates that <code>Baz.prototype</code>, <code>Bar.prototype</code>, <code>Foo.prototype</code> and <code>Object.prototype</code> exist in the prototype chain for object <code>baz</code>:</p>
 
-<pre class="brush: js">function Foo() {}
+<pre class="brush: js notranslate">function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -72,7 +72,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 <p>For example, check if <code>baz</code> object descends from <code>Foo.prototype</code>:</p>
 
-<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
+<pre class="brush: js notranslate">if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
 </pre>
@@ -80,10 +80,12 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}</td>
   </tr>

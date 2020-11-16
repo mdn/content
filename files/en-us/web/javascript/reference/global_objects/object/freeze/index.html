@@ -20,16 +20,16 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.freeze(<var>obj</var>)</code></pre>
+<pre class="syntaxbox notranslate">Object.freeze(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>obj</code></dt>
+ <dt><code><var>obj</var></code></dt>
  <dd>The object to freeze.</dd>
 </dl>
 
@@ -54,7 +54,7 @@ TypeError: 1 is not an object // ES5 code
 1                             // ES2015 code
 </pre>
 
-<p>An <a href="/en-US/docs/Web/API/ArrayBufferView" title="ArrayBufferView is a helper type representing any of the following JavaScript TypedArray types:"><code>ArrayBufferView</code></a> with elements will cause a {{jsxref("TypeError")}}, as they are views over memory and will definitely cause other possible issues:</p>
+<p>An {{domxref("ArrayBufferView")}} with elements will cause a {{jsxref("TypeError")}}, as they are views over memory and will definitely cause other possible issues:</p>
 
 <pre class="brush: js notranslate">&gt; Object.freeze(new Uint8Array(0)) // No elements
 <em>Uint8Array</em> []
@@ -74,7 +74,7 @@ TypeError: Cannot freeze array buffer views with elements
 
 <p>Note that; as the standard three properties (<code>buf.byteLength</code>, <code>buf.byteOffset</code> and <code>buf.buffer</code>) are read-only (as are those of an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}), there is no reason for attempting to freeze these properties.</p>
 
-<h3 id="Comparison_to_Object.seal">Comparison to <code>Object.seal()</code></h3>
+<h3 id="Comparison_to_Object.seal">Comparison to Object.seal()</h3>
 
 <p>Objects sealed with {{jsxref("Object.seal()")}} can have their existing properties changed. Existing properties in objects frozen with <code>Object.freeze()</code> are made immutable.</p>
 

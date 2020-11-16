@@ -147,12 +147,15 @@ tags:
   }
 }
 
+/* Note: By far, there's no browser that supports the `of` argument of :nth-child(…) */
 @supports selector(:nth-child(1n of a, b)) {
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support
      the `of` argument of :nth-child(…) is supported */
-  :is(:nth-child(1n of ul, ol) a,
-  details &gt; summary) {
+  :is(
+      :nth-child(1n of ul, ol) a,
+      details &gt; summary
+  ) {
     … /* CSS applied when the :is(…) selector and
          the `of` argument of :nth-child(…) are both supported */
   }

@@ -42,7 +42,7 @@ tags:
  <dt>{{jsxref("TypedArray.prototype.buffer", "Float32Array.prototype.buffer")}}</dt>
  <dd>Returns the {{jsxref("ArrayBuffer")}} referenced by the <code>Float32Array</code> Fixed at construction time and thus <strong>read only</strong>.</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Float32Array.prototype.byteLength")}}</dt>
- <dd>Returns the length (in bytes) of the <code>Float32Array</code> from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus <strong>read only.</strong></dd>
+ <dd>Returns the length (in bytes) of the <code>Float32Array</code>. Fixed at construction time and thus <strong>read only.</strong></dd>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Float32Array.prototype.byteOffset")}}</dt>
  <dd>Returns the offset (in bytes) of the <code>Float32Array</code> from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus <strong>read only.</strong></dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}</dt>
@@ -110,7 +110,7 @@ tags:
 
 <h3 id="Different_ways_to_create_a_Float32Array">Different ways to create a <code>Float32Array</code></h3>
 
-<pre class="brush: js">// From a length
+<pre class="brush: js notranslate">// From a length
 var float32 = new Float32Array(2);
 float32[0] = 42;
 console.log(float32[0]); // 42

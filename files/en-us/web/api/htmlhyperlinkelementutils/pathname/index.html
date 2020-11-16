@@ -11,17 +11,17 @@ tags:
 ---
 <p>{{ApiRef("URL API")}}</p>
 
-<p>The <strong><code>HTMLHyperlinkElementUtils.pathname</code></strong> property is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of the URL (or the empty string if there is no path).</p>
+<p>The <strong><code>HTMLHyperlinkElementUtils.pathname</code></strong> property is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of the URL not including the query string or fragment (or the empty string if there is no path).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.pathname;
+<pre class="syntaxbox notranslate"><em>string</em> = <em>object</em>.pathname;
 <em>object</em>.pathname = <em>string</em>;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">// Let's an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"&gt; element be in the document
+<pre class="brush: js notranslate">// Let's an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"&gt; element be in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.pathname; // Returns:'/en-US/docs/HTMLHyperlinkElementUtils.pathname'
 </pre>
