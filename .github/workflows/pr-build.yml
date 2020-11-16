@@ -30,12 +30,6 @@ jobs:
           SUFFIX_FILTER: .html
           PREFIX_FILTER: files/
 
-      - uses: actions/checkout@v2
-        if: steps.git_diff_content.outputs.diff
-        with:
-          repository: mdn/yari
-          path: yari
-
       - name: Setup Node.js environment
         if: steps.git_diff_content.outputs.diff
         uses: actions/setup-node@v2.1.2
@@ -60,15 +54,12 @@ jobs:
       - name: Install all yarn packages
         if: steps.git_diff_content.outputs.diff
         run: |
-          cd yari
           yarn --frozen-lockfile
 
       - name: Build changed content
         if: steps.git_diff_content.outputs.diff
         run: |
           export CONTENT_ROOT=$(pwd)/files
-          # Need to run from the yari we've cleanly cloned.
-          cd yari
 
           # Some day, when our number of flaws have reached 0 we'll change
           # this to "*:error" which means the slightest flaw in the build
@@ -102,10 +93,18 @@ jobs:
           # This environment variable will disable that functionality entirely.
           export REACT_APP_DISABLE_AUTH=true
 
+          # If we don't do this the built files will end up in
+          # `node_modules/@mdn/yari/client/build/` and we don't want that
+          # to get pushed into the cache.
+          export BUILD_OUT_ROOT=/tmp/
+
           export BUILD_NO_PROGRESSBAR=true
           export BUILD_FILES="${{ env.GIT_DIFF }}"
-          yarn prepare-build
-          yarn build
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          node node_modules/@mdn/yari/build/cli.js
 
   check_redirects:
     runs-on: ubuntu-latest
