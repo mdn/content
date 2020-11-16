@@ -56,11 +56,11 @@ num = 6; // Initialization</pre>
 <pre class="brush: js notranslate">console.log(num); // Throws ReferenceError exception
 num = 6; // Initialization</pre>
 
-<p>Declarations using <code>let</code> and <code>const</code> are also not hoisted. </p>
+<p>Initializations using <code>let</code> and <code>const</code> are also not hoisted. </p>
 
 <pre class="brush: js notranslate">// Example with let:
 a = 1; // initialization.
-let a; // Throws SyntaxError: Identifier 'a' has already been declared
+let a; // Throws ReferenceError: Cannot access 'a' before initialization
 
 // Example with const:
 a = 1; // initialization.

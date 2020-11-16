@@ -15,16 +15,16 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.search](str)</pre>
+<pre class="syntaxbox notranslate"><var>regexp</var>[Symbol.search](<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>str</code></dt>
+ <dt><code><var>str</var></code></dt>
  <dd>A {{jsxref("String")}} that is a target of the search.</dd>
 </dl>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>This method is called internally in {{jsxref("String.prototype.search()")}}. For example, the following two examples return the same result.</p>
 
-<pre class="brush: js">'abc'.search(/a/);
+<pre class="brush: js notranslate">'abc'.search(/a/);
 
 /a/[Symbol.search]('abc');</pre>
 
@@ -51,17 +51,17 @@ tags:
 
 <p>This method can be used in almost the same way as {{jsxref("String.prototype.search()")}}, except the different <code>this</code> and the different arguments order.</p>
 
-<pre class="brush: js">var re = /-/g;
+<pre class="brush: js notranslate">var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.search](str);
 console.log(result);  // 4
 </pre>
 
-<h3 id="Using_search_in_subclasses">Using <code>@@search</code> in subclasses</h3>
+<h3 id="Using_search_in_subclasses">Using @@search in subclasses</h3>
 
 <p>Subclass of {{jsxref("RegExp")}} can override <code>[@@search]()</code> method to modify the behavior.</p>
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+<pre class="brush: js notranslate">class MyRegExp extends RegExp {
   constructor(str) {
     super(str)
     this.pattern = str;
@@ -80,10 +80,12 @@ console.log(result); // 3
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}}</td>
   </tr>

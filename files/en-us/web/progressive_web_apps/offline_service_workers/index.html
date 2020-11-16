@@ -115,6 +115,8 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Here, we open a cache with a given name, then add all the files our app uses to the cache, so they are available next time it loads (identified by request URL).</p>
 
+<p>You may notice we haven't cached <code>game.js</code>. This is the file that contains the data we use when displaying our games. In reality this data would most likely come from an API endpoint or database and caching the data would mean updating it periodically when there was network connectivity. We won't go into that here, but the {{domxref('Web Periodic Background Synchronization API','Periodic Background Sync API')}} is good further reading on this topic.</p>
+
 <h4 id="Activation">Activation</h4>
 
 <p>There is also an <code>activate</code> event, which is used in the same way as <code>install</code>. This event is usually used to delete any files that are no longer necessary and clean up after the app in general. We don't need to do that in our app, so we'll skip it.</p>

@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>typedarray</var>.<code>some(<var>callback</var>[, <var>thisArg</var>])</code></code></pre>
+<pre class="syntaxbox notranslate"><code><var>typedarray</var>.<code>some(<var>callback</var>[, <var>thisArg</var>])</code></code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -57,7 +57,7 @@ tags:
 
 <p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be done on an "as needed" basis.</p>
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
+<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
   Object.defineProperty(Uint8Array.prototype, 'some', {
     value: Array.prototype.some
@@ -67,14 +67,13 @@ if (!Uint8Array.prototype.some) {
 
 <p>If you need to support truly obsolete JavaScript engines that don't support <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, it's best not to polyfill <code>Array.prototype</code> methods at all, as you can't make them non-enumerable.</p>
 
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Testing_size_of_all_typed_array_elements">Testing size of all typed array elements</h3>
 
 <p>The following example tests whether any element in the typed array is bigger than 10.</p>
 
-<pre class="brush: js  language-js">function isBiggerThan10(element, index, array) {
+<pre class="brush: js  language-js notranslate">function isBiggerThan10(element, index, array) {
   return element &gt; 10;
 }
 new Uint8Array([2, 5, 8, 1, 4]).some(isBiggerThan10); // false
@@ -85,9 +84,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> provide a shorter syntax for the same test.</p>
 
-<pre class="brush: js">new Uint8Array([2, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // false
+<pre class="brush: js notranslate">new Uint8Array([2, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // true</pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -10,16 +10,16 @@ tags:
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <code><strong>__lookupSetter__</strong></code> method returns the function bound as a setter to the specified property.</p>
+<p>The <strong><code>__lookupSetter__</code></strong> method returns the function bound as a setter to the specified property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>obj</var>.__lookupSetter__(<var>sprop</var>)</code></pre>
+<pre class="syntaxbox notranslate"><var>obj</var>.__lookupSetter__(<var>sprop</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>sprop</code></dt>
+ <dt><code><var>sprop</var></code></dt>
  <dd>A string containing the name of the property whose setter should be returned.</dd>
 </dl>
 
@@ -37,7 +37,7 @@ tags:
 
 <h3 id="Standard-compliant_and_non-standard_ways_to_get_a_property_setter">Standard-compliant and non-standard ways to get a property setter</h3>
 
-<pre class="brush: js">var obj = {
+<pre class="brush: js notranslate">var obj = {
   set foo(value) {
     this.bar = value;
   }
@@ -57,10 +57,12 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="spectable standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.prototype.__lookupSetter__', 'Object.prototype.__lookupSetter__()')}}</td>
   </tr>

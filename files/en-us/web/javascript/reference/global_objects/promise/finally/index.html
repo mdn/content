@@ -11,15 +11,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>finally()</strong></code> method returns a {{jsxref("Promise")}}. When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed. This provides a way for code to be run whether the promise was fulfilled successfully or rejected once the <code>Promise</code> has been dealt with.</p>
+<p>The <strong><code>finally()</code></strong> method returns a {{jsxref("Promise")}}. When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed. This provides a way for code to be run whether the promise was fulfilled successfully or rejected once the <code>Promise</code> has been dealt with.</p>
 
 <p>This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then", "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>p.finally(onFinally)</var>;
+<pre class="syntaxbox notranslate"><var>p</var>.finally(<var>onFinally</var>);
 
-p.finally(function() {
+<var>p</var>.finally(function() {
    // settled (fulfilled or rejected)
 });
 </pre>
@@ -27,7 +27,7 @@ p.finally(function() {
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>onFinally</code></dt>
+ <dt><code><var>onFinally</var></code></dt>
  <dd>A {{jsxref("Function")}} called when the <code>Promise</code> is settled.</dd>
 </dl>
 
@@ -59,7 +59,7 @@ p.finally(function() {
 
 <h3 id="Using_finally">Using finally</h3>
 
-<pre class="brush: js">let isLoading = true;
+<pre class="brush: js notranslate">let isLoading = true;
 
 fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");
@@ -81,10 +81,12 @@ fetch(myRequest).then(function(response) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}}</td>
   </tr>
@@ -93,7 +95,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</p>
+<div class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.builtins.Promise.finally")}}</p>
 

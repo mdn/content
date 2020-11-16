@@ -17,17 +17,16 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new SharedArrayBuffer([<var>length</var>])
-</pre>
+<pre class="syntaxbox notranslate">new SharedArrayBuffer([<var>length</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>length</code></dt>
+ <dt><code><var>length</var></code></dt>
  <dd>The size, in bytes, of the array buffer to create.</dd>
 </dl>
 
@@ -41,19 +40,21 @@ tags:
 
 <p><code>SharedArrayBuffer</code> constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a <code>SharedArrayBuffer</code> constructor as a function without <code>new</code> will throw a {{jsxref("TypeError")}}.</p>
 
-<pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
+<pre class="brush: js example-bad notranslate">var sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good">var sab = new SharedArrayBuffer(1024);</pre>
+<pre class="brush: js example-good notranslate">var sab = new SharedArrayBuffer(1024);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-sharedarraybuffer-constructor', 'SharedArrayBuffer constructor')}}</td>
   </tr>

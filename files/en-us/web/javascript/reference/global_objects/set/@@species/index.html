@@ -9,25 +9,25 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Set[Symbol.species]</strong></code> accessor property returns the <code>Set</code> constructor.</p>
+<p>The <strong><code>Set[Symbol.species]</code></strong> accessor property returns the <code>Set</code> constructor.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The species accessor property returns the default constructor for <code>Set</code> objects. Subclass constructors may override it to change the constructor assignment.</p>
+<p>The <code>species</code> accessor property returns the default constructor for <code>Set</code> objects. Subclass constructors may override it to change the constructor assignment.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
 
-<p>The species property returns the default constructor function, which is the <code>Set</code> constructor for <code>Set</code> objects:</p>
+<p>The <code>species</code> property returns the default constructor function, which is the <code>Set</code> constructor for <code>Set</code> objects:</p>
 
-<pre class="brush: js">Set[Symbol.species]; // function Set()</pre>
+<pre class="brush: js notranslate">Set[Symbol.species]; // function Set()</pre>
 
 <h3 id="Species_in_derived_objects">Species in derived objects</h3>
 
 <p>In a derived collection object (e.g. your custom set <code>MySet</code>), the <code>MySet</code> species is the <code>MySet</code> constructor. However, you might want to overwrite this, in order to return parent <code>Set</code> objects in your derived class methods:</p>
 
-<pre class="brush: js">class MySet extends Set {
+<pre class="brush: js notranslate">class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
   static get [Symbol.species]() { return Set; }
 }</pre>

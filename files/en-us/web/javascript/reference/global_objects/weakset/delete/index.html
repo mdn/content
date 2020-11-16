@@ -10,32 +10,32 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>delete()</strong></code> method removes the specified element from a <code>WeakSet</code> object.</p>
+<p>The <strong><code>delete()</code></strong> method removes the specified element from a <code>WeakSet</code> object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><em>ws</em>.delete(value);</code></pre>
+<pre class="syntaxbox notranslate"><var>ws</var>.delete(<var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>value</dt>
+ <dt><code><var>value</var></code></dt>
  <dd>Required. The object remove from the <code>WeakSet</code> object.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p><code>true</code> if an element in the <code>WeakMap</code> object has been removed successfully. <code>false</code> if the key is not found in the <code>WeakMap</code> or if the key is not an object.</p>
+<p><code>true</code> if an element in the <code>WeakSet</code> object has been removed successfully. <code>false</code> if the <code><var>value</var></code> is not found in the <code>WeakSet</code> or if the <code><var>value</var></code> is not an object.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_delete_method">Using the <code>delete</code> method</h3>
+<h3 id="Using_the_delete_method">Using the delete() method</h3>
 
-<pre class="brush: js">var ws = new WeakSet();
+<pre class="brush: js notranslate">var ws = new WeakSet();
 var obj = {};
 
 ws.add(window);
@@ -49,10 +49,12 @@ ws.has(window);    // Returns false. The window is no longer present in the Weak
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
   </tr>

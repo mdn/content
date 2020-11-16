@@ -34,7 +34,7 @@ tags:
 
 <p>The popular tool <em><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></em> has been updated to support the <code>-ms-</code> grid version. By default, grid prefixes are disabled, but you can enable it with <code>grid: true</code> option.</p>
 
-<pre>autoprefixer({ grid: 'autoplace' })</pre>
+<pre class="notranslate">autoprefixer({ grid: 'autoplace' })</pre>
 
 <p>Grid prefixes are disabled by default because some properties can’t be prefixed.</p>
 
@@ -53,7 +53,7 @@ tags:
 <p>The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:</p>
 
 <div id="enhancement_1">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 img {
     max-width: 100%;
     display: block;
@@ -84,7 +84,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html">&lt;div class="media"&gt;
+<pre class="brush: html notranslate">&lt;div class="media"&gt;
     &lt;div class="image"&gt;&lt;img src="http://placehold.it/150x150" alt="placeholder"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example. I am using floats for older browsers and grid for new ones.&lt;/div&gt;
 &lt;/div&gt;
@@ -105,7 +105,7 @@ img {
 
 <div id="enhancement_2">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -124,7 +124,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css">.wrapper ul {
+<pre class="brush: css notranslate">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -137,7 +137,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -178,7 +178,7 @@ img {
 
 <p><em>Feature queries</em> will look very familiar if you have ever used a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.</p>
 
-<pre class="brush: css">@supports (display: grid) {
+<pre class="brush: css notranslate">@supports (display: grid) {
     .wrapper {
         /* do anything for grid supporting browsers here. */
     }
@@ -191,7 +191,7 @@ img {
 
 <div id="enhancement_3">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -210,7 +210,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css">.wrapper ul {
+<pre class="brush: css notranslate">.wrapper ul {
     overflow: hidden;
     margin: 0 -10px;
     padding: 0;
@@ -225,7 +225,7 @@ img {
     .wrapper ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+        gap: 20px;
         margin: 0;
     }
     .wrapper li {
@@ -236,7 +236,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;&lt;h2&gt;One&lt;/h2&gt;
             &lt;p&gt;We can use CSS Grid to overwrite older methods.&lt;/p&gt;
@@ -272,7 +272,7 @@ img {
 
 <div id="enhancement_4">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -292,7 +292,7 @@ img {
 </pre>
 </div>
 
-<pre class="brush: css">.wrapper ul {
+<pre class="brush: css notranslate">.wrapper ul {
     margin: 0 -10px;
     padding: 0;
     list-style: none;
@@ -308,7 +308,7 @@ img {
     .wrapper ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
+        gap: 20px;
         margin: 0;
     }
     .wrapper li {
@@ -318,7 +318,7 @@ img {
 }
 </pre>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
     &lt;ul&gt;
         &lt;li class="card"&gt;
             &lt;h2&gt;One&lt;/h2&gt;
@@ -352,7 +352,7 @@ img {
 <p>{{ EmbedLiveSample('enhancement_4', '500', '480') }}</p>
 </div>
 
-<p>Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used <code>grid-gap</code>, rather than margins and negative margins to create my gutters.</p>
+<p>Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used <code>gap</code>, rather than margins and negative margins to create my gutters.</p>
 
 <h2 id="How_does_the_specification_define_these_overrides">How does the specification define these overrides?</h2>
 
@@ -411,28 +411,34 @@ img {
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
+   <li></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>

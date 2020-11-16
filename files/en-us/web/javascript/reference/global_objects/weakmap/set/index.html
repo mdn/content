@@ -10,23 +10,23 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>set()</strong></code> method adds a new element with a specified <code>key</code> and <code>value</code> to a <code>WeakMap</code> object.</p>
+<p>The <strong><code>set()</code></strong> method adds a new element with a specified key and value to a <code>WeakMap</code> object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><em>wm</em>.set(key, value);</code></pre>
+<pre class="syntaxbox notranslate"><var>wm</var>.set(<var>key</var>, <var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>key</dt>
+ <dt><code><var>key</var></code></dt>
  <dd>Required. Must be <code>object</code>. The key of the element to add to the <code>WeakMap</code> object.</dd>
- <dt>value</dt>
- <dd>Required. Any value. The value of the element to add to the <code>WeakMap</code> object.</dd>
+ <dt><code><var>value</var></code></dt>
+ <dd>Required. Any value. The value of the element to add to the <code>WeakMap</code> object.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,9 +35,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_set_method">Using the <code>set</code> method</h3>
+<h3 id="Using_the_set_method">Using the set() method</h3>
 
-<pre class="brush: js">var wm = new WeakMap();
+<pre class="brush: js notranslate">var wm = new WeakMap();
 var obj = {};
 
 // Add new elements to the WeakMap
@@ -50,10 +50,12 @@ wm.set(obj, 'baz');
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}</td>
   </tr>

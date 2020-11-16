@@ -15,20 +15,20 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.replace](str, <var>newSubStr</var>|<var>function</var>)</pre>
+<pre class="syntaxbox notranslate"><var>regexp</var>[Symbol.replace](<var>str<var>, <var>newSubStr</var>|<var>function</var>)</var></var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>str</code></dt>
+ <dt><code><var>str</var></code></dt>
  <dd>A {{jsxref("String")}} that is a target of the replacement.</dd>
- <dt><code>newSubStr (replacement)</code></dt>
+ <dt><code><var>newSubStr</var></code> (replacement)</dt>
  <dd>The {{jsxref("String")}} that replaces the substring. A number of special replacement patterns are supported; see the {{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}} section in {{jsxref("String.prototype.replace()")}} page.</dd>
- <dt><code>function (replacement)</code></dt>
+ <dt><code><var>function</var></code> (replacement)</dt>
  <dd>A function to be invoked to create the new substring. The arguments supplied to this function are described in the {{jsxref("String.prototype.replace", "Specifying a function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} section in {{jsxref("String.prototype.replace()")}} page.</dd>
 </dl>
 
@@ -40,7 +40,7 @@ tags:
 
 <p>This method is called internally in {{jsxref("String.prototype.replace()")}} if the <code>pattern</code> argument is a {{jsxref("RegExp")}} object.  For example, following two examples return same result.</p>
 
-<pre class="brush: js">'abc'.replace(/a/, 'A');
+<pre class="brush: js notranslate">'abc'.replace(/a/, 'A');
 
 /a/[Symbol.replace]('abc', 'A');</pre>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>This method can be used in almost the same way as {{jsxref("String.prototype.replace()")}}, except the different <code>this</code> and the different arguments order.</p>
 
-<pre class="brush: js">var re = /-/g;
+<pre class="brush: js notranslate">var re = /-/g;
 var str = '2016-01-01';
 var newstr = re[Symbol.replace](str, '.');
 console.log(newstr);  // 2016.01.01
@@ -64,7 +64,7 @@ console.log(newstr);  // 2016.01.01
 
 <p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@replace]()</code> method to modify the default behavior.</p>
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+<pre class="brush: js notranslate">class MyRegExp extends RegExp {
   constructor(pattern, flags, count) {
     super(pattern, flags);
     this.count = count;

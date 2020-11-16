@@ -9,20 +9,20 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Object.getOwnPropertySymbols()</strong></code> method returns an array of all symbol properties found directly upon a given object.</p>
+<p>The <strong><code>Object.getOwnPropertySymbols()</code></strong> method returns an array of all symbol properties found directly upon a given object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
+<pre class="brush: js notranslate">Object.getOwnPropertySymbols(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>obj</code></dt>
+ <dt><code><var>obj</var></code></dt>
  <dd>The object whose symbol properties are to be returned.</dd>
 </dl>
 
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Using_getOwnPropertySymbols">Using getOwnPropertySymbols</h3>
 
-<pre class="brush: js">var obj = {};
+<pre class="brush: js notranslate">var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -57,10 +57,12 @@ console.log(objectSymbols[0]);     // Symbol(a)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
   </tr>

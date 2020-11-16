@@ -118,7 +118,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+gap: 10px;
 }
 </pre>
 
@@ -161,7 +161,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+  gap: 10px;
 }
 </pre>
 
@@ -210,7 +210,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 100px);
-  grid-gap: 10px;
+  gap: 10px;
 }
 
 .item1 {
@@ -284,7 +284,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+  gap: 10px;
 }
 .item1 {
     grid-column: 1 ;
@@ -335,7 +335,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 100px);
-  grid-gap: 10px;
+  gap: 10px;
 }
 .item1 {
     grid-column: 1 ;
@@ -439,7 +439,7 @@ tags:
 
 <p>Our new layout methods give us the ability to use these logical values to place items, however, as soon as we start to combine them with the physical properties used for margins and padding, we need to remember that those physical properties will not change according to writing mode.</p>
 
-<p>The <a href="https://drafts.csswg.org/css-logical-props/">CSS Logical Properties specification</a> aims to change that, and in future we will be able to use the <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical equivalents</a> for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in our CSS. Firefox has already implemented these, so you can try them out right now in Firefox. I know in the future, once these ship everywhere, your knowledge of "Block and inline" through using Grid, will mean you know exactly how to use these too.</p>
+<p>The <a href="https://drafts.csswg.org/css-logical-props/">CSS Logical Properties specification</a> means that you can use the <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical equivalents</a> for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.</p>
 
 <section class="Quick_links" id="Quick_Links">
 <ol>
@@ -459,28 +459,34 @@ tags:
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
+   <li></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>

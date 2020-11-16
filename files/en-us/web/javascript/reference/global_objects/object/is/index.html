@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Object.is()</strong></code> method determines whether two values are <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">the same value</a>.</p>
+<p>The <strong><code>Object.is()</code></strong> method determines whether two values are <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">the same value</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -56,23 +56,6 @@ tags:
 
 <p>This is also <em>not</em> the same as being equal according to the {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} operator. The <code>===</code> operator (and the <code>==</code> operator as well) treats the number values <code>-0</code> and <code>+0</code> as equal and treats {{jsxref("Number.NaN")}} as not equal to {{jsxref("NaN")}}.</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js notranslate">if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
-      // SameValue algorithm
-      if (x === y) { // Steps 1-5, 7-10
-        // Steps 6.b-6.e: +0 != -0
-        return x !== 0 || 1 / x === 1 / y;
-      } else {
-        // Step 6.a: NaN == NaN
-        return x !== x &amp;&amp; y !== y;
-      }
-    }
-  });
-}</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Object.is">Using Object.is</h3>
@@ -95,6 +78,23 @@ Object.is(0, -0);            // false
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
 </pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<pre class="brush: js notranslate">if (!Object.is) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
+      // SameValue algorithm
+      if (x === y) { // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+      } else {
+        // Step 6.a: NaN == NaN
+        return x !== x &amp;&amp; y !== y;
+      }
+    }
+  });
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

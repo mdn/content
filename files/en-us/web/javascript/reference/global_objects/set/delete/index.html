@@ -11,15 +11,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>delete()</strong></code> method removes the specified element from a <code>Set</code> object.</p>
+<p>The <strong><code>delete()</code></strong> method removes the specified element from a <code>Set</code> object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>mySet</var>.delete(<var>value</var>);</pre>
+<pre class="syntaxbox notranslate"><var>mySet</var>.delete(<var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,9 +34,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_delete_method">Using the <code>delete()</code> method</h3>
+<h3 id="Using_the_delete_method">Using the delete() method</h3>
 
-<pre class="brush: js">const mySet = new Set();
+<pre class="brush: js notranslate">const mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
@@ -47,7 +47,7 @@ mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 
 <p>Let's checkout below how to delete an Object from a Set.</p>
 
-<pre class="brush: js">const setObj = new Set();   // Create a New Set.
+<pre class="brush: js notranslate">const setObj = new Set();   // Create a New Set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 
