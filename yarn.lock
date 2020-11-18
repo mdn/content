@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.228":
-  version "0.1.228"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.228.tgz#dde97c3d98aa84553f11e403ec78bf78bc220864"
-  integrity sha512-KjiamQt3ojQfo/xJsHR2IXe3jisvXnIn/ez0/fYPsyzlsx8sH+Gh6GadQo+gUAA1HLrsywVxiN+mpCqunA53Wg==
+"@mdn/yari@0.1.230":
+  version "0.1.230"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.230.tgz#6107f48dea91e5672ed1354930d777e2f26dad30"
+  integrity sha512-sYQKhAk2bY5nZ6K8ruZLds4wXAHiPZTaa7W15ajo0pelyisKWV5h4xb9JjpUZT1xSmFQ48InP+I7EsBUXyqHCw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.6"
@@ -84,7 +84,7 @@
     source-map-support "0.5.19"
     swr "0.3.8"
     tempy "1.0.0"
-    use-debounce "^5.0.4"
+    use-debounce "^5.1.0"
     webpack-cli "4.2.0"
     webpack-node-externals "2.5.2"
     ws "^7.4.0"
@@ -4295,10 +4295,10 @@ url-to-options@^1.0.1:
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
   integrity sha1-FQWgOiiaSMvXpDTvuu7FBV9WM6k=
 
-use-debounce@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.0.4.tgz#9cd1aaa43505ea37ba666e512abfc80bfbf69df6"
-  integrity sha512-gqlRJ4ppvdXAZhOV2eRFasOTBqRkWcss751HFXUJdRav0O6tHyEmKuZNphJssMlHw98RTTpuhgV5KzhUVzPusA==
+use-debounce@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.1.0.tgz#3df34bd7449da7dd2dbb10a6513efe701fc79d02"
+  integrity sha512-fU7O7iel2bA19fxSiPfRkieVGxrow503phSUAGZ/EqiJtCPrU9AdUdrKOAdgh803IrjdIzhj+8eDsDGn4OPy8g==
 
 utf8-byte-length@^1.0.1:
   version "1.0.4"
