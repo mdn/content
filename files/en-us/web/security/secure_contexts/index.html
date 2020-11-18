@@ -25,7 +25,11 @@ tags:
 
 <p>However, it’s important to note that if a non-secure context causes a new window to be created (with or without specifying <a href="/en-US/docs/Web/API/Window/open#noopener">noopener</a>), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That’s because the determination of whether or not a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.</p>
 
-<p>Locally-delivered resources such as those with <em>http://127.0.0.1</em> URLs, <em>http://localhost</em> URLs (under certain conditions), and <em>file://</em> URLs are also considered to have been delivered securely.</p>
+<p>Locally-delivered resources such as those with <em>http://127.0.0.1</em> URLs, <em>http://localhost</em> and  <em>http://*.localhost</em> URLs (e.g. <em>http://dev.whatever.localhost/</em>), and <em>file://</em> URLs are also considered to have been delivered securely.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> Firefox 84 and later support <em>http://localhost</em> and <em>http://*.localhost</em> URLs as trustworthy origins (earlier versions did not, because <code>localhost</code> was not guaranteed to map to a local/loopback address).</p>
+</div>
 
 <p>Resources that are not local, to be considered secure, must meet the following criteria:</p>
 
@@ -38,7 +42,7 @@ tags:
 
 <p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("WindowOrWorkerGlobalScope.isSecureContext", "isSecureContext")}} boolean, which is exposed on the global scope.</p>
 
-<pre class="brush: js">if (window.isSecureContext) {
+<pre class="brush: js notranslate">if (window.isSecureContext) {
   // Page is a secure context so service workers are now available
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...

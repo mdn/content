@@ -21,7 +21,15 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
+<ul>
+ <li>We've added support for complex selectors to the {{cssxref(":not()")}} pseudo-class ({{bug(933562)}}). </li>
+</ul>
+
 <h4 id="Removals_2">Removals</h4>
+
+<ul>
+ <li>We've removed the proprietary <code>-moz-default-appearance</code> property values <code>scrollbar-small</code> (<code>scrollbar-width: thin</code> is used instead) and <code>scrollbar</code> (macOS only; <code>scrollbar-horizontal</code> and <code>scrollbar-vertical</code> are used instead) ({{bug(1673132)}}).</li>
+</ul>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -32,10 +40,18 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
-	<li></li>
+ <li></li>
 </ul>
 
 <h4 id="Removals_4">Removals</h4>
+
+<h3 id="Security">Security</h3>
+
+<ul>
+ <li>Firefox now ensures that <code>localhost</code> URLs, such as <em>http://localhost/</em> and <em>http://dev.localhost/</em>, refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a>), and also will not be treated as <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a>. ({{bug(1220810)}}, {{bug(1488740)}})</li>
+</ul>
+
+<h4 id="sect1"></h4>
 
 <h3 id="APIs">APIs</h3>
 
@@ -56,7 +72,7 @@ tags:
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
-	<li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove">browsingData.remove</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove">browsingData.remove</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
 </ul>
 
 <h4 id="Removals_7">Removals</h4>

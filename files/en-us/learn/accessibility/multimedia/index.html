@@ -40,7 +40,7 @@ tags:
 
 <p>So far in this module, we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> attributes).</p>
 
-<p>This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, videos, {{htmlelement("canvas")}} elements, Flash movies, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.</p>
+<p>This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.</p>
 
 <p>But don't despair — here we will help you navigate through the techniques available for making multimedia more accessible.</p>
 
@@ -216,7 +216,7 @@ fwdBtn.onclick = function() {
 
 <h4 id="Further_reading">Further reading</h4>
 
-<p>This gives you a basic idea of how to add custom player functionality to video/audio player instances. For more information on how to add more complex features to video/audio players, including Flash fallbacks for older browsers, see:</p>
+<p>This gives you a basic idea of how to add custom player functionality to video/audio player instances. For more information on how to add more complex features to video/audio players, see:</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a></li>
@@ -328,27 +328,6 @@ This is the second.
 <p><strong>Note</strong>: Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>
 </div>
 
-<h2 id="Other_multimedia_content">Other multimedia content</h2>
-
-<p>The above sections don't cover all types of multimedia content that you might want to put on a web page. You might also need to deal with games, animations, slideshows, embedded video, and content created using other available technologies such as:</p>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API">HTML5 canvas</a></li>
- <li>Flash</li>
- <li>Silverlight</li>
-</ul>
-
-<p>For such content, you need to deal with accessibility concerns on a case by case basis. In some cases it is not so bad, for example:</p>
-
-<ul>
- <li>If you are embedding audio content using a plugin technology like Flash or Silverlight, you can probably just provide an audio transcript in the same manner as we already showed above in the {{anch("Transcript examples")}} section.</li>
- <li>If you are embedding video content using a plugin technology like Flash or Silverlight, you can take advantage of captioning/subtitling techniques available to those technologies. For example, see <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>, <a href="https://help.adobe.com/en_US/as3/components/WS5b3ccc516d4fbf351e63e3d118a9c65b32-7ee5.html">Using Timed Text Captions</a> (for Flash), or <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a>.</li>
-</ul>
-
-<p>However, other multimedia is not so easy to make accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.</p>
-
-<p>You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.</p>
-
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
 <p>You've reached the end of this article, but can you remember the most important information?</p>
@@ -358,6 +337,10 @@ This is the second.
 <h2 id="Summary">Summary</h2>
 
 <p>This chapter has provided a summary of accessibility concerns for multimedia content, along with some practical solutions.</p>
+
+<p>It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.</p>
+
+<p>You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.</p>
 
 <p>{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}</p>
 

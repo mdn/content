@@ -18,15 +18,17 @@ tags:
 
 <p>Mixed passive/display content is content served over HTTP that is included in an HTTPS webpage, but that cannot alter other portions of the webpage. For example, an attacker could replace an image served over HTTP with an inappropriate image or message to the user. The attacker could also infer information about the user's activities by watching which images are served to the user; often images are only served on a specific page within a website. If the attacker observes HTTP requests to certain images, they could determine which webpage the user is visiting.</p>
 
+<div class="blockIndicator note"></div>
+
 <h4 id="Passive_content_list">Passive content list</h4>
 
 <p>This section lists all types of HTTP requests which are considered passive content:</p>
 
 <ul>
- <li>{{HTMLElement("img")}} (<code>src</code> attribute)</li>
- <li>{{HTMLElement("audio")}} (<code>src</code> attribute)</li>
- <li>{{HTMLElement("video")}} (<code>src</code> attribute)</li>
- <li>{{HTMLElement("object")}} subresources (when an <code>&lt;object&gt;</code> performs HTTP requests)</li>
+	<li>{{HTMLElement("img")}} (<code>src</code> attribute)</li>
+	<li>{{HTMLElement("audio")}} (<code>src</code> attribute)</li>
+	<li>{{HTMLElement("video")}} (<code>src</code> attribute)</li>
+	<li>{{HTMLElement("object")}} subresources (when an <code>&lt;object&gt;</code> performs HTTP requests)</li>
 </ul>
 
 <h3 id="Mixed_active_content">Mixed active content</h3>
@@ -42,19 +44,37 @@ tags:
 <p>This section lists some types of HTTP requests which are considered active content:</p>
 
 <ul>
- <li>{{HTMLElement("script")}} (<code>src</code> attribute)</li>
- <li>{{HTMLElement("link")}} (<code>href</code> attribute) (this includes CSS stylesheets)</li>
- <li>{{HTMLElement("iframe")}} (<code>src</code> attribute)</li>
- <li>{{domxref("XMLHttpRequest")}} requests</li>
- <li>{{domxref("GlobalFetch.fetch","fetch()")}} requests</li>
- <li>All cases in CSS where a {{cssxref("url")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).</li>
- <li>{{HTMLElement("object")}} (<code>data</code> attribute)</li>
- <li>{{domxref("Navigator.sendBeacon")}} (<code>url</code> attribute)</li>
+	<li>{{HTMLElement("script")}} (<code>src</code> attribute)</li>
+	<li>{{HTMLElement("link")}} (<code>href</code> attribute) (this includes CSS stylesheets)</li>
+	<li>{{HTMLElement("iframe")}} (<code>src</code> attribute)</li>
+	<li>{{domxref("XMLHttpRequest")}} requests</li>
+	<li>{{domxref("GlobalFetch.fetch","fetch()")}} requests</li>
+	<li>All cases in CSS where a {{cssxref("url")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).</li>
+	<li>{{HTMLElement("object")}} (<code>data</code> attribute)</li>
+	<li>{{domxref("Navigator.sendBeacon")}} (<code>url</code> attribute)</li>
 </ul>
 
 <p>Other resource types like web fonts and workers may be considered active mixed content, as they are in Chrome.</p>
 
-<h2 id="Warnings_in_Web_Console">Warnings in Web Console</h2>
+<h2 id="Loading_mixed-content_resources">Loading mixed-content resources</h2>
+
+<p>Most browsers prevent <em>mixed active content</em> from loading, and some also block <em>mixed display content</em>.</p>
+
+<p>Browsers may allow locally-delivered mixed resources to be loaded. This includes <code>file:</code> URLs and content accessed from loopback addresses (e.g. <code>http://127.0.0.1/</code>).</p>
+
+<ul>
+	<li>Firefox 55 and later allow loading of mixed content on the loopback address <code>http://127.0.0.1/</code> (see {{bug(903966)}}),</li>
+	<li>Firefox 84 and later allow loading of mixed content on <code>http://localhost/</code> and <code>http://*.localhost/</code> URLs, as these are now mapped to loopback addresses (see {{bug(1220810)}}).</li>
+	<li>Chrome also allows mixed content on <code>http://127.0.0.1/</code> and <code>http://localhost/</code>.</li>
+	<li>Safari does not allow any mixed content.</li>
+</ul>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: From Firefox 60, the <code>security.mixed_content.upgrade_display_content</code><br>
+<a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">preference</a> can be used to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. For more information see: <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#Upgrading_mixed_display_content">Experimental features in Firefox &gt; Upgrading mixed display content</a>.</p>
+</div>
+
+<h2 id="Warnings_in_Firefox_Web_Console">Warnings in Firefox Web Console</h2>
 
 <p>The Firefox Web Console displays a mixed content warning message in the Net pane when a page on your website has this issue. The mixed content resource that was loaded via HTTP will show up in red, along with the text "mixed content", which links to this page.</p>
 
@@ -68,15 +88,16 @@ tags:
 
 <p>To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Since Firefox 55, the loading of mixed content is allowed on http://127.0.0.1/ (see {{bug(903966)}}). Chrome allows mixed content on http://127.0.0.1/ and http://localhost/. Safari does not allow any mixed content.</p>
+<div class="blockIndicator note">
+<p><strong>Note</strong>: From Firefox 60, if <a href="#Mixed_passivedisplay_content">mixed display content</a> is successfully being automatically upgraded from HTTP to HTTPS  (<a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">preference</a> <code>security.mixed_content.upgrade_display_content</code><br>
+must be true), the console warning message will indicate that a mixed content request was upgraded instead of a warning.</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://w3c.github.io/webappsec/specs/mixedcontent/" title="https://w3c.github.io/webappsec/specs/mixedcontent/">Mixed Content - W3C Editor's Draft</a></li>
- <li><a href="/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content">How to fix a website with blocked mixed content</a></li>
+	<li><a href="https://w3c.github.io/webappsec/specs/mixedcontent/" title="https://w3c.github.io/webappsec/specs/mixedcontent/">Mixed Content - W3C Editor's Draft</a></li>
+	<li><a href="/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content">How to fix a website with blocked mixed content</a></li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

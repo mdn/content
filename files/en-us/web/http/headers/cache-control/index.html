@@ -90,7 +90,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt><code>no-cache</code></dt>
  <dd>The response may be stored by <em>any</em> cache, even if the response is normally non-cacheable. However, the stored response MUST <em>always</em> go through validation with the origin server first before using it, therefore, you cannot use <code>no-cache</code> in-conjunction with <code>immutable</code>. <strong>If you mean to not store the response in any cache, use <code>no-store</code> instead.</strong> <em>This directive is not effective in preventing caches from storing your response.</em></dd>
  <dt><code>no-store</code></dt>
- <dd>The response may <strong>not</strong> be stored in <em>any</em> cache. Although other directives may be set, this alone is <em>the only directive you need in preventing cached responses</em> on modern browsers. <code>max-age=0</code> <strong>is already implied</strong>. <strong>Setting</strong> <code>must-revalidate</code> <strong>does not make sense</strong> because in order to go through revalidation you need the response to be stored in a cache, which <code>no-store</code> prevents.</dd>
+ <dd>The response may <strong>not</strong> be stored in <em>any</em> cache. Note that this will not prevent a valid <em>pre-existing</em> cached response being returned. Clients can set <code>max-age=0</code> to also clear existing cache responses, as this forces the cache to revalidate with the server (no other directives have an effect when used with <code>no-store</code>).</dd>
 </dl>
 
 <h3 id="Expiration">Expiration</h3>
@@ -140,6 +140,13 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt>Good:</dt>
  <dd>
  <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store</pre>
+
+ <div class="blockIndicator note">
+ <p>The <code>no-store</code> directive will prevent a new resource being cached, but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request. Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
+
+ <pre class="syntaxbox notranslate">Cache-Control: no-store, max-age=0
+</pre>
+ </div>
  </dd>
  <dt>Bad:</dt>
  <dd>

@@ -25,13 +25,13 @@ tags:
 <p>You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers:</p>
 
 <ul>
-	<li><code>::-webkit-scrollbar</code> — the entire scrollbar.</li>
-	<li><code>::-webkit-scrollbar-button</code> — the buttons on the scrollbar (arrows pointing upwards and downwards).</li>
-	<li><code>::-webkit-scrollbar-thumb</code> — the draggable scrolling handle.</li>
-	<li><code>::-webkit-scrollbar-track</code> — the track (progress bar) of the scrollbar.</li>
-	<li><code>::-webkit-scrollbar-track-piece</code> — the part of the track (progress bar) not covered by the handle.</li>
-	<li><code>::-webkit-scrollbar-corner</code> — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.</li>
-	<li><code>::-webkit-resizer</code> — the draggable resizing handle that appears at the bottom corner of some elements.</li>
+ <li><code>::-webkit-scrollbar</code> — the entire scrollbar.</li>
+ <li><code>::-webkit-scrollbar-button</code> — the buttons on the scrollbar (arrows pointing upwards and downwards).</li>
+ <li><code>::-webkit-scrollbar-thumb</code> — the draggable scrolling handle.</li>
+ <li><code>::-webkit-scrollbar-track</code> — the track (progress bar) of the scrollbar.</li>
+ <li><code>::-webkit-scrollbar-track-piece</code> — the part of the track (progress bar) not covered by the handle.</li>
+ <li><code>::-webkit-scrollbar-corner</code> — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.</li>
+ <li><code>::-webkit-resizer</code> — the draggable resizing handle that appears at the bottom corner of some elements.</li>
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
@@ -49,20 +49,20 @@ tags:
   height: 2em;
 }
 
-.invisible-scrollbar ::-webkit-scrollbar {
+.invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 /* Demonstrate a "mostly customized" scrollbar
  * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar ::-webkit-scrollbar {
+.mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
   background-color: #aaa; /* or add it to the track */
 }
 
 /* Add a thumb */
-.mostly-customized-scrollbar ::-webkit-scrollbar-thumb {
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
     background: #000;
 }
 </pre>
@@ -133,8 +133,8 @@ Who thought scrollbars could be made weeeeird?
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>WebKit blog on <a href="https://webkit.org/blog/363/styling-scrollbars/">Styling Scrollbars</a></li>
-	<li><a href="https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">WebKit test</a> for scrollbar styles mentioned above</li>
-	<li>{{CSSxRef("-ms-overflow-style")}}</li>
-	<li>{{CSSxRef("scrollbar-width")}}</li>
+ <li>WebKit blog on <a href="https://webkit.org/blog/363/styling-scrollbars/">Styling Scrollbars</a></li>
+ <li><a href="https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">WebKit test</a> for scrollbar styles mentioned above</li>
+ <li>{{CSSxRef("-ms-overflow-style")}}</li>
+ <li>{{CSSxRef("scrollbar-width")}}</li>
 </ul>

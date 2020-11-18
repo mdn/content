@@ -161,11 +161,11 @@ block content
       label(for='author') Author:
       select#author.form-control(type='select', placeholder='Select author' name='author' required='true' )
         - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
-        for author in authors
+<strong>        for author in authors
           if book
             option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
           else
-            option(value=author._id) #{author.name}
+            option(value=author._id) #{author.name}</strong>
     div.form-group
       label(for='summary') Summary:
       textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' required='true') #{undefined===book ? '' : book.summary}
@@ -192,7 +192,7 @@ block content
 
 <ul>
  <li>The set of genres are displayed as checkboxes, using the <code>checked</code> value we set in the controller to determine whether or not the box should be selected.</li>
- <li>The set of authors are displayed as a single-selection alphabetically ordered drop-down list. In this case we determine what author to display by comparing the id of the current author option with the value previously entered by the user (passed in as the <code>book</code> variable). This is highlighted above!
+ <li>The set of authors are displayed as a single-selection alphabetically ordered drop-down list. If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the <code>book</code> variable). This is highlighted above!
   <div class="note">
   <p><strong>Note:</strong> If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type <code>Schema.Types.ObjectId</code>. So to compare them we must convent them to strings first.</p>
   </div>
