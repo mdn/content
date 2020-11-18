@@ -85,7 +85,7 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(var i = 0; i &lt; voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -109,7 +109,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(var i = 0; i &lt; voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

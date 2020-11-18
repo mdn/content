@@ -17,7 +17,7 @@ tags:
 
 <p>Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the <a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a>.</p>
 
-<p><span style="">To deliver video and audio, the general workflow is usually something like this:</span></p>
+<p><span>To deliver video and audio, the general workflow is usually something like this:</span></p>
 
 <ol>
  <li>Check what format the browser supports via feature detection (usually a choice of two, as stated above).</li>
@@ -69,25 +69,6 @@ tags:
 </div>
 
 <p>For further info see <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/video">&lt;video&gt; element</a> and <a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">Creating a cross-browser video player</a>.</p>
-
-<h3 id="Audio_and_Video_Fallback">Audio and Video Fallback</h3>
-
-<p>You can create a more comprehensive Fallback using Flash. <a href="https://github.com/johndyer/mediaelement/blob/master/build/flashmediaelement.swf">Using flashmediaelement.swf</a> is one way.</p>
-
-<pre class="brush: html notranslate">&lt;audio controls&gt;
-  &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
-  &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
-  &lt;!-- fallback for non supporting browsers goes here --&gt;
-  &lt;a href="audiofile.mp3"&gt;download audio&lt;/a&gt;
-  &lt;object width="320" height="30" type="application/x-shockwave-flash" data="flashmediaelement.swf"&gt;
-    &lt;param name="movie" value="flashmediaelement.swf" /&gt;
-    &lt;param name="flashvars" value="controls=true&amp;isvideo=false&amp;file=audiofile.mp3" /&gt;
-  &lt;/object&gt;
-&lt;/audio&gt;</pre>
-
-<p>The process is very similar with video — just remember to set <code>isvideo=true</code> in the <code>flashvars value</code> parameters.<br>
- <br>
- <a href="/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Fallbacks">More options for Fallbacks</a>.</p>
 
 <h3 id="JavaScript_Audio">JavaScript Audio</h3>
 
@@ -454,7 +435,7 @@ lastsource.addEventListener('error', function(ev) {
 
 <h2 id="AudioVideo_JavaScript_Libraries">Audio/Video JavaScript Libraries</h2>
 
-<p>A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks often use Adobe Flash or Microsoft Silverlight plugins. Other functionality such as the track element for subtitles can also be provided through media libraries.</p>
+<p>A number of audio and video JavaScript libaries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the <code><a href="/en-US/docs/Web/HTML/Element/track">&lt;track&gt;</a></code> element for subtitles can also be provided through media libraries.</p>
 
 <h3 id="Audio_only">Audio only</h3>
 

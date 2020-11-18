@@ -37,7 +37,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag">Intl[@@toStringTag]</a> has been added, returning a default value of <code>Intl</code> (recent addition to the ECMA spec). ({{bug(1670053)}})</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag">Intl[@@toStringTag]</a></code> has been added, returning a default value of <code>Intl</code> (recent addition to the ECMA spec). ({{bug(1670053)}})</li>
 </ul>
 
 <h3 id="HTTP">HTTP</h3>
@@ -47,6 +47,13 @@ tags:
 <h3 id="APIs">APIs</h3>
 
 <p><em>No changes</em></p>
+
+<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+ <li>We've removed preliminary support for <code>WebDriver:SwitchToShadowRoot</code>, which hasn't been added to the WebDriver specification yet ({{bug(1662468)}}).</li>
+ <li>We fixed a bug in <code>WebDriver:Back</code> and <code>WebDriver:Forward</code> that caused Marionette to hang when the navigation was triggered from within an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> that gets removed ({{bug(1672758)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 

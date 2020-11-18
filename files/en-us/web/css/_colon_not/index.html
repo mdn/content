@@ -47,14 +47,20 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Basic_set_of_not_examples">Basic set of :not() examples</h3>
+
+<h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;p&gt;I am a paragraph.&lt;/p&gt;
 &lt;p class="fancy"&gt;I am so very fancy!&lt;/p&gt;
 &lt;div&gt;I am NOT a paragraph.&lt;/div&gt;
+&lt;h2&gt;
+  &lt;span class="foo"&gt;foo inside h2&lt;/span&gt;
+  &lt;span class="bar"&gt;bar inside h2&lt;/span&gt;
+&lt;/h2&gt;
 </pre>
 
-<h3 id="CSS">CSS</h3>
+<h4 id="CSS">CSS</h4>
 
 <pre class="brush: css notranslate">.fancy {
   text-shadow: 2px 2px 3px gold;
@@ -75,15 +81,22 @@ body :not(div):not(span) {
   font-weight: bold;
 }
 
-/* Elements that are not `.crazy` or `.fancy` */
+/* Elements that are not `.highlight` or `.fancy` */
 /* Note that this syntax is not well supported yet. */
-body :not(.crazy, .fancy) {
-  font-family: sans-serif;
-}</pre>
+body :not(.highlight, .fancy) {
+  text-decoration: overline;
+}
 
-<h3 id="Result">Result</h3>
+/* Elements but not a span with a class of foo inside an h2. */
+/* Complex selectors such as an element with a class are not well supported yet. */
+h2 :not(span.foo) {
+  color: red;
+}
+</pre>
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+<h4 id="Result">Result</h4>
+
+<p>{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -19,8 +19,8 @@ tags:
 <p>For a positioned box (that is, one with any <code>position</code> other than <code>static</code>), the <code>z-index</code> property specifies:</p>
 
 <ol>
-	<li>The stack level of the box in the current <a href="/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">stacking context</a>.</li>
-	<li>Whether the box establishes a local stacking context.</li>
+ <li>The stack level of the box in the current <a href="/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">stacking context</a>.</li>
+ <li>Whether the box establishes a local stacking context.</li>
 </ol>
 
 <h2 id="Syntax">Syntax</h2>
@@ -45,10 +45,10 @@ z-index: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
-	<dt><a id="auto" name="auto"><code>auto</code></a></dt>
-	<dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box.</dd>
-	<dt><a id="&lt;integer>" name="&lt;integer>"><code>&lt;integer&gt;</code></a></dt>
-	<dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is <code>0</code>. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
+ <dt><a id="auto" name="auto"><code>auto</code></a></dt>
+ <dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box.</dd>
+ <dt><a id="&lt;integer>" name="&lt;integer>"><code>&lt;integer&gt;</code></a></dt>
+ <dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is <code>0</code>. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -65,15 +65,20 @@ z-index: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="dashed-box"&gt;Dashed box
-  &lt;span class="gold-box"&gt;Gold box&lt;/span&gt;
-  &lt;span class="green-box"&gt;Green box&lt;/span&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+  &lt;div class="dashed-box"&gt;Dashed box&lt;/div&gt;
+  &lt;div class="gold-box"&gt;Gold box&lt;/div&gt;
+  &lt;div class="green-box"&gt;Green box&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight:[3,11,19] notranslate">.dashed-box {
+<pre class="brush: css; notranslate">.wrapper {
+  position: relative;
+}
+
+.dashed-box {
   position: relative;
   z-index: 1;
   border: dashed;
@@ -108,20 +113,20 @@ z-index: unset;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS2.1', 'visuren.html#z-index', 'z-index')}}</td>
-			<td>{{Spec2('CSS2.1')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'visuren.html#z-index', 'z-index')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -133,6 +138,6 @@ z-index: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>CSS {{Cssxref("position")}} property</li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Understanding CSS z-indexes</a></li>
+ <li>CSS {{Cssxref("position")}} property</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Understanding CSS z-indexes</a></li>
 </ul>
