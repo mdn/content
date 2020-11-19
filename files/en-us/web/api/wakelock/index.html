@@ -17,8 +17,8 @@ tags:
 <h2 id="Methods">Methods</h2>
 
 <dl>
-	<dt><code>{{domxref("WakeLock.request", "request")}}</code></dt>
-	<dd>Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.</dd>
+ <dt><code>{{domxref("WakeLock.request", "request")}}</code></dt>
+ <dd>Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -28,7 +28,7 @@ tags:
 <pre class="brush: js notranslate">try {
   const wakeLock = await navigator.wakeLock.request('screen');
 } catch (err) {
-  // the wake lock request fails - usually system related, such low as battery
+  // the wake lock request fails - usually system related, such being low on battery
   console.log(`${err.name}, ${err.message}`);
 }
 </pre>
@@ -36,18 +36,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Screen Wake Lock','#the-wakelock-interface','WakeLock')}}</td>
-			<td>{{Spec2('Screen Wake Lock')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Screen Wake Lock','#the-wakelock-interface','WakeLock')}}</td>
+   <td>{{Spec2('Screen Wake Lock')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -24,28 +24,28 @@ tags:
 </div>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
-   <td>A {{domxref("DOMString")}} representing the value of the checkbox.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{event("change")}} and {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td><code>checked</code></td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>{{anch("checked")}}</code>, <code>{{anch("indeterminate")}}</code> and <code>{{anch("value")}}</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<td><strong>{{anch("Value")}}</strong></td>
+			<td>A {{domxref("DOMString")}} representing the value of the checkbox.</td>
+		</tr>
+		<tr>
+			<td><strong>Events</strong></td>
+			<td>{{event("change")}} and {{event("input")}}</td>
+		</tr>
+		<tr>
+			<td><strong>Supported common attributes</strong></td>
+			<td><code>checked</code></td>
+		</tr>
+		<tr>
+			<td><strong>IDL attributes</strong></td>
+			<td><code>{{anch("checked")}}</code>, <code>{{anch("indeterminate")}}</code> and <code>{{anch("value")}}</code></td>
+		</tr>
+		<tr>
+			<td><strong>Methods</strong></td>
+			<td>{{domxref("HTMLInputElement.select", "select()")}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Value">Value</h2>
@@ -77,26 +77,26 @@ tags:
 <p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "<code>checkbox</code>" inputs support the following attributes:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("checked")}}</code></td>
-   <td>Boolean; if present, the checkbox is toggled on by default</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("indeterminate")}}</code></td>
-   <td>A Boolean which, if present, indicates that the value of the checkbox is indeterminate rather than <code>true</code> or <code>false</code></td>
-  </tr>
-  <tr>
-   <td><code>{{anch("value")}}</code></td>
-   <td>The string to use as the value of the checkbox when submitting the form, if the checkbox is currently toggled on</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Attribute</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>{{anch("checked")}}</code></td>
+			<td>Boolean; if present, the checkbox is toggled on by default</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("indeterminate")}}</code></td>
+			<td>A Boolean which, if present, indicates that the value of the checkbox is indeterminate rather than <code>true</code> or <code>false</code></td>
+		</tr>
+		<tr>
+			<td><code>{{anch("value")}}</code></td>
+			<td>The string to use as the value of the checkbox when submitting the form, if the checkbox is currently toggled on</td>
+		</tr>
+	</tbody>
 </table>
 
 <h3 id="htmlattrdefchecked">{{htmlattrdef("checked")}}</h3>
@@ -114,6 +114,10 @@ tags:
 <p>If the <code>indeterminate</code> attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither <code>true</code> nor <code>false</code>, but is instead <strong>indeterminate</strong>, meaning that it's state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.</p>
 
 <p>Essentially, then, the <code>indeterminate</code> attribute adds a third possible state to the checkbox: "I don't know." In this state, the browser may draw the checkbox in grey or with a different mark inside the checkbox. For instance, browsers on macOS may draw the checkbox with a hyphen "-" inside to indicate an unexpected state.</p>
+
+<div class="note">
+<p><strong>Note:</strong> No browser currently supports <code>indeterminate</code> as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.</p>
+</div>
 
 <h3 id="htmlattrdefvalue">{{htmlattrdef("value")}}</h3>
 
@@ -182,9 +186,9 @@ tags:
 <p>This can be seen in the below example (thanks to <a href="https://css-tricks.com/indeterminate-checkboxes/">CSS Tricks</a> for the inspiration). In this example we keep track of the ingredients we are collecting for a recipe. When you check or uncheck an ingredient's checkbox, a JavaScript function checks the total number of checked ingredients:</p>
 
 <ul>
- <li>If none are checked, the recipe name's checkbox is set to unchecked.</li>
- <li>If one or two are checked, the recipe name's checkbox is set to <code>indeterminate</code>.</li>
- <li>If all three are checked, the recipe name's checkbox is set to <code>checked</code>.</li>
+	<li>If none are checked, the recipe name's checkbox is set to unchecked.</li>
+	<li>If one or two are checked, the recipe name's checkbox is set to <code>indeterminate</code>.</li>
+	<li>If all three are checked, the recipe name's checkbox is set to <code>checked</code>.</li>
 </ul>
 
 <p>So in this case the <code>indeterminate</code> state is used to state that collecting the ingredients has started, but the recipe is not yet complete.</p>
@@ -317,25 +321,25 @@ otherCheckbox.addEventListener('change', () =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
+			<td>{{Spec2('HTML WHATWG')}}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>{{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
+			<td>{{Spec2('HTML5 W3C')}}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -347,7 +351,7 @@ otherCheckbox.addEventListener('change', () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li>The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+	<li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
+	<li>The {{cssxref(":checked")}} and {{cssxref(":indeterminate")}} CSS selectors let you style checkboxes based on their current state</li>
+	<li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
 </ul>
