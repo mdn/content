@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.230":
-  version "0.1.230"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.230.tgz#6107f48dea91e5672ed1354930d777e2f26dad30"
-  integrity sha512-sYQKhAk2bY5nZ6K8ruZLds4wXAHiPZTaa7W15ajo0pelyisKWV5h4xb9JjpUZT1xSmFQ48InP+I7EsBUXyqHCw==
+"@mdn/yari@0.1.234":
+  version "0.1.234"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.234.tgz#55611db5c3fc14b007ffa47d237ff17c4c7bfad2"
+  integrity sha512-KiZ3NPI5VOgKjMlxHyysWn1LPmvdonSGCpyiyObYmWjXfHgGUpFSA0r8iO686SI07Hs8nXMAkSD0tl7Z9zAM5A==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.6"
@@ -82,7 +82,7 @@
     send "0.17.1"
     sockette "^2.0.6"
     source-map-support "0.5.19"
-    swr "0.3.8"
+    swr "0.3.9"
     tempy "1.0.0"
     use-debounce "^5.1.0"
     webpack-cli "4.2.0"
@@ -4030,10 +4030,10 @@ svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swr@0.3.8:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.8.tgz#b3c3c7fa278913d22dbe1f3f28c07df9da9be944"
-  integrity sha512-EHRlaqoBtHsB2wOB+dQJ74DrZvaRGu4BaIQrhkD+/rj8/UGo2iQXN+rCcYnV7/VAreBJBmm9+lDkwZmUqWEkKA==
+swr@0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.9.tgz#a179a795244c7b68684af6a632f1ad579e6a69e0"
+  integrity sha512-lyN4SjBzpoW4+v3ebT7JUtpzf9XyzrFwXIFv+E8ZblvMa5enSNaUBs4EPkL8gGA/GDMLngEmB53o5LaNboAPfg==
   dependencies:
     dequal "2.0.2"
 
