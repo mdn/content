@@ -81,13 +81,13 @@ body :not(div):not(span) {
   font-weight: bold;
 }
 
-/* Elements that are not `.highlight` or `.fancy` */
+/* Elements that are not &lt;div&gt;s or `.fancy` */
 /* Note that this syntax is not well supported yet. */
-body :not(.highlight, .fancy) {
-  text-decoration: overline;
+body :not(div, .fancy) {
+  text-decoration: overline underline;
 }
 
-/* Elements but not a span with a class of foo inside an h2. */
+/* Elements inside an &lt;h2&gt; that aren't a &lt;span&gt; with a class of foo. */
 /* Complex selectors such as an element with a class are not well supported yet. */
 h2 :not(span.foo) {
   color: red;

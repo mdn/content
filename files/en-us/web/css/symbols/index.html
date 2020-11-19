@@ -19,11 +19,11 @@ tags:
 <p><code>&lt;symbols-type&gt;</code> can be one of the following:</p>
 
 <ul>
- <li><code>cyclic</code>: The system cycles through the given values in the order of their definition, and returns to the start when it reaches the end.</li>
- <li><code>numeric</code>: The system interprets the given values as the successive units of a place-value numbering system.</li>
- <li><code>alphabetic</code>: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without <code>0</code>.</li>
- <li><code>symbolic</code>: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).</li>
- <li><code>fixed</code>: The system cycles through the given values once, then falls back to Arabic numerals.</li>
+	<li><code>cyclic</code>: The system cycles through the given values in the order of their definition, and returns to the start when it reaches the end.</li>
+	<li><code>numeric</code>: The system interprets the given values as the successive units of a place-value numbering system.</li>
+	<li><code>alphabetic</code>: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without <code>0</code>.</li>
+	<li><code>symbolic</code>: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).</li>
+	<li><code>fixed</code>: The system cycles through the given values once, then falls back to Arabic numerals.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -53,25 +53,31 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#symbols-function', 'symbols()')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Initial defintion.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Counter Styles', '#symbols-function', 'symbols()')}}</td>
+			<td>{{Spec2('CSS3 Counter Styles')}}</td>
+			<td>Initial defintion.</td>
+		</tr>
+	</tbody>
 </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.properties.list-style-type.symbols")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.</li>
+	<li>{{cssxref("@counter-style")}}</li>
+	<li>{{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.</li>
 </ul>

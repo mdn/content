@@ -18,7 +18,7 @@ tags:
 <p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should first broach the subject in the <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum.</a></p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: If you want to search for places where a given class is being used on MDN, you can do so using a URL of the form <code>https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code>. For example, to find pages that use our card grid layout, try the URL <a href="https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=card-grid">https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=card-grid</a>.</p>
+<p><strong>Note</strong>: If you want to search for places where a given class is being used on MDN, you can do so using a URL of the form <code>https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code>. For example, to find pages that use our button class, try the URL <a href="https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button">https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button</a>.</p>
 </div>
 
 <div class="blockIndicator warning">
@@ -206,33 +206,6 @@ function works(){
 </pre>
 </details>
 
-<h3 id=".card-grid"><code style="white-space: nowrap;">.card-grid</code></h3>
-
-<p>Allows you to place a number of cards next to each other to call out specific contents or map out a multi-step call to action. The cards are spaced evenly in the available horizontal space; about 2–3 works best.</p>
-
-<ul class="card-grid">
- <li><span>CSS Reference</span>
-
-  <p>An <a href="/en-US/docs/Web/CSS/Reference" title="en-US/docs/CSS/CSS_Reference">exhaustive reference</a> for <u>seasoned Web developers</u> describing every property and concept of CSS.</p>
- </li>
- <li><span>CSS Tutorial</span>
-  <p>A <a href="/en-US/docs/CSS/Getting_Started" title="en-US/docs/CSS/Getting_Started">step-by-step introduction</a> to help <u>complete beginners</u> get started. It presents all the needed fundamentals.</p>
- </li>
- <li><span>CSS3 Demos</span>
-  <p>A <a href="/en-US/demos/tag/tech:css3" title="https://developer.mozilla.org/en-US/demos/tag/tech:css3">collection of demos</a> showing the <u>latest CSS technologies</u> in action: a boost for the creativity.</p>
- </li>
-</ul>
-
-<details>
-<h4 id="Example_syntax_6">Example syntax</h4>
-
-<pre class="brush: html; notranslate">&lt;ul class="card-grid"&gt;
-  &lt;li&gt;My card content&lt;/li&gt;
-  &lt;li&gt;My second card content&lt;/li&gt;
-  &lt;li&gt;My third card content&lt;/li&gt;
-&lt;/ul&gt;</pre>
-</details>
-
 <h3 id=".column-container"><code style="white-space: nowrap;">.column-container</code></h3>
 
 <p>Denotes a container for specific-width columns. Usually used in conjunction with other classes, as seen below.</p>
@@ -252,7 +225,7 @@ function works(){
 </div>
 
 <details>
-<h4 id="Example_syntax_7">Example syntax</h4>
+<h4 id="Example_syntax_6">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="column-container"&gt;
   &lt;div class="column-4"&gt;
@@ -292,7 +265,7 @@ function works(){
 </div>
 
 <details>
-<h4 id="Example_syntax_8">Example syntax</h4>
+<h4 id="Example_syntax_7">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="column-container"&gt;
   &lt;div class="column-1" style="background-color: yellow;"&gt;1/12&lt;/div&gt;
@@ -349,7 +322,7 @@ function works(){
  <li><code style="white-space: nowrap;">.column-half</code> — equivalent to <code style="white-space: nowrap;">.column-6</code></li>
 </ul>
 
-<h4 id="Example_syntax_9">Example syntax</h4>
+<h4 id="Example_syntax_8">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="column-container"&gt;
   &lt;div class="column-half" style="background-color: yellow;"&gt;Half&lt;/div&gt;
@@ -375,7 +348,7 @@ function works(){
 <p>Can be wrapped around a block of content to hide that content and instead display a "▶︎ Details" link that can be clicked to expand/collapse the content contained within. You can see it used throughout this article.</p>
 
 <details open>
-<h4 id="Example_syntax_10">Example syntax</h4>
+<h4 id="Example_syntax_9">Example syntax</h4>
 
 <p>This is an example syntax section for {{HTMLElement("details")}} that was hidden with {{HTMLElement("details")}}. Ooooooh, how meta.</p>
 
@@ -403,7 +376,7 @@ function works(){
 <details>
 <p><strong>You should always use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
 
-<h4 id="Example_syntax_11">Example syntax</h4>
+<h4 id="Example_syntax_10">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
 
@@ -436,7 +409,7 @@ function works(){
 </div>
 
 <details>
-<h4 id="Example_syntax_12">Example syntax</h4>
+<h4 id="Example_syntax_11">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="moreinfo"&gt;
   &lt;!-- content goes here --&gt;
@@ -456,7 +429,7 @@ function works(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11677/Screen%20Shot%202015-10-05%20at%2006.56.01.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<h4 id="Example_syntax_13">Example syntax</h4>
+<h4 id="Example_syntax_12">Example syntax</h4>
 
 <pre class="brush: html; notranslate">&lt;div class="blockIndicator note" role="complementary"&gt;
   &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
@@ -506,7 +479,7 @@ function works(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11863/article-summary-menu-option.png" style="display: block; height: 238px; margin: 0px auto; width: 254px;"></p>
 
-<h4 id="Example_syntax_14">Example syntax</h4>
+<h4 id="Example_syntax_13">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;p class="summary"&gt;This is the start of this article. Below we will talk about puppies, giraffes, and dugongs.&lt;/p&gt;</pre>
 </details>
@@ -522,7 +495,7 @@ function works(){
 </div>
 
 <details>
-<h4 id="Example_syntax_15">Example syntax</h4>
+<h4 id="Example_syntax_14">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="topicpage-table"&gt;
   &lt;div class="section"&gt;Column 1&lt;/div&gt;
@@ -549,7 +522,7 @@ function works(){
 <p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
 </div>
 
-<h4 id="Example_syntax_16">Example syntax</h4>
+<h4 id="Example_syntax_15">Example syntax</h4>
 
 <pre class="notranslate">&lt;div class="threecolumns"&gt;
   &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
@@ -577,7 +550,7 @@ function works(){
 <p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
 </div>
 
-<h4 id="Example_syntax_17">Example syntax</h4>
+<h4 id="Example_syntax_16">Example syntax</h4>
 
 <pre class="notranslate">&lt;div class="twocolumns"&gt;
   &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
@@ -599,7 +572,7 @@ function works(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
 
-<h4 id="Example_syntax_18">Example syntax</h4>
+<h4 id="Example_syntax_17">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;div class="blockIndicator warning"&gt;
   &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
@@ -697,7 +670,7 @@ function works(){
  <li>You can force a table to span the full width of the content area (or other immediate containing box, if it is not the content area) by adding the <code>.fullwidth</code> class to the {{HTMLElement("table")}} element.</li>
 </ul>
 
-<h4 id="Example_syntax_19">Example syntax</h4>
+<h4 id="Example_syntax_18">Example syntax</h4>
 
 <pre class="brush: html notranslate">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
  &lt;caption&gt;Favorite teas, December 2015&lt;/caption&gt;

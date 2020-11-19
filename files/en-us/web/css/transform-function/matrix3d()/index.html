@@ -21,30 +21,30 @@ tags:
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var></dt>
- <dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
- <dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
- <dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
+	<dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var></dt>
+	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
+	<dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
+	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for <var>a4</var>, <var>b4</var> and <var>c4</var>.</div>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
-   <td colspan="1" rowspan="2">A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not linear transformations.</td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+			<th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+			<th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+			<th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
+			<td colspan="1" rowspan="2">A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not linear transformations.</td>
+			<td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
@@ -210,30 +210,32 @@ body {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}}</td>
+			<td>{{Spec2("CSS Transforms 2")}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>Please see the <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> data type for compatibility info.</p>
+
+
+<p>{{Compat("css.types.transform-function")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
+	<li>{{cssxref("transform")}}</li>
+	<li>{{cssxref("&lt;transform-function&gt;")}}</li>
+	<li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
 </ul>
