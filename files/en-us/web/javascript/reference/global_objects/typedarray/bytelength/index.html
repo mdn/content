@@ -14,7 +14,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
@@ -22,9 +22,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_the_byteLength_property">Using the <code>byteLength</code> property</h3>
+<h3 id="Using_the_byteLength_property">Using the byteLength property</h3>
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteLength; // 8 (matches the byteLength of the buffer)
@@ -39,10 +39,12 @@ uint8.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}</td>
   </tr>

@@ -24,7 +24,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><code><var>functionRef</var></code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole argument. Within the function, {{jsxref("Operators/this", "this")}} will be the element upon which the event was triggered.</p>
+<p><code><var>functionRef</var></code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object that <code>onclick</code> was bound too (which will also match <code>event.currentTarget</code>)</p>
 
 <p>Only one <code>onclick</code> handler can be assigned to an object at a time. You may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since it's more flexible.</p>
 
