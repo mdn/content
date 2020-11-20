@@ -19,7 +19,7 @@ tags:
  <dt>File size</dt>
  <dd>Whether SVG or a raster format will produce a smaller file for a given image depends very much on the image. For example, consider an image of a path with a gradient fill. The size of an SVG of this image will be the same regardless of the dimensions of the image. On the other hand the size of a raster file of the same image will likely vary tremendously depending on the dimensions of the image since the larger the dimensions the more pixel data the file needs to store. At very small dimensions (the extreme case being 1px x 1px) the raster file will likely be much smaller than the SVG file since it only needs to store one pixel of data. At large dimensions the raster file may be much larger than the SVG file.</dd>
  <dt>Scalability, with caveats</dt>
- <dd>One of the primary advantages of SVG is that as it is scaled it does not pixelate. However, this is not to say that it always does away with the need to have a collection of raster images for display at different scales. This can be particularly true for icons. While SVG may scale well enough for flat-ish icons without a lot of detail, for icons that try to pack in a lot of detail graphic artists generally <a href="http://www.pushing-pixels.org/2011/11/04/about-those-vector-icons.html" title="About those vector icons">want to be able to pixel tweak</a>.</dd>
+ <dd>One of the primary advantages of SVG is that as it is scaled it does not pixelate. However, this is not to say that it always does away with the need to have a collection of raster images for display at different scales. This can be particularly true for icons. While SVG may scale well enough for flat-ish icons without a lot of detail, for icons that try to pack in a lot of detail graphic artists generally <a href="https://www.pushing-pixels.org/2011/11/04/about-those-vector-icons.html" title="About those vector icons">want to be able to pixel tweak</a>.</dd>
  <dt>Performance</dt>
  <dd>While SVG provides a lot of flexibility in terms of scaling, themability, etc. this flexibility depends on doing computations for SVG images at the time they're displayed, rather than at the time the author creates them. Consider an image that involves some complex gradients and filters. If saved as a raster image then the work to rasterize the gradients and filters takes place on the authors computer before the result is stored in the raster file. This work doesn't need to be redone when the image is displayed on someone else's computer. On the other hand, if the image is saved as an SVG image then all this work needs to be done each time the SVG is displayed on someone else's computer. This isn't to say that SVG images are always slower than raster equivalents. In fact it can be faster to send vector information from an SVG to a user's GPU than it is to extract raster data from an equivalent raster image. And even when an SVG image is slower than a raster equivalent, the difference is usually not noticable. However, just don't fall into the trap of thinking that SVGs are faster than eqivalent raster images, or vice versa. Once again, "it depends".</dd>
 </dl>
@@ -53,19 +53,19 @@ tags:
 
 <p>This path:<span class="author-g-g4g23bmoaru8by8u"> </span></p>
 
-<pre><span class="author-g-g4g23bmoaru8by8u">&lt;path d=" M5,5    L1,1z "&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-g4g23bmoaru8by8u">&lt;path d=" M5,5    L1,1z "&gt;</span></pre>
 
 <p><span class="author-g-g4g23bmoaru8by8u">can be cut down to this:</span></p>
 
-<pre><span class="author-g-g4g23bmoaru8by8u">&lt;path d="M5,5 L1,1z"&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-g4g23bmoaru8by8u">&lt;path d="M5,5 L1,1z"&gt;</span></pre>
 
 <p>Similarly, this polygon:</p>
 
-<pre><span class="author-g-g4g23bmoaru8by8u">&lt;polygon points="  0,0   4,4  4,0  "/&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-g4g23bmoaru8by8u">&lt;polygon points="  0,0   4,4  4,0  "/&gt;</span></pre>
 
 <p><span class="author-g-g4g23bmoaru8by8u">can be cut down to this:</span></p>
 
-<pre><span class="author-g-g4g23bmoaru8by8u">&lt;polygon points="0,0 4,4 4,0"/&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-g4g23bmoaru8by8u">&lt;polygon points="0,0 4,4 4,0"/&gt;</span></pre>
 
 <h4 id="Line_breaks">Line breaks</h4>
 
@@ -189,11 +189,11 @@ tags:
 
 <p>Some editors use <code>&lt;g&gt;</code> tags to do nested transforms, which is usually not needed. You can avoid this by doing basic algebra, for example:</p>
 
-<pre><span class="author-g-1scq3ywqbljc5puc">&lt;g transform="translate(-62, -310)"&gt;&lt;shape transform="translate(60, 308)"/&gt;&lt;/g&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-1scq3ywqbljc5puc">&lt;g transform="translate(-62, -310)"&gt;&lt;shape transform="translate(60, 308)"/&gt;&lt;/g&gt;</span></pre>
 
 <p><span class="author-g-1scq3ywqbljc5puc">can be cut down to:</span></p>
 
-<pre><span class="author-g-1scq3ywqbljc5puc">&lt;shape transform="translate(-2,-2)"/&gt;</span></pre>
+<pre class="notranslate"><span class="author-g-1scq3ywqbljc5puc">&lt;shape transform="translate(-2,-2)"/&gt;</span></pre>
 
 <p><span class="author-g-1scq3ywqbljc5puc">because: -62+60 = -310+308 = -2</span></p>
 

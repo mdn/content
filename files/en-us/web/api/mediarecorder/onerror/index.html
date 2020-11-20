@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
+<pre class="syntaxbox notranslate"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -32,6 +32,8 @@ tags:
  <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device.  This also happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the source stream.</dd>
  <dt><code>NotSupportedError</code></dt>
  <dd>An attempt was made to instantiate a <code>MediaRecorder</code> using a MIME type that isn't supported on the user's device; one or more of the requested container, codecs, or profiles as well as other information may be invalid.</dd>
+ <dt><code>InvalidModificationError</code></dt>
+ <dd>The number of tracks on the stream being recorded has changed. You can't add or remove tracks while recording media.</dd>
  <dt><code>UnknownError</code></dt>
  <dd>An non-security related error occurred that cannot otherwise be categorized. Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state", "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is sent to the <code>MediaRecorder</code> with the remaining received data, and finally a {{event("stop")}} event is sent.</dd>
 </dl>
@@ -43,7 +45,7 @@ tags:
 <p>This example creates a new {{domxref("MediaRecorder")}} instance and starts recording using the {{Glossary("user agent", "user agent's")}} default media format. It returns either the <code>MediaRecorder</code> or the name of the error that occurred if any exceptions are thrown during the setup process.</p>
 
 <div class="codecopy codecopy-lg">
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">let</span> recorder <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span>
   <span class="keyword token">let</span> bufferList <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
 

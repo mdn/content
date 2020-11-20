@@ -181,6 +181,8 @@ let [hour, minute, second] = new Date().toLocaleTimeString("en-US").split(/:| /)
 
 <h3 id="Two_digit_years_map_to_1900_–_1999">Two digit years map to 1900 – 1999</h3>
 
+<p>Values from <code>0</code> to <code>99</code> map to the years <code>1900</code> to <code>1999</code>. All other values are the actual year .</p>
+
 <p>In order to create and get dates between the years <code>0</code> and <code>99</code> the {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}} methods should be used.</p>
 
 <pre class="brush: js notranslate">let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)

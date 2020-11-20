@@ -380,6 +380,12 @@ let randomizerMixin = Base =&gt; class extends Base {
 <pre class="brush: js notranslate">class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
+<h2 id="Re-running_a_class_definition">Re-running a class definition</h2>
+
+<p>A class can't be redefined. Attempting to do so produces a <code>SyntaxError</code>.</p>
+
+<p>If you're experimenting with code in a web browser, such as the Firefox Web Console (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>) and you 'Run' a definition of a class with the same name twice, you'll get a <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -398,12 +404,6 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 
 <p>{{Compat("javascript.classes")}}</p>
-
-<h2 id="Re-running_a_class_definition">Re-running a class definition</h2>
-
-<p>A class can't be redefined. Attempting to do so produces a <code>SyntaxError</code>.</p>
-
-<p>If you're experimenting with code in a web browser, such as the Firefox Web Console (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>) and you 'Run' a definition of a class with the same name twice, you'll get a <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
 
 <h2 id="See_also">See also</h2>
 

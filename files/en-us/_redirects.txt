@@ -5934,7 +5934,6 @@
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/HTML_features_for_accessibility
 /en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
-/en-US/docs/Inbox/Request_Methods	/en-US/docs/Web/HTTP/Methods
 /en-US/docs/Inbox/User:maybe	/en-US/docs/User%3Amaybe
 /en-US/docs/Inbox/User:maybe/webidl_mdn	/en-US/docs/User%3Amaybe/webidl_mdn
 /en-US/docs/Inbox/User:maybe/webidl_mdn/Apps_API	/en-US/docs/User%3Amaybe/webidl_mdn/Apps_API
@@ -8533,7 +8532,6 @@
 /en-US/docs/Scripting_plugins	/en-US/docs/Plugins/Guide/Scripting_plugins
 /en-US/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/Sections_and_Outlines_of_an_HTML5_document
 /en-US/docs/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
-/en-US/docs/Security	/en-US/docs/Web/Security
 /en-US/docs/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -8542,6 +8540,7 @@
 /en-US/docs/Security/CSP/Using_CSP_violation_reports	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/CSP/Using_Content_Security_Policy	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/Firefox_Security_For_Beginners	/en-US/docs/Security/Firefox_Security_Basics_For_Developers
+/en-US/docs/Security/Firefox_Security_Guidelines	/en-US/docs/Web/Security/Firefox_Security_Guidelines
 /en-US/docs/Security/HTTP_Strict_Transport_Security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
 /en-US/docs/Security/InsecurePasswords	/en-US/docs/Web/Security/Insecure_passwords
 /en-US/docs/Security/Insecure_passwords	/en-US/docs/Web/Security/Insecure_passwords
@@ -8638,7 +8637,6 @@
 /en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:Basic_Example	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 /en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:Interface_List	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Interface_List
 /en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:Introduction	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-/en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:JavaScript/XSLT_Bindings	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:Resources	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /en-US/docs/The_XSLT/JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
@@ -12804,6 +12802,10 @@
 /en-US/docs/Web/CSS/transform-function/matrix	/en-US/docs/Web/CSS/transform-function/matrix()
 /en-US/docs/Web/CSS/transform-function/matrix3d	/en-US/docs/Web/CSS/transform-function/matrix3d()
 /en-US/docs/Web/CSS/transform-function/perspective	/en-US/docs/Web/CSS/transform-function/perspective()
+/en-US/docs/Web/CSS/transform-function/rotate	/en-US/docs/Web/CSS/transform-function/rotate()
+/en-US/docs/Web/CSS/transform-function/rotate3d	/en-US/docs/Web/CSS/transform-function/rotate3d()
+/en-US/docs/Web/CSS/transform-function/rotateX	/en-US/docs/Web/CSS/transform-function/rotateX()
+/en-US/docs/Web/CSS/transform-function/rotateY	/en-US/docs/Web/CSS/transform-function/rotateY()
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/%40font-face/unicode-range
 /en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url
 /en-US/docs/Web/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
