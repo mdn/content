@@ -44,13 +44,6 @@ jobs:
             node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: DEBUG yarn packages
-        run: |
-          echo "Where all the node_modules at?!"
-          find . -type d -name node_modules
-          echo ""
-          # yarn cache dir
-
       - name: Install all yarn packages
         if: steps.git_diff_content.outputs.diff && steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
