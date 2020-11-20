@@ -99,12 +99,11 @@ jobs:
           export BUILD_OUT_ROOT=/tmp/
 
           export BUILD_NO_PROGRESSBAR=true
-          export BUILD_FILES="${{ env.GIT_DIFF }}"
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          node node_modules/@mdn/yari/build/cli.js
+          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
 
   check_redirects:
     runs-on: ubuntu-latest
