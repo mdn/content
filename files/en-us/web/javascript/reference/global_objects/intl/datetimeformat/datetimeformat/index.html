@@ -138,6 +138,20 @@ tags:
   <dd>The representation of the minute. Possible values are "<code>numeric</code>", "<code>2-digit</code>".</dd>
   <dt><code>second</code></dt>
   <dd>The representation of the second. Possible values are "<code>numeric</code>", "<code>2-digit</code>".</dd>
+  <dt><code>fractionalSecondDigits</code></dt>
+  <dd>
+  <div class="blockIndicator note">
+  <p class="noinclude">Added in Firefox 84, Chrome 84, etc. See compatibility table for more information.</p>
+  </div>
+  The number of digits used to represent fractions of a second. Possible values are:
+
+  <ul>
+   <li><code>0</code> (Fractional part would be dropped.)</li>
+   <li><code>1</code> (Fractional part truncated to nearest digit. For example 736 would be formatted as <code>7</code>.)</li>
+   <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">2</span></font> (Fractional part truncated to nearest 2 digits. For example, 736 would be formatted as <code>73</code>.)</li>
+   <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">3</span></font> (Fractional part truncated to nearest 3 digits. For example, 736 would be formatted as <code>736</code>.)</li>
+  </ul>
+  </dd>
   <dt><code>timeZoneName</code></dt>
   <dd>The representation of the time zone name. Possible values are:
   <ul>

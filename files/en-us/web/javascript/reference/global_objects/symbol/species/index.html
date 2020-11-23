@@ -9,15 +9,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The well-known symbol <code><strong>Symbol.species</strong></code> specifies a function-valued property that the constructor function uses to create derived objects.</p>
+<p>The well-known symbol <code><strong>Symbol.species</strong></code> specifies a function-valued property that the constructor function uses to create derived objects.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-species.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
-<p>The species accessor property allows subclasses to override the default constructor for objects.</p>
+<p>The <code>species</code> accessor property allows subclasses to override the default constructor for objects.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -25,9 +25,9 @@ tags:
 
 <h3 id="Using_species">Using species</h3>
 
-<p>You might want to return {{jsxref("Array")}} objects in your derived array class <code>MyArray</code>. For example, when using methods such as {{jsxref("Array.map", "map()")}} that return the default constructor, you want these methods to return a parent <code>Array</code> object, instead of the <code>MyArray</code> object. The species symbol lets you do this:</p>
+<p>You might want to return {{jsxref("Array")}} objects in your derived array class <code>MyArray</code>. For example, when using methods such as {{jsxref("Array.map", "map()")}} that return the default constructor, you want these methods to return a parent <code>Array</code> object, instead of the <code>MyArray</code> object. The <code>species</code> symbol lets you do this:</p>
 
-<pre class="brush: js">class MyArray extends Array {
+<pre class="brush: js notranslate">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }

@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Symbol.keyFor(sym)</strong></code> method retrieves a shared symbol key from the global symbol registry for the given symbol.</p>
+<p>The <strong><code>Symbol.keyFor(sym)</code></strong> method retrieves a shared symbol key from the global symbol registry for the given symbol.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}</div>
 
@@ -17,12 +17,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>Symbol.keyFor(sym)</var>;</pre>
+<pre class="syntaxbox notranslate">Symbol.keyFor(<var>sym</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>sym</dt>
+ <dt><code><var>sym</var></code></dt>
  <dd>Symbol, required. The symbol to find a key for.</dd>
 </dl>
 
@@ -32,9 +32,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_keyFor">Using keyFor</h3>
+<h3 id="Using_keyFor">Using keyFor()</h3>
 
-<pre class="brush: js">var globalSym = Symbol.for('foo'); // create a new global symbol
+<pre class="brush: js notranslate">var globalSym = Symbol.for('foo'); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -48,10 +48,12 @@ Symbol.keyFor(Symbol.iterator) // undefined
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}}</td>
   </tr>

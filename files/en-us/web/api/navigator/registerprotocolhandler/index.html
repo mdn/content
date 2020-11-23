@@ -12,16 +12,16 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("Navigator")}}</strong> method <code><strong>registerProtocolHandler()</strong></code> lets web sites register their ability to open or handle particular URL schemes (aka protocols).</span></p>
+<p><span class="seoSummary">The <strong>{{domxref("Navigator")}}</strong> method <code><strong>registerProtocolHandler()</strong></code> lets websites register their ability to open or handle particular URL schemes (aka protocols).</span></p>
 
 <p>For example, this API lets webmail sites open <code>mailto:</code> URLs, or <abbr title="Voice over Internet Protocol, also called IP telephony">VoIP</abbr> sites open <code>tel:</code> URLs.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>, <var>title</var>);
+<pre class="syntaxbox notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
 </pre>
 
-<div class="note"><strong>Note:</strong> Recently updated to <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>)</code>, but no browsers currently support this version.</div>
+<div class="note"><strong>Note:</strong> The original implementation required three arguments: <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url, title</var>)</code>, which most browsers still support (see the <a href="#Browser_compatibility">compatibility table below</a>). It is recommended to still set the title, since browsers that support the updated spec will most likely be backwards-compatible and still accept the title (but not use it).</div>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ tags:
  </dd>
  <dt><code><var>title</var></code> {{Obsolete_Inline}}</dt>
  <dd>A human-readable title string for the handler. <strong>This will be displayed to the user</strong>, such as prompting “Allow this site to handle [scheme] links?” or listing registered handlers in the browser’s settings.
- <div class="note"><strong>Note:</strong> The title has been removed from the spec due to spoofing concerns, but all current browsers <strong>still require it</strong>. It is recommended to <strong>always set the title</strong>, since browsers that support the updated spec most likely will be backwards-compatible and still accept the title (but not use it).</div>
+ <div class="note"><strong>Note:</strong> The title has been removed from the spec due to spoofing concerns, but some browsers <strong>still require it</strong> (check the <a href="#Browser_compatibility">compatibility table below</a>). It is recommended to <strong>always set the title</strong>, since browsers that support the updated spec most likely will be backwards-compatible and still accept the title (but not use it).</div>
  </dd>
 </dl>
 
@@ -104,7 +104,7 @@ tags:
 
 <pre class="brush: js notranslate">navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
-                                  "Burger handler");
+                                  "Burger handler"); // last title arg included for compatibility
 </pre>
 
 <p>This creates a handler that lets <code>web+burger:</code> links send the user to your site, inserting the accessed burger URL into the <code>%s</code> placeholder.</p>

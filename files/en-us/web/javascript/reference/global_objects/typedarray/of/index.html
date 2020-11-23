@@ -10,31 +10,34 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong><var>TypedArray</var>.of()</strong></code> method creates a new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> from a variable number of arguments. This method is nearly the same as {{jsxref("Array.of()")}}.</p>
-
+<p>The <strong><code><var>TypedArray</var>.of()</code></strong> method creates a new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> from a variable number of arguments. This method is nearly the same as {{jsxref("Array.of()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-of.html","shorter")}}</div>
 
-
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><var>TypedArray</var>.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])
-</code>
-where <var>TypedArray</var> is one of:
+<pre class="syntaxbox notranslate"><var>TypedArray</var>.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])
+</pre>
 
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-Float32Array
-Float64Array
-BigInt64Array
-BigUint64Array</pre>
+<p>Where <code><var>TypedArray</var></code> is one of:</p>
+
+<div class="threecolumns">
+<ul>
+ <li>{{jsxref("Int8Array")}}</li>
+ <li>{{jsxref("Uint8Array")}}</li>
+ <li>{{jsxref("Uint8ClampedArray")}}</li>
+ <li>{{jsxref("Int16Array")}}</li>
+ <li>{{jsxref("Uint16Array")}}</li>
+ <li>{{jsxref("Int32Array")}}</li>
+ <li>{{jsxref("Uint32Array")}}</li>
+ <li>{{jsxref("Float32Array")}}</li>
+ <li>{{jsxref("Float64Array")}}</li>
+ <li>{{jsxref("BigInt64Array")}}</li>
+ <li>{{jsxref("BigUint64Array")}}</li>
+</ul>
+</div>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,13 +55,13 @@ BigUint64Array</pre>
 <p>Some subtle distinctions between {{jsxref("Array.of()")}} and <code><var>TypedArray</var>.of()</code>:</p>
 
 <ul>
- <li>If the <code>this</code> value passed to <code><var>TypedArray</var>.of</code> is not a constructor, <code><var>TypedArray</var>.of</code> will throw a {{jsxref("TypeError")}}, where <code>Array.of</code> defaults to creating a new {{jsxref("Array")}}.</li>
- <li><code><var>TypedArray</var>.of</code> uses <code>[[Put]]</code> where <code>Array.of</code> uses <code>[[DefineProperty]]</code>. Hence, when working with {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.</li>
+ <li>If the <code>this</code> value passed to <code><var>TypedArray</var>.of()</code> is not a constructor, <code><var>TypedArray</var>.of()</code> will throw a {{jsxref("TypeError")}}, where <code>Array.of()</code> defaults to creating a new {{jsxref("Array")}}.</li>
+ <li><code><var>TypedArray</var>.of()</code> uses <code>[[Put]]</code> where <code>Array.of()</code> uses <code>[[DefineProperty]]</code>. Hence, when working with {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_of">Using of</h3>
+<h3 id="Using_of">Using of()</h3>
 
 <pre class="brush: js notranslate">Uint8Array.of(1);            // Uint8Array [ 1 ]
 Int8Array.of('1', '2', '3'); // Int8Array [ 1, 2, 3 ]

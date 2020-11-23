@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>targetElement</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
+<pre class="syntaxbox notranslate"><var>targetElement</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -30,7 +30,7 @@ tags:
 
 <p>This example attempts to switch into full-screen mode from outside a handler for a user-initiated event (such as a {{domxref("Element/click_event", "click")}} or {{domxref("Element/keypress_event", "keypress")}} event). Since full-screen mode changes are only permitted in response to a user input, this causes an error to occur, which triggers the delivery of the {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event to the error handler,</p>
 
-<pre class="brush: js">let elem = document.querySelector("video")}}
+<pre class="brush: js notranslate">let elem = document.querySelector("video")}}
 
 elem.onfullscreenerror = function ( event ) {
   displayWarning("Unable to switch into full-screen mode.");
@@ -52,7 +52,7 @@ elem.requestFullscreen();</pre>
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName("Fullscreen", "#dom-element-onfullscreenerror", "onfullscreenerror")}}</td>
+   <td>{{SpecName("Fullscreen", "#handler-document-onfullscreenerror", "onfullscreenerror")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
    <td>Initial definition.</td>
   </tr>

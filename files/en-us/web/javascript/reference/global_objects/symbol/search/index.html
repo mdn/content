@@ -9,13 +9,13 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Symbol.search</strong></code> well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.</p>
+<p>The <strong><code>Symbol.search</code></strong> well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.</p>
 
 <p>For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-search.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
@@ -23,7 +23,7 @@ tags:
 
 <h3 id="Custom_string_search">Custom string search</h3>
 
-<pre class="brush: js">class caseInsensitiveSearch {
+<pre class="brush: js notranslate">class caseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -38,10 +38,12 @@ console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}}</td>
   </tr>

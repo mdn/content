@@ -36,11 +36,12 @@ tags:
  <dt><code>InvalidModificationError</code></dt>
  <dd>The number of tracks on the stream being recorded has changed. You can't add or remove tracks while recording media.</dd>
  <dt><code>UnknownError</code></dt>
- <dd>An non-security related error occurred that cannot otherwise be categorized. Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state", "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is sent to the <code>MediaRecorder</code> with the remaining received data, and finally a {{event("stop")}} event is sent.</dd>
-
+ <dd>A non-security related error occurred that cannot otherwise be categorized. Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state", "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is sent to the <code>MediaRecorder</code> with the remaining received data, and finally a {{event("stop")}} event is sent.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Basic_error-handling_example">Basic error-handling example</h3>
 
 <p>This function creates and returns a <code>MediaRecorder</code> for a given {{domxref("MediaStream")}}, configured to buffer data into an array and to watch for errors.</p>
 

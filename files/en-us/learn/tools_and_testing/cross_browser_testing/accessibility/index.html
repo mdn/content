@@ -77,7 +77,7 @@ tags:
 
 <p>The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:</p>
 
-<pre class="brush: html example-bad">&lt;font size="7"&gt;My heading&lt;/font&gt;
+<pre class="brush: html example-bad notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 This is the first section of my document.
 &lt;br&gt;&lt;br&gt;
@@ -91,7 +91,7 @@ This is the first subsection of my document. I'd love people to be able to find 
 &lt;br&gt;&lt;br&gt;
 This is the second subsection of my content. I think it is more interesting than the last one.</pre>
 
-<pre class="brush: html example-good">&lt;h1&gt;My heading&lt;/h1&gt;
+<pre class="brush: html example-good notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
 
 &lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
@@ -124,6 +124,10 @@ This is the second subsection of my content. I think it is more interesting than
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
 
+<div class="blockIndicator note">
+<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector#Show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
+</div>
+
 <p>You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).</p>
 
 <p>Note that different browsers may have different keyboard control options available. Most modern browsers follow the tab pattern described above (you can also do Shift + Tab to move backwards through the focusable elements), but some browsers have their own idiosyncracies:</p>
@@ -134,14 +138,14 @@ This is the second subsection of my content. I think it is more interesting than
 </ul>
 
 <div class="warning">
-<p><strong>Important</strong>: You should perform this kind of test on any new page you write — make sure the functionality can be accessed by the keyboard.</p>
+<p><strong>Important</strong>: You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.</p>
 </div>
 
 <p>This example highlights the importance of using the correct semantic element for the correct job. It is possible to style <em>any</em> element to look like a link or button with CSS, and to behave like a link or button with JavaScript, but they won't actually be links or buttons, and you'll lose a lot of the accessibility these elements give you for free. So don't do it if you can avoid it.</p>
 
 <p>Another tip — as shown in our example, you can control how your focusable elements look when focused, using the <a href="/en-US/docs/Web/CSS/:focus">:focus</a> pseudo-class. It is a good idea to double up focus and hover styles, so your users get that visual clue that a control will do something when activated, whether they are using mouse or keyboard:</p>
 
-<pre class="brush: css">a:hover, input:hover, button:hover, select:hover,
+<pre class="brush: css notranslate">a:hover, input:hover, button:hover, select:hover,
 a:focus, input:focus, button:focus, select:focus {
   font-weight: bold;
 }</pre>
@@ -158,7 +162,7 @@ a:focus, input:focus, button:focus, select:focus {
  <li>Create custom controls using <code>&lt;button&gt;</code> elements (which we can tab to by default!) and JavaScript to wire up their functionality. See <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for some good examples of this.</li>
  <li>Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> for some game-related examples that can be adapted for any purpose.</li>
  <li>Use some interesting tactics to fake button behaviour. Take for example our <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code> (see WebAIM's <a href="http://webaim.org/techniques/keyboard/tabindex">tabindex article</a> for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
-  <pre class="brush: js">document.onkeydown = function(e) {
+  <pre class="brush: js notranslate">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
@@ -282,7 +286,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Here's an example:</p>
 
-<pre class="brush: html">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
 
 <p>You can see an example in action at Freedom Scientific's <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) Live Regions</a> example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a> provides another useful example.</p>
 

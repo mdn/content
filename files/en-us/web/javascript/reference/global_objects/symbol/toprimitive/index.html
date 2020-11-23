@@ -9,15 +9,15 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Symbol.toPrimitive</strong></code> is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.</p>
+<p>The <strong><code>Symbol.toPrimitive</code></strong> is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
-<p>With the help of the <strong><code>Symbol.toPrimitive</code></strong> property (used as a function value), an object can be converted to a primitive value. The function is called with a string argument <strong><code>hint</code></strong>, which specifies the preferred type of the result primitive value. The <strong><code>hint</code></strong> argument can be one of <code>"<em>number</em>"</code>, <code>"<em>string</em>"</code>, and <code>"<em>default</em>"</code>.</p>
+<p>With the help of the <code>Symbol.toPrimitive</code> property (used as a function value), an object can be converted to a primitive value. The function is called with a string argument <code><var>hint</var></code>, which specifies the preferred type of the result primitive value. The <code><var>hint</var></code> argument can be one of "<code>number</code>", "<code>string</code>", and "<code>default</code>".</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -25,9 +25,9 @@ tags:
 
 <h3 id="Modifying_primitive_values_converted_from_an_object">Modifying primitive values converted from an object</h3>
 
-<p>Following example describes how <strong><code>Symbol.toPrimitive</code></strong> property can modify the primitive value converted from an object.</p>
+<p>Following example describes how <code>Symbol.toPrimitive</code> property can modify the primitive value converted from an object.</p>
 
-<pre class="brush: js">// An object without Symbol.toPrimitive property.
+<pre class="brush: js notranslate">// An object without Symbol.toPrimitive property.
 var obj1 = {};
 console.log(+obj1);     // NaN
 console.log(`${obj1}`); // "[object Object]"
@@ -53,10 +53,12 @@ console.log(obj2 + ''); // "true"    -- hint is "default"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}}</td>
   </tr>

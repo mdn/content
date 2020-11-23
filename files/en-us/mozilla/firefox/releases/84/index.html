@@ -15,6 +15,10 @@ tags:
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
+<ul>
+ <li>The Firefox <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a> now supports displaying the <a href="/en-US/docs/Tools/Accessibility_inspector##Show_web_page_tabbing_order">keyboard tab order</a> on a web page. This provides a better high level overview of how the page will be navigated using the key than simply tabbing through the links. ({{bug(1654956)}})</li>
+</ul>
+
 <h3 id="HTML">HTML</h3>
 
 <h4 id="Removals">Removals</h4>
@@ -49,13 +53,15 @@ tags:
 
 <ul>
  <li>Firefox now ensures that <code>localhost</code> URLs, such as <em>http://localhost/</em> and <em>http://dev.localhost/</em>, refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a>), and also will not be treated as <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a>. ({{bug(1220810)}}, {{bug(1488740)}})</li>
+ <li>Firefox now <a href="/en-US/docs/Web/Security/Mixed_content#Upgrading_mixed-display_resources">automatically upgrades mixed-display content</a> from HTTP to HTTPs in secure pages. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. There is also a new console warning for indicating successful content upgrades. ({{bug(1633743)}}, {{bug(1435733)}})</li>
 </ul>
-
-<h4 id="sect1"></h4>
 
 <h3 id="APIs">APIs</h3>
 
-<p><em>No changes</em></p>
+<ul>
+ <li>We've added support for the {{domxref('PerformancePaintTiming')}} interface of the Paint Timing API ({{bug(1518999)}})</li>
+ <li>The {{domxref('Navigator.registerProtocolHandler()')}} method now only accepts two parameters: <code>scheme</code> and <code>url</code>. <code>title</code> has been removed ({{bug(1631464)}})</li>
+</ul>
 
 <h4 id="DOM">DOM</h4>
 
