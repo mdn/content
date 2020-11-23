@@ -26,7 +26,6 @@ jobs:
       - uses: technote-space/get-diff-action@v3
         id: git_diff_content
         with:
-          SEPARATOR: ","
           SUFFIX_FILTER: .html
           PREFIX_FILTER: files/
 
