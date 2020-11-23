@@ -47,7 +47,7 @@ tags:
 
 <p>The enabled accessibility panel looks like so:</p>
 
-<p><img alt="Accessibility tab in firefox devtools, turned on, showing two information panels plus a button labelled Turn Off Accessibility Features" src="https://mdn.mozillademos.org/files/17283/Accessibility-Inspector-no-beta.png" style="border: 1px solid black; display: block; height: 444px; margin: 0px auto; width: 1156px;"></p>
+<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="https://mdn.mozillademos.org/files/17437/Accessibility-Inspector-tabbing_order.png" style="height: 427px; width: 1055px;"></p>
 
 <p>On the left-hand side, there is a tree diagram representing all the items in the accessibility tree for the current page. Items with nested children have arrows that can be clicked to reveal the children, so you can move deeper into the hierarchy. Each item has two properties listed:</p>
 
@@ -83,7 +83,7 @@ tags:
 <p>The <em>Accessibility</em> tab is fully keyboard-accessible:</p>
 
 <ul>
- <li>You can tab between the <em>Turn Off Accessibility Features</em> button and left and right panels.</li>
+ <li>You can tab between <em>Check for Issues</em>, <em>Simulate</em>, <em>Show tabbing order, </em>and left and right panels.</li>
  <li>When one of the panels is focused, you can move the focus up and down items using the up and down arrow keys, and use the left and right arrow keys to expand and collapse expandable rows (e.g., different hierarchy levels of the accessibility tree).</li>
 </ul>
 
@@ -91,13 +91,31 @@ tags:
 
 <p>You can print the contents of the accessibility tree to json by right-clicking on an entry in the Accessibility tab and selecting <strong>Print to JSON:</strong></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16423/print_to_json.png" style="border: 1px solid black; display: block; height: 298px; margin: 0px auto; width: 1000px;"></p>
+<p><strong><img alt="Print to JSON right-click menu in left panel" src="https://mdn.mozillademos.org/files/17438/Accessibility-Inspector-print_tree_to_json.png" style="height: 320px; width: 1055px;"></strong></p>
 
 <p>When you do, you will get a new tab with the selected accessibility tree loaded into the JSON viewer:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16424/accessibility_json.png" style="display: block; height: 586px; margin: 0px auto; width: 800px;"></p>
 
 <p>Once opened, you can save or copy the data as necessary. The JSON viewer can also show you the raw JSON data on a separate tab in the viewer.</p>
+
+<h3 id="Show_web_page_tabbing_order">Show web page tabbing order</h3>
+
+<p>People who are unable to navigate a page with the mouse or a trackpad can use the tab key to toggle through selectable items on the page (i.e. buttons, links, form controls). The order that tabs are selected is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page—if the tab order is incorrect, the page may be confusing!</p>
+
+<p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high level overview of how the page will be navigated using the tab key, which may highlight problems more effectively than simply tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
+
+<p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="https://mdn.mozillademos.org/files/17440/Accessibility-Inspector-show_tab_order.png" style="height: 642px; width: 993px;"></p>
+
+<p>All selectable items have a numbered marker and the currently selected item is highlighted in a different colour. In some cases the marker may be hidden by other elements, as is true for items 1 to 3 in the in the page below.<br>
+ <img alt="A page where some of the markers for selection items are hidden" src="https://mdn.mozillademos.org/files/17442/Accessibility-Inspector-hidden_items.png" style="height: 161px; width: 767px;"><br>
+ These become visible in the overlay when the item is the current item.</p>
+
+<p><img alt="Sshows a hidden selection item in the tabbing order overlay when it is selected." src="https://mdn.mozillademos.org/files/17443/Accessibility-Inspector-hidden_item_revealed.png"></p>
+
+<div class="blockIndicator note">
+<p>The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until it is re-launched.</p>
+</div>
 
 <h3 id="Check_for_accessibility_issues">Check for accessibility issues</h3>
 
@@ -111,9 +129,8 @@ tags:
  <li><strong>Text Labels</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">issues with missing text labels</a></li>
 </ul>
 
-<p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.</p>
-
-<p><img alt="Check for issues menu, including &quot;All issues&quot;, &quot;Contrast&quot;, &quot;Keyboard&quot;, and &quot;Text Labels'" src="https://mdn.mozillademos.org/files/17284/Check-for-issues-menu-no-beta.png" style="border: 1px solid black; display: block; height: 235px; margin: 0px auto; width: 494px;"></p>
+<p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.<br>
+ <img alt="Accessibility Inspector - Showing the options when you select the Check for Issues button" src="https://mdn.mozillademos.org/files/17439/Accessibility-Inspector-check_for_issues.png" style="height: 290px; width: 704px;"></p>
 
 <p>The menu items act as toggles. Select the item to view that type of issue; select the item again to clear the display of issues of that type.</p>
 

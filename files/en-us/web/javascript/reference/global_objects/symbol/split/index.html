@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Symbol.split</strong></code> well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.</p>
+<p>The <strong><code>Symbol.split</code></strong> well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.</p>
 
 <p>For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h3 id="Custom_reverse_split">Custom reverse split</h3>
 
-<pre class="brush: js">class ReverseSplit {
+<pre class="brush: js notranslate">class ReverseSplit {
   [Symbol.split](string) {
     const array = string.split(' ');
     return array.reverse();

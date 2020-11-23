@@ -116,24 +116,25 @@ tags:
 
 <h3 id="Creating_A_Detector">Creating A Detector</h3>
 
-<p>This example creates a new barcode detector object, with specified supported formats and tests for browser compatibility.</p>
+<p>This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.</p>
 
-<pre class="brush: js notranslate">// create new detector
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
-
-// check compatibility
-if (barcodeDetector) {
-  console.log('Barcode Detector supported!');
-} else {
+<pre class="brush: js notranslate">// check compatibility
+if (!('BarcodeDetector' in window)) {
   console.log('Barcode Detector is not supported by this browser.');
-}</pre>
+} else {
+  console.log('Barcode Detector supported!');
+
+  // create new detector
+  var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+}
+</pre>
 
 <h3 id="Getting_Supported_Formats">Getting Supported Formats</h3>
 
 <p>The following example calls the <code>getSupportFormat()</code> method and logs the results to the console.</p>
 
 <pre class="brush: js notranslate">// check supported types
-barcodeDetector.getSupportedFormats()
+BarcodeDetector.getSupportedFormats()
   .then(formats =&gt; {
     supportedFormats.forEach(format =&gt; console.log(format));
   });</pre>

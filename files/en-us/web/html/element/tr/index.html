@@ -125,7 +125,7 @@ tags:
 
 <p>There are just four rows (including one header row), each with four columns (including one header column). Not even the table section elements are used; instead, the browser is allowed to determine this automatically. We'll add {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}} in the next example.</p>
 
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Name&lt;/th&gt;
     &lt;th&gt;ID&lt;/th&gt;
@@ -156,7 +156,7 @@ tags:
 
 <p>This simple CSS just adds a solid black border around the table and around each of its cells, including those specified using both {{HTMLElement("th")}} and {{HTMLElement("td")}}. That way, both header and data cells are easily demarcated.</p>
 
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
 }
 
@@ -190,7 +190,7 @@ th, td {
 
 <p>The HTML is similar to the previous example's, except for the addition of the new column in each data row, and the changes to the header. Those changes make the HTML look like this:</p>
 
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
   &lt;tr&gt;
     &lt;th rowspan="2"&gt;Name&lt;/th&gt;
     &lt;th rowspan="2"&gt;ID&lt;/th&gt;
@@ -229,7 +229,7 @@ th, td {
 <p>The CSS is unchanged from before.</p>
 
 <div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
 }
 
@@ -246,7 +246,7 @@ th, td {
 
 <p>The HTML is where the action is here, and the action is pretty simple.</p>
 
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -289,7 +289,7 @@ th, td {
 <p>Once again, we haven't touched the CSS.</p>
 
 <div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
 }
 
@@ -317,7 +317,7 @@ th, td {
 <p>{{EmbedLiveSample("Basic_styling", 500, 200)}}</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -360,7 +360,7 @@ th, td {
 
 <p>This time, the HTML is unchanged, so let's dive right into the CSS.</p>
 
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
 }
@@ -392,7 +392,7 @@ th, td {
 <p>There is no change to the HTML again. See what proper preparation of your HTML can do for you?</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -433,11 +433,11 @@ th, td {
 
 <h4 id="CSS_3">CSS</h4>
 
-<p>The CSS is much more involved this time. it's not complicated, but there's a lot going on. Let's break it down.</p>
+<p>The CSS is much more involved this time. It's not complicated, but there's a lot going on. Let's break it down.</p>
 
 <h5 id="The_table_and_base_styles">The table and base styles</h5>
 
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border-spacing: 0;
@@ -446,7 +446,7 @@ th, td {
 
 <p>Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.</p>
 
-<pre class="brush: css">th, td {
+<pre class="brush: css notranslate">th, td {
   border: 1px solid black;
   padding:4px 6px;
 }
@@ -461,7 +461,7 @@ th {
 
 <p>We're going to look at the top header in two pieces. First, the overall styling of the header:</p>
 
-<pre class="brush: css">thead &gt; tr {
+<pre class="brush: css notranslate">thead &gt; tr {
   background-color: rgb(228, 240, 245);
 }
 
@@ -475,7 +475,7 @@ thead &gt; tr:nth-of-type(2) {
 
 <p>Let's style these two header cells with green and red hues to represent the "good" of a new member and the "bummer" of a canceled membership.</p>
 
-<pre class="brush: css">thead &gt; tr:last-of-type &gt; th:nth-of-type(1) {
+<pre class="brush: css notranslate">thead &gt; tr:last-of-type &gt; th:nth-of-type(1) {
   background-color: rgb(225, 255, 225);
 }
 
@@ -489,7 +489,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>It's common to help improve readability of table data by alternating row colors. Let's add a bit of color to every even row:</p>
 
-<pre class="brush: css">tbody &gt; tr:nth-of-type(even) {
+<pre class="brush: css notranslate">tbody &gt; tr:nth-of-type(even) {
   background-color: rgb(237, 238, 242);
 }</pre>
 
@@ -497,7 +497,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>Since we want the first column to stand out as well, we'll add some custom styling here, too.</p>
 
-<pre class="brush: css">tbody &gt; tr &gt; th:first-of-type {
+<pre class="brush: css notranslate">tbody &gt; tr &gt; th:first-of-type {
   text-align: left;
   background-color: rgb(225, 229, 244);
 }</pre>
@@ -508,7 +508,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>Finally, since it's standard practice to right-justify currency values in tables, let's do that here.</p>
 
-<pre class="brush: css">tbody &gt; tr &gt; td:last-of-type {
+<pre class="brush: css notranslate">tbody &gt; tr &gt; td:last-of-type {
   text-align:right;
 }</pre>
 

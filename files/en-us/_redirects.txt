@@ -482,7 +482,7 @@
 /en-US/docs/CSS/:-moz-read-write	/en-US/docs/Web/CSS/:read-write
 /en-US/docs/CSS/:-moz-submit-invalid	/en-US/docs/Web/CSS/:-moz-submit-invalid
 /en-US/docs/CSS/:-moz-suppressed	/en-US/docs/Web/CSS/:-moz-suppressed
-/en-US/docs/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:-moz-ui-invalid
+/en-US/docs/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
@@ -12562,6 +12562,7 @@
 /en-US/docs/Web/CSS/:-moz-any-link	/en-US/docs/Web/CSS/:any-link
 /en-US/docs/Web/CSS/:-moz-full-screen	/en-US/docs/Web/CSS/:fullscreen
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
+/en-US/docs/Web/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/Web/CSS/:-ms-input-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/Web/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection

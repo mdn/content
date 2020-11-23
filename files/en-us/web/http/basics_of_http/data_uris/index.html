@@ -20,7 +20,7 @@ tags:
 
 <p>Data URLs are composed of four parts: a prefix (<code>data:</code>), a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> indicating the type of data, an optional <code>base64</code> token if non-textual, and the data itself:</p>
 
-<pre class="syntaxbox">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
+<pre class="syntaxbox notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 </pre>
 
 <p>The <code>mediatype</code> is a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
@@ -52,7 +52,7 @@ tags:
 
 <p>Base64 encoding of a file or string on Linux and Mac OS X systems can be achieved using the command-line <code>base64</code> (or, as an alternative, the <code>uuencode</code> utility with <code>-m</code> argument).</p>
 
-<pre class="brush: bash">echo -n hello|base64
+<pre class="brush: bash notranslate">echo -n hello|base64
 # outputs to console: aGVsbG8=
 
 echo -n hello&gt;a.txt
@@ -65,26 +65,28 @@ base64 a.txt&gt;b.txt
 
 <h3 id="Encoding_on_Microsoft_Windows">Encoding on Microsoft Windows</h3>
 
-<p>Encoding on Windows can be done through powershell or some dedicated tool. It can even be done via bash <code>base64</code> utility (see section Encoding on a Unix system) if <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a> is activated.</p>
+<p>On Windows, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0">Convert.ToBase64String</a> from PowerShell can be used to perform the Base64 encoding:</p>
 
-<pre class="syntaxbox">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
+<pre class="syntaxbox notranslate">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
+</pre>
 
-bash -c "echo -n hello`|base64"
+<p>Alternatively, a GNU/Linux shell (such as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>) provides the utility <code>base64</code>:</p>
+
+<pre class="syntaxbox notranslate">bash$ echo -n hello | base64
 # outputs to console: aGVsbG8=
-# the backtick (`) is used to escape the piping (|) character here
 </pre>
 
 <h2 id="Common_problems">Common problems</h2>
 
 <p>This section describes problems that commonly occur when creating and using <code>data</code> URLs.</p>
 
-<pre>data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
+<pre class="notranslate">data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
 
 <p>This represents an HTML resource whose contents are:</p>
 
-<pre>lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
+<pre class="notranslate">lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
 
 <dl>

@@ -1,0 +1,62 @@
+---
+title: ':user-invalid (:-moz-ui-invalid)'
+slug: 'Web/CSS/:user-invalid'
+tags:
+  - CSS
+  - CSS Selectors
+  - 'CSS:Mozilla Extensions'
+  - NeedsExample
+  - NeedsMobileBrowserCompatibility
+  - Non-standard
+  - Pseudo-class
+  - Reference
+  - Selector
+---
+<div>{{CSSRef}}</div>
+
+<p>The <code>:user-invalid</code> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value isn't valid based on their <a href="/en-US/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation">validation constraints</a>, after the user has interacted with it.</p>
+
+<p>The :user-invalid pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, or blank-but {{CSSxRef(":required")}} element between the time the user has attempted to submit the form and before the user has interacted again with the form element. </p>
+
+<p>The pseudo-class behaves in the same way as the non-standard <code>:moz-ui-invalid</code> pseudo-class.</p>
+
+<p>By default, Gecko applies a style that creates a red "glow" (using the {{CSSxRef("box-shadow")}} property) around items, which have the <code>:moz-ui-invalid</code> pseudo-class applied. See the {{CSSxRef(":invalid")}} pseudo-class for an example that shows how to override the default style.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS4 Selectors", "#user-invalid-pseudo", ":user-invalid")}}</td>
+			<td>{{Spec2("CSS4 Selectors")}}</td>
+			<td>Adds :user-invalid</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.selectors.user-invalid")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li>{{CSSxRef(":valid")}}</li>
+	<li>{{CSSxRef(":invalid")}}</li>
+	<li>{{CSSxRef(":required")}}</li>
+	<li>{{CSSxRef(":optional")}}</li>
+	<li>{{CSSxRef(":-moz-ui-valid")}}</li>
+</ul>

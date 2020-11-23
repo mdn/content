@@ -244,7 +244,7 @@ This is the second.
 
 <ol>
  <li>Save it as a <code>.vtt</code> file in a sensible place.</li>
- <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.</li>
+ <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identifying the language they are searching for.</li>
 </ol>
 
 <p>Here's an example:</p>
@@ -252,14 +252,14 @@ This is the second.
 <pre class="brush: html notranslate">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
-    &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es"&gt;
+    &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish"&gt;
 &lt;/video&gt;</pre>
 
 <p>This will result in a video that has subtitles displayed, kind of like this:</p>
 
 <p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>For more details, please read <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
+<p>For more details, including on how to add labels please read <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>

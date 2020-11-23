@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>elemScrollHeight</em> = <em>element</em>.scrollHeight;</pre>
+<pre class="syntaxbox notranslate"><var>elemScrollHeight</var> = <var>element</var>.scrollHeight;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,7 +38,7 @@ tags:
 
 <p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
 </div>
-<strong style="">Left</strong> <strong style="">Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 225px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+<strong>Left</strong> <strong>Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 225px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
 
 <p><img alt="Image:scrollHeight.png" class="internal" src="/@api/deki/files/840/=ScrollHeight.png"></p>
 
@@ -51,7 +51,7 @@ tags:
 <pre class="syntaxbox notranslate">element.scrollHeight - element.scrollTop === element.clientHeight
 </pre>
 
-<p>When the container does not scroll, but has overflowing children, these checks determine if the container can scroll:</p>
+<p>When the container does not scroll, but has overflowing children, these checks determine if the container can scroll:</p>
 
 <pre class="syntaxbox notranslate">window.getComputedStyle(element).overflowY === 'visible'
 window.getComputedStyle(element).overflowY !== 'hidden'
@@ -59,7 +59,7 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 
 <h2 id="scrollHeight_Demo">scrollHeight Demo</h2>
 
-<p>Associated with the <code><a href="/en-US/docs/DOM/element.onscroll">onscroll</a></code> event, this equivalence can be useful to determine whether a user has read a text or not (see also the <code><a href="/en-US/docs/DOM/element.scrollTop">element.scrollTop</a></code> and <code><a href="/en-US/docs/DOM/element.clientHeight">element.clientHeight</a></code> properties). For example:</p>
+<p>Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this equivalence can be useful to determine whether a user has read a text or not (see also the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} properties). For example:</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -142,12 +142,14 @@ onload = function () {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th>Specification</th>
    <th>Status</th>
    <th>Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}}</td>
    <td>{{Spec2("CSSOM View")}}</td>
@@ -162,7 +164,7 @@ onload = function () {
 
 <p>{{Compat("api.Element.scrollHeight")}}</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9</a></li>

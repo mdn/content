@@ -11,13 +11,11 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong><var>TypedArray</var>.from()</strong></code> method creates a new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> from an array-like or iterable object. This method is nearly the same as {{jsxref("Array.from()")}}.</p>
-
+<p>The <strong><code><var>TypedArray</var>.from()</code></strong> method creates a new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array</a> from an array-like or iterable object. This method is nearly the same as {{jsxref("Array.from()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}</div>
 
-
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -80,15 +78,44 @@ tags:
 <p>Some subtle distinctions between {{jsxref("Array.from()")}} and <code><var>TypedArray</var>.from()</code>:</p>
 
 <ul>
- <li>If the <code><var>thisArg</var></code> value passed to <code>TypedArray.from()</code> is not a constructor, <code>TypedArray.from()</code> will throw a {{jsxref("TypeError")}}, where <code>Array.from()</code> defaults to creating a new {{jsxref("Array")}}.</li>
- <li><code>TypedArray.from()</code> uses <code>[[Put]]</code> where <code>Array.from()</code> uses <code>[[DefineProperty]]</code>. Hence, when working with {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.</li>
- <li>When the <code><var>source</var></code> parameter is an iterator, the <code>TypedArray.from()</code> first collects all the values from the iterator, then creates an instance of <code><var>thisArg</var></code> using the count, then sets the values on the instance. <code>Array.from()</code> sets each value as it receives them from the iterator, then sets its <code>length</code> at the end.</li>
- <li>When <code>Array.from()</code> gets an array-like which isn't an iterator, it respects holes. <code>TypedArray.from()</code> will ensure the result is dense.</li>
+ <li>If the <code><var>thisArg</var></code> value passed to <code><var>TypedArray</var>.from()</code> is not a constructor, <code><var>TypedArray</var>.from()</code> will throw a {{jsxref("TypeError")}}, where <code>Array.from()</code> defaults to creating a new {{jsxref("Array")}}.</li>
+ <li><code><var>TypedArray</var>.from()</code> uses <code>[[Put]]</code> where <code>Array.from()</code> uses <code>[[DefineProperty]]</code>. Hence, when working with {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.</li>
+ <li>When the <code><var>source</var></code> parameter is an iterator, the <code><var>TypedArray</var>.from()</code> first collects all the values from the iterator, then creates an instance of <code><var>thisArg</var></code> using the count, then sets the values on the instance. <code>Array.from()</code> sets each value as it receives them from the iterator, then sets its <code>length</code> at the end.</li>
+ <li>When <code>Array.from()</code> gets an array-like which isn't an iterator, it respects holes. <code><var>TypedArray</var>.from()</code> will ensure the result is dense.</li>
 </ul>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="From_an_iterable_object_Set">From an iterable object (Set)</h3>
+
+<pre class="brush: js notranslate">const s = new Set([1, 2, 3]);
+Uint8Array.from(s);
+// Uint8Array [ 1, 2, 3 ]
+</pre>
+
+<h3 id="From_a_string">From a string</h3>
+
+<pre class="notranslate">Int16Array.from('123');
+// Int16Array [ 1, 2, 3 ]
+</pre>
+
+<h3 id="Use_with_arrow_function_and_map">Use with arrow function and map</h3>
+
+<p>Using an arrow function as the map function to manipulate the elements</p>
+
+<pre class="notranslate">Float32Array.from([1, 2, 3], x =&gt; x + x);
+// Float32Array [ 2, 4, 6 ]
+</pre>
+
+<h3 id="Generate_a_sequence_of_numbers">Generate a sequence of numbers</h3>
+
+<pre class="notranslate">Uint8Array.from({length: 5}, (v, k) =&gt; k);
+// Uint8Array [ 0, 1, 2, 3, 4 ]
+</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>You can partially work around this by inserting the following code at the beginning of your scripts, allowing use of much of the functionality of <code>from()</code> in implementations that do not natively support it.</p>
+<p>You can partially work around this by inserting the following code at the beginning of your scripts, allowing use of much of the functionality of <code>from()</code> in implementations that do not natively support it.</p>
 
 <pre class="brush: js notranslate">if (!Int8Array.__proto__.from) {
     (function () {
@@ -129,35 +156,6 @@ tags:
         }
     })();
 }</pre>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="From_an_iterable_object_Set">From an iterable object (Set)</h3>
-
-<pre class="brush: js notranslate">const s = new Set([1, 2, 3]);
-Uint8Array.from(s);
-// Uint8Array [ 1, 2, 3 ]
-</pre>
-
-<h3 id="From_a_string">From a string</h3>
-
-<pre class="notranslate">Int16Array.from('123');
-// Int16Array [ 1, 2, 3 ]
-</pre>
-
-<h3 id="Use_with_arrow_function_and_map">Use with arrow function and map</h3>
-
-<p>Using an arrow function as the map function to manipulate the elements</p>
-
-<pre class="notranslate">Float32Array.from([1, 2, 3], x =&gt; x + x);
-// Float32Array [ 2, 4, 6 ]
-</pre>
-
-<h3 id="Generate_a_sequence_of_numbers">Generate a sequence of numbers</h3>
-
-<pre class="notranslate">Uint8Array.from({length: 5}, (v, k) =&gt; k);
-// Uint8Array [ 0, 1, 2, 3, 4 ]
-</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -36,7 +36,7 @@ document.body.appendChild(script);</pre>
 <p>and</p>
 
 <pre class="brush: js notranslate">var script = document.createElement('script');
-script.innerHTML = "code";
+script.textContent = "code";
 document.body.appendChild(script);</pre>
 
 <p>Both are counted as 'inline' scripts and get compiled and then run immediately.</p>

@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>[@@toPrimitive]()</strong></code> method converts a Symbol object to a primitive value.</p>
+<p>The <strong><code>[@@toPrimitive]()</code></strong> method converts a Symbol object to a primitive value.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Symbol()[Symbol.toPrimitive](<var>hint</var>)
+<pre class="syntaxbox notranslate">Symbol()[Symbol.toPrimitive](<var>hint</var>)
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -31,17 +31,19 @@ tags:
 
 <h3 id="Using_toPrimitive">Using @@toPrimitive</h3>
 
-<pre class="brush: js">const sym = Symbol("example");
+<pre class="brush: js notranslate">const sym = Symbol("example");
 sym === sym[Symbol.toPrimitive](); // true
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.prototype-@@toprimitive', 'Symbol.prototype.@@toPrimitive')}}</td>
   </tr>

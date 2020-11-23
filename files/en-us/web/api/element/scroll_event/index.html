@@ -13,23 +13,21 @@ tags:
 <p>The <strong><code>scroll</code></strong> event fires an element has been scrolled.</p>
 
 <table class="properties">
- <thead>
- </thead>
  <tbody>
   <tr>
-   <th>Bubbles</th>
+   <th scope="row">Bubbles</th>
    <td>No</td>
   </tr>
   <tr>
-   <th>Cancelable</th>
+   <th scope="row">Cancelable</th>
    <td>No</td>
   </tr>
   <tr>
-   <th>Interface</th>
+   <th scope="row">Interface</th>
    <td>{{DOMxRef("Event")}}</td>
   </tr>
   <tr>
-   <th>Event handler property</th>
+   <th scope="row">Event handler property</th>
    <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
   </tr>
  </tbody>
@@ -45,7 +43,7 @@ tags:
 
 <p>Since <code>scroll</code> events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.</p>
 
-<p>Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the<code>scroll</code> event for <code>requestAnimationFrame</code>.</p>
+<p>Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the <code>scroll</code> event for <code>requestAnimationFrame</code>.</p>
 
 <pre class="brush: js notranslate">// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
@@ -70,17 +68,19 @@ window.addEventListener('scroll', function(e) {
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: You can find more examples on the <code><a href="/en-US/docs/Web/API/Document/defaultView/resize_event">resize</a></code> event page.</p>
+<p><strong>Note</strong>: You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
    <td>{{Spec2('CSSOM View')}}</td>
@@ -95,5 +95,5 @@ window.addEventListener('scroll', function(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Document: <code><a href="/en-US/docs/Web/API/Document/scroll_event">scroll</a></code> event</li>
+ <li>Document: {{domxref("Document/scroll_event", "scroll")}} event</li>
 </ul>
