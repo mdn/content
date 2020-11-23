@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.251":
-  version "0.1.251"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.251.tgz#5afe0d8b151b4ef131ec746b3416ee2aa6a7fecf"
-  integrity sha512-QbCTl6twmcOXqcrP5gEMZ4WOQ3z5qmimMhAkSCUUAnDaGDQ9n7OMB2fFPOIuIHazZg8IdCalM2tW0BlAlSW2aQ==
+"@mdn/yari@0.1.255":
+  version "0.1.255"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.255.tgz#2c3058cc63b28673e97be07d459de2a9c6a3be47"
+  integrity sha512-eb3dcA4U611P2plU/P/5Wahpq+whbyz1eTMgNmV/exxqWxrrMVmRJu/txGJYNckvKtaZbZ/wR2u0v3xYiyf/7w==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.7"
