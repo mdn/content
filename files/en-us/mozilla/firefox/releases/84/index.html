@@ -37,7 +37,9 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p><em>No changes</em></p>
+<ul>
+ <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>fractionalSecondDigits</code> — the number of digits use to represent fractions of a second. ({{bug(1645107)}}).</li>
+</ul>
 
 <h4 id="Removals_3">Removals</h4>
 
@@ -53,7 +55,6 @@ tags:
 
 <ul>
  <li>Firefox now ensures that <code>localhost</code> URLs, such as <em>http://localhost/</em> and <em>http://dev.localhost/</em>, refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a>), and also will not be treated as <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a>. ({{bug(1220810)}}, {{bug(1488740)}})</li>
- <li>Firefox now <a href="/en-US/docs/Web/Security/Mixed_content#Upgrading_mixed-display_resources">automatically upgrades mixed-display content</a> from HTTP to HTTPs in secure pages. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. There is also a new console warning for indicating successful content upgrades. ({{bug(1633743)}}, {{bug(1435733)}})</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>

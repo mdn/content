@@ -12,51 +12,52 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.RelativeTimeFormat()</code></strong> constructor creates {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.</p>
+<p>The <strong><code>Intl.RelativeTimeFormat()</code></strong> constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+<pre class="notranslate">new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>locales</code></dt>
+ <dt><code><var>locales</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
+ <p>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
  </dd>
- <dt><code>options</code></dt>
- <dd>Optional. An object with some or all of the following properties:
- <ul>
-  <li><code>localeMatcher</code><br>
-   The locale matching algorithm to use. Possible values are <code>"lookup"</code> and <code>"best fit"</code>; the default is <code>"best fit"</code>. For information about this option, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code></a>.</li>
-  <li><code>numeric</code><br>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
+ <dd>An object with some or all of the following properties:
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>The locale matching algorithm to use. Possible values are <code>lookup</code> and <code>best fit</code>; the default is <code>best fit</code>. For information about this option, see {{jsxref("Global_Objects/IntlIntl", "Intl", "#Locale_negotiation")}}.</dd>
+  <dt><code>numeric</code></dt>
+  <dd>
    The format of output message. Possible values are:
    <ul>
-    <li><code>"always"</code> (default, e.g., <code>1 day ago</code>),</li>
-    <li>or <code>"auto"</code> (e.g., <code>yesterday</code>). The <code>"auto"</code> value allows to not always have to use numeric values in the output.</li>
+    <li>"<code>always</code>" (default, e.g., <code>1 day ago</code>),</li>
+    <li>or "<code>auto</code>" (e.g., <code>yesterday</code>). The "<code>auto</code>" value allows to not always have to use numeric values in the output.</li>
    </ul>
-  </li>
-  <li><code>style</code><br>
+  </dd>
+  <dt><code>style</code></dt>
+  <dd>
    The length of the internationalized message. Possible values are:
    <ul>
-    <li><code>"long"</code> (default, e.g., <code>in 1 month</code>)</li>
-    <li><code>"short"</code> (e.g., <code>in 1 mo.</code>),</li>
-    <li>or <code>"narrow"</code> (e.g., <code>in 1 mo.</code>). The narrow style could be similar to the short style for some locales.</li>
+    <li>"<code>long</code>" (default, e.g., <code>in 1 month</code>)</li>
+    <li>"<code>short</code>" (e.g., <code>in 1 mo.</code>),</li>
+    <li>or "<code>narrow</code>" (e.g., <code>in 1 mo.</code>). The narrow style could be similar to the short style for some locales.</li>
    </ul>
-  </li>
- </ul>
+  </dd>
+ </dl>
  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Basic_format_usage">Basic <code>format</code> usage</h3>
+<h3 id="Basic_format_usage">Basic format usage</h3>
 
 <p>The following example shows how to create a relative time formatter using the English language.</p>
 
-<pre class="brush: js">// Create a relative time formatter in your locale
+<pre class="brush: js notranslate">// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -72,11 +73,11 @@ rtf.format(-1, "day");
 rtf.format(1, "day");
 // &gt; "in 1 day"</pre>
 
-<h3 id="Using_the_auto_option">Using the <code>auto</code> option</h3>
+<h3 id="Using_the_auto_option">Using the auto option</h3>
 
 <p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code> or <code>tomorrow</code> instead of <code>1 day ago</code> or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
 
-<pre class="brush: js">// Create a relative time formatter in your locale
+<pre class="brush: js notranslate">// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
@@ -92,12 +93,14 @@ rtf.format(1, "day");
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ES Int Draft', '#sec-intl-relativetimeformat-constructor', 'RelativeTimeFormat()')}}</td>
    <td>Stage 4</td>

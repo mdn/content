@@ -73,17 +73,17 @@ tags:
 
 <h3 id="Upgrading_mixed-display_resources">Upgrading mixed-display resources</h3>
 
-<p>Browsers <em>may</em> automatically upgrade requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).</p>
+<p>Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).</p>
+
+<div class="blockIndicator note">
+<p>Firefox 60 and later support this functionality as an experimental feature. It can be enabled using the preference <code>security.mixed_content.upgrade_display_content</code>).</p>
 
 <ul>
- <li>Firefox 84 and later support automatic upgrade of display content by default (From Firefox 60, support can be enabled using a preference: <code>security.mixed_content.upgrade_display_content</code>).
-
-  <ul>
-   <li>If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.</li>
-   <li>Console warnings indicate when content has been successfully upgraded.</li>
-  </ul>
- </li>
+ <li>If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.</li>
+ <li>Console warnings indicate when content has been successfully upgraded.</li>
+ <li>For more information see <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#Upgrading_mixed_display_content">Experimental features in Firefox &gt; Upgrading mixed display content</a>.</li>
 </ul>
+</div>
 
 <h2 id="Warnings_in_Firefox_Web_Console"><span>Warnings in Firefox Web Console</span></h2>
 

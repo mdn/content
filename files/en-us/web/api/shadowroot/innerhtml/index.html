@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>domString</em> = <em>shadowRoot</em>.innerHTML
+<pre class="syntaxbox notranslate">var <em>domString</em> = <em>shadowRoot</em>.innerHTML
 <em>shadowRoot</em>.innerHTML = <em>domString</em>
 </pre>
 
@@ -25,14 +25,29 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+<pre class="brush: js notranslate">let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
 shadow.innerHTML = '&lt;strong&gt;This element should be more important!&lt;/strong&gt;';</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>This property is not defined by any specifications yet; see <a href="https://github.com/w3c/DOM-Parsing/issues/21">this open spec issue</a> to specify it.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'ShadowRoot.innerHTML')}}</td>
+   <td>{{Spec2('DOM Parsing')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
