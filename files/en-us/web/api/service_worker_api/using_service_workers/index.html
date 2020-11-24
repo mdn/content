@@ -31,7 +31,7 @@ tags:
 <p>Many service workers features are now enabled by default in newer versions of supporting browsers. If however you find that demo code is not working in your installed versions, you might need to enable a pref:</p>
 
 <ul>
- <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser.</li>
+ <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser. If you are testing with a non-https local server, you'll need to also set <code>dom.serviceWorkers.testing.enabled</code> to true.</li>
  <li><strong>Chrome Canary</strong>: Go to <code>chrome://flags</code> and turn on <code>experimental-web-platform-features</code>; restart browser (note that some features are now enabled by default in Chrome.)</li>
  <li><strong>Opera</strong>: Go to <code>opera://flags</code> and enable <code>Support for ServiceWorker</code>; restart browser.</li>
  <li><strong>Microsoft Edge</strong>: Go to <code>about:flags</code> and tick <code>Enable service workers</code>; restart browser.</li>

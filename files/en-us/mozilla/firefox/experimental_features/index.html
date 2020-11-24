@@ -1416,7 +1416,49 @@ tags:
  </tbody>
 </table>
 
-<h4 id="FTP_support_disabled"><span style="">FTP support disabled</span></h4>
+<h4 id="Upgrading_mixed_display_content">Upgrading mixed display content</h4>
+
+<p>When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. See {{bug(1435733)}} for more details.</p>
+
+<p>This also changes the console warning; if the upgrade succeeds, the message indicates that the request was upgraded, instead of showing a warning.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>84</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>60</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>60</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>60</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>security.mixed_content.upgrade_display_content</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="FTP_support_disabled">FTP support disabled</h4>
 
 <p>For security reasons, Mozilla intends to remove support for {{Glossary("FTP")}} from Firefox in 2020, effective in Firefox 82. See {{bug(1622409)}} for implementation progress. The <code>network.ftp.enabled</code> preference must be enabled (set to <code>true</code>) to allow FTP to be used.</p>
 

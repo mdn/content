@@ -26,9 +26,9 @@ tags:
 
 <h2 id="Accessing_the_Accessibility_Inspector">Accessing the Accessibility Inspector</h2>
 
-<p>When you first open any of the other Developer Tools, the accessibility features are turned off (unless you've already got them turned on in another browser tab, or got the Firefox accessibility engine started already, e.g., you might be a screenreader user or tester). This is because the accessibility engine runs in the background when the accessibility features are turned on. While it’s running, it slows performance and takes up memory; therefore it interferes with the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a> as well as overall browser performance. For this reason, you should keep it turned off when you aren't specifically using it.</p>
+<p>When you first open any of the other Developer Tools, the accessibility features are turned off (unless you've already got them turned on in another browser tab, or got the Firefox accessibility engine started already, e.g., you might be a screenreader user or tester).</p>
 
-<p>When first implemented, the accessibility engine had to be explicitly turned on. Starting in Firefox 79, it is automatically enabled when you do one of the following:</p>
+<p>The accessibility inspector is automatically enabled when you do one of the following (before Firefox 79,  it had to be explicitly enabled):</p>
 
 <ul>
  <li>Choose <strong>Accessibility</strong> in the <strong>Tools &gt; Web Developer</strong> menu.</li>
@@ -38,6 +38,10 @@ tags:
 </ul>
 
 <p>Once activated, the accessibility engine remains running until you close the Developer Tools toolbox.</p>
+
+<div class="blockIndicator note">
+<p>The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
+</div>
 
 <p>If you don't wish to allow the accessibility features to be automatically enabled, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (also known as <code>about:config</code>) to define the preference <code>devtools.accessibility.auto-init.enabled</code>, and set it to <code>False</code>.</p>
 
@@ -101,13 +105,13 @@ tags:
 
 <h3 id="Show_web_page_tabbing_order">Show web page tabbing order</h3>
 
-<p>People who are unable to navigate a page with the mouse or a trackpad can use the tab key to toggle through selectable items on the page (i.e. buttons, links, form controls). The order that tabs are selected is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page—if the tab order is incorrect, the page may be confusing!</p>
+<p>People who are unable to navigate a page with the mouse or a trackpad can use the tab key to toggle through focussable items on the page (i.e. buttons, links, form controls). The order that items are focussed is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page—if the tab order is incorrect, the page may be confusing!</p>
 
 <p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high level overview of how the page will be navigated using the tab key, which may highlight problems more effectively than simply tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
 
 <p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="https://mdn.mozillademos.org/files/17440/Accessibility-Inspector-show_tab_order.png" style="height: 642px; width: 993px;"></p>
 
-<p>All selectable items have a numbered marker and the currently selected item is highlighted in a different colour. In some cases the marker may be hidden by other elements, as is true for items 1 to 3 in the in the page below.<br>
+<p>All focussable items have a numbered marker and the currently focussed item is highlighted in a different colour. In some cases the marker may be hidden by other elements, as is true for items 1 to 3 in the in the page below.<br>
  <img alt="A page where some of the markers for selection items are hidden" src="https://mdn.mozillademos.org/files/17442/Accessibility-Inspector-hidden_items.png" style="height: 161px; width: 767px;"><br>
  These become visible in the overlay when the item is the current item.</p>
 

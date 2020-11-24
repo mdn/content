@@ -12,25 +12,25 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>[@@iterator]()</code></strong> method returns a new <code>Iterator</code> object that iterates over the code points of a String value, returning each code point as a String value.</p>
+<p>The <strong><code>[@@iterator]()</code></strong> method returns a new iterator object that iterates over the code points of a String value, returning each code point as a String value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-iterator.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>str</var>[Symbol.iterator]</code></pre>
+<pre class="syntaxbox notranslate"><var>str</var>[Symbol.iterator]</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new <code>Iterator</code> object.</p>
+<p>A new iterator object.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_iterator">Using <code>[@@iterator]()</code></h3>
+<h3 id="Using_iterator">Using [@@iterator]()</h3>
 
-<pre class="brush:js">var str = 'A\uD835\uDC68';
+<pre class="brush:js notranslate">var str = 'A\uD835\uDC68';
 
 var strIter = str[Symbol.iterator]();
 
@@ -38,9 +38,9 @@ console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
 </pre>
 
-<h3 id="Using_iterator_with_for..of">Using <code>[@@iterator]()</code> with <code>for..of</code></h3>
+<h3 id="Using_iterator_with_for..of">Using [@@iterator]() with for..of</h3>
 
-<pre class="brush:js">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+<pre class="brush:js notranslate">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of str) {
   console.log(v);
@@ -56,10 +56,12 @@ for (var v of str) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}}</td>
   </tr>
@@ -68,7 +70,7 @@ for (var v of str) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.String.@@iterator")}}</p>
 
