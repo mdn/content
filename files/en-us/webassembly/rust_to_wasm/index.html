@@ -16,13 +16,13 @@ tags:
 <p>There are two main use cases for Rust and WebAssembly:</p>
 
 <ul>
- <li>To build an entire application — an entire web app based in Rust.</li>
- <li>To build a part of an application — using Rust in an existing JavaScript frontend.</li>
+ <li>Build an entire application — an entire web app based in Rust.</li>
+ <li>Build a part of an application — using Rust in an existing JavaScript frontend.</li>
 </ul>
 
 <p>For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like <a href="https://github.com/DenisKolodin/yew"><code>yew</code></a>.</p>
 
-<p>In this tutorial, we build an npm package using <code>wasm-pack</code>, a tool for building npm packages in Rust. This package will contain only WebAssembly and JavaScript code, and so the users of the package won't need Rust installed. They may not even notice that it's written in WebAssembly.</p>
+<p>In this tutorial, we build an npm package using <code>wasm-pack</code>, a tool for building npm packages in Rust. This package will contain only WebAssembly and JavaScript code, and so the users of the package won't need Rust installed. They may not even notice that it's written in Rust.</p>
 
 <h2 id="Rust_Environment_Setup">Rust Environment Setup</h2>
 
@@ -42,7 +42,7 @@ tags:
 
 <pre class="brush: bash; no-line-numbers notranslate">$ cargo install wasm-pack</pre>
 
-<h3 id="Install_Node.js">Install Node.js</h3>
+<h3 id="Install_Node.js_and_npm">Install Node.js and npm</h3>
 
 <p>We are building an npm package in this tutorial, and so you need to have Node.js and npm installed.</p>
 
@@ -91,7 +91,7 @@ pub fn greet(name: &amp;str) {
     alert(&amp;format!("Hello, {}!", name));
 }</pre>
 
-<p>This is the contents of our Rust project. It has three main parts; let's talk about them in turn. We give a high-level explanation here, and gloss over some details; to learn more about Rust, please check the free online book <a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>.</p>
+<p>This is the contents of our Rust project. It has three main parts; let's talk about each of them in turn. We give a high-level explanation here, and gloss over some details; to learn more about Rust, please check the free online book <a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>.</p>
 
 <h4 id="Using_wasm-bindgen_to_communicate_between_Rust_and_JavaScript">Using <code>wasm-bindgen</code> to communicate between Rust and JavaScript</h4>
 
@@ -168,7 +168,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Fill in your own repository and use the same info that <code>git</code> uses for the <code>authors</code> field.</p>
 
-<p>The big part to add is the stuff at the bottom. The first part — <code>[lib]</code> — tells Rust to build a <code>cdylib</code> version of our package; we won't get into what that means in this tutorial. For more, consult the <a href="https://doc.rust-lang.org/cargo/guide/">Cargo</a> and <a href="https://doc.rust-lang.org/reference/linkage.html">Rust Linkage</a> documentation.</p>
+<p>The big part to add is the <code>[package]</code>. The <code>[lib]</code> part tells Rust to build a <code>cdylib</code> version of our package; we won't get into what that means in this tutorial. For more, consult the <a href="https://doc.rust-lang.org/cargo/guide/">Cargo</a> and <a href="https://doc.rust-lang.org/reference/linkage.html">Rust Linkage</a> documentation.</p>
 
 <p>The last section is the <code>[dependencies]</code> section. Here's where we tell Cargo what version of <code>wasm-bindgen</code> we want to depend on; in this case, that's any <code>0.2.z</code> version (but not <code>0.3.0</code> or above).</p>
 

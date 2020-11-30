@@ -11,27 +11,27 @@ tags:
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <strong><code>strike()</code></strong> method creates a <a href="/en-US/docs/Web/HTML/Element/strike" title="The HTML &lt;strike> element (or HTML Strikethrough Element) places a strikethrough (horizontal line) over text."><code>&lt;strike&gt;</code></a> HTML element that causes a string to be displayed as struck-out text.</p>
+<p>The <strong><code>strike()</code></strong> method creates a {{HTMLElement("strike")}} HTML element that causes a string to be displayed as struck-out text.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>str</var>.strike()</code></pre>
+<pre class="syntaxbox notranslate"><var>str</var>.strike()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A string containing a <a href="/en-US/docs/Web/HTML/Element/strike" title="The HTML &lt;strike> element (or HTML Strikethrough Element) places a strikethrough (horizontal line) over text."><code>&lt;strike&gt;</code></a> HTML element.</p>
+<p>A string containing a {{HTMLElement("strike")}} HTML element.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>strike()</code> method embeds a string in a <code>&lt;strike&gt;</code> tag: <code>"&lt;strike&gt;str&lt;/strike&gt;"</code>.</p>
+<p>The <code>strike()</code> method embeds a string in a <code>&lt;strike&gt;</code> element: "<code>&lt;strike&gt;str&lt;/strike&gt;</code>".</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_strike">Using <code>strike()</code></h3>
+<h3 id="Using_strike">Using strike()</h3>
 
 <p>The following example uses string methods to change the formatting of a string:</p>
 
-<pre class="brush: js">var worldString = 'Hello, world';
+<pre class="brush: js notranslate">var worldString = 'Hello, world';
 
 console.log(worldString.blink()); // &lt;blink&gt;Hello, world&lt;/blink&gt;
 console.log(worldString.bold()); // &lt;b&gt;Hello, world&lt;/b&gt;
@@ -42,10 +42,12 @@ console.log(worldString.strike()); // &lt;strike&gt;Hello, world&lt;/strike&gt;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}}</td>
   </tr>
@@ -54,7 +56,7 @@ console.log(worldString.strike()); // &lt;strike&gt;Hello, world&lt;/strike&gt;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.String.strike")}}</p>
 

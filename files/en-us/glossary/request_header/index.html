@@ -9,11 +9,11 @@ tags:
 
 <p>Not all headers appearing in a request are <em>request headers</em>. For example, the {{HTTPHeader("Content-Length")}} appearing in a {{HTTPMethod("POST")}} request is actually an {{glossary("entity header")}} referring to the size of the body of the request message. However, these entity headers are often called request headers in such a context.</p>
 
-<p>In addition, <a href="/en-US/docs/Glossary/CORS">CORS</a> defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.</p>
+<p>In addition, <a href="/en-US/docs/Glossary/CORS">CORS</a> defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.</p>
 
 <p>A few request headers after a {{HTTPMethod("GET")}} request:</p>
 
-<pre>GET /home.html HTTP/1.1
+<pre class="notranslate">GET /home.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -28,7 +28,7 @@ Cache-Control: max-age=0</pre>
 
 <p>Strictly speaking, the {{HTTPHeader("Content-Length")}} header in this example is not a request header like the others, but an {{glossary("entity header")}}:</p>
 
-<pre>POST /myform.html HTTP/1.1
+<pre class="notranslate">POST /myform.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Content-Length: 128

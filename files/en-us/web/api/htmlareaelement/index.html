@@ -34,10 +34,6 @@ tags:
  <dd>Is a {{domxref("USVString")}} containing the hostname in the referenced URL.</dd>
  <dt>{{domxref("HTMLHyperlinkElementUtils.href")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.hreflang")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("hreflang", "area") }} HTML attribute, indicating the language of the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.media")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("media", "area") }} HTML attribute, indicating target media of the linked resource.</dd>
  <dt>{{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}</dt>
  <dd>Is a {{jsxref("Boolean")}} flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
  <dt>{{domxref("HTMLHyperlinkElementUtils.password")}}</dt>
@@ -64,8 +60,6 @@ tags:
  <dd>Is a <code>long</code> containing the element's position in the tabbing order.</dd>
  <dt>{{domxref("HTMLAreaElement.target")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("type", "area") }} HTML attribute, indicating the MIME type of the linked resource.</dd>
  <dt>{{domxref("HTMLHyperlinkElementUtils.username")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the username specified before the domain name.</dd>
 </dl>
@@ -92,14 +86,14 @@ tags:
    <td>{{SpecName('HTML WHATWG', "#htmlareaelement", "HTMLAreaElement")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>The following property has been added: <code>download</code>.<br>
-    Technically, the URL-related properties, <code>media</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moving to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAreaElement</code> implements this mixin.</td>
+    Technically, the URL-related properties, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moving to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAreaElement</code> implements this mixin.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-area-element", "HTMLAreaElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td>Technically, the properties <code>tabindex</code> and <code>accesskey</code> are now defined on {{domxref("HTMLElement")}}.<br>
     The following property is now obsolete: <code>nohref</code>.<br>
-    The following properties have been added: <code>rel</code>, <code>relList</code>, <code>media</code>, <code>hreflang</code>, <code>type</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>.</td>
+    The following properties have been added: <code>rel</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-26019118', 'HTMLAreaElement')}}</td>

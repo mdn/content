@@ -28,7 +28,7 @@ tags:
 
 <h3 id="Page_titles">Page titles</h3>
 
-<p>Page titles are used in search results and also used to structure the page hierarchy in the breadcrumb list at the top of the page. The page title (which is displayed at the top of the page and in the search results) can be different from the page "slug", which is the portion of the page's URL following "<code><var>&lt;locale&gt;</var>/docs/</code>".</p>
+<p>Page titles are used in search results and are also used to structure the page hierarchy in the breadcrumb list at the top of the page. The page title (which is displayed at the top of the page and in the search results) can be different from the page "slug", which is the portion of the page's URL following "<code><var>&lt;locale&gt;</var>/docs/</code>".</p>
 
 <h4 id="Title_and_heading_capitalization">Title and heading capitalization</h4>
 
@@ -68,21 +68,21 @@ tags:
 
 <h3 id="General_article_content_guidelines">General article content guidelines</h3>
 
-<p>When writing any document, it's important to know how much to say. If you ramble on too long, or provide excessive detail, the article becomes tedious to read and nobody will use it. Getting the amount of coverage right is important for several reasons. Among those reasons: to ensure that the reader finds the information they truly need, and to provide enough quality material for search engines to adequately analyze and rank the article.</p>
+<p>When writing any document, it's important to know how much to say. If you ramble on too long, or provide excessive detail, the article becomes tedious to read and it will rarely be used. Getting the amount of coverage right is important for several reasons. Among those reasons: ensure that the reader finds the information they truly need, and provide enough quality material for search engines to adequately analyze and rank the article.</p>
 
-<p>We'll discuss the former (providing the information the reader may need) here. To learn a little about ensuring that pages are properly classified and ranked by search engines, see the article <a href="/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>.</p>
+<p>We'll discuss the former (providing the information the reader may need) here. To learn more about ensuring that pages are properly classified and ranked by search engines, see the article <a href="/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>.</p>
 
-<p>The goal is to write pages that include all the information that readers may need without going on too long about it all. We have a few recommendations in this area.</p>
+<p>The goal is to write pages that include all the information that readers may need without going into too much details. Following are some recommendations in this area.</p>
 
 <h4 id="Consider_your_audience">Consider your audience</h4>
 
-<p>Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. An article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking code, for instance.</p>
+<p>Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. For example, article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking.</p>
 
 <h4 id="Provide_a_useful_summary">Provide a useful summary</h4>
 
-<p>Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information for the reader to understand if the article is likely to be covering what they're interested in reading about.</p>
+<p>Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information for the readers to understand if the article is likely to be covering what they're interested in reading about.</p>
 
-<p>In guide or tutorial content, the summary should let the reader know what topics will be covered and what they're already expected to know, if anything. It should mention the technology, technologies, and/or APIs that are being documented or discussed, with links to those, and it should offer hints as to the situations in which the article's contents might be useful.</p>
+<p>In a guide or tutorial content, the summary should let the reader know what topics will be covered and what they're already expected to know, if anything. It should mention the technologies and/or APIs that are being documented or discussed, with links to related information, and it should offer hints to situations in which the article's contents might be useful.</p>
 
 <h5 id="Example_Too_short!">Example: Too short!</h5>
 
@@ -94,9 +94,9 @@ tags:
 
 <h5 id="Example_Too_long!">Example: Too long!</h5>
 
-<p>Here, we've updated the summary, but now it's far too long. Too much detail is included, and the text gets far too much into other methods and properties.</p>
+<p>Here, we've updated the summary, but now it's far too long. Too much details are included, and the text gets far too much into describing other methods and properties.</p>
 
-<p>Instead, the summary should focus on the <code>strokeText()</code> method, and should refer to the appropriate guide where the other details are offered.</p>
+<p>Instead, the summary should focus on the <code>strokeText()</code> method, and should refer to the appropriate guides where the other details are described.</p>
 
 <div class="example-bad">
 <p>When called, the Canvas 2D API method <strong><code>CanvasRenderingContext2D.strokeText()</code></strong> strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.</p>
@@ -124,9 +124,9 @@ tags:
 
 <h4 id="Include_all_relevant_examples">Include all relevant examples</h4>
 
-<p>More pages should have examples than not. The majority of pages probably deserve multiple examples, in fact.</p>
-
 <p>It's important to ensure that you use examples to clarify what every parameter is used for, and to clarify any edge cases that may exist. You should also use examples to demonstrate solutions for common tasks, and you should use examples to demonstrate solutions to problems that may arise.</p>
+
+<p>In general it is expected that most of the pages will include examples, and that most of them will include more than one example.</p>
 
 <p>Each example should be preceded by text explaining what the example does and anything the reader should know before beginning to read or try out the example.</p>
 
@@ -134,10 +134,10 @@ tags:
 
 <p>Each piece of code should include an explanation of how it works. Keep in mind that it may make sense to break up a large piece of code into smaller portions so they can be described individually.</p>
 
-<p>The text following each piece of code should explain anything relevant, using an appropriate level of detail.</p>
+<p>The text following each piece of code should explain anything relevant, using an appropriate level of detail:</p>
 
 <ul>
- <li>If the code is very simple and doesn't really feature anything directly related to the API being documented, you may only give a quick summary of what it is and why it's there.</li>
+ <li>If the code is very simple and doesn't really use directly anything related to the API being documented, you may only give a quick summary of what it is and why it's there.</li>
  <li>If the code is intricate, uses the API being documented, or is technically creative, you should provide a more detailed explanation.</li>
 </ul>
 
@@ -149,7 +149,9 @@ tags:
 
 <h3 id="Sections_paragraphs_and_newlines">Sections, paragraphs, and newlines</h3>
 
-<p>Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
+<p>The <kbd>Enter</kbd> (or <kbd>Return</kbd>) key on your keyboard starts a new paragraph. To insert a newline, rather than a new paragraph (that is, to create a {{HTMLElement("br")}} instead of a {{HTMLElement("p")}}), hold down the <kbd>Shift</kbd> key while pressing <kbd>Enter</kbd>.</p>
+
+<p>When a new paragraph starts a new section, a header should be added.  Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
 
 <p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page, and linking them together using the following macros: {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, and {{TemplateLink("PreviousNext")}}.</p>
 
@@ -158,19 +160,17 @@ tags:
 <ul>
  <li><strong>Don't create single subsections.</strong> Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.</li>
  <li><strong>Don't use styles and classes within headings.</strong> This includes the {{HTMLElement("code")}} element for code terms. So don't make a heading "Using the <code>SuperAmazingThing</code> interface". It should instead just be "Using the SuperAmazingThing interface".</li>
- <li><strong>Avoid using macros within headings</strong> (except for certain macros that are specifically designed to be used in headings).</li>
+ <li><strong>Avoid using macros within headings</strong> (except for certain macros that are especifically designed to be used in headings).</li>
  <li><strong>Don't create "bumping heads."</strong> These are headings followed immediately by a subheading, with no content text in between. This doesn't look good, and leaves readers without any explanatory text at the beginning of the outer section.</li>
 </ul>
 
-<p>The <kbd>Enter</kbd> (or <kbd>Return</kbd>) key on your keyboard starts a new paragraph. To insert a newline, rather than a new paragraph (that is, to create a {{HTMLElement("br")}} instead of a {{HTMLElement("p")}}), hold down the <kbd>Shift</kbd> key while pressing <kbd>Enter</kbd>.</p>
-
 <h3 id="Lists">Lists</h3>
 
-<p>Lists should be formatted and structured uniformly across all contributions. Individual list items should be written with suitable punctuation, regardless of the list format. However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below.</p>
+<p>Lists should be formatted and structured uniformly across all pages. Individual list items should be written with suitable punctuation, regardless of the list format. However, depending on the type of the list you are creating, you will want to adjust your writing as described in the sections below.</p>
 
 <h4 id="Bulleted_lists">Bulleted lists</h4>
 
-<p>Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. Periods must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.</p>
+<p>Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Phrases and sentences in bulleted lists should include standard punctuation. A period must appear at the end of each sentence in a bulleted list, including the item's final sentence, just as would be expected in a paragraph.</p>
 
 <p>An example of a correctly structured bulleted list:</p>
 
@@ -198,13 +198,13 @@ tags:
 <ol>
  <li>Open with a heading or brief paragraph to introduce the instructions. It's important to provide the user with context before beginning the instructions.</li>
  <li>Start creating your instructions, and keep each step in its own numbered item. Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.</li>
- <li>After you have finished your instructions, close off the numbered list with a brief summary or explanation of the expected outcome upon completion.</li>
+ <li>After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.</li>
 </ol>
 
 <p>This is an example of writing a closing explanation. We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.</p>
 </div>
 
-<p>Note how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one item per number or step.</p>
+<p>Note how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.</p>
 
 <h3 id="Text_formatting_and_styles">Text formatting and styles</h3>
 
@@ -214,7 +214,7 @@ tags:
 
 <div class="warning">Similarly, the <strong>"Warning Box"</strong> style creates warning boxes like this.</div>
 
-<p>Unless specifically instructed to do so, <em>do not</em> use the HTML <code>style</code> attribute to manually style content. If you can't do it using a predefined class, ask for help in the <a href="https://discourse.mozilla.org/c/mdn">MDN discussion forum</a>.</p>
+<p>Unless specifically instructed, <em>do not</em> use the HTML <code>style</code> attribute to manually apply a style. If you can't do it using a predefined class, ask for help in the <a href="https://discourse.mozilla.org/c/mdn">MDN discussion forum</a>.</p>
 
 <h3 id="Code_sample_style_and_formatting">Code sample style and formatting</h3>
 
@@ -233,7 +233,7 @@ tags:
 }
 </pre>
 
-<p>Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break at natural breaking points. Some examples follow:</p>
+<p>Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break long lines at natural breaking points. Some examples follow:</p>
 
 <pre class="brush: js notranslate">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
        || class.YET_ANOTHER_CONDITION ) {
@@ -252,7 +252,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Syntax_highlighting">Syntax highlighting</h4>
 
-<p><img alt="Screenshot of the 'Syntax Highlighter' menu." src="https://mdn.mozillademos.org/files/12682/Language%20list.png" style="border-style: solid; border-width: 1px; float: right; margin: 2px 4px;">Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Select the appropriate language from the language list button (the one with the two code blocks), as seen in the screenshot to the right. This will insert a preformatted code box with line numbers and syntax highlighting for the chosen language.</p>
+<p><img alt="Screenshot of the 'Syntax Highlighter' menu." src="https://mdn.mozillademos.org/files/12682/Language%20list.png" style="border-style: solid; border-width: 1px; float: right; margin: 2px 4px;">A line or multiple lines of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Select the appropriate language from the language list button (the one with the two code blocks), as seen in the screenshot to the right. This will insert a preformatted code box with line numbers and syntax highlighting for the chosen language.</p>
 
 <div class="note">
 <p><strong>Note:</strong> <em>Do not</em> use the {{HTMLElement("code")}} element inside the {{HTMLElement("pre")}} block!</p>
@@ -273,11 +273,11 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Syntax_definitions">Syntax definitions</h4>
 
-<p>When writing the syntax description section of a reference page, use the <em>"Syntax Box"</em> option in the <strong>"Styles"</strong> drop-down menu in the editor toolbar. This creates a specially-formatted box used specifically for syntax definitions, distinguishing them from other code blocks.</p>
+<p>When writing the syntax description section of a reference page, use the <em>"Syntax Box"</em> option in the <strong>"Styles"</strong> drop-down menu in the editor toolbar. This creates a specially-formatted box that is used specifically for syntax definitions, distinguishing them from other code blocks.</p>
 
 <h4 id="Blocks_not_referring_to_code">Blocks not referring to code</h4>
 
-<p>There are a few use cases where a <code>&lt;pre&gt;</code> block does not refer to code and doesn't have syntax highlighting nor line numbers. In such cases you should add a <code>&lt;pre&gt;</code> without a <code>class</code> attribute. Those cases include things like tree structures:</p>
+<p>There are a some use cases where a <code>&lt;pre&gt;</code> block does not refer to code and doesn't have syntax highlighting nor line numbers. In such cases you should add a <code>&lt;pre&gt;</code> without a <code>class</code> attribute. For example, those cases include tree structures:</p>
 
 <pre class="notranslate">root/
 
@@ -299,9 +299,9 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Element names</dt>
  <dd>Use the {{TemplateLink("HTMLElement")}} macro, which creates a link to the page for that element. For example, writing \{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, <strong>enclose the name in angle brackets</strong> and use the "Inline Code" style (e.g., <code>&lt;title&gt;</code>).</dd>
  <dt>Attribute names</dt>
- <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it's used in the article.</dd>
+ <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.</dd>
  <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages easily by simply using the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("attr","element")}}</span>) to reference attribute definitions.</dd>
+ <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages easily by simply using the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("type","element")}}</span>) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
  <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.</dd>
  <dd><strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
@@ -403,7 +403,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Expansion">Expansion</h4>
 
-<p>On the first mention of a term on a page, expand acronyms likely to be unfamiliar to users. When in doubt, expand it—or, better yet, link it to the article or <a href="/en-US/docs/Glossary">glossary</a> entry describing the technology.</p>
+<p>On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or <a href="/en-US/docs/Glossary">glossary</a> entry describing the technology.</p>
 
 <ul>
  <li><span class="correct"><strong>Correct</strong></span>: "XUL (XML User Interface Language) is Mozilla's XML-based language..."</li>
@@ -441,7 +441,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.</p>
 </div>
 
-<p>Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>." The only exception is that if you wish to abbreviate the name of the "<kbd>Escape</kbd>" key, you may use "<kbd>ESC</kbd>".</p>
+<p>Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>". The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate he "<kbd>Escape</kbd>" key.</p>
 
 <p>Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing). Some examples:</p>
 
@@ -466,7 +466,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Hyphenation">Hyphenation</h3>
 
-<p>Hyphenate compounds when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
+<p>Hyphenate compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
 
 <ul>
  <li><font color="green"><strong>Correct</strong></font>: email, re-elect, co-op</li>
@@ -475,7 +475,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Gender-neutral_language">Gender-neutral language</h3>
 
-<p>It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter, to make the text as inclusive as possible. So, for example, if you are talking about the actions of a specific man, usage of "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.<br>
+<p>To make the text as inclusive as possible, it is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.<br>
  <br>
  Let's take the following example:</p>
 

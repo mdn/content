@@ -37,7 +37,7 @@ tags:
 
 <p style="display: block;"><img alt="" src="https://mdn.mozillademos.org/files/17155/element-box-diagram.png" style="height: 1099px; width: 1466px;"></p>
 
-<p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}} object returned by the method include the <code>padding</code> and <code>border-width</code>, not only the content width/height. In the standard box model, this would be <code>width</code> or <code>height</code> property of the element + <code>padding</code> + <code>border-width</code>. But if <code><a href="/en-US/docs/Web/CSS/box-sizing">box-sizing: border-box</a></code> is set for the element, this would only be <code>width</code> or <code>height</code>.</p>
+<p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}} object returned by the method include the <code>padding</code> and <code>border-width</code>, not only the content width/height. In the standard box model, this would be equal to the <code>width</code> or <code>height</code> property of the element + <code>padding</code> + <code>border-width</code>. But if <code><a href="/en-US/docs/Web/CSS/box-sizing">box-sizing: border-box</a></code> is set for the element this would be directly equal to its <code>width</code> or <code>height</code>.</p>
 
 <p>The returned value can be thought of as the union of the rectangles returned by {{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e., the CSS border-boxes associated with the element.</p>
 

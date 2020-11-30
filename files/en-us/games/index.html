@@ -10,10 +10,170 @@ tags:
   - JavaScript Games
   - Web
 ---
-<div>{{GamesSidebar}}</div>
+<div>
+<pre dir="ltr">var hit;
+var Score;
+var Raj;
+var wandering;
+var moving_with_arrow_keys;
+var moving_east;
+var Run_fast;
+var moving_west;
+var spinning_right;
+var growing;
+var swimming_left_and_right;
+var moving_north;
+var patrolling;
+var moving_south;
+var jittering;
+var shrinking;
+var spinning_left;
+var driving_with_arrow_keys;
 
-<div class="summary">
-<p><span class="seoSummary">Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.</span></p>
+function math_random_int(a, b) {
+  if (a &gt; b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
+function wandering2(this_sprite) {
+  if (math_random_int(0, 5) == 0) {
+    changePropBy(this_sprite, "direction", math_random_int(-25, 25));
+  }
+  moveForward(this_sprite, 3);
+  if (isTouchingEdges(this_sprite)) {
+    edgesDisplace(this_sprite);
+    changePropBy(this_sprite, "direction", math_random_int(135, 225));
+  }
+}
+
+function moving_with_arrow_keys2(this_sprite) {
+  if (isKeyPressed("up")) {
+    moveInDirection(this_sprite, 10, "North");
+  }
+  if (isKeyPressed("down")) {
+    moveInDirection(this_sprite, 10, "South");
+  }
+  if (isKeyPressed("left")) {
+    moveInDirection(this_sprite, 10, "West");
+  }
+  if (isKeyPressed("right")) {
+    moveInDirection(this_sprite, 10, "East");
+  }
+}
+
+function Run_fast2(this_sprite) {
+}
+
+function moving_west2(this_sprite) {
+  moveInDirection(this_sprite, 5, "West");
+}
+
+function spinning_right2(this_sprite) {
+  turn(this_sprite, 6, "right");
+}
+
+function growing2(this_sprite) {
+  changePropBy(this_sprite, "scale", 1);
+}
+
+function swimming_left_and_right2(this_sprite) {
+  if (getProp(this_sprite, "direction") == 0) {
+    mirrorSprite(this_sprite, "right");
+  } else if (getProp(this_sprite, "direction") == 180) {
+    mirrorSprite(this_sprite, "left");
+  }
+  moveForward(this_sprite, 5);
+  if (isTouchingEdges(this_sprite)) {
+    edgesDisplace(this_sprite);
+    changePropBy(this_sprite, "direction", 180);
+  }
+}
+
+function moving_east2(this_sprite) {
+  moveInDirection(this_sprite, 5, "East");
+}
+
+function moving_north2(this_sprite) {
+  moveInDirection(this_sprite, 5, "North");
+}
+
+function patrolling2(this_sprite) {
+  moveForward(this_sprite, 5);
+  if (isTouchingEdges(this_sprite)) {
+    edgesDisplace(this_sprite);
+    changePropBy(this_sprite, "direction", 180);
+  }
+}
+
+function moving_south2(this_sprite) {
+  moveInDirection(this_sprite, 5, "South");
+}
+
+function jittering2(this_sprite) {
+  changePropBy(this_sprite, "scale", math_random_int(-1, 1));
+}
+
+function shrinking2(this_sprite) {
+  changePropBy(this_sprite, "scale", -1);
+}
+
+function spinning_left2(this_sprite) {
+  turn(this_sprite, 6, "left");
+}
+
+function driving_with_arrow_keys2(this_sprite) {
+  if (isKeyPressed("up")) {
+    moveForward(this_sprite, 5);
+  }
+  if (isKeyPressed("down")) {
+    moveBackward(this_sprite, 5);
+  }
+  if (isKeyPressed("left")) {
+    changePropBy(this_sprite, "direction", -5);
+    changePropBy(this_sprite, "rotation", -5);
+  }
+  if (isKeyPressed("right")) {
+    changePropBy(this_sprite, "direction", 5);
+    changePropBy(this_sprite, "rotation", 5);
+  }
+  if (isTouchingEdges(this_sprite)) {
+    edgesDisplace(this_sprite);
+  }
+}
+
+hit = 0;
+Score = 0;
+setBackgroundImage("https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png");
+createNewSprite({name: 'Raj'}, "animation_4", ({"x":74,"y":341}));
+makeNewSpriteAnon("animation_3", ({"x":355,"y":61}));
+addBehaviorSimple(({costume: "animation_3"}), new Behavior(wandering2, []));
+
+spriteClicked("when", ({costume: "animation_4"}), function (extraArgs) {
+  addBehaviorSimple(({costume: "animation_4"}), new Behavior(moving_with_arrow_keys2, []));
+});
+
+keyPressed("when", "space", function () {
+  makeNewSpriteAnon("animation_2", locationAt(getProp(({costume: "animation_4"}), "x") + 70, getProp(({costume: "animation_4"}), "y")));
+  setProp(({costume: "animation_2"}), "scale", 50);
+  addBehaviorSimple(({costume: "animation_2"}), new Behavior(moving_east2, []));
+  playSound('sound://category_explosion/radioactive_zombie_explode_2.mp3');
+});
+
+checkTouching("when", ({costume: "animation_2"}), ({costume: "animation_3"}), function (extraArgs) {
+  playSound('sound://category_hits/vibrant_crate_break_1.mp3');
+  hit = hit + 1;
+  if (hit == 2) {
+    hit = 0;
+    Score = Score + 1;
+    showTitleScreen(Score, undefined);
+    jumpTo(({costume: "animation_3"}), randomLocation());
+  }
+});</pre>
 </div>
 
 <div>{{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}</div>

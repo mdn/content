@@ -163,11 +163,16 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="Requiring_revalidation">Requiring revalidation</h3>
 
-<p>Specifying <code>no-cache</code> or <code>max-age=0</code> indicates that clients can cache a resource and must revalidate each time before using it. This means HTTP request occurs each time, but it can skip downloading HTTP body if the content is valid.</p>
+<p><code>no-cache</code> and <code>max-age=0, must-revalidate</code> indicates same meaning.<br>
+ Clients can cache a resource but must revalidate each time before using it. This means HTTP request occurs each time though, it can skip downloading HTTP body if the content is valid.</p>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache
-Cache-Control: no-cache, max-age=0
-</pre>
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache</pre>
+
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0, must-revalidate</pre>
+
+<p><strong>Note</strong>: Following may serve stale resource if server is down or lose connectivity.</p>
+
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

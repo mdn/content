@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>padding-left</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area">padding area</a> to the left of an element.</p>
+<p>The <strong><code>padding-left</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area">padding area</a> to the left of an element.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/padding-left.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>An element's padding area is the space between its content and its border.</p>
 
@@ -22,7 +22,7 @@ tags:
 <p><strong>Note:</strong> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
 padding-left: 0.5em;
@@ -40,13 +40,13 @@ padding-left: unset;
 
 <p>The <code>padding-left</code> property is specified as a single value chosen from the list below. Unlike margins, negative values are not allowed for padding.</p>
 
-<h3 id="Values" name="Values">Values</h3>
+<h3 id="Values">Values</h3>
 
 <dl>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>The size of the padding as a percentage, relative to the width of the containing block. Must be nonnegative.</dd>
+ <dd>The size of the padding as a percentage, relative to the <em>width</em> of the containing block. Must be nonnegative.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -77,18 +77,18 @@ padding-left: unset;
  </thead>
  <tbody>
   <tr>
-   <td>{{ SpecName('CSS3 Box', '#propdef-padding-left', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
+   <td>{{SpecName('CSS3 Box', '#propdef-padding-left', 'padding-left')}}</td>
+   <td>{{Spec2('CSS3 Box')}}</td>
    <td>No change.</td>
   </tr>
   <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>{{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
    <td>No change.</td>
   </tr>
   <tr>
-   <td>{{ Specname('CSS1', '#padding-left', 'padding-left') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
+   <td>{{Specname('CSS1', '#padding-left', 'padding-left')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>
@@ -104,6 +104,6 @@ padding-left: unset;
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS basic box model</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand</li>
- <li>The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}</li>
+ <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand</li>
+ <li>The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}</li>
 </ul>

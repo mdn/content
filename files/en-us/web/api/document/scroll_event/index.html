@@ -15,26 +15,26 @@ tags:
 <p>The <strong><code>scroll</code></strong> event fires when the document view or an element has been scrolled.</p>
 
 <table class="properties">
-	<thead>
-	</thead>
-	<tbody>
-		<tr>
-			<th>Bubbles</th>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<th>Cancelable</th>
-			<td>No</td>
-		</tr>
-		<tr>
-			<th>Interface</th>
-			<td>{{DOMxRef("Event")}}</td>
-		</tr>
-		<tr>
-			<th>Event handler property</th>
-			<td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-		</tr>
-	</tbody>
+ <thead>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Bubbles</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th>Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th>Interface</th>
+   <td>{{DOMxRef("Event")}}</td>
+  </tr>
+  <tr>
+   <th>Event handler property</th>
+   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <div class="blockIndicator note">
@@ -58,7 +58,7 @@ function doSomething(scroll_pos) {
   // Do something with the scroll position
 }
 
-window.addEventListener('scroll', function(e) {
+document.addEventListener('scroll', function(e) {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
@@ -76,16 +76,16 @@ window.addEventListener('scroll', function(e) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
-			<td>{{Spec2('CSSOM View')}}</td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#scrolling-events')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -95,5 +95,5 @@ window.addEventListener('scroll', function(e) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> event</a></li>
+ <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> event</a></li>
 </ul>

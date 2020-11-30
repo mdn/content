@@ -13,11 +13,11 @@ tags:
 <div>{{ APIRef("HTML DOM") }}</div>
 </div>
 
-<p>The <strong><code>HTMLElement.offsetTop</code></strong> read-only property returns the distance of the current element relative to the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}} node.</p>
+<p>The <strong><code>HTMLElement.offsetTop</code></strong> read-only property returns the distance of the outer border of the current element relative to the inner border of the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}} node.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>topPos</var> = element.offsetTop;
+<pre class="syntaxbox notranslate"><var>topPos</var> = element.offsetTop;
 </pre>
 
 <h3 id="Parameters" name="Parameters">Parameters</h3>
@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Example" name="Example">Example</h2>
 
-<pre class="brush:js">var d = document.getElementById("div1");
+<pre class="brush:js notranslate">var d = document.getElementById("div1");
 var topPos = d.offsetTop;
 
 if (topPos &gt; 10) {
@@ -50,7 +50,7 @@ if (topPos &gt; 10) {
 		<tr>
 			<td>{{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}}</td>
 			<td>{{Spec2('CSSOM View')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
