@@ -32,8 +32,6 @@ tags:
  <dd>Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.</dd>
  <dt>{{domxref("HTMLAnchorElement.hreflang")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.</dd>
- <dt>{{domxref("HTMLAnchorElement.media")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("media", "a")}} HTML attribute, indicating the intended media for the linked resource.</dd>
  <dt>{{domxref("HTMLHyperlinkElementUtils.password")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
  <dt>{{domxref("HTMLHyperlinkElementUtils.origin")}} {{readonlyInline}}</dt>
@@ -109,14 +107,14 @@ tags:
    <td>{{SpecName('HTML WHATWG', "#htmlanchorelement", "HTMLAnchorElement")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>The following property has been added: <code>download</code>.<br>
-    Technically, the URL-related properties, <code>media</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moved to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAnchorElement</code> implements this mixin.</td>
+    Technically, the URL-related properties, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moved to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAnchorElement</code> implements this mixin.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td>The methods <code>blur()</code> and <code>focus()</code>, as well as the properties <code>tabindex</code> and <code>accessKey</code>, are now defined on {{domxref("HTMLElement")}}.<br>
     The following properties are now obsolete: <code>charset</code>, <code>coords</code>, <code>name</code>, <code>rev</code>, and <code>shape</code>.<br>
-    The following properties have been added: <code>hash</code>, <code>host</code>, <code>hostname</code>, <code>media</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>relList</code>, <code>search</code>, and <code>text</code>.</td>
+    The following properties have been added: <code>hash</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>relList</code>, <code>search</code>, and <code>text</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-48250443', 'HTMLAnchorElement')}}</td>

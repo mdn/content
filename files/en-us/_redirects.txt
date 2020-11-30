@@ -3117,7 +3117,7 @@
 /en-US/docs/DOM/Node.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM/Node.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/DOM/Node.baseURI	/en-US/docs/Web/API/Node/baseURI
-/en-US/docs/DOM/Node.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/DOM/Node.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/Node.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/DOM/Node.cloneNode	/en-US/docs/Web/API/Node/cloneNode
 /en-US/docs/DOM/Node.compareDocumentPosition	/en-US/docs/Web/API/Node/compareDocumentPosition
@@ -3138,7 +3138,7 @@
 /en-US/docs/DOM/Node.namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/DOM/Node.nextSibling	/en-US/docs/Web/API/Node/nextSibling
 /en-US/docs/DOM/Node.nodeName	/en-US/docs/Web/API/Node/nodeName
-/en-US/docs/DOM/Node.nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/DOM/Node.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/Node.nodeType	/en-US/docs/Web/API/Node/nodeType
 /en-US/docs/DOM/Node.nodeValue	/en-US/docs/Web/API/Node/nodeValue
 /en-US/docs/DOM/Node.normalize	/en-US/docs/Web/API/Node/normalize
@@ -3391,7 +3391,7 @@
 /en-US/docs/DOM/document.anchors	/en-US/docs/Web/API/Document/anchors
 /en-US/docs/DOM/document.applets	/en-US/docs/Web/API/Document/applets
 /en-US/docs/DOM/document.async	/en-US/docs/Web/API/XMLDocument/async
-/en-US/docs/DOM/document.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/DOM/document.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/document.bgColor	/en-US/docs/Web/API/Document/bgColor
 /en-US/docs/DOM/document.body	/en-US/docs/Web/API/Document/body
 /en-US/docs/DOM/document.caretPositionFromPoint	/en-US/docs/Web/API/document/caretPositionFromPoint
@@ -3487,7 +3487,7 @@
 /en-US/docs/DOM/element.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/element.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM/element.attributes	/en-US/docs/Web/API/Element/attributes
-/en-US/docs/DOM/element.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/DOM/element.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/element.blur	/en-US/docs/Web/API/element.blur
 /en-US/docs/DOM/element.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/DOM/element.classList	/en-US/docs/Web/API/element.classList
@@ -3524,7 +3524,7 @@
 /en-US/docs/DOM/element.namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/DOM/element.nextSibling	/en-US/docs/Web/API/Node/nextSibling
 /en-US/docs/DOM/element.nodeName	/en-US/docs/Web/API/Node/nodeName
-/en-US/docs/DOM/element.nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/DOM/element.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/element.nodeType	/en-US/docs/Web/API/Node/nodeType
 /en-US/docs/DOM/element.nodeValue	/en-US/docs/Web/API/Node/nodeValue
 /en-US/docs/DOM/element.normalize	/en-US/docs/Web/API/Node/normalize
@@ -3955,7 +3955,7 @@
 /en-US/docs/DOM:document.anchors	/en-US/docs/Web/API/Document/anchors
 /en-US/docs/DOM:document.applets	/en-US/docs/Web/API/Document/applets
 /en-US/docs/DOM:document.async	/en-US/docs/Web/API/XMLDocument/async
-/en-US/docs/DOM:document.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/DOM:document.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM:document.bgColor	/en-US/docs/Web/API/Document/bgColor
 /en-US/docs/DOM:document.body	/en-US/docs/Web/API/Document/body
 /en-US/docs/DOM:document.characterSet	/en-US/docs/Web/API/document/characterSet
@@ -4027,7 +4027,7 @@
 /en-US/docs/DOM:element.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM:element.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM:element.attributes	/en-US/docs/Web/API/Element/attributes
-/en-US/docs/DOM:element.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/DOM:element.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/DOM:element.blur	/en-US/docs/Web/API/element.blur
 /en-US/docs/DOM:element.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/DOM:element.className	/en-US/docs/Web/API/element.className
@@ -4068,7 +4068,7 @@
 /en-US/docs/DOM:element.namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/DOM:element.nextSibling	/en-US/docs/Web/API/Node/nextSibling
 /en-US/docs/DOM:element.nodeName	/en-US/docs/Web/API/Node/nodeName
-/en-US/docs/DOM:element.nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/DOM:element.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/DOM:element.nodeType	/en-US/docs/Web/API/Node/nodeType
 /en-US/docs/DOM:element.nodeValue	/en-US/docs/Web/API/Node/nodeValue
 /en-US/docs/DOM:element.normalize	/en-US/docs/Web/API/Node/normalize
@@ -4680,7 +4680,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Node.namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/Document_Object_Model_(DOM)/Node.nextSibling	/en-US/docs/Web/API/Node/nextSibling
 /en-US/docs/Document_Object_Model_(DOM)/Node.nodeName	/en-US/docs/Web/API/Node/nodeName
-/en-US/docs/Document_Object_Model_(DOM)/Node.nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/Document_Object_Model_(DOM)/Node.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Document_Object_Model_(DOM)/Node.nodeType	/en-US/docs/Web/API/Node/nodeType
 /en-US/docs/Document_Object_Model_(DOM)/Node.nodeValue	/en-US/docs/Web/API/Node/nodeValue
 /en-US/docs/Document_Object_Model_(DOM)/Node.normalize	/en-US/docs/Web/API/Node/normalize
@@ -4852,7 +4852,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.anchors	/en-US/docs/Web/API/Document/anchors
 /en-US/docs/Document_Object_Model_(DOM)/document.applets	/en-US/docs/Web/API/Document/applets
 /en-US/docs/Document_Object_Model_(DOM)/document.async	/en-US/docs/Web/API/XMLDocument/async
-/en-US/docs/Document_Object_Model_(DOM)/document.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/Document_Object_Model_(DOM)/document.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/Document_Object_Model_(DOM)/document.bgColor	/en-US/docs/Web/API/Document/bgColor
 /en-US/docs/Document_Object_Model_(DOM)/document.body	/en-US/docs/Web/API/Document/body
 /en-US/docs/Document_Object_Model_(DOM)/document.characterSet	/en-US/docs/Web/API/document/characterSet
@@ -4939,7 +4939,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.writeln	/en-US/docs/Web/API/Document/writeln
 /en-US/docs/Document_Object_Model_(DOM)/document.xmlVersion	/en-US/docs/Web/API/Document/xmlVersion
 /en-US/docs/Document_Object_Model_(DOM)/element.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
-/en-US/docs/Document_Object_Model_(DOM)/element.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/Document_Object_Model_(DOM)/element.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/Document_Object_Model_(DOM)/element.classList	/en-US/docs/Web/API/element.classList
 /en-US/docs/Document_Object_Model_(DOM)/element.className	/en-US/docs/Web/API/element.className
 /en-US/docs/Document_Object_Model_(DOM)/element.click	/en-US/docs/Web/API/element.click
@@ -9690,7 +9690,7 @@
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
 /en-US/docs/Web/API/Document/msElementsFromRect	/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
-/en-US/docs/Web/API/Document/nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/Web/API/Document/nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/Document/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -10604,7 +10604,7 @@
 /en-US/docs/Web/API/Node.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/Web/API/Node.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/Web/API/Node.baseURI	/en-US/docs/Web/API/Node/baseURI
-/en-US/docs/Web/API/Node.baseURIObject	/en-US/docs/Web/API/Node/baseURIObject
+/en-US/docs/Web/API/Node.baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/Node.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/Web/API/Node.cloneNode	/en-US/docs/Web/API/Node/cloneNode
 /en-US/docs/Web/API/Node.compareDocumentPosition	/en-US/docs/Web/API/Node/compareDocumentPosition
@@ -10627,7 +10627,7 @@
 /en-US/docs/Web/API/Node.namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
 /en-US/docs/Web/API/Node.nextSibling	/en-US/docs/Web/API/Node/nextSibling
 /en-US/docs/Web/API/Node.nodeName	/en-US/docs/Web/API/Node/nodeName
-/en-US/docs/Web/API/Node.nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/Web/API/Node.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/Node.nodeType	/en-US/docs/Web/API/Node/nodeType
 /en-US/docs/Web/API/Node.nodeValue	/en-US/docs/Web/API/Node/nodeValue
 /en-US/docs/Web/API/Node.normalize	/en-US/docs/Web/API/Node/normalize
@@ -10640,8 +10640,11 @@
 /en-US/docs/Web/API/Node.replaceChild	/en-US/docs/Web/API/Node/replaceChild
 /en-US/docs/Web/API/Node.setUserData	/en-US/docs/Web/API/Node/setUserData
 /en-US/docs/Web/API/Node.textContent	/en-US/docs/Web/API/Node/textContent
+/en-US/docs/Web/API/Node/baseURIObject	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/Node/innerText	/en-US/docs/Web/API/HTMLElement/innerText
+/en-US/docs/Web/API/Node/nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/Node/outerText	/en-US/docs/Web/API/HTMLElement/outerText
+/en-US/docs/Web/API/Node/rootNode	/en-US/docs/Web/API/Node/getRootNode
 /en-US/docs/Web/API/NodeFilter.acceptNode	/en-US/docs/Web/API/NodeFilter/acceptNode
 /en-US/docs/Web/API/NodeIterator.detach	/en-US/docs/Web/API/NodeIterator/detach
 /en-US/docs/Web/API/NodeIterator.expandEntityReferences	/en-US/docs/Web/API/NodeIterator/expandEntityReferences
@@ -11996,7 +11999,7 @@
 /en-US/docs/Web/API/temp_document/mozSetImageElement	/en-US/docs/Web/API/Document/mozSetImageElement
 /en-US/docs/Web/API/temp_document/mozSyntheticDocument	/en-US/docs/Web/API/Document/mozSyntheticDocument
 /en-US/docs/Web/API/temp_document/namespaceURI	/en-US/docs/Web/API/Node/namespaceURI
-/en-US/docs/Web/API/temp_document/nodePrincipal	/en-US/docs/Web/API/Node/nodePrincipal
+/en-US/docs/Web/API/temp_document/nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/Web/API/temp_document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/temp_document/onafterscriptexecute	/en-US/docs/Web/API/Document/onafterscriptexecute
 /en-US/docs/Web/API/temp_document/onbeforescriptexecute	/en-US/docs/Web/API/Document/onbeforescriptexecute
@@ -12588,6 +12591,18 @@
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@page_rule	/en-US/docs/Web/CSS/@page
 /en-US/docs/Web/CSS/@styleset	/en-US/docs/Web/CSS/@font-feature-values
+/en-US/docs/Web/CSS/@viewport/height	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/max-height	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/max-width	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/max-zoom	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/min-height	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/min-width	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/min-zoom	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/orientation	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/user-zoom	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/viewport-fit	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/width	/en-US/docs/Web/CSS/@viewport
+/en-US/docs/Web/CSS/@viewport/zoom	/en-US/docs/Web/CSS/@viewport
 /en-US/docs/Web/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Adjacent_sibling_combinator
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/Containing_block

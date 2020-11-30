@@ -3,15 +3,13 @@ title: Column combinator
 slug: Web/CSS/Column_combinator
 tags:
   - CSS
-  - Draft
   - Experimental
-  - NeedsBrowserCompatibility
   - Reference
   - Selector
   - Selectors
   - Tables
 ---
-<div>{{CSSRef("Selectors")}}{{Draft}}{{SeeCompatTable}}</div>
+<div>{{CSSRef("Selectors")}}{{SeeCompatTable}}</div>
 
 <p>The <strong>column combinator</strong> (<code>||</code>) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.</p>
 
@@ -69,20 +67,20 @@ col.selected || td {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}}</td>
+			<td>{{Spec2("CSS4 Selectors")}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -94,7 +92,9 @@ col.selected || td {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}}</li>
- <li>{{CSSxRef("grid")}}</li>
+	<li>{{HTMLElement("col")}}</li>
+	<li>{{HTMLElement("colgroup")}}</li>
+	<li>{{CSSxRef("grid")}}</li>
+	<li>{{CSSxRef(":nth-col")}}</li>
+	<li>{{CSSxRef(":nth-last-col")}}</li>
 </ul>

@@ -34,7 +34,7 @@ tags:
    <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("formaction", "input") }} attribute, containing the URI of a program that processes information submitted by the element. This overrides the {{ htmlattrxref("action", "form") }} attribute of the parent form.</td>
   </tr>
   <tr>
-   <td><code>formEncType</code></td>
+   <td><code>formEnctype</code></td>
    <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("formenctype", "input") }} attribute, containing the type of content that is used to submit the form to the server. This overrides the {{ htmlattrxref("enctype", "form") }} attribute of the parent form.</td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ tags:
   <tr>
    <td><code>value</code></td>
    <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the current value of the control.
-   <p class="note"><strong>Note:</strong> If the user enters a value different from the value expected, this may return an empty string.</p>
+    <p class="note"><strong>Note:</strong> If the user enters a value different from the value expected, this may return an empty string.</p>
    </td>
   </tr>
   <tr>
@@ -87,7 +87,7 @@ tags:
   </tr>
   <tr>
    <td><code>validationMessage</code> {{readonlyInline}}</td>
-   <td><em><code>string</code>:</em> <strong>Returns</strong> a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is  <code>false</code>), or it satisfies its constraints. This value can be set by the <code>setCustomValidity</code> method.</td>
+   <td><em><code>string</code>:</em> <strong>Returns</strong> a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is <code>false</code>), or it satisfies its constraints. This value can be set by the <code>setCustomValidity</code> method.</td>
   </tr>
   <tr>
    <td><code>willValidate</code> {{readonlyInline}}</td>
@@ -168,8 +168,8 @@ tags:
   <tr>
    <td><code>autocomplete</code></td>
    <td><em><code>string</code>: </em><strong>Returns / Sets</strong> the element's {{htmlattrxref("autocomplete", "input")}} attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} attribute is <code>hidden</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (<code>button</code>, <code>submit</code>, <code>reset</code>, <code>image</code>). Possible values are:<br>
-   <code>on</code>: the browser can autocomplete the value using previously stored value<br>
-   <code>off</code>: the user must explicity enter a value</td>
+    <code>on</code>: the browser can autocomplete the value using previously stored value<br>
+    <code>off</code>: the user must explicity enter a value</td>
   </tr>
   <tr>
    <td><code>max</code></td>
@@ -198,7 +198,7 @@ tags:
   <tr>
    <td><code>readOnly</code></td>
    <td><em><code>boolean</code>:</em><strong> Returns / Sets</strong> the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control.<br>
-   {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
+    {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
   </tr>
   <tr>
    <td><code>selectionStart</code></td>
@@ -211,9 +211,9 @@ tags:
   <tr>
    <td><code>selectionDirection</code></td>
    <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the direction in which selection occurred. Possible values are:<br>
-   <code>forward</code> if selection was performed in the start-to-end direction of the current locale<br>
-   <code>backward</code> for the opposite direction<br>
-   <code>none</code> if the direction is unknown</td>
+    <code>forward</code> if selection was performed in the start-to-end direction of the current locale<br>
+    <code>backward</code> for the opposite direction<br>
+    <code>none</code> if the direction is unknown</td>
   </tr>
   <tr>
    <td><code>size</code></td>
@@ -264,11 +264,11 @@ tags:
   <tr>
    <td><code>valueAsNumber</code></td>
    <td><em><code>double</code>:</em> <strong>Returns</strong> the value of the element, interpreted as one of the following, in order:
-   <ul>
-    <li>A time value</li>
-    <li>A number</li>
-    <li><code>NaN</code> if conversion is impossible</li>
-   </ul>
+    <ul>
+     <li>A time value</li>
+     <li>A number</li>
+     <li><code>NaN</code> if conversion is impossible</li>
+    </ul>
    </td>
   </tr>
   <tr>
@@ -395,9 +395,9 @@ tags:
    <td>{{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
    <td>Technically, the <code>tabindex</code> and <code>accesskey</code> properties, as well as the <code>blur()</code>, <code>click()</code>, and <code>focus()</code> methods, are now defined on {{domxref("HTMLElement")}}.<br>
-   The following properties are now obsolete: <code>align</code> and <code>useMap</code>.<br>
-   The following properties have been added: <code>autocomplete</code>, <code>autofocus</code>, <code>dirName</code>, <code>files</code>, <code>formAction</code>, <code>formEncType</code>, <code>formMethod</code>, <code>formNoValidate</code>, <code>formTarget</code>, <code>height</code>, <code>indeterminate</code>, <code>labels</code>, <code>list</code>, <code>max</code>, <code>min</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>selectionDirection</code>, <code>selectionEnd</code>, <code>selectionStart</code>, <code>step</code>, <code>validationMessage</code>, <code>validity</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, <code>width</code>, and <code>willValidate</code>.<br>
-   The following methods have been added: <code>checkValidity()</code>, <code>setCustomValidity()</code>, <code>setSelectionRange()</code>, <code>stepUp()</code>, and <code>stepDown()</code>.</td>
+    The following properties are now obsolete: <code>align</code> and <code>useMap</code>.<br>
+    The following properties have been added: <code>autocomplete</code>, <code>autofocus</code>, <code>dirName</code>, <code>files</code>, <code>formAction</code>, <code>formEnctype</code>, <code>formMethod</code>, <code>formNoValidate</code>, <code>formTarget</code>, <code>height</code>, <code>indeterminate</code>, <code>labels</code>, <code>list</code>, <code>max</code>, <code>min</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>selectionDirection</code>, <code>selectionEnd</code>, <code>selectionStart</code>, <code>step</code>, <code>validationMessage</code>, <code>validity</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, <code>width</code>, and <code>willValidate</code>.<br>
+    The following methods have been added: <code>checkValidity()</code>, <code>setCustomValidity()</code>, <code>setSelectionRange()</code>, <code>stepUp()</code>, and <code>stepDown()</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}</td>

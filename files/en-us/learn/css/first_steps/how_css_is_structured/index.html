@@ -215,7 +215,7 @@ p {
   color: blue;
 }</pre>
 
-<p>However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering red paragraph text. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more <strong>specificity</strong> than the element selector, so it cancels the other conflicting style declaration.</p>
+<p>However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering the paragraph text red. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more <strong>specificity</strong> than the element selector, so it cancels the other conflicting style declaration.</p>
 
 <p>Try this experiment for yourself! Add HTML, then add the two <code>p { ... }</code> rules to your stylesheet. Next, change the first <code>p</code> selector to <code>.special</code> to see how it changes the styling.</p>
 
@@ -321,7 +321,7 @@ p {
 
 <h2 id="rules">@rules</h2>
 
-<p>CSS <a href="/en-US/docs/Web/CSS/At-rule">@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example,  <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
+<p>CSS <a href="/en-US/docs/Web/CSS/At-rule">@rules</a> (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword and a value. For example, <code>@import</code> imports a stylesheet into another CSS stylesheet:</p>
 
 <pre class="brush: css notranslate">@import 'styles2.css';</pre>
 

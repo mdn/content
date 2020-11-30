@@ -18,13 +18,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>appliedPromise</em> = <em>track</em>.applyConstraints([<em>constraints</em>])</pre>
+<pre class="syntaxbox notranslate">const <em>appliedPromise</em> = <em>track</em>.applyConstraints([<em>constraints</em>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>constraints</code> {{optional_inline}}</dt>
- <dd>A {{domxref("MediaTrackConstraints")}} object listing the constraints to apply to the track's constrainable properties; any existing constraints are replaced with the new values specified, and any constrainable properties not included are restored to their default constraints. If this parameter is omitted, all currently set custom constraints are cleared. This object represents the basic set of constraints that must apply for the {{jsxref("Promise")}} to resolve. The object may contain an advanced property containing an array of additional <code>MediaTrackConstrants</code> objects, which are treated as exact requires. </dd>
+ <dd>A {{domxref("MediaTrackConstraints")}} object listing the constraints to apply to the track's constrainable properties; any existing constraints are replaced with the new values specified, and any constrainable properties not included are restored to their default constraints. If this parameter is omitted, all currently set custom constraints are cleared. This object represents the basic set of constraints that must apply for the {{jsxref("Promise")}} to resolve. The object may contain an advanced property containing an array of additional <code>MediaTrackConstraints</code> objects, which are treated as exact requires. </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,7 +35,7 @@ tags:
 
 <p>The following shows how to specify a basic and advanced set of constraints. It specifies that the page or web app needs a width between 640 and 1280 and a height between 480 and 720, with the later number in each pair being preferred. The advanced property further specifies that an image size of 1920 by 1280 is the preferred or an aspect ratio of 1.333 if that is not available. Note that these constraints also illustrate what the spec refers to as a <em>backoff strategy</em>.</p>
 
-<pre class="brush: js">const constraints = {
+<pre class="brush: js notranslate">const constraints = {
   width: {min: 640, ideal: 1280},
   height: {min: 480, ideal: 720},
   advanced: [

@@ -151,14 +151,14 @@ Cache-Control: public
 <pre class="notranslate">Vary: <code>Accept-Encoding</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
+<div class="note"><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#Normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</div>
 
 <p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
 
 <pre class="notranslate">Vary: User-Agent
 </pre>
 
-<h3 id="Normalisation">Normalisation</h3>
+<h3 id="Normalization">Normalization</h3>
 
 <p>As discussed above, caching servers will by default match future requests <em>only</em> to requests with <em>exactly</em> the same headers and header values. That means a request will be made to the origin and a new cache will be created for every slight variant that might be specified by different user-agents.</p>
 

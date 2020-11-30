@@ -29,8 +29,6 @@ tags:
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMString")}} representing the base URL of the document containing the <code>Node</code>.</dd>
- <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}} {{ReadOnlyInline}}{{Fx_MinVersion_Inline("3")}}</dt>
- <dd>(Not available to web content.) The {{ Interface("nsIURI") }} object representing the base URI for the element.</dd>
  <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a live {{DOMxRef("NodeList")}} containing all the children of this node (including elements, text and comments). {{DOMxRef("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{DOMxRef("NodeList")}} object is automatically updated.</dd>
  <dt>{{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}</dt>
@@ -133,12 +131,8 @@ tags:
  <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code> namespace in both HTML and XML trees.</p>
  </div>
  </dd>
- <dt>{{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}{{Fx_MinVersion_Inline("3")}}</dt>
- <dd>A {{Interface("nsIPrincipal")}} representing the node principal.</dd>
  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} object representing the topmost node in the tree, or the current node if it's the topmost node in the tree. This has been replaced by {{DOMxRef("Node.getRootNode()")}}.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

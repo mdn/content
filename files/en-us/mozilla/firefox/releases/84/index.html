@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">December 15, 2020</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">December 15, 2020</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -64,6 +64,12 @@ tags:
  <li>The {{domxref('Navigator.registerProtocolHandler()')}} method now only accepts two parameters: <code>scheme</code> and <code>url</code>. <code>title</code> has been removed ({{bug(1631464)}})</li>
 </ul>
 
+<h4 id="Removals_5">Removals</h4>
+
+<ul>
+ <li>The <a href="/en-US/docs/Web/HTML/Using_the_application_cache">application cache</a> has been removed—developers should use the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> instead ({{bug(1619673)}}).</li>
+</ul>
+
 <h4 id="DOM">DOM</h4>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
@@ -72,13 +78,13 @@ tags:
  <li>The {{domxref('MediaRecorder.start()')}} method now throws an <code>InvalidModificationError</code> if number of tracks on the stream being recorded has changed. ({{bug(1581139)}})</li>
 </ul>
 
-<h4 id="Removals_5">Removals</h4>
+<h4 id="Removals_6">Removals</h4>
 
 <h3 id="WebAssembly">WebAssembly</h3>
 
 <p><em>No changes</em></p>
 
-<h4 id="Removals_6">Removals</h4>
+<h4 id="Removals_7">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
@@ -86,7 +92,7 @@ tags:
  <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove">browsingData.remove</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
 </ul>
 
-<h4 id="Removals_7">Removals</h4>
+<h4 id="Removals_8">Removals</h4>
 
 <h2 id="Older_versions">Older versions</h2>
 

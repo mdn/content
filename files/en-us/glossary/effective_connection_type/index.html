@@ -13,11 +13,11 @@ tags:
   - effective connection type
   - effectiveType
 ---
-<p><strong>Effective connection type</strong> (ECT) refers to the <span style='color: #666666; display: inline !important; float: none; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>measured network performance, returning a cellular connection type, like 3G, even if the actual connection is tethered broadband or WiFi, based on the </span>time between the browser requesting a page and effective type of the connection.</p>
+<p><strong>Effective connection type</strong> (ECT) refers to the measured network performance, returning a cellular connection type, like 3G, even if the actual connection is tethered broadband or WiFi, based on the time between the browser requesting a page and effective type of the connection.</p>
 
-<p>The values of '<code>slow-2g</code>', '<code>2g</code>', '<code>3g</code>', and '<code>4g</code>' are determined using observed round-trip times and downlink values.</p>
+<p>The values of '<code>slow-2g</code>', '<code>2g</code>', '<code>3g</code>', and '<code>4g</code>' are determined using observed round-trip times and downlink values.</p>
 
-<table style="height: 346px; width: 1172px;">
+<table>
  <caption><dfn>Table of effective connection types</dfn></caption>
  <thead>
   <tr>
@@ -55,11 +55,11 @@ tags:
  </tbody>
 </table>
 
-<p><a href="/en-US/docs/Web/API/NetworkInformation/effectiveType">effectiveType</a> is a property of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>, exposed to JavaScript via the <a href="/en-US/docs/Web/API/Navigator/connection">navigator.connection</a> object. To see your effective connection type, open the console of the developer tools of a supporting browser and enter the following:</p>
+<p><a href="/en-US/docs/Web/API/NetworkInformation/effectiveType">effectiveType</a> is a property of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>, exposed to JavaScript via the <a href="/en-US/docs/Web/API/Navigator/connection">navigator.connection</a> object. To see your effective connection type, open the console of the developer tools of a supporting browser and enter the following:</p>
 
-<pre class="brush: js">navigator.connection.effectiveType;</pre>
+<pre class="brush: js notranslate">navigator.connection.effectiveType;</pre>
 
-<h2 id="See_Also">See Also:</h2>
+<h2 id="See_also">See also:</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a></li>

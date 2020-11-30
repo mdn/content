@@ -6,7 +6,7 @@ tags:
   - HTTP
   - HTTP Header
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+<div>{{HTTPSidebar}}{{Draft}}</div>
 
 <p>The <strong><code>Sec-Fetch-Mode</code></strong> fetch metadata header indicates the request's mode.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Sec-Fetch-Mode: cors
+<pre class="syntaxbox notranslate">Sec-Fetch-Mode: cors
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Mode: nested-navigate
 Sec-Fetch-Mode: no-cors
@@ -64,13 +64,15 @@ Sec-Fetch-Mode: websocket
  <thead>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Title</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://w3c.github.io/webappsec-fetch-metadata/#sec-fetch-mode-header">Fetch Metadata Request Headers</a></td>
-   <td>The Sec-Fetch-Mode HTTP Request Header</td>
+   <td>{{SpecName('Fetch Metadata','#sec-fetch-mode-header', 'Sec-Fetch-Mode')}}</td>
+   <td>{{Spec2("Fetch Metadata")}}</td>
+   <td>Initial definition</td>
   </tr>
  </tbody>
 </table>
@@ -84,7 +86,7 @@ Sec-Fetch-Mode: websocket
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
 </ul>

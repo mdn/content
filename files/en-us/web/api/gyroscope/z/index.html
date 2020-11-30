@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>z</var> = <var>gyroscope</var>.z</pre>
+<pre class="syntaxbox notranslate">var <var>z</var> = <var>gyroscope</var>.z</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -30,12 +30,12 @@ tags:
 
 <p>The gyroscope is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js">let gyroscope = new Gyroscope({frequency: 60});
+<pre class="brush: js notranslate">let gyroscope = new Gyroscope({frequency: 60});
 
 gyroscope.addEventListener('reading', e =&gt; {
-  console.log("Angular velocety along the X-axis " + gyroscope.x);
-  console.log("Angular velocety along the Y-axis " + gyroscope.y);
-  console.log("Angular velocety along the Z-axis " + gyroscope.z);
+  console.log("Angular velocity along the X-axis " + gyroscope.x);
+  console.log("Angular velocity along the Y-axis " + gyroscope.y);
+  console.log("Angular velocity along the Z-axis " + gyroscope.z);
 });
 gyroscope.start();</pre>
 
@@ -56,7 +56,7 @@ gyroscope.start();</pre>
   <tr>
    <td>{{SpecName('Gyroscope','#gyroscope-z','z')}}</td>
    <td>{{Spec2('Gyroscope')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

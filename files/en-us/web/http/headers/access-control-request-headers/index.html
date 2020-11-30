@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p>The <strong><code>Access-Control-Request-Headers</code></strong> request header is used by browsers when issuing a {{glossary("preflight request")}}, to let the server know which <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> the client might send when the actual request is made.</p>
+<p>The <strong><code>Access-Control-Request-Headers</code></strong> request header is used by browsers when issuing a {{glossary("preflight request")}}, to let the server know which <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> the client might send when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.</p>
 
 <table class="properties">
  <tbody>

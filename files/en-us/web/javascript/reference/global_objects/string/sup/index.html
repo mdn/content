@@ -12,27 +12,27 @@ tags:
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <strong><code>sup()</code></strong> method creates a <a href="/en-US/docs/Web/HTML/Element/sup" title="The HTML Superscript element (&lt;sup>) specifies inline text which is to be displayed as superscript for solely typographical reasons."><code>&lt;sup&gt;</code></a> HTML element that causes a string to be displayed as superscript.</p>
+<p>The <strong><code>sup()</code></strong> method creates a {{HTMLElement("sup")}} HTML element that causes a string to be displayed as superscript.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>str</var>.sup()</code></pre>
+<pre class="syntaxbox notranslate"><var>str</var>.sup()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A string containing a <a href="/en-US/docs/Web/HTML/Element/sup" title="The HTML Superscript element (&lt;sup>) specifies inline text which is to be displayed as superscript for solely typographical reasons."><code>&lt;sup&gt;</code></a> HTML element.</p>
+<p>A string containing a {{HTMLElement("sup")}} HTML element.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>sup()</code> method embeds a string in a <code>&lt;sup&gt;</code> tag: <code>"&lt;sup&gt;str&lt;/sup&gt;"</code>.</p>
+<p>The <code>sup()</code> method embeds a string in a <code>&lt;sup&gt;</code> element: "<code>&lt;sup&gt;str&lt;/sup&gt;</code>".</p>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_sub_and_sup_methods">Using <code>sub()</code> and <code>sup()</code> methods</h3>
+<h3 id="Using_sub_and_sup_methods">Using sub() and sup() methods</h3>
 
 <p>The following example uses the {{jsxref("String.prototype.sub()", "sub()")}} and <code>sup()</code> methods to format a string:</p>
 
-<pre class="brush: js">var superText = 'superscript';
+<pre class="brush: js notranslate">var superText = 'superscript';
 var subText = 'subscript';
 
 console.log('This is what a ' + superText.sup() + ' looks like.');
@@ -45,10 +45,12 @@ console.log('This is what a ' + subText.sub() + ' looks like.');
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}}</td>
   </tr>
@@ -57,7 +59,7 @@ console.log('This is what a ' + subText.sub() + ' looks like.');
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.String.sup")}}</p>
 

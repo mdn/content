@@ -15,12 +15,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>str</var>.repeat(<var>count</var>)</code>
-</pre>
+<pre class="syntaxbox notranslate"><var>str</var>.repeat(<var>count</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,11 +39,26 @@ tags:
  <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: repeat count must be less than infinity and not overflow maximum string size.</li>
 </ul>
 
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_repeat">Using repeat()</h3>
+
+<pre class="brush: js notranslate">'abc'.repeat(-1)    // RangeError
+'abc'.repeat(0)     // ''
+'abc'.repeat(1)     // 'abc'
+'abc'.repeat(2)     // 'abcabc'
+'abc'.repeat(3.5)   // 'abcabcabc' (count will be converted to integer)
+'abc'.repeat(1/0)   // RangeError
+
+({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2)
+// 'abcabc' (repeat() is a generic method)
+</pre>
+
 <h2 id="Polyfill">Polyfill</h2>
 
 <p>This method has been added to the ECMAScript 2015 specification and may not be available in all JavaScript implementations yet. However, you can polyfill <code>String.prototype.repeat()</code> with the following snippet:</p>
 
-<pre dir="rtl"><code>if (!String.prototype.repeat) {
+<pre class="notranslate">if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null)
@@ -82,21 +96,7 @@ tags:
     str += str.substring(0, maxCount - str.length);
     return str;
   }
-}</code></pre>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_repeat">Using repeat</h3>
-
-<pre class="brush: js">'abc'.repeat(-1)    // RangeError
-'abc'.repeat(0)     // ''
-'abc'.repeat(1)     // 'abc'
-'abc'.repeat(2)     // 'abcabc'
-'abc'.repeat(3.5)   // 'abcabcabc' (count will be converted to integer)
-'abc'.repeat(1/0)   // RangeError
-
-({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2)
-// 'abcabc' (repeat() is a generic method)
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -116,7 +116,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
 
 <p>{{Compat("javascript.builtins.String.repeat")}}</p>
 

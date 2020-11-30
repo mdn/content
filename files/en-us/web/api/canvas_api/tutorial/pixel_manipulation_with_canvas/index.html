@@ -254,12 +254,16 @@ function draw(img) {
   ctx.drawImage(img, 0, 0);
 
   var smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
-  smoothedZoomCtx.imageSmoothingEnabled = this.checked;
-  smoothedZoomCtx.mozImageSmoothingEnabled = this.checked;
-  smoothedZoomCtx.webkitImageSmoothingEnabled = this.checked;
-  smoothedZoomCtx.msImageSmoothingEnabled = this.checked;
+  smoothedZoomCtx.imageSmoothingEnabled = true;
+  smoothedZoomCtx.mozImageSmoothingEnabled = true;
+  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
+  smoothedZoomCtx.msImageSmoothingEnabled = true;
 
   var pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
+  pixelatedZoomCtx.imageSmoothingEnabled = false;
+  pixelatedZoomCtx.mozImageSmoothingEnabled = false;
+  pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
+  pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
   var zoom = function(ctx, x, y) {
     ctx.drawImage(canvas,

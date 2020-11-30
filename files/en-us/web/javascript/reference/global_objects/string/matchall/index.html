@@ -15,7 +15,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -54,9 +54,9 @@ while ((match = regexp.exec(str)) !== null) {
   // expected output: "Found foosball start=16 end=24."
 }</pre>
 
-<p>With <code>matchAll</code> available, you can avoid the {{jsxref("Statements/while", "while")}}  loop and <code>exec</code> with <code>g</code>.</p>
+<p>With <code>matchAll</code> available, you can avoid the {{jsxref("Statements/while", "while")}} loop and <code>exec</code> with <code>g</code>.</p>
 
-<p>Instead, by using <code>matchAll</code>, you get an iterator to use with the more convenient {{jsxref("Statements/for...of", "for...of")}}, {{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}} constructs:</p>
+<p>Instead, by using <code>matchAll</code>, you get an iterator to use with the more convenient {{jsxref("Statements/for...of", "for...of")}}, {{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}} constructs:</p>
 
 <pre class="brush: js notranslate">const regexp = RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
@@ -73,7 +73,7 @@ for (const match of matches) {
 Array.from(str.matchAll(regexp), m =&gt; m[0]);
 // Array [ "football", "foosball" ]</pre>
 
-<p><code>matchAll</code> will throw an exception if the <code>g</code> flag is missing.</p>
+<p><code>matchAll</code> will throw an exception if the <code>g</code> flag is missing.</p>
 
 <pre class="brush: js notranslate">const regexp = RegExp('[a-c]','');
 const str = 'abc';
@@ -81,7 +81,7 @@ str.matchAll(regexp);
 // TypeError
 </pre>
 
-<p><code>matchAll</code> internally makes a clone of the <code><var>regexp</var></code>—so, unlike {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}, <code>lastIndex</code> does not change as the string is scanned.</p>
+<p><code>matchAll</code> internally makes a clone of the <code><var>regexp</var></code>—so, unlike {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}, <code>lastIndex</code> does not change as the string is scanned.</p>
 
 <pre class="brush: js notranslate">const regexp = RegExp('[a-c]','g');
 regexp.lastIndex = 1;
@@ -93,7 +93,7 @@ Array.from(str.matchAll(regexp), m =&gt; `${regexp.lastIndex} ${m[0]}`);
 
 <p>Another compelling reason for <code>matchAll</code> is the improved access to capture groups.</p>
 
-<p>Capture groups are ignored when using {{jsxref("Global_Objects/String/match", "match()")}} with the global <code>/g</code> flag:</p>
+<p>Capture groups are ignored when using {{jsxref("Global_Objects/String/match", "match()")}} with the global <code>/g</code> flag:</p>
 
 <pre class="brush: js notranslate">let regexp = /t(e)(st(\d?))/g;
 let str = 'test1test2';
@@ -101,7 +101,7 @@ let str = 'test1test2';
 str.match(regexp);
 // Array ['test1', 'test2']</pre>
 
-<p>Using <code>matchAll</code>, you can access capture groups easily:</p>
+<p>Using <code>matchAll</code>, you can access capture groups easily:</p>
 
 <pre class="brush: js notranslate">let array = [...str.matchAll(regexp)];
 

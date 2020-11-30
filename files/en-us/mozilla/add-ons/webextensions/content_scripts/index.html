@@ -218,6 +218,10 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <p>For cross-browser extensions, the presence of these methods must be feature-detected.</p>
 </div>
 
+<div class="blockIndicator note">
+<p>In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See "<span dir="ltr" id="sites-page-title" style="outline: none;"><a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a></span>".</p>
+</div>
+
 <h2 id="Communicating_with_background_scripts">Communicating with background scripts</h2>
 
 <p>Although content scripts can't directly use most of the WebExtension APIs, they can communicate with the extension's background scripts using the messaging APIs, and can therefore indirectly access all the same APIs that the background scripts can.</p>

@@ -20,14 +20,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <var>var1</var> [= <var>value1</var>] [, <var>var2</var> [= <var>value2</var>]] [, ..., <var>varN</var> [= <var>valueN</var>];</pre>
+<pre class="syntaxbox notranslate">let <var>name1</var> [= <var>value1</var>] [, <var>name2</var> [= <var>value2</var>]] [, ..., <var>nameN</var> [= <var>valueN</var>];</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>var1</var></code>, <code><var>var2</var></code>, …, <code><var>varN</var></code></dt>
+ <dt><code><var>nameN</var></code></dt>
  <dd>The names of the variable or variables to declare. Each must be a legal JavaScript identifier.</dd>
- <dt><code><var>value1</var></code>, <code><var>value2</var></code>, …, <code><var>valueN</var></code> {{optional_inline}}</dt>
+ <dt><code><var>value</var></code><code><var>N</var></code> {{optional_inline}}</dt>
  <dd>For each variable declared, you may optionally specify its initial value to any legal JavaScript expression.</dd>
 </dl>
 
@@ -43,6 +43,10 @@ tags:
 <p>Just like {{jsxref("statements/const", "const", "Description")}} the <code>let</code> does <em>not</em> create properties of the {{domxref("window")}} object when declared globally (in the top-most scope).</p>
 
 <p>An explanation of why the name "<strong>let</strong>" was chosen can be found <a href="https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri">here</a>.</p>
+
+<div class="blockIndicator note">
+<p>It is good practice to declare and intialise <code>let</code> variables at the top of the scope in which they are used. </p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -119,7 +123,7 @@ thing.showPrivate();
 // 1
 </pre>
 
-<p>The same privacy pattern with closures over local variables can be created with <code>var</code>, but those need a function scope (typically an IIFE in the module pattern) instead of just a block scope like in the example above.</p>
+<p>The same privacy pattern with closures over local variables can be created with <code>var</code>, but those need a function scope (typically an {{Glossary("IIFE")}} in the module pattern) instead of just a block scope like in the example above.</p>
 
 <h3 id="Redeclarations">Redeclarations</h3>
 
@@ -159,35 +163,54 @@ switch(x) {
   }
 }</pre>
 
-<h3 id="Temporal_dead_zone">Temporal dead zone</h3>
+<h3 id="Temporal_dead_zone_TDZ">Temporal dead zone (TDZ)</h3>
 
-<p>Unlike variables declared with {{jsxref("Statements/var", "var", "var_hoisting")}}, which will start with the value <code>undefined</code>, <code>let</code> variables are <em>not</em> initialized until their definition is evaluated. Accessing the variable before the initialization results in a {{jsxref("ReferenceError")}}. The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.</p>
+<p><code>let</code> variables cannot be read/written until they have been fully initialized, which happens when they are declared (if no initial value is specified on declaration, the variable is initialized with a value of <code>undefined</code>). Accessing the variable before the initialization results in a {{jsxref("ReferenceError")}}.</p>
 
-<pre class="brush: js example-bad notranslate">function do_something() {
-  console.log(bar); // undefined
+<div class="blockIndicator note">
+<p>This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of <code>undefined</code> if they are accessed before they are declared.</p>
+</div>
+
+<p>The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until the initialization has completed.</p>
+
+<pre class="brush: js example-bad notranslate">{ // TDZ starts at beginning of scope
+  console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
-  let foo = 2;
-}</pre>
+  let foo = 2; // End of TDZ (for foo)
+}
+</pre>
 
-<h3 id="The_temporal_dead_zone_and_typeof">The temporal dead zone and <code>typeof</code></h3>
+<p>The term "temporal" is used because the zone depends on the order of execution (time) rather than the order in which the code is written (position). For example, the code below works because, even though the function that uses the <code>let</code> variable appears before the variable is declared, the function is <em>called</em> outside the TDZ.</p>
 
-<p>Unlike with simply undeclared variables and variables that hold a value of <code>undefined</code>, using the <code>typeof</code> operator to check for the type of a variable in that variable's temporal dead zone will throw a {{jsxref("ReferenceError")}}:</p>
+<pre class="brush: js notranslate">{
+    // TDZ starts at beginning of scope
+    const func = () =&gt; console.log(letVar); // OK
 
-<pre class="brush: js example-bad notranslate">// prints out 'undefined'
-console.log(typeof undeclaredVariable);
+    // Within the TDZ letVar access throws `ReferenceError`
 
-// results in a 'ReferenceError'
+    let letVar = 3; // End of TDZ (for letVar)
+    func(); // Called outside TDZ!
+}
+</pre>
+
+<h4 id="The_TDZ_and_typeof">The TDZ and <code>typeof</code></h4>
+
+<p>Using the <code>typeof</code> operator for a <code>let</code> variable in its TDZ will throw a {{jsxref("ReferenceError")}}:</p>
+
+<pre class="brush: js example-bad notranslate">// results in a 'ReferenceError'
 console.log(typeof i);
 let i = 10;</pre>
 
-<h3 id="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping">Another example of temporal dead zone combined with lexical scoping</h3>
+<p>This differs from using <code>typeof</code> for undeclared variables, and variables that hold a value of <code>undefined</code>:</p>
 
-<p>Due to lexical scoping, the identifier <code>foo</code> inside the expression <code>(foo + 55)</code> evaluates to the <code>if</code> block's <code>foo</code>, and not the overlying variable <code>foo</code> with the value of <code>33</code>.</p>
+<pre class="brush: js notranslate">// prints out 'undefined'
+console.log(typeof undeclaredVariable);
+</pre>
 
-<p>In the same line, the <code>if</code> block's <code>foo</code> has already been created in the lexical environment, but has not yet reached (and terminated) its initialization (which is part of the statement itself).</p>
+<h4 id="TDZ_combined_with_lexical_scoping">TDZ combined with lexical scoping</h4>
 
-<p>The if block's <code>foo</code> is still in the temporal dead zone.</p>
+<p>The following code results in a <code>ReferenceError</code> at the line shown:</p>
 
 <pre class="brush: js example-bad notranslate">function test(){
    var foo = 33;
@@ -197,7 +220,9 @@ let i = 10;</pre>
 }
 test();</pre>
 
-<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the for loop's block. So, the identifier <code>n.a</code> is resolved to the property '<code>a</code>' of the '<code>n</code>' object located in the first part of the instruction itself (<code>let n</code>).</p>
+<p>The <code>if</code> block is evaluated because the outer <code>var foo</code> has a value. However due to lexical scoping this value is not available inside the block: the identifier <code>foo</code> <em>inside</em> the <code>if</code> block is the <code>let foo</code>. The expression <code>(foo + 55)</code> throws a <code>ReferenceError</code> because initialisation of <code>let foo</code> has not completed — it is still in the temporal dead zone.</p>
+
+<p>This phenomenon can be confusing in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the for loop's block. So, the identifier <code>n.a</code> is resolved to the property '<code>a</code>' of the '<code>n</code>' object located in the first part of the instruction itself (<code>let n</code>).</p>
 
 <p>This is still in the temporal dead zone as its declaration statement has not been reached and terminated.</p>
 

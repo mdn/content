@@ -49,7 +49,7 @@ font-size: unset;
 
 <ul>
  <li>As one of the <a href="#absolute-size">absolute-size</a> or <a href="#relative-size">relative-size</a> keywords</li>
- <li>As a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code>, relative to the parent element's font size</li>
+ <li>As a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code>, relative to the element's font size.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
@@ -93,24 +93,24 @@ font-size: unset;
 
 <h3 id="Ems">Ems</h3>
 
-<p>Another way of setting the font size is with <code>em</code> values. Using an em value creates a dynamic or computed font size. The numerical value in front of the unit name acts as a multiplier of the <a href="https://drafts.csswg.org/css-fonts-3/#propdef-font-size" id="ref-for-propdef-font-size①">font-size</a> property of the element on which it is used. Consider this example:</p>
+<p>Using an <code>em</code> value creates a dynamic or computed font size (historically the <code>em</code> unit was derived from the width of a capital "M" in a given typeface.). The numeric value acts as a multiplier of the <code>font-size</code> property of the element on which it is used. Consider this example:</p>
 
 <pre class="brush: css notranslate">p {
   font-size: 2em;
 }
 </pre>
 
-<p>This means that the font size of <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">p</span></font> elements will be two times greater than the computed font-size inherited by <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">p</span></font> elements. By extension, this means that setting a <code>font-size</code> of 1em equals the computed font-size of the element on which it is used.</p>
+<p>In this case, the font size of <code>&lt;p&gt;</code> elements will be double the computed <code>font-size</code> inherited by <code>&lt;p&gt;</code> elements. By extension, a <code>font-size</code> of <code>1em</code> equals the computed <code>font-size</code> of the element on which it is used.</p>
 
-<p>If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. If you set a <code>font-size</code> of 20px on the body element, then 1em = 20px and 2em = 40px. </p>
+<p>If a <code>font-size</code> has not been set on any of the <code>&lt;p&gt;</code>'s ancestors, then <code>1em</code> will equal the default browser <code>font-size</code>, which is usually <code>16px</code>. So, by default <code>1em</code> is equivalent to <code>16px</code>, and <code>2em</code> is equivalent to <code>32px</code>. If you were to set a <code>font-size</code> of 20px on the <code>&lt;body&gt;</code> element say, then <code>1em</code> on the <code>&lt;p&gt;</code> elements would instead be equivalent to <code>20px</code>, and <code>2em</code> would be equivalent to <code>40px</code>.</p>
 
-<p>In order to calculate the em equivalent for any pixel value required, you can use this formula:</p>
+<p>In order to calculate the <code>em</code> equivalent for any pixel value required, you can use this formula:</p>
 
 <pre class="brush: plain notranslate">em = desired element pixel value / parent element font-size in pixels</pre>
 
-<p>For example, suppose the font-size of the body of the page is set to 16px. If the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).</p>
+<p>For example, suppose the <code>font-size</code> of the <code>&lt;body&gt;</code> of the page is set to <code>16px</code>. If the font-size you want is <code>12px</code>, then you should specify <code>0.75em</code> (because 12/16 = 0.75). Similarly, if you want a font size of <code>10px</code>, then specify <code>0.625em</code> (10/16 = 0.625); for <code>22px</code>, specify <code>1.375em</code> (22/16).</p>
 
-<p>The em is a very useful unit in CSS since it automatically adapts its length relative to the font that the reader chooses to use.</p>
+<p>The <code>em</code> is a very useful unit in CSS since it automatically adapts its length relative to the font that the reader chooses to use.</p>
 
 <p>One important fact to keep in mind: em values compound. Take the following HTML and CSS:</p>
 
@@ -156,9 +156,9 @@ span {
 
 <h3 id="Ex">Ex</h3>
 
-<p>You may also set a font-size using the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">ex</span></font> unit. Like the <code>em</code> unit, an element's font-size set using the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">ex</span></font> unit is computed or dynamic. And a font-size set using the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">ex</span></font> unit acts just like those using <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">em</span></font> units. The number value in front of the unit name multiplies the element's inherited font-size and font-size compounds relatively. </p>
+<p>Like the <code>em</code> unit, an element's <code>font-size</code> set using the <code>ex</code> unit is computed or dynamic. It beaves in exactly the same way, except that when setting the <code>font-size</code> property using <code>ex</code> units, the <code>font-size</code> equals the x-height of the <a href="https://www.w3.org/TR/css3-fonts/#first-available-font">first available font</a> used on the page. The number value multiplies the element's inherited <code>font-size</code> and the <code>font-size</code> compounds relatively.</p>
 
-<p>When setting the <code>font-size</code> property using <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">ex</span></font> units, the font-size equals the x-height of the <a href="https://www.w3.org/TR/css3-fonts/#first-available-font">first available font</a> used on the page. See the W3C Editor's Draft for a more detailed description of <a href="https://drafts.csswg.org/css-values-4/#font-relative-length">font-relative length units</a> such as the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">ex</span></font>.</p>
+<p>See the W3C Editor's Draft for a more detailed description of <a href="https://drafts.csswg.org/css-values-4/#font-relative-length">font-relative length units</a> such as <code>ex</code>.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 

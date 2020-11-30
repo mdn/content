@@ -50,14 +50,14 @@ Referrer-Policy: unsafe-url
  <dt><code>no-referrer</code></dt>
  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer information is sent along with requests.</dd>
  <dt><code>no-referrer-when-downgrade</code> (default)</dt>
- <dd>This is the default behavior if no policy is specified, or if the provided value is invalid. The {{glossary("origin")}}, {{glossary("path")}}, and {{glossary("querystring")}} of the URL are sent as a referrer when the protocol security level stays the same (HTTP→HTTP, HTTPS→HTTPS) or improves (HTTP→HTTPS), but isn't sent to less secure destinations (HTTPS→HTTP).
+ <dd>This is the default behavior if no policy is specified, or if the provided value is invalid. The {{glossary("origin")}}, path, and querystring of the URL are sent as a referrer when the protocol security level stays the same (HTTP→HTTP, HTTPS→HTTPS) or improves (HTTP→HTTPS), but isn't sent to less secure destinations (HTTPS→HTTP).
  <div class="note">There is effort from browsers in moving to a stricter default value, namely <code>strict-origin-when-cross-origin</code> (see <a href="https://github.com/whatwg/fetch/pull/952">https://github.com/whatwg/fetch/pull/952</a>), consider using this value (or a stricter one), if possible, when changing the Referrer-Policy.</div>
  </dd>
  <dt><code>origin</code></dt>
  <dd>Only send the {{glossary("origin")}} of the document as the referrer.<br>
  For example, a document at <code>https://example.com/page.html</code> will send the referrer <code>https://example.com/</code>.</dd>
  <dt><code>origin-when-cross-origin</code></dt>
- <dd>Send the origin, path, and query string when performing a {{glossary("Same-origin_policy", "same-origin")}} request, but only send the origin of the document for other cases.</dd>
+ <dd>Send the {{glossary("origin")}}, path, and query string when performing a {{glossary("Same-origin_policy", "same-origin")}} request, but only send the origin of the document for other cases.</dd>
  <dt><code>same-origin</code></dt>
  <dd>A referrer will be sent for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-site origins</a>, but cross-origin requests will send no referrer information.</dd>
  <dt><code>strict-origin</code></dt>
