@@ -16,7 +16,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-indexof.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,10 +25,10 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-	<dt><code><var>searchElement</var></code></dt>
-	<dd>Element to locate in the array.</dd>
-	<dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
-	<dd>The index to start the search at. If the index is greater than or equal to the array's length, -1 is returned, which means the array will not be searched. If the provided index value is a negative number, it is taken as the offset from the end of the array. Note: if the provided index is negative, the array is still searched from front to back. If the provided index is 0, then the whole array will be searched. Default: 0 (entire array is searched).</dd>
+ <dt><code><var>searchElement</var></code></dt>
+ <dd>Element to locate in the array.</dd>
+ <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
+ <dd>The index to start the search at. If the index is greater than or equal to the array's length, -1 is returned, which means the array will not be searched. If the provided index value is a negative number, it is taken as the offset from the end of the array. Note: if the provided index is negative, the array is still searched from front to back. If the provided index is 0, then the whole array will be searched. Default: 0 (entire array is searched).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -37,11 +37,58 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>indexOf()</code> compares <code><var>searchElement</var></code> to elements of the Array using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict equality</a> (the same method used by the <code>===</code> or triple-equals operator).</p>
+<p><code>indexOf()</code> compares <code><var>searchElement</var></code> to elements of the Array using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict equality</a> (the same method used by the <code>===</code> or triple-equals operator).</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> For the String method, see {{jsxref("String.prototype.indexOf()")}}.</p>
 </div>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_indexOf">Using indexOf()</h3>
+
+<p>The following example uses <code>indexOf()</code> to locate values in an array.</p>
+
+<pre class="brush: js notranslate">var array = [2, 9, 9];
+array.indexOf(2);     // 0
+array.indexOf(7);     // -1
+array.indexOf(9, 2);  // 2
+array.indexOf(2, -1); // -1
+array.indexOf(2, -3); // 0
+</pre>
+
+<h3 id="Finding_all_the_occurrences_of_an_element">Finding all the occurrences of an element</h3>
+
+<pre class="brush: js notranslate">var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = array.indexOf(element);
+while (idx != -1) {
+  indices.push(idx);
+  idx = array.indexOf(element, idx + 1);
+}
+console.log(indices);
+// [0, 2, 4]
+</pre>
+
+<h3 id="Finding_if_an_element_exists_in_the_array_or_not_and_updating_the_array">Finding if an element exists in the array or not and updating the array</h3>
+
+<pre class="brush: js notranslate">function updateVegetablesCollection (veggies, veggie) {
+    if (veggies.indexOf(veggie) === -1) {
+        veggies.push(veggie);
+        console.log('New veggies collection is : ' + veggies);
+    } else if (veggies.indexOf(veggie) &gt; -1) {
+        console.log(veggie + ' already exists in the veggies collection.');
+    }
+}
+
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'spinach');
+// New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+updateVegetablesCollection(veggies, 'spinach');
+// spinach already exists in the veggies collection.
+</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -51,29 +98,29 @@ tags:
 // skipping the definitely fruitless NaN search. Other parts are merely cosmetic conciseness.
 // Whether it is actually faster remains to be seen.
 if (!Array.prototype.indexOf)
-  Array.prototype.indexOf = (function(Object, max, min) {
-    "use strict"
-    return function indexOf(member, fromIndex) {
-      if (this === null || this === undefined)
-        throw TypeError("Array.prototype.indexOf called on null or undefined")
+  Array.prototype.indexOf = (function(Object, max, min) {
+    "use strict"
+    return function indexOf(member, fromIndex) {
+      if (this === null || this === undefined)
+        throw TypeError("Array.prototype.indexOf called on null or undefined")
 
-      var that = Object(this), Len = that.length &gt;&gt;&gt; 0, i = min(fromIndex | 0, Len)
-      if (i &lt; 0) i = max(0, Len + i)
-      else if (i &gt;= Len) return -1
+      var that = Object(this), Len = that.length &gt;&gt;&gt; 0, i = min(fromIndex | 0, Len)
+      if (i &lt; 0) i = max(0, Len + i)
+      else if (i &gt;= Len) return -1
 
-      if (member === void 0) {        // undefined
-        for (; i !== Len; ++i) if (that[i] === void 0 &amp;&amp; i in that) return i
-      } else if (member !== member) { // NaN
-        return -1 // Since NaN !== NaN, it will never be found. Fast-path it.
-      } else                          // all else
-        for (; i !== Len; ++i) if (that[i] === member) return i
+      if (member === void 0) {        // undefined
+        for (; i !== Len; ++i) if (that[i] === void 0 &amp;&amp; i in that) return i
+      } else if (member !== member) { // NaN
+        return -1 // Since NaN !== NaN, it will never be found. Fast-path it.
+      } else                          // all else
+        for (; i !== Len; ++i) if (that[i] === member) return i
 
-      return -1 // if the value was not found, then return -1
-    }
-  })(Object, Math.max, Math.min)
+      return -1 // if the value was not found, then return -1
+    }
+  })(Object, Math.max, Math.min)
 </pre>
 
-<p>However, if you are more interested in all the little technical bits defined by the ECMA standard, and are less concerned about performance or conciseness, then you may find this more descriptive polyfill to be more useful.</p>
+<p>However, if you are more interested in all the little technical bits defined by the ECMA standard, and are less concerned about performance or conciseness, then you may find this more descriptive polyfill to be more useful.</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: http://es5.github.io/#x15.4.4.14
@@ -136,66 +183,19 @@ if (!Array.prototype.indexOf) {
 }
 </pre>
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_indexOf">Using <code>indexOf()</code></h3>
-
-<p>The following example uses <code>indexOf()</code> to locate values in an array.</p>
-
-<pre class="brush: js notranslate">var array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
-array.indexOf(2, -1); // -1
-array.indexOf(2, -3); // 0
-</pre>
-
-<h3 id="Finding_all_the_occurrences_of_an_element">Finding all the occurrences of an element</h3>
-
-<pre class="brush: js notranslate">var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.indexOf(element);
-while (idx != -1) {
-  indices.push(idx);
-  idx = array.indexOf(element, idx + 1);
-}
-console.log(indices);
-// [0, 2, 4]
-</pre>
-
-<h3 id="Finding_if_an_element_exists_in_the_array_or_not_and_updating_the_array">Finding if an element exists in the array or not and updating the array</h3>
-
-<pre class="brush: js notranslate">function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else if (veggies.indexOf(veggie) &gt; -1) {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
-}
-
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
-
-updateVegetablesCollection(veggies, 'spinach');
-// New veggies collection is : potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
-// spinach already exists in the veggies collection.
-</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -209,7 +209,7 @@ updateVegetablesCollection(veggies, 'spinach');
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
-	<li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
-	<li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
+ <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
 </ul>

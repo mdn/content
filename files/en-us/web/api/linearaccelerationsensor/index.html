@@ -24,26 +24,19 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{domxref("LinearAccelerationSensor.LinearAccelerationSensor()")}}</dt>
- <dd>Creates a new <code>LinearAccelerationSensor</code> object.</dd>
+	<dt>{{domxref("LinearAccelerationSensor.LinearAccelerationSensor()")}}</dt>
+	<dd>Creates a new <code>LinearAccelerationSensor</code> object.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
-<dl>
- <dt>{{domxref('LinearAccelerationSensor.x')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the linear acceleration of the device along the device's x axis.</dd>
- <dt>{{domxref('LinearAccelerationSensor.y')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the linear acceleration of the device along the device's y axis.</dd>
- <dt>{{domxref('LinearAccelerationSensor.z')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the linear acceleration of the device along the device's z axis.</dd>
-</dl>
+<p><em>Inherits properties from its ancestor, {{domxref('Accelerometer')}}.</em></p>
 
 <h2 id="Example">Example</h2>
 
 <p>Linear acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js">let laSensor = new LinearAccelerationSensor({frequency: 60});
+<pre class="brush: js notranslate">let laSensor = new LinearAccelerationSensor({frequency: 60});
 
 laSensor.addEventListener('reading', e =&gt; {
   console.log("Linear acceleration along the X-axis " + laSensor.x);
@@ -55,23 +48,23 @@ laSensor.start();</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Generic Sensor')}}</td>
-   <td>{{Spec2('Generic Sensor')}}</td>
-   <td>Defines sensors in general.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Accelerometer','#linearaccelerationsensor-interface','LinearAccelerationSensor')}}</td>
-   <td>{{Spec2('Accelerometer')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Generic Sensor')}}</td>
+			<td>{{Spec2('Generic Sensor')}}</td>
+			<td>Defines sensors in general.</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('Accelerometer','#linearaccelerationsensor-interface','LinearAccelerationSensor')}}</td>
+			<td>{{Spec2('Accelerometer')}}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

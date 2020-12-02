@@ -27,7 +27,6 @@ tags:
 
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
-
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <h3 id="Color_contrast">Color contrast</h3>
@@ -80,14 +79,15 @@ tags:
  <li><a href="https://www.nngroup.com/articles/form-design-placeholders/">Placeholders in Form Fields Are Harmful — Nielsen Norman Group</a></li>
 </ul>
 
-
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Red_text">Red text</h3>
+<h3 id="Change_placeholder_appearance">Change placeholder appearance</h3>
+
+<p>This example shows some of the adjustments that you can make to the styles of placeholder text.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Type something here!"&gt;</pre>
+<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Type here..."&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -99,24 +99,32 @@ tags:
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample("Red_text", 200, 60)}}</p>
+<p>{{EmbedLiveSample("Change_placeholder_appearance", 200, 60)}}</p>
 
-<h3 id="Green_text">Green text</h3>
+<h3 id="Opaque_text">Opaque text</h3>
+
+<p>Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeholders to something less than 100%. If you want fully opaque placeholder text, set <code>opacity</code> to <code>1</code>.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Type something here..."&gt;</pre>
+<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Default opacity..."&gt;
+&lt;input placeholder="Full opacity..." class="force-opaque"&gt;
+</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">input::placeholder {
+<pre class="brush: css notranslate">::placeholder {
   color: green;
+}
+
+.force-opaque::placeholder {
+  opacity: 1;
 }
 </pre>
 
 <h4 id="Result_2">Result</h4>
 
-<p>{{EmbedLiveSample("Green_text", 200, 60)}}</p>
+<p>{{EmbedLiveSample("Opaque_text", 200, 60)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

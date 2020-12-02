@@ -19,7 +19,7 @@ tags:
 <p>The Web Authentication API (also referred to as WebAuthn) uses {{interwiki("wikipedia", "Public-key_cryptography", "asymmetric (public-key) cryptography")}} instead of passwords or SMS texts for registering, authenticating, and {{interwiki("wikipedia", "Multi-factor_authentication", "second-factor authentication")}} with websites. This has some benefits:</p>
 
 <ul>
- <li><strong>Protection against phising:</strong> An attacker who creates a fake login website can't login as the user because the signature changes with the <a href="/en-US/docs/Glossary/Origin">origin</a> of the website.</li>
+ <li><strong>Protection against phishing:</strong> An attacker who creates a fake login website can't login as the user because the signature changes with the <a href="/en-US/docs/Glossary/Origin">origin</a> of the website.</li>
  <li><strong>Reduced impact of data breaches:</strong> Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.</li>
  <li><strong>Invulnerable to password attacks:</strong> Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are much easier to brute-force than a digital signature.</li>
 </ul>

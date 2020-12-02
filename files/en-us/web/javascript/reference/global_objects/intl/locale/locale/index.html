@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new Intl.Locale(<var>tag</var> [, <var>options</var>])</pre>
+<pre class="syntaxbox notranslate">new Intl.Locale(<var>tag</var> [, <var>options</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,14 +33,18 @@ tags:
 
 <p>At its very simplest, the {{jsxref("Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:</p>
 
-<pre class="brush: js">let us = new Intl.Locale('en-US');</pre>
+<pre class="brush: js notranslate">let us = new Intl.Locale('en-US');</pre>
 
 <h3 id="Using_the_Locale_constructor_with_an_options_object">Using the Locale constructor with an options object</h3>
 
 <p>The constructor also takes an optional configuration object argument, which can contain any of several extension types. For example, set the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle">hourCycle</a></code> property of the configuration object to your desired hour cycle type, and then pass it into the constructor:</p>
 
-<pre class="brush: js">let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
+<pre class="brush: js notranslate">let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
 console.log(us12hour.hourCycle); // Prints "h12"</pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><a href="https://formatjs.io/docs/polyfills/intl-locale">formatjs Intl.Locale polyfill</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -68,6 +72,5 @@ console.log(us12hour.hourCycle); // Prints "h12"</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://github.com/zbraniecki/Intl.js/tree/intllocale">The Intl.Locale Polyfill</a></li>
  <li><a href="https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers">Unicode locale identifiers spec</a></li>
 </ul>

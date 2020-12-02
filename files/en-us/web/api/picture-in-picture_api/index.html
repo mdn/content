@@ -21,8 +21,8 @@ tags:
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
-	<dt>{{DOMxRef("PictureInPictureWindow")}}</dt>
-	<dd>Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.</dd>
+ <dt>{{DOMxRef("PictureInPictureWindow")}}</dt>
+ <dd>Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -32,19 +32,19 @@ tags:
 <h3 id="Methods_on_the_HTMLVideoElement_interface">Methods on the HTMLVideoElement interface</h3>
 
 <dl>
-	<dt>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</dt>
-	<dd>Requests that the user agent enters the video into picture-in-picture mode</dd>
+ <dt>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</dt>
+ <dd>Requests that the user agent enters the video into picture-in-picture mode</dd>
 </dl>
 
 <dl>
 </dl>
 
 <dl>
-	<dt>
-	<h3 id="Methods_on_the_Document_interface">Methods on the Document interface</h3>
-	</dt>
-	<dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
-	<dd>Requests that the user agent returns the element in picture-in-picture mode back into its original box.</dd>
+ <dt>
+ <h3 id="Methods_on_the_Document_interface">Methods on the Document interface</h3>
+ </dt>
+ <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
+ <dd>Requests that the user agent returns the element in picture-in-picture mode back into its original box.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -54,25 +54,25 @@ tags:
 <h3 id="Properties_on_the_HTMLVideoElement_interface">Properties on the HTMLVideoElement interface</h3>
 
 <dl>
-	<dt>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</dt>
-	<dd>The <code>autoPictureInPicture</code> property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.</dd>
-	<dt>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</dt>
-	<dd>The <code>disablePictureInPicture</code> property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.</dd>
+ <dt>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</dt>
+ <dd>The <code>autoPictureInPicture</code> property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.</dd>
+ <dt>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</dt>
+ <dd>The <code>disablePictureInPicture</code> property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.</dd>
 </dl>
 
 <dl>
-	<dt>
-	<h3 id="Properties_on_the_Document_interface">Properties on the Document interface</h3>
-	</dt>
-	<dt>{{DOMxRef("Document.pictureInPictureEnabled")}}</dt>
-	<dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
+ <dt>
+ <h3 id="Properties_on_the_Document_interface">Properties on the Document interface</h3>
+ </dt>
+ <dt>{{DOMxRef("Document.pictureInPictureEnabled")}}</dt>
+ <dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
 </dl>
 
 <h3 id="Properties_on_the_DocumentOrShadowRoot_interface">Properties on the DocumentOrShadowRoot interface</h3>
 
 <dl>
-	<dt>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</dt>
-	<dd>The <code>pictureInPictureElement</code> property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window. If this is <code>null</code>, the document has no node currently in picture-in-picture mode.</dd>
+ <dt>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</dt>
+ <dd>The <code>pictureInPictureElement</code> property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window. If this is <code>null</code>, the document has no node currently in picture-in-picture mode.</dd>
 </dl>
 
 <h2 id="Events" name="Events">Events</h2>
@@ -80,12 +80,12 @@ tags:
 <p><em>The Picture-in-Picture API defines three events, which can be used to detect when picture-in-picture mode is toggled and when the floating video window is resized.</em></p>
 
 <dl>
-	<dt>{{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}</dt>
-	<dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}</dd>
-	<dt>{{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}</dt>
-	<dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}</dd>
-	<dt>{{domxref("PictureInPictureWindow.resize_event", "resize")}}</dt>
-	<dd>Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}</dd>
+ <dt>{{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}</dt>
+ <dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}</dd>
+ <dt>{{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}</dt>
+ <dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}</dd>
+ <dt>{{domxref("PictureInPictureWindow.resize_event", "resize")}}</dt>
+ <dd>Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}</dd>
 </dl>
 
 <h2 id="Controlling_styling">Controlling styling</h2>
@@ -125,86 +125,72 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("Picture-in-Picture")}}</td>
-			<td>{{Spec2("Picture-in-Picture")}}</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Picture-in-Picture")}}</td>
+   <td>{{Spec2("Picture-in-Picture")}}</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="HTMLVideoElement.requestPictureInPicture"><code>HTMLVideoElement.requestPictureInPicture</code></h3>
 
-<div>
 
 
 <p>{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}</p>
 
 <h3 id="HTMLVideoElement.autoPictureInPicture"><code>HTMLVideoElement.autoPictureInPicture</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}</p>
-</div>
-</div>
 
 <h3 id="HTMLVideoElement.disablePictureInPicture"><code>HTMLVideoElement.disablePictureInPicture</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}</p>
 
 <h3 id="Document.pictureInPictureEnabled"><code>Document.pictureInPictureEnabled</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.Document.pictureInPictureEnabled")}}</p>
 
 <h3 id="Document.exitPictureInPicture"><code>Document.exitPictureInPicture</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.Document.exitPictureInPicture")}}</p>
 
 <h3 id="DocumentOrShadowRoot.pictureInPictureElement"><code>DocumentOrShadowRoot.pictureInPictureElement</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.DocumentOrShadowRoot.pictureInPictureElement")}}</p>
 
 <h3 id="PictureInPictureWindow"><code>PictureInPictureWindow</code></h3>
 
-<div>
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.PictureInPictureWindow")}}</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
-	<li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
-	<li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
-	<li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
-	<li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-	<li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
-	<li>{{CSSxRef(":picture-in-picture")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
+ <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
+ <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
+ <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
+ <li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
+ <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

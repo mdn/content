@@ -20,17 +20,17 @@ tags:
 <h2 id="Instance_properties">Instance properties</h2>
 
 <dl>
- <dt>{{jsxref("Function.arguments")}}</dt>
+ <dt>{{jsxref("Function.prototype.arguments")}}</dt>
  <dd>An array corresponding to the arguments passed to a function.<br>
  This is deprecated as a property of {{jsxref("Function")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object (available within the function) instead.</dd>
- <dt>{{jsxref("Function.caller")}}</dt>
+ <dt>{{jsxref("Function.prototype.caller")}}</dt>
  <dd>Specifies the function that invoked the currently executing function.<br>
  This property is deprecated, and is only functional for some non-strict functions.</dd>
- <dt>{{jsxref("Function.displayName")}}</dt>
+ <dt>{{jsxref("Function.prototype.displayName")}}</dt>
  <dd>The display name of the function.</dd>
- <dt>{{jsxref("Function.length")}}</dt>
+ <dt>{{jsxref("Function.prototype.length")}}</dt>
  <dd>Specifies the number of arguments expected by the function.</dd>
- <dt>{{jsxref("Function.name")}}</dt>
+ <dt>{{jsxref("Function.prototype.name")}}</dt>
  <dd>The name of the function.</dd>
 </dl>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>Functions created with the <code>Function</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>Function</code> constructor was created. This is different from using {{jsxref("eval")}} with code for a function expression.</p>
 
-<pre class="brush: js">var x = 10;
+<pre class="brush: js notranslate">var x = 10;
 
 function createFunction1() {
     var x = 20;
