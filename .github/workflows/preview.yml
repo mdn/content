@@ -5,7 +5,7 @@ on:
     paths:
     - package.json
     - yarn.lock
-    - preview.yml
+    - .github/workflows/preview.yml
 
 jobs:
   build:
