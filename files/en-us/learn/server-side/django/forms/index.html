@@ -613,9 +613,9 @@ class AuthorDelete(DeleteView):
 <p>Open your URL configuration file (<strong>locallibrary/catalog/urls.py</strong>) and add the following configuration to the bottom of the file:</p>
 
 <pre class="brush: python notranslate">urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
-    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
-    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
+    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author-update'),
+    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author-delete'),
 ]</pre>
 
 <p>There is nothing particularly new here! You can see that the views are classes, and must hence be called via <code>.as_view()</code>, and you should be able to recognize the URL patterns in each case. We must use <code>pk</code> as the name for our captured primary key value, as this is the parameter name expected by the view classes.</p>

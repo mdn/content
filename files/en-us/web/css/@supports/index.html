@@ -47,7 +47,7 @@ tags:
 
 <pre class="brush: css notranslate">@supports selector(A &gt; B) {}</pre>
 
-<h3 id="The_not_operator">The <code>not</code> operator</h3>
+<h3 id="The_not_operator">The not operator</h3>
 
 <p>The <code>not</code> operator can precede any expression to create a new expression, resulting in the negation of the original one. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property <strong>doesn't</strong> consider <code>10em 10em 10em</code> valid:</p>
 
@@ -62,7 +62,7 @@ tags:
 <p><strong>Note:</strong> There is no need to enclose the <code>not</code> operator between two parentheses at the top level. To combine it with other operators, like <code>and</code> and <code>or</code>, the parentheses are required.</p>
 </div>
 
-<h3 id="The_and_operator">The <code>and</code> operator</h3>
+<h3 id="The_and_operator">The and operator</h3>
 
 <p>The <code>and</code> operator creates a new expression from the conjunction of two shorter expressions. It returns true only if <strong>both</strong> of the shorter expressions are also true. The following example returns true if and only if the two shorter expressions are simultaneously true:</p>
 
@@ -73,7 +73,7 @@ tags:
 <pre class="brush: css notranslate">@supports (display: table-cell) and (display: list-item) and (display:run-in) {}
 @supports (display: table-cell) and ((display: list-item) and (display:run-in)) {}</pre>
 
-<h3 id="The_or_operator">The <code>or</code> operator</h3>
+<h3 id="The_or_operator">The or operator</h3>
 
 <p>The <code>or</code> operator creates a new expression from the disjunction of two shorter expressions. It returns true if <strong>one or both</strong> of the shorter expressions is also true. The following example returns true if at least one of the two shorter expressions is true:</p>
 

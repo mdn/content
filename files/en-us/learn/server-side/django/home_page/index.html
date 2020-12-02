@@ -86,18 +86,18 @@ tags:
 
 <p>The following code snippet from <strong>locallibrary/urls.py </strong>includes the <code>catalog.urls</code> module:</p>
 
-<pre>urlpatterns += [
+<pre class="notranslate">urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Whenever Django encounters the import function <code><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, it splits the URL string at the designated end character and sends the remaining substring to the included <em>URLconf</em> module for further processing.</p>
+<p><strong>Note</strong>: Whenever Django encounters the import function <code><a href="https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, it splits the URL string at the designated end character and sends the remaining substring to the included <em>URLconf</em> module for further processing.</p>
 </div>
 
 <p>We also created a placeholder file for the <em>URLConf </em>module, named <strong>/catalog/urls.py</strong>. Add the following lines to that file: </p>
 
-<pre class="brush: python">urlpatterns = [
+<pre class="brush: python notranslate">urlpatterns = [
 <strong>    path('', views.index, name='index'),</strong>
 ]</pre>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>The <code>path()</code> function also specifies a <code>name</code> parameter, which is a unique identifier for <em>this</em> particular URL mapping. You can use the name to "reverse" the mapper, i.e.  to dynamically create a URL that  points to the resource that the mapper is designed to handle. For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:</p>
 
-<pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
+<pre class="brush: html notranslate">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
 <div class="note">
 <p><strong>Note</strong>: We can hard code the link as in <code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>), but if we change the pattern for our home page, for example, to <code>/catalog/index</code>) the templates will no longer link correctly. Using a reversed url mapping is more robust.</p>
@@ -120,16 +120,16 @@ tags:
 
 <p>A view is a function that processes an HTTP request, fetches the required data from the database, renders the data in an HTML page using an HTML template, and then returns the generated HTML in an HTTP response to display the page to the user. The index view follows this model — it fetches information about the number of <code>Book</code>, <code>BookInstance</code>, available <code>BookInstance</code> and <code>Author</code> records that we have in the database, and passes that information to a template for display.</p>
 
-<p>Open <strong>catalog/views.py</strong> and note that the file already imports the <a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render">render()</a> shortcut function to generate an HTML file using a template and data: </p>
+<p>Open <strong>catalog/views.py</strong> and note that the file already imports the <a href="https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#django.shortcuts.render">render()</a> shortcut function to generate an HTML file using a template and data: </p>
 
-<pre class="brush: python">from django.shortcuts import render
+<pre class="brush: python notranslate">from django.shortcuts import render
 
 # Create your views here.
 </pre>
 
 <p>Paste the following lines at the bottom of the file:</p>
 
-<pre class="brush: python">from catalog.models import Book, Author, BookInstance, Genre
+<pre class="brush: python notranslate">from catalog.models import Book, Author, BookInstance, Genre
 
 def index(request):
     """View function for home page of site."""
@@ -172,12 +172,12 @@ def index(request):
 
 <p>A template is a text file that defines the structure or layout of a file (such as an HTML page), it uses placeholders to represent actual content. </p>
 
-<p>Django will automatically look for templates in a directory named '<strong>templates</strong>' in your application. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong> </em>in<em> </em><strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
+<p>A Django application created using <strong>startapp</strong> (like the skeleton of this example) will look for templates in a subdirectory named '<strong>templates</strong>' of your applications. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong> </em>in<em> </em><strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
 
 <p>You can check this by saving the previous changes and accessing <code>127.0.0.1:8000</code> in your browser - it will display a fairly intuitive error message: "<code>TemplateDoesNotExist at /catalog/</code>", and other details.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in <a href="https://docs.djangoproject.com/en/2.1/topics/templates/">the Templates section of the Django documentation</a>.</p>
+<p><strong>Note</strong>: Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in <a href="https://docs.djangoproject.com/en/3.1/topics/templates/">the Templates section of the Django documentation</a>.</p>
 </div>
 
 <h4 id="Extending_templates">Extending templates</h4>
@@ -192,7 +192,7 @@ def index(request):
 <p><strong>Note</strong>: Template <em>tags</em> are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use <em>template filters to</em> format variables (for example, to convert a string to lower case).</p>
 </div>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   <strong>{% block title %}</strong>&lt;title&gt;Local Library&lt;/title&gt;<strong>{% endblock %}</strong>
@@ -208,7 +208,7 @@ def index(request):
 
 <p>For example, the code snippet below shows how to use the <code>extends</code> template tag and override the <code>content</code> block. The generated HTML will include the code and structure defined in the base template, including the default content you defined in the <code>title</code> block, but the new <code>content</code> block in place of the default one.</p>
 
-<pre class="brush: html">{% extends "base_generic.html" %}
+<pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;h1&gt;Local Library Home&lt;/h1&gt;
@@ -225,16 +225,16 @@ def index(request):
 
 <p>Create a new file <strong><em>base_generic.html </em></strong>in <strong>/locallibrary/catalog/templates/</strong> and paste the following code to the file:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  {% block title %}&lt;title&gt;Local Library&lt;/title&gt;{% endblock %}
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"&gt;
-  &lt;!-- Add additional CSS in static file --&gt;
-  {% load static %}
-  &lt;link rel="stylesheet" href="{% static 'css/styles.css' %}"&gt;
+  {% block title %}&lt;title&gt;Local Library&lt;/title&gt;{% endblock %}
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"&gt;
+  &lt;!-- Add additional CSS in static file --&gt;
+  {% load static %}
+  &lt;link rel="stylesheet" href="{% static 'css/styles.css' %}"&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div class="container-fluid"&gt;
@@ -258,7 +258,7 @@ def index(request):
 
 <p>The base template also references a local css file (<strong>styles.css</strong>) that provides additional styling. Create a <strong>styles.css </strong>file in<strong> </strong><strong>/locallibrary/catalog/static/css/</strong> and paste the following code in the file:</p>
 
-<pre class="brush: css">.sidebar-nav {
+<pre class="brush: css notranslate">.sidebar-nav {
     margin-top: 20px;
     padding: 0;
     list-style: none;
@@ -268,7 +268,7 @@ def index(request):
 
 <p>Create a new HTML file <strong><em>index.html </em></strong>in <strong>/locallibrary/catalog/templates/</strong> and paste the following code in the file. This code extends our base template on the first line, and then replaces the default <code>content</code> block for the template. </p>
 
-<pre class="brush: html">{% extends "base_generic.html" %}
+<pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;h1&gt;Local Library Home&lt;/h1&gt;
@@ -291,7 +291,7 @@ def index(request):
 
 <p>The important thing to note here is that variables are named with the <em>keys</em> that we pass into the <code>context</code> dictionary in the <code>render()</code> function of our view (see sample below). Variables will be replaced with their associated <em>values</em> when the template is rendered.  </p>
 
-<pre class="brush: python">context = {
+<pre class="brush: python notranslate">context = {
     '<strong>num_books</strong>': num_books,
     '<strong>num_instances</strong>': num_instances,
     '<strong>num_instances_available</strong>': num_instances_available,
@@ -306,13 +306,13 @@ return render(request, 'index.html', context=context)</pre>
 
 <p>Within the template you first call the <code>load</code> template tag specifying "static" to add the template library, as shown in the code sample below. You can then use the <code>static</code> template tag and specify the relative URL to the required file.</p>
 
-<pre class="brush: html">&lt;!-- Add additional CSS in static file --&gt;
+<pre class="brush: html notranslate">&lt;!-- Add additional CSS in static file --&gt;
 {% load static %}
 &lt;link rel="stylesheet" href="{% static 'css/styles.css' %}"&gt;</pre>
 
 <p>You can add an image into the page in a similar way, for example:</p>
 
-<pre class="brush: html">{% load static %}
+<pre class="brush: html notranslate">{% load static %}
 &lt;img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;"&gt;
 </pre>
 
@@ -320,27 +320,25 @@ return render(request, 'index.html', context=context)</pre>
 <p><strong>Note</strong>: The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (<strong>/locallibrary/locallibrary/urls.py</strong>) when we <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>, but still need to enable file serving in production. We'll look at this later.</p>
 </div>
 
-<p>For more information on working with static files see <a href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Managing static files</a> in the Django documentation.</p>
+<p>For more information on working with static files see <a href="https://docs.djangoproject.com/en/3.1/howto/static-files/">Managing static files</a> in the Django documentation.</p>
 
 <h4 id="Linking_to_URLs">Linking to URLs</h4>
 
 <p>The base template above introduced the <code>url</code> template tag.</p>
 
-<pre class="brush: python">&lt;li&gt;&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;&lt;/li&gt;
+<pre class="brush: python notranslate">&lt;li&gt;&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;&lt;/li&gt;
 </pre>
 
 <p>This tag accepts the name of a <code>path()</code> function called in your <strong>urls.py</strong> and the values for any arguments that the associated view will receive from that function, and returns a URL that you can use to link to the resource.</p>
 
 <h4 id="Configuring_where_to_find_the_templates">Configuring where to find the templates</h4>
 
-<p>You need to point Django to search for your templates in the templates folder. To do that, add the templates dir to the TEMPLATES object by editing the <strong>settings.py</strong> file as shown in bold in the following code sample:</p>
+<p>The location where Django searches for templates is specified in the <code>TEMPLATES</code> object in the <strong>settings.py</strong> file. The default <strong>settings.py</strong> (as created for this tutorial) looks something like this:</p>
 
-<pre class="brush: python">TEMPLATES = [
+<pre class="brush: python notranslate">TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-<strong>            os.path.join(BASE_DIR, 'templates'),
-</strong>        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -352,6 +350,14 @@ return render(request, 'index.html', context=context)</pre>
         },
     },
 ]</pre>
+
+<p>The setting of <code>'APP_DIRS': True</code>, is the most important, as it tells Django to search for templates in a subdirectory of each application in the project, named "templates" (this makes it easier to group templates with their associated application for easy re-use).</p>
+
+<p>We can also specify specific locations for Django to search for directories using <code>'DIRS': []</code> (but that isn't needed yet).</p>
+
+<div class="note">
+<p><strong>Note</strong>: You can find out more about how Django finds templates and what template formats it supports in <a href="https://docs.djangoproject.com/en/3.1/topics/templates/">the Templates section of the Django documentation</a>.</p>
+</div>
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>
 
@@ -390,12 +396,12 @@ return render(request, 'index.html', context=context)</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial03/">Writing your first Django app, part 3: Views and Templates</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/urls/">URL dispatcher</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/views/">View functions</a> (DJango docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/templates/">Templates</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/howto/static-files/">Managing static files</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render">Django shortcut functions</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial03/">Writing your first Django app, part 3: Views and Templates</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/">URL dispatcher</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/http/views/">View functions</a> (DJango docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/templates/">Templates</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/howto/static-files/">Managing static files</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/http/shortcuts/#django.shortcuts.render">Django shortcut functions</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}</p>

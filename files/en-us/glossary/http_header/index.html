@@ -6,32 +6,40 @@ tags:
   - HTTP Header
   - WebMechanics
 ---
-<p>An <strong>HTTP header</strong> is a field of an HTTP request or response that passes additional information, altering or precising the semantics of the message or of the body. Headers are case-insensitive, begins at the start of a line and are immediately followed by a <code>':'</code> and a value depending of the header itself. The value finish at the next CRLF or at the end of the message.</p>
+<p>An <strong>HTTP header</strong> is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a <code>':'</code> and a header-dependent value. The value finishes at the next CRLF or at the end of the message.</p>
 
-<p>Traditionally, headers are classed in categories, though this classification is no more part of any specification:</p>
+<p>The current specification has a number of header categories, including:</p>
+
+<ul>
+ <li>{{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.</li>
+ <li>{{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).</li>
+ <li><strong>Representation metadata header</strong>: metadata about the resource in the message body (e.g. language, length, media type, etc.).</li>
+</ul>
+
+<div class="blockIndicator note">
+<p>Older versions of the specification referred to:</p>
 
 <ul>
  <li>{{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.</li>
- <li>{{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.</li>
- <li>{{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).</li>
- <li>{{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type.</li>
+ <li>{{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)</li>
 </ul>
+</div>
 
 <p>A basic request with one header:</p>
 
-<pre>GET /example.http HTTP/1.1
+<pre class="notranslate">GET /example.http HTTP/1.1
 Host: example.com
 </pre>
 
 <p>Redirects have mandatory headers ({{HTTPHeader("Location")}}):</p>
 
-<pre>302 Found
+<pre class="notranslate">302 Found
 Location: /NewPage.html
 </pre>
 
 <p>A typical set of headers:</p>
 
-<pre>304 Not Modified
+<pre class="notranslate">304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000

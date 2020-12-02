@@ -9,14 +9,14 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a first-party or same-site context. </span></p>
+<p><span class="seoSummary">The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a <a href="/en-US/docs/Web/HTTP/Cookies#Third-party_cookies">first-party</a> or same-site context. </span></p>
 
 <div class="blockIndicator note">
 <p>Standards related to the Cookie <code>SameSite</code> attribute recently changed such that:</p>
 
 <ul>
- <li>The cookie-sending behaviour if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was <code>None</code> (cookies sent for all requests).</li>
- <li>Cookies with <code>SameSite=None</code> must also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
+ <li>The cookie-sending behaviour if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+ <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
 </ul>
 
 <p>This article documents the new standard. See <a href="#Browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behaviour changed.</p>
@@ -28,7 +28,7 @@ tags:
 
 <h3 id="Lax"><code>Lax</code></h3>
 
-<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).</p>
+<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is <em>navigating to</em> the origin site (i.e. when following a link).</p>
 
 <p>This is the default cookie value if <code>SameSite</code> has not been explicitly specified in recent browser versions (see the "SameSite: Defaults to Lax" feature in the Browser Compatibility).</p>
 
@@ -44,8 +44,6 @@ tags:
 
 <p>Cookies will be sent in all contexts, i.e in responses to both first-party and cross-origin requests.If <code>SameSite=None</code> is set, the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Secure"><code>Secure</code></a> attribute must also be set (or the cookie will be blocked).</p>
 
-<div class="blockIndicator note"></div>
-
 <h2 id="Fixing_common_warnings">Fixing common warnings</h2>
 
 <h3 id="SameSiteNone_requires_Secure"><code>SameSite=None</code> requires <code>Secure</code></h3>
@@ -54,8 +52,7 @@ tags:
 
 <pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.
 
-This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute,
-which is required in order to use "SameSite=None".</pre>
+This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".</pre>
 
 <p>The warning appears because any cookie that requests <code>SameSite=None</code> but is not marked <code>Secure</code> will be rejected.</p>
 
@@ -70,7 +67,7 @@ which is required in order to use "SameSite=None".</pre>
 <div class="blockIndicator note">
 <p>On older browser versions you might simply get a warning that the cookie will be blocked in future. For example:</p>
 
-<pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite“ attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+<pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite” attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 </pre>
 </div>
 
@@ -135,5 +132,5 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
  <li><a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
  <li>{{HTTPHeader("Cookie")}}</li>
  <li>{{domxref("Document.cookie")}}</li>
- <li><a href="/en-US/docs/https://web.dev/samesite-cookies-explained/">Samesite cookies explained</a> (web.dev blog)</li>
+ <li><a href="https://web.dev/samesite-cookies-explained/">Samesite cookies explained</a> (web.dev blog)</li>
 </ul>

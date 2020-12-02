@@ -427,13 +427,13 @@ def book_detail_view(request, primary_key):
  <li>We access the context fields using the dot notation (because we've used the detail generic view, the context is named <code>book</code>; we could also use "<code>object</code>")</li>
 </ul>
 
-<p>The one interesting thing we haven't seen before is the function <code>book.bookinstance_set.all()</code>. This method is "automagically" constructed by Django in order to return the set of <code>BookInstance</code> records associated with a particular <code>Book</code>.</p>
+<p>The first interesting thing we haven't seen before is the function <code>book.bookinstance_set.all()</code>. This method is "automagically" constructed by Django in order to return the set of <code>BookInstance</code> records associated with a particular <code>Book</code>.</p>
 
 <pre class="brush: python notranslate">{% for copy in book.bookinstance_set.all %}
   &lt;!-- code to iterate across each copy/instance of a book --&gt;
 {% endfor %}</pre>
 
-<p>This method is needed because you declare a <code>ForeignKey</code> (one-to many) field in only the "one" side of the relationship. Since you don't do anything to declare the relationship in the other ("many") models, it doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the <code>ForeignKey</code> was declared, followed by <code>_set</code> (i.e. so the function created in <code>Book</code> is <code>bookinstance_set()</code>).</p>
+<p>This method is needed because you declare a <code>ForeignKey</code> (one-to many) field in only the "one" side of the relationship (the <code>BookInstance</code>). Since you don't do anything to declare the relationship in the other ("many") models, it (the <code>Book</code>) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the <code>ForeignKey</code> was declared, followed by <code>_set</code> (i.e. so the function created in <code>Book</code> is <code>bookinstance_set()</code>).</p>
 
 <div class="note">
 <p><strong>Note</strong>: Here we use <code>all()</code> to get all records (the default). While you can use the <code>filter()</code> method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.</p>
@@ -476,6 +476,13 @@ def book_detail_view(request, primary_key):
 
 <p>Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.</p>
 </div>
+
+<p>The second interesting (and non-obvious) thing in the template is where we set a class (<code>text-success</code>, <code>text-danger</code>, <code>text-warning</code>) to colour-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method <code>BookInstance.get_status_display()</code> that we use to get the status text does not appear elsewhere in the code.</p>
+
+<pre class="brush: python notranslate"> &lt;p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}"&gt;
+ <strong>\{{ copy.get_status_display }}</strong> &lt;/p&gt;</pre>
+
+<p>This function is automatically created because <code>BookInstance.status</code> is a <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">choices field</a>. Django automatically creates a method <code>get_<strong>FOO</strong>_display()</code> for every choices field "<code>Foo</code>" in a model, which can be used to get the current value of the field. </p>
 
 <h2 id="What_does_it_look_like_2">What does it look like?</h2>
 
@@ -595,11 +602,12 @@ def book_detail_view(request, primary_key):
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-display/">Generic display views</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/">Introduction to class-based views</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins">Built-in template tags and filters</a> (Django docs).</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/pagination/">Pagination</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-display/">Generic display views</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/intro/">Introduction to class-based views</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins">Built-in template tags and filters</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/pagination/">Pagination</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/#related-objects">Making queries &gt; Related objects</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</p>

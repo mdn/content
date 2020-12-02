@@ -17,7 +17,7 @@ tags:
 <p>Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
 </div>
 
-<p>For more information, see the <a href="/en-US/docs/Web/HTTP/Cookies">guide on HTTP cookies</a>.</p>
+<p>For more information, see the guide on <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -48,7 +48,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; HttpOnly
 
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; SameSite=Strict
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; SameSite=Lax
-Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; SameSite=None
+Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; SameSite=None; Secure
 
 // Multiple attributes are also possible, for example:
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;; Secure; HttpOnly
@@ -100,16 +100,27 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>
  <dd>Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}. This mitigates attacks against cross-site scripting ({{Glossary("XSS")}}).</dd>
  <dt id="SameSite"><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
+ <dd>Controls whether a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</dd>
  <dd>
+ <div class="note">
+ <p>Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
+
+ <ol>
+  <li>The cookie-sending behaviour if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+  <li>Cookies with <code>SameSite=None</code> must now<br>
+   also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
+ </ol>
+
+ <p>The options below covers the new behaviour. See the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ </div>
+ Inline options are:
+
  <ul>
   <li><code>Strict</code>: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the <code>SameSite=Strict</code> attribute are sent.</li>
-  <li><code>Lax</code>: The cookie is withheld on cross-site subrequests, such as calls to load images or frames, but is sent when a user navigates to the URL from an external site, such as by following a link.</li>
-  <li><code>None</code>: The browser sends the cookie with both cross-site and same-site requests.</li>
+  <li><code>Lax</code>: The cookie is not sent on cross-site requests, such as calls to load images or frames, but is sent when a user is navigating to the origin site from an external site (e.g. if following a link).<br>
+   This is the default behaviour if the <code>SameSite</code> attribute is not specified.</li>
+  <li><code>None</code>: The browser sends the cookie with both cross-site and same-site requests. The <code>Secure</code> attribute must also be set when <code>SameSite=None</code>!</li>
  </ul>
-
- <p>Asserts that a cookie must not be sent with cross-origin requests, providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
-
- <p class="note">Browsers are migrating to have <a href="https://www.chromestatus.com/feature/5088147346030592">cookies default to <code>SameSite=Lax</code></a>. If a cookie is needed to be sent cross-origin, opt out of the <code>SameSite</code> restriction using the <code>None</code> value. The <code>None</code> value requires the <a href="#Secure"><code>Secure</code></a> attribute.</p>
  </dd>
 </dl>
 
@@ -207,4 +218,5 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
  <li><a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
  <li>{{HTTPHeader("Cookie")}}</li>
  <li>{{domxref("Document.cookie")}}</li>
+ <li><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite cookies</a></li>
 </ul>

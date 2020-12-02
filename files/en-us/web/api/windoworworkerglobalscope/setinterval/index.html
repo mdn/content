@@ -44,7 +44,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the timeout.</p>
+<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the interval.</p>
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
 

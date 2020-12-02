@@ -10419,6 +10419,9 @@
 /en-US/docs/Web/API/KeyframeEffectReadOnly/getKeyframes	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
 /en-US/docs/Web/API/KeyframeEffectReadOnly/iterationComposite	/en-US/docs/Web/API/KeyframeEffect/iterationComposite
 /en-US/docs/Web/API/KeyframeEffectReadOnly/target	/en-US/docs/Web/API/KeyframeEffect/target
+/en-US/docs/Web/API/LinearAccelerationSensor/x	/en-US/docs/Web/API/Accelerometer/x
+/en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
+/en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
 /en-US/docs/Web/API/LocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Location.assign	/en-US/docs/Web/API/Location/assign
 /en-US/docs/Web/API/Location.hash	/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash
@@ -12732,6 +12735,8 @@
 /en-US/docs/Web/CSS/filter-function/hue-rotate	/en-US/docs/Web/CSS/filter-function/hue-rotate()
 /en-US/docs/Web/CSS/filter-function/invert	/en-US/docs/Web/CSS/filter-function/invert()
 /en-US/docs/Web/CSS/filter-function/opacity	/en-US/docs/Web/CSS/filter-function/opacity()
+/en-US/docs/Web/CSS/filter-function/saturate	/en-US/docs/Web/CSS/filter-function/saturate()
+/en-US/docs/Web/CSS/filter-function/sepia	/en-US/docs/Web/CSS/filter-function/sepia()
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url()
 /en-US/docs/Web/CSS/flex-align	/en-US/docs/Web/CSS/align-items
 /en-US/docs/Web/CSS/flex-item-align	/en-US/docs/Web/CSS/align-self
@@ -12808,7 +12813,7 @@
 /en-US/docs/Web/CSS/stroke-opacity	/en-US/docs/Web/SVG/Attribute/stroke-opacity
 /en-US/docs/Web/CSS/stroke-width	/en-US/docs/Web/SVG/Attribute/stroke-width
 /en-US/docs/Web/CSS/suffix	/en-US/docs/Web/CSS/@counter-style/suffix
-/en-US/docs/Web/CSS/symbols()	/en-US/docs/Web/CSS/symbols
+/en-US/docs/Web/CSS/symbols	/en-US/docs/Web/CSS/symbols()
 /en-US/docs/Web/CSS/symbols-descriptor	/en-US/docs/Web/CSS/@counter-style/symbols
 /en-US/docs/Web/CSS/system	/en-US/docs/Web/CSS/@counter-style/system
 /en-US/docs/Web/CSS/text-anchor	/en-US/docs/Web/SVG/Attribute/text-anchor
@@ -12822,6 +12827,19 @@
 /en-US/docs/Web/CSS/transform-function/rotate3d	/en-US/docs/Web/CSS/transform-function/rotate3d()
 /en-US/docs/Web/CSS/transform-function/rotateX	/en-US/docs/Web/CSS/transform-function/rotateX()
 /en-US/docs/Web/CSS/transform-function/rotateY	/en-US/docs/Web/CSS/transform-function/rotateY()
+/en-US/docs/Web/CSS/transform-function/rotateZ	/en-US/docs/Web/CSS/transform-function/rotateZ()
+/en-US/docs/Web/CSS/transform-function/scale	/en-US/docs/Web/CSS/transform-function/scale()
+/en-US/docs/Web/CSS/transform-function/scale3d	/en-US/docs/Web/CSS/transform-function/scale3d()
+/en-US/docs/Web/CSS/transform-function/scaleX	/en-US/docs/Web/CSS/transform-function/scaleX()
+/en-US/docs/Web/CSS/transform-function/scaleY	/en-US/docs/Web/CSS/transform-function/scaleY()
+/en-US/docs/Web/CSS/transform-function/scaleZ	/en-US/docs/Web/CSS/transform-function/scaleZ()
+/en-US/docs/Web/CSS/transform-function/skew	/en-US/docs/Web/CSS/transform-function/skew()
+/en-US/docs/Web/CSS/transform-function/skewX	/en-US/docs/Web/CSS/transform-function/skewX()
+/en-US/docs/Web/CSS/transform-function/skewY	/en-US/docs/Web/CSS/transform-function/skewY()
+/en-US/docs/Web/CSS/transform-function/translate	/en-US/docs/Web/CSS/transform-function/translate()
+/en-US/docs/Web/CSS/transform-function/translate3d	/en-US/docs/Web/CSS/transform-function/translate3d()
+/en-US/docs/Web/CSS/transform-function/translateY	/en-US/docs/Web/CSS/transform-function/translateY()
+/en-US/docs/Web/CSS/transform-function/translateZ	/en-US/docs/Web/CSS/transform-function/translateZ()
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/%40font-face/unicode-range
 /en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url
 /en-US/docs/Web/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
