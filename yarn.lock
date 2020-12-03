@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.297":
-  version "0.1.297"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.297.tgz#508d620fa2bd467c2ada65cb8532abe48bed9a38"
-  integrity sha512-cRHbL5eOdn7DF2LF2tmoQSSMHwEY7nUfDLN/DG9MP8KCvlVl6l13q2XrDzJk8QbWU53bGX3x0mvKZSo+Laoadg==
+"@mdn/yari@0.1.307":
+  version "0.1.307"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.307.tgz#4e71010d970265d62ac3ea7571d9239ed3befd90"
+  integrity sha512-YeB1goQAOMh6Z9dAjIrn1myqndjPIfa/dfeio+sWW0RAjUnf3hcc/Lx7pLG8S1L8ql9aGV88wR69KksWHMs4+A==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.7"
@@ -49,7 +49,7 @@
     clean-webpack-plugin "3.0.0"
     cli-progress "^3.8.2"
     compression "1.7.4"
-    cross-env "^7.0.2"
+    cross-env "^7.0.3"
     cssesc "^3.0.0"
     diff "5.0.0"
     dotenv "8.2.0"
@@ -939,7 +939,7 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cross-env@7.0.3, cross-env@^7.0.2:
+cross-env@7.0.3, cross-env@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
   integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
