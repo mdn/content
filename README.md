@@ -87,6 +87,7 @@ and branch to commit your changes to, as well as helping you reach the ultimate 
 [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Your pull-request
 represents the work you want to be reviewed, hopefully approved,
 and then merged into the `main` branch of this repository.
+**See the [pull-request etiquette section](#pull-request-etiquette) for more details.**
 
 If you're not certain of the changes that you want to make, get in touch with us first!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
@@ -226,14 +227,40 @@ that represents your fork is `origin`.
 1. You're now ready to create a [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull-request, sit back, relax, and wait for a review.
-**You do not need to request a review. We triage all incoming pull requests periodically.**
-Your pull-request will have to be reviewed and eventually approved before it's merged into
-the `main` branch, and then later (within 48 hours) published on
+**You do not need to request a review. One or more reviewers will be selected for**
+**you automatically.** Your pull-request will have to be reviewed and eventually approved before it's merged into the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
-common and natural part of the process. **When you submit a pull-request, a number of**
-**tests are automatically run. If one or more of these tests fail, it is your**
-**responsibility to try and resolve the underlying issue(s).**
+common and natural part of the process.
+**See the [pull-request etiquette section](#pull-request-etiquette) for more details.**
+
+### Pull-request etiquette
+
+Here are some important rules of etiquette to remember when working with pull-requests.
+
+1. When you submit a pull-request, a number of tests are automatically run. If one or more
+of these tests fail, it is your responsibility to try and resolve the underlying issue(s).
+If you don't know how to resolve the underlying issue(s), you can ask for help. Your pull-request will not be approved and merged if these tests are failing.
+
+1. If your pull-request has merge conflicts with the `main` branch (GitHub checks for this
+automatically and notifies you), it's your responsibility to resolve them. You can do this
+by merging the `main` branch into your branch (`git pull mdn main`), and then pushing your
+updated branch to your fork (`git push`).
+
+1. Once you've created your pull-request, never use `git rebase` on your branch if you
+need to make changes. Any changes should be made as one or more additional commits.
+
+1. If you pack too many unrelated changes into your pull-request, the reviewer has the
+right to close it, and request that you submit a separate pull-request for each logical
+chunk of changes that belong together.
+
+1. If your pull-request is more than a small change, there should already exist an issue
+that explains the need for that change, and you should reference that issue's ID (e.g.
+#1234) in your pull-request's description. If an issue does not already exist, please
+create one at https://github.com/mdn/content/issues, explaining the motivation for the
+change.
+
+1. Do not re-open a pull-request that a reviewer has closed.
 
 ### Adding a new document
 
