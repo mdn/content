@@ -1,5 +1,5 @@
 # FROM-URL	TO-URL
-/en-US/docs/%3Cimg%3E	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/%3Cimg%3E	/en-US/docs/Web/HTML/Element
 /en-US/docs/%7B%7Bdomxref(%22/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/%7B%7Bdomxref(%22/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/%D9%88%D8%A7%D8%B5%D9%81%D8%A9_SpellCheck_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9_%D9%81%D9%8A_HTML5	/ar/docs/واصفة_SpellCheck_الجديدة_في_HTML5
