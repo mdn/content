@@ -84,10 +84,11 @@ you can sign into GitHub, go to https://github.com/mdn/content, navigate to
 like automatically creating a
 [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
 and branch to commit your changes to, as well as helping you reach the ultimate goal, a
-[pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Your pull-request
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Your pull request
 represents the work you want to be reviewed, hopefully approved,
 and then merged into the `main` branch of this repository.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details.**
+**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**on creating and handling pull requests successfully.**
 
 If you're not certain of the changes that you want to make, get in touch with us first!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
@@ -97,7 +98,7 @@ You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 
 If you need to do some work that requires changes to more than one file, like
 moving one or more documents, the GitHub UI is not very efficient. You'd have to make
-a separate pull-request for every page you want to change. Instead, you're going to
+a separate pull request for every page you want to change. Instead, you're going to
 have to use `git` or one of the other `git`-based approaches like the
 [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
 
@@ -105,7 +106,7 @@ have to use `git` or one of the other `git`-based approaches like the
 [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
 of this repository, so you can freely experiment with branches and changes in your own copy
 before submitting your changes as a
-[pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so `https://github.com/octocat/content`.
 
@@ -203,7 +204,7 @@ important to keep the following in mind:**
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
-    separate pull-request for each logical chunk.**
+    separate pull request for each logical chunk.**
 
 1. Once you've made and saved your changes, open a browser, and navigate to the page(s)
 you've changed. For example, if you changed `files/en-us/web/javascript/index.html`,
@@ -224,43 +225,56 @@ that represents your fork is `origin`.
     git push -u origin my-work
     ```
 
-1. You're now ready to create a [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. You're now ready to create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-1. Once you've created your pull-request, sit back, relax, and wait for a review.
+1. Once you've created your pull request, sit back, relax, and wait for a review.
 **You do not need to request a review. One or more reviewers will be selected for**
-**you automatically.** Your pull-request will have to be reviewed and eventually approved before it's merged into the `main` branch, and then later (within 48 hours) published on
+**you automatically.** Your pull request will have to be reviewed and eventually approved before it's merged into the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
 common and natural part of the process.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details.**
+**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**on creating and handling pull requests successfully.**
 
 ### Pull-request etiquette
 
 Here are some important rules of etiquette to remember when working with pull-requests.
 
-1. When you submit a pull-request, a number of tests are automatically run. If one or more
-of these tests fail, it is your responsibility to try and resolve the underlying issue(s).
-If you don't know how to resolve the underlying issue(s), you can ask for help. Your pull-request will not be approved and merged if these tests are failing.
+1. When you submit a pull request, a number of tests are automatically run as GitHub
+Actions (see [.github/workflows/pr-build.yml](.github/workflows/pr-build.yml),
+[.github/workflows/pr-filecheck.yml](.github/workflows/pr-filecheck.yml),
+and [.github/workflows/preview.yml](.github/workflows/preview.yml)). If one or more of
+these tests fail, it is your responsibility to try and resolve the underlying issue(s).
+If you don't know how to resolve the underlying issue(s), you can ask for help.
+Your pull request will not be approved and merged if these tests are failing.
 
-1. If your pull-request has merge conflicts with the `main` branch (GitHub checks for this
+1. If your pull request has merge conflicts with the `main` branch (GitHub checks for this
 automatically and notifies you), it's your responsibility to resolve them. You can do this
 by merging the `main` branch into your branch (`git pull mdn main`), and then pushing your
 updated branch to your fork (`git push`).
 
-1. Once you've created your pull-request, never use `git rebase` on your branch if you
+1. Once you've created your pull request, never use `git rebase` on your branch if you
 need to make changes. Any changes should be made as one or more additional commits.
 
-1. If you pack too many unrelated changes into your pull-request, the reviewer has the
-right to close it, and request that you submit a separate pull-request for each logical
-chunk of changes that belong together.
+1. Each pull request should contain a single logical change, or related set of changes that make sense to submit together. If a pull request becomes too large or contains too many unrelated changes, it becomes too difficult to review, and may begin to look suspicious
+(it is easier to hide malicious changes in a large pull request). In such cases, the
+reviewer has the right to close your pull request, and ask that you submit a separate
+pull request for each logical set of changes that belong together.
 
-1. If your pull-request is more than a small change, there should already exist an issue
+1. If your pull request is more than a small change, there should already exist an issue
 that explains the need for that change, and you should reference that issue's ID (e.g.
-#1234) in your pull-request's description. If an issue does not already exist, please
+#1234) in your pull request's description. If an issue does not already exist, please
 create one at https://github.com/mdn/content/issues, explaining the motivation for the
 change.
 
-1. Do not re-open a pull-request that a reviewer has closed.
+1. If your pull request contains any kind of significant complexity (it contains
+technical changes, and isn't just a typo fix, grammatical improvement, or
+formatting/structural change), please describe, in your pull request's description,
+why you're making the change, or reference an existing issue that describes the
+motivation for the change. You can reference an existing issue using `#` followed
+by the issue's ID, for example `#1234`.
+
+1. Do not re-open a pull request that a reviewer has closed.
 
 ### Adding a new document
 
@@ -298,7 +312,7 @@ As we outlined above, the step-by-step process in general would be:
     ```
 
 1. And finally create your
-[pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -344,7 +358,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ### Deleting a document
 
@@ -388,7 +402,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ### Adding images
 
@@ -420,7 +434,7 @@ a new image to the `files/en-us/web/css` document.
     ```
 
 1. Run our `filecheck` command on each image you add. It'll complain if something's wrong.
-We'll automatically run this as one of the tests we run when your new pull-request is created,
+We'll automatically run this as one of the tests we run when your new pull request is created,
 but why wait to fix any possible issues later?
 
     ```sh
@@ -443,7 +457,7 @@ push your branch to your fork:
     git push -u origin my-images
     ```
 
-1. Now you're ready to create your [pull-request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ### Updating a browser compatibility table
 
