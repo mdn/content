@@ -3,3 +3,4 @@
 .env
 yarn-debug.log*
 yarn-error.log*
+_githistory.json
