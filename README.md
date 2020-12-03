@@ -229,7 +229,9 @@ that represents your fork is `origin`.
 
 1. Once you've created your pull request, sit back, relax, and wait for a review.
 **You do not need to request a review. One or more reviewers will be selected for**
-**you automatically.** Your pull request will have to be reviewed and eventually approved before it's merged into the `main` branch, and then later (within 48 hours) published on
+**you automatically.**
+Your pull request will have to be reviewed and eventually approved before it's merged
+into the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
 common and natural part of the process.
@@ -256,10 +258,12 @@ updated branch to your fork (`git push`).
 1. Once you've created your pull request, never use `git rebase` on your branch if you
 need to make changes. Any changes should be made as one or more additional commits.
 
-1. Each pull request should contain a single logical change, or related set of changes that make sense to submit together. If a pull request becomes too large or contains too many unrelated changes, it becomes too difficult to review, and may begin to look suspicious
-(it is easier to hide malicious changes in a large pull request). In such cases, the
-reviewer has the right to close your pull request, and ask that you submit a separate
-pull request for each logical set of changes that belong together.
+1. Each pull request should contain a single logical change, or related set of changes
+that make sense to submit together. If a pull request becomes too large or contains too
+many unrelated changes, it becomes too difficult to review, and may begin to look
+suspicious (it is easier to hide malicious changes in a large pull request). In such
+cases, the reviewer has the right to close your pull request, and ask that you submit
+a separate pull request for each logical set of changes that belong together.
 
 1. If your pull request is more than a small change, there should already exist an issue
 that explains the need for that change, and you should reference that issue's ID (e.g.
