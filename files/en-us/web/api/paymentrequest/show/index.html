@@ -181,7 +181,7 @@ tags:
     },
   };
   const request = new PaymentRequest(methods, initialDetails, options);
-  // Check if the the user supports the `methods`
+  // Check if the user supports the `methods`
   if (!await request.canMakePayment()) {
     return; // no, so use a web form instead.
   }

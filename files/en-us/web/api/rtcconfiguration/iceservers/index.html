@@ -42,7 +42,7 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
 
 <p>How the list of servers you provide is used is up to the implementation of the {{Glossary("user agent")}}. While it can be useful to provide a second server as a fallback in case the first is offline, listing too many servers can delay the user's connection being established, depending on the network's performance and how many servers get used for negotiation before a connection is established.</p>
 
-<p>If the list of servers is changed while a connection is already active by calling the the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate effect occurs. However, the new list of servers is used for any future renegotiation, such as while handling an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</p>
+<p>If the list of servers is changed while a connection is already active by calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate effect occurs. However, the new list of servers is used for any future renegotiation, such as while handling an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 

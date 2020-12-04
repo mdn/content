@@ -175,7 +175,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <h3 id="Windowed_Plug-ins" name="Windowed_Plug-ins">Windowed Plug-ins</h3>
 
-<p>The browser gives each windowed plug-in its own native window, often a child window of the the browser window itself, to draw into. The plug-in has complete control over drawing and event handling within that window.</p>
+<p>The browser gives each windowed plug-in its own native window, often a child window of the browser window itself, to draw into. The plug-in has complete control over drawing and event handling within that window.</p>
 
 <p>On Mac OS, the browser does not give a windowed plug-in a native window, because the Mac OS platform does not support child windows. Instead, the windowed plug-in draws into the graphics port associated with the browser window, at the offset that the browser specifies.</p>
 
@@ -330,7 +330,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
  <dt>Windows</dt>
 </dl>
 
-<p>The plug-in receives a <code>WM_PAINT</code> message. The <code>lParam</code> parameter of <code>WM_PAINT</code> holds a pointer to a <code>RECT</code> structure specifying the bounding box of the update area. Some plug-ins will choose to ignore this paint rect and always update the entire plug-in window instead, though. Also, because the plug-in and the browser share the same HDC, the plug-in must save the current settings on the HDC, set up its own environment, draw itself, and restore the HDC to the previous settings. The HDC settings must be restored whenever control returns to the the browser, either before returning from <code>NPP_HandleEvent</code> or before calling a drawing-related browser-side method.</p>
+<p>The plug-in receives a <code>WM_PAINT</code> message. The <code>lParam</code> parameter of <code>WM_PAINT</code> holds a pointer to a <code>RECT</code> structure specifying the bounding box of the update area. Some plug-ins will choose to ignore this paint rect and always update the entire plug-in window instead, though. Also, because the plug-in and the browser share the same HDC, the plug-in must save the current settings on the HDC, set up its own environment, draw itself, and restore the HDC to the previous settings. The HDC settings must be restored whenever control returns to the browser, either before returning from <code>NPP_HandleEvent</code> or before calling a drawing-related browser-side method.</p>
 
 <dl>
  <dt>Mac OS</dt>
@@ -384,7 +384,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <p>The requested information, a value of type HWND, is returned from <a href="/en/NPN_GetValue" title="en/NPN_GetValue">NPN_GetValue</a> in the value parameter.</p>
 
-<p>In many cases, a plug-in may still have to create its own window (a transparent child window of the the browser window) to act as the owner window for pop-up menus and modal dialog boxes. You can give this transparent child window its own WindowProc process. The plug-in can use this to deal with <code>WM_COMMAND</code> messages sent to it as a result of tracking the pop-up menu or modal dialog box.</p>
+<p>In many cases, a plug-in may still have to create its own window (a transparent child window of the browser window) to act as the owner window for pop-up menus and modal dialog boxes. You can give this transparent child window its own WindowProc process. The plug-in can use this to deal with <code>WM_COMMAND</code> messages sent to it as a result of tracking the pop-up menu or modal dialog box.</p>
 
 <dl>
  <dt>Unix/X11</dt>
