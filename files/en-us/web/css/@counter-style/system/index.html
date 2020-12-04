@@ -62,7 +62,7 @@ system: extends decimal;
  <dt><code>extends</code></dt>
  <dd>Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the <code>extends</code> system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.<br>
  <br>
- It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one more more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
+ It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one or more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
