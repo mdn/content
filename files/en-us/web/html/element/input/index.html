@@ -1137,7 +1137,7 @@ input[min][max] {}
 
 <p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
 
-<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
+<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
 
 <pre class="brush: js notranslate">function validate(input) {
   let validityState_object = input.validity;
