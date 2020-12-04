@@ -252,7 +252,7 @@ Your pull request will not be approved and merged if these tests are failing.
 
 1. If your pull request has merge conflicts with the `main` branch (GitHub checks for this
 automatically and notifies you), it's your responsibility to resolve them. You can do this
-by merging the `main` branch into your branch (`git pull mdn main`), and then pushing your
+by merging the latest upstream `main` branch into your branch (`git pull mdn main`), and then pushing your
 updated branch to your fork (`git push`).
 
 1. Once you've created your pull request, never use `git rebase` on your branch if you
