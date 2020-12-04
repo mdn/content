@@ -150,7 +150,7 @@ with open('/etc/secret_key.txt') as f:
 
 <pre class="brush: bash notranslate">export DJANGO_DEBUG=False</pre>
 
-<p>A full checklist of settings you might want to change is provided in <a href="https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/">Deployment checklist</a> (Django docs). You can also list a number of these using the terminal command below:</p>
+<p>A full checklist of settings you might want to change is provided in <a href="https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/">Deployment checklist</a> (Django docs). You can also list a number of these using the terminal command below:</p>
 
 <pre class="brush: python notranslate">python3 manage.py check --deploy
 </pre>
@@ -590,7 +590,7 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 
 Setting DJANGO_DEBUG and restarting locallibrary... done, v8</code></pre>
 
-<p>If you visit the site now you'll get a "Bad request" error, because the <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> setting is <em>required</em> if you have <code>DEBUG=False</code> (as a security measure). Open <strong>/locallibrary/settings.py</strong> and change the <code>ALLOWED_HOSTS</code> setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.</p>
+<p>If you visit the site now you'll get a "Bad request" error, because the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> setting is <em>required</em> if you have <code>DEBUG=False</code> (as a security measure). Open <strong>/locallibrary/settings.py</strong> and change the <code>ALLOWED_HOSTS</code> setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.</p>
 
 <pre class="brush: python notranslate">ALLOWED_HOSTS = ['&lt;your app URL without the https:// prefix&gt;.herokuapp.com','127.0.0.1']
 # For example:
@@ -625,7 +625,7 @@ heroku config:set DEBUG_COLLECTSTATIC=1
 heroku ps
 </pre>
 
-<p>If you need more information than these can provide you will need to start looking into <a href="https://docs.djangoproject.com/en/2.1/topics/logging/">Django Logging</a>.</p>
+<p>If you need more information than these can provide you will need to start looking into <a href="https://docs.djangoproject.com/en/3.1/topics/logging/">Django Logging</a>.</p>
 
 <ul>
 </ul>
@@ -639,14 +639,14 @@ heroku ps
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/howto/deployment/">Deploying Django</a> (Django docs)
+ <li><a href="https://docs.djangoproject.com/en/3.1/howto/deployment/">Deploying Django</a> (Django docs)
 
   <ul>
-   <li><a href="https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/">Deployment checklist</a> (Django docs)</li>
-   <li><a href="https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/">Deploying static files</a> (Django docs)</li>
-   <li><a href="https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/">How to deploy with WSGI</a> (Django docs)</li>
-   <li><a href="https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/modwsgi/">How to use Django with Apache and mod_wsgi</a> (Django docs)</li>
-   <li><a href="https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/gunicorn/">How to use Django with Gunicorn</a> (Django docs)</li>
+   <li><a href="https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/">Deployment checklist</a> (Django docs)</li>
+   <li><a href="https://docs.djangoproject.com/en/3.1/howto/static-files/deployment/">Deploying static files</a> (Django docs)</li>
+   <li><a href="https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/">How to deploy with WSGI</a> (Django docs)</li>
+   <li><a href="https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/modwsgi/">How to use Django with Apache and mod_wsgi</a> (Django docs)</li>
+   <li><a href="https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/gunicorn/">How to use Django with Gunicorn</a> (Django docs)</li>
   </ul>
  </li>
  <li>Heroku

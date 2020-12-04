@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>boolean</var> = StylePropertyMapReadOnly.has(<var>property</var>)</pre>
+<pre class="syntaxbox notranslate">var <var>boolean</var> = StylePropertyMapReadOnly.has(<var>property</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -32,7 +32,16 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>Here we use the <code>has()</code> method to see if the padding-top property is present within the button elements style attribute.</p>
+
+<pre class="brush: js notranslate">// get the button element
+const buttonEl = document.querySelector('.example');
+
+// find what's in the style attribute with attributeStyleMap and has()
+const hasPadTop = buttonEl.attributeStyleMap.has('padding-top);
+
+console.log(hasPadTop); // logs true if padding-top is present in style attribute
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

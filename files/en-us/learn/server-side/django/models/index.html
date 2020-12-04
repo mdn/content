@@ -117,34 +117,34 @@ class MyModelName(models.Model):
 <p>The following common arguments can be used when declaring many/most of the different field types:</p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text">help_text</a>: Provides a text label for HTML forms (e.g. in the admin site), as described above.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: If <code>True</code>, Django will store blank values as <code>NULL</code> in the database for fields where this is appropriate (a <code>CharField</code> will instead store an empty string). The default is <code>False</code>.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>: If <code>True</code>, the field is allowed to be blank in your forms. The default is <code>False</code>, which means that Django's form validation will force you to enter a value. This is often used with <code>null=True</code> , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key">primary_key</a>: If <code>True</code>, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#help-text">help_text</a>: Provides a text label for HTML forms (e.g. in the admin site), as described above.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#verbose-name">verbose_name</a>: A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#default">default</a>: The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#null">null</a>: If <code>True</code>, Django will store blank values as <code>NULL</code> in the database for fields where this is appropriate (a <code>CharField</code> will instead store an empty string). The default is <code>False</code>.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#blank">blank</a>: If <code>True</code>, the field is allowed to be blank in your forms. The default is <code>False</code>, which means that Django's form validation will force you to enter a value. This is often used with <code>null=True</code> , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices">choices</a>: A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#primary-key">primary_key</a>: If <code>True</code>, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.</li>
 </ul>
 
-<p>There are many other options — you can view the <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-options">full list of field options here</a>.</p>
+<p>There are many other options — you can view the <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-options">full list of field options here</a>.</p>
 
 <h5 id="Common_field_types">Common field types</h5>
 
 <p>The following list describes some of the more commonly used types of fields. </p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.CharField">CharField</a> is used to define short-to-mid sized fixed-length strings. You must specify the <code>max_length</code> of the data to be stored.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.TextField">TextField</a> is used for large arbitrary-length strings. You may specify a <code>max_length</code> for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> is a field for storing integer (whole number) values, and for validating entered values as integers in forms.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#datefield">DateField</a> and <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#datetimefield">DateTimeField</a> are used for storing/representing dates and date/time information (as Python <code>datetime.date</code> in and <code>datetime.datetime</code> objects, respectively). These fields can additionally declare the (mutually exclusive) parameters <code>auto_now=True</code> (to set the field to the current date every time the model is saved), <code>auto_now_add</code> (to only set the date when the model is first created) , and <code>default</code> (to set a default date that can be overridden by the user).</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#emailfield">EmailField</a> is used to store and validate email addresses.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#filefield">FileField</a> and <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#imagefield">ImageField</a> are used to upload files and images respectively (the <code>ImageField</code> simply adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#autofield">AutoField</a> is a special type of <code>IntegerField</code> that automatically increments. A primary key of this type is automatically added to your model if you don’t explicitly specify one.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#foreignkey">ForeignKey</a> is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#manytomanyfield">ManyToManyField</a> is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to <code>ForeignKeys</code>, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter <code>on_delete</code> to define what happens when the associated record is deleted (e.g. a value of <code>models.SET_NULL</code> would simply set the value to <code>NULL</code>).</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.CharField">CharField</a> is used to define short-to-mid sized fixed-length strings. You must specify the <code>max_length</code> of the data to be stored.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.TextField">TextField</a> is used for large arbitrary-length strings. You may specify a <code>max_length</code> for the field, but this is used only when the field is displayed in forms (it is not enforced at the database level).</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> is a field for storing integer (whole number) values, and for validating entered values as integers in forms.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datefield">DateField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datetimefield">DateTimeField</a> are used for storing/representing dates and date/time information (as Python <code>datetime.date</code> in and <code>datetime.datetime</code> objects, respectively). These fields can additionally declare the (mutually exclusive) parameters <code>auto_now=True</code> (to set the field to the current date every time the model is saved), <code>auto_now_add</code> (to only set the date when the model is first created) , and <code>default</code> (to set a default date that can be overridden by the user).</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#emailfield">EmailField</a> is used to store and validate email addresses.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#filefield">FileField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#imagefield">ImageField</a> are used to upload files and images respectively (the <code>ImageField</code> simply adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#autofield">AutoField</a> is a special type of <code>IntegerField</code> that automatically increments. A primary key of this type is automatically added to your model if you don’t explicitly specify one.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#foreignkey">ForeignKey</a> is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#manytomanyfield">ManyToManyField</a> is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to <code>ForeignKeys</code>, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter <code>on_delete</code> to define what happens when the associated record is deleted (e.g. a value of <code>models.SET_NULL</code> would simply set the value to <code>NULL</code>).</li>
 </ul>
 
-<p>There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the <a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-types">full list here</a>.</p>
+<p>There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types">full list here</a>.</p>
 
 <h4 id="Metadata">Metadata</h4>
 
@@ -170,7 +170,7 @@ class MyModelName(models.Model):
 
 <p>Many of the other metadata options control what database must be used for the model and how the data is stored (these are really only useful if you need to map a model to an existing database).</p>
 
-<p>The full list of metadata options are available here: <a href="https://docs.djangoproject.com/en/2.1/ref/models/options/">Model metadata options</a> (Django docs).</p>
+<p>The full list of metadata options are available here: <a href="https://docs.djangoproject.com/en/3.1/ref/models/options/">Model metadata options</a> (Django docs).</p>
 
 <h4 id="Methods">Methods</h4>
 
@@ -244,7 +244,7 @@ record.save()</pre>
 number_wild_books = wild_books.count()
 </pre>
 
-<p>The fields to match and the type of match are defined in the filter parameter name, using the format: <code>field_name__match_type</code> (note the <em>double underscore</em> between <code>title</code> and <code>contains</code> above). Above we're filtering <code>title</code> with a case-sensitive match. There are many other types of matches you can do: <code>icontains</code> (case insensitive), <code>iexact</code> (case-insensitive exact match), <code>exact</code> (case-sensitive exact match) and <code>in</code>, <code>gt</code> (greater than), <code>startswith</code>, etc. The <a href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/#field-lookups">full list is here</a>.</p>
+<p>The fields to match and the type of match are defined in the filter parameter name, using the format: <code>field_name__match_type</code> (note the <em>double underscore</em> between <code>title</code> and <code>contains</code> above). Above we're filtering <code>title</code> with a case-sensitive match. There are many other types of matches you can do: <code>icontains</code> (case insensitive), <code>iexact</code> (case-insensitive exact match), <code>exact</code> (case-sensitive exact match) and <code>in</code>, <code>gt</code> (greater than), <code>startswith</code>, etc. The <a href="https://docs.djangoproject.com/en/3.1/ref/models/querysets/#field-lookups">full list is here</a>.</p>
 
 <p>In some cases you'll need to filter on a field that defines a one-to-many relationship to another model (e.g. a <code>ForeignKey</code>). In this case you can "index" to fields within the related model with additional double underscores. So for example to filter for books with a specific genre pattern, you will have to index to the <code>name</code> through the <code>genre</code> field, as shown below:</p>
 
@@ -256,7 +256,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 <p><strong>Note</strong>: You can use underscores (__) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like. For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
-<p>There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see <a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> (Django Docs).</p>
+<p>There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see <a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs).</p>
 
 <h2 id="Defining_the_LocalLibrary_Models">Defining the LocalLibrary Models</h2>
 
@@ -443,9 +443,9 @@ python3 manage.py migrate</code></pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial02/">Writing your first Django app, part 2</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Making queries</a> (Django Docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">QuerySet API Reference</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial02/">Writing your first Django app, part 2</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/querysets/">QuerySet API Reference</a> (Django Docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</p>

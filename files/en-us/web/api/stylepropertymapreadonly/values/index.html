@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>StylePropertyMapReadOnly</var>.values()</pre>
+<pre class="syntaxbox notranslate"><var>StylePropertyMapReadOnly</var>.values()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +29,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>In this example we use the <code>values()</code> method to be able to access the values within our <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Element/computedStyleMap"><code>Element.computedStyleMap()</code></a>.</p>
+
+<pre class="brush: js notranslate">// get a button element
+const buttonEl = document.querySelector('button');
+
+// we can retrieve all computed styles with `computedStyleMap`
+const allComputedStyles = buttonEl.computedStyleMap();
+
+// values returns an iterable list of the css values
+const vals = allComputedStyles.values();
+console.log(vals.next().value); // returns a CSSStyleValue
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

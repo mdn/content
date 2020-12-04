@@ -12,16 +12,16 @@ tags:
 
 <p>The <code><strong>Window.sizeToContent()</strong></code> method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called—for example, once the {{event("DOMContentLoaded")}} event has been thrown.</p>
 
-<p>The minimal size of the window can be clamped.</p>
+<p>Since Firefox 20, the mimimal size of the window is clamped to prevent the window from being too small for the user to interact with.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.sizeToContent()
+<pre class="syntaxbox notranslate">window.sizeToContent()
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js">window.sizeToContent();
+<pre class="brush:js notranslate">window.sizeToContent();
 </pre>
 
 <h2 id="Specification">Specification</h2>

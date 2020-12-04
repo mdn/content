@@ -35,7 +35,7 @@ tags:
 
 <p>The Django admin <em>application</em> can use your models to automatically build a site area that you can use to create, view, update, and delete records. This can save you a lot of time during development, making it very easy to test your models and get a feel for whether you have the <em>right </em>data. The admin application can also be useful for managing data in production, depending on the type of website. The Django project recommends it only for internal data management (i.e. just for use by admins, or people internal to your organization), as the model-centric approach is not necessarily the best possible interface for all users, and exposes a lot of unnecessary detail about the models. </p>
 
-<p>All the configuration required to include the admin application in your website was done automatically when you <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the skeleton project</a> (for information about actual dependencies needed, see the <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">Django docs here</a>). As a result, all you <strong>must</strong> do to add your models to the admin application is to <em>register</em> them. At the end of this article we'll provide a brief demonstration of how you might further configure the admin area to better display our model data.</p>
+<p>All the configuration required to include the admin application in your website was done automatically when you <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the skeleton project</a> (for information about actual dependencies needed, see the <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/">Django docs here</a>). As a result, all you <strong>must</strong> do to add your models to the admin application is to <em>register</em> them. At the end of this article we'll provide a brief demonstration of how you might further configure the admin area to better display our model data.</p>
 
 <p>After registering the models we'll show how to create a new "superuser", login to the site, and create some books, authors, book instances, and genres. These will be useful for testing the views and templates we'll start creating in the next tutorial.</p>
 
@@ -144,11 +144,11 @@ admin.site.register(BookInstance)
 
 <p>In this section we're going to look at a few changes that will improve the interface for our <em>LocalLibrary</em>, including adding more information to <code>Book</code> and <code>Author</code> model lists, and improving the layout of their edit views. We won't change the <code>Language</code> and <code>Genre</code> model presentation because they only have one field each, so there is no real benefit in doing so!</p>
 
-<p>You can find a complete reference of all the admin site customisation choices in <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
+<p>You can find a complete reference of all the admin site customisation choices in <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
 
 <h3 id="Register_a_ModelAdmin_class">Register a ModelAdmin class</h3>
 
-<p>To change how a model is displayed in the admin interface you define a <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#modeladmin-objects">ModelAdmin</a> class (which describes the layout) and register it with the model.</p>
+<p>To change how a model is displayed in the admin interface you define a <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#modeladmin-objects">ModelAdmin</a> class (which describes the layout) and register it with the model.</p>
 
 <p>Let's start with the <code>Author</code> model. Open <strong>admin.py</strong> in the catalog application (<strong>/locallibrary/catalog/admin.py</strong>). Comment out your original registration (prefix it with a #) for the <code>Author</code> model:</p>
 
@@ -186,7 +186,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h3 id="Configure_list_views">Configure list views</h3>
 
-<p>The <em>LocalLibrary</em> currently lists all authors using the object name generated from the model <code>__str__()</code> method. This is fine when you only have a few authors, but once you have many you may end up having duplicates. To differentiate them, or just because you want to show more interesting information about each author, you can use <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display">list_display</a> to add additional fields to the view. </p>
+<p>The <em>LocalLibrary</em> currently lists all authors using the object name generated from the model <code>__str__()</code> method. This is fine when you only have a few authors, but once you have many you may end up having duplicates. To differentiate them, or just because you want to show more interesting information about each author, you can use <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display">list_display</a> to add additional fields to the view. </p>
 
 <p>Replace your <code>AuthorAdmin</code> class with the code below. The field names to be displayed in the list are declared in a <em>tuple</em> in the required order, as shown (these are the same names as specified in your original model).</p>
 
@@ -270,7 +270,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h4 id="Sectioning_the_detail_view">Sectioning the detail view</h4>
 
-<p>You can add "sections" to group related model information within the detail form, using the <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a> attribute.</p>
+<p>You can add "sections" to group related model information within the detail form, using the <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a> attribute.</p>
 
 <p>In the <code>BookInstance</code> model we have information related to what the book is (i.e. <code>name</code>, <code>imprint</code>, and <code>id</code>) and when it will be available (<code>status</code>, <code>due_back</code>). We can add these in different sections by adding the text in bold to our <code>BookInstanceAdmin</code> class. </p>
 
@@ -297,7 +297,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Sometimes it can make sense to be able to add associated records at the same time. For example, it may make sense to have both the book information and information about the specific copies you've got on the same detail page.</p>
 
-<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizonal layout) or <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
+<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizonal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
 
 <pre class="brush: python notranslate"><strong>class BooksInstanceInline(admin.TabularInline):
     model = BookInstance</strong>
@@ -312,7 +312,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p><img alt="Admin Site - Book with Inlines" src="https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; height: 889px; margin: 0px auto; width: 937px;"></p>
 
-<p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
+<p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 
 <div class="note">
 <p><strong>Note</strong>: There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to <code>0</code> in <code>BooksInstanceInline</code> model, try it by yourself.</p>
@@ -337,8 +337,8 @@ class BookAdmin(admin.ModelAdmin):
 <h2 id="Further_reading">Further reading</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial02/#introducing-the-django-admin">Writing your first Django app, part 2: Introducing the Django Admin</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/contrib/admin/">The Django Admin site</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial02/#introducing-the-django-admin">Writing your first Django app, part 2: Introducing the Django Admin</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/">The Django Admin site</a> (Django Docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</p>

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>StylePropertyMapReadOnly</var>.keys()</pre>
+<pre class="syntaxbox notranslate"><var>StylePropertyMapReadOnly</var>.keys()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +29,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>In this example we use the <code>keys()</code> method to be able to access the properties within our {{domxref('Element.computedStyleMap()')}}.</p>
+
+<pre class="brush: js notranslate">// get a button element
+const buttonEl = document.querySelector('button');
+
+// we can retrieve all computed styles with `computedStyleMap`
+const allComputedStyles = buttonEl.computedStyleMap();
+
+// keys returns an iterable list of properties
+const props = allComputedStyles.keys();
+console.log(props.next().value); // returns align-content
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

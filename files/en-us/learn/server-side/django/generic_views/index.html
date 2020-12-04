@@ -114,7 +114,7 @@ class BookListView(generic.ListView):
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Check out <a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
+<p><strong>Note</strong>: Check out <a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
 </div>
 
 <h3 id="Creating_the_List_View_template">Creating the List View template</h3>
@@ -144,7 +144,7 @@ class BookListView(generic.ListView):
 
 <h4 id="Conditional_execution">Conditional execution</h4>
 
-<p>We use the <code><a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if">if</a></code>, <code>else</code>, and <code>endif</code> template tags to check whether the <code>book_list</code> has been defined and is not empty. If <code>book_list</code> is empty, then the <code>else</code> clause displays text explaining that there are no books to list. If <code>book_list</code> is not empty, then we iterate through the list of books.</p>
+<p>We use the <code><a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if">if</a></code>, <code>else</code>, and <code>endif</code> template tags to check whether the <code>book_list</code> has been defined and is not empty. If <code>book_list</code> is empty, then the <code>else</code> clause displays text explaining that there are no books to list. If <code>book_list</code> is not empty, then we iterate through the list of books.</p>
 
 <pre class="brush: html notranslate"><strong>{% if book_list %}</strong>
   &lt;!-- code here to list the books --&gt;
@@ -153,11 +153,11 @@ class BookListView(generic.ListView):
 <strong>{% endif %}</strong>
 </pre>
 
-<p>The condition above only checks for one case, but you can test on additional conditions using the <code>elif</code> template tag (e.g. <code>{% elif var2 %}</code>). For more information about conditional operators see: <a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if">if</a>, <a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifequal-and-ifnotequal">ifequal/ifnotequal</a>, and <a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifchanged">ifchanged</a> in <a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins">Built-in template tags and filters</a> (Django Docs).</p>
+<p>The condition above only checks for one case, but you can test on additional conditions using the <code>elif</code> template tag (e.g. <code>{% elif var2 %}</code>). For more information about conditional operators see: <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if">if</a>, <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifequal-and-ifnotequal">ifequal/ifnotequal</a>, and <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifchanged">ifchanged</a> in <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins">Built-in template tags and filters</a> (Django Docs).</p>
 
 <h4 id="For_loops">For loops</h4>
 
-<p>The template uses the <a href="https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#for">for</a> and <code>endfor</code> template tags to loop through the book list, as shown below. Each iteration populates the <code>book</code> template variable with information for the current list item.</p>
+<p>The template uses the <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#for">for</a> and <code>endfor</code> template tags to loop through the book list, as shown below. Each iteration populates the <code>book</code> template variable with information for the current list item.</p>
 
 <pre class="brush: html notranslate">{% for <strong>book</strong> in book_list %}
   &lt;li&gt; &lt;!-- code here get information from each <strong>book</strong> item --&gt; &lt;/li&gt;
@@ -207,7 +207,7 @@ class BookListView(generic.ListView):
 <strong>    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),</strong>
 ]</pre>
 
-<p>For the <em>book-detail</em> path the URL pattern uses a special syntax to capture the specific id of the book that we want to see. The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data. For example, <strong>&lt;something&gt;</strong> , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a <a href="https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters">converter specification</a> that defines the type of data (int, str, slug, uuid, path).</p>
+<p>For the <em>book-detail</em> path the URL pattern uses a special syntax to capture the specific id of the book that we want to see. The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data. For example, <strong>&lt;something&gt;</strong> , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#path-converters">converter specification</a> that defines the type of data (int, str, slug, uuid, path).</p>
 
 <p>In this case we use <code>'&lt;int:pk&gt;'</code><strong> </strong>to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named <code>pk</code> (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.</p>
 
@@ -225,7 +225,7 @@ class BookListView(generic.ListView):
 <p><strong>Note</strong>: You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.</p>
 </div>
 
-<p>The pattern matching provided by <code>path()</code> is simple and useful for the (very common) cases where you just want to capture <em>any</em> string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the <a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.re_path">re_path()</a> method.</p>
+<p>The pattern matching provided by <code>path()</code> is simple and useful for the (very common) cases where you just want to capture <em>any</em> string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the <a href="https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.re_path">re_path()</a> method.</p>
 
 <p>This method is used just like <code>path()</code> except that it allows you to specify a pattern using a <a href="https://docs.python.org/3/library/re.html">Regular expression</a>. For example, the previous path could have been written as shown below:</p>
 
@@ -330,7 +330,7 @@ class BookListView(generic.ListView):
 
 <h4 id="Passing_additional_options_in_your_URL_maps">Passing additional options in your URL maps</h4>
 
-<p>One feature that we haven't used here, but which you may find valuable, is that you can declare and pass <a href="https://docs.djangoproject.com/en/2.1/topics/http/urls/#views-extra-options">additional options</a> to the view. The options are declared as a dictionary that you pass as the third un-named argument to the <code>path()</code> function. This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behaviour in each case (below we supply a different template in each case).</p>
+<p>One feature that we haven't used here, but which you may find valuable, is that you can declare and pass <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#views-extra-options">additional options</a> to the view. The options are declared as a dictionary that you pass as the third un-named argument to the <code>path()</code> function. This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behaviour in each case (below we supply a different template in each case).</p>
 
 <pre class="brush: python notranslate">path('url/', views.my_reused_view, <strong>{'my_template_name': 'some_path'}</strong>, name='aurl'),
 path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_path'}</strong>, name='anotherurl'),
@@ -445,7 +445,7 @@ def book_detail_view(request, primary_key):
   allow_empty_first_page=allow_empty_first_page, **kwargs)
 </pre>
 
-<p>That happens because the <a href="https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects">paginator object</a> expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!<strong> </strong></p>
+<p>That happens because the <a href="https://docs.djangoproject.com/en/3.1/topics/pagination/#paginator-objects">paginator object</a> expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!<strong> </strong></p>
 
 <p>This tutorial hasn't covered <strong>Pagination</strong> (yet!), but since you can't use <code>sort_by()</code> and pass a parameter (the same with <code>filter()</code> described above) you will have to choose between three choices:</p>
 
@@ -542,7 +542,7 @@ def book_detail_view(request, primary_key):
     {% endif %}
   {% endblock %} </strong></pre>
 
-<p>The <code>page_obj</code> is a <a href="https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects">Paginator</a> object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc. </p>
+<p>The <code>page_obj</code> is a <a href="https://docs.djangoproject.com/en/3.1/topics/pagination/#paginator-objects">Paginator</a> object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc. </p>
 
 <p>We use <code>\{{ request.path }}</code> to get the current page URL for creating the pagination links. This is useful because it is independent of the object that we're paginating.</p>
 

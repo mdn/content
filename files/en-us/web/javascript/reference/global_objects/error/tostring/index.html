@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>e</var>.toString()</code></pre>
+<pre class="syntaxbox notranslate"><code><var>e</var>.toString()</code></pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>The {{jsxref("Error")}} object overrides the {{jsxref("Object.prototype.toString()")}} method inherited by all objects. Its semantics are as follows (assuming {{jsxref("Object")}} and {{jsxref("String")}} have their original values):</p>
 
-<pre class="brush: js">Error.prototype.toString = function() {
+<pre class="brush: js notranslate">Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -51,20 +51,26 @@ tags:
 
 <h3 id="Using_toString">Using toString()</h3>
 
-<pre class="brush: js">var e = new Error('fatal error');
-console.log(e.toString()); // 'Error: fatal error'
+<pre class="brush: js notranslate">var e1 = new Error('fatal error');
+console.log(e1.toString()); // 'Error: fatal error'
 
-e.name = undefined;
-console.log(e.toString()); // 'Error: fatal error'
+var e2 = new Error('fatal error');
+e2.name = undefined;
+console.log(e2.toString()); // 'Error: fatal error'
 
-e.name = '';
-console.log(e.toString()); // 'fatal error'
+var e3 = new Error('fatal error');
+e3.name = '';
+console.log(e3.toString()); // 'fatal error'
 
-e.message = undefined;
-console.log(e.toString()); // ''
+var e4 = new Error('fatal error');
+e4.name = '';
+e4.message = undefined;
+console.log(e4.toString()); // ''
 
-e.name = 'hello';
-console.log(e.toString()); // 'hello'
+var e5 = new Error('fatal error');
+e5.name = 'hello';
+e5.message = undefined;
+console.log(e5.toString()); // 'hello'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

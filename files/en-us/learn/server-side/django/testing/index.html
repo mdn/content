@@ -62,9 +62,9 @@ tags:
 
 <p>Testing a website is a complex task, because it is made of several layers of logic – from HTTP-level request handling, queries models, to form validation and processing, and template rendering.</p>
 
-<p>Django provides a test framework with a small hierarchy of classes that build on the Python standard <code><a href="https://docs.python.org/3/library/unittest.html#module-unittest" title="(in Python v3.5)">unittest</a></code> library. Despite the name, this test framework is suitable for both unit and integration tests. The Django framework adds API methods and tools to help test web and Django-specific behaviour. These allow you to simulate requests, insert test data, and inspect your application's output. Django also provides an API (<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) and tools for <a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks">using different testing frameworks</a>, for example you can integrate with the popular <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> framework to simulate a user interacting with a live browser.</p>
+<p>Django provides a test framework with a small hierarchy of classes that build on the Python standard <code><a href="https://docs.python.org/3/library/unittest.html#module-unittest" title="(in Python v3.5)">unittest</a></code> library. Despite the name, this test framework is suitable for both unit and integration tests. The Django framework adds API methods and tools to help test web and Django-specific behaviour. These allow you to simulate requests, insert test data, and inspect your application's output. Django also provides an API (<a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) and tools for <a href="https://docs.djangoproject.com/en/3.1/topics/testing/advanced/#other-testing-frameworks">using different testing frameworks</a>, for example you can integrate with the popular <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> framework to simulate a user interacting with a live browser.</p>
 
-<p>To write a test you derive from any of the Django (or <em>unittest</em>) test base classes (<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase">SimpleTestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase">TransactionTestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase">TestCase</a>, <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) and then write separate methods to check that specific functionality works as expected (tests use "assert" methods to test that expressions result in <code>True</code> or <code>False</code> values, or that two values are equal, etc.) When you start a test run, the framework executes the chosen test methods in your derived classes. The test methods are run independently, with common setup and/or tear-down behaviour defined in the class, as shown below.</p>
+<p>To write a test you derive from any of the Django (or <em>unittest</em>) test base classes (<a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#simpletestcase">SimpleTestCase</a>, <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#transactiontestcase">TransactionTestCase</a>, <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#testcase">TestCase</a>, <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>) and then write separate methods to check that specific functionality works as expected (tests use "assert" methods to test that expressions result in <code>True</code> or <code>False</code> values, or that two values are equal, etc.) When you start a test run, the framework executes the chosen test methods in your derived classes. The test methods are run independently, with common setup and/or tear-down behaviour defined in the class, as shown below.</p>
 
 <pre class="brush: python notranslate">class YourTestClass(TestCase):
     def setUp(self):
@@ -82,10 +82,10 @@ tags:
         self.assertTrue(False)
 </pre>
 
-<p>The best base class for most tests is <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase">django.test.TestCase</a>. This test class creates a clean database before its tests are run, and runs every test function in its own transaction. The class also owns a test <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client" title="django.test.Client">Client</a> that you can use to simulate a user interacting with the code at the view level. In the following sections we're going to concentrate on unit tests, created using this <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase">TestCase</a> base class.</p>
+<p>The best base class for most tests is <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#testcase">django.test.TestCase</a>. This test class creates a clean database before its tests are run, and runs every test function in its own transaction. The class also owns a test <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.Client" title="django.test.Client">Client</a> that you can use to simulate a user interacting with the code at the view level. In the following sections we're going to concentrate on unit tests, created using this <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#testcase">TestCase</a> base class.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase">django.test.TestCase</a> class is very convenient, but may result in some tests being slower than they need to be (not every test will need to set up its own database or simulate the view interaction). Once you're familiar with what you can do with this class, you may want to replace some of your tests with the available simpler test classes.</p>
+<p><strong>Note:</strong> The <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#testcase">django.test.TestCase</a> class is very convenient, but may result in some tests being slower than they need to be (not every test will need to set up its own database or simulate the view interaction). Once you're familiar with what you can do with this class, you may want to replace some of your tests with the available simpler test classes.</p>
 </div>
 
 <h3 id="What_should_you_test">What should you test?</h3>
@@ -184,7 +184,7 @@ tags:
 
 <p>Below those we have a number of test methods, which use <code>Assert</code> functions to test whether conditions are true, false or equal (<code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual</code>). If the condition does not evaluate as expected then the test will fail and report the error to your console.</p>
 
-<p>The <code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual</code> are standard assertions provided by <strong>unittest</strong>. There are other standard assertions in the framework, and also <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#assertions">Django-specific assertions</a> to test if a view redirects (<code>assertRedirects</code>), to test if a particular template has been used (<code>assertTemplateUsed</code>), etc.</p>
+<p>The <code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual</code> are standard assertions provided by <strong>unittest</strong>. There are other standard assertions in the framework, and also <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#assertions">Django-specific assertions</a> to test if a view redirects (<code>assertRedirects</code>), to test if a particular template has been used (<code>assertTemplateUsed</code>), etc.</p>
 
 <div class="note">
 <p>You should <strong>not </strong>normally include <strong>print()</strong> functions in your tests as shown above. We do that here only so that you can see the order that the setup functions are called in the console (in the following section).</p>
@@ -199,7 +199,7 @@ tags:
 <p>This will discover all files named with the pattern <strong>test*.py</strong> under the current directory and run all tests defined using appropriate base classes (here we have a number of test files, but only <strong>/catalog/tests/test_models.py</strong> currently contains any tests.) By default the tests will individually report only on test failures, followed by a test summary.</p>
 
 <div class="note">
-<p>If you get errors similar to: <code>ValueError: Missing staticfiles manifest entry ...</code> this may be because testing does not run <em>collectstatic</em> by default and your app is using a storage class that requires it (see <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a> for more information). There are a number of ways you can overcome this problem - the easiest is to simply run <em>collectstatic</em> before running the tests:</p>
+<p>If you get errors similar to: <code>ValueError: Missing staticfiles manifest entry ...</code> this may be because testing does not run <em>collectstatic</em> by default and your app is using a storage class that requires it (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a> for more information). There are a number of ways you can overcome this problem - the easiest is to simply run <em>collectstatic</em> before running the tests:</p>
 
 <pre class="brush: bash notranslate">python3 manage.py collectstatic
 </pre>
@@ -458,7 +458,7 @@ class RenewBookFormTest(TestCase):
 <p>The rest of the functions test that the form is valid for renewal dates just inside the acceptable range and invalid for values outside the range. Note how we construct test date values around our current date (<code>datetime.date.today()</code>) using <code>datetime.timedelta()</code> (in this case specifying a number of days or weeks). We then just create the form, passing in our data, and test if it is valid.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Here we don't actually use the database or test client. Consider modifying these tests to use <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.SimpleTestCase">SimpleTestCase</a>.</p>
+<p><strong>Note:</strong> Here we don't actually use the database or test client. Consider modifying these tests to use <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.SimpleTestCase">SimpleTestCase</a>.</p>
 
 <p>We also need to validate that the correct errors are raised if the form is invalid, however this is usually done as part of view processing, so we'll take care of that in the next section.</p>
 </div>
@@ -467,7 +467,7 @@ class RenewBookFormTest(TestCase):
 
 <h3 id="Views">Views</h3>
 
-<p>To validate our view behaviour we use the Django test <a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client">Client</a>. This class acts like a dummy web browser that we can use to simulate <code>GET</code> and <code>POST</code> requests on a URL and observe the response. We can see almost everything about the response, from low-level HTTP (result headers and status codes) through to the template we're using to render the HTML and the context data we're passing to it. We can also see the chain of redirects (if any) and check the URL and status code at each step. This allows us to verify that each view is doing what is expected.</p>
+<p>To validate our view behaviour we use the Django test <a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.Client">Client</a>. This class acts like a dummy web browser that we can use to simulate <code>GET</code> and <code>POST</code> requests on a URL and observe the response. We can see almost everything about the response, from low-level HTTP (result headers and status codes) through to the template we're using to render the HTML and the context data we're passing to it. We can also see the chain of redirects (if any) and check the URL and status code at each step. This allows us to verify that each view is doing what is expected.</p>
 
 <p>Let's start with one of our simplest views, which provides a list of all Authors. This is displayed at URL <strong>/catalog/authors/</strong> (an URL named 'authors' in the URL configuration).</p>
 
@@ -921,10 +921,10 @@ class RenewBookInstancesViewTest(TestCase):
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/testing/overview/">Writing and running tests</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial05/">Writing your first Django app, part 5 &gt; Introducing automated testing</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/">Testing tools reference</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/testing/advanced/">Advanced testing topics</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/testing/overview/">Writing and running tests</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial05/">Writing your first Django app, part 5 &gt; Introducing automated testing</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/testing/tools/">Testing tools reference</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/testing/advanced/">Advanced testing topics</a> (Django docs)</li>
  <li><a href="http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/">A Guide to Testing in Django</a> (Toast Driven Blog, 2011)</li>
  <li><a href="http://test-driven-django-development.readthedocs.io/en/latest/index.html">Workshop: Test-Driven Web Development with Django</a> (San Diego Python, 2014)</li>
  <li><a href="https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/">Testing in Django (Part 1) - Best Practices and Examples</a> (RealPython, 2013)</li>

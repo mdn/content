@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>StylePropertyMapReadOnly</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+<pre class="syntaxbox notranslate"><var>StylePropertyMapReadOnly</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
     //your code
 }</var>[, <var>thisArg</var>]);</pre>
 
@@ -47,7 +47,19 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>Here is an example of using <code>forEach()</code> on a retrieved {{domxref('Element.computedStyleMap()')}}.</p>
+
+<pre class="brush: js notranslate">// get a button element
+const buttonEl = document.querySelector('.example');
+
+// we can retrieve all computed styles with `computedStyleMap`
+const allComputedStyles = buttonEl.computedStyleMap();
+
+// forEach will allow us to run code over each prop/val pair
+allComputedStyles.forEach((elem, index, arr) =&gt; {
+  // oode to run for each pair
+})
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
