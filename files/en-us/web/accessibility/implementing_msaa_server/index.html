@@ -392,7 +392,7 @@ tags:
 
 <p><span class="c1">Problem</span>: The assistive technology may interact slowly with your application.</p>
 
-<p><span class="c1">Solution</span>: Try not to calculate the same things more than once or create the same objects more than once. For example, create and cache an object's children when you look for them in get_accChildCount(), so that you can just hand them back when asked for using get_accChild() or accNavigate(). Support IEnumVARIANT so that the MSAA client can ask for a number of children in one call. In custom interfaces, create methods that hand back a lot of data in one call, rather than requiring a large number of calls. Fewer calls are much better better because COM Marshaling is slow.</p>
+<p><span class="c1">Solution</span>: Try not to calculate the same things more than once or create the same objects more than once. For example, create and cache an object's children when you look for them in get_accChildCount(), so that you can just hand them back when asked for using get_accChild() or accNavigate(). Support IEnumVARIANT so that the MSAA client can ask for a number of children in one call. In custom interfaces, create methods that hand back a lot of data in one call, rather than requiring a large number of calls. Fewer calls are much better because COM Marshaling is slow.</p>
 
 <h3 id="Differing_client_implementations_2"><a id="Differing_client_implementations" name="Differing_client_implementations">Differing client implementations</a></h3>
 
