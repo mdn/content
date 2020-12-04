@@ -132,7 +132,7 @@ it `mdn`, but you can name it anything you'd like.
 `mdn` and `origin`. The `origin` remote is the default name that `git` has assigned to your
 fork (`https://github.com/octocat/content`).
 
-1. Once you've created your local clone, there's no need to to do that again next time
+1. Once you've created your local clone, there's no need to do that again next time
 you want to make a contribution. However, each time before you start a new chunk of work make sure you update your local clone. The following checks-out your local clone's
 `main` branch, fetches the latest content from the `main` branch of the `mdn`
 repository and merges it into your local `main` branch, and finally checks out
