@@ -90,7 +90,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 </pre>
 
-<p>The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in <a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> (Django docs).</p>
+<p>The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> (Django docs).</p>
 
 <h2 id="Saving_session_data">Saving session data</h2>
 
@@ -141,7 +141,7 @@ request.session['my_car']['wheels'] = 'alloy'
 <p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
+<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
 </div>
 
 <p>Add the line seen at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the context variable:</p>
@@ -173,7 +173,7 @@ request.session['my_car']['wheels'] = 'alloy'
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}</p>

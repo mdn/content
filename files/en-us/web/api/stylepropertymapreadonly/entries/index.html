@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">StylePropertyMapReadOnly.entries()</pre>
+<pre class="syntaxbox notranslate">StylePropertyMapReadOnly.entries()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +29,20 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>Here shows an example of using <code>StylePropertyMapReadOnly.entries()</code> method on an elements computed styles.</p>
+
+<pre class="brush: js notranslate">// grab a dom element
+const buttonEl = document.querySelector('button');
+
+// we can retrieve all computed styles with `computedStyleMap`
+const allComputedStyles = buttonEl.computedStyleMap();
+
+// entries returns an iterable of the items
+const iterableStyles = allComputedStyles.entries();
+
+// returns a two item array with align-content as the first item and CSSStyleValue as the second
+console.log(iterableStyles.next().value);
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

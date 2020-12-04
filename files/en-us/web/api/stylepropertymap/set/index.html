@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">StylePropertyMap.set(<var>property</var>,<var>value<var>)</var></var></pre>
+<pre class="syntaxbox notranslate">StylePropertyMap.set(<var>property</var>,<var>value<var>)</var></var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,7 +33,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>This example sets the {{cssxref('padding-top')}} property, with the given value, within the element's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style">style attribute</a>.</p>
+
+<pre class="brush: js notranslate">// get the button element
+const buttonEl = document.querySelector('button');
+
+// set padding-top on button style attribute
+buttonEl.attributeStyleMap.set('padding-top', CSS.px(10));
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

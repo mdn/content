@@ -168,7 +168,7 @@ cd locallibrary</pre>
 
 <h2 id="Specifying_the_database">Specifying the database</h2>
 
-<p>This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior.  You can find out about the different options in <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#databases">Databases</a> (Django docs). </p>
+<p>This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior.  You can find out about the different options in <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#databases">Databases</a> (Django docs). </p>
 
 <p>We'll use the SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in <strong>settings.py</strong>:</p>
 
@@ -184,7 +184,7 @@ cd locallibrary</pre>
 
 <h2 id="Other_project_settings">Other project settings</h2>
 
-<p>The <strong>settings.py</strong> file is also used for configuring a number of other settings, but at this point, you probably only want to change the <a href="https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-TIME_ZONE">TIME_ZONE</a> — this should be made equal to a string from the standard <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a> (the TZ column in the table contains the values you want). Change your <code>TIME_ZONE</code> value to one of these strings appropriate for your time zone, for example:</p>
+<p>The <strong>settings.py</strong> file is also used for configuring a number of other settings, but at this point, you probably only want to change the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-TIME_ZONE">TIME_ZONE</a> — this should be made equal to a string from the standard <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a> (the TZ column in the table contains the values you want). Change your <code>TIME_ZONE</code> value to one of these strings appropriate for your time zone, for example:</p>
 
 <pre class="brush: python notranslate">TIME_ZONE = 'Europe/London'</pre>
 
@@ -204,7 +204,7 @@ cd locallibrary</pre>
 <pre class="brush: python notranslate">"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -324,7 +324,7 @@ python3 manage.py migrate
 <p>The <code>migrate</code> command is what applies the migrations to your database. Django tracks which ones have been added to the current database.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="https://docs.djangoproject.com/en/2.1/topics/migrations/">Migrations</a> (Django docs) for additional information about the lesser-used migration commands.</p>
+<p><strong>Note</strong>: See <a href="https://docs.djangoproject.com/en/3.1/topics/migrations/">Migrations</a> (Django docs) for additional information about the lesser-used migration commands.</p>
 </div>
 
 <h3 id="Running_the_website">Running the website</h3>
@@ -332,7 +332,7 @@ python3 manage.py migrate
 <p>During development, you can serve the website first using the <em>development web server</em>, and then viewing it on your local web browser. </p>
 
 <div class="note">
-<p><strong>Note</strong>: The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (<code>http://127.0.0.1:8000/)</code>, but you can also specify other computers on your network to serve to. For more information see <a href="https://docs.djangoproject.com/en/2.1/ref/django-admin/#runserver">django-admin and manage.py: runserver</a> (Django docs).</p>
+<p><strong>Note</strong>: The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (<code>http://127.0.0.1:8000/)</code>, but you can also specify other computers on your network to serve to. For more information see <a href="https://docs.djangoproject.com/en/3.1/ref/django-admin/#runserver">django-admin and manage.py: runserver</a> (Django docs).</p>
 </div>
 
 <p>Run the <em>development web server</em> by calling the <code>runserver</code> command (in the same directory as <strong>manage.py</strong>):</p>
@@ -382,8 +382,8 @@ python3 manage.py migrate
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</p>

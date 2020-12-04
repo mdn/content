@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>declarationBlock</var> = StylePropertyMapReadOnly.get(<var>property</var>)</pre>
+<pre class="syntaxbox notranslate">var <var>declarationBlock</var> = StylePropertyMapReadOnly.get(<var>property</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,14 +33,14 @@ tags:
 
 <p>Let's get just a few properties and values. Let's start by creating a link inside a paragraph in our HTML, and adding a definition list which we will populate with JavaScript:</p>
 
-<pre class="brush: html">&lt;p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
-&lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
+&lt;dl id="results"&gt;&lt;/dl&gt;</pre>
 
 <p>We add a bit of CSS, including a custom property and an inhertable property:</p>
 
-<pre class="brush: css">p {
+<pre class="brush: css notranslate">p {
   font-weight: bold;
 }
 a {
@@ -50,27 +50,30 @@ a {
 
 <p>We use the Element's <code><a href="/en-US/docs/Web/API/Element/computedStyleMap">computedStyleMap()</a></code> to return a <em>StylePropertyMapReadOnly </em>object. We create an array of properties of interest and use the StylePropertyMapReadOnly's <code>get()</code> method to get only those values.</p>
 
-<pre class="brush: js">// get the element
+<pre class="brush: js notranslate">// get the element
 const myElement = document.querySelector('a');
-
-// get the &lt;dl&gt; we'll be populating
-const stylesList = document.querySelector('#regurgitation');
 
 // Retrieve all computed styles with computedStyleMap()
 const styleMap = myElement.computedStyleMap();
 
+// get the &lt;dl&gt; we'll be populating
+const stylesList = document.querySelector('#results');
+
 // array of properties we're interested in
 const ofInterest = ['font-weight', 'border-left-color', 'color', '--colour'];
 
-// iterate thru our properties of interest
+// iterate over our properties of interest
 for ( let i = 0; i &lt; ofInterest.length; i++ ) {
-  	// properties
+
+  // properties
   const cssProperty = document.createElement('dt');
-  cssProperty.appendChild(document.createTextNode(ofInterest[i]));
+  cssProperty.innerText = ofInterest[i];
   stylesList.appendChild(cssProperty);
-  	// values
+
+  // values
   const cssValue = document.createElement('dd');
-  cssValue.appendChild(document.createTextNode( styleMap.get(ofInterest[i])));
+  // use get() to find the value
+  cssValue.innerText = styleMap.get(ofInterest[i]);
   stylesList.appendChild(cssValue);
 }
 </pre>

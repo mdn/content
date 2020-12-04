@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>size</var> = StylePropertyMapReadOnly.size</pre>
+<pre class="syntaxbox notranslate">var <var>size</var> = StylePropertyMapReadOnly.size</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -25,7 +25,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>Here we use the size property to return the total entries within the button elements {{domxref('Element.computedStyleMap()','computedStyleMap')}}.</p>
+
+<pre class="brush: js notranslate">// grab our element
+const buttonEl = document.querySelector('button');
+
+// we can retrieve all computed styles with `computedStyleMap`
+const allComputedStyles = buttonEl.computedStyleMap();
+
+// use size to get the total styles within the map
+const amountStyles = allComputedStyles.size;
+console.log(amountStyles); // logs 338
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

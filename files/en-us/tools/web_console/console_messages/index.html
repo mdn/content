@@ -123,9 +123,9 @@ slug: Tools/Web_Console/Console_messages
 
 <h3 id="JS">JS</h3>
 
-<p>
- </p><p>JavaScript errors contain a "Learn more" link that takes you to the<a href="/en-US/docs/Web/JavaScript/Reference/Errors"> JavaScript error reference</a> containing additional advice for fixing issues:</p>
 
+
+<p>JavaScript errors contain a "Learn more" link that takes you to the<a href="/en-US/docs/Web/JavaScript/Reference/Errors"> JavaScript error reference</a> containing additional advice for fixing issues:</p>
 
 <p>{{EmbedYouTube("OabJc2QR6o0")}}</p>
 
@@ -148,30 +148,6 @@ slug: Tools/Web_Console/Console_messages
 <p>Some CSS messages contain a disclosure triangle at the left of the message. Click it to view more information about the error, as well as which DOM nodes are affected by the error.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16674/css_warnings.png" style="display: block; height: 346px; margin: 0px auto; width: 918px;"></p>
-
-<h4 id="Reflow_events">Reflow events</h4>
-
-<p>The Web Console also logs reflow events under the CSS category. A reflow is the name given to the operation in which the browser calculates the layout of all or part of the page. Reflows occur when a change has happened to a page that the browser thinks affects the layout. Many events can trigger reflows, including: resizing the browser window, activating pseudoclasses like <a href="/en-US/docs/Web/CSS/:hover">:hover</a>, or manipulating the DOM in JavaScript.</p>
-
-<p>Because reflows can be computationally expensive and directly affect the user interface, they can have a big impact on the responsiveness of a website or web app. By logging reflow events the Web Console can give you insight into when reflow events are being triggered, how long they take to execute and, if the reflows are <a href="/en-US/docs/Tools/Web_Console/Console_messages#Synchronous_and_asynchronous_reflows">synchronous reflows</a> triggered from JavaScript, which code triggered them.</p>
-
-<p>Reflow events are logged as "Reflow" messages, as distinct from CSS errors or warnings. By default, they are disabled. You can enable them by clicking the "CSS" button in the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">toolbar</a> and selecting "Reflows".</p>
-
-<p>Each message is labeled "reflow" and shows the time taken to execute the reflow.</p>
-
-<p>If the reflow is a synchronous reflow triggered from JavaScript, it also shows a link to the line of code that triggered the reflow. Click the link to open the file in the <a href="/en-US/docs/Tools/Debugger">Debugger</a>.</p>
-
-<h4 id="Synchronous_and_asynchronous_reflows"><a name="synchronous-and-asynchronous-reflows">Synchronous and asynchronous reflows</a></h4>
-
-<p>If a change is made that invalidates the current layout — for example, the browser window is resized or some JavaScript modifies an element's CSS — the layout is not recalculated immediately. Instead, the reflow happens asynchronously, the next time the browser decides it needs to be done (generally, the next time the browser repaints). In this way the browser can save up a collection of invalidating changes and recalculate their effect at once.</p>
-
-<p>However, if some JavaScript code reads a style that has been modified, then the browser must perform a synchronous reflow in order to calculate the computed style to return. For example, code like this will cause an immediate, synchronous, reflow, when it calls <code>window.getComputedStyle(thing).height</code>:</p>
-
-<pre class="brush: js notranslate">var thing = document.getElementById("the-thing");
-thing.style.display = "inline-block";
-var thingHeight = window.getComputedStyle(thing).height;</pre>
-
-<p>Because of this, it's a good idea to avoid interleaving write and read calls to an element's styles when manipulating the DOM, because every time you read back a style that has been invalidated by a previous write call, you force a synchronous reflow.</p>
 
 <h3 id="Security">Security</h3>
 

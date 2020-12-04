@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">StylePropertyMap.delete(<var>property</var>)</pre>
+<pre class="syntaxbox notranslate">StylePropertyMap.delete(<var>property</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,7 +31,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">// TBD</pre>
+<p>The following example removes the {{cssxref('background-image')}} property from the element's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style">style attribute</a>.</p>
+
+<pre class="brush: js notranslate">// get the button element
+const buttonEl = document.querySelector('button');
+
+// remove background-image from style attribute
+buttonEl.attributeStyleMap.delete('background-image');
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

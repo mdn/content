@@ -121,7 +121,7 @@ tags:
 
 <p>If we assume that the box has the following CSS defining <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code>:</p>
 
-<pre class="brush: css">.box {
+<pre class="brush: css notranslate">.box {
   width: 350px;
   height: 150px;
   margin: 10px;
@@ -146,13 +146,13 @@ tags:
 
 <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting <code>box-sizing: border-box</code> on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.</p>
 
-<pre class="brush: css"><code>.box {
+<pre class="brush: css notranslate"><code>.box {
   box-sizing: border-box;
 } </code></pre>
 
 <p>If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the <code>box-sizing</code> property on the <code>&lt;html&gt;</code> element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>.</p>
 
-<pre class="brush: css"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
+<pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
   <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
 <span class="punctuation token">}</span>
 <span class="selector token">*, *<span class="pseudo-element token">::before</span>, *<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
@@ -306,7 +306,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}} </p>
 
-<p>Where this can be useful is when you want to give a link to a larger hit area by adding <code>padding</code>. <code>&lt;a&gt;</code> is an inline element like <code>&lt;span&gt;</code>; you can use <code>display: inline-block</code> to allow padding to be set on it, making it easier for a user to click the link.</p>
+<p>Where this can be useful is when you want to give a link a larger hit area by adding <code>padding</code>. <code>&lt;a&gt;</code> is an inline element like <code>&lt;span&gt;</code>; you can use <code>display: inline-block</code> to allow padding to be set on it, making it easier for a user to click the link.</p>
 
 <p>You see this fairly frequently in navigation bars. The navigation below is displayed in a row using flexbox and we have added padding to the <code>&lt;a&gt;</code> element as we want to be able to change the <code>background-color</code> when the <code>&lt;a&gt;</code> is hovered. The padding appears to overlap the border on the <code>&lt;ul&gt;</code> element. This is because the <code>&lt;a&gt;</code> is an inline element.</p>
 

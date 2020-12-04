@@ -2,17 +2,30 @@
 title: CSSStyleRule.styleMap
 slug: Web/API/CSSStyleRule/styleMap
 ---
-<div>{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
 <p class="summary">The <strong><code>styleMap</code></strong> read-only property of the {{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var stylePropertyMap = <em>cssStyleRule</em>.styleMap;</pre>
+<pre class="syntaxbox notranslate">var stylePropertyMap = <em>cssStyleRule</em>.styleMap;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A {{domxref('StylePropertyMap')}} object.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>The following example shows <code>styleMap</code> being used to modify a style using the {{domxref('StylePropertyMap.set()')}} method.</p>
+
+<pre class="brush: js notranslate">const stylesheet = document.styleSheets[0];
+
+Object.values(stylesheet.cssRules).forEach(block =&gt; {
+
+	if (block.selectorText === 'button') {
+		block.styleMap.set('--mainColour', 'black');
+	}
+})</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
