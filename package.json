@@ -12,7 +12,7 @@
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/tool/cli.js"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.310",
+    "@mdn/yari": "0.1.323",
     "env-cmd": "10.1.0"
   },
   "devDependencies": {
