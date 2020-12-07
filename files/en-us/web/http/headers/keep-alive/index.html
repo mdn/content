@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <code><strong>Keep-Alive</strong></code> general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.</p>
+<p>The <strong><code>Keep-Alive</code></strong> general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.</p>
 
 <div class="note">
 <p>The {{HTTPHeader("Connection")}} header needs to be set to "keep-alive" for this header to have any meaning.</p>
@@ -34,12 +34,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Keep-Alive: <var>parameters</var></pre>
+<pre class="syntaxbox notranslate">Keep-Alive: <var>parameters</var></pre>
 
 <h2 id="Directives">Directives</h2>
 
 <dl>
- <dt><var>parameters</var></dt>
+ <dt><code><var>parameters</var></code></dt>
  <dd>A comma-separated list of parameters, each consisting of an identifier and a value separated by the equal sign (<code>'='</code>). The following identifiers are possible:
  <ul>
   <li><code>timeout</code>: indicating the <em>minimum </em>amount of time an idle connection has to be kept opened (in seconds). Note that timeouts longer than the TCP timeout may be ignored if no keep-alive TCP message is set at the transport level.</li>
@@ -52,7 +52,7 @@ tags:
 
 <p>A response containing a <code>Keep-Alive</code> header:</p>
 
-<pre>HTTP/1.1 200 OK
+<pre class="notranslate">HTTP/1.1 200 OK
 <strong>Connection: Keep-Alive</strong>
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8

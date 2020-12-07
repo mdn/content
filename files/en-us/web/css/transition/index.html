@@ -38,10 +38,10 @@ transition: margin-right 4s;
 /* property name | duration | delay */
 transition: margin-right 4s 1s;
 
-/* property name | duration | timing function */
+/* property name | duration | easing function */
 transition: margin-right 4s ease-in-out;
 
-/* property name | duration | timing function | delay */
+/* property name | duration | easing function | delay */
 transition: margin-right 4s ease-in-out 1s;
 
 /* Apply to 2 properties */
@@ -68,7 +68,7 @@ transition: unset;
 		<li>a {{cssxref("&lt;custom-ident&gt;")}} naming a CSS property.</li>
 	</ul>
 	</li>
-	<li>zero or one {{cssxref("&lt;single-transition-timing-function&gt;")}} value representing the timing function to use</li>
+	<li>zero or one {{cssxref("&lt;easing-function&gt;")}} value representing the easing function to use</li>
 	<li>zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.</li>
 </ul>
 

@@ -14,13 +14,15 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;easing-function&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a mathematical function that describes how fast one-dimensional values change during animations. This lets you vary the animation's speed over the course of its duration.</p>
+<p>The <strong><code>&lt;easing-function&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a mathematical function that describes the the rate at which a numerical value changes.</p>
 
-<p>The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the animation. They correlate a time ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, <code>0.0</code> represents the initial state, and <code>1.0</code> represents the final state.</p>
+<p>This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.</p>
+
+<p>The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the interpolation. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, <code>0.0</code> represents the initial state, and <code>1.0</code> represents the final state.</p>
 
 <p><img src="/files/3434/TF_with_output_gt_than_1.png" style="float: left;"><img src="/files/3435/TF_with_output_gt_than_1_clipped.png" style="float: left; margin-right: 5px;"></p>
 
-<p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the animation to go farther than the final state, and then return. For some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.</p>
+<p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.</p>
 
 <p>However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than <code>255</code> or smaller than <code>0</code> will be clipped to the closest allowed value (<code>255</code> and <code>0</code>, respectively). Some <code>cubic-bezier()</code> curves exhibit this property.</p>
 
@@ -38,15 +40,15 @@ tags:
 
 <p style="float: left;"><img src="/files/3425/cubic-bezier,linear.png" style="height: 325px; width: 244px;"></p>
 
-<p>The animation moves from beginning to end at a constant rate. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>.</p>
+<p>The interpolation is done at a constant rate from beginning to end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>.</p>
 
 <h4 class="cleared" id="cubic-bezier" name="cubic-bezier()">The cubic-bezier() class of easing functions</h4>
 
 <p style="float: left;"><img src="/files/3433/cubic-bezier,%20example.png"></p>
 
-<p>The <code>cubic-bezier()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">cubic Bézier curve</a>. As these curves are continuous, they are often used to smooth down the start and end of the animation and are therefore sometimes called <em>easing functions</em>.</p>
+<p>The <code>cubic-bezier()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">cubic Bézier curve</a>. As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called <em>easing functions</em>.</p>
 
-<p>A cubic Bézier curve is defined by four points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>. P<sub>0</sub> and P<sub>3</sub> are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P<sub>0</sub> is <code>(0, 0)</code> and represents the initial time and the initial state, P<sub>3</sub> is <code>(1, 1)</code> and represents the final time and the final state.</p>
+<p>A cubic Bézier curve is defined by four points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>. P<sub>0</sub> and P<sub>3</sub> are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P<sub>0</sub> is <code>(0, 0)</code> and represents the initial time or position and the initial state, P<sub>3</sub> is <code>(1, 1)</code> and represents the final time or position and the final state.</p>
 
 <p>Not all cubic Bézier curves are suitable as easing functions as not all are <a href="https://en.wikipedia.org/wiki/Function_%28mathematics%29">mathematical functions</a>; i.e., curves that for a given abscissa have zero or one value. With P<sub>0</sub> and P<sub>3</sub> fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P<sub>1</sub> and P<sub>2</sub> are both in the <code>[0, 1]</code> range.</p>
 
@@ -72,29 +74,29 @@ tags:
 
 <p style="float: left;"><img src="/files/3429/cubic-bezier,ease.png" style="height: 332px; width: 244px;"></p>
 
-<p>The animation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>. It is similar to <a href="#ease-in-out"><code>ease-in-out</code></a>, though it accelerates more sharply at the beginning.</p>
+<p>The interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>. It is similar to <a href="#ease-in-out"><code>ease-in-out</code></a>, though it accelerates more sharply at the beginning.</p>
 
 <h5 class="cleared" id="ease-in">ease-in</h5>
 
 <p style="float: left;"><img src="/files/3426/cubic-bezier,ease-in.png" style="height: 325px; width: 244px;"></p>
 
-<p>The animation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 1.0, 1.0)</code>.</p>
+<p>The interpolation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 1.0, 1.0)</code>.</p>
 
 <h5 class="cleared" id="ease-in-out"><code>ease-in-out</code></h5>
 
 <p style="float: left;"><img src="/files/3428/cubic-bezier,ease-in-out.png" style="height: 332px; width: 244px;"></p>
 
-<p>The animation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 0.58, 1.0)</code>. At the beginning, it behaves like the <a href="#ease-in"><code>ease-in</code></a> function; at the end, it is like the <a href="#ease-out"><code>ease-out</code></a> function.</p>
+<p>The interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.42, 0.0, 0.58, 1.0)</code>. At the beginning, it behaves like the <a href="#ease-in"><code>ease-in</code></a> function; at the end, it is like the <a href="#ease-out"><code>ease-out</code></a> function.</p>
 
 <h5 class="cleared" id="ease-out">ease-out</h5>
 
 <p style="float: left;"><img src="/files/3427/cubic-bezer,ease-out.png" style="height: 325px;"></p>
 
-<p>The animation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 0.58, 1.0)</code>.</p>
+<p>The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 0.58, 1.0)</code>.</p>
 
 <h4 class="cleared" id="steps" name="steps()">The steps() class of easing functions</h4>
 
-<p>The <code>steps()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/Step_function">step function</a> dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called staircase functions.</p>
+<p>The <code>steps()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/Step_function">step function</a> dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called <em>staircase functions</em>.</p>
 
 <h5 id="Syntax_3">Syntax</h5>
 
@@ -110,9 +112,9 @@ tags:
  <dd>Is a keyword indicating if it the function is <a href="https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">left- or right-continuous</a>:</dd>
  <dd>
  <ul>
-  <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the animation begins;</li>
-  <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the animation ends;</li>
-  <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the animation iteration;</li>
+  <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;</li>
+  <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;</li>
+  <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;</li>
   <li><code>jump-none</code> There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</li>
   <li><code>start</code> is the equivalent of <code>jump-start</code></li>
   <li><code>end</code> is the equivalent of <code>jump-end</code></li>
@@ -142,11 +144,11 @@ tags:
 
 <h5 class="cleared" id="step-start">step-start</h5>
 
-<p><img src="/files/3423/steps(1,start).png" style="float: left; height: 327px; vertical-align: top;"> The animation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function <code>steps(1, jump-start)</code> or <code>steps(1, start)</code>.</p>
+<p><img src="/files/3423/steps(1,start).png" style="float: left; height: 327px; vertical-align: top;"> The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function <code>steps(1, jump-start)</code> or <code>steps(1, start)</code>.</p>
 
 <h5 class="cleared" id="step-end">step-end</h5>
 
-<p><img src="/files/3424/steps(1,end).png" style="float: left; height: 327px; vertical-align: top;"> The animation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function <code>steps(1, jump-end)</code> or <code>steps(1, end)</code>.</p>
+<p><img src="/files/3424/steps(1,end).png" style="float: left; height: 327px; vertical-align: top;"> The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function <code>steps(1, jump-end)</code> or <code>steps(1, end)</code>.</p>
 
 <h2 class="cleared" id="Examples">Examples</h2>
 
@@ -313,11 +315,6 @@ steps(0, jump-none)</pre>
   </tr>
  </thead>
  <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-timing-function', '&lt;timing-function&gt;')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Defines <code>&lt;single-timing-function&gt;</code> as a synonym for <code>&lt;single-transition-timing-function&gt;</code> of the CSS Transitions Module.</td>
-  </tr>
   <tr>
    <td>{{SpecName('CSS Easing 1', '#typedef-easing-function', '&lt;easing-function&gt;')}}</td>
    <td>{{Spec2('CSS Easing 1')}}</td>

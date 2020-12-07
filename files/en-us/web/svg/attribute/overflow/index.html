@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overflow</code></strong> attribute sets what to do when an element's content is too big to fit in its block formatting context.</span> It has the same parameter values and meaning as the {{cssxref("overflow", "CSS overflow property")}}, however, the following additional points apply:</p>
+<p><span class="seoSummary">The <strong><code>overflow</code></strong> attribute sets what to do when an element's content is too big to fit in its block formatting context. <strong>This feature is not widely implemented yet</strong>.</span> It has the same parameter values and meaning as the {{cssxref("overflow", "CSS overflow property")}}, however, the following additional points apply:</p>
 
 <ul>
  <li>If it has a value of <code>visible</code>, the attribute has no effect (i.e., a clipping rectangle is not created).</li>
@@ -24,12 +24,12 @@ tags:
 
 <div id="Example">
 <div class="hidden">
-<pre class="brush: css">html, body, svg {
+<pre class="brush: css notranslate">html, body, svg {
   height: 100%;
 }</pre>
 </div>
 
-<pre class="brush: html; highlight[1]">&lt;svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" overflow="auto"&gt;
+<pre class="brush: html; highlight[1] notranslate">&lt;svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" overflow="auto"&gt;
   &lt;text y="20"&gt;This text is wider than the SVG, so there should be a scrollbar shown.&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
