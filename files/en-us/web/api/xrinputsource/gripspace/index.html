@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>xrSpace</var> = <em>xrInputSource</em>.gripSpace;</pre>
+<pre class="syntaxbox notranslate">var <var>xrSpace</var> = <em>xrInputSource</em>.gripSpace;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -51,7 +51,7 @@ tags:
 
 <ul>
  <li>The x-axis is perpendicular to the palm of the user's hand, with the direction extending outward from the back of the hand being +X if the controller is in the user's right hand or -X if the controller is in the left hand.</li>
- <li>The z-axis along the length of the rod, parallel to the user's palm and along the length of their grip. +Z is in the direction of the user's thumb, and -Z is in the opposite direction.</li>
+ <li>The z-axis along the length of the rod, parallel to the user's palm and along the length of their grip. -Z is in the direction of the user's thumb, and +Z is in the opposite direction.</li>
  <li>The y-axis is implied by the relationship between the other two axes; as is always the case, it's the cross product of the other two axes (lying 90° away from both the X and Z axes).</li>
 </ul>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>In tis example, taken from the frame rendering callback, the <code>gripSpace</code> is used to render a mesh that represents the position and orieintation of the controller in the virtual environment.</p>
 
-<pre class="brush: js">for (let source in xrSession.inputSources) {
+<pre class="brush: js notranslate">for (let source in xrSession.inputSources) {
   if (source.gripSpace) {
     let gripPose = frame.getPose(source.gripSpace, xrRefSpace);
 

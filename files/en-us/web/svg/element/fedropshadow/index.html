@@ -13,37 +13,37 @@ tags:
 
 <p class="note">The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.</p>
 
-<div id="Exemple">
+<div id="Example">
 <div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
+<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html; highlight[4] notranslate">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
     &lt;filter id="shadow"&gt;
       &lt;feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2"/&gt;
     &lt;/filter&gt;
     &lt;filter id="shadow2"&gt;
-      &lt;feDropShadow dx="0" dy="0" stdDeviation="0.5"
+      &lt;feDropShadow dx="0" dy="0" stdDeviation="0.5"
           flood-color="cyan"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="shadow3"&gt;
-      &lt;feDropShadow dx="-0.8" dy="-0.8" stdDeviation="0"
+    &lt;/filter&gt;
+    &lt;filter id="shadow3"&gt;
+      &lt;feDropShadow dx="-0.8" dy="-0.8" stdDeviation="0"
           flood-color="pink" flood-opacity="0.5"/&gt;
-    &lt;/filter&gt;
+    &lt;/filter&gt;
   &lt;/defs&gt;
 
   &lt;circle cx="5" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow);"/&gt;
+      style="fill:pink; filter:url(#shadow);"/&gt;
 
-  &lt;circle cx="15" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow2);"/&gt;
+  &lt;circle cx="15" cy="50%" r="4"
+      style="fill:pink; filter:url(#shadow2);"/&gt;
 
-  &lt;circle cx="25" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow3);"/&gt;
+  &lt;circle cx="25" cy="50%" r="4"
+      style="fill:pink; filter:url(#shadow3);"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
+<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
 </div>
 
 <h2 id="Attributes">Attributes</h2>
@@ -51,13 +51,13 @@ tags:
 <dl>
  <dt id="attr-cx">{{SVGAttr("dx")}}</dt>
  <dd>This attribute defines the x offset of the drop shadow.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
+ <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt id="attr-cx">{{SVGAttr("dy")}}</dt>
  <dd>This attribute defines the y offset of the drop shadow.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
+ <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt id="attr-cx">{{SVGAttr("stdDeviation")}}</dt>
  <dd>This attribute defines the standard deviation for the blur operation in the drop shadow.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
+ <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a>; <em>Default value</em>: <code>2</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
 </dl>
 
 <h3 id="Global_attributes">Global attributes</h3>
@@ -68,7 +68,7 @@ tags:
  <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
  <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
  <dt><a href="/docs/Web/SVG/Attribute#Filters_Attributes">Filter primitive attributes</a></dt>
- <dd><small>{{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}</small></dd>
+ <dd><small>{{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}</small></dd>
  <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
  <dd><small>Most notably: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}</small></dd>
 </dl>

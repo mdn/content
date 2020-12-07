@@ -52,9 +52,9 @@ background-size: unset;
 <p>The <code>background-size</code> property is specified in one of the following ways:</p>
 
 <ul>
-	<li>Using the keyword values <code><a href="#contain">contain</a></code> or <code><a href="#cover">cover</a></code>.</li>
-	<li>Using a width value only, in which case the height defaults to <code><a href="#auto">auto</a></code><a href="#auto">.</a></li>
-	<li>Using both a width and a height value, in which case the first sets the width and the second sets the height. Each value can be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or <code><a href="#auto">auto</a></code>.</li>
+ <li>Using the keyword values <code><a href="#contain">contain</a></code> or <code><a href="#cover">cover</a></code>.</li>
+ <li>Using a width value only, in which case the height defaults to <code><a href="#auto">auto</a></code><a href="#auto">.</a></li>
+ <li>Using both a width and a height value, in which case the first sets the width and the second sets the height. Each value can be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or <code><a href="#auto">auto</a></code>.</li>
 </ul>
 
 <p>To specify the size of multiple background images, separate the value for each one with a comma.</p>
@@ -62,16 +62,16 @@ background-size: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
-	<dt id="contain"><code>contain</code></dt>
-	<dd>Scales the image as large as possible without cropping or stretching the image.</dd>
-	<dt id="cover"><code>cover</code></dt>
-	<dd>Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.</dd>
-	<dt id="auto"><code>auto</code></dt>
-	<dd>Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.</dd>
-	<dt id="length">{{cssxref("&lt;length&gt;")}}</dt>
-	<dd>Stretches the image in the corresponding dimension to the specified length. Negative values are not allowed.</dd>
-	<dt id="percentage">{{cssxref("&lt;percentage&gt;")}}</dt>
-	<dd>Stretches the image in the corresponding dimension to the specified percentage of the <em>background positioning area</em>. The background positioning area is determined by the value of {{cssxref("background-origin")}} (by default, the padding box). However, if the background's {{cssxref("background-attachment")}} value is <code>fixed</code>, the positioning area is instead the entire {{glossary("viewport")}}. Negative values are not allowed.</dd>
+ <dt id="contain"><code>contain</code></dt>
+ <dd>Scales the image as large as possible within its container without cropping or stretching the image. If the container is larger than the image, this will result in image tiling, unless the <code><a href="#contain">background-repeat</a></code> property is set to <code><a href="#contain">no-repeat</a></code>.</dd>
+ <dt id="cover"><code>cover</code></dt>
+ <dd>Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.</dd>
+ <dt id="auto"><code>auto</code></dt>
+ <dd>Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.</dd>
+ <dt id="length">{{cssxref("&lt;length&gt;")}}</dt>
+ <dd>Stretches the image in the corresponding dimension to the specified length. Negative values are not allowed.</dd>
+ <dt id="percentage">{{cssxref("&lt;percentage&gt;")}}</dt>
+ <dd>Stretches the image in the corresponding dimension to the specified percentage of the <em>background positioning area</em>. The background positioning area is determined by the value of {{cssxref("background-origin")}} (by default, the padding box). However, if the background's {{cssxref("background-attachment")}} value is <code>fixed</code>, the positioning area is instead the entire {{glossary("viewport")}}. Negative values are not allowed.</dd>
 </dl>
 
 <h3 id="Intrinsic_dimensions_and_proportions">Intrinsic dimensions and proportions</h3>
@@ -79,10 +79,10 @@ background-size: unset;
 <p>The computation of values depends on the image's intrinsic dimensions (width and height) and intrinsic proportions (width-to-height ratio). These attributes are as follows:</p>
 
 <ul>
-	<li>A bitmap image (such as JPG) always has intrinsic dimensions and proportions.</li>
-	<li>A vector image (such as SVG) does not necessarily have intrinsic dimensions. If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions. If it has no dimensions or only one dimension, it may or may not have proportions.</li>
-	<li>CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.</li>
-	<li>Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.</li>
+ <li>A bitmap image (such as JPG) always has intrinsic dimensions and proportions.</li>
+ <li>A vector image (such as SVG) does not necessarily have intrinsic dimensions. If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions. If it has no dimensions or only one dimension, it may or may not have proportions.</li>
+ <li>CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.</li>
+ <li>Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.</li>
 </ul>
 
 <div class="note">
@@ -96,30 +96,30 @@ background-size: unset;
 <p>Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:</p>
 
 <dl>
-	<dt>If both components of <code>background-size</code> are specified and are not <code>auto</code>:</dt>
-	<dd>The background image is rendered at the specified size.</dd>
-	<dt>If the <code>background-size</code> is <code>contain</code> or <code>cover</code>:</dt>
-	<dd>While preserving its intrinsic proportions, the image is rendered at the largest size contained within, or covering, the background positioning area. If the image has no intrinsic proportions, then it's rendered at the size of the background positioning area.</dd>
-	<dt>If the <code>background-size</code> is <code>auto</code> or <code>auto auto</code>:</dt>
-	<dd>
-	<ul>
-		<li>If the image has both horizontal and vertical intrinsic dimensions, it's rendered at that size.</li>
-		<li>If the image has no intrinsic dimensions and has no intrinsic proportions, it's rendered at the size of the background positioning area.</li>
-		<li>If the image has no intrinsic dimensions but has intrinsic proportions, it's rendered as if <code>contain</code> had been specified instead.</li>
-		<li>If the image has only one intrinsic dimension and has intrinsic proportions, it's rendered at the size corresponding to that one dimension. The other dimension is computed using the specified dimension and the intrinsic proportions.</li>
-		<li>If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.</li>
-	</ul>
-	</dd>
-	<dd>
-	<div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>. In Firefox 43, as opposed to Chrome 52, an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div>
-	</dd>
-	<dt>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</dt>
-	<dd>
-	<ul>
-		<li>If the image has intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the specified dimension and the intrinsic proportions.</li>
-		<li>If the image has no intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the image's corresponding intrinsic dimension, if there is one. If there is no such intrinsic dimension, it becomes the corresponding dimension of the background positioning area.</li>
-	</ul>
-	</dd>
+ <dt>If both components of <code>background-size</code> are specified and are not <code>auto</code>:</dt>
+ <dd>The background image is rendered at the specified size.</dd>
+ <dt>If the <code>background-size</code> is <code>contain</code> or <code>cover</code>:</dt>
+ <dd>While preserving its intrinsic proportions, the image is rendered at the largest size contained within, or covering, the background positioning area. If the image has no intrinsic proportions, then it's rendered at the size of the background positioning area.</dd>
+ <dt>If the <code>background-size</code> is <code>auto</code> or <code>auto auto</code>:</dt>
+ <dd>
+ <ul>
+  <li>If the image has both horizontal and vertical intrinsic dimensions, it's rendered at that size.</li>
+  <li>If the image has no intrinsic dimensions and has no intrinsic proportions, it's rendered at the size of the background positioning area.</li>
+  <li>If the image has no intrinsic dimensions but has intrinsic proportions, it's rendered as if <code>contain</code> had been specified instead.</li>
+  <li>If the image has only one intrinsic dimension and has intrinsic proportions, it's rendered at the size corresponding to that one dimension. The other dimension is computed using the specified dimension and the intrinsic proportions.</li>
+  <li>If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.</li>
+ </ul>
+ </dd>
+ <dd>
+ <div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>. In Firefox 43, as opposed to Chrome 52, an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div>
+ </dd>
+ <dt>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</dt>
+ <dd>
+ <ul>
+  <li>If the image has intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the specified dimension and the intrinsic proportions.</li>
+  <li>If the image has no intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the image's corresponding intrinsic dimension, if there is one. If there is no such intrinsic dimension, it becomes the corresponding dimension of the background positioning area.</li>
+ </ul>
+ </dd>
 </dl>
 
 <div class="note">
@@ -191,20 +191,20 @@ background-size: unset;
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
-			<td>{{Spec2('CSS3 Backgrounds')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
@@ -216,7 +216,7 @@ background-size: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">Scaling background images</a></li>
-	<li><a href="/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds">Scaling of SVG backgrounds</a></li>
-	<li>{{cssxref("object-fit")}}</li>
+ <li><a href="/en-US/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">Scaling background images</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds">Scaling of SVG backgrounds</a></li>
+ <li>{{cssxref("object-fit")}}</li>
 </ul>

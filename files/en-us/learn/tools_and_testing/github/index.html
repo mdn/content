@@ -10,14 +10,14 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">All developers will use some kind of <strong>version control system</strong> (<strong>VCS</strong>), a tool to allow them to collaborate with other developers on a project without danger of them overwriting each other's work, and roll back to previous versions of the code base if a problem is discovered later on. The most popular VCS (at least among web developers) is <strong>Git</strong>, along with <strong>GitHub</strong>, a site that provides hosting for your repositories and several tools for working with them. This module aims to teach you what you need to know about both of them.</p>
+<p class="summary">All developers will use some kind of <strong>version control system</strong> (<strong>VCS</strong>), a tool to allow them to collaborate with other developers on a project without the danger of them overwriting each other's work, and roll back to previous versions of the code base if a problem is discovered later on. The most popular VCS (at least among web developers) is <strong>Git</strong>, along with <strong>GitHub</strong>, a site that provides hosting for your repositories and several tools for working with them. This module aims to teach you what you need to know about both of them.</p>
 
 <h2 id="Overview">Overview</h2>
 
 <p>VCSes are essential for software development:</p>
 
 <ul>
- <li>It is rare that you will work on a project completely on your own, and as soon as you start working with other people you start to run the risk of conflicting with each other's work — this is when both of you try to update the same piece of code at the same time. You need to have some kind of mechanism in place to manage the occurences, and help avoid loss of work as a result.</li>
+ <li>It is rare that you will work on a project completely on your own, and as soon as you start working with other people you start to run the risk of conflicting with each other's work — this is when both of you try to update the same piece of code at the same time. You need to have some kind of mechanism in place to manage the occurrences, and help avoid loss of work as a result.</li>
  <li>When working on a project on your own or with others, you'll want to be able to back up the code in a central place, so it is not lost if your computer breaks.</li>
  <li>You will also want to be able to roll back to earlier versions if a problem is later discovered. You might have started doing this in your own work by creating different versions of the same file, e.g. <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js</code>, <code>myCode_really_really_final.js</code>, etc., but this is really error-prone and unreliable.</li>
  <li>Different team members will commonly want to create their own separate versions of the code (called <strong>branches</strong> in Git), work on a new feature in that version, and then get it merged in a controlled manner (in GitHub we use <strong>pull requests</strong>) with the master version when they are done with it.</li>
@@ -26,13 +26,15 @@ tags:
 <p>VCSes provide tools to meet the above needs. <a href="https://git-scm.com/">Git</a> is an example of a VCS, and <a href="https://github.com/">GitHub</a> is a web site + infrastructure that provides a Git server plus a number of really useful tools for working with git repositories individually or in teams, such as reporting issues with the code, reviewing tools, project management features such as assigning tasks and task statuses, and more.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Git is actually a <em>distributed</em> version control system, meaning that a complete copy of the repository containing the codebase is made on your computer (and everyone else's). You make changes to your own copy, and then push those changes back up to the server, where an administrator will decide whether to merge your changes with the master copy.</p>
+<p><strong>Note</strong>: Git is actually a <em>distributed</em> version control system, meaning that a complete copy of the repository containing the codebase is made on your computer (and everyone else's). You make changes to your own copy and then push those changes back up to the server, where an administrator will decide whether to merge your changes with the master copy.</p>
 </div>
 
 <div class="in-page-callout webdev">
-  <h3 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web developer?</h3>
-  <p>We have put together a course that includes all the essential information you need to work towards your goal.</p>
-  <p><a class="cta primary" href="/docs/Learn/Front-end_web_developer">Get started</a></p>
+<h3 id="Looking_to_become_a_front-end_web_developer">Looking to become a front-end web developer?</h3>
+
+<p>We have put together a course that includes all the essential information you need to work towards your goal.</p>
+
+<p><a class="cta primary" href="/docs/Learn/Front-end_web_developer">Get started</a></p>
 </div>
 
 <h2 id="Prerequisites">Prerequisites</h2>
@@ -45,9 +47,9 @@ tags:
  <li>A <a href="https://github.com/join">GitHub account</a>. If you haven't already got one, sign up now using the provided link.</li>
 </ul>
 
-<p>In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub or VCSes to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!</p>
+<p>In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub, or VCSes to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!</p>
 
-<p>It is also preferrable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system <code>PATH</code>.</p>
+<p>It is also preferable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system <code>PATH</code>.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: Github is not the only site/toolset you can use with Git. There are other alternatives such as <a href="https://about.gitlab.com/">GitLab</a> that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.</p>
@@ -55,10 +57,10 @@ tags:
 
 <h2 id="Guides">Guides</h2>
 
-<p>Note that the links below take you to resources on external sites. Eventually we will are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject in hand.</p>
+<p>Note that the links below take you to resources on external sites. Eventually, we are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject at hand.</p>
 
 <dl>
- <dt><a href="https://guides.github.com/activities/hello-world/">Hello World (from GitHub)</a></dt>
+ <dt><a href="https://guides.github.com/activities/hello-world/">Hello, World (from GitHub)</a></dt>
  <dd>This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.</dd>
  <dt><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook (from GitHub)</a></dt>
  <dd>This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.</dd>
@@ -71,7 +73,7 @@ tags:
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: There is <strong>a lot more</strong> that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realise that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> and<a href="https://dangitgit.com/"> Dangit, git!</a></p>
+<p><strong>Note</strong>: There is <strong>a lot more</strong> that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realize that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a> and<a href="https://dangitgit.com/"> Dangit, git!</a></p>
 </div>
 
 <h2 id="See_also">See also</h2>

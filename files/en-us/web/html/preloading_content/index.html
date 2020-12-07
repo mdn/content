@@ -26,8 +26,8 @@ tags:
 <p>Here however, we will use a <code>rel</code> value of <code>preload</code>, which turns <code>&lt;link&gt;</code> into a preloader for any resource we want. You will also need to specify:</p>
 
 <ul>
- <li>The path to the resource in the {{htmlattrxref("href", "link")}} attribute.</li>
- <li>The type of resource in the {{htmlattrxref("as", "link")}} attribute.</li>
+	<li>The path to the resource in the {{htmlattrxref("href", "link")}} attribute.</li>
+	<li>The type of resource in the {{htmlattrxref("as", "link")}} attribute.</li>
 </ul>
 
 <p>A simple example might look like this (see our <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">JS and CSS example source</a>, and <a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">also live</a>):</p>
@@ -52,18 +52,18 @@ tags:
 <p>Here we preload our CSS and JavaScript files so they will be available as soon as they are required for the rendering of the page later on. This example is trivial, as the browser probably discovers the <code>&lt;link rel="stylesheet"&gt;</code> and <code>&lt;script&gt;</code> elements in the same chunk of HTML as the preloads, but the benefits can be seen much more clearly the later resources are discovered and the larger they are. For example:</p>
 
 <ul>
- <li>Resources that are pointed to from inside CSS, like fonts or images.</li>
- <li>Resources that JavaScript can request, like JSON, imported scripts, or web workers.</li>
- <li>Larger images and video files.</li>
+	<li>Resources that are pointed to from inside CSS, like fonts or images.</li>
+	<li>Resources that JavaScript can request, like JSON, imported scripts, or web workers.</li>
+	<li>Larger images and video files.</li>
 </ul>
 
 <p><code>preload</code> has other advantages too. Using <code>as</code> to specify the type of content to be preloaded allows the browser to:</p>
 
 <ul>
- <li>Prioritize resource loading more accurately.</li>
- <li>Store in the cache for future requests, reusing the resource if appropriate.</li>
- <li>Apply the correct <a href="/en-US/docs/Web/HTTP/CSP">content security policy</a> to the resource.</li>
- <li>Set the correct {{HTTPHeader("Accept")}} request headers for it.</li>
+	<li>Prioritize resource loading more accurately.</li>
+	<li>Store in the cache for future requests, reusing the resource if appropriate.</li>
+	<li>Apply the correct <a href="/en-US/docs/Web/HTTP/CSP">content security policy</a> to the resource.</li>
+	<li>Set the correct {{HTTPHeader("Accept")}} request headers for it.</li>
 </ul>
 
 <h3 id="What_types_of_content_can_be_preloaded">What types of content can be preloaded?</h3>
@@ -71,18 +71,18 @@ tags:
 <p>Many different content types can be preloaded. The possible <code>as</code> attribute values are:</p>
 
 <ul>
- <li><code>audio</code>: Audio file, as typically used in {{htmlelement("audio")}}.</li>
- <li><code>document</code>: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.</li>
- <li><code>embed</code>: A resource to be embedded inside an {{htmlelement("embed")}} element.</li>
- <li><code>fetch</code>: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.</li>
- <li><code>font</code>: Font file.</li>
- <li><code>image</code>: Image file.</li>
- <li><code>object</code>: A resource to be embedded inside an {{htmlelement("object")}} element.</li>
- <li><code>script</code>: JavaScript file.</li>
- <li><code>style</code>: CSS stylesheet.</li>
- <li><code>track</code>: WebVTT file.</li>
- <li><code>worker</code>: A JavaScript web worker or shared worker.</li>
- <li><code>video</code>: Video file, as typically used in {{htmlelement("video")}}. </li>
+	<li><code>audio</code>: Audio file, as typically used in {{htmlelement("audio")}}.</li>
+	<li><code>document</code>: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.</li>
+	<li><code>embed</code>: A resource to be embedded inside an {{htmlelement("embed")}} element.</li>
+	<li><code>fetch</code>: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.</li>
+	<li><code>font</code>: Font file.</li>
+	<li><code>image</code>: Image file.</li>
+	<li><code>object</code>: A resource to be embedded inside an {{htmlelement("object")}} element.</li>
+	<li><code>script</code>: JavaScript file.</li>
+	<li><code>style</code>: CSS stylesheet.</li>
+	<li><code>track</code>: WebVTT file.</li>
+	<li><code>worker</code>: A JavaScript web worker or shared worker.</li>
+	<li><code>video</code>: Video file, as typically used in {{htmlelement("video")}}. </li>
 </ul>
 
 <div class="note">
@@ -118,7 +118,7 @@ tags:
 
 <h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
 
-<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, event when the fetch is not cross-origin.</p>
+<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
 
 <p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
 
@@ -202,34 +202,34 @@ document<span class="punctuation token">.</span>body<span class="punctuation tok
 <p>Other preloading features exist, but none are quite as fit for purpose as <code>&lt;link rel="preload"&gt;</code>:</p>
 
 <ul>
- <li><code>&lt;link rel="prefetch"&gt;</code> has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the <strong><em>next</em></strong> navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give <code>prefetch</code> resources a lower priority than <code>preload</code> ones — the current page is more important than the next. See <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching FAQ</a> for more details.</li>
- <li><code>&lt;link rel="prerender"&gt;</code> renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats <code>prerender</code> as a <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState prefetch</a> instead.</li>
- <li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as <code>preload</code>, but it had a problem: there was no way to work out a priority for the items (<code>as</code> didn't exist back then), so they all got fetched with fairly low priority.</li>
- <li>There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.</li>
+	<li><code>&lt;link rel="prefetch"&gt;</code> has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the <strong><em>next</em></strong> navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give <code>prefetch</code> resources a lower priority than <code>preload</code> ones — the current page is more important than the next. See <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching FAQ</a> for more details.</li>
+	<li><code>&lt;link rel="prerender"&gt;</code> renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats <code>prerender</code> as a <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState prefetch</a> instead.</li>
+	<li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as <code>preload</code>, but it had a problem: there was no way to work out a priority for the items (<code>as</code> didn't exist back then), so they all got fetched with fairly low priority.</li>
+	<li>There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.</li>
 </ul>
 
 <h2 id="Specifications" name="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Preload','#x2.link-type-preload','preload')}}</td>
-   <td>{{Spec2('Preload')}}</td>
-   <td>Further details of <code>preload</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#link-type-preload', 'rel=preload')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definition of <code>rel=preload</code>.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('Preload','#x2.link-type-preload','preload')}}</td>
+			<td>{{Spec2('Preload')}}</td>
+			<td>Further details of <code>preload</code>.</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('HTML WHATWG', '#link-type-preload', 'rel=preload')}}</td>
+			<td>{{Spec2('HTML WHATWG')}}</td>
+			<td>Definition of <code>rel=preload</code>.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -241,7 +241,7 @@ document<span class="punctuation token">.</span>body<span class="punctuation tok
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</a> by Yoav Weiss</li>
+	<li><a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</a> by Yoav Weiss</li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}</p>

@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>Accept-Encoding</code></strong> request HTTP header advertises which content encoding, usually a compression algorithm, the client is able to understand. Using <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>, the server selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Encoding")}} response header.</p>
 
-<p>Even if both the client and the server supports the same compression algorithms, the server may choose not to compress the body of a response, if the identity value is also acceptable. Two common cases lead to this:</p>
+<p>Even if both the client and the server supports the same compression algorithms, the server may choose not to compress the body of a response, if the <code>identity</code> value is also acceptable. Two common cases lead to this:</p>
 
 <ul>
  <li>The data to be sent is already compressed and a second compression won't lead to smaller data to be transmitted. This may be the case with some image formats;</li>
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Accept-Encoding: gzip
+<pre class="syntaxbox notranslate">Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
@@ -77,7 +77,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre>Accept-Encoding: gzip
+<pre class="notranslate">Accept-Encoding: gzip
 
 Accept-Encoding: gzip, compress, br
 
@@ -87,11 +87,13 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Title</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{RFC("7231", "Accept-Encoding", "5.3.4")}}</td>
    <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context</td>

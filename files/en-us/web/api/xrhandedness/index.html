@@ -36,7 +36,7 @@ tags:
 
 <p>One important usage scentario for <code>handedness</code> is to determine which hand a controller is in so you can draw a representation of that hand (or the device that hand is controlling) in virtual space.</p>
 
-<pre class="brush: js">function updateInputSources(session, frame, refSpace) {
+<pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
   for (let source of session.inputSources) {
     if (source.gripSpace) {
       let gripPose = frame.getPose(source.gripSpace, refSpace);
@@ -51,7 +51,7 @@ tags:
 
 <p>This function, which would be called every animation frame (or possibly just periodically, depending on the degree of smoothness required and any performance constraints), scans the list of input sources looking for any which have a {{domxref("XRInputSource.gripSpace", "gripSpace")}} which isn't <code>null</code>. If a <code>gripSpace</code> is present, that means the input source is a hand-held device of some sort, so it should be rendered visibly if possible.</p>
 
-<p>If <code>gripSpace</code> is non-<code>null</code>, the function proceeds to get the pose for the <code>gripSpace</code> transformed into the current reference space. Assuming that's then valid, a function called <code>myRenderHandObject()</code> is called with the grip's pose and the value of <code>handedness</code>. WIth these values in hand (no pun intended), <code>myRenderHandObject()</code> can draw the appropriate model positioned and formed for the correct hand.</p>
+<p>If <code>gripSpace</code> is non-<code>null</code>, the function proceeds to get the pose for the <code>gripSpace</code> transformed into the current reference space. Assuming that's then valid, a function called <code>myRenderHandObject()</code> is called with the grip's pose and the value of <code>handedness</code>. With these values in hand (no pun intended), <code>myRenderHandObject()</code> can draw the appropriate model positioned and formed for the correct hand.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
