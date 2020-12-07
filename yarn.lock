@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.310":
-  version "0.1.310"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.310.tgz#d46fc3288771bb7ebc3c3955c16011d32025d6e1"
-  integrity sha512-EYTG3QIdKe0ABuRYQ7LUSlt0xSwbTqEyTNtT7ZNygaVDA0hBElt0uWsJvibhBJmo3+BDzS3mMKOPNYd/69MTfw==
+"@mdn/yari@0.1.323":
+  version "0.1.323"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.323.tgz#454d630325d44855ec183fe7342f93140e069cb6"
+  integrity sha512-egat3CtmFJiCp8sjE3vmU2kkdyruK1yUxHrFA3wHM+X1aoCvH++s6ESf+shWTYNiYr4tCvmN304lZRm7F5lGxg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "2.0.7"
@@ -87,7 +87,7 @@
     use-debounce "^5.1.0"
     webpack-cli "4.2.0"
     webpack-node-externals "2.5.2"
-    ws "^7.4.0"
+    ws "^7.4.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -4438,10 +4438,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-ws@^7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.0.tgz#a5dd76a24197940d4a8bb9e0e152bb4503764da7"
-  integrity sha512-kyFwXuV/5ymf+IXhS6f0+eAFvydbaBW3zjpT6hUdAh/hbVjTIB5EHBGi0bPoCLSK2wcuz3BrEkB9LrYv1Nm4NQ==
+ws@^7.4.1:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.1.tgz#a333be02696bd0e54cea0434e21dcc8a9ac294bb"
+  integrity sha512-pTsP8UAfhy3sk1lSk/O/s4tjD0CRwvMnzvwr4OKGX7ZvqZtUyx4KIJB5JWbkykPoc55tixMGgTNoh3k4FkNGFQ==
 
 xtend@^4.0.0:
   version "4.0.2"
