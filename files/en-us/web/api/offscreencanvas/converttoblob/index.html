@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre>Promise&lt;Blob&gt; OffscreenCanvas.convertToBlob(<var>options</var>);</pre>
+<pre class="notranslate">Promise&lt;Blob&gt; OffscreenCanvas.convertToBlob(<var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -24,7 +24,7 @@ tags:
  <dd>
  <p>You can specify several options when converting your {{domxref("OffscreenCanvas")}} object into a {{domxref("Blob")}} object, for example:</p>
 
- <pre>const blob = offscreenCanvas.convertToBlob({
+ <pre class="notranslate">const blob = offscreenCanvas.convertToBlob({
   type: "image/jpeg",
   quality: 0.95
 });</pre>
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre>var offscreen = new OffscreenCanvas(256, 256);
+<pre class="notranslate">var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
 // ... some drawing using the gl context ...
@@ -76,7 +76,9 @@ offscreen.convertToBlob().then(function(blob) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
+<div class="hidden">
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
+</div>
 
 <p>{{Compat("api.OffscreenCanvas.convertToBlob")}}</p>
 

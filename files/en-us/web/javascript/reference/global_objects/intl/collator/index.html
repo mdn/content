@@ -14,12 +14,12 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"><code>Intl.Collator()</code></a></dt>
+ <dt>{{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}</dt>
  <dd>Creates a new <code>Collator</code> object.</dd>
 </dl>
 
@@ -41,22 +41,22 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Collator">Using <code>Collator</code></h3>
+<h3 id="Using_Collator">Using Collator</h3>
 
 <p>The following example demonstrates the different potential results for a string occurring before, after, or at the same level as another:</p>
 
-<pre class="brush: js">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
+<pre class="brush: js notranslate">console.log(new Intl.Collator().compare('a', 'c')); // → a negative value
 console.log(new Intl.Collator().compare('c', 'a')); // → a positive value
 console.log(new Intl.Collator().compare('a', 'a')); // → 0
 </pre>
 
 <p>Note that the results shown in the code above can vary between browsers and browser versions. This is because the values are implementation-specific. That is, the specification requires only that the before and after values are negative and positive.</p>
 
-<h3 id="Using_locales">Using <code>locales</code></h3>
+<h3 id="Using_locales">Using locales</h3>
 
-<p>The results provided by {{jsxref("Collator.prototype.compare()")}} vary between languages. In order to get the sort order of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
+<p>The results provided by {{jsxref("Collator.prototype.compare()")}} vary between languages. In order to get the sort order of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code><var>locales</var></code> argument:</p>
 
-<pre class="brush: js">// in German, ä sorts with a
+<pre class="brush: js notranslate">// in German, ä sorts with a
 console.log(new Intl.Collator('de').compare('ä', 'z'));
 // → a negative value
 
@@ -65,11 +65,11 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 // → a positive value
 </pre>
 
-<h3 id="Using_options">Using <code>options</code></h3>
+<h3 id="Using_options">Using options</h3>
 
-<p>The results provided by {{jsxref("Collator.prototype.compare()")}} can be customized using the <code>options</code> argument:</p>
+<p>The results provided by {{jsxref("Collator.prototype.compare()")}} can be customized using the <code><var>options</var></code> argument:</p>
 
-<pre class="brush: js">// in German, ä has a as the base letter
+<pre class="brush: js notranslate">// in German, ä has a as the base letter
 console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
 // → 0
 
@@ -81,10 +81,12 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}}</td>
   </tr>

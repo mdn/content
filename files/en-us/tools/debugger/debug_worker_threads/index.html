@@ -9,7 +9,9 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>The debugger shows the source code for all running worker threads — <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, etc. — listed in the sources list. You can open the JavaScript file for the worker process and set <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a> and <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoints</a> just as you can with JavaScript code running on the main thread.</p>
+<p>Debugging a worker process is the <em>same </em>as debugging the main thread! The debugger shows the source files for all active worker threads in the sources list (<a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, <a href="/en-US/docs/Web/API/SharedWorker">shared workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, etc.). You can open the JavaScript file for a worker process and set <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a> and <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoints</a> just as you can with JavaScript code running on the main thread.</p>
+
+<div class="blockIndicator note"></div>
 
 <h2 id="Inspecting_worker_code">Inspecting worker code</h2>
 
@@ -17,10 +19,21 @@ tags:
 
 <p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
+<div class="blockIndicator note">
+<p>Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+</div>
+
 <h2 id="Setting_breakpoints_etc.">Setting breakpoints, etc.</h2>
 
-<p>You can set a breakpoint (or logpoint) on any active worker thread:</p>
+<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) on any active worker thread:</p>
 
 <p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>When execution is paused in a worker thread, the context of the debugger is updated to show the correct breakpoints, call stack, etc., just as you'd expect.</p>
+<p>When execution is paused in a worker thread, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">call stack</a>, etc., just as you'd expect.</p>
+
+<h2 id="Further_Information">Further Information</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Tools/Debugger/UI_Tour">UI Tour</a> - Quick Overview of the Debugger UI</li>
+ <li><a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a> - Links to all debugger UI topics</li>
+</ul>

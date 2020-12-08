@@ -29,6 +29,8 @@ tags:
 <p><strong>Note:</strong> The caching API doesn't honor HTTP caching headers.</p>
 </div>
 
+<p>{{AvailableInWorkers}}</p>
+
 <h2 id="Methods">Methods</h2>
 
 <dl>
@@ -62,7 +64,7 @@ tags:
 
 <div class="note"><strong>Note:</strong> In Chrome, visit <code>chrome://inspect/#service-workers</code> and click on the "inspect" link below the registered service worker to view logging statements for the various actions the <code><a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a></code> script is performing.</div>
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+<pre class="brush: js notranslate">var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   font: 'font-cache-v' + CACHE_VERSION
 };

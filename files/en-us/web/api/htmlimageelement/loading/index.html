@@ -22,11 +22,11 @@ tags:
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>loading</strong></code> is a string whose value provides a hint to the {{Glossary("user agent")}} that tells the browser how to handle loading images which are currently outside the window's {{Glossary("visual viewport")}}.</span> This helps to optimize the loading of the document's contents by postponing loading the image until it's expected to be needed, rather than immediately during the initial page load.</p>
+<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>loading</strong></code> is a string whose value provides a hint to the {{Glossary("user agent")}} on how to handle the loading of the image which is currently outside the window's {{Glossary("visual viewport")}}.</span> This helps to optimize the loading of the document's contents by postponing loading the image until it's expected to be needed, rather than immediately during the initial page load.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
+<pre class="syntaxbox notranslate">let <em>imageLoadScheduling</em> = <em>htmlImageElement</em>.loading;
 <em>htmlImageElement</em>.loading = <em>eagerOrLazy</em>;
 </pre>
 
@@ -63,7 +63,7 @@ tags:
 
 <p>The <code>addImageToList()</code> function shown below adds a photo thumbnail to a list of items, using lazy-loading to avoid loading the image from the network until it's actually needed.</p>
 
-<pre class="brush: js">function addImageToList(url) {
+<pre class="brush: js notranslate">function addImageToList(url) {
   const list = document.querySelector("div.photo-list");
 
   let newItem = document.createElement("div");

@@ -384,7 +384,15 @@ console.log(myArray);
 
 <p>In the following example, the user is expected to enter a phone number. When the user presses the "Check" button, the script checks the validity of the number. If the number is valid (matches the character sequence specified by the regular expression), the script shows a message thanking the user and confirming the number. If the number is invalid, the script informs the user that the phone number is not valid.</p>
 
-<p>Within non-capturing parentheses <code>(?:</code> , the regular expression looks for three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code> followed by three digits<code> \d{3}</code>, followed by a close parenthesis <code>\)</code>, (end non-capturing parenthesis <code>)</code>), followed by one dash, forward slash, or decimal point and when found, remember the character <code>([-\/\.])</code>, followed by three digits <code>\d{3}</code>, followed by the remembered match of a dash, forward slash, or decimal point <code>\1</code>, followed by four digits <code>\d{4}</code>.</p>
+<p>The regular expression looks for:</p>
+
+<ol>
+ <li>three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code>, followed by three digits<code> \d{3}</code>, followed by a close parenthesis <code>\)</code>, in a non-capturing group <code>(?:)</code></li>
+ <li>followed by one dash, forward slash, or decimal point in a capturing group <code>()</code></li>
+ <li>followed by three digits <code>\d{3}</code></li>
+ <li>followed by the match remembered in the (first) captured group <code>\1</code></li>
+ <li>followed by four digits <code>\d{4}</code></li>
+</ol>
 
 <p>The <code>Change</code> event activated when the user presses <kbd>Enter</kbd> sets the value of <code>RegExp.input</code>.</p>
 

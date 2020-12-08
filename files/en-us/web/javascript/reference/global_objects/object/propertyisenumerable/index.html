@@ -34,7 +34,9 @@ tags:
 
 <p>Every object has a <code>propertyIsEnumerable</code> method. This method can determine whether the specified property in an object can be enumerated by a {{jsxref("Statements/for...in", "for...in")}} loop, with the exception of properties inherited through the prototype chain. If the object does not have the specified property, this method returns <code>false</code>.</p>
 
-<p>Remember, enumerable properties show up in {{jsxref("Statements/for...in", "for...in")}} loops unless the property's key is a {{jsxref("Global_Objects/Symbol", "Symbol")}}.  </p>
+<div class="blockIndicator note">
+<p><strong>Note</strong>: Bear in mind that enumerable properties are looped over by {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of {{jsxref("Global_Objects/Symbol", "Symbol")}}s.  </p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 

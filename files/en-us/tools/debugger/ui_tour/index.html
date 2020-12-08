@@ -1,6 +1,10 @@
 ---
 title: UI Tour
 slug: Tools/Debugger/UI_Tour
+tags:
+  - Debugger
+  - JavaScript
+  - Tools
 ---
 <div>{{ToolsSidebar}}</div>
 
@@ -153,19 +157,33 @@ slug: Tools/Debugger/UI_Tour
 
 <h2 id="Call_stack">Call stack</h2>
 
-<p>When the debugger's paused, you'll see a call stack:</p>
+<p>The <em>call stack</em> becomes visible when the debugger is paused.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16846/debugger_uiTour_call_stack.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;">Each level of the call stack gets a line, with the name of the function and the filename and line number. Clicking a line selects the corresponding line in the source pane.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16846/debugger_uiTour_call_stack.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+
+<p>The stack lists the chain of functions that are waiting to complete, with the frame for the function that was called last at the top (i.e. the most deeply nested function). Selecting a line opens the associated file in the source pane, at the specified location. It also updates the <a href="#Scopes">Scopes</a> section with the variables for that frame/scope.</p>
 
 <div class="blockIndicator note">
-<p>Note: If you click <strong>Step over</strong> (<kbd>F10</kbd>) after changing the selected line in the source pane, the debugger executes until reaching the line following the newly-selected line (disregarding whatever line the debugger originally stopped at).</p>
+<p><strong>Note</strong>: The call stack is a useful tool for tracking execution flow through your application! It allows you to confirm that functions are called in the order you expect, and with sensible variable values.</p>
 </div>
 
-<p>Right-clicking in the call stack pane opens a context menu with the following items:</p>
+<p>Call stack lines for frames in your own code show the function name and the file location in which it was called.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: If you click <strong>Step over</strong> (<kbd>F10</kbd>) after changing the selected line in the source pane, the debugger executes until reaching the line following the newly-selected line (disregarding whatever line the debugger originally stopped at).</p>
+</div>
+
+<p>Lines for JavaScript frameworks/libraries <em>used </em>by your code (React, jQuery, Angular, Webpack, Backbone etc.) are grouped by default, and represented by a framework-specific icon (see the <em>jQuery</em> frame in the screenshot above). Generally you won't want to debug into the code of frameworks or libraries, so grouping these reduces the complexity of the call stack list. You can still expand and inspect the grouped frames if needed, or disable framework grouping using a context menu option: <strong>Disable framework grouping</strong>. <br>
+ <br>
+ You can also use the context menu to <strong>Ignore source</strong> for a particular line. This will remove the line from the call stack, and the debugger will subsequently skip through any calls into that file. Note that you'll have to use the source pane "eye icon" or source list if you want to <em>Unignore</em> the source later!</p>
+
+<p><img alt='FF Debugger showing callstack with right-menu and marked up unignore/ignore source "eye"' src="https://mdn.mozillademos.org/files/17447/ff_debugger_callstack_ignore_source.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>Right-/Ctrl- clicking in the call stack pane opens a context menu with the following items:</p>
 
 <ul>
  <li><strong>Restart frame</strong> restarts execution at the beginning of the current frame.</li>
- <li><strong>Enable framework grouping</strong> collects items belonging to a framework into a collapsible group (for example, jQuery in the screenshot above). When grouping is enabled, the menu option changes to <strong>Disable framework grouping</strong>.</li>
+ <li><strong>Enable framework grouping</strong> collects items belonging to a framework into a collapsible group (for example, Webpack in the screenshot immediately above). When grouping is enabled, the menu option changes to <strong>Disable framework grouping</strong>.</li>
  <li><strong>Copy source URI</strong> copies the full identifier of the source file to the clipboard.</li>
  <li><strong>Ignore source</strong> causes the debugger to skip the file when "stepping into" functions. Any stack frames from the ignored source file are hidden in the call stack pane. (To remove this restriction, choose <strong>Unignore source</strong> in the context menu of the Sources list or the Source pane.)</li>
  <li><strong>Copy stack trace</strong> copies all items in the call stack (including their URIs and line number) to the clipboard.</li>
