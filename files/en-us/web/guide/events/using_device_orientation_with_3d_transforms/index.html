@@ -13,10 +13,9 @@ tags:
 
 <h2 id="Using_orientation_to_rotate_an_element">Using orientation to rotate an element</h2>
 
-<p>The easiest way to convert <a href="/en/DOM/DeviceOrientationEvent" title="DeviceOrientationEvent">orientation data</a> to a <a href="/en/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values. There are however two corrections that should be applied to those values:</p>
+<p>The easiest way to convert <a href="/en/DOM/DeviceOrientationEvent" title="DeviceOrientationEvent">orientation data</a> to a <a href="/en/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values. There is however one correction that should be applied to those values:</p>
 
 <ol>
- <li>The initial alpha value is 180 (device flat on the back, top of the screen pointing 12:00), so the <code>rotateZ</code> value should be alpha - 180</li>
  <li>The Y axis of the screen coordinate system is inverted, such that translateY(100px) moves an element 100px down, so the <code>rotateY</code> value should be -gamma</li>
 </ol>
 
@@ -25,9 +24,8 @@ tags:
 <pre class="brush: js notranslate">var elem = document.getElementById("view3d");
 
 window.addEventListener("deviceorientation", function(e) {
-  // remember to use vendor-prefixed transform property
   elem.style.transform =
-    "rotateZ(" + ( e.alpha - 180 ) + "deg) " +
+    "rotateZ(" + e.alpha + "deg) " +
     "rotateX(" + e.beta + "deg) " +
     "rotateY(" + ( -e.gamma ) + "deg)";
 });
@@ -40,11 +38,10 @@ window.addEventListener("deviceorientation", function(e) {
 <pre class="brush: js notranslate">var elem = document.getElementById("view3d");
 
 window.addEventListener("deviceorientation", function(e) {
-  // again, use vendor-prefixed transform property
   elem.style.transform =
     "rotateY(" + ( -e.gamma ) + "deg)" +
     "rotateX(" + e.beta + "deg) " +
-    "rotateZ(" + - ( e.alpha - 180 ) + "deg) ";
+    "rotateZ(" + ( -e.alpha ) + "deg) ";
 });
 </pre>
 

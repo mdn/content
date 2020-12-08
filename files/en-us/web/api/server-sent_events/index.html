@@ -11,6 +11,12 @@ tags:
 
 <p>Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as <em><a href="/en-US/docs/DOM/event">Events</a> + data</em> inside the web page.</p>
 
+<p>{{AvailableInWorkers}}</p>
+
+<div class="blockIndicator note">
+<p><a href="https://wiki.developer.mozilla.org/en-US/Firefox/Releases/53" title="Released on 2017-04-18.">Firefox 53</a> added support for use of server-sent events in dedicated and shared workers only (not service workers).</p>
+</div>
+
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>To learn how to use server-sent events, see our article <a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a>.</p>
@@ -42,7 +48,7 @@ tags:
   <tr>
    <td>{{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

@@ -26,7 +26,7 @@ tags:
 <p><strong>Note</strong>: <a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
 </div>
 
-<pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
+<pre class="brush: js notranslate">window.addEventListener("deviceorientation", handleOrientation, true);
 </pre>
 
 <p>After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.</p>
@@ -34,15 +34,15 @@ tags:
 <p>The orientation event contains four values:</p>
 
 <ul>
- <li>{{domxref("DeviceOrientationEvent.absolute")}}</li>
- <li>{{domxref("DeviceOrientationEvent.alpha")}}</li>
- <li>{{domxref("DeviceOrientationEvent.beta")}}</li>
- <li>{{domxref("DeviceOrientationEvent.gamma")}}</li>
+	<li>{{domxref("DeviceOrientationEvent.absolute")}}</li>
+	<li>{{domxref("DeviceOrientationEvent.alpha")}}</li>
+	<li>{{domxref("DeviceOrientationEvent.beta")}}</li>
+	<li>{{domxref("DeviceOrientationEvent.gamma")}}</li>
 </ul>
 
 <p>The event handler function can look something like this:</p>
 
-<pre class="brush: js">function handleOrientation(event) {
+<pre class="brush: js notranslate">function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
@@ -57,9 +57,9 @@ tags:
 <p>The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the <a href="/en-US/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a> article which is summarized below.</p>
 
 <ul>
- <li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 to 360.</li>
- <li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 to 180. This represents a front to back motion of the device.</li>
- <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 to 90. This represents a left to right motion of the device.</li>
+	<li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).</li>
+	<li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.</li>
+	<li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</li>
 </ul>
 
 <h3 id="Orientation_example">Orientation example</h3>
@@ -68,7 +68,7 @@ tags:
 
 <p>So let's imagine a ball in a garden:</p>
 
-<pre class="brush: html">&lt;div class="garden"&gt;
+<pre class="brush: html notranslate">&lt;div class="garden"&gt;
   &lt;div class="ball"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -77,7 +77,7 @@ tags:
 
 <p>This garden is 200 pixel wide (Yes, it's a tiny one), and the ball is in the center:</p>
 
-<pre class="brush: css">.garden {
+<pre class="brush: css notranslate">.garden {
   position: relative;
   width : 200px;
   height: 200px;
@@ -98,7 +98,7 @@ tags:
 
 <p>Now, if we move our device, the ball will move accordingly:</p>
 
-<pre class="brush: js">var ball   = document.querySelector('.ball');
+<pre class="brush: js notranslate">var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
@@ -106,8 +106,8 @@ var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180]
-  var y = event.gamma; // In degree in the range [-90,90]
+  var x = event.beta;  // In degree in the range [-180,180)
+  var y = event.gamma; // In degree in the range [-90,90)
 
   output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
@@ -137,25 +137,21 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 <div></div>
 
-<div class="warning">
-<p><strong>Warning:</strong> Chrome and Firefox do not handle the angles the same way, so on some axes the direction are reversed.</p>
-</div>
-
 <h2 id="Processing_motion_events">Processing motion events</h2>
 
 <p>Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}</p>
 
-<pre class="brush: js">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
+<pre class="brush: js notranslate">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
 
 <p>What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the <em>HandleMotion</em> function.</p>
 
 <p>The motion event contains four properties:</p>
 
 <ul>
- <li>{{domxref("DeviceMotionEvent.acceleration")}}</li>
- <li>{{domxref("DeviceMotionEvent.accelerationIncludingGravity")}}</li>
- <li>{{domxref("DeviceMotionEvent.rotationRate")}}</li>
- <li>{{domxref("DeviceMotionEvent.interval")}}</li>
+	<li>{{domxref("DeviceMotionEvent.acceleration")}}</li>
+	<li>{{domxref("DeviceMotionEvent.accelerationIncludingGravity")}}</li>
+	<li>{{domxref("DeviceMotionEvent.rotationRate")}}</li>
+	<li>{{domxref("DeviceMotionEvent.interval")}}</li>
 </ul>
 
 <h3 id="Motion_values_explained">Motion values explained</h3>
@@ -165,17 +161,17 @@ window.addEventListener('deviceorientation', handleOrientation);
 <p>For {{domxref("DeviceMotionEvent.acceleration","acceleration")}} and {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}}, those axes correspond to the following:</p>
 
 <ul>
- <li><code>x</code>: Represents the axis from West to East</li>
- <li><code>y</code>: Represents the axis from South to North</li>
- <li><code>z</code>: Represents the axis perpendicular to the ground</li>
+	<li><code>x</code>: Represents the axis from West to East</li>
+	<li><code>y</code>: Represents the axis from South to North</li>
+	<li><code>z</code>: Represents the axis perpendicular to the ground</li>
 </ul>
 
 <p>For {{domxref("DeviceMotionEvent.rotationRate","rotationRate")}}, the situation is a bit different; the information corresponds to the following in each case:</p>
 
 <ul>
- <li><code>alpha</code>: Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).</li>
- <li><code>beta</code>: Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).</li>
- <li><code>gamma</code>: Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).</li>
+	<li><code>alpha</code>: Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).</li>
+	<li><code>beta</code>: Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).</li>
+	<li><code>gamma</code>: Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).</li>
 </ul>
 
 <p>Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the interval of time, in milliseconds, at which data are obtained from the device.</p>
@@ -183,20 +179,20 @@ window.addEventListener('deviceorientation', handleOrientation);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Device Orientation')}}</td>
-   <td>{{Spec2('Device Orientation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('Device Orientation')}}</td>
+			<td>{{Spec2('Device Orientation')}}</td>
+			<td>Initial specification.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -216,10 +212,10 @@ window.addEventListener('deviceorientation', handleOrientation);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("DeviceOrientationEvent")}}</li>
- <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>The legacy <code><a href="/en-US/docs/Web/Events/MozOrientation">MozOrientation</a></code> event.</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li>
- <li><a href="/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb: 2D maze game with device orientation</a></li>
+	<li>{{domxref("DeviceOrientationEvent")}}</li>
+	<li>{{domxref("DeviceMotionEvent")}}</li>
+	<li>The legacy <code><a href="/en-US/docs/Web/Events/MozOrientation">MozOrientation</a></code> event.</li>
+	<li><a href="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
+	<li><a href="/en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li>
+	<li><a href="/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb: 2D maze game with device orientation</a></li>
 </ul>

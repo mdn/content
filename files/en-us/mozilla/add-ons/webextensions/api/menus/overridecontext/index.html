@@ -1,5 +1,5 @@
 ---
-title: overrideContext()
+title: menus.overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 tags:
   - API
@@ -14,13 +14,13 @@ tags:
 
 <p>Hide all default Firefox menu items in favor of providing a custom context menu UI.</p>
 
-<p>The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a 'contextmenu' DOM event handler, and only applies to the menu that opens after this event.</p>
+<p>The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a {{Event("contextmenu")}} DOM event handler, and only applies to the menu that opens after this event.</p>
 
-<p>To call this method, your extension must have the <code>menus.overrideContext</code> permission.</p>
+<p>This interface requires the <code>menus.overrideContext</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.overrideContext(
+<pre class="syntaxbox brush:js notranslate">browser.menus.overrideContext(
   contextOptions // object
 )</pre>
 
@@ -39,7 +39,25 @@ tags:
   <dd><code>string</code>. Required when context is <code>'bookmark'</code>. Requires 'bookmark' permission.</dd>
   <dt><code>tabId </code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Required when context is <code>'tab'</code>. Requires 'tabs' permission.</dd>
-  <dt></dt>
  </dl>
  </dd>
 </dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Open the tab context menu on your custom UI, in this case :</p>
+
+<pre class="brush:js notranslate">document.addEventListener('contextmenu', event =&gt; {
+  const foo = event.target.closest('.foo');
+  if (foo) {
+    // When the context menu is opened on an element with the foo class
+    // set the context to "opening a tab context menu".
+    browser.menus.overrideContext({
+      context: 'tab',
+      tabId: parseInt(foo.dataset.tabId)
+    });
+  }
+}, { capture: true });
+</pre>
+
+<p>See <a href="https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm">this blog post</a> for more details.</p>

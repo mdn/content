@@ -33,25 +33,25 @@ tags:
 <ul>
  <li>Choose <strong>Accessibility</strong> in the <strong>Tools &gt; Web Developer</strong> menu.</li>
  <li>Select the <strong>Accessibility</strong> tab in the Developer Tools toolbox.</li>
- <li>Right-click in the main browser window, and choose <strong>Inspect Accessibility Properties</strong> in the context menu.</li>
+ <li>Right-/<kbd>Ctrl</kbd>- click in the main browser window, and choose <strong>Inspect Accessibility Properties</strong> in the context menu.</li>
  <li>Right-click an item in the HTML pane of the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>, and choose <strong>Show Accessibility Properties</strong> in the context menu.</li>
 </ul>
 
 <p>Once activated, the accessibility engine remains running until you close the Developer Tools toolbox.</p>
 
 <div class="blockIndicator note">
-<p>The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
+<p><strong>Note</strong>: The accessibility engine runs in the background when the accessibility features are turned on. When enabled it may affect the metrics from other panels such as <a href="/en-US/docs/Tools/Memory">Memory</a> and <a href="/en-US/docs/Tools/Performance">Performance</a>, and have some impact on overall browser performance.</p>
 </div>
 
 <p>If you don't wish to allow the accessibility features to be automatically enabled, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (also known as <code>about:config</code>) to define the preference <code>devtools.accessibility.auto-init.enabled</code>, and set it to <code>False</code>.</p>
 
-<p>If you don't wish to use the accessibility features at all, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to set the preference <code>devtools.accessibility.enabled</code> to <code>False</code>. If you do this, the ways listed above for activating the Accessibility Inspector do nothing.</p>
+<p>If you don't wish to use the accessibility features at all, you can use the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to set the preference <code>devtools.accessibility.enabled</code> to <code>False</code>. If you do this, the methods listed above for activating the Accessibility Inspector do nothing.</p>
 
 <h2 id="Features_of_the_Accessibility_panel">Features of the Accessibility panel</h2>
 
 <p>The enabled accessibility panel looks like so:</p>
 
-<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="https://mdn.mozillademos.org/files/17437/Accessibility-Inspector-tabbing_order.png" style="height: 427px; width: 1055px;"></p>
+<p><img alt='Shows issue checker toolbar with "contrast and "text label" options' src="https://mdn.mozillademos.org/files/17437/Accessibility-Inspector-tabbing_order.png" style="border-style: solid; border-width: 1px; height: 427px; width: 1055px;"></p>
 
 <p>On the left-hand side, there is a tree diagram representing all the items in the accessibility tree for the current page. Items with nested children have arrows that can be clicked to reveal the children, so you can move deeper into the hierarchy. Each item has two properties listed:</p>
 
@@ -95,7 +95,7 @@ tags:
 
 <p>You can print the contents of the accessibility tree to json by right-clicking on an entry in the Accessibility tab and selecting <strong>Print to JSON:</strong></p>
 
-<p><strong><img alt="Print to JSON right-click menu in left panel" src="https://mdn.mozillademos.org/files/17438/Accessibility-Inspector-print_tree_to_json.png" style="height: 320px; width: 1055px;"></strong></p>
+<p><strong><img alt="Print to JSON right-click menu in left panel" src="https://mdn.mozillademos.org/files/17438/Accessibility-Inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px; height: 320px; width: 1055px;"></strong></p>
 
 <p>When you do, you will get a new tab with the selected accessibility tree loaded into the JSON viewer:</p>
 
@@ -105,20 +105,20 @@ tags:
 
 <h3 id="Show_web_page_tabbing_order">Show web page tabbing order</h3>
 
-<p>People who are unable to navigate a page with the mouse or a trackpad can use the tab key to toggle through focussable items on the page (i.e. buttons, links, form controls). The order that items are focussed is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page—if the tab order is incorrect, the page may be confusing!</p>
+<p>People who are unable to navigate a page with the mouse or a trackpad can use the <kbd>tab</kbd> key to toggle through focussable items on the page (i.e. buttons, links, form controls). The order that items are focussed is one of the most important aspects of web accessibility, as it allows keyboard users to properly navigate a web page — if the tab order is incorrect, the page may be confusing!</p>
 
-<p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high level overview of how the page will be navigated using the tab key, which may highlight problems more effectively than simply tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
+<p>Firefox 84 and later can enable a visual overlay showing the tabbing order. This provides a high-level overview of how the page will be navigated using the <kbd>tab</kbd> key, which may highlight problems more effectively than simply tabbing through the elements. The overlay is toggled on/off using the <strong>Show Tabbing Order</strong> checkbox.</p>
 
-<p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="https://mdn.mozillademos.org/files/17440/Accessibility-Inspector-show_tab_order.png" style="height: 642px; width: 993px;"></p>
+<p><img alt="Accessibility inspector and page with checkbox Show tab order selected." src="https://mdn.mozillademos.org/files/17440/Accessibility-Inspector-show_tab_order.png" style="border-style: solid; border-width: 1px; height: 642px; width: 993px;"></p>
 
-<p>All focussable items have a numbered marker and the currently focussed item is highlighted in a different colour. In some cases the marker may be hidden by other elements, as is true for items 1 to 3 in the in the page below.<br>
+<p>All focussable items have a numbered marker and the currently focussed item is highlighted in a different color. In some cases the marker may be hidden by other elements, as is true for items 1 and 2 in the in the page below.<br>
  <img alt="A page where some of the markers for selection items are hidden" src="https://mdn.mozillademos.org/files/17442/Accessibility-Inspector-hidden_items.png" style="height: 161px; width: 767px;"><br>
  These become visible in the overlay when the item is the current item.</p>
 
 <p><img alt="Sshows a hidden selection item in the tabbing order overlay when it is selected." src="https://mdn.mozillademos.org/files/17443/Accessibility-Inspector-hidden_item_revealed.png"></p>
 
 <div class="blockIndicator note">
-<p>The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until it is re-launched.</p>
+<p><strong>Note</strong>: The overlay reflects the tab order at the time that the checkbox is selected (i.e. it is not dynamic). If a user does anything that adds items to the tab order (e.g. opens a visual element that contains more links), these new items will not be reflected in the overlay until the Accessibility Inspector is re-launched.</p>
 </div>
 
 <h3 id="Check_for_accessibility_issues">Check for accessibility issues</h3>
@@ -133,8 +133,10 @@ tags:
  <li><strong>Text Labels</strong> — Check for <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">issues with missing text labels</a></li>
 </ul>
 
-<p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.<br>
- <img alt="Accessibility Inspector - Showing the options when you select the Check for Issues button" src="https://mdn.mozillademos.org/files/17439/Accessibility-Inspector-check_for_issues.png" style="height: 290px; width: 704px;"></p>
+<p>When you one of the menu items, Firefox scans your document for the type of issues you selected. Depending on the size and complexity of your document, this may take a few seconds. When the scan is complete, the left side of the Accessibility Inspector panel displays only the items that have that type of issue. In the right side of the panel, the <em>Checks</em> subpanel lists the specific issue with the selected node. For each type of issue, there is a <strong>Learn more</strong> link to further information on <em>MDN Web Docs</em> about the issue.</p>
+
+<p><br>
+ <img alt="Accessibility Inspector - Showing the options when you select the Check for Issues button" src="https://mdn.mozillademos.org/files/17439/Accessibility-Inspector-check_for_issues.png" style="border-style: solid; border-width: 1px; height: 290px; width: 704px;"></p>
 
 <p>The menu items act as toggles. Select the item to view that type of issue; select the item again to clear the display of issues of that type.</p>
 

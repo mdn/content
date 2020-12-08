@@ -8667,6 +8667,7 @@
 /en-US/docs/Tools/DOM_Inspector	/en-US/docs/Tools/DOM_Property_Viewer
 /en-US/docs/Tools/Debugger/How_to/Black_box_a_source	/en-US/docs/Tools/Debugger/How_to/Ignore_a_source
 /en-US/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/en-US/docs/Tools/Debugger/Break_on_DOM_mutation
+/en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions
 /en-US/docs/Tools/Debugger/How_to/Search_and_filter	/en-US/docs/Tools/Debugger/How_to/Search
 /en-US/docs/Tools/Debugger/How_to/Set_a_watchpoint_on_a_property	/en-US/docs/Tools/Debugger/How_to/Use_watchpoints
 /en-US/docs/Tools/Debugger/Set_a_log_point	/en-US/docs/Tools/Debugger/Set_a_logpoint
