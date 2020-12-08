@@ -251,12 +251,12 @@ If you don't know how to resolve the underlying issue(s), you can ask for help.
 Your pull request will not be approved and merged if these tests are failing.
 
 1. If your pull request has merge conflicts with the `main` branch (GitHub checks for this
-automatically and notifies you), it's your responsibility to resolve them. You can do this
-by merging the `main` branch into your branch (`git pull mdn main`), and then pushing your
+automatically and notifies you), you are responsible to resolve them. You can do this
+by merging the `main` branch into your branch (`git pull mdn main`), and then pushing the
 updated branch to your fork (`git push`).
 
 1. Once you've created your pull request, never use `git rebase` on your branch if you
-need to make changes. Any changes should be made as one or more additional commits.
+need to make changes. Any changes should be made as additional commits.
 
 1. Each pull request should contain a single logical change, or related set of changes
 that make sense to submit together. If a pull request becomes too large or contains too
@@ -265,18 +265,7 @@ suspicious (it is easier to hide malicious changes in a large pull request). In 
 cases, the reviewer has the right to close your pull request, and ask that you submit
 a separate pull request for each logical set of changes that belong together.
 
-1. If your pull request is more than a small change, there should already exist an issue
-that explains the need for that change, and you should reference that issue's ID (e.g.
-#1234) in your pull request's description. If an issue does not already exist, please
-create one at https://github.com/mdn/content/issues, explaining the motivation for the
-change.
-
-1. If your pull request contains any kind of significant complexity (it contains
-technical changes, and isn't just a typo fix, grammatical improvement, or
-formatting/structural change), please describe, in your pull request's description,
-why you're making the change, or reference an existing issue that describes the
-motivation for the change. You can reference an existing issue using `#` followed
-by the issue's ID, for example `#1234`.
+1. If your pull request contains any kind of significant complexity (it contains technical changes, and isn't just a typo fix, grammatical improvement, or formatting/structural change), please describe why you're making the change and anything else we need to know about it. You can do this in your pull request's description, or reference an existing issue that describes the motivation for the change. You can reference an existing issue using `#` followed by the issue's ID, for example `#1234`.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
