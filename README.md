@@ -429,11 +429,9 @@ table on any given MDN document page, you can either use the `Report problems wi
 or simply go to https://github.com/mdn/browser-compat-data and
 [read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
 
-### Adding examples
+### Adding code examples
 
-For a complete description of this topic, see
-[the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples),
-but here's a quick summary of the four types of code example available on MDN:
+There are a lot of code examples on MDN, and you'll probably want to add some as you contribute content to the project. There are four types of code example used on MDN:
 
 - [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples) — plain code blocks, possibly with a screenshot to statically show the
 result of such code if it were to be run.
@@ -445,3 +443,8 @@ organization`](https://github.com/mdn), puts it inside an `<iframe>` element, an
 it into the page to show the code running live.
 - [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples) — Our system for creating live interactive examples that show the
 code running live but also allow you to change code on the fly to see what the effect is.
+
+For a complete description of this topic, see
+[the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples).
+
+Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines). 
