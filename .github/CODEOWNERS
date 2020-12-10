@@ -17,24 +17,64 @@
 /files/en-us/    @mdn/core-yari-content
 
 # ----------------------------------------------------------------------------
-# ENGLISH LEARNING CONTENT OWNER(S)
+# ENGLISH WEB ACCESSIBILITY CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/learn/    TBD
+/files/en-us/web/accessibility/    @ericwbailey
 
 # ----------------------------------------------------------------------------
-# ENGLISH JAVASCRIPT CONTENT OWNER(S)
+# DEFAULT ENGLISH LEARNING CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/javascript/    TBD
+/files/en-us/learn/    @chrisdavidmills
+
+# ----------------------------------------------------------------------------
+# ENGLISH LEARNING CSS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/learn/css/    @rachelandrew
+
+# ----------------------------------------------------------------------------
+# ENGLISH LEARNING SERVER-SIDE CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/learn/server-side/    @hamishwillee
+
+# ----------------------------------------------------------------------------
+# ENGLISH TOOLS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/tools/    @hamishwillee
+
+# ----------------------------------------------------------------------------
+# ENGLISH MDN CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/mdn/    @mdn/yari-content-mdn
+
+# ----------------------------------------------------------------------------
+# ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
+
+# ----------------------------------------------------------------------------
+# ENGLISH WEB API CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/api/    @mdn/yari-content-web-api
 
 # ----------------------------------------------------------------------------
 # ENGLISH CSS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/css/    TBD
+/files/en-us/web/css/    @mdn/yari-content-css
 
 # ----------------------------------------------------------------------------
 # ENGLISH HTML CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-# /files/en-us/web/html/    TBD
+/files/en-us/web/html/    @mdn/yari-content-html
+
+# ----------------------------------------------------------------------------
+# ENGLISH HTTP CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/http/    @mdn/yari-content-http
+
+# ----------------------------------------------------------------------------
+# ENGLISH JAVASCRIPT CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/javascript/    @mdn/yari-content-javascript
 
 # ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
