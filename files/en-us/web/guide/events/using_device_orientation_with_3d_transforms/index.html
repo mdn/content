@@ -13,35 +13,23 @@ tags:
 
 <h2 id="Using_orientation_to_rotate_an_element">Using orientation to rotate an element</h2>
 
-<p>The easiest way to convert <a href="/en/DOM/DeviceOrientationEvent" title="DeviceOrientationEvent">orientation data</a> to a <a href="/en/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values. There is however one correction that should be applied to those values:</p>
+<p>The easiest way to convert <a href="/en/DOM/DeviceOrientationEvent" title="DeviceOrientationEvent">orientation data</a> to a <a href="/en/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values.</p>
 
-<ol>
- <li>The Y axis of the screen coordinate system is inverted, such that translateY(100px) moves an element 100px down, so the <code>rotateY</code> value should be -gamma</li>
-</ol>
+<p>It is important to keep in mind, however, that the <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Device Orientation coordinate system</a> is different from the <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">CSS coordinate system</a>. Namely, the former is {{interwiki("wikipedia", "Right-hand_rule", "right-handed")}} and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a>. These are some of the practical consequences of these differences:</p>
 
-<p>Finally, the order of the three different rotations is very important to accurately convert an orientation to a 3D rotation: <code>rotateZ</code>, then <code>rotateX</code> and then <code>rotateY</code>. Here's a simple code snippet to sum it up:</p>
+<ul>
+	<li>The order of angle rotations matters, so make sure the alpha, beta and gamma rotations are applied in this order.</li>
+	<li>The <a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3d()</a> CSS transformation, and the <a href="/en-US/docs/Web/API/DOMMatrixReadOnly/rotate">DOMMatrixReadOnly.rotate()</a> and <a href="/en-US/docs/Web/API/DOMMatrix/rotateSelf">DOMMatrix.rotateSelf()</a> functions apply angle rotations in a Z - Y' - X'' order, so it is not possible to apply the alpha, beta and gamma rotations in the right order with a single call to any of them. Instead, you should rotate each axis individually in the correct order.</li>
+	<li>Due to the differences in coordinate systems outlined above, when looking towards the origin rotations are applied clockwise around in CSS and counter-clockwise in the Device Orientation spec. This means alpha and beta need to be inverted (the rotations around Z and X), but gamma (the rotation around Y) does not because they point to different directions in the two coordinate systems.</li>
+</ul>
 
-<pre class="brush: js notranslate">var elem = document.getElementById("view3d");
+<p>Here's a simple code snippet to sum it up:</p>
 
-window.addEventListener("deviceorientation", function(e) {
-  elem.style.transform =
-    "rotateZ(" + e.alpha + "deg) " +
-    "rotateX(" + e.beta + "deg) " +
-    "rotateY(" + ( -e.gamma ) + "deg)";
-});
-</pre>
-
-<h2 id="Orientation_compensation">Orientation compensation</h2>
-
-<p>Compensating the orientation of the device can be useful to create parallax effects or augmented reality. This is achieved by inverting the previous order of rotations and negating the alpha value:</p>
-
-<pre class="brush: js notranslate">var elem = document.getElementById("view3d");
+<pre class="brush: js notranslate">const elem = document.getElementById("view3d");
 
 window.addEventListener("deviceorientation", function(e) {
   elem.style.transform =
-    "rotateY(" + ( -e.gamma ) + "deg)" +
-    "rotateX(" + e.beta + "deg) " +
-    "rotateZ(" + ( -e.alpha ) + "deg) ";
+    `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
 });
 </pre>
 
@@ -93,6 +81,6 @@ function orient( aa ) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/En/CSS/Using_CSS_transforms" title="en/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
- <li><a href="/en/Detecting_device_orientation" title="en/detecting_device_orientation">Detecting device orientation</a></li>
+	<li><a href="/En/CSS/Using_CSS_transforms" title="en/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
+	<li><a href="/en/Detecting_device_orientation" title="en/detecting_device_orientation">Detecting device orientation</a></li>
 </ul>

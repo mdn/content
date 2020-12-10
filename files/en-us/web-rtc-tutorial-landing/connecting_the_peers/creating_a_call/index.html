@@ -1,14 +1,16 @@
 ---
-title: Creating a Call
+title: Dummy Creating a Call
 slug: web-rtc-tutorial-landing/connecting_the_peers/Creating_a_Call
 ---
+<p>{{WebRTCSidebar}}</p>
+
 <p id="684c">Now you’ll want to give your users the ability to create calls. First get the call button that’s defined in the HTML:</p>
 
-<pre class="notranslate">const <strong><em>callBtn </em></strong>= <strong><em>document</em></strong>.querySelector(‘.call-btn’);`</pre>
+<pre class="brush: js notranslate">const <strong><em>callBtn </em></strong>= <strong><em>document</em></strong>.querySelector(‘.call-btn’);`</pre>
 
 <p id="602e">When a caller clicks “call” you’ll want to ask them for peer ID of the peer they want to call (which we store in <code>code</code> in <code>getStreamCode</code>) and then you’ll want to create a connection with that code.</p>
 
-<pre class="notranslate"><strong><em>callBtn</em></strong>.addEventListener('click', function(){
+<pre class="brush: js notranslate"><strong><em>callBtn</em></strong>.addEventListener('click', function(){
     getStreamCode();
     connectPeers();
     const call = <strong><em>peer</em></strong>.call(<strong><em>code</em></strong>, <strong><em>window</em></strong>.localStream); // <strong>A</strong>

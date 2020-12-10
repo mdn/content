@@ -16,20 +16,44 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
+<h2 id="Description">Description</h2>
+
+<p>Spread syntax can be used when all elements from an object or array need to be included in a list of some kind. </p>
+
+<p>In the above example, the defined function takes <code>x</code>, <code>y</code>, and <code>z</code> as arguments and returns the sum of these values. An array value is also defined.</p>
+
+<p>When we invoke the function, we pass it all the values in the array using the spread syntax and the array name — <code>...numbers</code>.</p>
+
+<p>If the array contained more than three numbers, e.g. <code>[1, 2, 3, 4]</code>, then it would stll work fine, except that all four would be passed, but only the first three would be used unless you added more arguments to the function, e.g.:</p>
+
+<pre class="brush: js notranslate">function sum(x, y, z, n) {
+  return x + y + z + n;
+}</pre>
+
+<p>The above example is somewhat rigid; the real value in spread syntax is that it works with the same value, no matter how many elements are contained in the object, array, etc.</p>
+
+<p>It is commonly used when you want to add a new item to a local data store, or display all stored items plus a new addition. A very simple version of this kind of action could look like so:</p>
+
+<pre class="brush: js notranslate">let numberStore = [0, 1, 2];
+let newNumber = 12;
+numberStore = [...numberStore, newNumber];</pre>
+
+<p>In the above example you can rerun the last line as many times as you like, to keep adding an additional 12 to the end of the array.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <p>For function calls:</p>
 
-<pre class="syntaxbox notranslate"><var>myFunction</var>(...<var>iterableObj</var>);
+<pre class="syntaxbox notranslate"><var>myFunction</var>(...<var>iterableObj</var>); // pass all elements of <em>iterableObj </em>as arguments to function<em> myFunction</em>
 </pre>
 
 <p>For array literals or strings:</p>
 
-<pre class="syntaxbox notranslate">[...<var>iterableObj</var>, '4', 'five', 6];</pre>
+<pre class="syntaxbox notranslate">[...<var>iterableObj</var>, '4', 'five', 6]; // combine two arrays by inserting all elements from <em>iterableObj</em></pre>
 
 <p>For object literals (new in ECMAScript 2018):</p>
 
-<pre class="syntaxbox notranslate">let <var>objClone</var> = { ...<var>obj</var> };</pre>
+<pre class="syntaxbox notranslate">let <var>objClone</var> = { ...<var>obj</var> }; // pass all <em>key:value</em> pairs from an object </pre>
 
 <h2 id="Rest_syntax_parameters">Rest syntax (parameters)</h2>
 

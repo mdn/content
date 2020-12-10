@@ -24,7 +24,7 @@ tags:
 ---
 <p>{{APIRef("WebXR")}}</p>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> enumerated type <code>XRTargetRayMode</code> describes the method by an input controller's targeting ray is being produced.</span> Targeting may be done by looking at the target using a gaze-tracking system, pointing at the target with a hand controller, glove, or motion-tracking system, or by tapping or clicking on the target using a finger on a screen or with a mouse.</p>
+<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> enumerated type <strong><code>XRTargetRayMode</code></strong> describes the method by an input controller's targeting ray is being produced.</span> Targeting may be done by looking at the target using a gaze-tracking system, pointing at the target with a hand controller, glove, or motion-tracking system, or by tapping or clicking on the target using a finger on a screen or with a mouse.</p>
 
 <p>Typically a <strong>target ray</strong> is drawn from the source of the targeting system along the target ray in the direction in which the user is looking or pointing. The style of the ray is generally up to you, as is the method for indicating the endpoint of the ray. The targeted point or object might be indicated by drawing a shape or highlighting the targeted surface or object.</p>
 
@@ -49,13 +49,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-<code>NULL</code> {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.</p>
+<p>This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-<code>null</code> {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.</p>
 
 <p>For each such input, this example looks for inputs whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is <code>tracked-pointer</code>, indicating that the input is in fact intended to represent a targeting device rather than a gazing device, screen tap, or mouse click. For tracked pointers, a function <code>myRenderTargetRayAsBeam()</code> is called to render a beam from the input controller's virtual position outward in the direction it's pointing.</p>
 
 <p>The code should continue to perform tasks such as drawing controllers or any objects representative of the user's hands' positions in the virtual space, as well as any other input-related tasks.</p>
 
-<pre class="brush: js">function updateInputSources(session, frame, refSpace) {
+<pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
   for (let source of session.getInputSources()) {
     let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>doesItBubble</em> = <em>event</em>.bubbles;</pre>
+<pre class="brush: js notranslate">var <em>doesItBubble</em> = <em>event</em>.bubbles;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function handleInput(e) {
+<pre class="brush: js notranslate">function handleInput(e) {
   // Checks whether the event bubbles and ...
   if (!e.bubbles) {
     // ... passes the event along if does not
@@ -81,7 +81,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Event.stopPropagation", "stopPropagation()")}} to stop bubbling the event</li>
+ <li>{{domxref("Event.stopPropagation", "stopPropagation()")}} to prevent further propagation of the current event in the capturing and bubbling phases</li>
  <li>{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} to not call any further listeners for the same event at the same level in the DOM</li>
  <li>{{domxref("Event.preventDefault", "preventDefault()")}} to allow propagation to continue but to disallow the browser to perform its default action should no listeners handle the event</li>
 </ul>

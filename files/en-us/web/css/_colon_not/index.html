@@ -38,11 +38,11 @@ tags:
 
 <ul>
  <li>The <code>:not</code> pseudo-class may not be nested, which means that <code>:not(:not(...))</code> is invalid.</li>
- <li>Since pseudo-elements are not simple selectors, they are not valid arguments to <code>:not()</code>; thus, selectors like <code>:not(p::before)</code> will not work.</li>
  <li>Useless selectors can be written using this pseudo-class. For example, <code>:not(*)</code> matches any element which is not an element, which is obviously nonsense, so the accompanying rule will never be applied.</li>
  <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
  <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
  <li>This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, <code>body :not(table) a</code> will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the <code>:not()</code> part of the selector.</li>
+ <li>Using two selectors at the same time will not work. For example, <code>:not(.foo,bar)</code> is invalid. Instead, <code>:not(.foo):not(.bar)</code> should be used.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>targetDocument</em>.onfullscreenchange = <em>fullscreenChangeHandler</em>;
+<pre class="syntaxbox notranslate"><em>targetDocument</em>.onfullscreenchange = <em>fullscreenChangeHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -33,7 +33,7 @@ tags:
 
 <p>This gives us a value, <code>isFullscreen</code>, which we pass into a function called <code>adjustMyControls()</code>, which we imagine to be a function that makes adjustments to the app's user interface to present itself optimally when it's in full-screen mode versus being displayed in a window.</p>
 
-<pre class="brush: js">function toggleFullscreen() {
+<pre class="brush: js notranslate">function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   elem.onfullscreenchange = handleFullscreenChange;
@@ -75,7 +75,7 @@ function handleFullscreenChange(event) {
 
 
 
-<p>{{Compat("api.Document.onfullscreenchange")}}</p>
+<p>{{Compat("api.Element.onfullscreenchange")}}</p>
 
 <h2 id="See_also">See also</h2>
 

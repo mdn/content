@@ -78,7 +78,7 @@ hello();</pre>
 
 <h3 id="The_await_keyword">The await keyword</h3>
 
-<p>The real advantage of async functions becomes apparent when you combine it with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> keyword — in fact, <strong><code>await</code> only works inside async functions</strong>. This can be put in front of any async promise-based function to pause your code on that line until the promise fulfills, then return the resulting value. In the meantime, other code that may be waiting for a chance to execute gets to do so.</p>
+<p>The real advantage of async functions becomes apparent when you combine it with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> keyword — in fact, <strong><code>await</code> only works inside async functions</strong>. This can be put in front of any async promise-based function to pause your code on that line until the promise fulfills, then return the resulting value.</p>
 
 <p>You can use <code>await</code> when calling any function that returns a Promise, including web API functions.</p>
 
@@ -162,7 +162,9 @@ myFetch().then((blob) =&gt; {
 
 <p>You'll note that we've wrapped the code inside a function, and we've included the <code>async</code> keyword before the <code>function</code> keyword. This is necessary — you have to create an async function to define a block of code in which you'll run your async code; as we said earlier, <code>await</code> only works inside of async functions.</p>
 
-<p>Inside the <code>myFetch()</code> function definition you can see that the code closely resembles the previous promise version, but there are some differences. Instead of needing to chain a <code>.then()</code> block on to the end of each promise-based method, you just need to add an <code>await</code> keyword before the method call, and then assign the result to a variable. The <code>await</code> keyword causes the JavaScript runtime to pause your code on this line, allowing other code to execute in the meantime, until the async function call has returned its result. Once that's complete, your code continues to execute starting on the next line. For example:</p>
+<p>Inside the <code>myFetch()</code> function definition you can see that the code closely resembles the previous promise version, but there are some differences. Instead of needing to chain a <code>.then()</code> block on to the end of each promise-based method, you just need to add an <code>await</code> keyword before the method call, and then assign the result to a variable. The <code>await</code> keyword causes the JavaScript runtime to pause your code on this line, not allowing further code to execute in the meantime until the async function call has returned its result — very useful if subsequent code relies on that result!</p>
+
+<p>Once that's complete, your code continues to execute starting on the next line. For example:</p>
 
 <pre class="brush: js notranslate">let response = await fetch('coffee.jpg');</pre>
 
@@ -299,7 +301,22 @@ displayContent()
 
 <p>Async/await is really useful to know about, but there are a couple of downsides to consider.</p>
 
-<p>Async/await makes your code look synchronous, and in a way it makes it behave more synchronously. The <code>await</code> keyword blocks execution of all the code that follows until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but your own code is blocked.</p>
+<p>Async/await makes your code look synchronous, and in a way it makes it behave more synchronously. The <code>await</code> keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked.</p>
+
+<pre class="brush: js notranslate">async function makeResult(items) {
+ let newArr;
+ for(let i=0; i &lt; items.length; i++) {
+  newArr[i].push('word_'+i);
+ }
+ return newArr;
+}
+
+async function getResult() {
+ let result = await makeResult(items); // Blocked on this line
+ useThatResult(result); // Will not be executed before makeResult() is done
+}
+
+</pre>
 
 <p>This means that your code could be slowed down by a significant number of awaited promises happening straight after one another. Each <code>await</code> will wait for the previous one to finish, whereas actually what you want is for the promises to begin processing simultaneously, like they would do if we weren't using async/await.</p>
 
