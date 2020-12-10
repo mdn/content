@@ -11,7 +11,9 @@ tags:
   - TV Leap Motion
   - Voice
 ---
-<div>{{GamesSidebar}}</div><p>{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
+<div>{{GamesSidebar}}</div>
+
+<p>{{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}</p>
 
 <p class="summary">Having different control mechanisms in your game helps reach broader audiences. Implementing mobile and desktop controls is recommended is a must, and gamepad controls add that extra experience. But imagine going even further — in this article we will explore various unconventional ways to control your web game, some more unconventional than others.</p>
 
@@ -25,7 +27,7 @@ tags:
 
 <p>Using a TV remote to control the game ended up being surprisingly easy, because the events fired by the controller are emulating conventional keyboard keys. Captain Rogers had the keyboard controls implemented already:</p>
 
-<pre class="notranslate">this.cursors = this.input.keyboard.createCursorKeys();
+<pre class="brush: js notranslate">this.cursors = this.input.keyboard.createCursorKeys();
 //...
 if(this.cursors.right.isDown) {
     // move player right
@@ -33,7 +35,7 @@ if(this.cursors.right.isDown) {
 
 <p>It works out of the box. The cursors are the four directional arrow keys on the keyboard, and these have exactly the same key codes as the arrow keys on the remote. How do you know the codes for the other remote keys? You can check them by printing the responses out in the console:</p>
 
-<pre class="notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
     console.log(event.keyCode);
 }, this);</pre>
 
@@ -43,7 +45,7 @@ if(this.cursors.right.isDown) {
 
 <p>You can add moving between states, starting a new game, controlling the ship and blowing stuff up, pausing and restarting the game. All that is needed is checking for key presses:</p>
 
-<pre class="js notranslate">window.addEventListener("keydown", function(event) {
+<pre class="brush: js notranslate">window.addEventListener("keydown", function(event) {
     switch(event.keyCode) {
         case 8: {
             // pause the game
@@ -95,7 +97,7 @@ var grabStrength = 0;</pre>
 
 <p>The code above is calculating and assigning the <code>horizontalDegree</code>, <code>verticalDegree</code> and <code>grabStrength</code> values that we will use later on, and outputting it in HTML so we can see the actual values. When those variables are up-to-date, we can use them in the <code>draw()</code> function to move the ship:</p>
 
-<pre class="js notranslate">function draw() {
+<pre class="brush: js notranslate">function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // ...
@@ -150,7 +152,7 @@ var grabStrength = 0;</pre>
 
 <p>An event listener for device proximity would look like this:</p>
 
-<pre class="notranslate">window.addEventListener('deviceproximity', function(event) {
+<pre class="brush: js notranslate">window.addEventListener('deviceproximity', function(event) {
     var min = event.min;
     var max = event.max;
     var proximity = event.value;

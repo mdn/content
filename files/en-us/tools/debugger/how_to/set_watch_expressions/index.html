@@ -1,17 +1,27 @@
 ---
 title: Set watch expressions
 slug: Tools/Debugger/How_to/Set_Watch_Expressions
+tags:
+  - Firefox
+  - Tools
+  - watch expressions
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>When debugging code, sometimes it's useful to watch expressions as executions are paused. The Debugger features a pane for entering expressions to be watched (watch expressions). As you step through code, the debugger will watch the expression and return any results.</p>
+<p>The Debugger <em>Watch expressions</em> pane allows you to specify JavaScript expressions that will be reevaluated and displayed every time the debugger pauses. As you step through code, the debugger will watch the expression and return any results. Watches are most commonly used to group individual <em>variables</em> of interest for easier observation. Watching more complicated expressions can sometimes also be useful: for example, to check that variables are within certain limits or values.</p>
 
-<p>To set a watch expression, expand the Watch Expressions sidebar, then click "Add Watch Expression." Type the expression you'd like to watch into the text field.</p>
+<p>The screenshot below shows the <em>Watch expressions</em> panel with a number of expressions already defined. Each line shows the expression and its value at the current step, separated by a colon. Expressions that evaluate to an object can be expanded using the caret symbol to the left.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14999/add-watch-expression.png" style="display: block; height: 354px; margin-left: auto; margin-right: auto; width: 417px;"></p>
+<p><img alt="Screenshot showing the Watch expressions dialog after the + button has been pressed (for entry of a new watch expression)" src="https://mdn.mozillademos.org/files/17448/ff_watch_expressions_add.png" style="border-style: solid; border-width: 1px; display: block; height: 391px; margin: 0 auto; width: 484px;"></p>
 
-<p>The debugger will save the expression and watch it as you step through your code. When the debugger reaches a breakpoint, it will display your watch expressions variables:</p>
+<p>To add a watch expression click the <strong>+</strong> button in the top right corner of the panel. Then type the expression into the text entry field that appears at the bottom of the panel, and press <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee; font-size: 13.6px; white-space: nowrap;"><strong>Enter</strong></span></font> to save it. The expression will will be evaluated when you save, when you step through the code, or when you select the <em>Refresh</em> icon (next to <strong>+</strong>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15007/watched-expression.png" style="display: block; height: 490px; margin-left: auto; margin-right: auto; width: 966px;"></p>
+<p>You can enter any valid expression into the watch, and even declare new "watch" variables and re-use them. For example, <code>mywatchvar1 = 3</code> and <code>mywatchvar2 = mywatchvar1 + 2</code> will evaluate <code>mywatchvar2</code> as 5. You can also declare an expression that modifies a variable value in the code, and this will be re-evaluated whenever you step through the code or refresh the watch expression.</p>
 
-<p>You can step through your code, watching the value of the expression as it changes. Each time it does, the box will flash briefly yellow. You can remove a watch expression by clicking the "x" icon next to it, and you can have more than one watch expression at a time.</p>
+<div class="blockIndicator warning">
+<p><strong>Important</strong>: Changing values in the code using a watch expression may affect normal code execution.</p>
+</div>
+
+<p>To remove a watch expression, select the <strong>X</strong> button that appears when you hover over a line.</p>
+
+<p><img alt="Hover over watch expression to get X that can be clicked to remove an expression." src="https://mdn.mozillademos.org/files/17449/ff_watch_expressions_remove.png" style="border-style: solid; border-width: 1px; display: block; height: 131px; margin: 0 auto; width: 478px;"></p>

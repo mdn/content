@@ -703,6 +703,28 @@ onmessage = function(event) {
  <li><a href="/en-US/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript">Audio Worklet</a> provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.</li>
 </ul>
 
+<h2 id="Debugging_worker_threads">Debugging worker threads</h2>
+
+<div></div>
+
+<p>Debugging a worker process is the <em>exactly the same </em>as debugging the main thread! The debugger shows the source files for all active worker threads in the sources list. You can open the JavaScript file for a worker process and set <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a> and <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoints</a> just as you can with JavaScript code running on the main thread.</p>
+
+<p>For example, see the selected item <code>worker.js</code> below — it is listed in a separate thread in the sources list, but appears in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a> in the same way as main thread code when selected<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">.</a></p>
+
+<p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<div class="blockIndicator note">
+<p>Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+</div>
+
+<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) on any active worker thread:</p>
+
+<p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<p>When execution is paused in a worker thread, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">call stack</a>, etc., just as you'd expect.</p>
+
+<p>For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
 
 <p>You can use most standard JavaScript features inside a web worker, including:</p>
@@ -715,6 +737,10 @@ onmessage = function(event) {
 </ul>
 
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
+
+<div class="blockIndicator note">
+<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
+</div>
 
 <div class="note">
 <p><strong>Note</strong>: For a complete list of functions available to workers, see <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>

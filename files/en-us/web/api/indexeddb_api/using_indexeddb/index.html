@@ -28,15 +28,15 @@ tags:
 <p>The basic pattern that IndexedDB encourages is the following:</p>
 
 <ol>
-	<li>Open a database.</li>
-	<li>Create an object store in the database. </li>
-	<li>Start a transaction and make a request to do some database operation, like adding or retrieving data.</li>
-	<li>
-	<div>Wait for the operation to complete by listening to the right kind of DOM event.</div>
-	</li>
-	<li>
-	<div>Do something with the results (which can be found on the request object).</div>
-	</li>
+ <li>Open a database.</li>
+ <li>Create an object store in the database. </li>
+ <li>Start a transaction and make a request to do some database operation, like adding or retrieving data.</li>
+ <li>
+  <div>Wait for the operation to complete by listening to the right kind of DOM event.</div>
+ </li>
+ <li>
+  <div>Do something with the results (which can be found on the request object).</div>
+ </li>
 </ol>
 
 <p>With these big concepts under our belts, we can get to more concrete stuff.</p>
@@ -78,7 +78,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <div class="warning">
 <p><strong>Important</strong>: The version number is an <code>unsigned long long</code> number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the <code>upgradeneeded</code> event trigger. So for example, don't use 2.4 as a version number:<br>
-<code>var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2</code></p>
+ <code>var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2</code></p>
 </div>
 
 <h4 id="Generating_handlers">Generating handlers</h4>
@@ -151,35 +151,35 @@ request.onupgradeneeded = function(event) {
 <p>The following table shows the different ways the keys are supplied:</p>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Key Path (<code>keyPath</code>)</th>
-			<th scope="col">Key Generator (<code>autoIncrement</code>)</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>No</td>
-			<td>No</td>
-			<td>This object store can hold any kind of value, even primitive values like numbers and strings. You must supply a separate key argument whenever you want to add a new value.</td>
-		</tr>
-		<tr>
-			<td>Yes</td>
-			<td>No</td>
-			<td>This object store can only hold JavaScript objects. The objects must have a property with the same name as the key path.</td>
-		</tr>
-		<tr>
-			<td>No</td>
-			<td>Yes</td>
-			<td>This object store can hold any kind of value. The key is generated for you automatically, or you can supply a separate key argument if you want to use a specific key.</td>
-		</tr>
-		<tr>
-			<td>Yes</td>
-			<td>Yes</td>
-			<td>This object store can only hold JavaScript objects. Usually a key is generated and the value of the generated key is stored in the object in a property with the same name as the key path. However, if such a property already exists, the value of that property is used as key rather than generating a new key.</td>
-		</tr>
-	</tbody>
+ <thead>
+  <tr>
+   <th scope="col">Key Path (<code>keyPath</code>)</th>
+   <th scope="col">Key Generator (<code>autoIncrement</code>)</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>No</td>
+   <td>No</td>
+   <td>This object store can hold any kind of value, even primitive values like numbers and strings. You must supply a separate key argument whenever you want to add a new value.</td>
+  </tr>
+  <tr>
+   <td>Yes</td>
+   <td>No</td>
+   <td>This object store can only hold JavaScript objects. The objects must have a property with the same name as the key path.</td>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>Yes</td>
+   <td>This object store can hold any kind of value. The key is generated for you automatically, or you can supply a separate key argument if you want to use a specific key.</td>
+  </tr>
+  <tr>
+   <td>Yes</td>
+   <td>Yes</td>
+   <td>This object store can only hold JavaScript objects. Usually a key is generated and the value of the generated key is stored in the object in a property with the same name as the key path. However, if such a property already exists, the value of that property is used as key rather than generating a new key.</td>
+  </tr>
+ </tbody>
 </table>
 
 <p>You can also create indices on any object store, provided the object store holds objects, not primitives. An index lets you look up the values stored in an object store using the value of a property of the stored object, rather than the object's key.</p>
@@ -288,8 +288,8 @@ request.onupgradeneeded = function (event) {
 <p>You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:</p>
 
 <ul>
-	<li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
-	<li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <dfn><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> in the <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
+ <li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
+ <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <dfn><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> in the <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
 </ul>
 
 <h3 id="Adding_data_to_the_database">Adding data to the database</h3>
@@ -365,8 +365,8 @@ request.onsuccess = function(event) {
 <p>Note that you can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:</p>
 
 <ul>
-	<li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
-	<li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
+ <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>
@@ -595,9 +595,9 @@ function useDatabase(db) {
 <p>When the browser shuts down (because the user chose the Quit or Exit option), the disk containing the database is removed unexpectedly, or permissions are lost to the database store, the following things happen:</p>
 
 <ol>
-	<li>Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an <code>AbortError</code>. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.</li>
-	<li>Once all of the transactions have completed, the database connection is closed.</li>
-	<li>Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.</li>
+ <li>Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an <code>AbortError</code>. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.</li>
+ <li>Once all of the transactions have completed, the database connection is closed.</li>
+ <li>Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.</li>
 </ol>
 
 <p>The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).</p>
@@ -619,10 +619,10 @@ function useDatabase(db) {
 <p>Mozilla has implemented the ability to perform locale-aware sorting of IndexedDB data in Firefox 43+. By default, IndexedDB didn’t handle internationalization of sorting strings at all, and everything was sorted as if it were English text. For example, b, á, z, a would be sorted as:</p>
 
 <ul>
-	<li>a</li>
-	<li>b</li>
-	<li>z</li>
-	<li>á</li>
+ <li>a</li>
+ <li>b</li>
+ <li>z</li>
+ <li>á</li>
 </ul>
 
 <p>which is obviously not how users want their data to be sorted — Aaron and Áaron for example should go next to one another in a contacts list. Achieving proper international sorting therefore required the entire dataset to be called into memory, and sorting to be performed by client-side JavaScript, which is not very efficient.</p>
@@ -1199,8 +1199,8 @@ input {
       // Warning: The exact same key used for creation needs to be passed for
       // the deletion. If the key was a Number for creation, then it needs to
       // be a Number for deletion.
-      req = store.delete(key);
-      req.onsuccess = function(evt) {
+      var deleteReq = store.delete(key);
+      deleteReq.onsuccess = function(evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1208,7 +1208,7 @@ input {
         displayActionSuccess("Deletion successful");
         displayPubList(store);
       };
-      req.onerror = function (evt) {
+      deleteReq.onerror = function (evt) {
         console.error("deletePublication:", evt.target.errorCode);
       };
     };
@@ -1323,25 +1323,25 @@ input {
 <h3 id="Reference">Reference</h3>
 
 <ul>
-	<li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
-	<li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
-	<li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
-	<li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
-	<li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
+ <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
+ <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
 </ul>
 
 <h3 id="Tutorials_and_guides">Tutorials and guides</h3>
 
 <ul>
-	<li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
-	<li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>
 
 <ul>
-	<li><a href="https://localforage.github.io/localForage/">localForage</a>: A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.</li>
-	<li><a href="http://www.dexie.org/">dexie.js</a>: A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.</li>
-	<li><a href="https://github.com/erikolson186/zangodb">ZangoDB</a>: A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.</li>
-	<li><a href="http://jsstore.net/">JsStore</a>: A simple and advanced IndexedDB wrapper having SQL like syntax. </li>
+ <li><a href="https://localforage.github.io/localForage/">localForage</a>: A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.</li>
+ <li><a href="http://www.dexie.org/">dexie.js</a>: A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.</li>
+ <li><a href="https://github.com/erikolson186/zangodb">ZangoDB</a>: A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.</li>
+ <li><a href="http://jsstore.net/">JsStore</a>: A simple and advanced IndexedDB wrapper having SQL like syntax. </li>
 </ul>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>addPromise</em> = <em>worklet</em>.addModule(<em>moduleURL</em>);
+<pre class="syntaxbox notranslate"><em>addPromise</em> = <em>worklet</em>.addModule(<em>moduleURL</em>);
 <em>addPromise =</em> <em>worklet</em>.addModule(<em>moduleURL</em>, <em>options</em>);
 </pre>
 
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="AudioWorklet_example">AudioWorklet example</h3>
 
-<pre class="brush: js highlight:[3,4,5]">const audioCtx = new AudioContext();
+<pre class="brush: js highlight:[3,4,5] notranslate">const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
 await audioWorklet.addModule('modules/bypassFilter.js', {
   credentials: 'omit',
@@ -65,11 +65,11 @@ await audioWorklet.addModule('modules/bypassFilter.js', {
 
 <h3 id="PaintWorklet_example">PaintWorklet example</h3>
 
-<pre class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');</pre>
+<pre class="brush: js notranslate">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');</pre>
 
 <p>Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('paint()')}} function can be used to include the image created by the worklet:</p>
 
-<pre class="brush: css">@supports (background-image: paint(id)) {
+<pre class="brush: css notranslate">@supports (background-image: paint(id)) {
   h1 {
       background-image: paint(hollowHighlights, filled, 3px);
   }
@@ -81,13 +81,9 @@ await audioWorklet.addModule('modules/bypassFilter.js', {
  <tbody>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('Worklets', '#dom-worklet-addmodule', 'addModule()')}}</td>
-   <td>{{Spec2('Worklets')}}</td>
-   <td></td>
+   <td>{{SpecName('HTML WHATWG', '#dom-worklet-addmodule', 'addModule()')}}</td>
   </tr>
  </tbody>
 </table>

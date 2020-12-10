@@ -8665,6 +8665,7 @@
 /en-US/docs/Toolbox	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/Contributing/Contribute_on_nigthly	/en-US/docs/Tools/Contributing/Contribute_on_nightly
 /en-US/docs/Tools/DOM_Inspector	/en-US/docs/Tools/DOM_Property_Viewer
+/en-US/docs/Tools/Debugger/Debug_worker_threads	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads
 /en-US/docs/Tools/Debugger/How_to/Black_box_a_source	/en-US/docs/Tools/Debugger/How_to/Ignore_a_source
 /en-US/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/en-US/docs/Tools/Debugger/Break_on_DOM_mutation
 /en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions
@@ -10534,6 +10535,7 @@
 /en-US/docs/Web/API/MsStereo3DRenderMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DRenderMode
 /en-US/docs/Web/API/MsZoom	/en-US/docs/Web/API/HTMLVideoElement/msZoom
 /en-US/docs/Web/API/MsZoomTo	/en-US/docs/Web/API/Element/msZoomTo
+/en-US/docs/Web/API/NDEFReader/onerror	/en-US/docs/Web/API/NDEFReader/onreadingerror
 /en-US/docs/Web/API/NamedNodeMap/NamedNodeMap.getNamedItem	/en-US/docs/Web/API/NamedNodeMap/getNamedItem
 /en-US/docs/Web/API/Navigation.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/Navigator.appCodeName	/en-US/docs/Web/API/NavigatorID/appCodeName
@@ -10695,6 +10697,8 @@
 /en-US/docs/Web/API/OscillatorNode.start	/en-US/docs/Web/API/OscillatorNode/start
 /en-US/docs/Web/API/OscillatorNode.stop	/en-US/docs/Web/API/OscillatorNode/stop
 /en-US/docs/Web/API/OscillatorNode.type	/en-US/docs/Web/API/OscillatorNode/type
+/en-US/docs/Web/API/OverconstrainedError/message	/en-US/docs/Web/API/DOMException/message
+/en-US/docs/Web/API/OverconstrainedError/name	/en-US/docs/Web/API/DOMException/name
 /en-US/docs/Web/API/PannerNode.coneInnerAngle	/en-US/docs/Web/API/PannerNode/coneInnerAngle
 /en-US/docs/Web/API/PannerNode.coneOuterAngle	/en-US/docs/Web/API/PannerNode/coneOuterAngle
 /en-US/docs/Web/API/PannerNode.coneOuterGain	/en-US/docs/Web/API/PannerNode/coneOuterGain

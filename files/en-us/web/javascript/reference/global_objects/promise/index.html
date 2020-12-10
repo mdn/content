@@ -109,11 +109,13 @@ console.log("immediate logging");
 // asynchronous logging has val: 777
 </pre>
 
-<h3 id="Incumbent_realm">Incumbent realm</h3>
+<h3 id="Incumbent_settings_object_tracking">Incumbent settings object tracking</h3>
 
-<p>JavaScript code has a concept of a <strong>realm</strong> — this can be roughly thought of as the global object. What is unique about realms is that they hold all of the necessary information to run JavaScript code. This includes objects like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></code>. Each realm has its own "copy" of these and they are not shared. That can cause some unexpected behavior in relation to promises. In order to get around this, we track something called the <strong>incumbent realm</strong>. The incumbent realm represents the realm of the user code responsible for a certain function call.</p>
+<p>A settings object is an <a href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object">environment</a> that provides additional information when JavaScript code is running. This includes the realm and module map, as well as HTML specific information such as the origin. The incumbent settings object is tracked in order to ensure that the browser knows which one to use for a given piece of user code.</p>
 
-<p>To illustrate this a bit further we can take a look at how an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent realm, the following will work in all browsers:</p>
+<p>To better picture this, we can take a closer look at how the realm might be an issue. A <strong>realm</strong> can be roughly thought of as the global object. What is unique about realms is that they hold all of the necessary information to run JavaScript code. This includes objects like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></code>. Each settings object has its own "copy" of these and they are not shared. That can cause some unexpected behavior in relation to promises. In order to get around this, we track something called the <strong>incumbent settings object</strong>. This represents information specific to the context of the user code responsible for a certain function call.</p>
+
+<p>To illustrate this a bit further we can take a look at how an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
@@ -145,7 +147,7 @@ console.log("immediate logging");
 </pre>
 </div>
 
-<p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent realm:</p>
+<p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent settings object:</p>
 
 <div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!-- y.html --&gt;
@@ -164,14 +166,14 @@ console.log("immediate logging");
 &lt;script&gt;
 window.addEventListener("message", (event) =&gt; {
   document.querySelector("#text").innerHTML = "hello";
-  // this code will only run in browsers that track the incumbent realm
+  // this code will only run in browsers that track the incumbent settings object
   console.log(event);
 }, false);
 &lt;/script&gt;
 </pre>
 </div>
 
-<p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent realm is tracked. This is because without tracking the incumbent realm, we may end up using the wrong environment to send the message.</p>
+<p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
