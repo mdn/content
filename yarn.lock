@@ -28,20 +28,20 @@
     winston "3.2.1"
     wrap-ansi "^6.2.0"
 
-"@mdn/browser-compat-data@2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-2.0.7.tgz#72ec37b9c1e00ce0b4e0309d753be18e2da12ee3"
-  integrity sha512-GeeM827DlzFFidn1eKkMBiqXFD2oLsnZbaiGhByPl0vcapsRzUL+t9hDoov1swc9rB2jw64R+ihtzC8qOE9wXw==
+"@mdn/browser-compat-data@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.0.tgz#023f7057e75ac26adb3546a4f43450caadcf5ccc"
+  integrity sha512-J2kn2zBbgAvOoHRiPikMnZWJ8qWKrpdlHepoozYbTbwwUGrFXP4opIitH8Dn68e36nUrhUu/NL4lGq7ZOqh+xg==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.355":
-  version "0.1.355"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.355.tgz#769d7f6a51f8e0deeec34a087c448e6ad117cb72"
-  integrity sha512-rkhw6DZ118jjgcZ6UfWibUiak6eO77nYZklVWmWTsDLT9EoLHKDI7VCYcxl5lFBdyhf4Cf6AyDAMF1seLAcMgg==
+"@mdn/yari@0.1.362":
+  version "0.1.362"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.362.tgz#ae0eb53ab510f6655528739717a21458d87536a2"
+  integrity sha512-n/SqNVQsOA6v0o3HKsaRvbYWUrK17STc/PfkkCEi5K9JiL+CYSaKhj64RS8hhNm8WlgdBeh1C1r7Z5tStdnO+A==
   dependencies:
     "@caporal/core" "2.0.2"
-    "@mdn/browser-compat-data" "2.0.7"
+    "@mdn/browser-compat-data" "3.0.0"
     accept-language-parser "1.5.0"
     braces "^3.0.2"
     chalk "4.1.0"
@@ -64,7 +64,7 @@
     front-matter "4.0.2"
     fs-extra "9.0.1"
     glob "^7.1.6"
-    got "11.8.0"
+    got "11.8.1"
     ignore-loader "0.1.2"
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
@@ -1987,10 +1987,10 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-got@11.8.0:
-  version "11.8.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-11.8.0.tgz#be0920c3586b07fd94add3b5b27cb28f49e6545f"
-  integrity sha512-k9noyoIIY9EejuhaBNLyZ31D5328LeqnyPNXJQb2XlJZcKakLqN5m6O/ikhq/0lw56kUYS54fVm+D1x57YC9oQ==
+got@11.8.1:
+  version "11.8.1"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.8.1.tgz#df04adfaf2e782babb3daabc79139feec2f7e85d"
+  integrity sha512-9aYdZL+6nHmvJwHALLwKSUZ0hMwGaJGYv3hoPLPgnT8BoBXm1SjnZeky+91tfwJaDzun2s4RsBRy48IEYv2q2Q==
   dependencies:
     "@sindresorhus/is" "^4.0.0"
     "@szmarczak/http-timer" "^4.0.5"
