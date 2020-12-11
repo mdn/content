@@ -19,27 +19,27 @@
 # ----------------------------------------------------------------------------
 # ENGLISH WEB ACCESSIBILITY CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/web/accessibility/    @ericwbailey
+/files/en-us/web/accessibility/    @mdn/yari-content-accessibility
 
 # ----------------------------------------------------------------------------
 # DEFAULT ENGLISH LEARNING CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/    @chrisdavidmills
+/files/en-us/learn/    @mdn/yari-content-learn
 
 # ----------------------------------------------------------------------------
 # ENGLISH LEARNING CSS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/css/    @rachelandrew
+/files/en-us/learn/css/    @mdn/yari-content-learn-css
 
 # ----------------------------------------------------------------------------
 # ENGLISH LEARNING SERVER-SIDE CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/learn/server-side/    @hamishwillee
+/files/en-us/learn/server-side/    @mdn/yari-content-learn-server-side
 
 # ----------------------------------------------------------------------------
 # ENGLISH TOOLS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
-/files/en-us/tools/    @hamishwillee
+/files/en-us/tools/    @mdn/yari-content-tools
 
 # ----------------------------------------------------------------------------
 # ENGLISH MDN CONTENT OWNER(S)
