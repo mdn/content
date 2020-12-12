@@ -3,6 +3,10 @@ title: Getting Browser Microphone Permission
 slug: >-
   Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/get_microphone_permission
 ---
+{{WebRTCSidebar}}
+
+<div>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/show_hide_html")}}</div>
+
 <p id="cdf0">After you’ve created the peer, you’ll want to get the browser’s permission to access the microphone. We’ll be using the <code>getUserMedia</code> function on the <code>navigator.MediaDevices</code> object, which is part of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" rel="noopener nofollow">Media Devices Web interface</a>. The <code>getUserMedia</code> endpoint takes a <code>constraints</code> object which specifies which permissions are needed. <code>getUserMedia</code> is a promise which when successfully resolved returns a <code>MediaStream</code> object. In this case this is going to be the audio from our stream. If the promise isn’t successfully resolved, you’ll want to catch and display the error.</p>
 
 <pre class="brush: js notranslate">function getLocalStream() {
@@ -56,3 +60,5 @@ function getLocalStream() {
 getLocalStream();
 
 </pre>
+
+<div>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/show_hide_html")}}</div>

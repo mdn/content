@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">baseAudioCtx.createPanner();</pre>
+<pre class="syntaxbox notranslate">baseAudioCtx.createPanner();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>Note how we have used some feature detection to either give the browser the newer property values (like {{domxref("AudioListener.forwardX")}}) for setting position, etc. if it supports those, or older methods (like {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the new properties.</p>
 
-<pre class="brush: js">// set up listener and panner position information
+<pre class="brush: js notranslate">// set up listener and panner position information
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -103,7 +103,7 @@ if(listener.positionX) {
   listener.setPosition(xPos,yPos,300);
 }
 
-listenerData.innerHTML = 'Listener data: X ' + xPos + ' Y ' + yPos + ' Z ' + 300;
+listenerData.textContent = `Listener data: X ${xPos} Y ${yPos} Z 300`;
 
 // panner will move as the boombox graphic moves around on the screen
 function positionPanner() {
@@ -114,7 +114,7 @@ function positionPanner() {
   } else {
     panner.setPosition(xPos,yPos,zPos);
   }
-  pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
+  pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
 }</pre>
 
 <div class="note">
@@ -133,7 +133,7 @@ function positionPanner() {
   <tr>
    <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createpanner', 'createPanner()')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

@@ -705,25 +705,23 @@ onmessage = function(event) {
 
 <h2 id="Debugging_worker_threads">Debugging worker threads</h2>
 
-<div></div>
+<p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way </em>as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
 
-<p>Debugging a worker process is the <em>exactly the same </em>as debugging the main thread! The debugger shows the source files for all active worker threads in the sources list. You can open the JavaScript file for a worker process and set <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a> and <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoints</a> just as you can with JavaScript code running on the main thread.</p>
-
-<p>For example, see the selected item <code>worker.js</code> below — it is listed in a separate thread in the sources list, but appears in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a> in the same way as main thread code when selected<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">.</a></p>
+<p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a>, just like code running in the main thread.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <div class="blockIndicator note">
-<p>Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+<p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
-<p>You can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) on any active worker thread:</p>
+<p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">call stack</a>, etc., just as you'd expect.</p>
 
 <p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<p>When execution is paused in a worker thread, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">call stack</a>, etc., just as you'd expect.</p>
-
-<p>For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+<div class="blockIndicator note">
+<p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+</div>
 
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
 

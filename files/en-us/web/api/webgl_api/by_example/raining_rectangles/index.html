@@ -34,17 +34,17 @@ tags:
 
 <div id="raining-rectangles-source">
 <div class="hidden">
-<pre class="brush: html">&lt;p&gt;You caught
+<pre class="brush: html notranslate">&lt;p&gt;You caught
 &lt;strong&gt;0&lt;/strong&gt;.
   You missed
 &lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
 </pre>
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
+<pre class="brush: html notranslate">&lt;canvas&gt;Your browser does not seem to support
     HTML5 canvas.&lt;/canvas&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   text-align : center;
 }
 canvas {
@@ -66,11 +66,11 @@ button {
 </div>
 
 <div class="hidden">
-<pre class="brush: js">;(function(){
+<pre class="brush: js notranslate">;(function(){
 </pre>
 </div>
 
-<pre class="brush: js" id="livesample-js">"use strict"
+<pre class="brush: js notranslate" id="livesample-js">"use strict"
 window.addEventListener("load", setupAnimation, false);
 var gl,
   timer,
@@ -101,7 +101,7 @@ function drawAnimation () {
   rainingRect.position[1] -= rainingRect.velocity;
   if (rainingRect.position[1] &lt; 0) {
     misses += 1;
-    missesDisplay.innerHTML = misses;
+    missesDisplay.textContent = misses;
     rainingRect = new Rectangle();
   }
 // We are using setTimeout for animation. So we reschedule
@@ -127,7 +127,7 @@ function playerClick (evt) {
   if ( diffPos[0] &gt;= 0 &amp;&amp; diffPos[0] &lt; rainingRect.size[0]
       &amp;&amp; diffPos[1] &gt;= 0 &amp;&amp; diffPos[1] &lt; rainingRect.size[1] ) {
     score += 1;
-    scoreDisplay.innerHTML = score;
+    scoreDisplay.textContent = score;
     rainingRect = new Rectangle();
   }
 }
@@ -159,7 +159,7 @@ function Rectangle () {
 </pre>
 
 <div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+<pre class="brush: js notranslate">function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -167,8 +167,7 @@ function Rectangle () {
     || canvas.getContext("experimental-webgl");
   if (!gl) {
     var paragraph = document.querySelector("p");
-    paragraph.innerHTML = "Failed to get WebGL context."
-      + "Your browser or device may not support WebGL.";
+    paragraph.textContent = "Failed to get WebGL context. Your browser or device may not support WebGL.";
     return null;
   }
   gl.viewport(0, 0,
@@ -181,7 +180,7 @@ function Rectangle () {
 </div>
 
 <div class="hidden">
-<pre class="brush: js">})();
+<pre class="brush: js notranslate">})();
 </pre>
 </div>
 

@@ -25,7 +25,7 @@ tags:
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker registrations</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API data</a> managed using {{domxref("window.localStorage")}}</li>
  <li>History state information saved using {{domxref("History.pushState()")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Application caches</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Application caches</a> (highly deprecated!)</li>
  <li><a href="/en-US/docs/Web/API/Notifications_API">Notification data</a></li>
  <li>Other kinds of site-accessible, site-specific data that may be maintained</li>
 </ul>
@@ -83,7 +83,7 @@ tags:
 
 <p>To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:</p>
 
-<pre class="brush: js">navigator.storage.estimate().then(estimate =&gt; {
+<pre class="brush: js notranslate">navigator.storage.estimate().then(estimate =&gt; {
   // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });</pre>

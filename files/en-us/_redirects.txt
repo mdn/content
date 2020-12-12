@@ -957,7 +957,7 @@
 /en-US/docs/CSS/transition-timing-function	/en-US/docs/Web/CSS/transition-timing-function
 /en-US/docs/CSS/translation-value	/en-US/docs/Web/CSS/translation-value
 /en-US/docs/CSS/unicode-bidi	/en-US/docs/Web/CSS/unicode-bidi
-/en-US/docs/CSS/uri	/en-US/docs/Web/CSS/url
+/en-US/docs/CSS/uri	/en-US/docs/Web/CSS/url()
 /en-US/docs/CSS/used_value	/en-US/docs/Web/CSS/used_value
 /en-US/docs/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
 /en-US/docs/CSS/user-select	/en-US/docs/Web/CSS/user-select
@@ -1204,7 +1204,7 @@
 /en-US/docs/CSS:text-shadow	/en-US/docs/Web/CSS/text-shadow
 /en-US/docs/CSS:text-transform	/en-US/docs/Web/CSS/text-transform
 /en-US/docs/CSS:top	/en-US/docs/Web/CSS/top
-/en-US/docs/CSS:uri	/en-US/docs/Web/CSS/url
+/en-US/docs/CSS:uri	/en-US/docs/Web/CSS/url()
 /en-US/docs/CSS:vertical-align	/en-US/docs/Web/CSS/vertical-align
 /en-US/docs/CSS:visibility	/en-US/docs/Web/CSS/visibility
 /en-US/docs/CSS:visible	/en-US/docs/Web/CSS/visibility
@@ -12740,6 +12740,7 @@
 /en-US/docs/Web/CSS/filter-function/hue-rotate	/en-US/docs/Web/CSS/filter-function/hue-rotate()
 /en-US/docs/Web/CSS/filter-function/invert	/en-US/docs/Web/CSS/filter-function/invert()
 /en-US/docs/Web/CSS/filter-function/opacity	/en-US/docs/Web/CSS/filter-function/opacity()
+/en-US/docs/Web/CSS/filter-function/path()	/en-US/docs/Web/CSS/path()
 /en-US/docs/Web/CSS/filter-function/saturate	/en-US/docs/Web/CSS/filter-function/saturate()
 /en-US/docs/Web/CSS/filter-function/sepia	/en-US/docs/Web/CSS/filter-function/sepia()
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url()
@@ -12846,7 +12847,8 @@
 /en-US/docs/Web/CSS/transform-function/translateY	/en-US/docs/Web/CSS/transform-function/translateY()
 /en-US/docs/Web/CSS/transform-function/translateZ	/en-US/docs/Web/CSS/transform-function/translateZ()
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/%40font-face/unicode-range
-/en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url
+/en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url()
+/en-US/docs/Web/CSS/url	/en-US/docs/Web/CSS/url()
 /en-US/docs/Web/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
 /en-US/docs/Web/CSS/var	/en-US/docs/Web/CSS/var()
 /en-US/docs/Web/CSS/var-*	/en-US/docs/Web/CSS/--%252A

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
+<pre class="syntaxbox notranslate"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <p>You can use this value in combination with {{domxref("RTCIceCandidatePairStats.lastRequestTimestamp", "lastRequestTimestamp")}} and {{domxref("RTCIceCandidatePairStats.requestsSent", "requestsSent")}} to compute the average interval between consecutive connectivity checks:</p>
 
-<pre class="brush: js">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
+<pre class="brush: js notranslate">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
                     candidatePairStats.firstRequestTimestamp) /
                    candidatePairStats.requestsSent;</pre>
 
@@ -59,4 +59,8 @@ tags:
 
 
 
-<p>{{Compat("api.RTCIceCandidatePairStats.firstRequestTimestamp")}}</p>
+<div class="hidden">
+<p>Note: change to <code>firstRequestTime<strong>s</strong>tamp</code>, once BCD is updated.</p>
+</div>
+
+<p>{{Compat("api.RTCIceCandidatePairStats.firstRequestTimeStamp")}}</p>

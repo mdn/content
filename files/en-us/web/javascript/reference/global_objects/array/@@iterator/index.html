@@ -36,14 +36,16 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c'];
-var eArr = arr[Symbol.iterator]();
-var letterResult = document.getElementById('letterResult');
+<pre class="brush: js notranslate">const arr = ['a', 'b', 'c'];
+const eArr = arr[Symbol.iterator]();
+const letterResult = document.getElementById('letterResult');
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 // const and var could also be used
 for (let letter of eArr) {
- letterResult.innerHTML += "&lt;li&gt;" + letter + "&lt;/li&gt;";
+  const li = document.createElement('LI');
+  li.textContent = letter;
+  letterResult.appendChild(li);
 }
 </pre>
 

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>element</em>.onmouseout = <em>function</em>;
+<pre class="syntaxbox notranslate"><em>element</em>.onmouseout = <em>function</em>;
 </pre>
 
 <h2 class="editable" id="Example"><span><span>Example</span></span></h2>
@@ -26,20 +26,20 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;Test your mouse on me!&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;p&gt;Test your mouse on me!&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">const p = document.querySelector('p');
+<pre class="brush: js notranslate">const p = document.querySelector('p');
 p.onmouseover = logMouseOver;
 p.onmouseout = logMouseOut;
 
 function logMouseOver() {
-  p.innerHTML = 'MOUSE OVER detected';
+  p.textContent = 'MOUSE OVER detected';
 }
 
 function logMouseOut() {
-  p.innerHTML = 'MOUSE OUT detected';
+  p.textContent = 'MOUSE OUT detected';
 }</pre>
 
 <h3 id="Result">Result</h3>
@@ -58,7 +58,7 @@ function logMouseOut() {
   <tr>
    <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onmouseout','onmouseout')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

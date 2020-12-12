@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new Path2D();
+<pre class="syntaxbox notranslate">new Path2D();
 new Path2D(<em>path</em>);
 new Path2D(<em>d</em>);
 </pre>
@@ -41,10 +41,10 @@ new Path2D(<em>d</em>);
 <p>This example creates and copies a <code>Path2D</code> path.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js; highlight:[4,7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[4,7] notranslate">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let path1 = new Path2D();
@@ -64,10 +64,10 @@ ctx.stroke(path2);
 <p>This example creates a <code>Path2D</code> path using <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a>. The path will move to point (<code>M10 10</code>) and then move horizontally 80 points to the right (<code>h 80</code>), then 80 points down (<code>v 80</code>), then 80 points to the left (<code>h -80</code>), and then back to the start (<code>Z</code>).</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[4] notranslate">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
@@ -98,7 +98,7 @@ ctx.fill(p);
 <div>
 
 
-<p>{{Compat("api.Path2D")}}</p>
+<p>{{Compat("api.Path2D.Path2D")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>

@@ -148,16 +148,16 @@ tags:
 
 <p>If we gave all of our items in the example above a <code>flex-grow</code> value of 1 then the available space in the flex container would be equally shared between our items and they would stretch to fill the container on the main axis.</p>
 
-<p>The flex-grow property can be used to distribute space in proportion. If we give our first item a <code>flex-grow</code> value of 2 and the other items a value of 1, 2 parts will be given to the first item (100px out of 200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
+<p>The flex-grow property can be used to distribute space in proportion. If we give our first item a <code>flex-grow</code> value of 2, and the other items a value of 1 each, 2 parts will be given to the first item (100px out of 200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
 
 <h3 id="The_flex-shrink_property">The flex-shrink property</h3>
 
-<p>Where the <code>flex-grow</code> property deals with adding space in the main axis, the <code>flex-shrink</code> property controls how it is taken away. If we do not have enough space in the container to lay out our items and <code>flex-shrink</code> is set to a positive integer the item can become smaller than the <code>flex-basis</code>. As with <code>flex-grow</code> different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for <code>flex-shrink</code> will shrink faster than its siblings that have lower values.</p>
+<p>Where the <code>flex-grow</code> property deals with adding space in the main axis, the <code>flex-shrink</code> property controls how it is taken away. If we do not have enough space in the container to lay out our items, and <code>flex-shrink</code> is set to a positive integer, then the item can become smaller than the <code>flex-basis</code>. As with <code>flex-grow</code>, different values can be assigned in order to cause one item to shrink faster than others — an item with a higher value set for <code>flex-shrink</code> will shrink faster than its siblings that have lower values.</p>
 
 <p>The minimum size of the item will be taken into account while working out the actual amount of shrinkage that will happen, which means that flex-shrink has the potential to appear less consistent than flex-grow in behavior. We’ll therefore take a more detailed look at how this algorithm works in the article <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of items along the main axis</a>.</p>
 
 <div class="note">
-<p>Note that these values for <code>flex-grow</code> and <code>flex-shrink</code> are proportions. Typically if we had all of our items set to flex: <code>1 1 200px</code> and then wanted one item to grow at twice the rate, we would set that item to flex: <code>2 1 200px</code>. However you could use flex: <code>10 1 200px</code> and flex: <code>20 1 200px</code> if you wanted.</p>
+<p>Note that these values for <code>flex-grow</code> and <code>flex-shrink</code> are proportions. Typically if we had all of our items set to <code>flex: 1 1 200px</code> and then wanted one item to grow at twice the rate, we would set that item to flex: <code>2 1 200px</code>. However you could also use <code>flex: 10 1 200px</code> and <code>flex: 20 1 200px</code> if you wanted.</p>
 </div>
 
 <h3 id="Shorthand_values_for_the_flex_properties">Shorthand values for the flex properties</h3>
@@ -191,7 +191,7 @@ tags:
 
 <h2 id="Alignment_justification_and_distribution_of_free_space_between_items">Alignment, justification and distribution of free space between items</h2>
 
-<p>A key feature of flexbox is the ability to align and justify items on the main- and cross-axes, and to distribute space between flex items.</p>
+<p>A key feature of flexbox is the ability to align and justify items on the main- and cross-axes, and to distribute space between flex items. Note that these properties are to be set on the flex container, not on the items themselves.</p>
 
 <h3 id="align-items">align-items</h3>
 

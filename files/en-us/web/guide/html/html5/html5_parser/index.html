@@ -17,7 +17,7 @@ tags:
 <ul>
  <li>You can now use SVG and MathML inline in HTML5 pages, without XML namespace syntax.</li>
  <li>Parsing is now done in a separate thread from Firefox’s main UI thread, improving overall browser responsiveness.</li>
- <li>Calls to <code>innerHTML</code> are a lot faster.</li>
+ <li>Calls to {{DOMxRef("Element.innerHTML","innerHTML")}} are a lot faster.</li>
  <li><a class="external" href="http://tinyurl.com/html-parser-bugs" title="https://bugzilla.mozilla.org/buglist.cgi?status_whiteboard_type=substring&amp;status_whiteboard=[fixed%20by%20the%20HTML5%20parser]&amp;resolution=FIXED">Dozens of long-standing parser related bugs</a> are now fixed.</li>
 </ul>
 
@@ -31,7 +31,7 @@ tags:
 
 <p>Given the string <code>&lt;foo&lt;bar&gt;</code>, the new parser reads it as one tag named <code>foo&lt;bar</code>. This behavior is consistent with IE and Opera, and is different from Gecko 1.x and WebKit, which read it as two tags, <code>foo</code> and <code>bar</code>. If you previously tested your code in IE and Opera, then you probably don't have any tags like this. If you tested your site only with Gecko 1.x or WebKit (for example, Firefox-only intranets or WebKit-oriented mobile sites), then you might have tags that match this pattern, and they will behave differently with Gecko 2.</p>
 
-<h3 id="Calling_document.write()_during_parsing">Calling document.write() during parsing</h3>
+<h3 id="Calling_document.write_during_parsing">Calling document.write() during parsing</h3>
 
 <p>Prior to HTML5, Gecko and WebKit allowed calls to <a href="/en/DOM/document.write" title="en/DOM/document.write"><code>document.write()</code></a> <em>during parsing</em> to insert content into the source stream. This behavior was inherently <a class="external" href="http://en.wikipedia.org/wiki/Race_condition" title="http://en.wikipedia.org/wiki/Race_condition">racy</a>, as the content was inserted into a timing-dependent point in the source stream. If the call happened after the parser was done, the inserted content replaced the document. In IE, such calls are either ignored or imply a call to <a href="/en/DOM/document.open" title="en/DOM/document.open"><code>document.open()</code></a>, replacing the document. In HTML5, <code>document.write()</code> can only be called from a script that is created by a {{ HTMLElement("script") }} tag that does not have the <code><a href="/En/HTML/Element/Script#attr_async" title="En/HTML/Element/Script#attr async">async</a></code> or <code><a href="/En/HTML/Element/Script#attr_defer" title="En/HTML/Element/Script#attr defer">defer</a></code> attributes set. With the HTML5 parser, calls to <code>document.write()</code> in any other context either are ignored or replace the document.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>For example, the following code writes a balanced sub-tree:</p>
 
-<pre>&lt;script&gt;
+<pre class="notranslate">&lt;script&gt;
   document.write("&lt;div&gt;");
   document.write("&lt;p&gt;Some content goes here.&lt;/p&gt;");
   document.write("&lt;/div&gt;");
@@ -102,7 +102,7 @@ tags:
 
 <p>In contrast, the following code contains two scripts with unbalanced sub-trees, which causes speculative parsing to fail and therefore the time to parse the document is longer.</p>
 
-<pre>&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
+<pre class="notranslate">&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
 &lt;p&gt;Some content goes here.&lt;/p&gt;
 &lt;script&gt;document.write("&lt;/div&gt;");&lt;/script&gt;
 </pre>

@@ -153,7 +153,7 @@ b.shift().shift();
 
 //  Oh no!  Now array 'a' is affected as well:
 a
-//  [[2], [3]]
+//  [[], [2], [3]]
 </pre>
 </div>
 
@@ -248,19 +248,19 @@ let array = [...obj]; // TypeError: obj is not iterable
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-initializer', 'Array initializer')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-initializer', 'Object initializer')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-array-initializer', 'Array initializer')}}</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-object-initializer', 'Object initializer')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -272,6 +272,6 @@ let array = [...obj]; // TypeError: obj is not iterable
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘<code>...</code>’)</li>
- <li>{{jsxref("Function.prototype.apply()")}} (also ‘<code>...</code>’)</li>
+	<li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘<code>...</code>’)</li>
+	<li>{{jsxref("Function.prototype.apply()")}} (also ‘<code>...</code>’)</li>
 </ul>

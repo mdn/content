@@ -165,7 +165,7 @@ console.log("immediate logging");
 &lt;!DOCTYPE html&gt;
 &lt;script&gt;
 window.addEventListener("message", (event) =&gt; {
-  document.querySelector("#text").innerHTML = "hello";
+  document.querySelector("#text").textContent = "hello";
   // this code will only run in browsers that track the incumbent settings object
   console.log(event);
 }, false);

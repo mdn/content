@@ -25,10 +25,10 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>nameN</var></code></dt>
- <dd>The names of the variable or variables to declare. Each must be a legal JavaScript identifier.</dd>
- <dt><code><var>value</var></code><code><var>N</var></code> {{optional_inline}}</dt>
- <dd>For each variable declared, you may optionally specify its initial value to any legal JavaScript expression.</dd>
+	<dt><code><var>nameN</var></code></dt>
+	<dd>The names of the variable or variables to declare. Each must be a legal JavaScript identifier.</dd>
+	<dt><code><var>value</var></code><code><var>N</var></code> {{optional_inline}}</dt>
+	<dd>For each variable declared, you may optionally specify its initial value to any legal JavaScript expression.</dd>
 </dl>
 
 <p> Alternatively, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment </a>syntax can also be used to declare variables.</p>
@@ -45,7 +45,7 @@ tags:
 <p>An explanation of why the name "<strong>let</strong>" was chosen can be found <a href="https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri">here</a>.</p>
 
 <div class="blockIndicator note">
-<p>It is good practice to declare and intialise <code>let</code> variables at the top of the scope in which they are used. </p>
+<p>Many issues with <code>let</code> variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readibility).</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -269,16 +269,16 @@ console.log(b); // 2
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -290,11 +290,11 @@ console.log(b); // 2
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/const", "const")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a></li>
- <li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44</a></li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope</a></li>
- <li><a href="https://stackoverflow.com/a/33198850/1125029">StackOverflow: What is the Temporal Dead Zone</a>?</li>
- <li><a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable">StackOverflow: What is the difference between using <code>let</code> and <code>var</code>?</a></li>
+	<li>{{jsxref("Statements/var", "var")}}</li>
+	<li>{{jsxref("Statements/const", "const")}}</li>
+	<li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a></li>
+	<li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44</a></li>
+	<li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope</a></li>
+	<li><a href="https://stackoverflow.com/a/33198850/1125029">StackOverflow: What is the Temporal Dead Zone</a>?</li>
+	<li><a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable">StackOverflow: What is the difference between using <code>let</code> and <code>var</code>?</a></li>
 </ul>
