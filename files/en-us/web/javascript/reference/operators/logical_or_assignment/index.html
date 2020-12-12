@@ -49,9 +49,9 @@ tags:
 
 <h3 id="Setting_default_content">Setting default content</h3>
 
-<p>If the "lyrics" element is empty, set the <code><a href="/en-US/docs/Web/API/Element/innerHTML">innerHTML</a></code> to a default value:</p>
+<p>If the "lyrics" element is empty, display a default value:</p>
 
-<pre class="brush: js notranslate">document.getElementById('lyrics').innerHTML ||= '&lt;i&gt;No lyrics.&lt;/i&gt;'</pre>
+<pre class="brush: js notranslate">document.getElementById('lyrics').textContent ||= 'No lyrics.'</pre>
 
 <p>Here the short-circuit is especially beneficial, since the element will not be updated unnecessarily and won't cause unwanted side-effects such as additional parsing or rendering work, or loss of focus, etc.</p>
 

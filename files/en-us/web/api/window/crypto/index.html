@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
+<pre class="syntaxbox notranslate">let <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -36,13 +36,13 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js notranslate">genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
+  const array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
-    randText.innerHTML += array[i] + " ";
+  const randText = document.getElementById("myRandText");
+  randText.textContent = "The random numbers are: "
+  for (let i = 0; i &lt; array.length; i++) {
+    randText.textContent += array[i] + " ";
   }
 }</pre>
 

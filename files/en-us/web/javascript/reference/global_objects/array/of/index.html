@@ -14,16 +14,16 @@ tags:
 
 <p>The difference between <code><strong>Array.of()</strong></code> and the <code><strong>Array</strong></code> constructor is in the handling of integer arguments: <code><strong>Array.of(7)</strong></code> creates an array with a single element, <code>7</code>, whereas <code><strong>Array(7)</strong></code> creates an empty array with a <code>length</code> property of <code>7</code> (<strong>Note:</strong> this implies an array of <code>7</code> empty slots, not slots with actual {{jsxref("undefined")}} values).</p>
 
-<pre class="brush: js">Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
+<pre class="brush: js notranslate">Array.of(7); // [7]
+Array(7); // array of 7 empty slots
 
-Array(7);          // array of 7 empty slots
+Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
 </pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
+<pre class="syntaxbox notranslate">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,7 +52,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <p>Running the following code before any other code will create <code>Array.of()</code> if it's not natively available.</p>
 
-<pre class="brush: js">if (!Array.of) {
+<pre class="brush: js notranslate">if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
     // Or
@@ -69,12 +69,10 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <h3 id="Using_Array.of">Using Array.of</h3>
 
-<pre class="brush: js">Array.of(1);         // [1]
+<pre class="brush: js notranslate">Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 </pre>
-
-
 
 <h2 id="Specifications">Specifications</h2>
 

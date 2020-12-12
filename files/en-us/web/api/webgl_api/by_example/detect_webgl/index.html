@@ -29,11 +29,11 @@ tags:
 </div>
 
 <div id="detect-webgl-source">
-<pre class="brush: html">&lt;p&gt;[ Here would go the result of WebGL feature detection ]&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;[ Here would go the result of WebGL feature detection ]&lt;/p&gt;
 &lt;button&gt;Press here to detect WebGLRenderingContext&lt;/button&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   text-align : center;
 }
 button {
@@ -44,7 +44,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">// Run everything inside window load event handler, to make sure
+<pre class="brush: js notranslate">// Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it.
 window.addEventListener("load", function() {
   var paragraph = document.querySelector("p"),
@@ -61,10 +61,10 @@ window.addEventListener("load", function() {
       || canvas.getContext("experimental-webgl");
     // Report the result.
     if (gl &amp;&amp; gl instanceof WebGLRenderingContext) {
-      paragraph.innerHTML =
+      paragraph.textContent =
         "Congratulations! Your browser supports WebGL.";
     } else {
-      paragraph.innerHTML = "Failed to get WebGL context. "
+      paragraph.textContent = "Failed to get WebGL context. "
         + "Your browser or device may not support WebGL.";
     }
   }

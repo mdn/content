@@ -4,6 +4,8 @@ slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/end_a_call
 ---
 <p>{{WebRTCSidebar}}</p>
 
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/answer_a_call", "Web/API/WebRTC_API/build_a_phone_with_peerjs/deployment_and_further_reading")}}</p>
+
 <p id="d434">The last thing you want to do, is ensure your callers have a way of ending the call. The most graceful way of doing this is closing the connection using the <code>close</code> , which you can do in an event listener for the hang up button.</p>
 
 <pre class="brush: js notranslate">const <strong><em>hangUpBtn </em></strong>= <strong><em>document</em></strong>.querySelector('.hangup-btn');
@@ -27,3 +29,4 @@ slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/end_a_call
 <div class="blockIndicator warning">
 <p>The way we’ve currently coded things means that when a connection is closed, both browsers will be updated <strong>only</strong> if the person who started the call presses ‘hang up’ first. If the person who answered the call clicks ‘hang up’ first, the other caller will also have to click ‘hang up’ to see the correct HTML.</p>
 </div>
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/answer_a_call", "Web/API/WebRTC_API/build_a_phone_with_peerjs/deployment_and_further_reading")}}</p>

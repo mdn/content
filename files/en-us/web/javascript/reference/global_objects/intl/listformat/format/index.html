@@ -17,12 +17,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>listFormat</em>.format([<em>list</em>]);</pre>
+<pre class="syntaxbox notranslate"><var>listFormat</var>.format([<var>list</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><strong><code>list</code></strong></dt>
+ <dt><code><var>list</var></code></dt>
  <dd>An iterable object, such as an Array</dd>
 </dl>
 
@@ -36,11 +36,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_format">Using <code>format</code></h3>
+<h3 id="Using_format">Using format</h3>
 
 <p>The following example shows how to create a List formatter using the English language.</p>
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
 // &gt; Motorcycle, Bus and Car
@@ -53,7 +53,6 @@ tags:
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
-
 
 <table class="standard-table">
  <thead>

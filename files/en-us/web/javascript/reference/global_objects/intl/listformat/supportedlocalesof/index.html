@@ -15,20 +15,20 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre><code>Intl.ListFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
+<pre class="syntaxbox notranslate">Intl.ListFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>locales</code></dt>
+ <dt><code><var>locales</var></code></dt>
  <dd>A string with a BCP 47 language tag, or an array of such strings. For the general form of the <code>locales</code> argument, see the {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</dd>
- <dt><code>options</code></dt>
+ <dt><code><var>options</var></code></dt>
  <dd>
  <p>Optional. An object that may have the following property:</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>The locale matching algorithm to use. Possible values are <code>"lookup"</code> and <code>"best fit"</code>; the default is <code>"best fit"</code>. For information about this option, see the {{jsxref("Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>The locale matching algorithm to use. Possible values are <code>lookup</code> and <code>best fit</code>; the default is <code>best fit</code>. For information about this option, see the {{jsxref("Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
  </dl>
  </dd>
 </dl>
@@ -43,18 +43,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_supportedLocalesOf">Using <code>supportedLocalesOf</code></h3>
+<h3 id="Using_supportedLocalesOf">Using supportedLocalesOf()</h3>
 
-<p>Assuming a runtime that supports Indonesian and German but not Balinese in date and time formatting, <code>supportedLocalesOf</code> returns the Indonesian and German language tags unchanged, even though pinyin collation is neither relevant to date and time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the <code>"lookup"</code> algorithm here — a <code>"best fit"</code> matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.</p>
+<p>Assuming a runtime that supports Indonesian and German but not Balinese in date and time formatting, <code>supportedLocalesOf</code> returns the Indonesian and German language tags unchanged, even though pinyin collation is neither relevant to date and time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the <code>lookup</code> algorithm here — a <code>best fit</code> matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.</p>
 
-<pre class="brush: js">const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+<pre class="brush: js notranslate">const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
-
 
 <table class="standard-table">
  <thead>

@@ -14,40 +14,43 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre><code>new Intl.ListFormat([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+<pre class="syntaxbox notranslate">new Intl.ListFormat([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>locales</code></dt>
+ <dt><code><var>locales</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
+ <p>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code><var>locales</var></code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
  </dd>
- <dt><code>options</code></dt>
- <dd>Optional. An object with some or all of the following properties:
- <ul>
-  <li><code>localeMatcher</code><br>
-   The locale matching algorithm to use. Possible values are <code>"lookup"</code> and <code>"best fit"</code>; the default is <code>"best fit"</code>. For information about this option, see the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code> page</a>.</li>
-  <li><code>type</code><br>
-   The format of output message. Possible values are <code>"conjunction"</code> that stands for "and"-based lists (default, e.g., <code>A, B, and C</code>), or <code>"disjunction"</code> that stands for "or"-based lists (e.g., <code>A, B, or C</code>). <code>"unit"</code> stands for lists of values with units (e.g., <code>5 pounds, 12 ounces</code>).</li>
-  <li><code>style</code><br>
-   The length of the formated message. Possible values are: <code>"long"</code> (default, e.g., <code>A, B, and C</code>); <code>"short"</code> (e.g., <code>A, B, C</code>), or <code>"narrow"</code> (e.g., <code>A B C</code>). When <code>style</code> is <code>short</code> or <code>narrow</code>, <code>unit</code> is the only allowed value for the type option.</li>
- </ul>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
+ <dd>
+ <p>An object with some or all of the following properties:</p>
+
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>The locale matching algorithm to use. Possible values are <code>lookup</code> and <code>best fit</code>; the default is <code>best fit</code>. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dt><code>type</code></dt>
+  <dt></dt>
+  <dd>The format of output message. Possible values are <code>conjunction</code> that stands for "and"-based lists (default, e.g., <code>A, B, and C</code>), or <code>disjunction</code> that stands for "or"-based lists (e.g., <code>A, B, or C</code>). <code>unit</code> stands for lists of values with units (e.g., <code>5 pounds, 12 ounces</code>).</dd>
+  <dt><code>style</code></dt>
+  <dt></dt>
+  <dd>The length of the formated message. Possible values are: <code>long</code> (default, e.g., <code>A, B, and C</code>); <code>short</code> (e.g., <code>A, B, C</code>), or <code>narrow</code> (e.g., <code>A B C</code>). When <code>style</code> is <code>short</code> or <code>narrow</code>, <code>unit</code> is the only allowed value for the type option.</dd>
+ </dl>
  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_format">Using <code>format</code></h3>
+<h3 id="Using_format">Using format</h3>
 
 <p>The following example shows how to create a List formatter using the English language.</p>
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
 // &gt; Motorcycle, Bus and Car
@@ -59,7 +62,6 @@ tags:
 // &gt; Motorcycle Bus Car</pre>
 
 <h2 id="Specifications">Specifications</h2>
-
 
 <table class="standard-table">
  <thead>
@@ -85,19 +87,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+ <li>{{jsxref("Intl")}}</li>
 </ul>
-
-<div id="gtx-anchor" style="position: absolute; left: 20px; top: 1894px; width: 593.609px; height: 42px;"></div>
-
-<div class="jfk-bubble gtx-bubble" style="display: none;">
-<div class="jfk-bubble-content-id" id="bubble-2"></div>
-
-<div class="jfk-bubble-closebtn-id jfk-bubble-closebtn"></div>
-
-<div class="jfk-bubble-arrow-id jfk-bubble-arrow">
-<div class="jfk-bubble-arrowimplbefore"></div>
-
-<div class="jfk-bubble-arrowimplafter"></div>
-</div>
-</div>

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>DataTransfer</var>.clearData([<em>format</em>]);
+<pre class="syntaxbox notranslate"><var>DataTransfer</var>.clearData([<em>format</em>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;span class="tweaked" id="source" draggable="true"&gt;
+<pre class="brush: html notranslate">&lt;span class="tweaked" id="source" draggable="true"&gt;
   Select this element, drag it to the Drop Zone and then release the selection to move the element.
 &lt;/span&gt;
 &lt;span class="tweaked" id="target"&gt;Drop Zone&lt;/span&gt;
@@ -50,7 +50,7 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">span.tweaked {
+<pre class="brush: css notranslate">span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;
@@ -68,7 +68,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">window.addEventListener('DOMContentLoaded', function () {
+<pre class="brush: js notranslate">window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
   var draggable = document.getElementById('source');
   var dropable = document.getElementById('target');
@@ -84,7 +84,7 @@ tags:
   dropable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
-    status.innerHTML = 'Drag in process';
+    status.textContent = 'Drag in process';
 
     // Change target element's border to signify drag has started
     event.currentTarget.style.border = '1px dashed blue';
@@ -97,15 +97,15 @@ tags:
     // Set the drag's format and data (use event target's id for data)
     event.dataTransfer.setData('text/plain', event.target.id);
 
-    data.innerHTML = event.dataTransfer.getData('text/plain');
+    data.textContent = event.dataTransfer.getData('text/plain');
   }
 
   function dragEndHandler (event) {
     if (!dropped) {
-      status.innerHTML = 'Drag canceled';
+      status.textContent = 'Drag canceled';
     }
 
-    data.innerHTML = event.dataTransfer.getData('text/plain') || 'empty';
+    data.textContent = event.dataTransfer.getData('text/plain') || 'empty';
 
     // Change border to signify drag is no longer in process
     event.currentTarget.style.border = '1px solid black';
@@ -121,13 +121,13 @@ tags:
   }
 
   function dragOverHandler (event) {
-    status.innerHTML = 'Drop available';
+    status.textContent = 'Drop available';
 
     event.preventDefault();
   }
 
   function dragLeaveHandler (event) {
-    status.innerHTML = 'Drag in process (drop was available)';
+    status.textContent = 'Drag in process (drop was available)';
 
     event.preventDefault();
   }
@@ -135,7 +135,7 @@ tags:
   function dropHandler (event) {
     dropped = true;
 
-    status.innerHTML = 'Drop done';
+    status.textContent = 'Drop done';
 
     event.preventDefault();
 
@@ -148,7 +148,7 @@ tags:
 
     // Change CSS styles and displayed text
     element.style.cssText = 'border: 1px solid black;display: block; color: red';
-    element.innerHTML = "I'm in the Drop Zone!";
+    element.textContent = "I'm in the Drop Zone!";
   }
 })
 </pre>
@@ -167,7 +167,7 @@ tags:
   <tr>
    <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>

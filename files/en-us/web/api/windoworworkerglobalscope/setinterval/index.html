@@ -86,8 +86,11 @@ function myCallback(a, b)
 
     function flashText() {
       var oElem = document.getElementById('my_box');
-      oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
-      // oElem.style.color == 'red' ? 'blue' : 'red' is a conditional or ternary operator.
+      if(oElem.style.color === 'red') {
+        oElem.style.color = 'blue'
+      } else {
+        oElem.style.color = 'red'
+      }
     }
 
     function stopTextColor() {

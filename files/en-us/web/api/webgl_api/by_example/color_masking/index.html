@@ -35,7 +35,7 @@ tags:
 </div>
 
 <div id="color-masking-source">
-<pre class="brush: html">&lt;p&gt;Tinting the displayed colors with color masking.&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;Tinting the displayed colors with color masking.&lt;/p&gt;
 &lt;canvas&gt;Your browser does not seem to support
     HTML5 canvas.&lt;/canvas&gt;
 &lt;button id="red-toggle"&gt;On&lt;/button&gt;
@@ -43,7 +43,7 @@ tags:
 &lt;button id="blue-toggle"&gt;On&lt;/button&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   text-align : center;
 }
 canvas {
@@ -75,7 +75,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
+<pre class="brush: js notranslate" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -83,9 +83,8 @@ button {
   var gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
   if (!gl) {
-    document.querySelector("p").innerHTML =
-      "Failed to get WebGL context."
-      + "Your browser or device may not support WebGL.";
+    document.querySelector("p").textContent =
+      "Failed to get WebGL context. Your browser or device may not support WebGL.";
     return;
   }
   gl.viewport(0, 0,
@@ -108,9 +107,9 @@ button {
       || 0;
     mask[index] = !mask[index];
     if (mask[index] === true)
-      evt.target.innerHTML="On";
+      evt.target.textContent ="On";
     else
-      evt.target.innerHTML="Off";
+      evt.target.textContent ="Off";
     gl.colorMask(mask[0], mask[1], mask[2], true);
     drawAnimation();
   };

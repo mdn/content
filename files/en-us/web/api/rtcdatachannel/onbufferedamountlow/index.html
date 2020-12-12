@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>RTCDataChannel</em>.onbufferedamountlow = <em>function</em>;</pre>
+<pre class="syntaxbox notranslate"><em>RTCDataChannel</em>.onbufferedamountlow = <em>function</em>;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>This example responds to the {{event("bufferedamountlow")}} event by fetching up to 64kB of a file represented by an object <code>source</code> and calling {{domxref("RTCDataChannel.send()")}} to queue up the retrieved data for sending on the data channel.</p>
 
-<pre>pc = new RTCPeerConnection();
+<pre class="notranslate">pc = new RTCPeerConnection();
 dc = pc.createDataChannel("SendFile");
 
 /* ... */
@@ -43,7 +43,7 @@ dc.onbufferedamountlow = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Specification</th>

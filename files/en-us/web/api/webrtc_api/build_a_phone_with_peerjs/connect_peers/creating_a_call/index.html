@@ -4,9 +4,11 @@ slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/Creating_a_Call
 ---
 <p>{{WebRTCSidebar}}</p>
 
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/create_a_peer_connection", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/answer_a_call")}}</p>
+
 <p id="684c">Now you’ll want to give your users the ability to create calls. First get the call button that’s defined in the HTML:</p>
 
-<pre class="brush: js notranslate">const <strong><em>callBtn </em></strong>= <strong><em>document</em></strong>.querySelector(‘.call-btn’);`</pre>
+<pre class="brush: js notranslate">const <strong><em>callBtn </em></strong>= <strong><em>document</em></strong>.querySelector('.call-btn');</pre>
 
 <p id="602e">When a caller clicks “call” you’ll want to ask them for peer ID of the peer they want to call (which we store in <code>code</code> in <code>getStreamCode</code>) and then you’ll want to create a connection with that code.</p>
 
@@ -39,3 +41,5 @@ slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/Creating_a_Call
 <p><img alt="Two screens side by side both A cream background with the words 'phone a friend' in bold, dark green font as the heading. The first screen has 'Your device ID is: 3b77.' and the second 'Your device ID is: 2doa', is immediately below the title and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream colour of the background. The second screen has a browser dialogue that asks for a peer id." src="https://miro.medium.com/max/1400/1*PUBiml_PJ-jjaVpjjeOUOw.png" style="height: 875px; width: 1400px;"></p>
 
 <p>If you submit the other peer’s ID, the call will be connected but we need to give the other browser the chance to answer or decline the call.</p>
+
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/create_a_peer_connection", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/answer_a_call")}}</p>

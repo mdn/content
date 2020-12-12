@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>sets</var> = <var>document</var>.styleSheetSets;
+<pre class="syntaxbox notranslate">var <var>sets</var> = <var>document</var>.styleSheetSets;
 </pre>
 
 <p>On return, <code>sets</code> is a list of style sheet sets that are available.</p>
@@ -24,15 +24,15 @@ tags:
 
 <p>Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate it with the names of all the available style sheet sets with code like this:</p>
 
-<pre class="brush:js">let list = document.getElementById('sheetList');
-let sheets = document.styleSheetSets;
+<pre class="brush:js notranslate">const list = document.getElementById('sheetList');
+const sheets = document.styleSheetSets;
 
-list.innerHTML = '';
+list.textContent = '';
 
 for (let i = 0; i &lt; sheets.length; i++) {
-  let item = document.createElement('li');
+  const item = document.createElement('li');
 
-  item.innerHTML = sheets[i];
+  item.textContent = sheets[i];
   list.appendChild(item);
 }</pre>
 

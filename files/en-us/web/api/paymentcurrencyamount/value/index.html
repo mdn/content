@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>value</em> = <em>paymentCurrencyAmount</em>.value;</pre>
+<pre class="syntaxbox notranslate"><em>value</em> = <em>paymentCurrencyAmount</em>.value;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>This example represents the price of $42.95 in US dollars:</p>
 
-<pre class="brush: js">let itemPrice = {
+<pre class="brush: js notranslate">let itemPrice = {
   currency: "USD",
   value: "42.95"
 };
@@ -49,7 +49,7 @@ tags:
 
 <p>This example specifies a price of £7.77:</p>
 
-<pre class="brush: js">let shippingCost = {
+<pre class="brush: js notranslate">let shippingCost = {
   currency: "GBP",
   value: "7.77"
 }
@@ -57,7 +57,7 @@ tags:
 
 <p>This example specifies a price of 1000¥:</p>
 
-<pre class="brush: js">let price = {
+<pre class="brush: js notranslate">let price = {
   currency: "JPY",
   value: "1000"
 }
@@ -67,7 +67,7 @@ tags:
 
 <p>You can ensure that the value entered as a price is formatted correctly prior to submission by matching it against a simple {{Glossary("regular expression")}}:</p>
 
-<pre class="brush: js">function checkPriceFormat(price) {
+<pre class="brush: js notranslate">function checkPriceFormat(price) {
   let validRegex = /^-?[0-9]+(\.[0-9]+)?$/;
 
   return validRegex.test(price);
@@ -87,7 +87,7 @@ tags:
   <tr>
    <td>{{SpecName('Payment','#dom-paymentcurrencyamount-value','PaymentCurrencyAmount.value')}}</td>
    <td>{{Spec2('Payment')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
@@ -97,7 +97,7 @@ tags:
 <div>
 
 
-<p>{{Compat("api.PaymentCurrencySystem.value")}}</p>
+<p>{{Compat("api.PaymentCurrencyAmount.value")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
