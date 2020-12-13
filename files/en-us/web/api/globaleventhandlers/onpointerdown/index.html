@@ -63,7 +63,7 @@ function handleDown(evt) {
       break;
   }
 
-  targetBox.innerHTML = "&lt;strong&gt;Thanks for " + action + " me!&lt;/strong&gt;";
+  targetBox.textContent = `Thanks for ${action} me!`;
   evt.preventDefault();
 }</pre>
 
@@ -78,7 +78,7 @@ function handleDown(evt) {
 <pre class="brush: js notranslate">targetBox.onpointerup = handleUp;
 
 function handleUp(evt) {
-  targetBox.innerHTML = "Tap me, click me, or touch me!";
+  targetBox.textContent = "Tap me, click me, or touch me!";
   evt.preventDefault();
 }</pre>
 

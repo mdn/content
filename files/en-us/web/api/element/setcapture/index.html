@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>element</em>.setCapture(<em>retargetToElement</em>);
+<pre class="syntaxbox notranslate"><em>element</em>.setCapture(<em>retargetToElement</em>);
 </pre>
 
 <dl>
@@ -29,7 +29,7 @@ tags:
 
 <p>In this example, the current mouse coordinates are drawn while you mouse around after clicking and holding down on an element.</p>
 
-<pre class="brush: html">&lt;html&gt;
+<pre class="brush: html notranslate">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Mouse Capture Example&lt;/title&gt;
   &lt;style type="text/css"&gt;
@@ -48,7 +48,7 @@ tags:
         btn.addEventListener("mousedown", mouseDown, false);
         btn.addEventListener("mouseup", mouseUp, false);
       } else {
-        document.getElementById("output").innerHTML
+        document.getElementById("output").textContent
           = "Sorry, there appears to be no setCapture support on this browser";
       }
     }
@@ -64,7 +64,7 @@ tags:
 
     function mouseMoved(e) {
       var output = document.getElementById("output");
-      output.innerHTML = "Position: " + e.clientX + ", " + e.clientY;
+      output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
   &lt;/script&gt;
 &lt;/head&gt;

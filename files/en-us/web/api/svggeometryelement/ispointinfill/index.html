@@ -11,18 +11,18 @@ tags:
 ---
 <div>{{APIRef("SVG")}}</div>
 
-<p>The <code><strong>SVGGeometryElement.isPointInFill()</strong></code> method determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the fill. The <code>point</code> argument is interpreted as a point in the local coordiante system of the element.</p>
+<p>The <code><strong>SVGGeometryElement.isPointInFill()</strong></code> method determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the fill. The <code>point</code> argument is interpreted as a point in the local coordinate system of the element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">boolean <var>someElement</var>.isPointInFill(DOMPointInit <var>point</var>);
+<pre class="syntaxbox notranslate">boolean <var>someElement</var>.isPointInFill(DOMPointInit <var>point</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt>point</dt>
- <dd>A {{domxref("DOMPointInit")}} interpreted as a point in the local coordiante system of the element.</dd>
+ <dd>A {{domxref("DOMPointInit")}} interpreted as a point in the local coordinate system of the element.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" width="150" height="150"
+<pre class="brush: html notranslate">&lt;svg viewBox="0 0 100 100" width="150" height="150"
     xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;circle id="circle" cx="50" cy="50" r="45"
       fill="white" stroke="black" stroke-width="10"/&gt;
@@ -44,7 +44,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var circle = document.getElementById('circle');
+<pre class="brush: js notranslate">var circle = document.getElementById('circle');
 
 // Point not in circle
 console.log('Point at 10,10:', circle.isPointInFill(new DOMPoint(10, 10)));

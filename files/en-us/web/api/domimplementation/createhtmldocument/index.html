@@ -43,7 +43,7 @@ tags:
 
   let doc = document.implementation.createHTMLDocument("New Document");
   let p = doc.createElement("p");
-  p.innerHTML = "This is a new paragraph.";
+  p.textContent = "This is a new paragraph.";
 
   try {
     doc.body.appendChild(p);

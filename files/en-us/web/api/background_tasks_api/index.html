@@ -25,18 +25,18 @@ tags:
 <p>Because idle callbacks are intended to give your code a way to cooperate with the event loop to ensure that the system is utilized to its full potential without over-tasking it, resulting in lag or other performance problems, you should be thoughtful about how you go about using them.</p>
 
 <ul>
-	<li><strong>Use idle callbacks for tasks which don't have high priority.</strong> Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a <code>timeout</code>. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a <code>timeout</code>).</li>
-	<li><strong>Idle callbacks should do their best not to overrun the time allotted.</strong> While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go<strong> </strong><em>way</em> over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.</li>
-	<li><strong>Avoid making changes to the DOM within your idle callback.</strong> By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use {{domxref("Window.requestAnimationFrame()")}} to schedule that.</li>
-	<li><strong>Avoid tasks whose run time can't be predicted.</strong> Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{domxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.</li>
-	<li><strong>Use timeouts when you need to, but only when you need to.</strong> Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.</li>
+ <li><strong>Use idle callbacks for tasks which don't have high priority.</strong> Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a <code>timeout</code>. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a <code>timeout</code>).</li>
+ <li><strong>Idle callbacks should do their best not to overrun the time allotted.</strong> While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go<strong> </strong><em>way</em> over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.</li>
+ <li><strong>Avoid making changes to the DOM within your idle callback.</strong> By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use {{domxref("Window.requestAnimationFrame()")}} to schedule that.</li>
+ <li><strong>Avoid tasks whose run time can't be predicted.</strong> Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{domxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.</li>
+ <li><strong>Use timeouts when you need to, but only when you need to.</strong> Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.</li>
 </ul>
 
 <h3 id="Falling_back_to_setTimeout">Falling back to setTimeout</h3>
 
 <p>Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; <code>setTimeout()</code> doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.</p>
 
-<pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+<pre class="brush: js notranslate">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
 
   return setTimeout(function() {
@@ -57,7 +57,7 @@ tags:
 
 <p>The implementation of our shim for {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} is much simpler:</p>
 
-<pre class="brush: js">window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
+<pre class="brush: js notranslate">window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
   clearTimeout(id);
 }</pre>
 
@@ -70,8 +70,8 @@ tags:
 <p>The Background Tasks API adds only one new interface:</p>
 
 <dl>
-	<dt>{{domxref("IdleDeadline")}}</dt>
-	<dd>An object of this type is passed to the idle callback to provide an estimate of how long the idle period is expected to last, as well as whether or not the callback is running because its timeout period has expired.</dd>
+ <dt>{{domxref("IdleDeadline")}}</dt>
+ <dd>An object of this type is passed to the idle callback to provide an estimate of how long the idle period is expected to last, as well as whether or not the callback is running because its timeout period has expired.</dd>
 </dl>
 
 <p>The {{domxref("Window")}} interface is also augmented by this API to offer the new {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} and {{domxref("window.cancelIdleCallback", "cancelIdleCallback()")}} methods.</p>
@@ -86,7 +86,7 @@ tags:
 
 <p>In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID <code>"Container"</code>) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID <code>"logBox"</code>), which is used to display textual output.</p>
 
-<pre class="brush: html">&lt;p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;
   Demonstration of using &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"&gt;
   cooperatively scheduled background tasks&lt;/a&gt; using the &lt;code&gt;requestIdleCallback()&lt;/code&gt;
   method.
@@ -116,7 +116,7 @@ tags:
 <div class="hidden">
 <h3 id="CSS_content">CSS content</h3>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   font-family: "Open Sans", "Lucida Grande", "Arial", sans-serif;
   font-size: 16px;
 }
@@ -194,7 +194,7 @@ tags:
 
 <h4 id="Variable_declarations">Variable declarations</h4>
 
-<pre class="brush: js">let taskList = [];
+<pre class="brush: js notranslate">let taskList = [];
 let totalTaskCount = 0;
 let currentTaskNumber = 0;
 let taskHandle = null;
@@ -203,13 +203,13 @@ let taskHandle = null;
 <p>These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:</p>
 
 <ul>
-	<li><code>taskList</code> is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.</li>
-	<li><code>totalTaskCount</code> is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.</li>
-	<li><code>currentTaskNumber</code> is used to track how many tasks have been processed so far.</li>
-	<li><code>taskHandle</code> is a reference to the task currently being processed.</li>
+ <li><code>taskList</code> is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.</li>
+ <li><code>totalTaskCount</code> is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.</li>
+ <li><code>currentTaskNumber</code> is used to track how many tasks have been processed so far.</li>
+ <li><code>taskHandle</code> is a reference to the task currently being processed.</li>
 </ul>
 
-<pre class="brush: js">let totalTaskCountElem = document.getElementById("totalTaskCount");
+<pre class="brush: js notranslate">let totalTaskCountElem = document.getElementById("totalTaskCount");
 let currentTaskNumberElem = document.getElementById("currentTaskNumber");
 let progressBarElem = document.getElementById("progress");
 let startButtonElem = document.getElementById("startButton");
@@ -219,28 +219,28 @@ let logElem = document.getElementById("log");
 <p>Next we have variables which reference the DOM elements we need to interact with. These elements are:</p>
 
 <ul>
-	<li><code>totalTaskCountElem</code> is the {{HTMLElement("span")}} we use to insert the total number of tasks created into the status display in the progress box.</li>
-	<li><code>currentTaskNumberElem</code> is the element used to display the number of tasks processed so far.</li>
-	<li><code>progressBarElem</code> is the {{HTMLElement("progress")}} element showing the percentage of the tasks processed so far.</li>
-	<li><code>startButtonElem</code> is the start button.</li>
-	<li><code>logElem</code> is the {{HTMLElement("div")}} we'll insert logged text messages into.</li>
+ <li><code>totalTaskCountElem</code> is the {{HTMLElement("span")}} we use to insert the total number of tasks created into the status display in the progress box.</li>
+ <li><code>currentTaskNumberElem</code> is the element used to display the number of tasks processed so far.</li>
+ <li><code>progressBarElem</code> is the {{HTMLElement("progress")}} element showing the percentage of the tasks processed so far.</li>
+ <li><code>startButtonElem</code> is the start button.</li>
+ <li><code>logElem</code> is the {{HTMLElement("div")}} we'll insert logged text messages into.</li>
 </ul>
 
-<pre class="brush: js">let logFragment = null;
+<pre class="brush: js notranslate">let logFragment = null;
 let statusRefreshScheduled = false;
 </pre>
 
 <p>Finally, we set up a couple of variables for other items:</p>
 
 <ul>
-	<li><code>logFragment</code> will be used to store a {{domxref("DocumentFragment")}} that's generated by our logging functions to create content to append to the log when the next animation frame is rendered.</li>
-	<li><code>statusRefreshScheduled</code> is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame</li>
+ <li><code>logFragment</code> will be used to store a {{domxref("DocumentFragment")}} that's generated by our logging functions to create content to append to the log when the next animation frame is rendered.</li>
+ <li><code>statusRefreshScheduled</code> is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame</li>
 </ul>
 
 <div class="hidden">
 <p>The shim to function even if idle callbacks aren't supported. Already discussed above, so it's hidden here to save space in the article.</p>
 
-<pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+<pre class="brush: js notranslate">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
 
   return setTimeout(function() {
@@ -267,7 +267,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>First, we need a function that enqueues tasks for future execution. That function, <code>enqueueTask()</code>, looks like this:</p>
 
-<pre class="brush: js">function enqueueTask(taskHandler, taskData) {
+<pre class="brush: js notranslate">function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
     data: taskData
@@ -286,8 +286,8 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p><code>enqueueTask()</code> accepts as input two parameters:</p>
 
 <ul>
-	<li><code>taskHandler</code> is a function which will be called to handle the task.</li>
-	<li><code>taskData</code> is an object which is passed into the task handler as an input parameter, to allow the task to receive custom data.</li>
+ <li><code>taskHandler</code> is a function which will be called to handle the task.</li>
+ <li><code>taskData</code> is an object which is passed into the task handler as an input parameter, to allow the task to receive custom data.</li>
 </ul>
 
 <p>To enqueue the task, we <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a> an object onto the <code>taskList</code> array; the object contains the <code>taskHandler</code> and <code>taskData</code> values under the names <code>handler</code> and <code>data</code>, respectively, then increment <code>totalTaskCount</code>, which reflects the total number of tasks which have ever been enqueued (we don't decrement it when tasks are removed from the queue).</p>
@@ -298,7 +298,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>Our idle callback handler, runTaskQueue(), gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.</p>
 
-<pre class="brush: js">function runTaskQueue(deadline) {
+<pre class="brush: js notranslate">function runTaskQueue(deadline) {
   while ((deadline.timeRemaining() &gt; 0 || deadline.didTimeout) &amp;&amp; taskList.length) {
     let task = taskList.shift();
     currentTaskNumber++;
@@ -320,10 +320,10 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p>For each task in the queue that we have time to execute, we do the following:</p>
 
 <ol>
-	<li>We <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">remove the task object from the queue</a>.</li>
-	<li>We increment <code>currentTaskNumber</code> to track how many tasks we've executed.</li>
-	<li>We call the task's handler, <code>task.handler</code>, passing into it the task's data object (<code>task.data</code>).</li>
-	<li>We call a function, <code>scheduleStatusRefresh()</code>, to handle scheduling a screen update to reflect changes to our progress.</li>
+ <li>We <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">remove the task object from the queue</a>.</li>
+ <li>We increment <code>currentTaskNumber</code> to track how many tasks we've executed.</li>
+ <li>We call the task's handler, <code>task.handler</code>, passing into it the task's data object (<code>task.data</code>).</li>
+ <li>We call a function, <code>scheduleStatusRefresh()</code>, to handle scheduling a screen update to reflect changes to our progress.</li>
 </ol>
 
 <p>When time runs out, if there are still tasks left in the list, we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time <code>enqueueTask()</code> is called.</p>
@@ -336,7 +336,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>DOM changes are scheduled by calling the <code>scheduleStatusRefresh()</code> function.</p>
 
-<pre class="brush: js">function scheduleStatusRefresh() {
+<pre class="brush: js notranslate">function scheduleStatusRefresh() {
     if (!statusRefreshScheduled) {
       requestAnimationFrame(updateDisplay);
       statusRefreshScheduled = true;
@@ -350,7 +350,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>The <code>updateDisplay()</code> function is responsible for drawing the contents of the progress box and the log. It's called by the browser when the DOM is in a safe condition for us to apply changes during the process of rendering the next frame.</p>
 
-<pre class="brush: js">function updateDisplay() {
+<pre class="brush: js notranslate">function updateDisplay() {
   let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight &lt;= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
@@ -382,8 +382,8 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <p>Next, we update the progress and status information if any tasks have been enqueued.</p>
 
 <ol>
-	<li>If the current maximum value of the progress bar is different from the current total number of enqueued tasks (<code>totalTaskCount</code>), then we update the contents of the displayed total number of tasks (<code>totalTaskCountElem</code>) and the maximum value of the progress bar, so that it scales properly.</li>
-	<li>We do the same thing with the number of tasks processed so far; if <code>progressBarElem.value</code> is different from the task number currently being processed (<code>currentTaskNumber</code>), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.</li>
+ <li>If the current maximum value of the progress bar is different from the current total number of enqueued tasks (<code>totalTaskCount</code>), then we update the contents of the displayed total number of tasks (<code>totalTaskCountElem</code>) and the maximum value of the progress bar, so that it scales properly.</li>
+ <li>We do the same thing with the number of tasks processed so far; if <code>progressBarElem.value</code> is different from the task number currently being processed (<code>currentTaskNumber</code>), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.</li>
 </ol>
 
 <p>Then, if there's text waiting to be added to the log (that is, if <code>logFragment</code> isn't <code>null</code>), we append it to the log element using {{domxref("Node.appendChild", "Element.appendChild()")}} and set <code>logFragment</code> to <code>null</code> so we don't add it again.</p>
@@ -394,13 +394,13 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>The <code>log()</code> function adds the specified text to the log. Since we don't know at the time <code>log()</code> is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for <code>updateDisplay</code><code>()</code>, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.</p>
 
-<pre class="brush: js">function log(text) {
+<pre class="brush: js notranslate">function log(text) {
   if (!logFragment) {
       logFragment = document.createDocumentFragment();
   }
 
-  let el = document.createElement("div");
-  el.innerHTML = text;
+  const el = document.createElement("div");
+  el.textContent = text;
   logFragment.appendChild(el);
 }
 </pre>
@@ -417,7 +417,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 <p>The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's <code>handler</code> property—is <code>logTaskHandler</code>(). It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
 
-<pre class="brush: js">function logTaskHandler(data) {
+<pre class="brush: js notranslate">function logTaskHandler(data) {
   log("&lt;strong&gt;Running task #" + currentTaskNumber + "&lt;/strong&gt;");
 
   for (i=0; i&lt;data.count; i+=1) {
@@ -433,7 +433,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 <div class="hidden">
 <p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive">getRandomIntInclusive()</a></code> method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.</p>
 
-<pre class="brush: js">function getRandomIntInclusive(min, max) {
+<pre class="brush: js notranslate">function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -441,7 +441,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 </pre>
 </div>
 
-<pre class="brush: js">function decodeTechnoStuff() {
+<pre class="brush: js notranslate">function decodeTechnoStuff() {
   totalTaskCount = 0;
   currentTaskNumber = 0;
   updateDisplay();
@@ -467,8 +467,8 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 <p>Then we start a loop to create the actual tasks. For each task, we create an object, <code>taskData</code>, which includes two properties:</p>
 
 <ul>
-	<li><code>count</code> is the number of strings to output into the log from the task.</li>
-	<li><code>text</code> is the text to output to the log the number of times specified by <code>count</code>.</li>
+ <li><code>count</code> is the number of strings to output into the log from the task.</li>
+ <li><code>text</code> is the text to output to the log the number of times specified by <code>count</code>.</li>
 </ul>
 
 <p>Each task is then enqueued by calling <code>enqueueTask()</code>, passing in <code>logTaskHandler</code><code>()</code> as the handler function and the <code>taskData</code> object as the object to pass into the function when it's called.</p>
@@ -485,18 +485,18 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("Background Tasks")}}</td>
-			<td>{{Spec2("Background Tasks")}}</td>
-			<td></td>
-		</tr>
-	</tbody>
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Background Tasks")}}</td>
+   <td>{{Spec2("Background Tasks")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -510,7 +510,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{domxref("Window.requestIdleCallback()")}}</li>
-	<li>{{domxref("Window.cancelIdleCallback()")}}</li>
-	<li>{{domxref("IdleDeadline")}}</li>
+ <li>{{domxref("Window.requestIdleCallback()")}}</li>
+ <li>{{domxref("Window.cancelIdleCallback()")}}</li>
+ <li>{{domxref("IdleDeadline")}}</li>
 </ul>

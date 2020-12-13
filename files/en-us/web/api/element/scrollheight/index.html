@@ -123,7 +123,7 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   }
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
   document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
 onload = function () {

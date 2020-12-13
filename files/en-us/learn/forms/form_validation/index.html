@@ -564,7 +564,7 @@ email.addEventListener('input', function (event) {
   if (email.validity.valid) {
     // In case there is an error message visible, if the field
     // is valid, we remove the error message.
-    emailError.innerHTML = ''; // Reset the content of the message
+    emailError.textContent = ''; // Reset the content of the message
     emailError.className = 'error'; // Reset the visual state of the message
   } else {
     // If there is still an error, show the correct error
@@ -770,7 +770,7 @@ addEvent(email, "input", function () {
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (test) {
     email.className = "valid";
-    error.innerHTML = "";
+    error.textContent = "";
     error.className = "error";
   } else {
     email.className = "invalid";
@@ -783,14 +783,14 @@ addEvent(form, "submit", function () {
 
   if (!test) {
     email.className = "invalid";
-    error.innerHTML = "I expect an e-mail, darling!";
+    error.textContent = "I expect an e-mail, darling!";
     error.className = "error active";
 
     // Some legacy browsers do not support the event.preventDefault() method
     return false;
   } else {
     email.className = "valid";
-    error.innerHTML = "";
+    error.textContent = "";
     error.className = "error";
   }
 });</pre>

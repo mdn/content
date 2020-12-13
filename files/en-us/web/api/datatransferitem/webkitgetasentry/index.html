@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>DataTransferItem</em>.webkitGetAsEntry();</pre>
+<pre class="syntaxbox notranslate"><em>DataTransferItem</em>.webkitGetAsEntry();</pre>
 
 <h3 class="syntaxbox" id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} element with the ID <code>"dropzone"</code>, and an unordered list element with the ID <code>"listing"</code>.</p>
 
-<pre class="brush: html">&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
 
 &lt;div id="dropzone"&gt;
   &lt;div id="boxtitle"&gt;
@@ -59,7 +59,7 @@ tags:
 
 <p>The styles used by the example are shown here.</p>
 
-<pre class="brush: css">#dropzone {
+<pre class="brush: css notranslate">#dropzone {
   text-align: center;
   width: 300px;
   height: 100px;
@@ -91,12 +91,12 @@ body {
 <p>Note that to read all files in a directory, <code>readEntries</code> needs to be called repeatedly until it returns an empty array. In Chromium-based browsers, the following example will only return a max of 100 entries.</p>
 </div>
 
-<pre class="brush: js">let dropzone = document.getElementById("dropzone");
+<pre class="brush: js notranslate">let dropzone = document.getElementById("dropzone");
 let listing = document.getElementById("listing");
 
 function scanFiles(item, container) {
   let elem = document.createElement("li");
-  elem.innerHTML = item.name;
+  elem.textContent = item.name;
   container.appendChild(elem);
 
  if (item.isDirectory) {
@@ -120,18 +120,18 @@ function scanFiles(item, container) {
 
 <p>Then come the event handlers. First, we prevent the {{event("dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:</p>
 
-<pre class="brush: js">dropzone.addEventListener("dragover", function(event) {
+<pre class="brush: js notranslate">dropzone.addEventListener("dragover", function(event) {
     event.preventDefault();
 }, false);
 </pre>
 
 <p>The event handler that kicks everything off, of course, is the handler for the {{event("drop")}} event:</p>
 
-<pre class="brush: js">dropzone.addEventListener("drop", function(event) {
+<pre class="brush: js notranslate">dropzone.addEventListener("drop", function(event) {
   let items = event.dataTransfer.items;
 
   event.preventDefault();
-  listing.innerHTML = "";
+  listing.textContent = "";
 
   for (let i=0; i&lt;items.length; i++) {
     let item = items[i].webkitGetAsEntry();
@@ -144,7 +144,7 @@ function scanFiles(item, container) {
 
 <p>This fetches the list of {{domxref("DataTransferItem")}} objects representing the items dropped from <code>event.dataTransfer.items</code>. Then we call {{domxref("Event.preventDefault()")}} to prevent the event from being handled further after we're done.</p>
 
-<p>Now it's time to start building the list. First, the list is emptied by setting {{domxref("Element.innerHTML", "listing.innerHTML")}} to be empty. That leaves us with an empty {{domxref("ul")}} to begin inserting directory entries into.</p>
+<p>Now it's time to start building the list. First, the list is emptied by setting {{domxref("Node.textContent", "listing.textContent")}} to be empty. That leaves us with an empty {{domxref("ul")}} to begin inserting directory entries into.</p>
 
 <p>Then we iterate over the items in the list of dropped items. For each one, we call its {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} method to obtain a {{domxref("FileSystemEntry")}} representing the file. If that's successful, we call <code>scanFiles()</code> to process the item—either by adding it to the list if it's just a file or by adding it and walking down into it if it's a directory.</p>
 

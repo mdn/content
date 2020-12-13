@@ -14,7 +14,7 @@ tags:
 
 <p><small><strong>Figure 7: Sorting based on div content<span class="comment">view example</span></strong></small></p>
 
-<pre class="brush: js">// XHTML Fragment:
+<pre class="brush: js notranslate">// XHTML Fragment:
 
 &lt;div id="example"&gt;
   &lt;div&gt;1&lt;/div&gt;
@@ -72,7 +72,7 @@ function sort() {
   var fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
   // clear the contents
-  document.getElementById("example").innerHTML = "";
+  document.getElementById("example").textContent = "";
 
   myDOM = fragment;
   // add the new content from the transformation

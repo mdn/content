@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>MediaStream</em>.onremovetrack = <em>eventHandler</em>;
+<pre class="syntaxbox notranslate"><em>MediaStream</em>.onremovetrack = <em>eventHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -29,11 +29,11 @@ tags:
 
 <p>This example adds a listener which, when a track is removed from the stream, logs the track that was removed.</p>
 
-<pre class="brush: js">stream.onremovetrack = function(event) {
+<pre class="brush: js notranslate">stream.onremovetrack = function(event) {
   let trackList = document.getElementById("tracks");
   let label = document.createElement("li");
 
-  label.innerHTML = "Removed: " + event.track.kind + ": " + event.track.label;
+  label.textContent = `Removed: ${event.track.kind}: ${event.track.label}`;
   trackList.appendChild(label);
 };
 </pre>
