@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>cursor</em>.advance(<em>count</em>);</pre>
+<pre class="syntaxbox notranslate"><em>cursor</em>.advance(<em>count</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,15 +62,15 @@ tags:
 
 <p><span style="line-height: 1.5;">Note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/indexeddb-examples/idbcursor/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
-<pre class="brush: js"><span class="brush: js" style="line-height: 1.5;">function advanceResult() {</span>
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+<pre class="brush: js notranslate"><span class="brush: js" style="line-height: 1.5;">function advanceResult() {</span>
+  list.textContent = '';
+  const transaction = db.transaction(['rushAlbumList'], "readonly");
+  const objectStore = transaction.objectStore('rushAlbumList');
 
   objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
-      var listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
       list.appendChild(listItem);
       cursor.advance(2);
@@ -92,12 +92,12 @@ tags:
   <tr>
    <td>{{SpecName('IndexedDB', '#dom-idbcursor-advance', 'advance()')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-advance", "advance()")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

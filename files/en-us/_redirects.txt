@@ -5324,6 +5324,7 @@
 /en-US/docs/Extension_Library/Extensions/Firefox	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/FORCE_SHARED_LIB	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/FORCE_STATIC_LIB	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
+/en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_Access_API
 /en-US/docs/FirebugInternals	/en-US/docs/Firebug_internals
 /en-US/docs/Firebug_Firefox_extension_(external)	https://addons.mozilla.org/extensions/moreinfo.php?id=1843&application=firefox
 /en-US/docs/Firefox%2011%20for%20developers	/en-US/docs/Mozilla/Firefox/Releases/11

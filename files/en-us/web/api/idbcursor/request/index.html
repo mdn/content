@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre>var <em>request = cursor</em>.request;</pre>
+<pre class="notranslate"><em>IDBCursor</em>.request;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,17 +29,17 @@ tags:
 
 <p>When you open a cursor, the <code>request</code> property is then available on that cursor object, to tell you what request object the cursor originated from. For example:</p>
 
-<pre class="brush: js">function displayData() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], 'readonly');
-  var objectStore = transaction.objectStore('rushAlbumList');
+<pre class="brush: js notranslate">function displayData() {
+  list.textContent = '';
+  const transaction = db.transaction(['rushAlbumList'], 'readonly');
+  const objectStore = transaction.objectStore('rushAlbumList');
 
-  var request = objectStore.openCursor();
+  const request = objectStore.openCursor();
 
   request.onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
       if(cursor) {
-        var listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
         list.appendChild(listItem);
         console.log(cursor.request);

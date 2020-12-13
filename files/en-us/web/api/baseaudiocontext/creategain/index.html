@@ -77,11 +77,11 @@ function voiceMute() {
     // connected your source into the output in addition to using the GainNode.
     gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
     mute.id = "activated";
-    mute.innerHTML = "Unmute";
+    mute.textContent = "Unmute";
   } else {
     gainNode.gain.setValueAtTime(1, audioCtx.currentTime);
     mute.id = "";
-    mute.innerHTML = "Mute";
+    mute.textContent = "Mute";
   }
 }</pre>
 

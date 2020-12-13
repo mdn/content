@@ -44,7 +44,7 @@ function init() {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
-    newAnchor.innerHTML = document.anchors[i].text;
+    newAnchor.textContent = document.anchors[i].text;
     li.appendChild(newAnchor);
     toc.appendChild(li);
   }

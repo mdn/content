@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>myIDBCursor</em>.delete();</pre>
+<pre class="syntaxbox notranslate"><em>myIDBCursor</em>.delete();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -60,21 +60,21 @@ tags:
 
 <p>The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
 
-<pre class="brush: js">function deleteResult() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  var objectStore = transaction.objectStore('rushAlbumList');
+<pre class="brush: js notranslate">function deleteResult() {
+  list.textContent = '';
+  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
+  const objectStore = transaction.objectStore('rushAlbumList');
 
   objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
       if(cursor.value.albumTitle === 'Grace under pressure') {
-        var request = cursor.delete();
+        const request = cursor.delete();
         request.onsuccess = function() {
           console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
         };
       } else {
-        var listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
         list.appendChild(listItem);
       }
@@ -97,12 +97,12 @@ tags:
   <tr>
    <td>{{SpecName('IndexedDB', '#dom-idbcursor-delete', 'delete()')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-delete", "delete()")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

@@ -84,10 +84,10 @@ tags:
 
 <pre class="brush: js notranslate">let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
-  box.innerHTML = "Zooming...";
+  box.textContent = "Zooming...";
 }
 box.ontransitionend = function(event) {
-  box.innerHTML = "Done!";
+  box.textContent = "Done!";
 }
 </pre>
 

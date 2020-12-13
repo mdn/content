@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var<em> sessionPromise = xr</em>.requestSession(<em>sessionMode</em>, <em>sessionInit</em>)
+<pre class="syntaxbox notranslate">var<em> sessionPromise = xr</em>.requestSession(<em>sessionMode</em>, <em>sessionInit</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -63,7 +63,7 @@ tags:
 
 <p>The following example calls <code>requestSession()</code> requesting an <code>"immersive-vr"</code> session. If the {{jsxref("Promise")}} resolves, it sets up a session and initiates the animation loop.</p>
 
-<pre class="brush: js">navigator.xr.requestSession("immersive-vr")
+<pre class="brush: js notranslate">navigator.xr.requestSession("immersive-vr")
 .then((xrSession) =&gt; {
   xrSession.addEventListener('end', onXRSessionEnded);
   // Do necessary session setup here.
@@ -78,12 +78,12 @@ tags:
 
 <p>The following example shows how to use both <code>isSessionSupported()</code> and <code>requestSession()</code>. First, it checks to see if WebXR is available by verifying the existence of {{domxref("navigator.xr")}}. Next, it calls <code>isSessionSupported()</code>, passing it the desired session option before enabling controls for entering XR. Adding controls is a necessary step because entering XR requires a user action. Finally, the <code>onButtonClicked()</code> method calls <code>requestSession()</code> using the same session option passed to <code>isSessionSupported()</code>.</p>
 
-<pre class="brush: js">if (navigator.xr) {
+<pre class="brush: js notranslate">if (navigator.xr) {
   navigator.xr.isSessionSupported('immersive-vr')
   .then((isSupported) =&gt; {
     if (isSupported) {
       immersiveButton.addEventListener('click', onButtonClicked);
-      immersiveButton.innerHTML = 'Enter XR';
+      immersiveButton.textContent = 'Enter XR';
       immersiveButton.disabled = false;
     } else {
       console.log("WebXR doesn't support immersive-vr mode!");

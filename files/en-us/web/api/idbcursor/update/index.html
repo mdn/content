@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>anIDBRequest</em> = <em>myIDBCursor</em>.update(<em>value</em>);</pre>
+<pre class="syntaxbox notranslate">var <em>anIDBRequest</em> = <em>myIDBCursor</em>.update(<em>value</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -73,14 +73,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. If the <code>albumTitle</code> of the current cursor is "A farewell to kings", we update year the album was released using <code>var request = cursor.update();</code>.</p>
+<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. If the <code>albumTitle</code> of the current cursor is "A farewell to kings", we update year the album was released using <code>const request = cursor.update();</code>.</p>
 
 <p>Note that you cannot change primary keys using <code>cursor.update()</code>, hence us not changing the album title; this would ruin the integrity of the data. In such a situation, you would have to delete the record altogether and then add a new one using {{domxref("IDBObjectStore.add")}}. Note also that you can't directly put <code>cursor.value</code> into an update call, hence the below example using an intermediary <code>updateData</code> variable.</p>
 
-<p>T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a class="external external-icon" href="https://github.com/mdn/IDBcursor-example/" style="white-space: pre-line;">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a class="external external-icon" href="http://mdn.github.io/IDBcursor-example/" style="white-space: pre-line; line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a class="external external-icon" href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor" style="white-space: pre-line;">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a class="external external-icon" href="https://mdn.github.io/indexeddb-examples/idbcursor/" style="white-space: pre-line; line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
-<pre class="brush: js">function updateResult() {
-  list.innerHTML = '';
+<pre class="brush: js notranslate">function updateResult() {
+  list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
@@ -119,12 +119,12 @@ tags:
   <tr>
    <td>{{SpecName('IndexedDB', '#dom-idbcursor-update', 'update()')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-update", "update()")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
