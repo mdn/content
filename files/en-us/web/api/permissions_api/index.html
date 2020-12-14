@@ -16,6 +16,10 @@ tags:
 <p><span class="seoSummary">The <strong>Permissions API</strong> provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.</span></p>
 </div>
 
+<div class="blockIndicator note">
+<p><strong>Note:</strong> This feature is available in <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (although not current versions of Firefox, as <a href="/en-US/docs/Web/API/WorkerNavigator/permissions">WorkerNavigator.permissions</a> is not implemented).</p>
+</div>
+
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>Historically different APIs handle their own permissions inconsistently — for example the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> allows for explicit checking of permission status and requesting permission, whereas the <a href="/en-US/docs/Web/API/Geolocation">Geolocation API</a> doesn't (which causes problems if the user denied the initial permission request). The Permissions API provides the tools to allow developers to implement a better user experience as far as permissions are concerned.</p>

@@ -76,7 +76,18 @@ tags:
   <tr>
    <th scope="row">Iteration</th>
    <td>A <code>Map</code> is an <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>, so it can be directly iterated.</td>
-   <td>Iterating over an <code>Object</code> requires obtaining its keys in some fashion and iterating over them.</td>
+   <td>
+    <p><code>Object</code> does not implement an <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols##The_iterable_protocol">iteration protocol</a>, and so objects are not directly iterable using the JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> statement (by default).</p>
+
+    <div class="blockIndicator note">
+    <p><strong>Note:</strong></p>
+
+    <ul>
+     <li>An object can implement the iteration protocol, or you can get an iterable for an object using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries</code></a>.</li>
+     <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> statement allows you to iterate over the <em>enumerable</em> properties of an object.</li>
+    </ul>
+    </div>
+   </td>
   </tr>
   <tr>
    <th scope="row">Performance</th>
