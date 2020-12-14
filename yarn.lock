@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/runtime@^7.11.2":
+"@babel/runtime@^7.12.5":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -35,10 +35,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.362":
-  version "0.1.362"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.362.tgz#ae0eb53ab510f6655528739717a21458d87536a2"
-  integrity sha512-n/SqNVQsOA6v0o3HKsaRvbYWUrK17STc/PfkkCEi5K9JiL+CYSaKhj64RS8hhNm8WlgdBeh1C1r7Z5tStdnO+A==
+"@mdn/yari@0.1.387":
+  version "0.1.387"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.387.tgz#e4455097d0ce572377a02494fc207ec42c3a288c"
+  integrity sha512-f0neUgyRkeajmL1N1i0rxXDzZ4QktJTy5X4HE34bOQ0Li+i6Q9gXrRYFYdxK63m/uubJUShMo2X4FSYou/BQWQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "3.0.0"
@@ -56,7 +56,7 @@
     cssesc "^3.0.0"
     diff "5.0.0"
     dotenv "8.2.0"
-    downshift "^6.0.6"
+    downshift "^6.0.7"
     ejs "3.1.5"
     express "4.17.1"
     express-http-proxy "1.6.2"
@@ -87,7 +87,7 @@
     source-map-support "0.5.19"
     swr "0.3.9"
     tempy "1.0.0"
-    use-debounce "^5.1.0"
+    use-debounce "^5.2.0"
     webpack-cli "4.2.0"
     webpack-node-externals "2.5.2"
     ws "^7.4.1"
@@ -897,7 +897,7 @@ compression@1.7.4:
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
-compute-scroll-into-view@^1.0.14:
+compute-scroll-into-view@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.16.tgz#5b7bf4f7127ea2c19b750353d7ce6776a90ee088"
   integrity sha512-a85LHKY81oQnikatZYA90pufpZ6sQx++BoCxOEMsjpZx+ZnaKGQnCyCehTRr/1p9GBIAHTjcU9k71kSYWloLiQ==
@@ -1343,15 +1343,15 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-downshift@^6.0.6:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.0.6.tgz#82aee8e2e260d7ad99df8a0969bd002dd523abe8"
-  integrity sha512-tmLab3cXCn6PtZYl9V8r/nB2m+7/nCNrwo0B3kTHo/2lRBHr+1en1VNOQt2wIt0ajanAnxquZ00WPCyxe6cNFQ==
+downshift@^6.0.7:
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.0.7.tgz#05ef58b991e4467cdb8cd36e7a87a011d0bada5c"
+  integrity sha512-+rqgx3JTSs8b4V9q++hsLvaP8mhMOdX7u+jy5S2etg7+Y7uFLVzZaI0S7Xo2yEnNDmTcNnYZZ/vFjdWuJ2kZdg==
   dependencies:
-    "@babel/runtime" "^7.11.2"
-    compute-scroll-into-view "^1.0.14"
+    "@babel/runtime" "^7.12.5"
+    compute-scroll-into-view "^1.0.16"
     prop-types "^15.7.2"
-    react-is "^16.13.1"
+    react-is "^17.0.1"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -3450,10 +3450,15 @@ raw-body@^2.3.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-is@^16.13.1, react-is@^16.8.1:
+react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-is@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
+  integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -4316,10 +4321,10 @@ url-to-options@^1.0.1:
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
   integrity sha1-FQWgOiiaSMvXpDTvuu7FBV9WM6k=
 
-use-debounce@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.1.0.tgz#3df34bd7449da7dd2dbb10a6513efe701fc79d02"
-  integrity sha512-fU7O7iel2bA19fxSiPfRkieVGxrow503phSUAGZ/EqiJtCPrU9AdUdrKOAdgh803IrjdIzhj+8eDsDGn4OPy8g==
+use-debounce@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.2.0.tgz#3cb63f5c46f40092c570356e441dbc016ffb2f8b"
+  integrity sha512-lW4tbPsTnvPKYqOYXp5xZ7SP7No/ARLqqQqoyRKuSzP0HxR9arhSAhznXUZFoNPWDRij8fog+N6sYbjb8c3kzw==
 
 utf8-byte-length@^1.0.1:
   version "1.0.4"
