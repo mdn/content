@@ -5899,6 +5899,7 @@
 /en-US/docs/HTMLSpanElement	/en-US/docs/Web/API/HTMLSpanElement
 /en-US/docs/HTMLSpanElement_interface	/en-US/docs/Web/API/HTMLSpanElement
 /en-US/docs/HTML_Intro2	/en-US/docs/Learn/HTML/Introduction_to_HTML
+/en-US/docs/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
 /en-US/docs/HTML_in_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 /en-US/docs/HTML_intro	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTTP	/en-US/docs/Web/HTTP
@@ -9227,6 +9228,7 @@
 /en-US/docs/Web/API/AudioParam.setValueCurveAtTime	/en-US/docs/Web/API/AudioParam/setValueCurveAtTime
 /en-US/docs/Web/API/AudioParam.value	/en-US/docs/Web/API/AudioParam/value
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
+/en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
 /en-US/docs/Web/API/BaseAudioContext/resume	/en-US/docs/Web/API/AudioContext/resume
 /en-US/docs/Web/API/BatteryManager.charging	/en-US/docs/Web/API/BatteryManager/charging
 /en-US/docs/Web/API/BatteryManager.chargingTime	/en-US/docs/Web/API/BatteryManager/chargingTime
@@ -10248,6 +10250,7 @@
 /en-US/docs/Web/API/HTMLVideoElement/msInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
 /en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture()	/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
+/en-US/docs/Web/API/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
@@ -10537,6 +10540,9 @@
 /en-US/docs/Web/API/MsZoom	/en-US/docs/Web/API/HTMLVideoElement/msZoom
 /en-US/docs/Web/API/MsZoomTo	/en-US/docs/Web/API/Element/msZoomTo
 /en-US/docs/Web/API/NDEFReader/onerror	/en-US/docs/Web/API/NDEFReader/onreadingerror
+/en-US/docs/Web/API/NDEFWriter	/en-US/docs/Web/API/NDEFReader
+/en-US/docs/Web/API/NDEFWriter/NDEFWriter	/en-US/docs/Web/API/NDEFReader/NDEFReader
+/en-US/docs/Web/API/NDEFWriter/write	/en-US/docs/Web/API/NDEFReader/write
 /en-US/docs/Web/API/NamedNodeMap/NamedNodeMap.getNamedItem	/en-US/docs/Web/API/NamedNodeMap/getNamedItem
 /en-US/docs/Web/API/Navigation.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/Navigator.appCodeName	/en-US/docs/Web/API/NavigatorID/appCodeName

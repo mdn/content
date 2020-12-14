@@ -22,6 +22,10 @@ tags:
 
 <p>Additionally, a pointer event contains the usual properties present in mouse events (client coordinates, target element, button states, etc.) in addition to new properties for other forms of input: pressure, contact geometry, tilt, etc. In fact, the {{domxref("PointerEvent")}} interface inherits all of the {{domxref("MouseEvent")}} properties, thus facilitating the migration of content from mouse events to pointer events.</p>
 
+<div class="blockIndicator note">
+<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (along with {{domxref("Document")}} and most other <a href="/en-US/docs/Web/API/HTML_DOM_API">DOM API</a>-related functionality). </p>
+</div>
+
 <h2 id="Terminology">Terminology</h2>
 
 <dl>

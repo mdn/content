@@ -14,16 +14,16 @@ tags:
 <p>The <strong><code>KeyboardEvent.metaKey</code></strong> read-only property returning a {{jsxref("Boolean")}} that indicates if the <kbd>Meta</kbd> key was pressed (<code>true</code>) or not (<code>false</code>) when the event occurred. Some operating systems may intercept the key so it is never detected.</p>
 
 <div class="note">
-<p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞ Windows</kbd>).</p>
+<p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.</p>
 </div>
 
 <div class="warning">
-<p>At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is not considered the "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞ Windows</kbd> is pressed.</p>
+<p>At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞ Windows</kbd> key is pressed.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
+<pre class="syntaxbox notranslate">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -32,12 +32,12 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function ismetaKey(e) {
+<pre class="brush: js notranslate">function ismetaKey(e) {
   alert("metaKey = " + e.metaKey);
 }
 </pre>
 
-<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
+<pre class="brush: html notranslate">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
 </pre>
 
 <p>{{ EmbedLiveSample('Example', 400, 36) }}</p>
