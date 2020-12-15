@@ -53,7 +53,7 @@ $ ./mach eslint --warnings &lt;path&gt;  # Show issues including warnings</em></
 
 <p dir="ltr">Both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> expect that the path being passed to them is the path on-disk. If this is not the case, for example when formatting a temporary file, the "real" path must be specified. This can be done with the <code>--assume-filename &lt;name&gt;</code> argument.</p>
 
-<h2 dir="ltr" id="Commit_hook"><a id="Commit hook" name="Commit hook"></a>Commit hook</h2>
+<h2 dir="ltr" id="Commit_hook">Commit hook</h2>
 
 <p dir="ltr">To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
@@ -68,7 +68,7 @@ $ ln -s $(pwd)/tools/lint/hooks_js_format.py .git/hooks/pre-commit</pre>
 
 <p>You'll likely need to install the <code>python-hglib</code> package for your OS, or else you may get errors like <code>abort: No module named hglib.client!</code> when you try to commit.</p>
 
-<h2 dir="ltr" id="Editor_integration"><a id="Editor integration" name="Editor integration"></a>Editor integration</h2>
+<h2 dir="ltr" id="Editor_integration">Editor integration</h2>
 
 <p dir="ltr">It is possible to configure many editors to support running <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> automatically on save, or when run from within the editor.</p>
 
