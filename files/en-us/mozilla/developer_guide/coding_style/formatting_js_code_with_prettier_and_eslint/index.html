@@ -10,26 +10,26 @@ tags:
   - hook
   - prettier
 ---
-<p dir="ltr" id="docs-internal-guid-a4d34563-0515-810b-1e18-88bde0437e91">Mozilla uses <a href="https://prettier.io">Prettier</a> for enforcing coding style and whitespace. A pinned version of the utility will be installed when <code>./mach bootstrap</code> is run, as specified by the dependencies in our top-level <a href="https://dxr.mozilla.org/mozilla-central/source/package.json">package.json</a>.</p>
+<p id="docs-internal-guid-a4d34563-0515-810b-1e18-88bde0437e91">Mozilla uses <a href="https://prettier.io">Prettier</a> for enforcing coding style and whitespace. A pinned version of the utility will be installed when <code>./mach bootstrap</code> is run, as specified by the dependencies in our top-level <a href="https://dxr.mozilla.org/mozilla-central/source/package.json">package.json</a>.</p>
 
-<p dir="ltr">Options are explicitly defined in <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a>.</p>
+<p>Options are explicitly defined in <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a>.</p>
 
-<h2 dir="ltr" id="Manual_formatting">Manual formatting</h2>
+<h2 id="Manual_formatting">Manual formatting</h2>
 
 <div class="notecard note">
-<p dir="ltr"><strong>Note: </strong>Instead of manually formatting, we recommend <a href="#Editor_integration">setting up your editor</a> to format on save, or alternatively using a <a href="#Commit_hook">commit hook</a>.</p>
+<p><strong>Note: </strong>Instead of manually formatting, we recommend <a href="#Editor_integration">setting up your editor</a> to format on save, or alternatively using a <a href="#Commit_hook">commit hook</a>.</p>
 </div>
 
-<p dir="ltr">A <code>mach</code> subcommand is provided for running both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> from the command-line. This wrapper ensures the correct version of these tools are installed and run.</p>
+<p>A <code>mach</code> subcommand is provided for running both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> from the command-line. This wrapper ensures the correct version of these tools are installed and run.</p>
 
-<p dir="ltr">If the tools aren't installed, the packages will be automatically downloaded from <code>npm</code> and installed into <code>node_modules</code>. We pin the versions used for those packages.</p>
+<p>If the tools aren't installed, the packages will be automatically downloaded from <code>npm</code> and installed into <code>node_modules</code>. We pin the versions used for those packages.</p>
 
-<h3 dir="ltr" id="Formatting_the_current_directory">Formatting the current directory</h3>
+<h3 id="Formatting_the_current_directory">Formatting the current directory</h3>
 
 <pre dir="ltr"><em>$ ./mach eslint --fix</em>
 </pre>
 
-<p dir="ltr">When run without other arguments, this will run both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> on the current directory. This could miss some reformatting (for example, when other parts of the tree are touched).</p>
+<p>When run without other arguments, this will run both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> on the current directory. This could miss some reformatting (for example, when other parts of the tree are touched).</p>
 
 <h3 id="Formatting_specific_paths">Formatting specific paths</h3>
 
@@ -37,25 +37,25 @@ tags:
 $ ./mach eslint &lt;path&gt;             # Show issues
 $ ./mach eslint --warnings &lt;path&gt;  # Show issues including warnings</em></pre>
 
-<p dir="ltr">The command also accepts a list of <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">&lt;path&gt;</span></font> arguments to reformat a specific directory or file; omitting the <code>--fix</code> flag will show the issues instead of fixing them. The<code> --warnings</code> flag includes warnings in the output.</p>
+<p>The command also accepts a list of <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">&lt;path&gt;</span></font> arguments to reformat a specific directory or file; omitting the <code>--fix</code> flag will show the issues instead of fixing them. The<code> --warnings</code> flag includes warnings in the output.</p>
 
 <h3 id="Formatting_outgoing">Formatting outgoing</h3>
 
 <pre dir="ltr"><em>$ ./mach lint --outgoing  # Format outgoing commits</em>
 </pre>
 
-<p dir="ltr">The command also accepts an <code>--outgoing</code> flag to format all files touched by commits that are not on the remote repository. Without arguments, finds the default remote that would be pushed to. The branch can also be specified manually, and works with mercurial or git.</p>
+<p>The command also accepts an <code>--outgoing</code> flag to format all files touched by commits that are not on the remote repository. Without arguments, finds the default remote that would be pushed to. The branch can also be specified manually, and works with mercurial or git.</p>
 
-<h3 dir="ltr" id="Scripting_Prettier">Scripting Prettier</h3>
+<h3 id="Scripting_Prettier">Scripting Prettier</h3>
 
 <pre dir="ltr"><em>$ ./mach </em>prettier-format -p<em> &lt;path&gt; </em>--assume-filename &lt;name&gt;
 </pre>
 
-<p dir="ltr">Both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> expect that the path being passed to them is the path on-disk. If this is not the case, for example when formatting a temporary file, the "real" path must be specified. This can be done with the <code>--assume-filename &lt;name&gt;</code> argument.</p>
+<p>Both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> expect that the path being passed to them is the path on-disk. If this is not the case, for example when formatting a temporary file, the "real" path must be specified. This can be done with the <code>--assume-filename &lt;name&gt;</code> argument.</p>
 
-<h2 dir="ltr" id="Commit_hook">Commit hook</h2>
+<h2 id="Commit_hook">Commit hook</h2>
 
-<p dir="ltr">To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
+<p>To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
 <pre class="comment-text " id="ct-11">[extensions]
 js-format = ~/.mozbuild/version-control-tools/hgext/js-format
@@ -68,13 +68,13 @@ $ ln -s $(pwd)/tools/lint/hooks_js_format.py .git/hooks/pre-commit</pre>
 
 <p>You'll likely need to install the <code>python-hglib</code> package for your OS, or else you may get errors like <code>abort: No module named hglib.client!</code> when you try to commit.</p>
 
-<h2 dir="ltr" id="Editor_integration">Editor integration</h2>
+<h2 id="Editor_integration">Editor integration</h2>
 
-<p dir="ltr">It is possible to configure many editors to support running <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> automatically on save, or when run from within the editor.</p>
+<p>It is possible to configure many editors to support running <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> automatically on save, or when run from within the editor.</p>
 
-<h3 dir="ltr" id="Editor_plugins">Editor plugins</h3>
+<h3 id="Editor_plugins">Editor plugins</h3>
 
-<ul dir="ltr">
+<ul>
  <li>Atom
   <ul>
    <li><a href="https://atom.io/packages/prettier-atom">prettier-atom</a></li>
@@ -107,23 +107,23 @@ $ ln -s $(pwd)/tools/lint/hooks_js_format.py .git/hooks/pre-commit</pre>
  </li>
 </ul>
 
-<h3 dir="ltr" id="Editor_setup">Editor setup</h3>
+<h3 id="Editor_setup">Editor setup</h3>
 
-<p dir="ltr">These tools generally run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> themselves, and will not actually use either <code>./mach eslint</code> or  <code>./mach prettier-format</code>. The packages installed by our tooling will be located in the top-level <code>node_modules</code>.</p>
+<p>These tools generally run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> themselves, and will not actually use either <code>./mach eslint</code> or  <code>./mach prettier-format</code>. The packages installed by our tooling will be located in the top-level <code>node_modules</code>.</p>
 
-<p dir="ltr"><span class="message"><span class="content">Typically, it's sufficient to:</span></span></p>
+<p><span class="message"><span class="content">Typically, it's sufficient to:</span></span></p>
 
-<p dir="ltr"><span class="message"><span class="content">1. Configure your editor to specify that "formatting on save" is desired, and/or</span></span></p>
+<p><span class="message"><span class="content">1. Configure your editor to specify that "formatting on save" is desired, and/or</span></span></p>
 
-<p dir="ltr"><span class="message"><span class="content">2. Configure the eslint extension to automatically <code>--fix</code> on save.</span></span></p>
+<p><span class="message"><span class="content">2. Configure the eslint extension to automatically <code>--fix</code> on save.</span></span></p>
 
-<p dir="ltr"><span class="message"><span class="content">There shouldn't be a need for any other special setup. Most of the configuration that </span></span><a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a><span class="message"><span class="content"> relies on for formatting is stored inside our source tree (more specifically, using the <a href="https://dxr.mozilla.org/mozilla-central/source/.eslintrc">.eslintrc.js</a> and <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a> format files located in the root of the repository).</span></span> Note that the list of ignored files and directories is provided by <a href="https://dxr.mozilla.org/mozilla-central/source/.eslintignore">.eslintignore</a> and <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierignore">.prettierignore</a>.</p>
+<p><span class="message"><span class="content">There shouldn't be a need for any other special setup. Most of the configuration that </span></span><a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a><span class="message"><span class="content"> relies on for formatting is stored inside our source tree (more specifically, using the <a href="https://dxr.mozilla.org/mozilla-central/source/.eslintrc">.eslintrc.js</a> and <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a> format files located in the root of the repository).</span></span> Note that the list of ignored files and directories is provided by <a href="https://dxr.mozilla.org/mozilla-central/source/.eslintignore">.eslintignore</a> and <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierignore">.prettierignore</a>.</p>
 
-<h3 dir="ltr" id="Example">Example</h3>
+<h3 id="Example">Example</h3>
 
-<p dir="ltr"><span class="message"><span class="content">You can mix and match combinations of Prettier and ESLint plugin options to better suit your needs. For example, in Visual Studio Code: to only <strong>display code quality errors</strong>, but instead <strong>hide formatting errors</strong>, while also automatically fixing issues and formatting on save, add this to your workspace:</span></span></p>
+<p><span class="message"><span class="content">You can mix and match combinations of Prettier and ESLint plugin options to better suit your needs. For example, in Visual Studio Code: to only <strong>display code quality errors</strong>, but instead <strong>hide formatting errors</strong>, while also automatically fixing issues and formatting on save, add this to your workspace:</span></span></p>
 
-<p dir="ltr"><kbd>{<br>
+<p><kbd>{<br>
    "editor.formatOnSave": true,<br>
    "eslint.autoFixOnSave": true,<br>
    "eslint.options": {<br>
@@ -133,17 +133,17 @@ $ ln -s $(pwd)/tools/lint/hooks_js_format.py .git/hooks/pre-commit</pre>
    }<br>
  }</kbd></p>
 
-<h2 dir="ltr" id="Configuration"><span>Configuration</span></h2>
+<h2 id="Configuration"><span>Configuration</span></h2>
 
-<p dir="ltr"><strong>Code quality</strong> configurations for <a href="http://eslint.org">ESLint</a> are entirely determined by the options defined in <span class="message"><span class="content"><a href="https://dxr.mozilla.org/mozilla-central/source/.eslintrc">.eslintrc.js</a>.</span></span> However, <strong>coding style</strong> configurations are largely predetermined within <a href="https://prettier.io">Prettier</a> itself, and we only specify a minimal set of options in <span class="message"><span class="content"><a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a></span></span>. Use of local overrides is not planned and not part of our guidelines.</p>
+<p><strong>Code quality</strong> configurations for <a href="http://eslint.org">ESLint</a> are entirely determined by the options defined in <span class="message"><span class="content"><a href="https://dxr.mozilla.org/mozilla-central/source/.eslintrc">.eslintrc.js</a>.</span></span> However, <strong>coding style</strong> configurations are largely predetermined within <a href="https://prettier.io">Prettier</a> itself, and we only specify a minimal set of options in <span class="message"><span class="content"><a href="https://dxr.mozilla.org/mozilla-central/source/.prettierrc">.prettierrc</a></span></span>. Use of local overrides is not planned and not part of our guidelines.</p>
 
-<h3 dir="ltr" id="Ignored_files_directories">Ignored files &amp; directories</h3>
+<h3 id="Ignored_files_directories">Ignored files &amp; directories</h3>
 
-<p dir="ltr">We maintain a <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierignore">list of ignored directories and files</a>, as well as a <a href="https://dxr.mozilla.org/mozilla-central/source/tools/rewriting/ThirdPartyPaths.txt">list of ignored libraries</a>, which is used by <code>./mach eslint --fix</code>. This is only used for technical reasons (such as testing parsers or debugger functionality), and third-party code.</p>
+<p>We maintain a <a href="https://dxr.mozilla.org/mozilla-central/source/.prettierignore">list of ignored directories and files</a>, as well as a <a href="https://dxr.mozilla.org/mozilla-central/source/tools/rewriting/ThirdPartyPaths.txt">list of ignored libraries</a>, which is used by <code>./mach eslint --fix</code>. This is only used for technical reasons (such as testing parsers or debugger functionality), and third-party code.</p>
 
-<h3 dir="ltr" id="Ignored_code_hunks">Ignored code hunks</h3>
+<h3 id="Ignored_code_hunks">Ignored code hunks</h3>
 
-<p dir="ltr">Sections of code may have formatting disabled using comments, but only for technical reasons. If a section must not be formatted, the following comments will disable the reformat:</p>
+<p>Sections of code may have formatting disabled using comments, but only for technical reasons. If a section must not be formatted, the following comments will disable the reformat:</p>
 
 <pre dir="ltr"><em>// prettier-ignore</em>
 my code which should not be reformated
@@ -159,7 +159,7 @@ my code which should not be reformated
 
 <p>The <code><a href="https://bitbucket.org/octobus/format-source">format-source</a></code> extension, now bundled with <code>version-control-tools</code>, and installed by <code>./mach bootstrap</code>, may be used to seamlessly handle this situation.</p>
 
-<p dir="ltr">To reformat your commits during the rebase or merge phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
+<p>To reformat your commits during the rebase or merge phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
 <pre class="comment-text " id="ct-11">[extensions]
 format-source = ~/.mozbuild/version-control-tools/hgext/format-source</pre>
