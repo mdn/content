@@ -14,6 +14,11 @@ tags:
 
 <p>Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. <em><a href="#term_pointer_event">Pointer events</a></em> address that need.</p>
 
+<div class="blockIndicator note">
+<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+</div>
+
+
 <p>Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).</p>
 
 <p>The <em><a href="#term_pointer">pointer</a></em> is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.</p>
@@ -21,10 +26,6 @@ tags:
 <p>The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (<code>mousedown</code>/<code>pointerdown</code>, <code>mousemove</code>/<code>pointermove</code>, etc.). Consequently, pointer event types are intentionally similar to mouse event types.</p>
 
 <p>Additionally, a pointer event contains the usual properties present in mouse events (client coordinates, target element, button states, etc.) in addition to new properties for other forms of input: pressure, contact geometry, tilt, etc. In fact, the {{domxref("PointerEvent")}} interface inherits all of the {{domxref("MouseEvent")}} properties, thus facilitating the migration of content from mouse events to pointer events.</p>
-
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (along with {{domxref("Document")}} and most other <a href="/en-US/docs/Web/API/HTML_DOM_API">DOM API</a>-related functionality). </p>
-</div>
 
 <h2 id="Terminology">Terminology</h2>
 

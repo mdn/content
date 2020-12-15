@@ -6,11 +6,11 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Ambient Light Events")}}{{SeeCompatTable}}</div>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is accessed in the main thread using {{domxref("window")}}, but is not included in the <a href="/en-US/docs/Web/API/Web_Workers_API#Worker_global_contexts_and_functions">worker global context</a>).</p>
-</div>
-
 <p>The ambient light events are a handy way to make a web page or an application aware of any change in the light intensity. It allows them to react to such a change, for example by changing the color contrast of the User Interface (UI) or by changing the exposure necessary to take a picture.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is not exposed in the <a href="/en-US/docs/Web/API/Web_Workers_API#Worker_global_contexts_and_functions">worker global context</a>).</p>
+</div>
 
 <h2 id="Light_Events">Light Events</h2>
 
