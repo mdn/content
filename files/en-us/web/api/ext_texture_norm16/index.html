@@ -9,12 +9,12 @@ tags:
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>The <code><strong>EXT_texture_norm16</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and provides a set of new 16-bit signed normalized and unsigned normalized fixed point texture, renderbuffer and texture buffer formats.</p>
+<p>The <code><strong>EXT_texture_norm16</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and provides a set of new 16-bit signed normalized and unsigned normalized formats (fixed-point texture, renderbuffer and texture buffer).</p>
 
 <p>When this extension is enabled:</p>
 <ul>
   <li>The {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods accept new formats provided by this extension.</li>
-  <li>The 16-bit normalized fixed point types <code>ext.R16_EXT</code>, <code>ext.RG16_EXT</code> and <code>ext.RGBA16_EXT</code> become available as color-renderable formats and renderbuffers and be created in these formats.</li>
+  <li>The 16-bit normalized fixed-point types <code>ext.R16_EXT</code>, <code>ext.RG16_EXT</code> and <code>ext.RGBA16_EXT</code> become available as color-renderable formats and renderbuffers and be created in these formats.</li>
 </ul>
 
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
@@ -53,7 +53,7 @@ let ext = gl.getExtension('EXT_texture_norm16');
 
 <h3>Texture formats</h3>
 
-<p>The {{domxref("WebGLRenderingContext.texImage2D()")}} accepts new formats when <code>EXT_texture_norm16</code> is enabled. Example calls:</p>
+<p>The {{domxref("WebGLRenderingContext.texImage2D()")}} method accepts new formats when <code>EXT_texture_norm16</code> is enabled. Example calls:</p>
 
 <pre class="brush:js">
 // imageData = Uint16Array
