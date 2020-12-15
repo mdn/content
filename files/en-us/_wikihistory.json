@@ -13418,116 +13418,6 @@
       "Gerv"
     ]
   },
-  "MDN/About/Linking_to_MDN": {
-    "modified": "2019-01-16T13:26:32.209Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "Mingun",
-      "Sheppy",
-      "maybe",
-      "Alkarex",
-      "emorley-old",
-      "teoli"
-    ]
-  },
-  "MDN/Community": {
-    "modified": "2020-12-14T09:31:17.409Z",
-    "contributors": [
-      "SphinxKnight",
-      "rondaknowles1433",
-      "airwawekz",
-      "jswisher",
-      "christopherwilson1",
-      "Tauta2",
-      "wbamberg",
-      "schalkneethling",
-      "chrisdavidmills",
-      "macoo222",
-      "wengker90",
-      "Sheppy",
-      "jsx",
-      "Manish62",
-      "traci",
-      "teoli",
-      "shipukissu2508",
-      "username1001",
-      "MR46DAYAT59",
-      "abdullahasseiri",
-      "dvincent",
-      "Priyanka13",
-      "Rouzbeh",
-      "rhyne24",
-      "hanny77",
-      "Jeremie",
-      "Delapouite",
-      "arvin",
-      "emma",
-      "fayis",
-      "BishopCorlisLeeDeesII",
-      "mkazuhiro",
-      "ethertank",
-      "rsilveira",
-      "davidgumberg",
-      "markg"
-    ]
-  },
-  "MDN/Community/Conversations": {
-    "modified": "2020-02-18T20:33:38.348Z",
-    "contributors": [
-      "jswisher",
-      "SphinxKnight",
-      "xsss",
-      "wbamberg",
-      "odnes",
-      "xfq",
-      "jsx",
-      "Sheppy",
-      "techhelp",
-      "EPDelta"
-    ]
-  },
-  "MDN/Community/Doc_sprints": {
-    "modified": "2019-03-24T00:17:21.814Z",
-    "contributors": [
-      "wbamberg",
-      "m.donoghue",
-      "dcondrey",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
-  "MDN/Community/Whats_happening": {
-    "modified": "2019-11-05T03:42:12.536Z",
-    "contributors": [
-      "Grae-Drake",
-      "wbamberg",
-      "jswisher",
-      "dc0614",
-      "saulitisa",
-      "dvincent",
-      "Sheppy",
-      "SphinxKnight",
-      "Jeremie",
-      "raka88"
-    ]
-  },
-  "MDN/Community/Working_in_community": {
-    "modified": "2020-02-19T17:46:53.349Z",
-    "contributors": [
-      "jswisher",
-      "chrisdavidmills",
-      "christopherwilson1",
-      "wbamberg",
-      "FloraFauna",
-      "xfq",
-      "jalbertbowden",
-      "Sheppy",
-      "SphinxKnight",
-      "ArnoldRay",
-      "rogerhc"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2020-12-14T09:31:17.213Z",
     "contributors": [
@@ -14101,24 +13991,6 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-09-09T10:02:50.782Z",
-    "contributors": [
-      "jswisher",
-      "oyenirat",
-      "wbamberg",
-      "chrisdavidmills",
-      "cosnochic",
-      "nhoobee",
-      "jsx",
-      "Sandaruvan",
-      "fscholz",
-      "iliastsangaris",
-      "JoanYin",
-      "Sheppy",
-      "Sebastianz"
-    ]
-  },
   "MDN/Contribute/Howto/Do_an_editorial_review": {
     "modified": "2020-11-10T10:02:20.383Z",
     "contributors": [
@@ -14278,31 +14150,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2020-12-04T01:11:44.153Z",
-    "contributors": [
-      "sideshowbarker",
-      "Taon",
-      "mfuji09",
-      "SphinxKnight",
-      "viewerboss",
-      "jfkdls",
-      "blue821",
-      "jswisher",
-      "umutbozdag",
-      "ofkos",
-      "wbamberg",
-      "Sheppy",
-      "chrisdavidmills",
-      "Ricochris1",
-      "Anonymodous",
-      "ClompenSander",
-      "stephaniehobson",
-      "mehmetaergun",
-      "anca_haiduc",
-      "keyanrockers87"
-    ]
-  },
   "MDN/Contribute/Howto/Tag": {
     "modified": "2020-03-25T16:30:08.477Z",
     "contributors": [
@@ -14443,22 +14290,6 @@
       "markg",
       "jswisher",
       "jryans"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web": {
-    "modified": "2020-12-13T19:32:30.838Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "CanarySec",
-      "wbamberg",
-      "Uemmra3",
-      "chrisdavidmills",
-      "jswisher",
-      "Andrew_Pfeiffer",
-      "Jeremie",
-      "Sheppy",
-      "teoli"
     ]
   },
   "MDN/Contribute/Howto/Write_for_SEO": {
@@ -15531,20 +15362,6 @@
       "Sheppy",
       "jswisher",
       "alispivak"
-    ]
-  },
-  "MDN/Tools/Document_parameters": {
-    "modified": "2020-09-30T16:47:39.074Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "mfuji09",
-      "Sheppy",
-      "wbamberg",
-      "SphinxKnight",
-      "maybe",
-      "jswisher",
-      "groovecoder"
     ]
   },
   "MDN/Tools/Feeds": {
