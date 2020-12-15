@@ -14,6 +14,10 @@ tags:
 
 <p>The <strong>Cooperative Scheduling of Background Tasks API</strong> (also referred to as the Background Tasks API or simply the <code>requestIdleCallback()</code> API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.</p>
 
+<div class="blockIndicator note">
+<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+</div>
+
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>The main thread of a Web browser is centered around its event loop. This code draws any pending updates to the {{domxref("Document")}} currently being displayed, runs any JavaScript code the page needs to run, accepts events from input devices, and dispatches those events to the elements that should receive them. In addition, the event loop handles interactions with the operating system, updates to the browser's own user interface, and so forth. It's an extremely busy chunk of code, and your main JavaScript code may run right inside this thread along with all of this. Certainly most if not all code that is capable of making changes to the DOM is running in the main thread, since it's common for user interface changes to only be available to the main thread.</p>
