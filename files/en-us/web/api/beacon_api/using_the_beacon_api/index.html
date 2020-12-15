@@ -51,48 +51,6 @@ tags:
 };
 </pre>
 
-<h2 id="WorkerNavigator.sendBeacon()">WorkerNavigator.sendBeacon()</h2>
-
-<p>The Beacon API's {{domxref("WorkerNavigator.sendBeacon()")}} method works identically to the usual method, but is accessible from <em>{{domxref("WorkerGlobalScope","worker global scope")}}</em>.</p>
-
-<p>In the following example, a {{domxref("Worker")}} sends a beacon using the URL and data from the global context.</p>
-
-<p>This code snippet is for the global context:</p>
-
-<pre class="brush: js">function worker_send(url, data) {
-  // Create the worker object
-  var myWorker = new Worker("worker-using.js");
-
-  // Send the worker the URL and data to beacon
-  myWorker.postMessage([url, data]);
-
-  // Set up a message handler to receive the success/fail message from the worker
-  myWorker.onmessage = function(event) {
-    var msg = event.data;
-    // Log worker's send status
-    console.log("Worker reply: sendBeacon() status = " + msg);
-  };
-}
-</pre>
-
-<p>This code snippet is for the worker (<code>worker-using.js</code>):</p>
-
-<pre class="brush: js">onmessage = function(event) {
-  var msg = event.data;
-  // Split the URL and data from the message
-  var url = msg[0];
-  var data = msg[1];
-
-  // If the browser supports worker sendBeacon(), then send the beacon; otherwise
-  // return failure message to the global context
-  if (self.navigator.sendBeacon) {
-    var status = self.navigator.sendBeacon(url, data);
-    postMessage(status ? "success" : "fail");
-  } else {
-    postMessage("Worker: self.navigator.sendBeacon is unsupported");
-  }
-}
-</pre>
 
 <h2 id="See_Also">See Also</h2>
 
