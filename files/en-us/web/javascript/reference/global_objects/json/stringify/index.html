@@ -145,11 +145,11 @@ JSON.stringify({x: 2n});
  <li>If you return any other object, the object is recursively stringified, calling the <code><var>replacer</var></code> function on each property.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You cannot use the <code><var>replacer</var></code> function to remove values from an array. If you return <code>undefined</code> or a function then <code>null</code> is used instead.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If you wish the <code><var>replacer</var></code> to distinguish an initial object from a key with an empty string property (since both would give the empty string as key and potentially an object as value), you will have to keep track of the iteration count (if it is beyond the first iteration, it is a genuine empty string key).</p>
 </div>
 
@@ -277,7 +277,7 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Properties of non-array objects are not guaranteed to be stringified in any particular order. Do not rely on ordering of properties within the same object within the stringification.</p>
 </div>
 

@@ -77,7 +77,7 @@ tags:
 
 <p>By default, when you create a new app with <code>npx degit sveltejs/template my-svelte-project</code>, Svelte will use <a href="https://rollupjs.org/">rollup</a> as the module bundler.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note: There is also an official template for using <a href="https://webpack.js.org/">webpack</a> and also many <a href="https://github.com/sveltejs/integrations#bundler-plugins">community-maintained plugins</a> for other bundlers.</p>
 </div>
 
@@ -141,7 +141,7 @@ export default {
 
 <p>From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: the following section could be applied to any client-side static web site requiring a build step, not just Svelte apps.</p>
 </div>
 
@@ -189,7 +189,7 @@ Auto-detected Project Settings (Svelte):
 
 <p>You can also <a href="https://vercel.com/import/svelte">import a Svelte git project</a> into Vercel from <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a>, or <a href="https://bitbucket.org/product">BitBucket</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: you can globally install Vercel with <code>npm i -g vercel</code> so you don't have to use <code>npx</code> to run it.</p>
 </div>
 
@@ -218,7 +218,7 @@ git add .
 git commit -m "Initial commit"
 git push -u origin master</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: You could use <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol">the <code>git</code> protocol</a> instead of <code>https</code>, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to <a href="https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair">create an SSH key pair</a>. Your origin URL will be like this: <code>git@gitlab.com:[your-user]/mdn-svelte-todo.git</code>.</p>
   </div>
  </li>

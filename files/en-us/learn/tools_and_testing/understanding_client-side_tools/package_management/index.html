@@ -67,7 +67,7 @@ tags:
 
 <p>To see local dependencies really shine, all you need to do is try to download and run an existing project — if it works and all the dependencies work right out of the box, then you have local dependencies to thank for the fact that the code is portable.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: npm is not the only package manager available. A successful and popular alternative package manager is <a href="https://yarnpkg.com/">Yarn</a>. Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as <a href="https://pnpm.js.org/">pnpm</a>.</p>
 </div>
 
@@ -179,7 +179,7 @@ cd parcel-experiment
 <pre class="brush: bash notranslate">Server running at http://localhost:1234
 ✨  Built in 193ms.</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you have trouble with the terminal returning a "command not found" type error, try running the above command with the <code>npx</code> utility, i.e. <code>npx parcel index.html</code>.</p>
 </div>
 
@@ -269,7 +269,7 @@ dist/index.html                   288 B    753ms</pre>
 
 <p>If we were to release this project to a server, we would only release the files in the <code>dist</code> folder. Parcel has automatically handled all the filename changes for us. We would recommend having a look at the source code in <code>dist/index.html</code> just so you can see what changes Parcel has performed automatically.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: At time of writing, Parcel 2 had not been released. However when it does, these commands will all still work because the authors of Parcel have had the good sense to name the tool slightly differently. To install Parcel 1.x you have to install <code>parcel-bundler</code>, but parcel 2.x is simply called <code>parcel</code>.</p>
 </div>
 
@@ -293,7 +293,7 @@ dist/index.html                   288 B    753ms</pre>
 
 <p>yarn is often thought to be quicker than npm in terms of installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The npm package manager is <strong>not </strong>required to install packages from the npm registry, even though they share the same name. pnpm and yarn can consume the same <code class="highlighter-rouge">package.json</code> format as npm, and can install any package from the npm and other package registries.</p>
 </div>
 

@@ -41,7 +41,7 @@ tags:
 
 <p>Sample media should be placed in the Bento4 <code>utils</code> directory and worked here.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add <code>--audio-codec=aac</code> to the <code>mp4-dash-encode.py</code> command line.</p>
 </div>
 
@@ -134,11 +134,11 @@ output
 
 8 directories, 1 file</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>mp4-dash-encode.py</code> does not display ffmpeg error messages. You can see it by specifying the <code>-d</code> option.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If <code>"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"</code> is displayed as an error message, modify <code>mp4-dash-encode.py</code> and remove two <code>"'"</code> from <code>"-force_key_frames 'expr:eq(mod(n,%d),0)'"</code>.</p>
 </div>
 

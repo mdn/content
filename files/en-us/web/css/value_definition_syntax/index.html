@@ -117,7 +117,7 @@ tags:
  <li><code>bold 1em bold</code>, as both components must appear only one time.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> juxtaposition has precedence over the double ampersand, meaning that <code>bold thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>[ bold thin ] &amp;&amp; &lt;length&gt;</code>. It describes <code>bold thin &lt;length&gt;</code> or <code>&lt;length&gt; bold thin</code> but not <code>bold &lt;length&gt; thin</code>.</p>
 </div>
 
@@ -143,7 +143,7 @@ tags:
  <li><code>bold</code>, as it isn't a keyword allowed as value of any of the entity.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> the double ampersand has precedence over the double bar, meaning that <code>bold || thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin &lt;length&gt;</code>, <code>bold thin &lt;length&gt;</code>, or <code>thin &lt;length&gt; bold</code> but not <code>&lt;length&gt; bold thin</code> as bold, if not omitted, must be placed before or after the whole <code>thin &amp;&amp; &lt;length&gt;</code> component.</p>
 </div>
 
@@ -173,7 +173,7 @@ tags:
  <li><code>3em 4.5em</code>, as a component must be present at most one time.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> the double bar has precedence over the single bar, meaning that <code>bold | thin || &lt;length&gt;</code> is equivalent to <code>bold | [ thin || &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, or <code>thin &lt;length&gt; </code>but not <code>bold &lt;length&gt;</code> as only one entity from each side of the <code>|</code> combinator can be present.</p>
 </div>
 

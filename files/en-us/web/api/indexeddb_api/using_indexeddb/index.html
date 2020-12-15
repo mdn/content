@@ -1312,7 +1312,7 @@ input {
 
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 

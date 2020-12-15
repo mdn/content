@@ -32,7 +32,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>If the user clicks <strong>Back</strong> once again, the URL will change to <code><span class="nowiki">http://mozilla.org/foo.html</span></code>, and the document will get a <code>popstate</code> event, this time with a <code>null</code> state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the <code>popstate</code> event.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Calling <code>history.back()</code> normally behaves the same way as clicking the <strong>Back</strong> button. But there is one important exception:</p>
 
 <p><em>After</em> using <code>history.pushState()</code>, calling <code>history.back()</code> <em>does not</em> raise a <code>popstate</code> event. Clicking the browser's <strong>Back</strong> button (still) does.</p>

@@ -142,7 +142,7 @@ arr2.push(4);
 //  arr remains unaffected
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays, as the following example shows. (The same is true with {{jsxref("Object.assign()")}} and spread syntax.)</p>
 
 <pre class="brush: js example-bad notranslate">let a = [[1], [2], [3]];
@@ -196,7 +196,7 @@ arr1 = [...arr2, ...arr1];
 //  arr1 is now [3, 4, 5, 0, 1, 2]
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Unlike <code>unshift()</code>, this creates a new <code>arr1</code>, and does not modify the original <code>arr1</code> array in-place.</p>
 </div>
 

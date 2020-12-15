@@ -180,7 +180,7 @@ audioElement.addEventListener('ended', function() {
     playBtn.textContent = 'Play';
 });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
 </div>
 
@@ -269,7 +269,7 @@ request.onload = function() {
 
 <p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.</p>
 </div>
 

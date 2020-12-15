@@ -59,11 +59,11 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <pre class="brush: js notranslate">let result = someInterface.customMethod?.();</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If there is a property with such a name and which is not a function, using <code>?.</code> will still raise a {{JSxRef("TypeError")}} exception (<code>someInterface.customMethod is not a function</code>).</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be raised (<code>someInterface is null</code>). If you expect that <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>, you have to use <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">?.</span></font> at this position as well: <code>someInterface?.customMethod?.()</code></p>
 </div>
 

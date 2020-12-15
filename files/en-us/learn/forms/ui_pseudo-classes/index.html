@@ -50,7 +50,7 @@ tags:
 
 <p>There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or simply not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a> — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.</p>
 </div>
 
@@ -101,11 +101,11 @@ input:optional {
 
 <p>In the next section, we'll look at a better example of indicating required fields using <code>:required</code>, which also digs into using generated content.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You'll probably not find yourself using the <code>:optional</code> pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If one radio button in a same-named group of radio buttons has the <code>required</code> attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}<strong>.</strong></p>
 </div>
 
@@ -137,7 +137,7 @@ input[type="radio"]:checked::before {
 
 <p>This is really useful — screenreaders already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: This also shows how you can combine a pseudo-class and pseudo-element if required.</p>
 </div>
 
@@ -244,7 +244,7 @@ input:valid + span::before {
 
 <p>As before, we set the <code>&lt;span&gt;</code>s to <code>position: relative</code> so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: We've used <code>::before</code> to add these labels, as we were already using <code>::after</code> for the "required" labels.</p>
 </div>
 
@@ -258,7 +258,7 @@ input:valid + span::before {
 
 <p>As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}}, when their data is inside or outside the specified range, respectvely.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Numeric input types are <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>.</p>
 </div>
 
@@ -310,7 +310,7 @@ input:out-of-range + span::after {
 
 <p>This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.</p>
 </div>
 
@@ -443,7 +443,7 @@ textarea:read-write {
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>:enabled</code> and <code>:read-write</code> are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.</p>
 </div>
 
@@ -533,7 +533,7 @@ input:default ~ span::after {
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can also find the example live on GitHub at <a href="https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html">radios-checked-default.html</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-default.html">source code</a>.)</p>
 </div>
 
@@ -560,11 +560,11 @@ input:default ~ span::after {
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can also find the example live on GitHub at <a href="https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html">radios-checked-indeterminate.html</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/radios-checked-indeterminate.html">source code</a>.)</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find an <a href="/en-US/docs/Web/HTML/Element/Input/checkbox#Indeterminate_state_checkboxes">interesting example involving <code>indeterminate</code> states</a> on the <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> reference page.</p>
 </div>
 

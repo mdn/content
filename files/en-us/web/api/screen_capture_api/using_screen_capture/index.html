@@ -20,7 +20,7 @@ tags:
 
 <p><span class="seoSummary">In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> conference session.</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> It may be useful to note that recent versions of the <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js shim</a> include implementations of <code>getDisplayMedia()</code> to enable screen sharing on browsers that support it but do not implement the current standard API. This works with at least Chrome, Edge, and Firefox.</p>
 </div>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is a {{domxref("DisplayMediaStreamConstraints")}} object which is used to configuring the resulting stream.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and <em>not</em> to filter the available choices.</p>
 </div>
 
@@ -108,13 +108,13 @@ tags:
 
 <p>For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}} constraint for the video, it's applied by scaling the video after the user selects the area to share. It doesn't establish a restriction on the size of the source itself.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Constraints <em>never</em> cause changes to the list of sources available for capture by the Screen Sharing API. This ensures that web applications can't force the user to share specific content by restricting the source list until only one item is left.</p>
 </div>
 
 <p>While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for <code>getDisplayMedia()</code>.</p>
 </div>
 
@@ -150,7 +150,7 @@ tags:
 
 <p>Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
 </div>
 
@@ -192,7 +192,7 @@ tags:
 
 <p>The object <code>displayMediaOptions</code> contains the {{domxref("MediaStreamConstraints")}} to pass into <code>getDisplayMedia()</code>; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to <code>always</code>, indicating that the mouse cursor should always be included in the captured media.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
 </div>
 

@@ -47,7 +47,7 @@ tags:
 
 <p>This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and <strong id="docs-internal-guid-1a994dc9-7fff-a700-71f0-25b6cfe48215"> </strong><code>&lt;input type="image"&gt;</code>). When such an element has <code>width</code> and <code>height</code> attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Currently this effect is being limited to actual <code>&lt;img&gt;</code> elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).</p>
 </div>
 
@@ -72,6 +72,6 @@ tags:
 
 <p>So there you have it — eliminating another piece of jank from web layout! There is no need for a web developer to do anything special to their code to take advantage of this, besides returning to the habit of using <code>width</code> and <code>height</code> attributes in their HTML. They'll just get it for free.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: This new mechanism is enabled in Firefox 69 in beta and Nightly as the spec is worked out (controlled by the <code>layout.css.width-and-height-map-to-aspect-ratio.enabled</code> pref), and it is <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/hbhKRuBzZ4o">currently being implemented in Chrome</a>. It will ship with <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1585637">Firefox 71</a>.</p>
 </div>

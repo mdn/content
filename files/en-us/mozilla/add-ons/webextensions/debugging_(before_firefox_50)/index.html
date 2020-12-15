@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.</p>
 
 <p>If you're using Firefox 50 or later, see the <a href="/en-US/Add-ons/WebExtensions/Debugging">main article on debugging extensions</a>.</p>
@@ -176,11 +176,11 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Note that content scripts won't appear in the source listing until they are loaded. If you need to access them as soon as they load, try adding a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger;</a></code> statement at the start of your script.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note: you only need, and can only access, the Browser Content Toolbox if you are developing against multiprocess Firefox.</p>
 </div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Enabling worker debugging in Toolbox Options will disable <span id="summary_alias_container"><span id="short_desc_nonedit_display">Browser Content Toolbox debugging, </span></span> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
 </div>
 
@@ -206,7 +206,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12622/disable-autohide.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#Debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">), as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>

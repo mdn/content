@@ -134,7 +134,7 @@ tags:
 
     <p>Note that some characters like <code>:</code>, <code>-</code>, <code>@</code>, etc. neither have a special meaning when escaped nor when unescaped. Escape sequences like <code>\:</code>, <code>\-</code>, <code>\@</code> will be equivalent to their literal, unescaped character equivalents in regular expressions. However, in regular expressions with the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">unicode flag</a>, these will cause an <em>invalid identity escape</em> error. This is done to ensure backward compatibility with existing code that uses new escape sequences like <code>\p</code> or <code>\k</code>.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
     </div>
    </td>
@@ -161,7 +161,7 @@ tags:
    <td>
     <p>Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, <code>/^A/</code> does not match the "A" in "an A", but does match the first "A" in "An A".</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
     </div>
    </td>
@@ -200,7 +200,7 @@ tags:
 
 <h3 id="Other_assertions">Other assertions</h3>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <code>?</code> character may also be used as a quantifier.</p>
 </div>
 
@@ -279,7 +279,7 @@ tags:
    <td>
     <p>A negated or complemented character set. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character set as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">beginning of input</a>.</p>
     </div>
    </td>
@@ -309,7 +309,7 @@ tags:
 
     <p>For example, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
     </div>
    </td>
@@ -333,7 +333,7 @@ tags:
 
 <div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">the original article</a></div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> In the following, <em>item</em> refers not only to singular characters, but also includes <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups and ranges</a>.</p>
 </div>
 
@@ -443,6 +443,6 @@ tags:
  <dd>One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value <code>Decimal_Number</code> for the <code>General_Category</code> property may be written <code>Nd</code>, <code>digit</code>, or <code>Decimal_Number</code>). For most values, the <em><code>UnicodePropertyName</code> </em>part and equals sign may be omitted. If a <em><code>UnicodePropertyName</code> </em>is specified, the value must correspond to the property type given.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples</p>
 </div>

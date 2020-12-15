@@ -13,11 +13,11 @@ tags:
 
 <p>The <strong><code>onunload</code></strong> property of the {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for processing {{Event("unload")}} events. These events fire when the window is unloading its content and resources. The resource removal is processed <em>after</em> the <code>unload</code> event occurs.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Browsers equipped with pop-up blockers will ignore all {{domxref("Window.open()")}} method calls in <code>onunload</code> event handler functions.</p>
 </div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>The <code>onunload</code> (and the <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code> event itself) are not the right features to use with <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a></code>. Instead for <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a>,</code> use the <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> and <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> events. See discussion comments in the blog post <a href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is broken</a>.</p>
 </div>
 

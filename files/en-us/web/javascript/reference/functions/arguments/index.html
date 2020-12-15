@@ -18,11 +18,11 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If you're writing ES6 compatible code, then <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> should be preferred.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See <a href="#Description">§Description</a> for details.</p>
 </div>
 
@@ -150,7 +150,7 @@ foo(1, 2, 3); // [1, 2, 3]
 
 <p>In strict-mode code, the <code>arguments</code> object behaves the same whether or not a function is passed rest, default, or destructured parameters. That is, assigning new values to variables in the body of the function will not affect the <code>arguments</code> object. Nor will assigning new variables to the <code>arguments</code> object affect the value of variables.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You cannot write a <code>"use strict";</code> directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params">a syntax error</a>.</p>
 </div>
 

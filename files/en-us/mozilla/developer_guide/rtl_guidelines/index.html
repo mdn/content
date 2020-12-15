@@ -87,7 +87,7 @@ tags:
 }
 </pre>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Note that it may be inappropriate to use logical properties when embedding LTR within RTL contexts, this is described further in the document.</p>
 </div>
 
@@ -175,7 +175,7 @@ tags:
 }
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>The LTR rule is seperate from the global rule to avoid having the left padding apply on RTL without having to reset it in the RTL rule.</p>
 </div>
 
@@ -188,7 +188,7 @@ tags:
 <p>To test for RTL layouts in Firefox, you can go to about:config and set <span dir="auto"><code class="c-mrkdwn__code"><span class="c-mrkdwn__highlight">intl.l10n.pseudo</span></code> to <code class="c-mrkdwn__code">bidi</code></span> or <code>intl.uidirection</code> to <code>1</code>.<br>
  The Firefox UI should immediately flip, but a restart may be required to take effect in some Firefox features and interactions.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>When testing with <code>intl.uidirection</code> set to <code>1</code>, you may see some oddities regarding text ordering due to the nature of displaying LTR text in RTL layout.</p>
 
 <p><img alt="about:protections in RTL layour- English vs. Hebrew" src="https://mdn.mozillademos.org/files/16970/about-protections-rtl.png" style="height: 124px; width: 350px;"></p>

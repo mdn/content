@@ -42,7 +42,7 @@ image-rendering: unset;</pre>
  <dd>When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as <code>auto</code>.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The values <code>optimizeQuality</code> and <code>optimizeSpeed</code> present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the <code>smooth</code> and <code>pixelated</code> values respectively.</p>
 </div>
 
@@ -122,7 +122,7 @@ image-rendering: unset;</pre>
 
 <p>{{Compat("css.properties.image-rendering")}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Although <code>crisp-edges</code> is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) does so. <a href="https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727">In Firefox</a>, <code>crisp-edges</code> is interpreted as nearest-neighbor, <code>pixelated</code> is not supported, and <code>auto</code> is interpolated as trilinear or linear.</p>
 
 <p>For behavior on Chromium and Safari (WebKit), see the <code><a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&amp;q=GetInterpolationQuality&amp;g=0&amp;l=1160">GetInterpolationQuality</a></code> function and <code><a href="https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324">CSSPrimitiveValue::operator ImageRendering()</a></code> respectively.</p>

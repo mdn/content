@@ -17,11 +17,11 @@ tags:
 
 <p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should first broach the subject in the <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum.</a></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to search for places where a given class is being used on MDN, you can do so using a URL of the form <code>https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code>. For example, to find pages that use our button class, try the URL <a href="https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button">https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button</a>.</p>
 </div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Important</strong>: This guide is incomplete. See {{anch("Updating this guide")}} for information on how to help us finish it.</p>
 </div>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>Links to content outside of MDN are automatically formated to have the class <code style="white-space: nowrap;">external-icon</code> added to them, which creates an icon indicating that they lead away from the site. In some cases, however, this icon is unwanted and interferes with other styles. It can be removed by adding the <code style="white-space: nowrap;">ignore-external</code> class to the link.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Most of the time, we don't want to use these. <code style="white-space: nowrap;">.external-icon</code> is added automatically in order to help protect users from unknowingly leaving MDN. The only generally acceptable use cases are links to MDN-specific domains or subdomains, such as the ones we use for our sample code or other services.</p>
 </div>
 
@@ -147,7 +147,7 @@ function works(){
 <p><img alt="" src="https://mdn.mozillademos.org/files/11859/seosummary-menu-option.png" style="border: 1px solid black; display: block; height: 58px; margin: 0px auto; width: 235px;"></p>
 
 <details>
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary: there is no need to use this on most pages.</p>
 </div>
 
@@ -175,7 +175,7 @@ function works(){
 <p><img alt="SEOSummary as it is used by Facebook" src="https://mdn.mozillademos.org/files/11857/seosummary.jpg" style="display: block; height: 338px; margin: 0px auto; width: 500px;"></p>
 </details>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This is <em>not</em> the same as the <code>{{anch(".summary")}}</code> class, which creates a special "About this page" style blurb box. That class does not set the SEO summary used by search engines or the macros that MDN uses to generate tooltips and to automatically produce menus listing subpages.</p>
 </div>
 
@@ -420,7 +420,7 @@ function works(){
 
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: This is how we usually present a note in an MDN article.</p>
 </div>
 
@@ -431,7 +431,7 @@ function works(){
 
 <h4 id="Example_syntax_12">Example syntax</h4>
 
-<pre class="brush: html; notranslate">&lt;div class="blockIndicator note" role="complementary"&gt;
+<pre class="brush: html; notranslate">&lt;div class="notecard note" role="complementary"&gt;
   &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
 </details>
@@ -468,7 +468,7 @@ function works(){
 
 <p>Creates a summary box for the page, which visually manifests as a grey box with extra padding — should be used for the opening paragraph of an article (but not for <em>reference</em> articles), to give it extra importance on the page.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Important:</strong> This is <em>not</em> the same as the {{anch(".seoSummary")}} class, which establishes the section of text which is used by search engines to summarize the page in results listings and by MDN to create tooltips and menus of page titles and their summaries. This class is strictly a visual effect. You can use both classes together if you wish in order to establish both a visible and an effective summary for the page.</p>
 </div>
 
@@ -518,7 +518,7 @@ function works(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
 </div>
 
@@ -546,7 +546,7 @@ function works(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
 </div>
 
@@ -563,7 +563,7 @@ function works(){
 
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning</strong>: Here be dragons!</p>
 </div>
 
@@ -574,7 +574,7 @@ function works(){
 
 <h4 id="Example_syntax_17">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;div class="blockIndicator warning"&gt;
+<pre class="brush: html notranslate">&lt;div class="notecard warning"&gt;
   &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
 &lt;/div&gt;</pre>
 </details>

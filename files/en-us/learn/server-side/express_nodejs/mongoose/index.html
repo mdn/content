@@ -573,12 +573,12 @@ SomeModel.find(callback_function);</pre>
   <ul>
    <li>Click the <strong>Allow Access from Anywhere</strong> button.<br>
     This will open a form with <code>0.0.0.0/0</code> pre-seeded for the IP Address. Click the <strong>Add IP Address</strong> button.
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.</p>
     </div>
    </li>
    <li>Enter a username and password and click <strong>Create MongoDB User</strong> button.
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.</p>
     </div>
    </li>

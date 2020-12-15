@@ -295,7 +295,7 @@ if (!Array.prototype.reduce) {
 }
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Caution:</strong> If you need to support truly obsolete JavaScript engines that do not support {{domxref("Object.defineProperty()")}}, it is best not to polyfill <code>Array.prototype</code> methods at all, as you cannot make them <strong>non-enumerable</strong>.</p>
 </div>
 
@@ -437,7 +437,7 @@ let allbooks = friends.reduce(function(accumulator, currentValue) {
 
 <h3 id="Remove_duplicate_items_in_an_array">Remove duplicate items in an array</h3>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If you are using an environment compatible with {{jsxref("Set")}} and {{jsxref("Array.from()")}}, you could use <code>let orderedArray = Array.from(new Set(myArray))</code> to get an array where duplicate items have been removed.</p>
 </div>
 

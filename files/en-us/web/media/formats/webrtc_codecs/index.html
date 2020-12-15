@@ -66,7 +66,7 @@ tags:
 
 <p>Complete details of what video codecs and configurations WebRTC is required to support can be found in {{RFC(7742, "WebRTC Video Processing and Codec Requirements")}}. It's worth noting that the RFC covers a variety of video-related requirements, including color spaces (sRGB is the preferred, but not required, default color space), recommendations for webcam processing features (automatic focus, automatic white balance, automatic light level), and so on.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> These requirements are for web browsers and other fully-WebRTC compliant products. Non-WebRTC products that are able to communicate with WebRTC to some extent may or may not support these codecs, although they're encouraged to by the specification documents.</p>
 </div>
 
@@ -191,7 +191,7 @@ tags:
 
 <p>It's useful to note that {{RFC(7874)}} defines more than a list of audio codecs that a WebRTC-compliant browser must support; it also provides recommendations and requirements for special audio features such as echo cancelation, noise reduction, and audio leveling.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.</p>
 </div>
 
@@ -325,7 +325,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>On return, then, <code>codecList</code> is either <code>null</code> to indicate that no video tracks were found or it's an array of {{domxref("RTCRtpCodecParameters")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.</p>
 </div>
 
@@ -443,7 +443,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main <a href="/en-US/docs/Web/Media/Formats/Video_codecs">guide to video codecs used on the web</a>. Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical web site developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> The information here does <em>not</em> constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.</p>
 </div>
 

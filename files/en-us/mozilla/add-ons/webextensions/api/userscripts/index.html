@@ -23,13 +23,13 @@ tags:
  <li>no access to WebExtension APIs or associated permissions granted to the extension: the API script, which inherits the extension’s permissions, can provide packaged WebExtension APIs to registered user scripts. An API script is declared in the extension's manifest file using the "user_scripts" manifest key.</li>
 </ul>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>This API requires the presence of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> key in the manifest.json, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
 </div>
 
 <p>To use the API, call <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> passing in an object defining the scripts to register. The method returns a Promise that is resolved with a <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code> object.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
 </div>
 

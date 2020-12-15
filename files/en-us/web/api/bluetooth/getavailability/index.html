@@ -11,7 +11,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>getAvailability()</code></strong> method of {{DOMxRef("Bluetooth")}} interface of <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> interface exposes the Bluetooth capabilities of the current device. For a returns a {{JSxRef("Boolean")}} which is <code>true</code> if the deveice has a Bluetooth adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to expose a real value).</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> User might not allow use of Web Bluetooth API, even if <code>getAvailability()</code> returned <code>true</code> ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User Agent to return a fixed value instead of a real one.</p>
 </div>
 

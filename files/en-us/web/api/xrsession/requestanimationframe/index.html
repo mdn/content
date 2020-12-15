@@ -23,7 +23,7 @@ tags:
 
 <p>You can cancel a previously scheduled animation by calling {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Note:</strong> Despite the obvious similarities between these methods and the global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function provided by the <code>Window</code> interface, you <em>must not</em> treat these as interchangeable. There is <em>no</em> guarantee that the latter will work at all while an immersive XR session is underway.</p>
 </div>
 
@@ -56,7 +56,7 @@ tags:
 
 <p>The following example requests <code>XRSession</code> with "inline" mode so that it can be displayed in an HTML element (without the need for a separate AR or VR device).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> A real application should check that the device and the User Agent support WebXR API at all and then that they both support the desired session type via {{DOMxRef("XR.isSessionSupported()")}}.</p>
 </div>
 

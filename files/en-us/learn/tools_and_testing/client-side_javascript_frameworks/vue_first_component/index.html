@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p class="summary"><strong>Note</strong>: If you need to check your code against our version, you can find a finished version of the sample Vue app code in our <a href="https://github.com/mdn/todo-vue">todo-vue repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>.</p>
 </div>
 
@@ -142,7 +142,7 @@ export default {
  <li>The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
 </div>
 
@@ -233,7 +233,7 @@ found in
 
 <p>You use <code>this</code> to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
 </div>
 
@@ -297,7 +297,7 @@ found in
 
 <pre class="brush: bash notranslate">npm install --save lodash.uniqueid</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
 </div>
 

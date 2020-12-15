@@ -22,11 +22,11 @@ tags:
 
 <p>When considering using <code>browser_style: true</code>, you need to test your extension with various themes (built-in or from AMO) to make sure that the extension UI behaves the way you expect it to.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>When <code>browser_style: true</code> is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Google Chrome</strong> and <strong>Opera</strong> use <code>chrome_style</code> instead of <code>browser_style</code>, so if you wish to support them, you need to add both keys.</p>
 </div>
 
@@ -85,7 +85,7 @@ tags:
  </tbody>
 </table>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>See {{bug(1465256)}} for removal of this unnecessary requirement.</p>
 </div>
 

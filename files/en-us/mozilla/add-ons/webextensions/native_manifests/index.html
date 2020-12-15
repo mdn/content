@@ -223,7 +223,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
    <td>
     <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> values. Each value represents an extension which is allowed to interact with the module.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> This means you will probably want to include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key in your extension's <code>manifest.json</code> file, so you can set an explicit ID during development.</p>
     </div>
    </td>
@@ -263,7 +263,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>The key should have a single default value, which is the path to the manifest.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>As of Firefox 64:</strong> The 32-bit registry view (<a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node) </a>will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.</p>
 
 <p><strong>For Firefox 63 and older:</strong> This key should <em>not</em> be created under <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a>, even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the <code>KEY_WOW64_64KEY</code> or <code>KEY_WOW64_32KEY</code> flags into <code>RegCreateKeyEx</code>. See <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a>.</p>

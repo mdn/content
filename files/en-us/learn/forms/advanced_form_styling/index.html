@@ -93,7 +93,7 @@ tags:
   appearance: none;
 }</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.</p>
 </div>
 
@@ -122,7 +122,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use <code>input[type="search"]::-webkit-search-cancel-button { display: none; }</code>. However, this seems to get rid of the icon <em>with</em> focus too, with no apparent way to get it back.</p>
 </div>
 
@@ -271,7 +271,7 @@ input[type="checkbox"]:disabled {
 
 <p>If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: While Internet Explorer doesn't support any version of <code>appearance</code>, the <code>input[type=checkbox]::-ms-check</code> enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name <code>-ms-<em><strong>check</strong></em></code>.</p>
 </div>
 
@@ -342,7 +342,7 @@ button {
   margin: 0 auto;
 }</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to test these examples across a number of browsers simultaneously, you can <a href="https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html">find it live here</a> (also <a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html">see here for the source code</a>).</p>
 
 <p>Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the <code><a href="/en-US/docs/Web/HTML/Element/input/file#Examples">&lt;input type="file"&gt;</a></code> reference page.</p>
@@ -426,7 +426,7 @@ button {
 
 <p>However, the internal parts of the control (e.g. the popup calendar that you use pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using <code>appearance: none;</code>. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: It is worth mentioning <code><a href="/en-US/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the <code>number</code> type the data being collected is simpler, and it is easy to just use a <code>text</code> input type instead if desired (or <code>tel</code> if you want mobile browsers to show the numeric keypad).</p>
 </div>
 

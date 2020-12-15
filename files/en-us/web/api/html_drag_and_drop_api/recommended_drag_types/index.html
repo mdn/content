@@ -42,7 +42,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>To drag multiple links, separate each link inside the <code>text/uri-list</code> data with a CRLF linebreak. Lines that begin with a number sign (<code>#</code>) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
 </div>
 
@@ -55,7 +55,7 @@ http://www.example.com
 
 <p>When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type <code>URL</code> may be used to refer to the first valid link within data for the <code>text/uri-list</code> type.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Do not add data with the <code>URL</code> type — attempting to do so will set the value of the <code>text/uri-list</code> type instead.</p>
 </div>
 

@@ -121,7 +121,7 @@ tags:
  <li>Manipulate and transform streams of text (for example changing all the instances of <code>&lt;div&gt;</code>s in an HTML file to <code>&lt;article&gt;</code>): <code>awk</code>, <code>tr</code>, <code>sed</code></li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!</p>
 </div>
 
@@ -145,7 +145,7 @@ tags:
 
 <pre class="brush: bash notranslate">cd ..</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing <code>cd D</code> and pressing <kbd>tab</kbd> — it should autocomplete the directory name <code>Desktop</code> for you, provided it is present in the current directory. Bear this in mind as you move forward.</p>
 </div>
 
@@ -163,7 +163,7 @@ cd src</pre>
 
 <p>Note that including a leading slash on your path makes the path absolute, for example <code>/Users/your-user-name/Desktop</code>. Omitting the leading slash like we’ve done above makes the path relative to the your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: On windows you use backslashes instead of forward slashes, e.g. <code>cd Desktop\project\src</code> — this may seem really odd, but if you are interested in why, <a href="https://www.youtube.com/watch?v=5T3IJfBfBmI">watch this YouTube clip</a> featuring an explanation by one of Microsoft’s Principal engineers.</p>
 </div>
 
@@ -191,11 +191,11 @@ cd src</pre>
 
 <p><img alt="A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command" src="https://mdn.mozillademos.org/files/17181/mac-terminals-ls.png" style="border-style: solid; border-width: 1px; display: block; height: 360px; margin: 0px auto; width: 500px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: To find out exactly what options each command has available, you can look at its <a href="https://en.wikipedia.org/wiki/Man_page">man page</a>. This is done by typing the <code>man</code> command, followed by the name of the command you want to look up, for example <code>man ls</code>. This will open up the man page in the terminal’s default text file viewer (for example, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code> in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it’s there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer’s quit command ("q" in <code>less</code>; you may have to search on the web to find it if it isn’t obvious).</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example <code>ls -lah</code>, or <code>ls -ltrh</code>. Try looking at the <code>ls</code> man page to work out what these extra options do!</p>
 </div>
 
@@ -216,7 +216,7 @@ cd src</pre>
  <li><code>rm</code> — removes the specified file. For example, <code>rm mdn-example.txt</code> deletes a single file called <code>mdn-example.txt</code>. Note that this delete is permanent and can’t be undone via the recycle bin that you might have on your desktop user interface.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, <code>rm mdn-*</code> would delete all files beginning with <code>mdn-</code>. <code>rm mdn-*.bak</code> would delete all files that start with <code>mdn- </code>and end with <code>.bak</code>.</p>
 </div>
 

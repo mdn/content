@@ -19,7 +19,7 @@ tags:
 
 <p>Unlike <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, <code>EventSource</code> is a useful approach for handling things like social media status updates, news feeds, or delivering data into a <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">client-side storage</a> mechanism like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a>.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is <em>per browser</em> and set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com.</code> (from <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
 </div>
 

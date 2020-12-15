@@ -11,7 +11,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a <a href="/en-US/docs/Web/HTTP/Cookies#Third-party_cookies">first-party</a> or same-site context. </span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Standards related to the Cookie <code>SameSite</code> attribute recently changed such that:</p>
 
 <ul>
@@ -32,7 +32,7 @@ tags:
 
 <p>This is the default cookie value if <code>SameSite</code> has not been explicitly specified in recent browser versions (see the "SameSite: Defaults to Lax" feature in the Browser Compatibility).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><code>Lax</code> replaced <code>None</code> as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.</p>
 </div>
 
@@ -64,7 +64,7 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 <p>A <a href="#Secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>On older browser versions you might simply get a warning that the cookie will be blocked in future. For example:</p>
 
 <pre class="syntaxbox notranslate">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite” attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite

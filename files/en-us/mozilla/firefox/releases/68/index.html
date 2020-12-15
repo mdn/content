@@ -162,7 +162,7 @@ tags:
  <li>
   <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} may no longer be used from a non-secure context; attempting to do so now throws a <code>NotAllowedError</code> exception. Secure contexts are those loaded using HTTPS, those located using the <code>file:///</code> scheme, and those loaded from <code>localhost</code>. For now, if you must, you can re-enable the ability to perform insecure calls to <code>getUserMedia()</code> by setting the preference <code>media.getusermedia.insecure.enabled</code> to <code>true</code> ({{bug(1335740)}}).</p>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note:</strong> In the future, Firefox will also remove the {{domxref("navigator.mediaDevices")}} property on insecure contexts, preventing all access to the {{domxref("MediaDevices")}} APIs. <strong>This is already the case in Nightly builds.</strong></p>
   </div>
  </li>

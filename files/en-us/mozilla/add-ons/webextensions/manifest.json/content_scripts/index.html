@@ -62,7 +62,7 @@ tags:
      <dt><code>true</code></dt>
      <dd>Inject the scripts specified in <code><a href="#js">js</a></code> and <code><a href="#css">css</a></code> into all frames matching the specified URL requirements, even if the frame is not the topmost frame in a tab. This does not inject into child frames where only their parent matches the URL requirements and the child frame does not match the URL requirements. The URL requirements are checked for each frame independently.</dd>
      <dd>
-     <div class="blockIndicator note">
+     <div class="notecard note">
      <p><strong>Note:</strong> This also applies to any tracker or ad that uses iframes, which means that enabling this could make your content script get called dozens of times on some pages.</p>
      </div>
      </dd>
@@ -81,7 +81,7 @@ tags:
 
     <p>Files are injected in the order given, and before the DOM is loaded.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
     </div>
    </td>
@@ -139,7 +139,7 @@ tags:
 
     <p>If the user loads <code>https://example.org/</code>, and this page embeds an empty iframe, then <code>"my-script.js"</code> will be loaded into the iframe.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note: </strong><code>match_about_blank</code> is supported in Firefox from version 52. </p>
 
     <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>

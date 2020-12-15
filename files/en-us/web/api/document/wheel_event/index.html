@@ -39,7 +39,7 @@ tags:
 
 <p>This event replaces the non-standard deprecated <code><a href="/en-US/docs/Web/API/Element/mousewheel_event">mousewheel</a></code> event.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Don't confuse the <code>wheel</code> event with the <code><a href="/en-US/docs/Web/API/Document/scroll_event">scroll</a></code> event. The default action of a <code>wheel</code> event is implementation-specific, and doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, the <code>delta*</code> values in the <code>wheel</code> event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the <code>wheel</code> event's <code>delta*</code> properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} in the <code>scroll</code> event.</p>
 </div>
 

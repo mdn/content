@@ -100,7 +100,7 @@ MyInterface includes MyMixin;</pre>
  <li>They are listed on the interface page when the interface <em>implements</em> the mixin. Unlike regular properties and methods, they are prefixed with the mixin name and not the interface name. You can see <code>Body</code> properties and methods listed on both {{domxref('Request')}} and {{domxref('Response')}} interfaces, as they both implement the <code>Body</code> mixin.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><span><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface (such cases are bugs in the relevant specs — they shouldn't be defined as mixins, but as partial interfaces.)</span></p>
 </div>
 

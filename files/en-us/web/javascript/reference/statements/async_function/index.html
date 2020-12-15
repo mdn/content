@@ -236,7 +236,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <p>In the above example, notice there is no <code>await</code> statement after the <code>return</code> keyword, although that would be valid too: The return value of an <code>async function</code> is implicitly wrapped in {{jsxref("Promise.resolve")}} - if it's not already a promise itself (as in this example).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <h4 id="return_await_promiseValue_vs._return_promiseValue">return await promiseValue vs. return promiseValue</h4>
 
 <p>The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not imply that <code>return await promiseValue</code> is functionally equivalent to <code>return promiseValue</code>.</p>

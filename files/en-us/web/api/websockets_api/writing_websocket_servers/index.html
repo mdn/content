@@ -36,7 +36,7 @@ tags:
 
 <p>The handshake is the "Web" in WebSockets. It's the bridge from HTTP to WebSockets. In the handshake, details of the connection are negotiated, and either party can back out before completion if the terms are unfavorable. The server must be careful to understand everything the client asks for, otherwise security issues can occur.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Tip:</strong> The request-uri (<code>/chat</code> here) has no defined meaning in the spec. So, many people  use it to let one server handle multiple WebSocket applications. For example, <code>example.com/chat</code> could invoke a multiuser chat app, while <code>/game</code> on the same server might invoke a multiplayer game.</p>
 </div>
 
@@ -55,7 +55,7 @@ Sec-WebSocket-Version: 13
 
 <p>The client can solicit extensions and/or subprotocols here; see <a href="#Miscellaneous">Miscellaneous</a> for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Tip:</strong> All <strong>browsers</strong> send an <a href="/en-US/docs/HTTP/Access_control_CORS#Origin"><code>Origin</code> header</a>. You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a <a href="/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a> if you don't like what you see. However, be warned that non-browser agents can send a faked <code>Origin</code>. Most applications reject requests without this header.</p>
 </div>
 
