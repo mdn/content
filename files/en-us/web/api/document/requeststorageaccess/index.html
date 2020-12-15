@@ -74,7 +74,7 @@ tags:
 
 <p>When an ephemeral or persistent storage access grant expires, the number of origins the requesting origin has storage access to is decremented by one.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If the requesting origin is not <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Tracking_protection_explained">classified as a tracking origin</a>, the access request is automatically given an ephemeral storage access grant, which will go away when the page is reloaded. The user is never shown a prompt in this case, and calling <code>requestStorageAccess()</code> won’t have any side effects besides changing the value returned by {{domxref("Document.hasStorageAccess()")}}.</p>
 </div>
 

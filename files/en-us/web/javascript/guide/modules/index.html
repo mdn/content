@@ -38,7 +38,7 @@ tags:
 
 <p>These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to download the examples and run them locally, you'll need to run them through a local web server.</p>
 </div>
 
@@ -52,7 +52,7 @@ modules/
     canvas.js
     square.js</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.</p>
 </div>
 
@@ -146,7 +146,7 @@ export function draw(ctx, length, x, y, color) {
 
 <p>You can see such lines in action in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In some module systems, you can omit the file extension and the leading <code>/</code>, <code>./</code>, or <code>../</code> (e.g. <code>'modules/square'</code>). This doesn't work in native JavaScript modules.</p>
 </div>
 
@@ -160,7 +160,7 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note: </strong>Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to <code>const</code>. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike <code>const</code>.</p>
 </div>
 
@@ -218,7 +218,7 @@ reportPerimeter(square1.length, reportList);
 
 <pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The as syntax for renaming exported items is explained below in the <a href="#Renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
 </div>
 
@@ -388,7 +388,7 @@ export { Circle } from './shapes/circle.js';</pre>
 
 <p>These grab the exports from the individual submodules and effectively make them available from the <code>shapes.js</code> module.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The exports referenced in <code>shapes.js</code> basically get redirected through the file and don't really exist there, so you won't be able to write any useful related code inside the same file.</p>
 </div>
 

@@ -25,7 +25,7 @@ window.name = <var>string</var>;
 
 <p><code>Window.name</code> has also been used in some frameworks for providing cross-domain messaging (e.g. <a href="http://www.thomasfrank.se/sessionvars.html">SessionVars</a> and Dojo's <a href="https://www.sitepen.com/blog/2008/07/22/windowname-transport/">dojox.io.windowName</a>) as a more secure alternative to JSONP. Modern web applications hosting sensitive data should, however, not rely on <code>window.name</code> for cross-domain messaging — that is not its intended purpose and there are safer/better ways of sharing information between windows. <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code> is the recommended mechanism.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>window.name</code> converts all stored values to their string representations using the <code>toString</code> method.</p>
 </div>
 
@@ -40,7 +40,7 @@ window.name = <var>string</var>;
 &lt;a href="url2" target="other-tab"&gt;This link will be opened in the other tab.&lt;/a&gt;
 </pre>
 
-<div class="blockIndicator note"></div>
+<div class="notecard note"></div>
 
 <h2 id="Specifications">Specifications</h2>
 

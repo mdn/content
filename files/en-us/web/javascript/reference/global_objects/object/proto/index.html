@@ -11,11 +11,11 @@ tags:
   - Reference
 ---
 <div>{{JSRef}}{{Deprecated_header}}
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Changing the <code>[[Prototype]]</code> of an object is, by the nature of how modern JavaScript engines optimize property accesses, a very slow operation, in <strong><em>every</em></strong> browser and JavaScript engine. The effects on the performance of altering inheritance are subtle and far-flung, and are not limited to simply the time spent in <code>obj.__proto__ = ...</code> statements, but may extend to <strong><em>any</em></strong> code that has access to <strong><em>any</em></strong> object whose <code>[[Prototype]]</code> has been altered. If you care about performance you should avoid setting the <code>[[Prototype]]</code> of an object. Instead, create a new object with the desired <code>[[Prototype]]</code> using {{JSxRef("Object.create()")}}.</p>
 </div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> While <code>Object.prototype.__proto__</code> is supported today in most browsers, its existence and exact behavior has only been standardized in the ECMAScript 2015 specification as a legacy feature to ensure compatibility for web browsers. For better support, use {{JSxRef("Object.getPrototypeOf()")}} instead.</p>
 </div>
 </div>

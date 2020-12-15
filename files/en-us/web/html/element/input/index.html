@@ -1042,13 +1042,13 @@ input[min][max] {}
 
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Don't use the {{htmlattrxref("placeholder", "input")}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
 </div>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
@@ -1197,11 +1197,11 @@ nameInput.addEventListener('invalid', () =&gt; {
  <li>If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking <code>setCustomValidity()</code> with an empty string value. We therefore do this every time the <code>input</code> event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the <em>server side</em>. Invalid values can still be sent by older browsers or by bad actors.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).</p>
 </div>
 

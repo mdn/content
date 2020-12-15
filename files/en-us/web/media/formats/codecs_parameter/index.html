@@ -53,7 +53,7 @@ tags:
 
 <p>As is the case with any MIME type parameter, <code>codecs</code> must be changed to <code>codecs*</code> (note the asterisk character, <code>*</code>) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>When the <code>codecs</code> parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.</p>
 </div>
 
@@ -441,7 +441,7 @@ tags:
 
 <p>Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full <code>codecs</code> value <code>mp4a.40.17</code>. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as <code>mp4a.40.02</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading <code>0</code> is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.</p>
 </div>
 

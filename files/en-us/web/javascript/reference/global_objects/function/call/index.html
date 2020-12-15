@@ -25,7 +25,7 @@ tags:
  <dd>
  <p>The value to use as <code>this</code> when calling <code><var>func</var></code>.</p>
 
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p><strong>Caution:</strong> In certain cases, <code><var>thisArg</var></code> may not be the actual value seen by the method.</p>
 
  <p>If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} and {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the global object, and primitive values will be converted to objects.</p>
@@ -45,7 +45,7 @@ tags:
 
 <p><code>call()</code> provides a new value of <code>this</code> to the function/method. With <code>call()</code>, you can write a method once and then inherit it in another object, without having to rewrite the method for the new object.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> While the syntax of this function is almost identical to that of {{jsxref("Function.prototype.apply", "apply()")}}, the fundamental difference is that <code>call()</code> accepts an <strong>argument list</strong>, while <code>apply()</code> accepts a <strong>single array of arguments</strong>.</p>
 </div>
 
@@ -84,7 +84,7 @@ const fun = new Toy('robot', 40);
 
 <p>The main purpose of the anonymous function here is to add a <code>print</code> function to every object, which is able to print the correct index of the object in the array.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Passing the object as <code>this</code> value is not strictly necessary, but is done for explanatory purpose.</p>
 </div>
 

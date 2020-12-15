@@ -35,7 +35,7 @@ tags:
 
 <p>The endpoints are arranged into groups; an endpoint group can work together to provide load balancing (each endpoint will receive a specified proportion of report traffic) and safeguarding against failure (fallback endpoints can be specified to use if the primary ones fail).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.</p>
 </div>
 
@@ -122,7 +122,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="https://mdn.mozillademos.org/files/16561/reporting_api_example.png" style="border-style: solid; border-width: 1px; display: block; height: 476px; margin: 0px auto; width: 902px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you look at the <a href="https://github.com/mdn/dom-examples/blob/master/reporting-api/deprecation_report.html">complete source code</a>, you'll notice that we actually call the deprecated <code>getUserMedia()</code> method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.</p>
 </div>
 

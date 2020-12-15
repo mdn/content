@@ -73,7 +73,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: It is important to remember that <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, while being very useful for demonstrating a synchronous blocking operation, is terrible for use in real world applications.</p>
 </div>
 
@@ -160,7 +160,7 @@ gods.forEach(function (eachName, index){
   console.log('Fetch problem: ' + err.message);
 });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find the finished version on GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">see it running live</a>).</p>
 </div>
 
@@ -173,7 +173,7 @@ gods.forEach(function (eachName, index){
  <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> block at the end runs if any of the <code>.then()</code> blocks fail — in a similar way to synchronous <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> blocks, an error object is made available inside the <code>catch()</code>, which can be used to report the kind of error that has occurred. Note however that synchronous <code>try...catch</code> won't work with promises, although it will work with <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>, as you'll learn later on.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You'll learn a lot more about promises later on in the module, so don't worry if you don't understand them fully yet.</p>
 </div>
 
@@ -251,7 +251,7 @@ console.log("all done");</pre>
 
 <p>This is because at the time the browser tries to run the third <code>console.log()</code> statement, the <code>fetch()</code> block has not finished running so the <code>image</code> variable has not been given a value.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For security reasons, you can't <code>fetch()</code> files from your local filesystem (or run other such operations locally); to run the above example locally you'll have to run the example through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local webserver</a>.</p>
 </div>
 
@@ -259,7 +259,7 @@ console.log("all done");</pre>
 
 <p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by simply moving it inside the second <code>then()</code> block. Try fixing this now.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
 </div>
 

@@ -96,7 +96,7 @@ tags:
  <li>If the user tries to send the data, the browser will block the form and display an error message.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There are several errors that will prevent the form from being submitted, including a {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} or {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} or {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, or a {{domxref('validityState.customError','customError')}}.</p>
 </div>
 
@@ -156,7 +156,7 @@ input:valid {
 
 <p>{{EmbedLiveSample("The_required_attribute", "100%", 80)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">source code</a>.)</p>
 </div>
 
@@ -164,7 +164,7 @@ input:valid {
 
 <p>The presence of the <code>required</code> attribute on any element that supports this attribute means the element matches the {{cssxref(':required')}} pseudoclass whether it has a value or not. If the {{HTMLElement("input")}} has no value, the <code>input</code> will match the {{cssxref(':invalid')}} pseudoclass.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG <a href="/en-US/docs/Learn/Accessibility">accessibility</a> guidelines. Also, only require users to input data you actually need: For example, why do you really need to know someone's gender or title?</p>
 </div>
 
@@ -208,7 +208,7 @@ input:valid {
 
 <p>{{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html">fruit-pattern.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">source code</a>.)</p>
 </div>
 
@@ -218,11 +218,11 @@ input:valid {
 
 <p>If a non-empty value of the {{HTMLElement("input")}} doesn't match the regular expression's pattern, the <code>input</code> will match the {{cssxref(':invalid')}} pseudoclass.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Some {{HTMLElement("input")}} element types don't need a <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute to be validated against a regular expression. Specifying the <code>email</code> type, for example, validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> attribute.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The {{HTMLElement("textarea")}} element doesn't support the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute.</p>
 </div>
 
@@ -277,11 +277,11 @@ div {
 
 <p>{{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html">source code</a>.)</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>&lt;input type="number"&gt;</code> (and other types, such as <code>range</code> and <code>date</code>) can also take a <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a> attribute, which specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons). In the above example we've not included a <code>step</code> attribute, so the value defaults to <code>1</code>. This means that floats, like 3.2, will also show as invalid.</p>
 </div>
 
@@ -371,7 +371,7 @@ input:focus:invalid {
 
 <p>See <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes">Validation-related attributes</a> for a complete list of attributes that can be used to constrain input values and the input types that support them.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html">full-example.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html">source code</a>.)</p>
 </div>
 
@@ -463,7 +463,7 @@ email.addEventListener("input", function (event) {
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html">custom-error-message.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html">source code</a>.)</p>
 </div>
 
@@ -490,7 +490,7 @@ email.addEventListener("input", function (event) {
 
 <p>We are aiming to show the error messages inside a <code>&lt;span&gt;</code> element. The <a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> attribute is set on that <code>&lt;span&gt;</code> to make sure that our custom error message will be presented to everyone, including it being read out to screenreader users.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: A key point here is that setting the <code>novalidate</code> attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.</p>
 </div>
 
@@ -614,13 +614,13 @@ function showError() {
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example live on GitHub as <a href="https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html">detailed-custom-validation.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html">source code</a>.)</p>
 </div>
 
 <p>The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For further information, see our <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>, and the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a> reference.</p>
 </div>
 

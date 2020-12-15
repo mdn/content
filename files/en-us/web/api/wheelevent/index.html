@@ -12,11 +12,11 @@ tags:
 
 <p>The <strong><code>WheelEvent</code></strong> interface represents events that occur due to the user moving a mouse wheel or similar input device.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Important: This is the standard wheel event interface to use.</strong> Old versions of browsers implemented the non-standard and non-cross-browser-compatible {{DOMxRef("MouseWheelEvent")}} and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Do not confuse the {{domxref("Element/wheel_event", "wheel")}} event with the {{domxref("Element/scroll_event", "scroll")}} event:</strong> The default action of a <code>wheel</code> event is implementation-defined. Thus, a <code>wheel</code> event doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, that doesn't mean that the <code>delta*</code> values in the <code>wheel</code> event necessarily reflect the content's scrolling direction. Therefore, do not rely on <code>delta*</code> properties to get the content's scrolling direction. Instead, detect value changes to {{DOMxRef("Element.scrollLeft", "scrollLeft")}} and {{DOMxRef("Element.scrollTop", "scrollTop")}} of the target in the <code>scroll</code> event.</p>
 </div>
 

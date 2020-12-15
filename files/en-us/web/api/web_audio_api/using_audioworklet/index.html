@@ -191,7 +191,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
 <p>Returning <code>false</code> from the <code>process()</code> method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, <code>process()</code> will not be called again.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return <code>true</code> and shuts it down if you return <code>false</code>. Thus for compatibility reasons you must always return <code>true</code> from <code>process()</code>, at least on Chrome. However, once <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">this Chrome issue</a> is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.</p>
 </div>
 

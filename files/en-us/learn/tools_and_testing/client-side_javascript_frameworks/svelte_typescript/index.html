@@ -66,7 +66,7 @@ tags:
 
 <p>Our TypeScript code will be able to run everywhere JavaScript can run. How is that possible? TypeScript "transpiles" our code to vainilla JavaScript. That means that it parses TypeScript code and produces the equivalent vanilla JavaScript code for browsers to run.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you are curious about how TypeScript transpiles our code to JavaScript you can have a look at the <a href="https://www.typescriptlang.org/play/?target=1&amp;e=4#example/hello-world">TypeScript Playground</a>.</p>
 </div>
 
@@ -128,7 +128,7 @@ npm run dev</pre>
 
 <p>You can even use <code>degit</code> to download the script. That's what we will do to start porting our application to TypeScript.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Remember that you can run <code>npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript</code> to get the complete to-do list application in JavaScript before you start porting it to TypeScript.</p>
 </div>
 
@@ -147,7 +147,7 @@ npm run dev                                       # start the app in development
 
 <p>These instructions apply to any Svelte project you'd like to convert to TypeScript. Just take into account that the Svelte community is constantly improving Svelte TypeScript support, so you should run <code>npm update</code> regularly to take advantage of the latest changes.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: if you find any trouble working with TypeScript inside a Svelte application, have a look at this <a href="https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq">troubleshooting/FAQ section about TypeScript support</a>.</p>
 </div>
 
@@ -155,7 +155,7 @@ npm run dev                                       # start the app in development
 
 <p>Once you have TypeScript configured, you can start using it from a Svelte component by just adding a <code>&lt;script lang='ts'&gt;</code> at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from <code>.js</code> to <code>.ts</code>. You'll also have to update any corresponding import statements (don't include the <code>.ts</code> in your <code>import</code> statements; TypeScript chose to omit the extensions).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: using TypeScript in component markup sections is <a href="https://github.com/sveltejs/svelte/issues/4701">not supported yet</a>. You'll have to use JavaScript from the markup, and TypeScript in the <code>&lt;script lang='ts'&gt;</code> section.</p>
 </div>
 
@@ -165,13 +165,13 @@ npm run dev                                       # start the app in development
 
 <p>We'll use <a href="https://code.visualstudio.com/">Visual Studio Code</a> to do a quick test and see how we can get autocompletion hints and type-checking as we're writing components.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you don't wish to use VS Code, we also provide instructions for using TypeScript error checking from the terminal instead, slightly later on.</p>
 </div>
 
 <p>There is work in progress to support TypeScript in Svelte projects in several code editors; the most complete support so far is available in the <a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code extension</a>, which is developed and maintained by the Svelte team. This extension offers type checking, inspecting, refactoring, intellisense, hover-information, auto-completion, and other features. This kind of developer assistance is another good reason to start using TypeScript in your projects.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Make sure you are using <a href="https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode">Svelte for VS Code</a> and NOT the old "Svelte" by James Birtles, which has been discontinued. In case you have it installed, you should uninstall it and install the official Svelte extension instead.</p>
 </div>
 
@@ -231,7 +231,7 @@ npm run dev                                       # start the app in development
   completed: boolean
 }</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: the Svelte template uses <a href="https://github.com/sveltejs/svelte-preprocess">svelte-preprocess</a> 4.0.0 to support TypeScript. From that version onward you have to use <code>export</code>/<code>import</code> type syntax to import types and interfaces. Check <a href="https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation">this section of the troubleshooting guide</a> for more information.</p>
 	</div>
 	</li>
@@ -245,7 +245,7 @@ npm run dev                                       # start the app in development
 
 export let todo: TodoType</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: Another reminder — When importing a <code>.ts</code> file you have to omit the extension. Check the <a href="https://www.typescriptlang.org/docs/handbook/modules.html#import"><code>import</code> section</a> of the TypeScript manual for more information.</p>
 	</div>
 	</li>
@@ -343,7 +343,7 @@ Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be infe
     clearTimeout(timeout)
     if (!message) {               // hide Alert if message is empty</pre>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><code>Note</code>: There's no need to specify the <code>ms</code> type with <code>export let ms:number = 3000</code> because TypeScript is already inferring it from its default value.</p>
 	</div>
 	</li>

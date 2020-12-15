@@ -96,7 +96,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
  <li><code>timestamp</code>: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the <code>axes</code> and <code>button</code> data have been updated from the hardware. The value must be relative to the <code>navigationStart</code> attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
 </div>
 

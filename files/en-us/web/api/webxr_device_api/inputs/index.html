@@ -220,7 +220,7 @@ xrSession.addEventListener("inputsourceschange", event =&gt; {
 
 <p>In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This doesn't mean your app <em>needs</em> to decide upon a primary controller. But if it does, these strategies may help.</p>
 </div>
 
@@ -323,7 +323,7 @@ xrSession.onselect = function(event) {
 
 <p>Each input source should define a <strong>primary action</strong>. A primary action (which will sometimes be shortened to simply "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If an input source doesn't have a primary action, the input source is considered to be an <strong>auxiliary input source</strong>.</p>
 </div>
 
@@ -532,7 +532,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>An {{domxref("XRInputSource")}} has a {{domxref("XRInputSource.gamepad", "gamepad")}} property whose value, if not <code>null</code>, is a {{domxref("Gamepad")}} object which provides access to gamepad-style buttons, axis controllers (such as joysticks or thumbpads), and so forth. This may include the same buttons that trigger the standard {{domxref("XRInputSource")}} actions, but may include any number of additional buttons and controls.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> While <code>Gamepad</code> is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.</p>
 </div>
 

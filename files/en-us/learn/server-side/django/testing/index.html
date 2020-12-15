@@ -533,7 +533,7 @@ response = self.client.get(reverse('authors'))
 
 <p>Once we have the response we query it for its status code, the template used, whether or not the response is paginated, the number of items returned, and the total number of items.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p class="brush: python">Note: If you set the <code>paginate_by</code> variable in your <strong>/c</strong><strong>atalog/views.py</strong> file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:</p>
 
 <pre class="brush: python notranslate">self.assertTrue(len(response.context['author_list']) == 5)

@@ -28,7 +28,7 @@ tags:
 
 <p>If an error occcurs while attempting to validate an incoming identity assertion (that is, the information describing a peer's identity), the promise is rejected. If there isn't already a target peer identity, <code>peerIdentity</code> is set to a newly created promise and the process begins again, until the process succeeds or no further attempts to authenticate occur.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The promise returned by {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} cannot resolve until any target peer identity that's been set is validated. If the identity hasn't been validated yet, the promise returned by <code>setRemoteDescription()</code> will be rejected. If there's no target peer identity, <code>setRemoteDescription()</code> doesn't need to wait for validation to occur before it resolves.</p>
 </div>
 

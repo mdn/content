@@ -16,7 +16,7 @@ tags:
 
 <p>Consider: each face requires four vertices to define it, but each vertex is shared by three faces. We can pass a lot fewer data around by building an array of all 24 vertices, then referring to each vertex by its index into that array instead of moving entire sets of coordinates around. If you wonder why we need 24 vertices, and not just 8, it is because each corner belongs to three faces of different colors, and a single vertex needs to have a single specific color; therefore we will create three copies of each vertex in three different colors, one for each face.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
 </div>
 

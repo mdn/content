@@ -21,7 +21,7 @@ tags:
 
 <p>Many DOM elements can be set up to accept (or "listen" for) these events, and execute code in response to process (or "handle") them. Event-handlers are usually connected (or "attached") to various <a href="/en-US/docs/Web/HTML/Element">HTML elements</a> (such as <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) using <a href="/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a>, and this generally replaces using the old HTML <a href="/en-US/docs/HTML/Global_attributes">event handler attributes</a>. Further, when properly added, such handlers can also be disconnected if needed using <a href="/en-US/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> One element can have several such handlers, even for the exact same event—particularly if separate, independent code modules attach them, each for its own independent purposes. (For example, a webpage with an advertising-module and statistics-module both monitoring video-watching.)</p>
 </div>
 

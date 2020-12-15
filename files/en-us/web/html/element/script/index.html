@@ -105,7 +105,7 @@ tags:
   <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
 
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>no-referrer-when-downgrade</code>.</p>
  </div>
  </dd>

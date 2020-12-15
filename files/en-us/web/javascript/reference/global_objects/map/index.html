@@ -45,7 +45,7 @@ tags:
    <td>
     <p>An <code>Object</code> has a prototype, so it contains default keys that could collide with your own keys if you're not careful.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> As of ES5, this can be bypassed by using {{jsxref("Object.create", "Object.create(null)")}}, but this is seldom done.</p>
     </div>
    </td>
@@ -79,7 +79,7 @@ tags:
    <td>
     <p><code>Object</code> does not implement an <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iteration protocol</a>, and so objects are not directly iterable using the JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> statement (by default).</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong></p>
 
     <ul>
@@ -304,7 +304,7 @@ let clone = new Map(original)
 console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Important:</strong> Keep in mind that <em>the data itself</em> is not cloned.</p>
 </div>
 

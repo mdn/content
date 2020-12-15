@@ -15,7 +15,7 @@ tags:
 
 <p class="summary">WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the <code>.wasm</code> assembly format.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Text format files are usually saved with a <code>.wat</code> extension. Historically, a <code>.wast</code> extension was also used, however that's now used for the scripting language used by the WebAssembly testsuite.</p>
 </div>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>This will convert the wasm into a file called <code>simple.wasm</code>, which contains the <code>.wasm</code> assembly code.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can also convert the assembly back into the text representation using the wasm2wat tool; for example <code>wasm2wat simple.wasm -o text.wat</code>.</p>
 </div>
 

@@ -68,7 +68,7 @@ tags:
  <li>npm or yarn.</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you don't have the above installed, find out <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups">more about installing npm and Node.js</a> here.</p>
 </div>
 
@@ -102,7 +102,7 @@ tags:
 
 <p>If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag <code>--packageManager=&lt;package-manager&gt;</code>, when you run <code>vue create</code>.  So if you wanted to create the <code>moz-todo-vue</code> project with npm and you'd previously chosen yarn, you’d run <code>vue create moz-todo-vue --packageManager=npm</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: We've not gone over all of the options here, but you can <a href="https://cli.vuejs.org">find more information on the CLI</a> in the Vue docs.</p>
 </div>
 
@@ -132,7 +132,7 @@ tags:
  </li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a <code>views</code> directory).</p>
 </div>
 
@@ -152,7 +152,7 @@ tags:
 
 <p><code>&lt;template&gt;</code> contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: By setting the <code>lang</code> attribute on the <code>&lt;template&gt;</code> tag, you can use Pug template syntax instead of standard HTML — <code>&lt;template lang="pug"&gt;</code>. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.</p>
 </div>
 
@@ -170,13 +170,13 @@ export default {
   }
 };</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to use <a href="https://www.typescriptlang.org/">TypeScript</a> syntax, you need to set the <code>lang</code> attribute on the <code>&lt;script&gt;</code> tag to signify to the compiler that you're using TypeScript — <code>&lt;script lang="ts"&gt;</code>.</p>
 </div>
 
 <p><code>&lt;style&gt;</code> is where you write your CSS for the component. If you add a <code>scoped</code> attribute — <code>&lt;style scoped&gt;</code> — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you select a CSS pre-processor when creating the project via the CLI, you can add a <code>lang</code> attribute to the <code>&lt;style&gt;</code> tag so that the contents can be processed by Webpack at build time. For example, <code>&lt;style lang="scss"&gt;</code> will allow you to use SCSS syntax in your styling information.</p>
 </div>
 

@@ -67,7 +67,7 @@ tags:
  <li>Zero or more values that represent any parameters you want to pass to the function when it is run.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>NOTE: </strong> The specified amount of time (or the delay) is <strong>not</strong><em> </em>the <em>guaranteed time </em>to execution, but rather the <em>minimum time </em>to execution. The callbacks you pass to these functions cannot run until the stack on the main thread is empty.</p>
 
 <p>As a consequence, code like <code>setTimeout(fn, 0)</code><em> </em>will execute as soon as the stack is empty, <strong>not</strong> immediately. If you execute code like <code>setTimeout(fn, 0)</code> but then immediately after run a loop that counts from 1 to 10 billion, your callback will be executed after a few seconds.</p>
@@ -117,7 +117,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <pre class="brush: js notranslate">clearTimeout(myGreeting);</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See <code><a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/greeter-app.html">greeter-app.html</a></code> for a slightly more involved demo that allows you to set the name of the person to say hello to in a form, and cancel the greeting using a separate button (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/greeter-app.html">see the source code also</a>).</p>
 </div>
 
@@ -179,7 +179,7 @@ clearInterval(myInterval);</pre>
  <li>You probably ought to disable the start button after pressing it once, and enable it again after you've stopped/reset it. Otherwise multiple presses of the start button will apply multiple <code>setInterval()</code>s to the clock, leading to wrong behavior.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, you can <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">find our version here</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">source code</a> also).</p>
 </div>
 
@@ -250,7 +250,7 @@ alert('Hello');</pre>
 
 <p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Read more about this on CreativeJS</a>.)</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find examples of using <code>requestAnimationFrame()</code> elsewhere in the course — see for example <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a>, and <a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a>.</p>
 </div>
 
@@ -265,7 +265,7 @@ draw();</pre>
 
 <p>The idea is to define a function in which your animation is updated (e.g. your sprites are moved, score is updated, data is refreshed, or whatever). Then, you call it to start the process off. At the end of the function block you call <code>requestAnimationFrame()</code> with the function reference passed as the parameter, and this instructs the browser to call the function again on the next display repaint. This is then run continuously, as the code is calling <code>requestAnimationFrame()</code> recursively.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to perform some kind of simple constant DOM animation, <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> are probably faster. They are calculated directly by the browser's internal code, rather than JavaScript.</p>
 
 <p>If, however, you are doing something more complex and involving objects that are not directly accessible inside the DOM (such as <a href="/en-US/docs/Web/API/Canvas_API">2D Canvas API</a> or <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> objects), <code>requestAnimationFrame()</code> is the better option in most cases.</p>
@@ -336,7 +336,7 @@ draw();</pre>
 
 <p>Enough with the theory! Let's build your own personal <code>requestAnimationFrame()</code> example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate <code>requestAnimationFrame()</code> usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.</p>
 </div>
 
@@ -420,7 +420,7 @@ let rAF;
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find the finished <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">example live on GitHub</a>. (You can see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">source code</a>, also.)</p>
 </div>
 
@@ -443,7 +443,7 @@ let rAF;
  <li>You'll want to add a tracking variable to check whether the spinner is spinning or not, clearing the animation frame if it is, and calling it again if it isn't.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Try this yourself first; if you get really stuck, check out of our <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">live example</a> and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/start-and-stop-spinner.html">source code</a>.</p>
 </div>
 
@@ -571,7 +571,7 @@ function start() {
   setTimeout(setEndgame, random(5000,10000));
 }</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: You'll see this example is calling <code>setTimeout()</code> without storing the return value. (So, not <code>let myTimeout = setTimeout(functionName, interval)</code>.) </p>
 
   <p>This works just fine, as long as you don't need to clear your interval/timeout at any point. If you do, you'll need to save the returned identifier!</p>
@@ -626,7 +626,7 @@ function start() {
 
 <p>That's it—you're all done!</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, check out <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">our version of the reaction game</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">source code</a> also).</p>
 </div>
 

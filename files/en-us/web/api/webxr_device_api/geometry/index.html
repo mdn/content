@@ -173,7 +173,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object conforming to the {{domxref("XRSessionInit")}} dictionary which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.</p>
 </div>
 

@@ -39,7 +39,7 @@ tags:
 
 <p>The <code>{{htmlattrxref("draggable")}}</code> attribute may be used on any element, including images and links. However, for these last two, the default value is <code>true</code>, so you would only use the <code>{{htmlattrxref("draggable")}}</code> attribute with a value of <code>false</code> to disable dragging of these elements.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.</p>
 </div>
 
@@ -224,7 +224,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>In this example, the element with the class <code>droparea</code> will receive a 1 pixel black outline while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the <code>{{event("dragenter")}}</code> event.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You must cancel the <code>{{event("dragenter")}}</code> event for this pseudoclass to apply, as this state is not checked for the <code>{{event("dragover")}}</code> event.</p>
 </div>
 

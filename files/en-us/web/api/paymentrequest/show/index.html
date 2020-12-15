@@ -22,7 +22,7 @@ tags:
 
 <p>Only one payment request can be in the process of being handled at once, across all documents. Once one <code>PaymentRequest</code>'s <code>show()</code> method has been called, any other call to <code>show()</code> will by rejected with an <code>AbortError</code> until the returned promise has been concluded, either by being fulfilled with a {{domxref("PaymentResponse")}} indicating the results of the payment request, or by being rejected with an error.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> In reality, despite the fact that the specification says this can't be done, some browsers, including Firefox, support multiple active payment requests at a time.</p>
 </div>
 

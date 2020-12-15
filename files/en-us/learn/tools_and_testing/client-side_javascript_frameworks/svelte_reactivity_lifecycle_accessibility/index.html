@@ -174,7 +174,7 @@ foo.bar = 'baz'</pre>
 
 <p>Svelte won't update references to <code>obj.foo.bar</code>, unless you follow it up with <code>obj = obj</code>. That's because Svelte can't track object references, so we have to explicitly tell it that <code>obj</code> has changed by issuing an assignment.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: if <code>foo</code> is a top level variable, you can easily tell Svelte to update <code>obj</code> whenever <code>foo</code> is changed with the following reactive statement: <code>$: foo, obj = obj</code>. With this we are defining <code>foo</code> as a dependency, and whenever it changes Svelte will run <code>obj = obj</code>.</p>
 </div>
 
@@ -213,7 +213,7 @@ foo.bar = 'baz'</pre>
 
 <p>In this case we are using the <code><a href="/en-US/docs/User:chrisdavidmills/Framework_tests_and_research/array.map()">map()</a></code> method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each todo using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original <code>todos</code> array.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Svelte allows us to specify different options that affect how the compiler works. The <code>&lt;svelte:options immutable={true}/&gt;</code> option tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed and generate simpler and more performant code. For more information on <code>&lt;svelte:options...&gt;</code>, check the <a href="https://svelte.dev/docs#svelte_options">Svelte options documentation</a>.</p>
 </div>
 
@@ -342,7 +342,7 @@ foo.bar = 'baz'</pre>
 
 	<p><code>addTodo()</code> now receives the name of the new todo directly, so we no longer need the <code>newTodoName</code> variable to give it its value. Our <code>NewTodo</code> component takes care of that.</p>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: the <code>{ name }</code> syntax is just a shorthand for <code>{ name: name }</code>. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.</p>
 	</div>
 	</li>
@@ -468,7 +468,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can have a look at the other <a href="https://svelte.dev/docs#svelte">lifecycle functions in the Svelte docs</a>, and you can see them in action in the <a href="https://svelte.dev/tutorial/onmount">interactive tutorial</a>.</p>
 </div>
 
@@ -535,7 +535,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: To see another example using <code>tick()</code>, visit the <a href="https://svelte.dev/tutorial/tick">Svelte tutorial</a>.</p>
 </div>
 
@@ -549,7 +549,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 
 <p>And, in order to avoid memory leaks, we should also call the <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener() </a></code>function when the node is destroyed.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: All this is just standard WebAPI functionality; nothing here is specific to Svelte.</p>
 </div>
 
@@ -709,7 +709,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. Have a look at the relevant Svelte School article for a more <a href="https://svelte.school/tutorials/introduction-to-actions">detailed introduction to actions</a>. Actions are also very useful for seamlessly <a href="https://svelte.school/tutorials/external-libraries-in-svelte-and-sapper-using-actions">integrating with third party libraries</a>.</p>
 </div>
 
@@ -834,7 +834,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You might be wondering why we need to declare a new variable for component binding — why can't we just call <code>TodosStatus.focus()</code>? You might have multiple <code>TodosStatus</code> instances active, so you need a way to reference each particular instance. That's why you have to specify a variable to bind each specific instance to.</p>
 </div>
 

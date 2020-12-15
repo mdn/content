@@ -36,7 +36,7 @@ tags:
 
 <p>Note, in this case, we get a <code>patternMismatch</code> not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note: The <code>{{HTMLElement("input/email", "email")}}</code> input type requires, at minimum, a match of <code>x@y</code> and the <code>{{HTMLElement("input/url", "url")}}</code> type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).</p>
 </div>
 

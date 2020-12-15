@@ -171,7 +171,7 @@ mediaRecorder.ondataavailable = function(e) {
   <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
 }</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The browser will fire <code>dataavailable</code> events as needed, but if you want to intervene you can also include a timeslice when invoking the <code>start()</code> method — for example <code>start(10000)</code> — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.</p>
 </div>
 

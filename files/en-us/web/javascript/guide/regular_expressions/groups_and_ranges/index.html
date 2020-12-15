@@ -55,7 +55,7 @@ tags:
    <td>
     <p>A negated or complemented character set. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character set as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">beginning of input</a>.</p>
     </div>
    </td>
@@ -85,7 +85,7 @@ tags:
 
     <p>For example, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
     </div>
    </td>
@@ -138,7 +138,7 @@ do {
   console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 } while((match = regexpNames.exec(personList)) !== null);</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Not all browsers support this feature; refer to the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">compatibility table</a>.</p>
 </div>
 

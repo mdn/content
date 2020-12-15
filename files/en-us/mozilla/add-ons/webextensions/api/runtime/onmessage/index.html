@@ -27,7 +27,7 @@ tags:
 
 <p>To send a message that is received by the <code>onMessage()</code> listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Avoid creating multiple <code>onMessage()</code> listeners for the same type of message, because the order in which multiple listeners will fire is not guaranteed.</p>
 
 <p>If you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
@@ -55,7 +55,7 @@ tags:
 <p>The popular <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> library has already removed the <code>sendResponse()</code> function from its implementation.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
@@ -110,7 +110,7 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
 
  <p>The <code><var>listener</var></code> function can return either a Boolean or a {{jsxref("Promise")}}.</p>
 
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p><strong>Important:</strong> Do not call <code>addListener()</code> using an <code>async</code> function:</p>
 
  <pre class="brush: js example-bad notranslate">// don't do this

@@ -44,7 +44,7 @@ console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can always easily get the global object using the global {{jsxref("globalThis")}} property, regardless of the current context in which your code is running.</p>
 </div>
 
@@ -97,7 +97,7 @@ f2() === undefined; // true
 new Example(); // ['constructor', 'first', 'second']
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Static methods are not properties of <code>this</code>. They are properties of the class itself.</p>
 </div>
 
@@ -107,7 +107,7 @@ new Example(); // ['constructor', 'first', 'second']
 
 <pre class="brush: js">this = new Base();</pre>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Referring to <code>this</code> before calling <code>super()</code> will throw an error.</p>
 </div>
 
@@ -412,7 +412,7 @@ for (var i = 0; i &lt; elements.length; i++) {
 
 <h3 id="this_in_classes">this in classes</h3>
 
-<div class="blockIndicator note"></div>
+<div class="notecard note"></div>
 
 <p>Just like with regular functions, the value of <code>this</code> within methods depends on how they are called. Sometimes it is useful to override this behavior so that <code>this</code> within classes always refers to the class instance. To achieve this, bind the class methods in the constructor:</p>
 
@@ -450,7 +450,7 @@ bird.sayHi(); // Hello from Tweety
 bird.sayBye = car.sayBye;
 bird.sayBye();  // Bye from Ferrari</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Classes are always strict mode code. Calling methods with an undefined <code>this</code> will throw an error.</p>
 </div>
 

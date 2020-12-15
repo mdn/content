@@ -129,7 +129,7 @@ tags:
 
 <p>And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the <code>(max-width: 600px)</code> media condition will be true, and so the browser chooses the <code>480px</code> slot. The <code>elva-fairy-480w.jpg</code> will be loaded, as its inherent width (<code>480w</code>) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'html'</span>).<span class="cm-property">clientWidth</span></span></span></span></code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
  <br>
  To see which images were loaded, you can use Firefox DevTools's <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tab.</p>

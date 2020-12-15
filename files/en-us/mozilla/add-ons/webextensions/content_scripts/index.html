@@ -150,7 +150,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
   }
 ]</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Firefox <em>does</em> provide some APIs that enable content scripts to access JavaScript objects created by page scripts, and to expose their own JavaScript objects to page scripts.</p>
 
 <p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Sharing objects with page scripts</a> for more details.</p>
@@ -202,7 +202,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>Content scripts can make requests using the normal <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> and <code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch()</a></code> APIs.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>In Firefox, content script requests (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) happen in the context of an extension, so you must provide an absolute URL to reference page content.</p>
 
 <p>In Chrome, these requests happen in context of the page, so they are made to a relative URL.  For example, <code>/api</code> is sent to <code>https://<strong>«</strong><var>current page URL</var><strong>»</strong>/api</code>.</p>
@@ -212,13 +212,13 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code> headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>In Firefox, extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead.</p>
 
 <p>For cross-browser extensions, the presence of these methods must be feature-detected.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See "<span dir="ltr" id="sites-page-title" style="outline: none;"><a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a></span>".</p>
 </div>
 
@@ -537,7 +537,7 @@ In page script, window.y: undefined</pre>
 
 <p>The same applies to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Be very careful when running code in the context of the page!</strong> </p>
 
 <p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>

@@ -32,7 +32,7 @@ tags:
 
 <p>There really are unlimited combinations of tools and ways to use them, what you see in this article and the next is only <em>one</em> way that the featured tools can be used for a project.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code and Atom) have integration support for a <em>lot</em> of tools via plugins.</p>
 </div>
 
@@ -120,7 +120,7 @@ tags:
 
 <p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups">refer back to that section</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
 </div>
 
@@ -162,7 +162,7 @@ tags:
 
 <pre class="brush: bash notranslate">prettier --write ./src/index.html</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In the command above, I use Prettier with the <code>--write</code> flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use prettier without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."</p>
 </div>
 
@@ -176,7 +176,7 @@ tags:
  <li>Using code editor plugins to run prettier commands each time a file is saved.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks you perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, <a href="https://github.com/typicode/husky">Husky</a> is a greatly simplified route into using hooks.</p>
 </div>
 
@@ -212,7 +212,7 @@ tags:
 
 ✖ 3 problems (3 errors, 0 warnings)</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: We'll install eslint in the next section; don't worry about this for now.</p>
 </div>
 
@@ -280,7 +280,7 @@ cd will-it-miss</pre>
 
 <p>We have our project files in place. That’s all we need to do for now!</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you want to just take our existing project and set it up, ready to use, you could go into the root directory of the unzipped downloaded, and run one single installation command to install all of the project’s dependencies: <code>npm install</code>. This is possible because we installed all the tools locally, not globally, and highlights why it is such a powerful option.</p>
 </div>
 
@@ -443,7 +443,7 @@ cd will-it-miss</pre>
 
   <p>Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.</p>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: if you run Parcel on this project and are faced with an error that reads <code>Error: ENOENT: no such file or directory</code>, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.</p>
   </div>
 

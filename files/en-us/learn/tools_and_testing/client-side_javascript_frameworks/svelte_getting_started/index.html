@@ -42,7 +42,7 @@ tags:
 
 <p>It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But it's advantages should be enough to make you interested to explore it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: recently Svelte has added <a href="https://svelte.dev/blog/svelte-and-typescript">official TypeScript support</a>, one of its most requested features. We'll look at it later on in this tutorial series.</p>
 </div>
 
@@ -103,7 +103,7 @@ cd moz-todo-svelte
 npm install
 npm run dev</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using <code>git clone</code> because it will not download all the history of the repo, or create a complete local clone.</p>
 </div>
 
@@ -180,7 +180,7 @@ npm run dev</pre>
 
 &lt;!-- markup (zero or more HTML elements) goes here --&gt;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For more information on the component format, have a look at the <a href="https://svelte.dev/docs#Component_format">svelte documentation</a>.</p>
 </div>
 
@@ -274,7 +274,7 @@ npm run dev</pre>
 
 <p>When compiling the app, Svelte changes our <code>h1</code> styles definition to <code>h1.svelte-1tky8bj</code>, and then modifies every <code>&lt;h1&gt;</code> element in our component to <code>&lt;h1 class="svelte-1tky8bj"&gt;</code>, so that it picks up the styles as required.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can override this behavior and apply styles to a selector globally using the <code>:global(...)</code> modifier (see the <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> docs</a> for more information).</p>
 </div>
 
@@ -400,7 +400,7 @@ npm run dev</pre>
 
 <p>If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see <a href="/en-US/docs/Learn/Tools_and_testing/GitHub">Git and GitHub</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you just want to download the files without cloning the git repo, you can use the degit tool like this — <code>npx degit opensas/mdn-svelte-tutorial</code>. You can also download a specific folder with <code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>. Degit won't create a local git repo, it will just download the files of the specified folder.</p>
 </div>
 
@@ -434,13 +434,13 @@ npm run dev</pre>
 
 <p>Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app simply share the url. For example, here's the link for a REPL running our complete app: <a href="https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2">https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.</p>
 </div>
 
 <p>We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: at the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example <code>import Todos from './components/Todos.svelte'</code>, just replace it with a flat URL, e.g. <code>import Todos from './Todos.svelte'</code>.</p>
 </div>
 

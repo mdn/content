@@ -36,11 +36,11 @@ tags:
 
 <p>In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> or <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. When you see the value type <code>&lt;color&gt;</code> as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> reference page.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You'll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term <em>value</em> refers to any particular expression supported by a value type that you choose to use.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Yes, CSS value types tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
 </div>
 
@@ -249,7 +249,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: When you use a number in CSS as a value it should not be surrounded in quotes.</p>
 </div>
 
@@ -259,7 +259,7 @@ tags:
 
 <p>The standard color system available in modern computers is 24 bit, which allows the display of about 16.7 million distinct colors via a combination of different red, green and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216.) Let's have a look at some of the ways in which we can specify colors in CSS.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In this tutorial we will look at the common methods of specifying color that have good browser support; there are others but they don't have as good support and are less common.</p>
 </div>
 
@@ -289,7 +289,7 @@ tags:
 
 <p>You can also use RGBA colors — these work in exactly the same way as RGB colors, and so you can use any RGB values. However, there is a fourth value that represents the alpha channel of the color, which controls opacity. If you set this value to <code>0</code> it will make the color fully transparent, whereas <code>1</code> will make it fully opaque. Values in between give you different levels of transparency.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you are specifying opaque.</p>
 </div>
 
@@ -299,7 +299,7 @@ tags:
 
 <p><strong>In this example, try changing the alpha channel values to see how it affects the color output. </strong></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: At some point modern browsers were updated so that <code>rgba()</code> and <code>rgb()</code>, and <code>hsl()</code> and <code>hsla()</code> (see below), became pure aliases of each other and started to behave exactly the same. So for example both <code>rgba()</code> and <code>rgb()</code> accept colors with and without alpha channel values. Try changing the above example's <code>rgba()</code> functions to <code>rgb()</code> and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.</p>
 </div>
 
@@ -331,7 +331,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: there are some other possible values for <code>&lt;image&gt;</code>, however these are newer and currently have poor browser support. Check out the page on MDN for the <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> data type if you want to read about them.</p>
 </div>
 

@@ -43,7 +43,7 @@ tags:
  <li>Actually deploying the updated code to a live URL: Or potentially a staging URL so it can be reviewed first.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Parcel (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.</p>
 </div>
 
@@ -85,7 +85,7 @@ tags:
   <strong>"build": "parcel build src/index.html"</strong>
 }</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: If the <code>scripts</code> property already has a command inside it, put a comma at the end of it. Keep the JSON valid.</p>
   </div>
  </li>
@@ -143,7 +143,7 @@ dist/index.html                    354 B    944ms</pre>
 
   <pre class="brush: bash">git commit -m ’committing initial code’</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.  </p>
   </div>
  </li>
@@ -179,7 +179,7 @@ dist/index.html                    354 B    944ms</pre>
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">this tutorial walks you through how</a>.</p>
 </div>
 
@@ -191,7 +191,7 @@ dist/index.html                    354 B    944ms</pre>
 
 <p>Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There are also a lot of <a href="https://www.netlify.com/tags/tutorial/">guides and tutorials on Netlify</a> to help you improve your development workflow.</p>
 </div>
 

@@ -97,7 +97,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <p>As a porting aid, the Firefox implementation of WebExtensions supports <code>chrome</code>, using callbacks, as well as <code>browser</code>, using promises. This means that many Chrome extensions will just work in Firefox without any changes.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> However, this is <em>not</em> part of the WebExtensions standard. and may not be supported by all compliant browsers.</p>
 </div>
 
@@ -152,7 +152,7 @@ setCookie.then(logCookie, logError);</pre>
  <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
  <dt>In Firefox</dt>
  <dd>The proxy API only supports the PAC file approach (since this is also possible using extended PAC files).
- <div class="blockIndicator note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
+ <div class="notecard note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
  </dd>
 </dl>
 
@@ -212,7 +212,7 @@ setCookie.then(logCookie, logError);</pre>
   <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
    <ul>
     <li>
-     <div class="blockIndicator note">
+     <div class="notecard note">
      <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
      </div>
     </li>

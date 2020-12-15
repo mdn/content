@@ -41,7 +41,7 @@ tags:
  <dd>Send a full URL when performing a same-origin or cross-origin request. This policy will leak origins and paths from TLS-protected resources to insecure origins. Carefully consider the impact of this setting.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>no-referrer-when-downgrade</code>.</p>
 </div>
 

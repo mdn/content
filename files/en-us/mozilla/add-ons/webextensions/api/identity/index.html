@@ -36,7 +36,7 @@ tags:
 
 <p>You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}}. This function derives a redirect URL from the add-on's ID.  To simplify testing, set your add-on's ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key (otherwise, each time you <a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">temporarily install the add-on</a>, you get a different redirect URL).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.</p>
 </div>
 

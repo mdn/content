@@ -711,7 +711,7 @@ onmessage = function(event) {
 
 <p><img src="https://mdn.mozillademos.org/files/16988/worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
@@ -719,7 +719,7 @@ onmessage = function(event) {
 
 <p><img src="https://mdn.mozillademos.org/files/16987/worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
 </div>
 
@@ -736,7 +736,7 @@ onmessage = function(event) {
 
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
 </div>
 
