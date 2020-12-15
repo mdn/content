@@ -31,10 +31,10 @@ tags:
  <li><em><code>format</code></em> is a string value describing the data format in which the key should be exported. It can be one of the following:
 
   <ul>
-   <li><code>raw</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
-   <li><code>pkcs8</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.</li>
-   <li><code>spki</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a> format.</li>
-   <li><code>jwk</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a> format.<span style="display: none;"> </span></li>
+   <li><code>raw</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
+   <li><code>pkcs8</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.</li>
+   <li><code>spki</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a> format.</li>
+   <li><code>jwk</code>: <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a> format.<span style="display: none;"> </span></li>
   </ul>
  </li>
  <li><code><em>key</em></code> is the {{domxref("CryptoKey")}} to export.</li>
@@ -43,7 +43,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>.
+ <li><code><em>result</em></code> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>.
 
   <ul>
    <li>If <code><em>format</em></code> was <code>jwk</code>, then the promise fulfills with a JSON object containing the key.</li>

@@ -66,8 +66,8 @@ tags:
 <h3 id="Security">Security</h3>
 
 <ul>
- <li>The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element now abides by the <code><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#connect-src">connect-src</a></code> <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives">CSP 1.1 policy directive</a> ({{bug(1100181)}}).</li>
- <li>Support for the <code><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#sandbox">sandbox</a></code> <a href="/en-US/docs/Web/Security/CSP">CSP</a> directive has been added ({{bug(671389)}}).</li>
+ <li>The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element now abides by the <code><a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#connect-src">connect-src</a></code> <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">CSP 1.1 policy directive</a> ({{bug(1100181)}}).</li>
+ <li>Support for the <code><a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#sandbox">sandbox</a></code> <a href="/en-US/docs/Web/Security/CSP">CSP</a> directive has been added ({{bug(671389)}}).</li>
  <li>It's now possible to set a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy">content security policy for workers</a> ({{bug (959388)}}).</li>
  <li>The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> restriction; instead, it returns <code>false</code> as expected ({{bug(1234813)}}).</li>
  <li>Support for RC4 encryption was deprecated in Firefox 36 and disabled by default in Firefox 44. The one-year grace period has ended, so Firefox 50 removes all support for RC4 (Google Chrome removed support for RC4 in August 2016). From now on, any time Firefox encounters RC4 encryption, it will report an <code>SSL_ERROR_NO_CYPHER_OVERLAP</code> error.</li>

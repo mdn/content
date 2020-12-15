@@ -123,7 +123,7 @@ tags:
 
 <h4 id="Listen_for_the_video_to_start_playing">Listen for the video to start playing</h4>
 
-<p>After calling <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to <code>video</code> for the {{event("canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the <code>video</code> object have been configured based on the stream's format.</p>
+<p>After calling <code><a href="/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to <code>video</code> for the {{event("canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the <code>video</code> object have been configured based on the stream's format.</p>
 
 <pre class="brush: js">    video.addEventListener('canplay', function(ev){
       if (!streaming) {

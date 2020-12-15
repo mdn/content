@@ -357,7 +357,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 }
 </pre>
 
-<p>The <code>bindObjectActor</code> property is an optional <code>ObjectActor</code> ID that points to a <code>Debugger.Object</code>. This option allows you to bind <code>_self</code> to the <code>Debugger.Object</code> of the given object actor, during string evaluation. See <a href="https://developer.mozilla.org/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Object#evalInGlobalWithBindings%28%29"><code>evalInGlobalWithBindings()</code></a> for information about bindings.</p>
+<p>The <code>bindObjectActor</code> property is an optional <code>ObjectActor</code> ID that points to a <code>Debugger.Object</code>. This option allows you to bind <code>_self</code> to the <code>Debugger.Object</code> of the given object actor, during string evaluation. See <a href="/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Object#evalInGlobalWithBindings%28%29"><code>evalInGlobalWithBindings()</code></a> for information about bindings.</p>
 
 <div class="note">
 <p>The variable view needs to update objects and it does so by binding <code>_self</code> to the <code>Debugger.Object</code> of the <code>ObjectActor</code> that is being viewed. As such, variable view sends strings like these for evaluation:</p>
@@ -366,7 +366,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 </pre>
 </div>
 
-<p>The <code>frameActor</code> property is an optional <code>FrameActor</code> ID. The FA holds a reference to a <a href="https://developer.mozilla.org/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Frame"><code>Debugger.Frame</code></a>. This option allows you to evaluate the string in the frame of the given FA.</p>
+<p>The <code>frameActor</code> property is an optional <code>FrameActor</code> ID. The FA holds a reference to a <a href="/en-US/docs/SpiderMonkey/JS_Debugger_API_Reference/Debugger.Frame"><code>Debugger.Frame</code></a>. This option allows you to evaluate the string in the frame of the given FA.</p>
 
 <p>The <code>url</code> property is an optional URL to evaluate the script as (new in Firefox 25). The default source URL for evaluation is "debugger eval code".</p>
 

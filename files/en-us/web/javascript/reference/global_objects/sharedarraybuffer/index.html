@@ -40,13 +40,13 @@ worker.postMessage(sab);
 
 <p>Shared memory and high-resolution timers were effectively <a href="https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/">disabled at the start of 2018</a> in light of <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>. In 2020, a new, secure approach has been standardized to re-enable shared memory. With a few security measures, <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code> will no longer throw for <code>SharedArrayBuffer</code> objects and shared memory across threads will be available:</p>
 
-<p>As a baseline requirement, your document needs to be in a <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts">secure context</a>.</p>
+<p>As a baseline requirement, your document needs to be in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>.</p>
 
 <p>For top-level documents, two headers will need to be set to cross-origin isolate your site:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
+ <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
+ <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
 </ul>
 
 <pre class="notranslate">Cross-Origin-Opener-Policy: same-origin

@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{MDNSidebar}}</div><p class="summary">The editor's toolbar offers features that let you adjust the appearance and flow of the article as you work. This article describes each of the controls in the toolbar.</p>
 
-<p>There are two rows of buttons and a third row that shows the context of HTML elements leading up to where you are. In the screenshot below, for example, you're writing inside a top-level <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph of text."><code>&lt;p&gt;</code></a> block.</p>
+<p>There are two rows of buttons and a third row that shows the context of HTML elements leading up to where you are. In the screenshot below, for example, you're writing inside a top-level <a href="/en-US/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph of text."><code>&lt;p&gt;</code></a> block.</p>
 
 <p><img alt="Screenshot of the toolbar, with labels for the button groups" src="https://mdn.mozillademos.org/files/15269/toolbar-labeled.png" style="border-style: solid; border-width: 2px; float: right; height: 142px; width: 725px;">The toolbar's buttons are divided into nine groups. Let's look at each; we will examine the buttons in each group in order left-to-right.</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <dl>
  <dt>Source</dt>
- <dd>The <strong>Source</strong> button lets you toggle between editing using the WYSIWYG interface and editing in raw HTML source mode. We <em>strongly</em> request that you try to avoid using source mode, as it's very easy to wind up with content that doesn't match our style guide or, worse, doesn't work right at all. Currently, though, the editor has some quirks that make it impossible to do certain things without resorting to source mode. See <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor/Source_mode">Using source mode in the MDN editor</a> for details on how to use source mode and the dos and don'ts involved.</dd>
+ <dd>The <strong>Source</strong> button lets you toggle between editing using the WYSIWYG interface and editing in raw HTML source mode. We <em>strongly</em> request that you try to avoid using source mode, as it's very easy to wind up with content that doesn't match our style guide or, worse, doesn't work right at all. Currently, though, the editor has some quirks that make it impossible to do certain things without resorting to source mode. See <a href="/en-US/docs/MDN/Contribute/Editor/Source_mode">Using source mode in the MDN editor</a> for details on how to use source mode and the dos and don'ts involved.</dd>
  <dt>Publish</dt>
  <dd>Just like the main <strong>Publish</strong> button.</dd>
 </dl>
@@ -145,7 +145,7 @@ tags:
  <dt>Anchor</dt>
  <dd>Creates an anchor at the insertion point. Note that you don't need an anchor to link to a heading; the MDN editor automatically creates an <code>{{htmlattrxref("id")}}</code> for each heading that is the same as the heading text, with spaces replaced by underscores. For example, the heading of this section has an <code>id</code> whose value is <code>Hyperlinking_group</code>.</dd>
  <dt>Create a redirect</dt>
- <dd>Inserts a redirect from this page to another. See <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor/Redirects#Creating_redirects">Creating redirects</a> for further information.</dd>
+ <dd>Inserts a redirect from this page to another. See <a href="/en-US/docs/MDN/Contribute/Editor/Redirects#Creating_redirects">Creating redirects</a> for further information.</dd>
 </dl>
 
 <h2 id="Custom_styles_group">Custom styles group</h2>
@@ -182,7 +182,7 @@ tags:
  <dt>Article summary</dt>
  <dd>This style places its contents in a specially formatted call-out block that should contain a summary of the article. See the first paragraph of this article for an example.</dd>
  <dt>Syntax box</dt>
- <dd>Creates a syntax box, such as the one shown below. You need to use the "PRE" button as well, to create a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" title='The HTML &amp;amp;amp;amp;amp;amp;lt;pre> element represents preformatted text. Text within this element is typically displayed in a non-proportional ("monospace") font exactly as it is laid out in the file. Whitespace inside this element is displayed as typed.'><code>&lt;pre&gt;</code></a> block inside it. You probably won't see the yellow box until you do.</dd>
+ <dd>Creates a syntax box, such as the one shown below. You need to use the "PRE" button as well, to create a <a href="/en-US/docs/Web/HTML/Element/pre" title='The HTML &amp;amp;amp;amp;amp;amp;lt;pre> element represents preformatted text. Text within this element is typically displayed in a non-proportional ("monospace") font exactly as it is laid out in the file. Whitespace inside this element is displayed as typed.'><code>&lt;pre&gt;</code></a> block inside it. You probably won't see the yellow box until you do.</dd>
  <dt>Hidden when reading</dt>
  <dd>Creates a block that is visible only in edit mode, not when normally displayed. This is not the same as an HTML comment, which is visible only in source mode.</dd>
 </dl>
@@ -204,13 +204,13 @@ tags:
  <dt>Preformatted Text</dt>
  <dd>Inserts a {{htmlelement("pre")}} block, or turns the current block into one. All code samples or examples of text output to a terminal should be in one of these blocks.</dd>
  <dt>Headings</dt>
- <dd>The heading buttons let you insert a heading. Click one of these buttons to create a new heading at the corresponding depth. By default, H2 through H4 are included in the table of contents, but you can change this, as described in the <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor/Basics/Page_info">page info box</a>.</dd>
+ <dd>The heading buttons let you insert a heading. Click one of these buttons to create a new heading at the corresponding depth. By default, H2 through H4 are included in the table of contents, but you can change this, as described in the <a href="/en-US/docs/MDN/Contribute/Editor/Basics/Page_info">page info box</a>.</dd>
  <dt>Syntax highlighter</dt>
  <dd>The syntax highlighter lets you choose a language for which to apply syntax highlighting to the {{htmlelement("pre")}} (preformatted text) block; if you're not already in such a block, this will create one for you.  Choose the language used in the  block, and it will be highlighted appropriately.</dd>
  <dt>Insert Code Sample Template</dt>
- <dd>This button is used by the live sample system to help you quickly insert a new live sample. You don't need to use it, but it's there for convenience. See <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Live_samples#Using_the_live_sample_system">Using the live sample system</a> for details on using this and other live sample features.</dd>
+ <dd>This button is used by the live sample system to help you quickly insert a new live sample. You don't need to use it, but it's there for convenience. See <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples#Using_the_live_sample_system">Using the live sample system</a> for details on using this and other live sample features.</dd>
  <dt>Insert Code Sample iFrame</dt>
- <dd>Inserts into the document the appropriate macro to display a given live sample. See <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Live_samples#Using_the_live_sample_system">Using the live sample system</a> for details on using this and other live sample features.</dd>
+ <dd>Inserts into the document the appropriate macro to display a given live sample. See <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples#Using_the_live_sample_system">Using the live sample system</a> for details on using this and other live sample features.</dd>
 </dl>
 
 <h2 id="Lists_and_flow_group">Lists and flow group</h2>

@@ -451,7 +451,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
    <li><strong><code>upgrade-insecure-requests</code> does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the <code>Strict-Transport-Security</code> header</strong></li>
   </ul>
  </li>
- <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#CSP_in_workers">web workers</a></li>
+ <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#CSP_in_workers">web workers</a></li>
 </ol>
 
 <p>Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.</p>

@@ -12,9 +12,9 @@ tags:
 
 <p>The way users access the page, and the way it's integrated into the browser's user interface, will vary from one browser to another.</p>
 
-<p>You can open the page programmatically by calling <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage" title="If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set."><code>runtime.openOptionsPage()</code></a>.</p>
+<p>You can open the page programmatically by calling <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage" title="If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set."><code>runtime.openOptionsPage()</code></a>.</p>
 
-<p>Options pages have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> for more details.</p>
+<p>Options pages have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> for more details.</p>
 
 <h2 id="Specifying_the_options_page">Specifying the options page</h2>
 
@@ -37,11 +37,11 @@ tags:
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>JavaScript running in the page can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the add-on has <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for. In particular, you can use the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Storage" title="Enables WebExtensions to store and retrieve data, and listen for changes to stored items."><code>storage</code></a> API to persist preferences.</p>
+<p>JavaScript running in the page can use all the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> that the add-on has <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> for. In particular, you can use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Storage" title="Enables WebExtensions to store and retrieve data, and listen for changes to stored items."><code>storage</code></a> API to persist preferences.</p>
 
 <p>Package the page's files in your extension.</p>
 
-<p>You also need to include the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> key in your manifest.json file, giving it the URL to the page.</p>
+<p>You also need to include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> key in your manifest.json file, giving it the URL to the page.</p>
 
 <pre class="brush: json">"options_ui": {
   "page": "options.html",
@@ -52,7 +52,7 @@ tags:
 <p><strong>Note:</strong> <strong>Google Chrome</strong> and <strong>Opera</strong> use <code>chrome_style</code> instead of <code>browser_style</code>, so if you wish to support them, you need to add both keys.</p>
 </div>
 
-<p>See the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> page for <strong>sharing options</strong> between your options page and background or content scripts.</p>
+<p>See the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> page for <strong>sharing options</strong> between your options page and background or content scripts.</p>
 
 <h2 id="Options_content_design">Options content design</h2>
 

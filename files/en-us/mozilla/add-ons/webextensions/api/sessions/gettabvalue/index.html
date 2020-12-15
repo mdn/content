@@ -17,7 +17,7 @@ tags:
 
 <p>You can retrieve a value from a tab even over a close/restore cycle: meaning that if you set a value, then the user closes the tab, then restores the tab using the browser's "restore tab" feature (for example, by pressing Control+Shift+T), then you will be able to retrieve the value from the restored tab. Note, though, that a restored tab does not get the same ID as the original, so the ID you pass into <code>getTabValue()</code> will be different from the ID you passed into <code>setTabValue()</code>, even though they both refer to the same tab.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with the value if it exists, or <code>undefined</code> if it does not exist. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with the value if it exists, or <code>undefined</code> if it does not exist. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

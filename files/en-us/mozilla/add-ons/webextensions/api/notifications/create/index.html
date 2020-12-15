@@ -20,7 +20,7 @@ tags:
 
 <p>You can optionally provide an ID for the notification. If you omit the ID, an ID will be generated. You can use the ID to {{WebExtAPIRef("notifications.update()", "update")}} or {{WebExtAPIRef("notifications.clear()", "clear")}} the notification.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <div class="warning">
 <p>If you call <code>notifications.create()</code> more than once in rapid succession, Firefox may end up not displaying any notification at all.</p>
@@ -45,7 +45,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled when the notification is created and the display process has been started, which is before the notification is actually displayed to the user. It is fulfilled with a string representing the notification's ID.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled when the notification is created and the display process has been started, which is before the notification is actually displayed to the user. It is fulfilled with a string representing the notification's ID.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

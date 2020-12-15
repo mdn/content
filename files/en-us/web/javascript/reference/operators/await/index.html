@@ -31,7 +31,7 @@ tags:
 
 <p>If the <code>Promise</code> is rejected, the <code>await</code> expression throws the rejected value.</p>
 
-<p>If the value of the <em>expression</em> following the <code>await</code> operator is not a <code>Promise</code>, it's converted to a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolved Promise</a>.</p>
+<p>If the value of the <em>expression</em> following the <code>await</code> operator is not a <code>Promise</code>, it's converted to a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolved Promise</a>.</p>
 
 <p>An <code>await</code> splits execution flow, allowing the caller of the async function to resume execution. After the <code>await</code> defers the continuation of the async function, execution of subsequent statements ensues. If this <code>await</code> is the last expression executed by its function execution continues by returning to the function's caller a pending <code>Promise</code> for completion of the <code>await</code>'s function and resuming execution of that caller.</p>
 

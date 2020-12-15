@@ -41,7 +41,7 @@ tags:
  <dd><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</dd>
  <dd>For example: "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US</span></span></span></span>".</dd>
  <dt><code>rawDER</code></dt>
- <dd><code>Array</code> of <code>Number</code>. If <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo" title="Use this function to get detailed information about the TLS connection associated with a particular request."><code>webRequest.getSecurityInfo()</code></a> was called with the <code>rawDER</code> option present and set to <code>true</code>, this will contain the DER encoding of the certificate.</dd>
+ <dd><code>Array</code> of <code>Number</code>. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo" title="Use this function to get detailed information about the TLS connection associated with a particular request."><code>webRequest.getSecurityInfo()</code></a> was called with the <code>rawDER</code> option present and set to <code>true</code>, this will contain the DER encoding of the certificate.</dd>
  <dt><code>serialNumber</code></dt>
  <dd><code>String</code>. The certificate's <a href="https://tools.ietf.org/html/rfc5280#section-4.1.2.2">serial number</a>.</dd>
  <dt><code>subject</code></dt>

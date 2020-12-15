@@ -35,17 +35,17 @@ tags:
 
 <ul>
  <li>    Entry point splitting: separates code by entry point(s) in the app</li>
- <li>    Dynamic splitting: separates code where <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">dynamic import()</a> statements are used</li>
+ <li>    Dynamic splitting: separates code where <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">dynamic import()</a> statements are used</li>
 </ul>
 
 <h3 id="JavaScript">    JavaScript</h3>
 
 <p><strong>Script type module</strong><br>
- Any script tag with <code>type="module"</code> is treated like a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a> and is deferred by default.</p>
+ Any script tag with <code>type="module"</code> is treated like a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a> and is deferred by default.</p>
 
 <h3 id="CSS">    CSS</h3>
 
-<p>By default, CSS is treated as a <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a> resource, so the browser won't render any processed content until the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.</p>
+<p>By default, CSS is treated as a <a href="/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a> resource, so the browser won't render any processed content until the <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.</p>
 
 <pre class="notranslate">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
 &lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
@@ -58,13 +58,13 @@ tags:
 
 <p>By default, font requests are delayed until the render tree is constructed, which can result in delayed text rendering.</p>
 
-<p>It is possible to override the default behaviour and preload web font resources using <code>&lt;link rel="preload"&gt;</code>, the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display">CSS font-display property</a>, and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">Font Loading API</a>.<br>
+<p>It is possible to override the default behaviour and preload web font resources using <code>&lt;link rel="preload"&gt;</code>, the <a href="/en-US/docs/Web/CSS/@font-face/font-display">CSS font-display property</a>, and the <a href="/en-US/docs/Web/API/CSS_Font_Loading_API">Font Loading API</a>.<br>
  <br>
- See also: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">Element Link</a></p>
+ See also: <a href="/en-US/docs/Web/HTML/Element/link">Element Link</a></p>
 
 <h3 id="Images_and_iframes">Images and iframes</h3>
 
-<p>Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">non-critical</a>), requiring user interaction (an example being scroll) in order to view them.</p>
+<p>Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen (<a href="/en-US/docs/Web/Performance/Critical_rendering_path">non-critical</a>), requiring user interaction (an example being scroll) in order to view them.</p>
 
 <p><strong>Loading attribute</strong><br>
  The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.</p>
@@ -81,7 +81,7 @@ tags:
  <a href="https://github.com/mfranzke/loading-attribute-polyfill" rel="noopener">loading-attribute-polyfill</a></p>
 
 <p><strong>Intersection Observer API</strong><br>
- <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">Intersection Observers</a> allow the user to know when an observed element enters or exits the browser’s viewport.</p>
+ <a href="/en-US/docs/Web/API/IntersectionObserver">Intersection Observers</a> allow the user to know when an observed element enters or exits the browser’s viewport.</p>
 
 <p><strong>Event handlers</strong><br>
  When browser compatibility is crucial, there are a few options:</p>

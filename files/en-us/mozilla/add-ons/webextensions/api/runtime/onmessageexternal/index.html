@@ -79,7 +79,7 @@ browser.runtime.onMessageExternal.hasListener(listener)
 
   <ul>
    <li>either keep a reference to the <code>sendResponse</code> argument and return <code>true</code> from the listener function. You will then be able to call <code>sendResponse</code> after the listener function has returned.</li>
-   <li>or return a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> from the listener function and resolve the promise when the response is ready.</li>
+   <li>or return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> from the listener function and resolve the promise when the response is ready.</li>
   </ul>
   </dd>
  </dl>

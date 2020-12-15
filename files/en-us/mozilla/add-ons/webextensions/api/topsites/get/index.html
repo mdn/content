@@ -24,7 +24,7 @@ tags:
 
 <p>The <code>topSites.get()</code> API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <p>To use the topSites API you must have the "topSites" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a>.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

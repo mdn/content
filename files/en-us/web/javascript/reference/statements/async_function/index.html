@@ -194,7 +194,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 <p>In <code>concurrentStart</code>, both timers are created and then <code>await</code>ed. The timers run concurrently, which means the code finishes in 2 rather than 3 seconds, i.e. the slowest timer.<br>
  However, the <code>await</code> calls still run in series, which means the second <code>await</code> will wait for the first one to finish. In this case, the result of the fastest timer is processed after the slowest.</p>
 
-<p>If you wish to safely perform two or more jobs in parallel, you must await a call to <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all</a></code>, or <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled</a></code>.</p>
+<p>If you wish to safely perform two or more jobs in parallel, you must await a call to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled</a></code>.</p>
 
 <div class="warning">
 <h4 id="Error_Handling">Error Handling</h4>

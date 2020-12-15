@@ -43,7 +43,7 @@ console.assert(<em>assertion</em>, <em>msg</em> [, <em>subst1</em>, ..., <em>sub
 for (let number = 2; number &lt;= 5; number += 1) {
     console.log('the # is ' + number);
     console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // or, using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015">ES2015 object property shorthand</a>:
+    // or, using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015">ES2015 object property shorthand</a>:
     // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // output:

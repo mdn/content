@@ -82,7 +82,7 @@ tags:
 
 <h3 id="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29" name="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29">Popups (Menus, Context Menus, Tooltips and Panels)</h3>
 
-<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/en-US/docs/XUL/PopupGuide" title="XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<span id="m-showPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span></code> has been deprecated in favor of new <code>popup.<span id="m-openPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span></code> and <code>popup.<span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></span></code>.</p>
+<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/en-US/docs/XUL/PopupGuide" title="XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<span id="m-showPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span></code> has been deprecated in favor of new <code>popup.<span id="m-openPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span></code> and <code>popup.<span id="m-openPopupAtScreen"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></span></code>.</p>
 
 <h3 id="Autocomplete" name="Autocomplete">Autocomplete</h3>
 
@@ -157,7 +157,7 @@ tags:
 
 <h3 id="Changed_boxes">Changed boxes</h3>
 
-<p>Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/panel">&lt;xul:panel&gt;</a></code> XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the <code>noautohide</code> attribute to <code>true</code>.</p>
+<p>Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new <code><a href="/en-US/docs/Mozilla/Tech/XUL/panel">&lt;xul:panel&gt;</a></code> XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the <code>noautohide</code> attribute to <code>true</code>.</p>
 
 <h2 id="Other_changes" name="Other_changes">Other changes</h2>
 
@@ -166,7 +166,7 @@ tags:
 <ul>
  <li><code><a class="external" rel="freelink">chrome://browser/base/utilityOverlay.js</a></code> is no longer supported for security reasons. If you were previously using this, you should switch to <code><a class="external" rel="freelink">chrome://browser/content/utilityOverlay.js</a></code>.</li>
  <li>{{ Interface("nsIAboutModule") }} implementations are now required to support the <code>getURIFlags</code> method. See {{ Source("netwerk/protocol/about/public/nsIAboutModule.idl", "nsIAboutModule.idl") }} for documentation. This affects extensions that provide new <code>about:</code> URIs. ({{ Bug(337746) }})</li>
- <li>The <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).</li>
  <li>Changes to <a href="/en-US/docs/nsISupports_proxies" title="nsISupports_proxies">nsISupports proxies</a> and possibly to threading-related interfaces need to be documented.</li>
  <li>If you use XML processing instructions, such as <code>&lt;?xml-stylesheet ?&gt;</code> in your XUL files, be aware of the changes made in {{ Bug(319654) }}:
   <ol>

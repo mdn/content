@@ -18,9 +18,9 @@ tags:
 <p>Highlights:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter">See ::before and ::after pseudo elements in the Page Inspector</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Style_Editor#Source_map_support">CSS source maps are now enabled by default</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2">"Show DOM Properties" from the Page Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter">See ::before and ::after pseudo elements in the Page Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Style_Editor#Source_map_support">CSS source maps are now enabled by default</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2">"Show DOM Properties" from the Page Inspector</a></li>
 </ul>
 
 <p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-10-13&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-09-02&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">All devtools bugs fixed between Firefox 34 and Firefox 35</a>.</p>
@@ -46,7 +46,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" for <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> declarations has been implemented. In conformance with ES2015 <code>let</code> semantics, the following situations<br>
+ <li>The "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" for <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> declarations has been implemented. In conformance with ES2015 <code>let</code> semantics, the following situations<br>
   now throw errors. See also this<a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds"> newsgroup announcement</a> and {{bug(1001090)}}.
 
   <ul>
@@ -59,7 +59,7 @@ tags:
    <li><code>String(Symbol("1"))</code> now no longer throws a {{jsxref("TypeError")}}; instead a string (<code>"Symbol(1)"</code>) gets returned ({{bug(1058396)}}).</li>
   </ul>
  </li>
- <li>The various <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects"><em>TypedArray</em> constructors</a> now have as their <code>[[Prototype]]</code> a single function, denoted <code>%TypedArray%</code>  in ES2015 (but otherwise not directly exposed).  Each typed array prototype now inherits from <code>%TypedArray%.prototype</code>.  (<code>%TypedArray%</code> and <code>%TypedArray%.prototype</code> inherit from <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype"><code>Function.prototype</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype"><code>Object.prototype</code></a>, respectively, so that typed array constructors and instances still have the properties found on those objects.)  Typed array function properties now reside on <code>%TypedArray%.prototype</code> and work on any typed array.  See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description"><em>TypedArray</em></a> and {{bug(896116)}} for more information.</li>
+ <li>The various <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects"><em>TypedArray</em> constructors</a> now have as their <code>[[Prototype]]</code> a single function, denoted <code>%TypedArray%</code>  in ES2015 (but otherwise not directly exposed).  Each typed array prototype now inherits from <code>%TypedArray%.prototype</code>.  (<code>%TypedArray%</code> and <code>%TypedArray%.prototype</code> inherit from <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype"><code>Function.prototype</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype"><code>Object.prototype</code></a>, respectively, so that typed array constructors and instances still have the properties found on those objects.)  Typed array function properties now reside on <code>%TypedArray%.prototype</code> and work on any typed array.  See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description"><em>TypedArray</em></a> and {{bug(896116)}} for more information.</li>
  <li>ES2015 semantics for <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation">prototype mutations using object literals</a> have been implemented ({{bug(1061853)}}).
   <ul>
    <li>Now only a single member notated as <code>__proto__:value</code> will mutate the <code>[[Prototype]]</code> in the object literal syntax.</li>
@@ -124,7 +124,7 @@ tags:
 <h3 id="XUL_Add-ons">XUL &amp; Add-ons</h3>
 
 <ul>
- <li>The private <code>_getTabForBrowser()</code> method on the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element has been deprecated. In its place, we've added a new, public, method called <span id="m-getTabForBrowser"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getTabForBrowser">getTabForBrowser</a></code></span>. This returns, predictably, the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element that contains the specified <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/browser">&lt;xul:browser&gt;</a></code>.</li>
+ <li>The private <code>_getTabForBrowser()</code> method on the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element has been deprecated. In its place, we've added a new, public, method called <span id="m-getTabForBrowser"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/getTabForBrowser">getTabForBrowser</a></code></span>. This returns, predictably, the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element that contains the specified <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser">&lt;xul:browser&gt;</a></code>.</li>
  <li><code>Components.utils.now()</code>, matching {{domxref("Performance.now()")}} has been implemented for non-window chrome code ({{bug(969490)}}).</li>
 </ul>
 

@@ -454,7 +454,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 </pre>
 
-<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
+<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
 <pre class="brush: bash notranslate">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13

@@ -18,11 +18,11 @@ tags:
 
 <p>This takes two mandatory parameters: the name of the native application and a JSON object which is the message to send it. The browser will launch the native application and deliver the message.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The first message sent by the native application is treated as a response to the <code>sendNativeMessage()</code> call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The first message sent by the native application is treated as a response to the <code>sendNativeMessage()</code> call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.</p>
 
 <p>A new instance of the application is launched for call to <code>runtime.sendNativeMessage()</code>. The browser will terminate the native application after getting a reply. To terminate a native application, the browser will close the pipe, give the process a few seconds to exit gracefully, and then kill it if it has not exited.</p>
 
-<p>For more information, see <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the sender sent a response, this will be fulfilled with the response as a JSON object. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the native application, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the sender sent a response, this will be fulfilled with the response as a JSON object. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the native application, the promise will be rejected with an error message.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
