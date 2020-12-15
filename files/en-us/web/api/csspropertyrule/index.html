@@ -1,0 +1,74 @@
+---
+title: CSSPropertyRule
+slug: Web/API/CSSPropertyRule
+tags:
+  - API
+  - CSS
+  - CSS Properties and Values API
+  - CSSPropertyRule
+  - Experimental
+  - Houdini
+  - Interface
+  - Reference
+---
+<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}{{draft}}</div>
+
+<p><strong><code>CSSPropertyRule</code></strong> is an interface representing a single CSS {{domxref("@property")}} rule. It implements the {{domxref("CSSRule")}} interface.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<p>The syntax is described using the <a href="https://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+
+<pre class="syntaxbox">interface CSSPropertyRule : CSSRule {
+    readonly attribute CSSOMString name;
+    readonly attribute CSSOMString syntax;
+    readonly attribute boolean inherits;
+    readonly attribute CSSOMString? initialValue;
+};
+</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSPropertyRule</code> also implements the properties of this interface. It has the following specific properties:</p>
+
+<dl>
+	<dt>{{domxref("CSSPropertyRule.inherits")}} {{readonlyinline}}</dt>
+    <dd>Returns the inherit flag of the custom property.</dd>
+    <dt>{{domxref("CSSPropertyRule.initialvalue")}} {{readonlyinline}}</dt>
+    <dd>Returns the initial  value of the custom property.</dd>
+    <dt>{{domxref("CSSPropertyRule.name")}} {{readonlyinline}}</dt>
+    <dd>Returns the name of the custom property.</dd>
+    <dt>{{domxref("CSSPropertyRule.syntax")}} {{readonlyinline}}</dt>
+	<dd>Returns the syntax of the custom property.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>As a {{domxref("CSSRule")}}, <code>CSSPropertyRule</code> also implements the methods of that interface. It has no specific methods.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>To do</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+    <tbody>
+     <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+     </tr>
+     <tr>
+      <td>{{SpecName('CSS Properties and Values API','#dom-csspropertyrule','CSSPropertyRule')}}</td>
+      <td>{{Spec2('CSS Properties and Values API')}}</td>
+      <td>Initial definition.</td>
+     </tr>
+    </tbody>
+   </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.CSSPropertyRule")}}</p>
