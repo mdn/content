@@ -23,7 +23,7 @@ tags:
  <li><code><a href="/en-US/Add-ons/Plugins/Reference/NPN_MemFlush">NPN_MemFlush</a></code> requests the browser to free up a specified amount of memory if not enough is currently available for the plug-in's requirements.</li>
 </ul>
 
-<h3 id="Allocating_and_freeing_memory" name="Allocating_and_freeing_memory">Allocating and freeing memory</h3>
+<h3 id="Allocating_and_freeing_memory">Allocating and freeing memory</h3>
 
 <p>To allocate memory and free memory, use these paired functions:</p>
 
@@ -40,7 +40,7 @@ tags:
  <li>If the plug-in uses <code>NPN_MemAlloc</code>, the browser is able to manage memory more efficiently because it knows how much memory the plug-in is using at any given time.</li>
 </ul>
 
-<h4 id="Mac_OS" name="Mac_OS">Mac OS</h4>
+<h4 id="Mac_OS">Mac OS</h4>
 
 <p>The Mac OS browser frequently fills its memory partition with cached data that is purged only as necessary. Since <code>NPN_MemAlloc</code> automatically frees cached information if necessary to fulfill a request for memory, calls to <code>NPN_MemAlloc</code> may succeed where direct calls to <code>NewPtr</code> fail.</p>
 
@@ -58,7 +58,7 @@ tags:
 
 <p>The <code>ptr</code> parameter represents a block of memory previously allocated using <code>NPN_MemAlloc</code>.</p>
 
-<h3 id="Flushing_memory_.28Mac_OS_only.29" name="Flushing_memory_.28Mac_OS_only.29">Flushing memory (Mac OS only)</h3>
+<h3 id="Flushing_memory_.28Mac_OS_only.29">Flushing memory (Mac OS only)</h3>
 
 <p>The <code>NPN_MemFlush</code> method frees a specified amount of memory. Normally, plug-ins should use <code>NPN_MemAlloc</code>, which automatically frees nonessential memory if necessary to fulfill the request. For Communicator 4.0 and later versions, this function is not necessary for the Mac OS platform; <code>NPN_MemAlloc</code> now performs memory flushing internally. You need to use <code>NPN_MemFlush</code> only when it is not possible to call <code>NPN_MemAlloc</code>, for example, when calling system methods that allocate memory indirectly. If <code>NPN_MemAlloc</code> is called, calls to <code>NPN_MemFlush</code> have no effect.</p>
 

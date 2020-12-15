@@ -17,14 +17,14 @@ tags:
 
 <p>However, for inline-level elements (such as <strong>span</strong>) that can wrap from one line to the next, <code>offsetTop</code> and <code>offsetLeft</code> describe the positions of the <em>first</em> border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while <code>offsetWidth</code> and <code>offsetHeight</code> describe the dimensions of the <em>bounding</em> border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of <code>offsetLeft</code>, <code>offsetTop</code>, <code>offsetWidth</code> and <code>offsetHeight</code> will not be a bounding box for a span with wrapped text.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="eval"><var>left</var> = <var>element</var>.offsetLeft;
 </pre>
 
 <p><code><var>left</var></code> is an integer representing the offset to the left in pixels <em>from the closest relatively positioned</em> parent element.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var colorTable = document.getElementById("t1");
 var tOLeft = colorTable.offsetLeft;
@@ -80,7 +80,7 @@ if (tOLeft &gt; 5) {
 
 <p>{{Compat("api.HTMLElement.offsetLeft")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}</li>

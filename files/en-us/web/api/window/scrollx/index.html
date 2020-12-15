@@ -14,7 +14,7 @@ tags:
 
 <p>The read-only <code><strong>scrollX</strong></code> property of the {{domxref("Window")}} interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}} property.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var x = window.scrollX;</pre>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>In more technical terms, <code>scrollX</code> returns the X coordinate of the left edge of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is 0.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This example checks the current horizontal scroll position of the document. If it's greater than 400 pixels, the window is scrolled back to the beginning.</p>
 
@@ -36,7 +36,7 @@ tags:
   window.scroll(0,0);
 }</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p><span style="line-height: 1.572;">The </span><code style="font-size: 14px;">pageXOffset</code><span style="line-height: 1.572;"> property is an alias for the </span><code style="font-size: 14px;">scrollX</code><span style="line-height: 1.572;"> property:</span></p>
 
@@ -77,7 +77,7 @@ var y = (window.pageYOffset !== undefined)
 
 <p>{{Compat("api.Window.scrollX")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Window.scrollY")}}</li>

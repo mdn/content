@@ -6,11 +6,11 @@ tags:
   - NeedsUpdate
   - SVG
 ---
-<h2 id="Overview" name="Overview">Overview</h2>
+<h2 id="Overview">Overview</h2>
 
 <p>This article and its associated example shows how to use inline <a href="/en-US/docs/SVG" title="SVG">SVG</a> to provide a background picture for a form. It shows how <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a> and <a href="/en-US/docs/CSS" title="CSS">CSS</a> can be used to manipulate the picture in the same way you would script regular HTML.</p>
 
-<h2 id="Source" name="Source">Source</h2>
+<h2 id="Source">Source</h2>
 
 <p>Here is the source to <a class="external" href="/presentations/xtech2005/svg-canvas/SVGDemo.xml" title="presentations/xtech2005/svg-canvas/SVGDemo.xml">the example</a>:</p>
 
@@ -56,7 +56,7 @@ tags:
 &lt;/html&gt;
 </pre>
 
-<h2 id="Discussion" name="Discussion">Discussion</h2>
+<h2 id="Discussion">Discussion</h2>
 
 <p>The page is mainly regular HTML, CSS and JavaScript. The only interesting part is the &lt;svg&gt; element it contains. This element and its children are declared to be in the SVG namespace. The element contains a gradient and two shapes filled with the gradient. The gradient color stops have their colors set by CSS. When the user enters something incorrect into the form, the script sets the <code>invalid</code> attribute on the &lt;body&gt;, and a style rule changes the gradient <code>end-stop</code> color to red. (Another style rule makes an error message appear.)</p>
 
@@ -82,7 +82,7 @@ img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");
 </pre>
 </div>
 
-<h2 id="Details" name="Details">Details</h2>
+<h2 id="Details">Details</h2>
 
 <p>The <code>viewBox</code> attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.</p>
 
@@ -90,7 +90,7 @@ img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");
 
 <p>The <code>style</code> attribute pins the SVG element to the background of the form.</p>
 
-<h2 id="Related_Links" name="Related_Links">Related Links</h2>
+<h2 id="Related_Links">Related Links</h2>
 
 <ul>
  <li>Another SVG in HTML example: <a href="/en-US/docs/SVG/Namespaces_Crash_Course/Example" title="SVG/Namespaces_Crash_Course/Example">A swarm of motes</a></li>

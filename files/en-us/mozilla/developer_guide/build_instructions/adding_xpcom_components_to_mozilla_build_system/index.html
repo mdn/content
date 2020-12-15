@@ -12,7 +12,7 @@ tags:
 
 <p>This document describes adding new components to Mozilla, including the build system and component registration. It does not deal with extensions, only core components checked into the main tree. It assumes you already know how to <a href="/en/Creating_XPCOM_Components" title="en/Creating_XPCOM_Components"> write XPCOM components</a>, and want to integrate them into Mozilla.</p>
 
-<h3 id="Where_to_put_your_files" name="Where_to_put_your_files">Where to put your files</h3>
+<h3 id="Where_to_put_your_files">Where to put your files</h3>
 
 <p>You will have to pick a good place for your component to live. Some general shared classes live in {{ Source("toolkit/components") }}, Firefox-specific classes live in {{ Source("browser/components") }}, a lot of random other stuff lives in {{ Source("extensions") }} and in other directories underneath the main <code>mozilla</code> directory. If you are extending a component, you can just use that component's directories. Otherwise, ask your favorite Mozilla guru or on <code>#developers</code> if you don't know where it should go.</p>
 
@@ -24,7 +24,7 @@ tags:
  <li><code>content</code> Where your user interface files go, including .xul and any associated .js files that are used at runtime. If you aren't building new UI specific for this component, you won't have one of these.</li>
 </ul>
 
-<h3 id="Makefiles" name="Makefiles">Makefiles</h3>
+<h3 id="Makefiles">Makefiles</h3>
 
 <p>Once you have your component written, you will need to write the makefiles. Your best bet is to copy the Makefile.in from another component similar to yours: most of the makefiles are very similar. These Makefile.in files are processed and the "real" Makefile is created. If you are using a separate directory tree for your object files, that final Makefiles will appear there.</p>
 
@@ -66,7 +66,7 @@ tags:
  <li><strong><a href="/en/DEFINES" title="en/DEFINES">DEFINES</a>:</strong> Additional preprocessor defines for C++. Example: <code>DEFINES = -DSOME_DEFINE -DOTHER_DEFINE=25</code></li>
 </ul>
 
-<h3 id="Adding_new_JavaScript_components_to_Mozilla_core" name="Adding_new_JavaScript_components_to_Mozilla_core">Package manifest</h3>
+<h3 id="Adding_new_JavaScript_components_to_Mozilla_core">Package manifest</h3>
 
 <p>When you add a new makefile for an XPCOM component, or when you add new files to an existing makefile, you should also add the relevant <code>.xpt</code>, <code>.js</code> and <code>.manifest</code> files to the appropriate section of the <a class="external" href="http://mxr.mozilla.org/comm-central/find?string=package-manifest%5C.in" title="http://mxr.mozilla.org/comm-central/find?string=package-manifest\.in"><strong><code>package-manifest.in</code></strong></a> file for all the products that are going to include your new components or interfaces.</p>
 
@@ -85,7 +85,7 @@ tags:
 
 <p>You can then follow the <a href="/en/Build_and_Install#Installing_Your_Build" title="en/Build_and_Install#Installing_Your_Build">package build instructions</a> to create an installer and verify that your new component is included.</p>
 
-<h3 id="Adding_new_JavaScript_components_to_Mozilla_core" name="Adding_new_JavaScript_components_to_Mozilla_core">Adding new JavaScript components to Mozilla core</h3>
+<h3 id="Adding_new_JavaScript_components_to_Mozilla_core">Adding new JavaScript components to Mozilla core</h3>
 
 <p>Put your JavaScript file in some directory such as <code>foo/src</code> which is for XPCOM components (don't use <code>content</code> which is for interface code). Then add your filename to the <code>EXTRA_COMPONENTS=</code> section of the <code>Makefile.in</code>.</p>
 
@@ -136,15 +136,15 @@ tags:
 };
 </pre>
 
-<h3 id="Adding_new_C.2B.2B_components_to_Mozilla_core" name="Adding_new_C.2B.2B_components_to_Mozilla_core">Adding new C++ components to Mozilla core</h3>
+<h3 id="Adding_new_C.2B.2B_components_to_Mozilla_core">Adding new C++ components to Mozilla core</h3>
 
-<h4 id="The_init_function" name="The_init_function">The init function</h4>
+<h4 id="The_init_function">The init function</h4>
 
 <p>You can provide an initialization function for your class. This will be called immediately after your class is allocated and the constructor is called. The init function takes 0 arguments, returns an nsresult, and must be public. You can call it anything you like, just reference it from <code>NS_GENERIC_FACTORY_CONSTRUCTOR_INIT</code> (discussed below).</p>
 
 <p>The advantage of using the init function over the normal C++ constructor is that you can return an error from the init function. If an error is detected, the function will be deallocated and the caller requesting an instance of your class will get the error. Generally, you should perform all initialization that may fail in your class' Init function.</p>
 
-<h4 id="Registering_the_component" name="Registering_the_component">Registering the component</h4>
+<h4 id="Registering_the_component">Registering the component</h4>
 
 <p>The components are registered as part of a module, the source for which usually lives in a directory called <code>build</code>. For example, {{ Source("toolkit/components/build") }} is the module source for the components underneath {{ Source("toolkit/components/") }}. Likewise, there is a {{ Source("browser/components/build") }}, a {{ Source("widget/src/build") }}, etc.</p>
 
@@ -166,7 +166,7 @@ tags:
 
 <p>which will call the function <code>nsYourConcreteClassName-&gt;Init()</code> after the object is allocated (see {{ Anch("The_init_function") }} above).</p>
 
-<h5 id="Add_an_nsModuleComponentInfo_for_your_class" name="Add_an_nsModuleComponentInfo_for_your_class">Add an <code>nsModuleComponentInfo</code> for your class</h5>
+<h5 id="Add_an_nsModuleComponentInfo_for_your_class">Add an <code>nsModuleComponentInfo</code> for your class</h5>
 
 <p>In the module .cpp file, there should be a long list of <code>nsModuleComponentInfo</code> structures corresponding to each of the classes the module implements. These structures generally look like this:</p>
 

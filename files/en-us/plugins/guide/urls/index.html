@@ -89,7 +89,7 @@ tags:
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_URLs">Posting URLs</a></li>
 </ul>
 
-<h3 id="Getting_URLs" name="Getting_URLs">Getting URLs</h3>
+<h3 id="Getting_URLs">Getting URLs</h3>
 
 <p>To retrieve a URL and display it on a specified target page, use the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURLNotify">NPN_GetURLNotify</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_URLNotify">NPP_URLNotify</a></code> functions. This section describes the methods and procedures used for getting the URL and displaying the page.</p>
 
@@ -133,7 +133,7 @@ tags:
 
 <div class="warning"><strong>Warning</strong>: In Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), <code>NPN_GetURLNotify()</code> does not notify the plug-in if <code>notifyData</code> is <code>NULL</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=638367" title="[Firefox 4] [NPAPI plugins] NPN_GetURLNotify does not call NPP_URLNotify if notifyData is null">bug 638367</a> for details.</div>
 
-<h4 id="Getting_the_URL_and_Displaying_the_Page" name="Getting_the_URL_and_Displaying_the_Page">Getting the URL and Displaying the Page</h4>
+<h4 id="Getting_the_URL_and_Displaying_the_Page">Getting the URL and Displaying the Page</h4>
 
 <p>To retrieve a URL and display it on a specified target page, you use the <code>NPN_GetURL</code> and <code>NPN_GetURLNotify</code> functions. The URL can be displayed in the same window or frame, a new window, or a different window or frame, depending on the value of the target parameter. Specify the display target with one of these special target names:</p>
 
@@ -152,7 +152,7 @@ tags:
 
   instance, "http://www.example.com/", "_blank");</pre>
 
-<h3 id="Posting_URLs" name="Posting_URLs">Posting URLs</h3>
+<h3 id="Posting_URLs">Posting URLs</h3>
 
 <ul>
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/URLs#Posting_Data_to_an_HTTP_Server">Posting Data to an HTTP Server</a></li>
@@ -207,7 +207,7 @@ const char *buf, NPBool file);</pre>
 
 <p>The parameters of this function have the same definitions as those of <code>NPN_PostURL</code>. The <code>notifyData</code> parameter contains plug-in-private data passed by <code>NPP_URLNotify</code> and may be used for tracking multiple posts.</p>
 
-<h4 id="Posting_Data_to_an_HTTP_Server" name="Posting_Data_to_an_HTTP_Server">Posting Data to an HTTP Server</h4>
+<h4 id="Posting_Data_to_an_HTTP_Server">Posting Data to an HTTP Server</h4>
 
 <p>The following code posts two name-value pairs to a CGI script through HTTP. The response from the server is displayed in a new window.</p>
 
@@ -219,7 +219,7 @@ const char *buf, NPBool file);</pre>
 
 <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt;"><em>NPN_PostURL(npInstance, "http://www.baidu.com","_blank", nPostDataLen, pPostData, FALSE);</em></p>
 
-<h4 id="Uploading_Files_to_an_FTP_Server" name="Uploading_Files_to_an_FTP_Server">Uploading Files to an FTP Server</h4>
+<h4 id="Uploading_Files_to_an_FTP_Server">Uploading Files to an FTP Server</h4>
 
 <p>Plug-ins can use <code>NPN_PostURL</code> or <code>NPN_PostURLNotify</code> to upload files to a remote server using FTP. This example uploads a file from the root of the local file system to an FTP server and displays the response in a frame named response:</p>
 
@@ -233,7 +233,7 @@ err = NPN_PostURL(instance, "ftp://fred@ftp.example.com/pub/",
 
                   "response", myLength, myData, TRUE);</pre>
 
-<h4 id="Sending_Mail" name="Sending_Mail">Sending Mail</h4>
+<h4 id="Sending_Mail">Sending Mail</h4>
 
 <p>A plug-in can send an email message using <code>NPN_PostURL</code> or <code>NPN_PostURLNotify</code>. The following code sends a mail message with the default headers from the client machine.</p>
 

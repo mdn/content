@@ -82,7 +82,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Relative_positioning" name="Relative_positioning">Relative positioning</h3>
+<h3 id="Relative_positioning">Relative positioning</h3>
 
 <p>Relatively positioned elements are offset a given amount from their normal position within the document, but without the offset affecting other elements. In the example below, note how the other elements are placed as if "Two" were taking up the space of its normal location.</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>{{EmbedLiveSample('Relative_positioning', '', '200px')}}</p>
 
-<h3 id="Absolute_positioning" name="Absolute_positioning">Absolute positioning</h3>
+<h3 id="Absolute_positioning">Absolute positioning</h3>
 
 <p>Elements that are relatively positioned remain in the normal flow of the document. In contrast, an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its <em>nearest positioned ancestor</em> (i.e., the nearest ancestor that is not <code>static</code>). If a positioned ancestor doesn't exist, it is positioned relative to the ICB (initial containing block — see also the <a href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details">W3C definition</a>), which is the containing block of the document's root element.</p>
 
@@ -168,7 +168,7 @@ span {
 
 <p>{{EmbedLiveSample('Absolute_positioning', '', '420px')}}</p>
 
-<h3 id="Fixed_positioning" name="Fixed_positioning">Fixed positioning</h3>
+<h3 id="Fixed_positioning">Fixed positioning</h3>
 
 <p>Fixed positioning is similar to absolute positioning, with the exception that the element's <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> is the initial containing block established by the <em>viewport</em>, unless any ancestor has <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), which then causes that ancestor to take the place of the elements <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a>. This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport.</p>
 
@@ -229,7 +229,7 @@ span {
 
 <p>{{EmbedLiveSample('Fixed_positioning', '', '300px')}}</p>
 
-<h3 id="Sticky_positioning" name="Sticky_positioning">Sticky positioning</h3>
+<h3 id="Sticky_positioning">Sticky positioning</h3>
 
 <p>Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For instance...</p>
 
@@ -339,7 +339,7 @@ dd + dd {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

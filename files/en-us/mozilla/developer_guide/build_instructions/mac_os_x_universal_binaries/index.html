@@ -26,15 +26,15 @@ tags:
 
 <p>On the Gecko 1.9.2 and lower branches, universal binaries are PPC/i386 binaries. On Gecko 2.0 and higher branches, universal binaries are i386/x86_64.</p>
 
-<h3 id="Prerequisites" name="Prerequisites">Prerequisites</h3>
+<h3 id="Prerequisites">Prerequisites</h3>
 
 <p>The universal build system is supported on the trunk, Mozilla 1.9.1 and Mozilla 1.9.2 branches. You should be familiar with the <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites" title="En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS build prerequisites</a> before attempting to build a universal binary of a Mozilla product. The prerequisites for universal binaries are the same. "libIDL" and "GLib" need only be installed in the host architecture.</p>
 
-<h3 id="Configuration" name="Configuration">Configuration</h3>
+<h3 id="Configuration">Configuration</h3>
 
 <p>This section describes how to check out the necessary files and configure Mozilla to build as a universal binary.</p>
 
-<h4 id="Your_.mozconfig_File" name="Your_.mozconfig_File">Your .mozconfig file</h4>
+<h4 id="Your_.mozconfig_File">Your .mozconfig file</h4>
 
 <p>When preparing your own <code><a href="/en/Configuring_Build_Options" title="en/Configuring_Build_Options">.mozconfig</a></code> file, you must source the <code>$topsrcdir/build/macosx/universal/mozconfig</code> config fragment . It should be sourced after any product-specific <code>mozconfig</code>, in case it needs to override any options.</p>
 
@@ -54,11 +54,11 @@ ac_add_options --disable-tests
 
 <p>Once the configuration is in place, use the normal steps to build. Two build passes will be made, one for each architecture. As one might expect, this process takes approximately twice as long as compiling for a single architecture. After both passes are complete, the results are automatically merged into a single universal binary.</p>
 
-<h4 id="Results_of_a_Build" name="Results_of_a_Build">Results of a build</h4>
+<h4 id="Results_of_a_Build">Results of a build</h4>
 
 <p>Two subdirectories are created in your objdir, one for each architecture (<code>ppc</code>, <code>i386</code>, or <code>x86_64</code>). Each of these directories contains a complete processor-specific build. The merged universal binary is placed in both build directories, one via symlink, at <code>dist/universal</code>.</p>
 
-<h4 id="Packaging" name="Packaging">Packaging</h4>
+<h4 id="Packaging">Packaging</h4>
 
 <p>For most products, when configured as a universal binary, the packaging phase will produce a disk image containing the merged universal binary. In order to perform the packaging phase, you must keep the new objdir structure in mind. If you had used the <a href="#Your_.mozconfig_File">sample <code>.mozconfig</code></a> above, you would build a universal disk image of Firefox by typing:</p>
 

@@ -75,7 +75,7 @@ tags:
 
 <p>Any dynamic features that require the page to complete loading before being used, should be initially disabled, and then only enabled after the page has loaded. This will cause the JavaScript to be loaded after the page contents, which will improve the overall appearance of the page load.</p>
 
-<h3 id="Reduce_the_number_of_inline_scripts" name="Reduce_the_number_of_inline_scripts">Reduce the number of inline scripts</h3>
+<h3 id="Reduce_the_number_of_inline_scripts">Reduce the number of inline scripts</h3>
 
 <p>Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of <code>document.write()</code> to output content in particular, can improve overall page loading. Use modern <a href="/en-US/docs/AJAX" title="en-US/docs/AJAX">AJAX</a> methods to manipulate page content for modern browsers, rather than the older approaches based on <code>document.write()</code>.</p>
 
@@ -157,7 +157,7 @@ tags:
 
 <p>Note: Even though these attributes do help a lot the first time a page is loaded, you should use them but not assume they will work in all browsers. If you already follow all JavaScript best practices, there is no need to change your code.</p>
 
-<h2 id="Example_page_structure" name="Example_page_structure">Example page structure</h2>
+<h2 id="Example_page_structure">Example page structure</h2>
 
 <p>· <code>{{htmlelement('html')}}</code></p>
 

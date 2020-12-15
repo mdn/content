@@ -21,7 +21,7 @@ tags:
 <p><strong>Note</strong>: Calling <code>history.pushState()</code> or <code>history.replaceState()</code> won't trigger a <code>popstate</code> event. The <code>popstate</code> event is only triggered by performing a browser action, such as clicking on the back button (or calling <code>history.back()</code> in JavaScript), when navigating between two history entries for the same document.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">window.onpopstate = <em>funcRef</em>;
 </pre>
@@ -30,7 +30,7 @@ tags:
  <li><code>funcRef</code> is a handler function.</li>
 </ul>
 
-<h2 id="The_popstate_event" name="The_popstate_event">Examples</h2>
+<h2 id="The_popstate_event">Examples</h2>
 
 <p>For example, a page at <code>http://example.com/example.html</code> running the following code will generate alerts as indicated:</p>
 
@@ -73,7 +73,7 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 
 <p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("window.history")}}</li>

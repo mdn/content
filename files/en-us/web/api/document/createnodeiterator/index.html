@@ -12,7 +12,7 @@ tags:
 
 <p>Returns a new <a class="internal" href="/en/DOM/NodeIterator" title="NodeIterator"><code>NodeIterator</code></a> object.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">const nodeIterator = document.createNodeIterator(<var>root</var>[, <var>whatToShow</var>[, <var>filter</var>]]);
 </pre>
@@ -109,7 +109,7 @@ tags:
  <dd>An object implementing the {{ domxref("NodeFilter") }} interface. Its <code>acceptNode()</code> method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes (a simple callback function may also be used instead). The method should return one of <code>NodeFilter.FILTER_ACCEPT</code>, <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code>. See the {{ anch("Example") }}.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js notranslate">const nodeIterator = document.createNodeIterator(
     document.body,

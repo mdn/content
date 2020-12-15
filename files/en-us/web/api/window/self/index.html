@@ -13,7 +13,7 @@ tags:
 
 <p>The <code><strong>Window.self</strong></code> read-only property returns the window itself, as a {{domxref("WindowProxy")}}. It can be used with dot notation on a <code>window</code> object (that is, <code>window.self</code>) or standalone (<code>self</code>). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in {{domxref("Worker", "Web Workers", "", 1)}}. By using <code>self</code>, you can refer to the global scope in a way that will work not only in a window context (<code>self</code> will resolve to <code>window.self</code>) but also in a worker context (<code>self</code> will then resolve to {{domxref("WorkerGlobalScope.self")}}).</p>
 
-<h2 id="Notes" name="Notes">Example</h2>
+<h2 id="Notes">Example</h2>
 
 <p>Uses of <code>window.self</code> like the following could just as well be replaced by <code>window</code>.</p>
 

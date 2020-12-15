@@ -18,23 +18,23 @@ tags:
 
 <p>As you may remember from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">basic theory</a> article, a vertex is a point in a 3D coordinate system. Vertices may, and usually do, have additional properties. The 3D coordinate system defines space and the vertices help define shapes in that space.</p>
 
-<h2 id="shader_types" name="shader_types">Shader types</h2>
+<h2 id="shader_types">Shader types</h2>
 
 <p>A shader is essentially a function required to draw something on the screen. Shaders run on a <a href="https://en.wikipedia.org/wiki/GPU">GPU</a> (graphics processing unit), which is optimized for such operations. Using a GPU to deal with shaders offloads some of the number crunching from the CPU. This allows the CPU to focus its processing power on other tasks, like executing code.</p>
 
-<h3 id="vertex_shader" name="vertex_shader">Vertex shaders</h3>
+<h3 id="vertex_shader">Vertex shaders</h3>
 
 <p>Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the <code>gl_Position</code> variable — this is a special, global, and built-in GLSL variable. <code>gl_Position</code> is used to store the position of the current vertex.</p>
 
 <p>The <code>void main()</code> function is a standard way of defining the <code>gl_Position</code> variable. Everything inside  <code>void main()</code> will be executed by the vertex shader.  A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.</p>
 
-<h3 id="fragment_shader" name="fragment_shader">Fragment shaders</h3>
+<h3 id="fragment_shader">Fragment shaders</h3>
 
 <p>Fragment (or texture) shaders define RGBA (red, green, blue, alpha) colors for each pixel being processed — a single fragment shader is called once per pixel. The purpose of the fragment shader is to set up the <code>gl_FragColor</code> variable. <code>gl_FragColor</code> is a built-in GLSL variable like <code>gl_Position</code>.</p>
 
 <p>The calculations result in a variable containing the information about the RGBA color.</p>
 
-<h2 id="demo" name="demo">Demo</h2>
+<h2 id="demo">Demo</h2>
 
 <p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
 
@@ -42,7 +42,7 @@ tags:
 <p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
 </div>
 
-<h3 id="Environment_setup" name="Environment_setup">Environment setup</h3>
+<h3 id="Environment_setup">Environment setup</h3>
 
 <p>To start with the WebGL shaders you don't need much. You should:</p>
 
@@ -52,7 +52,7 @@ tags:
  <li>Save a copy of the <a href="https://threejs.org/build/three.min.js">latest minimized Three.js library</a> inside your directory.</li>
 </ul>
 
-<h3 id="HTML_structure" name="HTML_structure">HTML structure</h3>
+<h3 id="HTML_structure">HTML structure</h3>
 
 <p>Here's the HTML structure we will use.</p>
 

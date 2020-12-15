@@ -26,7 +26,7 @@ tags:
 <p><strong>NOTE:</strong> Windowless plug-ins were not supported on the X Window System platform prior to Gecko 1.9 Alpha 7 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=137189" title="FIXED: Windowless plug-in support for X (WMODE)">bug 137189</a>).</p>
 </div>
 
-<h3 id="The_NPWindow_Structure" name="The_NPWindow_Structure">The NPWindow Structure</h3>
+<h3 id="The_NPWindow_Structure">The NPWindow Structure</h3>
 
 <p>When a plug-in is loaded, it is drawn into a target area. This target is either the windowed plug-in's native window, or the drawable of a windowless plug-in. The <a href="/en/NPWindow" title="en/NPWindow">NPWindow</a> structure represents either the native window or a drawable. This structure contains information about coordinate position, size, the state of the plug-in (windowed or windowless), and some platform-specific information.</p>
 
@@ -88,7 +88,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>In both cases, the drawable can be an off-screen pixmap.</p>
 
-<h3 id="Drawing_Plug-ins" name="Drawing_Plug-ins">Drawing Plug-ins</h3>
+<h3 id="Drawing_Plug-ins">Drawing Plug-ins</h3>
 
 <p>This section describes the methods and processes you use in drawing both windowed and windowless plug-ins. Processes that apply to only one of these plug-in types are described in the following sections.</p>
 
@@ -110,7 +110,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
  <li><a href="/en/NPN_InvalidateRegion" title="en/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: Invalidate a region in a windowless plug-in before repainting or refreshing.</li>
 </ul>
 
-<h4 id="Printing_the_Plug-in" name="Printing_the_Plug-in">Printing the Plug-in</h4>
+<h4 id="Printing_the_Plug-in">Printing the Plug-in</h4>
 
 <p>The browser calls the <code>NPP_Print</code> method to ask the plug-in instance to print itself.</p>
 
@@ -135,7 +135,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>On MS Windows, note that the coordinates for the window rectangle are in TWIPS format. For this reason, you need to convert the x - and y - coordinates using the Windows API call <code>DPtoLP</code> when you output text.</p>
 
-<h4 id="Setting_the_Window" name="Setting_the_Window">Setting the Window</h4>
+<h4 id="Setting_the_Window">Setting the Window</h4>
 
 <p>The browser calls the <code>NPP_SetWindow</code> function to set the window in which a plug-in draws or returns an error code. This window is valid for the life of the instance, or until <code>NPP_SetWindow</code> is called again with a different value.</p>
 
@@ -156,7 +156,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>The <code>window-&gt;window</code> field points to an <code>NP_Port</code> structure.</p>
 
-<h4 id="Getting_Information" name="Getting_Information">Getting Information</h4>
+<h4 id="Getting_Information">Getting Information</h4>
 
 <p>To receive information from the browser, the plug-in calls the <code>NPN_GetValue</code> method.</p>
 
@@ -173,7 +173,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>You can also use <code>NPN_GetValue</code> to help create a menu or dialog box for a windowless plug-in.</p>
 
-<h3 id="Windowed_Plug-ins" name="Windowed_Plug-ins">Windowed Plug-ins</h3>
+<h3 id="Windowed_Plug-ins">Windowed Plug-ins</h3>
 
 <p>The browser gives each windowed plug-in its own native window, often a child window of the browser window itself, to draw into. The plug-in has complete control over drawing and event handling within that window.</p>
 
@@ -193,7 +193,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Unix">Unix</a></li>
 </ul>
 
-<h4 id="Mac_OS" name="Mac_OS">Mac OS</h4>
+<h4 id="Mac_OS">Mac OS</h4>
 
 <p>On Mac OS, the browser passes an <code>NP_Port</code> structure in the window field of the <code>NPWindow</code> structure. This structure contains a pointer to the graphics port (<code>CGraphPtr</code>) into which the plug-in instance should draw and the x - and y - coordinates of the upper-left corner of this port. The plug-in can use these coordinates to call <code>SetOrigin(portx, porty)</code> to place the upper-left corner of its rectangle at (0,0). The Mac OS <code>GrafPort</code> structure's <code>clipRgn</code> field should be set to the clipping rectangle for the instance in port coordinates.</p>
 
@@ -210,21 +210,21 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 
 <p>The browser is also responsible for sending the plug-in all events targeted to an instance, such as mouse clicks when the cursor is within the instance rectangle or suspend and resume events when the application is switched in and out. Events are sent to the plug-in with a call to <code>NPP_HandleEvent</code>; for a complete list of event types, see the reference entry for <code>NPEvent</code>.</p>
 
-<h4 id="Windows" name="Windows">Windows</h4>
+<h4 id="Windows">Windows</h4>
 
 <p>On Windows, the browser registers a window class and creates an instance of that class for the plug-in instance. The plug-in can then subclass the window to receive any events it needs. If the plug-in needs to receive periodic time messages (for example, for animation), it should use a timer or a separate thread.</p>
 
-<h4 id="Unix" name="Unix">Unix</h4>
+<h4 id="Unix">Unix</h4>
 
 <p>On Unix, the browser creates a Motif Drawing Area widget for the instance and passes the window ID of the widget in the window field of <code>NPWindow</code>. Additionally, the browser creates an <code>NPSetWindowCallbackStruct</code> object and passes it in the <code>ws_info</code> field of <code>NPWindow</code>. As on Windows, the plug-in can receive all events for the instance, in this case through the widget. If the plug-in needs to receive periodic time messages, it should install a timer or fork a thread.</p>
 
-<h4 id="Event_Handling_for_Windowed_Plug-ins" name="Event_Handling_for_Windowed_Plug-ins">Event Handling for Windowed Plug-ins</h4>
+<h4 id="Event_Handling_for_Windowed_Plug-ins">Event Handling for Windowed Plug-ins</h4>
 
 <p>All imaging and user interface events for a windowed plug-in instance are handled according to the windowing system of its native platform. The Plug-in API provides a native window handle within which an instance does its drawing through the API call <code>NPP_SetWindow</code>. <code>NPP_SetWindow</code> passes the instance an <code>NPWindow</code> object containing the native window handle.</p>
 
 <p>On Windows and Unix, each instance receives its own child window within the browser window hierarchy, and imaging and event processing are relative to this window. Mac OS does not support child windows. The native window is shared between the instance and the browser. The instance must restrict its drawing to a specified area of the shared window, and it must always save the current settings, set up the drawing environment, and restore the shared drawing environment to the previous settings. On Mac OS, events are explicitly provided to the instance by <code>NPP_HandleEvent</code>.</p>
 
-<h3 id="Windowless_Plug-ins" name="Windowless_Plug-ins">Windowless Plug-ins</h3>
+<h3 id="Windowless_Plug-ins">Windowless Plug-ins</h3>
 
 <p>A windowless plug-in does not require a native window to draw into. Instead it draws into a drawable (<code>HDC</code> on Windows or <code>CGrafPtr</code> on Mac OS), which can either be on-screen or off-screen.</p>
 
@@ -250,7 +250,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling#Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</a></li>
 </ul>
 
-<h4 id="Specifying_That_a_Plug-in_Is_Windowless" name="Specifying_That_a_Plug-in_Is_Windowless">Specifying That a Plug-in Is Windowless</h4>
+<h4 id="Specifying_That_a_Plug-in_Is_Windowless">Specifying That a Plug-in Is Windowless</h4>
 
 <p>To specify that a plug-in is windowless, use the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_SetValue">NPN_SetValue</a></code> method.</p>
 
@@ -270,7 +270,7 @@ NPWindowType  type;   /* Whether this is a window or a drawable */
 }
 </pre>
 
-<h4 id="Invalidating_the_Drawing_Area" name="Invalidating_the_Drawing_Area">Invalidating the Drawing Area</h4>
+<h4 id="Invalidating_the_Drawing_Area">Invalidating the Drawing Area</h4>
 
 <p>Before it can repaint or refresh part of its drawing area, a windowless plug-in must first invalidate the area with either of these browser methods: <code>NPN_InvalidateRect</code> or <code>NPN_InvalidateRegion</code>. Both methods perform the same operations:</p>
 
@@ -311,7 +311,7 @@ void NPN_InvalidateRect(NPP instance, NPRect *invalidRect);
 void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 </pre>
 
-<h4 id="Forcing_a_Paint_Message" name="Forcing_a_Paint_Message">Forcing a paint message</h4>
+<h4 id="Forcing_a_Paint_Message">Forcing a paint message</h4>
 
 <p>Windowed and windowless plug-ins have different drawing models. A windowed plug-in determines when it draws, whereas a windowless plug-in draws in response to a paint message from the browser. A plug-in can call <code>NPN_ForceRedraw()</code> to force a paint message synchronously, once an area has been invalidated with <code>NPN_InvalidateRect()</code> or <code>NPN_InvalidateRegion()</code>.</p>
 
@@ -322,7 +322,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <div class="note"><strong>Note:</strong> Some browsers, including Firefox 4, may ignore calls to <code>NPN_ForceRedraw()</code>.</div>
 
-<h4 id="Receiving_a_Paint_Message" name="Receiving_a_Paint_Message">Receiving a Paint Message</h4>
+<h4 id="Receiving_a_Paint_Message">Receiving a Paint Message</h4>
 
 <p>A plug-in must not draw into its drawable unless it receives a paint message. It does not need to call the platform-specific function to begin painting within a window. That is, the plug-in does not call <code>BeginPaint</code> on Windows or <code>BeginUpdate</code> on Mac OS.</p>
 
@@ -346,13 +346,13 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <p>The plugin should draw to the <code>Drawable</code> with the offset specified in the <code>x</code> and <code>y</code> members of the <a href="/en/NPWindow" title="en/NPWindow">NPWindow</a> structure, with the clip rectangle specified in the <code>clipRect</code> member, and with the <code>Visual</code> and <code>Colormap</code> specified in the <code>ws_info</code> member.</p>
 
-<h4 id="Making_a_Plug-in_Opaque" name="Making_a_Plug-in_Opaque">Making a Plug-in Opaque</h4>
+<h4 id="Making_a_Plug-in_Opaque">Making a Plug-in Opaque</h4>
 
 <p>A windowless plug-in is opaque if it has no transparent areas. When the browser generates a paint message for the plug-in, it assumes that the plug-in is responsible for painting the entire area to be updated. Because the browser does not need to draw the background behind the plug-in, opaque windowless plug-ins are considerably more efficient than transparent plug-ins.</p>
 
 <p>A windowless plug-in is transparent by default. To make a transparent plug-in opaque, call <code>NPN_SetValue</code> to set <code>NPPVpluginTransparentBool</code> to false. The plug-in can call this method any time after specifying that it is a windowless plug-in.</p>
 
-<h4 id="Making_a_Plug-in_Transparent" name="Making_a_Plug-in_Transparent">Making a Plug-in Transparent</h4>
+<h4 id="Making_a_Plug-in_Transparent">Making a Plug-in Transparent</h4>
 
 <p>A windowless plug-in is transparent if it has transparent areas. Here are two examples of plug-ins that have transparent areas:</p>
 
@@ -365,7 +365,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <p>Windowless plug-ins are transparent by default. If you want to make an opaque windowless plug-in transparent, call the <code>NPN_SetValue</code> method and set <code>NPPVpluginTransparentBool</code> to the value true. The plug-in can call this method any time after specifying that it is a windowless plug-in.</p>
 
-<h4 id="Creating_Pop-up_Menus_and_Dialog_Boxes" name="Creating_Pop-up_Menus_and_Dialog_Boxes">Creating Pop-up Menus and Dialog Boxes</h4>
+<h4 id="Creating_Pop-up_Menus_and_Dialog_Boxes">Creating Pop-up Menus and Dialog Boxes</h4>
 
 <p>MS Windows and Unix/X11 only</p>
 
@@ -392,7 +392,7 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <p>The value parameter for <a href="/en/NPN_GetValue" title="en/NPN_GetValue">NPN_GetValue</a> must point to an Xlib <code>Window</code>. On successful return this will contain the browser toplevel window. Use this <code>Window</code> to set the WM_TRANSIENT_FOR property on dialog boxes.</p>
 
-<h4 id="Event_Handling_for_Windowless_Plug-ins" name="Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</h4>
+<h4 id="Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</h4>
 
 <p>On all platforms, platform-specific events are passed to windowless plug-ins through the <code><a href="/en/NPP_HandleEvent" title="en/NPP_HandleEvent">NPP_HandleEvent</a></code> method. The plug-in must return true from <code>NPP_HandleEvent</code> if it has handled the event and false if it has not. Mac OS uses this mechanism for both windowed and windowless plug-ins; on this platform, <code>NPP_HandleEvent</code> is the only way the plug-in can receive events from its host application.</p>
 

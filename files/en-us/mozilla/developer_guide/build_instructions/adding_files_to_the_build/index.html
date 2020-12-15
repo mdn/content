@@ -9,7 +9,7 @@ tags:
 
 <p>{{ Note("Don\'t forget to check TreeHerder after you check in!") }}</p>
 
-<h2 id="Adding_files_to_the_build" name="Adding_files_to_the_build">Adding files to the build</h2>
+<h2 id="Adding_files_to_the_build">Adding files to the build</h2>
 
 <ul>
  <li>Edit <code class="filename">Makefile.in</code> files to add new source files, and export header files.</li>
@@ -19,7 +19,7 @@ tags:
  <li>On platforms that build with <code>gcc</code>, because of the symbol visibility, you might have to check <a href="/en/System_Headers" title="en/System_Headers">System Headers</a> to make sure they are properly wrapped.</li>
 </ul>
 
-<h2 id="Checking_In" name="Checking_In">Checking in</h2>
+<h2 id="Checking_In">Checking in</h2>
 
 <p>Adding new files to the build can cause breakage on tinderbox and to other developers if things aren't checked in the correct order.</p>
 
@@ -28,7 +28,7 @@ tags:
  <li>Check in the patches to existing files that make your new files get used.</li>
 </ol>
 
-<h2 id="Exporting_Files" name="Exporting_Files">Exporting files</h2>
+<h2 id="Exporting_Files">Exporting files</h2>
 
 <p>Exporting a file makes it get copied to <code>mozilla/dist</code>. C and C++ header files are exported by including them the <code>EXPORTS</code> list in {{ Source("xpcom/base/Makefile.in#60", "Makefile.in") }}, and IDL files are exported by including them in the <code>XPIDLSRCS</code> list.</p>
 

@@ -14,26 +14,26 @@ tags:
 
 <p>For documentation on developing features or fixing bugs, look at the <a href="en">Mozilla Technical Documents</a> or <a class="external" href="http://www.mozilla.org/library.html">Mozilla Library</a>. For general Unix issues, look at the <a class="external" href="http://www.mozilla.org/unix/">Mozilla Unix</a>.</p>
 
-<h3 id="Other_Unix_Build_pages" name="Other_Unix_Build_pages">Other Unix Build pages</h3>
+<h3 id="Other_Unix_Build_pages">Other Unix Build pages</h3>
 
 <ul>
  <li><a href="en/Adding_Files_to_the_Build">How to add files and not break the build</a>.</li>
  <li><a class="external" href="http://www.mozilla.org/build/configurator-faq.html">Build Configuator FAQ</a>: FAQ for the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a>.</li>
 </ul>
 
-<h3 id="Requirements" name="Requirements">Requirements</h3>
+<h3 id="Requirements">Requirements</h3>
 
 <p>See the <a href="en/Linux_Build_Prerequisites">Unix build requirements</a>.</p>
 
-<h3 id="Get_the_Code" name="Get_the_Code">Get the Code</h3>
+<h3 id="Get_the_Code">Get the Code</h3>
 
 <p>There are two ways to get the code:</p>
 
-<h4 id="FTP" name="FTP"><a href="en/Mozilla_Source_Code_(HTTP%2f%2fFTP)">FTP</a></h4>
+<h4 id="FTP"><a href="en/Mozilla_Source_Code_(HTTP%2f%2fFTP)">FTP</a></h4>
 
 <p>Drops are generally produced at least once per week (usually daily), and are known to compile and even run on a few platforms.</p>
 
-<h4 id="CVS" name="CVS"><a href="en/Mozilla_Source_Code_(CVS)">CVS</a></h4>
+<h4 id="CVS"><a href="en/Mozilla_Source_Code_(CVS)">CVS</a></h4>
 
 <p>Provides the most current code, but is slower than ftp. (First check that <a class="external" href="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey">Tinderbox</a> is green to be sure it will compile.)</p>
 
@@ -49,9 +49,9 @@ gmake -f client.mk checkout
 
 <p>Do not try to manually check out the mozilla/ CVS tree on the HEAD branch. It will not work.</p>
 
-<h3 id="Build_the_Lizard" name="Build_the_Lizard">Build the Lizard</h3>
+<h3 id="Build_the_Lizard">Build the Lizard</h3>
 
-<h4 id="Manually_drive_the_build" name="Manually_drive_the_build">Manually drive the build</h4>
+<h4 id="Manually_drive_the_build">Manually drive the build</h4>
 
 <ol>
  <li><code>cd mozilla</code></li>
@@ -64,7 +64,7 @@ gmake -f client.mk checkout
 
 <p>For build system hackers: If you change configure.in, cd to mozilla, and run <strong><code>autoconf-2.13</code></strong>. This generates a new configure script. (When you checkin configure.in, cvs will run autoconf and check in a new configure script for you).</p>
 
-<h4 id="Automated_build_.28client.mk.29" name="Automated_build_.28client.mk.29">Automated build (client.mk)</h4>
+<h4 id="Automated_build_.28client.mk.29">Automated build (client.mk)</h4>
 
 <ol>
  <li>Save the script from <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> as <strong><code>~/.mozconfig</code></strong>.</li>
@@ -79,7 +79,7 @@ gmake -f client.mk checkout
 
 <p>If you want to build <a class="external" href="http://www.mozilla.com/firefox/">Firefox</a>, use the {{ Source("browser/config/mozconfig", "example mozconfig file") }} in the mozilla/browser/config source directory.</p>
 
-<h3 id="After_the_build" name="After_the_build">After the build</h3>
+<h3 id="After_the_build">After the build</h3>
 
 <ul>
  <li><strong><code>cd dist/bin</code></strong> and you should see links to the scripts to run the executables: <code>mozilla</code> and <code>mozilla-viewer.sh</code>.</li>
@@ -93,7 +93,7 @@ gmake -f client.mk checkout
  <li>Update your tree by re-checking out the source, e.g. repeating the initial checkout process.</li>
 </ul>
 
-<h3 id="etc." name="etc.">etc.</h3>
+<h3 id="etc.">etc.</h3>
 
 <p>Parallel builds: just adding -j4 to gmake doesn't work, you need to do this:</p>
 
@@ -101,7 +101,7 @@ gmake -f client.mk checkout
 </pre>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): <a class="link-mailto" href="mailto:leaf@mozilla.org">Daniel Nunes</a></li>

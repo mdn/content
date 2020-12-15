@@ -20,7 +20,7 @@ tags:
 
 <p>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><var>var element</var> = <var>document</var>.fullscreenElement;</pre>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>The {{domxref("Element")}} object that's currently in full-screen mode; if full-screen mode isn't currently in use by the <code><var>document</var></code>&gt;, the returned value is <code>null</code>.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This example presents a function, <code>isVideoInFullscreen()</code>, which looks at the value returned by <code>fullscreenElement</code>; if the document is in full-screen mode (<code>fullscreenElement</code> isn't <code>null</code>) and the full-screen element's {{domxref("Node.nodeName", "nodeName")}} is <code>VIDEO</code>, indicating a {{HTMLElement("video")}} element, the function returns <code>true</code>, indicating that the video is in full-screen mode.</p>
 

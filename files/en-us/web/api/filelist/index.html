@@ -14,7 +14,7 @@ tags:
 <p><strong>Note:</strong> Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.</p>
 </div>
 
-<h2 id="Using_the_file_list" name="Using_the_file_list">Using the file list</h2>
+<h2 id="Using_the_file_list">Using the file list</h2>
 
 <p>All <code>&lt;input&gt;</code> element nodes have a <code>files</code> attribute of type <code>FileList</code> on them which allows access to the items in this list. For example, if the HTML includes the following file input:</p>
 
@@ -26,7 +26,7 @@ tags:
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
 
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
 	<tbody>
@@ -36,7 +36,7 @@ tags:
 	</tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">Properties</h2>
+<h2 id="Attributes">Properties</h2>
 
 <table class="standard-table">
 	<tbody>
@@ -53,9 +53,9 @@ tags:
 	</tbody>
 </table>
 
-<h2 id="Methods" name="Methods">Methods</h2>
+<h2 id="Methods">Methods</h2>
 
-<h3 id="item()" name="item()">item()</h3>
+<h3 id="item()">item()</h3>
 
 <p>Returns a <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
 
@@ -64,18 +64,18 @@ tags:
  );
 </pre>
 
-<h6 id="Parameters" name="Parameters">Parameters</h6>
+<h6 id="Parameters">Parameters</h6>
 
 <dl>
 	<dt><code>index</code></dt>
 	<dd>The zero-based index of the file to retrieve from the list.</dd>
 </dl>
 
-<h6 id="Return_value" name="Return_value">Return value</h6>
+<h6 id="Return_value">Return value</h6>
 
 <p>The <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representing the requested file.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This example iterates over all the files selected by the user using an <code>input</code> element:</p>
 
@@ -161,7 +161,7 @@ document.querySelector("#myfiles").onchange=pullfiles;
 	</tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 
@@ -169,7 +169,7 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 <p> </p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
 	<li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>

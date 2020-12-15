@@ -14,12 +14,12 @@ tags:
 
 <p>Originally, it detached the {{domxref("NodeIterator")}} from the set over which it iterates, releasing any resources used by the set and setting the iterator's state to <code>INVALID</code>. Once this method had been called, calls to other methods on <code>NodeIterator</code> would raise the <code>INVALID_STATE_ERR</code> exception. </p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>nodeIterator</em>.detach();
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="eval">var nodeIterator = document.createNodeIterator(
     document.body,

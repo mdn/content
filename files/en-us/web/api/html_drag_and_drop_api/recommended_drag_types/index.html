@@ -14,7 +14,7 @@ tags:
  All methods and properties in this document with a <code>moz</code> prefix, such as <code>mozSetDataAt()</code>, will <strong>only</strong> work with Gecko-based browsers.</p>
 </div>
 
-<h2 id="text" name="text">Dragging Text</h2>
+<h2 id="text">Dragging Text</h2>
 
 <p>For dragging text, use the <code>text/plain</code> type. The second data parameter should be the dragged string. For example:</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <p class="note">Note: In older code, you may find <code>text/unicode</code> or the <code>Text</code> types. These are equivalent to <code>text/plain</code>, and will store and retrieve plain text data.</p>
 
-<h2 id="link" name="link">Dragging Links</h2>
+<h2 id="link">Dragging Links</h2>
 
 <p>Dragged hyperlinks should include data of two types: <code>text/uri-list</code>, and <code>text/plain</code>. <em>Both</em> types should use the link’s URL for their data. For example:</p>
 
@@ -70,7 +70,7 @@ http://www.example.com
 Example
 </pre>
 
-<h2 id="html" name="html">Dragging HTML and XML</h2>
+<h2 id="html">Dragging HTML and XML</h2>
 
 <p>HTML content may use the <code>text/html</code> type. The data for this type should be serialized HTML source code. For example, it would be suitable to set its data to the value of the <code>{{domxref("Element.innerHTML","innerHTML")}}</code> property of an element.</p>
 
@@ -83,7 +83,7 @@ dt.setData("text/html", "Hello there, &lt;strong&gt;stranger&lt;/strong&gt;");
 dt.setData("text/plain", "Hello there, stranger");
 </pre>
 
-<h2 id="file" name="file">Dragging Files</h2>
+<h2 id="file">Dragging Files</h2>
 
 <p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> object. Non-privileged web pages canot retrieve or modify data of this type.</p>
 
@@ -130,7 +130,7 @@ function doDrop(event) {
 
 <p>You could use feature detection to determine which method is supported on <code>types</code>, then run code as appropriate.</p>
 
-<h2 id="image" name="image">Dragging Images</h2>
+<h2 id="image">Dragging Images</h2>
 
 <p>Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the <code>text/uri-list</code> type as with other URLs. The data should be the URL of the image, or a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI</a> if the image is not stored on a web site or disk.</p>
 
@@ -151,17 +151,17 @@ dt.setData("text/plain", imageurl);
 
 <p>Note the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method is used for non-textual data. As some contexts may only include some of these types, it is important to check which type is made available when receiving dropped images.</p>
 
-<h2 id="node" name="node">Dragging Nodes</h2>
+<h2 id="node">Dragging Nodes</h2>
 
 <p>Nodes and elements in a document may be dragged using the <code>application/x-moz-node</code> type. The data for the type should be a DOM node. This allows the drop target to receive the actual node where the drag was started from. Note that callers from a different domain will not be able to access the node even when it has been dropped.</p>
 
 <p>You should always include a <code>text/plain</code> alternative for the node.</p>
 
-<h2 id="custom" name="custom">Dragging Custom Data</h2>
+<h2 id="custom">Dragging Custom Data</h2>
 
 <p>You can also use other types that you invent for custom purposes. Strive to always include a <code>text/plain</code> alternative, unless the dragged object is specific to a particular site or application. In this case, the custom type ensures that the data cannot be dropped elsewhere.</p>
 
-<h2 id="filestoos" name="filestoos">Dragging files to an operating system folder</h2>
+<h2 id="filestoos">Dragging files to an operating system folder</h2>
 
 <p>You may want to add a file to an existing drag event session, and you may also want to write the file to disk when the drop operation happens over a folder in the operating system when your code receives notification of the target folder's location. This only works in extensions (or other privileged code) and the type <code>application/moz-file-promise</code> should be used. The following sample offers an overview of this advanced case:</p>
 

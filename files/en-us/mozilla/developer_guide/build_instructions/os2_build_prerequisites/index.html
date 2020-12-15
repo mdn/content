@@ -12,7 +12,7 @@ tags:
 
 <p>This document is designed for someone creating a build environment from scratch. The build environment is easiest to set up when all the tools are placed on a single drive. For our examples, we will use <code>D:</code>.</p>
 
-<h2 id="Hardware_requirements" name="Hardware_requirements">Hardware requirements</h2>
+<h2 id="Hardware_requirements">Hardware requirements</h2>
 
 <p>Compiling a package as big as the Mozilla source code requires a lot of time and disk space:</p>
 
@@ -30,7 +30,7 @@ tags:
  <li>If compiling a debug build, more than 1.2 GiB are required</li>
 </ul>
 
-<h2 id="Required_packages" name="Required_packages">Required packages</h2>
+<h2 id="Required_packages">Required packages</h2>
 
 <p>The following explains what tools are required to build Warpzilla.</p>
 
@@ -178,19 +178,19 @@ tags:
  </li>
 </ul>
 
-<h2 id="Compiler" name="Compiler">Compiler</h2>
+<h2 id="Compiler">Compiler</h2>
 
 <p>You should use GCC 3.3.5 for building any Mozilla application. It is no longer possible to compile Mozilla with the IBM C/C++ compiler, and while GCC 3.2.2 still works for branch builds, it does not work with the trunk any more without additional workarounds (since approximately September 2007).</p>
 
 <p>Download the newest version <a class="link-ftp" href="ftp://ftp.netlabs.org/pub/gcc/GCC-3.3.5-csd3.zip">GCC 3.3.5 CSD3</a> from the Netlabs FTP server, unpack, and go to the <strong>lib</strong> dir and run <strong>MakeOmfLibs.cmd</strong>. The setmozenv script (attached to this page) assumes that you installed into the directory <strong>D:\GCC335</strong>. If you installed elsewhere, you will have to make the appropriate changes.</p>
 
-<h2 id="Build_environment" name="Build_environment">Build environment</h2>
+<h2 id="Build_environment">Build environment</h2>
 
 <p>The build process expects all packages listed above to be installed. They are found either through specific environment variables (e.g. for Perl and AutoConf) or through PATH/LIBPATH that includes the <strong>moztools</strong> dir.</p>
 
 <p>This environment is set up using REXX scripts <strong>setmozenv*.cmd</strong>. Use the script for GCC 3.3.5 as attached to this page.  Please adapt any locations listed in this file, in case you did not install on drive <strong>D:</strong> and in the directory <strong>D:\MOZTOOLS</strong>. To set the environment, open a CMD shell and start the batch file.</p>
 
-<h2 id="Getting_sources_and_building" name="Getting_sources_and_building">Getting sources and building</h2>
+<h2 id="Getting_sources_and_building">Getting sources and building</h2>
 
 <p>The <a href="/en/Configuring_Build_Options" title="en/Configuring_Build_Options">options for the build</a> are taken from <code>.mozconfig</code> which is a file you create in the <code>mozilla</code> directory. They can also be generated using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> but you should start with a minimal file first, like this one:</p>
 
@@ -214,7 +214,7 @@ ac_add_options --disable-debug</pre>
 
 <p>If these information is not enough, there is some background info in <a href="/en/How_Mozilla's_build_system_works" title="en/How_Mozilla's_build_system_works">How Mozilla's build system works</a>.</p>
 
-<h2 id="Tricks" name="Tricks">Tricks</h2>
+<h2 id="Tricks">Tricks</h2>
 
 <p>Some hints that you can try in case of problems. You should also post to the mozilla.dev.ports.os2 newsgroup if you have problems.</p>
 

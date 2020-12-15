@@ -16,7 +16,7 @@ tags:
 
 <p>The {{domxref("RTCRtpSender")}} method <code><strong>getStats()</strong></code> asynchronously requests an {{domxref("RTCStatsReport")}} object which provides statistics about outgoing traffic on the {{domxref("RTCPeerConnection")}} which owns the sender, returning a {{jsxref("Promise")}} which is fulfilled when the results are available.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>promise</em> = <em>RTCRtpSender</em>.getStats();
 </pre>
@@ -27,7 +27,7 @@ tags:
 
 <p>The returned <code>RTCStatsReport</code> accumulates the statistics for all of the streams being sent using the <code>RTCRtpSender</code>, as well as the statistics for any dependencies those streams have.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This simple example obtains the statistics for an <code>RTCRtpSender</code> and updates an element's {{domxref("Node.innerText", "innerText")}} to display the current round trip time for requests on the sender.</p>
 

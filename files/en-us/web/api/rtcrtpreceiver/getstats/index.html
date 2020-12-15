@@ -17,7 +17,7 @@ tags:
 
 <p>The {{domxref("RTCRtpReceiver")}} method <code><strong>getStats()</strong></code> asynchronously requests an {{domxref("RTCStatsReport")}} object which provides statistics about incoming traffic on the owning {{domxref("RTCPeerConnection")}}, returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the results are available.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>promise</em> = <em>RTCRtpReceiver</em>.getStats();
 </pre>
@@ -28,7 +28,7 @@ tags:
 
 <p>The returned statistics include those from all streams which are coming in through the <code>RTCRtpReceiver</code>, as well as any of their dependencies.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This simple example obtains the statistics for an <code>RTCRtpReceiver</code> and updates an element's {{domxref("Node.innerText", "innerText")}} to display the number of packets lost.</p>
 

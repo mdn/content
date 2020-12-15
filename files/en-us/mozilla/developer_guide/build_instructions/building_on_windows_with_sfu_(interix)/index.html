@@ -7,11 +7,11 @@ tags:
   - Developing Mozilla
 ---
 <p> </p>
-<h3 id="Introduction" name="Introduction">Introduction</h3>
+<h3 id="Introduction">Introduction</h3>
 <p>These notes are meant to supplement the existing <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Documentation</a>. Windows Services for Unix (SFU, or Interix) is not a supported build platform, but it can be made to work with enough patience. Updating a CVS tree to the trunk takes me only 8 minutes using the Interix cvs client compared to 24 minutes for the MSYS cvs client. For a depend-only build (i.e. verifying that the previous build completed) it is roughly 20% faster than <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="En/Developer_Guide/Build_Instructions/Windows_Prerequisites">MSYS</a>. For a -j3 parallel clean build (excluding checkout and configure) it is only 3.7% faster. By comparison a -j3 SFU build is 25% faster than a -j1 SFU build.</p>
-<h3 id="Software_Requirements" name="Software_Requirements">Software Requirements</h3>
+<h3 id="Software_Requirements">Software Requirements</h3>
 <p>The following software needs to be installed for a standard Windows build using SFU.</p>
-<h4 id="Windows_Services_for_Unix" name="Windows_Services_for_Unix">Windows Services for Unix</h4>
+<h4 id="Windows_Services_for_Unix">Windows Services for Unix</h4>
 <p><a class="external" href="http://www.microsoft.com/technet/interopmigration/unix/sfu/default.mspx">Windows Services for UNIX</a> version provides a full range of cross-platform services for integrating Windows into existing UNIX-based environments.</p>
 <p>Download the self-extracting archive of the Windows Services for UNIX 3.5 product from <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=896C9688-601B-44F1-81A4-02878FF11778&amp;displaylang=en">here</a>. If you choose to include the development tools this will automatically install host gcc for you, but you will still need MSVC to produce the Windows binary.</p>
 <p>The terminal configuration files provided with SFU do not work correctly. If you intend to do a lot of editing then you will probably appreciate the following:</p>
@@ -178,10 +178,10 @@ done
 
 ${0##*/}.exe $nologo $args
 </pre>
-<h4 id="Netscape_wintools" name="Netscape_wintools">Netscape wintools</h4>
+<h4 id="Netscape_wintools">Netscape wintools</h4>
 <ul> <li>Most of the programs in MOZ_TOOLS/bin are obsolete, see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=255460">Bug 255460</a>. Also, the include files in the original archive have corrupted End-of-Line sequences. Instead, grab the new moztools.zip archive from <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=274221">Bug 274221</a> attachment 189071 and extract it in a convenient location (e.g. C:\); it will create a "moztools" directory tree wherever you extract it.</li> <li>Be sure to set the MOZ_TOOLS environment variable to point to the installation, and add MOZ_TOOLS/bin to your path.</li>
 </ul>
-<h5 id="glib.2FlibIDL" name="glib.2FlibIDL">glib/libIDL</h5>
+<h5 id="glib.2FlibIDL">glib/libIDL</h5>
 <p>You may need to compile glib and libIDL manually. The glib 1.2.10 sources for Interix can be found at <a class="link-ftp" href="ftp://ftp.interopsystems.com/src/glib/">Interix tools warehouse</a>. The supplied ltconfig expects you to use <code>configure --host=interix</code> as indicated in the Interix readme at the same place. libIDL source code can be fond on <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic/src/">mozilla.org</a> (configure as --host=i586-pc-interix3 or similar). It is necessary to modify <code>lexer.c</code> to use <code>strtoq</code> instead of <code>sscanf</code> as Interix <code>sscanf</code> does not support 64-bit integers. Make libIDL once to generate lexer.c, then apply the patch and remake and install:</p>
 <pre class="eval">--- lexer.c
 +++ lexer.c
@@ -230,9 +230,9 @@ ${0##*/}.exe $nologo $args
  }
  	YY_BREAK&lt;sys types.h=""/&gt;
 </pre>
-<h4 id="Compiler_&amp;_Linker" name="Compiler_&amp;_Linker">Compiler &amp; Linker</h4>
+<h4 id="Compiler_&amp;_Linker">Compiler &amp; Linker</h4>
 <p>This procedure has only been tested with the Microsoft Visual C++ suite.</p>
-<h3 id="Configure_the_Enviroment" name="Configure_the_Enviroment">Configure the Enviroment</h3>
+<h3 id="Configure_the_Enviroment">Configure the Enviroment</h3>
 <ul> <li>Because standard autoconf does not correctly detect SFU you need to add mk_add_options RUN_AUTOCONF_LOCALLY=1 to your .mozconfig</li> <li>SFU uses its own copy of the environment. It is simplest if you add the necessary environment variables to your SFU ~/.profile</li>
 </ul>
 <h4 id="Sample_.profile">Sample .profile</h4>
@@ -280,7 +280,7 @@ ac_add_options --enable-win32-target=WIN95
 ac_add_options --without-x
 ac_add_options --host=i586-pc-netbsd
 </pre>
-<h3 id="Patches" name="Patches">Getting the source</h3>
+<h3 id="Patches">Getting the source</h3>
 <h4 id="Pulling">Pulling</h4>
 <p>Your initial pull works in exactly the same way as it does for a regular comm-central or mozilla-central build. However, because we will be running autoconf locally, we need to remove the NSPR (and LDAP) configure scripts, so that they will be regenerated with the correct autoconf.</p>
 <h4 id="Patches_2">Patches</h4>

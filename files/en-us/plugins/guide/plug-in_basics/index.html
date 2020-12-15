@@ -15,7 +15,7 @@ tags:
 
 <p> </p>
 
-<h3 id="How_Plug-ins_Are_Used" name="How_Plug-ins_Are_Used">How Plug-ins are used</h3>
+<h3 id="How_Plug-ins_Are_Used">How Plug-ins are used</h3>
 
 <p>Plug-ins offer a rich variety of features that can increase the flexibility of <a href="/en/Gecko" title="en/Gecko">Gecko</a>-based browsers. Plug-ins like these are now available:</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>Because plug-ins are platform-specific, you must port them to every operating system and processor platform upon which you want to deploy your plug-in.</p>
 
-<h4 id="Plug-ins_and_Helper_Applications" name="Plug-ins_and_Helper_Applications">Plug-ins and helper applications</h4>
+<h4 id="Plug-ins_and_Helper_Applications">Plug-ins and helper applications</h4>
 
 <p>Before plug-ins, there were helper applications. A helper application is a separate, free-standing application that can be started from the browser. Like a plug-in, the browser starts a helper application when the browser encounters a MIME type that is mapped to it. Unlike a plug-in, a helper application runs separately from the browser in its own application space and does not interact with the browser or the web.</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>Plug-ins and helper applications fill different application needs. <span class="comment">For more information about helper applications, refer to the Netscape online help.</span></p>
 
-<h3 id="How_Plug-ins_Work" name="How_Plug-ins_Work">How plug-ins work</h3>
+<h3 id="How_Plug-ins_Work">How plug-ins work</h3>
 
 <p>The life cycle of a plug-in, unlike that of an application, is completely controlled by the web page that calls it. This section gives you an overview of the way that plug-ins operate in the browser.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p>Gecko can load multiple instances of the same plug-in on a single page, or in several open windows at the same time. If you are browsing a page that has several embedded RealAudio clips, for example, the browser will create as many instances of the RealPlayer plug-in as are needed (though of course playing several RealAudio files at the same time would seldom be a good idea). When the user leaves the page or closes the window, the plug-in instance is deleted. When the last instance of a plug-in is deleted, the plug-in code is unloaded from memory. A plug-in consumes no resources other than disk space when it is not loaded. The next section, <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Understanding_the_Runtime_Model">Understanding the Runtime Model</a>, describes these stages in more detail.</p>
 
-<h3 id="Understanding_the_Runtime_Model" name="Understanding_the_Runtime_Model">Understanding the runtime model</h3>
+<h3 id="Understanding_the_Runtime_Model">Understanding the runtime model</h3>
 
 <p>Plug-ins are dynamic code modules that are associated with one or more MIME types. When the browser starts, it enumerates the available plug-ins (this step varies according to platform), reads resources from each plug-in file to determine the MIME types for that plug-in, and registers each plug-in library for its MIME types.</p>
 
@@ -97,11 +97,11 @@ tags:
 
 <p>See <a href="/en-US/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> for more information about using these methods.</p>
 
-<h3 id="Plug-in_Detection" name="Plug-in_Detection">Plug-in detection</h3>
+<h3 id="Plug-in_Detection">Plug-in detection</h3>
 
 <p>Gecko looks for plug-ins in various places and in a particular order. The next section, <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins">How Gecko Finds Plug-ins</a>, describes these rules, and the following section, <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Checking_Plug-ins_by_MIME_Type">Checking Plug-ins by MIME Type</a>, describes how you can use JavaScript to locate plug-ins yourself and establish which ones are to be registered for which MIME types.</p>
 
-<h4 id="How_Gecko_Finds_Plug-ins" name="How_Gecko_Finds_Plug-ins">How Gecko finds plug-ins</h4>
+<h4 id="How_Gecko_Finds_Plug-ins">How Gecko finds plug-ins</h4>
 
 <p>When a Gecko-based browser starts up, it checks certain directories for plug-ins, in this order:</p>
 
@@ -188,7 +188,7 @@ access("/usr/lib/mozilla/plugins", F_OK) = 0</pre>
 
 <p>On Windows, installed plug-ins are automatically configured to handle the MIME types that they support. If multiple plug-ins handle the same MIME type, the first plug-in registered handles the MIME type. For information about the way MIME types are assigned, see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Registering_Plug-ins">Registering Plug-ins</a>.</p>
 
-<h4 id="Checking_Plug-ins_by_MIME_Type" name="Checking_Plug-ins_by_MIME_Type">Checking plug-ins by MIME type</h4>
+<h4 id="Checking_Plug-ins_by_MIME_Type">Checking plug-ins by MIME type</h4>
 
 <p>The <code>enabledPlugin</code> property in JavaScript can be used to determine which plug-in is configured for a specific MIME type. Though plug-ins may support multiple MIME types and each MIME type may be supported by multiple plug-ins, only one plug-in can be configured for a MIME type. The <code>enabledPlugin</code> property is a reference to a Plugin object that represents the plug-in that is configured for the specified MIME type.</p>
 
@@ -215,7 +215,7 @@ if (mimetype) {
 }
 </pre>
 
-<h3 id="Overview_of_Plug-in_Structure" name="Overview_of_Plug-in_Structure">Overview of plug-in structure</h3>
+<h3 id="Overview_of_Plug-in_Structure">Overview of plug-in structure</h3>
 
 <p>This section is an overview of basic information you will need as you develop plug-ins.</p>
 
@@ -224,7 +224,7 @@ if (mimetype) {
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Plug-ins_and_Platform_Independence">Plug-ins and Platform Independence</a></li>
 </ul>
 
-<h4 id="Understanding_the_Plug-in_API" name="Understanding_the_Plug-in_API">Understanding the plug-in API</h4>
+<h4 id="Understanding_the_Plug-in_API">Understanding the plug-in API</h4>
 
 <p>A plug-in is a native code library whose source conforms to standard C syntax. The Plug-in Application Programming Interface (API) is made up of two groups of functions and a set of shared data structures.</p>
 
@@ -236,7 +236,7 @@ if (mimetype) {
 
 <p>All plug-in names in the API start with <code>NP</code>. In general, the operation of all API functions is the same on all platforms. Where this varies, the reference entry for the function in the reference section describes the difference.</p>
 
-<h4 id="Plug-ins_and_Platform_Independence" name="Plug-ins_and_Platform_Independence">Plug-ins and platform independence</h4>
+<h4 id="Plug-ins_and_Platform_Independence">Plug-ins and platform independence</h4>
 
 <p>A plug-in is a dynamic code module that is native to the specific platform on which the browser is running. It is a code library, rather than an application or an applet, and runs only from the browser. Although plug-ins are platform-specific, the Plug-in API is designed to provide the maximum degree of flexibility and to be functionally consistent across all platforms. This guide notes platform-specific differences in coding for the MS Windows, Mac OS X, and Unix platforms.</p>
 
@@ -250,7 +250,7 @@ if (mimetype) {
  <li>Mac OS X: PPC/x86/Universal loadable Mach-O bundle</li>
 </ul>
 
-<h3 id="Windowed_and_Windowless_Plug-ins" name="Windowed_and_Windowless_Plug-ins">Windowed and windowless plug-ins</h3>
+<h3 id="Windowed_and_Windowless_Plug-ins">Windowed and windowless plug-ins</h3>
 
 <p>You can write plug-ins that are drawn in their own native windows or frames on a web page. Alternatively, you can write plug-ins that do not require a window to draw into. Using windowless plug-ins extends the possibilities for web page design and functionality. Note, however, that plug-ins are windowed by default, because windowed plug-ins are in general easier to develop and more stable to use.</p>
 
@@ -263,7 +263,7 @@ if (mimetype) {
 
 <p>The way plug-ins are displayed on the web page is determined by the HTML element that invokes them. This is up to the content developer or web page author. Depending on the element and its attributes, a plug-in can be visible or hidden, or can appear as part of a page or as a full page in its own window. A web page can display a windowed or windowless plug-in in any HTML display mode; however, the plug-in must be visible for its window type to be meaningful. For information about the way HTML determines plug-in display mode, see "Using HTML to Display Plug-ins."</p>
 
-<h3 id="Using_HTML_to_Display_Plug-ins" name="Using_HTML_to_Display_Plug-ins">Using HTML to Display Plug-Ins</h3>
+<h3 id="Using_HTML_to_Display_Plug-ins">Using HTML to Display Plug-Ins</h3>
 
 <p>When a user browses to a web page that invokes a plug-in, how the plug-in appears (or does not appear) depends on two factors:</p>
 
@@ -281,7 +281,7 @@ if (mimetype) {
  <li><a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_the_embed_Element_for_Plug-in_Display">Using the embed Element for Plug-in Display</a></li>
 </ul>
 
-<h4 id="Plug-in_Display_Modes" name="Plug-in_Display_Modes">Plug-in display modes</h4>
+<h4 id="Plug-in_Display_Modes">Plug-in display modes</h4>
 
 <p>Whether you are writing an HTML page to display a plug-in or developing a plug-in for an HTML author to include in a page, you need to understand how the display mode affects the way plug-ins appear.</p>
 
@@ -342,7 +342,7 @@ object.hiddenObject {
 
 <p>The browser user interface remains relatively constant regardless of which type of plug-in is displayed. The part of the application window that does not display plug-in data does not change. The basic operations of the browser, such as navigation, history, and opening files, apply to all pages, regardless of the plug-ins in use.</p>
 
-<h4 id="Using_the_object_Element_for_Plug-in_Display" name="Using_the_object_Element_for_Plug-in_Display">Using the <code>object</code> element for plug-in display</h4>
+<h4 id="Using_the_object_Element_for_Plug-in_Display">Using the <code>object</code> element for plug-in display</h4>
 
 <p>The <a href="/en-US/docs/Web/HTML/Element/object" title="The HTML &lt;object> element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin."><code>&lt;object&gt;</code></a> element is part of the HTML specification for generic inclusion of special media in a web page. It embeds a variety of object types in an HTML page, including plug-ins, Java components, ActiveX controls, applets, and images. <code>object</code> element attributes determine the type of object to embed, the type and location of the object's implementation (code), and the type and implementation of the object's data.</p>
 
@@ -399,7 +399,7 @@ object.hiddenObject {
 
 <p>The outermost <code>object</code> element defines the <code>classid</code>; the first nested <code>object</code> uses the <code>type</code> value <code>application/x-shockwave-flash</code> to load the Adobe Flash plug-in, and the innermost <code>object</code> exposes a download page for users that do not already have the necessary plug-in. This nesting is quite common in the use of <code>object</code> elements, and lets you avoid code forking for different browsers.</p>
 
-<h4 id="Nesting_Rules_for_HTML_Elements" name="Nesting_Rules_for_HTML_Elements">Nesting rules for HTML elements</h4>
+<h4 id="Nesting_Rules_for_HTML_Elements">Nesting rules for HTML elements</h4>
 
 <p>The rules for descending into nested <code>object</code> and <code>embed</code> elements are as follows:</p>
 
@@ -440,7 +440,7 @@ object.hiddenObject {
  <li>Use the <code>id</code> attribute, which specifies the name of the plug-in, if the plug-in is communicating with JavaScript. This is equivalent to the <code>name</code> attribute of <code>applet</code> and <code>embed</code>. It must be unique.</li>
 </ul>
 
-<h4 id="Using_the_Appropriate_Attributes" name="Using_the_Appropriate_Attributes">Using the appropriate attributes</h4>
+<h4 id="Using_the_Appropriate_Attributes">Using the appropriate attributes</h4>
 
 <p>It's up to you to provide enough attributes and to make sure that they do not conflict; for example, the values of <code>width</code> and <code>height</code> may be wrong for the plug-in. Otherwise, the plug-in cannot be embedded.</p>
 
@@ -451,7 +451,7 @@ object.hiddenObject {
  <li>If the browser cannot handle the type, or cannot determine the type, it cannot embed the object. Subsequent HTML is parsed as normal.</li>
 </ul>
 
-<h4 id="Using_the_embed_Element_for_Plug-in_Display" name="Using_the_embed_Element_for_Plug-in_Display">Using the <code>embed</code> element for plug-in display</h4>
+<h4 id="Using_the_embed_Element_for_Plug-in_Display">Using the <code>embed</code> element for plug-in display</h4>
 
 <p>A plug-in runs in an HTML page in a browser window. The HTML author uses the HTML <a href="/en-US/docs/Web/HTML/Element/embed" title="The HTML &lt;embed> element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in."><code>&lt;embed&gt;</code></a> element to invoke the plug-in and control its display. Though the <code>object</code> element is the preferred way to invoke plug-ins (see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_the_object_Element_for_Plug-in_Display">Using the object Element for Plug-in Display</a>), the <code>embed</code> element can be used for backward compatibility with Netscape 4.x browsers, and in cases where you specifically want to prompt the user to install a plug-in, because the default plug-in is only automatically invoked when you use the <code>embed</code> element.</p>
 
@@ -545,7 +545,7 @@ object.hiddenObject {
 &lt;/object&gt;
 </pre>
 
-<h4 id="Using_Custom_embed_Attributes" name="Using_Custom_embed_Attributes">Using custom <code>embed</code> attributes</h4>
+<h4 id="Using_Custom_embed_Attributes">Using custom <code>embed</code> attributes</h4>
 
 <p>In addition to these standard attributes, you can create private, plug-in-specific attributes and use them in the <code>embed</code> attribute to pass extra information between the HTML page and the plug-in code. The browser ignores these nonstandard attributes when parsing the HTML, but it passes all attributes to the plug-in, allowing the plug-in to examine the list for any private attributes that could modify its behavior.</p>
 
@@ -572,7 +572,7 @@ argv = {"movie.avi", "100", "125", "true", "true"}
 
 <p>The plug-in must scan its list of attributes to determine whether it should automatically start the video and loop it on playback. Note that with an <code>object</code> element, <code>param</code> values are also sent in this array after the attributes, separated by a <code>param</code> entry.</p>
 
-<h3 id="Plug-in_References" name="Plug-in_References">Plug-in references</h3>
+<h3 id="Plug-in_References">Plug-in references</h3>
 
 <ul>
  <li><a class="external" href="http://www.mozilla.org/projects/plugins/">The Mozilla Plug-ins project page</a></li>

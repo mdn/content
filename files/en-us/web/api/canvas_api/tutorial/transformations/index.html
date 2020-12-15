@@ -14,7 +14,7 @@ tags:
 
 <div class="summary">Earlier in this tutorial we've learned about the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">canvas grid</a> and the <strong>coordinate space</strong>. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.</div>
 
-<h2 id="Saving_and_restoring_state" name="Saving_and_restoring_state">Saving and restoring state</h2>
+<h2 id="Saving_and_restoring_state">Saving and restoring state</h2>
 
 <p>Before we look at the transformation methods, let's look at two other methods which are indispensable once you start generating ever more complex drawings.</p>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>You can call the <code>save()</code> method as many times as you like. Each time the <code>restore()</code> method is called, the last saved state is popped off the stack and all saved settings are restored.</p>
 
-<h3 id="A_save_and_restore_canvas_state_example" name="A_save_and_restore_canvas_state_example">A <code>save</code> and <code>restore</code> canvas state example</h3>
+<h3 id="A_save_and_restore_canvas_state_example">A <code>save</code> and <code>restore</code> canvas state example</h3>
 
 <p>This example tries to illustrate how the stack of drawing states functions by drawing a set of consecutive rectangles.</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
 
-<h2 id="Translating" name="Translating">Translating</h2>
+<h2 id="Translating">Translating</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
 
@@ -85,7 +85,7 @@ tags:
 
 <p>It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the <code>restore</code> method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.</p>
 
-<h3 id="A_translate_example" name="A_translate_example">A <code>translate</code> example</h3>
+<h3 id="A_translate_example">A <code>translate</code> example</h3>
 
 <p>This example demonstrates some of the benefits of translating the canvas origin. Without the <code>translate()</code> method, all of the rectangles would be drawn at the same position (0,0). The <code>translate()</code> method also gives us the freedom to place the rectangle anywhere on the canvas without having to manually adjust coordinates in the <code>fillRect()</code> function. This makes it a little easier to understand and use.</p>
 
@@ -113,7 +113,7 @@ tags:
 
 <p>{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}</p>
 
-<h2 id="Rotating" name="Rotating">Rotating</h2>
+<h2 id="Rotating">Rotating</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
 
@@ -124,7 +124,7 @@ tags:
 
 <p>The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the <code>translate()</code> method.</p>
 
-<h3 id="A_rotate_example" name="A_rotate_example">A <code>rotate</code> example</h3>
+<h3 id="A_rotate_example">A <code>rotate</code> example</h3>
 
 <p>In this example, we'll use the <code>rotate()</code> method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of <code>translate()</code>.</p>
 
@@ -173,7 +173,7 @@ tags:
 
 <p>{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}</p>
 
-<h2 id="Scaling" name="Scaling">Scaling</h2>
+<h2 id="Scaling">Scaling</h2>
 
 <p>The next transformation method is scaling. We use it to increase or decrease the units in our canvas grid. This can be used to draw scaled down or enlarged shapes and bitmaps.</p>
 
@@ -186,7 +186,7 @@ tags:
 
 <p>By default, one unit on the canvas is exactly one pixel. If we apply, for instance, a scaling factor of 0.5, the resulting unit would become 0.5 pixels and so shapes would be drawn at half size. In a similar way setting the scaling factor to 2.0 would increase the unit size and one unit now becomes two pixels. This results in shapes being drawn twice as large.</p>
 
-<h3 id="A_scale_example" name="A_scale_example">A <code>scale</code> example</h3>
+<h3 id="A_scale_example">A <code>scale</code> example</h3>
 
 <p>In this last example, we'll draw shapes with different scaling factors.</p>
 
@@ -215,7 +215,7 @@ tags:
 
 <p>{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}</p>
 
-<h2 id="Transforms" name="Transforms">Transforms</h2>
+<h2 id="Transforms">Transforms</h2>
 
 <p>Finally, the following transformation methods allow modifications directly to the transformation matrix.</p>
 

@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<h2 id="Introduction" name="Introduction">Introduction</h2>
+<h2 id="Introduction">Introduction</h2>
 
 <p>This chapter describes the DOM Event Model. The <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event">Event</a> interface itself is described, as well as the interfaces for event registration on nodes in the DOM, and <a href="/en-US/docs/Web/API/EventTarget/addEventListener">event listeners</a>, and several longer examples that show how the various event interfaces relate to one another.</p>
 
@@ -15,11 +15,11 @@ tags:
 
 <p>Also see <a href="/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Example 5: Event Propagation</a> in the Examples chapter for a more detailed example of how events move through the DOM.</p>
 
-<h2 id="DOM_event_handler_List" name="DOM_event_handler_List">Registering event listeners</h2>
+<h2 id="DOM_event_handler_List">Registering event listeners</h2>
 
 <p>There are 3 ways to register event handlers for a DOM element.</p>
 
-<h3 id="EventTarget.addEventListener" name="EventTarget.addEventListener">{{domxref("EventTarget.addEventListener")}}</h3>
+<h3 id="EventTarget.addEventListener">{{domxref("EventTarget.addEventListener")}}</h3>
 
 <pre class="brush: js notranslate">// Assuming myButton is a button element
 myButton.addEventListener('click', greet, false)
@@ -39,7 +39,7 @@ function greet(event){
 
 <p>More details can be found on the {{domxref("EventTarget.addEventListener")}} reference page.</p>
 
-<h3 id="HTML_attribute" name="HTML_attribute"><a href="/en-US/docs/Web/Guide/HTML/Event_attributes">HTML attribute</a></h3>
+<h3 id="HTML_attribute"><a href="/en-US/docs/Web/Guide/HTML/Event_attributes">HTML attribute</a></h3>
 
 <pre class="brush: html notranslate">&lt;button onclick="alert('Hello world!')"&gt;
 </pre>
@@ -50,7 +50,7 @@ function greet(event){
 <p><strong>Warning:</strong> This method should be avoided! It inflates the markup, and makes it less readable. Concerns of content/structure and behavior are not well-separated, making a bug harder to find.</p>
 </div>
 
-<h3 id="DOM_element_properties" name="DOM_element_properties">DOM element properties</h3>
+<h3 id="DOM_element_properties">DOM element properties</h3>
 
 <pre class="brush: js notranslate">// Assuming myButton is a button element
 myButton.onclick = function(event){alert('Hello world')}

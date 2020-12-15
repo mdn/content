@@ -27,7 +27,7 @@ tags:
 
 <p>When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">Event bubbling and capture</a> settings of each handler triggered.</p>
 
-<h2 id="Introduction" name="Introduction">Interfaces based on Event</h2>
+<h2 id="Introduction">Interfaces based on Event</h2>
 
 <p>Below is a list of interfaces which are based on the main <code>Event</code> interface, with links to their respective documentation in the MDN API reference.</p>
 
@@ -91,14 +91,14 @@ tags:
 </ul>
 </div>
 
-<h2 id="Constructor" name="Constructor">Constructor</h2>
+<h2 id="Constructor">Constructor</h2>
 
 <dl>
  <dt>{{domxref("Event.Event", "Event()")}}</dt>
  <dd>Creates an <code>Event</code> object, returning it to the caller.</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">Properties</h2>
+<h2 id="Properties">Properties</h2>
 
 <dl>
  <dt>{{domxref("Event.bubbles")}} {{readonlyinline}}</dt>
@@ -142,7 +142,7 @@ tags:
  <dd>A {{jsxref("Boolean")}} indicating whether the given event will bubble across through the shadow root into the standard DOM. Use {{domxref("Event.composed", "composed")}} instead.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Methods</h2>
+<h2 id="Methods">Methods</h2>
 
 <dl>
  <dt>{{domxref("Event.composedPath()")}}</dt>

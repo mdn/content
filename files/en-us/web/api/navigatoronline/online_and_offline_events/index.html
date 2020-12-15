@@ -12,7 +12,7 @@ tags:
 ---
 <p>Some browsers implement <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
 
-<h2 id="Overview" name="Overview">Overview</h2>
+<h2 id="Overview">Overview</h2>
 
 <p>In order to build a good offline-capable web application, you need to know when your application is actually offline. You also need to know when your application has returned to an 'online' status again. Effectively, the requirements break down as such:</p>
 
@@ -25,9 +25,9 @@ tags:
 
 <p>Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
 
-<h2 id="API" name="API">API</h2>
+<h2 id="API">API</h2>
 
-<h3 id="navigator.onLine" name="navigator.onLine"><code>navigator.onLine</code></h3>
+<h3 id="navigator.onLine"><code>navigator.onLine</code></h3>
 
 <p><code><a href="/en/DOM/window.navigator.onLine" title="en/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.</p>
 
-<h3 id=".22online.22_and_.22offline.22_events" name=".22online.22_and_.22offline.22_events">"<code>online</code>" and "<code>offline</code>" events</h3>
+<h3 id=".22online.22_and_.22offline.22_events">"<code>online</code>" and "<code>offline</code>" events</h3>
 
 <p><a href="/en/Firefox_3_for_developers" title="en/Firefox_3_for_developers">Firefox 3</a> introduces two new events: "<a href="/en-US/docs/Web/API/document.ononline"><code>online</code></a>" and "<a href="/en-US/docs/Web/API/document.onoffline"><code>offline</code></a>". These two events are fired on the <code>&lt;body&gt;</code> of each page when the browser switches between online and offline mode. Additionally, the events bubble up from <code>document.body</code>, to <code>document</code>, ending at <code>window</code>. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).</p>
 
@@ -53,7 +53,7 @@ tags:
  <li>by specifying <code>ononline="..."</code> or <code>onoffline="..."</code> attributes on the <code>&lt;body&gt;</code> tag in the HTML markup.</li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>There's <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">a simple test case</a> that you can run to verify that the events are working (does not work in Chrome due to attaching the event listener to document.body).</p>
 
@@ -111,11 +111,11 @@ tags:
 
 <p>{{ EmbedLiveSample('Example', '100%', '150') }}</p>
 
-<h2 id="References" name="References">Notes</h2>
+<h2 id="References">Notes</h2>
 
 <p>If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
 
-<h2 id="References" name="References">References</h2>
+<h2 id="References">References</h2>
 
 <ul>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>

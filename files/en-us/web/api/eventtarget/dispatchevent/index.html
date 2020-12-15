@@ -12,7 +12,7 @@ tags:
 
 <p><span class="seoSummary">Dispatches an {{domxref("Event")}} at the specified {{domxref("EventTarget")}}, (synchronously) invoking the affected {{domxref("EventListener")}}s in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with <code>dispatchEvent()</code>.</span></p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>cancelled</var> = !<var>target</var>.dispatchEvent(<var>event</var>)
 </pre>
@@ -36,7 +36,7 @@ tags:
 
 <p>Exceptions thrown by event handlers are reported as uncaught exceptions. The event handlers run on a nested callstack; they block the caller until they complete, but exceptions do not propagate to the caller.</p>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Unlike "native" events, which are fired by the DOM and invoke event handlers asynchronously via the <a href="/en-US/docs/Web/JavaScript/EventLoop">event loop</a>, <code>dispatchEvent()</code> invokes event handlers synchronously. All applicable event handlers will execute and return before the code continues on after the call to <code>dispatchEvent()</code>.</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>See also the <a href="/en-US/docs/DOM/event" title="DOM/event">Event object reference</a>.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>See <a href="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events" title="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
 
@@ -67,7 +67,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Browser_Compatibility">Browser compatibility</h2>
 
 
 

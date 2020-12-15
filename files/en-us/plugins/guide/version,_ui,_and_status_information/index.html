@@ -15,7 +15,7 @@ tags:
 
 <p>This chapter describes the functions that allow a plug-in to display a message on the status line, get agent information, and check on the current version of the Plug-in API and the browser.</p>
 
-<h2 id="Displaying_a_Status_Line_Message" name="Displaying_a_Status_Line_Message">Displaying a Status Line Message</h2>
+<h2 id="Displaying_a_Status_Line_Message">Displaying a Status Line Message</h2>
 
 <p>Users are accustomed to checking the UI status line at the bottom of the browser window for updates on the progress of an operation or the URL of a link on the page. You can also use the status line to notify the user of plug-in-related information. The user might appreciate seeing the percentage completed of the current operation or the URL of a button or other link object when the cursor is over it, all of which the browser shows. In fact, your plug-in interface should be consistent with the rest of the browser in this way.</p>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>The browser always displays the last status line message it receives, regardless of the message source. For this reason, your message is always displayed, but you have no control over how long it stays in the status line before another message replaces it. You should use a different method to display messages that the user needs to see, such as error messages.</p>
 
-<h2 id="Getting_Agent_Information" name="Getting_Agent_Information">Getting Agent Information</h2>
+<h2 id="Getting_Agent_Information">Getting Agent Information</h2>
 
 <p>A plug-in can check which browser is running on the user's current system. Browsers communicate with HTTP servers, which store agent software name, version, and operating system in a <code>user_agent</code> field. If you want to gather usage statistics or just find out the version of your plug-in's host browser, this information can help you.</p>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>The <code>instance</code> parameter represents the current plug-in instance. This function returns a string that contains the <code>user_agent</code> field of the browser.</p>
 
-<h2 id="Getting_the_Current_Version" name="Getting_the_Current_Version">Getting the Current Version</h2>
+<h2 id="Getting_the_Current_Version">Getting the Current Version</h2>
 
 <p>Your plug-in should make sure, possibly during initialization, that the version of the Plug-in API it is using is compatible with the version the browser is using. To do so, it must find the major and minor version numbers, which are determined when the plug-in and Navigator are compiled, and compare them. If the versions are not compatible, the plug-in can let the user know. The plug-in can also use the version number to find out whether a particular feature exists on the version of the browser that the plug-in is running in.</p>
 
@@ -68,11 +68,11 @@ void NPN_Version(
 ); // find version numbers
 </pre>
 
-<h2 id="Finding_Out_if_a_Feature_Exists" name="Finding_Out_if_a_Feature_Exists">Finding Out if a Feature Exists</h2>
+<h2 id="Finding_Out_if_a_Feature_Exists">Finding Out if a Feature Exists</h2>
 
 <p>A plug-in can figure out whether it is running in a version of the browser that supports a particular feature by using version or <code>NPVERS</code> constants (see <a href="/en-US/docs/Gecko_Plugin_API_Reference/Constants#Version_Feature_Constants">Version Feature Constants</a>). Each <code>NPVERS</code> constant represents a feature. The plug-in can compare the <code>NPVERS</code> constant to the version number. If the version supports the feature, the plug-in can operate according to plan. If not, the plug-in cannot use some functionality. If an essential feature is unavailable, the developer must arrange for alternative behavior, shut down the plug-in, or give the user a chance to decide what to do.</p>
 
-<h3 id="Detecting_Windowless_Support_on_MS_Windows_and_Mac_OS_X" name="Detecting_Windowless_Support_on_MS_Windows_and_Mac_OS_X">Detecting Windowless Support on MS Windows and Mac OS X</h3>
+<h3 id="Detecting_Windowless_Support_on_MS_Windows_and_Mac_OS_X">Detecting Windowless Support on MS Windows and Mac OS X</h3>
 
 <p>In this example, the <code>has_windowless</code> method finds out whether the current version of the API supports windowless plug-ins. This method for detecting support is only useful on MS Windows and Mac OS X.</p>
 
@@ -101,7 +101,7 @@ void NPN_Version(
 }
 </pre>
 
-<h3 id="Detecting_Windowless_Support_on_other_platforms" name="Detecting_Windowless_Support_on_other_platforms">Detecting Windowless Support on other platforms</h3>
+<h3 id="Detecting_Windowless_Support_on_other_platforms">Detecting Windowless Support on other platforms</h3>
 
 <p>Browser implementations on other platforms did not have windowless plug-in support at the time it was added to MS Windows and Mac OS X, so a different method must be used to detect whether the browser provides support.</p>
 
@@ -115,7 +115,7 @@ void NPN_Version(
 }
 </pre>
 
-<h2 id="Reloading_a_Plug-in" name="Reloading_a_Plug-in">Reloading a Plug-in</h2>
+<h2 id="Reloading_a_Plug-in">Reloading a Plug-in</h2>
 
 <p>When the browser starts up, it loads all the plug-ins it finds in the Plugins directory for the platform. If you call <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code>, the browser reloads all plug-ins in the Plugins directory without restarting. This causes the browser to install a new plug-in and load it, or remove a plug-in, without having to restart. Consider using this function as part of the plug-in's SmartUpdate process.</p>
 

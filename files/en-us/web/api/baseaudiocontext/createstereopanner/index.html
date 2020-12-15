@@ -21,11 +21,11 @@ tags:
 
 <pre class="syntaxbox">baseAudioContext.createStereoPanner();</pre>
 
-<h3 id="Description" name="Description">Returns</h3>
+<h3 id="Description">Returns</h3>
 
 <p>A {{domxref("StereoPannerNode")}}.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In our <a href="https://mdn.github.io/webaudio-examples/stereo-panner-node/">StereoPannerNode example</a> (<a href="https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node">see source code</a>) HTML we have a simple {{htmlelement("audio")}} element along with a slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we create a {{domxref("MediaElementAudioSourceNode")}} and a {{domxref("StereoPannerNode")}}, and connect the two together using the <code>connect() </code>method. We then use an <code>oninput</code> event handler to change the value of the {{domxref("StereoPannerNode.pan")}} parameter and update the pan value display when the slider is moved.</p>
 

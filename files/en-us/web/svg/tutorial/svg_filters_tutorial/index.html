@@ -12,7 +12,7 @@ tags:
 
 <p>This element has different attributes that help us create the clipping region. Between the filter tags, we can define the <em>primitives</em> that allow us to implement the desired effect. One of these primitives is the <a href="http://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement">feGaussianBlur</a>. The keyword <a href="http://www.w3.org/TR/SVG/filters.html#SourceAlpha">SourceAlpha</a> identifies the input for this primitive, is in this case input '<code>in</code>'. The amount of blur to be applied is done using the <code>stdDeviation </code>attribute<code>.</code></p>
 
-<h3 id="SVG_filter" name="SVG_filter">SVG filter example</h3>
+<h3 id="SVG_filter">SVG filter example</h3>
 
 <pre class="brush: html notranslate"><code>&lt;defs&gt;
   &lt;filter id="drop-shadow"&gt;
@@ -29,7 +29,7 @@ tags:
 
 <p><code><strong>&lt;result&gt;</strong> </code>attribute is a reference that can be use later. It is quite different to an XML id and only can be referenced within the actual <code>filter. </code><strong>&lt;<code>feoffset</code>&gt;</strong> primitive has the blur result from the Gaussian blur. <strong>&lt;<code>feMerge</code>&gt;</strong> primitive contains the nodes <strong>&lt;<code>feMergeNode</code>&gt;</strong> taking as input the result offsetBlur , this will allow it to appear below the  <code>sourceGraphic</code></p>
 
-<h3 id="More_filter_primitives" name="More_filter_primitives">Implementation of more primitives</h3>
+<h3 id="More_filter_primitives">Implementation of more primitives</h3>
 
 <pre class="brush: html notranslate"><code>&lt;defs&gt;
   &lt;filter id="drop-shadow"&gt;

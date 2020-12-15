@@ -11,9 +11,9 @@ tags:
 
 <p>There are several ways to color shapes (including specifying attributes on the object) using inline <a href="/en-US/docs/Glossary/CSS">CSS</a>, an embedded CSS section, or an external CSS file. Most <a href="/en-US/docs/Glossary/SVG">SVG </a>you'll find around the web use inline CSS, but there are advantages and disadvantages associated with each type.</p>
 
-<h2 id="Fill_and_Stroke_Attributes" name="Fill_and_Stroke_Attributes">Fill and Stroke Attributes</h2>
+<h2 id="Fill_and_Stroke_Attributes">Fill and Stroke Attributes</h2>
 
-<h3 id="Painting" name="Painting">Painting</h3>
+<h3 id="Painting">Painting</h3>
 
 <p>Basic coloring can be done by setting two attributes on the node: <code>fill</code> and <code>stroke</code>. Using <code>fill</code> sets the color inside the object and <code>stroke</code> sets the color of the line drawn around the object. You can use the same css color naming schemes that you use in HTML, whether that's color names (that is <code><em>red</em></code>), rgb values (that is <code><em>rgb(255,0,0)</em></code>), hex values, rgba values, etc.</p>
 
@@ -25,7 +25,7 @@ tags:
 
 <div class="note style-wrap"><strong>Note:</strong> in Firefox 3+, <code>rgba</code> values are also allowed, and will give the same effect. But for compatibility with other viewers, it's often best to specify the <code>fill</code>/<code>stroke</code> opacity separately. If you specify both an <code>rgba</code> value and a <code>fill</code>/<code>stroke</code> opacity value, both will be applied.</div>
 
-<h3 id="Stroke" name="Stroke">Stroke</h3>
+<h3 id="Stroke">Stroke</h3>
 
 <p>In addition to its color properties, there are a few other attributes available to control the way a stroke is drawn on a line.</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <p>There are additional stroke and fill properties available, including <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a>,</code> which specifies how to color in shapes that overlap themselves; <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code>, which determines if a stroke should draw miters; and <a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a>, which specifies where to start a dasharray on a line.</p>
 
-<h2 id="Using_CSS" name="Using_CSS">Using CSS</h2>
+<h2 id="Using_CSS">Using CSS</h2>
 
 <p>In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like <code>width</code>, <code>height</code>, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.</p>
 

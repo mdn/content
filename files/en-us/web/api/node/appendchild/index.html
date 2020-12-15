@@ -21,22 +21,22 @@ tags:
  The {{domxref("ParentNode.append()")}} method supports multiple arguments and appending strings.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>element</var>.appendChild(<var>aChild</var>)</pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code><var>aChild</var></code></dt>
  <dd>The node to append to the given parent node (commonly an element).</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Return value</h3>
+<h3 id="Returns">Return value</h3>
 
 <p>The returned value is the appended child (<code><var>aChild</var></code>), except when <code><var>aChild</var></code> is a {{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}} is returned.</p>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Chaining may not work as expected, due to <code>appendChild()</code> returning the child element:</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>Sets <code><var>aBlock</var></code> to <code>&lt;b&gt;&lt;/b&gt;</code> only, which is probably not what you want.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush:js notranslate">// Create a new paragraph element, and append it to the end of the document body
 let p = document.createElement("p");
@@ -92,7 +92,7 @@ document.body.appendChild(p);</pre>
 <p>{{Compat("api.Node.appendChild")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Node.removeChild()")}}</li>

@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>clearTimeout()</code></strong> method of the {{domxref("WindowOrWorkerGlobalScope")}} mixin cancels a timeout previously established by calling {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
 </pre>
@@ -27,7 +27,7 @@ tags:
 
 <p>It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use <code>clearTimeout()</code> and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>Run the script below in the context of a web page and click on the page once. You'll see a message popping up in a second. If you click the page multiple times in one second, the alert only appears once.</p>
 
@@ -54,7 +54,7 @@ tags:
 window.onclick = function() { alarm.setup(); };
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Passing an invalid ID to <code>clearTimeout()</code> silently does nothing; no exception is thrown.</p>
 

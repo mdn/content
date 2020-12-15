@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{Fx_minversion_header(3)}}</div>
 
-<h2 id="Background" name="Background">Background</h2>
+<h2 id="Background">Background</h2>
 
 <p>It's fairly common to find web pages link to resources using non-<code>http</code> protocols. An example is the <code>mailto:</code> protocol:</p>
 
@@ -20,7 +20,7 @@ tags:
 
 <p>Web-based protocol handlers allow web-based applications to participate in the process too. This is becoming more important as more types of applications migrate to the web. In fact, there are many web-based email handling applications that could process a <code>mailto</code> link.</p>
 
-<h2 id="Registering" name="Registering">Registering</h2>
+<h2 id="Registering">Registering</h2>
 
 <p>Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses <code><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler" title="DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> to register itself with the browser as a potential handler for a given protocol. For example:</p>
 
@@ -44,7 +44,7 @@ tags:
 
 <p>Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.</p>
 
-<h3 id="Example" name="Example">Example</h3>
+<h3 id="Example">Example</h3>
 
 <pre class="brush: js">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="en"&gt;
@@ -63,11 +63,11 @@ tags:
 &lt;/html&gt;
 </pre>
 
-<h2 id="Activating" name="Activating">Activating</h2>
+<h2 id="Activating">Activating</h2>
 
 <p>Now, anytime the user activates a link that uses the registered protocol, the browser will route the action to the URL supplied when the web application registered. Firefox will, by default, prompt the user before handing off the action.</p>
 
-<h3 id="Example_2" name="Example_2">Example</h3>
+<h3 id="Example_2">Example</h3>
 
 <pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
 &lt;html lang="en"&gt;
@@ -80,7 +80,7 @@ tags:
 &lt;/html&gt;
 </pre>
 
-<h2 id="Handling" name="Handling">Handling</h2>
+<h2 id="Handling">Handling</h2>
 
 <p>The next phase is handling the action. The browser extracts the <code>href</code> from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:</p>
 
@@ -91,7 +91,7 @@ tags:
 
 <div class="note"><strong>Note:</strong>The server side code is passed the <strong>entire</strong> contents of the <code>href</code>. This means the server side code will have to parse out the protocol from the data.</div>
 
-<h3 id="Example_3" name="Example_3">Example</h3>
+<h3 id="Example_3">Example</h3>
 
 <pre class="brush: php">&lt;?php
 $value = "";
@@ -115,13 +115,13 @@ if ( isset ( $_GET["value"] ) ) {
 &lt;/html&gt;
 </pre>
 
-<h2 id="References" name="References">References</h2>
+<h2 id="References">References</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/DOM/window.navigator.registerContentHandler" title="DOM/window.navigator.registerContentHandler">window.navigator.registerContentHandler</a></li>

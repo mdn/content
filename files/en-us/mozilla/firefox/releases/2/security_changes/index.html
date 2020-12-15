@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div><p>This article discusses changes that affect security in Firefox 2.</p>
 
-<h2 id="Weak_ciphers_disabled_by_default" name="Weak_ciphers_disabled_by_default">Weak ciphers disabled by default</h2>
+<h2 id="Weak_ciphers_disabled_by_default">Weak ciphers disabled by default</h2>
 
 <p><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.</p>
 
@@ -15,7 +15,7 @@ tags:
 
 <p>If SSLv2 support must be enabled, it can be by setting the appropriate <code>security.ssl2.*</code> user preferences to <code>true</code>.</p>
 
-<h2 id="New_features" name="New_features">New features</h2>
+<h2 id="New_features">New features</h2>
 
 <ul>
  <li>Firefox 2 supports <a class="external" href="http://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.</li>
@@ -23,7 +23,7 @@ tags:
  <li>When Firefox 2 makes an <a class="external" href="http://en.wikipedia.org/wiki/Ocsp">OCSP</a> request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.</li>
 </ul>
 
-<h2 id="Determining_what_ciphers_are_available" name="Determining_what_ciphers_are_available">Determining what ciphers are available</h2>
+<h2 id="Determining_what_ciphers_are_available">Determining what ciphers are available</h2>
 
 <p>As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".</p>
 
