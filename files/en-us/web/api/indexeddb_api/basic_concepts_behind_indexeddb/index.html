@@ -168,11 +168,11 @@ tags:
 <h3 id="range">Range and scope</h3>
 
 <dl>
- <dt id="scope"><a id="gloss_scope" name="gloss_scope">scope</a></dt>
+ <dt id="scope"><a id="gloss_scope">scope</a></dt>
  <dd>The set of object stores and indexes to which a transaction applies. The scopes of read-only transactions can overlap and execute at the same time. On the other hand, the scopes of writing transactions cannot overlap. You can still start several transactions with the same scope at the same time, but they just queue up and execute one after another.</dd>
- <dt id="cursor"><a id="gloss_cursor" name="gloss_cursor">cursor</a></dt>
+ <dt id="cursor"><a id="gloss_cursor">cursor</a></dt>
  <dd>A mechanism for iterating over multiple records with a <em>key range</em>. The cursor has a source that indicates which index or object store it is iterating. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. For the reference documentation on cursors, see {{domxref("IDBCursor")}}.</dd>
- <dt id="key_range"><a id="gloss_keyrange" name="gloss_keyrange">key range</a></dt>
+ <dt id="key_range"><a id="gloss_keyrange">key range</a></dt>
  <dd>
  <p>A continuous interval over some data type used for keys. Records can be retrieved from object stores and indexes using keys or a range of keys. You can limit or filter the range using lower and upper bounds. For example, you can iterate over all values of a key between x and y.</p>
 

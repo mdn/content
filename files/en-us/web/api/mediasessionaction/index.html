@@ -25,23 +25,23 @@ tags:
 
 <div id="action-types">
 <dl>
- <dt><a id="nexttrack" name="nexttrack"><code>nexttrack</code></a></dt>
+ <dt><a id="nexttrack"><code>nexttrack</code></a></dt>
  <dd>Advances playback to the next track.</dd>
- <dt><a id="pause" name="pause"><code>pause</code></a></dt>
+ <dt><a id="pause"><code>pause</code></a></dt>
  <dd>Pauses playback of the media.</dd>
- <dt><a id="play" name="play"><code>play</code></a></dt>
+ <dt><a id="play"><code>play</code></a></dt>
  <dd>Begins (or resumes) playback of the media.</dd>
- <dt><a id="previoustrack" name="previoustrack"><code>previoustrack</code></a></dt>
+ <dt><a id="previoustrack"><code>previoustrack</code></a></dt>
  <dd>Moves back to the previous track.</dd>
- <dt><a id="seekbackward" name="seekbackward"><code>seekbackward</code></a></dt>
+ <dt><a id="seekbackward"><code>seekbackward</code></a></dt>
  <dd>Seeks backward through the media from the current position. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek backward.</dd>
- <dt><a id="seekforward" name="seekforward"><code>seekforward</code></a></dt>
+ <dt><a id="seekforward"><code>seekforward</code></a></dt>
  <dd>Seeks forward from the current position through the media. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek forward.</dd>
- <dt><a id="seekto" name="seekto"><code>seekto</code></a></dt>
+ <dt><a id="seekto"><code>seekto</code></a></dt>
  <dd>Moves the playback position to the specified time within the media. The time to which to seek is specified in the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekTime", "seekTime")}}. If you intend to perform multiple <code>seekto</code> operations in rapid succession, you can also specify the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property with a value of <code>true</code>. This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.</dd>
- <dt><a id="skipad" name="skipad"><code>skipad</code></a></dt>
+ <dt><a id="skipad"><code>skipad</code></a></dt>
  <dd>Skips past the currently playing advertisement or commercial. This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.</dd>
- <dt><a id="stop" name="stop"><code>stop</code></a></dt>
+ <dt><a id="stop"><code>stop</code></a></dt>
  <dd>Halts playback entirely.</dd>
 </dl>
 

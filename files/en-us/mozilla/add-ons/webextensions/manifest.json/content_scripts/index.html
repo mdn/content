@@ -55,7 +55,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><a id="all_frames" name="all_frames"><code>all_frames</code></a></td>
+   <td><a id="all_frames"><code>all_frames</code></a></td>
    <td><code>Boolean</code></td>
    <td>
     <dl>
@@ -74,7 +74,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><a id="css" name="css"><code>css</code></a></td>
+   <td><a id="css"><code>css</code></a></td>
    <td><code>Array</code></td>
    <td>
     <p>An array of paths, relative to <code>manifest.json</code>, referencing CSS files that will be injected into matching pages.</p>
@@ -87,22 +87,22 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><a id="exclude_globs" name="exclude_globs"><code>exclude_globs</code></a></td>
+   <td><a id="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
    <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
-   <td><a id="exclude_matches" name="exclude_matches"><code>exclude_matches</code></a></td>
+   <td><a id="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
    <td>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
-   <td><a id="include_globs" name="include_globs"><code>include_globs</code></a></td>
+   <td><a id="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
    <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
-   <td><a id="js" name="js"><code>js</code></a></td>
+   <td><a id="js"><code>js</code></a></td>
    <td><code>Array</code></td>
    <td>
     <p>An array of paths, relative to the manifest.json file, referencing JavaScript files that will be injected into matching pages.</p>
@@ -118,7 +118,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code><a id="match_about_blank" name="match_about_blank">match_about_blank</a></code></td>
+   <td><code><a id="match_about_blank">match_about_blank</a></code></td>
    <td><code>Boolean</code></td>
    <td>
     <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
@@ -147,7 +147,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><a id="matches" name="matches"><code>matches</code></a></td>
+   <td><a id="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
     <p>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</p>
@@ -156,7 +156,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><a id="run_at" name="run_at"><code>run_at</code></a></td>
+   <td><a id="run_at"><code>run_at</code></a></td>
    <td><code>String</code></td>
    <td>
     <p>This option determines when the scripts specified in <code><a href="#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>

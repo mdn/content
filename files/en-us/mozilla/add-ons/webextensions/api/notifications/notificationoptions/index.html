@@ -30,19 +30,19 @@ tags:
 <dl class="reference-values">
  <dt><code>type</code></dt>
  <dd>{{WebExtAPIRef("notifications.TemplateType")}}. The type of notification you want. Depending on your choice here, certain other properties are either mandatory or are not permitted.</dd>
- <dt><a id="message" name="message"><code>message</code></a></dt>
+ <dt><a id="message"><code>message</code></a></dt>
  <dd><code>string</code>. The notification's main content.</dd>
- <dt><a id="title" name="title"><code>title</code></a></dt>
+ <dt><a id="title"><code>title</code></a></dt>
  <dd><code>string</code>. The notification's title.</dd>
- <dt><a id="iconUrl" name="iconUrl"><code>iconUrl</code></a>{{optional_inline}}</dt>
+ <dt><a id="iconUrl"><code>iconUrl</code></a>{{optional_inline}}</dt>
  <dd><code>string</code>. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs">relative URL</a> of a file within the extension.</dd>
- <dt><a id="contextMessage" name="contextMessage"><code>contextMessage</code></a>{{optional_inline}}</dt>
+ <dt><a id="contextMessage"><code>contextMessage</code></a>{{optional_inline}}</dt>
  <dd><code>string</code>. Supplementary content to display.</dd>
- <dt><a id="contextMessage" name="contextMessage"><code>priority</code></a>{{optional_inline}}</dt>
+ <dt><a id="contextMessage"><code>priority</code></a>{{optional_inline}}</dt>
  <dd><code>number</code>. The notification's priority: may be 0, 1, or 2. Defaults to 0 if omitted.</dd>
- <dt><a id="eventTime" name="eventTime"><code>eventTime</code></a>{{optional_inline}}</dt>
+ <dt><a id="eventTime"><code>eventTime</code></a>{{optional_inline}}</dt>
  <dd><code>number</code>. A timestamp for the notification in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><a id="buttons" name="buttons"><code>buttons</code></a>{{optional_inline}}</dt>
+ <dt><a id="buttons"><code>buttons</code></a>{{optional_inline}}</dt>
  <dd><code>array</code> of <code>button</code>. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:</dd>
  <dd>
  <dl class="reference-values">
@@ -52,13 +52,13 @@ tags:
   <dd><code>string</code>. URL pointing to an icon for the button.</dd>
  </dl>
  </dd>
- <dt><a id="imageUrl" name="imageUrl"><code>imageUrl</code></a></dt>
+ <dt><a id="imageUrl"><code>imageUrl</code></a></dt>
  <dd>
  <p><code>string</code>. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs">relative URL</a> of a file within the extension.</p>
 
  <p><em>This property is only permitted if <code>type</code> is <code>"image"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p>
  </dd>
- <dt><a id="items" name="items"><code>items</code></a></dt>
+ <dt><a id="items"><code>items</code></a></dt>
  <dd><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</dd>
  <dd>
  <dl class="reference-values">
@@ -68,7 +68,7 @@ tags:
   <dd><code>string</code>. Message to display in the item.</dd>
  </dl>
  <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
- <dt><a id="progress" name="progress"><code>progress</code></a></dt>
+ <dt><a id="progress"><code>progress</code></a></dt>
  <dd><code>integer</code>. An integer between 0 and 100, used to represent the current progress in a progress indicator.</dd>
  <dd><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
 </dl>
