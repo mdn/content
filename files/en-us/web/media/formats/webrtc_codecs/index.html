@@ -461,7 +461,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <h2 id="Security_implications">Security implications</h2>
 
-<p>There are interesting potential security issues that come come up while selecting and configuring codecs. WebRTC video is protected using Datagram Transport Layer Security ({{Glossary("DTLS")}}), but it is theoretically possible for a motivated party to infer the amount of change that's occurring from frame to frame when using variable bit rate (VBR) codecs, by monitoring the stream's bit rate and how it changes over time. This could potentially allow a bad actor to infer something about the content of the stream, given the ebb and flow of the bit rate.</p>
+<p>There are interesting potential security issues that come up while selecting and configuring codecs. WebRTC video is protected using Datagram Transport Layer Security ({{Glossary("DTLS")}}), but it is theoretically possible for a motivated party to infer the amount of change that's occurring from frame to frame when using variable bit rate (VBR) codecs, by monitoring the stream's bit rate and how it changes over time. This could potentially allow a bad actor to infer something about the content of the stream, given the ebb and flow of the bit rate.</p>
 
 <p>For more about security considerations when using AVC in WebRTC, see {{RFC(6184, "RTP Payload Format for H.264 Video: Security Considerations", 9)}}.</p>
 

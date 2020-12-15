@@ -32,7 +32,7 @@ tags:
 
 <p>This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.targetTouches")}} property. The {{domxref("TouchEvent.targetTouches")}} property is a {{domxref("TouchList")}} object that includes those TPs that are currently touching the surface <em>and</em> started on the element that is the target of the current event. As such, the <code>targetTouches</code> list is a strict subset of the <code>touches</code> list.</p>
 
-<p>In following code snippet, the function compares the length of the <code>touches</code> list to the the length of the <code>targetTouches</code> list and returns <code>true</code> if the lengths are the same and returns <code>false</code> otherwise.</p>
+<p>In following code snippet, the function compares the length of the <code>touches</code> list to the length of the <code>targetTouches</code> list and returns <code>true</code> if the lengths are the same and returns <code>false</code> otherwise.</p>
 
 <pre class="brush: js">function touches_in_target(ev) {
   // Return true if all of the touches are within the target element;

@@ -160,7 +160,7 @@ export default {
  </li>
  <li>Now on to the <code>done</code> prop.
   <ol>
-   <li>First add a <code>default</code> field, with a value of <code>false</code>. This means that when no <code>done</code> prop is passed to a <code>ToDoItem</code> component, the <code>done</code> prop will will have a value of false (bear in mind that this is not required — we only need <code>default</code> on non-required props).</li>
+   <li>First add a <code>default</code> field, with a value of <code>false</code>. This means that when no <code>done</code> prop is passed to a <code>ToDoItem</code> component, the <code>done</code> prop will have a value of false (bear in mind that this is not required — we only need <code>default</code> on non-required props).</li>
    <li>Next add a <code>type</code> field with a value of <code>Boolean</code>. This tells Vue we expect the value prop to be a JavaScript boolean type.</li>
   </ol>
  </li>
@@ -305,7 +305,7 @@ found in
 
 <pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';</pre>
 
-<p>Next, add add an <code>id</code> field to our data property, so the component object ends up looking like so (<code>uniqueId()</code> returns the specified prefix — <code>todo-</code> — with a unique string appended to it):</p>
+<p>Next, add an <code>id</code> field to our data property, so the component object ends up looking like so (<code>uniqueId()</code> returns the specified prefix — <code>todo-</code> — with a unique string appended to it):</p>
 
 <pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';
 

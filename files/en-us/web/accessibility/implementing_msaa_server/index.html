@@ -313,7 +313,7 @@ tags:
 
 <h3 id="MSAA_can_be_crash_prone"><a id="Crash_prone" name="Crash_prone">MSAA can be crash prone</a></h3>
 
-<p><span class="c1">Problem</span>: Many of MSAA's crash occur because more than one process is refcounting the same objects, and because pointers are being shared between processes. When your application closes, different signals are typically broadcast. For example, the application window closes and the window is blurred. It is impossible to know if and when the 3rd party assistive technology will use one of these signals to release the objects of yours that is is refcounting. This can lead to crashes where it releases something and the wrong time, when some of your dll's are unloaded but not others, and a destructor is called in an unloaded DLL.</p>
+<p><span class="c1">Problem</span>: Many of MSAA's crash occur because more than one process is refcounting the same objects, and because pointers are being shared between processes. When your application closes, different signals are typically broadcast. For example, the application window closes and the window is blurred. It is impossible to know if and when the 3rd party assistive technology will use one of these signals to release the objects of yours that it is refcounting. This can lead to crashes where it releases something and the wrong time, when some of your dll's are unloaded but not others, and a destructor is called in an unloaded DLL.</p>
 
 <p><span class="c1">Solution</span>: Create a "shutdown" method for each internal accessible object, to remove any references to other internal objects before any of your dll's are unloaded. In order to do this effectively, you will have to keep track of every accessible object that you create. The shutdown method for an accessibility object should be called whenever the document or UI object it refers to goes away. The easiest way to do that is to keep a pointer to an accessible in each internal UI object. If that pointer is non-null, then there is an accessible object for it. Whenever the UI object is destroyed, shutdown it's accessible object as well. In Gecko/Mozilla we are not allowed to keep this extra pointer for each accessible object, so when accessibility is turned on we use a hash table to cache these objects. Such a cache must be kept in perfect sync with the tree of UI and document objects, which is difficult. Therefore, unless 4 bytes extra on each object is criticial in your application, just keep the extra pointer around instead of using a hash table.</p>
 
@@ -392,7 +392,7 @@ tags:
 
 <p><span class="c1">Problem</span>: The assistive technology may interact slowly with your application.</p>
 
-<p><span class="c1">Solution</span>: Try not to calculate the same things more than once or create the same objects more than once. For example, create and cache an object's children when you look for them in get_accChildCount(), so that you can just hand them back when asked for using get_accChild() or accNavigate(). Support IEnumVARIANT so that the MSAA client can ask for a number of children in one call. In custom interfaces, create methods that hand back a lot of data in one call, rather than requiring a large number of calls. Fewer calls are much better better because COM Marshaling is slow.</p>
+<p><span class="c1">Solution</span>: Try not to calculate the same things more than once or create the same objects more than once. For example, create and cache an object's children when you look for them in get_accChildCount(), so that you can just hand them back when asked for using get_accChild() or accNavigate(). Support IEnumVARIANT so that the MSAA client can ask for a number of children in one call. In custom interfaces, create methods that hand back a lot of data in one call, rather than requiring a large number of calls. Fewer calls are much better because COM Marshaling is slow.</p>
 
 <h3 id="Differing_client_implementations_2"><a id="Differing_client_implementations" name="Differing_client_implementations">Differing client implementations</a></h3>
 
@@ -424,7 +424,7 @@ tags:
 
 <p><span class="c1">Problem</span>: The assistive technology does not use 50% of what's available in MSAA, e.g. MSAA caret, a lot of events, roles, states and methods. It's difficult to know which things to support.</p>
 
-<p><span class="c1">Solution</span>: Use this document to see what is generally considered important by assistive technology manufacturers. Contact the the top vendors early and often as you plan and implement your architecture, to see what's important to them. Implement only what's needed -- supporting everything would take too long for zero results.</p>
+<p><span class="c1">Solution</span>: Use this document to see what is generally considered important by assistive technology manufacturers. Contact the top vendors early and often as you plan and implement your architecture, to see what's important to them. Implement only what's needed -- supporting everything would take too long for zero results.</p>
 
 <h3 id="Vendor_quirks_2"><a id="Vendor_quirks" name="Vendor_quirks">Vendor quirks</a></h3>
 

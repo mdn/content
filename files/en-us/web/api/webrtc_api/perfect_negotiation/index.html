@@ -86,7 +86,7 @@ const pc = new RTCPeerConnection(config);
 
 <h3 id="Handling_incoming_tracks">Handling incoming tracks</h3>
 
-<p>We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiatied to be received by this peer connection. To do this, we implement the the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.</p>
+<p>We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiatied to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.</p>
 
 <pre class="brush: js notranslate">pc.ontrack = ({track, streams}) =&gt; {
   track.onunmute = () =&gt; {

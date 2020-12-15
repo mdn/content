@@ -24,7 +24,7 @@ tags:
  <dt><code>format</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('extensionTypes.ImageFormat')}}. The format of the resulting image. Default is <code>"png"</code>.</dd>
  <dt><code>quality</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. When format is <code>"jpeg"</code>, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the <code>encoderOptions</code> argument to <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL()</a></code>. If is is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.</dd>
+ <dd><code>integer</code>. When format is <code>"jpeg"</code>, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the <code>encoderOptions</code> argument to <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL()</a></code>. If it is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.</dd>
  <dt><code>rect</code>{{optional_inline}}</dt>
  <dd>An <code>object</code> specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to <code>0</code>. The properties are:</dd>
  <dd>

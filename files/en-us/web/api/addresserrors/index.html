@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{APIRef("Payment Request API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>AddressErrors</code></strong> dictionary is used by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to to report validation errors in a physical address (typically a billing address or a shipping address).</span> Any members which is present indicates that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.</p>
+<p><span class="seoSummary">The <strong><code>AddressErrors</code></strong> dictionary is used by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to report validation errors in a physical address (typically a billing address or a shipping address).</span> Any members which is present indicates that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.</p>
 
 <p><code>AddressErrors</code> is the type of the object returned by {{domxref("PaymentDetailsUpdate.shippingAddressErrors", "shippingAddressErrors")}} in the {{domxref("PaymentDetailsUpdate")}} passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.</p>
 

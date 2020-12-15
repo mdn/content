@@ -44,7 +44,7 @@ system: extends decimal;
  </dt>
  <dd>Cycles through the list of symbols provided. Once the end of the list of symbols is reached, it will loop back to the beginning and start over. This system is useful for simple bullet styles with just one symbol, or for styles having multiple symbols. At least one symbol must be specified in the <code>symbols</code> descriptor, or the counter style is not valid.</dd>
  <dt><code>fixed</code></dt>
- <dd>Defines a finite set of symbols are specified. Once the system has looped through all the specified symbols, it will fall back. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the <code>symbols</code> descriptor or the counter style is not valid. Also an optional {{cssxref("&lt;integer&gt;")}} can be specified after the the system, as the value of the first symbol. If this integer is omitted, value of the first integer is taken as <code>1</code>.</dd>
+ <dd>Defines a finite set of symbols are specified. Once the system has looped through all the specified symbols, it will fall back. This system is useful in cases where the counter values are finite. At least one symbol must be specified in the <code>symbols</code> descriptor or the counter style is not valid. Also an optional {{cssxref("&lt;integer&gt;")}} can be specified after the system, as the value of the first symbol. If this integer is omitted, value of the first integer is taken as <code>1</code>.</dd>
  <dt><code>symbolic</code></dt>
  <dd>Cycles through the provided list of symbols. On each successive pass through the cycle, the symbols used for the counter representation are doubled, tripled, and so on. For example, if the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the <code>symbols</code> descriptor or the counter style is not valid. This counter system works for positive counter values only.</dd>
  <dt><code>alphabetic</code></dt>
@@ -62,7 +62,7 @@ system: extends decimal;
  <dt><code>extends</code></dt>
  <dd>Allows authors to use the algorithm of another counter style, but alter its other aspects. If a counter style rule is using the <code>extends</code> system, any unspecified descriptors, and their values will be taken from the extended counter style specified. If the specified counter style name in extends, is not a currently defined counter style name, it will instead extend from the decimal counter style.<br>
  <br>
- It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one more more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
+ It must not contain a <code>symbols</code> or <code>additive-symbols</code> descriptor, or else the counter style rule is invalid. If one or more counter styles defenitions form a cycle with their extends values, the browser will treat all the participating counter styles as extending from the decimal style.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>

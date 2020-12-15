@@ -49,7 +49,7 @@ tags:
 
 <p>Attempting to set <code>document.domain</code> is dangerous. It opens up full access to a page's DOM from <em>all</em> subdomains, which is likely not be what is intended. It also removes the port component from the origin, so now your page can be accessed by other pages with the same IP address or same host component, even on a different port.</p>
 
-<p>This is especially insecure on shared hosting. For example, another shared hosting customer is able to host a site at the same IP address but on a different port, then setting <code>document.domain</code> will remove the the same-origin protection that normally protects you from that other customer's site accessing your site's data.</p>
+<p>This is especially insecure on shared hosting. For example, another shared hosting customer is able to host a site at the same IP address but on a different port, then setting <code>document.domain</code> will remove the same-origin protection that normally protects you from that other customer's site accessing your site's data.</p>
 
 <p>Similar problems occur with shared hosting sites that give each customer a different subdomain. If a site sets <code>document.domain</code>, any other customer on a different subdomain can now do the same thing, and start accessing the data of the original site.</p>
 
