@@ -8,7 +8,7 @@ tags:
   - part 6
   - server-side
 ---
-<p><a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form" rel="nofollow, noindex">Edit</a>This subarticle shows how to define a page/form to create <code>Book</code> objects. This is a little more complicated than the equivalent <code>Author</code> or <code>Genre</code> pages because we need to get and display available <code>Author</code> and <code>Genre</code> records in our <code>Book</code> form.</p>
+<p><a class="button section-edit only-icon" href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form" rel="nofollow, noindex">Edit</a>This subarticle shows how to define a page/form to create <code>Book</code> objects. This is a little more complicated than the equivalent <code>Author</code> or <code>Genre</code> pages because we need to get and display available <code>Author</code> and <code>Genre</code> records in our <code>Book</code> form.</p>
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
@@ -39,7 +39,7 @@ exports.book_create_get = function(req, res, next) {
 
 };</code></pre>
 
-<p>This uses the async module (described in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>) to get all <code>Author</code> and <code>Genre</code> objects. These are then passed to the view <code><strong>book_form.pug</strong></code> as variables named <code>authors</code> and <code>genres</code> (along with the page <code>title</code>).</p>
+<p>This uses the async module (described in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>) to get all <code>Author</code> and <code>Genre</code> objects. These are then passed to the view <code><strong>book_form.pug</strong></code> as variables named <code>authors</code> and <code>genres</code> (along with the page <code>title</code>).</p>
 
 <h2 id="Controller—post_route">Controller—post route</h2>
 

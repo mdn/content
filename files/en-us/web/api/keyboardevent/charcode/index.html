@@ -55,7 +55,7 @@ input.addEventListener('keypress', function(e) {
  <li><code>charCode</code> is never set in the {{Event("keydown")}} and {{Event("keyup")}} events. In these cases, <code>keyCode</code> is set instead.</li>
  <li>To get the code of the key regardless of whether it was stored in <code>keyCode</code> or <code>charCode</code>, query the {{ domxref("KeyboardEvent.which", "which") }} property.</li>
  <li>Characters entered through an IME do not register through <code>keyCode</code> or <code>charCode</code>. <span class="comment">Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</span></li>
- <li>For a list of the <code>charCode</code> values associated with particular keys, run <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_7:_Displaying_Event_Object_Properties" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Example 7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
+ <li>For a list of the <code>charCode</code> values associated with particular keys, run <a href="/en-US/docs/Web/API/Document_Object_Model/Examples#Example_7:_Displaying_Event_Object_Properties" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Example 7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>

@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Specifying_the_browser_action">Specifying the browser action</h2>
 
-<p>You define the browser action's properties using the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
+<p>You define the browser action's properties using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
 
 <pre class="brush: json notranslate"><code class="language-json">"browser_action": {
   "default_icon": {
@@ -25,7 +25,7 @@ tags:
 
 <p>The only mandatory key is <code>default_icon</code>.</p>
 
-<p>There are two ways to specify a browser action: with or without a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>. If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
+<p>There are two ways to specify a browser action: with or without a <a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>. If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">browser.browserAction.onClicked.addListener(<var>handleClick</var>);</code></pre>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>Note that your extension can have only one browser action.</p>
 
-<p>You can change many of the browser action properties programmatically using the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API.</p>
+<p>You can change many of the browser action properties programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API.</p>
 
 <h2 id="Icons">Icons</h2>
 

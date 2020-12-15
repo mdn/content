@@ -36,10 +36,10 @@ tags:
 
 <h2 id="demo" name="demo">Demo</h2>
 
-<p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
+<p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
+<p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
 </div>
 
 <h3 id="Environment_setup" name="Environment_setup">Environment setup</h3>
@@ -47,7 +47,7 @@ tags:
 <p>To start with the WebGL shaders you don't need much. You should:</p>
 
 <ul>
- <li>Make sure you are using a modern browser with good <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
+ <li>Make sure you are using a modern browser with good <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
  <li>Create a directory to store your experiments in.</li>
  <li>Save a copy of the <a href="https://threejs.org/build/three.min.js">latest minimized Three.js library</a> inside your directory.</li>
 </ul>
@@ -93,7 +93,7 @@ tags:
 
 <h3 id="The_cubes_source_code">The cube's source code</h3>
 
-<p>Instead of creating everything from scratch we can reuse the <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> source code of the cube. Most of the components like the renderer, camera, and lights will stay the same, but instead of the basic material we will set the cube's color and position using shaders.</p>
+<p>Instead of creating everything from scratch we can reuse the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> source code of the cube. Most of the components like the renderer, camera, and lights will stay the same, but instead of the basic material we will set the cube's color and position using shaders.</p>
 
 <p>Go to the <a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">cube.html file on GitHub</a>, copy all the JavaScript code from inside the second {{htmlelement("script")}} element, and paste it into the third <code>&lt;script&gt;</code> element of the current example. Save and load <code>index.html</code> in your browser — you should see a blue cube.</p>
 

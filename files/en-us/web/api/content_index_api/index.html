@@ -18,7 +18,7 @@ tags:
 
 <p>As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.</p>
 
-<p>The Content Index API is an extension to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service workers</a>, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.</p>
+<p>The Content Index API is an extension to <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.</p>
 
 <p>Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>All the following examples assume a service worker has been registered. For more information see the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>.</p>
+<p>All the following examples assume a service worker has been registered. For more information see the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>.</p>
 
 <h3 id="Feature_Detection_and_Interface_Access">Feature Detection and Interface Access</h3>
 
@@ -222,5 +222,5 @@ const contentIndexItems = self.registration.index.getAll();
 <ul>
   <li><a href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</a></li>
   <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list and remove 'save for later' content</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</a></li>
 </ul>

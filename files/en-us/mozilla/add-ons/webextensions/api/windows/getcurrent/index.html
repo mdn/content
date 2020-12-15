@@ -18,7 +18,7 @@ tags:
 
 <p>The "current" window is not necessarily the same as the currently focused window. If this function is called from a background script, then it returns the currently focused window. But if it is called from a script whose document is associated with a particular browser window, then it returns that browser window. For example, if the browser is displaying a sidebar, then every browser window has its own instance of the sidebar document. If a script running in the sidebar document calls <code>getCurrent()</code>, then it will return that sidebar document's window.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window" title="Information about a browser window."><code>windows.Window</code></a> object containing the details of the window. If any error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window" title="Information about a browser window."><code>windows.Window</code></a> object containing the details of the window. If any error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

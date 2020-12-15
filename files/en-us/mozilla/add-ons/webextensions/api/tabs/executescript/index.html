@@ -34,7 +34,7 @@ tags:
 
 <p>The scripts you inject are called <em>content scripts</em>. <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Learn more about content scripts</a>.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -112,7 +112,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.</p>
 
 <p>The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any <code>console.log()</code> output) if you executed the script in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>. For example, consider a script like this:</p>
 
@@ -123,7 +123,7 @@ tags:
 <p>The result values must be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clonable</a>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> The last statement may be also a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, but this feature is unsupported by <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> library.</p>
+<p><strong>Note:</strong> The last statement may be also a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, but this feature is unsupported by <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> library.</p>
 </div>
 
 <p>If any error occurs, the promise will be rejected with an error message.</p>

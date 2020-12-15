@@ -21,7 +21,7 @@ tags:
 
 <p>The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to its first-party storage on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.</p>
 
-<p>In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the <code>allow-storage-access-by-user-activation</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox token</a>. The embedding website needs to add this to allow storage access requests to be successful, along with <code>allow-scripts</code> and <code>allow-same-origin</code> to allow it to call the API, and execute in an origin that can have cookies:</p>
+<p>In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the <code>allow-storage-access-by-user-activation</code> <a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox token</a>. The embedding website needs to add this to allow storage access requests to be successful, along with <code>allow-scripts</code> and <code>allow-same-origin</code> to allow it to call the API, and execute in an origin that can have cookies:</p>
 
 <pre class="brush: html">&lt;iframe sandbox="allow-storage-access-by-user-activation
                  allow-scripts
@@ -54,7 +54,7 @@ tags:
  <li>In Firefox, the storage access grants are phased out after 30 calendar days passing, whereas in Safari the storage access grants are phased out after 30 days of browser usage passed without user interaction. This is currently a limitation of the Firefox implementation, which we may address in a future version.  In Safari, successful use of the storage access API resets this counter.</li>
 </ul>
 
-<p>Documentation for Firefox's new storage access policy for blocking tracking cookies includes <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants">a detailed description</a> of the scope of storage access grants.</p>
+<p>Documentation for Firefox's new storage access policy for blocking tracking cookies includes <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants">a detailed description</a> of the scope of storage access grants.</p>
 
 <h2 id="Storage_Access_API_methods">Storage Access API methods</h2>
 

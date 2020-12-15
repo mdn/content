@@ -22,9 +22,9 @@ tags:
 <p>Depending on your Operating System you will need to carry out a different process to prepare your machine. So firstly complete the instructions for your OS and then continue following these build instructions.</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation" title="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation" title="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a></li>
 </ul>
 
 <p><strong>TIP</strong>: After completing Setup for your OS, and before you Get the source, you can opt to add the progressExtension to your mercurial.ini (for Windows) or .hgrc (for *Nix / Mac) file. This will provide status feedback during the lengthy clone / download process. see: <a class="external external-icon" href="http://mercurial.selenic.com/wiki/ProgressExtension">Configure Mercurial .hgrc file for Progress Extension</a>.</p>
@@ -49,7 +49,7 @@ tags:
 <pre>python client.py checkout
 </pre>
 
-<div class="warning"><strong>Note: </strong>Unless you have a very good network connection, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. Then run <span style="color: #ffff00;">python client.py checkout</span> to ensure you are up-to-date.</div>
+<div class="warning"><strong>Note: </strong>Unless you have a very good network connection, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. Then run <span style="color: #ffff00;">python client.py checkout</span> to ensure you are up-to-date.</div>
 
 <p class="editable">The source code requires 1.5GB of free space or more.</p>
 

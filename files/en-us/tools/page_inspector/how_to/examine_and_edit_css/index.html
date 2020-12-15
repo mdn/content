@@ -60,14 +60,14 @@ tags:
 
 <ul>
  <li><em>Highlight matched elements</em>: next to the selector is a target icon: click this to highlight all nodes in the page that match this selector.</li>
- <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
  <li><em>Inactive rules</em> (not shown): if a rule is inactive (e.g., <code>padding</code> on a <code>:visited</code> pseudo-element), it is colored gray, with an info icon that gives more information when clicked.</li>
- <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
  <li><em>Enable/disable</em>: if you hover over a declaration, a checkbox appears next to it: you can use this to toggle the declaration on or off.</li>
- <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Link_to_CSS_file">link to CSS file</a>.</li>
+ <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Link_to_CSS_file">link to CSS file</a>.</li>
 </ul>
 
-<p>If the element has a <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display: grid</a></code> declaration, then it gets a grid icon next to it, like this: <img alt="" src="https://mdn.mozillademos.org/files/14524/Screen%20Shot%202016-12-16%20at%2010.51.15%20AM.png">. Click that icon to display the grid overlaid on the page, including grid lines and tracks. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Examine grid layouts</a> for more on this.</p>
+<p>If the element has a <code><a href="/en-US/docs/Web/CSS/display">display: grid</a></code> declaration, then it gets a grid icon next to it, like this: <img alt="" src="https://mdn.mozillademos.org/files/14524/Screen%20Shot%202016-12-16%20at%2010.51.15%20AM.png">. Click that icon to display the grid overlaid on the page, including grid lines and tracks. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Examine grid layouts</a> for more on this.</p>
 
 <p>To view <a href="/en-US/docs/Web/CSS/Cascade">user-agent styles</a> (<em>i.e.,</em> browser-default CSS rules), enable "Inspector &gt; Show Browser Styles" under the <a href="/en-US/docs/Tools/Settings">developer tool settings</a> panel. (Note that this setting is independent of the "Browser styles" checkbox in the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">Computed view</a>.)</p>
 
@@ -237,7 +237,7 @@ tags:
 
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
 
-<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
+<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16931/computed_css.png" style="border: 1px solid black; display: block; height: 225px; margin-left: auto; margin-right: auto; width: 444px;"></p>
 
@@ -273,7 +273,7 @@ tags:
 
 <h3 id="CSS_variable_autocompletion">CSS variable autocompletion</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS variable names</a> will auto-complete depending on the variables defined in the CSS. If you enter <code>var(</code> into a property value and then type a dash (<code>-</code>), any variables you have declared in your CSS will then appear in an autocomplete list, which shows a color swatch so you can see exactly what color each variable choice is storing ({{bug(1451211)}}).<br>
+<p><a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variable names</a> will auto-complete depending on the variables defined in the CSS. If you enter <code>var(</code> into a property value and then type a dash (<code>-</code>), any variables you have declared in your CSS will then appear in an autocomplete list, which shows a color swatch so you can see exactly what color each variable choice is storing ({{bug(1451211)}}).<br>
  <br>
  <img alt="" src="https://mdn.mozillademos.org/files/16934/edit_rule_var_autocomplete.png" style="border: 1px solid black; display: block; height: 343px; margin: 0px auto; width: 431px;"></p>
 

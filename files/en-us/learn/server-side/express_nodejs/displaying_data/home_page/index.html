@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Route">Route</h2>
 
-<p>We created our index page routes in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
+<p>We created our index page routes in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial.</a> As a reminder, all the route functions are defined in <strong>/routes/catalog.js</strong>:</p>
 
 <pre class="brush: js  notranslate">// GET catalog home page.
 router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
@@ -35,7 +35,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 <p>The index controller function needs to fetch information about how many <code>Book</code>, <code>BookInstance</code>, available <code>BookInstance</code>, <code>Author</code>, and <code>Genre</code> records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We use the <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or <code>null</code>) and the count of documents as the second parameter (or <code>null</code> if there was an error) .</p>
+<p><strong>Note:</strong> We use the <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>, and you can also return a <code>Query</code> and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or <code>null</code>) and the count of documents as the second parameter (or <code>null</code> if there was an error) .</p>
 
 <pre class="brush: js  notranslate">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
  // ... do something if there is an err

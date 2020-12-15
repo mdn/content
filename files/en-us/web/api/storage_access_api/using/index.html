@@ -21,7 +21,7 @@ tags:
 
 <p>In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user’s cookies under a storage access policy that blocks third-party cookies.</p>
 
-<p>First of all, if the <code>&lt;iframe&gt;</code> is sandboxed, the embedding website needs to add the <code>allow-storage-access-by-user-activation</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox token</a> to allow storage access requests to be successful, along with <code>allow-scripts</code> and <code>allow-same-origin</code> to allow it to call the API, and execute in an origin that can have cookies:</p>
+<p>First of all, if the <code>&lt;iframe&gt;</code> is sandboxed, the embedding website needs to add the <code>allow-storage-access-by-user-activation</code> <a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox token</a> to allow storage access requests to be successful, along with <code>allow-scripts</code> and <code>allow-same-origin</code> to allow it to call the API, and execute in an origin that can have cookies:</p>
 
 <pre class="brush: html">&lt;iframe sandbox="allow-storage-access-by-user-activation
                  allow-scripts

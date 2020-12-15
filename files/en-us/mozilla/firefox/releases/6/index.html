@@ -14,14 +14,12 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<dl>
-</dl>
 
 <ul>
  <li>The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.</li>
  <li>The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.</li>
  <li>The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.</li>
- <li>{{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/maxwidth">maxwidth</a></span></code> property; this was never intentional, and is in violation of the HTML specification. You should instead use the {{ HTMLAttrXref("size", "input") }} attribute to set the maximum width of input fields.</li>
+ <li>{{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL <code><span><a href="/en-US/docs/XUL/Property/maxwidth">maxwidth</a></span></code> property; this was never intentional, and is in violation of the HTML specification. You should instead use the {{ HTMLAttrXref("size", "input") }} attribute to set the maximum width of input fields.</li>
  <li>The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties <code>fillStyle</code> and <code>strokeStyle</code> used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.</li>
  <li>The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.</li>
  <li>Support for the HTML <a href="/en/HTML/Global_attributes#attr-data-*" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-data-*">custom data attributes</a> (data-*) has been added. The DOM {{ domxref("element.dataset") }} property allows to access them.</li>

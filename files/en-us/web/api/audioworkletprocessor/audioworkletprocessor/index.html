@@ -25,7 +25,7 @@ tags:
 
 <dl>
  <dt><code>options</code></dt>
- <dd>An object that is passed as <em>options</em> parameter to {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and passed through <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>. The object is based on {{domxref("AudioWorkletNodeOptions")}} dictionary. Available properties are as follows: {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}Note that there are default values for the first two properties, so even if there are no <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to the <code>AudioWorkletProcessor</code> constructor will exist and at minimum have <code>numberOfInputs</code> and <code>numberOfOutputs</code>.</dd>
+ <dd>An object that is passed as <em>options</em> parameter to {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and passed through <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>. The object is based on {{domxref("AudioWorkletNodeOptions")}} dictionary. Available properties are as follows: {{page("/en-US/docs/Web/API/AudioWorkletNodeOptions", "Properties")}}Note that there are default values for the first two properties, so even if there are no <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to the <code>AudioWorkletProcessor</code> constructor will exist and at minimum have <code>numberOfInputs</code> and <code>numberOfOutputs</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we pass custom options to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and observe how a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> of them gets passed to our <code>AudioWorkletProcessor</code> constructor.</p>
+<p>In this example we pass custom options to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and observe how a <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> of them gets passed to our <code>AudioWorkletProcessor</code> constructor.</p>
 
 <p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it. Note that this should be done in a separate file.</p>
 

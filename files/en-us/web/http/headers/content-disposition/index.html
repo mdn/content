@@ -131,7 +131,7 @@ value2
 
 <ul>
  <li>Firefox 5 handles the <code>Content-Disposition</code> HTTP response header more effectively if both the <code>filename</code> and <code>filename*</code> parameters are provided; it looks through all provided names, using the <code>filename*</code> parameter if one is available, even if a <code>filename</code> parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{bug(588781)}}.</li>
- <li>Firefox 82 (and later) and Chrome prioritize the HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element's</a> <code>download</code> attribute over the <code>Content-Disposition</code> <code>inline</code> parameter (for <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Earlier Firefox versions prioritize the header and will display the content inline.</li>
+ <li>Firefox 82 (and later) and Chrome prioritize the HTML <a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element's</a> <code>download</code> attribute over the <code>Content-Disposition</code> <code>inline</code> parameter (for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Earlier Firefox versions prioritize the header and will display the content inline.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

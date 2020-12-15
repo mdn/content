@@ -16,11 +16,11 @@ tags:
 <p>Highlights:</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Storage Inspector: a new tool enabling you to view data stored by web pages</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Performance tool: revamped Profiler UI and frame rate timeline</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.table">console.table support</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector: a new tool enabling you to view data stored by web pages</a></li>
+ <li><a href="/en-US/docs/Tools/Performance">Performance tool: revamped Profiler UI and frame rate timeline</a></li>
+ <li><a href="/en-US/docs/tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
+ <li><a href="/en-US/docs/Web/API/Console.table">console.table support</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#Examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
 </ul>
 
 <p><a class="external-icon external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-09-02&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-07-21&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">All devtools bugs fixed between Firefox 33 and Firefox 34</a>.</p>
@@ -65,15 +65,15 @@ tags:
  <li>A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).</li>
  <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a> (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
   <ul>
-   <li>When trying to convert a symbol to a number, a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="The TypeError object represents an error when a value is not of the expected type."><code>TypeError</code></a> will be thrown now.</li>
+   <li>When trying to convert a symbol to a number, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="The TypeError object represents an error when a value is not of the expected type."><code>TypeError</code></a> will be thrown now.</li>
    <li>When using loose equality, <code>Object(sym) == sym</code> returns <code>true</code> now.</li>
   </ul>
  </li>
  <li>The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).</li>
  <li>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>, setting a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Duplicate_property_names">duplicate property name in object literals</a> will no longer throw a <code>SyntaxError</code> as per ES2015 specification ({{bug(1041128)}}).</li>
  <li>In regular expressions (including <code>String.replace</code>), the matched text for a capturing group is now <code>undefined</code> instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Gecko_specific_notes">this example code</a>). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).</li>
- <li>The ES2015 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is now supported in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).</li>
+ <li>The ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).</li>
  <li><span class="message"><span class="content">{{jsxref("Proxy.revocable()")}} has been implemented</span></span> ({{bug(978279)}}).</li>
 </ul>
 

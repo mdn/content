@@ -123,7 +123,7 @@ document.body.onclick = function() {
 
 <h4 id="Receiving_and_handling_results">Receiving and handling results</h4>
 
-<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
+<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
 
 <pre class="brush: js">recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;

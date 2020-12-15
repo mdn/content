@@ -28,7 +28,7 @@ tags:
 <p>You can let the user download to a location of their choice by specifying the <code><var>saveAs</var></code> parameter.</p>
 
 <div class="note">
-<p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.</p>
+<p>Using <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.</p>
 </div>
 
 <p>The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer’s file manager; and open a file in an associated application.</p>
@@ -145,7 +145,7 @@ tags:
  API References:  <a href="https://rpl.github.io/idb-file-storage/">idb-file-storage library</a></p>
 
 <div class="note">
-<p><strong>Note:</strong> You can also use the full Web <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>
+<p><strong>Note:</strong> You can also use the full Web <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>
 </div>
 
 <h2 id="Process_files_in_a_local_app">Process files in a local app</h2>
@@ -156,14 +156,14 @@ tags:
 
 <dl>
  <dt>Connection-based messaging</dt>
- <dd>Here you trigger the process with <code>runtime.connectNative()</code>, which returns a <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object. You can then pass a JSON message to the native application using the <code>postMessage()</code> function of <code>Port</code>. Using the <code>onMessage.addListener()</code> function of <code>Port</code> you can listen for messages from the native application. The native application is opened if it is not running when <code>runtime.connectNative()</code> is called and the application remains running until the extension calls <code>Port.disconnect()</code> or the page that connected to it is closed.</dd>
+ <dd>Here you trigger the process with <code>runtime.connectNative()</code>, which returns a <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object. You can then pass a JSON message to the native application using the <code>postMessage()</code> function of <code>Port</code>. Using the <code>onMessage.addListener()</code> function of <code>Port</code> you can listen for messages from the native application. The native application is opened if it is not running when <code>runtime.connectNative()</code> is called and the application remains running until the extension calls <code>Port.disconnect()</code> or the page that connected to it is closed.</dd>
  <dt>Connectionless messaging</dt>
  <dd>Here you use <code>runtime.sendNativeMessage()</code> to send a JSON message to a new, temporary instance of the native application. The browser closes the native application after receiving any message back from the native application.</dd>
 </dl>
 
-<p>To add the file or blob you want the native application to process use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify()</a></code>.</p>
+<p>To add the file or blob you want the native application to process use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify()</a></code>.</p>
 
-<p>To use this method the extension must request the <code>"nativeMessaging"</code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
+<p>To use this method the extension must request the <code>"nativeMessaging"</code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in its <code>manifest.json</code> file. Reciprocally, the native application must grant permission for the extension by including its ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/native-messaging">Native Messaging</a> (illustrates simple messaging only)<br>
  Guides: <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging">Native messaging</a><br>
