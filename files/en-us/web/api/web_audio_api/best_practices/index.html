@@ -23,7 +23,7 @@ tags:
 
 <p>If you're looking to work with audio from the user's camera or microphone you can access it via the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a> and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyse audio.</p>
 
-<p>The last way is to generate your own sound, which can be done with either an {{domxref("OscillatorNode")}} or by creating a buffer and populating it with your own data. Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">tutorial here for creating your own instrument</a> for information on creating sounds with oscillators and buffers.</p>
+<p>The last way is to generate your own sound, which can be done with either an {{domxref("OscillatorNode")}} or by creating a buffer and populating it with your own data. Check out the <a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">tutorial here for creating your own instrument</a> for information on creating sounds with oscillators and buffers.</p>
 
 <h2 id="Cross_browser_legacy_support">Cross browser &amp; legacy support</h2>
 
@@ -57,7 +57,7 @@ button.addEventListener('click', function() {
 }, false);
 </pre>
 
-<p>If however, you create the context outside of a user gesture, its state will be set to <code>suspended</code> and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/resume"><code>resume()</code></a> method.</p>
+<p>If however, you create the context outside of a user gesture, its state will be set to <code>suspended</code> and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the <a href="/en-US/docs/Web/API/BaseAudioContext/resume"><code>resume()</code></a> method.</p>
 
 <pre class="brush: js">const audioCtx = new AudioContext();
 const button = document.querySelector('button');
@@ -70,15 +70,15 @@ button.addEventListener('click', function() {
 }, false);
 </pre>
 
-<p>You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering"><code>startRendering()</code></a> method.</p>
+<p>You might instead be working with an {{domxref("OfflineAudioContext")}}, in which case you can resume the suspended audio context with the <a href="/en-US/docs/Web/API/OfflineAudioContext/startRendering"><code>startRendering()</code></a> method.</p>
 
 <h2 id="User_control">User control</h2>
 
-<p>If your website or application contains sound, you should allow the user control over it, otherwise again, it will become annoying. This can be achieved by play/stop and volume/mute controls. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> tutorial goes over how to do this.</p>
+<p>If your website or application contains sound, you should allow the user control over it, otherwise again, it will become annoying. This can be achieved by play/stop and volume/mute controls. The <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> tutorial goes over how to do this.</p>
 
-<p>If you have buttons that switch audio on and off, using the ARIA <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role"><code>role="switch"</code></a> attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a <a href="https://codepen.io/Wilto/pen/ZoGoQm?editors=1100">demo of how to use it here</a>.</p>
+<p>If you have buttons that switch audio on and off, using the ARIA <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role"><code>role="switch"</code></a> attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a <a href="https://codepen.io/Wilto/pen/ZoGoQm?editors=1100">demo of how to use it here</a>.</p>
 
-<p>As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range"><code>range input</code></a> is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-step"><code>step</code></a> attribute.</p>
+<p>As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the <a href="/en-US/docs/Web/HTML/Element/input/range"><code>range input</code></a> is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the <a href="/en-US/docs/Web/HTML/Element/input#attr-step"><code>step</code></a> attribute.</p>
 
 <h2 id="Setting_AudioParam_values">Setting AudioParam values</h2>
 

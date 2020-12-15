@@ -14,7 +14,7 @@ tags:
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-<p>The read-only <strong><code>Animation.ready</code></strong> property of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the <code>"pending"</code> <a href="/en-US/docs/Web/API/Animation/playState">play state</a> as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.</p>
+<p>The read-only <strong><code>Animation.ready</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the <code>"pending"</code> <a href="/en-US/docs/Web/API/Animation/playState">play state</a> as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.</p>
 
 <div class="note">
 <p>Since the same {{jsxref("Promise")}} is used for both pending <code>play</code> and pending <code>pause</code> requests, authors are advised to check the state of the animation when the promise is resolved.</p>

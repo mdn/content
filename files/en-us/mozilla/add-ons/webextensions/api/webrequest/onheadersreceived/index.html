@@ -62,7 +62,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   <dd><a href="#details"><code>object</code></a>. Details of the request. This will include response headers if you have included <code>"responseHeaders"</code> in <code>extraInfoSpec</code>.</dd>
  </dl>
 
- <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener will return a <code>BlockingResponse</code> object, and can set its <code>responseHeaders</code> property. In Firefox, the return value can be a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to a  <code>BlockingResponse</code>.</p>
+ <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener will return a <code>BlockingResponse</code> object, and can set its <code>responseHeaders</code> property. In Firefox, the return value can be a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to a  <code>BlockingResponse</code>.</p>
  </dd>
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.</dd>
@@ -214,7 +214,7 @@ browser.webRequest.onHeadersReceived.addListener(
   ["blocking", "responseHeaders"]
 );</pre>
 
-<p>This code does the same thing the previous example, except that the listener is asynchronous, returning a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
+<p>This code does the same thing the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
 
 <pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 

@@ -108,65 +108,65 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <dd>If the referent is a non-revoked (scripted) proxy, return a <code>Debugger.Object</code> instance referring to the ECMAScript <code>[[ProxyHandler]]</code> of the referent. If the referent is a revoked (scripted) proxy, return <code>null</code>. If the referent is not a (scripted) proxy, return <code>undefined</code>.</dd>
  <dt><code>promiseState</code></dt>
  <dd>
- <p>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, return a string indicating whether the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is pending, or has been fulfilled or rejected. This string takes one of the following values:</p>
+ <p>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, return a string indicating whether the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is pending, or has been fulfilled or rejected. This string takes one of the following values:</p>
 
  <ul>
   <li>
-   <p><code>"pending"</code>, if the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is pending.</p>
+   <p><code>"pending"</code>, if the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is pending.</p>
   </li>
   <li>
-   <p><code>"fulfilled"</code>, if the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been fulfilled.</p>
+   <p><code>"fulfilled"</code>, if the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been fulfilled.</p>
   </li>
   <li>
-   <p><code>"rejected"</code>, if the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been rejected.</p>
+   <p><code>"rejected"</code>, if the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been rejected.</p>
   </li>
  </ul>
 
- <p>If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code>.</p>
+ <p>If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>promiseValue</code></dt>
  <dd>
- <p>Return a debuggee value representing the value the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been fulfilled with.</p>
+ <p>Return a debuggee value representing the value the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been fulfilled with.</p>
 
- <p>If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, or the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has not been fulfilled, throw a <code>TypeError</code>.</p>
+ <p>If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has not been fulfilled, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>promiseReason</code></dt>
  <dd>
- <p>Return a debuggee value representing the value the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been rejected with.</p>
+ <p>Return a debuggee value representing the value the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has been rejected with.</p>
 
- <p>If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, or the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has not been rejected, throw a <code>TypeError</code>.</p>
+ <p>If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> has not been rejected, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>promiseAllocationSite</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the promise’s allocation. This can return null if the promise was not created from script. If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the promise’s allocation. This can return null if the promise was not created from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseResolutionSite</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the promise’s resolution. This can return null if the promise was not resolved by calling its <code>resolve</code> or <code>reject</code> resolving functions from script. If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the promise’s resolution. This can return null if the promise was not resolved by calling its <code>resolve</code> or <code>reject</code> resolving functions from script. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseID</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is a process-unique identifier for the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. With e10s, the same id can potentially be assigned to multiple <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> instances, if those instances were created in different processes. If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is a process-unique identifier for the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. With e10s, the same id can potentially be assigned to multiple <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> instances, if those instances were created in different processes. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseDependentPromises</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is an <code>Array</code> of <code>Debugger.Objects</code> referring to the promises directly depending on the referent <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. These are:</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is an <code>Array</code> of <code>Debugger.Objects</code> referring to the promises directly depending on the referent <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. These are:</dd>
 </dl>
 
 <ol style="list-style-type: decimal;">
  <li>Return values of <code>then()</code> calls on the promise.</li>
- <li>Return values of <code>Promise.all()</code> if the referent <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was passed in as one of the arguments.</li>
- <li>Return values of <code>Promise.race()</code> if the referent <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was passed in as one of the arguments.</li>
+ <li>Return values of <code>Promise.all()</code> if the referent <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was passed in as one of the arguments.</li>
+ <li>Return values of <code>Promise.race()</code> if the referent <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was passed in as one of the arguments.</li>
 </ol>
 
-<p>Once a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is settled, it will generally notify its dependent promises and forget about them, so this is most useful on <em>pending</em> promises.</p>
+<p>Once a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> is settled, it will generally notify its dependent promises and forget about them, so this is most useful on <em>pending</em> promises.</p>
 
-<p>Note that the <code>Array</code> only contains the promises that directly depend on the referent <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. It does not contain promises that depend on promises that depend on the referent <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>.</p>
+<p>Note that the <code>Array</code> only contains the promises that directly depend on the referent <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>. It does not contain promises that depend on promises that depend on the referent <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>.</p>
 
-<p>If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</p>
+<p>If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</p>
 
 <dl>
  <dt><code>promiseLifetime</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed since the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was created. If the referent is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed since the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was created. If the referent is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>promiseTimeToResolution</code></dt>
- <dd>If the referent is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed between when the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was created and when it was resolved. If the referent hasn’t been resolved or is not a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
+ <dd>If the referent is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, this is the number of milliseconds elapsed between when the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a> was created and when it was resolved. If the referent hasn’t been resolved or is not a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise"><code>Promise</code></a>, throw a <code>TypeError</code> exception.</dd>
  <dt><code>global</code></dt>
  <dd>A <code>Debugger.Object</code> instance referring to the global object in whose scope the referent was allocated. This does not unwrap cross-compartment wrappers: if the referent is a wrapper, the result refers to the wrapper’s global, not the wrapped object’s global. The result refers to the global directly, not via a wrapper.</dd>
  <dt><code id="allocationsite">allocationSite</code></dt>
- <dd>If <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">object allocation site tracking</a> was enabled when this <code>Debugger.Object</code>’s referent was allocated, return the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the allocation. Otherwise, return <code>null</code>.</dd>
+ <dd>If <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">object allocation site tracking</a> was enabled when this <code>Debugger.Object</code>’s referent was allocated, return the <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/SavedFrame" title="SavedFrame">JavaScript execution stack</a> captured at the time of the allocation. Otherwise, return <code>null</code>.</dd>
 </dl>
 
 <h2 id="Function_Properties_of_the_Debugger.Object_prototype">Function Properties of the Debugger.Object prototype</h2>

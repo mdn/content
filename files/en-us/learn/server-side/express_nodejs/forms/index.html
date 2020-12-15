@@ -188,7 +188,7 @@ tags:
 
 <p>In order to implement our form handling code, we will need two routes that have the same URL pattern. The first (<code>GET</code>) route is used to display a new empty form for creating the object. The second route (<code>POST</code>) is used for validating data entered by the user, and then saving the information and redirecting to the detail page (if the data is valid) or redisplaying the form with errors (if the data is invalid).</p>
 
-<p>We have already created the routes for all our model's create pages in <strong>/routes/catalog.js</strong> (in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>). For example, the genre routes are shown below:</p>
+<p>We have already created the routes for all our model's create pages in <strong>/routes/catalog.js</strong> (in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>). For example, the genre routes are shown below:</p>
 
 <pre class="brush: js notranslate">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);

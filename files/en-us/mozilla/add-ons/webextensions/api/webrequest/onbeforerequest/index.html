@@ -27,7 +27,7 @@ tags:
 
 <p>When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  <code>requestId</code> again if another blocking handler redirected the request.</p>
 
-<p>From Firefox 52 onwards, instead of returning <code>BlockingResponse</code>, the listener can return a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>. This enables the listener to process the request asynchronously.</p>
+<p>From Firefox 52 onwards, instead of returning <code>BlockingResponse</code>, the listener can return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>. This enables the listener to process the request asynchronously.</p>
 
 <p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
 
@@ -67,7 +67,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
 
- <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener should return a <code>BlockingResponse</code> object, and can set either its <code>cancel</code> or its <code>redirectUrl</code> properties. From Firefox 52 onwards, instead of returning <code>BlockingResponse</code>, the listener can return a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>. This enables the listener to process the request asynchronously.</p>
+ <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener should return a <code>BlockingResponse</code> object, and can set either its <code>cancel</code> or its <code>redirectUrl</code> properties. From Firefox 52 onwards, instead of returning <code>BlockingResponse</code>, the listener can return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>. This enables the listener to process the request asynchronously.</p>
  </dd>
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.</dd>

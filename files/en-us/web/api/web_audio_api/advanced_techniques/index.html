@@ -414,7 +414,7 @@ bandControl.addEventListener('input', function() {
 
 <h3 id="Dial-up_user_controls">Dial-up user controls</h3>
 
-<p>The {{domxref("AudioBufferSourceNode")}} comes with a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate">playbackRate</a></code> property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:</p>
+<p>The {{domxref("AudioBufferSourceNode")}} comes with a <code><a href="/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate">playbackRate</a></code> property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:</p>
 
 <pre class="brush: html">&lt;label for="rate"&gt;Rate&lt;/label&gt;
 &lt;input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" /&gt;</pre>
@@ -446,7 +446,7 @@ rateControl.addEventListener('input', function() {
 
 <p>A common problem with digital audio applications is getting the sounds to play in time so that the beat remains consistent, and things do not slip out of time.</p>
 
-<p>{{domxref("AudioContext")}} object instances have a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
+<p>{{domxref("AudioContext")}} object instances have a <code><a href="/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
 
 <p>We could schedule our voices to play within a <code>for</code> loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.</p>
 

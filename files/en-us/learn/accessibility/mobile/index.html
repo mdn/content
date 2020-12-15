@@ -35,7 +35,7 @@ tags:
 
 <p>The state of accessibility — and support for web standards in general — is good in modern mobile devices. Long gone are the days when mobile devices ran completely different web technologies to desktop browsers, forcing developers to use browser sniffing and serve them completely separate sites (although quite a few companies still detect usage of mobile devices and serve them a separate mobile domain).</p>
 
-<p>These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screenreaders built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>, too.</p>
+<p>These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screenreaders built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>, too.</p>
 
 <p>To make a website accessible and usable on mobile, you just need to follow general good web design and accessibility best practices.</p>
 
@@ -210,11 +210,11 @@ tags:
 
 <h2 id="Control_mechanisms">Control mechanisms</h2>
 
-<p>In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">Mouse-specific events</a>). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.</p>
+<p>In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events">Mouse-specific events</a>). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.</p>
 
-<p>As an example, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">click</a> event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a> example (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">see it running live</a>) to see what we mean.</p>
+<p>As an example, the <a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">click</a> event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html">simple-button-example.html</a> example (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html">see it running live</a>) to see what we mean.</p>
 
-<p>Alternatively, mouse-specific events such as <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a> create problems — their event handlers cannot be invoked using non-mouse controls.</p>
+<p>Alternatively, mouse-specific events such as <a href="/en-US/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a> and <a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a> create problems — their event handlers cannot be invoked using non-mouse controls.</p>
 
 <p>If you try to control our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">see example live</a>) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:</p>
 
@@ -240,19 +240,19 @@ panel.ontouchend = stopMove;</pre>
 <p>We've provided a simple example that shows how to use the mouse and touch events together — see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html">multi-control-box-drag.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html">see the example live</a> also).</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> You can also see fully functional examples showing how to implement different control mechanisms at <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms">Implementing game control mechanisms</a>.</p>
+<p><strong>Note:</strong> You can also see fully functional examples showing how to implement different control mechanisms at <a href="/en-US/docs/Games/Techniques/Control_mechanisms">Implementing game control mechanisms</a>.</p>
 </div>
 
 <h2 id="Responsive_design">Responsive design</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Responsive">Responsive design</a> is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.</p>
+<p><a href="/en-US/docs/Web/Apps/Progressive/Responsive">Responsive design</a> is the practice of making your layouts and other features of your apps dynamically change depending on factors such as screen size and resolution, so they are usable and accessible to users of different device types.</p>
 
 <p>In particular, the most common problems that need to be addressed for mobile are:</p>
 
 <ul>
- <li>Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">media queries</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, and <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
- <li>Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</li>
- <li>Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed  (see <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a> for more details).</li>
+ <li>Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>.</li>
+ <li>Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</li>
+ <li>Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed  (see <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the web</a> for more details).</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -265,7 +265,7 @@ panel.ontouchend = stopMove;</pre>
 
 <h4 id="Not_disabling_zoom">Not disabling zoom</h4>
 
-<p>Using <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:</p>
+<p>Using <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>, it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:</p>
 
 <pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width; user-scalable=yes"&gt;</pre>
 
@@ -292,7 +292,7 @@ panel.ontouchend = stopMove;</pre>
  <li>Types <code>time</code> and <code>date</code> display suitable pickers for selecting times and dates.</li>
 </ul>
 
-<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="http://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
+<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="http://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
 
 <h2 id="Summary">Summary</h2>
 

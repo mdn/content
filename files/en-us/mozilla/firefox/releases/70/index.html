@@ -18,14 +18,14 @@ tags:
 <h4 id="Debugger_updates">Debugger updates</h4>
 
 <ul>
- <li>In the <a class="gr-progress" href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">Debugger</a> you can now set breakpoints for <a href="/en-US/docs/Tools/Debugger/Break_on_DOM_mutation">DOM Mutation</a>, so execution will pause when a node or its attibutes are changed or when a node is removed from the DOM ({{bug(1576219)}}).</li>
+ <li>In the <a class="gr-progress" href="/en-US/docs/Tools/Debugger">Debugger</a> you can now set breakpoints for <a href="/en-US/docs/Tools/Debugger/Break_on_DOM_mutation">DOM Mutation</a>, so execution will pause when a node or its attibutes are changed or when a node is removed from the DOM ({{bug(1576219)}}).</li>
  <li>The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ({{bug(1574646)}}).</li>
  <li>The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ({{bug(1572280)}}).</li>
- <li>The Debugger's <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">scopes panel</a> grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>, or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code>/<code>else</code></a>) ({{bug(1448166)}})</li>
- <li>The Debugger now retains the currently selected and expanded variables in the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">scopes panel</a> while stepping ({{bug(1405402)}}).</li>
- <li>The Debugger now handles stepping over async functions correctly, making <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">asynchronous function</a> debugging easier ({{bug(1570178)}}).</li>
+ <li>The Debugger's <a href="/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">scopes panel</a> grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>, or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code>/<code>else</code></a>) ({{bug(1448166)}})</li>
+ <li>The Debugger now retains the currently selected and expanded variables in the <a href="/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">scopes panel</a> while stepping ({{bug(1405402)}}).</li>
+ <li>The Debugger now handles stepping over async functions correctly, making <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">asynchronous function</a> debugging easier ({{bug(1570178)}}).</li>
  <li>When debugging in <a href="https://support.mozilla.org/en-US/kb/containers">Container sessions</a> (useful for testing different logins), the sources in the debugger are now shown correctly ({{bug(1375036)}}).</li>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> statements can be now disabled in the Debugger by setting a breakpoint on them and switching the breakpoints to "Never pause here" ({{bug(925269)}}).</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> statements can be now disabled in the Debugger by setting a breakpoint on them and switching the breakpoints to "Never pause here" ({{bug(925269)}}).</li>
  <li>WebExtensions developers can inspect <code>browser.storage.local</code> from the Extension Storage item under the Storage tab ({{bug(1585499)}}).</li>
 </ul>
 
@@ -149,7 +149,7 @@ tags:
 <h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
 
 <ul>
- <li>Updated the <code>WebDriver:TakeScreenshot</code> command to be <a href="https://wiki.mozilla.org/Project_Fission">Fission</a> compatible. It means that content from <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">cross-origin</a> iframes is now included in a page's screenshot. Or when using it from chrome scope that the active tab's content is visible now inside the browser window. ({{bug(1559592)}}).</li>
+ <li>Updated the <code>WebDriver:TakeScreenshot</code> command to be <a href="https://wiki.mozilla.org/Project_Fission">Fission</a> compatible. It means that content from <a href="/en-US/docs/Web/Security/Same-origin_policy">cross-origin</a> iframes is now included in a page's screenshot. Or when using it from chrome scope that the active tab's content is visible now inside the browser window. ({{bug(1559592)}}).</li>
  <li><code>WebDriver:TakeScreenshot</code> no longer accepts a list of DOM elements as used for highlighting ({{bug(1575511)}}).</li>
  <li><code>WebDriver:ExecuteScript</code> and <code>WebDriver:ExecuteAsyncScript</code> no longer sets <code>window.onunload</code> in ways that are web-exposed ({{bug(1568991)}}).</li>
 </ul>

@@ -16,7 +16,7 @@ tags:
 
 <p>Gets all currently active notifications created by the extension.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -29,7 +29,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object. Each currently active notification is a property of this object: the name of the property is the ID of the notification, and the value of the property is a {{WebExtAPIRef("notifications.NotificationOptions")}} object describing that notification.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object. Each currently active notification is a property of this object: the name of the property is the ID of the notification, and the value of the property is a {{WebExtAPIRef("notifications.NotificationOptions")}} object describing that notification.</p>
 
 <p>Note that you can define an ID for a notification explicitly by passing it into {{WebExtAPIRef("notifications.create()")}}. If you don't do this, the browser will generate one. Explicitly-specified IDs are strings, but generated IDs are numbers. </p>
 

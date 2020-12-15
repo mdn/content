@@ -301,19 +301,19 @@ tags:
 
 <ul>
 	<li><strong>Bitmap </strong>animation</li>
-	<li><strong>Canvas</strong> MDN's tutorial on Canvas has a great section on <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic Animations</a></strong> <code><strong>setInterval()</strong></code> is a mainstay in Canvas animation, but it is also interesting to see how it interacts with screen refresh. See the article, <strong><a href="https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe">Controlling fps with requestAnimationFrame?</a></strong> in which they discuss the nuts and bolts of implementing <strong><code>requestAnimationFrame</code></strong> against the backdrop of screen refresh.</li>
+	<li><strong>Canvas</strong> MDN's tutorial on Canvas has a great section on <strong><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic Animations</a></strong> <code><strong>setInterval()</strong></code> is a mainstay in Canvas animation, but it is also interesting to see how it interacts with screen refresh. See the article, <strong><a href="https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe">Controlling fps with requestAnimationFrame?</a></strong> in which they discuss the nuts and bolts of implementing <strong><code>requestAnimationFrame</code></strong> against the backdrop of screen refresh.</li>
 	<li><strong>GIFs (Raster) </strong>are tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of gifs see <strong>W3C's</strong> <strong>G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)</strong> <strong><a href="https://www.w3.org/TR/WCAG20-TECHS/G152.html">https://www.w3.org/TR/WCAG20-TECHS/G152.html</a> </strong> A great <strong>stackoverflow</strong> article on the subject is, "<strong><a href="https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript">Can you control GIF animation with Javascript?</a></strong>"</li>
 	<li><strong>GIFV (Raster) </strong>considered a variant, video version of GIF. The format is not standardized, and must reference a "real" video file (e.g. a .webm file) which must exist elsewhere.</li>
 	<li><strong>JPG (Raster)</strong></li>
 	<li><strong>MNG (Raster)</strong> Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.</li>
 	<li><strong>PNG, APNG (Raster)</strong> Portable Network Graphics and Animated Portable Network Graphics may both be animated.</li>
-	<li><strong>SVGs (Vector)</strong> The MDN document, "<strong><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG: Scalable Vector Graphics</a></strong>", notes that "<em>SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as <strong><a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a></strong>, <strong><a href="https://developer.mozilla.org/en-US/docs/DOM">DOM</a></strong>, and <strong><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a></strong>.</em>" SVGs can be used as an image, for example, <strong><code>&lt;img src="example.svg" alt="This is an image using a svg as a source"&gt;</code></strong> This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model#SVG_interfaces">SVG Interfaces</a></strong> and <strong><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></strong>.</li>
+	<li><strong>SVGs (Vector)</strong> The MDN document, "<strong><a href="/en-US/docs/Web/SVG">SVG: Scalable Vector Graphics</a></strong>", notes that "<em>SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as <strong><a href="/en-US/docs/CSS">CSS</a></strong>, <strong><a href="/en-US/docs/DOM">DOM</a></strong>, and <strong><a href="/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a></strong>.</em>" SVGs can be used as an image, for example, <strong><code>&lt;img src="example.svg" alt="This is an image using a svg as a source"&gt;</code></strong> This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on <strong><a href="/en-US/docs/Web/API/Document_Object_Model#SVG_interfaces">SVG Interfaces</a></strong> and <strong><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></strong>.</li>
 	<li><strong>Voxel</strong> <strong>(Raster) </strong>Three-dimensional <strong><a href="https://en.wikipedia.org/wiki/Voxel" title="Voxel">voxel</a></strong> raster graphics are employed in video games and are also used in medical imaging.</li>
 </ul>
 
 <h4 id="Text_can_also_be_animated">Text can also be animated</h4>
 
-<p>Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, <code><strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframe/keyText" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!">CSSKeyframe.keyText</a></strong></code> is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screenreaders cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.</p>
+<p>Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, <code><strong><a href="/en-US/docs/Web/API/CSSKeyframe/keyText" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!">CSSKeyframe.keyText</a></strong></code> is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screenreaders cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.</p>
 
 <h3 id="CSS_for_animation">CSS for animation</h3>
 
@@ -331,7 +331,7 @@ tags:
 
 <p>JavaScript is often used to control &lt;canvas&gt; elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. <strong><code>HTMLMedia​Element​.playback​Rate</code> </strong> is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: <strong><code>HTMLMediaElement.playbackRate = playbackspeed</code></strong></p>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
+<p><strong><a href="/en-US/docs/Web/API/Document/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
 
 <pre class="brush: js">document.getAnimations().forEach(
   function (animation) {
@@ -342,7 +342,7 @@ tags:
 
 <p><strong>Image sources for animation</strong></p>
 
-<p>One of the easiest ways is to start with an image that is already in existence, using it as an image source, and then animating it. Remember, you can use GIFs, JPGs, PNGs, SVGs and other file types here as an image source, as long as they are allowed file types—and sizes—in your environment. SVGs are often not allowed, due to security concerns. The MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic animations</a></strong>, provides outstanding examples of this, using multiple image sources for the sun, earth, and moon, and using several canvas methods to control the speed and animation of the earth as it orbits around the sun, and the moon as it orbits around the earth. Use the codepen available with this tutorial to adjust <code>ctx.rotate</code> in the code to see how the animation is affected when changes are made.</p>
+<p>One of the easiest ways is to start with an image that is already in existence, using it as an image source, and then animating it. Remember, you can use GIFs, JPGs, PNGs, SVGs and other file types here as an image source, as long as they are allowed file types—and sizes—in your environment. SVGs are often not allowed, due to security concerns. The MDN document, <strong><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic animations</a></strong>, provides outstanding examples of this, using multiple image sources for the sun, earth, and moon, and using several canvas methods to control the speed and animation of the earth as it orbits around the sun, and the moon as it orbits around the earth. Use the codepen available with this tutorial to adjust <code>ctx.rotate</code> in the code to see how the animation is affected when changes are made.</p>
 
 <h4 id="If_you_absolutely_positively_must_use_flashing_animation…">If you absolutely, positively <em>must</em> use flashing animation…</h4>
 
@@ -380,9 +380,9 @@ tags:
 
 <p>It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFS, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's <strong><a href="https://pinetools.com/brightness-contrast-image">Brightness and contrast online</a></strong>. If you intend to make animated gifs, for example, start with one that has a lower contrast ratio.</p>
 
-<p>JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, "<strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</a></strong>" from the MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">Traversing an HTML table with JavaScript and DOM Interfaces</a></strong>. Notice that the color in the example is described in the <strong>RGB</strong> color space.</p>
+<p>JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, "<strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</a></strong>" from the MDN document, <strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">Traversing an HTML table with JavaScript and DOM Interfaces</a></strong>. Notice that the color in the example is described in the <strong>RGB</strong> color space.</p>
 
-<p><strong>HTML Content <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#HTML_Content_2">(link to source page)</a></strong></p>
+<p><strong>HTML Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#HTML_Content_2">(link to source page)</a></strong></p>
 
 <pre class="brush: html">&lt;body&gt;
   &lt;input type="button" value="Set paragraph background color" onclick="set_background()"&gt;
@@ -390,7 +390,7 @@ tags:
   &lt;p&gt;hello&lt;/p&gt;
 &lt;/body&gt;</pre>
 
-<p><strong>JavaScript Content <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#JavaScript_Content_2">(link to source page)</a></strong></p>
+<p><strong>JavaScript Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#JavaScript_Content_2">(link to source page)</a></strong></p>
 
 <pre class="brush: js"><code>function set_background() {
   // get a list of all the body elements (there will only be one),
@@ -446,7 +446,7 @@ tags:
 
 <h3 id="Dynamic_Style_Switching">Dynamic Style Switching</h3>
 
-<p>One problem with relying on the browser to reveal alternative styles is that not all users are technically savvy enough to discover the alternate styles. Or, because of their disability, are not able to. Buttons or links make it obvious that options are available to many grateful users. There's a multitude of ways to add toggle buttons to allow the user to switch to the different style sheets. That said, the use of alternative style sheets are not the only option. Another option is to simply manipulate the style of the page itself. According to the MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></strong>, "<em>where possible, it really is best practice to dynamically manipulate classes via the <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" title="The className property of the Element interface gets and sets the value of the class attribute of the specified element."><code>className</code></a></strong> property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet".</em> One of the best examples around as to how to do this is from the W3C's page, <strong><a href="https://www.w3.org/TR/WCAG20-TECHS/C29.html">C29: Using a style switcher to provide a conforming alternate version</a></strong>.</p>
+<p>One problem with relying on the browser to reveal alternative styles is that not all users are technically savvy enough to discover the alternate styles. Or, because of their disability, are not able to. Buttons or links make it obvious that options are available to many grateful users. There's a multitude of ways to add toggle buttons to allow the user to switch to the different style sheets. That said, the use of alternative style sheets are not the only option. Another option is to simply manipulate the style of the page itself. According to the MDN document, <strong><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></strong>, "<em>where possible, it really is best practice to dynamically manipulate classes via the <strong><a href="/en-US/docs/Web/API/Element/className" title="The className property of the Element interface gets and sets the value of the class attribute of the specified element."><code>className</code></a></strong> property since the ultimate appearance of all of the styling hooks can be controlled in a single stylesheet".</em> One of the best examples around as to how to do this is from the W3C's page, <strong><a href="https://www.w3.org/TR/WCAG20-TECHS/C29.html">C29: Using a style switcher to provide a conforming alternate version</a></strong>.</p>
 
 <h3 id="Extreme_Cases_Text-Only_Alternatives">Extreme Cases: Text-Only Alternatives</h3>
 
@@ -466,7 +466,7 @@ tags:
 <pre class="brush: css">@media screen and (prefers-reduced-motion: reduce) { }
 @media screen and (prefers-reduced-motion) { }</pre>
 
-<p>To see a great example of how to use the code <code>prefers-reduced-motion</code>, visit the MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></strong>, or see the example below from the section on <strong><a href="https://developers.google.com/web/updates/2019/04/nic74">New in Chrome 74</a></strong>.</p>
+<p>To see a great example of how to use the code <code>prefers-reduced-motion</code>, visit the MDN document, <strong><a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></strong>, or see the example below from the section on <strong><a href="https://developers.google.com/web/updates/2019/04/nic74">New in Chrome 74</a></strong>.</p>
 
 <pre class="brush: css">button {
   animation: vibrate 0.3s linear infinite both;
@@ -489,7 +489,7 @@ tags:
 
 <h4 id="Window​.match​Media">Window​.match​Media()</h4>
 
-<p>There is a powerful tool available to developers via Window.matchMedia(). A great resource is MDN's document on <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia()</a></strong></p>
+<p>There is a powerful tool available to developers via Window.matchMedia(). A great resource is MDN's document on <strong><a href="/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia()</a></strong></p>
 
 <h4 id="media_update_feature">media update feature</h4>
 
@@ -520,7 +520,7 @@ tags:
 
 <h4 id="MDN_Navigator​.doNotTrack"><strong>MDN Navigator​.doNotTrack</strong></h4>
 
-<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack">From the documentation</a>: "</strong>Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by web sites, content, or advertising"</p>
+<p><strong><a href="/en-US/docs/Web/API/Navigator/doNotTrack">From the documentation</a>: "</strong>Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by web sites, content, or advertising"</p>
 
 <h4 id="Media_Queries_Level_5">Media Queries Level 5</h4>
 
@@ -560,7 +560,7 @@ tags:
 
 <h4 id="MediaQueryList_Interface"><code>MediaQueryList</code> Interface</h4>
 
-<p>Section 4.2 from the CSSWG.org drafts integrates with the <strong><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop">event loop</a></strong> defined in HTML. <strong><a href="https://drafts.csswg.org/cssom-view/#biblio-html">[HTML]</a></strong> for the <strong><code><a href="https://drafts.csswg.org/cssom-view/#mediaquerylist" id="ref-for-mediaquerylist③">MediaQueryList</a></code></strong> object. See the MDN document, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a></strong> for more information.</p>
+<p>Section 4.2 from the CSSWG.org drafts integrates with the <strong><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop">event loop</a></strong> defined in HTML. <strong><a href="https://drafts.csswg.org/cssom-view/#biblio-html">[HTML]</a></strong> for the <strong><code><a href="https://drafts.csswg.org/cssom-view/#mediaquerylist" id="ref-for-mediaquerylist③">MediaQueryList</a></code></strong> object. See the MDN document, <strong><a href="/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a></strong> for more information.</p>
 
 <h4 id="Personalization_Help_and_Support">Personalization Help and Support</h4>
 
@@ -581,16 +581,16 @@ tags:
 <ul>
 	<li><a href="/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely">Accessibility: What users can to to browse more safely</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance">Accessibility: Understanding color and luminance</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML Content</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic Animations</a> (Canvas Tutorial)</li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage()</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL: 2D and 3D graphics for the web</a></li>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
+	<li><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML Content</a></li>
+	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic Animations</a> (Canvas Tutorial)</li>
+	<li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
+	<li><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">CanvasRenderingContext2D.drawImage()</a></li>
+	<li><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></li>
+	<li><a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a></li>
+	<li><a href="/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a></li>
+	<li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+	<li><a href="/en-US/docs/Web/API/WebGL_API">WebGL: 2D and 3D graphics for the web</a></li>
+	<li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
 </ul>
 
 <h4 id="Color">Color</h4>

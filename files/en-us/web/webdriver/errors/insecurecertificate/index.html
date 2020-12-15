@@ -7,7 +7,7 @@ tags:
   - WebDriver
   - insecure certificate
 ---
-<p>The <strong>insecure certificate</strong> error is a <a href="https://developer.mozilla.org/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when the remotely controlled browser hits a certificate warning of any kind. This is usually the result of <a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</a> to a website with an expired or invalid <a href="https://developer.mozilla.org/en-US/docs/Glossary/TLS">TLS certificate</a>. Examples of invalid certificates include self-signed, revoked, and cryptographically insecure certificates.</p>
+<p>The <strong>insecure certificate</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs when the remotely controlled browser hits a certificate warning of any kind. This is usually the result of <a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</a> to a website with an expired or invalid <a href="/en-US/docs/Glossary/TLS">TLS certificate</a>. Examples of invalid certificates include self-signed, revoked, and cryptographically insecure certificates.</p>
 
 <p>Web browsers prevent and block traffic to domains with broken certificates since the communication with the server would be compromised. It is strongly recommended to fix the certificate situation instead of disabling certificate checks, even in test environments.</p>
 

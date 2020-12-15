@@ -69,7 +69,7 @@ listener.upZ.value = 0;
 
 <p>Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:</p>
 
-<p>To start we can set the <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/panningModel"><code>panningModel</code></a>. This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:</p>
+<p>To start we can set the <a href="/en-US/docs/Web/API/PannerNode/panningModel"><code>panningModel</code></a>. This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:</p>
 
 <p><code>equalpower</code> — The default and the general way panning is figured out</p>
 
@@ -80,19 +80,19 @@ listener.upZ.value = 0;
 <pre class="brush: js notranslate">const pannerModel = 'HRTF';
 </pre>
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneInnerAngle"><code>coneInnerAngle</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneOuterAngle"><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneOuterGain"><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
+<p>The <a href="/en-US/docs/Web/API/PannerNode/coneInnerAngle"><code>coneInnerAngle</code></a> and <a href="/en-US/docs/Web/API/PannerNode/coneOuterAngle"><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href="/en-US/docs/Web/API/PannerNode/coneOuterGain"><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
 
 <pre class="brush: js notranslate">const innerCone = 60;
 const outerCone = 90;
 const outerGain = 0.3;
 </pre>
 
-<p>The next parameter is <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
+<p>The next parameter is <a href="/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
 
 <pre class="notranslate">const distanceModel = 'linear';
 </pre>
 
-<p>We can set a maximum distance (<a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
+<p>We can set a maximum distance (<a href="/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
 
 <pre class="brush: js notranslate">const maxDistance = 10000;
 </pre>
@@ -102,7 +102,7 @@ const outerGain = 0.3;
 <pre class="brush: js notranslate">const refDistance = 1;
 </pre>
 
-<p>Then there's the roll-off factor (<a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/rolloffFactor"><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
+<p>Then there's the roll-off factor (<a href="/en-US/docs/Web/API/PannerNode/rolloffFactor"><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
 
 <pre class="brush: js notranslate">const rollOff = 10;
 </pre>

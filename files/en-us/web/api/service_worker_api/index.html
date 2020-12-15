@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Service_worker_concepts_and_usage">Service worker concepts and usage</h2>
 
-<p>A service worker is an event-driven <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">worker</a> registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).</p>
+<p>A service worker is an event-driven <a href="/en-US/docs/Web/API/Worker">worker</a> registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).</p>
 
 <p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> and <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> can't be used inside a service worker.</p>
 

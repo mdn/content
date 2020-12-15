@@ -46,7 +46,7 @@ tags:
 
 <p>The <code>onCommitted</code> event listener is passed two additional properties: a {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indicating the cause of the navigation (for example, because the user clicked a link, or because the user selected a bookmark), and a {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} providing further information about the navigation.</p>
 
-<p>To use this API you need to have the "webNavigation" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+<p>To use this API you need to have the "webNavigation" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
 
 <h2 id="Types">Types</h2>
 
@@ -63,7 +63,7 @@ tags:
 
 <dl>
  <dt>{{WebExtAPIRef("webNavigation.getFrame()")}}</dt>
- <dd>Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a>, and is uniquely identified by a tab ID and a frame ID.</dd>
+ <dd>Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, and is uniquely identified by a tab ID and a frame ID.</dd>
  <dt>{{WebExtAPIRef("webNavigation.getAllFrames()")}}</dt>
  <dd>
  <p>Given a tab ID, retrieves information about all the frames it contains.</p>
@@ -80,9 +80,9 @@ tags:
  <dt>{{WebExtAPIRef("webNavigation.onCommitted")}}</dt>
  <dd>Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}</dt>
- <dd>Fired when the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> event is fired in the page.</dd>
+ <dd>Fired when the <a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> event is fired in the page.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCompleted")}}</dt>
- <dd>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/load">load</a></code> event.</dd>
+ <dd>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="/en-US/docs/Web/Events/load">load</a></code> event.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onErrorOccurred")}}</dt>
  <dd>Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}</dt>

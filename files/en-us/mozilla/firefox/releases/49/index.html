@@ -32,7 +32,7 @@ tags:
  <li>In the <em>about:debugging</em> Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).</li>
  <li>In the <em>about:debugging</em> Workers page, a warning message will be displayed in the Service Workers section if <a href="/en-US/docs/Tools/about:debugging#Service_workers_not_compatible">service workers are incompatible</a> with the current browser configuration ({{bug(1266415)}}).</li>
  <li><em>about:debugging</em> now has a <a href="/en-US/docs/Tools/about:debugging#Tabs">new Tabs page</a> available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).</li>
- <li>The <em>Disable Cache</em> option in the <a href="/en-US/docs/Tools/Settings#Advanced_settings">Toolbox Advanced settings</a> has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
+ <li>The <em>Disable Cache</em> option in the <a href="/en-US/docs/Tools/Settings#Advanced_settings">Toolbox Advanced settings</a> has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/the <a href="/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
  <li>The <a href="/en-US/docs/Tools/Storage_Inspector#IndexedDB">Storage Inspector now allows IndexedDB databases to be deleted</a> via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).</li>
 </ul>
 
@@ -60,7 +60,7 @@ tags:
  <li>Added the <a href="/en-US/docs/Web/CSS/length#q"><code>q</code> length unit</a> ({{bug(1274526)}}).</li>
  <li>The property {{cssxref("text-align-last")}} has been unprefixed ({{bug(1039541)}}).</li>
  <li>Added support for {{cssxref("overflow-wrap")}}, replacing {{cssxref("word-wrap")}} that is still supported as an alternative name ({{bug(955857)}}).</li>
- <li>Our experimental <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> implementation has been improved:
+ <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> implementation has been improved:
   <ul>
    <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, and {{cssxref("grid-column-gap")}} properties ({{bug(1266268)}}).</li>
    <li>Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> and <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>

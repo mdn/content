@@ -35,7 +35,7 @@ tags:
     <p>Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, <code>/^A/</code> does not match the "A" in "an A", but does match the first "A" in "An A".</p>
 
     <div class="blockIndicator note">
-    <p>This character has a different meaning when it appears at the start of a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
+    <p>This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
     </div>
    </td>
   </tr>
@@ -59,7 +59,7 @@ tags:
      <li><code>/\w\b\w/</code> will never match anything, because a word character can never be followed by both a non-word and a word character.</li>
     </ul>
 
-    <p>To match a backspace character (<code>[\b]</code>), see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character Classes</a>.</p>
+    <p>To match a backspace character (<code>[\b]</code>), see <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character Classes</a>.</p>
    </td>
   </tr>
   <tr>
@@ -140,7 +140,7 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 
 <h3 id="Matching_the_beginning_of_input_using_a_control_character">Matching the beginning of input using a ^ control character</h3>
 
-<p>Use <code>^</code> for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a <code>/^A/</code> regex. For selecting appropriate fruits we can use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter </a>method with an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow</a> function. </p>
+<p>Use <code>^</code> for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a <code>/^A/</code> regex. For selecting appropriate fruits we can use the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter </a>method with an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow</a> function. </p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -150,7 +150,7 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 
-<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character sets when used within <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
+<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character sets when used within <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -194,7 +194,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 
 <h3 id="Different_meaning_of_!_combination_usage_in_Assertions_and_Ranges">Different meaning of '?!' combination usage in Assertions and  Ranges </h3>
 
-<p>Different meaning of <code>?!</code> combination usage in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a> <code>/x(?!y)/ </code>and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Ranges</a> <code>[^?!]</code>.</p>
+<p>Different meaning of <code>?!</code> combination usage in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a> <code>/x(?!y)/ </code>and <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Ranges</a> <code>[^?!]</code>.</p>
 
 <pre class="brush: js">let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
