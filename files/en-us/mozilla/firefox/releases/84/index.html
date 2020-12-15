@@ -78,10 +78,10 @@ tags:
 
 <ul>
  <li>Added chrome scope support for <code>WebDriver:PerformActions</code> and <code>WebDriver:ReleaseActions</code> ({{bug(1365886)}}).</li>
- <li>The new Fission compatible API has been enabled by default now. To revert to the former API the <code>marionette.actors.enabled</code> preference has to be set to <code>false</code> ({{bug(1669169)}}).
+ <li>The new Fission-compatible API has been enabled by default now. To revert to the former API the <code>marionette.actors.enabled</code> preference has to be set to <code>false</code> ({{bug(1669169)}}).
  <li>Fixed <code>WebDriver:SwitchToWindow</code> to always switch back to the top-level browsing context ({{bug(1305822)}}).</li>
  <li>Improved browsing context checks for <code>WebDriver:SwitchToParentFrame</code> ({{bug(1671622)}}).</li>
- <li>Fixed a hang for <code>WebDriver:Back</code> when the currently selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
+ <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
