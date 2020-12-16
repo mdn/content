@@ -48,6 +48,14 @@ Especially you should be careful to choose the **Squash and merge** option when 
 
 Using that **Squash and merge** option helps significantly to keep the [commit history for the repo](https://github.com/mdn/content/commits/main) more readable. Otherwise, we end up with a commit history that's less clear, with multiple commit messages that are less informative, making it all a lot more work to read through later
 
+That said, you should still prefer the **Squash and merge** option even for the normal case where a pull request consists of a single commit; that is, when there's nothing to actually squash. Even in those single-commit cases, the **Squash and merge** option is better; that's because it has the effect of appending the pull-request number to the commit subject line, like this:
+
+```
+No longer mark WebGL 2 as experimental (#304)
+```
+
+And the effect of appending the pull-request number to the commit subject line is: when you view the [commit history for the repo](https://github.com/mdn/content/commits/main) in GitHub, the pull-request number becomes a hyperlink to the actual pull request. And that can be very helpful to anyone who browses through the commit history later.
+
 However, in the case of some pull requests, using the **Rebase and merge** option makes more sense. You should choose that option when the commit author has intentionally constructed the pull request as a set of related commits, and has written an informative commit message for each commit in the pull request.
 
 ## Topic review owners
