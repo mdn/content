@@ -74,7 +74,6 @@
 /en-US/docs/ARIA:_Accessible_Rich_Internet_Applications_Relationship_to_HTML_FAQ	/en-US/docs/ARIA/Accessible_Rich_Internet_Applications_Relationship_to_HTML_FAQ
 /en-US/docs/ARIA:_JAWS_Issues	/en-US/docs/Web/Accessibility/JAWS_Issues_with_Firefox
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/ARIENGGO.COM-redirect-1-redirect-1	/en-US/docs/ARIENGGO.COM-redirect-1
 /en-US/docs/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/A_Basic_RayCaster/Level.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/Level.js
 /en-US/docs/A_Basic_RayCaster/Player.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/Player.js
@@ -609,7 +608,7 @@
 /en-US/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS-redirect-1	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/en-US/docs/CSS/Getting_Started/Why_use_CSS?	undefined
+/en-US/docs/CSS/Getting_Started/Why_use_CSS?	/en-US/docs/CSS/Getting_Started/Why_use_CSS
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
@@ -2662,7 +2661,6 @@
 /en-US/docs/Creating_OpenSearch_plugins_for_Firefox	/en-US/docs/Web/OpenSearch
 /en-US/docs/Creating_StandAlone_Executable_Tests	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/GTest
 /en-US/docs/Creating_a_Skin_for_Firefox:Getting_Started	/en-US/docs/Creating_a_Skin_for_Firefox/Getting_Started
-/en-US/docs/Creating_a_simple_synth	/en-US/docs/Inbox/Creating_a_simple_synth
 /en-US/docs/Creating_and_triggering_custom_events	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/CredentialsContainer.preventSilentAccess()	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
 /en-US/docs/Cross-Compiling_Mozilla	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Cross-compiling_Mozilla
@@ -5384,7 +5382,6 @@
 /en-US/docs/Flash/AJAX_Integration_Kit_Example_(external)	/en-US/docs/Flash___AJAX_Integration_Kit_Example_(external)
 /en-US/docs/Flexible_Box	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
-/en-US/docs/Frank_P	/en-US/docs/User:Frank_P
 /en-US/docs/Free/Open_Source_Software:_Localization_Primer_(PDF)_(external)	/en-US/docs/Free_Open_Source_Software/Localization_Primer_(PDF)_(external)
 /en-US/docs/Free_Open_Source_Software:_Localization_Primer_(PDF)_(external)	/en-US/docs/Free_Open_Source_Software/Localization_Primer_(PDF)_(external)
 /en-US/docs/Frequently_Asked_Questions	/en-US/docs/Project:en/Creating_FAQs
@@ -5459,7 +5456,6 @@
 /en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/Getting_your_patch_in_the_tree	/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch
-/en-US/docs/Gfx	/en-US/docs/User:ryoqun/Gfx
 /en-US/docs/Giving_'cursor'_a_Hand	/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /en-US/docs/Glossary/AOM	/en-US/docs/Glossary/Accessibility_tree
 /en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Boot2Gecko
@@ -5936,28 +5932,6 @@
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/HTML_features_for_accessibility
 /en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
-/en-US/docs/Inbox/User:maybe	/en-US/docs/User%3Amaybe
-/en-US/docs/Inbox/User:maybe/webidl_mdn	/en-US/docs/User%3Amaybe/webidl_mdn
-/en-US/docs/Inbox/User:maybe/webidl_mdn/Apps_API	/en-US/docs/User%3Amaybe/webidl_mdn/Apps_API
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BluetoothAdapter	/en-US/docs/User%3Amaybe/webidl_mdn/BluetoothAdapter
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BluetoothAdapter_API	/en-US/docs/User%3Amaybe/webidl_mdn/BluetoothAdapter_API
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BrowserElement	/en-US/docs/User%3Amaybe/webidl_mdn/BrowserElement
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BrowserElementCommon	/en-US/docs/User%3Amaybe/webidl_mdn/BrowserElementCommon
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BrowserElementPrivileged	/en-US/docs/User%3Amaybe/webidl_mdn/BrowserElementPrivileged
-/en-US/docs/Inbox/User:maybe/webidl_mdn/BrowserElement_API	/en-US/docs/User%3Amaybe/webidl_mdn/BrowserElement_API
-/en-US/docs/Inbox/User:maybe/webidl_mdn/Credential	/en-US/docs/User%3Amaybe/webidl_mdn/Credential
-/en-US/docs/Inbox/User:maybe/webidl_mdn/CryptoKey	/en-US/docs/User%3Amaybe/webidl_mdn/CryptoKey
-/en-US/docs/Inbox/User:maybe/webidl_mdn/DOMApplication	/en-US/docs/User%3Amaybe/webidl_mdn/DOMApplication
-/en-US/docs/Inbox/User:maybe/webidl_mdn/DOMApplicationsManager	/en-US/docs/User%3Amaybe/webidl_mdn/DOMApplicationsManager
-/en-US/docs/Inbox/User:maybe/webidl_mdn/DOMApplicationsRegistry	/en-US/docs/User%3Amaybe/webidl_mdn/DOMApplicationsRegistry
-/en-US/docs/Inbox/User:maybe/webidl_mdn/FIDOCredentialInfo	/en-US/docs/User%3Amaybe/webidl_mdn/FIDOCredentialInfo
-/en-US/docs/Inbox/User:maybe/webidl_mdn/FIDOCredentials	/en-US/docs/User%3Amaybe/webidl_mdn/FIDOCredentials
-/en-US/docs/Inbox/User:maybe/webidl_mdn/FIDO_API	/en-US/docs/User%3Amaybe/webidl_mdn/FIDO_API
-/en-US/docs/Inbox/User:maybe/webidl_mdn/SubtleCrypto	/en-US/docs/User%3Amaybe/webidl_mdn/SubtleCrypto
-/en-US/docs/Inbox/User:maybe/webidl_mdn/SubtleCrypto_API	/en-US/docs/User%3Amaybe/webidl_mdn/SubtleCrypto_API
-/en-US/docs/Inbox/User:maybe/webidl_mdn/Window	/en-US/docs/User%3Amaybe/webidl_mdn/Window
-/en-US/docs/Inbox/User:maybe/webidl_mdn/XMLHttpRequest	/en-US/docs/User%3Amaybe/webidl_mdn/XMLHttpRequest
-/en-US/docs/Inbox/User:maybe/webidl_mdn/XMLHttpRequest_API	/en-US/docs/User%3Amaybe/webidl_mdn/XMLHttpRequest_API
 /en-US/docs/Inbox/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -7266,7 +7240,6 @@
 /en-US/docs/LIBXUL_LIBRARY	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Common_web_layouts
-/en-US/docs/Learn/Aumentando_a_sua_privacidade_com_Firefox	/en-US/docs/Inbox/Aumentando_a_sua_privacidade_com_Firefox
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn/CSS/First_steps
 /en-US/docs/Learn/CSS/Basics/Box_model	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
@@ -7730,7 +7703,6 @@
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN_at_ten/History_of_MDN
 /en-US/docs/MDN_content_on_WebPlatform.org	/en-US/docs/Project:MDN_content_on_WebPlatform.org
 /en-US/docs/MODULE	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
-/en-US/docs/MOZILLA_BEATS__EXPLORER	/en-US/docs/User:tom2000/MOZILLA_BEATS__EXPLORER
 /en-US/docs/MOZ_FS_LAYOUT	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/Mac_OS_X_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites
 /en-US/docs/Mac_OS_X_Universal_Binaries	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Universal_Binaries
@@ -9055,7 +9027,6 @@
 /en-US/docs/View_source	/en-US/docs/Tools/View_source
 /en-US/docs/Virtual_ARM_Linux_environment	/en-US/docs/Mozilla/Developer_guide/Virtual_ARM_Linux_environment
 /en-US/docs/Vuletube-vue-typescript-threejs-nui-voice-opencvjs	/en-US/docs/Games/
-/en-US/docs/W.M._Bony	/en-US/docs/User:W.M._Bony
 /en-US/docs/WARNINGS_AS_ERRORS	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/WOFF	/en-US/docs/Web/Guide/WOFF
 /en-US/docs/We/API/RotationRate	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
@@ -12686,7 +12657,6 @@
 /en-US/docs/Web/CSS/Microsoft_CSS_extensions	/en-US/docs/Web/CSS/Microsoft_extensions
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_Motion_Path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
-/en-US/docs/Web/CSS/Reference/CSS_Properties_2019	/en-US/docs/user:estelle
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Property_Template	/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property/Property_template
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
@@ -14432,9 +14402,6 @@
 /en-US/docs/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/Yasm/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/YouCompleteMe	/en-US/docs/Mozilla/Developer_guide/YouCompleteMe
-/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3EClick%20Me!%3Cbutton%3E	/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3E
-/en-US/docs/aaaaa&quot;%3Ebbbbbbb	/en-US/docs/http:google.com"%3Ebbbbbbb
-/en-US/docs/aadddddd&quot;%3Ebbbbbbb	/en-US/docs/aadddddd"%3Ebbbbbbb%0d%0asdfsdfsdsdfsdf
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/action	/en-US/docs/Document_Object_Model_(DOM)/form.action
 /en-US/docs/adData	/en-US/docs/Web/API/BluetoothDevice/adData
@@ -14583,10 +14550,7 @@
 /en-US/docs/hasAttributes	/en-US/docs/Web/API/Element.hasAttributes()
 /en-US/docs/hasChildNodes	/en-US/docs/Web/API/Node/hasChildNodes
 /en-US/docs/href	/en-US/docs/DOM/stylesheet/href
-/en-US/docs/http:__www.erdogduemlak.com	/en-US/docs/http/__www.erdogduemlak.com
-/en-US/docs/http:google.com&quot;%3Ebbbbbbb	/en-US/docs/aa%0d%0adddddd"%3Ebbbbbbb
 /en-US/docs/id	/en-US/docs/Document_Object_Model_(DOM)/element.id
-/en-US/docs/index.php?title=pt/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o	/en-US/docs/User:clauber.halic/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o
 /en-US/docs/indexOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 /en-US/docs/initEvent	/en-US/docs/Web/API/event.initEvent
 /en-US/docs/initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
@@ -14746,13 +14710,10 @@
 /en-US/docs/toLowerCase	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /en-US/docs/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /en-US/docs/toString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
-/en-US/docs/tom2000/MOZILLA_BEATS__EXPLORER	/en-US/docs/User:tom2000/MOZILLA_BEATS__EXPLORER
 /en-US/docs/trace.css	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.css
 /en-US/docs/trace.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.js
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/translation-value	/en-US/docs/Web/CSS/translation-value
-/en-US/docs/ttttttt&quot;%3Ebbbbbbb	/en-US/docs/aaaaa"%3Ebbbbbbb
-/en-US/docs/tx.py.txt_here	/en-US/docs/Tx.py.txt
 /en-US/docs/type	/en-US/docs/Document_Object_Model_(DOM)/event.type
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var()
