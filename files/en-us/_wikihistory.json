@@ -72306,7 +72306,7 @@
       "jpmedley"
     ]
   },
-  "Web/API/PaintWorklet/Paint​Worklet​.device​Pixel​Ratio": {
+  "Web/API/PaintWorklet/PaintWorklet.devicePixelRatio": {
     "modified": "2020-10-15T22:17:39.475Z",
     "contributors": [
       "estelle",

@@ -32,7 +32,7 @@ slug: Tools/Memory/Dominators_view
 <p>In the main part of the UI, the first row is labeled "GC Roots". Immediately underneath that is an entry for:</p>
 
 <ul>
- <li>Every GC root node. In Gecko, there is more than one memory graph, and therefore more than one root. There may be many (often temporary) roots. For example: variables allocated on the stack need to be rooted, or internal caches may need to root their​ elements.</li>
+ <li>Every GC root node. In Gecko, there is more than one memory graph, and therefore more than one root. There may be many (often temporary) roots. For example: variables allocated on the stack need to be rooted, or internal caches may need to root their elements.</li>
  <li>Any other node that's referenced from two different roots (since in this case, neither root dominates it).</li>
 </ul>
 
