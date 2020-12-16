@@ -19,7 +19,7 @@ tags:
 <ul>
  <li><code>&lt;plaintext&gt;</code> is deprecated since HTML 2, and not all browsers implemented it. Browsers that did implement it didn't do so consistently.</li>
  <li><code>&lt;plaintext&gt;</code> is obsolete in HTML5; browsers that accept it may instead treat it as a {{HTMLElement("pre")}} element that still interprets HTML within.</li>
- <li>If <code>&lt;plaintext&gt;</code> is the first element on the page (other than any non-displayed elements, like {{HTMLElement("head")}}), do not use HTML at all. Instead serve a text file with the <code>text/plain</code> <a href="/en-US/docs/Properly_Configuring_Server_MIME_Types" title="Properly Configuring Server MIME Types">MIME-type</a>.</li>
+ <li>If <code>&lt;plaintext&gt;</code> is the first element on the page (other than any non-displayed elements, like {{HTMLElement("head")}}), do not use HTML at all. Instead serve a text file with the <code>text/plain</code> <a href="/en-US/docs/Learn/Server-side/Configuring_server_MIME_types" title="Properly Configuring Server MIME Types">MIME-type</a>.</li>
  <li>Instead of <code>&lt;plaintext&gt;</code>, use the {{HTMLElement("pre")}} element or, if semantically accurate (such as for inline text), the {{HTMLElement("code")}} element. Escape any <code>&lt;</code>, <code>&gt;</code> and <code>&amp;</code> characters, to prevent browsers inadvertently parsing content the element content as HTML.</li>
  <li>A monospaced font can be applied to any HTML element via a <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("font-family")}} style with the <code>monospace</code> generic value.</li>
 </ul>

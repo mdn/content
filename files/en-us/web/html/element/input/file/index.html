@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements with <strong><code>type="file"</code></strong> let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using<a href="/en-US/docs/Learn/HTML/Forms"> form submission</a>, or manipulated using JavaScript code and <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">the File API</a>.</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} elements with <strong><code>type="file"</code></strong> let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using<a href="/en-US/docs/Learn/Forms"> form submission</a>, or manipulated using JavaScript code and <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">the File API</a>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
 
@@ -69,7 +69,7 @@ tags:
 <div class="note"><strong>Note:</strong>
 
 <ol>
- <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
+ <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
  <li>If no file is yet selected, the string is <code>""</code> (empty).</li>
  <li>The string <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">is prefixed with <code>C:\fakepath\</code></a>, to prevent malicious software from guessing the user's file structure.</li>
 </ol>
@@ -273,7 +273,7 @@ tags:
 
 <p>It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the <code>accept</code> value (the exact nature differs across browsers and operating systems).</p>
 
-<p><img alt="Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable." src="https://mdn.mozillademos.org/files/15183/file-chooser.png" style="margin: 0 auto;"></p>
+<p><img alt="Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable." src="file-chooser.png" style="margin: 0 auto;"></p>
 
 <p>The <code>accept</code> attribute doesn't validate the types of the selected files; it simply provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.</p>
 

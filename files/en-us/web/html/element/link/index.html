@@ -132,19 +132,19 @@ tags:
  </table>
  </dd>
  <dt>{{HTMLAttrDef("crossorigin")}}</dt>
- <dd>This enumerated attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource. <a href="/en-US/docs/Web/HTML/CORS_Enabled_Image">CORS-enabled images</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
+ <dd>This enumerated attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource. <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled images</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
  <dl>
   <dt><code>anonymous</code></dt>
   <dd>A cross-origin request (i.e. with an {{HTTPHeader("Origin")}} HTTP header) is performed, but no credential is sent (i.e. no cookie, X.509 certificate, or HTTP Basic authentication). If the server does not give credentials to the origin site (by not setting the {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP header) the resource will be tainted and its usage restricted.</dd>
   <dt><code>use-credentials</code></dt>
   <dd>A cross-origin request (i.e. with an <code>Origin</code> HTTP header) is performed along with a credential sent (i.e. a cookie, certificate, and/or HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through {{HTTPHeader("Access-Control-Allow-Credentials")}} HTTP header), the resource will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
- If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the <code>Origin</code> HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> for additional information.</dd>
+ If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the <code>Origin</code> HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for additional information.</dd>
  <dt>{{HTMLAttrDef("disabled")}}</dt>
  <dd>
  <p>For <code>rel="stylesheet"</code> only, the <code>disabled</code> Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document. If <code>disabled</code> is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded on-demand, if and when the <code>disabled</code> attribute is changed to <code>false</code> or removed.</p>
 
- <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("document.styleSheets")}} list.</p>
+ <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("DocumentOrShadowRoot/styleSheets")}} list.</p>
  </dd>
  <dt>{{HTMLAttrDef("href")}}</dt>
  <dd>This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.</dd>
@@ -157,13 +157,13 @@ tags:
  <dt>{{HTMLAttrDef("integrity")}} {{Experimental_Inline}}</dt>
  <dd>Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you’re telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation. See <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>.</dd>
  <dt>{{HTMLAttrDef("media")}}</dt>
- <dd>This attribute specifies the media that the linked resource applies to. Its value must be a media type / <a href="/en-US/docs/Web/CSS/Media_queries">media query</a>. This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
+ <dd>This attribute specifies the media that the linked resource applies to. Its value must be a media type / <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
  <div class="notecard note">
  <p><strong>Notes:</strong></p>
 
  <ul>
-  <li>In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., <a href="/en-US/docs/Web/CSS/@media">media types and groups</a>, where defined and allowed as values for this attribute, such as <code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code>. HTML5 extended this to any kind of <a href="/en-US/docs/Web/CSS/Media_queries">media queries</a>, which are a superset of the allowed values of HTML 4.</li>
-  <li>Browsers not supporting <a href="/en-US/docs/Web/CSS/Media_queries">CSS3 Media Queries</a> won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.</li>
+  <li>In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., <a href="/en-US/docs/Web/CSS/@media">media types and groups</a>, where defined and allowed as values for this attribute, such as <code>print</code>, <code>screen</code>, <code>aural</code>, <code>braille</code>. HTML5 extended this to any kind of <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, which are a superset of the allowed values of HTML 4.</li>
+  <li>Browsers not supporting <a href="/en-US/docs/Web/CSS/Media_Queries">CSS3 Media Queries</a> won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.</li>
  </ul>
  </div>
  </dd>
@@ -302,8 +302,8 @@ myStylesheet.onerror = function() {
 <table class="properties">
  <tbody>
   <tr>
-   <th><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a> and <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <th><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a> and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th>Permitted content</th>
@@ -315,7 +315,7 @@ myStylesheet.onerror = function() {
   </tr>
   <tr>
    <th>Permitted parents</th>
-   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
