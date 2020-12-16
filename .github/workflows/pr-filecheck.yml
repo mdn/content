@@ -47,6 +47,7 @@ jobs:
 
       - name: Debug hashFiles function
         run: |
+          echo ${{ env.GITHUB_WORKSPACE }}
           echo ${{ hashFiles('**/yarn.lock') }}
 
       - name: Cache node_modules
