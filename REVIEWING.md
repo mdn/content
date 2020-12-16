@@ -34,7 +34,7 @@ If you are reviewing mdn content changes, read through the following guidelines.
 
 ### Choosing how a pull request gets merged
 
-When you're ready to merge a pull request to the main branch, you can use the green button in GitHub to perform the actual merge.
+When you're ready to merge a pull request to the `main` branch, you can use the green button in GitHub to perform the actual merge.
 
 As explained in [Merging a pull request on GitHub](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request#merging-a-pull-request-on-github), GitHub provides multiple options for controlling how pull requests gets merged. The MDN content repo doesn't allow the *"Merge all of the commits into the base branch"* option, so you're left with a choice between two options:
 
@@ -42,13 +42,13 @@ As explained in [Merging a pull request on GitHub](https://docs.github.com/en/fr
 
 * Rebase the commits individually onto the base branch by clicking the merge drop down menu next to the green button, selecting **Rebase and merge** and then clicking the green button (which will now say **Rebase and merge**).
 
-For most pull requests, you generally want to use the **Squash and merge** option, to squash all the commits in the pull-request branch into one commit.
+For most pull requests, you generally want to use the **Squash and merge** option, to squash all the commits in the pull request branch into one commit.
 
-Especially you should be careful to choose the **Squash and merge** option when your review of a pull request has resulted in the pull-request author making a series of small commits in response to your review suggestions.
+Especially you should be careful to choose the **Squash and merge** option when your review of a pull request has resulted in the pull request author making a series of small commits in response to your review suggestions.
 
-Using that **Squash and merge** option helps significantly to keep the [commit history for the repo](https://github.com/mdn/content/commits/main) more readable. Otherwise, we end up with a commit history that's less clear, with multiple commit messages that are less informative, making it all a lot more work to read through later
+Using that **Squash and merge** option helps significantly to keep the [commit history for the repo](https://github.com/mdn/content/commits/main) more readable. Otherwise, we end up with a commit history that's less clear, with multiple commit messages that are less informative, making it all a lot more work to read through later.
 
-That said, you should still prefer the **Squash and merge** option even for the normal case where a pull request consists of a single commit; that is, when there's nothing to actually squash. Even in those single-commit cases, the **Squash and merge** option is better; that's because it has the effect of appending the pull-request number to the commit subject line, like this:
+That said, you should still prefer the **Squash and merge** option even for the normal case where a pull request consists of a single commit; that is, when there's nothing to actually squash. Even in those single-commit cases, the **Squash and merge** option is better; that's because it has the effect of appending the pull request number to the commit subject line, like this:
 
 ```
 No longer mark WebGL 2 as experimental (#304)
