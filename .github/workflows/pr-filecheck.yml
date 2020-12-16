@@ -49,7 +49,6 @@ jobs:
         run: |
           # echo ${{ env.GITHUB_WORKSPACE }}
           echo $GITHUB_WORKSPACE
-          echo ${{ GITHUB_WORKSPACE }}
           echo ${{ hashFiles('**/yarn.lock') }}
 
       - name: Cache node_modules
