@@ -608,7 +608,7 @@
 /en-US/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS-redirect-1	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/en-US/docs/CSS/Getting_Started/Why_use_CSS?	undefined
+/en-US/docs/CSS/Getting_Started/Why_use_CSS?	/en-US/docs/CSS/Getting_Started/Why_use_CSS
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
