@@ -32,6 +32,23 @@ If you are reviewing mdn content changes, read through the following guidelines.
 1. If you don't understand a content change that you've been selected to review, or feel that it is too large and complex for you to deal with, don't panic! Feel free to reach out to someone else to ask for help, like a colleague, or someone else in your group of topic review owners (if you know who they are). If you are not sure who to approach for help, then ping our @core-yari-content group to ask for help.
 1. Related to the above point, it is rare that you'll be required to review a large, complex content change with no warning, like a complete page rewrite, or the addition of several new reference pages or tutorials. Usually such changes are done as part of specific work streams where the content has been approved for addition, and reviewer(s) have been assigned already. In such cases, the PR should be linked to an issue that explains all these details. If you are not sure, ask the submitter if they need a review of the content, and where the rationale behnd the change is explained. Ping our [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content) team to ask for help if you are still not sure, or if you think the content is suspicious.
 
+### Choosing how a pull request gets merged
+
+When you're ready to merge a pull request to the main branch, you can use the green button in GitHub to perform the actual merge.
+
+As explained in [Merging a pull request on GitHub](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request#merging-a-pull-request-on-github), GitHub provides multiple options for controlling how pull requests gets merged. The MDN content repo doesn't allow the *"Merge all of the commits into the base branch"* option, so you're left with a choice between two options:
+
+* Squash the commits into one commit by clicking the merge drop down menu next to the green button, selecting **Squash and merge** and then clicking the green button (which will now say **Squash and merge**).
+
+* Rebase the commits individually onto the base branch by clicking the merge drop down menu next to the green button, selecting **Rebase and merge** and then clicking the green button (which will now say **Rebase and merge**).
+
+For most pull requests, you generally want to use the **Squash and merge** option, to squash all the commits in the pull-request branch into one commit.
+
+Especially you should be careful to choose the **Squash and merge** option when your review of a pull request has resulted in the pull-request author making a series of small commits in response to your review suggestions.
+
+Using that **Squash and merge** option helps significantly to keep the [commit history for the repo](https://github.com/mdn/content/commits/main) more readable. Otherwise, we end up with a commit history that's less clear, with multiple commit messages that are less informative, making it all a lot more work to read through later
+
+However, in the case of some pull requests, using the **Rebase and merge** option makes more sense. You should choose that option when the commit author has intentionally constructed the pull request as a set of related commits, and has written an informative commit message for each commit in the pull request.
 
 ## Topic review owners
 
