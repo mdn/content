@@ -7688,6 +7688,7 @@
 /en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
 /en-US/docs/MDN/Tools/Kuma_API	/en-US/docs/Project:MDN/Kuma/API
 /en-US/docs/MDN/Tools/MDN-related_projects	/en-US/docs/MDN/Tools/Add-ons_and_plug-ins
+/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Deleting_pages	/en-US/docs/MDN/Tools/Page_deletion
