@@ -496,7 +496,7 @@ serializer;</span></strong><span> // Standard version</span>
 <p>When the <code>stringifier</code> keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
 
 <pre class="syntaxbox" lang="en"><span id="the-code">interface InterfaceIdentifier {
-  stringifier DOMString name();
+  stringifier attribute DOMString DOMString name;
 };</span></pre>
 
 <p>For a class based on this interface, the following lines of code below are equivalent. The behavior should be noted on the property page in addition to the interface page.</p>
