@@ -12,19 +12,19 @@ tags:
 
 <p class="summary">When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.</p>
 
-<p>IDL stands for <em><strong>Interface Definition Language</strong></em> and it is designed to describe APIs. In the wider world of computing there are several kinds of IDL. In the world of browsers, the IDL we use is called <em>WebIDL</em>. Two kinds of WebIDL are available: the one given in the WebIDL spec, and the one implemented in browsers. The spec is the canonical reference, and the browser WebIDL describes what is actually implemented in a particular browser, and contains additional things such as annotations and information about non-standard elements.</p>
+<p>IDL stands for <em><strong>Interface Definition Language</strong></em> and it is designed to describe APIs. In the wider world of computing there are several kinds of IDL. In the world of browsers, the IDL we use is called <em>WebIDL</em>. Two kinds of WebIDL are available: the one given in the WebIDL spec, and the one implemented in browsers. The spec is the canonical reference, and the browser WebIDL describes what is actually implemented in a particular browser, and contains additional things such as annotations, information about non-standard elements, and browser-specific extensions to the IDL specification.</p>
 
 <h2 id="Where_to_find_WebIDL_files">Where to find WebIDL files</h2>
 
 <p>WebIDL can be found in multiple locations:</p>
 
 <ul>
- <li>Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On the MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).</li>
- <li>Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Edge uses it internally, but these are unfortunately not public (it would have helped us a lot).
+ <li>Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).</li>
+ <li>Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
   <ul>
    <li>For Gecko, all WebIDL files are grouped in a single directory: <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">https://dxr.mozilla.org/mozilla-central/source/dom/webidl/</a>. Their extension is <code>.webidl</code>. There are other <code>*.idl</code> files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.</li>
-   <li>For Chromium,  they are scattered around the source code, so you need to dig a bit more: E.g. <a href="http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl">http://src.chromium.org/viewvc/blink/trunk/Source/modules/mediastream/MediaStream.idl</a></li>
-   <li>Similarly, WebCore, as expected because Chromium was forked from it, also scatters them: E.g. <a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl">https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl</a></li>
+   <li>For Chromium, they are located in two locations, both subtrees of the source code's <code><a href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/">renderer/<a></a></code> directory: <code><a href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/">core/</a></code> and <code><a href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/">modules/</a></code>. Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.</li>
+   <li>For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl">https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl</a></li>
   </ul>
  </li>
 </ul>
@@ -101,7 +101,7 @@ MyInterface includes MyMixin;</pre>
 </ul>
 
 <div class="notecard note">
-<p><span><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface (such cases are bugs in the relevant specs — they shouldn't be defined as mixins, but as partial interfaces.)</span></p>
+<p><span><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface. (Such cases are bugs in the relevant specs. They shouldn't be defined as mixins, but as partial interfaces.)</span></p>
 </div>
 
 <h3 id="Old_mixin_syntax">Old mixin syntax</h3>
@@ -392,7 +392,7 @@ interface SpeechSynthesis {
 
 <h3 id="toString_and_toJSON">toString() and toJSON()</h3>
 
-<p>A stringifier is mapped to <code>toString()</code> and defined as:</p>
+<p>A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See <a href="Stringifiers">stringifiers</a>.) Additionaly, the keyword is mapped to <code>toString()</code> and defined as:</p>
 
 <pre class="syntaxbox"><strong><span id="the-code">stringifier;</span></strong></pre>
 
@@ -484,6 +484,34 @@ serializer;</span></strong><span> // Standard version</span>
 </ul>
 
 <p>Such an set interface also allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FontFaceSet')}}.</p>
+
+<h2 id="Special_Behaviors">Special Behaviors</h2>
+
+<p>Some IDL members indicate special behaviors that should be noted on appropriate pages.</p>
+
+<h3 id="Stringifiers">Stringifiers</h3>
+
+<p>In addition to adding the <code>toString()</code> method to an interface as described in <a href="#toString_and_toJSON">toString() and toJSON()</a>, stringifiers also indicate that an object instance, when used as a string, returns a <code>DOMString</code> other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.</p>
+
+<p>When the <code>stringifier</code> keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
+
+<pre class="syntaxbox" lang="en"><span id="the-code">interface InterfaceIdentifier {
+  stringifier attribute DOMString DOMString name;
+};</span></pre>
+
+<p>For a class based on this interface, the following lines of code below are equivalent. The behavior should be noted on the property page in addition to the interface page.</p>
+
+<pre class="js" lang="en"><span id="the-code">console.log(interfaceIdentifier);
+console.log(interfaceIdentifier.name);
+</span></pre>
+
+<p>When the <code>stringifier</code> keyword is used by itself, an object of the interface may be used as above, but the behavior is defined in source code.</p>
+
+<pre class="syntaxbox" lang="en"><span id="the-code">interface InterfaceIdentifier {
+  stringifier;
+};</span></pre>
+
+<p>To learn what an interface reference actually does, refer to the interface's spec or experiment with the interface to determine its output.</p>
 
 <h2 id="Constructors">Constructors</h2>
 
