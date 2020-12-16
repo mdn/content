@@ -1,4 +1,5 @@
 # FROM-URL	TO-URL
+# IGNORE ME
 /en-US/docs/%3Cimg%3E	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/%7B%7Bdomxref(%22/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/%7B%7Bdomxref(%22/TouchList.item	/en-US/docs/Web/API/TouchList/item
