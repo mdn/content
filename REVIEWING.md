@@ -58,6 +58,8 @@ And the effect of appending the pull-request number to the commit subject line i
 
 However, in the case of some pull requests, using the **Rebase and merge** option makes more sense. You should choose that option when the commit author has intentionally constructed the pull request as a set of related commits, and has written an informative commit message for each commit in the pull request.
 
+You should also choose the **Rebase and merge** option when a pull request was created from separate commits by multiple authors, and you want to preserve the authorship of the commits — that is, to ensure that in the commit history, each commit is attributed to the right author. Otherwise, using the **Squash and merge** option would cause the commits to all be attributed to a single author, obscuring the actual authorship.
+
 ## Topic review owners
 
 The following specific topic areas are being reviewed by the kind souls listed underneath them. Be kind to them, and thank them for all the help they give to this project. If you would like to help with MDN content reviews, [get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#Step_4_Ask_for_help).
