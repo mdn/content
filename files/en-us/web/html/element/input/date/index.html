@@ -27,11 +27,11 @@ tags:
 
 <p>Among browsers with custom interfaces for selecting dates are Chrome, Edge, and Opera, whose date control looks like so:</p>
 
-<p><img alt="Chrome's date input as of November 2020" src="https://mdn.mozillademos.org/files/17433/chrome-date-input.PNG" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Chrome's date input as of November 2020" src="chrome-date-input.png" style="display: block; margin: 0 auto;"></p>
 
 <p>And the Firefox date control looks like this:</p>
 
-<p><img alt="Another “dd/mm/yyyy” textbox that expands into a selectable calendar control." src="https://mdn.mozillademos.org/files/15644/firefox_datepicker.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Another “dd/mm/yyyy” textbox that expands into a selectable calendar control." src="firefox_datepicker.png" style="display: block; margin: 0 auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -207,7 +207,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”" src="https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”" src="date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -236,7 +236,7 @@ input:valid+span::after {
 
 <p>As mentioned, the major problem with date inputs at the time of writing is {{anch("Browser compatibility", "browser support")}}. As an example, the date picker on Firefox for Android looks like this:</p>
 
-<p><img alt="A popup calendar picker modal floats above the web page and browser UI." src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A popup calendar picker modal floats above the web page and browser UI." src="date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Unsupporting browsers gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.</p>
 
@@ -516,7 +516,7 @@ daySelect.onchange = function() {
 
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

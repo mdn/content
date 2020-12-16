@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;track&gt;</code> element</strong> is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles.</span> The tracks are formatted in <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT format</a> (<code>.vtt</code> files) — Web Video Text Tracks.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;track&gt;</code> element</strong> is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles.</span> The tracks are formatted in <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT format</a> (<code>.vtt</code> files) — Web Video Text Tracks.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
    <td>None</td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ tags:
  <dt>{{htmlattrdef("label")}}</dt>
  <dd>A user-readable title of the text track which is used by the browser when listing available text tracks.</dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>Address of the track (<code>.vtt</code> file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the <code>track</code> element has a <code><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code> attribute.</dd>
+ <dd>Address of the track (<code>.vtt</code> file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the <code>track</code> element has a <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code> attribute.</dd>
  <dt>{{htmlattrdef("srclang")}}</dt>
  <dd>Language of the track text data. It must be a valid <a href="https://r12a.github.io/app-subtags/">BCP 47</a> language tag. If the <code>kind</code> attribute is set to <code>subtitles</code>, then <code>srclang</code> must be defined.</dd>
 </dl>
@@ -176,6 +176,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/HTML/WebVTT">WebVTT text track format</a></li>
+ <li><a href="/en-US/docs/Web/API/WebVTT_API">WebVTT text track format</a></li>
  <li>{{domxref("HTMLMediaElement.textTracks")}}</li>
 </ul>

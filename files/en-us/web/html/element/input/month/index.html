@@ -28,11 +28,11 @@ tags:
 
 <p>For those of you using a browser that doesn't support <code>month</code>, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15391/month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
+<p><img alt="" src="month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
 
 <p>The Microsoft Edge <code>month</code> control looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15393/month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
+<p><img alt="" src="month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
 
 <table class="properties">
  <tbody>
@@ -219,7 +219,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15395/month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -256,7 +256,7 @@ input:valid+span:after {
 
 <p>As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15397/month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
@@ -483,7 +483,7 @@ function populateYears() {
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

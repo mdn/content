@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;button&gt;</code> element</strong> represents a clickable button, used to submit <a href="/en-US/docs/Learn/HTML/Forms">forms</a> or anywhere in a document for accessible, standard button functionality.</span> By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;button&gt;</code> element</strong> represents a clickable button, used to submit <a href="/en-US/docs/Learn/Forms">forms</a> or anywhere in a document for accessible, standard button functionality.</span> By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons’ appearance with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}</div>
 
@@ -20,12 +20,12 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form_labelable">labelable</a>, and <a href="/en-US/docs/Web/HTML/Content_categories#Form_submittable">submittable</a> <a href="/docs/Web/HTML/Content_categories#Form-associated_content">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a> but there must be no <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">Interactive content</a></td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> but there must be no <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">Interactive content</a></td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -33,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -56,7 +56,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}</dt>
- <dd>This Boolean attribute specifies that the button should have input <a href="/en-US/docs/Web/API/HTMLElement/focus">focus</a> when the page loads. <strong>Only one element in a document can have this attribute.</strong></dd>
+ <dd>This Boolean attribute specifies that the button should have input <a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus</a> when the page loads. <strong>Only one element in a document can have this attribute.</strong></dd>
  <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
  <dd>This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Setting <code>autocomplete="off"</code> on the button disables this feature; see {{bug(654072)}}.</dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
@@ -90,7 +90,7 @@ tags:
  <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
- <dd>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</dd>
+ <dd>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</dd>
  <dd>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</dd>
  <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
  <dd>If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the <code>name</code> of, or keyword for, a <em>browsing context</em> (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:

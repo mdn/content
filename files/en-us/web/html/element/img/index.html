@@ -67,7 +67,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element includes the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
 	<dt>{{htmlattrdef("alt")}}</dt>
@@ -90,7 +90,7 @@ tags:
 	</dd>
 	<dt>{{htmlattrdef("crossorigin")}}</dt>
 	<dd>
-	<p>Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a <a href="/en-US/docs/CORS_Enabled_Image">CORS-enabled image</a> returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas">tainted</a>".</p>
+	<p>Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled image</a> returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas">tainted</a>".</p>
 
 	<p>If the <code>crossorigin</code> attribute is <em>not</em> specified, then a non-CORS request is sent (without the {{httpheader("Origin")}} request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
 
@@ -105,7 +105,7 @@ tags:
 		<dd>The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the <code>Authorization</code> request header). If the server does not opt into sharing credentials with the origin site (by sending back the <code>Access-Control-Allow-Credentials: true</code> response header), then the browser marks the image as tainted and restricts access to its image data.</dd>
 	</dl>
 
-	<p>If the attribute has an invalid value, browsers handle it as if the <code>anonymous</code> value was used. See <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS settings attributes</a> for additional information.</p>
+	<p>If the attribute has an invalid value, browsers handle it as if the <code>anonymous</code> value was used. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for additional information.</p>
 	</dd>
 	<dt>{{htmlattrdef("decoding")}}</dt>
 	<dd>
@@ -184,7 +184,7 @@ tags:
 	<dt>{{htmlattrdef("width")}}</dt>
 	<dd>The intrinsic width of the image in pixels. Must be an integer without a unit.</dd>
 	<dt>{{htmlattrdef("usemap")}}</dt>
-	<dd>The partial {{glossary("URL")}} (starting with <code>#</code>) of an <a href="/en-US/docs/HTML/Element/map">image map</a> associated with the element.
+	<dd>The partial {{glossary("URL")}} (starting with <code>#</code>) of an <a href="/en-US/docs/Web/HTML/Element/map">image map</a> associated with the element.
 	<div class="note">
 	<p><strong>Note: </strong>You cannot use this attribute if the <code>&lt;img&gt;</code> element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.</p>
 	</div>
