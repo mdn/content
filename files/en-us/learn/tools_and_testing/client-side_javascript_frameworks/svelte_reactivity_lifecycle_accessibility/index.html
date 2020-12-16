@@ -211,7 +211,7 @@ foo.bar = 'baz'</pre>
   })
 }</pre>
 
-<p>In this case we are using the <code><a href="/en-US/docs/User:chrisdavidmills/Framework_tests_and_research/array.map()">map()</a></code> method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each todo using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original <code>todos</code> array.</p>
+<p>In this case we are using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each todo using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original <code>todos</code> array.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Svelte allows us to specify different options that affect how the compiler works. The <code>&lt;svelte:options immutable={true}/&gt;</code> option tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed and generate simpler and more performant code. For more information on <code>&lt;svelte:options...&gt;</code>, check the <a href="https://svelte.dev/docs#svelte_options">Svelte options documentation</a>.</p>
