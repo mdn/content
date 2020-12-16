@@ -35,6 +35,11 @@ jobs:
         with:
           node-version: "12"
 
+      - name: Debug hashFiles function
+        run: |
+          echo ${{ hashFiles('**/yarn.lock') }}
+
+
       - name: Cache node_modules
         uses: actions/cache@v2.1.3
         id: cached-node_modules
