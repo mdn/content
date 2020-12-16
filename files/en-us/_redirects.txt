@@ -90,7 +90,6 @@
 /en-US/docs/A_Basic_RayCaster:trace.css	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.css
 /en-US/docs/A_Basic_RayCaster:trace.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.js
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
-/en-US/docs/Aardvark_(external)	https://addons.mozilla.org/en-US/firefox/addon/4111
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
 /en-US/docs/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
@@ -1250,7 +1249,6 @@
 /en-US/docs/Chrome	/en-US/docs/Glossary/Chrome
 /en-US/docs/Class_Elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Code_Review_FAQ	/en-US/docs/Mozilla/Developer_guide/Code_Review_FAQ
-/en-US/docs/Colorzilla_(external)	https://addons.mozilla.org/en-US/firefox/addon/271
 /en-US/docs/Comm-central_source_code_(Mercurial)	/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central
 /en-US/docs/Common_CSS_Questions	/en-US/docs/Learn/CSS/Howto/CSS_FAQ
 /en-US/docs/Common_XSLT_Errors	/en-US/docs/Web/XSLT/Common_errors
@@ -5311,7 +5309,6 @@
 /en-US/docs/Eclipse_CDT	/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT
 /en-US/docs/Eclipse_CDT/Eclipse_CDT	/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT
 /en-US/docs/Eclipse_CDT_Manual_Setup	/en-US/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT/Manual_Setup
-/en-US/docs/EditCSS_Firefox_Extension_(external)	https://addons.mozilla.org/extensions/moreinfo.php?id=179
 /en-US/docs/Edit_fonts	/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /en-US/docs/Element.hasAttributes()	/en-US/docs/Web/API/Element/hasAttributes
 /en-US/docs/Enterprise_Project_(external)	/en-US/docs/Mozilla_Enterprise_Project_(external)
@@ -5324,7 +5321,6 @@
 /en-US/docs/FORCE_STATIC_LIB	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/File_System_Access_API	/en-US/docs/Web/API/File_System_Access_API
 /en-US/docs/FirebugInternals	/en-US/docs/Firebug_internals
-/en-US/docs/Firebug_Firefox_extension_(external)	https://addons.mozilla.org/extensions/moreinfo.php?id=1843&application=firefox
 /en-US/docs/Firefox%2011%20for%20developers	/en-US/docs/Mozilla/Firefox/Releases/11
 /en-US/docs/Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Firefox_1.5_Beta_for_Developers	/en-US/docs/Mozilla/Firefox/Releases/1.5
@@ -8561,7 +8557,6 @@
 /en-US/docs/Site_Compatibility_for_Firefox_23	/en-US/docs/Mozilla/Firefox/Releases/23/Site_compatibility
 /en-US/docs/Site_Compatibility_for_Firefox_24	/en-US/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /en-US/docs/So_You_Just_Built_Firefox	/en-US/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
-/en-US/docs/SocketIO	https://wiki.mozilla.org/docs/ServerJS/SocketIO/SocketIO
 /en-US/docs/Solaris_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Solaris_Prerequisites
 /en-US/docs/Specification:FirefoxMainWindow	/en-US/docs/Specification/FirefoxMainWindow
 /en-US/docs/Specification_List	/en-US/docs/Web/Specification_list
@@ -9023,7 +9018,6 @@
 /en-US/docs/VPATH	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 /en-US/docs/Valid_Application_Versions_for_Add-on_Developers	https://addons.mozilla.org/en-US/firefox/pages/appversions
 /en-US/docs/Values,_Variables,_and_Literals	/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
-/en-US/docs/View_Formatted_Source_(external)	https://addons.mozilla.org/en-US/firefox/addon/697
 /en-US/docs/View_source	/en-US/docs/Tools/View_source
 /en-US/docs/Virtual_ARM_Linux_environment	/en-US/docs/Mozilla/Developer_guide/Virtual_ARM_Linux_environment
 /en-US/docs/Vuletube-vue-typescript-threejs-nui-voice-opencvjs	/en-US/docs/Games/
