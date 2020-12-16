@@ -92,7 +92,7 @@ tags:
 <p>You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>map</code> in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that <code>callback.call</code> evaluates to the original value of <code>{{jsxref("Function.prototype.call")}}</code>.</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.19
-// Reference: http://es5.github.io/#x15.4.4.19
+// Reference: https://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
   Array.prototype.map = function(callback/*, thisArg*/) {
@@ -113,7 +113,7 @@ if (!Array.prototype.map) {
     var len = O.length &gt;&gt;&gt; 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
+    // See: https://es5.github.com/#x9.11
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' is not a function');
     }

@@ -47,7 +47,7 @@ tags:
 
 <p>In the main script, <code>onmessage</code> would have to be called on a <code>Worker object</code>, whereas inside the worker script you just need <code>onmessage</code> because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>postMessage()</code> can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.</p>

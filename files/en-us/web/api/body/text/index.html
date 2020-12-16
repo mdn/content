@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-text">fetch text example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-text/">fetch text live</a>), we have an {{htmlelement("article")}} element and three links (stored in the <code>myLinks</code> array.) First, we loop through all of these and give each one an <code>onclick</code> event handler so that the <code>getData()</code> function is run — with the link's <code>data-page</code> identifier passed to it as an argument — when one of the links is clicked.</p>
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-text">fetch text example</a> (run <a href="https://mdn.github.io/fetch-examples/fetch-text/">fetch text live</a>), we have an {{htmlelement("article")}} element and three links (stored in the <code>myLinks</code> array.) First, we loop through all of these and give each one an <code>onclick</code> event handler so that the <code>getData()</code> function is run — with the link's <code>data-page</code> identifier passed to it as an argument — when one of the links is clicked.</p>
 
 <p>When <code>getData()</code> is run, we create a new request using the {{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific <code>.txt</code> file. When the fetch is successful, we read a {{domxref("USVString")}} (text) object out of the response using <code>text()</code>, then set the {{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element equal to the text object.</p>
 

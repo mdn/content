@@ -57,7 +57,7 @@ tags:
 
 <h2 id="Understanding_prototype_objects">Understanding prototype objects</h2>
 
-<p>Here we'll go back to the example in which we finished writing our <code>Person()</code> constructor — load the example in your browser. You can use our <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> example (see also the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">source code</a>), if you don't already have it from working through the last article.</p>
+<p>Here we'll go back to the example in which we finished writing our <code>Person()</code> constructor — load the example in your browser. You can use our <a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> example (see also the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">source code</a>), if you don't already have it from working through the last article.</p>
 
 <p>In this example, we have defined a constructor function, like so:</p>
 
@@ -216,7 +216,7 @@ person3.bio()</pre>
 <p>Let's have a look at an example of modifying the <code>prototype</code> property of a constructor function — methods added to the prototype are then available on all object instances created from the constructor. At this point we'll finally add something to our <code>Person()</code> constructor's prototype.</p>
 
 <ol>
- <li>Go back to our <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> example and make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">source code</a>. Below the existing JavaScript, add the following code, which adds a new method to the constructor's <code>prototype</code> property:
+ <li>Go back to our <a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> example and make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">source code</a>. Below the existing JavaScript, add the following code, which adds a new method to the constructor's <code>prototype</code> property:
 
   <pre class="brush: js   notranslate">Person.prototype.farewell = function() {
   alert(this.name.first + ' has left the building. Bye for now!');
@@ -252,7 +252,7 @@ In the above example, performing <code>delete person1.__proto__.farewell</code>
 In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> instead.</div>
 
 <div class="note">
-<p><strong>Note</strong>: If you are having trouble getting this example to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> example (see it <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a> also).</p>
+<p><strong>Note</strong>: If you are having trouble getting this example to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> example (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a> also).</p>
 </div>
 
 <p>You will rarely see properties defined on the <code>prototype</code> property, because they are not very flexible when defined like this. For example you could add a property like so:</p>
