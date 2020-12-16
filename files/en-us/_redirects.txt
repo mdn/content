@@ -74,7 +74,6 @@
 /en-US/docs/ARIA:_Accessible_Rich_Internet_Applications_Relationship_to_HTML_FAQ	/en-US/docs/ARIA/Accessible_Rich_Internet_Applications_Relationship_to_HTML_FAQ
 /en-US/docs/ARIA:_JAWS_Issues	/en-US/docs/Web/Accessibility/JAWS_Issues_with_Firefox
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/ARIENGGO.COM-redirect-1-redirect-1	/en-US/docs/ARIENGGO.COM-redirect-1
 /en-US/docs/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/A_Basic_RayCaster/Level.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/Level.js
 /en-US/docs/A_Basic_RayCaster/Player.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/Player.js
@@ -14432,9 +14431,6 @@
 /en-US/docs/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/Yasm/Yasm	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Yasm
 /en-US/docs/YouCompleteMe	/en-US/docs/Mozilla/Developer_guide/YouCompleteMe
-/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3EClick%20Me!%3Cbutton%3E	/en-US/docs/aaaaa%3Cbutton%20type=%22button%22%3E
-/en-US/docs/aaaaa&quot;%3Ebbbbbbb	/en-US/docs/http:google.com"%3Ebbbbbbb
-/en-US/docs/aadddddd&quot;%3Ebbbbbbb	/en-US/docs/aadddddd"%3Ebbbbbbb%0d%0asdfsdfsdsdfsdf
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/action	/en-US/docs/Document_Object_Model_(DOM)/form.action
 /en-US/docs/adData	/en-US/docs/Web/API/BluetoothDevice/adData
@@ -14583,8 +14579,6 @@
 /en-US/docs/hasAttributes	/en-US/docs/Web/API/Element.hasAttributes()
 /en-US/docs/hasChildNodes	/en-US/docs/Web/API/Node/hasChildNodes
 /en-US/docs/href	/en-US/docs/DOM/stylesheet/href
-/en-US/docs/http:__www.erdogduemlak.com	/en-US/docs/http/__www.erdogduemlak.com
-/en-US/docs/http:google.com&quot;%3Ebbbbbbb	/en-US/docs/aa%0d%0adddddd"%3Ebbbbbbb
 /en-US/docs/id	/en-US/docs/Document_Object_Model_(DOM)/element.id
 /en-US/docs/index.php?title=pt/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o	/en-US/docs/User:clauber.halic/Documenta%C3%A7%C3%A3o_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_compila%C3%A7%C3%A3o/Instru%C3%A7%C3%B5es_de_Compila%C3%A7%C3%A3o
 /en-US/docs/indexOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
@@ -14751,8 +14745,6 @@
 /en-US/docs/trace.js	/en-US/docs/Canvas_tutorial/A_Basic_RayCaster/trace.js
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/translation-value	/en-US/docs/Web/CSS/translation-value
-/en-US/docs/ttttttt&quot;%3Ebbbbbbb	/en-US/docs/aaaaa"%3Ebbbbbbb
-/en-US/docs/tx.py.txt_here	/en-US/docs/Tx.py.txt
 /en-US/docs/type	/en-US/docs/Document_Object_Model_(DOM)/event.type
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var()
