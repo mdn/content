@@ -392,7 +392,7 @@ interface SpeechSynthesis {
 
 <h3 id="toString_and_toJSON">toString() and toJSON()</h3>
 
-<p>A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See <a href="Stringifiers">stringiffiers</a>.) Additionaly, the keyword is mapped to <code>toString()</code> and defined as:</p>
+<p>A stringifier specifies how an object based on an interface is resolved in contexts expecting a string. (See <a href="Stringifiers">stringifiers</a>.) Additionaly, the keyword is mapped to <code>toString()</code> and defined as:</p>
 
 <pre class="syntaxbox"><strong><span id="the-code">stringifier;</span></strong></pre>
 
@@ -491,15 +491,15 @@ serializer;</span></strong><span> // Standard version</span>
 
 <h3 id="Stringifiers">Stringifiers</h3>
 
-<p>In addition to adding the <code>toString()</code> method to an interface as described in <a href="#toString_and_toJSON">toString() and toJason()</a>, stringifiers also indicate that an object instance, when used as a string, returns a <code>DOMString</code> other than the default (usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL.</p>
+<p>In addition to adding the <code>toString()</code> method to an interface as described in <a href="#toString_and_toJSON">toString() and toJason()</a>, stringifiers also indicate that an object instance, when used as a string, returns a <code>DOMString</code> other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.</p>
 
-<p>When stringifier accompanies an attribute name, referecing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
+<p>When stringifier accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:</p>
 
 <pre class="syntaxbox" lang="en"><span id="the-code">interface InterfaceIdentifier {
   stringifier DOMString name();
 };</span></pre>
 
-<p>For a class based on this interface, the following lines of code are equivalent:</p>
+<p>For a class based on this interface, the following lines of code below are equivalent. The behavior should be noted on the property page in addition to the interface page.</p>
 
 <pre class="js" lang="en"><span id="the-code">console.log(interfaceIdentifier);
 console.log(interfaceIdentifier.name);
