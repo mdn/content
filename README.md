@@ -43,7 +43,7 @@ There are several ways forward from this point. It's up to you. Here are some op
     - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
-[Node.js (version >=12)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
+[Node.js (version >=12.11)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
 
 ### Fundamental content concepts
 
