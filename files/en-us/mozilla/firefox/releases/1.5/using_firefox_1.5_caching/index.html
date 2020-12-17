@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<h2 id="Introduction" name="Introduction">Introduction</h2>
+<h2 id="Introduction">Introduction</h2>
 
 <p><a href="/en-US/docs/Firefox_1.5_for_developers" title="Firefox_1.5_for_developers">Firefox 1.5</a> uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as <strong>bfcache</strong> (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>Two new browser events enable Web authors to do both.</p>
 
-<h2 id="New_browser_events" name="New_browser_events">New browser events</h2>
+<h2 id="New_browser_events">New browser events</h2>
 
 <p>If you use these new events, your pages will continue to display properly in other browsers (we’ve tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>If you have behaviors that fire when a user navigates away from the page, but you want to take advantage of this new caching feature, and therefore don’t want to use the unload handler, use the new <code>pagehide</code> event.</p>
 
-<h3 id="pageshow_event" name="pageshow_event">pageshow event</h3>
+<h3 id="pageshow_event">pageshow event</h3>
 
 <p>This event works the same as the <code>load</code> event, except that it fires every time the page is loaded (whereas the <code>load</code> event doesn’t fire in Firefox 1.5 when the page is loaded from cache). The first time the page loads, the <code>pageshow</code> event fires just after the firing of the <code>load</code> event. The <code>pageshow</code> event uses a boolean property called <code>persisted</code> that is set to <code>false</code> on the initial load. It is set to <code>true</code> if it is not the initial load (in other words, it is set to true when the page is cached).</p>
 
@@ -72,7 +72,7 @@ tags:
 
 <p>If you call JavaScript functions as part of the <code>pageshow</code> event, you can ensure these functions are called when the page is loaded in browsers other than Firefox 1.5 by calling the <code>pageshow</code> event as part of the <code>load</code> event, as shown in the sample later in this article.</p>
 
-<h3 id="pagehide_event" name="pagehide_event">pagehide event</h3>
+<h3 id="pagehide_event">pagehide event</h3>
 
 <p>If you want to define behavior that occurs when the user navigates away from the page, but you don’t want to use the <code>unload</code> event (which would cause the page to not be cached), you can use the new <code>pagehide</code> event. Like <code>pageshow</code>, the <code>pagehide</code> event uses a boolean property called <code>persisted</code>. This property is set to <code>false</code> if the page is not cached by the browser and set to <code>true</code> if the page is cached by the browser. When this property is set to <code>false</code>, the <code>unload</code> handler, if present, fires immediately after the <code>pagehide</code> event.</p>
 
@@ -185,7 +185,7 @@ function loadOnlyFirst() {
 &lt;body onload="onLoad();"&gt;
 </pre>
 
-<h2 id="Developing_Firefox_extensions" name="Developing_Firefox_extensions">Developing Firefox extensions</h2>
+<h2 id="Developing_Firefox_extensions">Developing Firefox extensions</h2>
 
 <p>Firefox 1.5 <a href="/en-US/docs/Building_an_Extension" title="Building_an_Extension">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
 

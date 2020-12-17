@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">To enable WebAssembly to be read and edited by humans, there is a textual representation of the wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing wasm in JavaScript.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: This is potentially overkill if you are a web developer who just wants to load a wasm module into a page and use it in your code (see <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>), but it is more useful if for example, you want to write wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.</p>
 </div>
 
@@ -173,7 +173,7 @@ tags:
     console.log(obj.instance.exports.add(1, 2));  // "3"
   });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example in GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html">add.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/add.html">see it live also</a>). Also see {{JSxRef("WebAssembly.instantiateStreaming()")}} for more details about the instantiate function.</p>
 </div>
 
@@ -193,7 +193,7 @@ tags:
     i32.const 1
     i32.add))</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>i32.const</code> just defines a 32-bit integer and pushes it onto the stack. You could swap out the <code>i32</code> for any of the other available types, and change the value of the const to whatever you like (here we’ve set the value to <code>42</code>).</p>
 </div>
 
@@ -243,7 +243,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
     obj.instance.exports.logIt();
   });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html">logger.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html">see it live also</a>).</p>
 </div>
 
@@ -313,7 +313,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
     i32.const 2  ;; pass length 2 to log
     call $log))</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Above, note the double semi-colon syntax (<code>;;</code>) for allowing comments in WebAssembly files.</p>
 </div>
 
@@ -328,7 +328,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
     obj.instance.exports.writeHi();
   });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find the full source on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html">logger2.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html">also see it live</a>).</p>
 </div>
 
@@ -371,7 +371,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
  <li>The <code>(i32.const 0)</code> value inside the <code>elem</code> section is an offset — this needs to be declared at the start of the section, and specifies at what index in the table function references start to be populated. Here we’ve specified 0, and a size of 2 (see above), so we can fill in two references at indexes 0 and 1. If we wanted to start writing our references at offset 1, we’d have to write <code>(i32.const 1)</code>, and the table size would have to be 3.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Uninitialized elements are given a default throw-on-call value.</p>
 </div>
 
@@ -442,11 +442,11 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
     console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
   });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can find this example on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html">wasm-table.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html">see it live also</a>).</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Just like Memory, Tables can also be created from JavaScript (see <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table">WebAssembly.Table()</a></code>) as well as imported to/from another wasm module.</p>
 </div>
 
@@ -495,7 +495,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
  <li>When called, <code>shared0func</code> loads the <code>42</code> we stored in memory using the <code>i32.store</code> command in <code>shared1.wat</code>.</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:</p>
 
 <pre class="brush: wasm; no-line-numbers notranslate" style="margin-bottom: 0;">(i32.store (i32.const 0) (i32.const 42))
@@ -522,7 +522,7 @@ Promise.all([
 
 <p>Each of the modules that is being compiled can import the same memory and table objects and thus share the same linear memory and table "address space".</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html">shared-address-space.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html">see it live also</a>).</p>
 </div>
 
@@ -542,7 +542,7 @@ Promise.all([
  <li><code>table.init</code>: Copy a region from an element segment.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find more information in the <a href="https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md">Bulk Memory Operations and Conditional Segment Initialization</a> proposal.</p>
 </div>
 
@@ -555,7 +555,7 @@ Promise.all([
  <li>A number of new instructions that allow wasm modules to directly manipulate {{anch("WebAssembly tables")}}, rather than having to do it via the JavaScript API.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <a href="https://rustwasm.github.io/docs/wasm-bindgen/">wasm-bindgen</a> documentation contains some useful information on how to take advantage of <code>externref</code> from Rust.</p>
 </div>
 
@@ -604,7 +604,7 @@ Promise.all([
 
 <p>Unlike unshared memories, shared memories must specify a "maximum" size, in both the JavaScript API constructor and wasm text format.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find a lot more details in the <a href="https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md">Threading proposal for WebAssembly</a>.</p>
 </div>
 
@@ -612,7 +612,7 @@ Promise.all([
 
 <p>A number of new wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can <a href="https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses">find them listed here</a>. These instructions are allowed on non-shared memories as of Firefox 80.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <a href="https://emscripten.org/docs/porting/pthreads.html">Emscripten Pthreads support page</a> shows how to take advantage of this new functionality from Emscripten.</p>
 </div>
 

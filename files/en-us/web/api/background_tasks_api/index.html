@@ -14,7 +14,7 @@ tags:
 
 <p>The <strong>Cooperative Scheduling of Background Tasks API</strong> (also referred to as the Background Tasks API or simply the <code>requestIdleCallback()</code> API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>The {{domxref("Window")}} interface is also augmented by this API to offer the new {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} and {{domxref("window.cancelIdleCallback", "cancelIdleCallback()")}} methods.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In this example, we'll take a look at how you can use {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} to run time-consuming, low-priority tasks during time the browser would otherwise be idle. In addition, this example demonstrates how to schedule updates to the document content using {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
 
@@ -91,7 +91,7 @@ tags:
 <p>In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID <code>"Container"</code>) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID <code>"logBox"</code>), which is used to display textual output.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;
-  Demonstration of using &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"&gt;
+  Demonstration of using &lt;a href="/en-US/docs/Web/API/Background_Tasks_API"&gt;
   cooperatively scheduled background tasks&lt;/a&gt; using the &lt;code&gt;requestIdleCallback()&lt;/code&gt;
   method.
 &lt;/p&gt;
@@ -477,8 +477,6 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 <p>Each task is then enqueued by calling <code>enqueueTask()</code>, passing in <code>logTaskHandler</code><code>()</code> as the handler function and the <code>taskData</code> object as the object to pass into the function when it's called.</p>
 
-<dl>
-</dl>
 
 <h3 id="Result">Result</h3>
 

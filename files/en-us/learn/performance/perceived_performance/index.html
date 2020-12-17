@@ -26,7 +26,7 @@ tags:
  </tbody>
 </table>
 
-<p>Performance is about user perception. How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the <a href="/en-US/docs/Glossary/Main_thread">main thread</a>), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.</p>
+<p>Performance is about user perception. How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or inavailability of the <a href="/en-US/docs/Glossary/Main_thread">main thread</a>), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.</p>
 
 <h2 id="Perceived_performance">Perceived performance</h2>
 
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="Minimize_initial_load">Minimize initial load</h3>
 
-<p>To improve perceived performance, minimize the original page load. In other words, first download everything you're going to actually show, but only the stuff you are actually using, then download the rest. If you're downloading all the assets in the end, the weight of all your assets hasn't improved -- in fact, you may need to add some code -- but because the download of non-immediately necessary assets are delayed in a manner that is not perceptible the the user, the user will feel like the download was faster. </p>
+<p>To improve perceived performance, minimize the original page load. In other words, first download everything you're going to actually show, but only the stuff you are actually using, then download the rest. If you're downloading all the assets in the end, the weight of all your assets hasn't improved -- in fact, you may need to add some code -- but because the download of non-immediately necessary assets are delayed in a manner that is not perceptible the user, the user will feel like the download was faster. </p>
 
 <p>To <a href="https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/">minimize the assets</a> required for initial load, separate interactive functionality from content so that required content  -- the text, styles, and images visible at initial load -- can be loaded first. Delay, or lazy load, the rest of the assets.</p>
 

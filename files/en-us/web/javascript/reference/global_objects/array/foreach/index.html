@@ -114,7 +114,7 @@ console.log(sum)
 <p>This algorithm is exactly the one specified in ECMA-262, 5<sup>th</sup> edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that <code><var>fun</var>.call</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}.</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.18
-// Reference: http://es5.github.io/#x15.4.4.18
+// Reference: https://es5.github.io/#x15.4.4.18
 
 if (!Array.prototype['forEach']) {
 
@@ -133,7 +133,7 @@ if (!Array.prototype['forEach']) {
     var len = O.length &gt;&gt;&gt; 0;
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
+    // See: https://es5.github.com/#x9.11
     if (typeof callback !== "function") { throw new TypeError(callback + ' is not a function'); }
 
     // 5. If thisArg was supplied, let T be thisArg; else let
@@ -173,7 +173,7 @@ if (!Array.prototype['forEach']) {
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="sparseArray" name="sparseArray">No operation for uninitialized values (sparse arrays)</h3>
+<h3 id="sparseArray">No operation for uninitialized values (sparse arrays)</h3>
 
 <pre class="brush: js notranslate">const arraySparse = [1,3,,7]
 let numCallbackRuns = 0
@@ -209,7 +209,7 @@ items.forEach(function(item){
 
 <h3 id="Printing_the_contents_of_an_array">Printing the contents of an array</h3>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> In order to display the content of an array in the console, you can use {{domxref("Console/table", "console.table()")}}, which prints a formatted version of the array.</p>
 
 <p>The following example illustrates an alternative approach, using <code>forEach()</code>.</p>
@@ -295,9 +295,9 @@ words.forEach(function(word) {
   if (word === 'two') {
     words.shift() //'one' will delete from array
   }
-}) // one // two ​​​​// four
+}) // one // two // four
 
-console.log(words);  //['two', 'three',​​​​ 'four']
+console.log(words);  //['two', 'three', 'four']
 
 </pre>
 

@@ -11,7 +11,7 @@ tags:
 
 <p>During the build process, various <em>chrome</em> files are collected into dist/bin/chrome. These files define the user interface of the application, and include <a href="/en/XUL" title="en/XUL">XUL</a>, <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>, DTDs (for <a href="/en/Localization" title="en/Localization">localization</a>), CSS, XBL, and images. The build system automates the process of building the chrome files through manifest files named <code>jar.mn</code>.</p>
 
-<h3 id="Chrome_packaging_formats" name="Chrome_packaging_formats">Chrome packaging formats</h3>
+<h3 id="Chrome_packaging_formats">Chrome packaging formats</h3>
 
 <p>There are different formats that chrome files can take. Each has its advantages and disadvantages:</p>
 
@@ -42,11 +42,11 @@ tags:
 
 <p>When building Mozilla, you can specify the chrome packaging format using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Build Configurator</a> or manually using the configure flag <code>--enable-chrome-format=(jar|flat|symlink)</code></p>
 
-<h3 id="The_jar.mn_format" name="The_jar.mn_format">The <em>jar.mn</em> format</h3>
+<h3 id="The_jar.mn_format">The <em>jar.mn</em> format</h3>
 
 <p>See the <a href="https://firefox-source-docs.mozilla.org/build/buildsystem/jar-manifests.html">in-tree docs</a> for the file format.</p>
 
-<h3 id="Structure_of_JAR_files" name="Structure_of_JAR_files">Structure of JAR files</h3>
+<h3 id="Structure_of_JAR_files">Structure of JAR files</h3>
 
 <p>The internal structure of jar files is consistent, to allow for easy debugging. This allows us to inspect jar files (eventually) to determine what they contain, and easily rearrange packages for different product releases. For example, one product might want to integrate the content, skin and locale for its chrome into a single package (e.g. chatzilla), whereas another product might want to include the content of the first product in its content jar file, but factor off the skins in to separate jar files for extensibility.</p>
 
@@ -66,7 +66,7 @@ tags:
  <li><span class="nowiki"><code>chrome://package-name/locale/&lt;path&gt;</code></span></li>
 </ul>
 
-<h3 id="contents.rdf_and_the_Chrome_Registry" name="contents.rdf_and_the_Chrome_Registry">contents.rdf and the Chrome Registry</h3>
+<h3 id="contents.rdf_and_the_Chrome_Registry">contents.rdf and the Chrome Registry</h3>
 
 <p>Merely putting XUL files into JARs does not mean that these files can be accessed from a <span class="nowiki"><code>chrome://</code></span> URI. You also need to let the chrome registry know about your files. This is done using <a href="/en/RDF" title="en/RDF">RDF</a> and a special file named <code>contents.rdf</code>. Unfortunately, the RDF schema for <code>contents.rdf</code> is not really documented. The best way to learn it is to copy an existing example:</p>
 
@@ -134,7 +134,7 @@ tags:
 </pre>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): Warren Harris</li>

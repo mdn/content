@@ -141,7 +141,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dd>
  <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store</pre>
 
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p>The <code>no-store</code> directive will prevent a new resource being cached, but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request. Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
 
  <pre class="syntaxbox notranslate">Cache-Control: no-store, max-age=0

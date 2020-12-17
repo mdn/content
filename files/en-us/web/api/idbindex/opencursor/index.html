@@ -24,7 +24,7 @@ tags:
  <li>A <a href="/en/IndexedDB/IDBSuccessEvent" title="en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the result object.
   <ul>
    <li>If at least one record matches the key range, then the <code>result</code> property of the event is set to the new {{domxref("IDBCursorWithValue")}} object; the <code><a href="/en/IndexedDB/IDBCursor#attr_value" title="en/IndexedDB/IDBCursor#attr value">value</a></code> of the cursor object is set to a structured clone of the referenced value.</li>
-   <li>If no records match the key range then then the <code>result</code> property of the event is set to <code>null</code>.</li>
+   <li>If no records match the key range then the <code>result</code> property of the event is set to <code>null</code>.</li>
   </ul>
  </li>
 </ul>
@@ -87,7 +87,7 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
 
 <p>In the following example we open a transaction and an object store, then get the index <code>lName</code> from a simple contacts database. We then open a basic cursor on the index using <code>openCursor()</code> — this works the same as opening a cursor directly on an <code>ObjectStore</code> using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.</p>
 
-<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/IDBIndex-example">IDBIndex-example demo repo</a> (<a href="http://mdn.github.io/IDBIndex-example/">View the example live</a>.)</p>
+<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/IDBIndex-example">IDBIndex-example demo repo</a> (<a href="https://mdn.github.io/IDBIndex-example/">View the example live</a>.)</p>
 
 <pre class="brush: js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
@@ -119,8 +119,6 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
 
 <h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
 
-<dl>
-</dl>
 
 <table class="standard-table">
  <tbody>
@@ -142,7 +140,7 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
@@ -159,5 +157,5 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

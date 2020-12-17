@@ -11,7 +11,7 @@ tags:
 
 <p>The <strong><code>Connection</code></strong> general header controls whether or not the network connection stays open after the current transaction finishes. If the value sent is <code>keep-alive</code>, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Connection-specific header fields such as {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>. Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2 spec requirements and won’t load any response which contains them.</p>
 </div>
 

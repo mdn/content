@@ -58,7 +58,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/relationship/writing-modes.html", '100%', 360)}} </p>
 
-<p>Note that <code>sideways-rl</code> and <code>sideways-lr</code> have support only in Firefox currently. There are also some known issues with regard to <code>writing-mode</code> and flexbox. You can see more information on browser support in the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">MDN documentation for writing-mode</a>. However if you are planning on using writing modes in your layout, carefully testing the results is advisable — not least because it would be easy to make things hard to read!</p>
+<p>Note that <code>sideways-rl</code> and <code>sideways-lr</code> have support only in Firefox currently. There are also some known issues with regard to <code>writing-mode</code> and flexbox. You can see more information on browser support in the <a href="/en-US/docs/Web/CSS/writing-mode">MDN documentation for writing-mode</a>. However if you are planning on using writing modes in your layout, carefully testing the results is advisable — not least because it would be easy to make things hard to read!</p>
 
 <p>Note that you would not normally use CSS and the <code>writing-mode</code> property to change an entire document to another writing mode. This would be done via HTML, by adding a <code>dir</code> and <code>lang</code> attribute to the <code>html</code> element to indicate the document language and default text direction. This would mean that the document would display correctly even if CSS did not load.</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.</p>
 
-<p>For more comparisons of grid and flexbox see the article <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship of Grid Layout to other layout methods</a>. This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.</p>
+<p>For more comparisons of grid and flexbox see the article <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship of Grid Layout to other layout methods</a>. This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.</p>
 
 <h2 id="Flexbox_and_display_contents">Flexbox and display: contents</h2>
 
@@ -117,7 +117,7 @@ tags:
 <p>Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.</p>
 
 <div class="warning">
-<p><strong>Warning</strong>: Current implementations in most browsers will remove any element with <code>display: contents</code> from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#display_contents"><code>display: contents</code></a>.</p>
+<p><strong>Warning</strong>: Current implementations in most browsers will remove any element with <code>display: contents</code> from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see <a href="/en-US/docs/Web/CSS/display#display_contents"><code>display: contents</code></a>.</p>
 </div>
 
 <p>Also, having removed the box you cannot then use it to — for example — add a background colour behind the nested sub children. If you remove <code>display: contents</code> in this live example you will see that the direct child we are removing has an orange background colour. This also disappears when the box disappears. </p>

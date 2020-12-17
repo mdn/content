@@ -73,7 +73,7 @@ list-style: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Safari has an issue whereby unordered lists with a <code>list-style</code> value of <code>none</code> applied to them will not be recognized as a list in the accessibility tree. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">pseudo-content</a> before each list item to ensure the list is recognized properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+<p>Safari has an issue whereby unordered lists with a <code>list-style</code> value of <code>none</code> applied to them will not be recognized as a list in the accessibility tree. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/en-US/docs/Web/CSS/content">pseudo-content</a> before each list item to ensure the list is recognized properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
 
 <pre class="brush: css notranslate">ul {
   list-style: none;
@@ -86,7 +86,7 @@ ul li::before {
 
 <ul>
  <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 

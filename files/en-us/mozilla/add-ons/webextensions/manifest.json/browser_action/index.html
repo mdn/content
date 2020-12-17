@@ -78,7 +78,7 @@ tags:
 
     <p>The <a href="https://github.com/mdn/webextensions-examples/tree/master/latest-download">latest-download</a> example extension uses <code>browser_style</code> in its popup.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p>Setting <code>browser_style</code> to <code>true</code> prevents users from selecting text in an extension's popup or sidebar content. This is normal behavior. You can't select parts of the UI in the browser. However, You can work around this limitation to allow your users to select text in two ways:</p>
 
     <ol>
@@ -142,7 +142,7 @@ tags:
    <td>
     <p>The path to an HTML file containing the specification of the popup.</p>
 
-    <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page. However, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt; </a></code>must have <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">src</a></code> attribute to load a file. Don't use <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> with embedded code, because you'll get a confusing Content Violation Policy error.</p>
+    <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page. However, <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt; </a></code>must have <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code> attribute to load a file. Don't use <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> with embedded code, because you'll get a confusing Content Violation Policy error.</p>
 
     <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
 
@@ -159,7 +159,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><a id="theme_icons" name="theme_icons"><code>theme_icons</code></a></td>
+   <td><a id="theme_icons"><code>theme_icons</code></a></td>
    <td><code>Array</code></td>
    <td>
     <p>This property enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text.</p>

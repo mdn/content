@@ -14,14 +14,14 @@ tags:
 
 <p>The <code><strong>fullScreen</strong></code> property of the <code>Window</code> interface indicates whether the window is displayed in full screen mode or not.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>isInFullScreen</var> = <var>windowRef</var>.fullScreen;
 </pre>
 
 <p>With chrome privileges, the property is read-write, otherwise it is read-only. Bear in mind that if you try to set this property without chrome privileges, it will not throw an exception and instead just silently fail. This is to prevent scripts designed to set this property in Internet Explorer from breaking.</p>
 
-<h3 id="Return_Value" name="Return_Value">Return value</h3>
+<h3 id="Return_Value">Return value</h3>
 
 <dl>
  <dt><code>isInFullScreen</code></dt>
@@ -33,7 +33,7 @@ tags:
  <li><code>false</code>: The window is not in full screen mode.</li>
 </ul>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <ul>
  <li>Switching between regular window and full screen will fire the "resize" event on the corresponding window.</li>

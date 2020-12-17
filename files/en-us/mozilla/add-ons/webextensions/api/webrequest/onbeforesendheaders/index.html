@@ -18,9 +18,9 @@ tags:
 
 <p>To have the request headers passed into the listener along with the rest of the request data, pass <code>"requestHeaders"</code> in the <code>extraInfoSpec</code> array.</p>
 
-<p>To modify the headers synchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse" title='An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.'><code>BlockingResponse</code></a> with a property named <code>requestHeaders</code>, whose value is the set of request headers to send.</p>
+<p>To modify the headers synchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse" title='An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.'><code>BlockingResponse</code></a> with a property named <code>requestHeaders</code>, whose value is the set of request headers to send.</p>
 
-<p>To modify the headers asynchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>.</p>
+<p>To modify the headers asynchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>.</p>
 
 <p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
 

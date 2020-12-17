@@ -13,12 +13,12 @@ tags:
 
 <p>When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the third parameter, and the object method <code>acceptNode(<em>node</em>)</code> is called on every single node to determine whether or not to accept it. This function should return the constant <code>NodeFilter.FILTER_ACCEPT</code> for cases when the node should be accepted and <code>NodeFilter.FILTER_REJECT</code> for cases when the node should be rejected.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">const nodeIterator = document.createNodeIterator(
     document.body,

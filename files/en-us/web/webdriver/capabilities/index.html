@@ -10,7 +10,7 @@ tags:
 
 <p>When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are <a href="#list-of-capabilities">standard and shared between all browsers</a>, but the set may also contain <a href="#vendor-specific-capabilities">browser-specific capabilities</a> and these are always prefixed.</p>
 
-<h2 id="Capabilities_negotiation"><a id="capabilities-negotiation" name="capabilities-negotiation">Capabilities negotiation</a></h2>
+<h2 id="Capabilities_negotiation"><a id="capabilities-negotiation">Capabilities negotiation</a></h2>
 
 <p>Capabilities can be used to require a driver that supports a certain subset of features. This can be used to require certain browser features, such as the <a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect">ability to resize the window dimensions</a>, but is also used in distributed environments to select a particular browser configuration from a matrix of choices.</p>
 
@@ -98,29 +98,29 @@ tags:
   }
 }</pre>
 
-<h2 id="List_of_capabilities"><a id="list-of-capabilities" name="list-of-capabilities">List of capabilities</a></h2>
+<h2 id="List_of_capabilities"><a id="list-of-capabilities">List of capabilities</a></h2>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserName" id="browserName" name="browserName">browserName</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserName" id="browserName">browserName</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserVersion" id="browserVersion" name="browserVersion">browserVersion</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserVersion" id="browserVersion">browserVersion</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/platformName" id="platformName" name="platformName">platformName</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/platformName" id="platformName">platformName</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts" id="acceptInsecureCerts" name="acceptInsecureCerts">acceptInsecureCerts</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts" id="acceptInsecureCerts">acceptInsecureCerts</a></code></dt>
  <dd>The <code>acceptInsecureCerts</code> capability communicates whether expired or invalid <a href="/en-US/docs/Glossary/TLS">TLS certificates</a> are checked when <a href="/en-US/docs/Web/WebDriver/Commands/NavigateTo">navigating</a>. If the capability is false, an <a href="/en-US/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate</a> error will be returned as navigation encounters domains with certificate problems. Otherwise, self-signed or otherwise invalid certificates will be implicitly trusted by the browser on navigation. The capability has effect for the lifetime of the session.</dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/pageLoadStrategy" id="pageLoadStrategy" name="pageLoadStrategy">pageLoadStrategy</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/pageLoadStrategy" id="pageLoadStrategy">pageLoadStrategy</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/proxy" id="proxy" name="proxy">proxy</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/proxy" id="proxy">proxy</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect" id="setWindowRect" name="setWindowRect">setWindowRect</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect" id="setWindowRect">setWindowRect</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/timeouts" id="timeouts" name="timeouts">timeouts</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/timeouts" id="timeouts">timeouts</a></code></dt>
  <dd></dd>
- <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/unhandledPromptBehavior" id="unhandledPromptBehavior" name="unhandledPromptBehavior">unhandledPromptBehavior</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/unhandledPromptBehavior" id="unhandledPromptBehavior">unhandledPromptBehavior</a></code></dt>
 </dl>
 
-<h2 id="Vendor-specific_capabilities"><a id="vendor-specific-capabilities" name="vendor-specific-capabilities">Vendor-specific capabilities</a></h2>
+<h2 id="Vendor-specific_capabilities"><a id="vendor-specific-capabilities">Vendor-specific capabilities</a></h2>
 
 <p>In addition to the <a href="#list-of-capabilities">standard capabilities</a> WebDriver allows third-parties to <em>extend</em> the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.</p>
 
@@ -129,7 +129,7 @@ tags:
  <li><a href="/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions">Chrome capabilities</a> (<code>goog:chromeOptions</code>)</li>
 </ul>
 
-<h2 id="Legacy_capabilities"><a id="Legacy" name="Legacy">Legacy capabilities</a></h2>
+<h2 id="Legacy_capabilities"><a id="Legacy">Legacy capabilities</a></h2>
 
 <p>The majority of Selenium clients use <code>desiredCapabilities</code> and <code>requiredCapabilities</code> to configure the new session. These are very similar to <code>firstMatch</code> and <code>alwaysMatch</code> described above. Some drivers support these legacy capabilities, but they are deprecated and should be avoided.</p>
 

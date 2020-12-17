@@ -9,7 +9,7 @@ tags:
 
 <p>If you are trying to compile 32-bit Firefox on a 64-bit Linux OS, you don't need to do a full cross-compile... see <a href="/en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS" title="en/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS">these simpler instructions</a>.</p>
 
-<h3 id="Setting_up_a_cross-compilation_build_environment" name="Setting_up_a_cross-compilation_build_environment">Setting up a cross-compilation build environment</h3>
+<h3 id="Setting_up_a_cross-compilation_build_environment">Setting up a cross-compilation build environment</h3>
 
 <p>This isn't the end-all-be-all guide to setting up a cross-compilation build environment. WFM; YMMV. (If you have to ask "where do I get... or why doesn't 'X' work", then this isn't for you.)</p>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>You should add <code>${xprefix}/bin</code> to your PATH.</p>
 
-<h4 id="Cross-compile_binutils" name="Cross-compile_binutils">Cross-compile binutils (if needed)</h4>
+<h4 id="Cross-compile_binutils">Cross-compile binutils (if needed)</h4>
 
 <p>Download binutils and apply the <a class="external" href="http://www-archive.mozilla.org/build/binutils-cross-libpath.patch">binutils-cross-libpath.patch</a>, which will make installing prebuilt libraries easier. Run configure using the following command:</p>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>Build and install the package on the system.</p>
 
-<h4 id="Install_target_system_headers_and_libraries" name="Install_target_system_headers_and_libraries">Install target system headers and libraries</h4>
+<h4 id="Install_target_system_headers_and_libraries">Install target system headers and libraries</h4>
 
 <p>GCC and binutils will expect to find the system headers and libraries under ${xprefix}/${xtarget_arch} so you will need to copy those files from the target system, preserving directory structure and modify any scripts as necessary. You should copy over the X11 lib and include dirs as well.</p>
 
@@ -51,7 +51,7 @@ tags:
  <br>
  To setup multi architecture support on Debian, see <a href="https://wiki.debian.org/Multiarch/HOWTO">https://wiki.debian.org/Multiarch/HOWTO</a> for more details.</p>
 
-<h4 id="Cross-compile_gcc" name="Cross-compile_gcc">Cross-compile gcc (if needed)</h4>
+<h4 id="Cross-compile_gcc">Cross-compile gcc (if needed)</h4>
 
 <p>Some distributions already have cross compiling support such as g++-arm-linux-gnuabihf on Debian/sid.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>Build and install the package on the system.</p>
 
-<h4 id="Verification" name="Verification">Verification</h4>
+<h4 id="Verification">Verification</h4>
 
 <p>At this point, your cross-compilation environment should be completely set up. You should verify that it works. Start with <a class="link-ftp" href="ftp://ftp.gnu.org/gnu/hello/">Hello World</a> and work your way up to a basic X11-based application.</p>
 
@@ -73,11 +73,11 @@ tags:
 <pre class="eval">env AR=${xtarget_arch}-ar CC=${xtarget_arch}-gcc CXX=${xtarget_arch}-g++ LD=${xtarget_arch}-ld AS=${xtarget_arch}-as ./configure --prefix=${xprefix} --target=${xtarget_arch}
 </pre>
 
-<h4 id="Cross-compile_glib.2C_libIDL__gtk.2B" name="Cross-compile_glib.2C_libIDL_&amp;_gtk.2B">Cross-compile glib, gtk+ and etc</h4>
+<h4 id="Cross-compile_glib.2C_libIDL__gtk.2B">Cross-compile glib, gtk+ and etc</h4>
 
 <p>This step is only necessary if you did not install pre-built versions of these packages. Use the steps outlined above to build and install them.</p>
 
-<h3 id="Cross-compiling_the_lizard" name="Cross-compiling_the_lizard">Cross-compiling the lizard</h3>
+<h3 id="Cross-compiling_the_lizard">Cross-compiling the lizard</h3>
 
 <p>Assuming that you properly setup your cross-compilation build environment as outlined above, cross-compiling Mozilla is fairly straightforward although NSS isn't properly setup to cross-compile ({{ Bug(104541) }}).</p>
 
@@ -113,7 +113,7 @@ ac_add_options --enable-application=browser
 </pre>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): <a class="link-mailto" href="mailto:seawood@netscape.com">Chris Seawood</a></li>

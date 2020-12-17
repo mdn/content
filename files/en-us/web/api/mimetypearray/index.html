@@ -31,7 +31,7 @@ tags:
 
 <p>The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.</p>
 
-<pre class="brush: js">var mimeTypes = navigator.MimeType;
+<pre class="brush: js">var mimeTypes = navigator.mimeTypes;
 var flashPlugin = mimeTypes['video/x-flv'];
 if (typeof flashPlugin === "undefined") {
   var vid = document.createElement('video');

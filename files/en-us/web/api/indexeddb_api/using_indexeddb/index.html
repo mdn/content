@@ -23,7 +23,7 @@ tags:
 
 <p>For the reference documentation on the IndexedDB API, see the <a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
 
-<h2 id="pattern" name="pattern">Basic pattern</h2>
+<h2 id="pattern">Basic pattern</h2>
 
 <p>The basic pattern that IndexedDB encourages is the following:</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>With these big concepts under our belts, we can get to more concrete stuff.</p>
 
-<h2 id="open" name="open">Creating and structuring the store</h2>
+<h2 id="open">Creating and structuring the store</h2>
 
 <h3 id="Using_an_experimental_version_of_IndexedDB">Using an experimental version of IndexedDB</h3>
 
@@ -543,7 +543,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>Please see "<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
+<p>Please see "<a href="/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
 
 <h2 id="Version_changes_while_a_web_app_is_open_in_another_tab">Version changes while a web app is open in another tab</h2>
 
@@ -635,7 +635,7 @@ function useDatabase(db) {
 <p><strong>Note</strong>: This feature is currently hidden behind a flag — to enable it and experiment, go to <a>about:config</a> and enable <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">Full IndexedDB example</h2>
+<h2 id="Full_IndexedDB_example">Full IndexedDB example</h2>
 
 <h3 id="HTML_Content">HTML Content</h3>
 
@@ -1312,7 +1312,7 @@ input {
 
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>window.indexedDB.open()</code> is asynchronous; the method will finish running long before the <code>success</code> event is fired. This means that a function (e.g. <code>openDb()</code>) that calls <code>open()</code> and <code>onsuccess</code> will return before the <code>onsuccess</code> handler has run. This issue is also true of other request methods such as <code>transaction()</code> and <code>get()</code>.</p>
 </div>
 

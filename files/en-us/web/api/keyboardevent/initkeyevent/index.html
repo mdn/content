@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
 
-<p>The <strong><code>KeyboardEvent.initKeyEvent()</code></strong> method is used to initialize the value of an event created using {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code>. Events initialized in this way must have been created with the {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code> method. <code>initKeyEvent()</code> must be called to set the event before it is <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.dispatchEvent">dispatched</a>.</p>
+<p>The <strong><code>KeyboardEvent.initKeyEvent()</code></strong> method is used to initialize the value of an event created using {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code>. Events initialized in this way must have been created with the {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code> method. <code>initKeyEvent()</code> must be called to set the event before it is <a href="/en-US/docs/Web/API/EventTarget.dispatchEvent">dispatched</a>.</p>
 
 <div class="note">
 <p><strong>Do not use this method anymore, use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead.</strong><br>
@@ -19,7 +19,7 @@ tags:
  This method is based on early drafts of {{SpecName("DOM2 Events")}} and is implemented in Gecko-based browsers; other browsers implemented {{domxref("KeyboardEvent.initKeyboardEvent")}} based on early drafts of {{SpecName("DOM3 Events")}}. Favor the modern constructor structure as the only cross-browser way of building events.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>event</em>.initKeyEvent (<em>type</em>, <em>bubbles</em>, <em>cancelable</em>, <em>viewArg</em>,
                     <em>ctrlKeyArg</em>, <em>altKeyArg</em>, <em>shiftKeyArg</em>, <em>metaKeyArg</em>,
@@ -51,7 +51,7 @@ tags:
  <dd>Is a <code>unsigned long</code> representingthe Unicode character associated with the depressed key otherwise <code>0</code>.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
@@ -69,7 +69,7 @@ event.initKeyEvent("keypress",       // typeArg,
 document.getElementById('blah').dispatchEvent(event);
 </pre>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <p>This implementation of keyboard events is based on the key events spec in the <a class="external" href="http://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions of DOM 2 Events</a>, later removed from that spec.</p>
 

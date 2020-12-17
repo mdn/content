@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of <a href="/en-US/docs/Web/CSS/CSS_Reference#Selectors">CSS selectors</a>.</p>
+<p class="summary"><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of <a href="/en-US/docs/Web/CSS/Reference#Selectors">CSS selectors</a>.</p>
 
 <h2 id="How_is_specificity_calculated">How is specificity calculated?</h2>
 
 <p>Specificity is a weight that is applied to a given CSS declaration, determined by the number of each <a href="#Selector_Types">selector type</a> in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules, <a href="#Directly_targeted_elements_vs._inherited_styles">directly targeted elements</a> will always take precedence over rules which an element inherits from its ancestor.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> <a href="#Tree_proximity_ignorance">Proximity of elements</a> in the document tree has no effect on the specificity.</p>
 </div>
 
@@ -171,7 +171,7 @@ div:not(.outer) p {
 <p>{{EmbedLiveSample("The_not_exception-example")}}</p>
 </div>
 
-<h3 id="The_where_exception" name="The_where_exception">The :where() exception {{Experimental_Inline}}</h3>
+<h3 id="The_where_exception">The :where() exception {{Experimental_Inline}}</h3>
 
 <p>{{SeeCompatTable}}</p>
 

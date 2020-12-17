@@ -22,7 +22,7 @@ tags:
 <p><strong>Warning</strong><strong>:</strong> This API was never accepted and never became standardized. Various browsers implement pieces of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (otherwise known as the File System API) but you should try to avoid using it.</p>
 </div>
 
-<h2 id="basic" name="basic">Basic concepts</h2>
+<h2 id="basic">Basic concepts</h2>
 
 <p>The <code>FileSystemEntrySync</code> interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: <code><a href="#toURL">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
 
@@ -84,12 +84,12 @@ tags:
    <td>True if FileSystemEntrySync is a directory.</td>
   </tr>
   <tr>
-   <td><a id="attr_isfile" name="attr_isfile"><code>isFile</code></a></td>
+   <td><a id="attr_isfile"><code>isFile</code></a></td>
    <td><code>readonly boolean</code></td>
    <td>True if the FileSystemEntrySync is a file.</td>
   </tr>
   <tr>
-   <td><a id="attr_name" name="attr_name"><code>name</code></a></td>
+   <td><a id="attr_name"><code>name</code></a></td>
    <td><code>readonly DOMString</code></td>
    <td>The name of the entry, excluding the path leading to it.</td>
   </tr>
@@ -98,7 +98,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="getMetadata" name="getMetadata">getMetadata()</h3>
+<h3 id="getMetadata">getMetadata()</h3>
 
 <p>Look up metadata about this entry. [ todo: specify what kind of metadata ]</p>
 
@@ -140,7 +140,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="moveTo" name="moveTo">moveTo()</h3>
+<h3 id="moveTo">moveTo()</h3>
 
 <p>Move an entry to a different location on the file system. Moving a file over an existing file replaces that existing file. Moving a directory over an existing empty directory replaces that directory. [todo: What if the directory is not empty? ]</p>
 
@@ -213,7 +213,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="copyTo" name="copyTo">copyTo()</h3>
+<h3 id="copyTo">copyTo()</h3>
 
 <p>Copy an entry to a different location on the file system. You cannot copy an entry inside itself if it is a directory, nor can you copy it into its parent without providing a new name. Directory copies are always recursive—that is, all contents of the directory are copied. You cannot change this behavior. Files are simply duplicated.</p>
 
@@ -279,7 +279,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="toURL" name="toURL">toURL()</h3>
+<h3 id="toURL">toURL()</h3>
 
 <p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a class="external" href="/en/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a class="external" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a>.</code></p>
 
@@ -305,7 +305,7 @@ tags:
 
 <p>None</p>
 
-<h3 id="remove" name="remove">remove()</h3>
+<h3 id="remove">remove()</h3>
 
 <p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
 
@@ -351,7 +351,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="getParent" name="getParent">getParent()</h3>
+<h3 id="getParent">getParent()</h3>
 
 <p>Look up the parent <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
 

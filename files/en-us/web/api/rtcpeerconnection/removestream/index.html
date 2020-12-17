@@ -17,12 +17,12 @@ tags:
 
 <p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to <code>"closed"</code>, an <code>InvalidStateError</code> is raised. If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to <code>"stable"</code>, the event {{event("negotiationneeded")}} is sent on the {{domxref("RTCPeerConnection")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><code><em>RTCPeerConnection</em>.removeStream(<em>mediaStream</em>);
 </code></pre>
 
-<h3 id="Example" name="Example">Parameters</h3>
+<h3 id="Example">Parameters</h3>
 
 <dl>
  <dt><code>mediaStream</code></dt>
@@ -33,7 +33,7 @@ tags:
 
 <p>{{jsxref("undefined")}}.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var pc, videoStream;
 navigator.getUserMedia({video: true}, function(stream) {

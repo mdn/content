@@ -37,7 +37,7 @@ tags:
 
 <p>Unicode code points range from <code>0</code> to <code>1114111</code> (<code>0x10FFFF</code>). The first 128 Unicode code points are a direct match of the ASCII character encoding. (For information on Unicode, see the <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">JavaScript Guide</a>.)</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> <code>charCodeAt()</code> will always return a value that is less than <code>65536</code>. This is because the higher code points are represented by <em>a pair</em> of (lower valued) "surrogate" pseudo-characters which are used to comprise the real character.</p>
 
 <p>Because of this, in order to examine (or reproduce) the full character for individual character values of <code>65536</code> or greater, for such characters, it is necessary to retrieve not only <code>charCodeAt(<var>i</var>)</code>, but also <code>charCodeAt(<var>i</var>+1)</code> (as if manipulating a string with two letters), or to use <code>codePointAt(<var>i</var>)</code> instead. See examples 2 and 3 (below).</p>

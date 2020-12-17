@@ -16,7 +16,7 @@ tags:
 
 <p>Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,7 +34,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, one for each of the most recently closed tabs or windows in the current browsing session, up to {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} or the number included in the <code>filter</code> argument, whichever is smaller. The array is given in the reverse of the order in which tabs or windows were closed, so the most recently closed will be at index 0.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, one for each of the most recently closed tabs or windows in the current browsing session, up to {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} or the number included in the <code>filter</code> argument, whichever is smaller. The array is given in the reverse of the order in which tabs or windows were closed, so the most recently closed will be at index 0.</p>
 
 <p>If an error occurs, the promise will be rejected with an error message.</p>
 

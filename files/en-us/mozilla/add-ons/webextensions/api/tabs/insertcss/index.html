@@ -20,13 +20,13 @@ tags:
 
 <p>You can only inject CSS into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>: meaning, its scheme must be one of "http", "https", "file", "ftp". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
 </div>
 
 <p>The inserted CSS may be removed again by calling {{WebExtAPIRef("tabs.removeCSS()")}}.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (on Firefox only).</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (on Firefox only).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -70,7 +70,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Examples">Examples</h2>
 

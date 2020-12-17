@@ -84,7 +84,7 @@ tags:
 
 <p>If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form controls</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.</p>
 </div>
 
@@ -158,7 +158,7 @@ legend {
 
 <p>The {{HTMLElement("legend")}} element is very important for accessibility — it will be spoken by assistive technologies as part of the label of each form element inside the fieldset — but using a technique like the one above is fine. The legend contents will still be spoken in the same way; it is just the visual position that has changed.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You could also use the {{cssxref("transform")}} property to help you with positioning your <code>&lt;legend&gt;</code>. However, when you position it with for example a <code>transform: translateY();</code>, it moves but leaves an ugly gap in the <code>&lt;fieldset&gt;</code> border, which is not easy to get rid of.</p>
 </div>
 

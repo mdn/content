@@ -9,7 +9,7 @@ tags:
 ---
 <p>This subarticle shows how to define a page to delete <code>Author</code> objects.</p>
 
-<p>As discussed in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
+<p>As discussed in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a> section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an <code>Author</code> to be deleted if it is referenced by a <code>Book</code>). In terms of implementation this means that the form needs to confirm that there are no associated books before the author is deleted. If there are associated books, it should display them, and state that they must be deleted before the <code>Author</code> object can be deleted.</p>
 
 <h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
 

@@ -9,7 +9,11 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">December 15, 2020</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.</p>
+
+<div class="notecard note">
+<p class="summary"><strong>Note</strong>: See also <a href="https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/">And now for … Firefox 84</a> on Mozilla hacks</p>
+</div>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -73,6 +77,16 @@ tags:
 <h3 id="WebAssembly">WebAssembly</h3>
 
 <p><em>No changes.</em></p>
+
+<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+ <li>Added chrome scope support for <code>WebDriver:PerformActions</code> and <code>WebDriver:ReleaseActions</code> ({{bug(1365886)}}).</li>
+ <li>The new Fission-compatible API has been enabled by default now. To revert to the former API the <code>marionette.actors.enabled</code> preference has to be set to <code>false</code> ({{bug(1669169)}}).
+ <li>Fixed <code>WebDriver:SwitchToWindow</code> to always switch back to the top-level browsing context ({{bug(1305822)}}).</li>
+ <li>Improved browsing context checks for <code>WebDriver:SwitchToParentFrame</code> ({{bug(1671622)}}).</li>
+ <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 

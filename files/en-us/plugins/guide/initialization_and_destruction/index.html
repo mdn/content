@@ -20,7 +20,7 @@ tags:
 
 <p>This chapter ends with <a href="/en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example" title="en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example">Initialize and Shutdown Example</a>, which includes the <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> and <code><a href="/en/NP_Shutdown" title="en/NP_Shutdown">NP_Shutdown</a></code> methods.</p>
 
-<h3 id="Initialization" name="Initialization">Initialization</h3>
+<h3 id="Initialization">Initialization</h3>
 
 <p>The browser calls <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> when a plug-in is loaded and before the first instance is created. Use this function to allocate the memory and resources shared by all instances of your plug-in.</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>No plug-in API calls can take place in either direction until the initialization completes successfully, with the exception of the functions <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> and <code><a href="/en/NP_Shutdown" title="en/NP_Shutdown">NP_Shutdown</a></code>, which are not in the function tables. However, because <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> is called at the end of the initialization process, you can call other methods, such as <code><a class="internal" href="/en/NPN_MemAlloc" title="en/NPN MemAlloc">NPN_MemAlloc</a></code> and <code><a class="internal" href="/en/NPN_Status" title="en/NPN Status">NPN_Status</a></code>, from <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code>.</p>
 
-<h3 id="Instance_Creation" name="Instance_Creation">Instance Creation</h3>
+<h3 id="Instance_Creation">Instance Creation</h3>
 
 <p>After initialization, the plug-in instance is created. More than one instance of the same plug-in can exist if a single page contains multiple embedded plug-ins, or if several browser windows are open and display the same data type. At this point, a plug-in can call the <code><a href="/en/NPN_SetValue" title="en/NPN_SetValue">NPN_SetValue</a></code> function to specify whether it is windowed (the default) or windowless.</p>
 
@@ -86,7 +86,7 @@ argv = { "movie.avi", "100", "100", "true" }
 
 <p>The saved parameter allows an instance of a plug-in to save its data and, when the instance is destroyed, pass the data to the next instance of the plug-in at the same URL. The data is saved in the History list. As long as the plug-in still appears in this list, that saved data is associated with the page; any new instances receive this data.</p>
 
-<h3 id="Instance_Destruction" name="Instance_Destruction">Instance Destruction</h3>
+<h3 id="Instance_Destruction">Instance Destruction</h3>
 
 <p>Plug-in instances are created with <code><a href="/en/NPP_New" title="en/NPP_New">NPP_New</a></code> and destroyed with <code><a href="/en/NPP_Destroy" title="en/NPP_Destroy">NPP_Destroy</a></code>. The browser calls <code>NPP_Destroy</code> when a plug-in instance is deleted, usually because the user has left the page containing the instance, closed the window, or quit the application. If this is the last instance created by a plug-in, <code><a href="/en/NP_Shutdown" title="en/NP_Shutdown">NP_Shutdown</a></code> is called.</p>
 
@@ -125,7 +125,7 @@ strcpy((*save)-&gt;buf, myData);
 
 <p>If you allocate saved instance data in <code><a href="/en/NPP_Destroy" title="en/NPP_Destroy">NPP_Destroy</a></code>, be sure to allocate memory with this function, since the browser can delete the saved data with the equivalent of <code><a href="/en/NPN_MemAlloc" title="en/NPN_MemAlloc">NPN_MemAlloc</a></code> at any time.</p>
 
-<h3 id="Shutdown" name="Shutdown">Shutdown</h3>
+<h3 id="Shutdown">Shutdown</h3>
 
 <p>When the application no longer needs the plug-in, it is shut down and released. <code><a href="/en/NP_Shutdown" title="en/NP_Shutdown">NP_Shutdown</a></code> gives you an opportunity to delete data allocated in <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> to be shared by all instances of a plug-in. The browser calls the plug-in's <code>NP_Shutdown</code> function, which informs the plug-in that its library is about to be unloaded, and gives it a chance to cancel any outstanding I/O requests, delete threads it created, free any memory it allocated, and perform any other closing tasks.</p>
 
@@ -135,7 +135,7 @@ strcpy((*save)-&gt;buf, myData);
 
 <p>For an example that shows both the <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> and <code><a class="internal" href="/en/NP_Shutdown" title="en/NP Shutdown">NP_Shutdown</a></code> methods, see <a href="/en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example" title="en/Gecko_Plugin_API_Reference/Initialization_and_Destruction#Initialize_and_Shutdown_Example">Initialize and Shutdown Example</a>.</p>
 
-<h3 id="Initialize_and_Shutdown_Example" name="Initialize_and_Shutdown_Example">Initialize and Shutdown Example</h3>
+<h3 id="Initialize_and_Shutdown_Example">Initialize and Shutdown Example</h3>
 
 <p>This example demonstrates the use of the <code><a href="/en/NP_Initialize" title="en/NP_Initialize">NP_Initialize</a></code> and <code><a href="/en/NP_Shutdown" title="en/NP_Shutdown">NP_Shutdown</a></code> methods.</p>
 

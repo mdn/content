@@ -8,11 +8,11 @@ tags:
 ---
 <p><span class="comment">NOTE: Do not make substantive changes to this document without consulting Benjamin Smedberg &lt;<a class="link-mailto" href="mailto:benjamin@smedbergs.us" rel="freelink">benjamin@smedbergs.us</a>&gt; or one of the build-config peers.</span></p>
 
-<h3 id="Introduction" name="Introduction">Introduction</h3>
+<h3 id="Introduction">Introduction</h3>
 
 <p>This document is a guide to the prerequisite software for building Mozilla on Windows platforms on the 1.7 branch (Mozilla 1.7.*), the aviary branch (Firefox 1.0.*), the 1.8.0 branch (Firefox 1.5.0.*), and the 1.8 branch (Firefox 2). The build prerequisites for the Mozilla trunk are <a href="/en/Windows_Build_Prerequisites" title="en/Windows_Build_Prerequisites">here</a>.</p>
 
-<h3 id="Hardware_Requirements" name="Hardware_Requirements">Hardware Requirements</h3>
+<h3 id="Hardware_Requirements">Hardware Requirements</h3>
 
 <ul>
  <li>Pentium or equivalent processor, 266 MHz or better, 600MHz+ recommended</li>
@@ -21,9 +21,9 @@ tags:
  <li>Windows NT-class operating system (NT4.0, Win2k, Windows XP Professional and XP Home Edition)</li>
 </ul>
 
-<h3 id="Software_Requirements" name="Software_Requirements">Software Requirements</h3>
+<h3 id="Software_Requirements">Software Requirements</h3>
 
-<h4 id="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29" name="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29">GNU Tools for Microsoft Windows (Cygwin)</h4>
+<h4 id="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29">GNU Tools for Microsoft Windows (Cygwin)</h4>
 
 <p><a class="link-ftp" href="ftp://ftp.osuosl.org/pub/cygwin/setup.exe">Cygwin setup</a></p>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>You may use <a class="external" href="http://activestate.com/Products/ActivePerl/">ActivePerl from ActiveState</a> instead of the perl package in cygwin if you prefer.</p>
 
-<h4 id="make" name="make">make</h4>
+<h4 id="make">make</h4>
 
 <p>make 3.80 is no longer available in the cygwin installer (version 3.81 will <strong>not</strong> work), so get it from <a class="external" href="http://cygwin.paracoda.com/release/make/make-3.80-1.tar.bz2">paracoda</a> and place the included make.exe in your %cygwin%\bin\ directory, e.g. by starting a cygwin bash shell and executing</p>
 
@@ -61,7 +61,7 @@ tar xjf /cygdrive/c/where-your-download-is/make-3.80-1.tar.bz2
 bin/make.exe --version
 </pre>
 
-<h4 id="Netscape_wintools" name="Netscape_wintools">Netscape wintools</h4>
+<h4 id="Netscape_wintools">Netscape wintools</h4>
 
 <p><strong>If you are building the 1.8 branch or trunk</strong> (not 1.8.0 or any earlier branches, see below), you should use the special <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static</a> package which has a static version of the moztools, glib, and libIDL for all MSVC versions.</p>
 
@@ -86,15 +86,15 @@ bin/make.exe --version
 install.bat
 </pre>
 
-<h4 id="glib.2FlibIDL_for_MSVC7.2F7.1" name="glib.2FlibIDL_for_MSVC7.2F7.1">glib/libIDL for MSVC7/7.1</h4>
+<h4 id="glib.2FlibIDL_for_MSVC7.2F7.1">glib/libIDL for MSVC7/7.1</h4>
 
 <p>When building with MSVC++ 7 or 7.1, you must install pre-built versions of the glib &amp; libIDL libraries. The static moztools package includes these libraries, so you if you're using that, you don't need to do anything more to obtain them. Otherwise, you can find the prebuilt versions of these libraries on <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic">the mozilla.org FTP servers</a>. Do NOT install these libraries over your existing moztools directory; instead, pick a separate location and set GLIB_PREFIX, LIBIDL_PREFIX, and PATH appropriately in your environment (see below).</p>
 
-<h4 id="cvs" name="cvs">cvs</h4>
+<h4 id="cvs">cvs</h4>
 
 <p>To pull Mozilla sources, cvs version 1.11 or higher is required. Cygwin CVS is recommended. When installing CVS, you should also install an editor such as emacs.</p>
 
-<h4 id="Compiler_&amp;_Linker" name="Compiler_&amp;_Linker">Compiler &amp; Linker</h4>
+<h4 id="Compiler_&amp;_Linker">Compiler &amp; Linker</h4>
 
 <p>The standard compiler for Mozilla on Windows is Microsoft Visual C++, version 6. You must use either the Professional or Enterprise edition (the Visual C++ Processor Pack will not install with Visual C++ Standard). The GUI tools of the MSVC environment are not used, only the command-line tools CL (C/C++ compiler), LINK (linker), RC (resource compiler), and ML (assembler). <a class="external" href="http://msdn.microsoft.com/vstudio/downloads/updates/sp/vs6/sp5/default.aspx">Visual C++ Service Pack 5</a> and <a class="external" href="http://msdn.microsoft.com/vstudio/downloads/tools/ppack/">Visual C++ Processor Pack</a> are required. Service Pack 6 is not supported. MSVC version 5 is not supported.</p>
 
@@ -104,7 +104,7 @@ install.bat
 
 <p>It is also possible (but not recommended) to compile Mozilla using the mingw gcc compiler: see <a class="external" href="http://gemal.dk/mozilla/build.html">Compiling Mozilla with mingw</a>.</p>
 
-<h4 id="Platform_SDK" name="Platform_SDK">Platform SDK</h4>
+<h4 id="Platform_SDK">Platform SDK</h4>
 
 <p>If you are using at least Visual Studio .NET 2003, you already have all the necessary SDKs for building mozilla and can skip this requirement step. For older compilers, you need to download SDKs from Microsoft to have the GDI+ headers and library.</p>
 
@@ -116,17 +116,17 @@ install.bat
 
 <p>The build environment must be altered to pick up the SDK paths, see the examples below.</p>
 
-<h4 id="NSIS" name="NSIS">NSIS</h4>
+<h4 id="NSIS">NSIS</h4>
 
 <p>Some applications built from the Mozilla 1.8 branch use NSIS for their installer, notably the toolkit apps Firefox &amp; Thunderbird 2, and Sunbird 0.3. If you will need to build the installer then setup <a class="external" href="http://nsis.sf.net">NSIS</a> and ensure it is on the PATH. Version 2.17 or greater is recommended.  However note that NSIS version 2.30 and later will NOT work, as it handles language macros differently from earlier versions.</p>
 
-<h4 id="7-Zip_and_UPX" name="7-Zip_and_UPX">7-Zip and UPX</h4>
+<h4 id="7-Zip_and_UPX">7-Zip and UPX</h4>
 
 <p>If you want to make the highly compressed installer used by Firefox and Thunderbird, you need to install the <a class="external" href="http://www.7-zip.org/">7-zip</a> and <a class="external" href="http://upx.sourceforge.net/">UPX</a> utilities, make sure they are in your path, and export MOZ_INSTALLER_USE_7ZIP in your environment.</p>
 
 <p>The UPX package is available in <a class="external" href="http://cygwin.com/">Cygwin</a> setup under the Utils category. Do not use the DOS version, as it will not work.</p>
 
-<h3 id="Configure_the_Environment" name="Configure_the_Environment">Configure the Environment</h3>
+<h3 id="Configure_the_Environment">Configure the Environment</h3>
 
 <p>The build environment must be configured so that the mozilla build system can find the proper compiler and libraries. This is best done with a DOS batch script. Your build may fail if your paths have spaces or other special characters. Make sure that you did not install software into locations with such paths, except Visual C++.</p>
 
@@ -194,7 +194,7 @@ bash --login -i
 Fix above errors and restart with "make -f client.mk build"
 </pre>
 
-<h3 id="Common_Problems_and_Hints" name="Common_Problems_and_Hints">Common Problems and Hints</h3>
+<h3 id="Common_Problems_and_Hints">Common Problems and Hints</h3>
 
 <ul>
  <li>Check the <a href="/en/Mozilla_Build_FAQ" title="en/Mozilla_Build_FAQ">Mozilla Build Frequently Asked Questions</a></li>

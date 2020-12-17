@@ -62,8 +62,6 @@ tags:
 
 <p>The easiest solution is to just treat the each boundary segment as if it were an object to hit test against. As the user grows close to the boundary, you might warn them by displaying a message, flashing a warning indicator, playing an audio warning, or the like. And if the user actually collides with the boundary, don't let them continue past it.</p>
 
-<p><strong>&lt;&lt;&lt;--- example ---&gt;&gt;&gt;</strong></p>
-
 <h2 id="Creating_a_bounded_reference_space">Creating a bounded reference space</h2>
 
 <p>Before creating a project that relies on bounded reference spaces, it's important to keep in mind that not all XR devices are capable of creating them. By their very nature, bounded reference spaces have special hardware requirements, since they need to allow for the user to physically move around in space while their movements are tracked. In this section, we'll look at how to safely create a session that will work whether bounded spaces are supported or not.</p>

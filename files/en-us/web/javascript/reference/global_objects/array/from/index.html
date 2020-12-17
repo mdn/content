@@ -164,7 +164,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <p>You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>Array.from()</code> in implementations that don't natively support it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Polyfill Notes:</strong> This algorithm is exactly as specified in ECMA-262 6<sup>th</sup> Edition (assuming <code>Object</code> and <code>TypeError</code> have their original values and that <code><var>callback</var>.call()</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}).</p>
 
 <p>In addition, since true iterables cannot be polyfilled, this implementation does not support generic iterables as defined in the 6<sup>th</sup> Edition of ECMA-262.</p>

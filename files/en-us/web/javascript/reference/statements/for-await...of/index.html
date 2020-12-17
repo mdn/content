@@ -15,7 +15,7 @@ tags:
 
 <p>The <strong><code>for await...of</code> statement</strong> creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. Like the {{jsxref("Operators/await", "await")}} operator, the statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><code>for await...of</code> doesn't work with async iterators that are not async iterables.</p>
 </div>
 
@@ -157,7 +157,7 @@ for (let numOrPromise of generator()) {
 
 <div></div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: be aware of yielding rejected promises from sync generator. In such case <code>for await...of</code> throws when consuming rejected promise and DOESN'T CALL <code>finally</code> blocks within that generator. This can be undesireable if you need to free some allocated resources with <code>try/finally</code>.</p>
 </div>
 

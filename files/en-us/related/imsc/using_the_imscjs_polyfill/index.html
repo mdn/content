@@ -126,7 +126,7 @@ client.send()</pre>
 
 <p>To map this into HTML we need at least two cues: one that represents the text "Hello" from second 1-2 and the other representing the text "Hello world!" from second 2-3.</p>
 
-<p>But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g. representing a different speaker). This subtitle is shown in parallel to the other subtittle but the accumulating words may have have different start times and therefore different intervals.</p>
+<p>But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g. representing a different speaker). This subtitle is shown in parallel to the other subtittle but the accumulating words may have different start times and therefore different intervals.</p>
 
 <p>Luckily in IMSC and imscJS this scenario is quite easy to cover, because IMSC has a mechanism of stateless subtitle rendering.</p>
 
@@ -183,7 +183,7 @@ client.send()</pre>
 
 <pre class="brush: js">var myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note: </strong>In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.</p>
 </div>
 
@@ -241,7 +241,7 @@ client.send()</pre>
   pointer-events: none;
 }</pre>
 
-<p>This has the effect that pointer events are going "through" the overlay (see <a href="/en-US/docs/Web/CSS/pointer-events">reference documentation for point events</a> for for more details).</p>
+<p>This has the effect that pointer events are going "through" the overlay (see <a href="/en-US/docs/Web/CSS/pointer-events">reference documentation for point events</a> for more details).</p>
 
 <p>The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.</p>
 

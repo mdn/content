@@ -13,12 +13,12 @@ tags:
 
 <p>The <strong><code>Element.attributes</code></strong> property returns a live collection of all attribute nodes registered to the specified node. It is a {{domxref("NamedNodeMap")}}, not an <code>Array</code>, so it has no {{jsxref("Array")}} methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more specific, <code>attributes</code> is a key/value pair of strings that represents any information regarding that attribute.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <h3 id="Basic_examples">Basic examples</h3>
 
@@ -26,7 +26,7 @@ tags:
 var para = document.getElementsByTagName("p")[0];
 var atts = para.attributes;</pre>
 
-<h3 id="Enumerating_elements_attributes" name="Enumerating_elements_attributes">Enumerating elements attributes</h3>
+<h3 id="Enumerating_elements_attributes">Enumerating elements attributes</h3>
 
 <p>Numerical indexing is useful for going through all of an element's attributes.<br>
  The following example runs through the attribute nodes for the element in the document with id "paragraph", and prints each attribute's value.</p>

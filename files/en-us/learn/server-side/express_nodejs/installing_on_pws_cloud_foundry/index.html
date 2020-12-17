@@ -59,7 +59,7 @@ tags:
  <li>How to look at logs, again using the cf CLI tool.</li>
 </ul>
 
-<p>So let's get started. You have two options, you can go through the tutorial from the <a href="&lt;https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website>">beginning</a> or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:</p>
+<p>So let's get started. You have two options, you can go through the tutorial from the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">beginning</a> or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:</p>
 
 <pre class="brush: bash"><code>git clone https://github.com/mdn/express-locallibrary-tutorial</code></pre>
 
@@ -161,7 +161,7 @@ var appEnv = cfenv.getAppEnv();
 </pre>
  </li>
  <li>
-  <p>Now run the site locally (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
+  <p>Now run the site locally (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect. At this point your app is ready to use with Cloud Foundry and Pivotal Web Services.</p>
  </li>
 </ol>
 
@@ -198,7 +198,7 @@ var appEnv = cfenv.getAppEnv();
 Email: enter your email
 Password: enter your password</pre>
 
-<p>We can now push our app to PWS. In the below example. replace 'some-unique-name' with something you can remember that is likely to be unique. If it isn't unique, the system will let you know. The reason this name has to be unique to the PWS system is it is the address we will use to to access your LocalLibrary application. I used <em>mozilla-express-tutorial-xyzzy</em>. You should use something else.</p>
+<p>We can now push our app to PWS. In the below example. replace 'some-unique-name' with something you can remember that is likely to be unique. If it isn't unique, the system will let you know. The reason this name has to be unique to the PWS system is it is the address we will use to access your LocalLibrary application. I used <em>mozilla-express-tutorial-xyzzy</em>. You should use something else.</p>
 
 <pre class="brush: bash">cf push some-unique-name -m 256MB</pre>
 

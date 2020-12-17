@@ -32,7 +32,7 @@ tags:
 
 <p>For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect <em>any</em> user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a <em>Start</em> button is pressed.</p>
 
-<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practises with the autoplay policy here</a>.</p>
+<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practises with the autoplay policy here</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Playing part of your file at zero volume could also work if the browser allows you to change volume (see below). Also note that playing and immediately pausing your audio does not guarantee that a small piece of audio won't be played.</p>
@@ -50,7 +50,7 @@ tags:
 
 <p>Likely as an attempt to mitigate runaway mobile network data use, we also often find that buffering is disabled before playback has been initiated. Buffering is the process of the browser downloading the media in advance, which we often need to do to ensure smooth playback.</p>
 
-<p>The {{domxref("HTMLMediaElement")}} interface comes with <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Properties">lots of properties</a> to help determine whether a track is in a state to be playable.</p>
+<p>The {{domxref("HTMLMediaElement")}} interface comes with <a href="/en-US/docs/Web/API/HTMLMediaElement#Properties">lots of properties</a> to help determine whether a track is in a state to be playable.</p>
 
 <div class="note">
 <p><strong>Note</strong>: In many ways the concept of buffering is an outdated one. As long as byte-range requests are accepted (which is the default behavior), we should be able to jump to a specific point in the audio without having to download the preceding content. However, preloading is still useful — without it, there would always need to be some client-server communication required before playing can commence.</p>
@@ -435,7 +435,7 @@ function playTrack(audioBuffer) {
 
 <p>Positional audio can be an important technique in making audio a key part of an immersive gaming experience. The Web Audio API not only enables us to position a number of audio sources in three-dimensional space but it can also allow us to apply filters that make that audio appear more realistic.</p>
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/PannerNode"><code>pannerNode</code></a> harnesses the positional capabilities of the Web Audio API so we can relate further information about the game world to the player. There's a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">tutorial here</a> to help understand the <code>pannerNode</code> in better detail.</p>
+<p>The <a href="/en-US/docs/Web/API/PannerNode"><code>pannerNode</code></a> harnesses the positional capabilities of the Web Audio API so we can relate further information about the game world to the player. There's a <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">tutorial here</a> to help understand the <code>pannerNode</code> in better detail.</p>
 
 <p>We can relate:</p>
 

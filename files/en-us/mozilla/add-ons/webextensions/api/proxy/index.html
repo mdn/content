@@ -11,7 +11,7 @@ tags:
 
 <div></div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning</strong><br>
  You should not use the {{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}} function to register and remove extended <a href="/en-US/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification">Proxy Auto-Configuration (PAC) file</a>. This API was deprecated in Firefox 68 and will be removed from Firefox 71.</p>
 </div>
@@ -24,7 +24,7 @@ tags:
 
 <p>Google Chrome provides <a href="https://developer.chrome.com/extensions/proxy">an extension API also called "proxy"</a> which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome <code>proxy</code> API, this API is only available through the <code>browser</code> namespace.</p>
 
-<p>To use this API you need to have the "proxy" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. Also, where you want to intercept requests, you also need <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the URLs of intercepted requests.</p>
+<p>To use this API you need to have the "proxy" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. Also, where you want to intercept requests, you also need <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the URLs of intercepted requests.</p>
 
 <h2 id="Types">Types</h2>
 

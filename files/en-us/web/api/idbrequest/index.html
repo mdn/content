@@ -37,7 +37,7 @@ tags:
  <dd>Returns a {{domxref("DOMException")}} in the event of an unsuccessful request, indicating what went wrong.</dd>
  <dt>{{domxref("IDBRequest.result")}} {{readonlyInline}}</dt>
  <dd>
- <p>Returns the result of the request. If the the request failed and the result is not available, an InvalidStateError exception is thrown.</p>
+ <p>Returns the result of the request. If the request failed and the result is not available, an InvalidStateError exception is thrown.</p>
  </dd>
  <dt>{{domxref("IDBRequest.source")}} {{readonlyInline}}</dt>
  <dd>The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.</dd>
@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a database asynchronously and make a request; <code>onerror</code> and <code>onsuccess</code> functions are included to handle the success and error cases. For a full working example, see our <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we open a database asynchronously and make a request; <code>onerror</code> and <code>onsuccess</code> functions are included to handle the success and error cases. For a full working example, see our <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="https://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">var db;
 
@@ -127,5 +127,5 @@ DBOpenRequest.onsuccess = function(event) {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

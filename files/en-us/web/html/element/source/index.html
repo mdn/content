@@ -21,7 +21,7 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
    <td>None.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ tags:
   <tr>
    <th scope="row"><dfn>Permitted parents</dfn></th>
    <td>
-    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
+    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
 
     <div>A {{HTMLElement("picture")}} element, and it must be placed before the {{HTMLElement("img")}} element.</div>
    </td>
@@ -61,7 +61,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
+ <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
  <dt>{{htmlattrdef("sizes")}}</dt>
  <dd>
  <p>Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that <code>sizes</code> will have its effect only if width dimension descriptors are provided with <code>srcset</code> instead of pixel ratio values (200w instead of 2x for example).</p>

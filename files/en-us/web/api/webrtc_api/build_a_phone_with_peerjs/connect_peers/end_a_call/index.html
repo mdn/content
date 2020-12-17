@@ -22,11 +22,11 @@ slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/end_a_call
 
 <p id="7248">If the person who initiated the call clicks ‘hang up’ first, then both browsers will be updated.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>The <code>on('close')</code> event that is called on the <code>conn</code> variable isn’t available in Firefox yet, this just means in Firefox each caller will have to hang up individually.</p>
 </div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>The way we’ve currently coded things means that when a connection is closed, both browsers will be updated <strong>only</strong> if the person who started the call presses ‘hang up’ first. If the person who answered the call clicks ‘hang up’ first, the other caller will also have to click ‘hang up’ to see the correct HTML.</p>
 </div>
 <p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/answer_a_call", "Web/API/WebRTC_API/build_a_phone_with_peerjs/deployment_and_further_reading")}}</p>

@@ -22,9 +22,9 @@ tags:
 <p>Depending on your Operating System you will need to carry out a different process to prepare your machine. So firstly complete the instructions for your OS and then continue following these build instructions.</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation" title="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation" title="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS Build Prerequisites</a></li>
 </ul>
 
 <h2 class="editable" id="MAPI_Headers">MAPI Headers</h2>
@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Get_the_source">Get the source</h2>
 
-<div class="note"><strong>Note:</strong> On Windows, you won't be able to build the Thunderbird source code if it's under a directory with spaces in the path (e.g., don't use "Documents and Settings"). You can pick any other location, such as a new directory C:/thunderbird-src (where "C:/", with a forward slash, is intentional to clarify you are in the MozillaBuild command prompt per <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisite</a>).</div>
+<div class="note"><strong>Note:</strong> On Windows, you won't be able to build the Thunderbird source code if it's under a directory with spaces in the path (e.g., don't use "Documents and Settings"). You can pick any other location, such as a new directory C:/thunderbird-src (where "C:/", with a forward slash, is intentional to clarify you are in the MozillaBuild command prompt per <a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisite</a>).</div>
 
 <div class="note"><strong>Note:</strong> Parts of the build process also have problems when the source code is in a directory where the path is long (nested many levels deep). On Linux, this can manifest as problems setting up the virtualenv for running tests (failure to install pip or virtualenv because of OS access denied errors, where access is denied not because of permission problems, but because the paths being accessed have been truncated, and so do not exist). Having the source deep in a filesystem hierarchy can also cause problems with pymake builds on Windows. If you run into seemingly arbitrary problems in building and the source is deeply nested, try moving it closer to the root of your machine and re-building.</div>
 
@@ -64,7 +64,7 @@ cd source/
 hg clone https://hg.mozilla.org/comm-central comm/
 </pre>
 
-<p class="editable">The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. Instead of using <code>hg clone</code>, you can follow <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">these instructions</a> on downloading and "unpacking" a Mercurial bundle.</p>
+<p class="editable">The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. Instead of using <code>hg clone</code>, you can follow <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">these instructions</a> on downloading and "unpacking" a Mercurial bundle.</p>
 
 <p class="editable"><strong>Warning: The page </strong><a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central" title="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a><strong> is 99% out of date!</strong> Only useful content is working with Github.</p>
 

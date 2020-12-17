@@ -12,7 +12,7 @@ tags:
 
 <p>The <strong><code>Origin</code></strong> request header indicates where a fetch originates from. It doesn't include any path information, but only the server name. It is sent with {{Glossary("CORS")}} requests, as well as with {{HTTPMethod("POST")}} requests. It is similar to the {{HTTPHeader("Referer")}} header, but, unlike this header, it doesn't disclose the whole path.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The {{httpheader("Origin")}} header is not set on <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">Fetch requests</a> with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} (this behavior was corrected in Firefox 65 — see {{bug(1508661)}}).</p>
 </div>
 

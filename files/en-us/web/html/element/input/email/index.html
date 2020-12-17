@@ -252,7 +252,7 @@ tags:
 
 <p>With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the e-mail address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested e-mail addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.</p>
 
-<p><img alt="Animation: Using keyboard entry to filter the list of suggested e-mail addresses" src="https://mdn.mozillademos.org/files/14831/html-input-email1.gif" style="border-style: solid; border-width: 1px; height: 168px; width: 352px;"></p>
+<p><img alt="Animation: Using keyboard entry to filter the list of suggested e-mail addresses" src="html-input-email1.gif" style="border-style: solid; border-width: 1px; height: 168px; width: 352px;"></p>
 
 <h2 id="Validation">Validation</h2>
 
@@ -270,7 +270,7 @@ tags:
 [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 </pre>
 
-<p>Tolearn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a>.</p>
+<p>Tolearn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see <a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489">W3C bug 15489</a> for details.</p>
@@ -331,7 +331,7 @@ label::after {
 
 <p>An appropriate {{htmlattrxref("placeholder", "input")}} is provided—<code>username@beststartupever.com</code>—to demonstrate what constitutes a valid entry. This string demonstrates both that an e-mail address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type <code>email</code> will validate the text to ensure that it's formatted like an e-mail address. If the text in the input box isn't an e-mail address, you'll get an error message that looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14855/enter-valid-email-address.png" style="height: 125px; width: 530px;"></p>
+<p><img alt="" src="enter-valid-email-address.png" style="height: 125px; width: 530px;"></p>
 
 <p>If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "<em>username</em>@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set <code>pattern</code> to <code>.+@beststartupever.com</code>. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".</p>
 
@@ -341,7 +341,7 @@ label::after {
 
 <p>That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate e-mail address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address."</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14853/email-pattern-match-bad.png" style="height: 140px; width: 536px;"></p>
+<p><img alt="" src="email-pattern-match-bad.png" style="height: 140px; width: 536px;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
@@ -395,7 +395,7 @@ label::after {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms guide</a></li>
+ <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
  <li>{{HTMLElement("input")}}</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code></li>
@@ -411,5 +411,5 @@ label::after {
    <li><code><a href="/en-US/docs/Web/HTML/Attributes/size">size</a></code></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

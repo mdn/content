@@ -16,7 +16,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>stop()</code></strong> method in the {{domxref("RTCRtpTransceiver")}} interface permanently stops the transceiver by stopping both the associated {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Until recently, the {{domxref("RTCRtpTransceiver.stopped", "stopped")}} property was provided to return <code>true</code> if the connection is stopped. That property has been deprecated and will be removed at some point. Instead, check the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}. If it's <code>stopped</code>, the transceiver has been stopped.</p>
 </div>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>The negotiation process causes {{domxref("RTCRtpTransceiver.currentDirection", "currentNegotiation")}} to be set to <code>stopped</code>, finally indicating that the transceiver has been fully stopped.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Stopping the transceiver causes a {{event("negotiationneeded")}} event to be sent to the transceiver's {{domxref("RTCPeerConnection")}}, so the connection can adapt to the change.</p>
 </div>
 

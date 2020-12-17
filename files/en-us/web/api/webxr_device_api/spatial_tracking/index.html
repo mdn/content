@@ -30,7 +30,7 @@ tags:
 
 <p><span class="seoSummary">In this guide, we'll explore how WebXR uses <strong>spaces</strong> and, more specifically, <strong>reference spaces</strong>, to track the positions, orientations, and movements of objects and of the user's body in the virtual world.</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This article presumes that you are familiar with the concepts introduced in <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR</a>: that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.</p>
 </div>
 
@@ -179,8 +179,6 @@ function myDrawFrame(currentFrameTime, frame) {
 <p>On the other hand, if your app involves the user physically moving in real space to move around through your virtual world, simply adopting the new tracking position and jumping there can be unsettling to the user, and should be avoided if possible. Instead, use the difference between the current position and the new tracking position to compute the new teleportation offset; that is, a transform applied to everything to adapt the position and orientation data from WebXR to your needs.</p>
 
 <p>You can do this by creating a new reference space that incorporates into its effective origin the distance the viewer's position jumped since the previous frame, using the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.</p>
-
-<p><strong>&lt;&lt;&lt;--- needs an example ---&gt;&gt;&gt;</strong></p>
 
 <h3 id="The_reset_event">The reset event</h3>
 

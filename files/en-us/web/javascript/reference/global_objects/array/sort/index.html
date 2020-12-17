@@ -46,7 +46,7 @@ tags:
 
 <p>If <code>compareFunction</code> is not supplied, all non-<code>undefined</code> array elements are sorted by converting them to strings and comparing strings in UTF-16 code units order. For example, "banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in the Unicode order. All <code>undefined</code> elements are sorted to the end of the array.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note :</strong> In UTF-16, Unicode characters above <code>\uFFFF</code> are encoded as two surrogate code units, of the range <code>\uD800</code>-<code>\uDFFF</code>. The value of each code unit is taken separately into account for the comparison. Thus the character formed by the surrogate pair <code>\uD655\uDE55</code> will be sorted before the character <code>\uFF3A</code>.</p>
 </div>
 

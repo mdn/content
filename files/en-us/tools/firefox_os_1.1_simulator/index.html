@@ -18,12 +18,12 @@ tags:
 
 <h2 id="Summary">Summary</h2>
 
-<p>The Firefox OS Simulator add-on is a tool that enables you to test and debug your <a href="https://developer.mozilla.org/en-US/docs/Apps" title="/en-US/docs/Apps">Firefox OS app</a> on the desktop. The code-test-debug cycle is much faster with the simulator than with a real device, and of course, you don't need a real device in order to use it.</p>
+<p>The Firefox OS Simulator add-on is a tool that enables you to test and debug your <a href="/en-US/docs/Apps" title="/en-US/docs/Apps">Firefox OS app</a> on the desktop. The code-test-debug cycle is much faster with the simulator than with a real device, and of course, you don't need a real device in order to use it.</p>
 
 <p>Essentially, the Simulator add-on consists of:</p>
 
 <ul>
- <li><strong>the Simulator</strong>: this includes the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Firefox OS desktop client</a>, which is a version of the higher layers of <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> that runs on your desktop. The Simulator also includes some <a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_1.1_Simulator#Simulator-toolbar" title="#Simulator-toolbar">additional emulation features</a> that aren't in the standard Firefox OS desktop builds.</li>
+ <li><strong>the Simulator</strong>: this includes the <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Firefox OS desktop client</a>, which is a version of the higher layers of <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> that runs on your desktop. The Simulator also includes some <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#Simulator-toolbar" title="#Simulator-toolbar">additional emulation features</a> that aren't in the standard Firefox OS desktop builds.</li>
  <li><strong>the Dashboard</strong>: a tool hosted by the Firefox browser that enables you to start and stop the Simulator and to install, uninstall, and debug apps running in it. The Dashboard also helps you push apps to a real device, and checks app manifests for common problems.</li>
 </ul>
 
@@ -46,7 +46,7 @@ tags:
  <li><a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#Limitations" title="#Limitations">the limitations of the Simulator compared with a real Firefox OS device</a></li>
 </ul>
 
-<div class="note">For a practical walkthrough that shows how to use the Simulator to debug a real web app, see the <a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough" title="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough">Simulator Walkthrough</a> page.</div>
+<div class="note">For a practical walkthrough that shows how to use the Simulator to debug a real web app, see the <a href="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough" title="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough">Simulator Walkthrough</a> page.</div>
 
 <h2 id="Installing_the_Simulator_add-on"><a name="Installing">Installing the Simulator add-on</a></h2>
 
@@ -71,7 +71,7 @@ tags:
 
 <h3 id="Adding_apps">Adding apps</h3>
 
-<p>To add a <a href="https://developer.mozilla.org/en-US/docs/Apps/Packaged_apps" title="/en-US/docs/Apps/Packaged_apps">packaged app</a> to the Simulator, open the Dashboard, click "Add Directory" and select the <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifest file</a> for your app.<br>
+<p>To add a <a href="/en-US/docs/Apps/Packaged_apps" title="/en-US/docs/Apps/Packaged_apps">packaged app</a> to the Simulator, open the Dashboard, click "Add Directory" and select the <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifest file</a> for your app.<br>
  <br>
  To add a hosted app, enter a URL in the textbox where it says "URL for page or manifest.webapp", then click "Add URL". If the URL points to a manifest, then that manifest will be used. If it doesn't, the Dashboard will generate a manifest for the URL, so you can add any website as an app just by entering its URL.<br>
  <br>
@@ -124,7 +124,7 @@ tags:
 <ul>
  <li>the manifest does not include the mandatory "name" field</li>
  <li>the manifest is not valid JSON</li>
- <li>the app is a hosted app, but the <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field in its manifest is <a href="https://developer.mozilla.org/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps">"privileged" or "certified"</a>, which are only available to packaged apps</li>
+ <li>the app is a hosted app, but the <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field in its manifest is <a href="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps">"privileged" or "certified"</a>, which are only available to packaged apps</li>
  <li>common appCache errors (packaged apps can't use appCache, requests to the manifest URL return an HTTP redirect or an HTTP error status)</li>
 </ul>
 
@@ -138,10 +138,10 @@ tags:
 <ul>
  <li>missing icons</li>
  <li>the icon is less than 128 pixels: all apps submitted to the Marketplace must have at least one icon that is at least 128 pixels square</li>
- <li>the <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field is unrecognized</li>
- <li>the manifest requests a <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> that is unrecognized</li>
- <li>the manifest requests a <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> which will be denied</li>
- <li>the manifest requests a <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> for which access could not be determined</li>
+ <li>the <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field is unrecognized</li>
+ <li>the manifest requests a <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> that is unrecognized</li>
+ <li>the manifest requests a <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> which will be denied</li>
+ <li>the manifest requests a <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> for which access could not be determined</li>
 </ul>
 
 <h4 id="Simulator-specific_warnings">Simulator-specific warnings</h4>
@@ -149,8 +149,8 @@ tags:
 <p>Finally, the Manager will emit warnings for apps that use features of Firefox OS not yet fully supported by the Simulator:</p>
 
 <ul>
- <li>the <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field is "certified", but the Simulator does not yet fully support certified apps</li>
- <li>the manifest requests a <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> to use an API that is <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#Unsupported-APIs" title="#Unsupported-APIs">not yet supported</a> by the Simulator</li>
+ <li>the <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> field is "certified", but the Simulator does not yet fully support certified apps</li>
+ <li>the manifest requests a <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permission</a> to use an API that is <a href="/en-US/docs/Tools/Firefox_OS_1.1_Simulator#Unsupported-APIs" title="#Unsupported-APIs">not yet supported</a> by the Simulator</li>
 </ul>
 
 <h2 id="Running_the_Simulator"><a name="Running-the-Simulator">Running the Simulator</a></h2>
@@ -178,8 +178,8 @@ tags:
 
 <ul>
  <li>The <strong>Home button</strong> takes you to the Home screen (or to the task list if you keep it pressed for a couple of seconds).</li>
- <li>The <strong>Screen Rotation button</strong> switches the device between portrait and landscape orientation. This will generate the <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a> event.</li>
- <li>The <strong>Geolocation button</strong> triggers a dialog asking you to share your geographic location, either using your current coordinates or supplying custom coordinates; this will be made available to your app via the <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Geolocation API</a>.</li>
+ <li>The <strong>Screen Rotation button</strong> switches the device between portrait and landscape orientation. This will generate the <a href="/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a> event.</li>
+ <li>The <strong>Geolocation button</strong> triggers a dialog asking you to share your geographic location, either using your current coordinates or supplying custom coordinates; this will be made available to your app via the <a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Geolocation API</a>.</li>
 </ul>
 
 <p><a href="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png"><img alt="" src="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png" style="height: 309px; width: 520px;"></a><a href="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png"><img alt="" src="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png" style="height: 297px; width: 500px;"></a></p>
@@ -223,7 +223,7 @@ tags:
 
 <h2 id="Attaching_developer_tools"><a name="Attaching-developer-tools">Attaching developer tools</a></h2>
 
-<p>You can attach developer tools to the Simulator to help debug your app. At the moment you can only attach the <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, the <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>, the <a href="https://developer.mozilla.org/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Style_Editor">Style Editor</a>, the <a href="https://developer.mozilla.org/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Profiler">Profiler</a>, and the <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor" title="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>, but we're working on adding support for more <a href="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window" title="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window">developer tools</a>.</p>
+<p>You can attach developer tools to the Simulator to help debug your app. At the moment you can only attach the <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, the <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>, the <a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Style_Editor">Style Editor</a>, the <a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Profiler">Profiler</a>, and the <a href="/en-US/docs/Tools/Network_Monitor" title="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>, but we're working on adding support for more <a href="/en-US/docs/Tools/DevTools_Window" title="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window">developer tools</a>.</p>
 
 <div class="geckoVersionNote">
 <p>Some of these tools are only available in Beta, Aurora, or Nightly builds of Firefox.</p>
@@ -239,19 +239,19 @@ tags:
 
 <h3 id="Web_Console">Web Console</h3>
 
-<p>The app can log to this console using the global <a href="https://developer.mozilla.org/en-US/docs/DOM/console" title="/en-US/docs/DOM/console">console</a> object, and it displays various other messages generated by the app: network requests, CSS and JS warnings/errors, and security errors. (<a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Learn more about the Web Console.</a>)</p>
+<p>The app can log to this console using the global <a href="/en-US/docs/DOM/console" title="/en-US/docs/DOM/console">console</a> object, and it displays various other messages generated by the app: network requests, CSS and JS warnings/errors, and security errors. (<a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Learn more about the Web Console.</a>)</p>
 
 <h3 id="Debugger">Debugger</h3>
 
-<p>Using the Debugger, you can step through JavaScript code that is running in the connected app, manage breakpoints, and watch expressions to track down errors and problems faster. (<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Web_Console">Learn more about the Debugger.</a>)</p>
+<p>Using the Debugger, you can step through JavaScript code that is running in the connected app, manage breakpoints, and watch expressions to track down errors and problems faster. (<a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Web_Console">Learn more about the Debugger.</a>)</p>
 
 <h3 id="Style_Editor">Style Editor</h3>
 
-<p>You can view and edit CSS files referenced in the app using the connected Style Editor. Your changes will be applied to the app in real time, without needing to refresh the app. (<a href="https://developer.mozilla.org/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Web_Console">Learn more about the Style Editor.</a>)</p>
+<p>You can view and edit CSS files referenced in the app using the connected Style Editor. Your changes will be applied to the app in real time, without needing to refresh the app. (<a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Web_Console">Learn more about the Style Editor.</a>)</p>
 
 <h3 id="Profiler">Profiler</h3>
 
-<p>Using the Profiler tool connected to the app, you can find out where your JavaScript code is spending too much time. The Profiler periodically samples the current JavaScript call stack and compiles statistics about the samples. (<a href="https://developer.mozilla.org/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Web_Console">Learn more about the Profiler.</a>)</p>
+<p>Using the Profiler tool connected to the app, you can find out where your JavaScript code is spending too much time. The Profiler periodically samples the current JavaScript call stack and compiles statistics about the samples. (<a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Web_Console">Learn more about the Profiler.</a>)</p>
 
 <h3 id="Network_Monitor">Network Monitor</h3>
 
@@ -271,7 +271,7 @@ tags:
 
 <h3 id="Connecting_a_device">Connecting a device</h3>
 
-<p>To connect the device, follow the instructions in the guide to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">connecting a Firefox OS device to the desktop</a>. Note that you don't have to install ADB, as the Simulator add-on includes it already.</p>
+<p>To connect the device, follow the instructions in the guide to <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">connecting a Firefox OS device to the desktop</a>. Note that you don't have to install ADB, as the Simulator add-on includes it already.</p>
 
 <h3 id="Pushing_apps_to_the_device">Pushing apps to the device</h3>
 
@@ -331,13 +331,13 @@ tags:
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
 </ul>
 
 <h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>

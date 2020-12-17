@@ -38,13 +38,13 @@ tags:
 
 <p>The eventʼs default action is to copy the current selection (if any) to the system clipboard and remove it from the document.</p>
 
-<p>A handler for this event can <em>modify</em> the clipboard contents by calling <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData" title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type."><code>setData(format, data)</code></a> on the event's  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData" title="The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:"><code>ClipboardEvent.clipboardData</code></a> property, and cancelling the default action using <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">event.preventDefault()</a></code>.</p>
+<p>A handler for this event can <em>modify</em> the clipboard contents by calling <a href="/en-US/docs/Web/API/DataTransfer/setData" title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type."><code>setData(format, data)</code></a> on the event's  <a href="/en-US/docs/Web/API/ClipboardEvent/clipboardData" title="The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:"><code>ClipboardEvent.clipboardData</code></a> property, and cancelling the default action using <code><a href="/en-US/docs/Web/API/Event/preventDefault">event.preventDefault()</a></code>.</p>
 
 <p>Note though that cancelling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.</p>
 
 <p>The handler cannot <em>read</em> the clipboard data.</p>
 
-<p>It's possible to construct and dispatch a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>cut</code> event, but this will not affect the system clipboard or the document's contents.</p>
+<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">synthetic</a> <code>cut</code> event, but this will not affect the system clipboard or the document's contents.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

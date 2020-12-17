@@ -42,7 +42,7 @@ tags:
 
 <p>It's main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But it's advantages should be enough to make you interested to explore it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: recently Svelte has added <a href="https://svelte.dev/blog/svelte-and-typescript">official TypeScript support</a>, one of its most requested features. We'll look at it later on in this tutorial series.</p>
 </div>
 
@@ -103,13 +103,13 @@ cd moz-todo-svelte
 npm install
 npm run dev</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using <code>git clone</code> because it will not download all the history of the repo, or create a complete local clone.</p>
 </div>
 
 <p>After running <code>npm run dev</code>, Svelte will compile and build your application. It will start a local server at <code>localhost:5000</code>. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:</p>
 
-<p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="https://mdn.mozillademos.org/files/17338/01-svelte-starter-app.png" style="border-style: solid; border-width: 1px; height: 529px; width: 1166px;"></p>
+<p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="https://mdn.mozillademos.org/files/17338/01-svelte-starter-app.png" style="border-style: solid; border-width: 1px; height: auto;"></p>
 
 <h3 id="Application_structure">Application structure</h3>
 
@@ -138,7 +138,7 @@ npm run dev</pre>
 <p>The contents are as follows:</p>
 
 <ul>
- <li><code>package.json</code> and <code>package-lock.json</code>: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file <code>package.json</code></a>? on NodeJS.org; we also talk about it in our <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics tutorial</a>.</li>
+ <li><code>package.json</code> and <code>package-lock.json</code>: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file <code>package.json</code></a>? on NodeJS.org; we also talk about it in our <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics tutorial</a>.</li>
  <li><code>node_modules</code>: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.</li>
  <li><code>.gitignore</code>: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.</li>
  <li><code>rollup.config.js</code>: Svelte uses <a href="https://rollupjs.org/">rollup.js</a> as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer <a href="https://webpack.js.org/">webpack</a> you can create your starter project with <code>npx degit sveltejs/template-webpack svelte-app</code> instead.</li>
@@ -180,7 +180,7 @@ npm run dev</pre>
 
 &lt;!-- markup (zero or more HTML elements) goes here --&gt;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: For more information on the component format, have a look at the <a href="https://svelte.dev/docs#Component_format">svelte documentation</a>.</p>
 </div>
 
@@ -270,11 +270,11 @@ npm run dev</pre>
 
 <p>You can see this in action by opening <code>localhost:5000</code> in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the <em>HELLO WORLD!</em> label, and choosing <em>Inspect</em>:</p>
 
-<p><img alt="Svelte starter app with devtools open, showing classes for scoped styles" src="https://mdn.mozillademos.org/files/17339/02-svelte-component-scoped-styles.png" style="height: 878px; width: 1117px;"></p>
+<p><img alt="Svelte starter app with devtools open, showing classes for scoped styles" src="https://mdn.mozillademos.org/files/17339/02-svelte-component-scoped-styles.png" style="height: auto;"></p>
 
 <p>When compiling the app, Svelte changes our <code>h1</code> styles definition to <code>h1.svelte-1tky8bj</code>, and then modifies every <code>&lt;h1&gt;</code> element in our component to <code>&lt;h1 class="svelte-1tky8bj"&gt;</code>, so that it picks up the styles as required.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can override this behavior and apply styles to a selector globally using the <code>:global(...)</code> modifier (see the <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> docs</a> for more information).</p>
 </div>
 
@@ -400,7 +400,7 @@ npm run dev</pre>
 
 <p>If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see <a href="/en-US/docs/Learn/Tools_and_testing/GitHub">Git and GitHub</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you just want to download the files without cloning the git repo, you can use the degit tool like this — <code>npx degit opensas/mdn-svelte-tutorial</code>. You can also download a specific folder with <code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>. Degit won't create a local git repo, it will just download the files of the specified folder.</p>
 </div>
 
@@ -414,7 +414,7 @@ npm run dev</pre>
 
 <p>Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:</p>
 
-<p><img alt="the svelte repl in action, showing component code on the left, and output on the right" src="https://mdn.mozillademos.org/files/17340/03-svelte-repl-in-action.png" style="height: 946px; width: 1284px;"></p>
+<p><img alt="the svelte repl in action, showing component code on the left, and output on the right" src="https://mdn.mozillademos.org/files/17340/03-svelte-repl-in-action.png" style="height: auto;"></p>
 
 <p>To start a REPL, open your browser and navigate to <a href="https://svelte.dev/repl">https://svelte.dev/repl</a>.</p>
 
@@ -434,13 +434,13 @@ npm run dev</pre>
 
 <p>Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app simply share the url. For example, here's the link for a REPL running our complete app: <a href="https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2">https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.</p>
 </div>
 
 <p>We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: at the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example <code>import Todos from './components/Todos.svelte'</code>, just replace it with a flat URL, e.g. <code>import Todos from './Todos.svelte'</code>.</p>
 </div>
 

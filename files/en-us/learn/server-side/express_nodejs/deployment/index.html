@@ -323,7 +323,7 @@ Changes to be committed:
  </li>
 </ol>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
 </div>
 
@@ -454,7 +454,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 </pre>
 
-<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
+<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
 <pre class="brush: bash notranslate">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
@@ -471,7 +471,7 @@ NODE_ENV:    production
 
 <p>Heroku will restart your app when it updates the variables. If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note: </strong>If you got the Heroku error page in the last section. Now try rerunning the last section.</p>
 </div>
 

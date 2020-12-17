@@ -870,7 +870,7 @@ let hatSize = form.elements["hat-size"];
   </tr>
   <tr>
    <td>{{Cssxref(":placeholder-shown")}}</td>
-   <td>Element that is currently displaying <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td>{{Cssxref(":default")}}</td>
@@ -947,12 +947,12 @@ input[type="password"] {}
 /* matches a form control whose valid values are limited to a range of values*/
 input[min][max] {}
 
-/* matches a form control with with a pattern attribute */
+/* matches a form control with a pattern attribute */
  input[pattern] {}</pre>
 
 <h3 id="placeholder">::placeholder</h3>
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
 
 <pre class="brush: css no-line-numbers notranslate">::placeholder {
   color: blue;
@@ -1005,8 +1005,8 @@ input[min][max] {}
 <p>Also see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">advanced styling for HTML forms</a>, and</li>
- <li>the<a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets"> compatibility table of CSS properties</a>.</li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">advanced styling for HTML forms</a>, and</li>
+ <li>the<a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls"> compatibility table of CSS properties</a>.</li>
 </ul>
 
 <h2 id="Additional_features">Additional features</h2>
@@ -1042,13 +1042,13 @@ input[min][max] {}
 
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Don't use the {{htmlattrxref("placeholder", "input")}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
 </div>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
@@ -1137,7 +1137,7 @@ input[min][max] {}
 
 <p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
 
-<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
+<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
 
 <pre class="brush: js notranslate">function validate(input) {
   let validityState_object = input.validity;
@@ -1197,11 +1197,11 @@ nameInput.addEventListener('invalid', () =&gt; {
  <li>If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking <code>setCustomValidity()</code> with an empty string value. We therefore do this every time the <code>input</code> event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the <em>server side</em>. Invalid values can still be sent by older browsers or by bad actors.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).</p>
 </div>
 
@@ -1222,8 +1222,8 @@ nameInput.addEventListener('invalid', () =&gt; {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -1235,7 +1235,7 @@ nameInput.addEventListener('invalid', () =&gt; {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -1369,14 +1369,14 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">CSS property compatibility table</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS property compatibility table</a></li>
 </ul>

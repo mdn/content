@@ -10,7 +10,7 @@ tags:
 
 <p>The HTTP 1.1 (only) <code>Upgrade</code> header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.</p>
 </div>
 
@@ -38,7 +38,7 @@ Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>Connection: upgrade</code> must be set whenever <code>Upgrade</code> is sent.</p>
 </div>
 

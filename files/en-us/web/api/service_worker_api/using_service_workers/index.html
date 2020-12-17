@@ -382,7 +382,7 @@ event.request.body</pre>
 
 <p>We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the <code>install</code> event listener we saw earlier.</p>
 
-<h2 id="Updating_your_service_worker"><a id="Updating your service worker" name="Updating your service worker">Updating your service worker</a></h2>
+<h2 id="Updating_your_service_worker">Updating your service worker</h2>
 
 <p>If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.</p>
 

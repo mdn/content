@@ -18,7 +18,7 @@ tags:
 
 <p>This function throws an exception if any of the input parameters are invalid or are not of an appropriate type; look in the <a href="/en-US/Add-ons/WebExtensions/Debugging">console</a> for the error message. The exceptions don't have error IDs, and the messages themselves may change, so don't write code that tries to interpret them.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects, each representing a single matching bookmark tree node. Results are returned in the order that the nodes were created. The array is empty if no results were found.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects, each representing a single matching bookmark tree node. Results are returned in the order that the nodes were created. The array is empty if no results were found.</p>
 
 <p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode">BookmarkTreeNodes</a></code>—even nodes of the <code>"folder"</code> type—returned by <code>bookmarks.search()</code> are missing the <code>children</code> property. To get a complete <code>BookmarkTreeNode</code> use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree">bookmarks.getSubTree()</a></code>.</p>
 

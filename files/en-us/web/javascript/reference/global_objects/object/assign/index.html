@@ -46,7 +46,7 @@ tags:
 
 <p>In case of an error, for example if a property is non-writable, a {{jsxref("TypeError")}} is raised, and the <code><var>target</var></code> object is changed if any properties are added before the error is raised.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> <code>Object.assign()</code> does not throw on {{jsxref("null")}} or {{jsxref("undefined")}} sources.</p>
 </div>
 
@@ -94,7 +94,7 @@ const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 </pre>
 
-<h3 id="Deep_Clone" name="Deep_Clone">Warning for Deep Clone</h3>
+<h3 id="Deep_Clone">Warning for Deep Clone</h3>
 
 <p>For deep cloning, we need to use alternatives, because <code>Object.assign()</code> copies property values.</p>
 

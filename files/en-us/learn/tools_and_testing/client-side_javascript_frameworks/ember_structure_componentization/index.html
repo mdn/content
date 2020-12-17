@@ -60,7 +60,7 @@ tags:
   &gt;
 &lt;/section&gt;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code> provides a label for assistive technology to make use of — for example, for a screenreader to read out. This is useful in such cases where we have an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> being used with no corresponding HTML text that could be turned into a label.</p>
 </div>
 
@@ -203,7 +203,7 @@ installing component-test
 
 <p><code>header.hbs</code> is the template file where we’ll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <code>header.js</code> file (shown as skipped) is for connection to a backing Glimmer Component Class, which we don't need for now, as they are for adding interactivity and state manipulation. By default, <code>generate component</code> generates template-only components, because in large applications, template-only components end up being the majority of the components.</p>
 </div>
 
@@ -245,7 +245,7 @@ ember generate component footer</pre>
   &lt;/ul&gt;
 &lt;/section&gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: The only non-HTML in this new <code>todo-list.hbs</code> is the <code>&lt;Todo /&gt;</code> component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with <code>&lt;TodoList /&gt;</code> later on. The contents of the <code>todo.hbs</code> file below will replace <code>&lt;Todo /&gt;</code> in the rendered page as our application loads.</p>
   </div>
  </li>

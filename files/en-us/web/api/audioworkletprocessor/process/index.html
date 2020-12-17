@@ -18,7 +18,7 @@ tags:
 
 <p>The method is called synchronously from the audio rendering thread, once for each block of audio (also known as a rendering quantum) being directed through the processor's corresponding {{domxref("AudioWorkletNode")}}. In other words, every time a new block of audio is ready for your processor to manipulate, your <code>process()</code> function is invoked to do so.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Important:</strong> Currently, audio data blocks are always 128 frames long—that is, they contain 128 32-bit floating-point samples for each of the inputs' channels. However, plans are already in place to revise the specification to allow the size of the audio blocks to be changed depending on circumstances (for example, if the audio hardware or CPU utilization is more efficient with larger block sizes). Therefore, you <em>must always check the size of the sample array</em> rather than assuming a particular size.</p>
 
 <p>This size may even be allowed to change over time, so you mustn't look at just the first block and assume the sample buffers will always be the same size.</p>

@@ -12,7 +12,7 @@ tags:
 
 <p>When a URL points at a specific piece of a document, it can be difficult for the user to notice. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience.</p>
 
-<h2 id="Picking_a_Target" name="Picking_a_Target">Picking a Target</h2>
+<h2 id="Picking_a_Target">Picking a Target</h2>
 
 <p>The <a href="/en/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> {{cssxref(":target")}} is used to style the target element of a URL containing a fragment identifier. For example, the URL <code><span class="nowiki">http://developer.mozilla.org/en/docs/Using_the_:target_selector#example</span></code> contains the fragment identifier <code>#example</code>. In HTML, identifiers are found as the values of either <code>id</code> or <code>name</code> attributes, since the two share the same namespace. Thus, the example URL would point to the heading "example" in this document.</p>
 
@@ -24,14 +24,14 @@ tags:
 
 <pre class="brush: css">#example:target { border: 1px solid black; }</pre>
 
-<h2 id="Targeting_the_Root_Element" name="Targeting_the_Root_Element">Targeting all elements</h2>
+<h2 id="Targeting_the_Root_Element">Targeting all elements</h2>
 
 <p>If the intent is to create a "blanket" style that will apply to all targeted elements, then the universal selector comes in handy:</p>
 
 <pre class="brush: css">:target { color: red; }
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In the following example, there are five links that point to elements in the same document. Selecting the "First" link, for example, will cause <code>&lt;h1 id="one"&gt;</code> to become the target element. Note that the document may jump to a new scroll position, since target elements are placed on the top of the browser window if possible.</p>
 
@@ -46,18 +46,18 @@ tags:
 &lt;a href="#five"&gt;Fifth&lt;/a&gt;</pre>
 </div>
 
-<h2 id="Conclusion" name="Conclusion">Conclusion</h2>
+<h2 id="Conclusion">Conclusion</h2>
 
 <p>In cases where a fragment identifier points to a portion of the document, readers may become confused about which part of the document they're supposed to be reading. By styling the target of a URI, reader confusion can be reduced or eliminated.</p>
 
-<h2 id="Related_Links" name="Related_Links">See also</h2>
+<h2 id="Related_Links">See also</h2>
 
 <ul>
  <li>{{cssxref(":target")}}</li>
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+<h3 id="Original_Document_Information">Original Document Information</h3>
 
 <ul>
  <li>Author(s): Eric Meyer, Standards Evangelist, Netscape Communications</li>

@@ -271,6 +271,8 @@ ctx.stroke();
  <dd>Restores the drawing style state to the last element on the 'state stack' saved by <code>save()</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
  <dd>A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.getContextAttributes()")}}</dt>
+ <dd>Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.</dd>
 </dl>
 
 <h3 id="Hit_regions">Hit regions</h3>
@@ -346,8 +348,6 @@ ctx.stroke();
  <dd>Intended for HD backing stores, but removed from canvas specifications.</dd>
 </dl>
 
-<dl>
-</dl>
 
 <h3 id="Gecko_only">Gecko only</h3>
 
@@ -361,7 +361,7 @@ ctx.stroke();
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
  <dd>See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.</dd>
  <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozTextStyle</code></dt>
- <dd>Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.</dd>
+ <dd>Introduced in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozDrawText()</code></dt>
  <dd>This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.mozMeasureText()</code></dt>

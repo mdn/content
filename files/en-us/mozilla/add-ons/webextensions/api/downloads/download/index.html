@@ -21,7 +21,7 @@ tags:
  <li>If both <code>filename</code> and <code>saveAs</code> are specified, then the Save As dialog will be displayed, pre-populated with the specified <code>filename</code>.</li>
 </ul>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the download started successfully, the promise will be fulfilled with the <code>id</code> of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the download started successfully, the promise will be fulfilled with the <code>id</code> of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.</p>
 
 <p>If you use <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> to download data created in JavaScript and you want to revoke the object URL (with <a href="/en-US/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a> event.</p>
 

@@ -267,7 +267,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#Show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
 </div>
 
@@ -348,7 +348,7 @@ This is the second subsection of my content. I think is more interesting than th
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
+<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 
 <p>This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. <strong>Better to just use the right element for the right job in the first place.</strong></p>
 

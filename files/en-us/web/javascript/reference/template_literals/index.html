@@ -119,11 +119,7 @@ let age = 28;
 function myTag(strings, personExp, ageExp) {
   let str0 = strings[0]; // "That "
   let str1 = strings[1]; // " is a "
-
-  // There is technically a string after
-  // the final expression (in our example),
-  // but it is empty (""), so disregard.
-  // let str2 = strings[2];
+  let str2 = strings[2]; // "."
 
   let ageStr;
   if (ageExp &gt; 99){
@@ -133,13 +129,13 @@ function myTag(strings, personExp, ageExp) {
   }
 
   // We can even return a string built using a template literal
-  return `${str0}${personExp}${str1}${ageStr}`;
+  return `${str0}${personExp}${str1}${ageStr}${str2}`;
 }
 
-let output = myTag`That ${ person } is a ${ age }`;
+let output = myTag`That ${ person } is a ${ age }.`;
 
 console.log(output);
-// That Mike is a youngster</pre>
+// That Mike is a youngster.</pre>
 
 <p>Tag functions don't even need to return a string!</p>
 

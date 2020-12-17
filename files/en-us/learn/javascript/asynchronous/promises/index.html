@@ -68,7 +68,7 @@ tags:
 
 <p>The important thing here is that the <code>getUserMedia()</code> call returns almost immediately, even if the camera stream hasn't been obtained yet. Even if the <code>handleCallButton()</code> function has already returned to the code that called it, when <code>getUserMedia()</code> has finished working, it calls the handler you provide. As long as the app doesn't assume that streaming has begun, it can just keep on running.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can learn more about this somewhat advanced topic, if you're interested, in the article <a href="/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>. Code similar to this, but much more complete, is used in that example.</p>
 </div>
 
@@ -144,7 +144,7 @@ tags:
 
 <p>This is not quite as easy to read, however, and this syntax might not be usable if your blocks are more complex than what we've shown here.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can make further improvements with <code>async</code>/<code>await</code> syntax, which we'll dig into in the next article.</p>
 </div>
 
@@ -161,7 +161,7 @@ tags:
 
 <p>In the first example, we'll use the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> method to fetch an image from the web, the {{domxref("Body.blob", "blob()")}} method to transform the fetch response's raw body contents into a {{domxref("Blob")}} object, and then display that blob inside an {{htmlelement("img")}} element. This is very similar to the example we looked at in the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript">first article of the series</a>, but we'll do it a bit differently as we get you building your own promise-based code.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The following example will not work if you just run it directly from the file (i.e. via a <code>file://</code> URL). You need to run it through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local testing server</a>, or use an online solution such as <a href="https://glitch.com/">Glitch</a> or <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a>.</p>
 </div>
 
@@ -182,7 +182,7 @@ tags:
  <li>
   <p>To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> method of the promise object. The callback inside the <code>.then()</code> block (referred to as the <strong>executor</strong>) runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been <strong>fulfilled</strong>. It is passed the returned {{domxref("Response")}} object as a parameter.</p>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: The way that a <code>.then()</code> block works is similar to when you add an event listener to an object using <code>AddEventListener()</code>. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a <code>.then()</code> will only run once for each time it is used, whereas an event listener could be invoked multiple times.</p>
   </div>
 
@@ -229,7 +229,7 @@ document.body.appendChild(image);</pre>
 
 <p>If you save the HTML file you've just created and load it in your browser, you'll see that the image is displayed in the page as expected. Good work!</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You will probably notice that these examples are somewhat contrived. You could just do away with the whole <code>fetch()</code> and <code>blob()</code> chain, and just create an <code>&lt;img&gt;</code> element and set its <code>src</code> attribute value to the URL of the image file, <code>coffee.jpg</code>. We did, however, pick this example because it demonstrates promises in a nice simple fashion, rather than for its real-world appropriateness.</p>
 </div>
 
@@ -245,7 +245,7 @@ document.body.appendChild(image);</pre>
 
 <p>This doesn't do much more than it would if you just didn't bother including the <code>.catch()</code> block at all, but think about it — this allows us to control error handling exactly how we want. In a real app, your <code>.catch()</code> block could retry fetching the image, or show a default image, or prompt the user to provide a different image URL, or whatever.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can see <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html">our version of the example live</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html">source code</a> also).</p>
 </div>
 
@@ -273,7 +273,7 @@ document.body.appendChild(image);</pre>
 
 <p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's executor function.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>.then()</code>/<code>.catch()</code> blocks in promises are basically the async equivalent of a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block in sync code. Bear in mind that synchronous <code>try...catch</code> won't work in async code.</p>
 </div>
 
@@ -409,11 +409,11 @@ document.body.appendChild(para);</pre>
 
 <p>The code we provided here for displaying the items is fairly rudimentary but works as an explainer for now.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, you can compare your version of the code to ours, to see what it is meant to look like — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">see it live</a>, and see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">source code</a>.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you were improving this code, you might want to loop through a list of items to display, fetching and decoding each one, and then loop through the results inside <code>Promise.all()</code>, running a different function to display each one depending on what the type of code was. This would make it work for any number of items, not just three.</p>
 
 <p>Also, you could determine what the type of file is being fetched without needing an explicit <code>type</code> property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using <code><a href="/en-US/docs/Web/API/Headers/get">response.headers.get("content-type")</a></code>, and then react accordingly.</p>
@@ -470,7 +470,7 @@ document.body.appendChild(para);</pre>
 
 <p>This logs a simple message to the console to tell us when each fetch attempt has finished.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: <code>then()</code>/<code>catch()</code>/<code>finally()</code> is the async equivalent to <code>try</code>/<code>catch</code>/<code>finally</code> in sync code.</p>
 </div>
 
@@ -510,7 +510,7 @@ document.body.appendChild(para);</pre>
 
 <p>The above example is not very flexible — the promise can only ever fulfil with a single string, and it doesn't have any kind of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">reject()</a></code> condition specified (admittedly, <code>setTimeout()</code> doesn't really have a fail condition, so it doesn't matter for this simple example).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Why <code>resolve()</code>, and not <code>fulfill()</code>? The answer we'll give you, for now, is <em>it's complicated</em>.</p>
 </div>
 
@@ -558,7 +558,7 @@ document.body.appendChild(para);</pre>
 
 <p>When you save and run the code as is, after one second you'll get the message alerted. Now try setting the message to an empty string or the interval to a negative number, for example, and you'll be able to see the promise reject with the appropriate error messages! You could also try doing something else with the resolved message rather than just alerting it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find our version of this example on GitHub as <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html">custom-promise2.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html">source code</a>).</p>
 </div>
 

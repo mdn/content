@@ -63,7 +63,7 @@ tags:
  <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>
  <dd>Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by <code>getDisplayMedia()</code> will reject with a {{Exception("NotAllowedError")}} if permission is not obtained to capture the display's contents.</dd>
  <dt>{{httpheader('Feature-Policy/document-domain','document-domain')}}</dt>
- <dd>Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be be thrown.</dd>
+ <dd>Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be thrown.</dd>
  <dt>{{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}</dt>
  <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
  <dt>{{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}</dt>

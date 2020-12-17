@@ -4,7 +4,7 @@ slug: 'Web/CSS/:target-within'
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>:target-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that is a target element or <em>contains</em> an element that is a target. A target element is a unique element with an <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-id">id</a></code> matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by <code>:target</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
+<p>The <strong><code>:target-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that is a target element or <em>contains</em> an element that is a target. A target element is a unique element with an <code><a href="/en-US/docs/Web/HTML/Global_attributes#attr-id">id</a></code> matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by <code>:target</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selects a &lt;div&gt; when one of its descendants is a target */
 div:target-within {

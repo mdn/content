@@ -57,7 +57,7 @@ tags:
 <p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
+<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
 </div>
 
 <p>The rest of this section provides an overview of how the <code>Router</code> can be used to define the routes.</p>
@@ -111,7 +111,7 @@ app.use('/wiki', wiki);</pre>
 <p>The callback takes three arguments (usually named as shown: <code>req</code>, <code>res</code>, <code>next</code>), that will contain the HTTP Request object, HTTP response, and the <em>next</em> function in the middleware chain.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Router functions are <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
+<p><strong>Note:</strong> Router functions are <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
 
 <p>The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).</p>
 </div>

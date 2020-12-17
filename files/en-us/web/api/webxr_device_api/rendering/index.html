@@ -97,7 +97,7 @@ async function runXR(xrSession) {
 
 <p>Clearly, you have very little time to render your scene each frame. Not only that, but if your renderer itself runs longer than that amount of time, you can cause not just the frame to get dropped, but that time to be wasted entirely, blocking other code from getting to run at all for that frame.</p>
 
-<p>Not only that, but if your rendering crosses the vertical refresh boundary, you can wind up with a <strong>tearing</strong> effect. Tearing occurs when the the display hardware starts the next refresh cycle while the previous frame is still being drawn to the screen. As a result, you wind up with the visual effect of the top part of the screen showing the new frame, while the bottom part of the frame shows some combination of the previous frame and possibly even the frame before that one.</p>
+<p>Not only that, but if your rendering crosses the vertical refresh boundary, you can wind up with a <strong>tearing</strong> effect. Tearing occurs when the display hardware starts the next refresh cycle while the previous frame is still being drawn to the screen. As a result, you wind up with the visual effect of the top part of the screen showing the new frame, while the bottom part of the frame shows some combination of the previous frame and possibly even the frame before that one.</p>
 
 <p>Your mission, then, is to keep your code tight and lightweight enough that you don't overrrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.</p>
 

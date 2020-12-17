@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>The original header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The <code>Referrer-Policy</code> header does not share this misspelling.</p>
 </div>
 
@@ -66,7 +66,7 @@ Referrer-Policy: unsafe-url
  <dd>Send the origin, path, and querystring when performing a same-origin request, only send the origin when the protocol security level stays the same while performing a cross-origin request (HTTPS→HTTPS), and send no header to any less-secure destinations (HTTPS→HTTP).</dd>
  <dt><code>unsafe-url</code></dt>
  <dd>Send the origin, path, and query string when performing any request, regardless of security.
- <div class="blockIndicator warning">
+ <div class="notecard warning">
  <p>This policy will leak potentially-private information from HTTPS resource URLs to insecure origins. Carefully consider the impact of this setting.</p>
  </div>
  </dd>
@@ -86,7 +86,7 @@ Referrer-Policy: unsafe-url
 
 <pre class="brush: html notranslate">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>As seen above, the <code>noreferrer</code> link relation is written without a dash — <code>noreferrer</code>. When the referrer policy is specified for the entire document with a {{HTMLElement("meta")}} element, it's written <em>with</em> a dash: <code>&lt;meta name="referrer" content="no-referrer"&gt;</code>.</p>
 </div>
 

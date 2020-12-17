@@ -24,7 +24,7 @@ tags:
 
 <p>A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they <em>must</em> be separated by semicolons.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
 </div>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>Comments behave like whitespace, and are discarded during script execution.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
 
 <p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments">Hashbang comments</a> for more details.</p>
@@ -347,7 +347,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p><code>parseInt</code> only returns whole numbers, so its use is diminished for decimals.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
 </div>
 
@@ -388,7 +388,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Array literals are also <code>Array</code> objects. See {{jsxref("Array")}} and <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a> for details on <code>Array</code> objects.</p>
 </div>
 
@@ -436,7 +436,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>The Boolean type has two literal values: <code>true</code> and <code>false</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Be careful:</strong> Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the {{jsxref("Boolean")}} object.</p>
 
 <p>The Boolean object is a wrapper around the primitive Boolean data type. See {{jsxref("Boolean")}} for more information.</p>
@@ -495,7 +495,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Do not use an object literal at the beginning of a statement! </strong>This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
 </div>
 

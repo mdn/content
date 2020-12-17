@@ -55,7 +55,7 @@ objectStore1.put("1", "key");
  <dt>{{domxref("IDBTransaction.db")}} {{readonlyInline}}</dt>
  <dd>The database connection with which this transaction is associated.</dd>
  <dt>{{domxref("IDBTransaction.error")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.</dd>
+ <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.</dd>
  <dt>{{domxref("IDBTransaction.mode")}} {{readonlyInline}}</dt>
  <dd>The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is <code><a href="#const_read_only">readonly</a></code>.</dd>
  <dt>{{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}</dt>
@@ -150,7 +150,7 @@ objectStore1.put("1", "key");
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -220,7 +220,7 @@ function addData() {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
@@ -237,5 +237,5 @@ function addData() {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

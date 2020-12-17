@@ -22,7 +22,7 @@ tags:
 
 <dl class="reference-values">
  <dt><code>urls</code></dt>
- <dd><code>array</code> of <code><code>string</code></code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events.</dd>
+ <dd><code>array</code> of <code><code>string</code></code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. <code>view-source:</code> requests may be matched based on its inner URL.</dd>
  <dt><code>types</code>{{optional_inline}}</dt>
  <dd><code>array</code> of <code>{{WebExtAPIRef('webRequest.ResourceType')}}</code>. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.</dd>
  <dt><code>tabId</code>{{optional_inline}}</dt>

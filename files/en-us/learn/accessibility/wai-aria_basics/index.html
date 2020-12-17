@@ -127,7 +127,7 @@ tags:
 
 <h3 id="SignpostsLandmarks">Signposts/Landmarks</h3>
 
-<p>WAI-ARIA adds the <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions"><code>role</code> attribute</a> to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screenreaders so that their users can find common page elements. Let's look at an example — our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles">website-no-roles</a> example (<a href="http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/">see it live</a>) has the following structure:</p>
+<p>WAI-ARIA adds the <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions"><code>role</code> attribute</a> to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screenreaders so that their users can find common page elements. Let's look at an example — our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles">website-no-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/">see it live</a>) has the following structure:</p>
 
 <pre class="brush: html notranslate">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -163,7 +163,7 @@ tags:
 
 <p>However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (<code>&lt;input type="search"&gt;</code>). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.</p>
 
-<p>Let's improve it by the use of some ARIA features. First, we'll add some role attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
+<p>Let's improve it by the use of some ARIA features. First, we'll add some role attributes to our HTML structure. You can try taking a copy of our original files (see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a>), or navigating to our <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>), which has a structure like this:</p>
 
 <pre class="brush: html notranslate">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -203,7 +203,7 @@ tags:
 
 <p>The problem is that modern web apps are often not just static text — they tend to have a lot of dynamically updating content, i.e. content that updates without the entire page reloading via a mechanism like <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>, or <a href="/en-US/docs/Web/API/Document_Object_Model">DOM APIs</a>. These are sometimes referred to as <strong>live regions</strong>.</p>
 
-<p>Let's look at a quick example — see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> (also <a href="http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html">see it running live</a>). In this example we have a simple random quote box:</p>
+<p>Let's look at a quick example — see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> (also <a href="https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html">see it running live</a>). In this example we have a simple random quote box:</p>
 
 <pre class="brush: html notranslate">&lt;section&gt;
   &lt;h1&gt;Random quote&lt;/h1&gt;
@@ -243,7 +243,7 @@ tags:
 <p>The <code>aria-atomic="true"</code> attribute tells screenreaders to read out the entire element contents as one atomic unit, not just the bits that were updated.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example at <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-live.html">see it running live</a>).</p>
+<p><strong>Note</strong>: You can see the finished example at <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/aria/aria-live.html">see it running live</a>).</p>
 </div>
 
 <div class="note">
@@ -303,14 +303,14 @@ tags:
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the finished example live at <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
+<p><strong>Note</strong>: You can see the finished example live at <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
 </div>
 
 <p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> for more details.</span></p>
 
 <p><span class="subtitle">There are many other useful properties and states too, for indicating the status of form elements. For example, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screenreaders, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screenreader know that a disabled input is in fact disabled.</span></p>
 
-<p><span class="subtitle">If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> demo there is a checkbox that when checked, enables another form input to allow further information be entered. We've set up a hidden live region:</span></p>
+<p><span class="subtitle">If the disabled state of an input is likely to change, then it is also a good idea to indicate when it happens, and what the result is. For example, in our <a href="https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a> demo there is a checkbox that when checked, enables another form input to allow further information be entered. We've set up a hidden live region:</span></p>
 
 <pre class="brush: html notranslate">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
@@ -336,7 +336,7 @@ tags:
 
 <p>A few times in this course already, we've mentioned the native accessibilty of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
 
-<p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
+<p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
 
 <p>We can fix this using a WAI-ARIA role. Make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>, and add <code><a href="https://www.w3.org/TR/wai-aria-1.1/#button">role="button"</a></code> to each button <code>&lt;div&gt;</code>, for example:</p>
 
@@ -352,11 +352,11 @@ tags:
 
 <p>There are a whole host of other <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">roles</a> that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example <code><a href="https://www.w3.org/TR/wai-aria-1.1/#combobox">combobox</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#slider">slider</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tabpanel">tabpanel</a></code>, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tree">tree</a></code>. You can see a number of useful examples in the <a href="https://dequeuniversity.com/library/">Deque university code library</a>, to give you an idea of how such controls can be made accessible.</p>
 
-<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
+<p>Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things">Hiding things</a> in our CSS and JavaScript accessibility article), which you can find at <a class="external external-icon" href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>).</p>
 
 <p>This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screenreader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.</p>
 
-<p>To improve things, we've created a new version of the example called <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html">aria-tabbed-info-box.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html">see it running live</a>). We've updated the structure of the tabbed interface like so:</p>
+<p>To improve things, we've created a new version of the example called <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html">aria-tabbed-info-box.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html">see it running live</a>). We've updated the structure of the tabbed interface like so:</p>
 
 <pre class="brush: html notranslate">&lt;ul role="tablist"&gt;
   &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
@@ -410,7 +410,7 @@ tags:
  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">Definition of Roles</a> — ARIA roles reference.</li>
  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">Definitions of States and Properties (all aria-* attributes)</a> — properties and states reference.</li>
  <li><a href="https://dequeuniversity.com/library/">Deque university code library</a> — a library of really useful practical examples showing complex UI controls made accessible using WAI-ARIA features.</li>
- <li><a href="http://w3c.github.io/aria-practices/">WAI-ARIA Authoring Practices</a> — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.</li>
+ <li><a href="https://w3c.github.io/aria-practices/">WAI-ARIA Authoring Practices</a> — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.</li>
  <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.</li>
 </ul>
 

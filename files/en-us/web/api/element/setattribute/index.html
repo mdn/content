@@ -17,7 +17,7 @@ tags:
 
 <p>To get the current value of an attribute, use {{domxref("Element.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>Element</em>.setAttribute(<em>name</em>, <em>value</em>);
 </pre>
@@ -46,7 +46,7 @@ tags:
  <dd>The specified attribute <code>name</code> contains one or more characters which are not valid in attribute names.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In the following example, <code>setAttribute()</code> is used to set attributes on a {{HTMLElement("button")}}.</p>
 
@@ -97,6 +97,6 @@ b.setAttribute("disabled", "");
 
 <p>{{Compat("api.Element.setAttribute")}}</p>
 
-<h3 id="Notes" name="Notes">Gecko notes</h3>
+<h3 id="Notes">Gecko notes</h3>
 
 <p>Using <code>setAttribute()</code> to modify certain attributes, most notably <code>value</code> in XUL, works inconsistently, as the attribute specifies the default value. To access or modify the current values, you should use the properties. For example, use <code>Element.value</code> instead of <code>Element.setAttribute()</code>.</p>

@@ -99,7 +99,7 @@ export const alert = writable('Welcome to the To-Do list app!')</pre>
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Stores can be defined and used outside of Svelte components, so you can organize them in any way you please.</p>
 </div>
 
@@ -324,7 +324,7 @@ const removeCompletedTodos = () =&gt; {
 
 <p>We could do the same within any component or <code>.js</code> file.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: outside of Svelte components you cannot use the <code>$store</code> syntax. That's because the Svelte compiler won't touch anything outside of Svelte components. In that case you'll have to rely on the <code>store.subscribe()</code> and <code>store.set()</code> methods.</p>
 </div>
 
@@ -414,7 +414,7 @@ const removeCompletedTodos = () =&gt; {
 
   <pre class="brush: html notranslate">&lt;Todos bind:todos /&gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Remember</strong>: <code>&lt;Todos bind:todos /&gt;</code> is just a shortcut for <code>&lt;Todos bind:todos={todos} /&gt;</code>.</p>
   </div>
  </li>
@@ -533,7 +533,7 @@ function myStore() {
 
 <p>Our To-do list app is not particularly complex, so we won't move all our modification methods into a central place. We'll just leave them as they are, and instead concentrate on persisting our todos.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: if you are following this guide working from the Svelte REPL you won't be able to complete this step. For security reasons the Svelte REPL works in a sandboxed environment which will not let you access web storage, and you will get a "The operation is insecure" error. In order to follow this section you'll have to clone the repo and go to the <code>mdn-svelte-tutorial/06-stores</code> folder or you can directly download the folder's content with <code>npx degit opensas/mdn-svelte-tutorial/06-stores</code>.</p>
 </div>
 
@@ -620,7 +620,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 &lt;Alert /&gt;
 &lt;Todos bind:todos={$todos} /&gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: This is the only change we have to make in order to use our custom store. <code>App.svelte</code> is completely transparent in terms of what kind of store we are using.</p>
   </div>
  </li>
@@ -663,7 +663,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
   transition:fly="\{{delay: 250, duration: 300, x: 0, y: -100, opacity: 0.5}}"
 &gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: the double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.</p>
   </div>
  </li>
@@ -672,7 +672,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with <code>npm run build</code>, our <code>public/build/bundle.js</code> file will weight a little less than 22KB. If we remove the <code>transitions:fly</code> directive Svelte is smart enough to realize the fly function is not being used and the <code>bundle.js</code> file size will drop down to just 18KB.</p>
 </div>
 

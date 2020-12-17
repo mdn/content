@@ -34,7 +34,7 @@ tags:
 
 <p>A {{domxref("FileSystemEntry")}}-based object describing the dropped item. This will be either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In this example, a drop zone is created, which responds to the {{event("drop")}} event by scanning through the dropped files and directories, outputting a hierarchical directory listing.</p>
 
@@ -87,7 +87,7 @@ body {
 
 <p>First, let's look at the recursive <code>scanFiles()</code> function. This function takes as input a {{domxref("FileSystemEntry")}} representing an entry in the file system to be scanned and processed (the <code>item</code> parameter), and an element into which to insert the list of contents (the <code>container</code> parameter).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note that to read all files in a directory, <code>readEntries</code> needs to be called repeatedly until it returns an empty array. In Chromium-based browsers, the following example will only return a max of 100 entries.</p>
 </div>
 
@@ -175,7 +175,7 @@ function scanFiles(item, container) {
 
 <p>This API has no official W3C or WHATWG specification.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

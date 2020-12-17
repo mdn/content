@@ -59,7 +59,7 @@ tags:
 
 <p>For details, see the auto-play policies for <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> and <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Put another way, playback of any media that includes audio is generally blocked if the playback is programmatically initiated in a tab which has not yet had any user interaction. Browsers may additionally choose to block under other circumstances.</p>
 </div>
 
@@ -114,7 +114,7 @@ tags:
 
 <p>At this point, your site or app can begin whatever it needs to do that relies upon the video having been started up.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> This approach doesn't differentiate between autoplay and the user starting playback manually.</p>
 </div>
 
@@ -122,7 +122,7 @@ tags:
 
 <p>The term "autoplay" also refers to scenarios in which a script tries to trigger the playback of media that includes audio, outside the context of handling a user input event. This is done by calling the media element's {{domxref("HTMLMediaElement.play", "play()")}} method.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> It is strongly recommended that you use the <code>autoplay</code> attribute whenever possible, because support for autoplay preferences are more widespread for the <code>autoplay</code> attribute than for other means of playing media automatically. It also lets the browser take responsibility for starting playback, letting it optimize the timing of that taking place.</p>
 </div>
 
@@ -174,7 +174,7 @@ if (startPlayPromise !== undefined) {
 
 <p>You can also specify <code>'none'</code> to disable autoplay entirely, <code>'*'</code> to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new feature policy for that frame and all frames nested within it.</p>
 </div>
 

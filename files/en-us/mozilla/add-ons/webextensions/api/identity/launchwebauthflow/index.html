@@ -26,7 +26,7 @@ tags:
 
 <p>This function also takes an optional parameter <code>interactive</code>: if this is omitted or set to false, then the flow is forced to complete silently. In this case, if the user has to authenticate or authorize, then the operation will just fail.</p>
 
-<p>This function returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>: if authentication and authorization were successful, the promise is fulfilled with a redirect URL that contains a number of URL parameters. Depending on the OAuth2 flow implemented by the service provider in question, the extension will need to go through further steps to get a valid access code, which it can then use to access the user's data.</p>
+<p>This function returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>: if authentication and authorization were successful, the promise is fulfilled with a redirect URL that contains a number of URL parameters. Depending on the OAuth2 flow implemented by the service provider in question, the extension will need to go through further steps to get a valid access code, which it can then use to access the user's data.</p>
 
 <p>If there's any error, the promise is rejected with an error message. Error conditions may include:</p>
 
@@ -75,7 +75,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the extension is authorized successfully, this will be fulfilled with a string containing the redirect URL. The URL will include a parameter that either is an access token or can be exchanged for an access token, using the documented flow for the particular service provider. </p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the extension is authorized successfully, this will be fulfilled with a string containing the redirect URL. The URL will include a parameter that either is an access token or can be exchanged for an access token, using the documented flow for the particular service provider. </p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

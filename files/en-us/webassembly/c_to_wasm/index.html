@@ -69,7 +69,7 @@ int main(int argc, char ** argv) {
 
 <p>Now all that remains is for you to load the resulting <code>hello.html</code> in a browser that supports WebAssembly. It is enabled by default in Firefox 52+ and Chrome 57+/latest Opera (you can also run wasm code in Firefox 47+ by enabling the <code>javascript.options.wasm</code> flag in <em>about:config</em>, or Chrome (51+) and Opera (38+) by going to <em>chrome://flags</em> and enabling the <em>Experimental WebAssembly</em> flag.)</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you try to open generated HTML file (<code>hello.html</code>) directly from your local hard drive (e.g. <code>file://your_path/hello.html</code>), you will end up with an error message along the lines of <em><code>both async and sync fetching of the wasm failed</code>.</em> You need to run your HTML file through an HTTP server (<code>http://</code>) — see <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for more information.</p>
 </div>
 
@@ -109,7 +109,7 @@ int main(int argc, char ** argv) {
 	</li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You could specify outputting just the JavaScript "glue" file* rather than the full HTML by specifying a .js file instead of an HTML file in the <code>-o</code> flag, e.g. <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code>. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.</p>
 
 <ul>
@@ -146,7 +146,7 @@ EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char ** argv) {
 
 	<p>By default, Emscripten-generated code always just calls the <code>main()</code> function, and other functions are eliminated as dead code. Putting <code>EMSCRIPTEN_KEEPALIVE</code> before a function name stops this from happening. You also need to import the <code>emscripten.h</code> library to use <code>EMSCRIPTEN_KEEPALIVE</code>.</p>
 
-	<div class="blockIndicator note">
+	<div class="notecard note">
 	<p><strong>Note</strong>: We are including the <code>#ifdef</code> blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.</p>
 	</div>
 	</li>

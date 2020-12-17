@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{HTTPSidebar}}{{deprecated_header}}</p>
 
-<div class="blockIndicator note"><strong>Note:</strong> Public Key Pinning mechanism was deprecated in favor of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> and {{HTTPHeader("Expect-CT")}} header.</div>
+<div class="notecard note"><strong>Note:</strong> Public Key Pinning mechanism was deprecated in favor of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> and {{HTTPHeader("Expect-CT")}} header.</div>
 
 <p>The HTTP <code><strong>Public-Key-Pins-Report-Only</strong></code> response header was used to send reports of pinning violation to the <code>report-uri</code> specified in the header but, unlike {{HTTPHeader("Public-Key-Pins")}} still allows browsers to connect to the server if the pinning is violated. The header is silently ignored in modern browsers as support for HPKP has been removed. Use <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> and the {{HTTPHeader("Expect-CT")}} header instead.</p>
 

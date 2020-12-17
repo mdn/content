@@ -25,15 +25,15 @@ tags:
 
 <p>Each embedded browsing context has its own <a href="/en-US/docs/Web/API/History">session history</a> and <a href="/en-US/docs/Web/API/Document">document</a>. The browsing context that embeds the others is called the <em><dfn>parent</dfn> browsing context</em>. The <em>topmost</em> browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Because each browsing context is a complete document environment, every <code>&lt;iframe&gt;</code> in a page requires increased memory and other computing resources. While theoretically you can use as many <code>&lt;iframe&gt;</code>s as you like, check for performance problems.</p>
 </div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -115,7 +115,7 @@ tags:
   <li><code>allow-forms</code>: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.</li>
   <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
   <li><code>allow-orientation-lock</code>: Lets the resource <a href="/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>
-  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>.</li>
+  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a>.</li>
   <li><code>allow-popups</code>: Allows popups (such as <code>window.open()</code>, <code>target="_blank"</code>, or <code>showModalDialog()</code>). If this keyword is not used, the popup will silently fail to open.</li>
   <li><code>allow-popups-to-escape-sandbox</code>: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.</li>
   <li><code>allow-presentation</code>: Lets the resource start a <a href="/en-US/docs/Web/API/PresentationRequest">presentation session</a>.</li>
@@ -194,7 +194,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Example1" name="Example1">A simple &lt;iframe&gt;</h3>
+<h3 id="Example1">A simple &lt;iframe&gt;</h3>
 
 <p>An <code>&lt;iframe&gt;</code> in action. After creating the frame, when the user clicks a button, its title is displayed in an alert.</p>
 

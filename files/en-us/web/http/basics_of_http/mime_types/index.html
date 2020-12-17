@@ -95,7 +95,7 @@ tags:
 
 <p>This is the default for textual files. Even if it really means "unknown textual file," browsers assume they can display it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note that <code>text/plain</code> does not mean "any kind of textual data." If they expect a specific kind of textual data, they will likely not consider it a match. Specifically if they download a <code>text/plain</code> file from a {{HTMLElement("link")}} element declaring a CSS file, they will not recognize it as a valid CSS file if presented with <code>text/plain</code>. The CSS mime type <code>text/css</code> must be used.</p>
 </div>
 
@@ -107,7 +107,7 @@ tags:
 
 <p>All HTML content should be served with this type. Alternative MIME types for XHTML (like <code>application/xhtml+xml</code>) are mostly useless nowadays.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Use <code>application/xml</code> or <code>application/xhtml+xml</code> if you want XML’s strict parsing rules, <code><a href="/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> sections, or elements that aren't from HTML/SVG/MathML namespaces.</p>
 </div>
 
@@ -136,7 +136,7 @@ tags:
  <li><code>text/x-javascript</code> {{Non-standard_Inline}}</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use <code>text/javascript</code>. It's the only MIME type guaranteed to work now and into the future.</p>
 </div>
 

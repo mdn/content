@@ -14,7 +14,7 @@ tags:
 
 <p>This Boolean disabled attribute indicates that the user cannot interact with the control or its descendant controls. If this attribute is not specified, the control inherits its setting from the containing element, for example <code>fieldset</code>; if there is no containing element with the <code>disabled</code> attribute set, and the control itself does not have the attribute, then the control is enabled. If declared on an {{ HTMLElement("optgroup") }}, the select is still interactive (unless otherwise disabled), but none of the items in the option group are selectable.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note: If a {{ HTMLElement("fieldset") }} is disabled, the descendant form controls are all disabled, with the exception of form controls within the {{ HTMLElement("legend") }}.</p>
 </div>
 
@@ -30,7 +30,7 @@ tags:
 
 <p>Because a disabled field cannot have its value changed, <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> does not have any effect on inputs with the <code>disabled</code> attribute also specified. Additionally, since the elements become immutable, most other attributes, such as <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>, have no effect, until the control is enabled.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The <code>required</code> attribute is not permitted on inputs with the <code>disabled</code> attribute specified.</p>
 </div>
 

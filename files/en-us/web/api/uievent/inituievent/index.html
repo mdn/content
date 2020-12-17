@@ -21,12 +21,12 @@ tags:
 <p>Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>event</em>.initUIEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>view</em>, <em>detail</em>)
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><em><code>type</code></em></dt>
@@ -41,7 +41,7 @@ tags:
  <dd>Is an <code>unsigned long</code>  specifying some detail information about the event, depending on the type of event. For mouse events, it indicates how many times the mouse has been clicked on a given screen location.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var e = document.createEvent("UIEvent");
 // creates a click event that bubbles, can be cancelled,
@@ -72,7 +72,7 @@ e.initUIEvent("click", true, true, window, 1);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 
