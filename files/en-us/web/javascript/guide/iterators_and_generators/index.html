@@ -127,7 +127,6 @@ console.log(<var>it</var>[Symbol.iterator]() === <var>it</var>) // true;
 // which has the @@iterator method return the <var>it</var> (itself),
 // and consequently, the <var>it</var> object can iterate only _once_.
 
-
 // If we change <var>it</var>'s @@iterator method to a function/generator
 // which returns a new iterator/generator object, (<var>it</var>)
 // can iterate many times

@@ -49,7 +49,6 @@ tags:
   });
 };
 
-
 const add = async function(x) { // async function expression assigned to a variable
   let a = await resolveAfter2Seconds(20);
   let b = await resolveAfter2Seconds(30);
@@ -59,7 +58,6 @@ const add = async function(x) { // async function expression assigned to a varia
 add(10).then(v =&gt; {
   console.log(v);  // prints 60 after 4 seconds.
 });
-
 
 (async function(x) { // async function expression used as an IIFE
   let p_a = resolveAfter2Seconds(20);
@@ -88,7 +86,6 @@ add(10).then(v =&gt; {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.operators.async_function_expression")}}</p>
 </div>

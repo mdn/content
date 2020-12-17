@@ -122,7 +122,6 @@ tags:
                 &lt;/div&gt;
             &lt;/div&gt;
 
-
             &lt;div id="output" class="category"&gt;
                 &lt;div class="title"&gt; CSS Code &lt;/div&gt;
                 &lt;div class="css-property"&gt;
@@ -203,7 +202,6 @@ tags:
 	width: 6.86%;
 }
 
-
 /*  SECTIONS
  * ========================================================================== */
 
@@ -215,7 +213,6 @@ tags:
 
 /*  GROUPING
  * ========================================================================== */
-
 
 .group:before, .group:after {
     content: "";
@@ -242,8 +239,6 @@ tags:
 .col:first-child {
 	margin-left: 0;
 } /* all browsers except IE6 and lower */
-
-
 
 /*
  * UI Component
@@ -427,7 +422,6 @@ tags:
 	cursor: pointer;
 }
 
-
 /*************************************************************************************/
 /*************************************************************************************/
 
@@ -541,8 +535,6 @@ body[data-move='Y'] {
 [data-draggable='true']:hover &gt; * {
 	cursor: default;
 }
-
-
 
 /******************************************************************************/
 /******************************************************************************/
@@ -731,7 +723,6 @@ body[data-move='Y'] {
 	cursor: s-resize;
 }
 
-
 #subject .relative {
 	position: relative;
 	font-size: 12px;
@@ -837,7 +828,6 @@ body[data-move='Y'] {
 	cursor: nw-resize;
 }
 
-
 /*
  * General controls MENU
  */
@@ -942,7 +932,6 @@ body[data-move='Y'] {
 	border-radius: 2px;
 }
 
-
 /* property */
 
 #controls .property {
@@ -1005,7 +994,6 @@ body[data-move='Y'] {
 	float: left;
 }
 
-
 #controls .property .ui-checkbox {
 	margin: 0 0 0 16px;
 	float: left;
@@ -1052,7 +1040,6 @@ body[data-move='Y'] {
 }
 
 /* border-image-slice */
-
 
 #border-slice-control .ui-dropdown-list {
 	height: 4.3em;
@@ -1167,7 +1154,6 @@ body[data-move='Y'] {
 	user-select: text;
 }
 
-
 @media (min-width: 880px) {
 	#output {
 		width: 63.33% !important;
@@ -1179,7 +1165,6 @@ body[data-move='Y'] {
 		width: 87% !important;
 	}
 }
-
 
 #output .title {
 	width: 100%;
@@ -1483,7 +1468,6 @@ var InputSliderManager = (function InputSliderManager() {
 
 })();
 
-
 /**
  * UI-DropDown Select
  */
@@ -1495,7 +1479,6 @@ var DropDownManager = (function DropdownManager() {
 	var active = null;
 
 	var visbility = ["hidden", "visible"];
-
 
 	var DropDown = function DropDown(node) {
 		var topic = node.getAttribute('data-topic');
@@ -1662,7 +1645,6 @@ var DropDownManager = (function DropdownManager() {
 	};
 
 })();
-
 
 /**
  * UI-ButtonManager
@@ -1903,7 +1885,6 @@ var BorderImage = (function BorderImage() {
 		var imgState = null;
 		var selected = null;
 
-
 		var topics = ['slice', 'width', 'outset'];
 		var properties = {};
 		properties['border1'] = {
@@ -2001,7 +1982,6 @@ var BorderImage = (function BorderImage() {
 			size			: [350, 350],
 			preview_area	: 500,
 		};
-
 
 		var loadLocalImage = function loadLocalImage(source) {
 			var location = "images/" + source;
@@ -2218,7 +2198,6 @@ var BorderImage = (function BorderImage() {
 		InputSliderManager.subscribe(topic, this.setPosition.bind(this));
 		InputSliderManager.setValue(topic, this.position);
 	};
-
 
 	GuideLine.prototype.updateGuidelinePos = function updateGuidelinePos() {
 		if (this.unit === 0)
@@ -2560,7 +2539,6 @@ var BorderImage = (function BorderImage() {
 			subject = getElemById('subject');
 			preview = getElemById("preview");
 			preview_area = getElemById("preview_section");
-
 
 			CSS_code['source'] = getElemById("out-border-source");
 			CSS_code['slice'] = getElemById("out-border-slice");

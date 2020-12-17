@@ -33,7 +33,6 @@ tags:
   <dd>A {{jsxref('String')}} which identifies the deleted content index via it's <code>id</code>.</dd>
  </dl>
 
-
 <h2 id="Methods">Methods</h2>
 
 <p><em>While <code>ContentIndexEvent</code> offers no methods of its own, it inherits any specified by its parent interface, {{domxref("ExtendableEvent")}}.</em></p>
@@ -41,7 +40,6 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.</p>
-
 
 <pre class="brush: js notranslate">self.addEventListener('contentdelete', (event) =&gt; {
   console.log(event.id);
@@ -69,8 +67,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.ContentIndexEvent")}}</p>
 

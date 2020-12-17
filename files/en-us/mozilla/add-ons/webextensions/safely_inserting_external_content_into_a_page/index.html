@@ -87,8 +87,6 @@ elem.html(cleanHTML);</pre>
 
 <p>For example, when using <a href="https://mustache.github.io/">mustache templates</a> you must use the double mustache, <code>\{{variable}}</code>, which escapes any HTML. Use of the triple mustache, <code>\{\{{variable}}}</code>, must be avoided as this injects a raw HTML string and could add executable code to your template. <a href="http://handlebarsjs.com/">Handlebars</a> works in a similar way, with variables in double handlebars, <code>\{{variable}}</code>, being escaped. Whereas, variables in triple handlebars are left raw and must be avoided. Also, if you create a Handlebars helper using <code>Handlebars.SafeString</code> use <code>Handlebars.escapeExpression()</code> to escape any dynamic parameters passed to the helper. This is a requirement because the resulting variable from <code>Handlebars.SafeString</code> is considered safe and it isn’t escaped when inserted with double handlebars.</p>
 
-
-
 <p>There are similar constructs in other templating systems that need to be approached with the same level of care.</p>
 
 <h2 id="Additional_reading">Additional reading</h2>

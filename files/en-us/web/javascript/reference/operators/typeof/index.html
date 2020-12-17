@@ -14,8 +14,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <p>The <code>typeof</code> operator is followed by its operand:</p>
@@ -104,7 +102,6 @@ typeof Number('shoe') === 'number';   // including values that cannot be type co
 
 typeof 42n === 'bigint';
 
-
 // Strings
 typeof '' === 'string';
 typeof 'bla' === 'string';
@@ -113,25 +110,21 @@ typeof '1' === 'string'; // note that a number within a string is still typeof s
 typeof (typeof 1) === 'string'; // typeof always returns a string
 typeof String(1) === 'string'; // String converts anything into a string, safer than toString
 
-
 // Booleans
 typeof true === 'boolean';
 typeof false === 'boolean';
 typeof Boolean(1) === 'boolean'; // Boolean() will convert values based on if they're truthy or falsy
 typeof !!(1) === 'boolean'; // two calls of the ! (logical NOT) operator are equivalent to Boolean()
 
-
 // Symbols
 typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
 typeof Symbol.iterator === 'symbol'
 
-
 // Undefined
 typeof undefined === 'undefined';
 typeof declaredButUndefinedVariable === 'undefined';
 typeof undeclaredVariable === 'undefined';
-
 
 // Objects
 typeof {a: 1} === 'object';
@@ -143,12 +136,10 @@ typeof [1, 2, 4] === 'object';
 typeof new Date() === 'object';
 typeof /regex/ === 'object'; // See Regular expressions section for historical results
 
-
 // The following are confusing, dangerous, and wasteful. Avoid them.
 typeof new Boolean(true) === 'object';
 typeof new Number(1) === 'object';
 typeof new String('abc') === 'object';
-
 
 // Functions
 typeof function() {} === 'function';
@@ -262,8 +253,6 @@ class newClass{};</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.operators.typeof")}}</p>
 
