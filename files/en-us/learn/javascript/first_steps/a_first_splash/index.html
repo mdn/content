@@ -334,7 +334,7 @@ hello;
 let greeting = name + hello;
 greeting;</pre>
 
-<p>There are also some shortcut operators available, called augmented <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment operators</a>. For example, if you want to simply add a new text string to an existing one and return the result, you could do this:</p>
+<p>There are also some shortcut operators available, called augmented <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment operators</a>. For example, if you want to add a new text string to an existing one and return the result, you could do this:</p>
 
 <pre class="brush: js notranslate">name += ' says hello!';</pre>
 
@@ -531,7 +531,7 @@ greeting;</pre>
 <ol>
  <li><strong>A starting value</strong>: In this case we are starting a count at 1, but this could be any number you like. You could replace the letter <code>i</code> with any name you like too, but <code>i</code> is used as a convention because it's short and easy to remember.</li>
  <li><strong>A condition</strong>: Here we have specified <code>i &lt; 21</code> — the loop will keep going until <code>i</code> is no longer less than 21. When <code>i</code> reaches 21, the loop will no longer run.</li>
- <li><strong>An incrementor</strong>: We have specified <code>i++</code>, which means "add 1 to i". The loop will run once for every value of <code>i</code>, until <code>i</code> reaches a value of 21 (as discussed above). In this case, we are simply printing the value of <code>i</code> out to the console on every iteration using {{domxref("Console.log", "console.log()")}}.</li>
+ <li><strong>An incrementor</strong>: We have specified <code>i++</code>, which means "add 1 to i". The loop will run once for every value of <code>i</code>, until <code>i</code> reaches a value of 21 (as discussed above). In this case, we are printing the value of <code>i</code> out to the console on every iteration using {{domxref("Console.log", "console.log()")}}.</li>
 </ol>
 
 <p>Now let's look at the loop in our number guessing game — the following can be found inside the <code>resetGame()</code> function:</p>

@@ -15,7 +15,7 @@ tags:
 
 <p>The <code>externalResourcesRequired</code> attribute is not inheritable (from a sense of attribute value inheritance), but if set on a container element, its value will apply to all elements within the container.</p>
 
-<p>Because setting <code>externalResourcesRequired="true"</code> on a container element will have the effect of disabling progressive display of the contents of that container, if that container includes elements that reference external resources, authors should avoid simply setting <code>externalResourcesRequired="true"</code> on the outermost {{SVGElement("svg")}} element on a universal basis. Instead, it is better to specify <code>externalResourcesRequired="true"</code> on those particular graphics elements or container elements which specifically need the availability of external resources in order to render properly.</p>
+<p>Because setting <code>externalResourcesRequired="true"</code> on a container element will have the effect of disabling progressive display of the contents of that container, if that container includes elements that reference external resources, authors should avoid setting <code>externalResourcesRequired="true"</code> on the outermost {{SVGElement("svg")}} element on a universal basis. Instead, it is better to specify <code>externalResourcesRequired="true"</code> on those particular graphics elements or container elements which specifically need the availability of external resources in order to render properly.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

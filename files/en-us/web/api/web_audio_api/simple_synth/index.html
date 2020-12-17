@@ -381,7 +381,7 @@ let cosineTerms = null;
  </tbody>
 </table>
 
-<p>With this table in place, we can find out the frequency for a given note in a particular octave quite easily. If we want the frequency for the note G# in octave 1, we simply use <code>noteFreq[1]["G#"]</code> and get the value 51.9 as a result.</p>
+<p>With this table in place, we can find out the frequency for a given note in a particular octave quite easily. If we want the frequency for the note G# in octave 1, we use <code>noteFreq[1]["G#"]</code> and get the value 51.9 as a result.</p>
 
 <div class="note">
 <p>The values in the example table above have been rounded to two decimal places.</p>
@@ -444,7 +444,7 @@ setup();</pre>
 
 <ol>
  <li>The table which maps note names and octaves to their frequenies is created by calling <code>createNoteTable()</code>.</li>
- <li>An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the master gain control. This will simply update the master gain node's volume to the new value of the control.</li>
+ <li>An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the master gain control. This will update the master gain node's volume to the new value of the control.</li>
  <li>Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.</li>
  <li>Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"</li>
  <li>For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call <code>createKey()</code>, specifying the note string, octave, and frequency. The returned element is appended to the octave element created  in step 4.</li>
@@ -508,7 +508,7 @@ setup();</pre>
 
 <p><code>playTone()</code> begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("AudioContext.createOscillator()")}} method. We then connect it to the master gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the master gain node will affect the volume of all tones being generated.</p>
 
-<p>Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to <code>"custom"</code>, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to <code>custom</code>. If any other waveform type is selected in the wave picker, we simply set the oscillator's type to the value of the picker; that value will be one of <code>sine</code>, <code>square</code>, <code>triangle</code>, and <code>sawtooth</code>.</p>
+<p>Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to <code>"custom"</code>, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to <code>custom</code>. If any other waveform type is selected in the wave picker, we set the oscillator's type to the value of the picker; that value will be one of <code>sine</code>, <code>square</code>, <code>triangle</code>, and <code>sawtooth</code>.</p>
 
 <p>The oscillator's frequency is set to the value specified in the <code>freq</code> parameter by setting the value of the {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.</p>
 
@@ -560,7 +560,7 @@ setup();</pre>
 }
 </pre>
 
-<p>This simply sets the value of the master gain node's <code>gain</code> {{domxref("AudioParam")}} to the slider's new value.</p>
+<p>This sets the value of the master gain node's <code>gain</code> {{domxref("AudioParam")}} to the slider's new value.</p>
 
 <h3 id="Result">Result</h3>
 

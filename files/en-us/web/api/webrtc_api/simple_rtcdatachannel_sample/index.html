@@ -236,7 +236,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
     receiveBox.appendChild(el);
   }</pre>
 
-<p>This method simply performs some basic {{Glossary("DOM")}} injection; it creates a new {{HTMLElement("p")}} (paragraph) element, then creates a new {{domxref("Text")}} node containing the message text, which is received in the event's <code>data</code> property. This text node is appended as a child of the new element, which is then inserted into the <code>receiveBox</code> block, thereby causing it to draw in the browser window.</p>
+<p>This method performs some basic {{Glossary("DOM")}} injection; it creates a new {{HTMLElement("p")}} (paragraph) element, then creates a new {{domxref("Text")}} node containing the message text, which is received in the event's <code>data</code> property. This text node is appended as a child of the new element, which is then inserted into the <code>receiveBox</code> block, thereby causing it to draw in the browser window.</p>
 
 <h3 id="Disconnecting_the_peers">Disconnecting the peers</h3>
 

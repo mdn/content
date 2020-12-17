@@ -222,7 +222,7 @@ background-repeat: no-repeat;</pre>
 } else {
   msg.style.paddingLeft = '20px';
 }</pre>
-  Here, if the <code>msgType</code> parameter is set as <code>'warning'</code>, the warning icon is displayed and the panel's background color is set to red. If it is set to <code>'chat'</code>, the chat icon is displayed and the panel's background color is set to aqua blue. If the <code>msgType</code> parameter is not set at all (or to something different), then the <code>else { ... }</code> part of the code comes into play, and the paragraph is simply given default padding and no icon, with no background panel color set either. This provides a default state if no <code>msgType</code> parameter is provided, meaning that it is an optional parameter!</li>
+  Here, if the <code>msgType</code> parameter is set as <code>'warning'</code>, the warning icon is displayed and the panel's background color is set to red. If it is set to <code>'chat'</code>, the chat icon is displayed and the panel's background color is set to aqua blue. If the <code>msgType</code> parameter is not set at all (or to something different), then the <code>else { ... }</code> part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no <code>msgType</code> parameter is provided, meaning that it is an optional parameter!</li>
  <li>Let's test out our updated function, try updating the <code>displayMessage()</code> call from this:
   <pre class="brush: js">displayMessage('Woo, this is a different message!');</pre>
 

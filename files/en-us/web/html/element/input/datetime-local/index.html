@@ -25,7 +25,7 @@ tags:
 
 <p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
-<p>The control is intended to simply represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
+<p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
 <p>Because of the limited browser support for <code>datetime-local</code>, and the variations in how the inputs work, it may currently still be best to use a framework or library to present these, or to use a custom input of your own. Another option is to use separate <code>date</code> and <code>time</code> inputs, each of which is more widely supported than <code>datetime-local</code>.</p>
 
@@ -259,7 +259,7 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
 </div>
 
 <h2 id="Handling_browser_support">Handling browser support</h2>

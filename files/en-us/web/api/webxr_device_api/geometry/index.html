@@ -43,7 +43,7 @@ tags:
 
 <h4 id="Angles">Angles</h4>
 
-<p>Angles are specified using <strong>{{interwiki("wikipedia", "radians")}}</strong>. To convert degrees to radians, simply multiply the value in degrees by <code>π/180</code>. The following code snippet shows two simple functions, <code>degreesToRadians()</code> and <code>radiansToDegrees()</code>, which convert back and forth between the two units for measuring angles.</p>
+<p>Angles are specified using <strong>{{interwiki("wikipedia", "radians")}}</strong>. To convert degrees to radians, multiply the value in degrees by <code>π/180</code>. The following code snippet shows two simple functions, <code>degreesToRadians()</code> and <code>radiansToDegrees()</code>, which convert back and forth between the two units for measuring angles.</p>
 
 <pre class="brush: js notranslate">const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
@@ -91,7 +91,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p><img alt="Diagram showing the coordinate system used by WebGL and WebXR." src="https://mdn.mozillademos.org/files/17033/webgl_coordinates.svg" style="height: 487px; width: 487px;"></p>
 
-<p>An {{domxref("XRRigidTransform")}} called the <strong>origin offset</strong> is used to transform points from the space's own effective coordinate system to the XR device's native coordinate system. The origin offset is initially simply an identity transform, since typically the two origins are aligned when the space is first established. However, as changes in alignment accumulate over time the origin offset may change to compensate.</p>
+<p>An {{domxref("XRRigidTransform")}} called the <strong>origin offset</strong> is used to transform points from the space's own effective coordinate system to the XR device's native coordinate system. The origin offset is initially an identity transform, since typically the two origins are aligned when the space is first established. However, as changes in alignment accumulate over time the origin offset may change to compensate.</p>
 
 <p>The position of a point in space relative to the origin is determined by determining its distance along each of the three spatial axes shown in the diagram above. The space's origin is the point (0, 0, 0), at the center of the space and at the zero position along each axis. Specifically, under the initial starting conditions, with the default orientation of the viewer upon the space:</p>
 
@@ -165,7 +165,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <h3 id="Device_limitations_on_reference_spaces">Device limitations on reference spaces</h3>
 
-<p>Some XR devices simply can't be made to support a given experience, despite the efforts the API goes to to make up for any missing capabilities. For example, there's simply no way for a basic headset such as a GearVR device to be made to work in an app that requires support for allowing the user to walk around the environment by tracking their real-world movements.</p>
+<p>Some XR devices can't be made to support a given experience, despite the efforts the API goes to to make up for any missing capabilities. For example, there's no way for a basic headset such as a GearVR device to be made to work in an app that requires support for allowing the user to walk around the environment by tracking their real-world movements.</p>
 
 <p>To support progressive enhancement—and thus broaden the availability of your app or site—you should choose a reference space that offers the lowest amount of functionality needed, or provide a fallback mechanism that detects failed attempts to obtain reference spaces and tries again with a less powerful alternative.</p>
 

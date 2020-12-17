@@ -133,7 +133,7 @@ function displayImage(blob) {
 
 loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
-<p>Here we create a <code>displayImage()</code> function that simply represents a blob passed to it as an object URL, then creates an image to display the URL in, appending it to the document's <code>&lt;body&gt;</code>. However, we then create a <code>loadAsset()</code> function that takes a callback as a parameter, along with a URL to fetch and a content type. It uses <code>XMLHttpRequest</code> (often abbreviated to "XHR") to fetch the resource at the given URL, then pass the response to the callback to do something with. In this case the callback is waiting on the XHR call to finish downloading the resource (using the <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> event handler) before it passes it to the callback.</p>
+<p>Here we create a <code>displayImage()</code> function that represents a blob passed to it as an object URL, then creates an image to display the URL in, appending it to the document's <code>&lt;body&gt;</code>. However, we then create a <code>loadAsset()</code> function that takes a callback as a parameter, along with a URL to fetch and a content type. It uses <code>XMLHttpRequest</code> (often abbreviated to "XHR") to fetch the resource at the given URL, then pass the response to the callback to do something with. In this case the callback is waiting on the XHR call to finish downloading the resource (using the <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> event handler) before it passes it to the callback.</p>
 
 <p>Callbacks are versatile — not only do they allow you to control the order in which functions are run and what data is passed between them, they also allow you to pass data to different functions depending on circumstance. So you could have different actions to run on the response downloaded, such as <code>processJSON()</code>, <code>displayText()</code>, etc.</p>
 
@@ -257,7 +257,7 @@ console.log("all done");</pre>
 
 <h2 id="Active_learning_make_it_all_async!">Active learning: make it all async!</h2>
 
-<p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by simply moving it inside the second <code>then()</code> block. Try fixing this now.</p>
+<p>To fix the problematic <code>fetch()</code> example and make the three <code>console.log()</code> statements appear in the desired order, you could make the third <code>console.log()</code> statement run async as well. This can be done by moving it inside another <code>.then()</code> block chained onto the end of the second one, or by moving it inside the second <code>then()</code> block. Try fixing this now.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>

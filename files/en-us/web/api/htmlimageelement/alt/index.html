@@ -17,7 +17,7 @@ tags:
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>alt</strong></code> provides fallback (alternate) text to display when the image specified by the {{HTMLElement("img")}} element is not loaded.</span> This may be the case because of an error, because the user has disabled the loading of images, or because the image simply hasn't finished loading yet.</p>
+<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>alt</strong></code> provides fallback (alternate) text to display when the image specified by the {{HTMLElement("img")}} element is not loaded.</span> This may be the case because of an error, because the user has disabled the loading of images, or because the image hasn't finished loading yet.</p>
 
 <p>Perhaps the most important reason to use the <code>alt</code> tag is to support <a href="/en-US/docs/Web/Accessibility">accessibility</a>, as the <code>alt</code> text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.</p>
 
@@ -36,7 +36,7 @@ let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <p>A {{domxref("DOMString")}} which contains the alternate text to display when the image is not loaded or for use by assistive devices.</p>
 
-<p>The <code>alt</code> attribute is officially mandatory; it's meant to always be specified. If the image doesn't require a fallback (such as for an image which is simply decorative or an advisory icon of minimal importance), you may specify an empty string (<code>""</code>). For compatibility reasons, browsers generally will accept an image without an <code>alt</code> attribute, but you should try to get into the habit of using it.</p>
+<p>The <code>alt</code> attribute is officially mandatory; it's meant to always be specified. If the image doesn't require a fallback (such as for an image which is decorative or an advisory icon of minimal importance), you may specify an empty string (<code>""</code>). For compatibility reasons, browsers generally will accept an image without an <code>alt</code> attribute, but you should try to get into the habit of using it.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -52,7 +52,7 @@ let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<p>In the HTML for this example, shown below, the {{HTMLElement("img")}} element includes the <code>alt</code> property, which will prevent the image from having any alternate text, since it's simply a decorational detail.</p>
+<p>In the HTML for this example, shown below, the {{HTMLElement("img")}} element includes the <code>alt</code> property, which will prevent the image from having any alternate text, since it's a decorational detail.</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="left-margin"&gt;
@@ -73,7 +73,7 @@ let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<p>The CSS for this example simply sets up the styles for the layout as shown in the result below. They're not crucial to the concept shown in the HTML above, but you may expand the view below if you wish to read the CSS used.</p>
+<p>The CSS for this example sets up the styles for the layout as shown in the result below. They're not crucial to the concept shown in the HTML above, but you may expand the view below if you wish to read the CSS used.</p>
 
 <details><summary>View the CSS</summary>
 
@@ -210,7 +210,7 @@ p {
 
 <h3 id="Other_images">Other images</h3>
 
-<p>Images simply showing objects or scenes should have <code>alt</code> text describing what's seen in the image. A photo of a yellow teapot might literally have its <code>alt</code> attribute set to "<code>A yellow teapot"</code>.</p>
+<p>Images showing objects or scenes should have <code>alt</code> text describing what's seen in the image. A photo of a yellow teapot might literally have its <code>alt</code> attribute set to "<code>A yellow teapot"</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

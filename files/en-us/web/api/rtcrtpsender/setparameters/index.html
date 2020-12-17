@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>It's important to keep in mind that you can't simply create an {{domxref("RTCRtpSendParameters")}} object yourself and expect it to work. Instead, you <em>must</em> first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}}, modify the received parameters object, then pass that object into <code>setParameters()</code>. WebRTC uses the parameters object's <code>transactionId</code> property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out of date configuration.</p>
+<p>It's important to keep in mind that you can't create an {{domxref("RTCRtpSendParameters")}} object yourself and expect it to work. Instead, you <em>must</em> first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}}, modify the received parameters object, then pass that object into <code>setParameters()</code>. WebRTC uses the parameters object's <code>transactionId</code> property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out of date configuration.</p>
 
 <h2 id="Examples">Examples</h2>
 

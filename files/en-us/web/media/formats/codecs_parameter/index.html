@@ -21,7 +21,7 @@ tags:
 
 <p>For that reason, the <code>codecs</code> parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.</p>
 
-<p><span class="seoSummary">This guide briefly examines the syntax of the media type <code>codecs</code> parameter and how it's used with the MIME type string to provide details about the contents of audio or video media beyond simply indicating the container type.</span></p>
+<p><span class="seoSummary">This guide briefly examines the syntax of the media type <code>codecs</code> parameter and how it's used with the MIME type string to provide details about the contents of audio or video media beyond indicating the container type.</span></p>
 
 <h2 id="General_syntax">General syntax</h2>
 
@@ -257,7 +257,7 @@ tags:
  </tbody>
 </table>
 
-<p>Each codec described by the <code>codecs</code> parameter can be specified either as simply the container's name (<code>3gp</code>, <code>mp4</code>, <code>quicktime</code>, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (<code>.</code>).</p>
+<p>Each codec described by the <code>codecs</code> parameter can be specified either as the container's name (<code>3gp</code>, <code>mp4</code>, <code>quicktime</code>, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (<code>.</code>).</p>
 
 <p>The syntax for the value of <code>codecs</code> varies by codec; however, it always starts with the codec's four-character identifier, a period separator (<code>.</code>), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC (H.264)</a>.</p>
 
@@ -689,7 +689,7 @@ tags:
 
 <h3 id="WebM">WebM</h3>
 
-<p>The basic form for a WebM <code>codecs</code> parameter is to simply list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:</p>
+<p>The basic form for a WebM <code>codecs</code> parameter is to list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:</p>
 
 <table class="standard-table">
  <caption>Examples of classic WebM MIME types with <code>codecs</code> parameter</caption>

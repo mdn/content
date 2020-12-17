@@ -81,7 +81,7 @@ tags:
 
 <p>A WebXR compatible environment starts with a securely-loaded document. Your document needs to either have been loaded from the local drive (such as by using an URL such as <code>http://localhost/...</code>), or using {{Glossary("HTTPS")}} when loading the page. The JavaScript code must, likewise, have been loaded securely.</p>
 
-<p>If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there simply is no compatible XR hardware available. Either way, you need to be prepared for the lack of an <code>xr</code> property and either gracefully handle the error or provide some form of fallback.</p>
+<p>If the document wasn't loaded securely, you won't get very far. The {{domxref("navigator.xr")}} property doesn't even exist if the document wasn't loaded securely. This may also be the case if there is no compatible XR hardware available. Either way, you need to be prepared for the lack of an <code>xr</code> property and either gracefully handle the error or provide some form of fallback.</p>
 
 <h3 id="Falling_back_to_the_WebXR_polyfill">Falling back to the WebXR polyfill</h3>
 
@@ -134,7 +134,7 @@ const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 
 <p>Before trying to create a new WebXR session, it's often wise to first check to see if the user's hardware and software support the presentation mode you wish to use. This can also be used to determine whether to use an immersive or an inline presentation, for example.</p>
 
-<p>To find out if a given mode is supported, simply call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to <code>true</code> if the given type of session is available for use or <code>false</code> otherwise.</p>
+<p>To find out if a given mode is supported, call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to <code>true</code> if the given type of session is available for use or <code>false</code> otherwise.</p>
 
 <pre class="brush: js notranslate">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
 if (immersiveOK) {

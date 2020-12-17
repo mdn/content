@@ -18,7 +18,7 @@ tags:
 
 <p>The process of retrieving an image or video stream happens as described below. The example code is adapted from <a href="https://googlechrome.github.io/samples/image-capture/">Chrome's Image Capture examples</a>.</p>
 
-<p>First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below simply says give me whatever video device is available, though the <code>getUserMedia()</code> method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.</p>
+<p>First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below says give me whatever video device is available, though the <code>getUserMedia()</code> method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.</p>
 
 <pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({ video: true })
   .then(mediaStream =&gt; {

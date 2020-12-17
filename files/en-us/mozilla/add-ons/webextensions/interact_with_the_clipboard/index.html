@@ -83,7 +83,7 @@ browser.alarms.onAlarm.addListener(copy);</pre>
 
 <h3 id="Using_the_Clipboard_API">Using the Clipboard API</h3>
 
-<p>The Clipboard API adds greater flexibility, in that you aren't limited to simply copying the current selection into the clipboard, but can directly specify what information to place into the clipboard.</p>
+<p>The Clipboard API adds greater flexibility, in that you aren't limited to copying the current selection into the clipboard, but can directly specify what information to place into the clipboard.</p>
 
 <p>Using the API requires that you have the permission "clipboardRead" or "clipboardWrite" in your manifest.json file.</p>
 
@@ -162,7 +162,7 @@ document.querySelector("#paste").addEventListener("click", paste);</pre>
 
 <h3 id="Using_the_Clipboard_API_2">Using the Clipboard API</h3>
 
-<p>The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard. This lets you access the data in the clipboard without simply pasting it into an editable element.</p>
+<p>The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard. This lets you access the data in the clipboard without pasting it into an editable element.</p>
 
 <p>Once you have the <code>"clipboard-read"</code> permission from the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, you can read from the clipboard easily:</p>
 

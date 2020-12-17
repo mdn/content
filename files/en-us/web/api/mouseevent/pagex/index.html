@@ -59,7 +59,7 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 
 <p>The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function <code>updateDisplay()</code> as the event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and {{event("mouseleave")}} events.</p>
 
-<p><code>updateDisplay()</code> simply replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of <code>pageX</code> and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
+<p><code>updateDisplay()</code> replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of <code>pageX</code> and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
 
 <h3 id="HTML">HTML</h3>
 

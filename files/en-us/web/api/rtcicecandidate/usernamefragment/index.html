@@ -51,7 +51,7 @@ tags:
 
 <p>To do so, you can compare the value of <code>usernameFragment</code> to the current <code>usernameFragment</code> being used for the connection after receiving the candidate from the signaling server and before caling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} to add it to the set of possible candidates.</p>
 
-<p>When the web app receives a message from the signaling server that includes a candidate to be added to the {{domxref("RTCPeerConnection")}}, you can (and generally <em>should</em>) simply call <code>addIceCandidate()</code>. There's not typically a need to manually worry about filtering the candidates.</p>
+<p>When the web app receives a message from the signaling server that includes a candidate to be added to the {{domxref("RTCPeerConnection")}}, you can (and generally <em>should</em>) call <code>addIceCandidate()</code>. There's not typically a need to manually worry about filtering the candidates.</p>
 
 <p>However, let's imagine that we do need to minimize traffic. The function below, <code>ssNewCandidate()</code>, is called when a message, <code>signalMsg</code>, arrives from the signaling server that contains an ICE candidate to be added to the <code>RTCPeerConnection</code>. To avoid including candidates obsoleted by an ICE restart, we can use code like this:</p>
 

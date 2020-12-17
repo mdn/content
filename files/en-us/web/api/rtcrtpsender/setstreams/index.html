@@ -47,7 +47,7 @@ rtcRtpSender.setStreams([<em>mediaStream...</em>]);
 
 <h2 id="Description">Description</h2>
 
-<p><code>setStreams()</code> is purely additive. It doesn't remove the track from any streams; it simply adds it to new ones. If you specify streams to which the track already belongs, that stream is unaffected.</p>
+<p><code>setStreams()</code> is purely additive. It doesn't remove the track from any streams; it adds it to new ones. If you specify streams to which the track already belongs, that stream is unaffected.</p>
 
 <p>Once the track has been added to all of the streams, renegotiation of the connection will be triggered by the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event being dispatched to the {{domxref("RTCPeerConnection")}} to which the sender belongs.</p>
 

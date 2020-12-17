@@ -186,7 +186,7 @@ fwdBtn.onclick = function() {
 
 <p>These are very simple, just adding or subtracting 3 seconds to the <code>currentTime</code> each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.</p>
 
-<p>Note that we also check to see if the <code>currentTime</code> is more than the total media <code>duration</code>, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we simply stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.</p>
+<p>Note that we also check to see if the <code>currentTime</code> is more than the total media <code>duration</code>, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.</p>
 
 <p>Last of all, add the following to the end of the code, to control the time elapsed display:</p>
 
@@ -252,7 +252,7 @@ fwdBtn.onclick = function() {
 
 <p>On occasions where there are visuals accompanying your audio, you'll need to provide audio descriptions of some kind to describe that extra content.</p>
 
-<p>In many cases, this will simply take the form of video, in which case you can implement captions using the techniques described in the next section of the article.</p>
+<p>In many cases, this will take the form of video, in which case you can implement captions using the techniques described in the next section of the article.</p>
 
 <p>However, there are some edge cases. You might for example have an audio recording of a meeting that refers to an accompanying resource such as a spreadsheet or chart. In such cases, you should make sure that the resources are provided along with the audio + transcript, and specifically link to them in the places where they are referred to in the transcript. This of course will help all users, not just people who are deaf.</p>
 

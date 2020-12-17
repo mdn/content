@@ -184,7 +184,7 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 
 <ul>
 	<li>Starting with Firefox 2, a better mechanism for client-side storage is available - <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a>.</li>
-	<li>You can delete a cookie by simply updating its expiration time to zero.</li>
+	<li>You can delete a cookie by updating its expiration time to zero.</li>
 	<li>Keep in mind that the more cookies you have, the more data will be transferred between the server and the client for each request. This will make each request slower. It is highly recommended for you to use <a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a> if you are going to keep "client-only" data.</li>
 	<li><a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a> (Section 5.3, "Implementation Limits") specifies that there should be <strong>no maximum length</strong> of a cookie's key or value size, and encourages implementations to support <strong>arbitrarily large cookies</strong>. Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.</li>
 </ul>

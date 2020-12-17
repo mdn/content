@@ -45,7 +45,7 @@ function handleFiles() {
 
 <pre class="brush: js notranslate">const numFiles = fileList.length;</pre>
 
-<p>Individual {{DOMxRef("File")}} objects can be retrieved by simply accessing the list as an array:</p>
+<p>Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:</p>
 
 <pre class="brush: js notranslate">for (let i = 0, numFiles = fileList.length; i &lt; numFiles; i++) {
   const file = fileList[i];
@@ -307,7 +307,7 @@ function handleFiles() {
 
 <p>This starts by fetching the URL of the {{HTMLElement("div")}} with the ID <code>fileList</code>. This is the block into which we'll insert our file list, including thumbnails.</p>
 
-<p>If the {{DOMxRef("FileList")}} object passed to <code>handleFiles()</code> is <code>null</code>, we simply set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:</p>
+<p>If the {{DOMxRef("FileList")}} object passed to <code>handleFiles()</code> is <code>null</code>, we set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:</p>
 
 <ol>
  <li>A new unordered list ({{HTMLElement("ul")}}) element is created.</li>

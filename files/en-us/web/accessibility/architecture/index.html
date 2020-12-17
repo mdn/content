@@ -23,7 +23,7 @@ tags:
 <h2 id="API_comparison">API comparison</h2>
 <ul>
   <li>nsIAccessible (internal). When you have an nsIAccessibleHyperText, you can ask for its links, which is the subset of children from the nsIAccessible hierarchy that are not text or whitespace.</li>
-  <li>ATK: Same as nsIAccessible, except that text and whitespace leaf nodes are not exposed. The children of any Hypertext object are an exact match to the links it exposes. The implementation simply doesn't create AtkObjects for a whitespace or text leaf nsIAccessibles. See the <a class="external" href="http://mxr.mozilla.org/seamonkey/search?string=isembeddedobject&amp;find=atk&amp;findi=&amp;filter=&amp;tree=seamonkey">ATK uses of IsEmbeddedObject()</a> for more information on how we do this.</li>
+  <li>ATK: Same as nsIAccessible, except that text and whitespace leaf nodes are not exposed. The children of any Hypertext object are an exact match to the links it exposes. The implementation doesn't create AtkObjects for a whitespace or text leaf nsIAccessibles. See the <a class="external" href="http://mxr.mozilla.org/seamonkey/search?string=isembeddedobject&amp;find=atk&amp;findi=&amp;filter=&amp;tree=seamonkey">ATK uses of IsEmbeddedObject()</a> for more information on how we do this.</li>
   <li>IAccessible2: Same as nsIAccessible. Text and whitespace leaf nodes are exposed, but are redundant with the information in the parent object's nsIAccessibleText. This is done for backward compatibility with older MSAA clients which didn't have access to a text interface. The children of a Hypertext object are a superset of the links it exposes. The new system makes it easier to show caret positions etc., which will be an improvement in IA2 over MSAA.</li>
 </ul>
 <h2 id="Example">Example</h2>

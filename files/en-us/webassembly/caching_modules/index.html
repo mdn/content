@@ -118,7 +118,7 @@ tags:
 <p><strong>Note</strong>: It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>; the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.</p>
 </div>
 
-<p>If opening the database failed (for example due to permissions or quota), we fall back to simply fetching and compiling the module and don't try to store the results (since there is no database to store them into).</p>
+<p>If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).</p>
 
 <pre class="brush: js notranslate">  errMsg =&gt; {
     console.log(errMsg);

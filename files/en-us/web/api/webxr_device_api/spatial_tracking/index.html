@@ -53,7 +53,7 @@ tags:
 
 <h3 id="Poses">Poses</h3>
 
-<p>Once your reference space or spaces are established for the various key objects in the scene, you will have times when you need to describe another position relative to the origin of a particular reference space. This is done using poses. A pose, simply put, describes a position and orientation relative to the origin of the reference space from which it was created.</p>
+<p>Once your reference space or spaces are established for the various key objects in the scene, you will have times when you need to describe another position relative to the origin of a particular reference space. This is done using poses. A pose, put, describes a position and orientation relative to the origin of the reference space from which it was created.</p>
 
 <p>In WebXR, a pose is represented by an {{domxref("XRPose")}} object, whose {{domxref("XRPose.transform", "transform")}} property is an {{domxref("XRRigidTransform")}} defining the transform matrix that, applied to any coordinate, vector, or matrix in the original space, converts it to the target space. Thus a pose can be used to not only convert and determine positions, but also rotational information.</p>
 
@@ -174,9 +174,9 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <h3 id="When_tracking_resumes">When tracking resumes</h3>
 
-<p>You can detect when tracking has resumed after being lost when the user position jumps while at the same time the value of <code>emulatedPosition</code> changes from <code>true</code> to <code>false</code>. How you handle this depends on your application. If your app provides a way for the user to move through the virtual world without physically moving in the real world (a so-called <strong>teleportation</strong> mechanic), you can simply accept the new position and continue, allowing the jump from your previously-assumed position to be immediately corrected with the new position.</p>
+<p>You can detect when tracking has resumed after being lost when the user position jumps while at the same time the value of <code>emulatedPosition</code> changes from <code>true</code> to <code>false</code>. How you handle this depends on your application. If your app provides a way for the user to move through the virtual world without physically moving in the real world (a so-called <strong>teleportation</strong> mechanic), you can accept the new position and continue, allowing the jump from your previously-assumed position to be immediately corrected with the new position.</p>
 
-<p>On the other hand, if your app involves the user physically moving in real space to move around through your virtual world, simply adopting the new tracking position and jumping there can be unsettling to the user, and should be avoided if possible. Instead, use the difference between the current position and the new tracking position to compute the new teleportation offset; that is, a transform applied to everything to adapt the position and orientation data from WebXR to your needs.</p>
+<p>On the other hand, if your app involves the user physically moving in real space to move around through your virtual world, adopting the new tracking position and jumping there can be unsettling to the user, and should be avoided if possible. Instead, use the difference between the current position and the new tracking position to compute the new teleportation offset; that is, a transform applied to everything to adapt the position and orientation data from WebXR to your needs.</p>
 
 <p>You can do this by creating a new reference space that incorporates into its effective origin the distance the viewer's position jumped since the previous frame, using the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.</p>
 

@@ -55,7 +55,7 @@ constantSource.connect(gainNode3.gain);</pre>
   constantSource.offset.value = volumeSliderControl.value;
 }</pre>
 
-<p>All this function has to do is fetch the current value of the slider control we're using to control the paired nodes' gains, then store that value into the <code>ConstantSourceNode</code>'s <code>offset</code> parameter. That's done by simply changing the contents of its {{domxref("AudioParam.value")}} property. The two gain nodes quickly adopt the new volume level.</p>
+<p>All this function has to do is fetch the current value of the slider control we're using to control the paired nodes' gains, then store that value into the <code>ConstantSourceNode</code>'s <code>offset</code> parameter. That's done by changing the contents of its {{domxref("AudioParam.value")}} property. The two gain nodes quickly adopt the new volume level.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -203,7 +203,7 @@ export default class TodoDataService extends Service {
 
 <p>This generates the new component class <code>todomvc/app/components/todo-list.js</code>.</p>
 
-<p>Populate this file with the following code, which simply exposes the <code>todo-data</code> service, via the <code>todos</code> property, to our template. This makes it accessible via <code>this.todos</code> inside both the class and the template:</p>
+<p>Populate this file with the following code, which exposes the <code>todo-data</code> service, via the <code>todos</code> property, to our template. This makes it accessible via <code>this.todos</code> inside both the class and the template:</p>
 
 <pre class="brush: js notranslate">import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';

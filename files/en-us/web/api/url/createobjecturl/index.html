@@ -60,7 +60,7 @@ tags:
 <p>In older versions of the Media Source specification, attaching a stream to a {{HTMLElement("video")}} element required creating an object URL for the {{domxref("MediaStream")}}. This is no longer necessary, and browsers are removing support for doing this.</p>
 
 <div class="warning">
-<p><strong>Important:</strong> If you still have code that relies on {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media elements, you need to update your code to simply set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the <code>MediaStream</code> directly.</p>
+<p><strong>Important:</strong> If you still have code that relies on {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the <code>MediaStream</code> directly.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

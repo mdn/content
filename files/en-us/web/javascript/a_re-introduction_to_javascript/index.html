@@ -137,7 +137,7 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 </pre>
 
-<div class="note">The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator simply converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</div>
+<div class="note">The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -174,7 +174,7 @@ isFinite(NaN); // false
 Boolean(234); // true
 </pre>
 
-<p>However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an <code>if</code> statement (see below). For this reason, we sometimes speak simply of "true values" and "false values," meaning values that become <code>true</code> and <code>false</code>, respectively, when converted to booleans. Alternatively, such values can be called "truthy" and "falsy", respectively.</p>
+<p>However, this is rarely necessary, as JavaScript will silently perform this conversion when it expects a boolean, such as in an <code>if</code> statement (see below). For this reason, we sometimes speak of "true values" and "false values," meaning values that become <code>true</code> and <code>false</code>, respectively, when converted to booleans. Alternatively, such values can be called "truthy" and "falsy", respectively.</p>
 
 <p>Boolean operations such as <code>&amp;&amp;</code> (logical <em>and</em>), <code>||</code> (logical <em>or</em>), and <code>!</code> (logical <em>not</em>) are supported; see below.</p>
 
@@ -512,7 +512,7 @@ a.length; // 101
 });
 </pre>
 
-<p>If you want to append an item to an array simply do it like this:</p>
+<p>If you want to append an item to an array do it like this:</p>
 
 <pre class="brush: js notranslate">a.push(item);</pre>
 

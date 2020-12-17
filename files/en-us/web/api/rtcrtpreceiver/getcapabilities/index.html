@@ -49,7 +49,7 @@ tags:
 
 <p>The returned set of capabilities is the most optimistic possible list. It is entirely possible that certain combinations of options may fail to work when you actually try to use them.</p>
 
-<p>Calling <code>RTCRtpReceiver.getCapabilities()</code> doesn't prime the browser in any way to handle media. Nothing is loaded, fetched, or otherwise prepared. It's simply a means of determining what might be usable before starting to try to access media.</p>
+<p>Calling <code>RTCRtpReceiver.getCapabilities()</code> doesn't prime the browser in any way to handle media. Nothing is loaded, fetched, or otherwise prepared. It's a means of determining what might be usable before starting to try to access media.</p>
 
 <p>Because the set of capabilities available tend to be stable for a length of time (people don't install and uninstall codecs and the like very often), the media capabilities can in whole or in part provide a cross-origin method for identifying a user. For that reason, in privacy-sensitive contexts, the browser may choose to obscure the capabilities; this might be done, for example, by leaving out rarely-used codec configurations.</p>
 

@@ -34,7 +34,7 @@ tags:
 
 <h3 id="Automatic_negotiation">Automatic negotiation</h3>
 
-<p>Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, simply call</p>
+<p>Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call</p>
 
 <p>{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the {{domxref("RTCDataChannelInit.negotiated", "negotiated")}} property, or specifying the property with a value of <code>false</code>. This will automatically trigger the <code>RTCPeerConnection</code> to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.</p>
 
@@ -65,7 +65,7 @@ requestRemoteChannel(dataChannel.id);</pre>
 
 <p>In this code snippet, the channel is created with <code>negotiated</code> set to <code>true</code>, then a function called <code>requestRemoteChannel()</code> is used to trigger negotiation, to create a remote channel with the same ID as the local channel.</p>
 
-<p>Doing this lets you create data channels with each peer using different properties, and to create channels declaratively by simply using the same value for <code>id</code>.</p>
+<p>Doing this lets you create data channels with each peer using different properties, and to create channels declaratively by using the same value for <code>id</code>.</p>
 
 <h2 id="Buffering">Buffering</h2>
 

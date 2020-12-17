@@ -29,7 +29,7 @@ firefox -createProfile testBeta4
 <p>If you run into any problems while testing, update your code to fix the issues.  This article contains useful information about things that may require some work.</p>
 <p>Once you've done that, try using your extension again, this time with your regular profile.  This will help to ensure compatibility with any existing saved data.</p>
 <h3 id="Update_your_extension_on_addons.mozilla.org">Update your extension on addons.mozilla.org</h3>
-<p>Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can simply log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.</p>
+<p>Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.</p>
 <p>See <a class="internal" href="/en/Submitting_an_add-on_to_AMO" title="En/Submitting an add-on to AMO">Submitting an add-on to AMO</a> for additional information.</p>
 <h2 id="Accessing_the_Places_database">Accessing the Places database</h2>
 <p>Prior to Firefox 3.5, accessing the Places database directly using the <a class="internal" href="/en/Storage" title="En/Storage">Storage API</a> required a little bit of trickery:</p>
@@ -117,7 +117,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 <p>In Firefox 3.5, customizable toolbar behavior has changed such that the <code>&lt;xul:toolbar/&gt; </code>binding now removes toolbar items from its associated <code>&lt;xul:toolbarpalette/&gt;</code> and  adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the <code>&lt;xul:toolbarpalette/&gt;</code>, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.</p>
 <h2 id="XPCNativeWrapper">XPCNativeWrapper</h2>
 <p>Starting in Firefox 3.5, you can no longer use <code>data:</code> bindings in chrome packages that get <code>XPCNativeWrapper</code> automation. This resolves a potential security issue.</p>
-<p>XUL documents now get <code>XPCNativeWrapper</code> treatment, so you now need to use the <code>getAttribute()</code> method to fetch attribute values instead of simply reading them directly.</p>
+<p>XUL documents now get <code>XPCNativeWrapper</code> treatment, so you now need to use the <code>getAttribute()</code> method to fetch attribute values instead of reading them directly.</p>
 <p>If your extension is using <code>xpcnativewrappers=no</code> (which it shouldn't be doing in the first place, since it's not safe to do so), XBL from that extension will not be applied to documents which are using <code>XPCNativeWrapper</code> automation starting in Firefox 3.5.</p>
 <h2 id="New_capabilities_of_interest">New capabilities of interest</h2>
 <h3 id="Listening_to_events_on_all_tabs">Listening to events on all tabs</h3>

@@ -43,7 +43,7 @@ tags:
 </table>
 
 <div class="notecard note">
-<p><strong>Note:</strong> While you can determine that ICE candidate gathering is complete by watching for <code>icegatheringstatechange</code> events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become <code>complete</code>, you can also simply have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code>. This also indicates that collection of candidates is finished.</p>
+<p><strong>Note:</strong> While you can determine that ICE candidate gathering is complete by watching for <code>icegatheringstatechange</code> events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become <code>complete</code>, you can also have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code>. This also indicates that collection of candidates is finished.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

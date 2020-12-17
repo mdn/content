@@ -215,7 +215,7 @@ ctx.strokeRect(25, 25, 175, 200);</pre>
 
 <ul>
  <li>{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — start drawing a path at the point where the pen currently is on the canvas. On a new canvas, the pen starts out at (0, 0).</li>
- <li>{{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — move the pen to a different point on the canvas, without recording or tracing the line; the pen simply "jumps" to the new position.</li>
+ <li>{{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — move the pen to a different point on the canvas, without recording or tracing the line; the pen "jumps" to the new position.</li>
  <li>{{domxref("CanvasRenderingContext2D.fill", "fill()")}} — draw a filled shape by filling in the path you've traced so far.</li>
  <li>{{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} — draw an outline shape by drawing a stroke along the path you've drawn so far.</li>
  <li>You can also use features like <code>lineWidth</code> and <code>fillStyle</code>/<code>strokeStyle</code> with paths as well as rectangles.</li>
@@ -643,7 +643,7 @@ let posX = 0;</pre>
 
   <p>We are using another <code>if ... else</code> statement to see if the value of <code>posX</code> has become greater than <code>width/2</code>, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.</p>
 
-  <p>If our character hasn't yet walked off the edge of the screen, we simply increment <code>posX</code> by 2. This will make him move a little bit to the right the next time we draw him.</p>
+  <p>If our character hasn't yet walked off the edge of the screen, we increment <code>posX</code> by 2. This will make him move a little bit to the right the next time we draw him.</p>
  </li>
  <li>
   <p>Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the <code>draw()</code> function:</p>

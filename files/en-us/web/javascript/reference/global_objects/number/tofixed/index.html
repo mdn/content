@@ -42,7 +42,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><strong><code>toFixed()</code></strong> returns a string representation of <code><var>numObj</var></code> that does not use exponential notation and has exactly <code><var>digits</var></code> digits after the decimal place. The number is rounded if necessary, and the fractional part is padded with zeros if necessary so that it has the specified length. If the absolute value of <code><var>numObj</var></code> is greater or equal to <code>1e+21</code>, this method simply calls {{jsxref("Number.prototype.toString()")}} and returns a string in exponential notation.</p>
+<p><strong><code>toFixed()</code></strong> returns a string representation of <code><var>numObj</var></code> that does not use exponential notation and has exactly <code><var>digits</var></code> digits after the decimal place. The number is rounded if necessary, and the fractional part is padded with zeros if necessary so that it has the specified length. If the absolute value of <code><var>numObj</var></code> is greater or equal to <code>1e+21</code>, this method calls {{jsxref("Number.prototype.toString()")}} and returns a string in exponential notation.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> Floating point numbers cannot represent all decimals precisely in binary. This can lead to unexpected results, such as <code>0.1 + 0.2 === 0.3</code> returning <code>false</code> .</p>

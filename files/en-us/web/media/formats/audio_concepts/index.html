@@ -41,7 +41,7 @@ tags:
 
 <p><img alt="An audio waveform with samples taken periodically" src="https://mdn.mozillademos.org/files/16653/audio-waveform-samples1.svg" style="height: 287px; width: 691px;"></p>
 
-<p>In this example, the blue line represents the samples taken from the audio waveform, which is black. At regular intervals, the A/D converter circuitry reads the voltage of the signal as a value between (in this case) -1.0 and +1.0. Since the amplitude varies over the duration of that time slice, the A/D converter must choose a value to represent that slice, whether by simply taking the value at a particular moment (in the diagram above, the midpoint of each slice is used as the value), or by averaging the amplitude over the duration of each sample. Those sample values are then recorded as the amplitude of the waveform at that time.</p>
+<p>In this example, the blue line represents the samples taken from the audio waveform, which is black. At regular intervals, the A/D converter circuitry reads the voltage of the signal as a value between (in this case) -1.0 and +1.0. Since the amplitude varies over the duration of that time slice, the A/D converter must choose a value to represent that slice, whether by taking the value at a particular moment (in the diagram above, the midpoint of each slice is used as the value), or by averaging the amplitude over the duration of each sample. Those sample values are then recorded as the amplitude of the waveform at that time.</p>
 
 <p>When it comes time to play back that sound later, these amplitudes are used to generate an approximation of the original waveform; instead of playing back an exact duplicate of the original, smooth wave, the rougher, blue wave is played.</p>
 

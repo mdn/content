@@ -19,7 +19,7 @@ tags:
 <p>If the item described by the {{domxref("DataTransferItem")}} is a file, <code>webkitGetAsEntry()</code> returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, <code>null</code> is returned.</p>
 
 <div class="note">
-<p>This function is implemented as <code>webkitGetAsEntry()</code> in non-WebKit browsers including Firefox at this time; it may be renamed to simply <code>getAsEntry()</code> in the future, so you should code defensively, looking for both.</p>
+<p>This function is implemented as <code>webkitGetAsEntry()</code> in non-WebKit browsers including Firefox at this time; it may be renamed to <code>getAsEntry()</code> in the future, so you should code defensively, looking for both.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -116,7 +116,7 @@ function scanFiles(item, container) {
 
 <p>Once the current item is in the list, the item's {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} property is checked. If the item is a directory, we need to recurse into that directory. The first step is to create a {{domxref("FileSystemDirectoryReader")}} to handle fetching the directory's contents. That's done by calling the item's {{domxref("FileSystemDirectoryEntry.createReader", "createReader()")}} method. Then a new {{HTMLElement("ul")}} is created and appended to the parent list; this will contain the directory's contents in the next level down in the list's hierarchy.</p>
 
-<p>After that, {{domxref("FileSystemDirectoryReader.readEntries", "directoryReader.readEntries()")}} is called to read in all the entries in the directory. These are each, in turn, passed into a recursive call to <code>scanFiles()</code> to process them. Any of them which are files are simply inserted into the list; any which are directories are inserted into the list and a new level of the list's hierarchy is added below, and so forth.</p>
+<p>After that, {{domxref("FileSystemDirectoryReader.readEntries", "directoryReader.readEntries()")}} is called to read in all the entries in the directory. These are each, in turn, passed into a recursive call to <code>scanFiles()</code> to process them. Any of them which are files are inserted into the list; any which are directories are inserted into the list and a new level of the list's hierarchy is added below, and so forth.</p>
 
 <p>Then come the event handlers. First, we prevent the {{event("dragover")}} event from being handled by the default handler, so that our drop zone can receive the drop:</p>
 

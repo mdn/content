@@ -281,7 +281,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
   );
 });</pre>
 
-<p>We could start by simply responding with the resource whose url matches that of the network request, in each case:</p>
+<p>We could start by responding with the resource whose url matches that of the network request, in each case:</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
@@ -307,7 +307,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 });</pre>
  </li>
  <li>
-  <p>If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
+  <p>If a match wasn’t found in the cache, you could tell the browser to {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
 
   <pre class="brush: js notranslate">fetch(event.request);</pre>
  </li>

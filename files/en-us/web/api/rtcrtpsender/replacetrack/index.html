@@ -19,7 +19,7 @@ tags:
 
 <p><span class="seoSummary">The {{domxref("RTCRtpSender")}} method <code><strong>replaceTrack()</strong></code> replaces the track currently being used as the sender's source with a new {{domxref("MediaStreamTrack")}}.</span> The new track must be of the same media kind (audio, video, etc) and switching the track should not require negotiation.</p>
 
-<p>Among the use cases for <code>replaceTrack()</code> is the common need to switch between the rear- and front-facing cameras on a phone. With <code>replaceTrack()</code>, you can simply have a track object for each camera and switch between the two as needed. See the example {{anch("Switching cameras")}} below.</p>
+<p>Among the use cases for <code>replaceTrack()</code> is the common need to switch between the rear- and front-facing cameras on a phone. With <code>replaceTrack()</code>, you can have a track object for each camera and switch between the two as needed. See the example {{anch("Switching cameras")}} below.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>A {{domxref("Promise")}} which is fulfilled once the track has been successfully replaced. The promise is rejected if the track cannot be replaced for any reason; this is commonly because the change would require renegotiation of the codec, which is not allowed (see {{anch("Things that require negotiation")}}).</p>
 
-<p>If <code>newTrack</code> was omitted or was <code>null</code>, <code>replaceTrack()</code> simply stops the sender. No negotiation is required in this case.</p>
+<p>If <code>newTrack</code> was omitted or was <code>null</code>, <code>replaceTrack()</code> stops the sender. No negotiation is required in this case.</p>
 
 <p>When the promise is fulfilled, the fulfillment handler receives a value of <code>undefined</code>.</p>
 

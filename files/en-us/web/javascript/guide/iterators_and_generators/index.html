@@ -35,9 +35,9 @@ tags:
  <dd>This is <code>true</code> if the last value in the sequence has already been consumed. If <code><var>value</var></code> is present alongside <code><var>done</var></code>, it is the iterator's return value.</dd>
 </dl>
 
-<p>Once created, an iterator object can be iterated explicitly by repeatedly calling <code>next()</code>. Iterating over an iterator is said to consume the iterator, because it is generally only possible to do once. After a terminating value has been yielded additional calls to <code>next()</code> should simply continue to return <code>{done: true}</code>.</p>
+<p>Once created, an iterator object can be iterated explicitly by repeatedly calling <code>next()</code>. Iterating over an iterator is said to consume the iterator, because it is generally only possible to do once. After a terminating value has been yielded additional calls to <code>next()</code> should continue to return <code>{done: true}</code>.</p>
 
-<p>The most common iterator in JavaScript is the Array iterator, which simply returns each value in the associated array in sequence.</p>
+<p>The most common iterator in JavaScript is the Array iterator, which returns each value in the associated array in sequence.</p>
 
 <p>While it is easy to imagine that all iterators could be expressed as arrays, this is not true. Arrays must be allocated in their entirety, but iterators are consumed only as necessary. Because of this, iterators can express sequences of unlimited size, such as the range of integers between <code>0</code> and {{jsxref("Global_Objects/Infinity", "Infinity")}}.</p>
 
@@ -104,7 +104,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>An object is <strong>iterable</strong> if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.</p>
 
-<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This simply means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
+<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
 
 <p>It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.</p>
 

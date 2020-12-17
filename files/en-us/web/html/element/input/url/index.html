@@ -170,7 +170,7 @@ tags:
 
 <p>When you create a URL input with the proper <code>type</code> value, <code>url</code>, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL. This can help avoid cases in which the user mis-types their web site's address, or provides an invalid one.</p>
 
-<p>It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It simply ensures that the value of the field is properly formatted to be a URL.</p>
+<p>It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be a URL.</p>
 
 <div class="note">
 <p><strong>Note</strong>: It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
@@ -225,7 +225,7 @@ tags:
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will simply refuse to let the user enter a value longer than the specified maximum length.</p>
+<p><strong>Note</strong>: These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.</p>
 </div>
 
 <h3 id="Providing_default_options">Providing default options</h3>
@@ -280,7 +280,7 @@ tags:
 <p>There are two levels of content validation available for <code>url</code> inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Basic_validation">Basic validation</h3>

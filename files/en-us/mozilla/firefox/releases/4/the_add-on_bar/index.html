@@ -14,7 +14,7 @@ tags:
 <div class="note">
  <strong>Note:</strong> For the time being, there is a status bar shim included so that add-ons that expect the status bar to be present will still work.</div>
 <h2 id="Adding_an_element_to_the_add-on_bar">Adding an element to the add-on bar</h2>
-<p>The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that simply displays the text "Hello world!" using an XUL {{ XULElem("label") }} element.</p>
+<p>The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates the most-recently used window and adds a new item to the add-on bar that displays the text "Hello world!" using an XUL {{ XULElem("label") }} element.</p>
 <pre class="brush: js">// Find the most recently used window
 
 var mediator = Components.classes['@mozilla.org/appshell/window-mediator;1']

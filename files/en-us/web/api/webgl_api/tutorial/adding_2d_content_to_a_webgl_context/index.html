@@ -67,7 +67,7 @@ tags:
 
 <p>The <strong>fragment shader</strong> is called once for every pixel on each shape to be drawn, after the shape's vertices have been processed by the vertex shader. Its job is to determine the color of that pixel by figuring out which texel (that is, the pixel from within the shape's texture) to apply to the pixel, getting that texel's color, then applying the appropriate lighting to the color. The color is then returned to the WebGL layer by storing it in the special variable <code>gl_FragColor</code>. That color is then drawn to the screen in the correct position for the shape's corresponding pixel.</p>
 
-<p>In this case, we're simply returning white every time, since we're just drawing a white square, with no lighting in use.</p>
+<p>In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.</p>
 
 <pre class="brush: js notranslate">  const fsSource = `
     void main() {

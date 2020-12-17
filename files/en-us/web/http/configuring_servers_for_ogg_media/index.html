@@ -104,7 +104,7 @@ AddType application/ogg .ogg
          Audio-Channels: 2
 </pre>
 
-<p>Note that you can't simply serve up the reported Content-Duration line reported by <code>oggz-info</code>, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your <code>X-Content-Duration</code> value. Just parse out the HH, MM, and SS into numbers, then do (HH*3600)+(MM*60)+SS to get the value you should report.</p>
+<p>Note that you can't serve up the reported Content-Duration line reported by <code>oggz-info</code>, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your <code>X-Content-Duration</code> value. Just parse out the HH, MM, and SS into numbers, then do (HH*3600)+(MM*60)+SS to get the value you should report.</p>
 
 <p>It's important to note that it appears that <code>oggz-info</code> makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.</p>
 

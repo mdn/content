@@ -56,7 +56,7 @@ tags:
 
 <p>When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.</p>
 
-<p>When a message is received back from the IFrame, the <code>onMessage</code> function simply outputs the message to a paragraph.</p>
+<p>When a message is received back from the IFrame, the <code>onMessage</code> function outputs the message to a paragraph.</p>
 
 <pre>var channel = new MessageChannel();
 var output = document.querySelector('.output');

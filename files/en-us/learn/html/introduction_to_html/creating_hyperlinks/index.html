@@ -103,7 +103,7 @@ tags:
 
 <p>To fully understand link targets, you need to understand URLs and file paths. This section gives you the information you need to achieve this.</p>
 
-<p>A URL, or Uniform Resource Locator is simply a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at <code>https://www.mozilla.org/en-US/</code>.</p>
+<p>A URL, or Uniform Resource Locator is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at <code>https://www.mozilla.org/en-US/</code>.</p>
 
 <p>URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the <a href="https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks">creating-hyperlinks</a> directory.</p>
 
@@ -283,14 +283,14 @@ to download Firefox&lt;/p&gt;
 
 <p>It's possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page. This is done using the {{HTMLElement("a")}} element and the <code>mailto:</code> URL scheme.</p>
 
-<p>In its most basic and commonly used form, a <code>mailto:</code> link simply indicates the email address of the intended recipient. For example:</p>
+<p>In its most basic and commonly used form, a <code>mailto:</code> link indicates the email address of the intended recipient. For example:</p>
 
 <pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;
 </pre>
 
 <p>This results in a link that looks like this: <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>.</p>
 
-<p>In fact, the email address is optional. If you omit it and your {{htmlattrxref("href", "a")}} is simply "mailto:", a new outgoing email window will be opened by the user's email client with no destination address. This is often useful as "Share" links that users can click to send an email to an address of their choosing.</p>
+<p>In fact, the email address is optional. If you omit it and your {{htmlattrxref("href", "a")}} is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address. This is often useful as "Share" links that users can click to send an email to an address of their choosing.</p>
 
 <h3 id="Specifying_details">Specifying details</h3>
 

@@ -150,7 +150,7 @@ app.use('/wiki', wiki);</pre>
 })</pre>
 
 <div class="note">
-<p><strong>Note:</strong> Most of our routes for the LocalLibrary will simply use strings and not regular expressions. We'll also use route parameters as discussed in the next section.</p>
+<p><strong>Note:</strong> Most of our routes for the LocalLibrary will use strings and not regular expressions. We'll also use route parameters as discussed in the next section.</p>
 </div>
 
 <h3 id="Route_parameters">Route parameters</h3>
@@ -259,7 +259,7 @@ exports.author_update_post = function(req, res) {
 
 <p>The module first requires the model that we'll later be using to access and update our data. It then exports functions for each of the URLs we wish to handle (the create, update and delete operations use forms, and hence also have additional methods for handling form post requests — we'll discuss those methods in the "forms article" later on).</p>
 
-<p>All the functions have the standard form of an <em>Express middleware function</em>, with arguments for the request and response. We could also include the <code>next</code> function to be called if the method does not complete the request cycle, but in all these cases it does, so we've omitted it. The methods simply return a string indicating that the associated page has not yet been created. If a controller function is expected to receive path parameters, these are output in the message string (see <code>req.params.id</code> above).</p>
+<p>All the functions have the standard form of an <em>Express middleware function</em>, with arguments for the request and response. We could also include the <code>next</code> function to be called if the method does not complete the request cycle, but in all these cases it does, so we've omitted it. The methods return a string indicating that the associated page has not yet been created. If a controller function is expected to receive path parameters, these are output in the message string (see <code>req.params.id</code> above).</p>
 
 <h4 id="BookInstance_controller">BookInstance controller</h4>
 

@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The event frame does not correspond to a visual frame as is delivered to the frame rendering callback function (see <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame rendering callback</a> for details on the callback). Instead, the <code>XRFrame</code> specified by the <code>frame</code> property is simply a method to provide access to the {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the relative positions of the objects in the scene at the time the event occurred.</p>
+<p>The event frame does not correspond to a visual frame as is delivered to the frame rendering callback function (see <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering">Rendering and the WebXR frame rendering callback</a> for details on the callback). Instead, the <code>XRFrame</code> specified by the <code>frame</code> property is a method to provide access to the {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the relative positions of the objects in the scene at the time the event occurred.</p>
 
 <p>However, since the event frame isn't an animation frame, there is no viewer pose available to represent the viewer's current point of view; the results of calling {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an  {{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}} list.</p>
 

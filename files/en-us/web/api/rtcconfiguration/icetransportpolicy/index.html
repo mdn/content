@@ -36,7 +36,7 @@ let <em>policy</em> = <em>rtcConfiguration</em>.iceTransportPolicy;
 
 <dl>
  <dt><code>all</code></dt>
- <dd>The ICE agent is permitted to use any kind of candidate, including both local and relay candidates. The agent—or the browser itself—may still perform some form of IP filtering on the incoming candidates for reasons including privacy and security, as well as to simply limit the number of candidates. <strong>This is the default.</strong></dd>
+ <dd>The ICE agent is permitted to use any kind of candidate, including both local and relay candidates. The agent—or the browser itself—may still perform some form of IP filtering on the incoming candidates for reasons including privacy and security, as well as to limit the number of candidates. <strong>This is the default.</strong></dd>
  <dt><code>relay</code></dt>
  <dd>
  <p>The ICE agent only considers media relay candidates when evaluating candidates. This includes, for example, those candidates relayed by a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.</p>

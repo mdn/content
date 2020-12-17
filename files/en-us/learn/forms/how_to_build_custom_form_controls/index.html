@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Design_structure_and_semantics">Design, structure, and semantics</h2>
 
-<p>Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can simply mimic those as much as possible.</p>
+<p>Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can mimic those as much as possible.</p>
 
 <p>In our example, we will rebuild the {{HTMLElement("select")}} element. Here is the result we want to achieve:</p>
 
@@ -589,7 +589,7 @@ window.addEventListener('load', function () {
 
 <p>The easiest way to do this is to use a native control under the hood. Such a control will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.</p>
 
-<p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can simply synchronize its value with that of our custom control:</p>
+<p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can synchronize its value with that of our custom control:</p>
 
 <pre class="brush: js notranslate">// This function updates the displayed value and synchronizes it with the native control.
 // It takes two parameters:

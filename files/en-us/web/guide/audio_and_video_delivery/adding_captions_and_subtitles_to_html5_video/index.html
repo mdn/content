@@ -93,7 +93,7 @@ tags:
 
 <p>The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.<br>
  <br>
- No image is used for the captions button, so it is simply styled as:</p>
+ No image is used for the captions button, so it is styled as:</p>
 
 <pre class="brush: css">.controls button[data-state="subtitles"] {
     height:85%;
@@ -134,7 +134,7 @@ tags:
 
 <p>Our aim is to use the <code>subtitles</code> button we added earlier to display a menu that allows users to choose which language they want the subtitles displayed in, or to turn them off entirely.<br>
  <br>
- We have added the button, but before we make it do anything, we need to build the menu that goes with it. This menu is built dynamically, so that languages can be added or removed later by simply editing the <code>&lt;track&gt;</code> elements within the video's markup.</p>
+ We have added the button, but before we make it do anything, we need to build the menu that goes with it. This menu is built dynamically, so that languages can be added or removed later by editing the <code>&lt;track&gt;</code> elements within the video's markup.</p>
 
 <p>All we need to do is to go through the video's <code>textTracks</code>, reading their properties and building the menu up from there:</p>
 
@@ -187,7 +187,7 @@ var createMenuItem = function(id, lang, label) {
    return listItem;
 }</pre>
 
-<p>This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by simply setting the required subtlte's <code>mode</code> attribute to <code>showing</code>, and setting the others to <code>hidden</code>.</p>
+<p>This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by setting the required subtlte's <code>mode</code> attribute to <code>showing</code>, and setting the others to <code>hidden</code>.</p>
 
 <p>Once the menu is built, it is then inserted into the DOM at the bottom of the videoContainer.<br>
  <br>
@@ -308,7 +308,7 @@ var createMenuItem = function(id, lang, label) {
  <dt><a href="https://flowplayer.org/player/">Flowplayer</a></dt>
  <dd>HTML5 player supporting WebVTT.</dd>
  <dt><a href="http://www.jwplayer.com/">jwplayer</a></dt>
- <dd>This video player is very extensive and does a lot more than simply support video captions. It supports the WebVTT, SRT and DFXP formats.</dd>
+ <dd>This video player is very extensive and does a lot more than support video captions. It supports the WebVTT, SRT and DFXP formats.</dd>
  <dt><a href="http://mediaelementjs.com/">MediaElement.js</a></dt>
  <dd>Another complete video player that also support video captions, albeit only in SRT format.</dd>
  <dt><a href="http://www.leanbackplayer.com/">LeanBack Player</a></dt>

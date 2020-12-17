@@ -132,7 +132,7 @@ tags:
 
 <p>Views are the heart of the web application, receiving HTTP requests from web clients and returning HTTP responses. In between, they marshall the other resources of the framework to access databases, render templates, etc. </p>
 
-<p>The example below shows a minimal view function <code>index()</code>, which could have been called by our URL mapper in the previous section. Like all view functions it receives an <code>HttpRequest</code> object as a parameter (<code>request</code>) and returns an <code>HttpResponse</code> object. In this case we don't do anything with the request, and our response simply returns a hard-coded string. We'll show you a request that does something more interesting in a later section.</p>
+<p>The example below shows a minimal view function <code>index()</code>, which could have been called by our URL mapper in the previous section. Like all view functions it receives an <code>HttpRequest</code> object as a parameter (<code>request</code>) and returns an <code>HttpResponse</code> object. In this case we don't do anything with the request, and our response returns a hard-coded string. We'll show you a request that does something more interesting in a later section.</p>
 
 <pre class="brush: python notranslate"># filename: views.py (Django view functions)
 

@@ -26,7 +26,7 @@ tags:
 
 <p>The {{Glossary("CORS")}} request was attempted with the credentials flag set, but the server is configured using the wildcard (<code>"*"</code>) as the value of {{HTTPHeader("Access-Control-Allow-Origin")}}, which doesn't allow the use of credentials.</p>
 
-<p>To correct this problem on the client side, simply ensure that the credentials flag's value is <code>false</code> when issuing your CORS request.</p>
+<p>To correct this problem on the client side, ensure that the credentials flag's value is <code>false</code> when issuing your CORS request.</p>
 
 <ul>
  <li>If the request is being issued using {{domxref("XMLHttpRequest")}}, make sure you're not setting {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} to <code>true</code>.</li>
