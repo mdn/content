@@ -18,12 +18,12 @@ tags:
 
 <p>If the connection has already been negotiated ({{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to <code>"stable"</code>), it is marked as needing to be negotiated again; the remote peer won't experience the change until this negotiation occurs. A {{event("negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}} to let the local end know this negotiation must occur.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><code><em>pc</em>.removeTrack(sender);
 </code></pre>
 
-<h3 id="Example" name="Example">Parameters</h3>
+<h3 id="Example">Parameters</h3>
 
 <dl>
  <dt><code>mediaTrack</code></dt>
@@ -41,7 +41,7 @@ tags:
  <dd>The connection is not open.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>This example adds a video track to a connection and sets up a listener on a close button which removes the track when the user clicks the button.</p>
 

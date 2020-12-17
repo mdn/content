@@ -12,7 +12,7 @@ tags:
 
 <p>If you have additions or suggestions for this list, please note them {{ interwiki('wikimo', 'MozillaReleaseChecklist', 'at the wiki') }} and one of will migrate appropriate additions from there to here.</p>
 
-<h3 id="Get_the_right_fixes_in" name="Get_the_right_fixes_in">Get the right fixes in</h3>
+<h3 id="Get_the_right_fixes_in">Get the right fixes in</h3>
 
 <ul>
  <li>Search for bugs nominated with the <code>blocking<em>{{ mediawiki.external('R') }}</em>?</code> bug flag, and mark them <code>+</code> or <code>-</code>.</li>
@@ -22,7 +22,7 @@ tags:
  <li>Look for regressions in difficult-to-test areas such as memory leaks.</li>
 </ul>
 
-<h3 id="Make_a_branch" name="Make_a_branch">Make a branch</h3>
+<h3 id="Make_a_branch">Make a branch</h3>
 
 <p>If it's a final release (rather than an alpha or beta release), a branch needs to be made. This is done once almost all of the necessary fixes are in. Before deciding that it's really time to release, drivers listen to feedback from people using the builds to make sure that they're good quality, and, before making the final decision, verify that talkback is working and run the smoketests plus a few additional tests.</p>
 
@@ -48,11 +48,11 @@ tags:
 
 <p>When the branch is made, create the <code>blocking<em>{{ mediawiki.external('R') }}</em></code> bug nomination flags for the next release.</p>
 
-<h3 id="Notify_the_sysadmins" name="Notify_the_sysadmins">Notify the sysadmins</h3>
+<h3 id="Notify_the_sysadmins">Notify the sysadmins</h3>
 
 <p>With our growing popularity, releases tend to cause us LOTs of bandwidth usage on our servers. As soon as a date has been set for the release (and preferably a week or so in advance) be sure to notify <a class="link-mailto" href="mailto:sysadmins@mozilla.org">sysadmins@mozilla.org</a> that a release is pending, so that proper preparations for having bandwidth available can be made. This is especially important for our FTP mirror network so we can avoid potential conflicts with other projects who share the same mirrors.</p>
 
-<h3 id="Update_the_version_numbers" name="Update_the_version_numbers">Update the version numbers</h3>
+<h3 id="Update_the_version_numbers">Update the version numbers</h3>
 
 <p>The version number updates have to be done twice. When the release is off the trunk they need to be done before the release, and some need to be done again after the release (to make things, e.g., <code>1.3b+</code> rather than <code>1.3b</code>). When the release is off a branch, the version numbers need to be updated on the branch and on the trunk after the branch.</p>
 
@@ -88,7 +88,7 @@ tags:
 
 <p>Also, for final releases only, remove the Debug and QA menus, build number, etc. (See {{ Bug(180823) }}, {{ Bug(163246) }}, and {{ Bug(139335) }}.)</p>
 
-<h3 id="Make_release_builds" name="Make_release_builds">Make release builds</h3>
+<h3 id="Make_release_builds">Make release builds</h3>
 
 <p>When it's time to release, drivers let the build team know that it's time to tag the release and make the final builds (usually with some advance warning with some uncertainty). The build team pulls the tree and <a href="/en/Creating_a_Release_Tag" title="en/Creating_a_Release_Tag">tags the release</a> (see <a href="#what_to_tag">above</a> for comments on tagged files) and makes the necessary builds for the major platforms. (See the <a href="/en/Mozilla_Release_Build_Notes" title="en/Mozilla_Release_Build_Notes">Mozilla Release Build Notes</a>.) Additional builds will be contributed for other platforms and for specific distributions (i.e., RPMS). Be sure to create a <code>contrib</code> directory under the main release directory so that these builds have a place to go.</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>Update log analysis scripts to start grabbing download stats for the new release.</p>
 
-<h3 id="Announce_the_release" name="Announce_the_release">Announce the release</h3>
+<h3 id="Announce_the_release">Announce the release</h3>
 
 <ul>
  <li>Write the release notes page and <a class="external" href="http://www.mozilla.org/contribute/writing/cvs">check it in</a>.</li>
@@ -123,7 +123,7 @@ tags:
 </ul>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): David Baron</li>

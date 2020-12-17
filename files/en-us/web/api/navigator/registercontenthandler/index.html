@@ -16,7 +16,7 @@ tags:
 
 <p>{{Note("Web sites may only register content handlers for themselves. For security reasons, it\'s not possible for an extension or web site to register content handlers targeting other sites.")}}</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">navigator.registerContentHandler(<em>mimeType</em>, <em>uri</em>, <em>title</em>);</pre>
 
@@ -26,7 +26,7 @@ tags:
  <li><code>title</code> is the title of the handler presented to the user as a string.</li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush:js;auto-links:false;">navigator.registerContentHandler(
     "application/vnd.mozilla.maybe.feed",
@@ -34,7 +34,7 @@ tags:
     "My Feed Reader"
 );</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>For <a href="/en-US/docs/Firefox_2_for_developers" title="Firefox_2_for_developers">Firefox 2</a> and above, only the <code>application/vnd.mozilla.maybe.feed</code>, <code>application/atom+xml</code>, and <code>application/rss+xml</code> MIME types are supported. All values have the same effect, and the registered handler will receive feeds in all Atom and RSS versions (see {{Bug("391286")}}).</p>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>{{Compat("api.Navigator.registerContentHandler")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web-based_protocol_handlers" title="Web-based_protocol_handlers">Web-based protocol handlers</a></li>

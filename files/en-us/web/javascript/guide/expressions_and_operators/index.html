@@ -51,7 +51,7 @@ tags:
 
 <p>For example, <code>x++</code> or <code>++x</code>.</p>
 
-<h3 id="Assignment_operators"><a id="Assignment" name="Assignment">Assignment operators</a></h3>
+<h3 id="Assignment_operators"><a id="Assignment">Assignment operators</a></h3>
 
 <p>An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (<code>=</code>), which assigns the value of its right operand to its left operand. That is, <code>x = y</code> assigns the value of <code>y</code> to <code>x</code>.</p>
 
@@ -187,7 +187,7 @@ var three = foo[2];
 // with destructuring
 var [one, two, three] = foo;</pre>
 
-<h3 id="Comparison_operators"><a id="Comparison" name="Comparison">Comparison operators</a></h3>
+<h3 id="Comparison_operators"><a id="Comparison">Comparison operators</a></h3>
 
 <p>A comparison operator compares its operands and returns a logical value based on whether the comparison is true. The operands can be numerical, string, logical, or object values. Strings are compared based on standard lexicographical ordering, using Unicode values. In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison. This behavior generally results in comparing the operands numerically. The sole exceptions to type conversion within comparisons involve the <code>===</code> and <code>!==</code> operators, which perform strict equality and inequality comparisons. These operators do not attempt to convert the operands to compatible types before checking equality. The following table describes the comparison operators in terms of this sample code:</p>
 
@@ -260,7 +260,7 @@ var var2 = 4;
 <p><strong>Note: </strong>(<strong>=&gt;</strong>) is not an operator, but the notation for <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>.</p>
 </div>
 
-<h3 id="Arithmetic_operators"><a id="Arithmetic" name="Arithmetic">Arithmetic operators</a></h3>
+<h3 id="Arithmetic_operators"><a id="Arithmetic">Arithmetic operators</a></h3>
 
 <p>An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (<code>+</code>), subtraction (<code>-</code>), multiplication (<code>*</code>), and division (<code>/</code>). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces {{jsxref("Infinity")}}). For example:</p>
 
@@ -318,7 +318,7 @@ var var2 = 4;
  </tbody>
 </table>
 
-<h3 id="Bitwise_operators"><a id="Bitwise" name="Bitwise">Bitwise operators</a></h3>
+<h3 id="Bitwise_operators"><a id="Bitwise">Bitwise operators</a></h3>
 
 <p>A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has a binary representation of 1001. Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values.</p>
 
@@ -373,7 +373,7 @@ var var2 = 4;
  </tbody>
 </table>
 
-<h4 id="Bitwise_Logical_Operators" name="Bitwise_Logical_Operators">Bitwise logical operators</h4>
+<h4 id="Bitwise_Logical_Operators">Bitwise logical operators</h4>
 
 <p>Conceptually, the bitwise logical operators work as follows:</p>
 
@@ -428,7 +428,7 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
 
 <p>Note that all 32 bits are inverted using the Bitwise NOT operator, and that values with the most significant (left-most) bit set to 1 represent negative numbers (two's-complement representation). <code>~x</code> evaluates to the same value that <code>-x - 1</code> evaluates to.</p>
 
-<h4 id="Bitwise_Shift_Operators" name="Bitwise_Shift_Operators">Bitwise shift operators</h4>
+<h4 id="Bitwise_Shift_Operators">Bitwise shift operators</h4>
 
 <p>The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be shifted. The direction of the shift operation is controlled by the operator used.</p>
 
@@ -465,7 +465,7 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
  </tbody>
 </table>
 
-<h3 id="Logical_operators"><a id="Logical" name="Logical">Logical operators</a></h3>
+<h3 id="Logical_operators"><a id="Logical">Logical operators</a></h3>
 
 <p>Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the <code>&amp;&amp;</code> and <code>||</code> operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value. The logical operators are described in the following table.</p>
 
@@ -528,7 +528,7 @@ var n2 = !false; // !f returns true
 var n3 = !'Cat'; // !t returns false
 </pre>
 
-<h4 id="Short-Circuit_Evaluation" name="Short-Circuit_Evaluation">Short-circuit evaluation</h4>
+<h4 id="Short-Circuit_Evaluation">Short-circuit evaluation</h4>
 
 <p>As logical expressions are evaluated left to right, they are tested for possible "short-circuit" evaluation using the following rules:</p>
 
@@ -541,7 +541,7 @@ var n3 = !'Cat'; // !t returns false
 
 <p>Note that for the second case, in modern code you can use the new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Nullish coalescing operator</a> (<code>??</code>) that works like <code>||</code>, but it only returns the second expression, when the first one is "<a href="/en-US/docs/Glossary/Nullish">nullish</a>", i.e. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations."><code>null</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a>. It is thus the better alternative to provide defaults, when values like <code>''</code> or <code>0</code> are valid values for the first expression, too.</p>
 
-<h3 id="String_operators"><a id="String" name="String">String operators</a></h3>
+<h3 id="String_operators"><a id="String">String operators</a></h3>
 
 <p>In addition to the comparison operators, which can be used on string values, the concatenation operator (+) concatenates two string values together, returning another string that is the union of the two operand strings.</p>
 
@@ -556,7 +556,7 @@ var n3 = !'Cat'; // !t returns false
 <pre class="brush: js notranslate">var mystring = 'alpha';
 mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.</pre>
 
-<h3 id="Conditional_ternary_operator"><a id="Conditional" name="Conditional">Conditional (ternary) operator</a></h3>
+<h3 id="Conditional_ternary_operator"><a id="Conditional">Conditional (ternary) operator</a></h3>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">conditional operator</a> is the only JavaScript operator that takes three operands. The operator can have one of two values based on a condition. The syntax is:</p>
 
@@ -572,7 +572,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 
 <p>This statement assigns the value "adult" to the variable <code>status</code> if <code>age</code> is eighteen or more. Otherwise, it assigns the value "minor" to <code>status</code>.</p>
 
-<h3 id="Comma_operator" name="Comma_operator"><a id="Comma" name="Comma">Comma operator</a></h3>
+<h3 id="Comma_operator"><a id="Comma">Comma operator</a></h3>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">comma operator</a> (<code>,</code>) simply evaluates both of its operands and returns the value of the last operand. This operator is primarily used inside a <code>for</code> loop, to allow multiple variables to be updated each time through the loop. It is regarded bad style to use it elsewhere, when it is not necessary. Often two separate statements can and should be used instead.</p>
 
@@ -586,11 +586,11 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
 </pre>
 
-<h3 id="Unary_operators"><a id="Unary" name="Unary">Unary operators</a></h3>
+<h3 id="Unary_operators"><a id="Unary">Unary operators</a></h3>
 
 <p>A unary operation is an operation with only one operand.</p>
 
-<h4 id="delete" name="delete"><code>delete</code></h4>
+<h4 id="delete"><code>delete</code></h4>
 
 <p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> operator deletes an object's property. The syntax is:</p>
 
@@ -620,7 +620,7 @@ delete myobj.h; // returns true (can delete user-defined properties)
 
 <p>Since arrays are just objects, it's technically possible to <code>delete</code> elements from them. This is however regarded as a bad practice, try to avoid it. When you delete an array property, the array length is not affected and other elements are not re-indexed. To achieve that behavior, it is much better to just overwrite the element with the value <code>undefined</code>. To actually manipulate the array, use the various array methods such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">splice</a></code>.</p>
 
-<h4 id="typeof" name="typeof"><code>typeof</code></h4>
+<h4 id="typeof"><code>typeof</code></h4>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> operator</a> is used in either of the following ways:</p>
 
@@ -685,7 +685,7 @@ typeof Option;   // returns "function"
 typeof String;   // returns "function"
 </pre>
 
-<h4 id="void" name="void"><code>void</code></h4>
+<h4 id="void"><code>void</code></h4>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code> operator</a> is used in either of the following ways:</p>
 
@@ -695,7 +695,7 @@ void expression
 
 <p>The <code>void</code> operator specifies an expression to be evaluated without returning a value. <code>expression</code> is a JavaScript expression to evaluate. The parentheses surrounding the expression are optional, but it is good style to use them.</p>
 
-<h3 id="Relational_operators"><a id="Relational" name="Relational">Relational operators</a></h3>
+<h3 id="Relational_operators"><a id="Relational">Relational operators</a></h3>
 
 <p>A relational operator compares its operands and returns a <code>Boolean</code> value based on whether the comparison is true.</p>
 
@@ -730,7 +730,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 'model' in mycar; // returns true
 </pre>
 
-<h4 id="instanceof" name="instanceof"><code>instanceof</code></h4>
+<h4 id="instanceof"><code>instanceof</code></h4>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> operator</a> returns <code>true</code> if the specified object is of the specified object type. The syntax is:</p>
 
@@ -857,7 +857,7 @@ if (theDay instanceof Date) {
 
 <p>Basic keywords and general expressions in JavaScript.</p>
 
-<h4 id="this" name="this"><code>this</code></h4>
+<h4 id="this"><code>this</code></h4>
 
 <p>Use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code> keyword</a> to refer to the current object. In general, <code>this</code> refers to the calling object in a method. Use <code>this</code> either with the dot or the bracket notation:</p>
 
@@ -904,7 +904,7 @@ a * c + b * c // 9
 
 <p>Left values are the destination of an assignment.</p>
 
-<h4 id="new" name="new"><code>new</code></h4>
+<h4 id="new"><code>new</code></h4>
 
 <p>You can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> to create an instance of a user-defined object type or of one of the built-in object types. Use <code>new</code> as follows:</p>
 

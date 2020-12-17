@@ -57,26 +57,26 @@ tags:
 }
 </pre>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>returnValue</em> = <em>range</em>.compareNode( <em>referenceNode</em> );
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><em>referenceNode</em></dt>
  <dd>The {{DOMxRef("Node")}} to compare with the <code>Range</code>.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="eval">range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>This method is obsolete; you should use the W3C DOM {{DOMxRef("Range.compareBoundaryPoints()")}} method.</p>
 

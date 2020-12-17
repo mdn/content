@@ -31,12 +31,12 @@ tags:
 <p>Be sure to always use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame, <strong>otherwise the animation will run faster on high refresh rate screens</strong>. Check the example below for a way to do this.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">window.requestAnimationFrame(<em>callback</em>);
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -47,7 +47,7 @@ tags:
 
 <p>A <code>long</code> integer value, the request id, that uniquely identifies the entry in the callback list. This is a non-zero value, but you may not make any other assumptions about its value. You can pass this value to {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.</p>
 
-<h2 id="Notes" name="Notes">Example</h2>
+<h2 id="Notes">Example</h2>
 
 <p>In this example, an element is animated for 2 seconds (2000 milliseconds). The element moves at a speed of 0.1px/ms to the right, so its relative position (in CSS pixels) can be calculated in function of the time elapsed since the start of the animation (in milliseconds) with <code>0.1 * elapsed</code>. The element's final position is 200px (<code>0.1 * 2000</code>) to the right of its initial position.</p>
 
@@ -104,7 +104,7 @@ window.requestAnimationFrame(step);
 <p>{{Compat("api.Window.requestAnimationFrame")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Window.mozAnimationStartTime")}}</li>

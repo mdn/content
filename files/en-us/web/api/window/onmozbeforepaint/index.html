@@ -15,11 +15,11 @@ tags:
 
 <p>{{ obsolete_header("11") }}{{ non-standard_header() }}</p>
 
-<h3 id="Summary" name="Summary">Summary</h3>
+<h3 id="Summary">Summary</h3>
 
 <p>An event handler for the <code>MozBeforePaint</code> event. This is used in concert with the {{ domxref("window.mozRequestAnimationFrame()") }} method to perform smooth, synchronized animations from JavaScript code.</p>
 
-<h3 id="Syntax" name="Syntax">Syntax</h3>
+<h3 id="Syntax">Syntax</h3>
 
 <pre class="eval">window.onmozbeforepaint = <em>funcRef</em>;
 </pre>
@@ -28,11 +28,11 @@ tags:
  <li><code>funcRef</code> is the handler function.</li>
 </ul>
 
-<h3 id="Example" name="Example">Example</h3>
+<h3 id="Example">Example</h3>
 
 <p>See {{ domxref("window.mozRequestAnimationFrame()") }} for an example.</p>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <p>This event fires immediately before the browser window is repainted, if the event has been requested by one or more scripts calling {{ domxref("window.mozRequestAnimationFrame()") }}. The event handler receives as an input parameter an event whose <code>timeStamp</code> property is the time, in milliseconds since epoch, that is the "current time" for the current animation frame. This time is the same for all animations being run in the same browser window, including those using the {{ domxref("window.mozRequestAnimationFrame()") }} method, <a href="/en/CSS/CSS_transitions" title="en/CSS/CSS transitions">CSS transitions</a>, and SMIL animations.</p>
 

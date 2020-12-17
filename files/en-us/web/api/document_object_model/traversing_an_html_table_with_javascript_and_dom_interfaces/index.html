@@ -19,7 +19,7 @@ tags:
 <p>The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).</p>
 </div>
 
-<h2 id="Overview_of_Sample1.html" name="Overview_of_Sample1.html">Example: Creating an HTML table dynamically (<code>Sample1.html</code>)</h2>
+<h2 id="Overview_of_Sample1.html">Example: Creating an HTML table dynamically (<code>Sample1.html</code>)</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -116,7 +116,7 @@ tags:
 
 <p>You can build this table and its internal child elements by using just a few DOM methods. Remember to keep in mind the tree model for the structures you are planning to create; this will make it easier to write the necessary code. In the <code>&lt;table&gt;</code> tree of Figure 1 the element <code>&lt;table&gt;</code> has one child: the element <code>&lt;tbody&gt;</code>. <code>&lt;tbody&gt;</code> has two children. Each <code>&lt;tbody&gt;</code>'s child (<code>&lt;tr&gt;</code>) has two children (<code>&lt;td&gt;</code>). Finally, each <code>&lt;td&gt;</code> has one child: a text node.</p>
 
-<h2 id="Setting_background_of_a_paragraph" name="Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</h2>
+<h2 id="Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</h2>
 
 <p><code>getElementsByTagName(tagNameValue)</code> is a method available in any DOM {{domxref("Element")}} or the root {{domxref("Document")}} element. When called, it returns an array with all of the element's descendants matching the tag name. The first element of the list is located at position <code>[0]</code> in the array.</p>
 
@@ -167,7 +167,7 @@ tags:
 // setting inline STYLE attribute
 </pre>
 
-<h3 id="Creating_TextNodes_with_document.createTextNode.28.22...22.29" name="Creating_TextNodes_with_document.createTextNode.28.22...22.29">Creating TextNodes with document.createTextNode("..")</h3>
+<h3 id="Creating_TextNodes_with_document.createTextNode.28.22...22.29">Creating TextNodes with document.createTextNode("..")</h3>
 
 <p>Use the document object to invoke the <code>createTextNode</code> method and create your text node. You just need to pass the text content. The return value is an object that represents the text node.</p>
 
@@ -176,7 +176,7 @@ tags:
 
 <p>This means that you have created a node of the type <code>TEXT_NODE</code> (a piece of text) whose text data is <code>"world"</code>, and <code>myTextNode</code> is your reference to this node object. To insert this text into your HTML page, you need to make this text node a child of some other node element.</p>
 
-<h3 id="Inserting_Elements_with_appendChild.28...29" name="Inserting_Elements_with_appendChild.28...29">Inserting Elements with appendChild(..)</h3>
+<h3 id="Inserting_Elements_with_appendChild.28...29">Inserting Elements with appendChild(..)</h3>
 
 <p>So, by calling <code>myP.appendChild(<var>node_element</var>)</code>, you are making the element a new child of the second <code>&lt;p&gt;</code> element.</p>
 
@@ -191,7 +191,7 @@ tags:
 <p><code>createTextNode()</code> and <code>appendChild()</code> is a simple way to include white space between the words hello and world. Another important note is that the <code>appendChild</code> method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world, you will need to use <code>insertBefore</code> instead of <code>appendChild</code>.</p>
 </div>
 
-<h3 id="Creating_New_Elements_with_the_document_object_and_the_createElement.28...29_method" name="Creating_New_Elements_with_the_document_object_and_the_createElement.28...29_method">Creating New Elements with the document object and the createElement(..) method</h3>
+<h3 id="Creating_New_Elements_with_the_document_object_and_the_createElement.28...29_method">Creating New Elements with the document object and the createElement(..) method</h3>
 
 <p>You can create new HTML elements or any other element you want with <code>createElement</code>. For example, if you want to create a new <code>&lt;p&gt;</code> element as a child of the <code>&lt;body&gt;</code> element, you can use the <code>myBody</code> in the previous example and append a new element node. To create a node simply call <code>document.createElement("tagname")</code>. For example:</p>
 
@@ -201,7 +201,7 @@ myBody.appendChild(myNewPTAGnode);
 
 <p><img alt="Image:sample2c.jpg" src="/@api/deki/files/836/=Sample2c.jpg"></p>
 
-<h3 id="Removing_nodes_with_the_removeChild.28...29_method" name="Removing_nodes_with_the_removeChild.28...29_method">Removing nodes with the removeChild(..) method</h3>
+<h3 id="Removing_nodes_with_the_removeChild.28...29_method">Removing nodes with the removeChild(..) method</h3>
 
 <p>Nodes can be removed. The following code removes text node <code>myTextNode</code> (containing the word "world") from the second <code>&lt;p&gt;</code> element, <code>myP</code>.</p>
 
@@ -217,15 +217,15 @@ myBody.appendChild(myNewPTAGnode);
 
 <p><img alt="Image:sample2d.jpg" src="/@api/deki/files/837/=Sample2d.jpg"></p>
 
-<h2 id="Creating_a_table_dynamically_.28back_to_Sample1.html.29" name="Creating_a_table_dynamically_.28back_to_Sample1.html.29">Creating a table dynamically (back to Sample1.html)</h2>
+<h2 id="Creating_a_table_dynamically_.28back_to_Sample1.html.29">Creating a table dynamically (back to Sample1.html)</h2>
 
 <p>For the rest of this article we will continue working with sample1.html. The following figure shows the table object tree structure for the table created in the sample.</p>
 
-<h3 id="Reviewing_the_HTML_Table_structure" name="Reviewing_the_HTML_Table_structure">Reviewing the HTML Table structure</h3>
+<h3 id="Reviewing_the_HTML_Table_structure">Reviewing the HTML Table structure</h3>
 
 <p><img alt="Image:sample1-tabledom.jpg" src="/@api/deki/files/833/=Sample1-tabledom.jpg"></p>
 
-<h3 id="Creating_element_nodes_and_inserting_them_into_the_document_tree" name="Creating_element_nodes_and_inserting_them_into_the_document_tree">Creating element nodes and inserting them into the document tree</h3>
+<h3 id="Creating_element_nodes_and_inserting_them_into_the_document_tree">Creating element nodes and inserting them into the document tree</h3>
 
 <p>The basic steps to create the table in sample1.html are:</p>
 
@@ -282,9 +282,9 @@ myBody.appendChild(myNewPTAGnode);
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<h2 id="Manipulating_the_table_with_DOM_and_CSS" name="Manipulating_the_table_with_DOM_and_CSS">Manipulating the table with DOM and CSS</h2>
+<h2 id="Manipulating_the_table_with_DOM_and_CSS">Manipulating the table with DOM and CSS</h2>
 
-<h3 id="Getting_a_text_node_from_the_table" name="Getting_a_text_node_from_the_table">Getting a text node from the table</h3>
+<h3 id="Getting_a_text_node_from_the_table">Getting a text node from the table</h3>
 
 <p>This example introduces two new DOM attributes. First it uses the <code>childNodes</code> attribute to get the list of child nodes of mycel. The <code>childNodes</code> list includes all child nodes, regardless of what their name or type is. Like <code>getElementsByTagName()</code>, it returns a list of nodes.</p>
 
@@ -312,13 +312,13 @@ currenttext=document.createTextNode(myceltext.data);
 mybody.appendChild(currenttext);
 </pre>
 
-<h3 id="Getting_an_attribute_value" name="Getting_an_attribute_value">Getting an attribute value</h3>
+<h3 id="Getting_an_attribute_value">Getting an attribute value</h3>
 
 <p>At the end of sample1 there is a call to <code>setAttribute</code> on the <code>mytable</code> object. This call was used to set the border property of the table. To retrieve the value of the attribute, use the <code>getAttribute</code> method:</p>
 
 <pre class="brush: js; notranslate">mytable.getAttribute("border");</pre>
 
-<h3 id="Hiding_a_column_by_changing_style_properties" name="Hiding_a_column_by_changing_style_properties">Hiding a column by changing style properties</h3>
+<h3 id="Hiding_a_column_by_changing_style_properties">Hiding a column by changing style properties</h3>
 
 <p>Once you have the object in your JavaScript variable, you can set <code>style</code> properties directly. The following code is a modified version of sample1.html in which each cell of the second column is hidden and each cell of the first column is changed to have a red background. Note that the <code>style</code> property was set directly.</p>
 
@@ -354,7 +354,7 @@ mybody.appendChild(currenttext);
 &lt;/script&gt;
 &lt;/html&gt;</pre>
 
-<h4 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h4>
+<h4 id="Original_Document_Information">Original Document Information</h4>
 
 <dl>
  <dt>Author(s)</dt>

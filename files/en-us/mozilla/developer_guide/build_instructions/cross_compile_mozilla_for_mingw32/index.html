@@ -14,7 +14,7 @@ tags:
 
 <p>Note that there are different build scripts and toolchains for mozilla-central and mozilla-esr. If you want to build ESR; ensure you are using the correct toolchain.</p>
 
-<h3 id="Build_a_GCC_mingw_cross-compiler" name="Build_a_GCC_mingw_cross-compiler">The mingw-clang cross-compiler</h3>
+<h3 id="Build_a_GCC_mingw_cross-compiler">The mingw-clang cross-compiler</h3>
 
 <p>The MinGW-clang compiler is built using: <a href="https://searchfox.org/mozilla-central/source/taskcluster/scripts/misc/build-clang-mingw.sh">https://searchfox.org/mozilla-central/source/taskcluster/scripts/misc/build-clang-mingw.sh</a></p>
 
@@ -62,7 +62,7 @@ $ <code>make</code>
 
 <p>nsis <a href="https://searchfox.org/mozilla-central/source/taskcluster/ci/fetch/toolchains.yml#247">version</a> and <a href="https://searchfox.org/mozilla-central/source/taskcluster/scripts/misc/build-mingw32-nsis.sh">build script</a></p>
 
-<h3 id="Configure_Mozilla" name="Configure_Mozilla">Configure Mozilla</h3>
+<h3 id="Configure_Mozilla">Configure Mozilla</h3>
 
 <p>You can get the source code following the instructions at <a href="/En/Developer_Guide/Build_Instructions#Get_the_source" title="en/Build_Documentation#Get_the_source">here</a>. After you have the source, create a <code>.mozconfig</code> file at the top level source directory.</p>
 
@@ -77,7 +77,7 @@ CBINDGEN="${TOOLTOOL_DIR}/cbindgen/cbindgen"</pre>
 
 <p>(Where TOOLTOOL_DIR is set up so this finds the rust package you downloaded.)</p>
 
-<h3 id="Build" name="Build">Build</h3>
+<h3 id="Build">Build</h3>
 
 <p>Build it:</p>
 
@@ -86,6 +86,6 @@ CBINDGEN="${TOOLTOOL_DIR}/cbindgen/cbindgen"</pre>
 
 <p>The build should succeed - mingw-clang is a Tier 2 supported compilation target for Mozilla. There is a small chance that the build is broken right now (you can ask in #build) but it is more likely you haven't matched the exact versions/checkouts/configure flags. Because MinGW is not a robustly supported build target, deviating from what Mozilla specifies for any of those is risky. Review the build scripts in mozilla-central (linked above) and if you've matched the git checkout version of mingw-w64, compiler/binutils version, and configure flags, ask in #build.</p>
 
-<h3 id="Other_troubles" name="Other_troubles">Other troubles</h3>
+<h3 id="Other_troubles">Other troubles</h3>
 
 <p>Please ask in the newsgroup mozilla.dev.builds.</p>

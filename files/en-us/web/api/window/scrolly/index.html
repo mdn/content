@@ -14,7 +14,7 @@ tags:
 
 <p><span class="seoSummary">The read-only <code><strong>scrollY</strong></code> property of the {{domxref("Window")}} interface returns the number of pixels that the document is currently scrolled vertically.</span> This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled horizontally from the {{domxref("Window.scrollX", "scrollX")}} property.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var y = window.scrollY</pre>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>In more technical terms, <code>scrollY</code> returns the Y coordinate of the top edge of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is 0.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush:js">// make sure and go down to the second page
 if (window.scrollY) {
@@ -37,7 +37,7 @@ if (window.scrollY) {
 
 window.scrollByPages(1);</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Use this property to check that the document hasn't already been scrolled when using relative scroll functions such as {{domxref("window.scrollBy", "scrollBy()")}}, {{domxref("window.scrollByLines", "scrollByLines()")}}, or {{domxref("window.scrollByPages", "scrollByPages()")}}.</p>
 
@@ -79,7 +79,7 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 <p>{{Compat("api.Window.scrollY")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("window.scrollX")}}</li>

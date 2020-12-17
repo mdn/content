@@ -18,7 +18,7 @@ tags:
 <p>In Firefox 29 and later, enumeration of the <code>navigator.plugins</code> array may be restricted as a privacy measure. Applications that must check for the presence of a browser plugin should query <code>navigator.plugins</code> or {{DOMxRef("navigator.mimeTypes")}} by exact name instead of enumerating the <code>navigator.plugins</code> array and comparing every plugin's name. This privacy change does not disable any plugins; it just hides some plugin names from enumeration.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <var>plugins</var> = navigator.plugins;
 </pre>
@@ -27,7 +27,7 @@ tags:
 
 <p>The returned value is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>The following example function returns the version of the Shockwave Flash plugin.</p>
 
@@ -65,7 +65,7 @@ for(var i = 0; i &lt; pluginsLength; i++) {
   newRow.insertCell().textContent = navigator.plugins[i].version?navigator.plugins[i].version:"";
 }</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>The {{DOMxRef("Plugin")}} object exposes a small interface for getting information about the various plugins installed in your browser. A list of plugins is also available by entering <code>about:plugins</code> in the browser's Location bar.</p>
 

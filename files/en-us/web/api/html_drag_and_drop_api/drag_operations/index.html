@@ -14,7 +14,7 @@ tags:
 
 <p class="note">The drag operations described in this document use the {{domxref("DataTransfer")}} interface. This document does <em>not</em> use the {{domxref("DataTransferItem")}} interface nor the {{domxref("DataTransferItemList")}} interface.</p>
 
-<h2 id="draggableattribute" name="draggableattribute">The <code>draggable</code> Attribute</h2>
+<h2 id="draggableattribute">The <code>draggable</code> Attribute</h2>
 
 <p>In a web page, there are certain cases where a default drag behavior is used. These include text selections, images, and links. When an image or link is dragged, the URL of the image or link is set as the drag data, and a drag begins. For other elements, they must be part of a selection for a default drag to occur. To see this in effect, select an area of a webpage, and then click and hold the mouse and drag the selection. An OS-specific rendering of the selection will appear and follow the mouse pointer as the drag occurs. However, this behavior is only the default drag behavior, if no listeners adjust the data to be dragged.</p>
 
@@ -43,7 +43,7 @@ tags:
 <p><strong>Note:</strong> When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.</p>
 </div>
 
-<h2 id="dragstart" name="dragstart">Starting a Drag Operation</h2>
+<h2 id="dragstart">Starting a Drag Operation</h2>
 
 <p>In this example, a listener is added for the {{event("dragstart")}} event by using the <code>{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}</code> attribute.</p>
 
@@ -58,7 +58,7 @@ tags:
 
 <p>Within the {{event("dragstart")}} event, you can specify the <strong>drag data</strong>, the <strong>feedback image</strong>, and the <strong>drag effects</strong>, all of which are described below. However, only the <strong>drag data</strong> is required. (The default image and drag effects are suitable in most situations.)</p>
 
-<h2 id="dragdata" name="dragdata">Drag Data</h2>
+<h2 id="dragdata">Drag Data</h2>
 
 <p>All {{domxref("DragEvent","drag events")}} have a property called {{domxref("DragEvent.dataTransfer","dataTransfer")}} which holds the drag data (<code>dataTransfer</code> is a {{domxref("DataTransfer")}} object).</p>
 
@@ -100,7 +100,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>The <code>type</code> argument to the {{domxref("DataTransfer.clearData","clearData()")}} method is optional. If the <code>type</code> is not specified, the data associated with all types is removed. If the drag contains no drag data items, or all of the items have been subsequently cleared, then no drag will occur.</p>
 
-<h2 id="dragfeedback" name="dragfeedback">Setting the drag feedback image</h2>
+<h2 id="dragfeedback">Setting the drag feedback image</h2>
 
 <p>When a drag occurs, a translucent image is generated from the drag target (the element the "{{event("dragstart")}}" event is fired at), and follows the user's pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, you can use {{domxref("DataTransfer.setDragImage","setDragImage()")}} to specify a custom drag feedback image.</p>
 
@@ -131,7 +131,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>In this example, we make one canvas the drag image. As the canvas is <code>50</code>×<code>50</code> pixels, we use offsets of half of this (<code>25</code>) so that the image appears centered on the mouse pointer.</p>
 
-<h2 id="drageffects" name="drageffects">Drag Effects</h2>
+<h2 id="drageffects">Drag Effects</h2>
 
 <p>When dragging, there are several operations that may be performed. The <code>copy</code> operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The <code>move</code> operation is used to indicate that the data being dragged will be moved, and the <code>link</code> operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.</p>
 
@@ -182,7 +182,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>Within the <code>{{event("drop")}}</code> and <code>{{event("dragend")}}</code> events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen.  If the chosen effect were "<code>move</code>", then the original data should be removed from the source of the drag within the <code>{{event("dragend")}}</code> event.</p>
 
-<h2 id="droptargets" name="droptargets">Specifying Drop Targets</h2>
+<h2 id="droptargets">Specifying Drop Targets</h2>
 
 <p>A listener for the <code>{{event("dragenter")}}</code> and <code>{{event("dragover")}}</code> events are used to indicate valid drop targets, that is, places where dragged items may be dropped. Most areas of a web page or application are not valid places to drop data. Thus, the default handling of these events is not to allow a drop.</p>
 
@@ -209,7 +209,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>You may also wish to set either the {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, {{domxref("DataTransfer.dropEffect","dropEffect")}} property, or both at the same time, if you wish to be more specific about the type of operation that will performed. Naturally, changing either property will have no effect if you do not cancel the event as well.</p>
 
-<h2 id="dropfeedback" name="dropfeedback">Drop Feedback</h2>
+<h2 id="dropfeedback">Drop Feedback</h2>
 
 <p>There are several ways in which you can indicate to the user that a drop is allowed at a certain location. The mouse pointer will update as necessary depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property.</p>
 
@@ -234,7 +234,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>Finally, the <code>{{event("dragleave")}}</code> event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the <code>:-moz-drag-over</code> pseudoclass will be removed automatically. The <code>{{event("dragleave")}}</code> event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.</p>
 
-<h2 id="drop" name="drop">Performing a Drop</h2>
+<h2 id="drop">Performing a Drop</h2>
 
 <p>When the user releases the mouse, the drag and drop operation ends.</p>
 
@@ -297,7 +297,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 }
 </pre>
 
-<h2 id="dragend" name="dragend">Finishing a Drag</h2>
+<h2 id="dragend">Finishing a Drag</h2>
 
 <p>Once the drag is complete, a <code>{{event("dragend")}}</code> event is fired at the source of the drag (the same element that received the <code>{{event("dragstart")}}</code> event). This event will fire if the drag was successful<sup>[1]</sup> or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drop operation occurred.</p>
 
@@ -309,7 +309,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>[1]: In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">Bug 460801</a></p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
 	<li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>

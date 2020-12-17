@@ -8,7 +8,7 @@ tags:
   - capabilities
   - firefoxOptions
 ---
-<p>The <a id="firefoxOptions" name="firefoxOptions"><strong><code>moz:firefoxOptions</code> capability</strong></a> is a namespaced set of capabilities specific to <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>. It is used to control the behaviour of Firefox and can be used as a member of <code><a href="en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code> or as a member of one of the <code><a href="en-US/docs/Web/WebDriver/Capabilities#firstMatch">firstMatch</a></code> entries.</p>
+<p>The <a id="firefoxOptions"><strong><code>moz:firefoxOptions</code> capability</strong></a> is a namespaced set of capabilities specific to <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>. It is used to control the behaviour of Firefox and can be used as a member of <code><a href="en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code> or as a member of one of the <code><a href="en-US/docs/Web/WebDriver/Capabilities#firstMatch">firstMatch</a></code> entries.</p>
 
 <p>It is used to define options which control how Firefox gets started and run.</p>
 
@@ -16,7 +16,7 @@ tags:
 
 <dl>
  <dt>
- <h5 id="binary_string"><a id="binary" name="binary"><code>binary</code></a> (string)</h5>
+ <h5 id="binary_string"><a id="binary"><code>binary</code></a> (string)</h5>
  </dt>
  <dd>Absolute path to the custom Firefox binary to use.</dd>
  <dd>On macOS you may either give the path to the application bundle, i.e. <code>/Applications/Firefox.app</code>, or the absolute path to the executable binary inside this bundle, for example <code>/Applications/Firefox.app/Contents/MacOS/firefox-bin</code>.</dd>
@@ -66,7 +66,7 @@ tags:
  </table>
  </dd>
  <dt>
- <h5 id="args_array_of_strings"><a id="args" name="args"><code>args</code></a> (array of strings)</h5>
+ <h5 id="args_array_of_strings"><a id="args"><code>args</code></a> (array of strings)</h5>
  </dt>
  <dd>
  <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where required, e.g. <code>["<a href="/en-US/docs/Mozilla/Firefox/Headless_mode">-headless</a>"]</code>.</p>
@@ -74,7 +74,7 @@ tags:
  <p>To have geckodriver pick up an existing <a href="#profile">profile</a> on the local filesystem, you may pass <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is recommended to use the <code>profile</code> entry.</p>
  </dd>
  <dt>
- <h5 id="profile_string"><a id="profile" name="profile"><code>profile</code></a> (string)</h5>
+ <h5 id="profile_string"><a id="profile"><code>profile</code></a> (string)</h5>
  </dt>
  <dd>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install extensions or custom certificates, but for setting custom preferences we recommend using the <code>prefs</code> (<a href="#Prefs">Preferences Object</a>) entry instead.</dd>
  <dd>Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when <code>profile</code> is provided. By default geckodriver will create a new profile in this location.</dd>
@@ -87,35 +87,35 @@ tags:
 
 <dl>
  <dt>
- <h5 id="log_Log_object"><a id="log" name="log"><code>log</code></a> (<a href="#Log">Log object</a>)</h5>
+ <h5 id="log_Log_object"><a id="log"><code>log</code></a> (<a href="#Log">Log object</a>)</h5>
  </dt>
  <dd>To increase the logging verbosity of geckodriver and Firefox, you may pass a <code><a href="#Log">log</a></code> object that may look like <code>{"log": {"level": "trace"}}</code> to include all trace-level logs and above</dd>
  <dt>
- <h5 id="prefs_Preferences_object"><a id="prefs" name="prefs"><code>prefs</code></a> (<a href="#Prefs">Preferences object</a>)</h5>
+ <h5 id="prefs_Preferences_object"><a id="prefs"><code>prefs</code></a> (<a href="#Prefs">Preferences object</a>)</h5>
  </dt>
  <dd>Map of preference name to preference value, which can be a string, a boolean or an integer.</dd>
  <dt>
- <h5 id="env_Env_object"><a id="env" name="env"><code>env</code> (</a><a href="#Env">Env object</a><a name="env">)</a></h5>
+ <h5 id="env_Env_object"><a id="env"><code>env</code> (</a><a href="#Env">Env object</a><a name="env">)</a></h5>
  </dt>
  <dd>Map of environment variable name to environment variable value, both of which must be strings.</dd>
 </dl>
 
-<h3 id="Android"><a id="android" name="android">Android</a></h3>
+<h3 id="Android"><a id="android">Android</a></h3>
 
 <p>Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding <a href="https://wiki.mozilla.org/Mobile/GeckoView">GeckoView</a> has to be controlled on Android:</p>
 
 <dl>
  <dt>
- <h5 id="androidPackage_string_required"><a id="androidPackage" name="androidPackage"><code>androidPackage</code></a> (string, required)</h5>
+ <h5 id="androidPackage_string_required"><a id="androidPackage"><code>androidPackage</code></a> (string, required)</h5>
  </dt>
  <dd>The package name of Firefox, e.g. <span class="message"><span class="content"><code>org.mozilla.firefox</code>, <code>org.mozilla.firefox_beta,</code> or <code>org.mozilla.fennec</code></span></span> depending on the release channel, or the package name of the application embedding GeckoView, e.g. <code>org.mozilla.geckoview_example</code>.</dd>
  <dt>
- <h5 id="androidActivity_string_optional"><a id="androidActivity" name="androidActivity"><code>androidActivity</code> (string, optional)</a></h5>
+ <h5 id="androidActivity_string_optional"><a id="androidActivity"><code>androidActivity</code> (string, optional)</a></h5>
  </dt>
  <dd>The fully qualified class name of the activity to be launched, e.g. <code>.GeckoViewActivity</code>. If not specified, the package’s default activity will be used.</dd>
 </dl>
 
-<h5 id="androidDeviceSerial_string_optional"><a id="androidDeviceSerial" name="androidDeviceSerial"><code>androidDeviceSerial</code> (string, optional)</a></h5>
+<h5 id="androidDeviceSerial_string_optional"><a id="androidDeviceSerial"><code>androidDeviceSerial</code> (string, optional)</a></h5>
 
 <dl>
  <dd>The serial number of the device on which to launch the application. If not specified and multiple devices are attached, an error will be returned.</dd>
@@ -145,17 +145,17 @@ tags:
  </dt>
 </dl>
 
-<h3 id="Log_object"><a id="Log" name="Log">Log object</a></h3>
+<h3 id="Log_object"><a id="Log">Log object</a></h3>
 
 <p>A JSON Object that may have any of these fields:</p>
 
-<h5 id="level_string"><code><a id="level" name="level">level</a></code> (string)</h5>
+<h5 id="level_string"><code><a id="level">level</a></code> (string)</h5>
 
 <dl>
  <dd>Set the level of verbosity of geckodriver and Firefox. Available levels are <code>trace</code>, <code>debug</code>, <code>config</code>, <code>info</code>, <code>warn</code>, <code>error</code>, and <code>fatal</code>. If left undefined the default is <code>info</code>. The value is treated case-insensitively.</dd>
 </dl>
 
-<h3 id="Preferences_object"><a id="Prefs" name="Prefs">Preferences object</a></h3>
+<h3 id="Preferences_object"><a id="Prefs">Preferences object</a></h3>
 
 <p>A JSON Object with one entry per preference to set. The preference will be written to the <a href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting "<a>about:config</a>" in your Firefox browser. Some of these are documented on the <a href="/en-US/docs/Mozilla/Preferences/Preference_reference">preference reference</a> page.</p>
 
@@ -168,7 +168,7 @@ tags:
 </pre>
 
 
-<h3 id="Env_object"><a id="Env" name="Env">Env object</a></h3>
+<h3 id="Env_object"><a id="Env">Env object</a></h3>
 
 <p>A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with given variable in its environment.  On Android, the GeckoView-based App will have the given variable added to the <code>env</code> block in its configuration YAML.</p>
 

@@ -7,7 +7,7 @@ tags:
   - MIME
   - XMLHttpRequest
 ---
-<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays" name="Receiving_binary_data_using_JavaScript_typed_arrays">Receiving binary data using JavaScript typed arrays</h2>
+<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays">Receiving binary data using JavaScript typed arrays</h2>
 
 <p>The <code>responseType</code> property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), <code>"arraybuffer"</code>, <code>"blob"</code>, <code>"document"</code>, <code>"json"</code>, and <code>"text"</code>. The <code>response</code> property will contain the entity body according to <code>responseType</code>, as an <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JSON</code>, or string. This is <code>null</code> if the request is not complete or was not successful.</p>
 
@@ -47,7 +47,7 @@ oReq.onload = function(oEvent) {
 
 oReq.send();</pre>
 
-<h2 id="Receiving_binary_data_in_older_browsers" name="Receiving_binary_data_in_older_browsers">Receiving binary data in older browsers</h2>
+<h2 id="Receiving_binary_data_in_older_browsers">Receiving binary data in older browsers</h2>
 
 <p>The <code>load_binary_resource()</code> function shown below loads binary data from the specified URL, returning it to the caller.</p>
 
@@ -72,7 +72,7 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 
 <p>See <a href="http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html">downloading binary streams with XMLHttpRequest</a> for a detailed explanation. See also <a href="/en-US/docs/Code_snippets/Downloading_Files" title="Code_snippets/Downloading_Files">downloading files</a>.</p>
 
-<h2 id="Sending_binary_data" name="Sending_binary_data">Sending binary data</h2>
+<h2 id="Sending_binary_data">Sending binary data</h2>
 
 <p>The <code>send</code> method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, or {{domxref("File")}} object.</p>
 
@@ -89,7 +89,7 @@ var blob = new Blob(['abc123'], {type: 'text/plain'});
 oReq.send(blob);
 </pre>
 
-<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Sending typed arrays as binary data</h2>
+<h2 id="Sending_typed_arrays_as_binary_data">Sending typed arrays as binary data</h2>
 
 <p>You can send JavaScript typed arrays as binary data as well.</p>
 
@@ -110,11 +110,11 @@ xhr.send(myArray);
 
 <div class="note"><strong>Note:</strong> Support for sending <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
 
-<h2 id="Submitting_forms_and_uploading_files" name="Submitting_forms_and_uploading_files">Submitting forms and uploading files</h2>
+<h2 id="Submitting_forms_and_uploading_files">Submitting forms and uploading files</h2>
 
 <p>Please, read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
 
-<h2 id="Firefox-specific_examples" name="Firefox-specific_examples">Firefox-specific examples</h2>
+<h2 id="Firefox-specific_examples">Firefox-specific examples</h2>
 
 <p>This example transmits binary content asynchronously, using the <code>POST</code> method, and Firefox's non-standard <code>sendAsBinary()</code>.</p>
 

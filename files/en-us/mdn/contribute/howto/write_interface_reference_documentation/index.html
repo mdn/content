@@ -14,11 +14,11 @@ tags:
 <p><strong>Important:</strong> We no longer actively document the Mozilla-internal interfaces (most of which start with <code>nsI</code>) on MDN. A final decision as to where these documents should reside in the future is still under consideration; in the meantime, we generally discourage using your time to document them on MDN.</p>
 </div>
 
-<h2 id="Learn_by_example" name="Learn_by_example">Learn by example</h2>
+<h2 id="Learn_by_example">Learn by example</h2>
 
 <p>See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_interface_reference_documentation/Sample_interface_document" title="Project:Sample_interface_document">sample interface document</a> for a fictional interface that implements all the features of a complete interface reference document. This article can serve as a helpful template when documenting an interface.</p>
 
-<h2 id="Interface_reference_sections" name="Interface_reference_sections">Interface reference sections</h2>
+<h2 id="Interface_reference_sections">Interface reference sections</h2>
 
 <p>Each interface reference article has at least an introduction section (which has no heading). The introduction should provide an overview of what the interface is used for.</p>
 
@@ -51,21 +51,21 @@ tags:
 
 <p>All other sections are usually optional, but may be necessary depending on the interface. The optional sections are:</p>
 
-<h3 id="Method_overview" name="Method_overview">Method overview</h3>
+<h3 id="Method_overview">Method overview</h3>
 
 <p>The method overview is a table that simply lists all the method signatures for each method provided by the interface. The method's name should be a clickable link to the method description itself. Ideally, the methods should be listed in alphabetical order.</p>
 
 <p>If a method supports multiple types for a given input parameter, you can list them using the format [type1, type2, ..., typeN].</p>
 
-<h3 id="Attributes" name="Attributes">Attributes</h3>
+<h3 id="Attributes">Attributes</h3>
 
 <p>The attributes section consists of a three column table. The first column contains the names of each attribute offered by the interface. The second column indicates the types of each attribute; these types should be links for non-simple types. The third column should describe the attribute, explaining its use and providing any details needed. Please list the attributes in alphabetical order; you can sort the table after the fact by right-clicking in it; there's a "Sort Table" option in the contextual menu.</p>
 
-<h3 id="Constants" name="Constants">Constants</h3>
+<h3 id="Constants">Constants</h3>
 
 <p>Each group of constants should have a sub-section containing a table describing the relevant constants. The table should have three columns: Constant (the names of the constants), Value (their values), and Description (descriptive text explaining the use of the constant).</p>
 
-<h3 id="Methods" name="Methods">Methods</h3>
+<h3 id="Methods">Methods</h3>
 
 <p>The methods section provides detailed documentation for each method offered by the interface. Within the methods section should be a subsection for each method. Each method's subsection name should include closing parentheses (such as "parseAsync()" in the {{Interface("nsIFeedProcessor")}} interface reference.</p>
 
@@ -81,18 +81,18 @@ tags:
 
 <p>If the method can throw exceptions, a similar "Exceptions thrown" subsection should be included, containing a definition list style list for each possible exception.</p>
 
-<h3 id="Remarks" name="Remarks">Remarks</h3>
+<h3 id="Remarks">Remarks</h3>
 
 <p>Any general comments that apply to the interface as a whole may be placed in the Remarks section.</p>
 
-<h3 id="See_also" name="See_also">See also</h3>
+<h3 id="See_also">See also</h3>
 
 <p>If links to other interfaces, or to any other documents, might be helpful to the reader, these should be listed in the "See also" section.</p>
 
-<h2 id="Categorizing_articles" name="Categorizing_articles">Categorizing articles</h2>
+<h2 id="Categorizing_articles">Categorizing articles</h2>
 
 <p>Each article that documents an interface needs to be added to the Interfaces category by adding the "Interfaces" tag. Likewise, the article should have any other appropriate tags.</p>
 
-<h2 id="Finding_articles_that_need_help" name="Finding_articles_that_need_help">Finding articles that need help</h2>
+<h2 id="Finding_articles_that_need_help">Finding articles that need help</h2>
 
 <p>Look through <a href="/en-US/docs/tag/Interfaces" title="tag/Interfaces">the interface list</a> and see if any are marked as being in the category <a href="/en-US/docs/tag/NeedsMarkupWork" title="tag/NeedsMarkupWork">NeedsMarkupWork</a>. These are interfaces that we know need to be reformatted into our new layout. If you clean one up, remove the line that adds it to that category.</p>

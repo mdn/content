@@ -12,7 +12,7 @@ tags:
 
 <p>Returns an {{domxref("XPathResult")}} based on an <a href="/en-US/docs/XPath" title="XPath">XPath</a> expression and other given parameters.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var xpathResult = document.evaluate(
   xpathExpression,
@@ -30,7 +30,7 @@ tags:
 	<li><code>result</code> is an existing <code>XPathResult</code> to use for the results. <code>null</code> is the most common and will create a new <code>XPathResult</code></li>
 </ul>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
 /* Search the document for all h2 elements.
@@ -55,14 +55,14 @@ alert(alertText); // Alerts the text of all h2 elements
 
 <p>See <a href="/en-US/docs/Introduction_to_using_XPath_in_JavaScript" title="Introduction to using XPath in JavaScript">Introduction to using XPath in JavaScript</a> for more information.</p>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <ul>
 	<li>XPath expressions can be evaluated on HTML and XML documents.</li>
 	<li>While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.</li>
 </ul>
 
-<h2 id="Result_types" name="Result_types">Result types</h2>
+<h2 id="Result_types">Result types</h2>
 
 <p>(Merge with <a href="/Template:XPathResultConstants" title="Template:XPathResultConstants">Template:XPathResultConstants</a>?</p>
 
@@ -151,13 +151,13 @@ alert(alertText); // Alerts the text of all h2 elements
 	</tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 
 <p>{{Compat("api.Document.evaluate")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
 	<li>{{domxref("Document.createExpression()")}}</li>

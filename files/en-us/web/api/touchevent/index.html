@@ -53,11 +53,11 @@ tags:
 
 <p>There are several types of event that can be fired to indicate that touch-related changes have occurred. You can determine which of these has happened by looking at the event's {{domxref("event.type", "TouchEvent.type")}} property.</p>
 
-<h3 id="touchstart_event" name="touchstart_event">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
+<h3 id="touchstart_event">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
 
 <p>Sent when the user places a touch point on the touch surface. The event's target will be the {{domxref("element")}} in which the touch occurred.</p>
 
-<h3 id="touchend_event" name="touchend_event">{{domxref("Element/touchend_event", "touchend")}}</h3>
+<h3 id="touchend_event">{{domxref("Element/touchend_event", "touchend")}}</h3>
 
 <p>Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.</p>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>The touch point (or points) that were removed from the surface can be found in the {{domxref("TouchList")}} specified by the <code>changedTouches</code> attribute.</p>
 
-<h3 id="touchmove_event" name="touchmove_event">{{domxref("Element/touchmove_event", "touchmove")}}</h3>
+<h3 id="touchmove_event">{{domxref("Element/touchmove_event", "touchmove")}}</h3>
 
 <p>Sent when the user moves a touch point along the surface. The event's target is the same {{domxref("element")}} that received the <code>touchstart</code> event corresponding to the touch point, even if the touch point has moved outside that element.</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <div class="note"><strong>Note:</strong> The rate at which <code>touchmove</code> events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.</div>
 
-<h3 id="touchcancel_event" name="touchcancel_event">{{domxref("Element/touchcancel_event", "touchcancel")}}</h3>
+<h3 id="touchcancel_event">{{domxref("Element/touchcancel_event", "touchcancel")}}</h3>
 
 <p>Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):</p>
 

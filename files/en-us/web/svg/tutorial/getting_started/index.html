@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}</p>
 
-<h3 id="A_Simple_Example" name="A_Simple_Example">A simple example</h3>
+<h3 id="A_Simple_Example">A simple example</h3>
 
 <p>Let us dive straight in with a simple example. Take a look at the following code.</p>
 
@@ -68,13 +68,13 @@ tags:
  <li>How SVG handles sizes and units will be explained <a href="/en-US/Web/SVG/Tutorial/Positions">on the next page</a>.</li>
 </ul>
 
-<h3 id="SVG_File_Types" name="SVG_File_Types">SVG file types</h3>
+<h3 id="SVG_File_Types">SVG file types</h3>
 
 <p>SVG files come in two flavors. Normal SVG files are simple text files containing SVG markup. The recommended filename extension for these files is ".svg" (all lowercase).</p>
 
 <p>Due to the potentially massive size SVG files can reach when used for some applications (e.g., geographical applications), the SVG specification also allows for gzip-compressed SVG files. The recommended filename extension for these files is ".svgz" (all lowercase). Unfortunately, it is very problematic to get gzip-compressed SVG files to work reliably across all SVG capable user agents when served from a Microsoft IIS server, and Firefox cannot load gzip-compressed SVG from the local computer. Avoid gzip-compressed SVG except when you are publishing to a webserver that you know will serve it correctly (see below).</p>
 
-<h3 id="A_Word_on_Webservers" name="A_Word_on_Webservers">A word on Webservers</h3>
+<h3 id="A_Word_on_Webservers">A word on Webservers</h3>
 
 <p>Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:</p>
 

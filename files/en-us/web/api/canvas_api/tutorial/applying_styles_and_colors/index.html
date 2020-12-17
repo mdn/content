@@ -15,7 +15,7 @@ tags:
 <p>In the chapter about <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes">drawing shapes</a>, we used only the default line and fill styles. Here we will explore the canvas options we have at our disposal to make our drawings a little more attractive. You will learn how to add different colors, line styles, gradients, patterns and shadows to your drawings.</p>
 </div>
 
-<h2 id="Colors" name="Colors">Colors</h2>
+<h2 id="Colors">Colors</h2>
 
 <p>Up until now we have only seen methods of the drawing context. If we want to apply colors to a shape, there are two important properties we can use: <code>fillStyle</code> and <code>strokeStyle</code>.</p>
 
@@ -42,7 +42,7 @@ ctx.fillStyle = 'rgb(255, 165, 0)';
 ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 </pre>
 
-<h3 id="A_fillStyle_example" name="A_fillStyle_example">A <code>fillStyle</code> example</h3>
+<h3 id="A_fillStyle_example">A <code>fillStyle</code> example</h3>
 
 <p>In this example, we once again use two <code>for</code> loops to draw a grid of rectangles, each in a different color. The resulting image should look something like the screenshot. There is nothing too spectacular happening here. We use the two variables <code>i</code> and <code>j</code> to generate a unique RGB color for each square, and only modify the red and green values. The blue channel has a fixed value. By modifying the channels, you can generate all kinds of palettes. By increasing the steps, you can achieve something that looks like the color palettes Photoshop uses.</p>
 
@@ -67,7 +67,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example">A <code>strokeStyle</code> example</h3>
+<h3 id="A_strokeStyle_example">A <code>strokeStyle</code> example</h3>
 
 <p>This example is similar to the one above, but uses the <code>strokeStyle</code> property to change the colors of the shapes' outlines. We use the <code>arc()</code> method to draw circles instead of squares.</p>
 
@@ -95,7 +95,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
 
-<h2 id="Transparency" name="Transparency">Transparency</h2>
+<h2 id="Transparency">Transparency</h2>
 
 <p>In addition to drawing opaque shapes to the canvas, we can also draw semi-transparent (or translucent) shapes. This is done by either setting the <code>globalAlpha</code> property or by assigning a semi-transparent color to the stroke and/or fill style.</p>
 
@@ -116,7 +116,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>The <code>rgba()</code> function is similar to the <code>rgb()</code> function but it has one extra parameter. The last parameter sets the transparency value of this particular color. The valid range is again between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
 
-<h3 id="A_globalAlpha_example" name="A_globalAlpha_example">A <code>globalAlpha</code> example</h3>
+<h3 id="A_globalAlpha_example">A <code>globalAlpha</code> example</h3>
 
 <p>In this example, we'll draw a background of four different colored squares. On top of these, we'll draw a set of semi-transparent circles. The <code>globalAlpha</code> property is set at <code>0.2</code> which will be used for all shapes from that point on. Every step in the <code>for</code> loop draws a set of circles with an increasing radius. The final result is a radial gradient. By overlaying ever more circles on top of each other, we effectively reduce the transparency of the circles that have already been drawn. By increasing the step count and in effect drawing more circles, the background would completely disappear from the center of the image.</p>
 
@@ -152,7 +152,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 
-<h3 id="An_example_using_rgba" name="An_example_using_rgba()">An example using <code>rgba()</code></h3>
+<h3 id="An_example_using_rgba">An example using <code>rgba()</code></h3>
 
 <p>In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using <code>rgba()</code> gives you a little more control and flexibility because we can set the fill and stroke style individually.</p>
 
@@ -186,7 +186,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
 
-<h2 id="Line_styles" name="Line_styles">Line styles</h2>
+<h2 id="Line_styles">Line styles</h2>
 
 <p>There are several properties which allow us to style lines.</p>
 
@@ -209,7 +209,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>You'll get a better understanding of what these do by looking at the examples below.</p>
 
-<h3 id="A_lineWidth_example" name="A_lineWidth_example">A <code>lineWidth</code> example</h3>
+<h3 id="A_lineWidth_example">A <code>lineWidth</code> example</h3>
 
 <p>This property sets the current line thickness. Values must be positive numbers. By default this value is set to 1.0 units.</p>
 
@@ -255,7 +255,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>While slightly painful when initially working with scalable 2D graphics, paying attention to the pixel grid and the position of paths ensures that your drawings will look correct regardless of scaling or any other transformations involved. A 1.0-width vertical line drawn at the correct position will become a crisp 2-pixel line when scaled up by 2, and will appear at the correct position.</p>
 
-<h3 id="A_lineCap_example" name="A_lineCap_example">A <code>lineCap</code> example</h3>
+<h3 id="A_lineCap_example">A <code>lineCap</code> example</h3>
 
 <p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>.</p>
 
@@ -308,7 +308,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
 
-<h3 id="A_lineJoin_example" name="A_lineJoin_example">A <code>lineJoin</code> example</h3>
+<h3 id="A_lineJoin_example">A <code>lineJoin</code> example</h3>
 
 <p>The <code>lineJoin</code> property determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together (degenerate segments with zero lengths, whose specified endpoints and control points are exactly at the same position, are skipped).</p>
 
@@ -352,7 +352,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
 
-<h3 id="A_demo_of_the_miterLimit_property" name="A_demo_of_the_miterLimit_property">A demo of the <code>miterLimit</code> property</h3>
+<h3 id="A_demo_of_the_miterLimit_property">A demo of the <code>miterLimit</code> property</h3>
 
 <p>As you've seen in the previous example, when joining two lines with the <code>miter</code> option, the outside edges of the two joining lines are extended up to the point where they meet. For lines which are at large angles with each other, this point is not far from the inside connection point. However, as the angles between each line decreases, the distance (miter length) between these points increases exponentially.</p>
 
@@ -459,7 +459,7 @@ march();</pre>
 
 <p>{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}</p>
 
-<h2 id="Gradients" name="Gradients">Gradients</h2>
+<h2 id="Gradients">Gradients</h2>
 
 <p>Just like any normal drawing program, we can fill and stroke shapes using linear and radial gradients. We create a {{domxref("CanvasGradient")}} object by using one of the following methods. We can then assign this object to the <code>fillStyle</code> or <code>strokeStyle</code> properties.</p>
 
@@ -490,7 +490,7 @@ lineargradient.addColorStop(0, 'white');
 lineargradient.addColorStop(1, 'black');
 </pre>
 
-<h3 id="A_createLinearGradient_example" name="A_createLinearGradient_example">A <code>createLinearGradient</code> example</h3>
+<h3 id="A_createLinearGradient_example">A <code>createLinearGradient</code> example</h3>
 
 <p>In this example, we'll create two different gradients. As you can see here, both the <code>strokeStyle</code> and <code>fillStyle</code> properties can accept a <code>canvasGradient</code> object as valid input.</p>
 
@@ -531,7 +531,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
 
-<h3 id="A_createRadialGradient_example" name="A_createRadialGradient_example">A <code>createRadialGradient</code> example</h3>
+<h3 id="A_createRadialGradient_example">A <code>createRadialGradient</code> example</h3>
 
 <p>In this example, we'll define four different radial gradients. Because we have control over the start and closing points of the gradient, we can achieve more complex effects than we would normally have in the "classic" radial gradients we see in, for instance, Photoshop (that is, a gradient with a single center point where the gradient expands outward in a circular shape).</p>
 
@@ -583,7 +583,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
 
-<h2 id="Patterns" name="Patterns">Patterns</h2>
+<h2 id="Patterns">Patterns</h2>
 
 <p>In one of the examples on the previous page, we used a series of loops to create a pattern of images. There is, however, a much simpler method: the <code>createPattern()</code> method.</p>
 
@@ -616,7 +616,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 <p><strong>Note:</strong> Like with the <code>drawImage()</code> method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.</p>
 </div>
 
-<h3 id="A_createPattern_example" name="A_createPattern_example">A <code>createPattern</code> example</h3>
+<h3 id="A_createPattern_example">A <code>createPattern</code> example</h3>
 
 <p>In this last example, we'll create a pattern to assign to the <code>fillStyle</code> property. The only thing worth noting is the use of the image's <code>onload</code> handler. This is to make sure the image is loaded before it is assigned to the pattern.</p>
 

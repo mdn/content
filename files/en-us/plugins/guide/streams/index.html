@@ -32,7 +32,7 @@ tags:
  <li>Sending a Stream</li>
 </ul>
 
-<h3 id="Receiving_a_Stream" name="Receiving_a_Stream">Receiving a Stream</h3>
+<h3 id="Receiving_a_Stream">Receiving a Stream</h3>
 
 <p>When the browser sends a data stream to the plug-in, it has several tasks to perform:</p>
 
@@ -45,7 +45,7 @@ tags:
  <li>Sending the Stream in File Mode</li>
 </ul>
 
-<h3 id="Telling_the_Plug-in_When_a_Stream_Is_Created" name="Telling_the_Plug-in_When_a_Stream_Is_Created">Telling the Plug-in When a Stream Is Created</h3>
+<h3 id="Telling_the_Plug-in_When_a_Stream_Is_Created">Telling the Plug-in When a Stream Is Created</h3>
 
 <p>To tell the plug-in instance when a new stream is created, the browser calls the <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code> method. This method also determines which mode it should use to send data to the plug-in. The browser can create a stream for several different types of data:</p>
 
@@ -83,7 +83,7 @@ NPStream *stream, NPBool seekable, uint16* stype);
 <p>NOTE: A plug-in can also use the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_GetURL">NPN_GetURL</a></code> method to request a stream for an arbitrary URL.</p>
 </div>
 
-<h3 id="Telling_the_Plug-in_When_a_Stream_Is_Deleted" name="Telling_the_Plug-in_When_a_Stream_Is_Deleted">Telling the Plug-in When a Stream Is Deleted</h3>
+<h3 id="Telling_the_Plug-in_When_a_Stream_Is_Deleted">Telling the Plug-in When a Stream Is Deleted</h3>
 
 <p>The browser calls the <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_DestroyStream">NPP_DestroyStream</a></code> method when it completes the stream sent to the plug-in, either successfully or abnormally. Once the plug-in returns from this method, the browser deletes the <code><a href="/en-US/Add-ons/Plugins/Reference/NPStream">NPStream</a></code> object. The plug-in can terminate the stream itself by calling <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code>.</p>
 
@@ -104,7 +104,7 @@ NPStream *stream, NPError reason);
  <li><strong>NPRES_NETWORK_ERR</strong>: The stream failed because of problems with the network, disk I/O error, lack of memory, or some other problem.</li>
 </ul>
 
-<h3 id="Finding_Out_How_Much_Data_the_Plug-in_Can_Accept" name="Finding_Out_How_Much_Data_the_Plug-in_Can_Accept">Finding Out How Much Data the Plug-in Can Accept</h3>
+<h3 id="Finding_Out_How_Much_Data_the_Plug-in_Can_Accept">Finding Out How Much Data the Plug-in Can Accept</h3>
 
 <p>After a call to <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code> and before writing data to the plug-in, the browser calls <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> to determine the maximum number of bytes that the plug-in can consume. This function allows the browser to send only as much data to the instance as it can handle at one time, and it helps both the browser and the plug-in to use their resources efficiently.</p>
 
@@ -121,7 +121,7 @@ NPStream *stream, NPError reason);
 
 <p>The instance parameter is the current plug-in instance; the stream parameter specifies the current stream.</p>
 
-<h3 id="Writing_the_Stream_to_the_Plug-in" name="Writing_the_Stream_to_the_Plug-in">Writing the Stream to the Plug-in</h3>
+<h3 id="Writing_the_Stream_to_the_Plug-in">Writing the Stream to the Plug-in</h3>
 
 <p>The next step is to write the data to a plug-in from a stream. After a call to <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>, in which the plug-in requested a normal-mode stream, the browser delivers the data in the stream progressively in a series of calls to <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>.</p>
 
@@ -142,7 +142,7 @@ int32 offset, int32 len, void *buf);
 
 <p>NOTE: If you want to be sure that the NPN_*Stream functions are called in the order you want and behave the way you expect, combine NPN_<a href="/en/NewStream" title="en/NewStream">NewStream</a>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Destroy_Stream">NPN_Destroy_Stream</a></code> in the same callback.</p>
 
-<h3 id="Sending_the_Stream_in_Random-Access_Mode" name="Sending_the_Stream_in_Random-Access_Mode">Sending the Stream in Random-Access Mode</h3>
+<h3 id="Sending_the_Stream_in_Random-Access_Mode">Sending the Stream in Random-Access Mode</h3>
 
 <p>In random-access mode, the plug-in "pulls" stream data by calling the <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_RequestRead">NPN_RequestRead</a></code> method. The browser must download the entire stream to a temporary file before it can be used, unless the stream comes from a local file or an HTTP server that supports the byte-range extension to HTTP. This mode consumes more resources than the others.</p>
 
@@ -164,7 +164,7 @@ int32 offset, int32 len, void *buf);
 
 <p>The plug-in can request multiple ranges, either through a list of NPByteRange objects in a single call to <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_RequestRead">NPN_RequestRead</a></code> or through multiple calls to <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_RequestRead">NPN_RequestRead</a></code>. In this case, the browser can write individual ranges in any order, with any number of <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_WriteReady">NPP_WriteReady</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code> calls.</p>
 
-<h3 id="Sending_the_Stream_in_File_Mode" name="Sending_the_Stream_in_File_Mode">Sending the Stream in File Mode</h3>
+<h3 id="Sending_the_Stream_in_File_Mode">Sending the Stream in File Mode</h3>
 
 <p>If the stream is sent in file mode, the browser saves the entire stream to a local file and passes the full file path to the plug-in instance through the <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_StreamAsFile">NPP_StreamAsFile</a></code> method. Use this feature only as a last resort; plug-ins should implement an incremental stream-based interface whenever possible.</p>
 
@@ -182,7 +182,7 @@ const char* fname);
 <p><br>
  The instance parameter is the current plug-in; the stream parameter specifies the current stream. The fname parameter specifies the full path to a local file (or null if an error occurs during data retrieval or writing to the file).</p>
 
-<h3 id="Sending_a_Stream" name="Sending_a_Stream">Sending a Stream</h3>
+<h3 id="Sending_a_Stream">Sending a Stream</h3>
 
 <p>When a plug-in sends a data stream to the browser, it performs several tasks. The plug-in calls the methods <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code> to create a stream, push data into it, and delete it. Streams produced by a plug-in have a specific MIME type and can be sent to a particular browser window or frame for display.</p>
 
@@ -214,7 +214,7 @@ const char* fname);
 
 <p>For an example that demonstrates using this function with <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code>, see "Example of Sending a Stream."</p>
 
-<h3 id="Pushing_Data_into_the_Stream" name="Pushing_Data_into_the_Stream">Pushing Data into the Stream</h3>
+<h3 id="Pushing_Data_into_the_Stream">Pushing Data into the Stream</h3>
 
 <p>After creating a stream with <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code>, the plug-in can call <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code> to deliver a buffer of data from the plug-in to the browser. This function returns the number of bytes written or a negative integer in case of an error during processing. NPN_Write should send as much data as is available. Unlike <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_Write">NPP_Write</a></code>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code> has no corresponding <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_WriteReady">NPN_WriteReady</a></code> function.</p>
 
@@ -229,7 +229,7 @@ int32 len, void *buf);
 
 <p>For an example that demonstrates using this function with <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code>, see "Example of Sending a Stream."</p>
 
-<h3 id="Deleting_the_Stream" name="Deleting_the_Stream">Deleting the Stream</h3>
+<h3 id="Deleting_the_Stream">Deleting the Stream</h3>
 
 <p>When the stream is complete, the plug-in calls <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code> to close and delete it. This applies to streams the plug-in creates with <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code> or streams created by the browser with <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>.</p>
 
@@ -250,7 +250,7 @@ NPError reason);
 
 <p>For an example that demonstrates using this function with <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_NewStream">NPN_NewStream</a></code> and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code>, see "Example of Sending a Stream."</p>
 
-<h3 id="Example_of_Sending_a_Stream" name="Example_of_Sending_a_Stream">Example of Sending a Stream</h3>
+<h3 id="Example_of_Sending_a_Stream">Example of Sending a Stream</h3>
 
 <p>The following code creates a new stream of HTML text displayed by the browser in a new window, writes it, and destroys the stream. Error handling has been omitted for simplicity.</p>
 

@@ -27,18 +27,18 @@ tags:
 	<dd>Creates a new {{domxref("File")}} object which can be used to read the file.</dd>
 </dl>
 
-<h3 id="basic_concepts" name="basic_concepts">Obsolete methods</h3>
+<h3 id="basic_concepts">Obsolete methods</h3>
 
 <dl>
 	<dt>{{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{obsolete_inline}}</dt>
 	<dd>Creates a new {{domxref("FileWriter")}} object which allows writing to the file represented by the file system entry.</dd>
 </dl>
 
-<h2 id="basic_concepts" name="basic_concepts">Basic concepts</h2>
+<h2 id="basic_concepts">Basic concepts</h2>
 
 <p>To write content to file, create a {{domxref("FileWriter")}} object by calling {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}}. To read a file, obtain a {{domxref("File")}} object representing its contents by calling {{domxref("FileSystemFileEntry.file", "file()")}}.</p>
 
-<h3 id="example" name="example">Example</h3>
+<h3 id="example">Example</h3>
 
 <p>The following code creates an empty file called "<code>log.txt"</code> (if it doesn't exist) and fills it with the text "Meow". Inside the success callback, event handlers are set up to handle the {{event("error")}} <code>error</code> and {{event("writeend")}} events. The text data is written to the file by creating a blob, appending text to it, and passing the blob to {{domxref("FileWriter.write()")}}.</p>
 
@@ -87,7 +87,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);</
 	</tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 

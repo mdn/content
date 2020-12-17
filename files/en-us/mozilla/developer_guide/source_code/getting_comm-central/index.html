@@ -87,7 +87,7 @@ cd src
 <pre>python client.py checkout
 </pre>
 
-<h2 id="Building" name="Building">Alternative methods</h2>
+<h2 id="Building">Alternative methods</h2>
 
 <h3 id="Using_Mercurial_bundles">Using Mercurial bundles</h3>
 
@@ -103,7 +103,7 @@ cd gecko-dev-master</pre>
 
 <p> </p>
 
-<h2 id="Building" name="Building">Building</h2>
+<h2 id="Building">Building</h2>
 
 <p>For the comm-central apps, see the following links:</p>
 
@@ -113,7 +113,7 @@ cd gecko-dev-master</pre>
  <li><a class="internal" href="/en-US/docs/Simple_Sunbird_build" title="en/Simple Sunbird build">Simple Sunbird Build</a></li>
 </ul>
 
-<h3 id="Example" name="Example">Example</h3>
+<h3 id="Example">Example</h3>
 
 <p>The following script runs the checkout, build, and package operations in turn, telling you what it does (and when) and stopping at (and displaying) the first nonzero program exit code. It is written for the <code>bash</code> shell on Linux-i686 and for an object directory set with <code>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-@CONFIG_GUESS@</code>, but it can be easily adapted for other Mozilla building environments:</p>
 
@@ -135,7 +135,7 @@ echo 'Exit status' $?
 date
 </pre>
 
-<h3 id="Firefox_and_xulrunner" name="Firefox_and_xulrunner">Firefox and xulrunner</h3>
+<h3 id="Firefox_and_xulrunner">Firefox and xulrunner</h3>
 
 <p>You can, if needed, build Firefox or <code>xulrunner</code> from this tree. As <code>client.py</code> pulls the mozilla-central repository, builds and development of Firefox and <code>xulrunner</code> can take place within a repository from comm-central. The only difference is that you must be in the mozilla/ directory before running the build command:</p>
 
@@ -143,7 +143,7 @@ date
 make -f client.mk build
 </pre>
 
-<h2 id="See_Also" name="See_Also">See Also</h2>
+<h2 id="See_Also">See Also</h2>
 
 <ul>
  <li><a href="/en-US/docs/comm-central" title="en/comm-central">comm-central</a></li>

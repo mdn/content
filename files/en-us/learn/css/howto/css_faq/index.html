@@ -44,7 +44,7 @@ tags:
 
 <p>When at all possible, you should just use the HTML5 doctype.</p>
 
-<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered">Why doesn't my CSS, which is valid, render at all?</h2>
+<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered">Why doesn't my CSS, which is valid, render at all?</h2>
 
 <p>Here are some possible causes:</p>
 
@@ -53,7 +53,7 @@ tags:
  <li>To be applied, a CSS stylesheet must be served with a <code>text/css</code> MIME type. If the Web server doesn't serve it with this type, it won't be applied.</li>
 </ul>
 
-<h2 id="Difference_between_id_and_class" name="Difference_between_id_and_class">What is the difference between <code>id</code> and <code>class</code>?</h2>
+<h2 id="Difference_between_id_and_class">What is the difference between <code>id</code> and <code>class</code>?</h2>
 
 <p>HTML elements can have an <code>id</code> and/or <code>class</code> attribute. The <code>id</code> attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The <code>class</code> attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular <code>id</code> and/or <code>class</code> names.</p>
 
@@ -74,7 +74,7 @@ tags:
 <p><strong>Note</strong>: See <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Selectors</a> for more information.</p>
 </div>
 
-<h2 id="Restoring_the_default_property_value" name="Restoring_the_default_property_value">How do I restore the default value of a property?</h2>
+<h2 id="Restoring_the_default_property_value">How do I restore the default value of a property?</h2>
 
 <p>Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property. For example:</p>
 
@@ -88,11 +88,11 @@ h1 { color: black; }</pre>
 h1 { color: red; }
 h1 { color: initial; }</pre>
 
-<h2 id="Derived_styles" name="Derived_styles">How do I derive one style from another?</h2>
+<h2 id="Derived_styles">How do I derive one style from another?</h2>
 
 <p>CSS does not exactly allow one style to be defined in terms of another. (See <a href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer's note about the Working Group's stance</a>). However, assigning multiple classes to a single element can provide the same effect, and <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS Variables</a> now provide a way to define style information in one place that can be reused in multiple places.</p>
 
-<h2 id="Assigning_multiple_classes" name="Assigning_multiple_classes">How do I assign multiple classes to an element?</h2>
+<h2 id="Assigning_multiple_classes">How do I assign multiple classes to an element?</h2>
 
 <p>HTML elements can be assigned multiple classes by listing the classes in the <code>class</code> attribute, with a blank space to separate them.</p>
 
@@ -108,11 +108,11 @@ h1 { color: initial; }</pre>
 
 <p>If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the <code>class</code> attribute is not relevant.</p>
 
-<h2 id="Style_rules_that_don.27t_work" name="Style_rules_that_don.27t_work">Why don't my style rules work properly?</h2>
+<h2 id="Style_rules_that_don.27t_work">Why don't my style rules work properly?</h2>
 
 <p>Style rules that are syntactically correct may not apply in certain situations. You can use <a href="/en-US/docs/DOM_Inspector" title="DOM_Inspector">DOM Inspector</a>'s <em>CSS Style Rules</em> view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.</p>
 
-<h3 id="HTML_elements_hierarchy" name="HTML_elements_hierarchy">HTML elements hierarchy</h3>
+<h3 id="HTML_elements_hierarchy">HTML elements hierarchy</h3>
 
 <p>The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.</p>
 
@@ -127,7 +127,7 @@ h1 { color: initial; }</pre>
 
 <p>In case of complex HTML hierarchies, if a rule seems to be ignored, check if the element is inside another element with a different style.</p>
 
-<h3 id="Explicitly_re-defined_style_rule" name="Explicitly_re-defined_style_rule">Explicitly re-defined style rule</h3>
+<h3 id="Explicitly_re-defined_style_rule">Explicitly re-defined style rule</h3>
 
 <p>In CSS stylesheets, order <strong>is</strong> important. If you define a rule and then you re-define the same rule, the last definition is used.</p>
 
@@ -146,7 +146,7 @@ h1 { color: initial; }</pre>
 
 <p>To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.</p>
 
-<h3 id="Use_of_a_shorthand_property" name="Use_of_a_shorthand_property">Use of a shorthand property</h3>
+<h3 id="Use_of_a_shorthand_property">Use of a shorthand property</h3>
 
 <p>Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.</p>
 
@@ -166,7 +166,7 @@ h1 { color: initial; }</pre>
 }
 </pre>
 
-<h3 id="Use_of_the_.2A_selector" name="Use_of_the_.2A_selector">Use of the <code>*</code> selector</h3>
+<h3 id="Use_of_the_.2A_selector">Use of the <code>*</code> selector</h3>
 
 <p>The <code>*</code> wildcard selector refers to any element, and it has to be used with particular care.</p>
 
@@ -184,7 +184,7 @@ h1 { color: initial; }</pre>
 
 <p>The use of the * selector should be minimized as it is a slow selector, especially when not used as the first element of a selector. Its use should be avoided as much as possible.</p>
 
-<h3 id="Specificity_in_CSS" name="Specificity_in_CSS">Specificity in CSS</h3>
+<h3 id="Specificity_in_CSS">Specificity in CSS</h3>
 
 <p>When multiple rules apply to a certain element, the rule chosen depends on its style <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity" title="Specificity">specificity</a>. Inline style (in HTML <code>style</code> attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.</p>
 
@@ -197,7 +197,7 @@ h1 { color: initial; }</pre>
 
 <p>The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the <a href="http://www.w3.org/TR/CSS21/cascade.html#specificity">CSS 2.1 Specification chapter 6.4.3</a>.</p>
 
-<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F">What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?</h2>
+<h2 id="What_do_the_-moz-.2A_properties_do.3F">What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?</h2>
 
 <p>These properties, called <em>prefixed properties</em>, are extensions to the CSS standard. They allow use of experimental and non-standard features in browsers without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.</p>
 

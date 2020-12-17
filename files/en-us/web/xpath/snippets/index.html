@@ -10,7 +10,7 @@ tags:
 ---
 <p><span class="seoSummary">This article provides some XPath code snippets</span>—simple examples of how to a few simple <strong>utility functions</strong> based on standard interfaces from the <a class="external" href="http://www.w3.org/TR/DOM-Level-3-XPath/">DOM Level 3 XPath specification</a> that expose XPath functionality to JavaScript code<span class="seoSummary">. The snippets are functions you can use in the real world in your own code.</span></p>
 
-<h3 id="Node-specific_evaluator_function" name="Node-specific_evaluator_function">Node-specific <em>evaluator</em> function</h3>
+<h3 id="Node-specific_evaluator_function">Node-specific <em>evaluator</em> function</h3>
 
 <p>The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.</p>
 
@@ -48,7 +48,7 @@ function evaluateXPath(aNode, aExpr) {
 
 <p>If you are using <a href="/en/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a> to read a local or remote XML file into a DOM tree (as described in <a href="/en/Parsing_and_serializing_XML" title="en/Parsing_and_serializing_XML">Parsing and serializing XML</a>), the first argument to <code>evaluateXPath()</code> should be <code>req.responseXML</code>.</p>
 
-<h4 id="Sample_usage" name="Sample_usage">Sample usage</h4>
+<h4 id="Sample_usage">Sample usage</h4>
 
 <p>Assume we have the following XML document (see also <a href="/en/How_to_create_a_DOM_tree" title="en/How_to_create_a_DOM_tree">How to Create a DOM tree</a> and <a href="/en/Parsing_and_serializing_XML" title="en/Parsing_and_serializing_XML">Parsing and serializing XML</a>):</p>
 
@@ -89,7 +89,7 @@ results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
 alert(results.length);
 </pre>
 
-<h3 id="docEvaluateArray" name="docEvaluateArray">docEvaluateArray</h3>
+<h3 id="docEvaluateArray">docEvaluateArray</h3>
 
 <p>The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of <code><a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">document.evaluate()</a></code> for cases when it is not required as well as the need to use the special iterators on <code><a href="/en/XPathResult" title="en/XPathResult">XPathResult</a></code> (by returning an array instead).</p>
 
@@ -113,7 +113,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 }
 </pre>
 
-<h3 id="getXPathForElement" name="getXPathForElement">getXPathForElement</h3>
+<h3 id="getXPathForElement">getXPathForElement</h3>
 
 <p>The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.</p>
 
@@ -142,14 +142,14 @@ function docEvaluateArray (expr, doc, context, resolver) {
 	return xpath;
 }</pre>
 
-<h3 id="Resources" name="Resources">Resources</h3>
+<h3 id="Resources">Resources</h3>
 
 <ul>
  <li><a href="/en/XPath" title="en/XPath">XPath</a></li>
  <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=229106">Forum discussion on this topic</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en/Introduction_to_using_XPath_in_JavaScript" title="en/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>

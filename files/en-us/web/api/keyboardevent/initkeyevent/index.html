@@ -19,7 +19,7 @@ tags:
  This method is based on early drafts of {{SpecName("DOM2 Events")}} and is implemented in Gecko-based browsers; other browsers implemented {{domxref("KeyboardEvent.initKeyboardEvent")}} based on early drafts of {{SpecName("DOM3 Events")}}. Favor the modern constructor structure as the only cross-browser way of building events.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>event</em>.initKeyEvent (<em>type</em>, <em>bubbles</em>, <em>cancelable</em>, <em>viewArg</em>,
                     <em>ctrlKeyArg</em>, <em>altKeyArg</em>, <em>shiftKeyArg</em>, <em>metaKeyArg</em>,
@@ -51,7 +51,7 @@ tags:
  <dd>Is a <code>unsigned long</code> representingthe Unicode character associated with the depressed key otherwise <code>0</code>.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event

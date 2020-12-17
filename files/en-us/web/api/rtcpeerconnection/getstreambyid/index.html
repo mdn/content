@@ -18,19 +18,19 @@ tags:
 <p>This property has been replaced with the {{domxref("RTCPeerConnection.getLocalStreams")}} and {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that uses <code>stream</code>, you will need to update, since browsers have begun to remove support for <code>stream</code>.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><code>var<em> mediaStream</em> = <em>pc</em>.getStream(id);
 </code></pre>
 
-<h3 id="Example" name="Example">Parameters</h3>
+<h3 id="Example">Parameters</h3>
 
 <dl>
  <dt><em>id</em></dt>
  <dd>Is a {{domxref("DOMString")}} corresponding to the stream to return.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var stream = pc.getStreamById(myTrackId);
 if (stream) {

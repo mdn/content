@@ -16,7 +16,7 @@ tags:
 
 <p>The <code><strong>UIEvent.isChar</strong></code> read-only property returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>isChar</em> = <em>UIEvent</em>.isChar;
 </pre>
@@ -25,7 +25,7 @@ tags:
 
 <p>A Boolean which is <code>true</code> if the event produces a character; otherwise <code>false</code>. Some keystroke combinations may raise events but not produce any character (example: <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>?</kbd>). When this is the case, <code>isChar</code> returns <code>false</code>. It is used when event handlers need to do something like echo the input on the screen.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>In this snippet, which is part of an event handler, the event is checked to see if it generates a character; if it does, the value of {{domxref("UIEvent.which")}} is appended to a string which buffers the typed characters.</p>
 

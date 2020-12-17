@@ -24,11 +24,11 @@ tags:
 
 <p>This specification is pretty much abandoned, having failed to reach any substantial traction.</p>
 
-<h2 id="basic_concepts" name="basic_concepts">Basic concepts</h2>
+<h2 id="basic_concepts">Basic concepts</h2>
 
 <p>If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.</p>
 
-<h4 id="example" name="example">Example</h4>
+<h4 id="example">Example</h4>
 
 <p>The <code>getFile()</code> method returns a <code>FileEntrySync</code>, which represents a file in the file system.  The following creates an empty file called <code>seekrits.txt</code> in the root directory.</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="createReader" name="createReader">createReader()</h3>
+<h3 id="createReader">createReader()</h3>
 
 <p>Creates a new <code>DirectoryReaderSync</code> to read entries from this directory.</p>
 
@@ -101,7 +101,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="getFile" name="getFile">getFile()</h3>
+<h3 id="getFile">getFile()</h3>
 
 <p>Depending on how you've set the <code>options</code> parameter, the method either creates a file or looks up an existing file.</p>
 
@@ -210,7 +210,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="getDirectory" name="getDirectory">getDirectory()</h3>
+<h3 id="getDirectory">getDirectory()</h3>
 
 <p>Creates or looks up a directory. The method is similar to <code>getFile()</code> with DirectoryEntrySync being passed.</p>
 
@@ -319,7 +319,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="removeRecursively" name="removeRecursively">removeRecursively()</h3>
+<h3 id="removeRecursively">removeRecursively()</h3>
 
 <p>Deletes a directory and all of its contents. You cannot delete the root directory of a file system.</p>
 

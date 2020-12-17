@@ -34,7 +34,7 @@ tags:
 
 <p>IndexedDB used to have a competing spec, WebSQL Database, but the W3C deprecated it on November 18, 2010. While both IndexedDB and WebSQL are solutions for storage, they do not offer the same functionalities. WebSQL Database is a relational database access system, whereas IndexedDB is an indexed table system.</p>
 
-<h2 id="concepts" name="concepts">Big concepts</h2>
+<h2 id="concepts">Big concepts</h2>
 
 <p>If you have assumptions from working with other types of databases, you might get thrown off when working with IndexedDB. So keep the following important concepts in mind:</p>
 
@@ -73,11 +73,11 @@ tags:
  </li>
 </ul>
 
-<h2 id="definitions" name="definitions">Definitions</h2>
+<h2 id="definitions">Definitions</h2>
 
 <p>This section defines and explains terms used in the IndexedDB API.</p>
 
-<h3 id="database" name="database">Database</h3>
+<h3 id="database">Database</h3>
 
 <dl>
  <dt><a name="gloss_database">database</a></dt>
@@ -136,7 +136,7 @@ tags:
  </dd>
 </dl>
 
-<h3 id="key" name="key">Key and value</h3>
+<h3 id="key">Key and value</h3>
 
 <dl>
  <dt><a name="gloss_key">key</a></dt>
@@ -165,14 +165,14 @@ tags:
  </dd>
 </dl>
 
-<h3 id="range" name="range">Range and scope</h3>
+<h3 id="range">Range and scope</h3>
 
 <dl>
- <dt id="scope"><a id="gloss_scope" name="gloss_scope">scope</a></dt>
+ <dt id="scope"><a id="gloss_scope">scope</a></dt>
  <dd>The set of object stores and indexes to which a transaction applies. The scopes of read-only transactions can overlap and execute at the same time. On the other hand, the scopes of writing transactions cannot overlap. You can still start several transactions with the same scope at the same time, but they just queue up and execute one after another.</dd>
- <dt id="cursor"><a id="gloss_cursor" name="gloss_cursor">cursor</a></dt>
+ <dt id="cursor"><a id="gloss_cursor">cursor</a></dt>
  <dd>A mechanism for iterating over multiple records with a <em>key range</em>. The cursor has a source that indicates which index or object store it is iterating. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. For the reference documentation on cursors, see {{domxref("IDBCursor")}}.</dd>
- <dt id="key_range"><a id="gloss_keyrange" name="gloss_keyrange">key range</a></dt>
+ <dt id="key_range"><a id="gloss_keyrange">key range</a></dt>
  <dd>
  <p>A continuous interval over some data type used for keys. Records can be retrieved from object stores and indexes using keys or a range of keys. You can limit or filter the range using lower and upper bounds. For example, you can iterate over all values of a key between x and y.</p>
 
@@ -180,7 +180,7 @@ tags:
  </dd>
 </dl>
 
-<h2 id="limitations" name="limitations">Limitations</h2>
+<h2 id="limitations">Limitations</h2>
 
 <p>IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:</p>
 
@@ -202,7 +202,7 @@ tags:
 
 <p>The exact circumstances and browser capabilities change over time, but the general philosophy of the browser vendors is to make the best effort to keep the data when possible.</p>
 
-<h2 id="next" name="next">Next steps</h2>
+<h2 id="next">Next steps</h2>
 
 <p>With these big concepts under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see <a href="/en/IndexedDB/Using_IndexedDB" title="en/IndexedDB/IndexedDB primer">Using IndexedDB</a>.</p>
 

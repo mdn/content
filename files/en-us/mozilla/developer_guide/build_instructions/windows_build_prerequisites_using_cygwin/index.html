@@ -8,14 +8,14 @@ tags:
 ---
 <div>{{page("/en-US/docs/Build_Documentation/TOC")}}</div>
 
-<h2 id="This_document_is_for_historical_use_only" name="This_document_is_for_historical_use_only">This document is for historical use only</h2>
+<h2 id="This_document_is_for_historical_use_only">This document is for historical use only</h2>
 
 <p>{{Note('This document is a guide to the build prerequisites for building the Mozilla 1.9 codebase before the introduction of the MozillaBuild system in March 2007. If you are building Firefox 3 or greater, please see the standard <a href="/en-US/docs/Windows_Build_Prerequisites" title="Windows Build Prerequisites">Windows Build Prerequisites</a>. <strong>For building Firefox 2, Firefox 1.5, and other Mozilla products based on pre-1.9 branches, see the <a href="/en-US/docs/Windows_Build_Prerequisites_(1.7_and_1.8_Branches)" title="Windows Build Prerequisites (1.7 and 1.8 Branches)">Windows Build Prerequisites on the 1.7 and 1.8 Branches</a>.</strong>')}}</p>
 
 
 <p>If you are building very old versions of the Mozilla source code, from the 1.0 branch and earlier, follow the <a class="external" href="http://www.mozilla.org/build/win32-nmake.html">nmake build instructions</a>.</p>
 
-<h2 id="Hardware_Requirements" name="Hardware_Requirements">Hardware Requirements</h2>
+<h2 id="Hardware_Requirements">Hardware Requirements</h2>
 <p>Mozilla takes time to build. You need a development-class system:</p>
 <ul>
   <li>Pentium III or equivalent processor, 1GHz or better, 1.5+GHz recommended</li>
@@ -24,11 +24,11 @@ tags:
   <li>Windows NT-class operating system (NT4.0, W2K (SP4?), Windows XP and Windows Vista)</li>
 </ul>
 
-<h2 id="Software_Requirements" name="Software_Requirements">Software Requirements</h2>
+<h2 id="Software_Requirements">Software Requirements</h2>
 <p>The following software needs to be installed for a standard Windows build.</p>
 <p>Mozilla may not build if some tools are installed at a path that contains spaces or other breaking characters such as pluses, quotation marks, or meta characters. The Visual C++ tools may be installed in a directory which contains spaces (the default install location is preferred).</p>
 
-<h3 id="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29" name="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29">GNU Tools for Microsoft Windows (Cygwin)</h3>
+<h3 id="GNU_Tools_for_Microsoft_Windows_.28Cygwin.29">GNU Tools for Microsoft Windows (Cygwin)</h3>
 <p>Cygwin is a Linux-like environment with GNU tools for Windows. Mozilla uses a developer set of GNU packages, which must be installed. These include gawk, make and zip utilities. GCC is not used and does not need to be installed. You must have Cygwin 1.1.6 or higher. You can have only one cygwin version installed on your operating system; concurrent installations may interfere with each other and cause errors.</p>
 <p>Click here to run <a class="link-ftp" href="ftp://ftp.cygwin.com/pub/cygwin/setup.exe">setup.exe</a> and follow the installation instructions. The Cygwin installer wizard runs as a Windows program. One page of the wizard presents an outline view of categories and packages. You must add packages beyond the default set.</p>
 <p>If you'll be using Cygwin only to build Mozilla, then install only the default packages and the packages needed by Mozilla. In the version of the installer current at this writing (version 2.510.2.2), the <strong>non-default</strong> packages are:</p>
@@ -64,29 +64,29 @@ tags:
 <p>For non-debug builds, it's recommended that you install the binutils package to make strip.exe available.</p>
 <p>You may use <a class="external" href="http://activestate.com/Products/ActivePerl/">ActivePerl from ActiveState</a> instead of the perl package in Cygwin if you prefer.</p>
 
-<h3 id="make" name="make">make</h3>
+<h3 id="make">make</h3>
 <p>make 3.80 is no longer available in the cygwin installer (version 3.81 will <strong>not</strong> work), so get it from <a class="external" href="http://cygwin.paracoda.com/release/make/make-3.80-1.tar.bz2">paracoda</a> or <a class="external" href="http://www.go-mono.com/archive/helper/make-3.80-1.tar.bz2">go-Mono</a> and place the included make.exe in your %cygwin%\bin\ directory, e.g. by starting a cygwin bash shell and executing</p>
 <pre>cd /
 tar xjf /cygdrive/c/where-your-download-is/make-3.80-1.tar.bz2
 bin/make.exe --version
 </pre>
 
-<h3 id="moztools" name="moztools">moztools</h3>
+<h3 id="moztools">moztools</h3>
 <p>The moztools package contains binaries and libraries necessary to build Mozilla. A single zip file containing all moztools which works with all versions of MSVC is available at <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static.zip</a>.</p>
 <p>The zip file contains a single folder named <em>moztools</em> that you should preserve. Unpack the zip file wherever you want the tools to be installed; however, Mozilla may not build if you install the moztools directory inside the cygwin directory. The MOZ_TOOLS environment variable should be set to point to this moztools folder. (You may rename the folder, as long as you update $MOZ_TOOLS accordingly.)</p>
 <p>Note: The 1.8.1 branch (Firefox 2) is compatible with the moztools-static package. Older branches (including the 1.8.0 branch) are not; see the <a href="/en-US/docs/Windows_Build_Prerequisites_(1.7_and_1.8_Branches)" title="Windows_Build_Prerequisites_(1.7_&amp;_1.8_Branches)">historical build prerequisites</a> for details.</p>
 <p>The moztools zip file does not contain the source for the components; if you are interested in building them from scratch, you can obtain the source <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic/src/">here</a>. The <a class="external" href="http://www.go-oo.org/">ooo-build</a> system for building OpenOffice.org builds the tools from scratch using this code and contains some relevant <a class="external" href="http://go-oo.org/ooo-build/patches/src680/">patches</a> for anyone who doesn't want to use the binaries provided.</p>
 
-<h3 id="cvs" name="cvs">cvs</h3>
+<h3 id="cvs">cvs</h3>
 <p>CVS is the source control system used by Mozilla. You do not need cvs if you are only going to build from source tarballs downloaded via FTP. If so, you may skip this step.</p>
 <p>To <a href="/en-US/docs/Developer_Guide/Source_Code/CVS" title="Mozilla_Source_Code_(CVS)">pull Mozilla sources</a>, cvs version 1.11 or higher is required. Cygwin CVS is recommended. WinCVS is also compatible. When installing CVS, you should also install an editor such as emacs or Xemacs.</p>
 
-<h3 id="Compiler_&amp;_Linker" name="Compiler_&amp;_Linker">Compiler &amp; Linker</h3>
+<h3 id="Compiler_&amp;_Linker">Compiler &amp; Linker</h3>
 <p>For doing development on the CVS trunk (Mozilla 1.9 or higher), the standard compiler is Microsoft Visual C++, version 8. The free Express edition of Microsoft Visual C++ 8 (aka Visual C++ 2005 Express Edition) will work with some <a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="Windows_Build_Prerequisites">extra tools and configure options</a>. Visual C++ 7.1 will also work. VC++ 7 is not recommended, and VC6 is not supported and will produce unusable builds.</p>
 <p>The build may occur from within either a Windows command line shell or from a cygwin shell; if you use the Windows shell, you need to set up the compiler environment variables using the vcvars32.bat script that is installed along with Visual Studio (selecting "Visual C++ Command Prompt" from the Start menu entries for VS will execute this script for you in a new shell).</p>
 <p>It is also possible (but not recommended) to compile Mozilla using the MinGW gcc compiler: see <a class="external" href="http://gemal.dk/mozilla/build.html">Compiling Mozilla with MinGW</a>.</p>
 
-<h4 id="Table_of_supported_Visual_Studio_compilers" name="Table_of_supported_Visual_Studio_compilers">Table of supported Visual Studio compilers</h4>
+<h4 id="Table_of_supported_Visual_Studio_compilers">Table of supported Visual Studio compilers</h4>
 <table class="standard-table">
   <tbody>
     <tr>
@@ -151,18 +151,18 @@ bin/make.exe --version
   <br>
   The results of this build have not been thoroughly tested, your mileage may vary.</p>
 
-<h3 id="Platform_SDK" name="Platform_SDK">Platform SDK</h3>
+<h3 id="Platform_SDK">Platform SDK</h3>
 <p>Skip this step, if you are using Visual Studio .NET 2003 or later, because you already have all the necessary SDKs for building Mozilla. For older compilers, as well as for the free Visual Studio Express Editions, you need to download SDKs from Microsoft to have the GDI+ headers and library.</p>
 <p>You can download the <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Windows Server 2003 SP1 Platform SDK</a>, or the <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0baf2b35-c656-4969-ace8-e4c0c0716adb&amp;DisplayLang=en">Windows Server 2003 R2 Platform SDK</a>. You must install the "Windows Core SDK" (Tools, Build Environment, and Redistributable Components) and the "Web Workshop SDK" (Build Environment).</p>
 <p>In order for the build environment to pick up this SDK, the SDK must be added to the build environment (see below).</p>
 
-<h3 id="NSIS" name="NSIS">NSIS</h3>
+<h3 id="NSIS">NSIS</h3>
 <p>Some applications built from the Mozilla codebase now use NSIS for their installer, notably the toolkit apps Firefox, Thunderbird and Sunbird. NSIS is already required during the normal build process because the uninstaller is built with the help of NSIS. If you do not disable building the installer with <code>ac_add_options --disable-installer</code> in your <code>.mozconfig</code> then install <a class="external" href="http://nsis.sourceforge.net/Download">NSIS</a> and ensure its install directory (not the 'Bin' directory in the install directory) is in your PATH. Version 2.17 or greater is recommended.</p>
-<h3 id="7-Zip_and_UPX" name="7-Zip_and_UPX">7-Zip and UPX</h3>
+<h3 id="7-Zip_and_UPX">7-Zip and UPX</h3>
 <p>If you want to make the highly compressed installer used by Firefox and Thunderbird, you need to install the <a class="external" href="http://www.7-zip.org/">7-zip</a> and <a class="external" href="http://upx.sourceforge.net/">UPX</a> utilities, make sure they are in your path, and export MOZ_INSTALLER_USE_7ZIP in your environment.</p>
 <p>The UPX package is available in <a class="external" href="http://cygwin.com/">Cygwin</a> setup under the Utils category. Do not use the DOS version, as it will not work.</p>
 
-<h2 id="Configure_the_Environment" name="Configure_the_Environment">Configure the Environment</h2>
+<h2 id="Configure_the_Environment">Configure the Environment</h2>
 <p>The build environment must be configured so that the mozilla build system can find the proper compiler and libraries. This is best done with a DOS batch script. Your build may fail if your paths have spaces or other special characters. Make sure that you did not install software into locations with such paths, except Visual C++.</p>
 <p>The following is a batch script (run with cmd.exe or modify the cygwin.bat file) which should be used to configure environment variables:</p>
 <pre>rem --- Set HOME so that cvs and ssh work correctly
@@ -214,7 +214,7 @@ bash --login -i
 <pre>start putty -cygterm -
 </pre>
 
-<h3 id="Fix_cygwin_path" name="Fix_cygwin_path">Fix cygwin path</h3>
+<h3 id="Fix_cygwin_path">Fix cygwin path</h3>
 <p>By default, cygwin puts itself at the beginning of PATH, breaking the order of our carefully constructed PATH. You can either</p>
 <ul>
   <li>edit /etc/profile/ = %CYGWINBASE%\etc\profile (use an editor which preserves Unix line endings - cygwin package <code>nano</code>, if in doubt), changing the line</li>
@@ -234,7 +234,7 @@ bash --login -i
 rename cyglink.exe link.exe</pre>
 <p>If you are using this method, don't forget to quit from the Cygwin shell by typing "Exit", instead of just closing the window.</p>
 
-<h2 id="Common_Problems.2C_Hints_and_Restrictions" name="Common_Problems.2C_Hints_and_Restrictions">Common Problems, Hints and Restrictions</h2>
+<h2 id="Common_Problems.2C_Hints_and_Restrictions">Common Problems, Hints and Restrictions</h2>
 <ul>
   <li>Check the <a href="/en-US/docs/Mozilla_Build_FAQ#Win32-specific_questions" title="Mozilla_Build_FAQ#Win32-specific_questions">Mozilla Build Frequently Asked Questions</a>, they list a number of very often encountered build problems.</li>
   <li>If you have chosen DOS-style line endings when installing cygwin, your source and object trees must be located at a /cygdrive/&lt;c&gt; mount point. It must not be located within your /home.</li>

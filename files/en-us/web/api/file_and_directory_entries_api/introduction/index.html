@@ -52,7 +52,7 @@ tags:
  <li>In Chrome, you can use the File and Directory Entries API with the <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html" title="http://code.google.com/chrome/whitepapers/storage.html">Quota Management API</a>, which lets you ask for more storage and manage your storage quota. </li>
 </ul>
 
-<h3 id="sample" name="sample">Sample use cases</h3>
+<h3 id="sample">Sample use cases</h3>
 
 <p>The following are just a few examples of how you can use the File and Directory Entries API:</p>
 
@@ -88,7 +88,7 @@ tags:
  </li>
 </ul>
 
-<h2 id="concepts" name="concepts">Big concepts</h2>
+<h2 id="concepts">Big concepts</h2>
 
 <p>Before you start using the File and Directory Entries API, you need to understand a few concepts:</p>
 
@@ -102,25 +102,25 @@ tags:
  <li><a href="#case">The File and Directory Entries API is case-sensitive</a></li>
 </ul>
 
-<h3 id="virtual" name="virtual">The File and Directory Entries API is a virtual representation of a file system</h3>
+<h3 id="virtual">The File and Directory Entries API is a virtual representation of a file system</h3>
 
 <p>The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser. </p>
 
 <p>What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.</p>
 
-<h3 id="storage" name="storage">The File and Directory Entries API can use different storage types</h3>
+<h3 id="storage">The File and Directory Entries API can use different storage types</h3>
 
 <p>An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.</p>
 
 <p>Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.</p>
 
-<h3 id="quota" name="quota">Browsers impose storage quotas</h3>
+<h3 id="quota">Browsers impose storage quotas</h3>
 
 <p>To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.</p>
 
 <p>How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html">Managing HTML5 Offline Storage</a>.</p>
 
-<h3 id="version" name="version">The File and Directory Entries API has asynchronous and synchronous versions</h3>
+<h3 id="version">The File and Directory Entries API has asynchronous and synchronous versions</h3>
 
 <p>The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.</p>
 
@@ -132,11 +132,11 @@ tags:
 
 <p>The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.</p>
 
-<h3 id="errorcallbacks" name="errorcallbacks">When using the asynchronous API, always use the error callbacks</h3>
+<h3 id="errorcallbacks">When using the asynchronous API, always use the error callbacks</h3>
 
 <p>When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.</p>
 
-<h3 id="interfaces" name="interfaces">The File and Directory Entries API interacts with other APIs</h3>
+<h3 id="interfaces">The File and Directory Entries API interacts with other APIs</h3>
 
 <p>The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:</p>
 
@@ -147,11 +147,11 @@ tags:
  <li>The <code>input</code> element (to programmatically obtain a list of files from the element)</li>
 </ul>
 
-<h3 id="case" name="case">The File and Directory Entries API is case sensitive</h3>
+<h3 id="case">The File and Directory Entries API is case sensitive</h3>
 
 <div>The filesystem API is case-sensitive, and case-preserving. </div>
 
-<h2 id="restrictions" name="restrictions">Restrictions</h2>
+<h2 id="restrictions">Restrictions</h2>
 
 <p>For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.</p>
 
@@ -162,27 +162,27 @@ tags:
  <li><a href="#file">You cannot run your app from file://</a></li>
 </ul>
 
-<h3 id="origin" name="origin">The File and Directory Entries API adheres to the same-origin policy</h3>
+<h3 id="origin">The File and Directory Entries API adheres to the same-origin policy</h3>
 
 <p>An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.</p>
 
 <p>The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in <a href="http://www.example.com/app/" rel="external" title="http://www.example.com/app/">http://www.example.com/app/</a> can access files from <a href="http://www.example.com/dir/" rel="external" title="http://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve files from <a href="http://www.example.com:8080/dir/" rel="external" title="http://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a href="https://www.example.com/dir/" rel="external" title="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol).</p>
 
-<h3 id="execute" name="execute">The File and Directory Entries API does not let you create and rename executable files</h3>
+<h3 id="execute">The File and Directory Entries API does not let you create and rename executable files</h3>
 
 <p>To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API. </p>
 
-<h3 id="sandbox" name="sandbox">The file system is sandboxed</h3>
+<h3 id="sandbox">The file system is sandboxed</h3>
 
 <p>Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.</p>
 
-<h3 id="file" name="file">You cannot run your app from file://</h3>
+<h3 id="file">You cannot run your app from file://</h3>
 
 <p>You cannot run your app locally from <code>file://</code>. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.</p>
 
 <p>For testing purposes, you can bypass the restriction on Chrome by starting the browser with the <code>--allow-file-access-from-files</code> flag. Use this flag only for this purpose.</p>
 
-<h2 id="definitions" name="definitions">Definitions</h2>
+<h2 id="definitions">Definitions</h2>
 
 <p>This section defines and explains terms used in the File and Directory Entries API.</p>
 

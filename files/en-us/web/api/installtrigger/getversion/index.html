@@ -5,20 +5,20 @@ slug: Web/API/InstallTrigger/getVersion
 <p></p><div class="warning"><p>Parts of this page show the use of the <a href="/en-US/docs/XPInstall_API_Reference">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href="/en-US/docs/Extensions">Extension</a>, <a href="/en-US/docs/Themes">Theme</a>, and <a href="/en-US/docs/Plugins">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href="/en-US/docs/Bundles">packaging scheme</a> with an <code><a href="/en-US/docs/Install_Manifests">install.rdf</a></code> manifest. In particular plugin developers should see <a href="/en-US/docs/Shipping_a_plugin_as_a_Toolkit_bundle">how to package a plugin as an extension</a>.</p></div><p></p>
 
 
-<h3 id="getVersion" name="getVersion">getVersion</h3>
+<h3 id="getVersion">getVersion</h3>
 
 <p>Returns an object representing the version number from the Client Version Registry for the specified component. It is used in both trigger scripts and installation scripts.</p>
 
-<h4 id="Method_of" name="Method_of">Method of</h4>
+<h4 id="Method_of">Method of</h4>
 
 <p><a href="/en/XPInstall_API_Reference/InstallTrigger_Object" title="en/XPInstall_API_Reference/InstallTrigger_Object">InstallTrigger</a> object</p>
 
-<h4 id="Syntax" name="Syntax">Syntax</h4>
+<h4 id="Syntax">Syntax</h4>
 
 <pre>InstallVersion getVersion ( String component );
 </pre>
 
-<h4 id="Parameters" name="Parameters">Parameters</h4>
+<h4 id="Parameters">Parameters</h4>
 
 <p>The <code>getVersion</code> method has one parameter:</p>
 
@@ -27,7 +27,7 @@ slug: Web/API/InstallTrigger/getVersion
  <dd>The name of a component in the Client Version Registry.</dd>
 </dl>
 
-<h4 id="Returns" name="Returns">Returns</h4>
+<h4 id="Returns">Returns</h4>
 
 <p>If Software Installation is disabled, this method returns <code>NULL</code>. Otherwise, it returns an <a href="/en/XPInstall_API_Reference/InstallVersion_Object" title="en/XPInstall_API_Reference/InstallVersion_Object"> InstallVersion</a> object representing the version of the component.</p>
 

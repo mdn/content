@@ -6,7 +6,7 @@ tags:
 ---
 <p> </p>
 
-<h3 id="Overview" name="Overview">Overview</h3>
+<h3 id="Overview">Overview</h3>
 
 <p>XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the <a href="en/XSLTProcessor">XSLTProcessor</a> in JavaScript. However when using an <code>&lt;?xml-stylesheet?&gt;</code> processing instruction (PI) there used to be no way to provide parameters.</p>
 
@@ -21,7 +21,7 @@ tags:
 
 <p>Note that these PIs have no effect when transformation is done using the <code>XSLTProcessor</code> object in JavaScript.</p>
 
-<h3 id="Processing_instructions" name="Processing_instructions">Processing instructions</h3>
+<h3 id="Processing_instructions">Processing instructions</h3>
 
 <p>The attributes in the <code>xslt-param</code> and <code>xslt-param-namespace</code> PIs are parsed using the rules defined in <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">xml-stylesheet</a>. Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in <code>xml-stylesheet</code>.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>If there are multiple <code>xml-stylesheet</code> PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.<span class="comment">reference?</span> Note that multiple <code>xml-stylesheet</code> XSLT PIs are not supported in Firefox currently.</p>
 
-<h4 id="xslt-param" name="xslt-param">xslt-param</h4>
+<h4 id="xslt-param">xslt-param</h4>
 
 <p>The <code>xslt-param</code> PI supports 4 attributes:</p>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>Note that <code>value="..."</code> is not strictly equal to <code>select="'...'"</code> since the value can contain both apostrophe and quote characters.</p>
 
-<h5 id="Examples" name="Examples">Examples</h5>
+<h5 id="Examples">Examples</h5>
 
 <p>Set the parameter 'color' to the string 'red':</p>
 
@@ -76,7 +76,7 @@ tags:
 <pre class="eval"> &lt;?xslt-param name="show-toc" select="true()"?&gt;
 </pre>
 
-<h5 id="The_select_attribute_context" name="The_select_attribute_context">The select attribute context</h5>
+<h5 id="The_select_attribute_context">The select attribute context</h5>
 
 <p>The following context is used to parse and evaluate the expression in the <strong>select</strong> attribute.</p>
 
@@ -91,7 +91,7 @@ tags:
 
 <p>If the <strong>select</strong> attribute fails to parse or execute, the PI is ignored (in particular, it does not fall back to the <strong>value</strong> attribute).</p>
 
-<h4 id="xslt-param-namespace" name="xslt-param-namespace">xslt-param-namespace</h4>
+<h4 id="xslt-param-namespace">xslt-param-namespace</h4>
 
 <p>The <code>xslt-param-namespace</code> uses two attributes:</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>If <strong>namespace</strong> is missing, the PI is ignored. If <strong>namespace</strong> is empty, the prefix mapping is removed.</p>
 
-<h5 id="Examples_2" name="Examples_2">Examples</h5>
+<h5 id="Examples_2">Examples</h5>
 
 <p>Set the parameter 'books' to a nodeset containing all <code>&lt;book&gt;</code> elements in the '<span class="nowiki">http://www.example.org/myNamespace</span>' namespace:</p>
 
@@ -118,11 +118,11 @@ tags:
 &lt;?xslt-param name="books" select="//my:book"?&gt;
 </pre>
 
-<h3 id="Supported_versions" name="Supported_versions">Supported versions</h3>
+<h3 id="Supported_versions">Supported versions</h3>
 
 <p>Supported as of Firefox 2.0.0.1. The <strong>value</strong> attribute is supported in Firefox 2, but the <strong>select</strong> attribute crashes for some expressions in the 2.0 release.</p>
 
-<h3 id="Possible_future_developments" name="Possible_future_developments">Possible future developments</h3>
+<h3 id="Possible_future_developments">Possible future developments</h3>
 
 <p>Should we allow any XSLT functions in the expression? <code>document()</code> seems useful, but it seems tricky to maintain the invariant that <code>generate-id()</code> should produce the same string for the same document.</p>
 

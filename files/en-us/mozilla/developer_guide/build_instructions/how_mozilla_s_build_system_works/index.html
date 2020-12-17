@@ -12,7 +12,7 @@ tags:
 
 <p>Note: This document is not intended for developers who just want to build Mozilla. For that, see the <a href="/en-US/docs/Developer_Guide/Build_Instructions" title="Developer_Guide/Build_Instructions">Build Documentation</a>.</p>
 
-<h2 id="Concepts" name="Concepts">Phases</h2>
+<h2 id="Concepts">Phases</h2>
 
 <p>When you type <code>mach build</code> to build the tree, three high-level phases occur within the build system:</p>
 
@@ -67,7 +67,7 @@ Total wall time: 5.03s; CPU time: 3.79s; Efficiency: 75%</pre>
 
 <p>When building the tree, most of the time is spent in Phase 3. This is when header files are installed, C++ files are compiled, files are preprocessed, and so on.</p>
 
-<h4 id="Build_Tiers" name="Build_Tiers">Recursive <em>Make</em> Backend</h4>
+<h4 id="Build_Tiers">Recursive <em>Make</em> Backend</h4>
 
 <p>The recursive <em>make</em> backend is the tried-and-true backend used to build the tree. It's what's been used since the dawn of Mozilla. Essentially, there are makefiles in each directory. <em>make </em>starts processing the makefile in the root directory and then recursively descends into child directories until it's done. But there's more to the process than that.</p>
 
@@ -202,7 +202,7 @@ include $(topsrcdir)/config/rules.mk
 
 <p>This example demonstrates another concept called <em>continuation lines</em>. A backslash as the last character on a line allows the variable definition to be continued on the next line. The extra whitespace is compressed. The terminating $(NULL) is a method for consistency; it allows you to add and remove lines without worrying about whether the last line has an ending backslash or not.</p>
 
-<h2 id="Makefile_examples" name="Makefile_examples">Makefile examples</h2>
+<h2 id="Makefile_examples">Makefile examples</h2>
 
 <ul>
  <li><a href="/en-US/docs/Standard_Makefile_Header" title="Standard_Makefile_Header">Standard Makefile Header</a></li>
@@ -218,7 +218,7 @@ include $(topsrcdir)/config/rules.mk
  <li><a href="/en-US/docs/Makefile_-_.mk_files" title="Makefile - .mk files">Makefile - *.mk files &amp; user config</a></li>
 </ul>
 
-<h2 id="Building_libraries" name="Building_libraries">Building libraries</h2>
+<h2 id="Building_libraries">Building libraries</h2>
 
 <p>There are three main types of libraries that are built in Mozilla:</p>
 
@@ -228,7 +228,7 @@ include $(topsrcdir)/config/rules.mk
  <li><strong>Static libraries</strong> are often used as intermediate steps to building a shared library, if there are source files from several directories that are part of the shared library. Static libraries may also be linked into an executable.</li>
 </ul>
 
-<h3 id="Non-component_shared_libraries" name="Non-component_shared_libraries">Non-component shared libraries</h3>
+<h3 id="Non-component_shared_libraries">Non-component shared libraries</h3>
 
 <p>A non-component shared library is useful when there is common code that several components need to share and sharing it through XPCOM is not appropriate or not possible. As an example, below is a portion of the makefile for libmsgbaseutil, which is linked against by all of the main news components:</p>
 
@@ -247,7 +247,7 @@ include $(topsrcdir)/config/rules.mk
 
 <p>Notice that the only change from the component example above is that <strong>IS_COMPONENT</strong> is not set. When this is not set, a shared library will be created and installed to dist/bin.</p>
 
-<h3 id="Static_libraries" name="Static_libraries">Static libraries</h3>
+<h3 id="Static_libraries">Static libraries</h3>
 
 <p>As mentioned above, static libraries are most commonly used as intermediate steps to building a larger library (usually a component). This lets you spread out the source files in multiple subdirectories. Static libraries may also be linked into an executable. As an example, below is a portion of the makefile from layout/base/src:</p>
 
@@ -305,7 +305,7 @@ include $(topsrcdir)/config/rules.mk
 
 <p><strong>SHARED_LIBRARY_LIBS</strong> is set to a list of static libraries, which should be linked into this shared library. Note the use of <strong>LIB_PREFIX</strong> and <strong>LIB_SUFFIX</strong> to make this work on all platforms.</p>
 
-<h2 id="Building_jar_files" name="Building_jar_files">Building jar files</h2>
+<h2 id="Building_jar_files">Building jar files</h2>
 
 <p>jar files are used for packaging chrome files (XUL, JavaScript, and CSS). For more information on jar packaging, see <a href="http://www.mozilla.org/build/jar-packaging.html">this document</a>. Here, we will only cover how to set up a makefile to package jars. Below is an example:</p>
 
