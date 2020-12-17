@@ -65,13 +65,15 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("HTMLTableElement.createTHead()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element.</dd>
+ <dd>Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element.</dd>
  <dt>{{DOMxRef("HTMLTableElement.deleteTHead()")}}</dt>
  <dd>Removes the first {{HTMLElement("thead")}} that is a child of the element.</dd>
  <dt>{{DOMxRef("HTMLTableElement.createTFoot()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, a {{HTMLElement("colgroup")}}, nor a {{HTMLElement("thead")}}, or as the last child if there is no such element.</dd>
+ <dd>Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the last child.</dd>
  <dt>{{DOMxRef("HTMLTableElement.deleteTFoot()")}}</dt>
  <dd>Removes the first {{HTMLElement("tfoot")}} that is a child of the element.</dd>
+ <dt>{{DOMxRef("HTMLTableElement.createTBody()")}}</dt>
+ <dd>Returns a {{DOMxRef("HTMLTableSectionElement")}} representing a new {{HTMLElement("tbody")}} that is a child of the element. It is inserted in the tree after the last element that is a {{HTMLElement("tbody")}}, or as the last child if there is no such element.</dd>
  <dt>{{DOMxRef("HTMLTableElement.createCaption()")}}</dt>
  <dd>Returns an {{DOMxRef("HTMLElement")}} representing the first {{HTMLElement("caption")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the first child of the {{HTMLElement("table")}} element.</dd>
  <dt>{{DOMxRef("HTMLTableElement.deleteCaption()")}}</dt>
