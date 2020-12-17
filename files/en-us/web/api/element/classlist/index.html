@@ -72,7 +72,7 @@ div.classList.replace("foo", "bar");</pre>
 <p>The following polyfill for both <code>classList</code> and <code>DOMTokenList</code> ensures <strong>full</strong> compliance (coverage) for all standard methods and properties of <code>Element.prototype.classList</code> for <strong>IE10</strong>-<strong>IE11</strong> browsers plus <em>nearly</em> compliant behavior for <strong>IE 6-9</strong>. Check it out:</p>
 
 <pre class="brush: js">// 1. String.prototype.trim polyfill
-if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
+if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s]+|[\s]+$/g, ''); };
 (function(window){"use strict"; // prevent global namespace pollution
 if(!window.DOMException) (DOMException = function(reason){this.message = reason}).prototype = new Error;
 var wsRE = /[\11\12\14\15\40]/, wsIndex = 0, checkIfValidClassListEntry = function(O, V) {
