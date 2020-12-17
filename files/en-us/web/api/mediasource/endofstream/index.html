@@ -27,8 +27,8 @@ tags:
  <dt>endOfStreamError {{optional_inline}}</dt>
  <dd>A {{domxref("DOMString")}} representing an error to throw when the end of the stream is reached. The possible values are:
  <ul>
-  <li><code>network</code>: Terminates playback and signals that a network error has occured. This can be used create a custom error handler related to media streams. For example, you might have a function that handles media chunk requests, separate from other network requests. When you make an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> call for a media chunk, and <code>onabort</code> or <code>onerror</code> triggers, you might want to call <code>endOfStream('network')</code>, display a descriptive message in the UI, and maybe retry the network request immediately or wait until the network is back up (via some kind of polling.)</li>
-  <li><code>decode</code>: Terminates playback and signals that a decoding error has occured. This can be used to indicate that a parsing error has occured while fetching media data; maybe the data is corrupt, or is encoded using a codec that the browser doesn't know how to decode.</li>
+  <li><code>network</code>: Terminates playback and signals that a network error has occurred. This can be used create a custom error handler related to media streams. For example, you might have a function that handles media chunk requests, separate from other network requests. When you make an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> call for a media chunk, and <code>onabort</code> or <code>onerror</code> triggers, you might want to call <code>endOfStream('network')</code>, display a descriptive message in the UI, and maybe retry the network request immediately or wait until the network is back up (via some kind of polling.)</li>
+  <li><code>decode</code>: Terminates playback and signals that a decoding error has occurred. This can be used to indicate that a parsing error has occurred while fetching media data; maybe the data is corrupt, or is encoded using a codec that the browser doesn't know how to decode.</li>
  </ul>
  </dd>
 </dl>
