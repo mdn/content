@@ -93,7 +93,7 @@ alert(results.length);
 
 <p>The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of <code><a href="/en/DOM/document.evaluate" title="en/DOM/document.evaluate">document.evaluate()</a></code> for cases when it is not required as well as the need to use the special iterators on <code><a href="/en/XPathResult" title="en/XPathResult">XPathResult</a></code> (by returning an array instead).</p>
 
-<h5 id="Example_Defining_a_simple_docEvaluateArray​()_utility_function">Example: Defining a simple <code>docEvaluateArray​()</code> utility function</h5>
+<h5 id="Example_Defining_a_simple_docEvaluateArray()_utility_function">Example: Defining a simple <code>docEvaluateArray()</code> utility function</h5>
 
 <pre class="brush: js">// Example usage:
 // var els = docEvaluateArray('//a');
@@ -117,7 +117,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 <p>The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.</p>
 
-<h5 id="Example_Defining_a_getXPathForElement​​()_utility_function">Example: Defining a <code>getXPathForElement​​()</code> utility function</h5>
+<h5 id="Example_Defining_a_getXPathForElement()_utility_function">Example: Defining a <code>getXPathForElement()</code> utility function</h5>
 
 <pre class="brush: js">function getXPathForElement(el, xml) {
 	var xpath = '';

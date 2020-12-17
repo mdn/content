@@ -48,7 +48,7 @@ class ClassWithPublicInstanceMethod {
 }
 
 console.log(ClassWithStaticField.staticField)
-// expected output: "static field"​
+// expected output: "static field"
 </pre>
 
 <p>Fields without initializers are initialized to <code>undefined</code>.</p>
@@ -184,7 +184,7 @@ console.log(ClassWithStaticMethod.staticMethod());
 
 const instance = new ClassWithPublicInstanceMethod()
 console.log(instance.publicMethod())
-// expected output: "hello worl​d"</pre>
+// expected output: "hello world"</pre>
 
 <p>Public instance methods are added to the class prototype at the time of class evaluation using {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. They are writable, non-enumerable, and configurable.</p>
 
@@ -213,7 +213,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass()
 console.log(instance.subPublicMethod())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 </pre>
 
 <p>Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a> syntax to declare a public instance getter or setter.</p>
@@ -230,7 +230,7 @@ console.log(instance.subPublicMethod())
 
 const instance = new ClassWithGetSet()
 console.log(instance.msg)
-// expected output: "hello worl​d"
+// expected output: "hello world"
 
 instance.msg = 'cake'
 console.log(instance.msg)

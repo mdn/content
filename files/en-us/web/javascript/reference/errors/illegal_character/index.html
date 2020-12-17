@@ -67,13 +67,13 @@ var foo = 'bar';
 
 <p>When copy pasting code from external sources, there might be invalid characters. Watch out!</p>
 
-<pre class="brush: js example-bad">var foo = 'bar';​
+<pre class="brush: js example-bad">var foo = 'bar';
 // SyntaxError: illegal character
 </pre>
 
 <p>When inspecting this code in an editor like Vim, you can see that there is actually a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space (ZWSP) (U+200B)</a> character.</p>
 
-<pre class="brush: js">var foo = 'bar';​&lt;200b&gt;</pre>
+<pre class="brush: js">var foo = 'bar';&lt;200b&gt;</pre>
 
 <h2 id="See_also">See also</h2>
 

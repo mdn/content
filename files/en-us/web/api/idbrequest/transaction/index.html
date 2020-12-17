@@ -16,7 +16,7 @@ tags:
 <div>
 <p>The <strong><code>transaction</code></strong> read-only property of the IDBRequest interface returns the transaction for the request, that is, the transaction the request is being made inside.</p>
 
-<p>This property can be <code>null</code> for requests not made within transactions, such as for requests returned from {{domxref("IDBFactory.open")}} — in this case you're just connecting to a database, so there is no transaction to return. If a version upgrade is needed when opening a database then during the {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the <strong><code>transaction</code></strong> property will be an {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal to <code>"versionchange"</code>, and can be used to access existing object stores and indexes, or abort the upgrade. Following the upgrade, the <strong><code>transaction</code></strong> ​property will again be <code>null</code>.</p>
+<p>This property can be <code>null</code> for requests not made within transactions, such as for requests returned from {{domxref("IDBFactory.open")}} — in this case you're just connecting to a database, so there is no transaction to return. If a version upgrade is needed when opening a database then during the {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the <strong><code>transaction</code></strong> property will be an {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal to <code>"versionchange"</code>, and can be used to access existing object stores and indexes, or abort the upgrade. Following the upgrade, the <strong><code>transaction</code></strong> property will again be <code>null</code>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 </div>
@@ -64,7 +64,7 @@ objectStoreTitleRequest.onsuccess = function() {
 
 </pre>
 
-<p>This example shows how a the <strong><code>transaction</code></strong> property can be used during a version upgrade to access existing object stores:​</p>
+<p>This example shows how a the <strong><code>transaction</code></strong> property can be used during a version upgrade to access existing object stores:</p>
 
 <pre class="brush: js">var openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
