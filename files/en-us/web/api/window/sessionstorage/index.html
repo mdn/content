@@ -15,7 +15,7 @@ tags:
 <p><span class="seoSummary">The read-only <strong><code>sessionStorage</code></strong> property accesses a session {{DOMxRef("Storage")}} object for the current {{glossary("origin")}}. <code>sessionStorage</code> is similar to {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while data in <code>localStorage</code> doesn't expire, data in <code>sessionStorage</code> is cleared when the <em>page session</em> ends.</span></p>
 
 <ul>
- <li>Whenever a website is loaded in a particular tab in the browser, an unique page session gets created and assigned to this particular tab. This page session is valid only for this particular tab</li>
+ <li>Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is valid only for that particular tab.</li>
  <li>A page session lasts as long as the tab or the browser is open, and survives over page reloads and restores.</li>
  <li><strong>Opening a page in a new tab or window creates a new session with the value of the top-level browsing context, which differs from how session cookies work.</strong></li>
  <li>Opening multiple tabs/windows with the same URL creates <code>sessionStorage</code> for each tab/window.</li>
