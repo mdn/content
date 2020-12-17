@@ -110,7 +110,7 @@ function screenToWorld(x,y) {
 <p>Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in <em>Tetris</em> or <em>Bejeweled</em>), path-finding algorithms, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can take a look at our demo that shows <a href="http://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
+<p><strong>Note</strong>: You can take a look at our demo that shows <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
 </div>
 
 <h2 id="Isometric_tilemaps">Isometric tilemaps</h2>
@@ -125,7 +125,7 @@ function screenToWorld(x,y) {
 
 <p>One simple technique consists of pre-rendering the map in a canvas on its own (when using the Canvas API) or on a texture (when using WebGL), so tiles don't need to be re-drawn every frame and rendering can be done in just one blitting operation. Of course, if the map is large this doesn't really solve the problem — and some systems don't have a very generous limit on how big a texture can be.</p>
 
-<p>One way consists of <a href="http://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html">drawing the section that will be visible off-canvas</a> (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.</p>
+<p>One way consists of <a href="https://mozdevs.github.io/gamedev-js-tiles/performance/offcanvas.html">drawing the section that will be visible off-canvas</a> (instead of the entire map.) That means that as long as there is no scrolling, the map doesn't need to be rendered.</p>
 
 <p>A caveat of that approach is that when there <em>is</em> a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.</p>
 
@@ -142,7 +142,7 @@ function screenToWorld(x,y) {
  </li>
  <li>External resources:
   <ul>
-   <li><a href="http://mozdevs.github.io/gamedev-js-tiles/">Demos and source code</a></li>
+   <li><a href="https://mozdevs.github.io/gamedev-js-tiles/">Demos and source code</a></li>
    <li><a href="http://www-cs-students.stanford.edu/~amitp/game-programming/grids/">Amit's thoughts on grids</a></li>
    <li><a href="https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art">Isometric graphics in videogames</a> (Wikipedia)</li>
   </ul>

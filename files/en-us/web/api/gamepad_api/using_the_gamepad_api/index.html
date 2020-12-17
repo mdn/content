@@ -102,7 +102,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 
 <h3 id="Using_button_information">Using button information</h3>
 
-<p>Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right hand side of the gamepad. You can <a href="http://chrisdavidmills.github.io/gamepad-buttons/">view the demo live</a>, and <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">find the source code</a> on Github.</p>
+<p>Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right hand side of the gamepad. You can <a href="https://chrisdavidmills.github.io/gamepad-buttons/">view the demo live</a>, and <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">find the source code</a> on Github.</p>
 
 <p>To start with, we declare some variables: The <code>gamepadInfo</code> paragraph that the connection info is written into, the <code>ball</code> that we want to move, the <code>start</code> variable that acts as the ID for <code>requestAnimation Frame</code>, the <code>a</code> and <code>b</code> variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.</p>
 
@@ -189,7 +189,7 @@ function gameLoop() {
 
 <h2 id="Complete_example_Displaying_gamepad_state">Complete example: Displaying gamepad state</h2>
 
-<p>This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a <a href="http://luser.github.io/gamepadtest/">working demo</a> and look at the <a href="https://github.com/luser/gamepadtest">full source code</a> on Github.</p>
+<p>This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a <a href="https://luser.github.io/gamepadtest/">working demo</a> and look at the <a href="https://github.com/luser/gamepadtest">full source code</a> on Github.</p>
 
 <pre class="brush: js notranslate">var haveEvents = 'ongamepadconnected' in window;
 var controllers = {};

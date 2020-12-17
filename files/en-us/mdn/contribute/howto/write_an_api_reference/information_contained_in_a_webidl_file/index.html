@@ -234,7 +234,7 @@ interface SpeechSynthesis {
 
 <p><span>In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the <code>[SetterThrows]</code> annotation. When this happens, the Syntax section of the property page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</span></p>
 
-<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="http://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.</span></p>
+<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.</span></p>
 
 <p><span>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</span></p>
 
@@ -355,7 +355,7 @@ interface SpeechSynthesis {
 
 <p><span>Some methods can throw exceptions. This is marked using the <code>[Throws]</code> annotation. When this happens, the Syntax section of the method page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</span></p>
 
-<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="http://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</span></p>
+<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</span></p>
 
 <p><span>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions"><em>Exceptions</em> sections</a>.</span></p>
 

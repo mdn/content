@@ -138,7 +138,7 @@ driver.sleep(2000).then(function() {
 <p>There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!</p>
 
 <ol>
- <li>Create another new file inside your project directory called <code>google_test_multiple.js</code>. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the <code>.forBrowser()</code> method for other browsers,  see the <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html">Browser enum</a> reference page.</li>
+ <li>Create another new file inside your project directory called <code>google_test_multiple.js</code>. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the <code>.forBrowser()</code> method for other browsers,  see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html">Browser enum</a> reference page.</li>
  <li>Give it the following contents, then save it:
   <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
@@ -191,7 +191,7 @@ function searchTest(driver) {
 
 <h2 id="WebDriver_syntax_crash_course">WebDriver syntax crash course</h2>
 
-<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
+<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
 
 <h3 id="Starting_a_new_test">Starting a new test</h3>
 
@@ -201,7 +201,7 @@ function searchTest(driver) {
     By = webdriver.By,
     until = webdriver.until;</pre>
 
-<p>Next, you need to create a new instance of a driver, using the <code>new webdriver.Builder()</code> constructor. This needs to have the <code>forBrowser()</code> method chained onto it to specify what browser you want to test with this builder, and the <code>build()</code> method to actually build it (see the <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html">Builder class reference</a> for detailed information on these features).</p>
+<p>Next, you need to create a new instance of a driver, using the <code>new webdriver.Builder()</code> constructor. This needs to have the <code>forBrowser()</code> method chained onto it to specify what browser you want to test with this builder, and the <code>build()</code> method to actually build it (see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html">Builder class reference</a> for detailed information on these features).</p>
 
 <pre class="brush: js notranslate">let driver = new webdriver.Builder()
     .forBrowser('firefox')
@@ -234,7 +234,7 @@ var driver = new webdriver.Builder()
 <pre class="brush: js notranslate"><span class="nx">driver</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://www.google.com'</span><span class="p">);</span></pre>
 
 <div class="note">
-<p><span class="p"><strong>Note</strong>: See the <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> for details of the features in this section and the ones below it.</span></p>
+<p><span class="p"><strong>Note</strong>: See the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> for details of the features in this section and the ones below it.</span></p>
 </div>
 
 <p>You can use any URL to point to your resource, including a <code>file://</code> URL to test a local document:</p>
@@ -249,7 +249,7 @@ var driver = new webdriver.Builder()
 
 <p>Add this line to the bottom of <code>quick_test.js</code> now:</p>
 
-<pre class="brush: js notranslate">driver.get('http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');</pre>
+<pre class="brush: js notranslate">driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');</pre>
 
 <h3 id="Interacting_with_the_document">Interacting with the document</h3>
 
@@ -341,7 +341,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 <p>WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using <code>getAttribute()</code> to retrieve it's <code>value</code> attribute value, and print a message to the console if it is not empty.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is also a method called <code><a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util library</a>, which defines common conditions to use along with <code>wait()</code>.</p>
+<p><strong>Note</strong>: There is also a method called <code><a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util library</a>, which defines common conditions to use along with <code>wait()</code>.</p>
 </div>
 
 <h3 id="Shutting_down_drivers_after_use">Shutting down drivers after use</h3>

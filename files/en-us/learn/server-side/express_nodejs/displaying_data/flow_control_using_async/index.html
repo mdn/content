@@ -17,9 +17,9 @@ tags:
 <p>Async has a lot of useful methods (check out <a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html" rel="noopener">the documentation</a>). Some of the more important functions are:</p>
 
 <ul>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> to execute any operations that must be performed in parallel.</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> for when we need to ensure that asynchronous operations are performed in series.</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> for operations that must be run in series, with each operation depending on the results of preceding operations.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> to execute any operations that must be performed in parallel.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> for when we need to ensure that asynchronous operations are performed in series.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> for operations that must be run in series, with each operation depending on the results of preceding operations.</li>
 </ul>
 
 <h2 class="highlight-spanned" id="Why_is_this_needed"><span class="highlight-span">Why is this needed?</span></h2>
@@ -45,7 +45,7 @@ tags:
 
 <h2 class="highlight-spanned" id="Asynchronous_operations_in_parallel"><span class="highlight-span">Asynchronous operations in parallel</span></h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
+<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> is used to run multiple asynchronous operations in parallel.</p>
 
 <p>The first argument to <code>async.parallel()</code> is a collection of the asynchronous functions to run (an array, object or other iterable). Each function is passed a <code>callback(err, result)</code> which it must call on completion with an error <code>err</code> (which can be <code>null</code>) and an optional <code>results</code> value.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <h2 class="highlight-spanned" id="Asynchronous_operations_in_series"><span class="highlight-span">Asynchronous operations in series</span></h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
+<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> is used to run multiple asynchronous operations in sequence, when subsequent functions do not depend on the output of earlier functions. It is essentially declared and behaves in the same way as <code>async.parallel()</code>.</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
@@ -105,7 +105,7 @@ tags:
 
 <h2 class="highlight-spanned" id="Dependent_asynchronous_operations_in_series"><span class="highlight-span">Dependent asynchronous operations in series</span></h2>
 
-<p>The method <code><a class="external external-icon" href="http://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
+<p>The method <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> is used to run multiple asynchronous operations in sequence when each operation is dependent on the result of the previous operation.</p>
 
 <p>The callback invoked by each asynchronous function contains <code>null</code> for the first argument and results in subsequent arguments. Each function in the series takes the results arguments of the previous callback as the first parameters, and then a callback function. When all operations are complete, a final callback is invoked with the result of the last operation. The way this works is more clear when you consider the code fragment below (this example is from the <em>async</em> documentation):</p>
 

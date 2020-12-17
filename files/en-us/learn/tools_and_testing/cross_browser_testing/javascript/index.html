@@ -354,7 +354,7 @@ fetch('flowers.jpg').then(function(response) {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our finished version at <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
+<p><strong>Note</strong>: You can find our finished version at <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
 </div>
 
 <div class="note">
@@ -400,7 +400,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Note that polyfills.js is basically the two polyfills we are using put together into one file. We did this manually, but there are cleverer solutions that will automatically generate bundles for you — see <a href="http://browserify.org/">Browserify</a> (see <a href="https://www.sitepoint.com/getting-started-browserify/">Getting started with Browserify</a> for a basic tutorial). It is a good idea to bundle JS files into one like this — reducing the number of HTTP requests you need to make improves the performance of your site.</p>
 
-<p>You can see this code in action in <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
+<p>You can see this code in action in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
 
 <div class="note">
 <p><strong>Note</strong>: There are some 3rd party options to consider, for example <a href="https://polyfill.io/v2/docs/">Polyfill.io</a> — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.</p>
@@ -414,7 +414,7 @@ fetch('flowers.jpg').then(function(response) {
 <p><strong>Note</strong>: This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).</p>
 </div>
 
-<p>So for example, we talked about arrow functions (see <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
+<p>So for example, we talked about arrow functions (see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
 
 <pre class="brush: js notranslate">() =&gt; { ... }</pre>
 
@@ -472,7 +472,7 @@ if(ua.indexOf('Firefox') !== -1) {
  <li>Microsoft would use <code>msObject</code></li>
 </ul>
 
-<p>Here's an example, taken from our <a href="http://mdn.github.io/violent-theremin/">violent-theremin demo</a> (see <a href="https://github.com/mdn/violent-theremin">source code</a>), which uses a combination of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to create a fun (and noisy) drawing tool:</p>
+<p>Here's an example, taken from our <a href="https://mdn.github.io/violent-theremin/">violent-theremin demo</a> (see <a href="https://github.com/mdn/violent-theremin">source code</a>), which uses a combination of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to create a fun (and noisy) drawing tool:</p>
 
 <pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>

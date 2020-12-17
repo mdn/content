@@ -71,7 +71,7 @@ tags:
 
 <h2 id="example" name="example">Example</h2>
 
-<p>In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js;highlight:[15,28,30,31,32,37]">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -169,5 +169,5 @@ DBOpenRequest.onupgradeneeded = function(event) {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
