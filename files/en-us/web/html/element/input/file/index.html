@@ -385,7 +385,7 @@ const preview = document.querySelector('.preview');
 input.style.opacity = 0;</pre>
 
 <div class="note">
-<p><strong>Note:</strong> {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.</p>
+<p><strong>Note:</strong> <a href="/en-US/docs/Web/CSS/opacity">opacity</a> is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.</p>
 </div>
 
 <p>Next, we add an <a href="/en-US/docs/Web/API/EventTarget/addEventListener">event listener</a> to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom <code>updateImageDisplay()</code> function.</p>

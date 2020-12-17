@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>CSSKeyframesRule</code></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} <a href="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSRule")}} interface with a type value of <code>7</code> (<code>CSSRule.KEYFRAMES_RULE</code>).</p>
+<p>The <strong><code>CSSKeyframesRule</code></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSRule")}} interface with a type value of <code>7</code> (<code>CSSRule.KEYFRAMES_RULE</code>).</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -19,7 +19,7 @@ tags:
 
 <dl>
  <dt>{{domxref("CSSKeyframesRule.name")}}</dt>
- <dd>Represents the name of the animation, used by the {{cssxref("animation-name")}} property.</dd>
+ <dd>Represents the name of the animation, used by the <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> property.</dd>
  <dt id="cssRules">{{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
 </dl>
@@ -30,7 +30,7 @@ tags:
 
 <dl>
  <dt id="appendRule">{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
- <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
+ <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
  <dt id="deleteRule">{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
  <dd>Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between <code>0%</code> and <code>100%</code>.</dd>
  <dt>{{domxref("CSSKeyframesRule.findRule()")}}</dt>
@@ -65,6 +65,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("@keyframes")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a></li>
  <li>{{domxref("CSSKeyFrameRule")}}</li>
 </ul>

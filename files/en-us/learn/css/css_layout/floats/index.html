@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">Originally for floating images inside blocks of text, the {{cssxref("float")}} property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it has now returned to its original purpose, as this article explains.</p>
+<p class="summary">Originally for floating images inside blocks of text, the <a href="/en-US/docs/Web/CSS/float">float</a> property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it has now returned to its original purpose, as this article explains.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="The_background_of_floats">The background of floats</h2>
 
-<p>The {{cssxref("float")}} property was introduced to allow web developers to implement simple layouts involving an image floating inside a column of text, with the text wrapping around the left or right of it. The kind of thing you might get in a newspaper layout.</p>
+<p>The <a href="/en-US/docs/Web/CSS/float">float</a> property was introduced to allow web developers to implement simple layouts involving an image floating inside a column of text, with the text wrapping around the left or right of it. The kind of thing you might get in a newspaper layout.</p>
 
 <p>But web developers quickly realized that you can float anything, not just images, so the use of float broadened, for example to fun layout effects such as <a href="https://css-tricks.com/snippets/css/drop-caps/">drop-caps</a>.</p>
 
@@ -75,7 +75,7 @@ tags:
   padding: 1em;
 }</pre>
 
-<p>If you save and refresh now, you'll see something much like what you'd expect — the box is sitting above the text, in normal flow. To float the text around it add the {{cssxref("float")}} and {{cssxref("margin-right")}} properties to the <code>.box</code> rule:</p>
+<p>If you save and refresh now, you'll see something much like what you'd expect — the box is sitting above the text, in normal flow. To float the text around it add the <a href="/en-US/docs/Web/CSS/float">float</a> and <a href="/en-US/docs/Web/CSS/margin-right">margin-right</a> properties to the <code>.box</code> rule:</p>
 
 <pre class="brush: css notranslate">.box {
   float: left;
@@ -128,7 +128,7 @@ tags:
 
 <p>So let's think about how the float works — the element with the float set on it (the {{htmlelement("div")}} element in this case) is taken out of the normal layout flow of the document and stuck to the left-hand side of its parent container ({{htmlelement("body")}}, in this case). Any content that comes below the floated element in the normal layout flow will now wrap around it, filling up the space to the right-hand side of it as far up as the top of the floated element. There, it will stop.</p>
 
-<p>Floating the content to the right has exactly the same effect, but in reverse — the floated element will stick to the right, and the content will wrap around it to the left. Try changing the float value to <code>right</code> and replace {{cssxref("margin-right")}} with {{cssxref("margin-left")}} in the last ruleset to see what the result is.</p>
+<p>Floating the content to the right has exactly the same effect, but in reverse — the floated element will stick to the right, and the content will wrap around it to the left. Try changing the float value to <code>right</code> and replace <a href="/en-US/docs/Web/CSS/margin-right">margin-right</a> with <a href="/en-US/docs/Web/CSS/margin-left">margin-left</a> in the last ruleset to see what the result is.</p>
 
 <p>While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow, and the boxes of the following items actually run behind the float. You can demonstrate this by making some changes to your example.</p>
 
@@ -189,7 +189,7 @@ tags:
 
 <h2 id="Clearing_floats">Clearing floats</h2>
 
-<p>We have seen that the float is removed from normal flow and that other elements will display beside it, therefore if we want to stop the following element from moving up we need to clear it; this is achieved with the {{cssxref("clear")}} property.</p>
+<p>We have seen that the float is removed from normal flow and that other elements will display beside it, therefore if we want to stop the following element from moving up we need to clear it; this is achieved with the <a href="/en-US/docs/Web/CSS/clear">clear</a> property.</p>
 
 <p>In your HTML from the previous example, add a class of <code>cleared</code> to the second paragraph below the floated item. Then add the following to your CSS:</p>
 
@@ -389,7 +389,7 @@ tags:
 
 <h3 id="Using_overflow">Using overflow</h3>
 
-<p>An alternative method is to set the {{cssxref("overflow")}} property of the wrapper to a value other than <code>visible</code>.</p>
+<p>An alternative method is to set the <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property of the wrapper to a value other than <code>visible</code>.</p>
 
 <p>Remove the clearfix CSS you added in the last section, and instead add <code>overflow: auto</code> to the rules for wrapper. Once again, the box should clear.</p>
 

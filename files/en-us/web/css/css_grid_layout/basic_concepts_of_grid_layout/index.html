@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Control_of_overlapping_content">Control of overlapping content</h3>
 
-<p>More than one item can be placed into a grid cell or area and, they can partially overlap each other. This layering may then be controlled with the {{cssxref("z-index")}} property.</p>
+<p>More than one item can be placed into a grid cell or area and, they can partially overlap each other. This layering may then be controlled with the <a href="/en-US/docs/Web/CSS/z-index">z-index</a> property.</p>
 
 <p>Grid is a powerful specification that, when combined with other parts of CSS such as <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>, can help you create layouts that were previously impossible to build in CSS. It all starts by creating a grid in your <strong>grid container</strong>.</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <h2 id="Grid_Tracks">Grid Tracks</h2>
 
-<p>We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A <em>grid track</em> is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.</p>
+<p>We define rows and columns on our grid with the <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> and <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a> properties. These define grid tracks. A <em>grid track</em> is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
 
@@ -231,11 +231,11 @@ tags:
 
 <h3 id="The_implicit_and_explicit_grid">The implicit and explicit grid</h3>
 
-<p>When creating our example grid we specifically defined our column tracks with the {{cssxref("grid-template-columns")}} property, but the grid also created rows on its own. These rows are part of the implicit grid. Whereas the explicit grid consists of any rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}.</p>
+<p>When creating our example grid we specifically defined our column tracks with the <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> property, but the grid also created rows on its own. These rows are part of the implicit grid. Whereas the explicit grid consists of any rows and columns defined with <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> or <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>.</p>
 
 <p>If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the implicit grid. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.</p>
 
-<p>You can also define a set size for tracks created in the implicit grid with the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.</p>
+<p>You can also define a set size for tracks created in the implicit grid with the <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a> and <a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a> properties.</p>
 
 <p>In the below example we use <code>grid-auto-rows</code> to ensure that tracks created in the implicit grid are 200 pixels tall.</p>
 
@@ -280,7 +280,7 @@ tags:
 
 <p>When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.</p>
 
-<p>Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using <code>minmax()</code> in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of <code>auto</code>. Using <code>auto</code> means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
+<p>Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using <code>minmax()</code> in the value of <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a>. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of <code>auto</code>. Using <code>auto</code> means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
 
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
@@ -334,7 +334,7 @@ tags:
 
 <p>We will be exploring line based placement in full detail in a later article. The following example demonstrates doing this in a simple way. When placing an item, we target the line – rather than the track.</p>
 
-<p>In the following example I am placing the first two items on our three column track grid, using the {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} properties. Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.</p>
+<p>In the following example I am placing the first two items on our three column track grid, using the <a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a>, <a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a>, <a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a> and <a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a> properties. Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.</p>
 
 <p>The second item starts on grid column line 1, and spans one track. This is the default so I do not need to specify the end line. It also spans two row tracks from row line 3 to row line 5. The other items will place themselves into empty spaces on the grid.</p>
 
@@ -404,7 +404,7 @@ tags:
 
 <h2 id="Gutters">Gutters</h2>
 
-<p><em>Gutters</em> or <em>alleys</em> between grid cells can be created using the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties, or the shorthand {{cssxref("gap")}}. In the below example, I am creating a 10-pixel gap between columns and a <code>1em</code> gap between rows.</p>
+<p><em>Gutters</em> or <em>alleys</em> between grid cells can be created using the <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a> and <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a> properties, or the shorthand <a href="/en-US/docs/Web/CSS/gap">gap</a>. In the below example, I am creating a 10-pixel gap between columns and a <code>1em</code> gap between rows.</p>
 
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
@@ -415,7 +415,7 @@ tags:
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the <code>grid-</code> prefix as {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} and {{cssxref("grid-gap")}} respectively.<br>
+<p><strong>Note:</strong> When grid first shipped in browsers the <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>, <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a> and <a href="/en-US/docs/Web/CSS/gap">gap</a> were prefixed with the <code>grid-</code> prefix as <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a>, <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a> and <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a> respectively.<br>
  <br>
  Browsers are updating to remove this prefix, however the prefixed versions will be maintained as aliases making them safe to use. </p>
 </div>
@@ -521,7 +521,7 @@ tags:
 
 <p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
 
-<p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
+<p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a> of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
 
 <h3 id="Subgrid">Subgrid</h3>
 

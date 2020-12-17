@@ -86,37 +86,37 @@ tags:
   <li><code>right</code>: the table is displayed on the right side of the document.</li>
  </ul>
 
- <p>Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to <code>auto</code> or {{cssxref("margin")}} to <code>0 auto</code> to achieve an effect that is similar to the align attribute.</p>
+ <p>Set <a href="/en-US/docs/Web/CSS/margin-left">margin-left</a> and <a href="/en-US/docs/Web/CSS/margin-right">margin-right</a> to <code>auto</code> or <a href="/en-US/docs/Web/CSS/margin">margin</a> to <code>0 auto</code> to achieve an effect that is similar to the align attribute.</p>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
  <dd>
  <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p>
 
- <p>To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.</p>
+ <p>To achieve a similar effect, use the CSS <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property.</p>
  </dd>
  <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
  <dd>
  <p>This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the {{htmlattrxref("frame", "table")}} attribute is set to void.</p>
 
- <p>To achieve a similar effect, use the CSS {{cssxref("border")}} shorthand property.</p>
+ <p>To achieve a similar effect, use the CSS <a href="/en-US/docs/Web/CSS/border">border</a> shorthand property.</p>
  </dd>
  <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
  <dd>
  <p>This attribute defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right).</p>
 
- <p>To achieve a similar effect, apply the {{cssxref("border-collapse")}} property to the <code>&lt;table&gt;</code> element, with its value set to collapse, and the {{cssxref("padding")}} property to the {{HTMLElement("td")}} elements.</p>
+ <p>To achieve a similar effect, apply the <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a> property to the <code>&lt;table&gt;</code> element, with its value set to collapse, and the <a href="/en-US/docs/Web/CSS/padding">padding</a> property to the {{HTMLElement("td")}} elements.</p>
  </dd>
  <dt>{{htmlattrdef("cellspacing")}} {{Deprecated_inline}}</dt>
  <dd>
  <p>This attribute defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.</p>
 
- <p>To achieve a similar effect, apply the {{cssxref("border-spacing")}} property to the <code>&lt;table&gt;</code> element. <code>border-spacing</code> does not have any effect if {{cssxref("border-collapse")}} is set to collapse.</p>
+ <p>To achieve a similar effect, apply the <a href="/en-US/docs/Web/CSS/border-spacing">border-spacing</a> property to the <code>&lt;table&gt;</code> element. <code>border-spacing</code> does not have any effect if <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a> is set to collapse.</p>
  </dd>
  <dt>{{htmlattrdef("frame")}} {{Deprecated_inline}}</dt>
  <dd>
  <p>This enumerated attribute defines which side of the frame surrounding the table must be displayed.</p>
 
- <p>To achieve a similar effect, use the {{cssxref("border-style")}} and {{cssxref("border-width")}} properties.</p>
+ <p>To achieve a similar effect, use the <a href="/en-US/docs/Web/CSS/border-style">border-style</a> and <a href="/en-US/docs/Web/CSS/border-width">border-width</a> properties.</p>
  </dd>
  <dt>{{htmlattrdef("rules")}} {{Deprecated_inline}}</dt>
  <dd>
@@ -130,13 +130,13 @@ tags:
   <li><code>all</code>, which will cause the rules to be displayed between rows and columns.</li>
  </ul>
 
- <p>To achieve a similar effect, apply the {{cssxref("border")}} property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.</p>
+ <p>To achieve a similar effect, apply the <a href="/en-US/docs/Web/CSS/border">border</a> property to the appropriate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, or {{HTMLElement("colgroup")}} elements.</p>
  </dd>
  <dt>{{htmlattrdef("summary")}} {{Deprecated_inline}}</dt>
  <dd>This attribute defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead.</dd>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline}}</dt>
  <dd>
- <p>This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.</p>
+ <p>This attribute defines the width of the table. Use the CSS <a href="/en-US/docs/Web/CSS/width">width</a> property instead.</p>
  </dd>
 </dl>
 
@@ -551,9 +551,9 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 </pre>
 </div>
 
-<p>When looking at these styles you’ll notice that table’s {{cssxref("display")}} property has been set to <code>block</code>. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to <code>nowrap</code> on the <code>&lt;tbody&gt;</code>. However, we don’t do this for the <code>&lt;thead&gt;</code> to avoid long titles forcing columns to be wider than they need to be to display the data.</p>
+<p>When looking at these styles you’ll notice that table’s <a href="/en-US/docs/Web/CSS/display">display</a> property has been set to <code>block</code>. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set <a href="/en-US/docs/Web/CSS/white-space">white-space</a> to <code>nowrap</code> on the <code>&lt;tbody&gt;</code>. However, we don’t do this for the <code>&lt;thead&gt;</code> to avoid long titles forcing columns to be wider than they need to be to display the data.</p>
 
-<p>To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the <code>&lt;th&gt;</code> elements. Note that we have <strong>not</strong> set {{cssxref("border-collapse")}}  to <code>collapse</code>, as if we do the header cannot be separated correctly from the rest of the table.</p>
+<p>To keep the table headers on the page while scrolling down we've set <a href="/en-US/docs/Web/CSS/position">position</a> to sticky on the <code>&lt;th&gt;</code> elements. Note that we have <strong>not</strong> set <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a>  to <code>collapse</code>, as if we do the header cannot be separated correctly from the rest of the table.</p>
 
 <pre class="brush: css notranslate">table,
 th,
@@ -707,10 +707,10 @@ tr:last-child td {
  <li>CSS properties that may be especially useful to style the <code>&lt;table&gt;</code> element:
 
   <ul>
-   <li>{{cssxref("width")}} to control the width of the table;</li>
-   <li>{{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;</li>
-   <li>{{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;</li>
-   <li>{{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.</li>
+   <li><a href="/en-US/docs/Web/CSS/width">width</a> to control the width of the table;</li>
+   <li><a href="/en-US/docs/Web/CSS/border">border</a>, <a href="/en-US/docs/Web/CSS/border-style">border-style</a>, <a href="/en-US/docs/Web/CSS/border-color">border-color</a>, <a href="/en-US/docs/Web/CSS/border-width">border-width</a>, <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a>, <a href="/en-US/docs/Web/CSS/border-spacing">border-spacing</a> to control the aspect of cell borders, rules and frame;</li>
+   <li><a href="/en-US/docs/Web/CSS/margin">margin</a> and <a href="/en-US/docs/Web/CSS/padding">padding</a> to style the individual cell content;</li>
+   <li><a href="/en-US/docs/Web/CSS/text-align">text-align</a> and <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> to define the alignment of text and cell content.</li>
   </ul>
  </li>
 </ul>

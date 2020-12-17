@@ -14,7 +14,7 @@ tags:
 
 <p class="summary"><strong><dfn>Shorthand properties</dfn></strong> are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.</p>
 
-<p>The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.</p>
+<p>The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS <a href="/en-US/docs/Web/CSS/background">background</a> property is a shorthand property that's able to define the values of <a href="/en-US/docs/Web/CSS/background-color">background-color</a>, <a href="/en-US/docs/Web/CSS/background-image">background-image</a>, <a href="/en-US/docs/Web/CSS/background-repeat">background-repeat</a>, and <a href="/en-US/docs/Web/CSS/background-position">background-position</a>. Similarly, the most common font-related properties can be defined using the shorthand <a href="/en-US/docs/Web/CSS/font">font</a>, and the different margins around a box can be defined using the <a href="/en-US/docs/Web/CSS/margin">margin</a> shorthand.</p>
 
 <h2 id="Tricky_edge_cases">Tricky edge cases</h2>
 
@@ -26,11 +26,11 @@ tags:
   <pre class="brush:css notranslate">background-color: red;
 background: url(images/bg.gif) no-repeat left top;
 </pre>
-  will not set the color of the background to <code>red</code> but to {{cssxref("background-color")}}'s default, <code>transparent</code>, as the second rule has precedence.</li>
+  will not set the color of the background to <code>red</code> but to <a href="/en-US/docs/Web/CSS/background-color">background-color</a>'s default, <code>transparent</code>, as the second rule has precedence.</li>
  <li>Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword <code>inherit</code> can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword <code>inherit</code>.</li>
  <li>Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
   <ol>
-   <li>Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+   <li>Shorthands handling properties related to edges of a box, like <a href="/en-US/docs/Web/CSS/border-style">border-style</a>, <a href="/en-US/docs/Web/CSS/margin">margin</a> or <a href="/en-US/docs/Web/CSS/padding">padding</a>, always use a consistent 1-to-4-value syntax representing those edges:
     <table>
      <tbody>
       <tr>
@@ -54,7 +54,7 @@ background: url(images/bg.gif) no-repeat left top;
      </tbody>
     </table>
    </li>
-   <li>Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+   <li>Similarly, shorthands handling properties related to corners of a box, like <a href="/en-US/docs/Web/CSS/border-radius">border-radius</a>, always use a consistent 1-to-4-value syntax representing those corners:
     <table>
      <tbody>
       <tr>
@@ -97,7 +97,7 @@ background-position: left top;</pre>
 
 <p>(The shorthand form is actually the equivalent of the longhand properties above plus <code>background-attachment: scroll</code> and, in CSS3, some additional properties.)</p>
 
-<p>See {{cssxref("background")}} for more detailed information, including CSS3 properties.</p>
+<p>See <a href="/en-US/docs/Web/CSS/background">background</a> for more detailed information, including CSS3 properties.</p>
 
 <h2 id="Font_Properties">Font properties</h2>
 
@@ -151,7 +151,7 @@ margin-left: 5px;</pre>
 
 <h2 id="The_universal_shorthand_property">The universal shorthand property</h2>
 
-<p>CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model to one of:</p>
+<p>CSS provides a universal shorthand property, <a href="/en-US/docs/Web/CSS/all">all</a>, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model to one of:</p>
 
 <p>{{page("/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance", "Controlling_inheritance")}}</p>
 
@@ -161,5 +161,5 @@ margin-left: 5px;</pre>
 
 <ul>
  <li>{{css_key_concepts}}</li>
- <li>Shorthand properties: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}</li>
+ <li>Shorthand properties: <a href="/en-US/docs/Web/CSS/all">all</a>, <a href="/en-US/docs/Web/CSS/animation">animation</a>, <a href="/en-US/docs/Web/CSS/background">background</a>, <a href="/en-US/docs/Web/CSS/border">border</a>, <a href="/en-US/docs/Web/CSS/border-block-end">border-block-end</a>, <a href="/en-US/docs/Web/CSS/border-block-start">border-block-start</a>, <a href="/en-US/docs/Web/CSS/border-bottom">border-bottom</a>, <a href="/en-US/docs/Web/CSS/border-color">border-color</a>, <a href="/en-US/docs/Web/CSS/border-image">border-image</a>, <a href="/en-US/docs/Web/CSS/border-inline-end">border-inline-end</a>, <a href="/en-US/docs/Web/CSS/border-inline-start">border-inline-start</a>, <a href="/en-US/docs/Web/CSS/border-left">border-left</a>, <a href="/en-US/docs/Web/CSS/border-radius">border-radius</a>, <a href="/en-US/docs/Web/CSS/border-right">border-right</a>, <a href="/en-US/docs/Web/CSS/border-style">border-style</a>, <a href="/en-US/docs/Web/CSS/border-top">border-top</a>, <a href="/en-US/docs/Web/CSS/border-width">border-width</a>, <a href="/en-US/docs/Web/CSS/column-rule">column-rule</a>, <a href="/en-US/docs/Web/CSS/columns">columns</a>, <a href="/en-US/docs/Web/CSS/flex">flex</a>, <a href="/en-US/docs/Web/CSS/flex-flow">flex-flow</a>, <a href="/en-US/docs/Web/CSS/font">font</a>, <a href="/en-US/docs/Web/CSS/gap">gap</a>, <a href="/en-US/docs/Web/CSS/grid">grid</a>, <a href="/en-US/docs/Web/CSS/grid-area">grid-area</a>, <a href="/en-US/docs/Web/CSS/grid-column">grid-column</a>, <a href="/en-US/docs/Web/CSS/grid-row">grid-row</a>, <a href="/en-US/docs/Web/CSS/grid-template">grid-template</a>, <a href="/en-US/docs/Web/CSS/list-style">list-style</a>, <a href="/en-US/docs/Web/CSS/margin">margin</a>, <a href="/en-US/docs/Web/CSS/mask">mask</a>, <a href="/en-US/docs/Web/CSS/offset">offset</a>, <a href="/en-US/docs/Web/CSS/outline">outline</a>, <a href="/en-US/docs/Web/CSS/overflow">overflow</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, <a href="/en-US/docs/Web/CSS/place-content">place-content</a>, <a href="/en-US/docs/Web/CSS/place-items">place-items</a>, <a href="/en-US/docs/Web/CSS/place-self">place-self</a>, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, <a href="/en-US/docs/Web/CSS/text-decoration">text-decoration</a>, <a href="/en-US/docs/Web/CSS/text-emphasis">text-emphasis</a>, <a href="/en-US/docs/Web/CSS/transition">transition</a></li>
 </ul>

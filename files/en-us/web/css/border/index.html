@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef("CSS Borders")}}</div>
 
-<p><span class="seoSummary">The <strong><code>border</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an element's border.</span> It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.</p>
+<p><span class="seoSummary">The <strong><code>border</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an element's border.</span> It sets the values of <a href="/en-US/docs/Web/CSS/border-width">border-width</a>, <a href="/en-US/docs/Web/CSS/border-style">border-style</a>, and <a href="/en-US/docs/Web/CSS/border-color">border-color</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/border.html")}}</div>
 
@@ -57,18 +57,18 @@ border: unset;
 
 <dl>
  <dt id="&lt;line-width>"><code>&lt;line-width&gt;</code></dt>
- <dd>Sets the thickness of the border. Defaults to <code>medium</code> if absent. See {{Cssxref("border-width")}}.</dd>
+ <dd>Sets the thickness of the border. Defaults to <code>medium</code> if absent. See <a href="/en-US/docs/Web/CSS/border-width">border-width</a>.</dd>
  <dt id="&lt;line-style>"><code>&lt;line-style&gt;</code></dt>
- <dd>Sets the style of the border. Defaults to <code>none</code> if absent. See {{Cssxref("border-style")}}.</dd>
+ <dd>Sets the style of the border. Defaults to <code>none</code> if absent. See <a href="/en-US/docs/Web/CSS/border-style">border-style</a>.</dd>
  <dt id="&lt;color>">{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Sets the color of the border. Defaults to <code>currentcolor</code> if absent. See {{Cssxref("border-color")}}.</dd>
+ <dd>Sets the color of the border. Defaults to <code>currentcolor</code> if absent. See <a href="/en-US/docs/Web/CSS/border-color">border-color</a>.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>As with all shorthand properties, any omitted sub-values will be set to their <a href="/en-US/docs/Web/CSS/initial_value">initial value</a>. Importantly, <code>border</code> cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., <code>none</code>.</p>
+<p>As with all shorthand properties, any omitted sub-values will be set to their <a href="/en-US/docs/Web/CSS/initial_value">initial value</a>. Importantly, <code>border</code> cannot be used to specify a custom value for <a href="/en-US/docs/Web/CSS/border-image">border-image</a>, but instead sets it to its initial value, i.e., <code>none</code>.</p>
 
-<p>The <code>border</code> shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.</p>
+<p>The <code>border</code> shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand <a href="/en-US/docs/Web/CSS/border-width">border-width</a>, <a href="/en-US/docs/Web/CSS/border-style">border-style</a>, and <a href="/en-US/docs/Web/CSS/border-color">border-color</a> properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., <a href="/en-US/docs/Web/CSS/border-top">border-top</a> ) and logical (e.g., <a href="/en-US/docs/Web/CSS/border-block-start">border-block-start</a>) border properties.</p>
 
 <h3 id="Borders_vs._outlines">Borders vs. outlines</h3>
 
@@ -128,7 +128,7 @@ border: unset;
    <td>{{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
    <td>Removes <em>specific</em> support for <code>transparent</code>, as it is now a valid {{cssxref("&lt;color&gt;")}}; this has no practical impact.<br>
-    Though it cannot be set to a custom value using the shorthand, <code>border</code> now resets {{cssxref("border-image")}} to its initial value (<code>none</code>).</td>
+    Though it cannot be set to a custom value using the shorthand, <code>border</code> now resets <a href="/en-US/docs/Web/CSS/border-image">border-image</a> to its initial value (<code>none</code>).</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}}</td>
@@ -152,9 +152,9 @@ border: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Cssxref("border-width")}}</li>
- <li>{{Cssxref("border-style")}}</li>
- <li>{{Cssxref("border-color")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/border-width">border-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-style">border-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-color">border-color</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Backgrounds and borders</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Learn CSS: Backgrounds and borders</a></li>
 </ul>

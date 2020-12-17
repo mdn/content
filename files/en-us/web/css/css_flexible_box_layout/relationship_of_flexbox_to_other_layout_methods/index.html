@@ -36,7 +36,7 @@ tags:
 
 <h3 id="The_gap_properties">The gap properties</h3>
 
-<p>A recent addition to the Box Alignment specification has been the {{cssxref("row-gap")}} and {{cssxref("column-gap")}} properties, along with the shorthand {{cssxref("gap")}}. These properties were initially defined in the CSS Grid specification and named <code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code>. They have been renamed and moved to Box Alignment in order that they can be used in all layout methods — this will ultimately include flexbox. Until browsers implement the <code>gap</code> properties for flexbox, {{cssxref("margin")}}s have to be used to create gaps between items.</p>
+<p>A recent addition to the Box Alignment specification has been the <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a> and <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a> properties, along with the shorthand <a href="/en-US/docs/Web/CSS/gap">gap</a>. These properties were initially defined in the CSS Grid specification and named <code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code>. They have been renamed and moved to Box Alignment in order that they can be used in all layout methods — this will ultimately include flexbox. Until browsers implement the <code>gap</code> properties for flexbox, <a href="/en-US/docs/Web/CSS/margin">margin</a>s have to be used to create gaps between items.</p>
 
 <h2 id="Writing_Modes">Writing Modes</h2>
 
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="The_writing_modes">The writing modes</h3>
 
-<p>The writing modes specification defines the following values of the {{cssxref("writing-mode")}} property, which serve to change the direction that blocks are laid out on the page, to match the direction that blocks lay out when content is formatted in that particular writing mode. You can change the live example below to these modes in order to see what happens to the flex layout.</p>
+<p>The writing modes specification defines the following values of the <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a> property, which serve to change the direction that blocks are laid out on the page, to match the direction that blocks lay out when content is formatted in that particular writing mode. You can change the live example below to these modes in order to see what happens to the flex layout.</p>
 
 <ul>
  <li><code>horizontal-tb</code></li>
@@ -68,7 +68,7 @@ tags:
 
 <p>An element set to <code>display: flex</code> behaves in most ways like any other block level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.</p>
 
-<p>With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having <code>display: flex</code> applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the {{cssxref("vertical-align")}} property, as used with <code>inline-block</code> or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.</p>
+<p>With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having <code>display: flex</code> applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> property, as used with <code>inline-block</code> or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.</p>
 
 <p>In this next live example the child elements have been floated, and then their container has had <code>display: flex</code> added. If you remove <code>display: flex</code>, you should see that the <code>.box</code> element collapses as we have no clearing applied. This demonstrates that the float is happening. Re-apply <code>display: flex</code> and the collapsing does not happen. This is because the items no longer have a float applied, as they have been transformed into flex items.</p>
 
@@ -102,7 +102,7 @@ tags:
 
 <h2 id="Flexbox_and_display_contents">Flexbox and display: contents</h2>
 
-<p>The <code>contents</code> value of the {{cssxref("display")}} property is a new value that is described in the spec as follows:</p>
+<p>The <code>contents</code> value of the <a href="/en-US/docs/Web/CSS/display">display</a> property is a new value that is described in the spec as follows:</p>
 
 <blockquote>
 <p>“The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”</p>

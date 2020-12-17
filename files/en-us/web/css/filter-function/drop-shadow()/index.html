@@ -19,14 +19,14 @@ tags:
 <p>A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This function is somewhat similar to the {{Cssxref("box-shadow")}} property. The <code>box-shadow</code> property creates a rectangular shadow behind an element's <em>entire box</em>, while the <code>drop-shadow()</code> filter function creates a shadow that conforms to the shape (alpha channel) of the <em>image itself</em>.</p>
+<p><strong>Note:</strong> This function is somewhat similar to the <a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a> property. The <code>box-shadow</code> property creates a rectangular shadow behind an element's <em>entire box</em>, while the <code>drop-shadow()</code> filter function creates a shadow that conforms to the shape (alpha channel) of the <em>image itself</em>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">drop-shadow(<var>offset-x</var> <var>offset-y</var> <var>blur-radius</var> <var>color</var>)</pre>
 
-<p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the {{cssxref("box-shadow")}} property), with the exception that the <code>inset</code> keyword and <code><var>spread</var></code> parameters are not allowed.</p>
+<p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the <a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a> property), with the exception that the <code>inset</code> keyword and <code><var>spread</var></code> parameters are not allowed.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,7 +36,7 @@ tags:
  <dt><code><var>blur-radius</var></code> <small>(optional)</small></dt>
  <dd>The shadow's blur radius, specified as a {{cssxref("&lt;length&gt;")}}. The larger the value, the larger and more blurred the shadow becomes. If unspecified, it defaults to <code>0</code>, resulting in a sharp, unblurred edge. Negative values are not allowed.</dd>
  <dt><code><var>color</var></code> <small>(optional)</small></dt>
- <dd>The color of the shadow, specified as a {{cssxref("&lt;color&gt;")}}. If unspecified, the value of the {{cssxref("color")}} property is used.</dd>
+ <dd>The color of the shadow, specified as a {{cssxref("&lt;color&gt;")}}. If unspecified, the value of the <a href="/en-US/docs/Web/CSS/color">color</a> property is used.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -73,7 +73,7 @@ drop-shadow(.5rem .5rem 1rem #e23)</pre>
 
 <ul>
  <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>CSS {{cssxref("box-shadow")}} property</li>
+ <li>CSS <a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a> property</li>
  <li>{{cssxref("filter-function/blur", "blur()")}}</li>
  <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
  <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>

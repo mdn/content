@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{cssref}}</div>
 
-<p>The <strong><code>unicode-range</code></strong> CSS descriptor sets the specific range of characters to be used from a font defined by {{cssxref("@font-face")}} and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.</p>
+<p>The <strong><code>unicode-range</code></strong> CSS descriptor sets the specific range of characters to be used from a font defined by <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> and made available for use on the current page. If the page doesn't use any character in this range, the font is not downloaded; if it uses at least one, the whole font is downloaded.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -54,7 +54,7 @@ unicode-range: U+0025-00FF, U+4??; /* multiple values */
 
 <p>In this example we create a simple HTML containing a single {{HTMLElement("div")}} element, including an ampersand, that we want to style with a different font. To make it obvious, we will use a sans-serif font, <em>Helvetica</em>, for the text, and a serif font, <em>Times New Roman</em>, for the ampersand.</p>
 
-<p>In the CSS we are in effect defining a completely separate {{cssxref("@font-face")}} that only includes a single character in it, meaning that only this character will be styled with this font. We could also have done this by wrapping the ampersand in a {{HTMLElement("span")}} and applying a different font just to that, but that is an extra element and rule set.</p>
+<p>In the CSS we are in effect defining a completely separate <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> that only includes a single character in it, meaning that only this character will be styled with this font. We could also have done this by wrapping the ampersand in a {{HTMLElement("span")}} and applying a different font just to that, but that is an extra element and rule set.</p>
 
 <h4 id="HTML">HTML</h4>
 

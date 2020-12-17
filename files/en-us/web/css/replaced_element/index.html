@@ -41,22 +41,22 @@ tags:
 
 <p>HTML spec also says that an {{HTMLElement("input")}} element can be replaced, because {{HTMLElement("input")}} elements of the <code>"image"</code> type are replaced elements similar to {{HTMLElement("img")}}. However, other form controls, including other types of {{HTMLElement("input")}} elements, are explicitly listed as non-replaced elements (the spec describes their default platform-specific rendering with the term "Widgets").</p>
 
-<p>Objects inserted using the CSS {{cssxref("content")}} property are <em>anonymous replaced elements</em>. They are "anonymous" because they don't exist in the HTML markup.</p>
+<p>Objects inserted using the CSS <a href="/en-US/docs/Web/CSS/content">content</a> property are <em>anonymous replaced elements</em>. They are "anonymous" because they don't exist in the HTML markup.</p>
 
 <h2 id="Using_CSS_with_replaced_elements">Using CSS with replaced elements</h2>
 
 <p>CSS handles replaced elements specifically in some cases, like when calculating margins and some <code>auto</code> values.</p>
 
-<p>Note that some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties, such as {{cssxref("vertical-align")}}. Only replaced elements can ever have intrinsic dimensions.</p>
+<p>Note that some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties, such as <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a>. Only replaced elements can ever have intrinsic dimensions.</p>
 
 <h3 id="Controlling_object_position_within_the_content_box">Controlling object position within the content box</h3>
 
 <p>Certain CSS properties can be used to specify how the object contained within the replaced element should be positioned within the element's box area. These are defined by the {{SpecName("CSS3 Images")}} and {{SpecName("CSS4 Images")}} specifications:</p>
 
 <dl>
- <dt>{{cssxref("object-fit")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/object-fit">object-fit</a></dt>
  <dd>Specifies how the replaced element's content object should be fitted to the containing element's box.</dd>
- <dt>{{cssxref("object-position")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/object-position">object-position</a></dt>
  <dd>Specifies the alignment of the replaced element's content object within the element's box.</dd>
 </dl>
 

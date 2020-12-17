@@ -51,30 +51,30 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Added {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow separately specifying the horizontal and vertical offsets at which to draw a background image; these are components of {{cssxref("background-position")}} ({{bug("550426")}}).</li>
- <li>Added support for the <code>round</code> and <code>space</code> keywords to {{cssxref("background-repeat")}} ({{bug("548372")}}).</li>
- <li>On {{cssxref("background-clip")}}, the keyword <code>text</code> is now activated by default ({{bug(1264905)}}).</li>
+ <li>Added <a href="/en-US/docs/Web/CSS/background-position-x">background-position-x</a> and <a href="/en-US/docs/Web/CSS/background-position-y">background-position-y</a>, which allow separately specifying the horizontal and vertical offsets at which to draw a background image; these are components of <a href="/en-US/docs/Web/CSS/background-position">background-position</a> ({{bug("550426")}}).</li>
+ <li>Added support for the <code>round</code> and <code>space</code> keywords to <a href="/en-US/docs/Web/CSS/background-repeat">background-repeat</a> ({{bug("548372")}}).</li>
+ <li>On <a href="/en-US/docs/Web/CSS/background-clip">background-clip</a>, the keyword <code>text</code> is now activated by default ({{bug(1264905)}}).</li>
  <li>Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex <a href="/en-US/docs/Web/CSS/color_value">color</a> values (#RRGGBBAA and #RGBA) ({{bug("567283")}}).</li>
  <li>The pseudo-class {{cssxref(":dir()")}} has been unprefixed ({{bug(859301)}}).</li>
- <li>In our experimental implementation (not yet activated by default) of {{cssxref("clip-path")}}, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ({{bug(1110460)}}).</li>
+ <li>In our experimental implementation (not yet activated by default) of <a href="/en-US/docs/Web/CSS/clip-path">clip-path</a>, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ({{bug(1110460)}}).</li>
  <li>Added the <a href="/en-US/docs/Web/CSS/length#q"><code>q</code> length unit</a> ({{bug(1274526)}}).</li>
- <li>The property {{cssxref("text-align-last")}} has been unprefixed ({{bug(1039541)}}).</li>
- <li>Added support for {{cssxref("overflow-wrap")}}, replacing {{cssxref("word-wrap")}} that is still supported as an alternative name ({{bug(955857)}}).</li>
+ <li>The property <a href="/en-US/docs/Web/CSS/text-align-last">text-align-last</a> has been unprefixed ({{bug(1039541)}}).</li>
+ <li>Added support for <a href="/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</a>, replacing <a href="/en-US/docs/Web/CSS/word-wrap">word-wrap</a> that is still supported as an alternative name ({{bug(955857)}}).</li>
  <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> implementation has been improved:
   <ul>
-   <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, and {{cssxref("grid-column-gap")}} properties ({{bug(1266268)}}).</li>
-   <li>Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> and <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
+   <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a>, <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a>, and <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a> properties ({{bug(1266268)}}).</li>
+   <li>Implemented grid layout support for {{cssxref("align")}}, <a href="/en-US/docs/Web/CSS/justify-self">justify-self</a><code>:baseline</code> and <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
    <li>Implemented grid item baseline content alignment ({{bug(1256429)}}).</li>
   </ul>
  </li>
  <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Masks">CSS Masks</a> implementation has been improved:
   <ul>
-   <li>The {{cssxref("mask-origin")}} property now uses <code>border-box</code> instead of <code>padding-box</code> as initial value, to match the spec ({{bug(1258286)}}).</li>
-   <li>The {{cssxref("mask-repeat")}} property now supports the <code>space</code> and <code>round</code> values ({{bug(1258626)}}).</li>
-   <li>Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ({{bug(1273804)}}).</li>
+   <li>The <a href="/en-US/docs/Web/CSS/mask-origin">mask-origin</a> property now uses <code>border-box</code> instead of <code>padding-box</code> as initial value, to match the spec ({{bug(1258286)}}).</li>
+   <li>The <a href="/en-US/docs/Web/CSS/mask-repeat">mask-repeat</a> property now supports the <code>space</code> and <code>round</code> values ({{bug(1258626)}}).</li>
+   <li>Fixed an issue preventing the <a href="/en-US/docs/Web/CSS/mask-position">mask-position</a> attribute from being animated ({{bug(1273804)}}).</li>
   </ul>
  </li>
- <li>The preference controlling {{cssxref("text-emphasis")}} has been removed, so support for this property can no longer be disabled ({{bug(1229609)}}).</li>
+ <li>The preference controlling <a href="/en-US/docs/Web/CSS/text-emphasis">text-emphasis</a> has been removed, so support for this property can no longer be disabled ({{bug(1229609)}}).</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -295,7 +295,7 @@ tags:
    <li>The outdated <code>-webkit-gradient</code> is supported (and translated to a regular gradient)</li>
   </ul>
  </li>
- <li>The following {{cssxref("display")}} values are translated:
+ <li>The following <a href="/en-US/docs/Web/CSS/display">display</a> values are translated:
   <ul>
    <li><code>-webkit-box</code> to <code>-moz-box</code></li>
    <li><code>-webkit-flex</code> to <code>flex</code></li>

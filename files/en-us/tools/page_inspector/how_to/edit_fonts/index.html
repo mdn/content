@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Size">Size</h3>
 
-<p>The {{cssxref("font-size")}} for the inspected element.</p>
+<p>The <a href="/en-US/docs/Web/CSS/font-size">font-size</a> for the inspected element.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16160/font-size_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 26px; margin: 0px auto; width: 360px;"></p>
 
@@ -78,7 +78,7 @@ tags:
 
 <h3 id="Line_height">Line height</h3>
 
-<p>The {{cssxref("line-height")}} of the inspected element.</p>
+<p>The <a href="/en-US/docs/Web/CSS/line-height">line-height</a> of the inspected element.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16166/line-height_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
 
@@ -90,7 +90,7 @@ tags:
 
 <h3 id="Weight">Weight</h3>
 
-<p>The {{cssxref("font-weight")}} for the inspected element.</p>
+<p>The <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> for the inspected element.</p>
 
 <p><img alt="Font weight setting" src="https://mdn.mozillademos.org/files/16162/font-weight_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
 
@@ -102,7 +102,7 @@ tags:
 
 <h3 id="Italic">Italic</h3>
 
-<p>The {{cssxref("font-style")}} for the inspected element.</p>
+<p>The <a href="/en-US/docs/Web/CSS/font-style">font-style</a> for the inspected element.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16163/font-italic_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
 
@@ -125,7 +125,7 @@ tags:
 <ul>
  <li>The <code>font-family</code> identifier and full name of the font.</li>
  <li>The URL to the font file in the case of web fonts not available on your system, or "System" in the case of fonts loaded from your computer (either default system fonts, or web fonts that you've also got installed on your system). You can copy the URL to the font file by clicking on the icon to the right of the URL.</li>
- <li>The {{cssxref("@font-face")}} descriptor that loads the font into the page, in the case of web fonts. The descriptor is expandable — when opened it shows its full syntax as defined in the stylesheet.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> descriptor that loads the font into the page, in the case of web fonts. The descriptor is expandable — when opened it shows its full syntax as defined in the stylesheet.</li>
  <li>A text sample, to give you an idea of what the font looks like when rendered. The default text for the sample is "Abc" but the preview text can be edited by clicking on the input field at the top of the section and entering a new value. Once entered, all of the sample text will be set to the same custom value.</li>
 </ul>
 
@@ -137,11 +137,11 @@ tags:
 
 <p><a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable Fonts</a>, or <strong>OpenType Font Variations</strong>, define a new font file format that allows the font designer to include multiple variations of a typeface inside a single font file. That means you no longer have to apply several different web fonts to a single page to represent a complete typeface for which a variable font is available, provided it includes the desired values for the different characteristics you want to vary.</p>
 
-<p>Variable fonts make it easy to vary font characteristics in a much more granular fashion because their allowable ranges are defined by <strong>axes of variation</strong> (see <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Introducing_the_'variation_axis'">Introducing the 'variation axis'</a> for more information). For example, {{cssxref("font-weight")}} can be set to any value between 1 and 1000 in variable fonts (although it is not guaranteed that a variable font will support this entire range).</p>
+<p>Variable fonts make it easy to vary font characteristics in a much more granular fashion because their allowable ranges are defined by <strong>axes of variation</strong> (see <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Introducing_the_'variation_axis'">Introducing the 'variation axis'</a> for more information). For example, <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> can be set to any value between 1 and 1000 in variable fonts (although it is not guaranteed that a variable font will support this entire range).</p>
 
 <p>There are several registered axes. Although it isn't required that these axes be defined for every font, if the font designer <em>does </em>implement a registered axis, its behavior <em>must</em> follow the defined behavior.</p>
 
-<p>All variable font axes have a four-character axis tag. The CSS <code>{{cssxref("font-variation-settings")}}</code> property uses the tag as part of the key-value pair. For example, to set {{cssxref("font-weight")}} using <code>font-variation-settings</code>, you could do something like this:</p>
+<p>All variable font axes have a four-character axis tag. The CSS <code><a href="/en-US/docs/Web/CSS/font-variation-settings">font-variation-settings</a></code> property uses the tag as part of the key-value pair. For example, to set <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> using <code>font-variation-settings</code>, you could do something like this:</p>
 
 <pre class="brush: css">font-variation-settings: "wght" 350;</pre>
 
@@ -163,24 +163,24 @@ tags:
  <tbody>
   <tr>
    <td>"wght"</td>
-   <td>{{cssxref("font-weight")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a></td>
   </tr>
   <tr>
    <td>"wdth"</td>
-   <td>{{cssxref("font-stretch")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/font-stretch">font-stretch</a></td>
   </tr>
   <tr>
    <td>"slnt" (slant)</td>
-   <td>{{cssxref("font-style")}}: <code>oblique + angle</code></td>
+   <td><a href="/en-US/docs/Web/CSS/font-style">font-style</a>: <code>oblique + angle</code></td>
   </tr>
   <tr>
    <td>"ital"</td>
-   <td>{{cssxref("font-style")}}: <code>italic</code></td>
+   <td><a href="/en-US/docs/Web/CSS/font-style">font-style</a>: <code>italic</code></td>
   </tr>
   <tr>
    <td>"opsz"</td>
    <td>
-    <p>{{cssxref("font-optical-sizing")}}</p>
+    <p><a href="/en-US/docs/Web/CSS/font-optical-sizing">font-optical-sizing</a></p>
    </td>
   </tr>
  </tbody>
@@ -225,7 +225,7 @@ tags:
 
 <ul>
  <li>When using the Page Inspector's <a href="/en-US/docs/Tools/Page_Inspector/3-pane_mode">3-pane mode</a>, you can view the CSS rules for the inspected element simultaneously alongside the Fonts tab.</li>
- <li>If you hover over the {{cssxref("font-family")}} property in the Rules view, a tooltip shows a sample of the font:
+ <li>If you hover over the <a href="/en-US/docs/Web/CSS/font-family">font-family</a> property in the Rules view, a tooltip shows a sample of the font:
   <p><img alt="" src="https://mdn.mozillademos.org/files/16170/fonts_62_tooltip_cropped.png" style="border: 1px solid black; display: block; height: 153px; margin: 0px auto; width: 450px;"></p>
  </li>
  <li>You'll also notice in the above screenshot that the font in the <code>font-family</code> font stack that is actually applied to the inspected element is underlined. This makes it easy to see exactly what is being applied where, when font stacks are specified.</li>

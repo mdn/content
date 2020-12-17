@@ -54,17 +54,17 @@ grid-template: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>Is a keyword that sets all three longhand properties to <code>none</code>, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.</dd>
+ <dd>Is a keyword that sets all three longhand properties to <code>none</code>, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a> and <a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a> properties.</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Sets {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} to the specified values, and sets {{cssxref("grid-template-areas")}} to <code>none</code>.</dd>
+ <dd>Sets <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a> and <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> to the specified values, and sets <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> to <code>none</code>.</dd>
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
- <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
+ <dd>Sets <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> to the strings listed, <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a> to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
- <p class="note">Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
+ <p class="note">Note: The <a href="/en-US/docs/Web/CSS/repeat">repeat</a> function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
  </dd>
 </dl>
 
-<p class="note"><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
+<p class="note"><strong>Note:</strong> The <a href="/en-US/docs/Web/CSS/grid">grid</a> shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -151,7 +151,7 @@ footer {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}</li>
+ <li>Related CSS properties: <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>, <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a>, <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
  <li>Video tutorial:<em> <a href="http://gridbyexample.com/video/grid-template-shorthand/">Grid Template shorthand</a></em></li>

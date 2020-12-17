@@ -101,7 +101,7 @@ body {
   margin: 0;
 }</pre>
 
-<p>This is just some general setup to set a sans-serif font on our page, use the <code>border-box</code> {{cssxref("box-sizing")}} model, and get rid of the default {{htmlelement("body")}} margin.</p>
+<p>This is just some general setup to set a sans-serif font on our page, use the <code>border-box</code> <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> model, and get rid of the default {{htmlelement("body")}} margin.</p>
 
 <p>Next, add the following just below your previous CSS:</p>
 
@@ -115,7 +115,7 @@ body {
 
 <h3 id="Styling_our_tabs">Styling our tabs</h3>
 
-<p>Now we want to style tabs to look like tabs — basically, these are a horizontal navigation menu, but instead of loading different web pages when they are clicked on like we've seen previously in the course, they cause different panels to be displayed on the same page. First, add the following rule at the bottom of your CSS to remove the default {{cssxref("padding-left")}} and {{cssxref("margin-top")}} from the unordered list:</p>
+<p>Now we want to style tabs to look like tabs — basically, these are a horizontal navigation menu, but instead of loading different web pages when they are clicked on like we've seen previously in the course, they cause different panels to be displayed on the same page. First, add the following rule at the bottom of your CSS to remove the default <a href="/en-US/docs/Web/CSS/padding-left">padding-left</a> and <a href="/en-US/docs/Web/CSS/margin-top">margin-top</a> from the unordered list:</p>
 
 <pre class="brush: css">.info-box ul {
   padding-left: 0;
@@ -126,7 +126,7 @@ body {
 <p><strong>Note</strong>: We are using descendant selectors with <code>.info-box</code> at the start of the chain throughout this example — this is so that we can insert this feature into a page with other content already on it, without fear of interfering with the styles applied to other parts of the page.</p>
 </div>
 
-<p>Next, we'll style the horizontal tabs — the list items are all floated left to make them sit in a line together, their {{cssxref("list-style-type")}} is set to <code>none</code> to get rid of the bullets, and their {{cssxref("width")}} is set to <code>150px</code> so they will comfortably fit across the info-box. The {{htmlelement("a")}} elements are set to {{cssxref("display")}} inline-block so they will sit in a line but still be stylable, and they are styled appropriately for tab buttons, using a variety of other properties.</p>
+<p>Next, we'll style the horizontal tabs — the list items are all floated left to make them sit in a line together, their <a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a> is set to <code>none</code> to get rid of the bullets, and their <a href="/en-US/docs/Web/CSS/width">width</a> is set to <code>150px</code> so they will comfortably fit across the info-box. The {{htmlelement("a")}} elements are set to <a href="/en-US/docs/Web/CSS/display">display</a> inline-block so they will sit in a line but still be stylable, and they are styled appropriately for tab buttons, using a variety of other properties.</p>
 
 <p>Add the following CSS:</p>
 
@@ -162,7 +162,7 @@ body {
 
 <p>The next job is to style our panels. Let's get going!</p>
 
-<p>First, of all, add the following rule to style the <code>.panels</code> {{htmlelement("div")}} container. Here we simply set a fixed {{cssxref("height")}} to make sure the panels fit snugly inside the info-box, {{cssxref("position")}} <code>relative</code> to set the {{htmlelement("div")}} as the positioning context, so you can then place positioned child elements relative to it and not the {{htmlelement("html")}} element, and finally we {{cssxref("clear")}} the float set in the CSS above so that it doesn't interfere with the remainder of the layout.</p>
+<p>First, of all, add the following rule to style the <code>.panels</code> {{htmlelement("div")}} container. Here we simply set a fixed <a href="/en-US/docs/Web/CSS/height">height</a> to make sure the panels fit snugly inside the info-box, <a href="/en-US/docs/Web/CSS/position">position</a> <code>relative</code> to set the {{htmlelement("div")}} as the positioning context, so you can then place positioned child elements relative to it and not the {{htmlelement("html")}} element, and finally we <a href="/en-US/docs/Web/CSS/clear">clear</a> the float set in the CSS above so that it doesn't interfere with the remainder of the layout.</p>
 
 <pre class="brush: css">.info-box .panels {
   height: 352px;
@@ -170,9 +170,9 @@ body {
   clear: both;
 }</pre>
 
-<p>Finally for this section, we will style the individual {{htmlelement("article")}} elements that comprise our panels. The first rule we'll add will absolutely {{cssxref("position")}} the panels, and make them all sit flush to the {{cssxref("top")}} and {{cssxref("left")}} of their {{htmlelement("div")}} container — this part is absolutely key to this whole layout feature, as it makes the panels sit on top of one another. The rule also gives the panels the same set height as the container, and gives the content some padding, a text {{cssxref("color")}}, and a {{cssxref("background-color")}}.</p>
+<p>Finally for this section, we will style the individual {{htmlelement("article")}} elements that comprise our panels. The first rule we'll add will absolutely <a href="/en-US/docs/Web/CSS/position">position</a> the panels, and make them all sit flush to the <a href="/en-US/docs/Web/CSS/top">top</a> and <a href="/en-US/docs/Web/CSS/left">left</a> of their {{htmlelement("div")}} container — this part is absolutely key to this whole layout feature, as it makes the panels sit on top of one another. The rule also gives the panels the same set height as the container, and gives the content some padding, a text <a href="/en-US/docs/Web/CSS/color">color</a>, and a <a href="/en-US/docs/Web/CSS/background-color">background-color</a>.</p>
 
-<p>The second rule we'll add here makes it so that a panel with a <code>class</code> of <code>active-panel</code> set on it will have a {{cssxref("z-index")}} of 1 applied to it, which will make it sit above the other panels (positioned elements have a <code>z-index</code> of 0 by default, which would put them below). Again, we'll add this class using JavaScript at the appropriate time.</p>
+<p>The second rule we'll add here makes it so that a panel with a <code>class</code> of <code>active-panel</code> set on it will have a <a href="/en-US/docs/Web/CSS/z-index">z-index</a> of 1 applied to it, which will make it sit above the other panels (positioned elements have a <code>z-index</code> of 0 by default, which would put them below). Again, we'll add this class using JavaScript at the appropriate time.</p>
 
 <pre class="brush: css">.info-box article {
   position: absolute;
@@ -224,9 +224,9 @@ function setTabHandler(tab, tabPos) {
  <li>In the <code>setTabHandler()</code> function, the tab has an <code>onclick</code> event handler set on it, so that when the tab is clicked, the following occurs:
   <ul>
    <li>A <code>for</code> loop is used to cycle through all the tabs and remove any classes that are present on them.</li>
-   <li>A <code>class</code> of <code>active</code> is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.</li>
+   <li>A <code>class</code> of <code>active</code> is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same <a href="/en-US/docs/Web/CSS/color">color</a> and <a href="/en-US/docs/Web/CSS/background-color">background-color</a> on the tab as the panels are styled with.</li>
    <li>A <code>for</code> loop is used to cycle through all the panels and remove any classes that are present on them.</li>
-   <li>A class of <code>active-panel</code> is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its {{cssxref("z-index")}} to 1, making it appear over the top of the other panels.</li>
+   <li>A class of <code>active-panel</code> is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its <a href="/en-US/docs/Web/CSS/z-index">z-index</a> to 1, making it appear over the top of the other panels.</li>
   </ul>
  </li>
 </ul>
@@ -267,7 +267,7 @@ function setTabHandler(tab, tabPos) {
 
 <h3 id="Changes_to_the_existing_CSS">Changes to the existing CSS</h3>
 
-<p>Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your <code>.info-box</code> rule to get rid of <code>margin: 0 auto;</code> (we no longer want the info-box centered), add {{cssxref("position")}}<code>: fixed;</code>, and stick it to the {{cssxref("top")}} of the browser viewport.</p>
+<p>Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your <code>.info-box</code> rule to get rid of <code>margin: 0 auto;</code> (we no longer want the info-box centered), add <a href="/en-US/docs/Web/CSS/position">position</a><code>: fixed;</code>, and stick it to the <a href="/en-US/docs/Web/CSS/top">top</a> of the browser viewport.</p>
 
 <p>It should now look like this:</p>
 
@@ -290,7 +290,7 @@ function setTabHandler(tab, tabPos) {
   margin-left: 470px;
 }</pre>
 
-<p>To start with, we give the content the same {{cssxref("background-color")}}, {{cssxref("color")}}, and {{cssxref("padding")}} as the info-box panels. We then give it a large {{cssxref("margin-left")}} to move it over to the right, making space for the info-box to sit in, so it is not overlapping anything else.</p>
+<p>To start with, we give the content the same <a href="/en-US/docs/Web/CSS/background-color">background-color</a>, <a href="/en-US/docs/Web/CSS/color">color</a>, and <a href="/en-US/docs/Web/CSS/padding">padding</a> as the info-box panels. We then give it a large <a href="/en-US/docs/Web/CSS/margin-left">margin-left</a> to move it over to the right, making space for the info-box to sit in, so it is not overlapping anything else.</p>
 
 <p>This marks the end of the second example; we hope you'll find the third just as interesting.</p>
 
@@ -347,13 +347,13 @@ input[type="checkbox"] {
 <p>The first rule styles the <code>&lt;label&gt;</code>; here we've:</p>
 
 <ul>
- <li>Set a large {{cssxref("font-size")}} to make the icon nice and big.</li>
- <li>Set {{cssxref("position")}} <code>absolute</code> on it, and used {{cssxref("top")}} and {{cssxref("right")}} to position it nicely in the top-right corner.</li>
- <li>Set a {{cssxref("z-index")}} of 1 on it — this is so that when the info panel is styled and shown, it doesn't cover up the icon; instead the icon will sit on top of it so it can be pressed again to hide the info pane.</li>
- <li>Used the {{cssxref("cursor")}} property to change the mouse cursor when it is hovering over the icon to a hand pointer (like the one you see when links are hovered over), as an extra visual clue to users that the icon does something interesting.</li>
+ <li>Set a large <a href="/en-US/docs/Web/CSS/font-size">font-size</a> to make the icon nice and big.</li>
+ <li>Set <a href="/en-US/docs/Web/CSS/position">position</a> <code>absolute</code> on it, and used <a href="/en-US/docs/Web/CSS/top">top</a> and <a href="/en-US/docs/Web/CSS/right">right</a> to position it nicely in the top-right corner.</li>
+ <li>Set a <a href="/en-US/docs/Web/CSS/z-index">z-index</a> of 1 on it — this is so that when the info panel is styled and shown, it doesn't cover up the icon; instead the icon will sit on top of it so it can be pressed again to hide the info pane.</li>
+ <li>Used the <a href="/en-US/docs/Web/CSS/cursor">cursor</a> property to change the mouse cursor when it is hovering over the icon to a hand pointer (like the one you see when links are hovered over), as an extra visual clue to users that the icon does something interesting.</li>
 </ul>
 
-<p>The second rule sets {{cssxref("position")}} <code>absolute</code> on the actual checkbox <code>&lt;input&gt;</code> element, and hides it off the top of the screen. We don't actually want to see this on our UI.</p>
+<p>The second rule sets <a href="/en-US/docs/Web/CSS/position">position</a> <code>absolute</code> on the actual checkbox <code>&lt;input&gt;</code> element, and hides it off the top of the screen. We don't actually want to see this on our UI.</p>
 
 <h3 id="Styling_the_panel">Styling the panel</h3>
 
@@ -377,11 +377,11 @@ input[type="checkbox"] {
 <p>There's a lot going on here — let's discuss it bit by bit:</p>
 
 <ul>
- <li>First, we set some simple {{cssxref("background-color")}} and {{cssxref("color")}} on the info box.</li>
- <li>Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.</li>
- <li>We also include some horizontal {{cssxref("padding")}} to space it out a bit.</li>
- <li>Next we set {{cssxref("position")}}<code>: fixed;</code> on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.</li>
- <li>Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the <code>&lt;label&gt;</code> will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...</li>
+ <li>First, we set some simple <a href="/en-US/docs/Web/CSS/background-color">background-color</a> and <a href="/en-US/docs/Web/CSS/color">color</a> on the info box.</li>
+ <li>Next, we set a fixed <a href="/en-US/docs/Web/CSS/width">width</a> on the panel, and make its <a href="/en-US/docs/Web/CSS/height">height</a> the entire height of the browser viewport.</li>
+ <li>We also include some horizontal <a href="/en-US/docs/Web/CSS/padding">padding</a> to space it out a bit.</li>
+ <li>Next we set <a href="/en-US/docs/Web/CSS/position">position</a><code>: fixed;</code> on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the <a href="/en-US/docs/Web/CSS/top">top</a> of the viewport, and set it so that by default it is offscreen to the <a href="/en-US/docs/Web/CSS/right">right</a>.</li>
+ <li>Finally, we set a <a href="/en-US/docs/Web/CSS/transition">transition</a> on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the <code>&lt;label&gt;</code> will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...</li>
 </ul>
 
 <h3 id="Setting_the_checked_state">Setting the checked state</h3>
@@ -392,7 +392,7 @@ input[type="checkbox"] {
   right: 0px;
 }</pre>
 
-<p>The selector is pretty complex here — we are selecting the <code>&lt;aside&gt;</code> element adjacent to the <code>&lt;input&gt;</code> element, but only when it is checked (note the use of the {{cssxref(":checked")}} pseudo-class to achieve this). When this is the case, we are setting the {{cssxref("right")}} property of the <code>&lt;aside&gt;</code> to <code>0px</code>, which causes the panel to appear on the screen again (smoothly due to the transition). Clicking the label again unchecks the checkbox, which hides the panel again.</p>
+<p>The selector is pretty complex here — we are selecting the <code>&lt;aside&gt;</code> element adjacent to the <code>&lt;input&gt;</code> element, but only when it is checked (note the use of the {{cssxref(":checked")}} pseudo-class to achieve this). When this is the case, we are setting the <a href="/en-US/docs/Web/CSS/right">right</a> property of the <code>&lt;aside&gt;</code> to <code>0px</code>, which causes the panel to appear on the screen again (smoothly due to the transition). Clicking the label again unchecks the checkbox, which hides the panel again.</p>
 
 <p>So there you have it — a rather clever JavaScript-free way to create a toggling button effect. This will work in IE9 and above (the smooth transition will work in IE10 and above.) This effect does have some concerns — this is a bit of an abuse of form elements, as they weren't intended for this purpose. In addition, the effect is not great in terms of accessibility; the label is not focusable by default, and the non-semantic use of the form elements could cause issues with screen readers. JavaScript and a link or button might be more appropriate, but it is still fun to experiment with.</p>
 

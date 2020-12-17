@@ -18,9 +18,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>max-block-size</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}.</span> That is, if the writing direction is horizontal, then <code>max-block-size</code> is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, <code>max-block-size</code> is the same as {{cssxref("max-width")}}.</p>
+<p><span class="seoSummary">The <code><strong>max-block-size</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a>.</span> That is, if the writing direction is horizontal, then <code>max-block-size</code> is equivalent to <a href="/en-US/docs/Web/CSS/max-height">max-height</a>; if the writing direction is vertical, <code>max-block-size</code> is the same as <a href="/en-US/docs/Web/CSS/max-width">max-width</a>.</p>
 
-<p>The other dimension's maximum length is specified using the {{cssxref("max-inline-size")}} property.</p>
+<p>The other dimension's maximum length is specified using the <a href="/en-US/docs/Web/CSS/max-inline-size">max-inline-size</a> property.</p>
 
 <p>This is useful because the <code>max-width</code> is always used for horizontal sizes and <code>max-height</code> is always used for vertical sizes, and if you need to set lengths based on the size of your text content, you need to be able to do so with the writing direction in mind.</p>
 
@@ -53,7 +53,7 @@ max-block-size: unset;
 
 <h3 id="Values">Values</h3>
 
-<p>The <code>max-block-size</code> property's value can be any value that's legal for the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties:</p>
+<p>The <code>max-block-size</code> property's value can be any value that's legal for the <a href="/en-US/docs/Web/CSS/max-width">max-width</a> and <a href="/en-US/docs/Web/CSS/max-height">max-height</a> properties:</p>
 
 <p>{{page("/en-US/docs/Web/CSS/max-width", "Values")}}</p>
 
@@ -71,11 +71,11 @@ max-block-size: unset;
  <tbody>
   <tr>
    <td><code>horizontal-tb</code>, <code>lr</code> {{deprecated_inline}}, <code>lr-tb</code> {{deprecated_inline}}, <code>rl</code> {{deprecated_inline}}, <code>rb</code> {{deprecated_inline}}, <code>rb-rl</code> {{deprecated_inline}}</td>
-   <td>{{cssxref("max-height")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/max-height">max-height</a></td>
   </tr>
   <tr>
    <td><code>vertical-rl</code>, <code>vertical-lr</code>, <code>sideways-rl</code> {{experimental_inline}}, <code>sideways-lr</code> {{experimental_inline}}, <code>tb</code> {{deprecated_inline}}, <code>tb-rl</code> {{deprecated_inline}}</td>
-   <td>{{cssxref("max-width")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/max-width">max-width</a></td>
   </tr>
  </tbody>
 </table>
@@ -102,11 +102,11 @@ max-block-size: unset;
 
 <p>In this example, the same text (the opening sentences from {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} novel <em>{{interwiki("wikipedia", "Moby-Dick")}}</em>) is presented in both the <code>horizontal-tb</code> and <code>vertical-rl</code> writing modes.</p>
 
-<p>Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.</p>
+<p>Everything else about the two boxes is identical, including the values used for <a href="/en-US/docs/Web/CSS/max-block-size">max-block-size</a>.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<p>The HTML simply establishes the two {{HTMLElement("div")}} blocks that will be presented with their {{cssxref("writing-mode")}} set using the classes <code>horizontal</code> or <code>vertical</code>. Both boxes share the <code>standard-box</code> class, which simply establishes coloring, padding, and their respective values of <code>max-block-size</code>.</p>
+<p>The HTML simply establishes the two {{HTMLElement("div")}} blocks that will be presented with their <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a> set using the classes <code>horizontal</code> or <code>vertical</code>. Both boxes share the <code>standard-box</code> class, which simply establishes coloring, padding, and their respective values of <code>max-block-size</code>.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Writing mode &lt;code&gt;horizontal-tb&lt;/code&gt; (the default):&lt;/p&gt;
 &lt;div class="standard-box horizontal"&gt;
@@ -134,7 +134,7 @@ max-block-size: unset;
 
 <p>The CSS defines three classes. The first, <code>standard-box</code>, is applied to both boxes, as seen above. It provides standard styling including the minimum and maximum block sizes, font size, and so forth.</p>
 
-<p>After that come the classes <code>horizontal</code> and <code>vertical</code>, which add the {{cssxref("writing-mode")}} property to the box, with the value set to <code>horizontal-tb</code> or <code>vertical-rl</code> depending on which class is used.</p>
+<p>After that come the classes <code>horizontal</code> and <code>vertical</code>, which add the <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a> property to the box, with the value set to <code>horizontal-tb</code> or <code>vertical-rl</code> depending on which class is used.</p>
 
 <pre class="brush: css notranslate">.standard-box {
   padding: 4px;
@@ -186,7 +186,7 @@ max-block-size: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}</li>
- <li>Setting the other direction's maximum size: {{cssxref("max-inline-size")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
+ <li>The mapped physical properties: <a href="/en-US/docs/Web/CSS/max-width">max-width</a> and <a href="/en-US/docs/Web/CSS/max-height">max-height</a></li>
+ <li>Setting the other direction's maximum size: <a href="/en-US/docs/Web/CSS/max-inline-size">max-inline-size</a></li>
+ <li><a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a></li>
 </ul>

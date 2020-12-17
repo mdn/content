@@ -35,7 +35,7 @@ tags:
 
 <p>If you create columns using multi-column layout your text will remain as a continuous stream filling each column in turn. The columns must all be the same size, and you are unable to target an individual column or the content of an individual column.</p>
 
-<p>You can control the gaps between columns with the {{cssxref("column-gap")}} property, and add a rule between columns using {{cssxref("column-rule")}}.</p>
+<p>You can control the gaps between columns with the <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a> property, and add a rule between columns using <a href="/en-US/docs/Web/CSS/column-rule">column-rule</a>.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}</p>
 
@@ -53,9 +53,9 @@ tags:
 
 <h3 id="A_single_row_of_items_with_equal_heights_—_flexbox">A single row of items with equal heights — flexbox</h3>
 
-<p>Flexbox can be used to break content into columns by setting {{cssxref("flex-direction")}} to <code>row</code>, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.</p>
+<p>Flexbox can be used to break content into columns by setting <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> to <code>row</code>, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.</p>
 
-<p>There is currently no way to add a rule between flex items, and browser support for the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties is limited. Therefore to create gaps between items use a margin.</p>
+<p>There is currently no way to add a rule between flex items, and browser support for the <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a> and <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a> properties is limited. Therefore to create gaps between items use a margin.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}</p>
 
@@ -63,7 +63,7 @@ tags:
 <p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html">Download this example</a></p>
 </div>
 
-<p>Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to <code>wrap</code>. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.</p>
+<p>Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the <a href="/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> property on the container to <code>wrap</code>. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}</p>
 

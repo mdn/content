@@ -17,7 +17,7 @@ tags:
 <p>The CSS Writing Modes Level 3 Specification defines the impact a change the document writing mode has on flow layout. In the writing modes introduction, <a href="https://drafts.csswg.org/css-writing-modes-3/#text-flow">the specification says</a>,</p>
 
 <blockquote>
-<p>“A writing mode in CSS is determined by the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties. It is defined primarily in terms of its inline base direction and block flow direction.”</p>
+<p>“A writing mode in CSS is determined by the <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a>, <a href="/en-US/docs/Web/CSS/direction">direction</a>, and <a href="/en-US/docs/Web/CSS/text-orientation">text-orientation</a> properties. It is defined primarily in terms of its inline base direction and block flow direction.”</p>
 </blockquote>
 
 <p>The specification defines the <em>inline base direction</em> as the direction in which content is ordered on a line. This defines the start and end of the inline direction. The start is where sentences start and the end is where a line of text ends before it would begin to wrap onto a new line.</p>
@@ -30,7 +30,7 @@ tags:
 
 <h2 id="The_writing-mode_property_and_block_flow">The <code>writing-mode</code> property and block flow</h2>
 
-<p>The {{cssxref("writing-mode")}} property accepts the values <code>horizontal-tb</code>, <code>vertical-rl</code> and <code>vertical-lr</code>. These values control the direction that blocks flow on the page. The initial value is <code>horizontal-tb,</code> which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all <code>horizontal-tb</code>.</p>
+<p>The <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a> property accepts the values <code>horizontal-tb</code>, <code>vertical-rl</code> and <code>vertical-lr</code>. These values control the direction that blocks flow on the page. The initial value is <code>horizontal-tb,</code> which is a top to bottom block flow direction with a horizontal inline direction. Left to right languages, such as English, and Right to left languages. such as Arabic, are all <code>horizontal-tb</code>.</p>
 
 <p>The following example shows blocks using <code>horizontal-tb</code>.</p>
 
@@ -66,7 +66,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}</p>
 
-<p>Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an <code>inline-size</code> of 100px, it doesn’t matter whether we are in a horizontal or a vertical writing mode, <code>inline-size</code> will always mean the size in the inline direction.</p>
+<p>Therefore, we have new properties of <a href="/en-US/docs/Web/CSS/block-size">block-size</a> and <a href="/en-US/docs/Web/CSS/inline-size">inline-size</a>. If we give our block an <code>inline-size</code> of 100px, it doesn’t matter whether we are in a horizontal or a vertical writing mode, <code>inline-size</code> will always mean the size in the inline direction.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}</p>
 

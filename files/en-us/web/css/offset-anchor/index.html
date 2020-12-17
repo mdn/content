@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{cssref}}</div>
 
-<p>The <strong><code>offset-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.</p>
+<p>The <strong><code>offset-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the point inside the box of an element travelling along an <a href="/en-US/docs/Web/CSS/offset-path">offset-path</a> that is actually moving along the path.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/offset-anchor.html")}}</div>
 
@@ -47,9 +47,9 @@ offset-anchor: unset;</pre>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd><code>offset-anchor</code> is given the same value as the element's {{cssxref("transform-origin")}}, unless {{cssxref("offset-path")}} is <code>none</code>, in which case it takes its value from {{cssxref("offset-position")}}.</dd>
+ <dd><code>offset-anchor</code> is given the same value as the element's <a href="/en-US/docs/Web/CSS/transform-origin">transform-origin</a>, unless <a href="/en-US/docs/Web/CSS/offset-path">offset-path</a> is <code>none</code>, in which case it takes its value from <a href="/en-US/docs/Web/CSS/offset-position">offset-position</a>.</dd>
  <dt><code>&lt;position&gt;</code></dt>
- <dd>A {{cssxref("&lt;position&gt;")}} defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. For more specifics, see the {{cssxref("&lt;position&gt;")}} and {{cssxref("background-position")}} reference pages. Note that the 3-value position syntax does not work for any usage of <code>&lt;position&gt;</code>, except for in <code>background(-position)</code>.</dd>
+ <dd>A {{cssxref("&lt;position&gt;")}} defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. For more specifics, see the {{cssxref("&lt;position&gt;")}} and <a href="/en-US/docs/Web/CSS/background-position">background-position</a> reference pages. Note that the 3-value position syntax does not work for any usage of <code>&lt;position&gt;</code>, except for in <code>background(-position)</code>.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -64,7 +64,7 @@ offset-anchor: unset;</pre>
 
 <h3 id="Setting_various_offset-anchor_values">Setting various offset-anchor values</h3>
 
-<p>In the following example, we have three {{htmlelement("div")}} elements nested in {{htmlelement("section")}} elements. Each <code>&lt;div&gt;</code> is given the same {{cssxref("offset-path")}} (a horizontal line 200 pixels long) and animated to move along it. The three are then given different {{cssxref("background-color")}} and <code>offset-anchor</code> values. </p>
+<p>In the following example, we have three {{htmlelement("div")}} elements nested in {{htmlelement("section")}} elements. Each <code>&lt;div&gt;</code> is given the same <a href="/en-US/docs/Web/CSS/offset-path">offset-path</a> (a horizontal line 200 pixels long) and animated to move along it. The three are then given different <a href="/en-US/docs/Web/CSS/background-color">background-color</a> and <code>offset-anchor</code> values. </p>
 
 <p>Each <code>&lt;section&gt;</code> has been styled with a linear gradient to give it a horizontal line running through its center, to give you a visual display of where the <code>&lt;div&gt;</code>'s offset paths are running.</p>
 
@@ -153,8 +153,8 @@ section {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/offset">offset</a></li>
+ <li><a href="/en-US/docs/Web/CSS/offset-distance">offset-distance</a></li>
  <li>{{cssxref("offset-rotation")}}</li>
  <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG <code>&lt;path&gt; </code></a></li>
 </ul>

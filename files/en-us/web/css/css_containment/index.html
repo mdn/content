@@ -59,7 +59,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 	<li><code>float</code> layout will be performed independently.</li>
 	<li>Margins won't collapse across a layout containment boundary</li>
 	<li>The layout container will be a containing block for <code>absolute</code>/<code>fixed</code> position descendants.</li>
-	<li>The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.</li>
+	<li>The containing box creates a stacking context, therefore <a href="/en-US/docs/Web/CSS/z-index">z-index</a> can be used.</li>
 </ul>
 
 <h3 id="Paint_containment">Paint containment</h3>
@@ -90,7 +90,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 <p>Despite the name, style containment does not provide scoped styles such as you would get with the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. The main use case is to prevent situations where a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS Counter</a> could be changed in an element, which could then affect the rest of the tree. </p>
 
-<p>Using <code>contain: style</code> would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.</p>
+<p>Using <code>contain: style</code> would ensure that the <a href="/en-US/docs/Web/CSS/counter-increment">counter-increment</a> and <a href="/en-US/docs/Web/CSS/counter-set">counter-set</a> properties created new counters scoped to that subtree only.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code>style</code> containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).</p>

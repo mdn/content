@@ -10,7 +10,7 @@ tags:
 
 <h2 id="Naming_a_grid_area">Naming a grid area</h2>
 
-<p>You have already encountered the {{cssxref("grid-area")}} property. This is the property that can take as a value all four of the lines used to position a grid area.</p>
+<p>You have already encountered the <a href="/en-US/docs/Web/CSS/grid-area">grid-area</a> property. This is the property that can take as a value all four of the lines used to position a grid area.</p>
 
 <pre class="brush: css notranslate">.box1 {
    grid-area: 1 / 1 / 4 / 2;
@@ -21,7 +21,7 @@ tags:
 
 <p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
 
-<p>We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.</p>
+<p>We can also define an area by giving it a name and then specify the location of that area in the value of the <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.</p>
 
 <ul>
  <li>a header</li>
@@ -32,7 +32,7 @@ tags:
 
 <p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
 
-<p>With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.</p>
+<p>With the <a href="/en-US/docs/Web/CSS/grid-area">grid-area</a> property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.</p>
 
 <div id="Grid_Area_1">
 <pre class="brush: css notranslate">.header {
@@ -93,7 +93,7 @@ tags:
 <p>{{ EmbedLiveSample('Grid_Area_1', '300', '330') }}</p>
 </div>
 
-<p>Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the {{cssxref("grid-template-areas")}} property.</p>
+<p>Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> property.</p>
 
 <h2 id="Leaving_a_grid_cell_empty">Leaving a grid cell empty</h2>
 
@@ -219,7 +219,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Spanning_multiple_cells', '300', '330') }}</p>
 
-<p>The value of {{cssxref("grid-template-areas")}} must show a complete grid, otherwise it is invalid (and the property is ignored). This means that you must have the same number of cells for each row, if empty with a full stop character demonstrating that the cell is to be left empty. You will also create an invalid grid if your areas are not rectangular.</p>
+<p>The value of <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> must show a complete grid, otherwise it is invalid (and the property is ignored). This means that you must have the same number of cells for each row, if empty with a full stop character demonstrating that the cell is to be left empty. You will also create an invalid grid if your areas are not rectangular.</p>
 
 <h2 id="Redefining_the_grid_using_media_queries">Redefining the grid using media queries</h2>
 
@@ -308,7 +308,7 @@ tags:
 
 <h2 id="Using_grid-template-areas_for_UI_elements">Using <code>grid-template-areas</code> for UI elements</h2>
 
-<p>Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.</p>
+<p>Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> can be especially nice as it is easy to see in the code what your element looks like.</p>
 
 <p>As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.</p>
 
@@ -358,7 +358,7 @@ tags:
 
 <h3 id="Displaying_the_image_on_the_other_side_of_the_box">Displaying the image on the other side of the box</h3>
 
-<p>We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the <code>1fr</code> track last, and simply flip the values in {{cssxref("grid-template-areas")}}.</p>
+<p>We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the <code>1fr</code> track last, and simply flip the values in <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>.</p>
 
 <div id="Media_2">
 <pre class="brush: css notranslate">* {box-sizing: border-box;}
@@ -415,17 +415,17 @@ tags:
 
 <h3 id="grid-template"><code>grid-template</code></h3>
 
-<p>The {{cssxref("grid-template")}} property sets the following properties:</p>
+<p>The <a href="/en-US/docs/Web/CSS/grid-template">grid-template</a> property sets the following properties:</p>
 
 <ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
 </ul>
 
 <p>The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.</p>
 
-<p>The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.</p>
+<p>The following code creates a layout using <a href="/en-US/docs/Web/CSS/grid-template">grid-template</a> that is the same as the layout created earlier in this guide.</p>
 
 <pre class="brush: css notranslate">.wrapper {
     display: grid;
@@ -443,18 +443,18 @@ tags:
 
 <h3 id="grid"><code>grid</code></h3>
 
-<p>The {{cssxref("grid")}} shorthand goes a step further and also sets properties used by the implicit grid. So you will be setting:</p>
+<p>The <a href="/en-US/docs/Web/CSS/grid">grid</a> shorthand goes a step further and also sets properties used by the implicit grid. So you will be setting:</p>
 
 <ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid-auto-flow")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
 </ul>
 
-<p>You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand, just be aware than when doing so you will reset the other values set by the property.</p>
+<p>You can use this syntax in the exact same way as the <a href="/en-US/docs/Web/CSS/grid-template">grid-template</a> shorthand, just be aware than when doing so you will reset the other values set by the property.</p>
 
 <pre class="brush: css notranslate">.wrapper {
     display: grid;

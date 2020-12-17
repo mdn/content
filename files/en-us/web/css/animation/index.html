@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>animation</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property applies an animation between styles.</span> It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.</p>
+<p><span class="seoSummary">The <strong><code>animation</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property applies an animation between styles.</span> It is a shorthand for <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a>, <a href="/en-US/docs/Web/CSS/animation-duration">animation-duration</a>, <a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a>, <a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a>, <a href="/en-US/docs/Web/CSS/animation-iteration-count">animation-iteration-count</a>, <a href="/en-US/docs/Web/CSS/animation-direction">animation-direction</a>, <a href="/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a>, and <a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/animation.html")}}</div>
 
@@ -239,21 +239,21 @@ button.restart {
 	<li>zero, one, or two {{cssxref("&lt;time&gt;")}} values</li>
 </ul>
 
-<p>The order of values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.</p>
+<p>The order of values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the <a href="/en-US/docs/Web/CSS/animation-duration">animation-duration</a>, and the second one is assigned to <a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a>.</p>
 
-<p>The order within each animation definition is also important for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsed, keywords that are valid for properties other than {{cssxref("animation-name")}}, and whose values were not found earlier in the shorthand, must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.</p>
+<p>The order within each animation definition is also important for distinguishing <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> values from other keywords. When parsed, keywords that are valid for properties other than <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a>, and whose values were not found earlier in the shorthand, must be accepted for those properties rather than for <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a>. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> that could be a value of another property, and may be output in additional cases.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
 	<dt><code id="&lt;single-animation-iteration-count>">&lt;single-animation-iteration-count&gt;</code></dt>
-	<dd>The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.</dd>
+	<dd>The number of times the animation is played. The value must be one of those available in <a href="/en-US/docs/Web/CSS/animation-iteration-count">animation-iteration-count</a>.</dd>
 	<dt id="&lt;single-animation-direction>"><code>&lt;single-animation-direction&gt;</code></dt>
-	<dd>The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.</dd>
+	<dd>The direction in which the animation is played. The value must be one of those available in <a href="/en-US/docs/Web/CSS/animation-direction">animation-direction</a>.</dd>
 	<dt id="&lt;single-animation-fill-mode>"><code>&lt;single-animation-fill-mode&gt;</code></dt>
-	<dd>Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.</dd>
+	<dd>Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in <a href="/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a>.</dd>
 	<dt id="&lt;single-animation-play-state>"><code>&lt;single-animation-play-state&gt;</code></dt>
-	<dd>Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.</dd>
+	<dd>Determines whether the animation is playing or not. The value must be one of those available in <a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a>.</dd>
 </dl>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
@@ -355,7 +355,7 @@ button.restart {
 <ul>
 	<li>Gecko has a bug whereby when you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}). This has been fixed in Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57).</li>
 	<li>Another Gecko bug means that {{htmlelement("details")}} elements can't be made open by default using the <code>open</code> attribute if they have an animation active on them ({{bug(1382124)}}). Quantum CSS fixes this.</li>
-	<li>A further bug means that animations using em units are not affected by changes to the {{cssxref("font-size")}} on the animated element's parent, whereas they should be ({{bug(1254424)}}). Quantum CSS fixes this.</li>
+	<li>A further bug means that animations using em units are not affected by changes to the <a href="/en-US/docs/Web/CSS/font-size">font-size</a> on the animated element's parent, whereas they should be ({{bug(1254424)}}). Quantum CSS fixes this.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

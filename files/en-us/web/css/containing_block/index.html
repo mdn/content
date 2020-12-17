@@ -34,11 +34,11 @@ tags:
 
 <p>Before learning what determines the containing block of an element, it's useful to know why it matters in the first place.</p>
 
-<p>The size and position of an element are often impacted by its containing block. Percentage values that are applied to the {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, and offset properties of an absolutely positioned element (i.e., which has its {{cssxref("position")}} set to <code>absolute</code> or <code>fixed</code>) are computed from the element's containing block.</p>
+<p>The size and position of an element are often impacted by its containing block. Percentage values that are applied to the <a href="/en-US/docs/Web/CSS/width">width</a>, <a href="/en-US/docs/Web/CSS/height">height</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, <a href="/en-US/docs/Web/CSS/margin">margin</a>, and offset properties of an absolutely positioned element (i.e., which has its <a href="/en-US/docs/Web/CSS/position">position</a> set to <code>absolute</code> or <code>fixed</code>) are computed from the element's containing block.</p>
 
 <h2 id="Identifying_the_containing_block">Identifying the containing block</h2>
 
-<p>The process for identifying the containing block depends entirely on the value of the element's {{cssxref("position")}} property:</p>
+<p>The process for identifying the containing block depends entirely on the value of the element's <a href="/en-US/docs/Web/CSS/position">position</a> property:</p>
 
 <ol start="1">
  <li>If the <code>position</code> property is <code><strong>static</strong></code>, <code><strong>relative</strong></code>, or <strong><code>sticky</code></strong>, the containing block is formed by the edge of the <em>content box</em> of the nearest ancestor element that is either <strong>a block container</strong> (such as an inline-block, block, or list-item element) or <strong>establishes a formatting context</strong> (such as a table container, flex container, grid container, or the block container itself).</li>
@@ -46,9 +46,9 @@ tags:
  <li>If the <code>position</code> property is <code><strong>fixed</strong></code>, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).</li>
  <li>If the <code>position</code> property is <code><strong>absolute</strong></code> or <code><strong>fixed</strong></code>, the containing block may also be formed by the edge of the <em>padding box</em> of the nearest ancestor element that has the following:
   <ol start="1">
-   <li>A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than <code>none</code></li>
-   <li>A {{cssxref("will-change")}} value of <code>transform</code> or <code>perspective</code></li>
-   <li>A {{cssxref("filter")}} value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox).</li>
+   <li>A <a href="/en-US/docs/Web/CSS/transform">transform</a> or {{cssxref("perspective")}} value other than <code>none</code></li>
+   <li>A <a href="/en-US/docs/Web/CSS/will-change">will-change</a> value of <code>transform</code> or <code>perspective</code></li>
+   <li>A <a href="/en-US/docs/Web/CSS/filter">filter</a> value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox).</li>
    <li>A {{cssxref("contain")}} value of <code>paint</code> (e.g. <code>contain: paint;</code>)</li>
   </ol>
  </li>
@@ -63,8 +63,8 @@ tags:
 <p>As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are <strong>box model properties</strong> and <strong>offset properties</strong>:</p>
 
 <ol start="1">
- <li>The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the <code>height</code> of the containing block.</li>
- <li>The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the <code>width</code> of the containing block.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/height">height</a>, <a href="/en-US/docs/Web/CSS/top">top</a>, and <a href="/en-US/docs/Web/CSS/bottom">bottom</a> properties compute percentage values from the <code>height</code> of the containing block.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/width">width</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, <a href="/en-US/docs/Web/CSS/right">right</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, and <a href="/en-US/docs/Web/CSS/margin">margin</a> properties compute percentage values from the <code>width</code> of the containing block.</li>
 </ol>
 
 <h2 id="Some_examples">Some examples</h2>
@@ -148,7 +148,7 @@ p {
 
 <h3 id="Example_3">Example 3</h3>
 
-<p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's {{cssxref("box-sizing")}} value were <code>border-box</code> this would not be the case.</p>
+<p>In this example, the paragraph's containing block is <code>&lt;section&gt;</code> because the latter's <code>position</code> is <code>absolute</code>. The paragraph's percentage values are affected by the <code>padding</code> of its containing block, though if the containing block's <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> value were <code>border-box</code> this would not be the case.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;body&gt;
@@ -224,7 +224,7 @@ p {
 
 <h3 id="Example_5">Example 5</h3>
 
-<p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a {{cssxref("transform")}} property that isn't <code>none</code>.</p>
+<p>In this example, the paragraph's <code>position</code> is <code>absolute</code>, so its containing block is <code>&lt;section&gt;</code>, which is the nearest ancestor with a <a href="/en-US/docs/Web/CSS/transform">transform</a> property that isn't <code>none</code>.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;body&gt;
@@ -264,5 +264,5 @@ p {
 
 <ul>
  <li>{{css_key_concepts}}</li>
- <li>The {{cssxref("all")}} property resets all CSS declarations to a given known state</li>
+ <li>The <a href="/en-US/docs/Web/CSS/all">all</a> property resets all CSS declarations to a given known state</li>
 </ul>

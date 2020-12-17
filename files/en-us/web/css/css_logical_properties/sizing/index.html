@@ -16,9 +16,9 @@ tags:
 
 <h2 id="Mappings_for_dimensions">Mappings for dimensions</h2>
 
-<p>The table below provides mappings between logical and physical properties. These mappings assume that you are in a <code>horizontal-tb</code> writing mode, such as English or Arabic, in which case {{CSSxRef("width")}} would be mapped to {{CSSxRef("inline-size")}}.</p>
+<p>The table below provides mappings between logical and physical properties. These mappings assume that you are in a <code>horizontal-tb</code> writing mode, such as English or Arabic, in which case <a href="/en-US/docs/Web/CSS/width">width</a> would be mapped to <a href="/en-US/docs/Web/CSS/inline-size">inline-size</a>.</p>
 
-<p>If you were in a vertical writing mode then {{CSSxRef("inline-size")}} would be mapped to {{CSSxRef("height")}}.</p>
+<p>If you were in a vertical writing mode then <a href="/en-US/docs/Web/CSS/inline-size">inline-size</a> would be mapped to <a href="/en-US/docs/Web/CSS/height">height</a>.</p>
 
 <table class="standard-table">
  <thead>
@@ -29,35 +29,35 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>{{CSSxRef("inline-size")}}</td>
-   <td>{{CSSxRef("width")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/inline-size">inline-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/width">width</a></td>
   </tr>
   <tr>
-   <td>{{CSSxRef("block-size")}}</td>
-   <td>{{CSSxRef("height")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/block-size">block-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/height">height</a></td>
   </tr>
   <tr>
-   <td>{{CSSxRef("min-inline-size")}}</td>
-   <td>{{CSSxRef("min-width")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/min-inline-size">min-inline-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/min-width">min-width</a></td>
   </tr>
   <tr>
-   <td>{{CSSxRef("min-block-size")}}</td>
-   <td>{{CSSxRef("min-height")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/min-block-size">min-block-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/min-height">min-height</a></td>
   </tr>
   <tr>
-   <td>{{CSSxRef("max-inline-size")}}</td>
-   <td>{{CSSxRef("max-width")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/max-inline-size">max-inline-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/max-width">max-width</a></td>
   </tr>
   <tr>
-   <td>{{CSSxRef("max-block-size")}}</td>
-   <td>{{CSSxRef("max-height")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/max-block-size">max-block-size</a></td>
+   <td><a href="/en-US/docs/Web/CSS/max-height">max-height</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Width_and_height_example">Width and height example</h2>
 
-<p>The logical mappings for {{CSSxRef("width")}} and {{CSSxRef("height")}} are {{CSSxRef("inline-size")}}, which sets the length in the inline dimension and {{CSSxRef("block-size")}}, which sets the length in the block dimension. When working in English, replacing <code>width</code> with <code>inline-size</code> and <code>height</code> with <code>block-size</code> will give the same layout.</p>
+<p>The logical mappings for <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> are <a href="/en-US/docs/Web/CSS/inline-size">inline-size</a>, which sets the length in the inline dimension and <a href="/en-US/docs/Web/CSS/block-size">block-size</a>, which sets the length in the block dimension. When working in English, replacing <code>width</code> with <code>inline-size</code> and <code>height</code> with <code>block-size</code> will give the same layout.</p>
 
 <p>In the live example below I have set the Writing Mode to <code>horizontal-tb</code>. Change it to <code>vertical-rl</code> and you will see that the first example — which uses <code>width</code> and <code>height</code> — remains the same size in each dimension, despite the text becoming vertical. The second example — which uses <code>inline-size</code> and <code>block-size</code> — will follow the text direction as if the entire block has rotated.</p>
 
@@ -65,7 +65,7 @@ tags:
 
 <h2 id="Min-width_and_min-height_example">Min-width and min-height example</h2>
 
-<p>There are also mappings for {{CSSxRef("min-width")}} and {{CSSxRef("min-height")}} — these are {{CSSxRef("min-inline-size")}} and {{CSSxRef("min-block-size")}}. These work in the same way as the <code>inline-size</code> and <code>block-size</code> properties, but setting a minimum rather than a fixed size.</p>
+<p>There are also mappings for <a href="/en-US/docs/Web/CSS/min-width">min-width</a> and <a href="/en-US/docs/Web/CSS/min-height">min-height</a> — these are <a href="/en-US/docs/Web/CSS/min-inline-size">min-inline-size</a> and <a href="/en-US/docs/Web/CSS/min-block-size">min-block-size</a>. These work in the same way as the <code>inline-size</code> and <code>block-size</code> properties, but setting a minimum rather than a fixed size.</p>
 
 <p>Try changing the example below to <code>vertical-rl</code>, as with the first example, to see the effect it has. I am using <code>min-height</code> in the first example and <code>min-block-size</code> in the second.</p>
 
@@ -73,13 +73,13 @@ tags:
 
 <h2 id="Max-width_and_max-height_example">Max-width and max-height example</h2>
 
-<p>Finally you can use {{CSSxRef("max-inline-size")}} and {{CSSxRef("max-block-size")}} as logical replacements for {{CSSxRef("max-width")}} and {{CSSxRef("max-height")}}. Try playing with the below example in the same way as before.</p>
+<p>Finally you can use <a href="/en-US/docs/Web/CSS/max-inline-size">max-inline-size</a> and <a href="/en-US/docs/Web/CSS/max-block-size">max-block-size</a> as logical replacements for <a href="/en-US/docs/Web/CSS/max-width">max-width</a> and <a href="/en-US/docs/Web/CSS/max-height">max-height</a>. Try playing with the below example in the same way as before.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/logical/size-max.html", "100%", 500)}}</p>
 
 <h2 id="Logical_keywords_for_resize">Logical keywords for resize</h2>
 
-<p>The {{CSSxRef("resize")}} property sets whether or not an item can be resized and has physical values of <code>horizontal</code> and <code>vertical</code>. The <code>resize</code> property also has logical keyword values. Using <code>resize: inline</code> allows resizing in the inline dimension and <code>resize: block</code> allow resizing in the block dimension.</p>
+<p>The <a href="/en-US/docs/Web/CSS/resize">resize</a> property sets whether or not an item can be resized and has physical values of <code>horizontal</code> and <code>vertical</code>. The <code>resize</code> property also has logical keyword values. Using <code>resize: inline</code> allows resizing in the inline dimension and <code>resize: block</code> allow resizing in the block dimension.</p>
 
 <p>The keyword value of <code>both</code> for the resize property works whether you are thinking physically or logically. It sets both dimensions at once. Try playing with the below example.</p>
 

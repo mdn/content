@@ -28,7 +28,7 @@ tags:
 
 <h2 id="What_is_overflow">What is overflow?</h2>
 
-<p>Everything in CSS is a box. You can constrain the size of these boxes by assigning values of {{cssxref("width")}} and {{cssxref("height")}} (or {{cssxref("inline-size")}} and {{cssxref("block-size")}}). <strong>Overflow happens when there is too much content to fit in a box.</strong> CSS provides various tools to manage overflow. As you go further with CSS layout and writing CSS, you will encounter more overflow situations.</p>
+<p>Everything in CSS is a box. You can constrain the size of these boxes by assigning values of <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> (or <a href="/en-US/docs/Web/CSS/inline-size">inline-size</a> and <a href="/en-US/docs/Web/CSS/block-size">block-size</a>). <strong>Overflow happens when there is too much content to fit in a box.</strong> CSS provides various tools to manage overflow. As you go further with CSS layout and writing CSS, you will encounter more overflow situations.</p>
 
 <h2 id="CSS_tries_to_avoid_data_loss">CSS tries to avoid "data loss"</h2>
 
@@ -52,7 +52,7 @@ tags:
 
 <h2 id="The_overflow_property">The overflow property</h2>
 
-<p>The  {{cssxref("overflow")}} property is how you take control of an element's overflow. It is the way you instruct the browser how it should behave. The default value of overflow is <code>visible</code>. With this default, we can see content when it overflows.</p>
+<p>The  <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property is how you take control of an element's overflow. It is the way you instruct the browser how it should behave. The default value of overflow is <code>visible</code>. With this default, we can see content when it overflows.</p>
 
 <p>To crop content when it overflows, you can set <code>overflow: hidden</code>. This does exactly what it says: it hides overflow. Beware that this can make some content invisible. You should only do this if hiding content won't cause problems.</p>
 
@@ -64,11 +64,11 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}</p>
 
-<p>In the example above, we only need to scroll on the <code>y</code> axis, however we get scrollbars in both axes. To just scroll on the <code>y</code> axis, you could use the {{cssxref("overflow-y")}} property, setting <code>overflow-y: scroll</code>.</p>
+<p>In the example above, we only need to scroll on the <code>y</code> axis, however we get scrollbars in both axes. To just scroll on the <code>y</code> axis, you could use the <a href="/en-US/docs/Web/CSS/overflow-y">overflow-y</a> property, setting <code>overflow-y: scroll</code>.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}</p>
 
-<p>You can also scroll on the x axis using {{cssxref("overflow-x")}}, although this is not a recommended way to accommodate long words! If you have a long word in a small box, you might consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} properties. In addition, some of the methods discussed in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a> may help you create boxes that scale better with varying amounts of content.</p>
+<p>You can also scroll on the x axis using <a href="/en-US/docs/Web/CSS/overflow-x">overflow-x</a>, although this is not a recommended way to accommodate long words! If you have a long word in a small box, you might consider using the <a href="/en-US/docs/Web/CSS/word-break">word-break</a> or <a href="/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</a> properties. In addition, some of the methods discussed in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a> may help you create boxes that scale better with varying amounts of content.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}</p>
 

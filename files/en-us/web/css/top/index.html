@@ -16,7 +16,7 @@ tags:
 
 
 
-<p>The effect of <code>top</code> depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):</p>
+<p>The effect of <code>top</code> depends on how the element is positioned (i.e., the value of the <a href="/en-US/docs/Web/CSS/position">position</a> property):</p>
 
 <ul>
  <li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>top</code> property specifies the distance between the element's outer margin of top edge and the inner boarder of the top edge of its containing block.</li>
@@ -25,7 +25,7 @@ tags:
  <li>When <code>position</code> is set to <code>static</code>, the <code>top</code> property has <em>no effect</em>.</li>
 </ul>
 
-<p>When both <code>top</code> and {{cssxref("bottom")}} are specified, <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, <em>and</em> {{cssxref("height")}} is unspecified (either <code>auto</code> or <code>100%</code>) both the <code>top</code> and <code>bottom</code> distances are respected. In all other situations, if {{cssxref("height")}} is constrained in any way or <code>position</code> is set to <code>relative</code>, the <code>top</code> property takes precedence and the <code>bottom</code> property is ignored.</p>
+<p>When both <code>top</code> and <a href="/en-US/docs/Web/CSS/bottom">bottom</a> are specified, <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, <em>and</em> <a href="/en-US/docs/Web/CSS/height">height</a> is unspecified (either <code>auto</code> or <code>100%</code>) both the <code>top</code> and <code>bottom</code> distances are respected. In all other situations, if <a href="/en-US/docs/Web/CSS/height">height</a> is constrained in any way or <code>position</code> is set to <code>relative</code>, the <code>top</code> property takes precedence and the <code>bottom</code> property is ignored.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -60,8 +60,8 @@ top: unset;
  <dt><code>auto</code></dt>
  <dd>Specifies that:
  <ul>
-  <li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("bottom")}} property, while <code>height: auto</code> is treated as a height based on the content; or if <code>bottom</code> is also <code>auto</code>, the element is positioned where it should vertically be positioned if it were a static element.</li>
-  <li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("bottom")}} property; or if <code>bottom</code> is also <code>auto</code>, the element is not moved vertically at all.</li>
+  <li>for <em>absolutely positioned elements</em>, the position of the element is based on the <a href="/en-US/docs/Web/CSS/bottom">bottom</a> property, while <code>height: auto</code> is treated as a height based on the content; or if <code>bottom</code> is also <code>auto</code>, the element is positioned where it should vertically be positioned if it were a static element.</li>
+  <li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the <a href="/en-US/docs/Web/CSS/bottom">bottom</a> property; or if <code>bottom</code> is also <code>auto</code>, the element is not moved vertically at all.</li>
  </ul>
  </dd>
  <dt><code>inherit</code></dt>
@@ -131,7 +131,7 @@ div {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}</li>
- <li>The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
- <li>{{cssxref("position")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/inset">inset</a>, the shorthand for all related properties: <a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a></li>
+ <li>The mapped logical properties: <a href="/en-US/docs/Web/CSS/inset-block-start">inset-block-start</a>, <a href="/en-US/docs/Web/CSS/inset-block-end">inset-block-end</a>, <a href="/en-US/docs/Web/CSS/inset-inline-start">inset-inline-start</a>, and <a href="/en-US/docs/Web/CSS/inset-inline-end">inset-inline-end</a> and the shorthands <a href="/en-US/docs/Web/CSS/inset-block">inset-block</a> and <a href="/en-US/docs/Web/CSS/inset-inline">inset-inline</a></li>
+ <li><a href="/en-US/docs/Web/CSS/position">position</a></li>
 </ul>

@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Styling_backgrounds_in_CSS">Styling backgrounds in CSS</h2>
 
-<p>The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.</p>
+<p>The CSS <a href="/en-US/docs/Web/CSS/background">background</a> property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="Background_colors">Background colors</h3>
 
-<p>The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>. A <code>background-color</code> extends underneath the content and padding box of the element.</p>
+<p>The <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property defines the background color on any element in CSS. The property accepts any valid <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>. A <code>background-color</code> extends underneath the content and padding box of the element.</p>
 
 <p>In the example below, we have used various color values to add a background color to the box, a heading, and a {{htmlelement("span")}} element.</p>
 
@@ -52,7 +52,7 @@ tags:
 
 <h3 id="Background_images">Background images</h3>
 
-<p>The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image which is larger than the box, the other has a small image of a star.</p>
+<p>The <a href="/en-US/docs/Web/CSS/background-image">background-image</a> property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image which is larger than the box, the other has a small image of a star.</p>
 
 <p>This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box. In this case, the actual image is just a single star.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <h4 id="Controlling_background-repeat">Controlling background-repeat</h4>
 
-<p>The {{cssxref("background-repeat")}} property is used to control the tiling behavior of images. The available values are:</p>
+<p>The <a href="/en-US/docs/Web/CSS/background-repeat">background-repeat</a> property is used to control the tiling behavior of images. The available values are:</p>
 
 <ul>
  <li><code>no-repeat</code> — stop the background from repeating altogether.</li>
@@ -77,7 +77,7 @@ tags:
 
 <h4 id="Sizing_the_background_image">Sizing the background image</h4>
 
-<p>In the example above, we have a large image that has ended up being cropped as it is larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take <a href="/en-US/docs/Web/CSS/length">length</a> or <a href="/en-US/docs/Web/CSS/percentage">percentage</a> values, to size the image to fit inside the background.</p>
+<p>In the example above, we have a large image that has ended up being cropped as it is larger than the element it is a background of. In this case we could use the <a href="/en-US/docs/Web/CSS/background-size">background-size</a> property, which can take <a href="/en-US/docs/Web/CSS/length">length</a> or <a href="/en-US/docs/Web/CSS/percentage">percentage</a> values, to size the image to fit inside the background.</p>
 
 <p>You can also use keywords:</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <h4 id="Positioning_the_background_image">Positioning the background image</h4>
 
-<p>The {{cssxref("background-position")}} property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is <code>(0,0)</code>, and the box is positioned along the horizontal (<code>x</code>) and vertical (<code>y</code>) axes.</p>
+<p>The <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is <code>(0,0)</code>, and the box is positioned along the horizontal (<code>x</code>) and vertical (<code>y</code>) axes.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The default <code>background-position</code> value is <code>(0,0)</code>.</p>
@@ -108,7 +108,7 @@ tags:
 
 <p>The most common <code>background-position</code> values take two individual values — a horizontal value followed by a vertical value.</p>
 
-<p>You can use keywords such as <code>top</code> and <code>right</code> (look up the others on the {{cssxref("background-position")}} page):</p>
+<p>You can use keywords such as <code>top</code> and <code>right</code> (look up the others on the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> page):</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background-image: url(star.png);
@@ -147,12 +147,12 @@ tags:
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>background-position</code> is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.</p>
+<p><strong>Note</strong>: <code>background-position</code> is a shorthand for <a href="/en-US/docs/Web/CSS/background-position-x">background-position-x</a> and <a href="/en-US/docs/Web/CSS/background-position-y">background-position-y</a>, which allow you to set the different axis position values individually.</p>
 </div>
 
 <h3 id="Gradient_backgrounds">Gradient backgrounds</h3>
 
-<p>A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.</p>
+<p>A gradient — when used for a background — acts just like an image and is also set by using the <a href="/en-US/docs/Web/CSS/background-image">background-image</a> property.</p>
 
 <p>You can read more about the different types of gradients and things you can do with them on the MDN page for the <code><a href="/en-US/docs/Web/CSS/gradient">&lt;gradient&gt;</a></code> data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as <a href="https://cssgradient.io/">this one</a>. You can create a gradient then copy and paste out the source code that generates it.</p>
 
@@ -184,7 +184,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="Background_attachment">Background attachment</h3>
 
-<p>Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the {{cssxref("background-attachment")}} property, which can take the following values:</p>
+<p>Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the <a href="/en-US/docs/Web/CSS/background-attachment">background-attachment</a> property, which can take the following values:</p>
 
 <ul>
  <li><code>scroll</code>: It causes the element's background to scroll when the page is scrolled. If the element content is scrolled, the background does not move. In effect, the background is fixed to the same position on the page, so it scrolls as the page scrolls.</li>
@@ -192,11 +192,11 @@ background-position: 10px 20px,  top right;</pre>
  <li><code>local</code>: This value was added later on (it is only supported in Internet Explorer 9+, whereas the others are supported in IE4+) because the <code>scroll</code> value is rather confusing and doesn't really do what you want in many cases. The <code>local</code> value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.</li>
 </ul>
 
-<p>The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (also <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">see the source code</a> here).</p>
+<p>The <a href="/en-US/docs/Web/CSS/background-attachment">background-attachment</a> property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (also <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">see the source code</a> here).</p>
 
 <h3 id="Using_the_background_shorthand_property">Using the background shorthand property</h3>
 
-<p>As I mentioned at the beginning of this lesson, you will often see backgrounds specified using the {{cssxref("background")}} property. This shorthand lets you set all of the different properties at once.</p>
+<p>As I mentioned at the beginning of this lesson, you will often see backgrounds specified using the <a href="/en-US/docs/Web/CSS/background">background</a> property. This shorthand lets you set all of the different properties at once.</p>
 
 <p>If using multiple backgrounds, you need to specify all of the properties for the first background, then add your next background after a comma. In the example below we have a gradient with a size and position, then an image background with <code>no-repeat</code> and a position, then a color.</p>
 
@@ -207,7 +207,7 @@ background-position: 10px 20px,  top right;</pre>
  <li>The value of <code>background-size</code> may only be included immediately after <code>background-position</code>, separated with the '/' character, like this: <code>center/80%</code>.</li>
 </ul>
 
-<p>Take a look at the MDN page for {{cssxref("background")}} to see all of the considerations.</p>
+<p>Take a look at the MDN page for <a href="/en-US/docs/Web/CSS/background">background</a> to see all of the considerations.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}</p>
 
@@ -221,7 +221,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>When learning about the Box Model, we discovered how borders affect the size of our box. In this lesson we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and style of the border in one line of CSS.</p>
 
-<p>We can set a border for all four sides of a box with {{cssxref("border")}}:</p>
+<p>We can set a border for all four sides of a box with <a href="/en-US/docs/Web/CSS/border">border</a>:</p>
 
 <pre class="brush: css notranslate"><code>.box {
   border: 1px solid black;
@@ -259,7 +259,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="Rounded_corners">Rounded corners</h3>
 
-<p>Rounding corners on a box is achieved by using the {{cssxref("border-radius")}} property and associated longhands which relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases, you will only pass in one value, which will be used for both.</p>
+<p>Rounding corners on a box is achieved by using the <a href="/en-US/docs/Web/CSS/border-radius">border-radius</a> property and associated longhands which relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases, you will only pass in one value, which will be used for both.</p>
 
 <p>For example, to make all four corners of a box have a 10px radius:</p>
 
@@ -273,7 +273,7 @@ background-position: 10px 20px,  top right;</pre>
   border-top-right-radius: 1em 10%;
 } </code></pre>
 
-<p>We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options.</p>
+<p>We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for <a href="/en-US/docs/Web/CSS/border-radius">border-radius</a> to see the available syntax options.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}</p>
 

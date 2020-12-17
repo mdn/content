@@ -36,7 +36,7 @@ tags:
 
 <p>Our starting point contains some very simple HTML; a wrapper with a class of <code>container</code> inside which is a heading and some paragraphs.</p>
 
-<p>The {{htmlelement("div")}} with a class of container will become our multicol container. We switch on multicol by using one of two properties {{cssxref("column-count")}} or {{cssxref("column-width")}}. The <code>column-count</code> property will create as many columns as the value you give it, so if you add the following CSS to your stylesheet and reload the page, you will get three columns:</p>
+<p>The {{htmlelement("div")}} with a class of container will become our multicol container. We switch on multicol by using one of two properties <a href="/en-US/docs/Web/CSS/column-count">column-count</a> or <a href="/en-US/docs/Web/CSS/column-width">column-width</a>. The <code>column-count</code> property will create as many columns as the value you give it, so if you add the following CSS to your stylesheet and reload the page, you will get three columns:</p>
 
 <pre class="brush: css">.container {
   column-count: 3;
@@ -131,8 +131,8 @@ tags:
 <p>The columns created by multicol cannot be styled individually. There is no way to make one column bigger than other columns, or to change the background or text color of a single column. You have two opportunities to change the way that columns display:</p>
 
 <ul>
- <li>Changing the size of the gap between columns using the {{cssxref("column-gap")}}.</li>
- <li>Adding a rule between columns with {{cssxref("column-rule")}}.</li>
+ <li>Changing the size of the gap between columns using the <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>.</li>
+ <li>Adding a rule between columns with <a href="/en-US/docs/Web/CSS/column-rule">column-rule</a>.</li>
 </ul>
 
 <p>Using your example above, change the size of the gap by adding a <code>column-gap</code> property:</p>
@@ -142,7 +142,7 @@ tags:
   column-gap: 20px;
 }</pre>
 
-<p>You can play around with different values — the property accepts any length unit. Now add a rule between the columns, with <code>column-rule</code>. In a similar way to the {{cssxref("border")}} property that you encountered in previous lessons, <code>column-rule</code> is a shorthand for {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}}, and {{cssxref("column-rule-width")}}, and accepts the same values as <code>border</code>.</p>
+<p>You can play around with different values — the property accepts any length unit. Now add a rule between the columns, with <code>column-rule</code>. In a similar way to the <a href="/en-US/docs/Web/CSS/border">border</a> property that you encountered in previous lessons, <code>column-rule</code> is a shorthand for <a href="/en-US/docs/Web/CSS/column-rule-color">column-rule-color</a>, <a href="/en-US/docs/Web/CSS/column-rule-style">column-rule-style</a>, and <a href="/en-US/docs/Web/CSS/column-rule-width">column-rule-width</a>, and accepts the same values as <code>border</code>.</p>
 
 <pre class="brush: css">.container {
   column-count: 3;
@@ -191,7 +191,7 @@ tags:
 
 <h2 id="Spanning_columns">Spanning columns</h2>
 
-<p>You can cause an element to span across all of the columns. In this case the content breaks when the spanning element is introduced and continues below creating a new set of column boxes. To cause an element to span all of the columns use the {{cssxref("column-span")}} property set to <code>all</code>.</p>
+<p>You can cause an element to span across all of the columns. In this case the content breaks when the spanning element is introduced and continues below creating a new set of column boxes. To cause an element to span all of the columns use the <a href="/en-US/docs/Web/CSS/column-span">column-span</a> property set to <code>all</code>.</p>
 
 <div class="notecard note">
 <p>Note that it isn't possible to cause an element to span some columns. The property can only have the value of <code>none</code> (which is the default) or <code>all</code>.</p>
@@ -333,7 +333,7 @@ h2 {
 
 <p>{{ EmbedLiveSample('Multicol_4', '100%', 600) }}</p>
 
-<p>To control this behavior we can use properties from the <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> specification. This specification gives us properties to control breaking of content in multicol and in paged media. For example, add the property {{cssxref("break-inside")}} with a value of <code>avoid</code> to the rules for <code>.card</code>. This is the container of the heading and text, and therefore we do not want to fragment this box.</p>
+<p>To control this behavior we can use properties from the <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> specification. This specification gives us properties to control breaking of content in multicol and in paged media. For example, add the property <a href="/en-US/docs/Web/CSS/break-inside">break-inside</a> with a value of <code>avoid</code> to the rules for <code>.card</code>. This is the container of the heading and text, and therefore we do not want to fragment this box.</p>
 
 <p>At the present time it is also worth adding the older property <code>page-break-inside: avoid</code> for best browser support.</p>
 

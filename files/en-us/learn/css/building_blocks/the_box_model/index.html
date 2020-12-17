@@ -37,7 +37,7 @@ tags:
 <ul>
  <li>The box will break onto a new line.</li>
  <li>The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.</li>
- <li>The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> properties are respected.</li>
  <li>Padding, margin and border will cause other elements to be pushed away from the box</li>
 </ul>
 
@@ -47,14 +47,14 @@ tags:
 
 <ul>
  <li>The box will not break onto a new line.</li>
- <li>The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> properties will not apply.</li>
  <li>Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
  <li>Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
 </ul>
 
 <p>The <code>&lt;a&gt;</code> element, used for links, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> are all examples of elements that will display inline by default.</p>
 
-<p>The type of box applied to an element is defined by {{cssxref("display")}} property values such as <code>block</code> and <code>inline</code>, and relates to the <strong>outer</strong> value of <code>display</code>.</p>
+<p>The type of box applied to an element is defined by <a href="/en-US/docs/Web/CSS/display">display</a> property values such as <code>block</code> and <code>inline</code>, and relates to the <strong>outer</strong> value of <code>display</code>.</p>
 
 <h2 id="Aside_Inner_and_outer_display_types">Aside: Inner and outer display types</h2>
 
@@ -105,10 +105,10 @@ tags:
 <p>Making up a block box in CSS we have the:</p>
 
 <ul>
- <li><strong>Content box</strong>: The area where your content is displayed, which can be sized using properties like {{cssxref("width")}} and {{cssxref("height")}}.</li>
- <li><strong>Padding box</strong>: The padding sits around the content as white space; its size can be controlled using {{cssxref("padding")}} and related properties.</li>
- <li><strong>Border box</strong>: The border box wraps the content and any padding. Its size and style can be controlled using {{cssxref("border")}} and related properties.</li>
- <li><strong>Margin box</strong>: The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements. Its size can be controlled using {{cssxref("margin")}} and related properties.</li>
+ <li><strong>Content box</strong>: The area where your content is displayed, which can be sized using properties like <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a>.</li>
+ <li><strong>Padding box</strong>: The padding sits around the content as white space; its size can be controlled using <a href="/en-US/docs/Web/CSS/padding">padding</a> and related properties.</li>
+ <li><strong>Border box</strong>: The border box wraps the content and any padding. Its size and style can be controlled using <a href="/en-US/docs/Web/CSS/border">border</a> and related properties.</li>
+ <li><strong>Margin box</strong>: The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements. Its size can be controlled using <a href="/en-US/docs/Web/CSS/margin">margin</a> and related properties.</li>
 </ul>
 
 <p>The below diagram shows these layers:</p>
@@ -183,7 +183,7 @@ tags:
 
 <h2 id="Margins_padding_and_borders">Margins, padding, and borders</h2>
 
-<p>You've already seen the {{cssxref("margin")}}, {{cssxref("padding")}}, and {{cssxref("border")}} properties at work in the example above. The properties used in that example are <strong>shorthands</strong> and allow us to set all four sides of the box at once. These shorthands also have equivalent longhand properties, which allow control over the different sides of the box individually.</p>
+<p>You've already seen the <a href="/en-US/docs/Web/CSS/margin">margin</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, and <a href="/en-US/docs/Web/CSS/border">border</a> properties at work in the example above. The properties used in that example are <strong>shorthands</strong> and allow us to set all four sides of the box at once. These shorthands also have equivalent longhand properties, which allow control over the different sides of the box individually.</p>
 
 <p>Let's explore these properties in more detail.</p>
 
@@ -191,13 +191,13 @@ tags:
 
 <p>The margin is an invisible space around your box. It pushes other elements away from the box. Margins can have positive or negative values. Setting a negative margin on one side of your box can cause it to overlap other things on the page. Whether you are using the standard or alternative box model, the margin is always added after the size of the visible box has been calculated.</p>
 
-<p>We can control all margins of an element at once using the {{cssxref("margin")}} property, or each side individually using the equivalent longhand properties:</p>
+<p>We can control all margins of an element at once using the <a href="/en-US/docs/Web/CSS/margin">margin</a> property, or each side individually using the equivalent longhand properties:</p>
 
 <ul>
- <li>{{cssxref("margin-top")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/margin-top">margin-top</a></li>
+ <li><a href="/en-US/docs/Web/CSS/margin-right">margin-right</a></li>
+ <li><a href="/en-US/docs/Web/CSS/margin-bottom">margin-bottom</a></li>
+ <li><a href="/en-US/docs/Web/CSS/margin-left">margin-left</a></li>
 </ul>
 
 <p><strong>In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.</strong></p>
@@ -222,40 +222,40 @@ tags:
 
 <p>For styling borders, there are a large number of properties — there are four borders, and each border has a style, width and color that we might want to manipulate.</p>
 
-<p>You can set the width, style, or color of all four borders at once using the {{cssxref("border")}} property.</p>
+<p>You can set the width, style, or color of all four borders at once using the <a href="/en-US/docs/Web/CSS/border">border</a> property.</p>
 
 <p>To set the properties of each side individually, you can use:</p>
 
 <ul>
- <li>{{cssxref("border-top")}}</li>
- <li>{{cssxref("border-right")}}</li>
- <li>{{cssxref("border-bottom")}}</li>
- <li>{{cssxref("border-left")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/border-top">border-top</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-right">border-right</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-bottom">border-bottom</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-left">border-left</a></li>
 </ul>
 
 <p>To set the width, style, or color of all sides, use the following:</p>
 
 <ul>
- <li>{{cssxref("border-width")}}</li>
- <li>{{cssxref("border-style")}}</li>
- <li>{{cssxref("border-color")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/border-width">border-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-style">border-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-color">border-color</a></li>
 </ul>
 
 <p>To set the width, style, or color of a single side, you can use one of the most granular longhand properties:</p>
 
 <ul>
- <li>{{cssxref("border-top-width")}}</li>
- <li>{{cssxref("border-top-style")}}</li>
- <li>{{cssxref("border-top-color")}}</li>
- <li>{{cssxref("border-right-width")}}</li>
- <li>{{cssxref("border-right-style")}}</li>
- <li>{{cssxref("border-right-color")}}</li>
- <li>{{cssxref("border-bottom-width")}}</li>
- <li>{{cssxref("border-bottom-style")}}</li>
- <li>{{cssxref("border-bottom-color")}}</li>
- <li>{{cssxref("border-left-width")}}</li>
- <li>{{cssxref("border-left-style")}}</li>
- <li>{{cssxref("border-left-color")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/border-top-width">border-top-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-top-style">border-top-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-top-color">border-top-color</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-right-width">border-right-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-right-style">border-right-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-right-color">border-right-color</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-bottom-width">border-bottom-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-bottom-style">border-bottom-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-bottom-color">border-bottom-color</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-left-width">border-left-width</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-left-style">border-left-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/border-left-color">border-left-color</a></li>
 </ul>
 
 <p><strong>In the example below we have used various shorthands and longhands to create borders. Have a play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.</strong></p>
@@ -266,13 +266,13 @@ tags:
 
 <p>The padding sits between the border and the content area. Unlike margins you cannot have negative amounts of padding, so the value must be 0 or a positive value. Any background applied to your element will display behind the padding, and it is typically used to push the content away from the border.</p>
 
-<p>We can control the padding on each side of an element individually using the {{cssxref("padding")}} property, or each side individually using the equivalent longhand properties:</p>
+<p>We can control the padding on each side of an element individually using the <a href="/en-US/docs/Web/CSS/padding">padding</a> property, or each side individually using the equivalent longhand properties:</p>
 
 <ul>
- <li>{{cssxref("padding-top")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/padding-top">padding-top</a></li>
+ <li><a href="/en-US/docs/Web/CSS/padding-right">padding-right</a></li>
+ <li><a href="/en-US/docs/Web/CSS/padding-bottom">padding-bottom</a></li>
+ <li><a href="/en-US/docs/Web/CSS/padding-left">padding-left</a></li>
 </ul>
 
 <p><strong>If you change the values for padding on the class <code>.box</code> in the example below you can see that this changes where the text begins in relation to the box.</strong></p>

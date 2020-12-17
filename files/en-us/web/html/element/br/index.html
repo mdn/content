@@ -19,7 +19,7 @@ tags:
 <p>As you can see from the above example, a <code>&lt;br&gt;</code> element is included at each point where we want the text to break. The text after the <code>&lt;br&gt;</code> begins again at the start of the next line of the text block.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Do not use <code>&lt;br&gt;</code> to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('margin')}} property to control their size.</p>
+<p><strong>Note</strong>: Do not use <code>&lt;br&gt;</code> to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/margin">margin</a> property to control their size.</p>
 </div>
 
 <h2 id="Attributes">Attributes</h2>
@@ -37,7 +37,7 @@ tags:
 
 <p>The <code>&lt;br&gt;</code> element has a single, well-defined purpose — to create a line break in a block of text. As such, it has no dimensions or visual output of its own, and there is very little you can do to style it.</p>
 
-<p>You can set a {{cssxref("margin")}} on <code>&lt;br&gt;</code> elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the {{cssxref("line-height")}} property that was designed for that purpose.</p>
+<p>You can set a <a href="/en-US/docs/Web/CSS/margin">margin</a> on <code>&lt;br&gt;</code> elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the <a href="/en-US/docs/Web/CSS/line-height">line-height</a> property that was designed for that purpose.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,7 +60,7 @@ USA&lt;br&gt;
 
 <p>Creating separate paragraphs of text using <code>&lt;br&gt;</code> is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within <code>&lt;br&gt;</code>s. This can be a confusing and frustrating experience for the person using the screen reader.</p>
 
-<p>Use <code>&lt;p&gt;</code> elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.</p>
+<p>Use <code>&lt;p&gt;</code> elements, and use CSS properties like <a href="/en-US/docs/Web/CSS/margin">margin</a> to control their spacing.</p>
 
 <h2 id="Technical_summary">Technical summary</h2>
 

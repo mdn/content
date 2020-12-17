@@ -100,13 +100,13 @@ tags:
 
 <h2 id="Styling_with_CSS">Styling with CSS</h2>
 
-<p><code>&lt;textarea&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is block. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.</p>
+<p><code>&lt;textarea&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a> — it has intrinsic dimensions, like a raster image. By default, its <a href="/en-US/docs/Web/CSS/display">display</a> value is block. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.</p>
 
 <p><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a> provides some useful tips on styling <code>&lt;textarea&gt;</code>s.</p>
 
 <h3 id="Baseline_inconsistency">Baseline inconsistency</h3>
 
-<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
+<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a><code>: baseline</code> on it; the behavior is unpredictable.</p>
 
 <h3 id="Controlling_whether_a_textarea_is_resizable">Controlling whether a textarea is resizable</h3>
 

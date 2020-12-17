@@ -211,7 +211,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>CSS tends to provide a lot fewer fundamental accessibility features than HTML, but it can still do just as much damage to accessibility if used incorrectly. We have already mentioned a couple of accessibility tips involving CSS:</p>
 
 <ul>
- <li>Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use {{cssxref("font-size")}}, not an {{htmlelement("h1")}} element.</li>
+ <li>Use the correct semantic elements to mark up different content in HTML; if you want to create a different visual effect, use CSS — don't abuse an HTML element to get the look you want. For example, if you want bigger text, use <a href="/en-US/docs/Web/CSS/font-size">font-size</a>, not an {{htmlelement("h1")}} element.</li>
  <li>Make sure your source order makes sense without CSS; you can always use CSS to style the page any way you want afterward.</li>
  <li>You should make sure interactive elements like buttons and links have appropriate focus/hover/active states set, to give the user visual clues as to their function. If you remove the defaults for stylistic reasons, make sure you include some replacement styles.</li>
 </ul>
@@ -236,7 +236,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 
-<p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.</p>
+<p>On the other hand, you shouldn't use <a href="/en-US/docs/Web/CSS/visibility">visibility</a><code>:hidden</code> or <a href="/en-US/docs/Web/CSS/display">display</a><code>:none</code>, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</span></p>

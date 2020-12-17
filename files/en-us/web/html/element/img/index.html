@@ -195,7 +195,7 @@ tags:
 
 <dl>
 	<dt>{{htmlattrdef("align")}} {{Obsolete_Inline}}</dt>
-	<dd>Aligns the image with its surrounding context. Use the {{cssxref('float')}} and/or {{cssxref('vertical-align')}} {{glossary("CSS")}} properties instead of this attribute. Allowed values:</dd>
+	<dd>Aligns the image with its surrounding context. Use the <a href="/en-US/docs/Web/CSS/float">float</a> and/or <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> {{glossary("CSS")}} properties instead of this attribute. Allowed values:</dd>
 	<dd>
 	<dl>
 		<dt><code>top</code></dt>
@@ -211,9 +211,9 @@ tags:
 	</dl>
 	</dd>
 	<dt>{{htmlattrdef("border")}} {{Obsolete_Inline}}</dt>
-	<dd>The width of a border around the image. Use the {{cssxref('border')}} {{glossary("CSS")}} property instead.</dd>
+	<dd>The width of a border around the image. Use the <a href="/en-US/docs/Web/CSS/border">border</a> {{glossary("CSS")}} property instead.</dd>
 	<dt>{{htmlattrdef("hspace")}} {{Obsolete_Inline}}</dt>
-	<dd>The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.</dd>
+	<dd>The number of pixels of white space on the left and right of the image. Use the <a href="/en-US/docs/Web/CSS/margin">margin</a> CSS property instead.</dd>
 	<dt>{{htmlattrdef("longdesc")}} {{Obsolete_Inline}}</dt>
 	<dd>A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
 	<div class="note">
@@ -223,16 +223,16 @@ tags:
 	<dt>{{htmlattrdef("name")}} {{Obsolete_Inline}}</dt>
 	<dd>A name for the element. Use the {{htmlattrxref("id")}} attribute instead.</dd>
 	<dt>{{htmlattrdef("vspace")}} {{Obsolete_Inline}}</dt>
-	<dd>The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.</dd>
+	<dd>The number of pixels of white space above and below the image. Use the <a href="/en-US/docs/Web/CSS/margin">margin</a> CSS property instead.</dd>
 </dl>
 
 <h2 id="Styling_with_CSS">Styling with CSS</h2>
 
-<p><code>&lt;img&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>; it has a {{cssxref("display")}} value of <code>inline</code> by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were <code>inline-block</code>. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.</p>
+<p><code>&lt;img&gt;</code> is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>; it has a <a href="/en-US/docs/Web/CSS/display">display</a> value of <code>inline</code> by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were <code>inline-block</code>. You can set properties like <a href="/en-US/docs/Web/CSS/border">border</a>/<a href="/en-US/docs/Web/CSS/border-radius">border-radius</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>/<a href="/en-US/docs/Web/CSS/margin">margin</a>, <a href="/en-US/docs/Web/CSS/width">width</a>, <a href="/en-US/docs/Web/CSS/height">height</a>, etc. on an image.</p>
 
-<p><code>&lt;img&gt;</code> has no baseline, so when images are used in an inline formatting context with {{cssxref("vertical-align")}}<code>: baseline</code>, the bottom of the image will be placed on the text baseline.</p>
+<p><code>&lt;img&gt;</code> has no baseline, so when images are used in an inline formatting context with <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a><code>: baseline</code>, the bottom of the image will be placed on the text baseline.</p>
 
-<p>You can use the {{cssxref("object-position")}} property to position the image within the element's box, and the {{cssxref("object-fit")}} property to adjust the sizing of the image within the box (for example, whether the image should fit the box or fill it even if clipping is required).</p>
+<p>You can use the <a href="/en-US/docs/Web/CSS/object-position">object-position</a> property to position the image within the element's box, and the <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a> property to adjust the sizing of the image within the box (for example, whether the image should fit the box or fill it even if clipping is required).</p>
 
 <p>Depending on its type, an image may have an intrinsic width and height. For some image types, however, intrinsic dimensions are unnecessary. {{glossary("SVG")}} images, for instance, have no intrinsic dimensions if their root {{SVGElement("svg")}} element doesn't have a <code>width</code> or <code>height</code> set on it.</p>
 
@@ -437,5 +437,5 @@ tags:
 	<li><a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></li>
 	<li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
 	<li>{{HTMLElement("picture")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements</li>
-	<li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}.</li>
+	<li>Other image-related CSS properties: <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a>, <a href="/en-US/docs/Web/CSS/object-position">object-position</a>, <a href="/en-US/docs/Web/CSS/image-orientation">image-orientation</a>, <a href="/en-US/docs/Web/CSS/image-rendering">image-rendering</a>, and <a href="/en-US/docs/Web/CSS/image-resolution">image-resolution</a>.</li>
 </ul>

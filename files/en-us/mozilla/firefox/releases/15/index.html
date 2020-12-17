@@ -25,12 +25,12 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The {{cssxref("font-feature-settings")}} property has been updated to the latest syntax: <code>font-feature-settings: "lnum" 1;</code></li>
- <li>The CSS {{cssxref("text-transform")}} property has been extended to correctly handle Unicode ligature characters (like <code>ﬁ</code>).</li>
- <li>The CSS {{cssxref("word-break")}} property has been implemented.</li>
- <li>The {{cssxref("border-image")}} property has been updated to match the latest Specification and properties have been unprefixed. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=713643">bug 713643</a>)</li>
- <li>The <code>skew()</code> {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use <code>skewX()</code> and <code>skewY(</code>) functions instead.</li>
- <li>The value <code>plaintext</code> of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ({{bug("746987")}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/font-feature-settings">font-feature-settings</a> property has been updated to the latest syntax: <code>font-feature-settings: "lnum" 1;</code></li>
+ <li>The CSS <a href="/en-US/docs/Web/CSS/text-transform">text-transform</a> property has been extended to correctly handle Unicode ligature characters (like <code>ﬁ</code>).</li>
+ <li>The CSS <a href="/en-US/docs/Web/CSS/word-break">word-break</a> property has been implemented.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/border-image">border-image</a> property has been updated to match the latest Specification and properties have been unprefixed. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=713643">bug 713643</a>)</li>
+ <li>The <code>skew()</code> <a href="/en-US/docs/Web/CSS/transform">transform</a> function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use <code>skewX()</code> and <code>skewY(</code>) functions instead.</li>
+ <li>The value <code>plaintext</code> of CSS <a href="/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</a> property now applies to inline elements too. ({{bug("746987")}}).</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -69,7 +69,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Mathematical operators can now use downloadable fonts specified with {{cssxref("@font-face")}}. This makes the <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/" title="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML-fonts add-on</a> work with stretchy operators too.</li>
+ <li>Mathematical operators can now use downloadable fonts specified with <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a>. This makes the <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/" title="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML-fonts add-on</a> work with stretchy operators too.</li>
  <li>The <code>selection</code> attribute of the {{MathMLElement("maction")}} is now only taken into account with the <code>toggle</code> actiontype.</li>
  <li><a href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1" title="http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1"><span id="summary_alias_container"><span id="short_desc_nonedit_display">Deprecated namedspace binding</span></span></a> has been removed ({{bug('673759')}}).</li>
  <li>Supported syntax for <a href="/en-US/docs/MathML/Attributes/Values" title="Values">Length</a> and {{MathMLElement("mpadded")}} values have been made closer to the one specified in MathML3 spec.</li>

@@ -20,9 +20,9 @@ tags:
 
 <p>Only CSS declarations, that is property/value pairs, participate in the cascade. This means that <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a> containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing <em>descriptors</em>, don't participate in the cascade. In these cases, only the at-rule as a whole participates in the cascade: here, the <code>@font-face</code> identified by its <code><a href="/en-US/docs/Web/CSS/@font-face/font-family">font-family</a></code> descriptor. If several <code>@font-face</code> rules with the same descriptor are defined, only the most appropriate <code>@font-face</code>, as a whole, is considered.</p>
 
-<p>While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with <code>@font-face</code>, only the at-rule as a whole is selected via the cascade algorithm.</p>
+<p>While the declarations contained in most at-rules — such as those in <a href="/en-US/docs/Web/CSS/@media">@media</a>, {{cssxref("@document")}}, or <a href="/en-US/docs/Web/CSS/@supports">@supports</a> — participate in the cascade, declarations contained in <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> don't. As with <code>@font-face</code>, only the at-rule as a whole is selected via the cascade algorithm.</p>
 
-<p>Finally, note that {{cssxref("@import")}} and {{cssxref("@charset")}} obey specific algorithms and aren't affected by the cascade algorithm.</p>
+<p>Finally, note that <a href="/en-US/docs/Web/CSS/@import">@import</a> and <a href="/en-US/docs/Web/CSS/@charset">@charset</a> obey specific algorithms and aren't affected by the cascade algorithm.</p>
 
 <h2 id="Origin_of_CSS_declarations">Origin of CSS declarations</h2>
 
@@ -108,13 +108,13 @@ tags:
 
 <h2 id="Resetting_styles">Resetting styles</h2>
 
-<p>After your content has finished altering styles, it may find itself in a situation where it needs to restore them to a known state. This may happen in cases of animations, theme changes, and so forth. The CSS property {{cssxref("all")}} lets you quickly set (almost) everything in CSS back to a known state.</p>
+<p>After your content has finished altering styles, it may find itself in a situation where it needs to restore them to a known state. This may happen in cases of animations, theme changes, and so forth. The CSS property <a href="/en-US/docs/Web/CSS/all">all</a> lets you quickly set (almost) everything in CSS back to a known state.</p>
 
 <p><code>all</code> lets you opt to immediately restore all properties to any of their initial (default) state, the state inherited from the previous level of the cascade, a specific origin (the user-agent stylesheet, the author stylesheet, or the user stylesheet), or even to clear the values of the properties entirely.</p>
 
 <h2 id="CSS_animations_and_the_cascade">CSS animations and the cascade</h2>
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Animations" title="/en-US/docs/Web/CSSUsing_CSS_animations">CSS animations</a>, using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.</p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Animations" title="/en-US/docs/Web/CSSUsing_CSS_animations">CSS animations</a>, using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a>, and never mixes multiple ones together.</p>
 
 <p>When several keyframes are appropriate, it chooses the latest defined in the most important document, but never combined all together.</p>
 
@@ -183,7 +183,7 @@ tags:
   <tr>
    <td>{{SpecName("CSS4 Cascade")}}</td>
    <td>{{Spec2("CSS4 Cascade")}}</td>
-   <td>Added the {{CSSxRef("revert")}} keyword, which allows rolling a property back a cascade level.</td>
+   <td>Added the <a href="/en-US/docs/Web/CSS/revert">revert</a> keyword, which allows rolling a property back a cascade level.</td>
   </tr>
   <tr>
    <td>{{SpecName("CSS3 Cascade")}}</td>

@@ -49,8 +49,8 @@ left: unset;
 	<dt><code>auto</code></dt>
 	<dd>Specifies that:
 	<ul>
-		<li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("right")}} property, while <code>width: auto</code> is treated as a width based on the content; or if <code>right</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
-		<li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("right")}} property; or if <code>right</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
+		<li>for <em>absolutely positioned elements</em>, the position of the element is based on the <a href="/en-US/docs/Web/CSS/right">right</a> property, while <code>width: auto</code> is treated as a width based on the content; or if <code>right</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
+		<li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the <a href="/en-US/docs/Web/CSS/right">right</a> property; or if <code>right</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
 	</ul>
 	</dd>
 	<dt><code>inherit</code></dt>
@@ -59,7 +59,7 @@ left: unset;
 
 <h2 id="Description">Description</h2>
 
-<p>The effect of <code>left</code> depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):</p>
+<p>The effect of <code>left</code> depends on how the element is positioned (i.e., the value of the <a href="/en-US/docs/Web/CSS/position">position</a> property):</p>
 
 <ul>
 	<li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>left</code> property specifies the distance between the element's left edge and the left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)</li>
@@ -68,7 +68,7 @@ left: unset;
 	<li>When <code>position</code> is set to <code>static</code>, the <code>left</code> property has <em>no effect</em>.</li>
 </ul>
 
-<p>When both <code>left</code> and {{cssxref("right")}} are defined, and width constraints don't prevent it, the element will stretch to satisfy both. If the element cannot stretch to satisfy both, the position of the element is <em>overspecified</em>. When this is the case, the <code>left</code> value has precedence when the container is left-to-right; the <code>right</code> value has precedence when the container is right-to-left.</p>
+<p>When both <code>left</code> and <a href="/en-US/docs/Web/CSS/right">right</a> are defined, and width constraints don't prevent it, the element will stretch to satisfy both. If the element cannot stretch to satisfy both, the position of the element is <em>overspecified</em>. When this is the case, the <code>left</code> value has precedence when the container is left-to-right; the <code>right</code> value has precedence when the container is right-to-left.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -227,7 +227,7 @@ pre {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}</li>
-	<li>The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
-	<li>{{cssxref("position")}}</li>
+	<li><a href="/en-US/docs/Web/CSS/inset">inset</a>, the shorthand for all related properties: <a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a></li>
+	<li>The mapped logical properties: <a href="/en-US/docs/Web/CSS/inset-block-start">inset-block-start</a>, <a href="/en-US/docs/Web/CSS/inset-block-end">inset-block-end</a>, <a href="/en-US/docs/Web/CSS/inset-inline-start">inset-inline-start</a>, and <a href="/en-US/docs/Web/CSS/inset-inline-end">inset-inline-end</a> and the shorthands <a href="/en-US/docs/Web/CSS/inset-block">inset-block</a> and <a href="/en-US/docs/Web/CSS/inset-inline">inset-inline</a></li>
+	<li><a href="/en-US/docs/Web/CSS/position">position</a></li>
 </ul>

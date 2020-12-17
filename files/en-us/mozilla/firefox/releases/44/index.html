@@ -25,16 +25,16 @@ tags:
 
 <ul>
  <li><code>position:</code> <code>fixed;</code> now always creates a new stacking context ({{bug(1179288)}}).</li>
- <li>The support of {{cssxref('unicode-range')}} has been enabled by default ({{bug(1119062)}}).</li>
+ <li>The support of <a href="/en-US/docs/Web/CSS/unicode-range">unicode-range</a> has been enabled by default ({{bug(1119062)}}).</li>
  <li>Our experimental implementation of CSS Writing Modes has been updated to reflect the latest specification:
   <ul>
-   <li>The value <code>sideways</code> of the {{cssxref("text-orientation")}} property has been implemented and <code>sideways-right</code> has been made an alias of it ({{bug(1193488)}}).</li>
-   <li>The value <code>sideways-rl</code> and <code>sideways-lr</code> of the {{cssxref("writing-mode")}} property ({{bug(1193488)}} and {{bug(1193519)}}).</li>
+   <li>The value <code>sideways</code> of the <a href="/en-US/docs/Web/CSS/text-orientation">text-orientation</a> property has been implemented and <code>sideways-right</code> has been made an alias of it ({{bug(1193488)}}).</li>
+   <li>The value <code>sideways-rl</code> and <code>sideways-lr</code> of the <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a> property ({{bug(1193488)}} and {{bug(1193519)}}).</li>
   </ul>
  </li>
  <li>The non-standard properties {{cssxref("-moz-math-display")}} and {{cssxref("-moz-window-shadow")}} are no more available from Web content ({{bug(1207002)}}, {{bug(1211040)}}, and {{bug(1212607)}}).</li>
- <li>The {{cssxref("font-style")}} property now distinguishes between <code>oblique</code> and <code>italic</code> when both variants are available ({{bug(543715)}}).</li>
- <li>Though not supported, the properties {{cssxref("marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ({{bug(1215702)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/font-style">font-style</a> property now distinguishes between <code>oblique</code> and <code>italic</code> when both variants are available ({{bug(543715)}}).</li>
+ <li>Though not supported, the properties {{cssxref("marks")}}, <a href="/en-US/docs/Web/CSS/orphans">orphans</a>, {{cssxref("page")}}, {{cssxref("size")}}, and <a href="/en-US/docs/Web/CSS/widows">widows</a>, were parsed and <a href="/en-US/docs/Web/CSS/@supports">@supports</a> was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ({{bug(1215702)}}).</li>
  <li>The internal value <code>-moz-mac-unified-toolbar</code> has been removed from the possible values for the {{cssxref("-moz-appearance")}} property ({{bug(1206468)}}).</li>
  <li>Several <code>-webkit</code> prefixed properties and values have been added for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code> ({{bug(837211)}}):
   <ul>

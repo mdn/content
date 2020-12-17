@@ -229,7 +229,7 @@ tags:
 <ul>
  <li>The {{htmlattrxref("src", "input")}} attribute is used to specify the path to the image you want to display in the button.</li>
  <li>The {{htmlattrxref("alt", "input")}} attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.</li>
- <li>The {{htmlattrxref("width", "input")}} and {{htmlattrxref("height", "input")}} attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.</li>
+ <li>The {{htmlattrxref("width", "input")}} and {{htmlattrxref("height", "input")}} attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. <a href="/en-US/docs/Web/CSS/padding">padding</a>). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.</li>
 </ul>
 
 <h3 id="Overriding_default_form_behaviors">Overriding default form behaviors</h3>
@@ -285,7 +285,7 @@ tags:
 
 <h3 id="Adjusting_the_images_position_and_scaling_algorithm">Adjusting the image's position and scaling algorithm</h3>
 
-<p>You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the <code>&lt;input&gt;</code> element's frame, and the {{cssxref("object-fit")}} property to control how the image's size is adjusted to fit within the frame. This allows you to specify a frame for the image using the <code>width</code> and <code>height</code> attributes to set aside space in the layout, then adjust where within that space the image is located and how (or if) it is scaled to occupy that space.</p>
+<p>You can use the <a href="/en-US/docs/Web/CSS/object-position">object-position</a> property to adjust the positioning of the image within the <code>&lt;input&gt;</code> element's frame, and the <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a> property to control how the image's size is adjusted to fit within the frame. This allows you to specify a frame for the image using the <code>width</code> and <code>height</code> attributes to set aside space in the layout, then adjust where within that space the image is located and how (or if) it is scaled to occupy that space.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -329,7 +329,7 @@ label {
 
 <h3 id="Adjusting_the_image_position_and_scaling">Adjusting the image position and scaling</h3>
 
-<p>In this example, we adapt the previous example to set aside more space for the image and then adjust the actual image's size and positioning using {{cssxref("object-fit")}} and {{cssxref("object-position")}}.</p>
+<p>In this example, we adapt the previous example to set aside more space for the image and then adjust the actual image's size and positioning using <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a> and <a href="/en-US/docs/Web/CSS/object-position">object-position</a>.</p>
 
 <p>{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}</p>
 
@@ -408,6 +408,6 @@ label {
 
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li>Positioning and sizing the image within the <code>&lt;input&gt;</code> element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
+ <li>Positioning and sizing the image within the <code>&lt;input&gt;</code> element's frame: <a href="/en-US/docs/Web/CSS/object-position">object-position</a> and <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

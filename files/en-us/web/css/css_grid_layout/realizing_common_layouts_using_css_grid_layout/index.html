@@ -62,7 +62,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>As we are using {{cssxref("grid-template-areas")}} to create the layout. Outside of any media queries I need to name the areas. We name areas using the {{cssxref("grid-area")}} property.</p>
+<p>As we are using <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> to create the layout. Outside of any media queries I need to name the areas. We name areas using the <a href="/en-US/docs/Web/CSS/grid-area">grid-area</a> property.</p>
 
 <pre class="brush: css notranslate">.main-head {
   grid-area: header;
@@ -117,7 +117,7 @@ tags:
 }
 </pre>
 
-<p>You can see the layout taking shape in the value of {{cssxref("grid-template-areas")}}. The <code>header</code> spans over two column tracks, as does the <code>nav</code>. In the third row track we have the <code>sidebar</code> alongside the <code>content</code>. In the fourth row track I have chosen to place my <code>ad</code> content – so it appears under the sidebar, then the <code>footer</code> next to it under the content. I’m using a flexbox on the navigation to display it in a row spaced out.</p>
+<p>You can see the layout taking shape in the value of <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>. The <code>header</code> spans over two column tracks, as does the <code>nav</code>. In the third row track we have the <code>sidebar</code> alongside the <code>content</code>. In the fourth row track I have chosen to place my <code>ad</code> content – so it appears under the sidebar, then the <code>footer</code> next to it under the content. I’m using a flexbox on the navigation to display it in a row spaced out.</p>
 
 <p>I can now add a final breakpoint to move to a three-column layout.</p>
 
@@ -214,7 +214,7 @@ tags:
 
 <h3 id="Building_a_layout_using_the_12-column_system">Building a layout using the 12-column system</h3>
 
-<p>To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. I am starting with the same markup as used for the grid template areas example.</p>
+<p>To see how this layout method works in practice, we can create the same layout that we created with <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>, this time using the 12-column grid system. I am starting with the same markup as used for the grid template areas example.</p>
 
 <div id="layout_3">
 <div class="hidden">
@@ -434,11 +434,11 @@ tags:
 <p>{{ EmbedLiveSample('layout_4', '800', '900') }}</p>
 </div>
 
-<p>This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won’t be so tall. I have a class of <code>wide</code> on my larger item, and I add a rule {{cssxref("grid-column-end")}} with a value of <code>span 2</code>. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn’t space to lay out a two-track item.</p>
+<p>This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won’t be so tall. I have a class of <code>wide</code> on my larger item, and I add a rule <a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a> with a value of <code>span 2</code>. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn’t space to lay out a two-track item.</p>
 
 <p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 812px; width: 800px;"></p>
 
-<p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
+<p>I can cause a grid to backfill those gaps by setting <a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a><code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
 
 <div id="layout_5">
 <div class="hidden">

@@ -105,7 +105,7 @@ tags:
 
 <p>Usually when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless of course teaching the shorthand is the point of the example). Remember that the point of MDN examples is to teach people, not to be clever or efficient.</p>
 
-<p>To start with, it is often harder to understand what the shorthand is doing. It takes a while to pick apart exactly what {{cssxref("font")}} syntax is doing, for example:</p>
+<p>To start with, it is often harder to understand what the shorthand is doing. It takes a while to pick apart exactly what <a href="/en-US/docs/Web/CSS/font">font</a> syntax is doing, for example:</p>
 
 <pre class="brush: css notranslate">font: small-caps bold 2rem/1.5 sans-serif;</pre>
 
@@ -117,19 +117,19 @@ font-size: 2rem;
 line-height: 1.5;
 font-family: sans-serif;</pre>
 
-<p>Second, CSS shorthand comes with potential added pitfalls — default values are set for parts of the syntax that you don't explicitly set, which can produce unexpected resets of values you've set earlier in the cascade, or other expected effects. The {{cssxref("grid")}} property for example sets all of the following default values for items that are not specified:</p>
+<p>Second, CSS shorthand comes with potential added pitfalls — default values are set for parts of the syntax that you don't explicitly set, which can produce unexpected resets of values you've set earlier in the cascade, or other expected effects. The <a href="/en-US/docs/Web/CSS/grid">grid</a> property for example sets all of the following default values for items that are not specified:</p>
 
 <ul>
- <li>{{cssxref("grid-template-rows")}}: <code>none</code></li>
- <li>{{cssxref("grid-template-columns")}}: <code>none</code></li>
- <li>{{cssxref("grid-template-areas")}}: <code>none</code></li>
- <li>{{cssxref("grid-auto-rows")}}: <code>auto</code></li>
- <li>{{cssxref("grid-auto-columns")}}: <code>auto</code></li>
- <li>{{cssxref("grid-auto-flow")}}: <code>row</code></li>
- <li>{{cssxref("grid-column-gap")}}: <code>0</code></li>
- <li>{{cssxref("grid-row-gap")}}: <code>0</code></li>
- <li>{{cssxref("column-gap")}}: <code>normal</code></li>
- <li>{{cssxref("row-gap")}}: <code>normal</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>: <code>none</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a>: <code>none</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>: <code>none</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a>: <code>auto</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a>: <code>auto</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a>: <code>row</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a>: <code>0</code></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a>: <code>0</code></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>: <code>normal</code></li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a>: <code>normal</code></li>
 </ul>
 
 <p>In addition, some shorthands only work as expected if you include the different value components in a certain order. In CSS animations for example:</p>

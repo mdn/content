@@ -21,7 +21,7 @@ tags:
 <p>The <code>transitionend</code> event is sent to when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> completes.</p>
 
 <div class="note">
-<p>If the transition is removed from its target node before the transition completes execution, the {{event("transitionend")}} event won't be generated. One way this can happen is by changing the value of the {{cssxref("transition-property")}} attribute which applies to the target. Another is if the {{cssxref("display")}} attribute is set to <code>none</code>.</p>
+<p>If the transition is removed from its target node before the transition completes execution, the {{event("transitionend")}} event won't be generated. One way this can happen is by changing the value of the <a href="/en-US/docs/Web/CSS/transition-property">transition-property</a> attribute which applies to the target. Another is if the <a href="/en-US/docs/Web/CSS/display">display</a> attribute is set to <code>none</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -33,10 +33,10 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Function")}} to be called when a {{event("transitionend")}} event occurs indicating that a CSS transition has completed on the <code><var>target</var></code>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.</p>
+<p>A {{jsxref("Function")}} to be called when a {{event("transitionend")}} event occurs indicating that a CSS transition has completed on the <code><var>target</var></code>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of <a href="/en-US/docs/Web/CSS/transition-duration">transition-duration</a>.</p>
 
 <div class="note">
-<p><code>elapsedTime</code> does not include time prior to the transition effect beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>, which is zero until the delay period ends and the animation begins.</p>
+<p><code>elapsedTime</code> does not include time prior to the transition effect beginning; that means that the value of <a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a> doesn't affect the value of <code>elapsedTime</code>, which is zero until the delay period ends and the animation begins.</p>
 </div>
 
 <h2 id="Example">Example</h2>

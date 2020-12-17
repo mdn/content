@@ -20,7 +20,7 @@ tags:
 
 <p>For example, you are probably reading this on a device with a display. But you might also want to project it to a big screen for a large audience, or you might want to print it. These different media have different characteristics. CSS has the capacity to present content according to the media type.</p>
 
-<p>To specify rules that are specific to a type of media, use {{CSSxRef("@media")}} followed by the media type, followed by curly braces that enclose the rules.</p>
+<p>To specify rules that are specific to a type of media, use <a href="/en-US/docs/Web/CSS/@media">@media</a> followed by the media type, followed by curly braces that enclose the rules.</p>
 
 <div class="tuto_example">
 <h4 class="tuto_type" id="Example">Example</h4>
@@ -67,24 +67,24 @@ tags:
 
 <p>The document's markup language might allow the media type to be specified when the stylesheet is linked to the document. For example, in HTML, you have the option to specify the media type with a <code>media</code> attribute in the <code>LINK</code> element.</p>
 
-<p>In CSS, you can use {{CSSxRef("@import")}} at the start of a stylesheet to import another stylesheet from a URL, optionally specifying the media type.</p>
+<p>In CSS, you can use <a href="/en-US/docs/Web/CSS/@import">@import</a> at the start of a stylesheet to import another stylesheet from a URL, optionally specifying the media type.</p>
 
 <p>These are ways of separating styling rules for different media types into different files.</p>
 
 <p>For full details of media types, see <a href="http://www.w3.org/TR/CSS21/media.html">Media</a> in the CSS Specification.</p>
 
-<p>There are more examples of the {{CSSxRef("display")}} property in a later page in this tutorial: <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a>.</p>
+<p>There are more examples of the <a href="/en-US/docs/Web/CSS/display">display</a> property in a later page in this tutorial: <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a>.</p>
 </div>
 
 <h3 id="Printing">Printing</h3>
 
 <p>CSS has specific support for printing and for paged media in general.</p>
 
-<p>A {{CSSxRef("@page")}} rule can set the page margins. For double-sided printing, you can specify the margins separately for <code>@page:left</code> and <code>@page:right</code>.</p>
+<p>A <a href="/en-US/docs/Web/CSS/@page">@page</a> rule can set the page margins. For double-sided printing, you can specify the margins separately for <code>@page:left</code> and <code>@page:right</code>.</p>
 
 <p>For print media, you normally use appropriate length units like inches (<code>in</code>) and points (<code>pt</code> = 1/72 inch), or centimeters (<code>cm</code>) and millimeters (<code>mm</code>). It is equally appropriate to use ems (<code>em</code>) to match the font size, and percentages (<code>%</code>).</p>
 
-<p>You can control how the content of the document breaks across page boundaries, by using the {{CSSxRef("page-break-before")}}, {{CSSxRef("page-break-after")}} and {{CSSxRef("page-break-inside")}} properties.</p>
+<p>You can control how the content of the document breaks across page boundaries, by using the <a href="/en-US/docs/Web/CSS/page-break-before">page-break-before</a>, <a href="/en-US/docs/Web/CSS/page-break-after">page-break-after</a> and <a href="/en-US/docs/Web/CSS/page-break-inside">page-break-inside</a> properties.</p>
 
 <div class="tuto_example">
 <h4 class="tuto_type" id="Example_2">Example</h4>
@@ -147,7 +147,7 @@ tags:
 <p><strong>Note: </strong>The information that can be obtained from the :visited selector is restricted in {{gecko("2.0")}}. See <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a> for more details.</p>
 </div>
 
-<p>The {{CSSxRef("cursor")}} property specifies the shape of the pointer: Some of the common shapes are as follows. Place your mouse over the items in this list to see the actual pointer shapes in your browser:</p>
+<p>The <a href="/en-US/docs/Web/CSS/cursor">cursor</a> property specifies the shape of the pointer: Some of the common shapes are as follows. Place your mouse over the items in this list to see the actual pointer shapes in your browser:</p>
 
 <table class="standard-table">
  <thead>
@@ -176,7 +176,7 @@ tags:
  </tbody>
 </table>
 
-<p>An {{CSSxRef("outline")}} property creates an outline that is often used to indicate keyboard focus. Its values are similar to the {{CSSxRef("border")}} property, except that you cannot specify individual sides.</p>
+<p>An <a href="/en-US/docs/Web/CSS/outline">outline</a> property creates an outline that is often used to indicate keyboard focus. Its values are similar to the <a href="/en-US/docs/Web/CSS/border">border</a> property, except that you cannot specify individual sides.</p>
 
 <p>Some other features of user interfaces are implemented using attributes, in the normal way. For example, an element that is disabled or read-only has the <strong>disabled</strong> attribute or the <strong>readonly</strong> attribute. Selectors can specify these attributes like any other attributes, by using square brackets: <code>[disabled]</code> or <code>[readonly]</code>.</p>
 
@@ -382,7 +382,7 @@ h1:first-child {
  <tbody>
   <tr>
    <td>Move the print-specific style rules to a separate CSS file.
-    <p>Read the {{CSSxRef("@import")}} reference page to find details of how to import the new print-specific CSS file into your <code>style4.css</code> stylesheet.</p>
+    <p>Read the <a href="/en-US/docs/Web/CSS/@import">@import</a> reference page to find details of how to import the new print-specific CSS file into your <code>style4.css</code> stylesheet.</p>
 
     <p>Make the headings turn blue when the mouse pointer is over them.</p>
    </td>

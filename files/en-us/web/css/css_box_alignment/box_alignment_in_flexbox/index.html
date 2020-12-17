@@ -13,13 +13,13 @@ tags:
 
 <h2 id="Basic_example">Basic example</h2>
 
-<p>In this example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the <code>align-items</code> values set on the group by setting {{cssxref("align-self")}} to <code>center</code>.</p>
+<p>In this example, three flex items are aligned on the main axis using <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> and on the cross axis using <a href="/en-US/docs/Web/CSS/align-items">align-items</a>. The first item overrides the <code>align-items</code> values set on the group by setting <a href="/en-US/docs/Web/CSS/align-self">align-self</a> to <code>center</code>.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
 
 <h2 id="The_axes_and_flex-direction">The axes and flex-direction</h2>
 
-<p>Flexbox respects the writing mode of the document, therefore if you are working in English and set {{cssxref("justify-content")}} to <code>flex-end</code> this will align the items to the end of the flex container. If you are working with {{cssxref("flex-direction")}} set to <code>row</code>, this alignment will be in the inline direction.</p>
+<p>Flexbox respects the writing mode of the document, therefore if you are working in English and set <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> to <code>flex-end</code> this will align the items to the end of the flex container. If you are working with <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> set to <code>row</code>, this alignment will be in the inline direction.</p>
 
 <p>However, in Flexbox you can change the main axis by setting <code>flex-direction</code> to <code>column</code>. In this case, <code>justify-content</code> will align items in the block direction. Therefore it is easiest to think about the main and cross axis when working in Flexbox like so:</p>
 
@@ -31,15 +31,15 @@ tags:
 <h3 id="Main_Axis_Alignment">Main Axis Alignment</h3>
 
 <ul>
- <li>{{cssxref("justify-content")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
 </ul>
 
 <h3 id="Cross_Axis_Alignment">Cross Axis Alignment</h3>
 
 <ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-content")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
 </ul>
 
 <h3 id="There_is_no_justify-self_in_Flexbox">There is no justify-self in Flexbox</h3>
@@ -54,16 +54,16 @@ tags:
 
 <p>There is a specific use case in Flexbox where we might think that a <code>justify-self</code> property is what we need, and this is when we want to split a set of flex items, perhaps to create a split navigation pattern. For this use case, we can use an <code>auto</code> margin. A margin set to <code>auto</code> will absorb all available space in its dimension. This is how centering a block with auto margins works. By setting the left and right margin to <code>auto</code>, both sides of our block try to take up all of the available space and so push the box into the center.</p>
 
-<p>By setting a {{cssxref("margin")}} of <code>auto</code> on one item in a set of flex items all aligned to start, we can create a split navigation. This works well with Flexbox and the alignment properties. As soon as there is no space available for the auto margin, the item behaves in the same way as all the other flex items and shrinks to try to fit into space.</p>
+<p>By setting a <a href="/en-US/docs/Web/CSS/margin">margin</a> of <code>auto</code> on one item in a set of flex items all aligned to start, we can create a split navigation. This works well with Flexbox and the alignment properties. As soon as there is no space available for the auto margin, the item behaves in the same way as all the other flex items and shrinks to try to fit into space.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
 
 <h2 id="The_gap_properties">The <code>gap</code> properties</h2>
 
 <ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
 </ul>
 
 <h3 id="Creating_fixed_size_gaps_between_items">Creating fixed size gaps between items</h3>
@@ -78,16 +78,16 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-content">place-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-items">place-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
 </ul>
 </div>
 

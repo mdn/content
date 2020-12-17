@@ -14,7 +14,7 @@ tags:
 
 <p><span class="seoSummary">The <code><strong>repeat()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.</span></p>
 
-<p>This function can be used in the CSS Grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.</p>
+<p>This function can be used in the CSS Grid properties <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> and <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>.</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* &lt;track-repeat&gt; values */
 repeat(4, 1fr)
@@ -62,7 +62,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
  <dt><code>min-content</code></dt>
  <dd>Represents the largest min-content contribution of the grid items occupying the grid track.</dd>
  <dt><code>auto</code></dt>
- <dd>As a maximum, identical to <code>max-content</code>. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
+ <dd>As a maximum, identical to <code>max-content</code>. As a minimum it represents the largest minimum size (as specified by <a href="/en-US/docs/Web/CSS/min-width">min-width</a>/<a href="/en-US/docs/Web/CSS/min-height">min-height</a>) of the grid items occupying the grid track.</dd>
  <dt><code>auto-fill</code></dt>
  <dd>If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independant value used to define <code>grid-template-rows</code> or <code>grid-template-columns</code>), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is <code>1</code>. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.</dd>
  <dt><code>auto-fit</code></dt>
@@ -150,7 +150,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
+ <li>Related CSS properties: <a href="/en-US/docs/Web/CSS/grid-template">grid-template</a>, <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>, <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a>, <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>, <a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a>, <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a>, <a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
 </ul>

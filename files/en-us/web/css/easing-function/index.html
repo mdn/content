@@ -22,7 +22,7 @@ tags:
 
 <p><img src="/files/3434/TF_with_output_gt_than_1.png" style="float: left;"><img src="/files/3435/TF_with_output_gt_than_1_clipped.png" style="float: left; margin-right: 5px;"></p>
 
-<p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.</p>
+<p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as <a href="/en-US/docs/Web/CSS/left">left</a> or <a href="/en-US/docs/Web/CSS/right">right</a>, this creates a kind of "bouncing" effect.</p>
 
 <p>However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than <code>255</code> or smaller than <code>0</code> will be clipped to the closest allowed value (<code>255</code> and <code>0</code>, respectively). Some <code>cubic-bezier()</code> curves exhibit this property.</p>
 

@@ -24,21 +24,21 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>{{cssxref("word-spacing")}} now allows percentage values ({{bug(1038663)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/word-spacing">word-spacing</a> now allows percentage values ({{bug(1038663)}}).</li>
  <li>Our implementation of CSS Grids has been improved and is no more considered experimental; it is now activated by default in nightly and developer edition, but not for beta and release ({{bug(1000592)}}):
   <ul>
-   <li>Gutters, that is the {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}}, and {{cssxref("grid-gap")}} properties are now supported ({{bug(1176792)}}).</li>
-   <li>The implied minimum size of grid Items, that is the special {{cssxref("min-width")}} and {{cssxref("min-height")}} <code>auto</code> behavior has been implemented ({{bug(1176775)}}).</li>
-   <li>{{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ({{bug(1151213)}}).</li>
-   <li>{{cssxref("align-content")}} and {{cssxref("justify-content")}} are now supported on grid layouts ({{bug(1151214)}}).</li>
+   <li>Gutters, that is the <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a>, <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a>, and <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a> properties are now supported ({{bug(1176792)}}).</li>
+   <li>The implied minimum size of grid Items, that is the special <a href="/en-US/docs/Web/CSS/min-width">min-width</a> and <a href="/en-US/docs/Web/CSS/min-height">min-height</a> <code>auto</code> behavior has been implemented ({{bug(1176775)}}).</li>
+   <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a> and <a href="/en-US/docs/Web/CSS/justify-self">justify-self</a> are now supported on grid layouts ({{bug(1151213)}}).</li>
+   <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a> and <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> are now supported on grid layouts ({{bug(1151214)}}).</li>
    <li>Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).</li>
-   <li>The related feature {{cssxref("display")}}: contents has been supported since <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a></li>
+   <li>The related feature <a href="/en-US/docs/Web/CSS/display">display</a>: contents has been supported since <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a></li>
   </ul>
  </li>
  <li>Implement full support for CSS Box Alignment for CSS Grid, support the missing values: <code>start,</code> <code>end,</code> <code>self-start,</code> <code>self-end,</code> <code>left,</code> <code>right,last-baseline,space-evenly </code>({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.</li>
  <li> [css-grid][css-flexbox] Implement grid/flex layout for &lt;fieldset&gt; ({{bug(1230207)}}).</li>
- <li>The <code>inline-start</code> and <code>inline-end</code> values have been added to {{cssxref("float")}} and {{cssxref("clear")}} ({{bug(1122918)}}). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the <code>layout.css.float-logical-values.enabled</code> to <code>true</code>.</li>
- <li>The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set <code>layout.css.text-emphasis.enabled</code>  to true to activate them ({{bug(1040668)}}).</li>
+ <li>The <code>inline-start</code> and <code>inline-end</code> values have been added to <a href="/en-US/docs/Web/CSS/float">float</a> and <a href="/en-US/docs/Web/CSS/clear">clear</a> ({{bug(1122918)}}). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the <code>layout.css.float-logical-values.enabled</code> to <code>true</code>.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/text-emphasis">text-emphasis</a>, <a href="/en-US/docs/Web/CSS/text-emphasis-style">text-emphasis-style</a>, <a href="/en-US/docs/Web/CSS/text-emphasis-color">text-emphasis-color</a>, and <a href="/en-US/docs/Web/CSS/text-emphasis-position">text-emphasis-position</a> have been implemented; they are disabled by default (set <code>layout.css.text-emphasis.enabled</code>  to true to activate them ({{bug(1040668)}}).</li>
  <li>Several <code>-webkit</code> prefixed properties and values have been added for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>:
   <ul>
    <li>Added {{cssxref("-webkit-backface-visibility")}}, {{cssxref("-webkit-perspective")}} and {{cssxref("-webkit-perspective-origin")}} for web compatibility, behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code> ({{bug(1179444)}}).</li>

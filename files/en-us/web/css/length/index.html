@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;length&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.</p>
+<p>The <strong><code>&lt;length&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a distance value. Lengths can be used in numerous CSS properties, such as <a href="/en-US/docs/Web/CSS/width">width</a>, <a href="/en-US/docs/Web/CSS/height">height</a>, <a href="/en-US/docs/Web/CSS/margin">margin</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, <a href="/en-US/docs/Web/CSS/border-width">border-width</a>, <a href="/en-US/docs/Web/CSS/font-size">font-size</a>, and <a href="/en-US/docs/Web/CSS/text-shadow">text-shadow</a>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Although {{cssxref("&lt;percentage&gt;")}} values are also CSS dimensions, and are usable in some of the same properties that accept <code>&lt;length&gt;</code> values, they are not themselves <code>&lt;length&gt;</code> values. See {{cssxref("&lt;length-percentage&gt;")}}.</p>
@@ -42,28 +42,28 @@ tags:
 
 <dl>
  <dt><code id="cap">cap</code> {{experimental_inline}}</dt>
- <dd>Represents the "cap height" (nominal height of capital letters) of the element’s {{Cssxref("font")}}.</dd>
+ <dd>Represents the "cap height" (nominal height of capital letters) of the element’s <a href="/en-US/docs/Web/CSS/font">font</a>.</dd>
  <dt><code id="ch">ch</code></dt>
- <dd>Represents the width, or more precisely the advance measure, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.<br>
+ <dd>Represents the width, or more precisely the advance measure, of the glyph "0" (zero, the Unicode character U+0030) in the element's <a href="/en-US/docs/Web/CSS/font">font</a>.<br>
  <br>
  In the cases where it is impossible or impractical to determine the measure of the “0” glyph, it must be assumed to be 0.5em wide by 1em tall.</dd>
  <dt><code id="em">em</code></dt>
- <dd>Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the <em>inherited</em> font-size of the element.</dd>
+ <dd>Represents the calculated <a href="/en-US/docs/Web/CSS/font-size">font-size</a> of the element. If used on the <a href="/en-US/docs/Web/CSS/font-size">font-size</a> property itself, it represents the <em>inherited</em> font-size of the element.</dd>
  <dt><code id="ex">ex</code></dt>
- <dd>Represents the <a href="https://en.wikipedia.org/wiki/X-height">x-height</a> of the element's {{Cssxref("font")}}. On fonts with the "x" letter, this is generally the height of lowercase letters in the font; <code>1ex ≈ 0.5em</code> in many fonts.</dd>
+ <dd>Represents the <a href="https://en.wikipedia.org/wiki/X-height">x-height</a> of the element's <a href="/en-US/docs/Web/CSS/font">font</a>. On fonts with the "x" letter, this is generally the height of lowercase letters in the font; <code>1ex ≈ 0.5em</code> in many fonts.</dd>
  <dt><code id="ic">ic</code> {{experimental_inline}}</dt>
  <dd>Equal to the used advance measure of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.</dd>
  <dt><code id="lh">lh</code> {{experimental_inline}}</dt>
- <dd>Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.</dd>
+ <dd>Equal to the computed value of the <a href="/en-US/docs/Web/CSS/line-height">line-height</a> property of the element on which it is used, converted to an absolute length.</dd>
  <dt><code id="rem">rem</code></dt>
- <dd>Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is <code>16px</code>, but user-defined preferences may modify this).</dd>
+ <dd>Represents the <a href="/en-US/docs/Web/CSS/font-size">font-size</a> of the root element (typically {{HTMLElement("html")}}). When used within the root element <a href="/en-US/docs/Web/CSS/font-size">font-size</a>, it represents its initial value (a common browser default is <code>16px</code>, but user-defined preferences may modify this).</dd>
  <dt><code id="rlh">rlh</code> {{experimental_inline}}</dt>
- <dd>Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.</dd>
+ <dd>Equal to the computed value of the <a href="/en-US/docs/Web/CSS/line-height">line-height</a> property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the <a href="/en-US/docs/Web/CSS/font-size">font-size</a> or <a href="/en-US/docs/Web/CSS/line-height">line-height</a> properties of the root element, it refers to the properties' initial value.</dd>
 </dl>
 
 <h5 id="Viewport-percentage_lengths">Viewport-percentage lengths</h5>
 
-<p>Viewport-percentage lengths define the <code>&lt;length&gt;</code> value relative to the size of the {{glossary("viewport")}}, i.e., the visible portion of the document. Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.</p>
+<p>Viewport-percentage lengths define the <code>&lt;length&gt;</code> value relative to the size of the {{glossary("viewport")}}, i.e., the visible portion of the document. Viewport lengths are invalid in <a href="/en-US/docs/Web/CSS/@page">@page</a> declaration blocks.</p>
 
 <dl>
  <dt><code id="vh">vh</code></dt>

@@ -19,7 +19,7 @@ tags:
 
 <div>{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different {{cssxref("display")}} values — and introduce some of the concepts we'll be covering throughout this module.</p>
+<p class="summary">This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different <a href="/en-US/docs/Web/CSS/display">display</a> values — and introduce some of the concepts we'll be covering throughout this module.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -38,7 +38,7 @@ tags:
 
 <ul>
  <li>Normal flow</li>
- <li>The {{cssxref("display")}} property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/display">display</a> property</li>
  <li>Flexbox</li>
  <li>Grid</li>
  <li>Floats</li>
@@ -80,9 +80,9 @@ tags:
 <p>The methods that can change how elements are laid out in CSS are as follows:</p>
 
 <ul>
- <li><strong>The {{cssxref("display")}} property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow, for example making a block-level element behave like an inline element (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a> for more information). We also have entire layout methods that are switched on via specific <code>display</code> values, for example <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, which alter how elements inside the element they are set on are laid out.</li>
- <li><strong>Floats</strong> — Applying a {{cssxref("float")}} value such as <code>left</code> can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.</li>
- <li><strong>The {{cssxref("position")}} property</strong> — Allows you to precisely control the placement of boxes inside other boxes. <code>static</code> positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top of the browser viewport.</li>
+ <li><strong>The <a href="/en-US/docs/Web/CSS/display">display</a> property</strong> — Standard values such as <code>block</code>, <code>inline</code> or <code>inline-block</code> can change how elements behave in normal flow, for example making a block-level element behave like an inline element (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a> for more information). We also have entire layout methods that are switched on via specific <code>display</code> values, for example <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, which alter how elements inside the element they are set on are laid out.</li>
+ <li><strong>Floats</strong> — Applying a <a href="/en-US/docs/Web/CSS/float">float</a> value such as <code>left</code> can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.</li>
+ <li><strong>The <a href="/en-US/docs/Web/CSS/position">position</a> property</strong> — Allows you to precisely control the placement of boxes inside other boxes. <code>static</code> positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top of the browser viewport.</li>
  <li><strong>Table layout</strong> — features designed for styling the parts of an HTML table can be used on non-table elements using <code>display: table</code> and associated properties.</li>
  <li><strong>Multi-column layout</strong> — The <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> properties can cause the content of a block to layout in columns, as you might see in a newspaper.</li>
 </ul>
@@ -101,7 +101,7 @@ tags:
 
 <p>The HTML markup below gives us a containing element, with a class of <code>wrapper</code>, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.</p>
 
-<p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row, because the initial value of {{cssxref("flex-direction")}} set on their parent is <code>row</code>. They all appear to stretch to the height of the tallest item, because the initial value of the {{cssxref("align-items")}} property set on their parent is <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
+<p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row, because the initial value of <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> set on their parent is <code>row</code>. They all appear to stretch to the height of the tallest item, because the initial value of the <a href="/en-US/docs/Web/CSS/align-items">align-items</a> property set on their parent is <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
 
 <div id="Flex_1">
 <div class="hidden">
@@ -134,7 +134,7 @@ tags:
 
 <p>In addition to the above properties that can be applied to the flex container, there are properties that can be applied to the flex items. These properties, among other things, can change the way that the items flex, enabling them to expand and contract to fit into the available space.</p>
 
-<p>As a simple example of this, we can add the {{cssxref("flex")}} property to all of our child items, with a value of <code>1</code>. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it — they will adjust size to take up the same amount of space, whatever that is.</p>
+<p>As a simple example of this, we can add the <a href="/en-US/docs/Web/CSS/flex">flex</a> property to all of our child items, with a value of <code>1</code>. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it — they will adjust size to take up the same amount of space, whatever that is.</p>
 
 <div id="Flex_2">
 <div class="hidden">
@@ -177,7 +177,7 @@ tags:
 
 <p>While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.</p>
 
-<p>Once again, you can switch on Grid Layout with a specific value of display — <code>display: grid</code>. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using <code>display: grid</code>, we are also defining some row and column tracks on the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns each of <code>1fr</code> and two rows of <code>100px</code>. I don’t need to put any rules on the child elements; they are automatically placed into the cells our grid has created.</p>
+<p>Once again, you can switch on Grid Layout with a specific value of display — <code>display: grid</code>. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using <code>display: grid</code>, we are also defining some row and column tracks on the parent using the <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a> and <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> properties respectively. We've defined three columns each of <code>1fr</code> and two rows of <code>100px</code>. I don’t need to put any rules on the child elements; they are automatically placed into the cells our grid has created.</p>
 
 <div id="Grid_1">
 <div class="hidden">
@@ -214,7 +214,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
 
-<p>Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the second example below we have defined the same grid, but this time with three child items. We've set the start and end line of each item using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. This causes the items to span multiple tracks.</p>
+<p>Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the second example below we have defined the same grid, but this time with three child items. We've set the start and end line of each item using the <a href="/en-US/docs/Web/CSS/grid-column">grid-column</a> and <a href="/en-US/docs/Web/CSS/grid-row">grid-row</a> properties. This causes the items to span multiple tracks.</p>
 
 <div id="Grid_2">
 <div class="hidden">
@@ -273,7 +273,7 @@ tags:
 
 <p>Floating an element changes the behavior of that element and the block level elements that follow it in normal flow. The element is moved to the left or right and removed from normal flow, and the surrounding content floats around the floated item.</p>
 
-<p>The {{cssxref("float")}} property has four possible values:</p>
+<p>The <a href="/en-US/docs/Web/CSS/float">float</a> property has four possible values:</p>
 
 <ul>
  <li><code>left</code> — Floats the element to the left.</li>
@@ -282,7 +282,7 @@ tags:
  <li><code>inherit</code> — Specifies that the value of the <code>float</code> property should be inherited from the element's parent element.</li>
 </ul>
 
-<p>In the example below we float a <code>&lt;div&gt;</code> left, and give it a {{cssxref("margin")}} on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.</p>
+<p>In the example below we float a <code>&lt;div&gt;</code> left, and give it a <a href="/en-US/docs/Web/CSS/margin">margin</a> on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.</p>
 
 <div id="Float_1">
 <div class="hidden">
@@ -336,7 +336,7 @@ p {
 
 <p>Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn’t a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.</p>
 
-<p>There are however useful techniques for certain layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.</p>
+<p>There are however useful techniques for certain layout patterns that rely on the <a href="/en-US/docs/Web/CSS/position">position</a> property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.</p>
 
 <p>There are five types of positioning you should know about:</p>
 
@@ -388,7 +388,7 @@ p {
   left: 30px;
 }</pre>
 
-<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>relative</code> — this doesn't do anything on its own, so we also add {{cssxref("top")}} and {{cssxref("left")}} properties. These serve to move the affected element down and to the right — this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which result in it moving right and down.</p>
+<p>Here we give our middle paragraph a <a href="/en-US/docs/Web/CSS/position">position</a> value of <code>relative</code> — this doesn't do anything on its own, so we also add <a href="/en-US/docs/Web/CSS/top">top</a> and <a href="/en-US/docs/Web/CSS/left">left</a> properties. These serve to move the affected element down and to the right — this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which result in it moving right and down.</p>
 
 <p>Adding this code will give the following result:</p>
 
@@ -440,7 +440,7 @@ p {
   left: 30px;
 }</pre>
 
-<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>absolute</code>, and the same {{cssxref("top")}} and {{cssxref("left")}} properties as before. Adding this code, however, will give the following result:</p>
+<p>Here we give our middle paragraph a <a href="/en-US/docs/Web/CSS/position">position</a> value of <code>absolute</code>, and the same <a href="/en-US/docs/Web/CSS/top">top</a> and <a href="/en-US/docs/Web/CSS/left">left</a> properties as before. Adding this code, however, will give the following result:</p>
 
 <div id="Absolute_1">
 <div class="hidden">
@@ -478,7 +478,7 @@ p {
 
 <p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
 
-<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p>
+<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The <a href="/en-US/docs/Web/CSS/top">top</a> and <a href="/en-US/docs/Web/CSS/left">left</a> properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p>
 
 <h3 id="Fixed_positioning">Fixed positioning</h3>
 
@@ -605,7 +605,7 @@ p {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>Now, the CSS for our example. Most of the CSS is fairly ordinary, except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively — basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.</p>
+<p>Now, the CSS for our example. Most of the CSS is fairly ordinary, except for the uses of the <a href="/en-US/docs/Web/CSS/display">display</a> property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively — basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.</p>
 
 <p>You'll notice that the caption paragraph has been given <code>display: table-caption;</code> — which makes it act like a table {{htmlelement("caption")}} — and <code>caption-side: bottom;</code> to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the <code>&lt;input&gt;</code> elements in the source. This allows for a nice bit of flexibility.</p>
 
@@ -655,7 +655,7 @@ form p {
 
 <p>The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don’t want to force users to scroll up and down, arranging content into columns can be a useful technique.</p>
 
-<p>To turn a block into a multicol container we use either the {{cssxref("column-count")}} property, which tells the browser how many columns we would like to have, or the {{cssxref("column-width")}} property, which tells the browser to fill the container with as many columns of at least that width.</p>
+<p>To turn a block into a multicol container we use either the <a href="/en-US/docs/Web/CSS/column-count">column-count</a> property, which tells the browser how many columns we would like to have, or the <a href="/en-US/docs/Web/CSS/column-width">column-width</a> property, which tells the browser to fill the container with as many columns of at least that width.</p>
 
 <p>In the below example we start with a block of HTML inside a containing <code>&lt;div&gt;</code> element with a class of <code>container</code>.</p>
 

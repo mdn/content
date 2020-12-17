@@ -98,14 +98,14 @@ tags:
 
 <h3 id="Fonts_and_text">Fonts and text</h3>
 
-<p>CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:</p>
+<p>CSS font and text features can be used easily with any widget (and yes, you can use <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit <a href="/en-US/docs/Web/CSS/font-family">font-family</a> and <a href="/en-US/docs/Web/CSS/font-size">font-size</a> from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:</p>
 
 <pre class="brush: css notranslate">button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
 }</pre>
 
-<p>The {{cssxref('inherit')}} property value causes the property value to match the computed value of the property of its parent element; inheriting the value of the parent.</p>
+<p>The <a href="/en-US/docs/Web/CSS/inherit">inherit</a> property value causes the property value to match the computed value of the property of its parent element; inheriting the value of the parent.</p>
 
 <p>The screenshots below show the difference. On the left is the default rendering of an <code>&lt;input type="text"&gt;</code>, <code>&lt;input type="date"&gt;</code>, {{htmlelement('select')}}, {{htmlelement('textarea')}}, <code>&lt;input type="submit"&gt;</code>, and a <code>&lt;button&gt;</code> in Chrome on macOS, with the platform's default font style in use. On the right are the same elements, with our above style rule applied.</p>
 
@@ -117,9 +117,9 @@ tags:
 
 <h3 id="Box_sizing">Box sizing</h3>
 
-<p>All text fields have complete support for every property related to the CSS box model, such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, and {{cssxref("border")}}. As before, however, browsers rely on the system default styles when displaying these widgets. It's up to you to define how you wish to blend them into your content. If you want to keep the native look and feel of the widgets, you'll face a little difficulty if you want to give them a consistent size.</p>
+<p>All text fields have complete support for every property related to the CSS box model, such as <a href="/en-US/docs/Web/CSS/width">width</a>, <a href="/en-US/docs/Web/CSS/height">height</a>, <a href="/en-US/docs/Web/CSS/padding">padding</a>, <a href="/en-US/docs/Web/CSS/margin">margin</a>, and <a href="/en-US/docs/Web/CSS/border">border</a>. As before, however, browsers rely on the system default styles when displaying these widgets. It's up to you to define how you wish to blend them into your content. If you want to keep the native look and feel of the widgets, you'll face a little difficulty if you want to give them a consistent size.</p>
 
-<p><strong>This is because each widget has their own rules for border, padding and margin.</strong> To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:</p>
+<p><strong>This is because each widget has their own rules for border, padding and margin.</strong> To give the same size to several different widgets, you can use the <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> property along with some consistent values for other properties:</p>
 
 <pre class="brush: css notranslate">input, textarea, select, button {
   width : 150px;
@@ -132,7 +132,7 @@ tags:
 
 <p><img alt="box model properties effect most input types." src="https://mdn.mozillademos.org/files/16904/boxmodel_formcontrols1.png" style="height: 365px; width: 359px;"></p>
 
-<p>What may not be apparent via the screenshot is that the radio and checkbox controls still look the same, but they are centered in the 150px of horizontal space provided by the {{cssxref('width')}} property. Other browsers may not center the widgets, but they do adhere to the space allotted.</p>
+<p>What may not be apparent via the screenshot is that the radio and checkbox controls still look the same, but they are centered in the 150px of horizontal space provided by the <a href="/en-US/docs/Web/CSS/width">width</a> property. Other browsers may not center the widgets, but they do adhere to the space allotted.</p>
 
 <h3 id="Legend_placement">Legend placement</h3>
 
@@ -159,7 +159,7 @@ legend {
 <p>The {{HTMLElement("legend")}} element is very important for accessibility — it will be spoken by assistive technologies as part of the label of each form element inside the fieldset — but using a technique like the one above is fine. The legend contents will still be spoken in the same way; it is just the visual position that has changed.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You could also use the {{cssxref("transform")}} property to help you with positioning your <code>&lt;legend&gt;</code>. However, when you position it with for example a <code>transform: translateY();</code>, it moves but leaves an ugly gap in the <code>&lt;fieldset&gt;</code> border, which is not easy to get rid of.</p>
+<p><strong>Note</strong>: You could also use the <a href="/en-US/docs/Web/CSS/transform">transform</a> property to help you with positioning your <code>&lt;legend&gt;</code>. However, when you position it with for example a <code>transform: translateY();</code>, it moves but leaves an ugly gap in the <code>&lt;fieldset&gt;</code> border, which is not easy to get rid of.</p>
 </div>
 
 <h2 id="A_specific_styling_example">A specific styling example</h2>
@@ -222,7 +222,7 @@ legend {
 
 <h4 id="Overall_layout">Overall layout</h4>
 
-<p>First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different to what we described above, you can find the correct <code>@font-face</code> blocks inside your downloaded webfont kit, in the <code>stylesheet.css</code> file (you'll need to replace the below <code>@font-face</code> blocks with them, and update the paths to the font files):</p>
+<p>First, we prepare by defining our <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different to what we described above, you can find the correct <code>@font-face</code> blocks inside your downloaded webfont kit, in the <code>stylesheet.css</code> file (you'll need to replace the below <code>@font-face</code> blocks with them, and update the paths to the font files):</p>
 
 <pre class="brush: css notranslate">@font-face {
     font-family: 'handwriting';
@@ -287,7 +287,7 @@ form {
   font : .8em "typewriter", sans-serif;
 }</pre>
 
-<p>The text fields require some common rules. Simply put, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:</p>
+<p>The text fields require some common rules. Simply put, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their <a href="/en-US/docs/Web/CSS/padding">padding</a> and <a href="/en-US/docs/Web/CSS/margin">margin</a>:</p>
 
 <pre class="brush: css notranslate">input, textarea {
   font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
@@ -310,7 +310,7 @@ form {
 
 <h4 id="Tweaking_the_textareas">Tweaking the textareas</h4>
 
-<p>{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the <code>resize</code> property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value <code>auto</code>, while some default to the value <code>scroll</code>. In our case, it's better to be sure every one will use <code>auto</code>:</p>
+<p>{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the <a href="/en-US/docs/Web/CSS/resize">resize</a> and <a href="/en-US/docs/Web/CSS/overflow">overflow</a> properties. While our design is a fixed-size design, and we could use the <code>resize</code> property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property is used to make the field render more consistently across browsers. Some browsers default to the value <code>auto</code>, while some default to the value <code>scroll</code>. In our case, it's better to be sure every one will use <code>auto</code>:</p>
 
 <pre class="brush: css notranslate">textarea {
   display : block;

@@ -12,11 +12,11 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is <code>row</code> and new columns if <code>flex-direction</code> is <code>column</code>. In this guide I will explain how this works, what it is designed for and what situations really require <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> rather than flexbox.</p>
+<p class="summary">Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> is <code>row</code> and new columns if <code>flex-direction</code> is <code>column</code>. In this guide I will explain how this works, what it is designed for and what situations really require <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> rather than flexbox.</p>
 
 <h2 id="Making_things_wrap">Making things wrap</h2>
 
-<p>The initial value of the {{cssxref("flex-wrap")}} property is <code>nowrap</code>. This means that if you have a set of flex items that are too wide for their container, they will overflow it. If you want to cause them to wrap once they become too wide you must add the <code>flex-wrap</code> property with a value of <code>wrap</code>, or use the shorthand {{cssxref("flex-flow")}} with values of <code>row wrap</code> or <code>column wrap</code>.</p>
+<p>The initial value of the <a href="/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> property is <code>nowrap</code>. This means that if you have a set of flex items that are too wide for their container, they will overflow it. If you want to cause them to wrap once they become too wide you must add the <code>flex-wrap</code> property with a value of <code>wrap</code>, or use the shorthand <a href="/en-US/docs/Web/CSS/flex-flow">flex-flow</a> with values of <code>row wrap</code> or <code>column wrap</code>.</p>
 
 <p>Items will then wrap in the container. In the next example I have ten items all with a <code>flex-basis</code> of <code>160px</code> and the ability to grow and shrink. Once the first row gets to a point where there is not enough space to place another 160 pixel item, a new flex line is created for the items and so on until all of the items are placed. As the items can grow, they will expand larger than 160 px in order to fill each row completely. If there is only one item on the final line it will stretch to fill the entire line.</p>
 
@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Collapsed_items">Collapsed items</h2>
 
-<p>The flexbox specification details what should happen if a flex item is collapsed by setting <code>visibility: collapse</code> on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behaviour as follows:</p>
+<p>The flexbox specification details what should happen if a flex item is collapsed by setting <code>visibility: collapse</code> on an item. See the MDN documentation for the <a href="/en-US/docs/Web/CSS/visibility">visibility</a> property. The specification describes the behaviour as follows:</p>
 
 <blockquote>
 <p>“Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.” - <a href="https://www.w3.org/TR/css-flexbox-1/#visibility-collapse">Collapsed items</a></p>

@@ -137,7 +137,7 @@ div:nth-of-type(2) {
 
 <h2 id="Creating_simple_legacy_grid_frameworks">Creating simple legacy grid frameworks</h2>
 
-<p>The majority of legacy frameworks use the behavior of the {{cssxref("float")}} property to float one column up next to another in order to create something that looks like a grid. Working through the process of creating a grid with floats shows you how this works and also introduces some more advanced concepts to build on the things you learned in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats and clearing</a>.</p>
+<p>The majority of legacy frameworks use the behavior of the <a href="/en-US/docs/Web/CSS/float">float</a> property to float one column up next to another in order to create something that looks like a grid. Working through the process of creating a grid with floats shows you how this works and also introduces some more advanced concepts to build on the things you learned in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats and clearing</a>.</p>
 
 <p>The easiest type of grid framework to create is a fixed width one — we just need to work out how much total width we want our design to be, how many columns we want, and how wide the gutters and columns should be. If we instead decided to lay out our design on a grid with columns that grow and shrink according to browser width, we would need to calculate percentage widths for the columns and  gutters between them.</p>
 
@@ -176,7 +176,7 @@ div:nth-of-type(2) {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
 
-<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
+<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
 
 <pre class="brush: css">* {
   box-sizing: border-box;
@@ -203,7 +203,7 @@ body {
 
 <p>We need to subtract that from our total width of 960 pixels, giving us 720 pixels for our columns. If we now divide that by 12, we know that each column should be 60 pixels wide.</p>
 
-<p>Our next step is to create a rule for the class <code>.col</code>,  floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:</p>
+<p>Our next step is to create a rule for the class <code>.col</code>,  floating it left, giving it a <a href="/en-US/docs/Web/CSS/margin-left">margin-left</a> of 20 pixels to form the gutter, and a <a href="/en-US/docs/Web/CSS/width">width</a> of 60 pixels. Add the following rule to the bottom of your CSS:</p>
 
 <pre class="brush: css">.col {
   float: left;
@@ -218,7 +218,7 @@ body {
 <p><strong>Note</strong>: We've also given each column a light red color so you can see exactly how much space each one takes up.</p>
 </div>
 
-<p>Layout containers that we want to span more than one column need to be given special classes to adjust their {{cssxref("width")}} values to the required number of columns (plus gutters in between). We need to create an additional class to allow containers to span 2 to 12 columns. Each width is the result of adding up the column width of that number of columns plus the gutter widths, which will always number one less than the number of columns.</p>
+<p>Layout containers that we want to span more than one column need to be given special classes to adjust their <a href="/en-US/docs/Web/CSS/width">width</a> values to the required number of columns (plus gutters in between). We need to create an additional class to allow containers to span 2 to 12 columns. Each width is the result of adding up the column width of that number of columns plus the gutter widths, which will always number one less than the number of columns.</p>
 
 <p>Add the following at the bottom of your CSS:</p>
 
@@ -270,7 +270,7 @@ body {
 
 <pre>20 / 960 = 0.02083333333</pre>
 
-<p>So we need to replace the 20 pixel {{cssxref("margin-left")}} on our <code>.col</code> rule and the 20 pixel {{cssxref("padding-right")}} on <code>.wrapper</code> with 2.08333333%.</p>
+<p>So we need to replace the 20 pixel <a href="/en-US/docs/Web/CSS/margin-left">margin-left</a> on our <code>.col</code> rule and the 20 pixel <a href="/en-US/docs/Web/CSS/padding-right">padding-right</a> on <code>.wrapper</code> with 2.08333333%.</p>
 
 <h4 id="Updating_our_grid">Updating our grid</h4>
 
@@ -288,7 +288,7 @@ body {
   padding-right: 2.08333333%;
 }</pre>
 
-<p>Not only have we given it a percentage {{cssxref("width")}}, we have also added a {{cssxref("max-width")}} property in order to stop the layout becoming too wide.</p>
+<p>Not only have we given it a percentage <a href="/en-US/docs/Web/CSS/width">width</a>, we have also added a <a href="/en-US/docs/Web/CSS/max-width">max-width</a> property in order to stop the layout becoming too wide.</p>
 
 <p>Next, update the fourth CSS rule (with the <code>.col</code> selector) like so:</p>
 
@@ -326,7 +326,7 @@ body {
 
 <h3 id="Easier_calculations_using_the_calc()_function">Easier calculations using the calc() function</h3>
 
-<p>You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
+<p>You could use the <a href="/en-US/docs/Web/CSS/calc()">calc()</a> function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
 
 <p>Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The <code>calc()</code> function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:</p>
 
@@ -451,7 +451,7 @@ body {
 
 <p>Here we are turning each row into a flex container. With a flexbox-based grid we still need rows in order to allow us to have elements that add up to less than 100%. We set that container to <code>display: flex</code>.</p>
 
-<p>On <code>.col</code> we set the {{cssxref("flex")}} property's first value ({{cssxref("flex-grow")}}) to 1 so our items can grow, the second value ({{cssxref("flex-shrink")}}) to 1 so the items can shrink, and the third value ({{cssxref("flex-basis")}}) to <code>auto</code>. As our element has a {{cssxref("width")}} set, <code>auto</code> will use that width as the <code>flex-basis</code> value.</p>
+<p>On <code>.col</code> we set the <a href="/en-US/docs/Web/CSS/flex">flex</a> property's first value (<a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a>) to 1 so our items can grow, the second value (<a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a>) to 1 so the items can shrink, and the third value (<a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a>) to <code>auto</code>. As our element has a <a href="/en-US/docs/Web/CSS/width">width</a> set, <code>auto</code> will use that width as the <code>flex-basis</code> value.</p>
 
 <p>On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.</p>
 
@@ -514,7 +514,7 @@ body {
 <p><br>
  To start using Skeleton we need to give the wrapper {{htmlelement("div")}} a class of <code>container</code> — this is already included in our HTML. This centers the content with a maximum width of 960 pixels. You can see how the boxes now never become wider than 960 pixels.</p>
 
-<p>You can take a look in the skeleton.css file to see the CSS that is used when we apply this class. The <code>&lt;div&gt;</code> is centered using <code>auto</code> left and right margins, and a padding of 20 pixels is applied left and right. Skeleton also sets the {{cssxref("box-sizing")}} property to <code>border-box</code> like we did earlier, so the padding and borders of this element will be included in the total width.</p>
+<p>You can take a look in the skeleton.css file to see the CSS that is used when we apply this class. The <code>&lt;div&gt;</code> is centered using <code>auto</code> left and right margins, and a padding of 20 pixels is applied left and right. Skeleton also sets the <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> property to <code>border-box</code> like we did earlier, so the padding and borders of this element will be included in the total width.</p>
 
 <pre class="brush: css">.container {
   position: relative;

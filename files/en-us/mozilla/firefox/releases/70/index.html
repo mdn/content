@@ -51,17 +51,17 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Opacity values like for {{cssxref("opacity")}} or {{SVGAttr("stop-opacity")}} can now be percentages ({{Bug(1562086)}}).</li>
- <li>{{cssxref("grid-auto-columns")}} and {{cssxref("grid-auto-rows")}} now accept multiple track-size values ({{Bug(1339672)}}).</li>
+ <li>Opacity values like for <a href="/en-US/docs/Web/CSS/opacity">opacity</a> or {{SVGAttr("stop-opacity")}} can now be percentages ({{Bug(1562086)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a> and <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a> now accept multiple track-size values ({{Bug(1339672)}}).</li>
  <li>A number of text-related CSS properties have been enabled by default ({{bug(1573631)}}):
   <ul>
-   <li>{{cssxref("text-decoration-thickness")}}.</li>
+   <li><a href="/en-US/docs/Web/CSS/text-decoration-thickness">text-decoration-thickness</a>.</li>
    <li>{{cssxref("text-underline-offset")}}.</li>
    <li>{{cssxref("text-decoration-skip-ink")}}. The default value is <code>auto</code>, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.</li>
   </ul>
  </li>
- <li>The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ({{Bug(1038294)}}, {{Bug(1105868)}} and {{Bug(1557825)}}).</li>
- <li>The {{cssxref("font-size")}} property now accepts the new keyword value <code>xxx-large</code>. ({{Bug(1553545)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/display">display</a> property now accepts two keyword values representing the inner and outer display type ({{Bug(1038294)}}, {{Bug(1105868)}} and {{Bug(1557825)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/font-size">font-size</a> property now accepts the new keyword value <code>xxx-large</code>. ({{Bug(1553545)}}).</li>
  <li>The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ({{bug(1572246)}}; see <span class="F0XO1GC-mb-Z" id="t-t"><a href="https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ">Intent to ship: Make &lt;link&gt; elements always unvisited</a> and </span><a href="https://github.com/w3c/csswg-drafts/issues/3817">[selectors] :link and &lt;link&gt;</a> for more reasoning as to why).</li>
  <li>We now support an <code>auto</code> value for the {{cssxref("quotes")}} property ({{bug(1421938)}}).</li>
  <li>Stylesheets contained in {{htmlelement("style")}} elements are now cached for reuse, to improve performance ({{bug(1480146)}}). Note that this currently doesn't include stylesheets that contain <code>@import</code> rules.</li>

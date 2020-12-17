@@ -35,7 +35,7 @@ table-layout: unset;
 	<dd>By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.</dd>
 	<dt><code>fixed</code></dt>
 	<dd>Table and column widths are set by the widths of <code>table</code> and <code>col</code> elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.</dd>
-	<dd>Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.</dd>
+	<dd>Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -50,7 +50,7 @@ table-layout: unset;
 
 <h3 id="Fixed-width_tables_with_text-overflow">Fixed-width tables with text-overflow</h3>
 
-<p>This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were <code>auto</code>, the table would grow to accomodate its contents, despite the specified <code>width</code>.</p>
+<p>This example uses a fixed table layout, combined with the <a href="/en-US/docs/Web/CSS/width">width</a> property, to restrict the table's width. The <a href="/en-US/docs/Web/CSS/text-overflow">text-overflow</a> property is used to apply an ellipsis to words that are too long to fit. If the table layout were <code>auto</code>, the table would grow to accomodate its contents, despite the specified <code>width</code>.</p>
 
 <h4 id="HTML">HTML</h4>
 

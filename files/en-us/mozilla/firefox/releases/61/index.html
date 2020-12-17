@@ -41,21 +41,21 @@ tags:
 
 <ul>
  <li>CSS parsing has been parallelized ({{bug(1346988)}}).</li>
- <li>Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ({{bug(1447163)}}).</li>
- <li>The <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ({{bug(1398482)}}). See <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#Gaps_between_boxes">Box alignment; Gaps between boxes</a> for additional details. The old names have been kept as aliases for web compatibility purposes.</li>
- <li>The {{cssxref("flex-basis")}} <code>content</code> value is now supported ({{bug(1105111)}}).</li>
- <li>Percentage values of {{cssxref("column-gap")}} are now supported in <a href="/en-US/docs/Web/CSS/CSS_Columns">CSS multi-column layout</a> ({{bug(1398537)}}).</li>
+ <li>Support for <a href="/en-US/docs/Web/CSS/font-variation-settings">font-variation-settings</a> and <a href="/en-US/docs/Web/CSS/font-optical-sizing">font-optical-sizing</a> has been enabled by default ({{bug(1447163)}}).</li>
+ <li>The <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties have been renamed to <a href="/en-US/docs/Web/CSS/gap">gap</a>, <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a>, and <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>, as they are no longer grid-specific ({{bug(1398482)}}). See <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#Gaps_between_boxes">Box alignment; Gaps between boxes</a> for additional details. The old names have been kept as aliases for web compatibility purposes.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a> <code>content</code> value is now supported ({{bug(1105111)}}).</li>
+ <li>Percentage values of <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a> are now supported in <a href="/en-US/docs/Web/CSS/CSS_Columns">CSS multi-column layout</a> ({{bug(1398537)}}).</li>
  <li>The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ({{bug(992245)}}).</li>
- <li>{{cssxref("overflow")}} now accepts two-value syntax ({{bug(1453148)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/overflow">overflow</a> now accepts two-value syntax ({{bug(1453148)}}).</li>
  <li>Flex items that are sized according to their content are now sized using <code>max-content</code>, not <code>fit-content</code> ({{bug(1282821)}}). See the <a href="/en-US/docs/Web/CSS/width#Values"><code>width</code> value definitions</a> for more details of these values.</li>
- <li>{{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by <a href="https://drafts.csswg.org/css-fonts-4/">CSS Fonts level 4</a> ({{bug(1436048)}}):
+ <li><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a>, <a href="/en-US/docs/Web/CSS/font-stretch">font-stretch</a> and <a href="/en-US/docs/Web/CSS/font-style">font-style</a> now support additional values as defined by <a href="https://drafts.csswg.org/css-fonts-4/">CSS Fonts level 4</a> ({{bug(1436048)}}):
   <ul>
-   <li>{{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.</li>
-   <li>{{cssxref("font-stretch")}} now accepts percentage values.</li>
-   <li>{{cssxref("font-style")}} now accepts an angle after the <code>oblique</code> keyword.</li>
+   <li><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> now accepts a floating-point value between 1 and 1000 inclusive.</li>
+   <li><a href="/en-US/docs/Web/CSS/font-stretch">font-stretch</a> now accepts percentage values.</li>
+   <li><a href="/en-US/docs/Web/CSS/font-style">font-style</a> now accepts an angle after the <code>oblique</code> keyword.</li>
   </ul>
  </li>
- <li>The {{cssxref("@font-face")}} descriptor equivalents of the three properties mentioned in the above entry also support the new syntax listed above, and additionally now support a two-value syntax allowing us to specify a range of descriptor values supported by a font-face ({{bug(1436061)}}, {{bug(1436048)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> descriptor equivalents of the three properties mentioned in the above entry also support the new syntax listed above, and additionally now support a two-value syntax allowing us to specify a range of descriptor values supported by a font-face ({{bug(1436061)}}, {{bug(1436048)}}).</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>

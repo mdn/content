@@ -10,9 +10,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>unicode-bidi</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The <code>unicode-bidi</code> property overrides this algorithm and allows the developer to control the text embedding.</p>
+<p>The <strong><code>unicode-bidi</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property, together with the <a href="/en-US/docs/Web/CSS/direction">direction</a> property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The <code>unicode-bidi</code> property overrides this algorithm and allows the developer to control the text embedding.</p>
 
-<p>The <code>unicode-bidi</code> and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.</p>
+<p>The <code>unicode-bidi</code> and <a href="/en-US/docs/Web/CSS/direction">direction</a> properties are the only properties that are not affected by the <a href="/en-US/docs/Web/CSS/all">all</a> shorthand.</p>
 
 <p class="warning"><strong>Note:</strong> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors <strong>should not</strong> override it.</p>
 
@@ -36,15 +36,15 @@ unicode-bidi: unset;</pre>
  <dt><code>normal</code></dt>
  <dd>The element does not offer an additional level of embedding with respect to the bidirectional algorithm. For inline elements, implicit reordering works across element boundaries.</dd>
  <dt><code>embed</code></dt>
- <dd>If the element is inline, this value opens an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the {{Cssxref("direction")}} property.</dd>
+ <dd>If the element is inline, this value opens an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the <a href="/en-US/docs/Web/CSS/direction">direction</a> property.</dd>
  <dt><code>bidi-override</code></dt>
- <dd>For inline elements this creates an override. For block container elements this creates an override for inline-level descendants not within another block container element. This means that inside the element, reordering is strictly in sequence according to the {{Cssxref("direction")}} property; the implicit part of the bidirectional algorithm is ignored.</dd>
+ <dd>For inline elements this creates an override. For block container elements this creates an override for inline-level descendants not within another block container element. This means that inside the element, reordering is strictly in sequence according to the <a href="/en-US/docs/Web/CSS/direction">direction</a> property; the implicit part of the bidirectional algorithm is ignored.</dd>
  <dt><code>isolate</code></dt>
  <dd>This keyword indicates that the element's container directionality should be calculated without considering the content of this element. The element is therefore <em>isolated</em> from its siblings. When applying its bidirectional-resolution algorithm, its container element treats it as one or several <code>U+FFFC Object Replacement Character</code>, i.e. like an image.</dd>
  <dt><code>isolate-override</code></dt>
  <dd>This keyword applies the isolation behavior of the <code>isolate</code> keyword to the surrounding content and the override behavior of the <code>bidi-override</code> keyword to the inner content.</dd>
  <dt><code>plaintext</code></dt>
- <dd>This keyword makes the elements directionality calculated without considering its parent bidirectional state or the value of the {{cssxref("direction")}} property. The directionality is calculated using the P2 and P3 rules of the Unicode Bidirectional Algorithm.<br>
+ <dd>This keyword makes the elements directionality calculated without considering its parent bidirectional state or the value of the <a href="/en-US/docs/Web/CSS/direction">direction</a> property. The directionality is calculated using the P2 and P3 rules of the Unicode Bidirectional Algorithm.<br>
  This value allows the display of data that is already formatted using a tool following the Unicode Bidirectional Algorithm.</dd>
 </dl>
 
@@ -113,5 +113,5 @@ unicode-bidi: unset;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Cssxref("direction")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/direction">direction</a></li>
 </ul>

@@ -88,7 +88,7 @@ tags:
  </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.</p>
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the <a href="/en-US/docs/Web/CSS/animation">animation</a> style later to start animating the box.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -105,7 +105,7 @@ tags:
 
 </pre>
 
-<p>The animation sequence is described next. First, the <code>"slideAnimation"</code> class, which establishes the {{cssxref("animation")}} that will cause the box to move over the course of five seconds, one time, using the <code>"slideBox"</code> keyframe set. The keyframes are defined next; they describe an animation which causes the box to migrate from the top-left corner of the container to the bottom-right corner.</p>
+<p>The animation sequence is described next. First, the <code>"slideAnimation"</code> class, which establishes the <a href="/en-US/docs/Web/CSS/animation">animation</a> that will cause the box to move over the course of five seconds, one time, using the <code>"slideBox"</code> keyframe set. The keyframes are defined next; they describe an animation which causes the box to migrate from the top-left corner of the container to the bottom-right corner.</p>
 
 <pre class="brush: css">.slideAnimation {
   animation: 5s ease-in-out 0s 1 slideBox;
@@ -164,7 +164,7 @@ box.onanimationend = function(event) {
   event.target.style.display = "none";
 }, false);</pre>
 
-<p>This sets the class of the box we want to animate to the class that contains the {{cssxref("animation")}} description, then hides the play button because this example will only run the animation once. For information about why, and how to support running an animation more than once, see {{SectionOnPage("/en-US/docs/Web/CSS/CSS_Animations/Tips", "Run an animation again")}}.</p>
+<p>This sets the class of the box we want to animate to the class that contains the <a href="/en-US/docs/Web/CSS/animation">animation</a> description, then hides the play button because this example will only run the animation once. For information about why, and how to support running an animation more than once, see {{SectionOnPage("/en-US/docs/Web/CSS/CSS_Animations/Tips", "Run an animation again")}}.</p>
 
 <h3 id="Result">Result</h3>
 

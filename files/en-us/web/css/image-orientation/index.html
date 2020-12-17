@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{deprecated_header}}</div>
 
-<p><span class="seoSummary">The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image.</span> It should <em>not</em> be used for any other orientation adjustments; instead, the {{cssxref("transform")}} property should be used with the <code>rotate</code> {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p><span class="seoSummary">The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image.</span> It should <em>not</em> be used for any other orientation adjustments; instead, the <a href="/en-US/docs/Web/CSS/transform">transform</a> property should be used with the <code>rotate</code> {{cssxref("&lt;transform-function&gt;")}}.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> This property is deprecated in the specification. Its functionality may be moved into properties on the {{HTMLElement("img")}} and/or {{HTMLElement("picture")}} elements, with the possible exception of <code>from-image</code>. The <code>flip</code> and <code>&lt;angle&gt;</code> values were made obsolete in Firefox 63.</p>
@@ -54,7 +54,7 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
 
 <h2 id="Description">Description</h2>
 
-<p>This property is intended <em>only</em> to be used for the purpose of correcting the orientation of images which were shot with the camera rotated. It should <em>not</em> be used for arbitrary rotations. For any purpose other than correcting an image's orientation due to how it was shot or scanned, use a {{cssxref("transform")}} property with the <code>rotate</code> keyword to specify rotation. This includes any user-directed changes to the orientation of the image, or changes required for printing in portrait versus landscape orientation.</p>
+<p>This property is intended <em>only</em> to be used for the purpose of correcting the orientation of images which were shot with the camera rotated. It should <em>not</em> be used for arbitrary rotations. For any purpose other than correcting an image's orientation due to how it was shot or scanned, use a <a href="/en-US/docs/Web/CSS/transform">transform</a> property with the <code>rotate</code> keyword to specify rotation. This includes any user-directed changes to the orientation of the image, or changes required for printing in portrait versus landscape orientation.</p>
 
 <p>If used in conjunction with other CSS properties, such as a {{cssxref("&lt;transform-function&gt;")}}, any <code>image-orientation</code> rotation is applied before any other transformations.</p>
 
@@ -129,8 +129,8 @@ imageOrientation.addEventListener("change", function (evt) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("transform")}} and {{cssxref("rotate")}}</li>
+ <li>Other image-related CSS properties: <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a>, <a href="/en-US/docs/Web/CSS/object-position">object-position</a>, <a href="/en-US/docs/Web/CSS/image-orientation">image-orientation</a>, <a href="/en-US/docs/Web/CSS/image-rendering">image-rendering</a>, <a href="/en-US/docs/Web/CSS/image-resolution">image-resolution</a>.</li>
+ <li><a href="/en-US/docs/Web/CSS/transform">transform</a> and {{cssxref("rotate")}}</li>
 </ul>
 
 <div>{{CSSRef}}</div>

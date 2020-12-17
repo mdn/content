@@ -13,7 +13,7 @@ tags:
 
 
 
-<p>If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.</p>
+<p>If a grid item is positioned into a row that is not explicitly sized by <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -74,9 +74,9 @@ grid-auto-rows: unset;
  <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
  <dt><code>auto</code></dt>
- <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
+ <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by <a href="/en-US/docs/Web/CSS/min-width">min-width</a>/<a href="/en-US/docs/Web/CSS/min-height">min-height</a>) of the grid items occupying the grid track.</dd>
  <dd>
- <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
+ <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the <a href="/en-US/docs/Web/CSS/align-content">align-content</a> and <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> properties.</p>
  </dd>
 </dl>
 
@@ -147,7 +147,7 @@ grid-auto-rows: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
+ <li>Related CSS properties: <a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a>, <a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a>, <a href="/en-US/docs/Web/CSS/grid">grid</a></li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">Auto-placement in grid layout - sizing rows in the implicit grid</a></em></li>
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
 </ul>

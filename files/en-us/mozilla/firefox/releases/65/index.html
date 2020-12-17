@@ -38,16 +38,16 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The {{cssxref("image-rendering")}} property's <code>crisp-edges</code> value has now been unprefixed ({{bug(1496617)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/image-rendering">image-rendering</a> property's <code>crisp-edges</code> value has now been unprefixed ({{bug(1496617)}}).</li>
  <li>A {{cssxref("scrollbar-color")}} value of <code>auto</code> now resolves to <code>auto</code>, rather than two colors ({{bug(1501418)}}).</li>
  <li>The <code>break-*</code> properties have been implemented, and the legacy <code>page-break-*</code> properties have been aliased to them ({{bug(775618)}}):
   <ul>
-   <li>{{cssxref("break-before")}} is now an alias for {{cssxref("page-break-before")}}.</li>
-   <li>{{cssxref("break-after")}} is now an alias for {{cssxref("page-break-after")}}.</li>
-   <li>{{cssxref("break-inside")}} is now an alias for {{cssxref("page-break-inside")}}.</li>
+   <li><a href="/en-US/docs/Web/CSS/break-before">break-before</a> is now an alias for <a href="/en-US/docs/Web/CSS/page-break-before">page-break-before</a>.</li>
+   <li><a href="/en-US/docs/Web/CSS/break-after">break-after</a> is now an alias for <a href="/en-US/docs/Web/CSS/page-break-after">page-break-after</a>.</li>
+   <li><a href="/en-US/docs/Web/CSS/break-inside">break-inside</a> is now an alias for <a href="/en-US/docs/Web/CSS/page-break-inside">page-break-inside</a>.</li>
   </ul>
  </li>
- <li>The {{cssxref("overflow-wrap")}} property's <code>anywhere</code> value has been implemented ({{bug(1505786)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</a> property's <code>anywhere</code> value has been implemented ({{bug(1505786)}}).</li>
  <li>The new step position keywords <code>jump-start</code>, <code>jump-end</code>, <code>jump-none</code>, and <code>jump-both</code> — usable inside the <a href="/en-US/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions"><code>steps()</code> timing function</a> — have been implemented ({{bug(1496619)}}). This also coincides with the removal of the <code>frames()</code> timing function, which was the previous way of implementing such functionality, now deprecated.</li>
  <li>Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
   <ul>
@@ -56,7 +56,7 @@ tags:
    <li><code>textarea</code>, which is now used as the default value for {{htmlelement("textarea")}} elements in UA stylesheets. the existing value <code>textfield-multiline</code> is now an alias for <code>textarea</code> ({{bug(1507905)}})</li>
   </ul>
  </li>
- <li>The behavior of {{cssxref("user-select")}} has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
+ <li>The behavior of <a href="/en-US/docs/Web/CSS/user-select">user-select</a> has been changed to make it align more with other browsers ({{bug(1506547)}}). Specifically:
   <ul>
    <li><code>user-select: all</code> set on an element no longer overrides other values of <code>user-select</code> set on children of that element. So for example in the following snippet:
     <pre class="brush: html">&lt;div style="-webkit-user-select: all"&gt;All
@@ -74,8 +74,8 @@ tags:
 <h4 id="Removals">Removals</h4>
 
 <ul>
- <li>The <code>layout.css.shape-outside.enabled</code> pref has been removed; {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}, and {{cssxref("shape-image-threshold")}} can no longer be disabled in <code>about:config</code> ({{bug(1504387)}}).</li>
- <li>Several Firefox-only values of the {{cssxref("user-select")}} property have been removed — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code>, and <code>toggle</code>. See {{bug(1492958)}} and {{bug(1506547)}}.</li>
+ <li>The <code>layout.css.shape-outside.enabled</code> pref has been removed; <a href="/en-US/docs/Web/CSS/shape-outside">shape-outside</a>, {{cssxref("shape-margin")}}, and {{cssxref("shape-image-threshold")}} can no longer be disabled in <code>about:config</code> ({{bug(1504387)}}).</li>
+ <li>Several Firefox-only values of the <a href="/en-US/docs/Web/CSS/user-select">user-select</a> property have been removed — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code>, and <code>toggle</code>. See {{bug(1492958)}} and {{bug(1506547)}}.</li>
  <li>As mentioned above, the <code>frames()</code> timing function has been removed ({{bug(1496619)}}).</li>
 </ul>
 

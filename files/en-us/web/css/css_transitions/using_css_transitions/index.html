@@ -28,16 +28,16 @@ tags:
 
 <h2 id="Defining_transitions">Defining transitions</h2>
 
-<p>CSS Transitions are controlled using the shorthand {{cssxref("transition")}} property. This is the best way to configure transitions, as it makes it easier to avoid out of sync parameters, which can be very frustrating to have to spend lots of time debugging in CSS.</p>
+<p>CSS Transitions are controlled using the shorthand <a href="/en-US/docs/Web/CSS/transition">transition</a> property. This is the best way to configure transitions, as it makes it easier to avoid out of sync parameters, which can be very frustrating to have to spend lots of time debugging in CSS.</p>
 
 <p>You can control the individual components of the transition with the following sub-properties:</p>
 
-<p><strong>(Note that these transitions loop infinitely only for the purpose of our examples; CSS <code>transition</code>s only visualize a property change from start to finish. If you need visualizations that loop, look into the CSS {{cssxref("animation")}} property.)</strong></p>
+<p><strong>(Note that these transitions loop infinitely only for the purpose of our examples; CSS <code>transition</code>s only visualize a property change from start to finish. If you need visualizations that loop, look into the CSS <a href="/en-US/docs/Web/CSS/animation">animation</a> property.)</strong></p>
 
 <dl>
- <dt>{{cssxref("transition-property")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/transition-property">transition-property</a></dt>
  <dd>Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.</dd>
- <dt>{{cssxref("transition-duration")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/transition-duration">transition-duration</a></dt>
  <dd>Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.
  <div>
  <div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -301,7 +301,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </div>
  </dd>
- <dt>{{cssxref("transition-timing-function")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/transition-timing-function">transition-timing-function</a></dt>
  <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">Specifies a function to define how intermediate values for properties are computed. <em>Timing functions</em> determine how intermediate values of the transition are calculated. Most <a href="/en-US/docs/Web/CSS/timing-function">timing functions</a> can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier. You can also choose easing from <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.
  <div class="cleared">
  <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -557,7 +557,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </div>
  </dd>
- <dt>{{cssxref("transition-delay")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a></dt>
  <dd>Defines how long to wait between the time a property is changed and the transition actually begins.
  <div>
  <div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -925,7 +925,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
   transition-duration: 3s, 5s, 3s, 5s;
 }</pre>
 
-<p>Similarly, if any property's value list is longer than that for {{cssxref("transition-property")}}, it's truncated, so if you have the following CSS:</p>
+<p>Similarly, if any property's value list is longer than that for <a href="/en-US/docs/Web/CSS/transition-property">transition-property</a>, it's truncated, so if you have the following CSS:</p>
 
 <pre class="brush: css notranslate">div {
   transition-property: opacity, left;
@@ -1029,7 +1029,7 @@ document.addEventListener('click', function(ev){
  <dt><code>propertyName</code></dt>
  <dd>A string indicating the name of the CSS property whose transition completed.</dd>
  <dt><code>elapsedTime</code></dt>
- <dd>A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.</dd>
+ <dd>A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of <a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a>.</dd>
 </dl>
 
 <p>As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to monitor for this event:</p>
@@ -1042,7 +1042,7 @@ document.addEventListener('click', function(ev){
 <pre class="brush: js notranslate">el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);</pre>
 
-<div class="note"><strong>Note</strong>: The <code>transitionend</code> event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}<code>: none</code> or the animating property's value is changed.</div>
+<div class="note"><strong>Note</strong>: The <code>transitionend</code> event doesn't fire if the transition is aborted before the transition is completed because either the element is made <a href="/en-US/docs/Web/CSS/display">display</a><code>: none</code> or the animating property's value is changed.</div>
 
 <h2 id="Specifications">Specifications</h2>
 

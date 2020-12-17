@@ -45,7 +45,7 @@ tags:
 
 <h2 id="Setting_a_specific_size">Setting a specific size</h2>
 
-<p>We can, of course, give elements in our design a specific size. When a size is given to an element (the content of which then needs to fit into that size) we refer to it as an <strong>extrinsic size</strong>. Take our <code>&lt;div&gt;</code> from the example above — we can give it specific {{cssxref("width")}} and {{cssxref("height")}} values, and it will now have that size no matter what content is placed into it. As we discovered in <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">our previous lesson on overflow</a>, a set height can cause content to overflow if there is more content than the element has space to fit inside it.</p>
+<p>We can, of course, give elements in our design a specific size. When a size is given to an element (the content of which then needs to fit into that size) we refer to it as an <strong>extrinsic size</strong>. Take our <code>&lt;div&gt;</code> from the example above — we can give it specific <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> values, and it will now have that size no matter what content is placed into it. As we discovered in <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">our previous lesson on overflow</a>, a set height can cause content to overflow if there is more content than the element has space to fit inside it.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Percentage_margins_and_padding">Percentage margins and padding</h3>
 
-<p>If you set <code>margins</code> and <code>padding</code> as a percentage, you may notice some strange behavior. In the below example we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of 10%. The padding and margin on the top and bottom of the box are the same size as the margin on the left and right.</p>
+<p>If you set <code>margins</code> and <code>padding</code> as a percentage, you may notice some strange behavior. In the below example we have a box. We have given the inner box a <a href="/en-US/docs/Web/CSS/margin">margin</a> of 10% and a <a href="/en-US/docs/Web/CSS/padding">padding</a> of 10%. The padding and margin on the top and bottom of the box are the same size as the margin on the left and right.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/percent-mp.html", '100%', 700)}}</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <h2 id="min-_and_max-_sizes">min- and max- sizes</h2>
 
-<p>In addition to giving things a fixed size, we can ask CSS to give an element a minimum or a maximum size. If you have a box that might contain a variable amount of content, and you always want it to be <em>at least</em> a certain height, you could set the {{cssxref("min-height")}} property on it. The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height.</p>
+<p>In addition to giving things a fixed size, we can ask CSS to give an element a minimum or a maximum size. If you have a box that might contain a variable amount of content, and you always want it to be <em>at least</em> a certain height, you could set the <a href="/en-US/docs/Web/CSS/min-height">min-height</a> property on it. The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height.</p>
 
 <p>In the example below you can see two boxes, both with a defined height of 150 pixels. The box on the left is 150 pixels tall; the box on the right has content that needs more room, and so it has grown taller than 150 pixels.</p>
 
@@ -79,7 +79,7 @@ tags:
 
 <p>This is very useful for dealing with variable amounts of content while avoiding overflow.</p>
 
-<p>A common use of {{cssxref("max-width")}} is to cause images to scale down if there is not enough space to display them at their intrinsic width while making sure they don't become larger than that width.</p>
+<p>A common use of <a href="/en-US/docs/Web/CSS/max-width">max-width</a> is to cause images to scale down if there is not enough space to display them at their intrinsic width while making sure they don't become larger than that width.</p>
 
 <p>As an example, if you were to set <code>width: 100%</code> on an image, and its intrinsic width was smaller than its container, the image would be forced to stretch and become larger, causing it to look pixellated.</p>
 
@@ -99,7 +99,7 @@ tags:
 
 <p>The viewport — which is the visible area of your page in the browser you are using to view a site — also has a size. In CSS we have units which relate to the size of the viewport — the <code>vw</code> unit for viewport width, and <code>vh</code> for viewport height. Using these units you can size something relative to the viewport of the user.</p>
 
-<p><code>1vh</code> is equal to 1% of the viewport height, and <code>1vw</code> is equal to 1% of the viewport width. You can use these units to size boxes, but also text. In the example below we have a box which is sized as 20vh and 20vw. The box contains a letter <code>A</code>, which has been given a {{cssxref("font-size")}} of 10vh.</p>
+<p><code>1vh</code> is equal to 1% of the viewport height, and <code>1vw</code> is equal to 1% of the viewport width. You can use these units to size boxes, but also text. In the example below we have a box which is sized as 20vh and 20vw. The box contains a letter <code>A</code>, which has been given a <a href="/en-US/docs/Web/CSS/font-size">font-size</a> of 10vh.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}</p>
 

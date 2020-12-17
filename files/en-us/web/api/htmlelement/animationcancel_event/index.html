@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>animationcancel</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("HTMLElement/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.</p>
+<p>The <strong><code>animationcancel</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("HTMLElement/animationend_event", "animationend")}} event. This might happen when the <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.</p>
 
 <p>An event handler for this event can be added by setting the {{domxref("GlobalEventHandlers.onanimationcancel", "onanimationcancel")}} property, or using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 
@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code gets an element that's currently being animated and adds a listener to the <code>animationcancel</code> event. It then sets the element's {{cssxref("display")}} property to <code>none</code>, which will trigger the <code>animationcancel</code> event.</p>
+<p>This code gets an element that's currently being animated and adds a listener to the <code>animationcancel</code> event. It then sets the element's <a href="/en-US/docs/Web/CSS/display">display</a> property to <code>none</code>, which will trigger the <code>animationcancel</code> event.</p>
 
 <pre class="brush: js">const animated = document.querySelector('.animated');
 

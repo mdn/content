@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>all</strong></code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>.</span> It can set properties to their initial or inherited values, or to the values specified in another stylesheet origin.</p>
+<p><span class="seoSummary">The <code><strong>all</strong></code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property resets all of an element's properties except <a href="/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</a>, <a href="/en-US/docs/Web/CSS/direction">direction</a>, and <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>.</span> It can set properties to their initial or inherited values, or to the values specified in another stylesheet origin.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/all.html")}}</div>
 
@@ -27,18 +27,18 @@ all: unset;
 all: revert;
 </pre>
 
-<p>The <code>all</code> property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.</p>
+<p>The <code>all</code> property is specified as one of the CSS global keyword values. Note that none of these values affect the <a href="/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</a> and <a href="/en-US/docs/Web/CSS/direction">direction</a> properties.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt>{{cssxref("initial")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/initial">initial</a></dt>
  <dd>Specifies that all the element's properties should be changed to their <a href="/en-US/docs/Web/CSS/initial_value">initial values</a>.</dd>
- <dt>{{cssxref("inherit")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/inherit">inherit</a></dt>
  <dd>Specifies that all the element's properties should be changed to their <a href="/en-US/docs/Web/CSS/inheritance">inherited values</a>.</dd>
- <dt>{{cssxref("unset")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/unset">unset</a></dt>
  <dd>Specifies that all the element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.</dd>
- <dt>{{cssxref("revert")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/revert">revert</a></dt>
  <dd>Specifies behavior that depends on the stylesheet origin to which the declaration belongs:
  <dl>
   <dt><a href="/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets">User-agent origin</a></dt>
@@ -106,7 +106,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: unset; }</pre>
 {{EmbedLiveSample("ex1", "200", "125")}}
 
-<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its {{cssxref("background-color")}} is <code>transparent</code> (initial value), but its {{cssxref("font-size")}} is still <code>small</code> (inherited value) and its {{cssxref("color")}} is <code>blue</code> (inherited value).</p>
+<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its <a href="/en-US/docs/Web/CSS/background-color">background-color</a> is <code>transparent</code> (initial value), but its <a href="/en-US/docs/Web/CSS/font-size">font-size</a> is still <code>small</code> (inherited value) and its <a href="/en-US/docs/Web/CSS/color">color</a> is <code>blue</code> (inherited value).</p>
 </div>
 
 <div id="ex2" style="display: inline-block; width: 225px; vertical-align: top;">
@@ -119,7 +119,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: initial; }</pre>
 {{EmbedLiveSample("ex2", "200", "125")}}
 
-<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its {{cssxref("background-color")}} is <code>transparent</code> (initial value), its {{cssxref("font-size")}} is <code>normal</code> (initial value) and its {{cssxref("color")}} is <code>black</code> (initial value).</p>
+<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its <a href="/en-US/docs/Web/CSS/background-color">background-color</a> is <code>transparent</code> (initial value), its <a href="/en-US/docs/Web/CSS/font-size">font-size</a> is <code>normal</code> (initial value) and its <a href="/en-US/docs/Web/CSS/color">color</a> is <code>black</code> (initial value).</p>
 </div>
 
 <div id="ex3" style="display: inline-block; width: 225px; vertical-align: top;">
@@ -132,7 +132,7 @@ blockquote { background-color: skyblue; color: red; }
 blockquote { all: inherit; }</pre>
 {{EmbedLiveSample("ex3", "200", "125")}}
 
-<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is a <em>block</em> element now (inherited value from its containing {{HTMLElement("body")}} element), its {{cssxref("background-color")}} is <code>#F0F0F0</code> (inherited value), its {{cssxref("font-size")}} is <code>small</code> (inherited value) and its {{cssxref("color")}} is <code>blue</code> (inherited value).</p>
+<p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is a <em>block</em> element now (inherited value from its containing {{HTMLElement("body")}} element), its <a href="/en-US/docs/Web/CSS/background-color">background-color</a> is <code>#F0F0F0</code> (inherited value), its <a href="/en-US/docs/Web/CSS/font-size">font-size</a> is <code>small</code> (inherited value) and its <a href="/en-US/docs/Web/CSS/color">color</a> is <code>blue</code> (inherited value).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -167,4 +167,4 @@ blockquote { all: inherit; }</pre>
 
 <h2 id="See_also">See also</h2>
 
-<p>CSS global keyword values: {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}</p>
+<p>CSS global keyword values: <a href="/en-US/docs/Web/CSS/initial">initial</a>, <a href="/en-US/docs/Web/CSS/inherit">inherit</a>, <a href="/en-US/docs/Web/CSS/unset">unset</a>, <a href="/en-US/docs/Web/CSS/revert">revert</a></p>

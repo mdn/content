@@ -131,12 +131,12 @@ th, td {
 <p>The most important parts to note are as follows:</p>
 
 <ul>
- <li>A {{cssxref("table-layout")}} value of <code>fixed</code> is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With <code>table-layout: fixed</code>, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) selector ("Select the <em>n</em>th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
+ <li>A <a href="/en-US/docs/Web/CSS/table-layout">table-layout</a> value of <code>fixed</code> is generally a good idea to set on your table, as it makes the table behave a bit more predictably by default. Normally, table columns tend to be sized according to how much content they contain, which produces some strange results. With <code>table-layout: fixed</code>, you can size your columns according to the width of their headings, and then deal with their content as appropriate. This is why we've selected the four different headings with the <code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) selector ("Select the <em>n</em>th child that is a {{htmlelement("th")}} element in a sequence, inside a {{htmlelement("thead")}} element") and given them set percentage widths. The entire column width follows the width of its heading, making for a nice way to size your table columns. Chris Coyier discusses this technique in more detail in <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a>.<br>
   <br>
-  We've coupled this with a {{cssxref("width")}} of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).</li>
- <li>A {{cssxref("border-collapse")}} value of <code>collapse</code> is a standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;"> This doesn't look very nice (although it might be the look you want, who knows?) With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
- <li>We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.</li>
- <li>We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.</li>
+  We've coupled this with a <a href="/en-US/docs/Web/CSS/width">width</a> of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).</li>
+ <li>A <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a> value of <code>collapse</code> is a standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: <img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;"> This doesn't look very nice (although it might be the look you want, who knows?) With <code>border-collapse: collapse;</code> set, the borders collapse down into one, which looks much better: <img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
+ <li>We've put a <a href="/en-US/docs/Web/CSS/border">border</a> around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.</li>
+ <li>We've set some <a href="/en-US/docs/Web/CSS/padding">padding</a> on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.</li>
 </ul>
 
 <p>At this point, our table already looks a lot better:</p>
@@ -147,7 +147,7 @@ th, td {
 
 <p>Now we'll get our text sorted out a bit.</p>
 
-<p>First of all, we've found a font on <a href="https://www.google.com/fonts">Google Fonts</a> that is suitable for a table about punk bands. You can go there and find a different one if you like; you'll just have to replace our provided {{htmlelement("link")}} element and custom {{cssxref("font-family")}} declaration with the ones Google Fonts gives you.</p>
+<p>First of all, we've found a font on <a href="https://www.google.com/fonts">Google Fonts</a> that is suitable for a table about punk bands. You can go there and find a different one if you like; you'll just have to replace our provided {{htmlelement("link")}} element and custom <a href="/en-US/docs/Web/CSS/font-family">font-family</a> declaration with the ones Google Fonts gives you.</p>
 
 <p>First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing <code>&lt;link&gt;</code> element:</p>
 
@@ -185,8 +185,8 @@ tfoot th {
 
 <ul>
  <li>We have set a global sans-serif font stack; this is purely a stylistic choice. We've also set our custom font on the headings inside the {{htmlelement("thead")}} and {{htmlelement("tfoot")}} elements, for a nice grungy, punky look.</li>
- <li>We've set some {{cssxref("letter-spacing")}} on the headings and cells, as we feel it aids readability. Again, mostly a stylistic choice.</li>
- <li>We've center-aligned the text in the table cells inside the {{htmlelement("tbody")}} so that they line up with the headings. By default, cells are given a {{cssxref("text-align")}} value of <code>left</code>, and headings are given a value of <code>center</code>, but generally it looks better to have the alignments set the same for both. The default bold weight on the heading fonts is enough to differentiate their look.</li>
+ <li>We've set some <a href="/en-US/docs/Web/CSS/letter-spacing">letter-spacing</a> on the headings and cells, as we feel it aids readability. Again, mostly a stylistic choice.</li>
+ <li>We've center-aligned the text in the table cells inside the {{htmlelement("tbody")}} so that they line up with the headings. By default, cells are given a <a href="/en-US/docs/Web/CSS/text-align">text-align</a> value of <code>left</code>, and headings are given a value of <code>center</code>, but generally it looks better to have the alignments set the same for both. The default bold weight on the heading fonts is enough to differentiate their look.</li>
  <li>We've right-aligned the heading inside the {{htmlelement("tfoot")}} so that it is visually associated better with its data point.</li>
 </ul>
 
@@ -216,7 +216,7 @@ thead th, tfoot th, tfoot td {
 
 <p>Again, there's nothing specific to tables here, but it is worthwhile to note a few things.</p>
 
-<p>We've added a {{cssxref("background-image")}} to the {{htmlelement("thead")}} and {{htmlelement("tfoot")}}, and changed the {{cssxref("color")}} of all the text inside the header and footer to white (and given it a {{cssxref("text-shadow")}}) so it is readable. You should always make sure your text contrasts well with your background, so it is readable.</p>
+<p>We've added a <a href="/en-US/docs/Web/CSS/background-image">background-image</a> to the {{htmlelement("thead")}} and {{htmlelement("tfoot")}}, and changed the <a href="/en-US/docs/Web/CSS/color">color</a> of all the text inside the header and footer to white (and given it a <a href="/en-US/docs/Web/CSS/text-shadow">text-shadow</a>) so it is readable. You should always make sure your text contrasts well with your background, so it is readable.</p>
 
 <p>We've also added a linear gradient to the {{htmlelement("th")}} and {{htmlelement("td")}} elements inside the header and footer for a nice bit of texture, as well as giving those elements a bright purple border. It is useful to have multiple nested elements available so you can layer styles on top of one another. Yes, we could have put both the background image and the linear gradient on the {{htmlelement("thead")}} and {{htmlelement("tfoot")}} elements using multiple background images, but we decided to do it separately for the benefit of older browsers that don't support multiple background images or linear gradients.</p>
 
@@ -270,7 +270,7 @@ caption {
   letter-spacing: 1px;
 }</pre>
 
-<p>There is nothing remarkable here, except for the {{cssxref("caption-side")}} property, which has been given a value of <code>bottom</code>. This causes the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
+<p>There is nothing remarkable here, except for the <a href="/en-US/docs/Web/CSS/caption-side">caption-side</a> property, which has been given a value of <code>bottom</code>. This causes the caption to be positioned on the bottom of the table, which along with the other declarations gives us this final look (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>):</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13076/table-with-caption.png" style="display: block; height: 357px; margin: 0px auto; width: 723px;"></p>
 
@@ -282,11 +282,11 @@ caption {
 
 <ul>
  <li>Make your table markup as simple as possible, and keep things flexible, e.g. by using percentages, so the design is more responsive.</li>
- <li>Use {{cssxref("table-layout")}}<code>: fixed</code> to create a more predictable table layout that allows you to easily set column widths by setting {{cssxref("width")}} on their headings ({{htmlelement("th")}}).</li>
- <li>Use {{cssxref("border-collapse")}}<code>: collapse</code> to make table elements borders collapse into each other, producing a neater and easier to control look.</li>
+ <li>Use <a href="/en-US/docs/Web/CSS/table-layout">table-layout</a><code>: fixed</code> to create a more predictable table layout that allows you to easily set column widths by setting <a href="/en-US/docs/Web/CSS/width">width</a> on their headings ({{htmlelement("th")}}).</li>
+ <li>Use <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a><code>: collapse</code> to make table elements borders collapse into each other, producing a neater and easier to control look.</li>
  <li>Use {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}} to break up your table into logical chunks and provide extra places to apply CSS to, so it is easier to layer styles on top of one another if required.</li>
  <li>Use zebra striping to make alternative rows easier to read.</li>
- <li>Use {{cssxref("text-align")}} to line up your {{htmlelement("th")}} and {{htmlelement("td")}} text, to make things neater and easier to follow.</li>
+ <li>Use <a href="/en-US/docs/Web/CSS/text-align">text-align</a> to line up your {{htmlelement("th")}} and {{htmlelement("td")}} text, to make things neater and easier to follow.</li>
 </ul>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>

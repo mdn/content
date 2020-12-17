@@ -24,11 +24,11 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>{{cssxref("clip-path")}} now supports <a href="/en-US/docs/Web/CSS/CSS_Shapes">basic shapes</a> ({{bug(1247229)}}).</li>
- <li>Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}}  as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/clip-path">clip-path</a> now supports <a href="/en-US/docs/Web/CSS/CSS_Shapes">basic shapes</a> ({{bug(1247229)}}).</li>
+ <li>Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties <a href="/en-US/docs/Web/CSS/align-items">align-items</a> and <a href="/en-US/docs/Web/CSS/align-self">align-self</a>  as well as between <a href="/en-US/docs/Web/CSS/justify-items">justify-items</a> and <a href="/en-US/docs/Web/CSS/justify-self">justify-self</a> ({{bug(1340309)}}).</li>
  <li>{{htmlelement("input")}} elements of types <code>checkbox</code> and <code>radio</code> with {{cssxref("appearance", "-moz-appearance")}}<code>: none;</code> set on them are now non-replaced elements, for compatibility with other browsers ({{bug(605985)}}).</li>
- <li>Previously, an element styled with {{cssxref("display")}}:<code> inline-block</code> with a child element of type {{domxref("HTMLInputElement")}} styled with <code>display:block</code> had a wrong baseline ({{bug(1330962)}}). This is now fixed.</li>
- <li>When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to <code>&lt;option&gt;</code> elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).</li>
+ <li>Previously, an element styled with <a href="/en-US/docs/Web/CSS/display">display</a>:<code> inline-block</code> with a child element of type {{domxref("HTMLInputElement")}} styled with <code>display:block</code> had a wrong baseline ({{bug(1330962)}}). This is now fixed.</li>
+ <li>When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to <code>&lt;option&gt;</code> elements again, using the <a href="/en-US/docs/Web/CSS/color">color</a> and <a href="/en-US/docs/Web/CSS/background-color">background-color</a> attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> now send the {{event("animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).</li>
  <li>Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code> color keyword</a> in <a href="https://www.fxsitecompat.com/en-CA/docs/2017/transparent-rgba-colour-values-are-no-longer-serialized-to-transparent-keyword/">certain situations</a>; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.</li>
  <li>The proprietary <code>:-moz-table-border-nonzero</code> pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA sylesheet ({{bug(1341925)}}).</li>
@@ -112,7 +112,7 @@ tags:
 <h3 id="CSS_2">CSS</h3>
 
 <ul>
- <li>Removed the <code>-moz</code> prefixed versions of <code>isolate</code>, <code>isolate-override</code>, and <code>plaintext</code> values for the {{cssxref("unicode-bidi")}} property ({{bug(1333675)}}).</li>
+ <li>Removed the <code>-moz</code> prefixed versions of <code>isolate</code>, <code>isolate-override</code>, and <code>plaintext</code> values for the <a href="/en-US/docs/Web/CSS/unicode-bidi">unicode-bidi</a> property ({{bug(1333675)}}).</li>
 </ul>
 
 <h3 id="HTTP">HTTP</h3>

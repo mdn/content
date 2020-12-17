@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Older_alignment_methods">Older alignment methods</h2>
 
-<p>CSS traditionally had very limited alignment capabilities. We were able to align text using {{cssxref("text-align")}}, center blocks using auto {{cssxref("margin")}}s, and in table or inline-block layouts using the {{cssxref("vertical-align")}} property. Alignment of text is now covered by the <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> and <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> modules, and for the first time in Box Alignment we have full horizontal and vertical alignment capabilities.</p>
+<p>CSS traditionally had very limited alignment capabilities. We were able to align text using <a href="/en-US/docs/Web/CSS/text-align">text-align</a>, center blocks using auto <a href="/en-US/docs/Web/CSS/margin">margin</a>s, and in table or inline-block layouts using the <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> property. Alignment of text is now covered by the <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> and <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> modules, and for the first time in Box Alignment we have full horizontal and vertical alignment capabilities.</p>
 
 <p>If you initially learned <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> then you may consider these properties to be part of the Flexbox specification, and some of the properties are indeed listed in Level 1 of Flexbox. However the specification notes that the Box Alignment specification should be referred to as it may add additional capabilities over what is currently in Flexbox.</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <h3 id="CSS_grid_layout_alignment_example">CSS grid layout alignment example</h3>
 
-<p>In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the <code>align-items</code> value set on the group by setting {{cssxref("align-self")}} to <code>center</code>.</p>
+<p>In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a>. On the block (cross) axis the alignment of the items inside their grid areas is controlled with <a href="/en-US/docs/Web/CSS/align-items">align-items</a>. The first item overrides the <code>align-items</code> value set on the group by setting <a href="/en-US/docs/Web/CSS/align-self">align-self</a> to <code>center</code>.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}</p>
 
@@ -58,20 +58,20 @@ tags:
 <p>When aligning items on the inline axis you will use the properties which begin with <code>justify-</code>:</p>
 
 <ul>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("justify-content")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-self">justify-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
 </ul>
 
 <p>When aligning items on the block axis you will use the properties that begin <code>align-</code>:</p>
 
 <ul>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-content")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
 </ul>
 
-<p>Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to <code>row</code>. The properties are swapped when flexbox is set to <code>column</code>. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The <code>justify-</code> properties are always used to align on the main axis, the <code>align-</code> properties on the cross axis.</p>
+<p>Flexbox adds an additional complication in that the above is true when <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> is set to <code>row</code>. The properties are swapped when flexbox is set to <code>column</code>. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The <code>justify-</code> properties are always used to align on the main axis, the <code>align-</code> properties on the cross axis.</p>
 
 <h3 id="The_alignment_subject">The alignment subject</h3>
 
@@ -171,21 +171,21 @@ tags:
 <p>The <code>gap</code> property is a shorthand for <code>row-gap</code> and <code>column-gap</code>, which allows us to set these properties at once:</p>
 
 <ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
 </ul>
 
 <p>In the below example, a grid layout uses the <code>gap</code> shorthand to set a <code>10px</code> gap between row tracks, and a <code>2em</code> gap between column tracks.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}</p>
 
-<p>In this example I am using the {{cssxref("grid-gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with <code>grid-</code> in the Grid Layout specification and some browsers only support these prefixed versions.</p>
+<p>In this example I am using the <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a> property in addition to <a href="/en-US/docs/Web/CSS/gap">gap</a>. The gap properties were originally prefixed with <code>grid-</code> in the Grid Layout specification and some browsers only support these prefixed versions.</p>
 
 <ul>
- <li>{{cssxref("grid-row-gap")}}</li>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
 </ul>
 
 <p>The prefixed versions will be maintained as an alias of the unprefixed ones, however you can always double up in the way that you would with vendor prefixes, adding the <code>grid-gap</code> property and then the <code>gap</code> property with the same values.</p>
@@ -209,18 +209,18 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("place-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-content">place-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-items">place-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-self">justify-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-self">place-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
 </ul>
 </div>
 

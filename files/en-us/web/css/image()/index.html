@@ -58,9 +58,9 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <p>If a color is specified in <code>image()</code> along with your image sources, it acts as a fallback if the images are invalid and do not appear. In such cases, the <code>image()</code> function renders as if no image were included, generating a solid-color image. As a use case, consider a dark image being used as a background for some white text. A dark background color may be needed for foreground text to be legible, if the image does not render.</p>
 
-<p>Omitting image sources while including a color is valid and creates a color swatch. Unlike declaring a {{CSSxRef("background-color")}}, which is placed under or behind all the background images, this can be used to put (generally semi-transparent) colors over other images.</p>
+<p>Omitting image sources while including a color is valid and creates a color swatch. Unlike declaring a <a href="/en-US/docs/Web/CSS/background-color">background-color</a>, which is placed under or behind all the background images, this can be used to put (generally semi-transparent) colors over other images.</p>
 
-<p>The size of the color swatch can be set with the {{CSSxRef("background-size")}} property. This is different from the <code>background-color</code>, which sets a color to cover the entire element. Both <code>image(color)</code> and <code>background-color</code> placements are impacted by the {{CSSxRef("background-clip")}} and {{CSSxRef("background-origin")}} properties.</p>
+<p>The size of the color swatch can be set with the <a href="/en-US/docs/Web/CSS/background-size">background-size</a> property. This is different from the <code>background-color</code>, which sets a color to cover the entire element. Both <code>image(color)</code> and <code>background-color</code> placements are impacted by the <a href="/en-US/docs/Web/CSS/background-clip">background-clip</a> and <a href="/en-US/docs/Web/CSS/background-origin">background-origin</a> properties.</p>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -132,7 +132,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 <pre class="brush: html; notranslate">&lt;div class="quarterlogo"&gt;If supported, a quarter of this div has a darkened logo&lt;/div&gt;
 </pre>
 
-<p>The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the {{cssxref("background-color")}} property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used <code>image()</code> along with the {{CSSxRef("background-size")}} property (and prevented the image from repeating with the {{CSSxRef("background-repeat")}} property, the color swatch will only cover a quarter of the container.</p>
+<p>The above will put a semi-transparent black mask over the Firefox logo background image. Had we used the <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property instead, the color would have appeared behind the logo image instead of on top of it. Additionally, the entire container would have had the same background color. Because we used <code>image()</code> along with the <a href="/en-US/docs/Web/CSS/background-size">background-size</a> property (and prevented the image from repeating with the <a href="/en-US/docs/Web/CSS/background-repeat">background-repeat</a> property, the color swatch will only cover a quarter of the container.</p>
 
 <p>{{EmbedLiveSample("Putting_color_on_top_of_a_background_image", "100%", 220)}}</p>
 
@@ -165,9 +165,9 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <ul>
  <li>{{CSSxRef("&lt;image&gt;")}}</li>
- <li>{{CSSxRef("element")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/element()">element()</a></li>
  <li>{{CSSxRef("&lt;url&gt;")}}</li>
- <li>{{CSSxRef("clip-path")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/clip-path">clip-path</a></li>
  <li>{{CSSxRef("-moz-image-rect")}}</li>
  <li>{{CSSxRef("&lt;gradient&gt;")}}</li>
  <li>{{CSSxRef("image-set")}}</li>

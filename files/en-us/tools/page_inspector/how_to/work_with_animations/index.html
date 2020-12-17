@@ -138,7 +138,7 @@ tags:
 
 <h3 id="Further_information_about_animation_compositing">Further information about animation compositing</h3>
 
-<p>If you open <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing.html">animation-inspector-compositing.html</a> and click the red rectangle, a simple {{cssxref("opacity")}} animation will start. If you look at this in the Animation Inspector in Firefox 49+, you'll see that:</p>
+<p>If you open <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing.html">animation-inspector-compositing.html</a> and click the red rectangle, a simple <a href="/en-US/docs/Web/CSS/opacity">opacity</a> animation will start. If you look at this in the Animation Inspector in Firefox 49+, you'll see that:</p>
 
 <ul>
  <li>The white lightning bolt icon now indicates whether all the animation properties have been optimized by running them through the compositor, where possible.</li>
@@ -148,7 +148,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16359/animation_swoosh_01.png" style="border: 1px solid black; display: block; height: 313px; margin: 0px auto; width: 549px;"></p>
 
-<p>Let's now look at <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing-silly.html">animation-inspector-compositing-silly.html</a> — this is the same example, except that now once the red rectangle is clicked we animate both the {{cssxref("left")}} and {{cssxref("transform")}} (with a translation) properties at the same time as {{cssxref("opacity")}}. It doesn't make much sense to try to animate a geometric property and a translation at the same time — the two effects won't be synchronized — so the <code>transform</code> property is deliberately not handed over to the compositor to handle. The Animation Inspector will tell you this — look at it now and you'll see that:</p>
+<p>Let's now look at <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing-silly.html">animation-inspector-compositing-silly.html</a> — this is the same example, except that now once the red rectangle is clicked we animate both the <a href="/en-US/docs/Web/CSS/left">left</a> and <a href="/en-US/docs/Web/CSS/transform">transform</a> (with a translation) properties at the same time as <a href="/en-US/docs/Web/CSS/opacity">opacity</a>. It doesn't make much sense to try to animate a geometric property and a translation at the same time — the two effects won't be synchronized — so the <code>transform</code> property is deliberately not handed over to the compositor to handle. The Animation Inspector will tell you this — look at it now and you'll see that:</p>
 
 <ul>
  <li>The white lightning bolt icon in the bar has been replaced with a grey lightning bolt icon, to indicate that only some of the relevant properties are being optimized by the compositor.</li>

@@ -52,7 +52,7 @@ tags:
 <h4 id="Miscellaneous_HTML_changes">Miscellaneous HTML changes</h4>
 
 <ul>
- <li>{{HTMLElement("textarea")}} elements are now resizable by default; you can use the {{cssxref("resize")}} CSS property to disable this.</li>
+ <li>{{HTMLElement("textarea")}} elements are now resizable by default; you can use the <a href="/en-US/docs/Web/CSS/resize">resize</a> CSS property to disable this.</li>
  <li><code>canvas.getContext</code> and <code>canvas.toDataURL</code> no longer throw an exception when called with unrecognized arguments.</li>
  <li>The {{HTMLElement("canvas")}} element now supports the Mozilla-specific <code>mozGetAsFile()</code> method, which lets you obtain a memory-based file containing an image of the canvas's contents. See {{domxref("HTMLCanvasElement")}} for details.</li>
  <li><code>canvas2dcontext.lineCap</code> and <code>canvas2dcontext.lineJoin</code> no longer throw an exception when set to an unrecognized value.</li>
@@ -74,7 +74,7 @@ tags:
  <dt>Selector grouping</dt>
  <dd>Support for {{cssxref(":-moz-any")}} to group selectors and factorize combinators.</dd>
  <dt>Background image subrectangle support</dt>
- <dd>The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.</dd>
+ <dd>The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a <a href="/en-US/docs/Web/CSS/background-image">background-image</a>.</dd>
  <dt>CSS touch properties</dt>
  <dd>Support for touch properties is added. Details, and real article names, to come later.</dd>
  <dt><a href="/en-US/docs/CSS/-moz-element" title="en-US/docs/CSS/-moz-element">Using arbitrary elements as CSS backgrounds</a></dt>
@@ -100,7 +100,7 @@ tags:
    <td>Specifies the width in space characters of a tab character (U+0009) when rendering text.</td>
   </tr>
   <tr>
-   <td>{{cssxref("resize")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/resize">resize</a></td>
    <td>Lets you control the dimensions in which an element may be resized.</td>
   </tr>
  </tbody>
@@ -182,11 +182,11 @@ tags:
   </tr>
   <tr>
    <td>{{cssxref("-moz-element")}}</td>
-   <td>Lets you use an arbitrary element as a background for {{cssxref("background-image")}} and {{cssxref("background")}}.</td>
+   <td>Lets you use an arbitrary element as a background for <a href="/en-US/docs/Web/CSS/background-image">background-image</a> and <a href="/en-US/docs/Web/CSS/background">background</a>.</td>
   </tr>
   <tr>
    <td>{{cssxref("-moz-image-rect")}}</td>
-   <td>Lets you use a subrectangle of an image as a {{cssxref("background-image")}} or {{cssxref("background")}}.</td>
+   <td>Lets you use a subrectangle of an image as a <a href="/en-US/docs/Web/CSS/background-image">background-image</a> or <a href="/en-US/docs/Web/CSS/background">background</a>.</td>
   </tr>
  </tbody>
 </table>
@@ -204,17 +204,17 @@ tags:
  <tbody>
   <tr>
    <td><code>-moz-background-size</code></td>
-   <td>{{cssxref("background-size")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/background-size">background-size</a></td>
    <td>The name <code>-moz-background-size</code> is no longer supported.</td>
   </tr>
   <tr>
    <td><code>-moz-border-radius</code></td>
-   <td>{{cssxref("border-radius")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/border-radius">border-radius</a></td>
    <td>The old name is supported for a limited time to allow you time to update your sites. Rendering changes have also been made to match the latest version of the specification.</td>
   </tr>
   <tr>
    <td><code>-moz-box-shadow</code></td>
-   <td>{{cssxref("box-shadow")}}</td>
+   <td><a href="/en-US/docs/Web/CSS/box-shadow">box-shadow</a></td>
    <td></td>
   </tr>
  </tbody>
@@ -223,8 +223,8 @@ tags:
 <h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
 
 <ul>
- <li>The {{cssxref("text-shadow")}} property now caps the blur radius to 300px for sanity and performance reasons.</li>
- <li>The {{cssxref("overflow")}} property no longer applies to table-group elements (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/text-shadow">text-shadow</a> property now caps the blur radius to 300px for sanity and performance reasons.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property no longer applies to table-group elements (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>).</li>
  <li>The {{cssxref("-moz-appearance")}} property now supports the<code> -moz-win-borderless-glass </code>value, which applies a borderless Aero Glass look to an element.</li>
  <li>The <code><a href="/en-US/docs/CSS/Media_queries#-moz-device-pixel-ratio" title="en-US/docs/CSS/Media queries#-moz-device-pixel-ratio">-moz-device-pixel-ratio</a></code> media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in <a href="/en-US/docs/CSS/Media_queries" title="en-US/docs/CSS/Media queries">Media Queries</a>.</li>
  <li>Gecko's handling of <a href="/en-US/docs/CSS-2_Quick_Reference/Units" title="en-US/docs/CSS-2 Quick Reference/Units">CSS units</a> has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.</li>
@@ -243,7 +243,7 @@ tags:
  <dt><a href="/en-US/docs/SVG/SVG_animation_with_SMIL" title="en-US/docs/SVG/SVG animation with SMIL">SVG animation with SMIL</a></dt>
  <dd>Support for SMIL animation of SVG is now available.</dd>
  <dt>Using SVG as images and as CSS backgrounds</dt>
- <dd>You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS {{cssxref("background-image")}}.</dd>
+ <dd>You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS <a href="/en-US/docs/Web/CSS/background-image">background-image</a>.</dd>
  <dt>Media <code>buffered</code> attribute support</dt>
  <dd>The <code>buffered</code> attribute on {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements is now supported, letting you determine which ranges of a media file have been buffered. The {{domxref("TimeRanges")}} DOM interface has been implemented to support this.</dd>
  <dt>Media <code>preload</code> attribute</dt>

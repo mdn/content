@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">In this guide we will be exploring the three properties that are applied to flex items, which enable us to control the size and flexibility of the items along the main axis — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the real key to mastering flexbox.</p>
+<p class="summary">In this guide we will be exploring the three properties that are applied to flex items, which enable us to control the size and flexibility of the items along the main axis — <a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a>, <a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a>, and <a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a>. Fully understanding how these properties work with growing and shrinking items is the real key to mastering flexbox.</p>
 
 <h2 id="A_first_look">A first look</h2>
 
@@ -29,7 +29,7 @@ tags:
  <li><code>flex-basis</code>: What is the size of the item before growing and shrinking happens?</li>
 </ul>
 
-<p>The properties are usually expressed as the shorthand {{CSSxRef("flex")}} property. The following code would set the <code>flex-grow</code> property to <code>2</code>, <code>flex-shrink</code> to <code>1</code> and <code>flex-basis</code> to <code>auto</code>.</p>
+<p>The properties are usually expressed as the shorthand <a href="/en-US/docs/Web/CSS/flex">flex</a> property. The following code would set the <code>flex-grow</code> property to <code>2</code>, <code>flex-shrink</code> to <code>1</code> and <code>flex-basis</code> to <code>auto</code>.</p>
 
 <pre class="brush: css no-line-numbers">.item {
   flex: 2 1 auto;
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Positive_and_negative_free_space">Positive and negative free space</h3>
 
-<p>To talk about these properties we need to understand the concept of <strong>positive and negative free space</strong>. When a flex container has positive free space, it has more space than is required to display the flex items inside the container. For example, if I have a 500 pixel-wide container, {{CSSxRef("flex-direction")}} is <code>row</code>, and I have three flex items each 100 pixels wide, then I have 200 pixels of positive free space, which could be distributed between the items if I wanted them to fill the container.</p>
+<p>To talk about these properties we need to understand the concept of <strong>positive and negative free space</strong>. When a flex container has positive free space, it has more space than is required to display the flex items inside the container. For example, if I have a 500 pixel-wide container, <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> is <code>row</code>, and I have three flex items each 100 pixels wide, then I have 200 pixels of positive free space, which could be distributed between the items if I wanted them to fill the container.</p>
 
 <p><img alt="Image showing space left over after items have been displayed." src="https://mdn.mozillademos.org/files/15654/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
 
@@ -71,11 +71,11 @@ tags:
 
 <p>It is this distribution of positive free space and removal of negative free space that we need to understand in order to understand the flex properties.</p>
 
-<p>In the following examples I am working with {{CSSxRef("flex-direction")}} set to row, therefore the size of items will always come from their width. We will be calculating the positive and negative free space created by comparing the total width of all the items with the container width. You could equally try out each example with <code>flex-direction: column</code>. The main axis would then be the column, and you would then need to compare the height of the items and that of the container they are in to work out the positive and negative free space.</p>
+<p>In the following examples I am working with <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> set to row, therefore the size of items will always come from their width. We will be calculating the positive and negative free space created by comparing the total width of all the items with the container width. You could equally try out each example with <code>flex-direction: column</code>. The main axis would then be the column, and you would then need to compare the height of the items and that of the container they are in to work out the positive and negative free space.</p>
 
 <h2 id="The_flex-basis_property">The flex-basis property</h2>
 
-<p>The {{CSSxRef("flex-basis")}} property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is <code>auto</code>. If <code>flex-basis</code> is set to <code>auto</code> then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case <code>200px</code> would be the <code>flex-basis</code> for this item.</p>
+<p>The <a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a> property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is <code>auto</code>. If <code>flex-basis</code> is set to <code>auto</code> then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case <code>200px</code> would be the <code>flex-basis</code> for this item.</p>
 
 <p>If your item is instead auto-sized, then <code>auto</code> resolves to the size of its content. At this point your knowledge of <code>min-</code> and <code>max-content</code> sizing becomes useful, as flexbox will take the <code>max-content</code> size of the item as the <code>flex-basis</code>. The following live example can help to demonstrate this.</p>
 
@@ -89,7 +89,7 @@ tags:
 
 <h2 id="The_flex-grow_property">The flex-grow property</h2>
 
-<p>The {{CSSxRef("flex-grow")}} property specifies the <strong>flex grow factor</strong>, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.</p>
+<p>The <a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a> property specifies the <strong>flex grow factor</strong>, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.</p>
 
 <p>If all of your items have the same <code>flex-grow</code> factor then space will be distributed evenly between all of them. If this is the situation that you want then typically you would use <code>1</code> as the value, however you could give them all a <code>flex-grow</code> of <code>88</code>, or <code>100</code>, or <code>1.2</code> if you like — it is a ratio. If the factor is the same for all, and there is positive free space in the flex container then it will be distributed equally to all.</p>
 
@@ -135,7 +135,7 @@ tags:
 
 <h2 id="The_flex-shrink_property">The <code>flex-shrink</code> property</h2>
 
-<p>The {{CSSxRef("flex-shrink")}} property specifies the <strong>flex shrink factor</strong>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.</p>
+<p>The <a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a> property specifies the <strong>flex shrink factor</strong>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.</p>
 
 <p>This property deals with situations where the browser calculates the <code>flex-basis</code> values of the flex items, and finds that they are too large to fit into the flex container. As long as <code>flex-shrink</code> has a positive value the items will shrink in order that they do not overflow the container.</p>
 
@@ -197,6 +197,6 @@ tags:
 
 <h3 id="Other_ways_to_distribute_space">Other ways to distribute space</h3>
 
-<p>If you do not want space added to the items, remember that you can deal with free space between or around items using the alignment properties described in the guide to aligning items in a flex container. The {{CSSxRef("justify-content")}} property will enable the distribution of free space between or around items. You can also use auto margins on flex items to absorb space and create gaps between items.</p>
+<p>If you do not want space added to the items, remember that you can deal with free space between or around items using the alignment properties described in the guide to aligning items in a flex container. The <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> property will enable the distribution of free space between or around items. You can also use auto margins on flex items to absorb space and create gaps between items.</p>
 
 <p>With all the flex tools at your disposal you will find that most tasks can be achieved, although it might take a little bit of experimentation at first.</p>

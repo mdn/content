@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.</p>
+<p class="summary"><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> reference. This article will give you all you need to know to get you started using variable fonts.</p>
 
 <div class="warning">
 <p><strong>Warning</strong>: In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
@@ -37,7 +37,7 @@ tags:
 
 <p>You might notice that we have been talking about having a specific font file for every weight and style (i.e. bold and italic and bold italic), rather than relying upon the browser to synthesize them. The reason for this is that most typefaces have very specific designs for bolder weights and italics that often include completely different characters (lower-case 'a' and 'g' are often quite different in italics, for example). In order to most accurately reflect the typeface design and avoid differences between browsers and how they may or may not synthesize the different styles, it's more accurate to load the specific font files where needed when using a non-variable font.</p>
 
-<p>You may also find that some variable fonts come split into two files: one for uprights and all their variations, and one containing the italic variations. This is sometimes done to reduce the overall file size in cases where the italics aren't needed or used. In all cases, it is still possible to link them with a common {{cssxref("font-family")}} name so you can call them using the same <code>font-family</code> and appropriate {{cssxref("font-style")}}.</p>
+<p>You may also find that some variable fonts come split into two files: one for uprights and all their variations, and one containing the italic variations. This is sometimes done to reduce the overall file size in cases where the italics aren't needed or used. In all cases, it is still possible to link them with a common <a href="/en-US/docs/Web/CSS/font-family">font-family</a> name so you can call them using the same <code>font-family</code> and appropriate <a href="/en-US/docs/Web/CSS/font-style">font-style</a>.</p>
 
 <h2 id="Introducing_the_variation_axis">Introducing the 'variation axis'</h2>
 
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="Registered_axes_and_existing_CSS_attributes">Registered axes and existing CSS attributes</h3>
 
-<p>In this section we'll demonstrate the five registered axes defined with examples and the corresponding CSS. Where possible, both the standard and lower-level syntax are included. The lower-level syntax ({{cssxref("font-variation-settings")}}) was the first mechanism implemented in order to test the early implementations of variable font support, and is necessary to utilize new or custom axes beyond the five registered ones. However, the W3C’s intent was for this syntax not to be used when other attributes are available. Therefore wherever possible, the appropriate property should be used, with the lower-level syntax of <code>font-variation-settings</code> only being used to set values or axes not available otherwise.</p>
+<p>In this section we'll demonstrate the five registered axes defined with examples and the corresponding CSS. Where possible, both the standard and lower-level syntax are included. The lower-level syntax (<a href="/en-US/docs/Web/CSS/font-variation-settings">font-variation-settings</a>) was the first mechanism implemented in order to test the early implementations of variable font support, and is necessary to utilize new or custom axes beyond the five registered ones. However, the W3C’s intent was for this syntax not to be used when other attributes are available. Therefore wherever possible, the appropriate property should be used, with the lower-level syntax of <code>font-variation-settings</code> only being used to set values or axes not available otherwise.</p>
 
 <h4 id="Notes">Notes</h4>
 
@@ -69,13 +69,13 @@ tags:
   <p><code>wght</code> (weight) is a registered axis, and <code>GRAD</code> (grade) is a custom one.</p>
  </li>
  <li>
-  <p>If you have set values using <code>font-variation-settings</code> and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS Custom Properties</a> (CSS variables) for the individual values, and simply modifying the value of an individual custom property. Example code follows at the end of the guide.</p>
+  <p>If you have set values using <code>font-variation-settings</code> and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using <a href="/en-US/docs/Web/CSS/font-feature-settings">font-feature-settings</a>). You can work around this limitation by using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS Custom Properties</a> (CSS variables) for the individual values, and simply modifying the value of an individual custom property. Example code follows at the end of the guide.</p>
  </li>
 </ol>
 
 <h3 id="Weight">Weight</h3>
 
-<p>Weight (represented by the <code>wght</code> tag) defines the design axis of how thin or thick (light or heavy, in typical typographic terms) the strokes of the letterforms can be. For a long time in CSS there has existed the ability to specify this via the {{cssxref("font-weight")}} property, which takes numeric values ranging from 100 to 900 in increments of 100, and keywords like <code>normal</code> or <code>bold</code>, which are simply aliases for their corresponding numeric values (400 and 700 in this case). These are still applied when dealing with non-variable or variable fonts, but with variable ones, any number from 1 to 1000 is now valid.</p>
+<p>Weight (represented by the <code>wght</code> tag) defines the design axis of how thin or thick (light or heavy, in typical typographic terms) the strokes of the letterforms can be. For a long time in CSS there has existed the ability to specify this via the <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> property, which takes numeric values ranging from 100 to 900 in increments of 100, and keywords like <code>normal</code> or <code>bold</code>, which are simply aliases for their corresponding numeric values (400 and 700 in this case). These are still applied when dealing with non-variable or variable fonts, but with variable ones, any number from 1 to 1000 is now valid.</p>
 
 <p>It should be noted that at this point there is no way in the <code>@font-face</code> declaration to 'map' a specific point on the variation axis of a variable font to the keyword <code>bold</code> (or any other keyword). This can generally be resolved fairly easily, but does require an extra step in writing your CSS:</p>
 
@@ -89,7 +89,7 @@ font-variation-settings: 'wght' 375;</pre>
 
 <h3 id="Width">Width</h3>
 
-<p>Width (represented by the <code>wdth</code> tag) defines the design axis of how narrow or wide (condensed or extended, in typographic terms) the letterforms can be. This is typically set in CSS using the {{cssxref("font-stretch")}} property, with values expressed as a percentage above or below ‘normal’ (100%), any number greater than 0 is technically valid—though it is far more likely that the range would fall closer to the 100% mark, such as 75%-125%. If a number value supplied is outside the range encoded in the font, the browser should render the font at the closest value allowed.</p>
+<p>Width (represented by the <code>wdth</code> tag) defines the design axis of how narrow or wide (condensed or extended, in typographic terms) the letterforms can be. This is typically set in CSS using the <a href="/en-US/docs/Web/CSS/font-stretch">font-stretch</a> property, with values expressed as a percentage above or below ‘normal’ (100%), any number greater than 0 is technically valid—though it is far more likely that the range would fall closer to the 100% mark, such as 75%-125%. If a number value supplied is outside the range encoded in the font, the browser should render the font at the closest value allowed.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The % symbol is not used when utilizing <code>font-variation-settings</code>.</p>
@@ -108,7 +108,7 @@ font-variation-settings: 'wdth' 115;
 
 <p>The Italic (<code>ital</code>) axis works differently in that it is either on or off; there is no in-between. Italic designs often include dramatically different letterforms from their upright counterparts, so in the transition from upright to italic, a number of glyph (or character) substitutions usually occur. Italic and oblique are often used somewhat interchangeably, but in truth are actually quite different. Oblique is defined in this context with the term <code>slant</code> (see the below section), and a typeface would typically have one or the other, but not both.</p>
 
-<p>In CSS, both italic and oblique are applied to text using the {{cssxref("font-style")}} property. Also note the introduction of <code>font-synthesis: none;</code>—which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.</p>
+<p>In CSS, both italic and oblique are applied to text using the <a href="/en-US/docs/Web/CSS/font-style">font-style</a> property. Also note the introduction of <code>font-synthesis: none;</code>—which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.</p>
 
 <pre class="brush: css notranslate">font-style: italic;
 
@@ -144,7 +144,7 @@ font-variation-settings: 'slnt' 14;</pre>
 
 <p>Optical size values are generally intended to be automatically applied corresponding to <code>font-size</code>, but can also be manipulated using the lower-level <code>font-variation-settings</code> syntax.</p>
 
-<p>There is a new attribute, {{cssxref("font-optical-sizing")}}, created to support variable fonts in CSS. When using <code>font-optical-sizing</code>, the only allowed values are <code>auto</code> or <code>none</code> — so this attribute only allows for turning optical sizing on or off. However when using <code>font-variation-settings: 'opsz' &lt;num&gt;</code>, you can supply a numeric value. In most cases you would want to match the <code>font-size</code> (the physical size the type is being rendered) with the <code>opsz</code> value (which is how optical sizing is intended to be applied when using <code>auto</code>). The option to provide a specific value is provided so that should it be necessary to override the default — for legibility, aesthetic, or some other reason — a specific value can be applied.</p>
+<p>There is a new attribute, <a href="/en-US/docs/Web/CSS/font-optical-sizing">font-optical-sizing</a>, created to support variable fonts in CSS. When using <code>font-optical-sizing</code>, the only allowed values are <code>auto</code> or <code>none</code> — so this attribute only allows for turning optical sizing on or off. However when using <code>font-variation-settings: 'opsz' &lt;num&gt;</code>, you can supply a numeric value. In most cases you would want to match the <code>font-size</code> (the physical size the type is being rendered) with the <code>opsz</code> value (which is how optical sizing is intended to be applied when using <code>auto</code>). The option to provide a specific value is provided so that should it be necessary to override the default — for legibility, aesthetic, or some other reason — a specific value can be applied.</p>
 
 <pre class="brush: css notranslate">font-optical-sizing: auto;
 
@@ -170,7 +170,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h3 id="Using_a_variable_font_font-face_changes">Using a variable font: @font-face changes</h3>
 
-<p>The syntax for loading variable fonts is very similar to any other web font, with a few notable differences, which are provided via upgrades to the traditional {{cssxref("@font-face")}} syntax now available in modern browsers.</p>
+<p>The syntax for loading variable fonts is very similar to any other web font, with a few notable differences, which are provided via upgrades to the traditional <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> syntax now available in modern browsers.</p>
 
 <p>The basic syntax is the same, but the font technology can be specified, and allowable ranges for descriptors like <code>font-weight</code> and <code>font-stretch</code> can be supplied, rather than named according to the font file being loaded.</p>
 
@@ -229,7 +229,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h2 id="Working_with_older_browsers">Working with older browsers</h2>
 
-<p>Variable font support can be checked with CSS Feature Queries (see {{cssxref("@supports")}}), so it's possible to use variable fonts in production and scope the CSS calling the variable fonts inside a feature query block.</p>
+<p>Variable font support can be checked with CSS Feature Queries (see <a href="/en-US/docs/Web/CSS/@supports">@supports</a>), so it's possible to use variable fonts in production and scope the CSS calling the variable fonts inside a feature query block.</p>
 
 <pre class="brush: css notranslate">h1 {
  font-family: some-non-variable-font-family;

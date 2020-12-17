@@ -127,9 +127,9 @@ tags:
 </pre>
 
 <ul>
- <li>We start off with the {{cssxref("visibility")}} of the custom controls set to <code>hidden</code>. In our JavaScript later on, we will set the controls to <code>visible</code>, and remove the <code>controls</code> attribute from the <code>&lt;video&gt;</code> element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.</li>
- <li>We give the controls an {{cssxref("opacity")}} of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.</li>
- <li>We lay out the buttons inside the control bar using Flexbox ({{cssxref("display")}}: flex), to make things easier.</li>
+ <li>We start off with the <a href="/en-US/docs/Web/CSS/visibility">visibility</a> of the custom controls set to <code>hidden</code>. In our JavaScript later on, we will set the controls to <code>visible</code>, and remove the <code>controls</code> attribute from the <code>&lt;video&gt;</code> element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.</li>
+ <li>We give the controls an <a href="/en-US/docs/Web/CSS/opacity">opacity</a> of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.</li>
+ <li>We lay out the buttons inside the control bar using Flexbox (<a href="/en-US/docs/Web/CSS/display">display</a>: flex), to make things easier.</li>
 </ul>
 
 <p>Next, let's look at our button icons:</p>
@@ -153,17 +153,17 @@ button:before {
   text-shadow: 1px 1px 0px black;
 }</pre>
 
-<p>First of all, at the top of the CSS we use a {{cssxref("@font-face")}} block to import a custom web font. This is an icon font — all the characters of the alphabet equate to common icons you might want to use in an application.</p>
+<p>First of all, at the top of the CSS we use a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block to import a custom web font. This is an icon font — all the characters of the alphabet equate to common icons you might want to use in an application.</p>
 
 <p>Next we use generated content to display an icon on each button:</p>
 
 <ul>
  <li>We use the {{cssxref("::before")}} selector to display the content before each {{htmlelement("button")}} element.</li>
- <li>We use the {{cssxref("content")}} property to set the content to be displayed in each case to be equal to the contents of the <code><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data-icon</a></code> attribute. In the case of our play button, <code>data-icon</code> contains a capital "P".</li>
- <li>We apply the custom web font to our buttons using {{cssxref("font-family")}}. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.</li>
+ <li>We use the <a href="/en-US/docs/Web/CSS/content">content</a> property to set the content to be displayed in each case to be equal to the contents of the <code><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data-icon</a></code> attribute. In the case of our play button, <code>data-icon</code> contains a capital "P".</li>
+ <li>We apply the custom web font to our buttons using <a href="/en-US/docs/Web/CSS/font-family">font-family</a>. In this font, "P" is actually a "play" icon, so therefore the play button has a "play" icon displayed on it.</li>
 </ul>
 
-<p>Icon fonts are very cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like {{cssxref("color")}} and {{cssxref("text-shadow")}}.</p>
+<p>Icon fonts are very cool for many reasons — cutting down on HTTP requests because you don't need to download those icons as image files, great scalability, and the fact that you can use text properties to style them — like <a href="/en-US/docs/Web/CSS/color">color</a> and <a href="/en-US/docs/Web/CSS/text-shadow">text-shadow</a>.</p>
 
 <p>Last but not least, let's look at the CSS for the timer:</p>
 
@@ -194,10 +194,10 @@ button:before {
 }</pre>
 
 <ul>
- <li>We set the outer <code>.timer</code> <code>&lt;div&gt;</code> to have flex: 5, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}<code>: relative</code>, so that we can position elements inside it conveniently according to it's boundaries, and not the boundaries of the {{htmlelement("body")}} element.</li>
+ <li>We set the outer <code>.timer</code> <code>&lt;div&gt;</code> to have flex: 5, so it takes up most of the width of the controls bar. We also give it <a href="/en-US/docs/Web/CSS/position">position</a><code>: relative</code>, so that we can position elements inside it conveniently according to it's boundaries, and not the boundaries of the {{htmlelement("body")}} element.</li>
  <li>The inner <code>&lt;div&gt;</code> is absolutely positioned to sit directly on top of the outer <code>&lt;div&gt;</code>. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.</li>
  <li>The <code>&lt;span&gt;</code> is also absolutely positioned to sit near the left hand side of the timer bar.</li>
- <li>We also give our inner <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner <code>&lt;div&gt;</code> below that. This way, we make sure we can see all the information — one box is not obscuring another.</li>
+ <li>We also give our inner <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> the right amount of <a href="/en-US/docs/Web/CSS/z-index">z-index</a> so that the timer will be displayed on top, and the inner <code>&lt;div&gt;</code> below that. This way, we make sure we can see all the information — one box is not obscuring another.</li>
 </ul>
 
 <h3 id="Implementing_the_JavaScript">Implementing the JavaScript</h3>

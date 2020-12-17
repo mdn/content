@@ -55,7 +55,7 @@ tags:
 
 <p>As a starting point, download and open <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html">the starting point file</a> in your text editor and browser (you can also<a href="https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html"> see it live here</a>). You will see an example with a container, which has some child items. By default these display in normal flow so the boxes display one below the other. We will be working with this file for the first part of this lesson, making changes to see how grid behaves.</p>
 
-<p>To define a grid we use the <code>grid</code> value of the {{cssxref("display")}} property. As with Flexbox, this switches on Grid Layout, and all of the direct children of the container become grid items. Add this to the CSS inside your file:</p>
+<p>To define a grid we use the <code>grid</code> value of the <a href="/en-US/docs/Web/CSS/display">display</a> property. As with Flexbox, this switches on Grid Layout, and all of the direct children of the container become grid items. Add this to the CSS inside your file:</p>
 
 <pre class="brush: css notranslate">.container {
     display: grid;
@@ -173,7 +173,7 @@ tags:
 
 <h3 id="Gaps_between_tracks">Gaps between tracks</h3>
 
-<p>To create gaps between tracks we use the properties {{cssxref("grid-column-gap")}} for gaps between columns, {{cssxref("grid-row-gap")}} for gaps between rows, and {{cssxref("grid-gap")}} to set both at once.</p>
+<p>To create gaps between tracks we use the properties <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a> for gaps between columns, <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a> for gaps between rows, and <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a> to set both at once.</p>
 
 <pre class="brush: css notranslate">.container {
     display: grid;
@@ -250,7 +250,7 @@ tags:
 
 <p>We have only specified column tracks so far, and yet rows are being created to hold our content. This is an example of the explicit versus the implicit grid. The explicit grid is the one that you create using <code>grid-template-columns</code> or <code>grid-template-rows</code>. The implicit grid is created when content is placed outside of that grid — such as into our rows.</p>
 
-<p>By default, tracks created in the implicit grid are <code>auto</code> sized, which in general means that they are large enough to fit their content. If you wish to give implicit grid tracks a size you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add <code>grid-auto-rows</code> with a value of <code>100px</code> to your CSS, you will see that those created rows are now 100 pixels tall.</p>
+<p>By default, tracks created in the implicit grid are <code>auto</code> sized, which in general means that they are large enough to fit their content. If you wish to give implicit grid tracks a size you can use the <a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a> and <a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a> properties. If you add <code>grid-auto-rows</code> with a value of <code>100px</code> to your CSS, you will see that those created rows are now 100 pixels tall.</p>
 
 <div id="Grid_4">
 <div class="hidden">
@@ -296,7 +296,7 @@ tags:
 
 <p>Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are <em>at least</em> 100 pixels tall and can still expand if more content gets into them. A fairly basic fact about the web is that you never really know how tall something is going to be; additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.</p>
 
-<p>The {{cssxref("minmax")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
+<p>The <a href="/en-US/docs/Web/CSS/minmax">minmax</a> function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
 
 <pre class="brush: css notranslate">.container {
     display: grid;
@@ -309,7 +309,7 @@ tags:
 
 <h3 id="As_many_columns_as_will_fit">As many columns as will fit</h3>
 
-<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
+<p>We can combine some of the things we have learned about track listing, repeat notation and <a href="/en-US/docs/Web/CSS/minmax">minmax</a> to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using <a href="/en-US/docs/Web/CSS/repeat">repeat</a> notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
 
 <p>Try this in your file now, using the below CSS:</p>
 
@@ -362,17 +362,17 @@ tags:
 <p>We can place things according to these lines by specifying the start and end line. We do this using the following properties:</p>
 
 <ul>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
 </ul>
 
 <p>These properties can all have a line number as the value. You can also use the shorthand properties:</p>
 
 <ul>
- <li>{{cssxref("grid-column")}}</li>
- <li>{{cssxref("grid-row")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
 </ul>
 
 <p>These let you specify the start and end lines at once, separated by a <code>/</code> — a forward slash character.</p>
@@ -475,7 +475,7 @@ aside {
 
 <h2 id="Positioning_with_grid-template-areas">Positioning with grid-template-areas</h2>
 
-<p>An alternative way to place items on your grid is to use the {{cssxref("grid-template-areas")}} property and giving the various elements of your design a name.</p>
+<p>An alternative way to place items on your grid is to use the <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> property and giving the various elements of your design a name.</p>
 
 <p>Remove the line-based positioning from the last example (or re-download the file to have a fresh starting point), and add the following CSS.</p>
 

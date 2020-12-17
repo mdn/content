@@ -50,21 +50,21 @@ tags:
  <li>Interaction Media Features implemented, including <code><a href="/en-US/docs/Web/CSS/@media/pointer">pointer:coarse</a></code> ({{bug(1035774)}}). For <code><a href="/en-US/docs/Web/CSS/@media/any-pointer">any-pointer</a></code> and <code><a href="/en-US/docs/Web/CSS/@media/any-hover">any-hover</a></code> implementation, see {{bug(1483111)}}.</li>
  <li>The <code><a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></code> media feature is now supported in Firefox for Android ({{bug(1478505)}}).</li>
  <li>CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g. <code>yellow 25%, yellow 50%</code> can now be written <code>yellow 25% 50%</code> ({{bug(1352643)}}).</li>
- <li>The {{cssxref("text-transform")}} property now accepts the <code>full-size-kana</code> value ({{bug(1498148)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/text-transform">text-transform</a> property now accepts the <code>full-size-kana</code> value ({{bug(1498148)}}).</li>
  <li>Support added for {{cssxref("appearance", "-webkit-appearance")}} to alleviate associated web compat issues ({{bug(1368555)}}).</li>
  <li>Closely associated with the above update, we've also removed most of the Firefox-specific <code>-moz-appearance</code> values ({{bug(1496720)}}).</li>
- <li>{{cssxref("display")}}: <code>list-item</code> is now supported on {{htmlelement("legend")}} elements ({{bug(1486602)}}).</li>
- <li>SVG <code>path()</code>s, as usable in {{cssxref("offset-path")}}, are now animatable ({{bug(1486094)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/display">display</a>: <code>list-item</code> is now supported on {{htmlelement("legend")}} elements ({{bug(1486602)}}).</li>
+ <li>SVG <code>path()</code>s, as usable in <a href="/en-US/docs/Web/CSS/offset-path">offset-path</a>, are now animatable ({{bug(1486094)}}).</li>
  <li>If a selector chain or group includes a <code>-webkit-</code>prefixed pseudo-element, that pseudo-element no longer invalidates it (see {{bug(1424106)}} for the details, and {{bug(1486325)}} for enabling this feature).</li>
 </ul>
 
 <h4 id="Removals_2">Removals</h4>
 
 <ul>
- <li>The non-standard <a href="/en-US/docs/Mozilla/Gecko/Chrome/CSS/display-xul"><code style="white-space: nowrap;">-moz-box</code> and <code style="white-space: nowrap;">-moz-inline-box</code></a> {{CSSxRef("display")}} values have been hidden from web content ({{bug(1496961)}}).</li>
+ <li>The non-standard <a href="/en-US/docs/Mozilla/Gecko/Chrome/CSS/display-xul"><code style="white-space: nowrap;">-moz-box</code> and <code style="white-space: nowrap;">-moz-inline-box</code></a> <a href="/en-US/docs/Web/CSS/display">display</a> values have been hidden from web content ({{bug(1496961)}}).</li>
  <li>The non-standard {{CSSxRef("::-moz-tree")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements" style="white-space: nowrap;">pseudo-elements</a> have been hidden from web content ({{bug(1496961)}}).</li>
  <li>The <code>layout.css.filters.enabled</code> preference has been removed; <a href="/en-US/docs/Web/CSS/Filter_Effects">CSS filters</a> can no longer be disabled ({{bug(1408841)}}).</li>
- <li>A previous change — to swap the values of the 2-value {{cssxref("overflow")}} syntax so block is specified first and inline second ({{bug(1481866)}}) — has been reverted ({{bug(1492567)}}). See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14">Bug 1481866 comment 14</a> for why.</li>
+ <li>A previous change — to swap the values of the 2-value <a href="/en-US/docs/Web/CSS/overflow">overflow</a> syntax so block is specified first and inline second ({{bug(1481866)}}) — has been reverted ({{bug(1492567)}}). See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14">Bug 1481866 comment 14</a> for why.</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>

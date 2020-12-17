@@ -41,7 +41,7 @@ tags:
 <p><strong>Note:</strong> Unfortunately, at this time there's no built-in way to animate the transition between open and closed.</p>
 </div>
 
-<p>Fully standards-compliant implementations automatically apply the CSS <code>{{cssxref("display")}}: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See {{anch("Customizing the disclosure widget")}} for further details.</p>
+<p>Fully standards-compliant implementations automatically apply the CSS <code><a href="/en-US/docs/Web/CSS/display">display</a>: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See {{anch("Customizing the disclosure widget")}} for further details.</p>
 
 <table class="properties">
  <tbody>
@@ -197,7 +197,7 @@ details &gt; p {
 
 <p>The disclosure triangle itself can be customized, although this is not as broadly supported. There are variations in how browsers support this customization due to experimental implementations as the element was standardized, so we'll have to use multiple approaches for a while.</p>
 
-<p>The {{HTMLElement("summary")}} element supports the {{cssxref("list-style")}} shorthand property and its longhand properties, such as {{cssxref("list-style-type")}}, to change the disclosure triangle to whatever you choose (usually with {{cssxref("list-style-image")}}). For example, we can remove the disclosure widget icon by setting <code>list-style: none</code>.</p>
+<p>The {{HTMLElement("summary")}} element supports the <a href="/en-US/docs/Web/CSS/list-style">list-style</a> shorthand property and its longhand properties, such as <a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a>, to change the disclosure triangle to whatever you choose (usually with <a href="/en-US/docs/Web/CSS/list-style-image">list-style-image</a>). For example, we can remove the disclosure widget icon by setting <code>list-style: none</code>.</p>
 
 <p>Chrome doesn't support this yet, however, so we also need to use its non-standard <code>::-webkit-details-marker</code> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> to customize the appearance in that browser.</p>
 

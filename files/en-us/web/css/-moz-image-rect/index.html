@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{CSSRef}}{{Non-standard_Header}}</div>
 
-<p>The <strong><code>-moz-image-rect</code></strong> value for <a href="/en-US/docs/Web/CSS">CSS</a> {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.</p>
+<p>The <strong><code>-moz-image-rect</code></strong> value for <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/background-image">background-image</a> lets you use a portion of a larger image as a background.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,13 +37,13 @@ tags:
 
 <p>This property allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.</p>
 
-<p>This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.</p>
+<p>This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the <a href="/en-US/docs/Web/CSS/list-style-image">list-style-image</a> property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.</p>
 
 <p>The syntax for the rectangle is similar to the <a href="/en-US/docs/Web/CSS/shape#Syntax"><code>rect()</code></a> function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example loads an image and uses it in four segments to draw the Firefox logo in four {{HTMLElement("div")}} blocks. Clicking on their container causes the four segments to rotate around by swapping the {{CSSxRef("background-image")}} property values among the four {{HTMLElement("div")}} blocks.</p>
+<p>This example loads an image and uses it in four segments to draw the Firefox logo in four {{HTMLElement("div")}} blocks. Clicking on their container causes the four segments to rotate around by swapping the <a href="/en-US/docs/Web/CSS/background-image">background-image</a> property values among the four {{HTMLElement("div")}} blocks.</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -134,7 +134,7 @@ tags:
   }
 }</pre>
 
-<p>This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By simply copying the values of the {{CSSxRef("background-image")}} property from one element to the next with each mouse click, we achieve the desired effect.</p>
+<p>This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By simply copying the values of the <a href="/en-US/docs/Web/CSS/background-image">background-image</a> property from one element to the next with each mouse click, we achieve the desired effect.</p>
 
 <h3 id="What_it_looks_like">What it looks like</h3>
 

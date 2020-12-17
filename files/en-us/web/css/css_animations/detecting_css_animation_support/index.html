@@ -42,7 +42,7 @@ if( animation === false ) {
 
 <p>For starters we define a few variables. We assume that animation is not supported by setting <code>animation</code> to <code>false</code>. We set the <code>animationstring</code> to <code>animation</code> which is the property we want to set later on. We create an array of browser prefixes to loop over and we set <code>pfx</code> to an empty string.</p>
 
-<p>Then we check if the CSS {{cssxref("animation-name")}} property on the style collection for the element specified by the variable <code>elem</code> is set. This means the browser supports CSS animation without any prefix, which, to date, none of them do.</p>
+<p>Then we check if the CSS <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> property on the style collection for the element specified by the variable <code>elem</code> is set. This means the browser supports CSS animation without any prefix, which, to date, none of them do.</p>
 
 <p>If the browser does not support non-prefixed animation and <code>animation</code> is still <code>false</code>, we iterate over all the possible prefixes, since all the major browsers are currently prefixing this property and changing its name to <code>AnimationName</code> instead.</p>
 

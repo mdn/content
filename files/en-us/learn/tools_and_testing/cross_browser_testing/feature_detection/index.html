@@ -82,7 +82,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
  </li>
 </ol>
 
-<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
+<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the <a href="/en-US/docs/Web/CSS/flex">flex</a> and <a href="/en-US/docs/Web/CSS/flex-flow">flex-flow</a> properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you have trouble getting this to work, you can compare it to our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> code (see also the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">live version</a>).</p>
@@ -96,7 +96,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <h4 id="supports">@supports</h4>
 
-<p>In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> (see also <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
+<p>In recent times, CSS has had its own native feature detection mechanism introduced — the <a href="/en-US/docs/Web/CSS/@supports">@supports</a> at-rule. This works in a similar manner to <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> (see also <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
 
 <p>For example, we could rewrite our previous example to use <code>@supports</code> — see <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. If you look at the latter, you'll see a couple of <code>@supports</code> blocks, for example:</p>
 
@@ -239,7 +239,7 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 <ul>
  <li><code>flexboxlegacy</code> for the old flexbox spec (2009).</li>
  <li><code>flexboxtweener</code> for 2011 in between syntax supported by IE10.</li>
- <li><code>flexwrap</code> for the {{cssxref("flex-wrap")}} property, which isn't present in some implementations.</li>
+ <li><code>flexwrap</code> for the <a href="/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> property, which isn't present in some implementations.</li>
 </ul>
 
 <div class="note">

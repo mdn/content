@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Space_distributed_outside_the_items">Space distributed outside the items</h3>
 
-<p>To distribute the space between or around the items we use the alignment properties in flexbox, and the {{cssxref("justify-content")}} property. You can read more about this property in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a flex container</a>, which deals with aligning items on the main axis.</p>
+<p>To distribute the space between or around the items we use the alignment properties in flexbox, and the <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> property. You can read more about this property in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a flex container</a>, which deals with aligning items on the main axis.</p>
 
 <p>In the below live example we display the items at their natural size and by using <code>justify-content: space-between</code> make equal amounts of space between the items. You can change how the space is distributed using the <code>space-around</code> value, or where supported, <code>space-evenly</code>. You could also use <code>flex-start</code> to place the space at the end of the items, <code>flex-end</code> to place it before them, or <code>center</code> to centre the navigation items.</p>
 
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Space_distributed_within_the_items">Space distributed within the items</h3>
 
-<p>A different pattern for navigation would be to distribute the available space within the items themselves, rather than create space between them. In this case we would use the {{cssxref("flex")}} properties to allow items to grow and shrink in proportion to one another as described in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling ratios of flex items along the main axis</a>.</p>
+<p>A different pattern for navigation would be to distribute the available space within the items themselves, rather than create space between them. In this case we would use the <a href="/en-US/docs/Web/CSS/flex">flex</a> properties to allow items to grow and shrink in proportion to one another as described in <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling ratios of flex items along the main axis</a>.</p>
 
 <p>If I wanted all of my navigation items to have equal width, then I might use <code>flex: auto</code>, which is the shorthand for <code>flex: 1 1 auto</code> — all items grow and shrink from a flex-basis of auto. This would mean that the longer item would have more space.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p><img alt="Two card components showing that the internals of the component do not stretch with the wrapper." src="https://mdn.mozillademos.org/files/15669/flex-cards.png" style="height: 626px; width: 964px;"></p>
 
-<p>Flexbox can solve this. We make the card a flex container, with {{cssxref("flex-direction")}}<code>: column</code>. We then set the content area to <code>flex: 1</code>, which is the shorthand for <code>flex: 1 1 0</code> — the item can grow and shrink from a flex basis of <code>0</code>. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. If you remove the <code>flex</code> property from the live example you will see how the footer then moves up to sit directly under the content.</p>
+<p>Flexbox can solve this. We make the card a flex container, with <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a><code>: column</code>. We then set the content area to <code>flex: 1</code>, which is the shorthand for <code>flex: 1 1 0</code> — the item can grow and shrink from a flex basis of <code>0</code>. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. If you remove the <code>flex</code> property from the live example you will see how the footer then moves up to sit directly under the content.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}</p>
 
@@ -85,14 +85,14 @@ tags:
 
 <p>Some things that you might want to try in this live example relate to the different ways you might want to constrain the media object in your design.</p>
 
-<p>To prevent the image growing too large, add a {{cssxref("max-width")}} to the image. As that side of the media object is using the initial values of flexbox it can shrink but not grow, and uses a <code>flex-basis</code> of auto. Any {{cssxref("width")}} or max-width applied to the image will become the <code>flex-basis</code>.</p>
+<p>To prevent the image growing too large, add a <a href="/en-US/docs/Web/CSS/max-width">max-width</a> to the image. As that side of the media object is using the initial values of flexbox it can shrink but not grow, and uses a <code>flex-basis</code> of auto. Any <a href="/en-US/docs/Web/CSS/width">width</a> or max-width applied to the image will become the <code>flex-basis</code>.</p>
 
 <pre class="brush: css">.image img {
   max-width: 100px;
 }
 </pre>
 
-<p>You could also allow both sides to grow and shrink in proportion. If you set both sides to <code>flex: 1</code>, they will grow and shrink from a {{cssxref("flex-basis")}} of 0, so you will end up with two equal-sized columns. You could either take the content as a guide and set both to <code>flex: auto</code>, in which case they would grow and shrink from the size of the content or any size applied directly to the flex items such as a width on the image.</p>
+<p>You could also allow both sides to grow and shrink in proportion. If you set both sides to <code>flex: 1</code>, they will grow and shrink from a <a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a> of 0, so you will end up with two equal-sized columns. You could either take the content as a guide and set both to <code>flex: auto</code>, in which case they would grow and shrink from the size of the content or any size applied directly to the flex items such as a width on the image.</p>
 
 <pre class="brush: css">.media .content {
   flex: 1;
@@ -103,7 +103,7 @@ tags:
   flex: 1;
 }</pre>
 
-<p>You could also give each side different {{cssxref("flex-grow")}} factors, for example setting the side with the image to <code>flex: 1</code> and the content side to <code>flex: 3</code>. This will mean they use a <code>flex-basis</code> of <code>0</code> but distribute that space at different rates according to the <code>flex-grow</code> factor you have assigned. The flex properties we use to do this are described in detail in the guide <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling ratios of flex items along the main axis</a>.</p>
+<p>You could also give each side different <a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a> factors, for example setting the side with the image to <code>flex: 1</code> and the content side to <code>flex: 3</code>. This will mean they use a <code>flex-basis</code> of <code>0</code> but distribute that space at different rates according to the <code>flex-grow</code> factor you have assigned. The flex properties we use to do this are described in detail in the guide <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling ratios of flex items along the main axis</a>.</p>
 
 <pre class="brush: css">.media .content {
   flex: 3;

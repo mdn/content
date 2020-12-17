@@ -71,7 +71,7 @@ let observer = new IntersectionObserver(callback, options);
  <dt><code>root</code></dt>
  <dd>The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if <code>null</code>.</dd>
  <dt><code>rootMargin</code></dt>
- <dd>Margin around the root. Can have values similar to the CSS {{cssxref("margin")}} property, e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Defaults to all zeros.</dd>
+ <dd>Margin around the root. Can have values similar to the CSS <a href="/en-US/docs/Web/CSS/margin">margin</a> property, e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Defaults to all zeros.</dd>
  <dt><code>threshold</code></dt>
  <dd>Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array [0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.</dd>
 </dl>
@@ -314,7 +314,7 @@ startup();
 
 <ol>
  <li>The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.</li>
- <li>Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting <code>overflow</code> to anything but <code>visible</code> causes clipping to occur.</li>
+ <li>Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the <a href="/en-US/docs/Web/CSS/overflow">overflow</a> property. Setting <code>overflow</code> to anything but <code>visible</code> causes clipping to occur.</li>
  <li>If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an <code>&lt;iframe&gt;</code> is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.</li>
  <li>When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.</li>
  <li>The resulting rectangle is then updated by intersecting it with the <a href="/en-US/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle">root intersection rectangle</a>.</li>
@@ -367,7 +367,7 @@ startup();
 
 <h3 id="CSS">CSS</h3>
 
-<p>The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, which we'll use to affect the changes to the element as it becomes more or less obscured.</p>
+<p>The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the <a href="/en-US/docs/Web/CSS/background-color">background-color</a> and <a href="/en-US/docs/Web/CSS/border">border</a> attributes can participate in <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, which we'll use to affect the changes to the element as it becomes more or less obscured.</p>
 
 <pre class="brush: css notranslate">#box {
   background-color: rgba(40, 40, 190, 255);
@@ -565,7 +565,7 @@ window.addEventListener("load", (event) =&gt; {
   });
 }</pre>
 
-<p>For each {{domxref("IntersectionObserverEntry")}} in the list <code>entries</code>, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in <code>increasingColor</code> (remember, it's <code>"rgba(40, 40, 190, ratio)"</code>), replaces the word "ratio" with the entry's <code>intersectionRatio</code>. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.</p>
+<p>For each {{domxref("IntersectionObserverEntry")}} in the list <code>entries</code>, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's <a href="/en-US/docs/Web/CSS/background-color">background-color</a> to the string in <code>increasingColor</code> (remember, it's <code>"rgba(40, 40, 190, ratio)"</code>), replaces the word "ratio" with the entry's <code>intersectionRatio</code>. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.</p>
 
 <p>Similarly, if the <code>intersectionRatio</code> is going down, we use the string <code>decreasingColor</code> and replace the word "ratio" in that with the <code>intersectionRatio</code> before setting the target element's <code>background-color</code>.</p>
 

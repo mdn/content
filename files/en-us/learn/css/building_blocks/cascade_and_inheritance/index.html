@@ -71,7 +71,7 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}} </p>
 
-<p>Some properties do not inherit — for example, if you set a {{cssxref("width")}} of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!</p>
+<p>Some properties do not inherit — for example, if you set a <a href="/en-US/docs/Web/CSS/width">width</a> of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: On MDN CSS property reference pages you can find a technical information box called Formal definition, which lists a number of data points about that property, including whether it is inherited or not. See the <a href="/en-US/docs/Web/CSS/color#Formal_definition">color property Formal definition section</a>, for example.</p>
@@ -102,16 +102,16 @@ tags:
 <p>CSS provides four special universal property values for controlling inheritance. Every CSS property accepts these values.</p>
 
 <dl>
- <dt>{{cssxref("inherit")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/inherit">inherit</a></dt>
  <dd>Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".</dd>
- <dt>{{cssxref("initial")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/initial">initial</a></dt>
  <dd>Sets the property value applied to a selected element to the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> of that property.</dd>
- <dt>{{cssxref("unset")}}</dt>
+ <dt><a href="/en-US/docs/Web/CSS/unset">unset</a></dt>
  <dd>Resets the property to its natural value, which means that if the property is naturally inherited it acts like <code>inherit</code>, otherwise it acts like <code>initial</code>.</dd>
 </dl>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There is also a newer value, {{cssxref("revert")}}, which has limited browser support.</p>
+<p><strong>Note</strong>: There is also a newer value, <a href="/en-US/docs/Web/CSS/revert">revert</a>, which has limited browser support.</p>
 </div>
 
 <div class="notecard note">
@@ -274,7 +274,7 @@ tags:
 <p>Let's walk through this to see what's happening — try removing some of the properties to see what happens if you are finding it hard to understand:</p>
 
 <ol>
- <li>You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really all three should surely apply, because rules later in the source order generally override earlier rules.</li>
+ <li>You'll see that the third rule's <a href="/en-US/docs/Web/CSS/color">color</a> and <a href="/en-US/docs/Web/CSS/padding">padding</a> values have been applied, but the <a href="/en-US/docs/Web/CSS/background-color">background-color</a> hasn't. Why? Really all three should surely apply, because rules later in the source order generally override earlier rules.</li>
  <li>However, The rules above it win, because class selectors have higher specificity than element selectors.</li>
  <li>Both elements have a {{htmlattrxref("class")}} of <code>better</code>, but the 2nd one has an {{htmlattrxref("id")}} of <code>winning</code> too. Since IDs have an <em>even higher</em> specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are <em>very specific</em> in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.</li>
  <li>The 2nd element <em>does</em> get the red background color, but no border. Why? Because of the <code>!important</code> declaration in the second rule — including this after <code>border: none</code> means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.</li>

@@ -167,7 +167,7 @@ tags:
 
 <h4 id="Use_CSS_transforms">Use CSS transforms</h4>
 
-<p>Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.</p>
+<p>Instead of tweaking absolute positioning and fiddling with all that math yourself, use the <a href="/en-US/docs/Web/CSS/transform">transform</a> CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.</p>
 
 <p>In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an <a href="https://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">in-depth analysis of the benefits of <code>translate()</code></a> from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with <code>top</code> and <code>left</code> positioning. Another bonus is that this is just like working in a <code>canvas</code> element.</p>
 

@@ -29,12 +29,12 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variables</a> have been implemented ({{bug("773296")}}). Mozilla Hacks article can be found <a href="https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/">here</a>. They are enabled by default only for non-release builds (on release builds flip the pref <code>layout.css.variables.enabled</code> to <code>true</code> if you want to play with them).</li>
- <li>Flexboxes now support {{cssxref("visibility")}}<code>: collapse</code> ({{bug(783470)}}).</li>
- <li>The {{cssxref("box-sizing")}} property has been unprefixed ({{bug(243412)}}).</li>
- <li>The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference <code>layout.css.will-change.enabled</code> must be switched to <code>true</code> to enable it. ({{bug(940842)}})</li>
+ <li>Flexboxes now support <a href="/en-US/docs/Web/CSS/visibility">visibility</a><code>: collapse</code> ({{bug(783470)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> property has been unprefixed ({{bug(243412)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/will-change">will-change</a> property, a hint to that something will animate has been added. The preference <code>layout.css.will-change.enabled</code> must be switched to <code>true</code> to enable it. ({{bug(940842)}})</li>
  <li>Scientific exponential notation, like <code>3e1</code> or <code>10e+0</code>, is now supported for {{cssxref("&lt;number&gt;")}} values and derivatives, like {{cssxref("&lt;percentage&gt;")}} and unit values, but not {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).</li>
- <li>Images of type {{cssxref("&lt;gradient&gt;")}} are now supported in {{cssxref("border-image")}} ({{bug(709587)}}).</li>
- <li>The {{cssxref("touch-action")}} property has been implemented. It is not activated by default; the <code>layout.css.touch_action.enabled</code> pref controls it. ({{bug(795567)}})</li>
+ <li>Images of type {{cssxref("&lt;gradient&gt;")}} are now supported in <a href="/en-US/docs/Web/CSS/border-image">border-image</a> ({{bug(709587)}}).</li>
+ <li>The <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a> property has been implemented. It is not activated by default; the <code>layout.css.touch_action.enabled</code> pref controls it. ({{bug(795567)}})</li>
  <li>Remove redundant default style for &lt;pre&gt; element from quirk.css ({{bug(948914)}}).</li>
  <li>CSS Variables fallback incorrectly implemented (primary cycles)  ({{bug(950497)}}).</li>
  <li>@supports conditions with tokens after a declaration's priority should evaluate to false ({{bug(909170)}}).</li>

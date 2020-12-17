@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
 
-<p>The {{domxref("IntersectionObserver")}} interface's read-only <strong><code>rootMargin</code></strong> property is a string with syntax similar to that of the CSS {{cssxref("margin")}} property. Each side of the rectangle represented by <code>rootMargin</code> is added to the corresponding side in the {{domxref("IntersectionObserver.root", "root")}} element's {{Glossary("bounding box")}} before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box.</p>
+<p>The {{domxref("IntersectionObserver")}} interface's read-only <strong><code>rootMargin</code></strong> property is a string with syntax similar to that of the CSS <a href="/en-US/docs/Web/CSS/margin">margin</a> property. Each side of the rectangle represented by <code>rootMargin</code> is added to the corresponding side in the {{domxref("IntersectionObserver.root", "root")}} element's {{Glossary("bounding box")}} before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box.</p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element and root margin")}} for a more in-depth look at the root margin and how it works with the root's bounding box.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A string, formatted similarly to the CSS {{cssxref("margin")}} property's value, which contains offsets for one or more sides of the root's bounding box. These offsets are added to the corresponding values in the root's bounding box before the intersection between the resulting rectangle and the target element's bounds.</p>
+<p>A string, formatted similarly to the CSS <a href="/en-US/docs/Web/CSS/margin">margin</a> property's value, which contains offsets for one or more sides of the root's bounding box. These offsets are added to the corresponding values in the root's bounding box before the intersection between the resulting rectangle and the target element's bounds.</p>
 
 <p>The string returned by this property may not match the one specified when the {{domxref("IntersectionObserver")}} was instantiated. The browser is permitted to alter the values</p>
 

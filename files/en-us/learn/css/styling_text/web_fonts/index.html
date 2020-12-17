@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Font_families_recap">Font families recap</h2>
 
-<p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
+<p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the <a href="/en-US/docs/Web/CSS/font-family">font-family</a> property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
 
 <pre class="brush: css notranslate">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
@@ -49,7 +49,7 @@ tags:
 
 <p>But there is an alternative, which works very well, right back to IE version 6. Web fonts are a CSS feature that allows you to specify font files to be downloaded along with your website as it is accessed, meaning that any browser that supports web fonts can have exactly the fonts you specify available to it. Amazing! The syntax required looks something like this:</p>
 
-<p>First of all, you have a {{cssxref("@font-face")}} block at the start of the CSS, which specifies the font file(s) to download:</p>
+<p>First of all, you have a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block at the start of the CSS, which specifies the font file(s) to download:</p>
 
 <pre class="brush: css notranslate">@font-face {
   font-family: "myFont";
@@ -186,11 +186,11 @@ tags:
 <ul>
  <li><code>font-family</code>: This line specifies the name you want to refer to the font as. You can put this as anything you like, as long as you use it consistently throughout your CSS.</li>
  <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster. Multiple declarations can be listed, separated by commas — the browser will search through them and use the first one it can find that it understands — it is therefore best to put newer, better formats like WOFF2 earlier on, and older, not so good formats like TTF later on. The one exception to this is the EOT fonts — they are placed first to fix a couple of bugs in older versions of IE whereby it will try to use the first thing it finds, even if it can't actually use the font.</li>
- <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
+ <li><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a>/<a href="/en-US/docs/Web/CSS/font-style">font-style</a>: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a>/<a href="/en-US/docs/Web/CSS/font-style">font-style</a> to choose between them, rather than having to call all the different members of the font family different names. <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
+<p><strong>Note</strong>: You can also specify particular <a href="/en-US/docs/Web/CSS/font-variant">font-variant</a> and <a href="/en-US/docs/Web/CSS/font-stretch">font-stretch</a> values for your web fonts. In newer browsers, you can also specify a <a href="/en-US/docs/Web/CSS/unicode-range">unicode-range</a> value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> by Drew McLellan provides some useful ideas on how to make use of this.</p>
 </div>
 
 <h2 id="Variable_fonts">Variable fonts</h2>

@@ -74,7 +74,7 @@ tags:
 
  <p>If this attribute is not set, the <code>left</code> value is assumed.</p>
 
- <p>As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.</p>
+ <p>As this attribute is deprecated, use the CSS <a href="/en-US/docs/Web/CSS/text-align">text-align</a> property instead.</p>
 
  <div class="note"><strong>Note: </strong>The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/en-US/docs/Web/CSS/text-align#Browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&lt;string&gt;</code> value.</div>
  </dd>
@@ -82,7 +82,7 @@ tags:
  <dd>
  <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p>
 
- <p>As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.</p>
+ <p>As this attribute is deprecated, use the CSS <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property instead.</p>
  </dd>
  <dt>{{ htmlattrdef("char") }} {{deprecated_inline}}</dt>
  <dd>
@@ -99,7 +99,7 @@ tags:
   <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
  </ul>
 
- <p>As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.</p>
+ <p>As this attribute is deprecated, use the CSS <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> property instead.</p>
  </dd>
 </dl>
 
@@ -162,7 +162,7 @@ tags:
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
 }</pre>
 
-<p>First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using {{cssxref("border-collapse")}} to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. {{cssxref("font")}} is used to establish an initial font for the table.</p>
+<p>First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a> to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. <a href="/en-US/docs/Web/CSS/font">font</a> is used to establish an initial font for the table.</p>
 
 <pre class="brush: css notranslate">th, td {
   border: 1px solid #bbb;
@@ -170,7 +170,7 @@ tags:
   text-align: left;
 }</pre>
 
-<p>Then the style is set for the majority of the cells in the table, including all data cells but also those styles shared between our {{HTMLElement("td")}} and {{HTMLElement("th")}} cells. The cells are given a light gray outline which is a single pixel thick, padding is adjusted, and all cells are left-aligned using {{cssxref("text-align")}}</p>
+<p>Then the style is set for the majority of the cells in the table, including all data cells but also those styles shared between our {{HTMLElement("td")}} and {{HTMLElement("th")}} cells. The cells are given a light gray outline which is a single pixel thick, padding is adjusted, and all cells are left-aligned using <a href="/en-US/docs/Web/CSS/text-align">text-align</a></p>
 
 <pre class="brush: css notranslate">thead &gt; tr &gt; th {
   background-color: #cce;
@@ -178,7 +178,7 @@ tags:
   border-bottom: 2px solid #999;
 }</pre>
 
-<p>Finally, header cells contained within the {{HTMLElement("thead")}} block are given additional styling. They use a darker {{cssxref("background-color")}}, a larger font size, and a thicker, darker bottom border than the other cell borders.</p>
+<p>Finally, header cells contained within the {{HTMLElement("thead")}} block are given additional styling. They use a darker <a href="/en-US/docs/Web/CSS/background-color">background-color</a>, a larger font size, and a thicker, darker bottom border than the other cell borders.</p>
 
 <h4 id="Result">Result</h4>
 

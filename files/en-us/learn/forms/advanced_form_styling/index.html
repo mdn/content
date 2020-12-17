@@ -55,7 +55,7 @@ tags:
 
 <p>In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.</p>
 
-<p>The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the <code>-webkit-</code>  prefixed version (<code>-webkit-appearance</code>). Firefox settled on this because web developers mostly seemed to be using the <code>-webkit-</code> prefixed version, so it was better for compatibility.</p>
+<p>The <a href="/en-US/docs/Web/CSS/appearance">appearance</a> property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the <code>-webkit-</code>  prefixed version (<code>-webkit-appearance</code>). Firefox settled on this because web developers mostly seemed to be using the <code>-webkit-</code> prefixed version, so it was better for compatibility.</p>
 
 <p>If you look at the reference page you'll see a lot of different possible values listed for <code>-webkit-appearance</code>, however by far the most helpful value, and probably the only one you'll use, is <code>none</code>. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.</p>
 
@@ -183,7 +183,7 @@ input[type="checkbox"] {
 
 <h4 id="Using_appearance_none_on_radioscheckboxes">Using appearance: none on radios/checkboxes</h4>
 
-<p>As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}<code>:none;</code> Let's take this example HTML:</p>
+<p>As we showed before, you can remove the default appearance of a checkbox or radio button altogether with <a href="/en-US/docs/Web/CSS/appearance">appearance</a><code>:none;</code> Let's take this example HTML:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;fieldset&gt;
@@ -269,7 +269,7 @@ input[type="checkbox"]:disabled {
  <li><a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">Toggle switch example</a>: A checkbox styled to look like a toggle switch.</li>
 </ul>
 
-<p>If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.</p>
+<p>If you view these checkboxes in a browser that doesn't support <a href="/en-US/docs/Web/CSS/appearance">appearance</a>, your custom design will be lost, but they will still look like checkboxes and be usable.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: While Internet Explorer doesn't support any version of <code>appearance</code>, the <code>input[type=checkbox]::-ms-check</code> enables the targeting of checkboxes in IE only. This technique works for radio buttons too, despite the name <code>-ms-<em><strong>check</strong></em></code>.</p>

@@ -239,7 +239,7 @@ p { color: blue; }
 p { color: var(--text-color); }
 </pre>
 
-<p>As expected, the browser substitutes the value of <code>--text-color</code> in place of <code>var(--text-color)</code>, but <code>16px</code> is not a valid property value for {{cssxref("color")}}. After substitution, the property doesn’t make any sense. The browser handles this situation in two steps:</p>
+<p>As expected, the browser substitutes the value of <code>--text-color</code> in place of <code>var(--text-color)</code>, but <code>16px</code> is not a valid property value for <a href="/en-US/docs/Web/CSS/color">color</a>. After substitution, the property doesn’t make any sense. The browser handles this situation in two steps:</p>
 
 <ol>
  <li>Check if the property color is inheritable. Yes, but <code>&lt;p&gt;</code> doesn't have any parent with color property. So move on to the next step.</li>

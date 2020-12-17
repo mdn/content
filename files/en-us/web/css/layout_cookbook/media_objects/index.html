@@ -41,9 +41,9 @@ tags:
 
 <p>I have chosen to use <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid Layout</a> for the media object as it allows me to control the layout in two dimensions when I need to. This means that when we have a footer, with short content above, the footer can be pushed down to the bottom of the media object.</p>
 
-<p>Another reason to use Grid Layout is in order that I can use {{cssxref("fit-content")}} for the track sizing of the image. By using <code>fit-content</code> with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the <code>max-content</code> size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width ")}} of 100% applied, it scales down so that it continues to fit inside the column.</p>
+<p>Another reason to use Grid Layout is in order that I can use <a href="/en-US/docs/Web/CSS/fit-content">fit-content</a> for the track sizing of the image. By using <code>fit-content</code> with a maximum size of 200 pixels, when we have a small image such as the icon, the track only gets as large as the size of that image — the <code>max-content</code> size. If the image is larger, the track stops growing at 200 pixels and as the image has a {{cssxref("max-width ")}} of 100% applied, it scales down so that it continues to fit inside the column.</p>
 
-<p>By using {{cssxref("grid-template-areas")}} to achieve the layout, I can see the pattern in the CSS. I define my grid once we have a max-width of 500 pixels, so on smaller devices the media object stacks.</p>
+<p>By using <a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a> to achieve the layout, I can see the pattern in the CSS. I define my grid once we have a max-width of 500 pixels, so on smaller devices the media object stacks.</p>
 
 <p>An option for the pattern is to flip it to switch the image to the other side — this is done by adding the <code>media-flip</code> class, which defines a flipped grid template causing the layout to be mirrored.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>Once floated elements become grid items the float no longer applies so you don’t need to do anything special to clear the float.</p>
 
-<p>What you will need to do is remove any margins applied to the item, and any widths which we don’t need in a grid context (we have the {{cssxref("gap")}} property to control it in grids, and the track takes control of the sizing).</p>
+<p>What you will need to do is remove any margins applied to the item, and any widths which we don’t need in a grid context (we have the <a href="/en-US/docs/Web/CSS/gap">gap</a> property to control it in grids, and the track takes control of the sizing).</p>
 
 <h2 id="Relevant_resources_on_MDN">Relevant resources on MDN</h2>
 

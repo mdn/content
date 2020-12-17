@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>Level 2 of the CSS Grid Layout specification includes a <code>subgrid</code> value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does, and gives some use cases and design patterns that are solved by the feature.</p>
+<p>Level 2 of the CSS Grid Layout specification includes a <code>subgrid</code> value for <a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> and <a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>. This guide details what subgrid does, and gives some use cases and design patterns that are solved by the feature.</p>
 
 <div class="notecard warning">
 <p><strong>Important</strong>: This feature is shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
@@ -24,7 +24,7 @@ tags:
 
 <p>If you set the value <code>subgrid</code> on <code>grid-template-columns</code>, <code>grid-template-rows</code> or both, instead of creating a new track listing the nested grid uses the tracks defined on the parent.</p>
 
-<p>For example, if you use <code>grid-template-columns: subgrid</code> and the nested grid spans three column tracks of the parent, the nested grid will have three column tracks of the same size as the parent grid. Gaps are inherited but can also be overridden with a different {{cssxref("gap")}} value. Line names can be passed from the parent into the subgrid, and the subgrid can also declare its own line names.</p>
+<p>For example, if you use <code>grid-template-columns: subgrid</code> and the nested grid spans three column tracks of the parent, the nested grid will have three column tracks of the same size as the parent grid. Gaps are inherited but can also be overridden with a different <a href="/en-US/docs/Web/CSS/gap">gap</a> value. Line names can be passed from the parent into the subgrid, and the subgrid can also declare its own line names.</p>
 
 <h2 id="Subgrid_for_columns">Subgrid for columns</h2>
 
@@ -64,7 +64,7 @@ tags:
 
 <h2 id="The_gap_properties_and_subgrid">The gap properties and subgrid</h2>
 
-<p>If you have a {{cssxref("gap")}}, {{cssxref("column-gap")}}, or {{cssxref("row-gap")}} specified on the parent, this will be passed into the subgrid, so it will have the same spacing between tracks as the parent. In some situations however you may wish the subgrid tracks to have a different gap or no gap. This can be achieved by using the <code>gap-*</code> properties on the grid container of the subgrid.</p>
+<p>If you have a <a href="/en-US/docs/Web/CSS/gap">gap</a>, <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>, or <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a> specified on the parent, this will be passed into the subgrid, so it will have the same spacing between tracks as the parent. In some situations however you may wish the subgrid tracks to have a different gap or no gap. This can be achieved by using the <code>gap-*</code> properties on the grid container of the subgrid.</p>
 
 <p>You can see this in the example below. The parent grid has a gap of 20px for rows and columns. The subgrid has <code>row-gap</code> set to <code>0</code>.</p>
 

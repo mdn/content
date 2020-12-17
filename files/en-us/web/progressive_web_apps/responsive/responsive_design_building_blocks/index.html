@@ -76,11 +76,11 @@ x-card:nth-child(3) {
   padding: 2rem;
 }</pre>
 
-<p>So we're giving the first two columns a {{cssxref("width")}} of <code>30%</code>, and the third a <code>width</code> of <code>40%</code>, floating the columns all left. This way they end up side-by-side, and their proportions remain the same as the browser window size varies. This is just a simple grid example, but you can apply this principle to more complex grid layouts as required.</p>
+<p>So we're giving the first two columns a <a href="/en-US/docs/Web/CSS/width">width</a> of <code>30%</code>, and the third a <code>width</code> of <code>40%</code>, floating the columns all left. This way they end up side-by-side, and their proportions remain the same as the browser window size varies. This is just a simple grid example, but you can apply this principle to more complex grid layouts as required.</p>
 
 <h3 id="border-box_sizing">border-box sizing</h3>
 
-<p>The padding does not affect the overall width and height of the containers because we have set the {{cssxref("box-sizing")}} of all elements to <code>border-box</code>:</p>
+<p>The padding does not affect the overall width and height of the containers because we have set the <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a> of all elements to <code>border-box</code>:</p>
 
 <pre class="brush: css notranslate">*, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -88,7 +88,7 @@ x-card:nth-child(3) {
   box-sizing: border-box;
 }</pre>
 
-<p>This basically means that {{cssxref("width")}} and {{cssxref("height")}} will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set <code>width: 40%</code>, the box width will always be <code>40%</code> of its parent, and any {{cssxref("padding")}} and {{cssxref("border")}} widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" title="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">* { Box-sizing: Border-box } FTW</a>, by Paul Irish.</p>
+<p>This basically means that <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set <code>width: 40%</code>, the box width will always be <code>40%</code> of its parent, and any <a href="/en-US/docs/Web/CSS/padding">padding</a> and <a href="/en-US/docs/Web/CSS/border">border</a> widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" title="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">* { Box-sizing: Border-box } FTW</a>, by Paul Irish.</p>
 
 <h2 id="Flexible_replaced_elements">Flexible replaced elements</h2>
 
@@ -109,7 +109,7 @@ x-card:nth-child(3) {
     …
 }</pre>
 
-<p>This is because in our case, we do in fact want the video and image to stretch to always fill their containers no matter what — a subtle but important difference from {{cssxref("max-width")}} — and therefore always be the same size. The video always resizes dynamically, but the screen captures taken from it do not, so upon resizing the screen it was possible to end up with a messy layout with different sized elements when using <code>max-width: 100%</code>, such as:</p>
+<p>This is because in our case, we do in fact want the video and image to stretch to always fill their containers no matter what — a subtle but important difference from <a href="/en-US/docs/Web/CSS/max-width">max-width</a> — and therefore always be the same size. The video always resizes dynamically, but the screen captures taken from it do not, so upon resizing the screen it was possible to end up with a messy layout with different sized elements when using <code>max-width: 100%</code>, such as:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5915/broken-max-width-layout.png" style="display: block; height: 220px; margin: 0px auto; width: 480px;"></p>
 
@@ -231,7 +231,7 @@ x-card:nth-child(3) {
   }
 }</pre>
 
-<p>In this last set of rules, we change the display value of the {{HTMLElement("nav")}} to <code>flex</code> to make it show (it was set to <code>none</code> in the default CSS at the top of the stylesheet, as it wasn't needed for the other views.) We then use absolute positioning and {{cssxref("z-index")}} to make it take up no space in the document flow,  and sit on top of the x-cards (this is why we gave the x-cards that top-margin earlier).</p>
+<p>In this last set of rules, we change the display value of the {{HTMLElement("nav")}} to <code>flex</code> to make it show (it was set to <code>none</code> in the default CSS at the top of the stylesheet, as it wasn't needed for the other views.) We then use absolute positioning and <a href="/en-US/docs/Web/CSS/z-index">z-index</a> to make it take up no space in the document flow,  and sit on top of the x-cards (this is why we gave the x-cards that top-margin earlier).</p>
 
 <p>Next up, the <code>font-size</code> of the buttons is set to <code>6.8vw</code>. Why? Because the top-margin of the x-cards was set to <code>17vw</code> earlier on. All buttons in the app have been set to have a <code>line-height</code> of 2.5, in the default CSS at the top of the stylesheet (check if you don't believe me.) And 6.8 x 2.5 = 17.</p>
 

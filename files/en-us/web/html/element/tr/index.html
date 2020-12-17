@@ -51,7 +51,7 @@ tags:
  <p>If no value is expressly set for <code>align</code>, the parent node's value is inherited.</p>
 
  <div class="note">
- <p>Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
+ <p>Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS <a href="/en-US/docs/Web/CSS/text-align">text-align</a> property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS <a href="/en-US/docs/Web/CSS/text-align">text-align</a> property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
  </div>
  </dd>
 </dl>
@@ -62,7 +62,7 @@ tags:
  <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
 
  <div class="note">
- <p>The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property {{CSSxRef("background-color")}}.</p>
+ <p>The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property <a href="/en-US/docs/Web/CSS/background-color">background-color</a>.</p>
  </div>
  </dd>
 </dl>
@@ -73,7 +73,7 @@ tags:
  <p>A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (<code>"."</code>) or comma (<code>","</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to <code>char</code>, this attribute is ignored.</p>
 
  <div class="note">
- <p>This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
+ <p>This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS <a href="/en-US/docs/Web/CSS/text-align">text-align</a> property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
  </div>
  </dd>
 </dl>
@@ -106,7 +106,7 @@ tags:
  </dl>
 
  <div class="note">
- <p>Don't use the obsolete <code>valign</code> attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.</p>
+ <p>Don't use the obsolete <code>valign</code> attribute. Instead, add the CSS <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> property to the row.</p>
  </div>
  </dd>
 </dl>
@@ -375,7 +375,7 @@ th, td {
 }
 </pre>
 
-<p>While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style <code>&lt;tr&gt;</code> elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all of the cells in the heading area at once.</p>
+<p>While we add a <a href="/en-US/docs/Web/CSS/font">font</a> property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style <code>&lt;tr&gt;</code> elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all of the cells in the heading area at once.</p>
 
 <p>This does <em>not</em> affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.</p>
 
@@ -444,7 +444,7 @@ th, td {
   border-collapse: collapse;
 }</pre>
 
-<p>Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.</p>
+<p>Here we've added the <a href="/en-US/docs/Web/CSS/border-spacing">border-spacing</a> and <a href="/en-US/docs/Web/CSS/border-collapse">border-collapse</a> properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.</p>
 
 <pre class="brush: css notranslate">th, td {
   border: 1px solid black;
@@ -469,7 +469,7 @@ thead &gt; tr:nth-of-type(2) {
   border-bottom: 2px solid black;
 }</pre>
 
-<p>This sets the background color of all <code>&lt;tr&gt;</code> elements in the table's heading (as specified using {{HTMLElement("thead")}}). Then we set the bottom border of the top header to be a two-pixel wide line. Notice, however, that we're using the {{CSSxRef(":nth-of-type")}} selector to apply {{CSSxRef("border-bottom")}} to the <em>second</em> row in the heading. Why? Because the heading is made of two rows that are spanned by some of the cells. That means there are actually two rows there; applying the style to the first row would not give us the expected result.</p>
+<p>This sets the background color of all <code>&lt;tr&gt;</code> elements in the table's heading (as specified using {{HTMLElement("thead")}}). Then we set the bottom border of the top header to be a two-pixel wide line. Notice, however, that we're using the {{CSSxRef(":nth-of-type")}} selector to apply <a href="/en-US/docs/Web/CSS/border-bottom">border-bottom</a> to the <em>second</em> row in the heading. Why? Because the heading is made of two rows that are spanned by some of the cells. That means there are actually two rows there; applying the style to the first row would not give us the expected result.</p>
 
 <h5 id="The_Joined_and_Canceled_headers">The "Joined" and "Canceled" headers</h5>
 
@@ -502,7 +502,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
   background-color: rgb(225, 229, 244);
 }</pre>
 
-<p>This styles the first header cell in each row of the table's body with {{CSSxRef("text-align")}} to left-justify the member names, and with a somewhat different background color.</p>
+<p>This styles the first header cell in each row of the table's body with <a href="/en-US/docs/Web/CSS/text-align">text-align</a> to left-justify the member names, and with a somewhat different background color.</p>
 
 <h5 id="Justify_the_balances">Justify the balances</h5>
 
@@ -512,7 +512,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
   text-align:right;
 }</pre>
 
-<p>This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLElement("td")}} in each body row to <code>"right"</code>.</p>
+<p>This just sets the CSS <a href="/en-US/docs/Web/CSS/text-align">text-align</a> property for the last {{HTMLElement("td")}} in each body row to <code>"right"</code>.</p>
 
 <h2 id="Technical_summary">Technical summary</h2>
 

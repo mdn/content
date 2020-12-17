@@ -27,23 +27,23 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15962/Inline_Axis.png" style="height: 306px; width: 940px;"></p>
 
-<p>To align things on the inline axis you use the properties that start with <code>justify-</code>, {{cssxref("justify-content")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}}.</p>
+<p>To align things on the inline axis you use the properties that start with <code>justify-</code>, <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a>, <a href="/en-US/docs/Web/CSS/justify-items">justify-items</a> and <a href="/en-US/docs/Web/CSS/justify-self">justify-self</a>.</p>
 
 <p>The block axis crosses the inline axis in the direction that blocks are displayed down the page — for example paragraphs in English are displayed one below the other vertically. This, therefore is the block dimension.</p>
 
-<p>To align things on the block axis you use the properties that start with <code>align-</code>, {{cssxref("align-content")}}, {{cssxref("align-items")}} and {{cssxref("align-self")}}.</p>
+<p>To align things on the block axis you use the properties that start with <code>align-</code>, <a href="/en-US/docs/Web/CSS/align-content">align-content</a>, <a href="/en-US/docs/Web/CSS/align-items">align-items</a> and <a href="/en-US/docs/Web/CSS/align-self">align-self</a>.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15961/Block_Axis.png" style="height: 306px; width: 940px;"></p>
 
 <h2 id="Self_alignment">Self alignment</h2>
 
 <ul>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("place-self")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-self">justify-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-self">place-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-items">place-items</a></li>
 </ul>
 
 <p>These properties deal with aligning the item inside the grid area it is placed into. The properties <code>align-items</code> and <code>justify-items</code> are applied to the grid container and set the <code>align-self</code> and <code>justify-self</code> properties as a group. This means that you can set alignment for all of your grid Items at once, then override any items that need a different alignment by applying the <code>align-self</code> or <code>justify-self</code> property to the rules for the individual grid Items.</p>
@@ -53,9 +53,9 @@ tags:
 <h2 id="Content_alignment">Content alignment</h2>
 
 <ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-content">place-content</a></li>
 </ul>
 
 <p>These properties deal with aligning the tracks of the grid when there is extra space to distribute. This scenario will occur if the tracks that you have defined total less than the total width of the grid container.</p>
@@ -63,15 +63,15 @@ tags:
 <h2 id="Gap_and_legacy_grid-gap_properties">Gap and legacy grid-gap properties</h2>
 
 <ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
- <li>{{cssxref("grid-row-gap")}}</li>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
 </ul>
 
-<p>The Grid specification originally contained the definition for the properties {{cssxref("grid-row-gap")}}, {{cssxref("grid-column-gap")}} and {{cssxref("grid-gap")}}. These have since been moved into the Box Alignment specification and renamed to {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. This allows them to be used for other layout methods where a gap between items makes sense.</p>
+<p>The Grid specification originally contained the definition for the properties <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a>, <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a> and <a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a>. These have since been moved into the Box Alignment specification and renamed to <a href="/en-US/docs/Web/CSS/row-gap">row-gap</a>, <a href="/en-US/docs/Web/CSS/column-gap">column-gap</a>, and <a href="/en-US/docs/Web/CSS/gap">gap</a>. This allows them to be used for other layout methods where a gap between items makes sense.</p>
 
 <p>The updated properties have not yet been implemented in all browsers. Therefore, to use the gap properties in grid layout, you should use the <code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code> versions to ensure full compatibility. You could double up the properties and use both as you would for vendor prefixes.</p>
 
@@ -81,18 +81,18 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("place-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/justify-content">justify-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-content">align-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-content">place-content</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-items">align-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-items">place-items</a></li>
+ <li><a href="/en-US/docs/Web/CSS/justify-self">justify-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/align-self">align-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/place-self">place-self</a></li>
+ <li><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></li>
+ <li><a href="/en-US/docs/Web/CSS/gap">gap</a></li>
 </ul>
 </div>
 

@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>align-self</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property overrides a grid or flex item's {{cssxref("align-items")}} value. In Grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In Flexbox, it aligns the item on the {{glossary("cross axis")}}.</p>
+<p>The <strong><code>align-self</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property overrides a grid or flex item's <a href="/en-US/docs/Web/CSS/align-items">align-items</a> value. In Grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In Flexbox, it aligns the item on the {{glossary("cross axis")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/align-self.html")}}</div>
 
@@ -54,7 +54,7 @@ align-self: unset;</pre>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>Computes to the parent's {{cssxref("align-items")}} value.</dd>
+ <dd>Computes to the parent's <a href="/en-US/docs/Web/CSS/align-items">align-items</a> value.</dd>
  <dt><code>normal</code></dt>
  <dd>The effect of this keyword is dependent of the layout mode we are in:
  <ul>
@@ -81,7 +81,7 @@ align-self: unset;</pre>
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
  The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>stretch</code></dt>
- <dd>If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
+ <dd>If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by <a href="/en-US/docs/Web/CSS/max-height">max-height</a>/<a href="/en-US/docs/Web/CSS/max-width">max-width</a> (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
  <dt><code>safe</code></dt>
  <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
  <dt><code>unsafe</code></dt>
@@ -173,5 +173,5 @@ div:nth-child(3) {
  <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
  <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{cssxref("align-items")}} property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/align-items">align-items</a> property</li>
 </ul>

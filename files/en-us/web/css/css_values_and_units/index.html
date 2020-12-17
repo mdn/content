@@ -33,14 +33,14 @@ tags:
   /* keyframes go here */
 }</pre>
 
-<p>Some text values are not valid if encompassed in quotes. For example, the value of {{cssxref("grid-area")}} can be a <code>&lt;custom-ident&gt;</code>, so if we had a grid area named <code>content</code> we would use it without quotes:</p>
+<p>Some text values are not valid if encompassed in quotes. For example, the value of <a href="/en-US/docs/Web/CSS/grid-area">grid-area</a> can be a <code>&lt;custom-ident&gt;</code>, so if we had a grid area named <code>content</code> we would use it without quotes:</p>
 
 <pre class="brush: css notranslate">.item {
   grid-area: content;
 }
 </pre>
 
-<p>In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a string value of the {{cssxref("content")}} property, must be quoted:</p>
+<p>In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a string value of the <a href="/en-US/docs/Web/CSS/content">content</a> property, must be quoted:</p>
 
 <pre class="brush: css notranslate">.item::after {
     content: "This is my content.";
@@ -53,7 +53,7 @@ tags:
 
 <p>Pre-defined keywords are text values defined by the specification for that property. These keywords are also CSS Identifiers and are therefore used without quotes.</p>
 
-<p>When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.</p>
+<p>When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for <a href="/en-US/docs/Web/CSS/float">float</a>.</p>
 
 <pre class="syntaxbox notranslate">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
 
@@ -66,13 +66,13 @@ tags:
 
 <h3 id="CSS-wide_values">CSS-wide values</h3>
 
-<p>In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, and {{cssxref("unset")}}, which explicitly specify defaulting behaviors.</p>
+<p>In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values <a href="/en-US/docs/Web/CSS/initial">initial</a>, <a href="/en-US/docs/Web/CSS/inherit">inherit</a>, and <a href="/en-US/docs/Web/CSS/unset">unset</a>, which explicitly specify defaulting behaviors.</p>
 
 <p>The <code>initial</code> keyword represents the value specified as the property’s initial value. The <code>inherit</code> keyword represents the computed value of the property on the element’s parent, provided it is inherited.</p>
 
 <p>The <code>unset</code> keyword acts as either <code>inherit</code> or <code>initial</code>, depending on whether the property is inherited or not.</p>
 
-<p>A fourth value of {{cssxref("revert")}} was added in the Cascade Level 4 specification, but it does not currently have good browser support.</p>
+<p>A fourth value of <a href="/en-US/docs/Web/CSS/revert">revert</a> was added in the Cascade Level 4 specification, but it does not currently have good browser support.</p>
 
 <h3 id="URLs">URLs</h3>
 
@@ -375,7 +375,7 @@ tags:
 
 <p>Percentage values are always relative to another quantity, for example a length. Each property that allows percentages also defines the quantity to which the percentage refers. This quantity can be a value of another property of the same element, the value of a property of an ancestor element, a measurement of a containing block, or something else.</p>
 
-<p>As an example, if you specify the {{cssxref("width")}} of a box as a percentage, it refers to the percentage of the box's parent's computed width:</p>
+<p>As an example, if you specify the <a href="/en-US/docs/Web/CSS/width">width</a> of a box as a percentage, it refers to the percentage of the box's parent's computed width:</p>
 
 <pre class="brush: css notranslate">.box {
   width: 50%;
@@ -409,12 +409,12 @@ tags:
 
 <h4 id="Position">Position</h4>
 
-<p>The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders specification</a>.</p>
+<p>The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  <a href="/en-US/docs/Web/CSS/background-position">background-position</a> and therefore specified in the <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders specification</a>.</p>
 
 <h3 id="Functional_notation">Functional notation</h3>
 
 <ul>
- <li>{{cssxref("calc()")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/calc()">calc()</a></li>
  <li>{{cssxref("min", "min()")}}</li>
  <li>{{cssxref("max", "max()")}}</li>
  <li>{{cssxref("clamp", "clamp()")}}</li>

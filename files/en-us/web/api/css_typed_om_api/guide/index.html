@@ -111,9 +111,9 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <p>{{EmbedLiveSample("example2", 120, 300)}}</p>
 </div>
 
-<p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
+<p>We included <a href="/en-US/docs/Web/CSS/border-left-color">border-left-color</a> to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including <a href="/en-US/docs/Web/CSS/caret-color">caret-color</a>, <a href="/en-US/docs/Web/CSS/outline-color">outline-color</a>, <a href="/en-US/docs/Web/CSS/text-decoration-color">text-decoration-color</a>, <a href="/en-US/docs/Web/CSS/column-rule-color">column-rule-color</a>, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
 
-<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
+<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — <a href="/en-US/docs/Web/CSS/color">color</a> was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the <a href="/en-US/docs/Web/CSS/font-weight">font-weight</a> returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
 
 <h3 id="CSSUnitValue_and_CSSKeywordValue">CSSUnitValue and CSSKeywordValue</h3>
 
@@ -238,7 +238,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>You'll note the {{cssxref('&lt;length&gt;')}} unit returned is <code>px</code>, the {{cssxref('&lt;percentage&gt;')}} unit returned is <code>percent</code>, the {{cssxref('&lt;time&gt;')}} unit is <code>s</code> for 'seconds', and the unitless {{cssxref('&lt;number&gt;')}} unit is <code>number</code>.</p>
 
-<p>We didn't declare a {{cssxref('width')}} or a {{cssxref('height')}} for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code> instead of a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>. </p>
+<p>We didn't declare a <a href="/en-US/docs/Web/CSS/width">width</a> or a <a href="/en-US/docs/Web/CSS/height">height</a> for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code> instead of a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>. </p>
 
 <p>Had the <code>width</code> or <code>height</code> been defined in a <code>&lt;length&gt;</code> or <code>&lt;percent&gt;</code>, the <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code> unit would have been <code>px</code> or <code>percent</code> respectively.</p>
 
@@ -247,7 +247,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <ul>
  <li>An <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> will return a {{domxref('CSSImageValue')}}.</li>
  <li>A <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> would return a {{domxref('CSSStyleValue')}}.</li>
- <li>A {{cssxref('transform')}} returns a <code>CSSTransformValue</code>.</li>
+ <li>A <a href="/en-US/docs/Web/CSS/transform">transform</a> returns a <code>CSSTransformValue</code>.</li>
  <li>A <a href="/en-US/docs/Web/CSS/--*">custom property</a> returns a {{domxref('CSSUnparsedValue')}}.</li>
 </ul>
 
@@ -386,7 +386,7 @@ console.log( btnWidth.operator );    // 'sum'</pre>
 
 <h3 id="CSSTransformValue_with_CSSScale">CSSTransformValue with CSSScale</h3>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function. </p>
+<p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a <a href="/en-US/docs/Web/CSS/transform">transform</a> function. </p>
 
 <pre class="brush: js notranslate">let transform = allComputedStyles.get('transform');
 
@@ -413,7 +413,7 @@ console.log( transform.is2D );   // true</pre>
 console.log( bgImage );             // CSSImageValue
 console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/16793/magicwand.png")</pre>
 
-<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("https://mdn.mozillademos.org/files/16793/magicwand.png")'</code>.</p>
+<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS <a href="/en-US/docs/Web/CSS/background">background</a> shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("https://mdn.mozillademos.org/files/16793/magicwand.png")'</code>.</p>
 
 <p>Notice that the value returned is the absolute path to the image — this is returned even if the original <code>url()</code> value was relative. Had the background image been a gradient or multiple background images,  <code>.get('background-image') </code>would have returned a <code>CSSStyleValue</code>. The <code>CSSImageValue</code> is returned only if there is a single image, and only if that single image declaration is a URL.</p>
 

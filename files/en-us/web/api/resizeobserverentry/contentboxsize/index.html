@@ -25,9 +25,9 @@ tags:
 
 <dl>
  <dt><code>blockSize</code></dt>
- <dd>The length of the observed element's content box in the block dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.</dd>
+ <dd>The length of the observed element's content box in the block dimension. For boxes with a horizontal <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a>, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.</dd>
  <dt><code>inlineSize</code></dt>
- <dd>The length of the observed element's content box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.</dd>
+ <dd>The length of the observed element's content box in the inline dimension. For boxes with a horizontal <a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a>, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.</dd>
 </dl>
 
 <div class="notecard note">
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html">resize-observer-border-radius.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html">see source</a>) example. This example includes a green box, sized as a percentage of the viewport size. When the viewport size is changed, the box's rounded corners change in proportion to the size of the box. We could just implement this using {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking elliptical corners; this solution gives you nice square corners that scale with the box size.</p>
+<p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html">resize-observer-border-radius.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html">see source</a>) example. This example includes a green box, sized as a percentage of the viewport size. When the viewport size is changed, the box's rounded corners change in proportion to the size of the box. We could just implement this using <a href="/en-US/docs/Web/CSS/border-radius">border-radius</a> with a percentage, but that quickly leads to ugly-looking elliptical corners; this solution gives you nice square corners that scale with the box size.</p>
 
 <pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {

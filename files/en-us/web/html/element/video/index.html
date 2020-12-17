@@ -232,7 +232,7 @@ tags:
 <ul>
  <li>If you don't specify the <code>controls</code> attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for more details.</li>
  <li>To allow precise control over your video (and audio) content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/Guide/Events/Media_events">events</a>. In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.</li>
- <li>You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.</li>
+ <li>You can use the <a href="/en-US/docs/Web/CSS/object-position">object-position</a> property to adjust the positioning of the video within the element's frame, and the <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a> property to control how the video's size is adjusted to fit within the frame.</li>
  <li>To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> format. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> for more information.</li>
  <li>You can play audio files using a <code>&lt;video&gt;</code> element. This can be useful if, for example, you need to perform audio with a <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.</li>
  <li>To test the fallback content on browsers that support the element, you can replace <code>&lt;video&gt;</code> with a non-existing element like <code>&lt;notavideo&gt;</code>.</li>
@@ -242,7 +242,7 @@ tags:
 
 <h3 id="Styling_with_CSS">Styling with CSS</h3>
 
-<p>The <code>&lt;video&gt;</code> element is a replaced element — its {{cssxref("display")}} value is <code>inline</code> by default, but its default width and height in the viewport is defined by the video being embedded.</p>
+<p>The <code>&lt;video&gt;</code> element is a replaced element — its <a href="/en-US/docs/Web/CSS/display">display</a> value is <code>inline</code> by default, but its default width and height in the viewport is defined by the video being embedded.</p>
 
 <p>There are no special considerations for styling <code>&lt;video&gt;</code>; a common strategy is to give it a <code>display</code> value of <code>block</code> to make it easier to position, size, etc., and then provide styling and layout information as required. <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Video player styling basics</a> provides some useful styling techniques.</p>
 
@@ -456,7 +456,7 @@ It's… it's a…
    <li><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Web audio codec guide</a></li>
   </ul>
  </li>
- <li>Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}</li>
+ <li>Positioning and sizing the picture within its frame: <a href="/en-US/docs/Web/CSS/object-position">object-position</a> and <a href="/en-US/docs/Web/CSS/object-fit">object-fit</a></li>
  <li>{{htmlelement("audio")}}</li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Using HTML5 audio and video</a></li>
  <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>

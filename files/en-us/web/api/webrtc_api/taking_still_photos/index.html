@@ -35,7 +35,7 @@ tags:
 
 <p>This is straightforward, and we'll see how it ties together when we get into the JavaScript code.</p>
 
-<p>Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display")}}<code>:none</code>, to avoid cluttering up the screen — the user does not need to see this intermediate stage.</p>
+<p>Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with <a href="/en-US/docs/Web/CSS/display">display</a><code>:none</code>, to avoid cluttering up the screen — the user does not need to see this intermediate stage.</p>
 
 <p>We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.</p>
 
@@ -212,7 +212,7 @@ tags:
 
 <h2 id="Fun_with_filters">Fun with filters</h2>
 
-<p>Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white)  to the extreme (gaussian blurs and hue rotation).</p>
+<p>Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the <a href="/en-US/docs/Web/CSS/filter">filter</a> property affect the captured photo. These filters can range from the simple (making the image black and white)  to the extreme (gaussian blurs and hue rotation).</p>
 
 <p>You can play with this effect using, for example, the Firefox developer tools' <a href="/en-US/docs/Tools/Style_Editor">style editor</a>; see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters">Edit CSS filters</a> for details on how to do so.</p>
 

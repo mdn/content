@@ -59,7 +59,7 @@ tags:
 
 <h2 id="Useful_fallback_techniques">Useful fallback techniques</h2>
 
-<p>Given that flexbox usage is initiated with value of the {{cssxref("display")}} property, when needing to support very old browsers which do not support flexbox at all, fallbacks can be created by overwriting one layout method with another. The specification defines what happens if you use other layout methods on an element which then becomes a flex item.</p>
+<p>Given that flexbox usage is initiated with value of the <a href="/en-US/docs/Web/CSS/display">display</a> property, when needing to support very old browsers which do not support flexbox at all, fallbacks can be created by overwriting one layout method with another. The specification defines what happens if you use other layout methods on an element which then becomes a flex item.</p>
 
 <h3 id="Floated_items">Floated items</h3>
 
@@ -97,7 +97,7 @@ tags:
 
 <h3 id="The_vertical-align_property">The vertical-align property</h3>
 
-<p>The live example below demonstrates use of the {{cssxref("vertical-align")}} property along with <code>display: inline-block</code>. Both <code>display: table-cell</code> and <code>display: inline-block</code> allow for the use of this property. Use of <code>vertical-align</code> enables vertical alignment prior to flexbox. The property is ignored by flexbox and so you can use it in conjunction with <code>display: table-cell</code> or <code>display: inline-block</code> as a fallback and then safely use box alignment properties in flexbox instead.</p>
+<p>The live example below demonstrates use of the <a href="/en-US/docs/Web/CSS/vertical-align">vertical-align</a> property along with <code>display: inline-block</code>. Both <code>display: table-cell</code> and <code>display: inline-block</code> allow for the use of this property. Use of <code>vertical-align</code> enables vertical alignment prior to flexbox. The property is ignored by flexbox and so you can use it in conjunction with <code>display: table-cell</code> or <code>display: inline-block</code> as a fallback and then safely use box alignment properties in flexbox instead.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/vertical-align.html", '100%', 550)}}</p>
 

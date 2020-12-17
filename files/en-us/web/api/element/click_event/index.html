@@ -50,18 +50,18 @@ tags:
 
 <h3 id="Internet_Explorer">Internet Explorer</h3>
 
-<p>Internet Explorer 8 &amp; 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Any <code>click</code> events will be fired at the underlying element(s) instead. See <a href="http://jsfiddle.net/YUKma/show/">this live example</a> for a demonstration.</p>
+<p>Internet Explorer 8 &amp; 9 suffer from a bug where elements with a computed <a href="/en-US/docs/Web/CSS/background-color">background-color</a> of <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Any <code>click</code> events will be fired at the underlying element(s) instead. See <a href="http://jsfiddle.net/YUKma/show/">this live example</a> for a demonstration.</p>
 
 <p>Known workarounds for this bug:</p>
 
 <ul>
  <li>For IE9 only:
   <ul>
-   <li>Set {{cssxref("background-color")}}<code>: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
-   <li>Set {{cssxref("opacity")}}<code>: 0</code> and an explicit {{cssxref("background-color")}} other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
+   <li>Set <a href="/en-US/docs/Web/CSS/background-color">background-color</a><code>: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
+   <li>Set <a href="/en-US/docs/Web/CSS/opacity">opacity</a><code>: 0</code> and an explicit <a href="/en-US/docs/Web/CSS/background-color">background-color</a> other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
   </ul>
  </li>
- <li>For IE8 and IE9: Set <code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code> and an explicit {{cssxref("background-color")}} other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
+ <li>For IE8 and IE9: Set <code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code> and an explicit <a href="/en-US/docs/Web/CSS/background-color">background-color</a> other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
 </ul>
 
 <h3 id="Safari_Mobile">Safari Mobile</h3>
@@ -71,7 +71,7 @@ tags:
 <p>Known workarounds for this bug:</p>
 
 <ul>
- <li>Set {{cssxref("cursor")}}<code>: pointer;</code> on the element or any of its ancestors.</li>
+ <li>Set <a href="/en-US/docs/Web/CSS/cursor">cursor</a><code>: pointer;</code> on the element or any of its ancestors.</li>
  <li>Add a dummy <code>onclick="void(0)"</code> attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.</li>
  <li>Use a typically interactive element (e.g., {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g., {{HTMLElement("div")}}).</li>
  <li>Stop using <code>click</code> <a href="https://davidwalsh.name/event-delegate">event delegation</a>.</li>

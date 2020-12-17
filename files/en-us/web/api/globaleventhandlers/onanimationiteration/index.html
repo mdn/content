@@ -92,7 +92,7 @@ tags:
 </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.</p>
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the <a href="/en-US/docs/Web/CSS/animation">animation</a> style later to start animating the box.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -138,7 +138,7 @@ box.onanimationiteration = function(event) {
 
 <p>This sets up two global variables: <code>box</code>, which references the <code>"box"</code> element that we're animating, and <code>iterationCounter</code>, which is initially zero, which indicates how many iterations of the animation have occurred.</p>
 
-<p>The onanimationiteration event handler is then set up. It simply sets the box's {{cssxref("animation-play-state")}} to "paused", then updates the text displayed in the button to indicate that clicking the button will start playing the next iteration of theanimation.</p>
+<p>The onanimationiteration event handler is then set up. It simply sets the box's <a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a> to "paused", then updates the text displayed in the button to indicate that clicking the button will start playing the next iteration of theanimation.</p>
 
 <p>Finally, we set up a handler for a click on the button that runs the animation:</p>
 
@@ -147,7 +147,7 @@ box.onanimationiteration = function(event) {
   iterationCounter++;
 }, false);</pre>
 
-<p>This sets the box element's {{cssxref("animation-play-state")}} to "running" and increments the iteration counter. That's all there is to it!</p>
+<p>This sets the box element's <a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a> to "running" and increments the iteration counter. That's all there is to it!</p>
 
 <h3 id="Result">Result</h3>
 

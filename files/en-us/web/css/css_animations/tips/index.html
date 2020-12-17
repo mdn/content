@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Run_an_animation_again">Run an animation again</h2>
 
-<p>The <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> specification doesn't offer a way to run an animation again. There's no magic <code>resetAnimation()</code> method on elements, and you can't even just set the element's {{cssxref("animation-play-state")}} to <code>"running"</code> again. Instead, you have to use clever tricks to get a stopped animation to replay.</p>
+<p>The <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> specification doesn't offer a way to run an animation again. There's no magic <code>resetAnimation()</code> method on elements, and you can't even just set the element's <a href="/en-US/docs/Web/CSS/animation-play-state">animation-play-state</a> to <code>"running"</code> again. Instead, you have to use clever tricks to get a stopped animation to replay.</p>
 
 <p>Here's one way to do it that we feel is stable and reliable enough to suggest to you.</p>
 
@@ -62,7 +62,7 @@ tags:
   animation: colorchange 2s;
 }</pre>
 
-<p>There are two classes here. The <code>"box"</code> class is the basic description of the box's appearance, without any animation information included. The animation details are included in the <code>"changing"</code> class, which says that the {{cssxref("@keyframes")}} named <code>"colorchange"</code> should be used over the course of two seconds to animate the box.</p>
+<p>There are two classes here. The <code>"box"</code> class is the basic description of the box's appearance, without any animation information included. The animation details are included in the <code>"changing"</code> class, which says that the <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> named <code>"colorchange"</code> should be used over the course of two seconds to animate the box.</p>
 
 <p>Note that because of this, the box doesn't start with any animation effects in place, so it won't be animating.</p>
 
@@ -99,7 +99,7 @@ tags:
 
 <h2 id="Stopping_an_animation">Stopping an animation</h2>
 
-<p>Simply removing the {{cssxref("animation-name")}} applied to an element will make it jump or cut to its next state. If instead you'd like the animation to complete and then come to a stop you have to try a different approach. The main tricks are:</p>
+<p>Simply removing the <a href="/en-US/docs/Web/CSS/animation-name">animation-name</a> applied to an element will make it jump or cut to its next state. If instead you'd like the animation to complete and then come to a stop you have to try a different approach. The main tricks are:</p>
 
 <ol>
  <li>Make your animation as self-contained as possible. This means you should not rely on <code>animation-direction: alternate</code>. Instead you should explicitly write a keyframe animation that goes through the full animation in one forward repetition.</li>

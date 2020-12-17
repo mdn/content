@@ -12,13 +12,13 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The<strong> <code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</span></p>
+<p><span class="seoSummary">The<strong> <code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its <a href="/en-US/docs/Web/CSS/font-family">font-family</a>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
 
 
 
-<p><strong>Italic</strong> font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while <strong>oblique</strong> faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).</p>
+<p><strong>Italic</strong> font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while <strong>oblique</strong> faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use <a href="/en-US/docs/Web/CSS/font-synthesis">font-synthesis</a> to control this behavior).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -39,7 +39,7 @@ font-style: unset;
 
 <dl>
  <dt><code>normal</code></dt>
- <dd>Selects a font that is classified as <code>normal</code> within a {{Cssxref("font-family")}}.</dd>
+ <dd>Selects a font that is classified as <code>normal</code> within a <a href="/en-US/docs/Web/CSS/font-family">font-family</a>.</dd>
  <dt><code>italic</code></dt>
  <dd>Selects a font that is classified as <code>italic</code>. If no italic version of the face is available, one classified as <code>oblique</code> is used instead. If neither is available, the style is artificially simulated.</dd>
  <dt><code>oblique</code></dt>
@@ -54,7 +54,7 @@ font-style: unset;
 
 <p>Variable fonts can offer a fine control over the degree to which an oblique face is slanted. You can select this using the <code>&lt;angle&gt;</code> modifier for the <code>oblique</code> keyword.</p>
 
-<p>For TrueType or OpenType variable fonts, the <code>"slnt"</code> variation is used to implement varying slant angles for oblique, and the <code>"ital"</code> variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.</p>
+<p>For TrueType or OpenType variable fonts, the <code>"slnt"</code> variation is used to implement varying slant angles for oblique, and the <code>"ital"</code> variation with a value of 1 is used to implement italic values. See <a href="/en-US/docs/Web/CSS/font-variation-settings">font-variation-settings</a>.</p>
 
 <p>For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which <code>font-style: oblique</code> can accept an <code>&lt;angle&gt;</code>.</p>
 
@@ -233,7 +233,7 @@ update();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/font-style">font-style</a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-weight">font-weight</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
 </ul>

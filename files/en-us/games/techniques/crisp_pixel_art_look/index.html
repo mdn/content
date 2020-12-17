@@ -42,12 +42,12 @@ tags:
 
 <p>The good news is that you can use CSS to automatically do the up-scaling, which not only solves the blur problem, but also allows you to use the images in their original, smaller size, thus saving download time. Also, some game techniques require algorithms that analyse images, which also benefit from working with smaller images.</p>
 
-<p>The CSS property to achieve this scaling is {{cssxref("image-rendering")}}. It is still experimental, but there is partial support in most browsers. The steps to achieve this effect are:</p>
+<p>The CSS property to achieve this scaling is <a href="/en-US/docs/Web/CSS/image-rendering">image-rendering</a>. It is still experimental, but there is partial support in most browsers. The steps to achieve this effect are:</p>
 
 <ul>
  <li>Create a {{htmlelement("canvas")}} element and set its <code>width</code> and <code>height</code> attributes to the original, smaller resolution.</li>
- <li>Set its CSS {{cssxref("width")}} and {{cssxref("height")}} properties to be 2x or 4x the value of the HTML <code>width</code> and <code>height</code>. If the canvas was created with a 128 pixel width, for example, we would set the CSS <code>width</code> to <code>512px</code> if we wanted a 4x scale.</li>
- <li>Set the {{htmlelement("canvas")}} element's <code>image-rendering</code> CSS property to some value that does not make the image blurry. Either <code>crisp-edges</code> or <code>pixelated</code> will work. Check out the {{cssxref("image-rendering")}} article for more information on the differences between these values, and which prefixes to use depending on the browser.</li>
+ <li>Set its CSS <a href="/en-US/docs/Web/CSS/width">width</a> and <a href="/en-US/docs/Web/CSS/height">height</a> properties to be 2x or 4x the value of the HTML <code>width</code> and <code>height</code>. If the canvas was created with a 128 pixel width, for example, we would set the CSS <code>width</code> to <code>512px</code> if we wanted a 4x scale.</li>
+ <li>Set the {{htmlelement("canvas")}} element's <code>image-rendering</code> CSS property to some value that does not make the image blurry. Either <code>crisp-edges</code> or <code>pixelated</code> will work. Check out the <a href="/en-US/docs/Web/CSS/image-rendering">image-rendering</a> article for more information on the differences between these values, and which prefixes to use depending on the browser.</li>
 </ul>
 
 <h2 id="An_example">An example</h2>

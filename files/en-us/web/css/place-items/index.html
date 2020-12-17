@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>place-items</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. If the second value is not set, the first value is also used for it.</p>
+<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>place-items</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> allows you to align items along both the block and inline directions at once (i.e. the <a href="/en-US/docs/Web/CSS/align-items">align-items</a> and <a href="/en-US/docs/Web/CSS/justify-items">justify-items</a> properties) in a relevant layout system such as <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. If the second value is not set, the first value is also used for it.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/place-items.html")}}</div>
 
@@ -96,7 +96,7 @@ place-items: unset;
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
  The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
+ <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by <a href="/en-US/docs/Web/CSS/max-height">max-height</a>/<a href="/en-US/docs/Web/CSS/max-width">max-width</a> (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -278,8 +278,8 @@ display.addEventListener('change', function (evt) {
  <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
  <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{CSSxRef("align-items")}} property</li>
- <li>The {{CSSxRef("align-self")}} property</li>
- <li>The {{CSSxRef("justify-items")}} property</li>
- <li>The {{CSSxRef("justify-self")}} property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/align-items">align-items</a> property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/align-self">align-self</a> property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/justify-items">justify-items</a> property</li>
+ <li>The <a href="/en-US/docs/Web/CSS/justify-self">justify-self</a> property</li>
 </ul>

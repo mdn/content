@@ -38,8 +38,8 @@ tags:
 
 <ul>
  <li>The <code>minimal-ui</code> and <code>standalone</code> values of the <code><a href="/en-US/docs/Web/CSS/@media/display-mode">display-mode</a></code> media query are now supported ({{bug(1369815)}}). See also the <a href="/en-US/docs/Web/Manifest#display">Web app manifest <code>display</code> field</a>.</li>
- <li>The {{CSSxRef("grid-row-gap")}} and {{CSSxRef("grid-column-gap")}} properties are no longer reset by the {{CSSxRef("grid")}} shorthand ({{bug(1387410)}}).</li>
- <li>The <code>layout.css.clip-path-shapes.enabled</code> preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}.  This support was shipped in Firefox 54 and can no longer be disabled.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a> and <a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a> properties are no longer reset by the <a href="/en-US/docs/Web/CSS/grid">grid</a> shorthand ({{bug(1387410)}}).</li>
+ <li>The <code>layout.css.clip-path-shapes.enabled</code> preference has been removed ({{bug(1399767)}}).  This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in <a href="/en-US/docs/Web/CSS/clip-path">clip-path</a>.  This support was shipped in Firefox 54 and can no longer be disabled.</li>
 </ul>
 
 <h4 id="Quantum_CSS_notes">Quantum CSS notes</h4>
@@ -49,19 +49,19 @@ tags:
 <ul>
  <li>Radial gradient values like <code>radial-gradient(circle gold,red)</code> will work in the old Gecko style system, even though they shouldn't because of the missing comma between <code>circle</code> and <code>gold</code> ({{bug(1383323)}}). </li>
  <li>When you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}). </li>
- <li>In Gecko, {{htmlelement("details")}} elements can't be made open by default using the <code>open</code> attribute if they have an {{CSSxRef("animation")}} active on them ({{bug(1382124)}}).</li>
- <li>In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a {{CSSxRef("text-shadow")}} with a color specified to a <code>text-shadow</code> without a color specified  ({{bug(726550)}}).</li>
+ <li>In Gecko, {{htmlelement("details")}} elements can't be made open by default using the <code>open</code> attribute if they have an <a href="/en-US/docs/Web/CSS/animation">animation</a> active on them ({{bug(1382124)}}).</li>
+ <li>In Gecko, {{CSSxRef("transition", "transitions")}} will not work when transitioning from a <a href="/en-US/docs/Web/CSS/text-shadow">text-shadow</a> with a color specified to a <code>text-shadow</code> without a color specified  ({{bug(726550)}}).</li>
  <li>In Gecko, cancelling a filling animation (e.g. with <code>animation-fill-mode: forwards</code> set) can trigger a transition set on the same element, although only once (see {{bug(1192592)}} and <a href="https://bug1192592.bmoattachments.org/attachment.cgi?id=8843824">these test cases</a> for more information). In general declarative animations should not trigger transitions. </li>
- <li>Animations using em units are not affected by changes to the {{CSSxRef("font-size")}} on the animated element's parent in Gecko, whereas they should be ({{bug(1254424)}}). </li>
+ <li>Animations using em units are not affected by changes to the <a href="/en-US/docs/Web/CSS/font-size">font-size</a> on the animated element's parent in Gecko, whereas they should be ({{bug(1254424)}}). </li>
  <li>Gecko also deals with <code>font-size</code> inheritance differently from Quantum CSS, meaning that for some language settings inherited font sizes end up being smaller than expected (see {{bug(1391341)}}). </li>
  <li>Gecko reuses the same mechanism used when parsing a url-token when parsing the <code>domain()</code> or <code>url-prefix()</code> URL matching functions for a {{CSSxRef("@document", "@-moz-document")}} rule. Quantum CSS does not use the same mechanism and it does not consider tokens invalid when they contain brackets or quotes ({{bug(1362333)}}).</li>
  <li>In Gecko, when you set a system font as the value of a canvas 2D context's {{DOMxRef("CanvasRenderingContext2D.font", "font")}} (e.g. <code>menu</code>), getting the font value fails to return the expected font (it returns nothing). This has been fixed in Quantum. ({{bug(1374885)}}).</li>
  <li>In Gecko, when you create a detached subtree (e.g. a {{htmlelement("div")}} created using {{DOMxRef("Document.createElement","createElement()")}} that is not yet inserted into the DOM), the subtree's root element is set as a block-level element. In Quantum CSS this is set as inline, as per spec ({{bug(1374994)}}).</li>
- <li>In Gecko, {{CSSxRef("calc")}} expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient")}} function ({{bug(1376019)}}).</li>
+ <li>In Gecko, <a href="/en-US/docs/Web/CSS/calc()">calc()</a> expressions are rejected — causing the value to be invalid — when used as the radius component of a {{CSSxRef("radial-gradient")}} function ({{bug(1376019)}}).</li>
  <li>In Gecko, <code>calc(1*2*3)</code> is not parsed successfully; Quantum CSS fixes this ({{bug(1379467)}}).</li>
  <li>In Quantum CSS, <a href="https://drafts.csswg.org/css-values-3/#calc-notation"><code>calc()</code> is supported everywhere that the spec explains it should be</a> ({{bug(1350857)}}). In Gecko it is not.</li>
- <li>Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the {{CSSxRef("content")}} property value is set to <code>normal</code> or <code>none</code>. As per spec, they shouldn't be ({{bug(1387931)}}).</li>
- <li>Another Gecko bug means that the {{CSSxRef("background-position")}} property can't be transitioned between two values containing different numbers of {{CSSxRef("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). </li>
+ <li>Gecko has a bug whereby the {{CSSxRef("::before")}} and {{CSSxRef("::after")}} pseudo-elements are still generated even if the <a href="/en-US/docs/Web/CSS/content">content</a> property value is set to <code>normal</code> or <code>none</code>. As per spec, they shouldn't be ({{bug(1387931)}}).</li>
+ <li>Another Gecko bug means that the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property can't be transitioned between two values containing different numbers of {{CSSxRef("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). </li>
 </ul>
 
 <h3 id="SVG">SVG</h3>

@@ -16,7 +16,7 @@ tags:
 
 
 
-<p>Spaces not covered by a background image are filled with the {{cssxref("background-color")}} property, and the background color will be visible behind background images that have transparency/translucency.</p>
+<p>Spaces not covered by a background image are filled with the <a href="/en-US/docs/Web/CSS/background-color">background-color</a> property, and the background color will be visible behind background images that have transparency/translucency.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -71,7 +71,7 @@ background-size: unset;
  <dt id="length">{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Stretches the image in the corresponding dimension to the specified length. Negative values are not allowed.</dd>
  <dt id="percentage">{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Stretches the image in the corresponding dimension to the specified percentage of the <em>background positioning area</em>. The background positioning area is determined by the value of {{cssxref("background-origin")}} (by default, the padding box). However, if the background's {{cssxref("background-attachment")}} value is <code>fixed</code>, the positioning area is instead the entire {{glossary("viewport")}}. Negative values are not allowed.</dd>
+ <dd>Stretches the image in the corresponding dimension to the specified percentage of the <em>background positioning area</em>. The background positioning area is determined by the value of <a href="/en-US/docs/Web/CSS/background-origin">background-origin</a> (by default, the padding box). However, if the background's <a href="/en-US/docs/Web/CSS/background-attachment">background-attachment</a> value is <code>fixed</code>, the positioning area is instead the entire {{glossary("viewport")}}. Negative values are not allowed.</dd>
 </dl>
 
 <h3 id="Intrinsic_dimensions_and_proportions">Intrinsic dimensions and proportions</h3>
@@ -82,7 +82,7 @@ background-size: unset;
  <li>A bitmap image (such as JPG) always has intrinsic dimensions and proportions.</li>
  <li>A vector image (such as SVG) does not necessarily have intrinsic dimensions. If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions. If it has no dimensions or only one dimension, it may or may not have proportions.</li>
  <li>CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.</li>
- <li>Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.</li>
+ <li>Background images created with the <a href="/en-US/docs/Web/CSS/element()">element()</a> function use the intrinsic dimensions and proportions of the generating element.</li>
 </ul>
 
 <div class="note">
@@ -90,7 +90,7 @@ background-size: unset;
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> In Gecko, background images created using the {{cssxref("element()")}} function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.</p>
+<p><strong>Note:</strong> In Gecko, background images created using the <a href="/en-US/docs/Web/CSS/element()">element()</a> function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.</p>
 </div>
 
 <p>Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:</p>
@@ -218,5 +218,5 @@ background-size: unset;
 <ul>
  <li><a href="/en-US/docs/CSS/Scaling_background_images" title="CSS/Scaling_background_images">Scaling background images</a></li>
  <li><a href="/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds">Scaling of SVG backgrounds</a></li>
- <li>{{cssxref("object-fit")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/object-fit">object-fit</a></li>
 </ul>

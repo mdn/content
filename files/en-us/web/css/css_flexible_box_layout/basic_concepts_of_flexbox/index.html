@@ -18,7 +18,7 @@ tags:
 
 <h2 id="The_two_axes_of_flexbox">The two axes of flexbox</h2>
 
-<p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by the {{cssxref("flex-direction")}} property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
+<p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by the <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
 
 <h3 id="The_main_axis">The main axis</h3>
 
@@ -71,15 +71,15 @@ tags:
 
 <h2 id="The_flex_container">The flex container</h2>
 
-<p>An area of a document laid out using flexbox is called a <strong>flex container</strong>. To create a flex container, we set the value of the area's container's {{cssxref("display")}} property to <code>flex</code> or <code>inline-flex</code>. As soon as we do this the direct children of that container become <strong>flex items</strong>. As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.</p>
+<p>An area of a document laid out using flexbox is called a <strong>flex container</strong>. To create a flex container, we set the value of the area's container's <a href="/en-US/docs/Web/CSS/display">display</a> property to <code>flex</code> or <code>inline-flex</code>. As soon as we do this the direct children of that container become <strong>flex items</strong>. As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.</p>
 
 <ul>
  <li>Items display in a row (the <code>flex-direction</code> property's default is <code>row</code>).</li>
  <li>The items start from the start edge of the main axis.</li>
  <li>The items do not stretch on the main dimension, but can shrink.</li>
  <li>The items will stretch to fill the size of the cross axis.</li>
- <li>The {{cssxref("flex-basis")}} property is set to <code>auto</code>.</li>
- <li>The {{cssxref("flex-wrap")}} property is set to <code>nowrap</code>.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a> property is set to <code>auto</code>.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> property is set to <code>nowrap</code>.</li>
 </ul>
 
 <p>The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the cross axis to fill its full size.</p>
@@ -90,7 +90,7 @@ tags:
 
 <h3 id="Changing_flex-direction">Changing flex-direction</h3>
 
-<p>Adding the {{cssxref("flex-direction")}} property to the flex container allows us to change the direction in which our flex items display. Setting <code>flex-direction: row-reverse</code> will keep the items displaying along the row, however the start and end lines are switched.</p>
+<p>Adding the <a href="/en-US/docs/Web/CSS/flex-direction">flex-direction</a> property to the flex container allows us to change the direction in which our flex items display. Setting <code>flex-direction: row-reverse</code> will keep the items displaying along the row, however the start and end lines are switched.</p>
 
 <p>If we change <code>flex-direction</code> to <code>column</code> the main axis switches and our items now display in a column. Set <code>column-reverse</code> and the start and end lines are again switched.</p>
 
@@ -102,7 +102,7 @@ tags:
 
 <p>While flexbox is a one dimensional model, it is possible to cause our flex items to wrap onto multiple lines. In doing so, you should consider each line as a new flex container. Any space distribution will happen across that line, without reference to the lines either side.</p>
 
-<p>To cause wrapping behaviour add the property {{cssxref("flex-wrap")}} with a value of <code>wrap</code>. Now, should your items be too large to all display in one line, they will wrap onto another line. The live sample below contains items that have been given a width, the total width of the items being too wide for the flex container. As <code>flex-wrap</code> is set to <code>wrap</code>, the items wrap. Set it to <code>nowrap</code>, which is also the initial value, and they will instead shrink to fit the container because they are using initial flexbox values that allows items to shrink. Using <code>nowrap</code> would cause an overflow if the items were not able to shrink, or could not shrink small enough to fit.</p>
+<p>To cause wrapping behaviour add the property <a href="/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> with a value of <code>wrap</code>. Now, should your items be too large to all display in one line, they will wrap onto another line. The live sample below contains items that have been given a width, the total width of the items being too wide for the flex container. As <code>flex-wrap</code> is set to <code>wrap</code>, the items wrap. Set it to <code>nowrap</code>, which is also the initial value, and they will instead shrink to fit the container because they are using initial flexbox values that allows items to shrink. Using <code>nowrap</code> would cause an overflow if the items were not able to shrink, or could not shrink small enough to fit.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <h2 id="The_flex-flow_shorthand">The flex-flow shorthand</h2>
 
-<p>You can combine the two properties <code>flex-direction</code> and <code>flex-wrap</code> into the {{cssxref("flex-flow")}} shorthand. The first value specified is <code>flex-direction</code> and the second value is <code>flex-wrap</code>.</p>
+<p>You can combine the two properties <code>flex-direction</code> and <code>flex-wrap</code> into the <a href="/en-US/docs/Web/CSS/flex-flow">flex-flow</a> shorthand. The first value specified is <code>flex-direction</code> and the second value is <code>flex-wrap</code>.</p>
 
 <p>In the live example below try changing the first value to one of the allowable values for <code>flex-direction</code> - <code>row</code>, <code>row-reverse</code>, <code>column</code> or <code>column-reverse</code>, and also change the second to <code>wrap</code> and <code>nowrap</code>.</p>
 
@@ -121,9 +121,9 @@ tags:
 <p>To have more control over flex items we can target them directly. We do this by way of three properties:</p>
 
 <ul>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a></li>
+ <li><a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a></li>
+ <li><a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a></li>
 </ul>
 
 <p>We will take a brief look at these properties in this overview, and you can gain a fuller understanding in the guide <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of Flex Items on the Main Axis</a>.</p>
@@ -162,7 +162,7 @@ tags:
 
 <h3 id="Shorthand_values_for_the_flex_properties">Shorthand values for the flex properties</h3>
 
-<p>You will very rarely see the <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> properties used individually; instead they are combined into the {{cssxref("flex")}} shorthand. The <code>flex</code> shorthand allows you to set the three values in this order — <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>.</p>
+<p>You will very rarely see the <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> properties used individually; instead they are combined into the <a href="/en-US/docs/Web/CSS/flex">flex</a> shorthand. The <code>flex</code> shorthand allows you to set the three values in this order — <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>.</p>
 
 <p>The live example below allows you to test out the different values of the flex shorthand; remember that the first value is <code>flex-grow</code>. Giving this a positive value means the item can grow. The second is <code>flex-shrink</code> — with a positive value the items can shrink, but only if their total values overflow the main axis. The final value is <code>flex-basis</code>; this is the value the items are using as their base value to grow and shrink from.</p>
 
@@ -195,7 +195,7 @@ tags:
 
 <h3 id="align-items">align-items</h3>
 
-<p>The {{cssxref("align-items")}} property will align the items on the cross axis.</p>
+<p>The <a href="/en-US/docs/Web/CSS/align-items">align-items</a> property will align the items on the cross axis.</p>
 
 <p>The initial value for this property is <code>stretch</code> and this is why flex items stretch to the height of the tallest one by default. They are in fact stretching to fill the flex container — the tallest item is defining the height of that.</p>
 
@@ -212,7 +212,7 @@ tags:
 
 <h3 id="justify-content">justify-content</h3>
 
-<p>The {{cssxref("justify-content")}} property is used to align the items on the main axis, the direction in which <code>flex-direction</code> has set the flow. The initial value is <code>flex-start</code> which will line the items up at the start edge of the container, but you could also set the value to <code>flex-end</code> to line them up at the end, or <code>center</code> to line them up in the centre.</p>
+<p>The <a href="/en-US/docs/Web/CSS/justify-content">justify-content</a> property is used to align the items on the main axis, the direction in which <code>flex-direction</code> has set the flow. The initial value is <code>flex-start</code> which will line the items up at the start edge of the container, but you could also set the value to <code>flex-end</code> to line them up at the end, or <code>center</code> to line them up in the centre.</p>
 
 <p>You can also use the value <code>space-between</code> to take all the spare space after the items have been laid out, and share it out evenly between the items so there will be an equal amount of space between each item. To cause an equal amount of space on the right and left of each item use the value <code>space-around</code>. With <code>space-around</code>, items have a half-size space on either end. Or, to cause items to have equal space around them use the value <code>space-evenly</code>. With <code>space-evenly</code>, items have a full-size space on either end.</p>
 

@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">Positioning allows you to take elements out of the normal document layout flow, and make them behave differently; for example sitting on top of one another, or always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values, and how to use them.</p>
+<p class="summary">Positioning allows you to take elements out of the normal document layout flow, and make them behave differently; for example sitting on top of one another, or always remaining in the same place inside the browser viewport. This article explains the different <a href="/en-US/docs/Web/CSS/position">position</a> values, and how to use them.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -38,7 +38,7 @@ tags:
 
 <p>The whole idea of positioning is to allow us to override the basic document flow behavior described above, to produce interesting effects. What if you want to slightly alter the position of some boxes inside a layout from their default layout flow position, to give a slightly quirky, distressed feel? Positioning is your tool. Or if you want to create a UI element that floats over the top of other parts of the page, and/or always sits in the same place inside the browser window no matter how much the page is scrolled? Positioning makes such layout work possible.</p>
 
-<p>There are a number of different types of positioning that you can put into effect on HTML elements. To make a specific type of positioning active on an element, we use the {{cssxref("position")}} property.</p>
+<p>There are a number of different types of positioning that you can put into effect on HTML elements. To make a specific type of positioning active on an element, we use the <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
 
 <h3 id="Static_positioning">Static positioning</h3>
 
@@ -67,11 +67,11 @@ tags:
 
 <pre class="brush: css   notranslate">position: relative;</pre>
 
-<p>If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.</p>
+<p>If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the <a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a> properties, which we'll explain in the next section.</p>
 
 <h3 id="Introducing_top_bottom_left_and_right">Introducing top, bottom, left, and right</h3>
 
-<p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the <code>.positioned</code> rule in your CSS:</p>
+<p><a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a> are used alongside <a href="/en-US/docs/Web/CSS/position">position</a> to specify exactly where to move the positioned element to. To try this out, add the following declarations to the <code>.positioned</code> rule in your CSS:</p>
 
 <pre class="brush: css   notranslate">top: 30px;
 left: 30px;</pre>
@@ -174,10 +174,10 @@ span {
 
 <p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document layout flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes and control menus; rollover panels; UI features that can be dragged and dropped anywhere on the page; and so on...</p>
 
-<p>Second, notice that the position of the element has changed — this is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document layout flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element", and 30px from the left. (In this case, the "containing element" is the <strong>initial containing block</strong>. See the section below for more information)</p>
+<p>Second, notice that the position of the element has changed — this is because <a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a> behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document layout flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element", and 30px from the left. (In this case, the "containing element" is the <strong>initial containing block</strong>. See the section below for more information)</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting <code>top: 0; bottom: 0; left: 0; right: 0;</code> and <code>margin: 0;</code> on your positioned elements and see what happens! Put it back again afterwards...</p>
+<p><strong>Note</strong>: You can use <a href="/en-US/docs/Web/CSS/top">top</a>, <a href="/en-US/docs/Web/CSS/bottom">bottom</a>, <a href="/en-US/docs/Web/CSS/left">left</a>, and <a href="/en-US/docs/Web/CSS/right">right</a> to resize elements if you need to. Try setting <code>top: 0; bottom: 0; left: 0; right: 0;</code> and <code>margin: 0;</code> on your positioned elements and see what happens! Put it back again afterwards...</p>
 </div>
 
 <div class="note">
@@ -260,9 +260,9 @@ span {
 
 <p>At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It is also stacked below the original <code>.positioned</code> paragraph, where the two overlap. This is because the <code>.positioned</code> paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.</p>
 
-<p>Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page (for left to right languages, anyway.)</p>
+<p>Can you change the stacking order? Yes, you can, by using the <a href="/en-US/docs/Web/CSS/z-index">z-index</a> property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page (for left to right languages, anyway.)</p>
 
-<p>Web pages also have a z-axis: an imaginary line that runs from the surface of your screen, towards your face (or whatever else you like to have in front of the screen). {{cssxref("z-index")}} values affect where positioned elements sit on that axis; positive values move them higher up the stack, and negative values move them lower down the stack. By default, positioned elements all have a <code>z-index</code> of <code>auto</code>, which is effectively 0.</p>
+<p>Web pages also have a z-axis: an imaginary line that runs from the surface of your screen, towards your face (or whatever else you like to have in front of the screen). <a href="/en-US/docs/Web/CSS/z-index">z-index</a> values affect where positioned elements sit on that axis; positive values move them higher up the stack, and negative values move them lower down the stack. By default, positioned elements all have a <code>z-index</code> of <code>auto</code>, which is effectively 0.</p>
 
 <p>To change the stacking order, try adding the following declaration to your <code>p:nth-of-type(1)</code> rule:</p>
 
@@ -481,7 +481,7 @@ p:nth-of-type(1) {
 &lt;/dl&gt;
 </pre>
 
-<p>The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add <code>position: sticky</code> to the {{htmlelement("dt")}} element, along with a {{cssxref("top")}} value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.</p>
+<p>The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add <code>position: sticky</code> to the {{htmlelement("dt")}} element, along with a <a href="/en-US/docs/Web/CSS/top">top</a> value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.</p>
 
 <pre class="brush: css   notranslate">dt {
   background-color: black;
@@ -567,7 +567,7 @@ dt {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{cssxref("position")}} property reference.</li>
+ <li>The <a href="/en-US/docs/Web/CSS/position">position</a> property reference.</li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>, for some more useful ideas.</li>
 </ul>
 
