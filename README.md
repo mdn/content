@@ -482,7 +482,7 @@ Also make sure that your code examples follow the [MDN code example guidelines](
 
 ### Archiving and unarchiving pages
 
-Pages with the banner "This is an archived page. It's not actively maintained." at the top ar archived pages — they are archived because either they are obsolete or out-of-date, or they are not in scope for MDN contributors to actively work on.
+Pages with the banner "This is an archived page. It's not actively maintained." at the top are archived pages — they are archived because either they are obsolete or out-of-date, or they are not in scope for MDN contributors to actively work on.
 
 If you find a page that is marked archived and you think it shouldn't be, you can follow the below steps to unarchive it:
 
