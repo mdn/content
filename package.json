@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
+    "fix": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_FIX_FLAWS=true node node_modules/@mdn/yari/build/cli.js",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/tool/cli.js"
   },
@@ -16,6 +17,19 @@
     "env-cmd": "10.1.0"
   },
   "devDependencies": {
-    "cross-env": "7.0.3"
+    "cross-env": "7.0.3",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -r"
+    }
+  },
+  "lint-staged": {
+    "**/*.html": [
+      "yarn fix --",
+      "git add"
+    ]
   }
 }
