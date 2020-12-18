@@ -59,7 +59,6 @@ function addData() {
     note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
   };
 
-
   transaction.onerror = function(event) {
     note.innerHTML += '&lt;li&gt;Transaction not opened due to error: ' + transaction.error + '&lt;/li&gt;';
   };
@@ -102,7 +101,6 @@ function addData() {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.IDBTransaction.error")}}</p>
 </div>

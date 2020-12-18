@@ -227,8 +227,6 @@ const char *buf, NPBool file);</pre>
 
 uint32 myLength = strlen(myData) + 1;
 
-
-
 err = NPN_PostURL(instance, "ftp://fred@ftp.example.com/pub/",
 
                   "response", myLength, myData, TRUE);</pre>
@@ -240,8 +238,6 @@ err = NPN_PostURL(instance, "ftp://fred@ftp.example.com/pub/",
 <pre>char* myData = "\nHi Fred, this is a message from my plug-in!";
 
 uint32 myLength = strlen(myData) + 1;
-
-
 
 err = NPN_PostURLNotify(instance, "mailto:fred@example.com",
 

@@ -38,10 +38,8 @@ tags:
 
 from selenium import webdriver
 
-
 def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
-
 
 session = webdriver.Firefox(capabilities={"timeouts": {"implicit": 4500}})
 session.get(inline("""

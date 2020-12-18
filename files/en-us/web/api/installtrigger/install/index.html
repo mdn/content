@@ -5,15 +5,12 @@ slug: Web/API/InstallTrigger/install
 <h2 id="Summary">Summary</h2>
 <p>Installs one or more XPI files on the local machine.</p>
 
-
 <h3 id="Method_of">Method of</h3>
 <p><a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object">InstallTrigger</a> object</p>
-
 
 <h2 id="Syntax">Syntax</h2>
 <pre class="syntaxbox">int install(array XPIlist [, function callBackFunc ] )
 </pre>
-
 
 <h3 id="Parameters">Parameters</h3>
 <p>The <code>install</code> method has the following parameters:</p>
@@ -30,10 +27,8 @@ slug: Web/API/InstallTrigger/install
 
 <div>{{ Fx_minversion_note(3, "In Firefox 3 the callback is no longer invoked unless the website performing the installation is whitelisted.") }}</div>
 
-
 <h3 id="Returns">Returns</h3>
 <p><code>install</code> returns True if the function succeeded and False if it did not, but these values are not always reliable as a determinant of the success of the operation. To surface detail about the status of the installation, use the optional callback function and its status parameter, as in the example below.</p>
-
 
 <h2 id="Description">Description</h2>
 
@@ -42,7 +37,6 @@ slug: Web/API/InstallTrigger/install
 <p>In the example below, a single installation object is created, but you can use this approach to create multiple installations to pass to a single <code>install</code>.</p>
 
 <p>As with the older <a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/startSoftwareUpdate"> startSoftwareUpdate</a> method, XPIs installed with this method must have their own install.js files in which the full installation is defined. In contrast to <a href="/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/startSoftwareUpdate"> startSoftwareUpdate</a>, <code>install</code> allows you to do multiple installs with the same trigger and provides a unified user experience for the multiple installs.</p>
-
 
 <h2 id="Example">Example</h2>
 

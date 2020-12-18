@@ -78,7 +78,6 @@ function getData() {
 
   request.responseType = 'arraybuffer';
 
-
   request.onload = function() {
     var audioData = request.response;
 
@@ -108,7 +107,6 @@ stop.onclick = function() {
   source.stop(0);
   play.removeAttribute('disabled');
 }
-
 
 // dump script to pre element
 
@@ -142,7 +140,6 @@ pre.innerHTML = myScript.innerHTML;</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.BaseAudioContext.decodeAudioData")}}</p>
 </div>

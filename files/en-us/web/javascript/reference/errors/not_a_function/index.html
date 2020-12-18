@@ -96,7 +96,6 @@ Dog.prototype.name = function(name) {
  return this;
 }
 
-
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 </pre>
@@ -114,7 +113,6 @@ Dog.prototype.name = function(name) {
  this.dogName = name;
  return this;
 }
-
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }

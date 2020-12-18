@@ -13,8 +13,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-match.html")}}</div>
 
-
-
 <h2 id="Description">Description</h2>
 
 <p>This function is also used to identify if objects have the behavior of regular expressions. For example, the methods {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} and {{jsxref("String.prototype.includes()")}}, check if their first argument is a regular expression and will throw a {{jsxref("TypeError")}} if they are. Now, if the <code>match</code> symbol is set to <code>false</code> (or a <a href="/en-US/docs/Glossary/Falsy">Falsy</a> value), it indicates that the object is not intended to be used as a regular expression object.</p>
@@ -54,8 +52,6 @@ re[Symbol.match] = false;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Symbol.match")}}</p>
 

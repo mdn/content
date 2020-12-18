@@ -73,7 +73,6 @@ function onLoad() {
   iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
 }
 
-
 // Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
@@ -102,7 +101,6 @@ function onMessage(e) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.MessagePort")}}</p>
 </div>

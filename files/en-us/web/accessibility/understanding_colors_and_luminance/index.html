@@ -26,7 +26,7 @@ tags:
 
 <p>When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems. Currently, the <strong>RGB</strong> color space predominates as the space web developers work in.  <strong>HEX</strong>, <strong>RGB</strong> and <strong>HSL</strong> color spaces all are measured differently.  Conversions between the color spaces are usually needed. Because of the current domination of the <strong>RGB</strong> color space in measuring color output, most calculations in this document are presumed to be in the <strong>RGB </strong>color space, and very specifically, in the <strong>sRGB </strong>color space. </p>
 
-<h2 id="The_sRGB_color_space"><strong>The sRGB color space </strong></h2>
+<h2 id="The_sRGB_color_space">The sRGB color space </h2>
 
 <p>The MDN document, <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> notes "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types">data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB color space</a>.</em>"</strong>  Color has many ways of being defined, including <strong>RGB</strong>, <strong>RGB decimal</strong>, <strong>RGB percent</strong>, <strong>HSL</strong>, <strong>CMYK</strong> among others.</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <p><strong><a href="https://drafts.csswg.org/css-color-4/">CSS Color Module Level 4</a></strong> will likely change the domination of the sRGB color space in the future.</p>
 
-<h3 id="Conversions"><strong>Conversions</strong></h3>
+<h3 id="Conversions">Conversions</h3>
 
 <p>It's important to know that there are variations even within one color space, such as the <strong>RGB </strong>color space.  For example, variations of the <strong>RGB</strong> color space include <strong>RGB</strong>, <strong>sRGB</strong>, <strong>Adobe RGB</strong>, <strong>Adobe Wide Gamut RGB</strong>, and <strong>RGBA</strong>, among others  And, one color within the same color space may be expressed in different ways.  Looking at how the <strong>RGB</strong> color space is used to describe a  color "red", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to a rgb value, as a full six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.</p>
 
@@ -62,7 +62,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <h2 id="Luminance_and_Contrast">Luminance and Contrast</h2>
 
-<h3 id="Contrast"><strong>Contrast</strong></h3>
+<h3 id="Contrast">Contrast</h3>
 
 <p>Contrast between colors ("hues") is a critical component, but the use of color ("hues") alone is not enough to create accessible content.  As mentioned before, any calculation of contrast must include luminance in the calculation. </p>
 
@@ -70,7 +70,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>Icons also need sufficient contrast for perception.  See <strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G207">WCAG 2.1 technique G207</a></strong></p>
 
-<h3 id="Luminance"><strong>Luminance</strong></h3>
+<h3 id="Luminance">Luminance</h3>
 
 <p>It is the difference in the<em> luminance</em> of a color that enables us to see contrast.  Here is the definition of <strong><a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">Relative luminance</a></strong> as defined by the W3C:</p>
 
@@ -122,7 +122,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>To summarize, color is as much about human physiology and perception in the brain as it is the measurement of light coming from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast.  Light, and its measurements, are linear, but human vision and human perception are not.</p>
 
-<h2 id="Color_Combinations"><strong>Color Combinations</strong></h2>
+<h2 id="Color_Combinations">Color Combinations</h2>
 
 <p>Contrast alone is not enough when it comes to accessibility considerations.  In the case of animation, certain color combinations are more likely to cause photosensitive seizures to those who are susceptible to them than others.  For example, alternating flashes between red and blue is more problematic than alternating flashes between green and blue. It has been theorized that this is because the "red" sensitive cones of our eyes, which tend to cluster around the fovea (near the center) are physically located at a different location than the "blue" sensitive cones of our eyes, which are located away from the fovea and towards the rims. The electrical signals that go from eye to brain have much to resolve between them as the information is processed in our brains.</p>
 
@@ -154,11 +154,11 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>Saturation is not brightness.  Brightness refers to how much white or black is mixed in with a color.  One can decrease saturation by adding white, black, or gray to the color; to take the example further, brightness can be increased by adding the color white, which also reduces saturation.  A common example is to add white to red to get the color pink. Pink is considered a desaturated red.</p>
 
-<h3 id="Saturation_and_Luminance"><strong>Saturation and Luminance</strong></h3>
+<h3 id="Saturation_and_Luminance">Saturation and Luminance</h3>
 
 <p>There is a loss of saturation at the extremes of luminance, at the extremes of black and white.  NASA's article, <strong><a href="https://colorusage.arc.nasa.gov/design_lum_1.php">Luminance Contrast in Color Graphics</a></strong>, in the section titled, <strong>"The effect of luminance on saturation", </strong>points out that there is a loss of saturation at low luminances. and also, "<em>..the loss of saturation at high luminances--the colors converge on white.</em>"</p>
 
-<h2 id="The_Special_Case_of_Red"><strong>The Special Case of "Red" </strong></h2>
+<h2 id="The_Special_Case_of_Red">The Special Case of "Red" </h2>
 
 <p>Not all colors ("hue") are processed the same way by our brains.  Human physiology and psychology are affected by the color "red" generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that <strong><a href="https://www.sciencedaily.com/releases/2009/09/090925092858.htm">some colors are more likely to cause epileptic fits than others</a></strong>; There is an interesting observation in a discussion thread, "<strong><a href="https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options">What is the “grayscale” setting for in accessibility options?</a>"</strong> in which one of the participants states: "<em>I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me</em>."</p>
 
@@ -167,7 +167,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
  <li><strong>Red Environment:</strong> Studies have shown that for those who suffer Traumatic Brain Injury, <strong><a href="https://www.ncbi.nlm.nih.gov/pubmed/20649469">cognitive function is reduced in a red environment</a></strong>. </li>
 </ul>
 
-<h3 id="Saturated_Red"><strong>Saturated Red</strong></h3>
+<h3 id="Saturated_Red">Saturated Red</h3>
 
 <p><strong>"Saturated Red" is a special, dangerous case, and there are special tests for it.</strong></p>
 

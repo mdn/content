@@ -43,11 +43,9 @@ tags:
   }
 };
 
-
 // Non-standard and deprecated way
 obj.__lookupGetter__('foo');
 // (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
-
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
@@ -72,7 +70,6 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
 </div>

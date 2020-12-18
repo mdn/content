@@ -155,9 +155,6 @@ tags:
 	width: 6.86%;
 }
 
-
-
-
 /*  SECTIONS
  * ========================================================================== */
 
@@ -169,7 +166,6 @@ tags:
 
 /*  GROUPING
  * ========================================================================== */
-
 
 .group:before, .group:after {
     content: "";
@@ -196,7 +192,6 @@ tags:
 .col:first-child {
 	margin-left: 0;
 } /* all browsers except IE6 and lower */
-
 
 /*
  * UI Component
@@ -435,7 +430,6 @@ body {
 	background: url("https://mdn.mozillademos.org/files/5677/resize-handle.png") bottom left no-repeat;
 }
 
-
 .radius-container {
 	position: absolute;
 	display : block;
@@ -445,7 +439,6 @@ body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 
 /* TOP LEFT */
 #top-left {
@@ -728,7 +721,6 @@ body {
 /******************************************************************************/
 /******************************************************************************/
 
-
 #radius-lock {
 	width: 200px;
 	height: 75px;
@@ -814,13 +806,11 @@ body {
 	float: right;
 }
 
-
 </pre>
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
 <pre class="brush: js"><code class="language-js">'use strict';
-
 
 /**
  * UI-InputSliderManager
@@ -1109,7 +1099,6 @@ var ButtonManager = (function CheckBoxManager() {
 
 })();
 
-
 window.addEventListener("load", function() {
 	BorderRadius.init();
 });
@@ -1205,7 +1194,6 @@ var BorderRadius = (function BorderRadius() {
 	UnitSelector.prototype.setValue = function setValue(value) {
 		this.salect.value = value;
 	}
-
 
 	var RadiusContainer = function RadiusContainer(node) {
 		var radius = document.createElement('div');
@@ -1487,7 +1475,6 @@ var BorderRadius = (function BorderRadius() {
 			this.updateBorderRadius();
 	}
 
-
 	/**
 	 * Tool Manager
 	 */
@@ -1592,7 +1579,6 @@ var BorderRadius = (function BorderRadius() {
 	}
 
 })();
-
 
 </code></pre>
 </div>

@@ -47,7 +47,6 @@ uneval(b); // returns a String containing "1"
 
 uneval(function foo() {}); // returns "(function foo(){})"
 
-
 var a = uneval(function foo() { return 'hi'; });
 var foo = eval(a);
 foo(); // returns "hi"
@@ -58,8 +57,6 @@ foo(); // returns "hi"
 <p><span class="pl-s">Not part of any standard.</span></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.uneval")}}</p>
 

@@ -121,12 +121,11 @@ const soundClips = document.querySelector('.sound-clips');</pre>
       // Success callback
       .then(function(stream) {
 
-
       })
 
       // Error callback
       .catch(function(err) {
-         console.log('The following <code>getUserMedia</code> error occured: ' + err);
+         console.log('The following <code>getUserMedia</code> error occurred: ' + err);
       }
    );
 } else {
@@ -260,8 +259,6 @@ mediaRecorder.ondataavailable = function(e) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="MediaRecorder"><code>MediaRecorder</code></h3>
-
-
 
 <p>{{Compat("api.MediaRecorder")}}</p>
 

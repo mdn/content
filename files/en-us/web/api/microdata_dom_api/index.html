@@ -8,7 +8,7 @@ slug: Web/API/Microdata_DOM_API
 
 <p>Microdata becomes even more useful when scripts can use it to expose information to the user, for example offering it in a form that can be used by other applications. The <strong>document.getItems(typeNames)</strong> method provides access to the top-level microdata items. It returns a NodeList containing the items with the specified types, or all types if no argument is specified. Each item is represented in the DOM by the element on which the relevant itemscope attribute is found. These elements have their element.itemScope IDL attribute set to true. The type(s) of items can be obtained using the element.itemType IDL attribute on the element with the itemscope attribute.</p>
 
-<h2 id="Methods"><strong>Methods</strong></h2>
+<h2 id="Methods">Methods</h2>
 
 <p><strong>document . getItems( [ types ] )</strong></p>
 
@@ -30,7 +30,7 @@ slug: Web/API/Microdata_DOM_API
 
 <p style="margin-left: .5in;">If the element has an itemscope attribute, returns an HTMLPropertiesCollection object with all the element's properties. Otherwise, an empty HTMLPropertiesCollection object.</p>
 
-<h2 id="Code_example"><strong>Code example</strong></h2>
+<h2 id="Code_example">Code example</h2>
 
 <p>This sample shows how the <a href="https://www.w3.org/TR/microdata/#dom-document-getitems">getItems()</a> method can be used to obtain a list of all the top-level microdata items of a particular type given in the document:</p>
 
@@ -40,7 +40,7 @@ slug: Web/API/Microdata_DOM_API
 
 <p>Each element that adds a property also has an <a href="https://www.w3.org/TR/microdata/#dom-itemvalue">itemValue</a> IDL attribute that returns its value.</p>
 
-<h2 id="Code_example_2"><strong>Code example</strong></h2>
+<h2 id="Code_example_2">Code example</h2>
 
 <p>This sample gets the first item of type "http://example.net/user" and then pops up an alert using the "name" property from that item.</p>
 
@@ -49,7 +49,7 @@ alert('Hello ' + user.properties['name'][0].itemValue + '!');</pre>
 
 <p>The <a href="https://www.w3.org/TR/microdata/#htmlpropertiescollection-0">HTMLPropertiesCollection</a> object, when indexed by name in this way, actually returns a <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object with all the matching properties. The <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object can be used to obtain all the values at once using<em>its</em> <a href="https://www.w3.org/TR/microdata/#dom-propertynodelist-getvalues">getValues</a> method, which returns an array of all the values.</p>
 
-<h2 id="Code_example_3"><strong>Code example</strong></h2>
+<h2 id="Code_example_3">Code example</h2>
 
 <p>In an earlier example, a "http://example.org/animals#cat" item had two "http://example.com/color" values. This script looks up the first such item and then lists all its values.</p>
 
@@ -68,7 +68,7 @@ if (colors.length == 0) {
 
 <p>It's also possible to get a list of all the <a href="https://www.w3.org/TR/microdata/#property-names">property names</a> using the object's <a href="https://www.w3.org/TR/microdata/#dom-htmlpropertiescollection-names">names</a> IDL attribute.</p>
 
-<h2 id="Code_example_4"><strong>Code example</strong></h2>
+<h2 id="Code_example_4">Code example</h2>
 
 <p>This example creates a big list with a nested list for each item on the page, each with all of the property names used in that item.</p>
 

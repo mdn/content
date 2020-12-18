@@ -24,10 +24,8 @@ tags:
 from selenium import webdriver
 from selenium.common import exceptions
 
-
 def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
-
 
 session = webdriver.Firefox()
 session.get(inline("&lt;strong&gt;foo&lt;/strong&gt;"))
@@ -53,10 +51,8 @@ except exceptions.StaleElementReferenceException as e:
 from selenium import webdriver
 from selenium.common import exceptions
 
-
 def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
-
 
 session = webdriver.Firefox()
 session.get(inline("&lt;button&gt;foo&lt;/button&gt;"))

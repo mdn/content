@@ -71,7 +71,6 @@ function addData() {
     note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
   };
 
-
   transaction.onerror = function(event) {
     note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
   };
@@ -115,8 +114,6 @@ function addData() {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.IDBTransaction.abort")}}</p>
 

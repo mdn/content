@@ -89,7 +89,7 @@ tags:
 
 <h2 id="Memory">Memory</h2>
 
-<p>In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called <a href="http://webassembly.org/docs/semantics/#linear-memory">Linear Memory</a> that are read and written by <a href="http://webassembly.org/docs/semantics/#linear-memory-accesses">load and store instructions</a> inside the module.  In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.</p>
+<p>In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called <a href="https://webassembly.org/docs/semantics/#linear-memory">Linear Memory</a> that are read and written by <a href="https://webassembly.org/docs/semantics/#linear-memory-accesses">load and store instructions</a> inside the module.  In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.</p>
 
 <p>Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memories</a>, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, and used in multiple places.</p>
 
@@ -190,7 +190,7 @@ console.log(sum);</pre>
 
 <p>When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference.  Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.</p>
 
-<p>Tables can be mutated via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, which updates one of the values in a table, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, which increases the number of values that can be stored in a table.  This allows the indirectly-callable set of functions to change over time, which is necessary for <a href="http://webassembly.org/docs/dynamic-linking/">dynamic linking techniques</a>.  The mutations are immediately accessible via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> in JavaScript, and to wasm modules.</p>
+<p>Tables can be mutated via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, which updates one of the values in a table, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, which increases the number of values that can be stored in a table.  This allows the indirectly-callable set of functions to change over time, which is necessary for <a href="https://webassembly.org/docs/dynamic-linking/">dynamic linking techniques</a>.  The mutations are immediately accessible via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> in JavaScript, and to wasm modules.</p>
 
 <h3 id="A_table_example">A table example</h3>
 
@@ -287,9 +287,9 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 <ul>
  <li>One module can have N Instances, in the same way that one function literal can produce N closure values.</li>
- <li>One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see <a href="http://webassembly.org/docs/future-features/#multiple-tables-and-memories">Multiple Tables and Memories</a>).</li>
+ <li>One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see <a href="https://webassembly.org/docs/future-features/#multiple-tables-and-memories">Multiple Tables and Memories</a>).</li>
  <li>One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance.</li>
- <li>One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing <a href="http://webassembly.org/docs/dynamic-linking">dynamic linking</a>.</li>
+ <li>One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing <a href="https://webassembly.org/docs/dynamic-linking">dynamic linking</a>.</li>
 </ul>
 
 <p>You can see multiplicity in action in our Understanding text format article — see the <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking section</a>.</p>
@@ -301,7 +301,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://webassembly.org/">webassembly.org</a></li>
+ <li><a href="https://webassembly.org/">webassembly.org</a></li>
  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
  <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
 </ul>

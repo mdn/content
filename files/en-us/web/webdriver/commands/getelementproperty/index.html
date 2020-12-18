@@ -56,10 +56,8 @@ tags:
 
 from selenium import webdriver
 
-
 def inline(doc):
     return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
-
 
 session = webdriver.Firefox()
 session.get(inline("&lt;input value=foo&gt;"))
@@ -94,8 +92,6 @@ bar
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webdriver.commands.GetElementProperty")}}</p>
 

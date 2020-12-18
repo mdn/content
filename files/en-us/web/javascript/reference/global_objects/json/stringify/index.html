@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
@@ -122,7 +120,6 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // Non-enumerable properties:
 JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
 // '{"y":"y"}'
-
 
 // BigInt values throw
 JSON.stringify({x: 2n});
@@ -350,7 +347,6 @@ console.log(restoredSession);
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
 </div>

@@ -142,7 +142,7 @@ document.body.onclick = function() {
 
 <h4 id="Handling_errors_and_unrecognised_speech">Handling errors and unrecognised speech</h4>
 
-<p>The last two handlers are there to handle cases where speech was recognised that wasn't in the defined grammar, or an error occured. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognised anyway:</p>
+<p>The last two handlers are there to handle cases where speech was recognised that wasn't in the defined grammar, or an error occurred. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognised anyway:</p>
 
 <pre class="brush: js">recognition.onnomatch = function(event) {
   diagnostic.textContent = 'I didnt recognise that color.';

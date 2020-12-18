@@ -16,8 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">String<code>.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
@@ -44,7 +42,6 @@ tags:
 <p>This method returns a string (and <em>not</em> a {{jsxref("String")}} object).</p>
 
 <p>Because <code>fromCodePoint()</code> is a static method of {{jsxref("String")}}, you must call it as <code>String.fromCodePoint()</code>, rather than as a method of a {{jsxref("String")}} object you created.</p>
-
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -125,7 +122,6 @@ String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 
 <pre class="brush: js">String.fromCodePoint(0x1F303); // or 127747 in decimal
 </pre>
-
 
 <h2 id="Specifications">Specifications</h2>
 

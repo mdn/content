@@ -262,13 +262,13 @@ button:active {
 <p><strong>Note</strong>: Sitepoint's <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</span></p>
 </div>
 
-<p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements styleable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
+<p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
 
 <pre class="brush: css">aside, main, article, section, nav, figure, figcaption {
   display: block;
 }</pre>
 
-<p>It isn't that simple, however — you also need to create a copy of each element you want to style in the DOM via JavaScript, for them to be styleable; this is a strange quirk, and we won't bore you with the details here. For example:</p>
+<p>It isn't that simple, however — you also need to create a copy of each element you want to style in the DOM via JavaScript, for them to be stylable; this is a strange quirk, and we won't bore you with the details here. For example:</p>
 
 <pre class="brush: js">const asideElem = document.createElement('aside');
  ...</pre>
