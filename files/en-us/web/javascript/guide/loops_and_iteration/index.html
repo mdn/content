@@ -57,7 +57,7 @@ tags:
  <li>Control returns to Step 2.</li>
 </ol>
 
-<h3 id="Example"><strong>Example</strong></h3>
+<h3 id="Example">Example</h3>
 
 <p>In the example below, the function contains a <code>for</code> statement that counts the number of selected options in a scrolling list (a <a href="/en-US/docs/Web/HTML/Element/select" title="The HTML &lt;select> element represents a control that provides a menu of options"><code>&lt;select&gt;</code></a> element that allows multiple selections). The <code>for</code> statement declares the variable <code>i</code> and initializes it to <code>0</code>. It checks that <code>i</code> is less than the number of options in the <code>&lt;select&gt;</code> element, performs the succeeding <code>if</code> statement, and increments <code>i</code> by after each pass through the loop.</p>
 
@@ -110,7 +110,7 @@ while (condition);
 
 <p>If <code>condition</code> is <code>true</code>, the statement executes again. At the end of every execution, the condition is checked. When the condition is <code>false</code>, execution stops, and control passes to the statement following <code>do...while</code>.</p>
 
-<h3 id="Example_2"><strong>Example</strong></h3>
+<h3 id="Example_2">Example</h3>
 
 <p>In the following example, the <code>do</code> loop iterates at least once and reiterates until <code><em>i</em></code> is no longer less than <code>5</code>.</p>
 
@@ -134,7 +134,7 @@ do {
 
 <p>To execute multiple statements, use a block statement (<code>{ ... }</code>) to group those statements.</p>
 
-<h3 id="Example_1"><strong>Example 1</strong></h3>
+<h3 id="Example_1">Example 1</h3>
 
 <p>The following <code>while</code> loop iterates as long as <em><code>n</code></em> is less than <code>3</code>:</p>
 
@@ -156,7 +156,7 @@ while (n &lt; 3) {
 
 <p>After completing the third pass, the condition <code>n &lt; 3</code> is no longer <code>true</code>, so the loop terminates.</p>
 
-<h3 id="Example_2_2"><strong>Example 2</strong></h3>
+<h3 id="Example_2_2">Example 2</h3>
 
 <p>Avoid infinite loops. Make sure the condition in a loop eventually becomes <code>false</code>—otherwise, the loop will never terminate! The statements in the following <code>while</code> loop execute forever because the condition never becomes <code>false</code>:</p>
 
@@ -177,7 +177,7 @@ while (true) {
 
 <p>The value of <code><em>label</em></code> may be any JavaScript identifier that is not a reserved word. The <code><em>statement</em></code> that you identify with a label may be any statement.</p>
 
-<h3 id="Example_3"><strong>Example</strong></h3>
+<h3 id="Example_3">Example</h3>
 
 <p>In this example, the label <code>markLoop</code> identifies a <code>while</code> loop.</p>
 
@@ -206,7 +206,7 @@ break [<em>label</em>];
  <li>The second form of the syntax terminates the specified enclosing labeled statement.</li>
 </ol>
 
-<h3 id="Example_1_2"><strong>Example</strong> <strong>1</strong></h3>
+<h3 id="Example_1_2">Example</strong> <strong>1</h3>
 
 <p>The following example iterates through the elements in an array until it finds the index of an element whose value is <code>theValue</code>:</p>
 
@@ -250,7 +250,7 @@ labelCancelLoops: while (true) {
 <pre class="syntaxbox notranslate">continue [<em>label</em>];
 </pre>
 
-<h3 id="Example_1_3"><strong>Example 1</strong></h3>
+<h3 id="Example_1_3">Example 1</h3>
 
 <p>The following example shows a <code>while</code> loop with a <code>continue</code> statement that executes when the value of <code>i</code> is <code>3</code>. Thus, <code>n</code> takes on the values <code>1</code>, <code>3</code>, <code>7</code>, and <code>12</code>.</p>
 
@@ -280,7 +280,7 @@ while (i &lt; 5) {
 // 1,3,6,10,15
 </pre>
 
-<h3 id="Example_2_3"><strong>Example 2</strong></h3>
+<h3 id="Example_2_3">Example 2</h3>
 
 <p>A statement labeled <em><code>checkiandj</code> </em>contains a statement labeled <em><code>checkj</code></em>. If <code>continue</code> is encountered, the program terminates the current iteration of <em><code>checkj</code></em> and begins the next iteration. Each time <code>continue</code> is encountered, <em><code>checkj</code> </em>reiterates until its condition returns <code>false</code>. When <code>false</code> is returned, the remainder of the <em><code>checkiandj</code></em> statement is completed, and <em><code>checkiandj</code></em> reiterates until its condition returns <code>false</code>. When <code>false</code> is returned, the program continues at the statement following <em><code>checkiandj</code></em>.</p>
 
@@ -313,7 +313,7 @@ checkiandj:
   statement
 </pre>
 
-<h3 id="Example_4"><strong>Example</strong></h3>
+<h3 id="Example_4">Example</h3>
 
 <p>The following function takes as its argument an object and the object's name. It then iterates over all the object's properties and returns a string that lists the property names and their values.</p>
 
@@ -333,7 +333,7 @@ checkiandj:
 car.model = Mustang
 </pre>
 
-<h3 id="Arrays"><strong>Arrays</strong></h3>
+<h3 id="Arrays">Arrays</h3>
 
 <p>Although it may be tempting to use this as a way to iterate over {{jsxref("Array")}} elements, the <code>for...in</code> statement will return the name of your user-defined properties in addition to the numeric indexes.</p>
 
