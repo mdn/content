@@ -238,8 +238,6 @@ request.onupgradeneeded = function(event) {
 
 <div>Object stores are created with a single call to <code>createObjectStore()</code>. The method takes a name of the store, and a parameter object. Even though the parameter object is optional, it is very important, because it lets you define important optional properties and refine the type of object store you want to create. In our case, we've asked for an object store named "customers" and defined a <code>keyPath</code>, which is the property that makes an individual object in the store unique. That property in this example is "ssn" since a social security number is guaranteed to be unique. "ssn" must be present on every object that is stored in the <code>objectStore</code>. </div>
 
-<div></div>
-
 <p>We've also asked for an index named "name" that looks at the <code>name</code> property of the stored objects. As with <code>createObjectStore()</code>, <code>createIndex()</code> takes an optional <code>options</code> object that refines the type of index that you want to create. Adding objects that don't have a <code>name</code> property still succeeds, but the objects won't appear in the "name" index.</p>
 
 <p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="/en/IndexedDB/Using_IndexedDB#Using_an_index" title="Using IndexedDB#Using an index">using an index</a>.</p>
