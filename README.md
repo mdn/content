@@ -82,7 +82,7 @@ and branch to commit your changes to, as well as helping you reach the ultimate 
 [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests). Your pull request
 represents the work you want to be reviewed, hopefully approved,
 and then merged into the `main` branch of this repository.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**See the [pull request etiquette section](#pull-request-etiquette) for more details**
 **on creating and handling pull requests successfully.**
 
 If you're not certain of the changes that you want to make, get in touch with us first!
@@ -230,12 +230,12 @@ into the `main` branch, and then later (within 48 hours) published on
 [MDN Web Docs](https://developer.mozilla.org). Along the way, you may be asked, not only
 to answer questions about your work, but to make changes as well. Don't worry, that's a
 common and natural part of the process.
-**See the [pull-request etiquette section](#pull-request-etiquette) for more details**
+**See the [pull request etiquette section](#pull-request-etiquette) for more details**
 **on creating and handling pull requests successfully.**
 
-### Pull-request etiquette
+### Pull request etiquette
 
-Here are some important rules of etiquette to remember when working with pull-requests.
+Here are some important rules of etiquette to remember when working with pull requests.
 
 1. When you submit a pull request, a number of tests are automatically run as GitHub
 Actions (see [.github/workflows/pr-build.yml](.github/workflows/pr-build.yml),
@@ -260,7 +260,9 @@ suspicious (it is easier to hide malicious changes in a large pull request). In 
 cases, the reviewer has the right to close your pull request, and ask that you submit
 a separate pull request for each logical set of changes that belong together.
 
-1. If your pull request contains any kind of significant complexity (it contains technical changes, and isn't just a typo fix, grammatical improvement, or formatting/structural change), please describe why you're making the change and anything else we need to know about it. You can do this in your pull request's description, or reference an existing issue that describes the motivation for the change. You can reference an existing issue using `#` followed by the issue's ID, for example `#1234`.
+1. If your pull request contains any kind of significant complexity (it contains technical changes, and isn't just a typo fix, grammatical improvement, or formatting/structural change), please describe why you're making the change and anything else we need to know about it.
+   * If the pull request is simple (it is really clear what has been changed and why, and the change is obviously a good thing), you can do this in your pull request's description.
+   * If the pull request is complex (the changes and the reasoning behind them need a bit more explanation), then the requestor should file an issue describing the intended change first, and seek discussion/approval as needed. When the time is right to submit the PR, they should reference the issue (or an existing issue that describes the motivation for the change) in the PR. You can reference an existing issue using `#` followed by the issue's ID, for example `#1234`.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
@@ -477,3 +479,30 @@ For a complete description of this topic, see
 [the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples).
 
 Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines). 
+
+### Archiving and unarchiving pages
+
+Pages with the banner "This is an archived page. It's not actively maintained." at the top are archived pages — they are archived because either they are obsolete or out-of-date, or they are not in scope for MDN contributors to actively work on.
+
+If you find a page that is marked archived and you think it shouldn't be, you can follow the below steps to unarchive it:
+
+* Submit an issue to check why the page is archived and if it should be unarchived.
+* Find the source code location of the archived page. Archived pages live in the [Archived content](https://github.com/mdn/archived-content/) repo, the structure of which is the same as this repo (except that there are also locale directories present other than `en-US`). As an example:
+   * Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge) page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
+   * This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
+* To unarchive the page, you need to open a pull request to move the page's directory into the appropriate place inside this repo, and update the page's meta data (like `slug`) if needed.
+
+Note: To archive a currently-non-archived page, you need to follow the above procedure, but move the page in question the opposite way between repos.
+
+Note: You can have an archived page with non-archived pages below it in the hierarchy, and vice-versa. To achive this you need to have the same directory structure in both the `content` and `archive-content` repos. Whether a page is non-archived or archived depends on which repo its `index.html` file is in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla) with the [content mozilla directory](https://github.com/mdn/content/tree/main/files/en-us/mozilla). Both locations represent the same directory structure, but the `index.html` file appears in the latter, therefore the page is not archived.
+
+### Making a change that depends on a macro update
+
+KumaScript macros are still used on MDN pages, even in the new platform. These are the function names surrounded by handlebars-style double curly braces that you'll see in the source code on occasion, for example `{{domxref}}` Eventually we have to replace them with something else, but they are here for now. They live in [https://github.com/mdn/yari/tree/master/kumascript/macros](https://github.com/mdn/yari/tree/master/kumascript/macros).
+
+Sometimes you'll want to make a change to the content that relies on a macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187). Florian wanted to add documentation for a new WebGL extension to MDN, but this change relied on the new feature's spec being added to [https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json](https://github.com/mdn/yari/blob/master/kumascript/macros/SpecData.json). If not, the specification table on the new page would not render properly because the data it relies on would not be there.
+
+In such situations:
+
+1. Make the required PR to `https://github.com/mdn/yari/blob/master/kumascript/macros/` first, and get that merged.
+2. Add the content to this repo.

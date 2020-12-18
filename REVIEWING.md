@@ -32,6 +32,17 @@ If you are reviewing mdn content changes, read through the following guidelines.
 1. If you don't understand a content change that you've been selected to review, or feel that it is too large and complex for you to deal with, don't panic! Feel free to reach out to someone else to ask for help, like a colleague, or someone else in your group of topic review owners (if you know who they are). If you are not sure who to approach for help, then ping our @core-yari-content group to ask for help.
 1. Related to the above point, it is rare that you'll be required to review a large, complex content change with no warning, like a complete page rewrite, or the addition of several new reference pages or tutorials. Usually such changes are done as part of specific work streams where the content has been approved for addition, and reviewer(s) have been assigned already. In such cases, the PR should be linked to an issue that explains all these details. If you are not sure, ask the submitter if they need a review of the content, and where the rationale behnd the change is explained. Ping our [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content) team to ask for help if you are still not sure, or if you think the content is suspicious.
 
+Note: You may encounter merge conflicts as you review pull requests, if a another pull request that touches some of the same files got merged before the one you are reviewing. [Addressing merge conflicts](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/addressing-merge-conflicts) is a useful resource to help you. Feel free also to ask your team(s) for help if you need it.
+
+## Specific reviewer overrides on pull requests
+
+Some of the pull requests submitted on the `content` repo relate to specific workstreams being undertaken by browser vendors or other organizations that have a defined set of writers and reviewers. In these cases, the submitter of the PR will include the username of the reviewer in a line at the bottom of the pull request description, for example:
+
+`reviewer: @jpmedley`
+
+Upon submitting the pull request, they will request a review from the reviewer specified in the pull request description. Once that reviewer has approved the new content, they will then ask you for an approval as required by the CODEOWNERS system for the pull request to be mergeable.
+
+Therefore, if you receive a pull request review request and then see that you have been overridden with another reviewer in the manner described above, then don't review the pull request — just wait for an approval request.
 
 ## Topic review owners
 
