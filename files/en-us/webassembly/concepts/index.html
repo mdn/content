@@ -29,14 +29,14 @@ tags:
 <p>WebAssembly is being created as an open standard inside the <a href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a> with the following goals:</p>
 
 <ul>
- <li>Be fast, efficient, and portable — WebAssembly code can be executed at near-native speed across different platforms by taking advantage of <a href="http://webassembly.org/docs/portability/#assumptions-for-efficient-execution">common hardware capabilities</a>.</li>
+ <li>Be fast, efficient, and portable — WebAssembly code can be executed at near-native speed across different platforms by taking advantage of <a href="https://webassembly.org/docs/portability/#assumptions-for-efficient-execution">common hardware capabilities</a>.</li>
  <li>Be readable and debuggable — WebAssembly is a low-level assembly language, but it does have a human-readable text format (the specification for which is still being finalized) that allows code to be written, viewed, and debugged by hand.</li>
  <li>Keep secure — WebAssembly is specified to be run in a safe, sandboxed execution environment. Like other web code, it will enforce the browser's same-origin and permissions policies.</li>
  <li>Don't break the web — WebAssembly is designed so that it plays nicely with other web technologies and maintains backwards compatibility.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: WebAssembly will also have uses outside web and JavaScript environments (see <a href="http://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
+<p><strong>Note</strong>: WebAssembly will also have uses outside web and JavaScript environments (see <a href="https://webassembly.org/docs/non-web/">Non-web embeddings</a>).</p>
 </div>
 
 <h2 id="How_does_WebAssembly_fit_into_the_web_platform">How does WebAssembly fit into the web platform?</h2>
@@ -48,7 +48,7 @@ tags:
  <li>A set of <a href="/en-US/docs/Web/API">Web APIs</a> that the Web app can call to control web browser/device functionality and make things happen (<a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>, <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, etc.).</li>
 </ul>
 
-<p>Historically, the VM has been able to load only JavaScript. This has worked well for us as JavaScript is powerful enough to solve most problems people have on the Web today. We have run into performance problems, however, when trying to use JavaScript for more intensive use cases like 3D games, Virtual and Augmented Reality, computer vision, image/video editing, and a number of other domains that demand native performance (see <a href="http://webassembly.org/docs/use-cases/">WebAssembly use cases</a> for more ideas).</p>
+<p>Historically, the VM has been able to load only JavaScript. This has worked well for us as JavaScript is powerful enough to solve most problems people have on the Web today. We have run into performance problems, however, when trying to use JavaScript for more intensive use cases like 3D games, Virtual and Augmented Reality, computer vision, image/video editing, and a number of other domains that demand native performance (see <a href="https://webassembly.org/docs/use-cases/">WebAssembly use cases</a> for more ideas).</p>
 
 <p>Additionally, the cost of downloading, parsing, and compiling very large JavaScript applications can be prohibitive. Mobile and other resource-constrained platforms can further amplify these performance bottlenecks.</p>
 
@@ -56,7 +56,7 @@ tags:
 
 <ul>
  <li>JavaScript is a high-level language, flexible and expressive enough to write web applications. It has many advantages — it is dynamically typed, requires no compile step, and has a huge ecosystem that provides powerful frameworks, libraries, and other tools.</li>
- <li>WebAssembly is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages with low-level memory models such as C++ and Rust with a compilation target so that they can run on the web. (Note that WebAssembly has the <a href="http://webassembly.org/docs/high-level-goals/">high-level goal</a> of supporting languages with garbage-collected memory models in the future.)</li>
+ <li>WebAssembly is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages with low-level memory models such as C++ and Rust with a compilation target so that they can run on the web. (Note that WebAssembly has the <a href="https://webassembly.org/docs/high-level-goals/">high-level goal</a> of supporting languages with garbage-collected memory models in the future.)</li>
 </ul>
 
 <p>With the advent of WebAssembly appearing in browsers, the virtual machine that we talked about earlier will now load and run two types of code — JavaScript AND WebAssembly.</p>

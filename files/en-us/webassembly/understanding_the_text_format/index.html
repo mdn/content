@@ -40,7 +40,7 @@ tags:
 
 <p>This module is totally empty, but is still a valid module.</p>
 
-<p>If we convert our module to binary now (see <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a>), we’ll see just the 8 byte module header described in the <a href="http://webassembly.org/docs/binary-encoding/#high-level-structure">binary format</a>:</p>
+<p>If we convert our module to binary now (see <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a>), we’ll see just the 8 byte module header described in the <a href="https://webassembly.org/docs/binary-encoding/#high-level-structure">binary format</a>:</p>
 
 <pre class="brush: wasm; no-line-numbers notranslate">0000000: 0061 736d              ; WASM_BINARY_MAGIC
 0000004: 0100 0000              ; WASM_BINARY_VERSION</pre>
@@ -270,7 +270,7 @@ WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
 
 <h3 id="WebAssembly_Memory">WebAssembly Memory</h3>
 
-<p>The above example is a pretty terrible logging function: it only prints a single integer!  What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides <strong>memory</strong> (although we also have {{anch("Reference types")}} in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like <code>i32.load</code> and <code>i32.store</code> for reading and writing from <a href="http://webassembly.org/docs/semantics/#linear-memory">linear memory</a>.</p>
+<p>The above example is a pretty terrible logging function: it only prints a single integer!  What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides <strong>memory</strong> (although we also have {{anch("Reference types")}} in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like <code>i32.load</code> and <code>i32.store</code> for reading and writing from <a href="https://webassembly.org/docs/semantics/#linear-memory">linear memory</a>.</p>
 
 <p>From JavaScript’s point of view, it’s as though memory is all inside one big (resizable) {{domxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js <a href="http://asmjs.org/spec/latest/#programming-model">Programming model</a>).</p>
 
@@ -454,7 +454,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>Because JavaScript has full access to function references, the Table object can be mutated from JavaScript using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">grow()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">get()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">set()</a></code> methods. And WebAssembly code is itself able to manipulate tables using instructions added as part of {{anch("Reference types")}}, such as <code>table.get</code> and <code>table.set</code>.</p>
 
-<p>Because tables are mutable, they can be used to implement sophisticated load-time and run-time <a href="http://webassembly.org/docs/dynamic-linking">dynamic linking schemes</a>. When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled <code>.dll</code>s share a single process’s address space.</p>
+<p>Because tables are mutable, they can be used to implement sophisticated load-time and run-time <a href="https://webassembly.org/docs/dynamic-linking">dynamic linking schemes</a>. When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled <code>.dll</code>s share a single process’s address space.</p>
 
 <p>To see this in action, we’ll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">instantiate()</a></code> calls.</p>
 
