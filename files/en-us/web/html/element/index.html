@@ -61,6 +61,29 @@ tags:
 
 <p>{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}</p>
 
+<h2 id="SVG_and_Math">SVG and MathML</h2>
+
+<p>You can embed <a href="/en-US/docs/Web/SVG">SVG</a> and <a href="/en-US/docs/Web/MathML">MathML</a> content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Element</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;">{{SVGElement("svg")}}</td>
+   <td>The <code>svg</code> element is a container that defines a new coordinate system and <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.</td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">{{MathMLElement("math")}}</td>
+   <td>The top-level element in MathML is <code>&lt;math&gt;</code>. Every valid MathML instance must be wrapped in <code>&lt;math&gt;</code> tags. In addition you must not nest a second <code>&lt;math&gt;</code> element in another, but you can have an arbitrary number of other child elements in it.</td>
+  </tr>
+ </tbody>
+</table>
+
 <h2 id="Scripting">Scripting</h2>
 
 <p>In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.</p>
