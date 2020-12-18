@@ -33,8 +33,8 @@ tags:
 </ul>
 <p style="margin-left: 40px;"><code>alias pymake=C:/mozilla-central/build/pymake/make.py</code></p>
 <ul>
- <li style="">Save your .profile edit and close the shell, then restart the shell.</li>
- <li style="">Try typing just <code>pymake</code> into the shell and press enter.  This should come back with "No makefile found." If it does, your <code>pymake</code> alias is connected and you are ready to type in <code>pymake -f client.mk</code> to start the build.</li>
+ <li>Save your .profile edit and close the shell, then restart the shell.</li>
+ <li>Try typing just <code>pymake</code> into the shell and press enter.  This should come back with "No makefile found." If it does, your <code>pymake</code> alias is connected and you are ready to type in <code>pymake -f client.mk</code> to start the build.</li>
 </ul>
 <p>Unlike <code>gmake</code> on Windows, <code>pymake</code> is capable of doing parallel builds, so you can set a <code>MOZ_MAKE_FLAGS=-jN</code> in your .<code>mozconfig</code> without risk of deadlocks.</p>
 <div class="note">
