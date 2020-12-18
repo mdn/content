@@ -33,7 +33,7 @@ tags:
 
 <p>The flexibility of forms makes them one of the most complex structures in <a href="/en-US/docs/Learn/HTML" title="/en-US/docs/HTML">HTML</a>; you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and <a href="/en-US/docs/Learn/Accessibility">accessible</a>.</p>
 
-<h2 id="The_&lt;form>_element">The &lt;form&gt; element</h2>
+<h2 id="The_&lt;form&gt;_element">The &lt;form&gt; element</h2>
 
 <p>The {{HTMLElement("form")}} element formally defines a form and attributes that determine the form's behavior. Each time you want to create an HTML form, you must start it by using this element, nesting all the contents inside. Many assistive technologies and browser plugins can discover {{HTMLElement("form")}} elements and implement special hooks to make them easier to use.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>Let's move forward and cover the structural elements you'll find nested in a form.</p>
 
-<h2 id="The_&lt;fieldset>_and_&lt;legend>_elements">The &lt;fieldset&gt; and &lt;legend&gt; elements</h2>
+<h2 id="The_&lt;fieldset&gt;_and_&lt;legend&gt;_elements">The &lt;fieldset&gt; and &lt;legend&gt; elements</h2>
 
 <p>The {{HTMLElement("fieldset")}} element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a {{HTMLElement("fieldset")}} by including a {{HTMLElement("legend")}} element just below the opening {{HTMLElement("fieldset")}} tag. The text content of the {{HTMLElement("legend")}} formally describes the purpose of the {{HTMLElement("fieldset")}} it is included inside.</p>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">listen to how a screen reader</a> interprets it. If it sounds odd, try to improve the form structure.</p>
 
-<h2 id="The_&lt;label>_element">The &lt;label&gt; element</h2>
+<h2 id="The_&lt;label&gt;_element">The &lt;label&gt; element</h2>
 
 <p>As we saw in the previous article, The {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screenreaders will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:</p>
 
