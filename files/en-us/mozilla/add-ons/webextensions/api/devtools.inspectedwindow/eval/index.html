@@ -6,6 +6,7 @@ tags:
   - Add-ons
   - Extensions
   - Reference
+  - Method
   - WebExtensions
   - devtools.inspectedWindow
   - eval
@@ -18,7 +19,7 @@ tags:
 
 <p>First, the JavaScript can use a set of <a href="#Helpers">special commands that browsers typically provide in their devtools console implementation</a>: for example, using "$0" to refer to the element currently selected in the Inspector.</p>
 
-<p>Second, the JavaScript you execute can see any changes made to the page by scripts that the page loaded. This is in contrast to content scripts, which see the page <a href="/en-US/Add-ons/WebExtensions/Content_scripts#DOM_access">as it would exist if no page scripts were loaded</a>. However, note that the isolation provided by content scripts is a deliberate security feature, intended to make it harder for malicious or simply uncooperative web pages to confuse or subvert WebExtensions APIs by redefining DOM functions and properties. This means you need to be very careful if you waive this protection by using <code>eval()</code>, and should use content scripts unless you need to use <code>eval()</code>.</p>
+<p>Second, the JavaScript you execute can see any changes made to the page by scripts that the page loaded. This is in contrast to content scripts, which see the page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access">as it would exist if no page scripts were loaded</a>. However, note that the isolation provided by content scripts is a deliberate security feature, intended to make it harder for malicious or simply uncooperative web pages to confuse or subvert WebExtensions APIs by redefining DOM functions and properties. This means you need to be very careful if you waive this protection by using <code>eval()</code>, and should use content scripts unless you need to use <code>eval()</code>.</p>
 
 <p>The script is evaluated by default in the main frame of the page. The script must evaluate to a value that can be represented as JSON (meaning that, for example, it may not evaluate to a function or an object that contains any functions). By default, the script does not see any content scripts attached to the page.</p>
 
