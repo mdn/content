@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Introducing_an_example">Introducing an example</h2>
 
-<p>To demonstrate usage of modules, we've created a <a href="https://github.com/mdn/js-examples/tree/master/modules">simple set of examples</a> that you can find on GitHub. These examples demonstrate a simple set of modules that create a <a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> element on a webpage, and then draw (and report information about) different shapes on the canvas.</p>
+<p>To demonstrate usage of modules, we've created a <a href="https://github.com/mdn/js-examples/tree/master/modules">simple set of examples</a> that you can find on GitHub. These examples demonstrate a simple set of modules that create a <a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas&gt; element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> element on a webpage, and then draw (and report information about) different shapes on the canvas.</p>
 
 <p>These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.</p>
 
@@ -62,7 +62,7 @@ modules/
 	<li><code>canvas.js</code> — contains functions related to setting up the canvas:
 
 	<ul>
-		<li><code>create()</code> — creates a canvas with a specified <code>width</code> and <code>height</code> inside a wrapper <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (&lt;div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.</li>
+		<li><code>create()</code> — creates a canvas with a specified <code>width</code> and <code>height</code> inside a wrapper <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (&lt;div&gt;) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.</li>
 		<li><code>createReportList()</code> — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.</li>
 	</ul>
 	</li>
@@ -168,7 +168,7 @@ reportPerimeter(square1.length, reportList);
 
 <p>Now we just need to apply the <code>main.js</code> module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.</p>
 
-<p>First of all, you need to include <code>type="module"</code> in the <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> element, to declare this script as a module. To import the <code>main.js</code> script, we use this:</p>
+<p>First of all, you need to include <code>type="module"</code> in the <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script&gt; element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> element, to declare this script as a module. To import the <code>main.js</code> script, we use this:</p>
 
 <pre class="brush: html; no-line-numbers notranslate">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
@@ -187,7 +187,7 @@ reportPerimeter(square1.length, reportList);
 <ul>
 	<li>You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.</li>
 	<li>Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.</li>
-	<li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
+	<li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script&gt; element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
 	<li>Modules are only executed once, even if they have been referenced in multiple <code>&lt;script&gt;</code> tags.</li>
 	<li>Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.</li>
 </ul>

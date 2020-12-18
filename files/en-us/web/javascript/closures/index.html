@@ -392,7 +392,7 @@ setupHelp();</pre>
 
 <p>This example uses <code>let</code> instead of <code>var</code>, so every closure binds the block-scoped variable, meaning that no additional closures are required.</p>
 
-<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href="/en-US/docs/Web/HTML/Element/input" title="The HTML &lt;input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."><code>&lt;input&gt;</code></a>, as shown:</p>
+<p>Another alternative could be to use <code>forEach()</code> to iterate over the <code>helpText</code> array and attach a listener to each <a href="/en-US/docs/Web/HTML/Element/input" title="The HTML &lt;input&gt; element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."><code>&lt;input&gt;</code></a>, as shown:</p>
 
 <pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').textContent = help;

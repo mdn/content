@@ -45,9 +45,9 @@ line-height: unset;
 <p>The <code>line-height</code> property is specified as any one of the following:</p>
 
 <ul>
- <li>a <code><a href="#&lt;number>">&lt;number&gt;</a></code></li>
- <li>a <code><a href="#&lt;length>">&lt;length&gt;</a></code></li>
- <li>a <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code></li>
+ <li>a <code><a href="#&lt;number&gt;">&lt;number&gt;</a></code></li>
+ <li>a <code><a href="#&lt;length&gt;">&lt;length&gt;</a></code></li>
+ <li>a <code><a href="#&lt;percentage&gt;">&lt;percentage&gt;</a></code></li>
  <li>the keyword <code><a href="#normal">normal</a></code>.</li>
 </ul>
 
@@ -56,11 +56,11 @@ line-height: unset;
 <dl>
  <dt><code id="normal">normal</code></dt>
  <dd>Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly<strong> <code>1.2</code></strong>, depending on the element's <code>font-family</code>.</dd>
- <dt><code id="&lt;number>">&lt;number&gt;</code> (unitless)</dt>
+ <dt><code id="&lt;number&gt;">&lt;number&gt;</code> (unitless)</dt>
  <dd>The used value is this unitless {{cssxref("&lt;number&gt;")}} multiplied by the element's own font size. The computed value is the same as the specified <code>&lt;number&gt;</code>. In most cases, <strong>this is the preferred way</strong> to set <code>line-height</code> and avoid unexpected results due to inheritance.</dd>
- <dt><code id="&lt;length>">&lt;length&gt;</code></dt>
+ <dt><code id="&lt;length&gt;">&lt;length&gt;</code></dt>
  <dd>The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height. Values given in <strong>em</strong> units may produce unexpected results (see example below).</dd>
- <dt><code id="&lt;percentage>">&lt;percentage&gt;</code></dt>
+ <dt><code id="&lt;percentage&gt;">&lt;percentage&gt;</code></dt>
  <dd>Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. <strong>Percentage</strong> values may produce unexpected results (see the second example below).</dd>
  <dt><code id="-moz-block-height">-moz-block-height</code> {{non-standard_inline}}</dt>
  <dd>Sets the line height to the content height of the current block.</dd>

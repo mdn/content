@@ -371,7 +371,7 @@ x-card:nth-child(3) {
 
 <p>This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at <a href="http://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/" title="http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/">Cross Browser Retina/High Resolution Media Queries</a>.</p>
 
-<h3 id="&lt;video>">&lt;video&gt;</h3>
+<h3 id="&lt;video&gt;">&lt;video&gt;</h3>
 
 <p>HTML5 video is fairly well catered for in terms of responsive capabilities. If you wish, you can point to multiple video files via {{HTMLElement("source")}} attributes, each with their own source and MIME type:</p>
 
@@ -391,7 +391,7 @@ x-card:nth-child(3) {
 
 <p>This allows your site to serve different video files based on the available space, in order to optimize the user's experience.</p>
 
-<h3 id="&lt;img>">&lt;img&gt;</h3>
+<h3 id="&lt;img&gt;">&lt;img&gt;</h3>
 
 <p>HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C <a href="http://www.w3.org/community/respimg/" title="http://www.w3.org/community/respimg/">responsive images community group</a> discussed this problem for ages and arrived at the <a href="http://www.w3.org/TR/html-picture-element/" title="http://www.w3.org/TR/html-picture-element/">&lt;picture&gt;</a> element, which provides a similar markup structure to {{HTMLElement("video")}}<a href="/en-US/docs/Web/HTML/Element/video" title="/en-US/docs/Web/HTML/Element/video">,</a> with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, <a href="http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/" title="http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/">srcset</a>, was put forward by Apple and takes a slightly different approach, instead providing a new <code>srcset</code> attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.</p>
 
