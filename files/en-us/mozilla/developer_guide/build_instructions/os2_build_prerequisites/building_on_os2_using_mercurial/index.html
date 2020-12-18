@@ -64,5 +64,4 @@ ac_add_options --disable-debug
 <p>and then kick-off the build with</p>
 <pre>make -f client.mk build 2&gt;&amp;1 | tee build.log
 </pre>
-<p> </p>
 <div class="warning"><strong>Warning</strong>: for some reason the configure file in <code>nsprpub </code>is part of the Hg repository, but as it is incompatible with the OS/2 build, you need to either remove it before building, or (<strong>recommended</strong>) to patch it away using the Mq extension of Mercurial. (In the latter case you might need to use <code>hg qrefresh</code> every now and then to update the patch.</div>
