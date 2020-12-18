@@ -91,7 +91,7 @@ tags:
 
 <h3 id="Creating_the_reference_space">Creating the reference space</h3>
 
-<p>requesting support for <code>bounded-floor</code> when calling the {{domxref("XRSystem")}} method {{domxref("XRSystem.requestSession", "requestSession()")}} isn't enough to get a bounded space. You need to ask for one when you call {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} as well. That means you need to change the code that calls <code>requestReferenceSpace()</code> to ask for a bounded reference space, then if that fails fall back to your backup choice, like this:</p>
+<p>Requesting support for <code>bounded-floor</code> when calling the {{domxref("XRSystem")}} method {{domxref("XRSystem.requestSession", "requestSession()")}} isn't enough to get a bounded space. You need to ask for one when you call {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} as well. That means you need to change the code that calls <code>requestReferenceSpace()</code> to ask for a bounded reference space, then if that fails fall back to your backup choice, like this:</p>
 
 <pre class="brush: js">let xrSession = null;
 let xrReferenceSpace = null;

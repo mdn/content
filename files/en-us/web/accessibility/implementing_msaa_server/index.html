@@ -386,7 +386,7 @@ tags:
 
 <p><span class="c1">Problem</span>: Tree views are difficult to support MSAA in, because the nodes may be constantly changing or lazily instantiated. The screen reader vendors actually use the SysTreeView32 class directly rather than the MSAA support for them, and can thus provide better support for native tree views.</p>
 
-<p><span class="c1">Solution</span>: Look carefully at how Microsoft implements MSAA for its tree views. The tree view object itself handles all of the requests for get_accName for child objects. The child ID is part of the VARIANT structure's information. This means you don't really need to create a separate object for each tree view row, which saves a lot of work. Also, rather than have multiple nested level of objects, treat all of the rows as direct children of the main tree view object. put the level, i.e. "1", "2", 3", etc. in the value field.</p>
+<p><span class="c1">Solution</span>: Look carefully at how Microsoft implements MSAA for its tree views. The tree view object itself handles all of the requests for get_accName for child objects. The child ID is part of the VARIANT structure's information. This means you don't really need to create a separate object for each tree view row, which saves a lot of work. Also, rather than have multiple nested level of objects, treat all of the rows as direct children of the main tree view object. Put the level, i.e. "1", "2", 3", etc. in the value field.</p>
 
 <h3 id="MSAA_Implementation_is_Not_Performant_2"><a id="MSAA_Implementation_is_Not_Performant">MSAA Implementation is Not Performant</a></h3>
 
