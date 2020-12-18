@@ -273,7 +273,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 <p>Sometimes, the server won't detect it: a redirection loop can spread over several servers which each don't have the full picture. In this case, browsers will detect it and display an error message. Firefox displays:</p>
 
 <blockquote>
-<p class="bz_comment_text" id="comment_text_0">Firefox has detected that the server is redirecting the request for this address in a way that will never complete.</p>
+<p>Firefox has detected that the server is redirecting the request for this address in a way that will never complete.</p>
 </blockquote>
 
 <p>…while Chrome displays:</p>

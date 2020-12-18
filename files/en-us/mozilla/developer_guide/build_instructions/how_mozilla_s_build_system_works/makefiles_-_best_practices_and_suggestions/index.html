@@ -75,7 +75,7 @@ GARBAGE_DIRS += $(timestampDIR)</span>
 <ul>
   <li>Wrapper check/unit tests with a ENABLE_TESTS conditional so tests can be disabled on demand.</li>
 </ul>
-<pre class="bz_comment_text" id="comment_text_6"><span style="color: rgb(51, 153, 51);"><span class="quote">ifdef ENABLE_TESTS
+<pre><span style="color: rgb(51, 153, 51);"><span class="quote">ifdef ENABLE_TESTS
     ifeq ($(NULL),$(filter WINNT OS2,$(OS_ARCH)))
         DIRS += test
     endif # WIN

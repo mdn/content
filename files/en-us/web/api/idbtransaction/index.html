@@ -20,7 +20,7 @@ tags:
 
 <p>Transactions are started when the transaction is created, not when the first request is placed; for example consider this:</p>
 
-<pre class="brush: js" id="comment_text_0">var trans1 = db.transaction("foo", "readwrite");
+<pre class="brush: js">var trans1 = db.transaction("foo", "readwrite");
 var trans2 = db.transaction("foo", "readwrite");
 var objectStore2 = trans2.objectStore("foo")
 var objectStore1 = trans1.objectStore("foo")
