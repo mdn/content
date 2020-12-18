@@ -218,8 +218,6 @@ To specify a content security policy for the worker, set a <a href="/en-US/docs/
 <br>
 The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.</div>
 
-<div></div>
-
 <h2 id="Transferring_data_to_and_from_workers_further_details">Transferring data to and from workers: further details</h2>
 
 <p>Data passed between the main page and workers is <strong>copied</strong>, not shared. Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker <strong>do not share the same instance</strong>, so the end result is that <strong>a duplicate</strong> is created on each end. Most browsers implement this feature as <a href="/en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">structured cloning</a>.</p>
