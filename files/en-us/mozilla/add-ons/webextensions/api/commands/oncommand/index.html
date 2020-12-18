@@ -16,7 +16,6 @@ tags:
 
 <div>Fired when a command is executed using its associated keyboard shortcut.</div>
 
-<div> </div>
 
 <div>The listener is passed the command's name. This matches the name given to the command in its <a href="/en-US/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</div>
 
@@ -64,7 +63,6 @@ browser.commands.onCommand.hasListener(listener)
 
 <div>Given a manifest.json entry like this:</div>
 
-<div> </div>
 
 <div>
 <pre class="brush: json line-numbers language-json"><code class="language-json"><span class="key token">"commands":</span> <span class="punctuation token">{</span>
@@ -79,7 +77,6 @@ browser.commands.onCommand.hasListener(listener)
 
 <div>You could listen for this particular command like this:</div>
 
-<div> </div>
 
 <div>
 <pre class="brush: js line-numbers language-js"><code class="language-js">browser<span class="punctuation token">.</span>commands<span class="punctuation token">.</span>onCommand<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>command<span class="punctuation token">)</span> <span class="punctuation token">{</span>
