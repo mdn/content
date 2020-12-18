@@ -24,7 +24,7 @@ tags:
 
 <p>Most of the interaction with files and directories is accomplished through handles. A parent {{domxref('FileSystemHandle')}} class helps define two child classes: {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}, depending if you want to work with files or directories respectively.</p>
 
-<p>These handles represent the file or directory on the users system. You gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called the picker presents itself and the user selects either a file or directory. Once this happens successfully a handle is returned.</p>
+<p>These handles represent the file or directory on the users system. You gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called the picker presents itself and the user selects either a file or directory. Once this happens successfully a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.</p>
 
 <p>The handle provides it's own functionality and there are a few differences depending on whether a file or directory was selected (see the below <a href="#Interfaces">interfaces</a> section for specific details). For the main part you gain access to the file data, or information (including children) of the directory selected.</p>
 
