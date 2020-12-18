@@ -15,7 +15,6 @@ tags:
 
 <p>Install a version of Visual Studio that supports C++ development: <a href="https://www.microsoft.com/visualstudio/eng/downloads" title="https://www.microsoft.com/visualstudio/eng/downloads">VS 2012 for Windows Desktop</a> Pro or Express (free), or VC++ 2010 Pro or <a class="external" href="http://go.microsoft.com/?linkid=9709949" title="http://go.microsoft.com/?linkid=9709949">Express (free)</a>,<strong> or VC++ 2008 Pro or <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=F3FBB04E-92C2-4701-B4BA-92E26E408569&amp;displaylang=en" title="http://www.microsoft.com/downloads/details.aspx?FamilyId=F3FBB04E-92C2-4701-B4BA-92E26E408569&amp;displaylang=en">Express with SP1 (free)</a> (Warning ! From Firefox 10, the compilator is Visual Studio 2010; if you want to use it, you must use a previous version of it !), or 2005 Professional</strong></p>
 
-<p> </p>
 
 <p>From <a href="/en-US/docs/Developer_Guide/Build_Instructions" title="/en-US/docs/Developer_Guide/Build_Instructions">Build_Instructions</a></p>
 
@@ -29,7 +28,6 @@ tags:
 <p><strong>Note:</strong> Starting with {{Gecko("7.0")}}, you should no longer include "-Zc:wchar_t-" in the command line when building on Windows. If you're using Visual Studio, go to Project Properties &gt; C/C++ &gt; Language &gt; Treat wchar_t as Built-in Type and set it to "yes".</p>
 </div>
 
-<p> </p>
 
 <p>From <a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial" title="/en-US/docs/Developer_Guide/Source_Code/Mercurial">Source_Code/Mercurial</a></p>
 
@@ -70,7 +68,6 @@ cd 191src
 
 <p>From <a href="/en-US/docs/Windows_SDK_versions" title="/en-US/docs/Windows_SDK_versions">Windows_SDK_versions</a></p>
 
-<p> </p>
 
 <h3 id="Visual_C_9_(VS2008)_ProfessionalExpress">Visual C++ 9 (VS2008) Professional/Express</h3>
 
@@ -87,21 +84,17 @@ cd 191src
 
 <p>These versions are <strong>not supported </strong>and the Windows 7 SDK will not work with them. You need to upgrade to one of the newer Visual C++ versions above.</p>
 
-<p> </p>
 
 <p><strong>For Gecko 11 or below</strong>: you could also download the <a href="#Windows_Vista_SDK">Windows Vista SDK</a> and follow the instructions there to allow you to build against it.</p>
 
-<p> </p>
 
 <div class="note">
 <p>Starting with {{Gecko ("12.0")}}, this SDK is necessary.</p>
 </div>
 
-<p> </p>
 
 <p><strong>Note:</strong> While this configuration will probably build on mozilla-1.9.1 and mozilla-1.9.0, it is not supported.</p>
 
-<p> </p>
 
 <div class="warning"><strong>Warning:</strong> Due to a bug in old versions of MozillaBuild (prior to 1.6), if you download version 7.1 of the Windows 7 SDK (which is the current version available), your build <strong>will</strong> fail, often while building cairo with "ocidl.h" errors. In order to fix this issue, you need to use the latest version of MozillaBuild.</div>
 
@@ -175,11 +168,9 @@ cd 191src
 
 <p>SDKs older than the Server 2003 R2 Platform SDK aren't supported either.</p>
 
-<p> </p>
 
 <p>From <a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites [en-US]</a></p>
 
-<p> </p>
 
 <h3 id="Microsoft_Visual_C_(MSVC)">Microsoft Visual C++ (MSVC)</h3>
 
@@ -194,7 +185,6 @@ cd 191src
  <li>The Visual C++ 8 command-line compiler is included with the Vista SDK, but you are then expected to use the included WinDbg debugger.</li>
 </ul>
 
-<p> </p>
 
 <p>From <a href="/en-US/docs/Configuring_Build_Options" title="/en-US/docs/Configuring_Build_Options">Configuring Build Options [en-US]</a></p>
 
@@ -204,11 +194,9 @@ cd 191src
 
 <p>If you are building Mozilla source code from before Firefox 5, then you <strong>must</strong> first select the Mozilla application that you want to build (see below), and you will probably <em>also</em> need to set at least <em>some</em> of the other basic configuration options (such as whether to build a debug build or not) to get the type of build that you need.</p>
 
-<p> </p>
 
 <p>If you are building from an older project branch that still uses CVS, you will need to set MOZ_CO_PROJECT to the appropriate value or values, using a comma-separated list, such as "<code>mk_add_options MOZ_CO_PROJECT=browser,mail,calendar,suite,xulrunner</code>".  This setting is ignored by most Mozilla project branches, which now use mercurial instead of CVS for source control.</p>
 
-<p> </p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting in {{Gecko ("2.0")}}, objdir builds are enabled by default.  If you do not specify a MOZ_OBJDIR it will be automatically set to @TOPSRCDIR@/obj-@CONFIG_GUESS@</p>
@@ -220,4 +208,3 @@ cd 191src
 <p><strong>Note:</strong> Starting in {{Gecko ("5.0")}}, if you don't specify an application, <code>--enable-application=browser</code> is assumed, thereby building Firefox.</p>
 </div>
 
-<p> </p>

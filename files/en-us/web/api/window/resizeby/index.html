@@ -37,13 +37,11 @@ window.resizeBy(-200, -200);
 
 <h3 id="Creating_and_resizing_an_external_window">Creating and resizing an external window</h3>
 
-<p> </p>
 
 <p>For security reasons, it's no longer possible in Firefox for a website to change the default size of a window in a browser if the window wasn’t created by <code>window.open()</code>, or contains more than one tab. See the compatability table for details on the change.</p>
 
 <p>Even if you create window by <code>window.open()</code> <strong>it is not resizable by default.</strong> To make the window resizable, you must open it with the <code>"resizable"</code> feature.</p>
 
-<p> </p>
 
 <pre class="brush: js">// Create resizable window
 myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");

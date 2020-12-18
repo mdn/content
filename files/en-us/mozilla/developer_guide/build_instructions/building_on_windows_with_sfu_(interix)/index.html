@@ -6,7 +6,6 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p> </p>
 <h3 id="Introduction">Introduction</h3>
 <p>These notes are meant to supplement the existing <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Documentation</a>. Windows Services for Unix (SFU, or Interix) is not a supported build platform, but it can be made to work with enough patience. Updating a CVS tree to the trunk takes me only 8 minutes using the Interix cvs client compared to 24 minutes for the MSYS cvs client. For a depend-only build (i.e. verifying that the previous build completed) it is roughly 20% faster than <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="En/Developer_Guide/Build_Instructions/Windows_Prerequisites">MSYS</a>. For a -j3 parallel clean build (excluding checkout and configure) it is only 3.7% faster. By comparison a -j3 SFU build is 25% faster than a -j1 SFU build.</p>
 <h3 id="Software_Requirements">Software Requirements</h3>
@@ -1157,7 +1156,6 @@ diff -u -r5.16 Makefile.in
  endif
 
 </pre>
-<p> </p>
 <h4 id="Updating">Updating</h4>
 <p>Since we have run autoconf locally, we need to revert the modified configures before we pull to avoid merge conflicts. As before, we then have to remove the configures again after the pull before building. This is a sample script for comm-central:</p>
 <pre>rm -f directory/c-sdk/configure &amp;&amp;

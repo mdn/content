@@ -32,7 +32,6 @@ tags:
 
 <p><strong>Attributes</strong> are GLSL variables which are only available to the vertex shader (as variables) and the JavaScript code. Attributes are typically used to store color information, texture coordinates, and any other data calculated or retrieved that needs to be shared between the JavaScript code and the vertex shader.</p>
 
-<p> </p>
 
 <pre class="brush: js">//init colors
     var vertexColors = [
@@ -48,7 +47,6 @@ tags:
     var cBuffer = gl.createBuffer();
 </pre>
 
-<p> </p>
 
 <pre class="brush: js">//continued
 //create buffer to store colors and reference it to "vColor" which is in GLSL
@@ -60,7 +58,6 @@ tags:
     gl.enableVertexAttribArray( vColor );
 </pre>
 
-<p> </p>
 
 <pre class="brush: cpp">//glsl
 attribute  vec4 vColor;
@@ -73,7 +70,6 @@ fColor = vColor;
 
 </pre>
 
-<p> </p>
 
 <h3 id="Varyings">Varyings</h3>
 

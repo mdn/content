@@ -18,8 +18,7 @@ tags:
    <li><code>loc TEXT</code>, the fully-resolved source file containing the declaration or definition of the function. See below.</li>
    <li><code>UNIQUE (name, loc) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>The fully-qualified method name includes the return value, namespaces, class name, method or function name, and parameter types. For instance, the code</p>
+    <p>The fully-qualified method name includes the return value, namespaces, class name, method or function name, and parameter types. For instance, the code</p>
   <pre class="brush: cpp">namespace ns {
   class cs {
     int method(float, double);
@@ -35,8 +34,7 @@ tags:
    <li><code>callee INTEGER REFERENCES node</code>, likewise for the callee.</li>
    <li><code>PRIMARY KEY(caller, callee) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>The primary key is currently unique on caller and callee, meaning that if the caller calls the callee multiple times, only one edge will exist in the table. We may change this if there are cases where the number of calls is relevant.</p>
+    <p>The primary key is currently unique on caller and callee, meaning that if the caller calls the callee multiple times, only one edge will exist in the table. We may change this if there are cases where the number of calls is relevant.</p>
  </li>
  <li><code>implementors</code>. This table provides information about the inheritance chain of C++ classes, specifically which virtual interface methods are overridden or implemented by which classes.
   <ul>
@@ -47,8 +45,7 @@ tags:
    <li><code>id INTEGER PRIMARY KEY</code>, a unique identifier for the entry.</li>
    <li><code>UNIQUE (implementor, interface, method, loc) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>An interface is considered a class which declares the method in question to be virtual (either pure or non-pure), while an implementor overrides it with a declaration that is non-pure. (Whether the implementor actually defines the function is not considered.) For instance, consider the code</p>
+    <p>An interface is considered a class which declares the method in question to be virtual (either pure or non-pure), while an implementor overrides it with a declaration that is non-pure. (Whether the implementor actually defines the function is not considered.) For instance, consider the code</p>
   <pre class="brush: cpp">class iFoo {
   public:
     virtual void method1(float) = 0;
