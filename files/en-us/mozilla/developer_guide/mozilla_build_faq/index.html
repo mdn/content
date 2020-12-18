@@ -20,7 +20,7 @@ tags:
 	<dt>
 	<h2 id="Getting_Help">Getting Help</h2>
 	</dt>
-	<dt id="platform">I'm running into a problem and I don't see a solution for it. Where can I get help?</dt>
+	<dt>I'm running into a problem and I don't see a solution for it. Where can I get help?</dt>
 	<dd>We have an IRC channel dedicated to helping people getting started with the Mozilla codebase called #introduction on the IRC.mozilla.org server. <a href="https://wiki.mozilla.org/IRC">You can learn more about connecting with Mozillians on IRC here.</a> You can also send your question directly to Mike Hoye - <a href="mailto:mhoye@mozilla.com">mhoye@mozilla.com</a> - and he will steer it to the right people.</dd>
 </dl>
 
@@ -33,7 +33,7 @@ tags:
 	<dd>Look at the <code>config.log</code> in the obj... directory. Try checking to make sure your PATH variable includes all the necessary directories. If you are using mozilla-build, then you need to start ming32 with one of the <code>start-msvc*.bat</code> files. If your build environment has changed, you may need to delete your config.cache file (in your mozilla or object directory) and then build again.</dd>
 	<dt>client.mk:121 *** This source tree appears to have Windows-style line endings.</dt>
 	<dd>This occurs when you are using git and do not have the proper line ending settings. The commands to set the proper line endings are (note this will remove local changes):
-	<pre class="bz_comment_text" id="comment_text_12"><span class="quote">git config core.autocrlf false
+	<pre><span class="quote">git config core.autocrlf false
 git config core.eof lf
 <span class="command">git rm --cached -r .</span>
 <span class="command">git reset --hard</span></span>
@@ -62,7 +62,7 @@ git config core.eof lf
 	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting" title="en/Mac_OS_X_Build_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites" title="en/Mac_OS_X_Build_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
 </dl>
 
-<pre class="bz_comment_text" id="comment_text_12">curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
+<pre>curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
 
 <dl>
 	<dt> </dt>

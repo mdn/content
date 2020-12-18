@@ -84,7 +84,7 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 
 <p>Also note that unwrapping is transitive: when you use <code>wrappedJSObject</code>, any properties of the unwrapped object are themselves unwrapped (and therefore unreliable). So it's good practice, once you've got the object you need, to rewrap it, which you can do like this:</p>
 
-<pre class="bz_comment_text" id="comment_text_38">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+<pre class="brush: js">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
 
 <p>See the document on <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> for much more detail on this.</p>
 
