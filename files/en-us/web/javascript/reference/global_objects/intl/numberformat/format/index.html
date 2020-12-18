@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html", "taller")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><code><var>numberFormat</var>.format(<var>number</var>)</code></pre>
@@ -48,8 +46,6 @@ console.log(numberFormat.format(654321.987));
 
 <p>Use the <code>format</code> getter function for formatting all numbers in an array. Note that the function is bound to the {{jsxref("NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}. This is considered a historical artefact, as part of a convention which is no longer followed for new features, but is preserved to maintain compatibility with existing programs.</p>
 
-
-
 <pre class="brush: js notranslate">var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
 var formatted = a.map(n =&gt; numberFormat.format(n));
@@ -73,7 +69,6 @@ console.log(formatted.join('; '));
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Intl.NumberFormat.format")}}</p>
 </div>

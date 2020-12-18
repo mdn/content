@@ -626,7 +626,6 @@ body[data-dragging="true"] {
 	margin: 0 auto;
 }
 
-
 #gradient-container {
 	width: 450px;
 	height: 250px;
@@ -773,7 +772,6 @@ body[data-dragging="true"] {
 .gradient-axis[axisID='3'] path {
 	fill: #5C5CDA;
 }
-
 
 .gradient-axis .rotate-point:hover {
 	cursor: pointer;
@@ -1011,7 +1009,6 @@ body[data-dragging="true"] {
 	top: -9.5px;
 }
 
-
 /**
  * Output
  */
@@ -1056,7 +1053,6 @@ body[data-dragging="true"] {
 	right: 0;
 
 }
-
 
 </pre>
 
@@ -2719,7 +2715,6 @@ var LinearGradientTool = (function LinearGradientTool() {
 		};
 	})();
 
-
 	/**
 	 * Gradient Point
 	 */
@@ -2854,7 +2849,6 @@ var LinearGradientTool = (function LinearGradientTool() {
 			this.NextPoint.PrevPoint = this;
 	};
 
-
 	/**
 	 * Gradient Axis
 	 */
@@ -2890,7 +2884,6 @@ var LinearGradientTool = (function LinearGradientTool() {
 		container.appendChild(axis);
 		line.addEventListener('click', this.placeGradientPoint.bind(this));
 	};
-
 
 	GradientAxis.prototype.createSVGArrow = function createSVGArrow(id) {
 		var xmlns = 'http://www.w3.org/2000/svg';

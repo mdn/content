@@ -76,7 +76,6 @@ if (typeof JSON.parse !== "function") {
             return reviver.call(holder, key, value);
         }
 
-
         // Parsing happens in four stages. In the first stage, we replace certain
         // Unicode characters with escape sequences. JavaScript handles many characters
         // incorrectly, either silently deleting them, or treating them as line endings.
@@ -205,8 +204,6 @@ JSON.parse("{'foo': 1}");
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.JSON.parse")}}</p>
 

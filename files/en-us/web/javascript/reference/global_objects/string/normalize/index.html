@@ -16,8 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.normalize([<var>form</var>])</code></pre>
@@ -167,14 +165,12 @@ console.log(string2.length);      // 2
 // U+0323: COMBINING DOT BELOW
 let str = '\u1E9B\u0323';
 
-
 // Canonically-composed form (NFC)
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
 str.normalize('NFC'); // '\u1E9B\u0323'
 str.normalize();      // same as above
-
 
 // Canonically-decomposed form (NFD)
 
@@ -183,12 +179,10 @@ str.normalize();      // same as above
 // U+0307: COMBINING DOT ABOVE
 str.normalize('NFD'); // '\u017F\u0323\u0307'
 
-
 // Compatibly-composed (NFKC)
 
 // U+1E69: LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 str.normalize('NFKC'); // '\u1E69'
-
 
 // Compatibly-decomposed (NFKD)
 

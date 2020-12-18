@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}</div>
 
-
-
 <p>The new <code><var>locales</var></code> and <code><var>options</var></code> arguments let applications specify the language whose sort order should be used and customize the behavior of the function. In older implementations, which ignore the <code><var>locales</var></code> and <code><var>options</var></code> arguments, the locale and sort order used are entirely implementation-dependent.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -56,11 +54,9 @@ tags:
 <p>Negative and positive integer results vary between browsers (as well as between browser versions) because the W3C specification only mandates negative and positive values. Some browsers may return <code>-2</code> or <code>2</code>, or even some other negative or positive value.</p>
 </div>
 
-
 <h2 id="Performance">Performance</h2>
 
 <p>When comparing large numbers of strings, such as in sorting large arrays, it is better to create an {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object and use the function provided by its {{jsxref("Collator.prototype.compare", "compare")}} property.</p>
-
 
 <h2 id="Examples">Examples</h2>
 

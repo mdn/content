@@ -170,7 +170,6 @@ var p5 = new Promise((resolve, reject) =&gt; {
   reject(new Error('reject'));
 });
 
-
 // Using .catch:
 Promise.all([p1, p2, p3, p4, p5])
 .then(values =&gt; {

@@ -32,7 +32,6 @@ var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
-
 console.log(speechRecognitionList[0].src); // should return the same as the contents of the grammar variable
 console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in line 4.
 </pre>
@@ -55,8 +54,6 @@ console.log(speechRecognitionList[0].weight); // should return 1 - the same as t
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.SpeechGrammar.weight")}}</p>
 

@@ -39,7 +39,6 @@ var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
 
 <pre class="brush: js example-good">[1, 3, 2].sort();   // [1, 2, 3]
 
-
 var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
 [1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]</pre>
 

@@ -142,8 +142,6 @@ Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
 
-
-
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false &gt;
 &lt;head prefix="og: http://ogp.me/ns#"&gt;
@@ -302,7 +300,6 @@ from django.shortcuts import render
 
 from .models import Team
 
-
 def junior(request):
     list_teams = Team.objects.filter(team_type__exact="junior")
     context = {'list': list_teams}
@@ -320,8 +317,6 @@ def junior(request):
 <p>In a following module we'll help you choose the best Web Framework for your first site.</p>
 
 <p>{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</p>
-
-
 
 <h2 id="In_this_module">In this module</h2>
 

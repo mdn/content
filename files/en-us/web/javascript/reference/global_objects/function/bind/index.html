@@ -174,13 +174,11 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-
 //  not supported in the polyfill below,
 
 //  works fine with native bind:
 
 const YAxisPoint = Point.bind(null, 0/*x*/);
-
 
 const emptyObj = {};
 const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
@@ -335,7 +333,6 @@ if (!Function.prototype.bind) (function(){
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Function.bind")}}</p>
 </div>

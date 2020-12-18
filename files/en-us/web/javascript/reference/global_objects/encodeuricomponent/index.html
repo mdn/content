@@ -99,7 +99,6 @@ var header = "Content-Disposition: attachment; filename*=UTF-8''"
 console.log(header);
 // logs "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
 
-
 function encodeRFC5987ValueChars(str) {
     return encodeURIComponent(str).
         // Note that although RFC3986 reserves "!", RFC5987 does not,
@@ -139,8 +138,6 @@ function encodeRFC5987ValueChars2(str) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.encodeURIComponent")}}</p>
 

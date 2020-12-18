@@ -177,7 +177,6 @@ ocn.toString = toString; // since new object lacks method then assign it directl
 &gt; ocn.toString() // shows "[object Object]"
 &gt; "ocn is: " + ocn // shows "ocn is: [object Object]"
 
-
 ob={}; ob.pn=ocn; ob.po=oco; // create a compound object (same as before)
 
 &gt; ShowProperties(ob) // display top-level properties
@@ -295,11 +294,9 @@ MyClass.prototype.myMethod = function() {
 // create an object with null as prototype
 o = Object.create(null);
 
-
 o = {};
 // is equivalent to:
 o = Object.create(Object.prototype);
-
 
 // Example where we create an object with a couple of
 // sample properties. (Note that the second parameter
@@ -326,7 +323,6 @@ o = Object.create(Object.prototype, {
   }
 });
 
-
 function Constructor() {}
 o = new Constructor();
 // is equivalent to:
@@ -334,7 +330,6 @@ o = Object.create(Constructor.prototype);
 // Of course, if there is actual initialization code
 // in the Constructor function,
 // the Object.create() cannot reflect it
-
 
 // Create a new object whose prototype is a new, empty
 // object and add a single property 'p', with value 42.
@@ -387,7 +382,6 @@ o2 = Object.create({p: 42}) */
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Object.create")}}</p>
 </div>

@@ -16,7 +16,6 @@ tags:
 
 <p>For the {{event("dragenter")}} and {{event("dragover")}} events, <code>dropEffect</code> will be initialized based on what action the user is requesting. How this is determined is platform specific, but typically the user can press modifier keys such as the alt key to adjust the desired action. Within event handlers for {{event("dragenter")}} and {{event("dragover")}} events, <code>dropEffect</code> should be modified if a different action is desired than the action that the user is requesting.</p>
 
-
 <p>For the {{event("drop")}} and {{event("dragend")}} events, <code>dropEffect</code> will be set to the action that was desired, which will be the value <code>dropEffect</code> had after the last {{event("dragenter")}} or {{event("dragover")}} event. In a {{event("dragend")}} event, for instance, if the desired dropEffect is "move", then the data being dragged should be removed from the source.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -127,8 +126,6 @@ function dragover_handler(ev) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.DataTransfer.dropEffect")}}</p>
 
