@@ -32,7 +32,7 @@ tags:
  </ul>
  </dd>
  <dt>{{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported barcode format types.</dd>
+ <dd>Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported <a href="/en-US/docs/Web/API/Barcode_Detection_API#Supported_barcode_formats">barcode format types</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -53,10 +53,10 @@ if (barcodeDetector) {
 
 <h3 id="Getting_Supported_Formats">Getting Supported Formats</h3>
 
-<p>The following example calls the <code>getSupportFormat()</code> method and logs the results to the console.</p>
+<p>The following example calls the <code>getSupportFormat()</code> static method and logs the results to the console.</p>
 
 <pre class="brush: js notranslate">// check supported types
-barcodeDetector.getSupportedFormats()
+BarcodeDetector.getSupportedFormats()
   .then(formats =&gt; {
     supportedFormats.forEach(format =&gt; console.log(format));
   });</pre>
