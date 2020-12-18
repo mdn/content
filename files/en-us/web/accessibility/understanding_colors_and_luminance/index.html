@@ -26,7 +26,7 @@ tags:
 
 <p>When working with color, it's important to know which "color space" you are working in, as different color spaces map to different measurement systems. Currently, the <strong>RGB</strong> color space predominates as the space web developers work in.  <strong>HEX</strong>, <strong>RGB</strong> and <strong>HSL</strong> color spaces all are measured differently.  Conversions between the color spaces are usually needed. Because of the current domination of the <strong>RGB</strong> color space in measuring color output, most calculations in this document are presumed to be in the <strong>RGB </strong>color space, and very specifically, in the <strong>sRGB </strong>color space. </p>
 
-<h2 id="The_sRGB_color_space"><strong>The sRGB color space </strong></h2>
+<h2 id="The_sRGB_color_space">The sRGB color space </h2>
 
 <p>The MDN document, <strong><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></strong> notes "<em>The  <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong> <strong><a href="/en-US/docs/Web/CSS/CSS_Types">data type</a></strong> represents a color in the </em><strong><em><a href="https://en.wikipedia.org/wiki/SRGB" rel="noopener">sRGB color space</a>.</em>"</strong>  Color has many ways of being defined, including <strong>RGB</strong>, <strong>RGB decimal</strong>, <strong>RGB percent</strong>, <strong>HSL</strong>, <strong>CMYK</strong> among others.</p>
 
@@ -122,7 +122,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>To summarize, color is as much about human physiology and perception in the brain as it is the measurement of light coming from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast.  Light, and its measurements, are linear, but human vision and human perception are not.</p>
 
-<h2 id="Color_Combinations"><strong>Color Combinations</strong></h2>
+<h2 id="Color_Combinations">Color Combinations</h2>
 
 <p>Contrast alone is not enough when it comes to accessibility considerations.  In the case of animation, certain color combinations are more likely to cause photosensitive seizures to those who are susceptible to them than others.  For example, alternating flashes between red and blue is more problematic than alternating flashes between green and blue. It has been theorized that this is because the "red" sensitive cones of our eyes, which tend to cluster around the fovea (near the center) are physically located at a different location than the "blue" sensitive cones of our eyes, which are located away from the fovea and towards the rims. The electrical signals that go from eye to brain have much to resolve between them as the information is processed in our brains.</p>
 
@@ -158,7 +158,7 @@ em { color: rgba(100%, 0%, 0%, 100%); }
 
 <p>There is a loss of saturation at the extremes of luminance, at the extremes of black and white.  NASA's article, <strong><a href="https://colorusage.arc.nasa.gov/design_lum_1.php">Luminance Contrast in Color Graphics</a></strong>, in the section titled, <strong>"The effect of luminance on saturation", </strong>points out that there is a loss of saturation at low luminances. and also, "<em>..the loss of saturation at high luminances--the colors converge on white.</em>"</p>
 
-<h2 id="The_Special_Case_of_Red"><strong>The Special Case of "Red" </strong></h2>
+<h2 id="The_Special_Case_of_Red">The Special Case of "Red" </h2>
 
 <p>Not all colors ("hue") are processed the same way by our brains.  Human physiology and psychology are affected by the color "red" generally speaking, in ways different from that of other colors. We respond physiologically as well as psychologically to colors. For example, it has been demonstrated that <strong><a href="https://www.sciencedaily.com/releases/2009/09/090925092858.htm">some colors are more likely to cause epileptic fits than others</a></strong>; There is an interesting observation in a discussion thread, "<strong><a href="https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options">What is the “grayscale” setting for in accessibility options?</a>"</strong> in which one of the participants states: "<em>I have photo-triggered ocular migraines and wish everything had a greyscale option. Even better a red or violet scale, but that is probably very specific to me</em>."</p>
 
