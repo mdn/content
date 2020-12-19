@@ -67,7 +67,7 @@ tags:
 <p>For these reasons, pipelining has been superseded by a better algorithm, <em>multiplexing</em>, that is used by HTTP/2.</p>
 </div>
 
-<p>By default, <a href="/en-US/docs/Web/HTTP" title="en/HTTP">HTTP</a> requests are issued sequentially. The next request is only issued once the response to the current request has been received. As they are affected by network latencies and bandwidth limitations, this can result in significant delay before the next request is <em>seen</em> by the server.</p>
+<p>By default, <a href="/en-US/docs/Web/HTTP">HTTP</a> requests are issued sequentially. The next request is only issued once the response to the current request has been received. As they are affected by network latencies and bandwidth limitations, this can result in significant delay before the next request is <em>seen</em> by the server.</p>
 
 <p>Pipelining is the process to send successive requests, over the same persistent connection, without waiting for the answer. This avoids latency of the connection. Theoretically, performance could also be improved if two HTTP requests were to be packed into the same TCP message. The typical <a href="https://en.wikipedia.org/wiki/Maximum_segment_size">MSS</a> (Maximum Segment Size), is big enough to contain several simple requests, although the demand in size of HTTP requests continues to grow.</p>
 

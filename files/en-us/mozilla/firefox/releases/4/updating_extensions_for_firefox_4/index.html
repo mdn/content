@@ -56,7 +56,7 @@ tags:
 
 <h2 id="Threading">Threading</h2>
 
-<p>You can no longer pass JavaScript objects between threads. This renders the Thread Manager mostly useless for add-on developers, unfortunately, and there aren't at this time many alternatives. It's possible that in the future the <a href="/en/DOM/ChromeWorker" title="en/DOM/ChromeWorker"><code>ChromeWorker</code></a> will be improved to fill the void.</p>
+<p>You can no longer pass JavaScript objects between threads. This renders the Thread Manager mostly useless for add-on developers, unfortunately, and there aren't at this time many alternatives. It's possible that in the future the <a href="/en/DOM/ChromeWorker"><code>ChromeWorker</code></a> will be improved to fill the void.</p>
 
 <h2 id="Network_redirects">Network redirects</h2>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>The first, and better, solution is to stop accessing <code>HWND</code>s and instead use Web features or XUL to implement your extension. There are a lot of new features in Firefox 4 that make possible a lot of things that used to require native code, so you may no longer need to do this.</p>
 
-<p>If you find that this doesn't work, and you still need to directly access <code>HWND</code>s, you may find that your only solution is to write an <a href="/en/NPAPI" title="en/NPAPI">NPAPI</a> plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific <code>HWND</code>s you were using no longer exist.</p>
+<p>If you find that this doesn't work, and you still need to directly access <code>HWND</code>s, you may find that your only solution is to write an <a href="/en/NPAPI">NPAPI</a> plugin that does the work. This may be a lot of work, but it should work. Of course, this may not help you if the specific <code>HWND</code>s you were using no longer exist.</p>
 
 <h2 id="Development_and_testing_tips">Development and testing tips</h2>
 

@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Compatible_by_default">Compatible by default</h2>
 
-<p>The first and most important thing to note is that starting in Firefox 10, add-ons are assumed to be compatible by default. Unless you use the <a href="/en/Install_Manifests#strictCompatibility" title="en/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> flag in your manifest, Firefox will no longer mark your add-on as incompatible after an upgrade to Firefox 10 or later. You can use that flag to ensure that an add-on that is likely to break will not try to run in updated copies of Firefox. It's worth noting that add-ons that have binary components will always be strictly checked for compatibility, since binary components always need to be recompiled for each major Firefox release.</p>
+<p>The first and most important thing to note is that starting in Firefox 10, add-ons are assumed to be compatible by default. Unless you use the <a href="/en/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> flag in your manifest, Firefox will no longer mark your add-on as incompatible after an upgrade to Firefox 10 or later. You can use that flag to ensure that an add-on that is likely to break will not try to run in updated copies of Firefox. It's worth noting that add-ons that have binary components will always be strictly checked for compatibility, since binary components always need to be recompiled for each major Firefox release.</p>
 
 <div class="note"><strong>Note:</strong> You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.</div>
 
@@ -65,6 +65,6 @@ tags:
 <ul>
  <li>All binary components on Windows should be built with ASLR (address space layout randomization) support enabled. While this is not <strong>yet</strong> required, it may be in the future, and not enabling it results in a performance penalty.</li>
  <li>A bug in regular expression handling that was introduced in Firefox 7 has been fixed. This can change the result of some regular expressions, so be aware of it.</li>
- <li>You can now <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest" title="en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">dynamically load and unload chrome.manifest files in bootstrapped add-ons</a>.</li>
+ <li>You can now <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">dynamically load and unload chrome.manifest files in bootstrapped add-ons</a>.</li>
  <li>The <code>mouseenter</code> and <code>mouseleave</code> events are now supported.</li>
 </ul>

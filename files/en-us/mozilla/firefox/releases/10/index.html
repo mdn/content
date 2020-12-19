@@ -71,22 +71,22 @@ tags:
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>The <a href="/en/DOM/CanvasRenderingContext2D#createPattern%28%29" title="en/DOM/CanvasRenderingContext2D#createPattern%28%29"><code>createPattern()</code></a> method now throws an exception if a zero-sized source canvas is specified.</li>
- <li>If you use a non-finite value for any of the numeric parameters to <a href="/en/DOM/CanvasRenderingContext2D#putImageData%28%29" title="en/DOM/CanvasRenderingContext2D#putImageData%28%29"><code>putImageData()</code></a>, the call is now silently ignored instead of throwing an exception, in keeping with the specification.</li>
+ <li>The <a href="/en/DOM/CanvasRenderingContext2D#createPattern%28%29"><code>createPattern()</code></a> method now throws an exception if a zero-sized source canvas is specified.</li>
+ <li>If you use a non-finite value for any of the numeric parameters to <a href="/en/DOM/CanvasRenderingContext2D#putImageData%28%29"><code>putImageData()</code></a>, the call is now silently ignored instead of throwing an exception, in keeping with the specification.</li>
 </ul>
 
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
  <li>Firefox 10 now supports the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
- <li><a href="/en/WebGL#WebGL_debugging_and_testing" title="en/WebGL#WebGL_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
+ <li><a href="/en/WebGL#WebGL_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
 </ul>
 
 <h4 id="Web_Workers">Web Workers</h4>
 
 <ul>
  <li>The attribute <code>XMLHttpRequest.responseType</code> and <code>XMLHttpRequest.response</code> are now available from inside <a href="/en/DOM/Worker/Functions_available_to_workers#section_2">Workers</a>.</li>
- <li>The <a href="/en/DOM/Worker#Worker()" title="En/DOM/Worker#Worker()"><code>Worker()</code></a> constructor now accepts <a href="/en/data_URIs" title="data URIs">data URIs</a>.</li>
+ <li>The <a href="/en/DOM/Worker#Worker()"><code>Worker()</code></a> constructor now accepts <a href="/en/data_URIs" title="data URIs">data URIs</a>.</li>
 </ul>
 
 <h4 id="IndexedDB">IndexedDB</h4>
@@ -94,14 +94,14 @@ tags:
 <p>Great progress has been made to update IndexedDB to the latest draft specification. This effort will continue in Firefox 11.</p>
 
 <ul>
- <li>The <a href="/en/IndexedDB/IDBIndex#count" title="en/IndexedDB/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en/IndexedDB/IDBObjectStore#count" title="en/IndexedDB/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
- <li>The <a href="/en/IndexedDB/IDBCursor#advance" title="en/IndexedDB/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
- <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore" title="en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
+ <li>The <a href="/en/IndexedDB/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en/IndexedDB/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
+ <li>The <a href="/en/IndexedDB/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
+ <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
  <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest" title="IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
- <li>The methods <a href="/en/IndexedDB/IDBObjectStore#delete()" title="en/IndexedDB/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en/IndexedDB/IDBCursor#delete()" title="en/IndexedDB/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
- <li>The method <a href="/en/IndexedDB/IDBDatabase#setVersion()" title="en/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en/IndexedDB/IDBFactory#open" title="en/IndexedDB/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en/IndexedDB/IDBVersionChangeRequest" title="en/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en/IndexedDB/IDBOpenDBRequest" title="en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
+ <li>The methods <a href="/en/IndexedDB/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en/IndexedDB/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
+ <li>The method <a href="/en/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en/IndexedDB/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
  <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
- <li>The method <a href="/en/IndexedDB/IDBFactory#deleteDatabase%28%29" title="en/IndexedDB/IDBFactory#deleteDatabase%28%29"><code>IDBFactory.deleteDatabase()</code></a> method has been added.</li>
+ <li>The method <a href="/en/IndexedDB/IDBFactory#deleteDatabase%28%29"><code>IDBFactory.deleteDatabase()</code></a> method has been added.</li>
  <li>Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.</li>
 </ul>
 
@@ -113,17 +113,17 @@ tags:
  <li>The ESC key no longer incorrectly results in the {{ domxref("window.oninput") }} handler incorrectly getting called.</li>
  <li>The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
  <li>The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.</li>
- <li>The {{ domxref("XMLHttpRequest") }} <code>responseType</code> "<code>moz-json</code>" <a href="/en/Firefox_9_for_developers#DOM" title="en/Firefox_9_for_developers#DOM">introduced in Firefox 9</a> has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}</li>
+ <li>The {{ domxref("XMLHttpRequest") }} <code>responseType</code> "<code>moz-json</code>" <a href="/en/Firefox_9_for_developers#DOM">introduced in Firefox 9</a> has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See <a href="/En/CSS/Using_CSS_transforms#3D_specific_CSS_properties" title="En/CSS/Using_CSS_transforms#3D_specific_CSS_properties">Using CSS transforms</a> for details.</li>
+ <li>CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See <a href="/En/CSS/Using_CSS_transforms#3D_specific_CSS_properties">Using CSS transforms</a> for details.</li>
  <li>Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: <code>-moz-isolation</code> and <code>-moz-plaintext</code>. The <code>-moz-isolation</code> value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with <code>unicode-bidi:-moz-isolation</code> behaves like a {{ HTMLElement("bdi") }} element. The <code>-moz-plaintext</code> indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.</li>
  <li>The CSS {{ cssxref("linear-gradient") }} and {{ cssxref("repeating-linear-gradient") }} properties have been updated to support the new <code>to</code> syntax and the <em>magic corner</em> algorithm. This allows to give a precise color on the corner of a gradient-filled box.</li>
- <li>The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the <code>text-overflow</code> property is set to overflow on only one <a href="/en/CSS/text-overflow#Gecko_notes" title="en/CSS/text-overflow#Gecko_notes">has been corrected</a>.</li>
- <li>Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements <a href="/en/CSS/position#Gecko_notes" title="en/CSS/position#Gecko_notes">has been fixed</a>. <strong>This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.</strong></li>
+ <li>The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the <code>text-overflow</code> property is set to overflow on only one <a href="/en/CSS/text-overflow#Gecko_notes">has been corrected</a>.</li>
+ <li>Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements <a href="/en/CSS/position#Gecko_notes">has been fixed</a>. <strong>This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.</strong></li>
  <li>Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. <strong>This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.</strong></li>
 </ul>
 
@@ -148,21 +148,21 @@ tags:
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
-<p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en/Firefox/Updating_add-ons_for_Firefox_10" title="en/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
+<p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
 
 <div class="note"><strong>Note:</strong> The old <a href="/en/PRBool" title="PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
 
 <h3 id="Manifests">Manifests</h3>
 
 <ul>
- <li>Support for <a href="/en/Install_Manifests#strictCompatibility" title="en/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to <code>true</code> the add-on will be disabled if the application version is greater than <code>&lt;em:maxVersion&gt;</code>. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, <strong>but not</strong> if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).</li>
+ <li>Support for <a href="/en/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to <code>true</code> the add-on will be disabled if the application version is greater than <code>&lt;em:maxVersion&gt;</code>. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, <strong>but not</strong> if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).</li>
  <li>If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the <code>strictCompatibility</code> flag in their manifests, you can set the <code>extensions.strictCompatibility</code> preference to <code>true</code>.</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>
 
 <ul>
- <li>Bootstrapped add-ons using a <a href="/en/Chrome_Registration" title="en/chrome.manifest">chrome.manifest</a> file now have the manifest file registered automatically. See the section <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest" title="en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
+ <li>Bootstrapped add-ons using a <a href="/en/Chrome_Registration">chrome.manifest</a> file now have the manifest file registered automatically. See the section <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
 </ul>
 
 <h3 id="XPConnect">XPConnect</h3>
@@ -174,7 +174,7 @@ tags:
 <h3 id="Interface_changes">Interface changes</h3>
 
 <ul>
- <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. <strong>XXX need to <a href="/En/Using_an_External_Spell-checker" title="en/Using_an_External_Spell-checker">update docs</a> on how to actually do this.</strong></li>
+ <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. <strong>XXX need to <a href="/En/Using_an_External_Spell-checker">update docs</a> on how to actually do this.</strong></li>
  <li>The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.</li>
  <li>The <code>nsIDocumentViewer</code> interface has been merged into {{ interface("nsIContentViewer") }}.</li>
  <li>The {{ interface("nsIURIFixup") }} interface has a new flag, <code>FIXUP_FLAG_USE_UTF8</code>, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.</li>
@@ -183,7 +183,7 @@ tags:
 <h3 id="Plug-in_changes">Plug-in changes</h3>
 
 <ul>
- <li>The <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs" title="en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs">new variable <code>NPNVdocumentOrigin</code></a> has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.</li>
+ <li>The <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs">new variable <code>NPNVdocumentOrigin</code></a> has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.</li>
 </ul>
 
 <h3 id="Build_system_changes">Build system changes</h3>

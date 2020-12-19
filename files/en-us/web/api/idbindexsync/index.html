@@ -15,7 +15,7 @@ tags:
 <p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBIndexSync</code> interface of the <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> provides synchronous access to an <a href="/en/IndexedDB#gloss_index" title="en/IndexedDB#gloss index">index</a> in a database.</p>
+<p>The <code>IDBIndexSync</code> interface of the <a href="/en/IndexedDB">IndexedDB API</a> provides synchronous access to an <a href="/en/IndexedDB#gloss_index" title="en/IndexedDB#gloss index">index</a> in a database.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -25,22 +25,22 @@ tags:
    <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/IDBDatabaseException" title="IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>any <a href="#get">get</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>any <a href="#get">get</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>any <a href="#getObject">getObject</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>any <a href="#getObject">getObject</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#openCursor">openCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange" title="en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#openCursor">openCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#openObjectCursor">openObjectCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange" title="en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#openObjectCursor">openObjectCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>any <a href="#put">put</a> (in any value, in optional any key) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>any <a href="#put">put</a> (in any value, in optional any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove">remove</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a> (in any key) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>

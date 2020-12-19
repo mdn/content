@@ -21,7 +21,7 @@ tags:
 
 <ul>
  <li>If the key range is not specified or is null, then the range includes all the records.</li>
- <li>A <a href="/en/IndexedDB/IDBSuccessEvent" title="en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the result object.
+ <li>A <a href="/en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the result object.
   <ul>
    <li>If at least one record matches the key range, then the <code>result</code> property of the event is set to the new {{domxref("IDBCursorWithValue")}} object; the <code><a href="/en/IndexedDB/IDBCursor#attr_value" title="en/IndexedDB/IDBCursor#attr value">value</a></code> of the cursor object is set to a structured clone of the referenced value.</li>
    <li>If no records match the key range then the <code>result</code> property of the event is set to <code>null</code>.</li>
@@ -43,7 +43,7 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
  <dt>range {{optional_inline}}</dt>
  <dd>A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is passed, this will default to a key range that selects all the records in this object store.</dd>
  <dt>direction {{optional_inline}}</dt>
- <dd>The cursor's <a href="/en/IndexedDB/IDBCursor#Constants" title="en/indexedDB#gloss direction">direction</a>. See <a href="/en/IndexedDB/IDBCursor#Constants" title="en/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible values.</dd>
+ <dd>The cursor's <a href="/en/IndexedDB/IDBCursor#Constants" title="en/indexedDB#gloss direction">direction</a>. See <a href="/en/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible values.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

@@ -40,7 +40,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <p>{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}</p>
 
-<p>The list of properties available in the DOM from the <code>style</code> property is given on the <a href="/en-US/docs/DOM/CSS" title="en/DOM/CSS">DOM CSS Properties List</a> page.</p>
+<p>The list of properties available in the DOM from the <code>style</code> property is given on the <a href="/en-US/docs/DOM/CSS">DOM CSS Properties List</a> page.</p>
 
 <p>To modify styles to a document using CSS syntax, one can insert rules or insert {{HTMLElement("style")}} tags whose <code>innerHTML</code> property is set to the desired CSS.</p>
 
@@ -91,11 +91,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
-<p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element. See <a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> in the examples chapter for more information on how to use this method.</p>
+<p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element. See <a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> in the examples chapter for more information on how to use this method.</p>
 
 <h2 id="DOM_Style_Object">DOM Style Object</h2>
 
-<p>The <code>style</code> object represents an individual style statement. Unlike the individual rules available from the <code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> collection, the style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
+<p>The <code>style</code> object represents an individual style statement. Unlike the individual rules available from the <code><a href="/en/DOM/document.styleSheets">document.styleSheets</a></code> collection, the style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
 
 <p>More important than the two properties noted here is the use of the <code>style</code> object to set individual style properties on an element:</p>
 
@@ -130,7 +130,7 @@ function resetStyle(elemId) {
 
 <h3 id="DOM_Style_Object_SetAttribue">Using the setAttribute method</h3>
 
-<p>Note that you can also change style of an element by getting a reference to it and then use its <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> method to specify the CSS property and its value.</p>
+<p>Note that you can also change style of an element by getting a reference to it and then use its <code><a href="/en/DOM/element.setAttribute">setAttribute</a></code> method to specify the CSS property and its value.</p>
 
 <pre class="brush: js notranslate">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');

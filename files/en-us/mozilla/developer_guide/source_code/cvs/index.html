@@ -10,13 +10,13 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>Those doing active development can check out the latest source using CVS. This is the preferred method if you plan to provide patches and fix bugs, as it lets you get up-to-the-minute changes and merge them with your own.</p>
 
-<p>If you want to compile a product for release, it is generally better to <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives" title="en/Mozilla_Source_Code_(HTTP//FTP)">Download Mozilla Source Code</a> tarballs.</p>
+<p>If you want to compile a product for release, it is generally better to <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives">Download Mozilla Source Code</a> tarballs.</p>
 
 <h3 id="Getting_Started">Getting Started</h3>
 
 <p>CVS means "Concurrent Versioning System". To learn more about CVS in general, visit <a class="external" href="https://mozilla-version-control-tools.readthedocs.io/en/latest/hgmozilla/unifiedrepo.html">Read The Docs</a>.</p>
 
-<p>Anyone can check out (also known as "pull" or "download") the sources via CVS, but only certain people have the ability to check in (make changes, also known as "commit"). Those people are the <a class="external" href="https://wiki.mozilla.org/Modules">module owners</a> and their delegates. Read our document on <a class="external" href="/en-US/docs/Mozilla/Developer_guide/Introduction">hacking mozilla</a> to find out how to get the ability to check in. You may also wish to read about <a href="/en-US/docs/Archive/Using_SSH_to_connect_to_CVS" title="en/Using_SSH_to_connect_to_CVS">Using SSH to connect to CVS</a>.</p>
+<p>Anyone can check out (also known as "pull" or "download") the sources via CVS, but only certain people have the ability to check in (make changes, also known as "commit"). Those people are the <a class="external" href="https://wiki.mozilla.org/Modules">module owners</a> and their delegates. Read our document on <a class="external" href="/en-US/docs/Mozilla/Developer_guide/Introduction">hacking mozilla</a> to find out how to get the ability to check in. You may also wish to read about <a href="/en-US/docs/Archive/Using_SSH_to_connect_to_CVS">Using SSH to connect to CVS</a>.</p>
 
 <h4 id="Requirements">Requirements</h4>
 
@@ -66,13 +66,13 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>Multiple projects can be specified with commas: <code>MOZ_CO_PROJECT=suite,browser,xulrunner</code>.</p>
 
-<p><strong>Note</strong> that if you are using a custom <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File" title="en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
+<p><strong>Note</strong> that if you are using a custom <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
 
 <h3 id="Checking_Out_a_New_Source_Tree">Checking Out a New Source Tree</h3>
 
 <h4 id="Check_Tinderbox">Check Tinderbox</h4>
 
-<p>Before pulling a tree, you should always check the appropriate <a href="/en-US/docs/Archive/Mozilla/Creating_a_Mozilla_extension/Tinderbox" title="en/Tinderbox">Tinderbox</a> to make sure that the codebase is not broken. If there are red tinderboxes, it is usually advisable to wait until they are green before pulling a tree.</p>
+<p>Before pulling a tree, you should always check the appropriate <a href="/en-US/docs/Archive/Mozilla/Creating_a_Mozilla_extension/Tinderbox">Tinderbox</a> to make sure that the codebase is not broken. If there are red tinderboxes, it is usually advisable to wait until they are green before pulling a tree.</p>
 
 <h4 id="Branch_HEAD">Branch HEAD</h4>
 
@@ -81,7 +81,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 <pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co mozilla/client.mk
 </pre>
 
-<p>Note: if you have already set up a <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File" title="en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you may also need to check out the following files:</p>
+<p>Note: if you have already set up a <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you may also need to check out the following files:</p>
 
 <dl>
  <dt>Firefox </dt>
@@ -103,7 +103,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 <pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co -r BRANCH mozilla/client.mk
 </pre>
 
-<p>instead. To, for example, pull the Firefox 2.0/Thunderbird 2.0/SeaMonkey 1.1 development branch, replace BRANCH above with MOZILLA_1_8_BRANCH. For available branch tags in Mozilla, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/CVS_Tags" title="en/CVS_Tags">CVS Tags</a>.</p>
+<p>instead. To, for example, pull the Firefox 2.0/Thunderbird 2.0/SeaMonkey 1.1 development branch, replace BRANCH above with MOZILLA_1_8_BRANCH. For available branch tags in Mozilla, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/CVS_Tags">CVS Tags</a>.</p>
 
 <p>The information on pulling project specific <code>.mozconfig</code> files as listed in the <a href="#Branch_HEAD">previous section</a> apply to other branches than HEAD as well of course.</p>
 
@@ -123,7 +123,7 @@ $ make -f client.mk checkout MOZ_CO_PROJECT=<em>option,option</em>
 
 <p>If you want to check out the source code as it was at a specific time you can use the MOZ_CO_DATE variable. For example <code>MOZ_CO_DATE="20 Oct 2006 17:00 PDT"</code>.</p>
 
-<p>This can either be added to your <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File" title="en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, or specified on the command line, such as</p>
+<p>This can either be added to your <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, or specified on the command line, such as</p>
 
 <pre class="eval">$ cd mozilla
 $ make -f client.mk checkout MOZ_CO_DATE="20 Oct 2006 17:00 PDT" MOZ_CO_PROJECT=<em>option,option</em>
@@ -167,10 +167,10 @@ $ cvs up -r BRANCH client.mk
 <pre class="eval">$ cvs diff -u8p FILENAME
 </pre>
 
-<p>See <a href="/en/Creating_a_patch" title="en/Creating_a_patch">Creating a patch</a> for more information.</p>
+<p>See <a href="/en/Creating_a_patch">Creating a patch</a> for more information.</p>
 
 <h3 id="Converting_a_Downloaded_Source_Tree">Converting a Downloaded Source Tree</h3>
 
-<p>Downloaded source trees from mozilla.org (<a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives" title="en/Mozilla_Source_Code_(HTTP//FTP)">source tarballs</a>) are already set up with CVS information, like a normal checkout. You can update these trees like normal trees to the latest code, without special action. See previous section on how to update a source tree.</p>
+<p>Downloaded source trees from mozilla.org (<a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives">source tarballs</a>) are already set up with CVS information, like a normal checkout. You can update these trees like normal trees to the latest code, without special action. See previous section on how to update a source tree.</p>
 
 <p><span class="comment">interwiki link</span></p>
