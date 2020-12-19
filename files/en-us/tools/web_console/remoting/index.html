@@ -9,9 +9,9 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div><h2 id="Introduction">Introduction</h2>
 
-<p>This document describes the way Web Console remoting works. The Web Console is split between a client with its user interface, and the server which has listeners for all the things that happen in the tab. For communication between the server and the client we use the <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol" title="https://wiki.mozilla.org/Remote_Debugging_Protocol">Remote Debugging Protocol</a>. This architecture allows you to connect a Web Console client instance to a server running on B2G, Fennec or some other Firefox instance.</p>
+<p>This document describes the way Web Console remoting works. The Web Console is split between a client with its user interface, and the server which has listeners for all the things that happen in the tab. For communication between the server and the client we use the <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol">Remote Debugging Protocol</a>. This architecture allows you to connect a Web Console client instance to a server running on B2G, Fennec or some other Firefox instance.</p>
 
-<p>To better understand the architecture of the Web Console we recommend learning about the <a href="https://wiki.mozilla.org/Debugger_Architecture" title="https://wiki.mozilla.org/Debugger_Architecture">debugger architecture</a>.</p>
+<p>To better understand the architecture of the Web Console we recommend learning about the <a href="https://wiki.mozilla.org/Debugger_Architecture">debugger architecture</a>.</p>
 
 <div class="note">
 <p>The remote Web Console is a feature introduced in Firefox 18. This document describes the latest protocol, with changes that have been made since then.</p>
@@ -19,11 +19,11 @@ tags:
 
 <h2 id="The_WebConsoleActor_and_the_WebConsoleClient">The <code>WebConsoleActor</code> and the <code>WebConsoleClient</code></h2>
 
-<p>The <code>WebConsoleActor</code> lives in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js"><code>dbg-webconsole-actors.js</code></a>, in the <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> folder.</p>
+<p>The <code>WebConsoleActor</code> lives in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/dbg-webconsole-actors.js"><code>dbg-webconsole-actors.js</code></a>, in the <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a> folder.</p>
 
-<p>The <code>WebConsoleClient</code> lives in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm"><code>WebConsoleClient.jsm</code></a> (in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a>) and it is used by the Web Console when working with the Web Console actor.</p>
+<p>The <code>WebConsoleClient</code> lives in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/WebConsoleClient.jsm"><code>WebConsoleClient.jsm</code></a> (in <a href="http://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/webconsole/"><code>toolkit/devtools/webconsole</code></a>) and it is used by the Web Console when working with the Web Console actor.</p>
 
-<p>To see how the debugger is used in the Web Console code, look in <a href="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js" title="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js"><code>browser/devtools/webconsole/webconsole.js</code></a>, and search for <code>WebConsoleConnectionProxy</code>.</p>
+<p>To see how the debugger is used in the Web Console code, look in <a href="http://mxr.mozilla.org/mozilla-central/source/browser/devtools/webconsole/webconsole.js"><code>browser/devtools/webconsole/webconsole.js</code></a>, and search for <code>WebConsoleConnectionProxy</code>.</p>
 
 <p>The new Web Console actors are:</p>
 
@@ -111,7 +111,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>To listen to the tab navigation events you also need to attach to the tab actor for the given tab. The <code>tabNavigated</code> notification comes from tab actors.</p>
 
 <div class="warning">
-<p>Prior to Firefox 20 the Web Console actor provided a <code>LocationChange</code> listener, with an associated <code>locationChanged</code> notification. This is no longer the case: we have made changes to allow the Web Console client to reuse the <code>tabNavigated</code> notification (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a>).</p>
+<p>Prior to Firefox 20 the Web Console actor provided a <code>LocationChange</code> listener, with an associated <code>locationChanged</code> notification. This is no longer the case: we have made changes to allow the Web Console client to reuse the <code>tabNavigated</code> notification (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a>).</p>
 </div>
 
 <p>When page navigation starts the following packet is sent from the tab actor:</p>
@@ -264,7 +264,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Page_errors">Page errors</h2>
 
-<p>Page errors come from the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService" title="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a>. Each allowed page error is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError" title="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> object.</p>
+<p>Page errors come from the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a>. Each allowed page error is an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> object.</p>
 
 <p>The <code>pageError</code> packet is:</p>
 
@@ -296,15 +296,15 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Console_API_messages">Console API messages</h2>
 
-<p>The <a href="/en-US/docs/DOM/console" title="/en-US/docs/DOM/console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
+<p>The <a href="/en-US/docs/DOM/console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
 
-<p>We use the <code>ObjectActor</code> from <a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js" title="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> without a <code>ThreadActor</code>, to avoid slowing down the page scripts - the debugger deoptimizes JavaScript execution in the target page. The <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes" title="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes">lifetime of object actors</a> in the Web Console is different than the lifetime of these objects in the debugger - which is usually per pause or per thread. The Web Console manages the lifetime of <code>ObjectActors</code> manually.</p>
+<p>We use the <code>ObjectActor</code> from <a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> without a <code>ThreadActor</code>, to avoid slowing down the page scripts - the debugger deoptimizes JavaScript execution in the target page. The <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes">lifetime of object actors</a> in the Web Console is different than the lifetime of these objects in the debugger - which is usually per pause or per thread. The Web Console manages the lifetime of <code>ObjectActors</code> manually.</p>
 
 <div class="warning">
-<p>Prior to Firefox 23 we used a different actor (<code>WebConsoleObjectActor</code>) for working with JavaScript objects through the protocol. In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> we did a number of changes that allowed us to reuse the <code>ObjectActor</code> from the debugger.</p>
+<p>Prior to Firefox 23 we used a different actor (<code>WebConsoleObjectActor</code>) for working with JavaScript objects through the protocol. In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> we did a number of changes that allowed us to reuse the <code>ObjectActor</code> from the debugger.</p>
 </div>
 
-<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService" title="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js" title="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
+<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
 
 <p>For each console message we receive in the server, we send the following <code>consoleAPICall</code> packet to the client:</p>
 
@@ -338,7 +338,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <p>The <code>private</code> flag tells if the console API call comes from a private window/tab (added in Firefox 24).</p>
 
-<p>We have small variations for the object, depending on the console API call method - just like there are small differences in the console event object received from the observer service. To see these differences please look in the Console API implementation: <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js" title="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js">dom/base/ConsoleAPI.js</a>.</p>
+<p>We have small variations for the object, depending on the console API call method - just like there are small differences in the console event object received from the observer service. To see these differences please look in the Console API implementation: <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js">dom/base/ConsoleAPI.js</a>.</p>
 
 <h3 id="JavaScript_evaluation">JavaScript evaluation</h3>
 
@@ -456,7 +456,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 }
 </pre>
 
-<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href="/en-US/docs/Web/API/XMLHttpRequest" title="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> instance, that is: the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel" title="/en-US/docs/">nsIHttpChannel</a>'s notification is of an <a href="/en-US/docs/nsIXMLHttpRequest" title="/en-US/docs/nsIXMLHttpRequest">nsIXMLHttpRequest</a> interface.</p>
+<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> instance, that is: the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel" title="/en-US/docs/">nsIHttpChannel</a>'s notification is of an <a href="/en-US/docs/nsIXMLHttpRequest">nsIXMLHttpRequest</a> interface.</p>
 
 <p>The <code>private</code> flag tells if the network request comes from a private window/tab (added in Firefox 24).</p>
 
@@ -596,7 +596,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 </pre>
 
 <div class="note">
-<p>Starting with Firefox 19: for all of the header and cookie values in the above packets we use <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects" title="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects"><code>LongStringActor</code> grips</a> when the value is very long. This helps us avoid using too much of the network bandwidth.</p>
+<p>Starting with Firefox 19: for all of the header and cookie values in the above packets we use <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Objects"><code>LongStringActor</code> grips</a> when the value is very long. This helps us avoid using too much of the network bandwidth.</p>
 </div>
 
 <p>The <code>getRequestPostData</code> packet:</p>
@@ -670,9 +670,9 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <ul>
  <li>Firefox 18: initial version.</li>
- <li>Firefox 19: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787981" title="https://bugzilla.mozilla.org/show_bug.cgi?id=787981">bug 787981</a> - added <code>LongStringActor</code> usage in several places.</li>
- <li>Firefox 20: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a> - removed <code>locationChanged</code> packet and updated the <code>tabNavigated</code> packet for tab actors.</li>
- <li>Firefox 23: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> - removed the <code>WebConsoleObjectActor</code>. Now the Web Console uses the JavaScript debugger API and the <code>ObjectActor</code>.</li>
+ <li>Firefox 19: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787981">bug 787981</a> - added <code>LongStringActor</code> usage in several places.</li>
+ <li>Firefox 20: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792062">bug 792062</a> - removed <code>locationChanged</code> packet and updated the <code>tabNavigated</code> packet for tab actors.</li>
+ <li>Firefox 23: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> - removed the <code>WebConsoleObjectActor</code>. Now the Web Console uses the JavaScript debugger API and the <code>ObjectActor</code>.</li>
  <li>Firefox 23: added the <code>bindObjectActor</code> and <code>frameActor</code> options to the <code>evaluateJS</code> request packet.</li>
  <li>Firefox 24: new <code>private</code> flags for the console actor notifications, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=874061">bug 874061</a>. Also added the <code>lastPrivateContextExited</code> notification for the global console actor.</li>
  <li>Firefox 24: new <code>isXHR</code> flag for the <code>networkEvent</code> notification, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=859046">bug 859046</a>.</li>
@@ -683,6 +683,6 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Conclusions">Conclusions</h2>
 
-<p>As of this writing, this document is a dense summary of the work we did in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768096" title="https://bugzilla.mozilla.org/show_bug.cgi?id=768096">bug 768096</a> and subsequent changes. We try to keep this document up-to-date. We hope this is helpful for you.</p>
+<p>As of this writing, this document is a dense summary of the work we did in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768096">bug 768096</a> and subsequent changes. We try to keep this document up-to-date. We hope this is helpful for you.</p>
 
 <p>If you make changes to the Web Console server please update this document. Thank you!</p>

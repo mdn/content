@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p>There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to <a href="/en-US/docs/Advanced_styling_for_HTML_forms" title="/en-US/docs/Advanced_styling_for_HTML_forms">perform advanced styling</a> on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.</p>
+<p>There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to <a href="/en-US/docs/Advanced_styling_for_HTML_forms">perform advanced styling</a> on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.</p>
 
 <p>In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.</p>
 
@@ -307,7 +307,7 @@ tags:
    <td>{{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}</td>
   </tr>
   <tr>
-   <td colspan="3" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1">Check out the source code</a></td>
+   <td colspan="3" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -402,7 +402,7 @@ tags:
    <td>{{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}</td>
   </tr>
   <tr>
-   <td colspan="2" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2">Check out the source code</a></td>
+   <td colspan="2" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -418,11 +418,11 @@ tags:
 <ol>
  <li>{{domxref("element.classList","classList")}}</li>
  <li>{{domxref("EventTarget.addEventListener","addEventListener()")}}</li>
- <li><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code></li>
+ <li><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code></li>
  <li>{{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}</li>
 </ol>
 
-<p>Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code>. This is important because <code>Array</code> objects support the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an <code>Array</code> and because <code>forEach</code> is so convenient to use, we can easily add the support of <code>forEach</code> to {{domxref("NodeList")}} in order to make our life easier, like so:</p>
+<p>Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code>. This is important because <code>Array</code> objects support the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an <code>Array</code> and because <code>forEach</code> is so convenient to use, we can easily add the support of <code>forEach</code> to {{domxref("NodeList")}} in order to make our life easier, like so:</p>
 
 <pre class="brush: js notranslate">NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
@@ -578,7 +578,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3">Check out the source code</a></td>
+   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -670,7 +670,7 @@ window.addEventListener('load', function () {
   });
 });</pre>
 
-<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex" title="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.</p>
+<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.</p>
 
 <p>With that, we're done! Here's the result:</p>
 
@@ -685,7 +685,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4">Check out the source code</a></td>
+   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -696,15 +696,15 @@ window.addEventListener('load', function () {
 
 <p>We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!</p>
 
-<p>Fortunately, there is a solution and it's called <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA stands for "Accessible Rich Internet Application", and it's <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">a W3C specification</a> specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.</p>
+<p>Fortunately, there is a solution and it's called <a href="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA stands for "Accessible Rich Internet Application", and it's <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">a W3C specification</a> specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.</p>
 
 <h3 id="The_role_attribute">The <code>role</code> attribute</h3>
 
-<p>The key attribute used by <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> is the <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute. The <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the <code><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code> role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the <code>option</code> role).</p>
+<p>The key attribute used by <a href="/en-US/docs/Accessibility/ARIA">ARIA</a> is the <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute. The <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the <code><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code> role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the <code>option</code> role).</p>
 
 <p>It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role <code>grid</code>, and the {{HTMLElement("ul")}} element matches the role <code>list</code>. Because we use a {{HTMLElement("ul")}} element, we want to make sure the <code>listbox</code> role of our control will supersede the <code>list</code> role of the {{HTMLElement("ul")}} element. To that end, we will use the role <code>presentation</code>. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.</p>
 
-<p>To support the <code><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code> role, we just have to update our HTML like this:</p>
+<p>To support the <code><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code> role, we just have to update our HTML like this:</p>
 
 <pre class="brush: html notranslate">&lt;!-- We add the role="listbox" attribute to our top element --&gt;
 &lt;div class="select" role="listbox"&gt;
@@ -721,12 +721,12 @@ window.addEventListener('load', function () {
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note:</strong> Including both the <code>role</code> attribute and a <code>class</code> attribute is not necessary. Instead of using <code>.option</code> use the <code>[role="option] </code><a href="/en-US/docs/CSS/Attribute_selectors" title="/en-US/docs/CSS/Attribute_selectors">attribute selectors</a> in your CSS .</p>
+<p><strong>Note:</strong> Including both the <code>role</code> attribute and a <code>class</code> attribute is not necessary. Instead of using <code>.option</code> use the <code>[role="option] </code><a href="/en-US/docs/CSS/Attribute_selectors">attribute selectors</a> in your CSS .</p>
 </div>
 
 <h3 id="The_aria-selected_attribute">The <code>aria-selected</code> attribute</h3>
 
-<p>Using the <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute is not enough. <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: <code>aria-selected</code>.</p>
+<p>Using the <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> attribute is not enough. <a href="/en-US/docs/Accessibility/ARIA">ARIA</a> also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: <code>aria-selected</code>.</p>
 
 <p>The <code>aria-selected</code> attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our <code>updateValue()</code> function:</p>
 

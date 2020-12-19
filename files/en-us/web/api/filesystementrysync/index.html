@@ -33,22 +33,22 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getMetada" title="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo" title="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo" title="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString <a href="#toURL" title="#toURL">toURL</a>();</code></td>
+   <td><code>DOMString <a href="#toURL">toURL</a>();</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove" title="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DirectoryEntrySync <a href="#getParent" title="#getParent">getParent</a>();</code></td>
+   <td><code>DirectoryEntrySync <a href="#getParent">getParent</a>();</code></td>
   </tr>
  </tbody>
 </table>
@@ -307,7 +307,7 @@ tags:
 
 <h3 id="remove">remove()</h3>
 
-<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
+<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal"><code>removeRecursively()</code></a> instead.</p>
 
 <pre>void remove (
 ) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
@@ -341,7 +341,7 @@ tags:
   <tr>
    <td><code>INVALID_MODIFICATION_ERR</code></td>
    <td>
-    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
+    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
    </td>
   </tr>
   <tr>
@@ -353,7 +353,7 @@ tags:
 
 <h3 id="getParent">getParent()</h3>
 
-<p>Look up the parent <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
+<p>Look up the parent <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
 
 <pre>void getParent ();</pre>
 

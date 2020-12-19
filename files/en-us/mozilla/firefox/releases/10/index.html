@@ -10,7 +10,7 @@ tags:
 
 <p>Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
 
-<div class="note"><strong>Important note: </strong>Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a class="external" href="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/" title="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.</div>
+<div class="note"><strong>Important note: </strong>Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a class="external" href="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.</div>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -24,7 +24,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The method <code><a href="/en/JavaScript/Reference/Global_Objects/WeakMap" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>.set()</code> now returns <em><code>undefined</code></em>, instead of itself.</li>
+ <li>The method <code><a href="/en/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>.set()</code> now returns <em><code>undefined</code></em>, instead of itself.</li>
  <li>A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.</li>
  <li>You can no longer use <a href="/en/E4X" title="E4X">E4X</a> syntax while in <a href="/en/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">ECMAScript 5 strict mode</a> (that is, after <code>"use strict;"</code>).</li>
 </ul>
@@ -78,14 +78,14 @@ tags:
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
- <li>Firefox 10 now supports the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/" title="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
+ <li>Firefox 10 now supports the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
  <li><a href="/en/WebGL#WebGL_debugging_and_testing" title="en/WebGL#WebGL_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
 </ul>
 
 <h4 id="Web_Workers">Web Workers</h4>
 
 <ul>
- <li>The attribute <code>XMLHttpRequest.responseType</code> and <code>XMLHttpRequest.response</code> are now available from inside <a href="/en/DOM/Worker/Functions_available_to_workers#section_2" title="https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers#section_2">Workers</a>.</li>
+ <li>The attribute <code>XMLHttpRequest.responseType</code> and <code>XMLHttpRequest.response</code> are now available from inside <a href="/en/DOM/Worker/Functions_available_to_workers#section_2">Workers</a>.</li>
  <li>The <a href="/en/DOM/Worker#Worker()" title="En/DOM/Worker#Worker()"><code>Worker()</code></a> constructor now accepts <a href="/en/data_URIs" title="data URIs">data URIs</a>.</li>
 </ul>
 
@@ -96,8 +96,8 @@ tags:
 <ul>
  <li>The <a href="/en/IndexedDB/IDBIndex#count" title="en/IndexedDB/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en/IndexedDB/IDBObjectStore#count" title="en/IndexedDB/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
  <li>The <a href="/en/IndexedDB/IDBCursor#advance" title="en/IndexedDB/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
- <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex" title="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore" title="en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but simply ignore it.</li>
- <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29" title="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest" title="IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
+ <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore" title="en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but simply ignore it.</li>
+ <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest" title="IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
  <li>The methods <a href="/en/IndexedDB/IDBObjectStore#delete()" title="en/IndexedDB/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en/IndexedDB/IDBCursor#delete()" title="en/IndexedDB/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
  <li>The method <a href="/en/IndexedDB/IDBDatabase#setVersion()" title="en/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en/IndexedDB/IDBFactory#open" title="en/IndexedDB/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en/IndexedDB/IDBVersionChangeRequest" title="en/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en/IndexedDB/IDBOpenDBRequest" title="en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
  <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
@@ -108,7 +108,7 @@ tags:
 <h4 id="Other">Other</h4>
 
 <ul>
- <li>When the proper MIME type is passed, <code>image/svg+xml</code>, <a href="/en/DOM/DOMParser#Parsing_a_SVG_document" title="https://developer.mozilla.org/en/DOM/DOMParser#Parsing_a_SVG_document">the <code>DOMParser</code> now creates a <code>SVGDocument</code></a> when given a string with SVG.</li>
+ <li>When the proper MIME type is passed, <code>image/svg+xml</code>, <a href="/en/DOM/DOMParser#Parsing_a_SVG_document">the <code>DOMParser</code> now creates a <code>SVGDocument</code></a> when given a string with SVG.</li>
  <li>In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.</li>
  <li>The ESC key no longer incorrectly results in the {{ domxref("window.oninput") }} handler incorrectly getting called.</li>
  <li>The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>

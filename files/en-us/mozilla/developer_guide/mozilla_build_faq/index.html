@@ -128,7 +128,7 @@ git config core.eof lf
 	<dt>Can I build multiple Mozilla-based projects from a single source tree?</dt>
 	<dd>Yes! Each project must be built in its own objdir.</dd>
 	<dt>What is a .mozconfig file?</dt>
-	<dd>It tells which Mozilla application to build and contains configuration options. See <a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File" title="https://developer.mozilla.org/en/configuring_build_options#Using_a_.mozconfig_Configuration_File">Using a .mozconfig configuration file</a>.</dd>
+	<dd>It tells which Mozilla application to build and contains configuration options. See <a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">Using a .mozconfig configuration file</a>.</dd>
 	<dt>What is an objdir?</dt>
 	<dd>
 	<p>An objdir build refers to the process of creating the output files in a different place than where the source lives. This is a standard feature of most configure-based projects. It allows you to build for multiple configurations, including multiple platforms if you use a network filesystem, from a single source tree. It also avoids tainting your source tree so that you know that the files in your tree have not been modified by the build process.</p>
@@ -176,7 +176,7 @@ cd obj-debug
 	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatiblity is silly.</p>
 	</dd>
 	<dt>Why doesn't NSS use autoconf?</dt>
-	<dd>The NSS project is also used outside of the Mozilla project and the NSS project members did not feel that moving to autoconf was worth the cost. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=52990" title="https://bugzilla.mozilla.org/show_bug.cgi?id=52990">bug 52990</a> for details.</dd>
+	<dd>The NSS project is also used outside of the Mozilla project and the NSS project members did not feel that moving to autoconf was worth the cost. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=52990">bug 52990</a> for details.</dd>
 </dl>
 
 <h2 id="See_also">See also</h2>

@@ -21,7 +21,7 @@ tags:
 
 <p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic Concepts Behind IndexedDB">Basic Concepts About IndexedDB</a>.</p>
 
-<p>For the reference documentation on the IndexedDB API, see the <a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
+<p>For the reference documentation on the IndexedDB API, see the <a href="/en/IndexedDB">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
 
 <h2 id="pattern">Basic pattern</h2>
 
@@ -72,7 +72,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>See that? Opening a database is just like any other operation — you have to "request" it.</p>
 
-<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
+<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
 
 <p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
@@ -94,7 +94,7 @@ request.onsuccess = function(event) {
 
 <p>Which of the two functions, <code>onsuccess()</code> or <code>onerror()</code>, gets called? If everything succeeds, a success event (that is, a DOM event whose <code>type</code> property is set to <code>"success"</code>) is fired with <code>request</code> as its <code>target</code>. Once it is fired, the <code>onsuccess()</code> function on <code>request</code> is triggered with the success event as its argument. Otherwise, if there was any problem, an error event (that is, a DOM event whose <code>type</code> property is set to <code>"error"</code>) is fired at <code>request</code>. This triggers the <code><code>onerror()</code></code> function with the error event as its argument.</p>
 
-<p>The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">Storage limits</a>.)  </p>
+<p>The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits">Storage limits</a>.)  </p>
 
 <p>Obviously, browsers do not want to allow some advertising network or malicious website to pollute your computer, so browsers used to prompt the user the first time any given web app attempts to open an IndexedDB for storage. The user could choose to allow or deny access. Also, IndexedDB storage in browsers' privacy modes only lasts in-memory until the incognito session is closed (Private Browsing mode for Firefox and Incognito mode for Chrome, but in Firefox this is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">not implemented yet</a> as of April 2020 so you can't use IndexedDB in Firefox Private Browsing at all).</p>
 
@@ -142,11 +142,11 @@ request.onupgradeneeded = function(event) {
 
 <p>If the <code>onupgradeneeded</code> event exits successfully, the <code>onsuccess</code> handler of the open database request will then be triggered. </p>
 
-<p>Blink/Webkit supports the current version of the spec, as shipped in Chrome 23+ and Opera 17+; IE10+ does too. Other and older implementations don't implement the current version of the spec, and thus do not support the <code>indexedDB.open(name, version).onupgradeneeded</code> signature yet. For more information on how to upgrade the version of the database in older Webkit/Blink, see the <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
+<p>Blink/Webkit supports the current version of the spec, as shipped in Chrome 23+ and Opera 17+; IE10+ does too. Other and older implementations don't implement the current version of the spec, and thus do not support the <code>indexedDB.open(name, version).onupgradeneeded</code> signature yet. For more information on how to upgrade the version of the database in older Webkit/Blink, see the <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
 
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
-<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> or a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator" title="en/IndexedDB#gloss key generator">key generator</a>.</p>
+<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> or a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator" title="en/IndexedDB#gloss key generator">key generator</a>.</p>
 
 <p>The following table shows the different ways the keys are supplied:</p>
 
@@ -1321,9 +1321,9 @@ input {
 <h3 id="Reference">Reference</h3>
 
 <ul>
- <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
+ <li><a href="/en/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
  <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
 </ul>
@@ -1331,8 +1331,8 @@ input {
 <h3 id="Tutorials_and_guides">Tutorials and guides</h3>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>

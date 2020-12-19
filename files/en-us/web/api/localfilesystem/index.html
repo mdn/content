@@ -22,11 +22,11 @@ tags:
 
 <p>You request access to a sandboxed file system by calling <code>window.requestFileSystem().</code> The argument of a successful callback is the <code><a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> object, which has two properties: the name and root of the file system.</p>
 
-<p>You can call the method more than once if you want to create two file systems: one that's temporary and one that's persistent. (To learn more about the storage types, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types">Basic Concepts</a> article.) In most cases, you need to create only one file system, but in a few cases, it might be useful to create a second one. For example, if you were to create a mail app, you might create a temporary storage for caching assets (like images and attachments) to speed up performance, while creating persistent storage for unique data—such as drafts of emails that were composed while offline—that should not be lost before they are backed up into the cloud.  </p>
+<p>You can call the method more than once if you want to create two file systems: one that's temporary and one that's persistent. (To learn more about the storage types, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types">Basic Concepts</a> article.) In most cases, you need to create only one file system, but in a few cases, it might be useful to create a second one. For example, if you were to create a mail app, you might create a temporary storage for caching assets (like images and attachments) to speed up performance, while creating persistent storage for unique data—such as drafts of emails that were composed while offline—that should not be lost before they are backed up into the cloud.  </p>
 
 <h3 id="Using_persistent_storage">Using persistent storage</h3>
 
-<p>The <code>requestFileSystem()</code> method lets you ask for <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types"><code>PERSISTENT</code> or <code>TEMPORARY</code> storage</a>. Persistent storage is storage that stays in the browser unless the app or the user removes it, but the user must grant you permission before you can use it. In contrast, temporary storage is automatically granted without any user permission, but it can be expunged by the browser at any time.</p>
+<p>The <code>requestFileSystem()</code> method lets you ask for <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types"><code>PERSISTENT</code> or <code>TEMPORARY</code> storage</a>. Persistent storage is storage that stays in the browser unless the app or the user removes it, but the user must grant you permission before you can use it. In contrast, temporary storage is automatically granted without any user permission, but it can be expunged by the browser at any time.</p>
 
 <p>To use <code>PERSISTENT</code> storage with the File System API, Chrome exposes a requestQuota  API. So to request storage, you need to do something like the following:</p>
 
@@ -46,7 +46,7 @@ navigator.webkitPersistentStorage.requestQuota (
 
 <h3 id="Working_within_a_single_origin">Working within a single origin</h3>
 
-<p> The file system is sandboxed to a single origin. This means that your app cannot read, or write the files of another app's files. Your app cannot access files in an arbitrary folder (such as, My Pictures, My Documents) on the user's hard drive either. For more information about restrictions, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#Restrictions" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#Restrictions">Basic Concepts</a> article. </p>
+<p> The file system is sandboxed to a single origin. This means that your app cannot read, or write the files of another app's files. Your app cannot access files in an arbitrary folder (such as, My Pictures, My Documents) on the user's hard drive either. For more information about restrictions, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#Restrictions">Basic Concepts</a> article. </p>
 
 <h3 id="Example">Example</h3>
 
@@ -69,7 +69,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>void <a href="#requestFileSystem" title="#requestFileSystem">requestFileSystem</a> (in unsigned short <em>type</em>, in unsigned long long <em>size</em>, in FileSystemCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>); </code></td>
+   <td><code>void <a href="#requestFileSystem">requestFileSystem</a> (in unsigned short <em>type</em>, in unsigned long long <em>size</em>, in FileSystemCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>); </code></td>
   </tr>
   <tr>
    <td><code>void <a href="/#resolveLocalFileSystemURL" title="#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a> (in DOMString <em>url</em>, in EntryCallback <em>successCallback</em>, in optional ErrorCallback <em>errorCallback</em>);</code></td>
@@ -152,7 +152,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
   </tr>
   <tr>
    <td><code>SECURITY_ERROR</code></td>
-   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">article on basic concepts</a>.</td>
+   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">article on basic concepts</a>.</td>
   </tr>
  </thead>
 </table>
