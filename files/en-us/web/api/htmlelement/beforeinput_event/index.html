@@ -53,10 +53,10 @@ tags:
 
 <h3 id="Feature_Detection">Feature Detection</h3>
 
-<p>The following function returns true if <code>beforeinput</code> is supported.</p>
+<p>The following function returns true if <code>beforeinput</code>, and thus <code>getTargetRanges</code>, is supported.</p>
 
 <pre class="brush: js notranslate">function isBeforeInputEventAvailable() {
-  return typeof InputEvent.prototype.getTargetRanges === "function";
+  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
 }
 </pre>
 
