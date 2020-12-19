@@ -75,9 +75,9 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <pre class="language-js"><code>["a", ["b", "c"], {d:"d", e:"f"}]</code></pre>
  </dd>
  <dt><code>script</code></dt>
- <dd>If the referent is a function that is debuggee code, this is that function’s script, as a <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
+ <dd>If the referent is a function that is debuggee code, this is that function’s script, as a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
  <dt><code>environment</code></dt>
- <dd>If the referent is a function that is debuggee code, a <a href="Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the lexical environment enclosing the function when it was created. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
+ <dd>If the referent is a function that is debuggee code, a <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the lexical environment enclosing the function when it was created. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</dd>
  <dt><code>errorMessageName</code></dt>
  <dd>If the referent is an error created with an engine internal message template this is a string which is the name of the template; <code>undefined</code> otherwise.</dd>
  <dt><code>errorLineNumber</code></dt>
@@ -249,7 +249,7 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  <p>The<em>options</em> argument is as for <a href="Debugger.Frame#eval" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a>.</p>
  </dd>
  <dt><code>asEnvironment()</code></dt>
- <dd>If the referent is a global object, return the <a href="Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent’s global lexical scope. The global lexical scope’s enclosing scope is the global object. If the referent is not a global object, throw a <code>TypeError</code>.</dd>
+ <dd>If the referent is a global object, return the <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent’s global lexical scope. The global lexical scope’s enclosing scope is the global object. If the referent is not a global object, throw a <code>TypeError</code>.</dd>
  <dt><code>unwrap()</code></dt>
  <dd>If the referent is a wrapper that this <code>Debugger.Object</code>’s compartment is permitted to unwrap, return a <code>Debugger.Object</code> instance referring to the wrapped object. If we are not permitted to unwrap the referent, return <code>null</code>. If the referent is not a wrapper, return this <code>Debugger.Object</code> instance unchanged.</dd>
  <dt><code>unsafeDereference()</code></dt>

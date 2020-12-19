@@ -83,11 +83,11 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  </dd>
  <dt><code>script</code></dt>
  <dd>
- <p>If the referent is a function that is debuggee code, this is that function's script, as a <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</p>
+ <p>If the referent is a function that is debuggee code, this is that function's script, as a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</p>
  </dd>
  <dt><code>environment</code></dt>
  <dd>
- <p>If the referent is a function that is debuggee code, a <a href="Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the lexical environment enclosing the function when it was created. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</p>
+ <p>If the referent is a function that is debuggee code, a <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the lexical environment enclosing the function when it was created. If the referent is a function proxy or not debuggee code, this is <code>undefined</code>.</p>
  </dd>
  <dt><code>proxyHandler</code></dt>
  <dd>
@@ -230,7 +230,7 @@ var s = f(function () {});  // display name: s&lt;</code></pre>
  </dd>
  <dt><code>asEnvironment()</code></dt>
  <dd>
- <p>If the referent is a global object, return the <a href="Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent as a variable environment for evaluating code. If the referent is not a global object, throw a <code>TypeError</code>.</p>
+ <p>If the referent is a global object, return the <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance representing the referent as a variable environment for evaluating code. If the referent is not a global object, throw a <code>TypeError</code>.</p>
  </dd>
  <dt><code>setObjectWatchpoint(<em>handler</em>)</code><em>(future plan)</em></dt>
  <dd>

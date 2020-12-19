@@ -28,7 +28,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>To help you make sense of the instructions that follow (and so that you can modify them to meet your own needs if necessary), this section provides some background on what IDEs need in order to provide advanced code assistance, and what Eclipse CDT needs in particular.</p>
 
-<p>To be able to provide really good code assistance for a project's source code, IDEs like Eclipse need to carry out a thorough <a class="link-https" href="https://en.wikipedia.org/wiki/Static_program_analysis" title="https://en.wikipedia.org/wiki/Static_program_analysis">static analysis</a> of the project's source files, to build up a picture of the code (what Eclipse is trying to do when it "indexes" the source.) Static analysis involves parsing the source files, so naturally it can only produce good results if it has a sensible set of preprocessor defines, include paths and pre-include files for each source file. Since Eclipse doesn't initially have any of this information, the code assistance that it's able to provide out of the box is pretty broken.<br>
+<p>To be able to provide really good code assistance for a project's source code, IDEs like Eclipse need to carry out a thorough <a class="link-https" href="https://en.wikipedia.org/wiki/Static_program_analysis">static analysis</a> of the project's source files, to build up a picture of the code (what Eclipse is trying to do when it "indexes" the source.) Static analysis involves parsing the source files, so naturally it can only produce good results if it has a sensible set of preprocessor defines, include paths and pre-include files for each source file. Since Eclipse doesn't initially have any of this information, the code assistance that it's able to provide out of the box is pretty broken.<br>
  <br>
  For projects the size and complexity of Mozilla, it's impractical to manually configure Eclipse when there is a valid set of defines and includes paths for each of the different parts of the source code. Happily, Eclipse makes manual configuration unnecessary. Like some other IDEs, that are used with projects like Mozilla that have their own build system. Eclipse provides a tool that can collect the options that are passed to the compiler for each file that's compiled during an actual build. This process is sometimes called "build option discovery" or "compiler option discovery".</p>
 
@@ -68,7 +68,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>Turning off automatic indexing prevents the CPU intensive indexer from running at various stages during the steps below before we're ready.</p>
 
-<p>Select "General &gt; Content Types", expand "Text &gt; C Source File &gt; C++ Source File", click "Add" and add "*.mm". Eclipse CDT doesn't currently understand Objective-C files (although there is <a class="external" href="http://code.google.com/p/objectiveclipse/" title="http://code.google.com/p/objectiveclipse/">a project that promises to add Objective-C support</a>), so for now, this is the best we can do to give Eclipse a chance of expanding its understanding of the source into the Objective-C files.</p>
+<p>Select "General &gt; Content Types", expand "Text &gt; C Source File &gt; C++ Source File", click "Add" and add "*.mm". Eclipse CDT doesn't currently understand Objective-C files (although there is <a class="external" href="http://code.google.com/p/objectiveclipse/">a project that promises to add Objective-C support</a>), so for now, this is the best we can do to give Eclipse a chance of expanding its understanding of the source into the Objective-C files.</p>
 
 <p>Select "General &gt; Editors &gt; Text Editors". If you want line numbers, tick "Show line numbers". If you want a column marker to mark the 80th column to help with formatting code to Mozilla's 80 character line limit, tick "Show print margin" and set the value to 80.</p>
 
@@ -139,11 +139,11 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <h3 id="Build_option_discovery">Build option discovery</h3>
 
-<div class="note">This section requires that you have already <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build" title="https://developer.mozilla.org/En/Simple_Firefox_build">built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
+<div class="note">This section requires that you have already <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build">built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
 
 <p>As explained in the {{ anch("Code assistance") }} section above, to provide good code assistance Eclipse CDT needs to collect build information for the source files by processing a build log from a full, clean build made using -j1 -w. Since such a non-parallel, full build would take a very long time, we're going to cheat and set Eclipse's "Build" action to run jwatt's just-print-mozilla-build.py script instead. This script will complete in about 30 seconds on a warm tree (files cached in RAM) if your object directory is up to date, although Eclipse will take several minutes to process the "build output" that it produces.</p>
 
-<p>Download <a class="link-https" href="https://hg.mozilla.org/users/jwatt_jwatt.org/eclipse-cdt-tools/raw-file/tip/just-print-mozilla-build.py" title="https://hg.mozilla.org/users/jwatt_jwatt.org/eclipse-cdt-tools/raw-file/tip/just-print-mozilla-build.py">just-print-mozilla-build.py</a> and change its permissions to make it executable ('chmod a+x just-print-mozilla-build.py').</p>
+<p>Download <a class="link-https" href="https://hg.mozilla.org/users/jwatt_jwatt.org/eclipse-cdt-tools/raw-file/tip/just-print-mozilla-build.py">just-print-mozilla-build.py</a> and change its permissions to make it executable ('chmod a+x just-print-mozilla-build.py').</p>
 
 <p class="note">If you don't put just-print-mozilla-build.py somewhere in your PATH, then go back to the {{ anch("Initial project properties") }} section where you set just-print-mozilla-build.py and specify its absolute path instead of just its name.</p>
 
@@ -151,9 +151,9 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <h3 id="Additional_discovery_for_C11_mode">Additional discovery for C++11 mode</h3>
 
-<p><a href="/en-US/docs/Using_CXX_in_Mozilla_code" title="/en-US/docs/Using_CXX_in_Mozilla_code">As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
+<p><a href="/en-US/docs/Using_CXX_in_Mozilla_code">As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
 
-<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains" title="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
+<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
 
 <h3 id="Building_the_index">Building the index</h3>
 

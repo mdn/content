@@ -7,7 +7,7 @@ tags:
 ---
 <h3 id="Required_Software">Required Software</h3>
 
-<p><a class="external" href="http://www.opensolaris.org/" title="http://www.opensolaris.org/">OpenSolaris</a> (and therefore also Solaris 11) can build Mozilla with a few extra packages installed:</p>
+<p><a class="external" href="http://www.opensolaris.org/">OpenSolaris</a> (and therefore also Solaris 11) can build Mozilla with a few extra packages installed:</p>
 
 <ul>
  <li>OpenSolaris builds <strong>before</strong> <code>snv_133</code>:</li>
@@ -159,11 +159,11 @@ $ gmake -f client.mk build
 </ul>
 
 <ul>
- <li>If you met a crash when start/close your build of Firefox/Thunderbird with <code>MOZ_gdk_display_close</code> in core stack, you hit <a class="external" href="http://defect.opensolaris.org/bz/show_bug.cgi?id=12024" title="http://defect.opensolaris.org/bz/show_bug.cgi?id=12024">defect 12024</a> . Set <code>GTK_IM_MODULE=xim</code> to get around.</li>
+ <li>If you met a crash when start/close your build of Firefox/Thunderbird with <code>MOZ_gdk_display_close</code> in core stack, you hit <a class="external" href="http://defect.opensolaris.org/bz/show_bug.cgi?id=12024">defect 12024</a> . Set <code>GTK_IM_MODULE=xim</code> to get around.</li>
 </ul>
 
 <ul>
- <li>If you want to remote display from SPARC to x86 or x86 to SPARC, please apply the patch in <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526977" title="https://bugzilla.mozilla.org/show_bug.cgi?id=526977">Bug 526977</a>.</li>
+ <li>If you want to remote display from SPARC to x86 or x86 to SPARC, please apply the patch in <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526977">Bug 526977</a>.</li>
 </ul>
 
 <ul>

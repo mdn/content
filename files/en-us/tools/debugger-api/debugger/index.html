@@ -26,7 +26,7 @@ slug: Tools/Debugger-API/Debugger
  <dd>
  <p>A boolean value indicating whether asm.js code running inside this <code>Debugger</code> instance’s debuggee globals is invisible to Debugger API handlers and breakpoints. Setting this to <code>false</code> inhibits the ahead-of-time asm.js compiler and forces asm.js code to run as normal JavaScript. This is an accessor property with a getter and setter. It is initially <code>false</code> in a freshly created <code>Debugger</code> instance.</p>
 
- <p>Setting this flag to <code>true</code> is intended for uses of subsystems of the Debugger API (e.g, <a href="Debugger.Source" title="Debugger.Source"><code>Debugger.Source</code></a>) for purposes other than step debugging a target JavaScript program.</p>
+ <p>Setting this flag to <code>true</code> is intended for uses of subsystems of the Debugger API (e.g, <a href="Debugger.Source"><code>Debugger.Source</code></a>) for purposes other than step debugging a target JavaScript program.</p>
  </dd>
  <dt><code>allowWasmBinarySource</code></dt>
  <dd>A boolean value indicating whether WebAssembly sources will be available in binary form. The WebAssembly text generation will be disabled.</dd>
@@ -34,7 +34,7 @@ slug: Tools/Debugger-API/Debugger
  <dd>
  <p>A boolean value indicating whether code coverage should be enabled inside each debuggee of this <code>Debugger</code> instance. Changing this flag value will recompile all JIT code to add or remove code coverage instrumentation. Changing this flag when any frame of the debuggee is currently active on the stack will produce an exception.</p>
 
- <p>Setting this to <code>true</code> enables code coverage instrumentation, which can be accessed via the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> <code>getOffsetsCoverage</code> function. In some cases, the code coverage might expose information which pre-date the modification of this flag. Code coverage reports are monotone, thus one can take a snapshot when the Debugger is enabled, and output the difference.</p>
+ <p>Setting this to <code>true</code> enables code coverage instrumentation, which can be accessed via the <a href="Debugger.Script"><code>Debugger.Script</code></a> <code>getOffsetsCoverage</code> function. In some cases, the code coverage might expose information which pre-date the modification of this flag. Code coverage reports are monotone, thus one can take a snapshot when the Debugger is enabled, and output the difference.</p>
 
  <p>Setting this to <code>false</code> prevents this <code>Debugger</code> instance from requiring any code coverage instrumentation, but it does not guarantee that the instrumentation is not present.</p>
  </dd>
@@ -65,19 +65,19 @@ slug: Tools/Debugger-API/Debugger
 <dl>
  <dt><code>onNewScript(<em>script</em>,<em>global</em>)</code></dt>
  <dd>
- <p>New code, represented by the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance<em>script</em>, has been loaded in the scope of the debuggees.</p>
+ <p>New code, represented by the <a href="Debugger.Script"><code>Debugger.Script</code></a> instance<em>script</em>, has been loaded in the scope of the debuggees.</p>
 
  <p>This method’s return value is ignored.</p>
  </dd>
  <dt><code>onNewPromise(<em>promise</em>)</code></dt>
  <dd>
- <p>A new Promise object, referenced by the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>, has been allocated in the scope of the debuggees. The Promise’s allocation stack can be obtained using the <em>promiseAllocationStack</em> accessor property of the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
+ <p>A new Promise object, referenced by the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>, has been allocated in the scope of the debuggees. The Promise’s allocation stack can be obtained using the <em>promiseAllocationStack</em> accessor property of the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
 
  <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> (“continue normally”);<em>value</em> is ignored.</p>
  </dd>
  <dt><code>onPromiseSettled(<em>promise</em>)</code></dt>
  <dd>
- <p>A Promise object, referenced by the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em> that was allocated within a debuggee scope, has settled (either fulfilled or rejected). The Promise’s state, fulfillment or rejection value, and the allocation and resolution stacks can be obtained using the Promise-related accessor properties of the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
+ <p>A Promise object, referenced by the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em> that was allocated within a debuggee scope, has settled (either fulfilled or rejected). The Promise’s state, fulfillment or rejection value, and the allocation and resolution stacks can be obtained using the Promise-related accessor properties of the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance <em>promise</em>.</p>
 
  <p>This handler method should return a <a href="Conventions#resumption-values" title="Debugger API: General Conventions: Resumption Values">resumption value</a> specifying how the debuggee’s execution should proceed. However, note that a <code>{ return:<em>value</em> }</code> resumption value is treated like <code>undefined</code> (“continue normally”);<em>value</em> is ignored.</p>
  </dd>
@@ -143,7 +143,7 @@ slug: Tools/Debugger-API/Debugger
 <dl>
  <dt><code id="addDebuggee">addDebuggee(<em>global</em>)</code></dt>
  <dd>
- <p>Add the global object designated by<em>global</em> to the set of global objects this <code>Debugger</code> instance is debugging. If the designated global is already a debuggee, this has no effect. Return this <code>Debugger</code>’s <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the designated global.</p>
+ <p>Add the global object designated by<em>global</em> to the set of global objects this <code>Debugger</code> instance is debugging. If the designated global is already a debuggee, this has no effect. Return this <code>Debugger</code>’s <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the designated global.</p>
 
  <p>The value<em>global</em> may be any of the following:</p>
 
@@ -158,18 +158,18 @@ slug: Tools/Debugger-API/Debugger
    <p>A cross-compartment wrapper of an object; we apply the prior rules to the wrapped object.</p>
   </li>
   <li>
-   <p>A <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance; we apply the prior rules to the referent.</p>
+   <p>A <a href="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance; we apply the prior rules to the referent.</p>
   </li>
   <li>
-   <p>Any other sort of value is treated as a <code>TypeError</code>. (Note that each rule is only applied once in the process of resolving a given<em>global</em> argument. Thus, for example, a <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> referring to a second <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> which refers to a global does not designate that global for the purposes of this function.)</p>
+   <p>Any other sort of value is treated as a <code>TypeError</code>. (Note that each rule is only applied once in the process of resolving a given<em>global</em> argument. Thus, for example, a <a href="Debugger.Object"><code>Debugger.Object</code></a> referring to a second <a href="Debugger.Object"><code>Debugger.Object</code></a> which refers to a global does not designate that global for the purposes of this function.)</p>
   </li>
  </ul>
 
  <p>The global designated by<em>global</em> must be in a different compartment than this <code>Debugger</code> instance itself. If adding the designated global’s compartment would create a cycle of debugger and debuggee compartments, this method throws an error.</p>
 
- <p>This method returns the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance whose referent is the designated global object.</p>
+ <p>This method returns the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance whose referent is the designated global object.</p>
 
- <p>The <code>Debugger</code> instance does not hold a strong reference to its debuggee globals: if a debuggee global is not otherwise reachable, then it is dropped from the <code>Debugger</code>’s set of debuggees. (Naturally, the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance this method returns does hold a strong reference to the added global.)</p>
+ <p>The <code>Debugger</code> instance does not hold a strong reference to its debuggee globals: if a debuggee global is not otherwise reachable, then it is dropped from the <code>Debugger</code>’s set of debuggees. (Naturally, the <a href="Debugger.Object"><code>Debugger.Object</code></a> instance this method returns does hold a strong reference to the added global.)</p>
 
  <p>If this debugger is <a href="Debugger.Memory#trackingallocationsites" title="Debugger.Memory: trackingAllocationSites">tracking allocation sites</a> and cannot track allocation sites for<em>global</em>, this method throws an <code>Error</code>.</p>
  </dd>
@@ -199,15 +199,15 @@ slug: Tools/Debugger-API/Debugger
  </dd>
  <dt><code>getDebuggees()</code></dt>
  <dd>
- <p>Return an array of distinct <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances whose referents are all the global objects this <code>Debugger</code> instance is debugging.</p>
+ <p>Return an array of distinct <a href="Debugger.Object"><code>Debugger.Object</code></a> instances whose referents are all the global objects this <code>Debugger</code> instance is debugging.</p>
 
  <p>Since <code>Debugger</code> instances don’t hold strong references to their debuggee globals, if a debuggee global is otherwise unreachable, it may be dropped at any moment from the array this method returns.</p>
  </dd>
  <dt><code>getNewestFrame()</code></dt>
- <dd>Return a <a href="Debugger.Frame" title="Debugger.Frame"><code>Debugger.Frame</code></a> instance referring to the youngest <a href="Debugger.Frame#visible-frames" title="Debugger.Frame: Visible Frames">visible frame</a> currently on the calling thread’s stack, or <code>null</code> if there are no visible frames on the stack.</dd>
+ <dd>Return a <a href="Debugger.Frame"><code>Debugger.Frame</code></a> instance referring to the youngest <a href="Debugger.Frame#visible-frames" title="Debugger.Frame: Visible Frames">visible frame</a> currently on the calling thread’s stack, or <code>null</code> if there are no visible frames on the stack.</dd>
  <dt><code>findSources([<em>query</em>])<em>(not yet implemented)</em></code></dt>
  <dd>
- <p>Return an array of all <a href="Debugger.Source" title="Debugger.Source"><code>Debugger.Source</code></a> instances matching<em>query</em>. Each source appears only once in the array.<em>Query</em> is an object whose properties restrict which sources are returned; a source must meet all the criteria given by<em>query</em> to be returned. If<em>query</em> is omitted, we return all sources of all debuggee scripts.</p>
+ <p>Return an array of all <a href="Debugger.Source"><code>Debugger.Source</code></a> instances matching<em>query</em>. Each source appears only once in the array.<em>Query</em> is an object whose properties restrict which sources are returned; a source must meet all the criteria given by<em>query</em> to be returned. If<em>query</em> is omitted, we return all sources of all debuggee scripts.</p>
 
  <p><em>Query</em>may have the following properties:</p>
 
@@ -215,14 +215,14 @@ slug: Tools/Debugger-API/Debugger
   <dt><code>url</code></dt>
   <dd>The source’s <code>url</code> property must be equal to this value.</dd>
   <dt><code>global</code></dt>
-  <dd>The source must have been evaluated in the scope of the given global object. If this property’s value is a <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance, then its referent is used. If the object is not a global object, then the global in whose scope it was allocated is used.</dd>
+  <dd>The source must have been evaluated in the scope of the given global object. If this property’s value is a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance, then its referent is used. If the object is not a global object, then the global in whose scope it was allocated is used.</dd>
  </dl>
 
  <p>Note that the result may include sources that can no longer ever be used by the debuggee: say, eval code that has finished running, or source for unreachable functions. Whether such sources appear can be affected by the garbage collector’s behavior, so this function’s result is not entirely deterministic.</p>
  </dd>
  <dt><code>findScripts([<em>query</em>])</code></dt>
  <dd>
- <p>Return an array of <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instances for all debuggee scripts matching<em>query</em>. Each instance appears only once in the array.<em>Query</em> is an object whose properties restrict which scripts are returned; a script must meet all the criteria given by<em>query</em> to be returned. If<em>query</em> is omitted, we return the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instances for all debuggee scripts.</p>
+ <p>Return an array of <a href="Debugger.Script"><code>Debugger.Script</code></a> instances for all debuggee scripts matching<em>query</em>. Each instance appears only once in the array.<em>Query</em> is an object whose properties restrict which scripts are returned; a script must meet all the criteria given by<em>query</em> to be returned. If<em>query</em> is omitted, we return the <a href="Debugger.Script"><code>Debugger.Script</code></a> instances for all debuggee scripts.</p>
 
  <p><em>Query</em>may have the following properties:</p>
 
@@ -238,16 +238,16 @@ slug: Tools/Debugger-API/Debugger
   <dt><code>innermost</code></dt>
   <dd>If this property is present and true, the script must be the innermost script covering the given source location; scripts of enclosing code are omitted.</dd>
   <dt><code>global</code></dt>
-  <dd>The script must be in the scope of the given global object. If this property’s value is a <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance, then its referent is used. If the object is not a global object, then the global in whose scope it was allocated is used.</dd>
+  <dd>The script must be in the scope of the given global object. If this property’s value is a <a href="Debugger.Object"><code>Debugger.Object</code></a> instance belonging to this <code>Debugger</code> instance, then its referent is used. If the object is not a global object, then the global in whose scope it was allocated is used.</dd>
  </dl>
 
  <p>All properties of<em>query</em> are optional. Passing an empty object returns all debuggee code scripts.</p>
 
- <p>Note that the result may include <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instances for scripts that can no longer ever be used by the debuggee, say, those for eval code that has finished running, or unreachable functions. Whether such scripts appear can be affected by the garbage collector’s behavior, so this function’s behavior is not entirely deterministic.</p>
+ <p>Note that the result may include <a href="Debugger.Script"><code>Debugger.Script</code></a> instances for scripts that can no longer ever be used by the debuggee, say, those for eval code that has finished running, or unreachable functions. Whether such scripts appear can be affected by the garbage collector’s behavior, so this function’s behavior is not entirely deterministic.</p>
  </dd>
  <dt><code>findObjects([<em>query</em>])</code></dt>
  <dd>
- <p>Return an array of <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances referring to each live object allocated in the scope of the debuggee globals that matches <em>query</em>. Each instance appears only once in the array. <em>Query</em> is an object whose properties restrict which objects are returned; an object must meet all the criteria given by <em>query</em> to be returned. If <em>query</em> is omitted, we return the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances for all objects allocated in the scope of debuggee globals.</p>
+ <p>Return an array of <a href="Debugger.Object"><code>Debugger.Object</code></a> instances referring to each live object allocated in the scope of the debuggee globals that matches <em>query</em>. Each instance appears only once in the array. <em>Query</em> is an object whose properties restrict which objects are returned; an object must meet all the criteria given by <em>query</em> to be returned. If <em>query</em> is omitted, we return the <a href="Debugger.Object"><code>Debugger.Object</code></a> instances for all objects allocated in the scope of debuggee globals.</p>
 
  <p>The <em>query</em> object may have the following properties:</p>
 
@@ -258,7 +258,7 @@ slug: Tools/Debugger-API/Debugger
 
  <p>All properties of <em>query</em> are optional. Passing an empty object returns all objects in debuggee globals.</p>
 
- <p>Unlike <code>findScripts</code>, this function is deterministic and will never return <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code>s</a> referring to previously unreachable objects that had not been collected yet.</p>
+ <p>Unlike <code>findScripts</code>, this function is deterministic and will never return <a href="Debugger.Object"><code>Debugger.Object</code>s</a> referring to previously unreachable objects that had not been collected yet.</p>
  </dd>
  <dt><code>clearBreakpoint(<em>handler</em>)</code></dt>
  <dd>Remove all breakpoints set in this <code>Debugger</code> instance that use<em>handler</em> as their handler. Note that, if breakpoints using other handler objects are set at the same location(s) as<em>handler</em>, they remain in place.</dd>
@@ -266,14 +266,14 @@ slug: Tools/Debugger-API/Debugger
  <dd>Remove all breakpoints set using this <code>Debugger</code> instance.</dd>
  <dt><code>findAllGlobals()</code></dt>
  <dd>
- <p>Return an array of <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances referring to all the global objects present in this JavaScript instance.</p>
+ <p>Return an array of <a href="Debugger.Object"><code>Debugger.Object</code></a> instances referring to all the global objects present in this JavaScript instance.</p>
 
- <p>The results of this call can be affected in non-deterministic ways by the details of the JavaScript implementation. The array may include <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances referring to global objects that are not actually reachable by the debuggee or any other code in the system. (Naturally, once the function has returned, the array’s <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instances strongly reference the globals they refer to.)</p>
+ <p>The results of this call can be affected in non-deterministic ways by the details of the JavaScript implementation. The array may include <a href="Debugger.Object"><code>Debugger.Object</code></a> instances referring to global objects that are not actually reachable by the debuggee or any other code in the system. (Naturally, once the function has returned, the array’s <a href="Debugger.Object"><code>Debugger.Object</code></a> instances strongly reference the globals they refer to.)</p>
 
  <p>This handler method is only available to debuggers running in privileged code (“chrome”, in Firefox). Most functions provided by this <code>Debugger</code> API observe activity in only those globals that are reachable by the API’s user, thus imposing capability-based restrictions on a <code>Debugger</code>’s reach. However, <code>findAllGlobals</code> allows the API user to find all global objects anywhere within the JavaScript system (the “JSRuntime”, in SpiderMonkey terms), thereby escaping the capability-based limits. For this reason, <code>findAllGlobals</code> is only available to privileged code.</p>
  </dd>
  <dt><code>makeGlobalObjectReference(<em>global</em>)</code></dt>
- <dd>Return the <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> whose referent is the global object designated by<em>global</em>, without adding the designated global as a debuggee. If<em>global</em> does not designate a global object, throw a <code>TypeError</code>. Determine which global is designated by<em>global</em> using the same rules as <a href="Debugger#addDebuggee" title="The Debugger object: addDebuggee"><code>Debugger.prototype.addDebuggee</code></a>.</dd>
+ <dd>Return the <a href="Debugger.Object"><code>Debugger.Object</code></a> whose referent is the global object designated by<em>global</em>, without adding the designated global as a debuggee. If<em>global</em> does not designate a global object, throw a <code>TypeError</code>. Determine which global is designated by<em>global</em> using the same rules as <a href="Debugger#addDebuggee" title="The Debugger object: addDebuggee"><code>Debugger.prototype.addDebuggee</code></a>.</dd>
  <dt><code>adoptDebuggeeValue(<em>value</em>)</code></dt>
  <dd>
  <p>Given a debuggee value <code>value</code> owned by an arbitrary <code>Debugger</code>, return an equivalent debuggee value owned by this <code>Debugger</code>.</p>

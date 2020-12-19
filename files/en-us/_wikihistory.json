@@ -13706,24 +13706,6 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Be_a_beta_tester": {
-    "modified": "2019-09-11T15:07:13.680Z",
-    "contributors": [
-      "wbamberg",
-      "johnnyagerard",
-      "jswisher",
-      "larzilla",
-      "yangjianyu",
-      "Liu_xi",
-      "iankit3",
-      "SamirTalwar",
-      "calculing",
-      "ganlanyuan",
-      "FelipeMD",
-      "medic27",
-      "DesignersViewData430"
-    ]
-  },
   "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
     "modified": "2020-09-28T14:41:41.230Z",
     "contributors": [
@@ -13741,51 +13723,6 @@
       "stephaniehobson",
       "Sheppy",
       "ilyakamens"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2020-09-30T03:30:26.326Z",
-    "contributors": [
-      "Maxi-MenuBestOfPlus",
-      "ohaver",
-      "mfuji09",
-      "patrick.weiden",
-      "sharma86hub",
-      "erhan35",
-      "jswisher",
-      "vvh1t3vvolf67",
-      "hcboypl",
-      "chrisdavidmills",
-      "helllllllllllllllllloworld",
-      "SphinxKnight",
-      "chetans",
-      "wbamberg",
-      "sanad94",
-      "chabtorrent",
-      "Faisal-International",
-      "sideshowbarker",
-      "firmsecurity",
-      "johnjago",
-      "elysdir1",
-      "Sheppy",
-      "KadirTopal",
-      "abigor5",
-      "Aloneforme2",
-      "jwhitlock",
-      "pakarseojakarta",
-      "pgerman",
-      "HitHindiSongs",
-      "stephaniehobson",
-      "NameChangedAsItWasSpam",
-      "sireed1979",
-      "appsfreeforpc",
-      "danley12367",
-      "jsx",
-      "rogermpeter",
-      "Sara1221",
-      "klez",
-      "CliwonSantoso",
-      "rohith.singirikonda"
     ]
   },
   "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
@@ -13971,17 +13908,6 @@
       "SHELI",
       "freebirdmrk",
       "mgnrsb"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_learning_pathways": {
-    "modified": "2019-09-11T14:54:51.157Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "jswisher",
-      "Sheppy",
-      "hbloomer",
-      "Jeremie"
     ]
   },
   "MDN/Contribute/Howto/Delete_my_profile": {
@@ -14354,18 +14280,6 @@
       "FredB"
     ]
   },
-  "MDN/Contribute/Onboarding": {
-    "modified": "2019-03-18T20:36:34.416Z",
-    "contributors": [
-      "sideshowbarker",
-      "bripmccann",
-      "jswisher",
-      "wbamberg",
-      "chrisdavidmills",
-      "Sheppy",
-      "ffesseler"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-09-30T15:17:09.733Z",
     "contributors": [
@@ -14375,24 +14289,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Processes/Browser_information_resources": {
-    "modified": "2020-08-09T13:14:03.620Z",
-    "contributors": [
-      "jswisher",
-      "Sheppy",
-      "cadorej"
-    ]
-  },
-  "MDN/Contribute/Processes/Cross-team_collaboration_tactics": {
-    "modified": "2019-05-02T21:09:20.366Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills",
-      "Sheppy",
-      "jswisher",
-      "Abin_Abraham"
-    ]
-  },
   "MDN/Contribute/Processes/Matching_features_to_browser_version": {
     "modified": "2020-08-31T15:05:54.154Z",
     "contributors": [
@@ -14400,27 +14296,6 @@
       "foolip",
       "Sheppy",
       "KWierso2"
-    ]
-  },
-  "MDN/Contribute/Processes/Plans": {
-    "modified": "2020-12-14T09:31:16.827Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "Sheppy",
-      "Naren",
-      "armukul",
-      "DavidWalsh"
-    ]
-  },
-  "MDN/Contribute/Processes/Requesting_elevated_privileges": {
-    "modified": "2019-03-23T22:48:10.241Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "ahmadnourallah",
-      "yfdyh000",
-      "hamasaki"
     ]
   },
   "MDN/Editor": {

@@ -12,11 +12,11 @@ slug: Tools/Debugger-API/Debugger.Source
 
 <h2 id="Debugger.Source_for_JavaScript">Debugger.Source for JavaScript</h2>
 
-<p>For a <code>Debugger.Source</code> instance representing a piece of JavaScript source code, its properties provide the source code itself as a string, and describe where it came from. Each <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance refers to the <code>Debugger.Source</code> instance holding the source code from which it was produced.</p>
+<p>For a <code>Debugger.Source</code> instance representing a piece of JavaScript source code, its properties provide the source code itself as a string, and describe where it came from. Each <a href="Debugger.Script"><code>Debugger.Script</code></a> instance refers to the <code>Debugger.Source</code> instance holding the source code from which it was produced.</p>
 
-<p>If a single piece of source code contains both top-level code and function definitions, perhaps with nested functions, then the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instances for those all refer to the same <code>Debugger.Source</code> instance. Each script indicates the substring of the overall source to which it corresponds.</p>
+<p>If a single piece of source code contains both top-level code and function definitions, perhaps with nested functions, then the <a href="Debugger.Script"><code>Debugger.Script</code></a> instances for those all refer to the same <code>Debugger.Source</code> instance. Each script indicates the substring of the overall source to which it corresponds.</p>
 
-<p>A <code>Debugger.Source</code> instance may represent only a portion of a larger source document. For example, an HTML document can contain JavaScript in multiple <code>&lt;script&gt;</code> elements and event handler content attributes. In this case, there may be either a single <code>Debugger.Source</code> instance for the entire HTML document, with each <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> referring to its substring of the document; or there may be a separate <code>Debugger.Source</code> instance for each <code>&lt;script&gt;</code> element and attribute. The choice is left up to the implementation.</p>
+<p>A <code>Debugger.Source</code> instance may represent only a portion of a larger source document. For example, an HTML document can contain JavaScript in multiple <code>&lt;script&gt;</code> elements and event handler content attributes. In this case, there may be either a single <code>Debugger.Source</code> instance for the entire HTML document, with each <a href="Debugger.Script"><code>Debugger.Script</code></a> referring to its substring of the document; or there may be a separate <code>Debugger.Source</code> instance for each <code>&lt;script&gt;</code> element and attribute. The choice is left up to the implementation.</p>
 
 <p>If a given piece of source code is presented to the JavaScript implementation more than once, with the same origin metadata, the JavaScript implementation may generate a fresh <code>Debugger.Source</code> instance to represent each presentation, or it may use a single <code>Debugger.Source</code> instance to represent them all.</p>
 
@@ -79,7 +79,7 @@ slug: Tools/Debugger-API/Debugger.Source
  <dd>If the script had a special <code>//# sourceURL</code> comment, as described in the source maps specification, then this property’s value holds the string that was given. Otherwise, this is <code>null</code>.</dd>
  <dt><code>element</code></dt>
  <dd>
- <p>The <a href="Debugger.Object" title="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the DOM element to which this source code belongs, if any, or <code>undefined</code> if it belongs to no DOM element. Source belongs to a DOM element in the following cases:</p>
+ <p>The <a href="Debugger.Object"><code>Debugger.Object</code></a> instance referring to the DOM element to which this source code belongs, if any, or <code>undefined</code> if it belongs to no DOM element. Source belongs to a DOM element in the following cases:</p>
 
  <ul>
   <li>
@@ -141,7 +141,7 @@ slug: Tools/Debugger-API/Debugger.Source
  </dd>
  <dt><code>introductionScript</code>, <code>introductionOffset</code></dt>
  <dd>
- <p><strong>If the instance refers to JavaScript source</strong>, and if this source was introduced by calling a function from debuggee code, then <code>introductionScript</code> is the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance referring to the script containing that call, and <code>introductionOffset</code> is the call’s bytecode offset within that script. Otherwise, these are both <code>undefined</code>. Taken together, these properties indicate the location of the introducing call.</p>
+ <p><strong>If the instance refers to JavaScript source</strong>, and if this source was introduced by calling a function from debuggee code, then <code>introductionScript</code> is the <a href="Debugger.Script"><code>Debugger.Script</code></a> instance referring to the script containing that call, and <code>introductionOffset</code> is the call’s bytecode offset within that script. Otherwise, these are both <code>undefined</code>. Taken together, these properties indicate the location of the introducing call.</p>
 
  <p>For the purposes of these accessors, assignments to accessor properties are treated as function calls. Thus, setting a DOM element’s event handler IDL attribute by assigning to the corresponding JavaScript property creates a source whose <code>introductionScript</code> and <code>introductionOffset</code> refer to the property assignment.</p>
 
@@ -151,7 +151,7 @@ slug: Tools/Debugger-API/Debugger.Source
 
  <p>Although the main script of a worker thread is introduced by a call to <code>Worker</code> or <code>SharedWorker</code>, these accessors always return <code>undefined</code> on such script’s sources. A worker’s main script source and the call that created the worker are always in separate threads, but <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> is an inherently single-threaded facility: its debuggees must all run in the same thread. Since the global that created the worker is in a different thread, it is guaranteed not to be a debuggee of the <a href="Debugger" title="The Debugger object"><code>Debugger</code></a> instance that owns this source; and thus the creating call is never “in debuggee code”. Relating a worker to its creator, and other multi-threaded debugging concerns, are out of scope for <a href="Debugger" title="The Debugger object"><code>Debugger</code></a>.</p>
 
- <p><strong>If the instance refers to WebAssembly code</strong>, <code>introductionScript</code> is the <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance referring to the same underlying WebAssembly module. <code>introductionOffset</code> is <code>undefined</code>.</p>
+ <p><strong>If the instance refers to WebAssembly code</strong>, <code>introductionScript</code> is the <a href="Debugger.Script"><code>Debugger.Script</code></a> instance referring to the same underlying WebAssembly module. <code>introductionOffset</code> is <code>undefined</code>.</p>
  </dd>
 </dl>
 

@@ -13,13 +13,13 @@ tags:
 
 <p>When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.</p>
 
-<p>There is no straight forward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>, <a href="https://codepen.io/">CodePen</a>, <a href="http://dabblet.com/">Dabblet</a>, etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use <a href="https://thimble.mozilla.org" rel="external">Thimble</a> from the WebMaker project.</p>
+<p>There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>, <a href="https://codepen.io/">CodePen</a>, <a href="http://dabblet.com/">Dabblet</a>, etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use <a href="https://thimble.mozilla.org" rel="external">Thimble</a> from the WebMaker project.</p>
 
-<p>Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content. Read on to see how to do that.</p>
+<p>Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content.</p>
 
 <h2 id="MDN_live_samples">MDN live samples</h2>
 
-<p>MDN has a very cool feature called <strong>live samples</strong>. It's a mechanism that turns any HTML, CSS, and JavaScript code inside an MDN page into its executed equivalent. Before using it, you should read over <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Using the live sample system</a>, which is our complete documentation for building them. While they're easy to do, there are quirks and tricks you'll learn along the way.</p>
+<p>MDN has a very cool feature called <strong>live samples</strong>. It's a mechanism that turns any HTML, CSS, and JavaScript code inside an MDN page into its executed equivalent. Before using it, you should read over <a href="/en-US/docs/MDN/Structures/Live_samples">Using the live sample system</a>, which is our complete documentation for building them. While they're easy to create, there are quirks and tricks you'll learn along the way.</p>
 
 <p>What is interesting is that it's really easy to tweak that feature to use it in order to embed any kind of tool or utility you want into an MDN page.</p>
 
@@ -30,7 +30,7 @@ tags:
 <p>Let's see a simple example:</p>
 
 <div class="moreinfo">
-<p>Click on the following square to randomly change its color or just type a hexadecimal code color</p>
+<p>Click on the following square to randomly change its color:</p>
 
 <div class="hidden">
 <h4 id="hidden_code_example">hidden code example</h4>
@@ -38,7 +38,7 @@ tags:
 <h5 id="HTML">HTML</h5>
 
 <pre class="brush: html">&lt;div class="square"&gt;
-  #&lt;input class="color"&gt;
+  &lt;p class="color"&gt;#000000&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h5 id="CSS">CSS</h5>
@@ -59,7 +59,7 @@ tags:
 
 .color {
   width: 60px;
-  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
 }
 </pre>
 
@@ -67,7 +67,7 @@ tags:
 
 <pre class="brush: js">function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
+  document.querySelector('.color').textContent = '#' + color;
 }
 
 function getRandomColor() {
@@ -75,27 +75,14 @@ function getRandomColor() {
   return color.toString(16);
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
-  }
-  return value;
-}
-
-document.addEventListener('click', function () {
+document.addEventListener('click', function (e) {
   setColor(getRandomColor());
-});
-
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
 });
 </pre>
 </div>
-{{EmbedLiveSample('hidden_code_example', 120, 120)}}</div>
+{{EmbedLiveSample('hidden_code_example', 120, 125)}}</div>
 
-<p>If you take a look at that page HTML code with the MDN editor, you'll see the exact following HTML code:</p>
+<p>If you take a look at the source code of this page, you'll see the following HTML code:</p>
 
 <pre class="brush: html">&lt;div class="moreinfo"&gt;
 &lt;p&gt;Click on the following square to randomly change its color or just type an hexadecimal code color&lt;/p&gt;
@@ -107,7 +94,7 @@ document.addEventListener('keyup', function () {
 
 &lt;pre class="brush: html"&gt;
 &amp;lt;div class="square"&amp;gt;
-  #&amp;lt;input class="color"&amp;gt;
+  &amplt;p class="color"&amp;gt;#000000&amp;lt;/p&amp;gt;
 &amp;lt;/div&amp;gt;&lt;/pre&gt;
 
 &lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
@@ -138,7 +125,7 @@ body {
 &lt;pre class="brush: js"&gt;
 function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
-  document.querySelector('.color').value = color;
+  document.querySelector('.color').textContent = '#' + color;
 }
 
 function getRandomColor() {
@@ -146,29 +133,16 @@ function getRandomColor() {
   return color.toString(16);
 }
 
-function getInputColor() {
-  var value = document.querySelector('.color').value;
-  var color = Number('0x' + color);
-  if (color === +color) {
-    return color.toString(16);
-  }
-  return value;
-}
-
-document.addEventListener('click', function () {
+document.addEventListener('click', function (e) {
   setColor(getRandomColor());
-});
-
-document.addEventListener('keyup', function () {
-  setColor(getInputColor());
 });
 &lt;/pre&gt;
 &lt;/div&gt;
 
-\{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+\{{EmbedLiveSample('hidden_code_example', 120, 125)}}
 &lt;/div&gt;</pre>
 
-<p>You can see a more advance example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#JavaScript">the Canvas API page</a>.</p>
+<p>You can see a more advanced example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#JavaScript">the Canvas API page</a>.</p>
 
 <h3 id="Code_from_outside_the_page">Code from outside the page</h3>
 
@@ -180,8 +154,6 @@ document.addEventListener('keyup', function () {
 
 <div class="moreinfo">
 <p>Click on the following square to randomly change its color or just type a hexadecimal code color</p>
-{{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}</div>
+{{EmbedLiveSample('The_example', 120, 125, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}</div>
 
-<p>This time, if you take a <a href="/en-US/docs/MDN/Contribute/Editor/Source_mode">look at that page's HTML using the MDN editor</a>, you'll see no hidden code. If you want to see the code, just go to <a href="/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example">the page that hosts it</a>.</p>
-
-<p>You can see a more advanced example of this usage in our <a href="/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets">HTML Form tutorial</a>, which uses this technique to allow experimentation with forms.</p>
+<p>This time, if you take a look at that page's source, you'll see no hidden code. If you want to see the code, just go to <a href="/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example">the page that hosts it</a>.</p>

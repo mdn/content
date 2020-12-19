@@ -12,11 +12,7 @@ tags:
 ---
 <div>{{APIRef("Frame Timing API")}}{{SeeCompatTable}}</div>
 
-<div></div>
-
 <div><span class="seoSummary"><strong><code>PerformanceFrameTiming</code></strong> is an <em>abstract</em> interface that provides <em>frame</em> timing data about the browser's event loop.</span> A <em>frame</em> represents the amount of work a browser does in <a href="https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8">one event loop</a> such as processing DOM events, resizing, scrolling, rendering, CSS animations, etc.. A <em>frame rate</em> of 60fps (frames per second) for a 60Hz refresh rate is the target for a good <em>responsive</em> user experience. This means the browser should process a frame in about 16.7ms.</div>
-
-<div></div>
 
 <p>An application can register a {{domxref("PerformanceObserver")}} for "<code>frame</code>" {{domxref("PerformanceEntry","performance entry types")}} and the observer can retrieve data about the duration of each frame event. This information can be used to help identify areas that take too long to provide a good user experience.</p>
 

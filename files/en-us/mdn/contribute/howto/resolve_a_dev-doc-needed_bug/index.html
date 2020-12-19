@@ -16,10 +16,10 @@ tags:
 
 <h3 id="Bugzilla">Bugzilla</h3>
 
-<p>Your search in the doc bug tracking sheet might have returned <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495" title="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug #761495</a>. In Bugzilla, we see that <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495" title="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug #761495</a> has the title: "(harmony:inthelpers) add Number.isInteger/toInteger." This suggests a couple of things:</p>
+<p>Your search in the doc bug tracking sheet might have returned <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug #761495</a>. In Bugzilla, we see that <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug #761495</a> has the title: "(harmony:inthelpers) add Number.isInteger/toInteger." This suggests a couple of things:</p>
 
 <ul>
- <li>"(harmony:inthelpers)": "Harmony" is a new edition of <a href="http://en.wikipedia.org/wiki/ECMAScript" title="http://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, the parent language of which JavaScript is a dialect.</li>
+ <li>"(harmony:inthelpers)": "Harmony" is a new edition of <a href="http://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, the parent language of which JavaScript is a dialect.</li>
  <li>"Number.isInteger/toInteger": This looks like shorthand for two object / method names.</li>
 </ul>
 
@@ -31,13 +31,13 @@ tags:
 
 <p>The third link in the list of changed files points to the relevant change in the source code (<code>jsnum.cpp</code>). (The other two links point to files that contain test cases.)</p>
 
-<p>Scrolling down, we see the actual change itself. A comment tells us which version of the ECMAScript standard implemented the change ("// ES6 draft ES6 15.7.3.12"). If we search the internet for "ecmascript harmony number isinteger" we find the descriptions of the <code>isInteger</code> and <code>toInteger</code> methods in the <a href="http://wiki.ecmascript.org/doku.php?id=harmony:number.tointeger&amp;s=tointeger" title="http://wiki.ecmascript.org/doku.php?id=harmony:number.tointeger&amp;s=tointeger">ECMAScript Harmony specification</a>. This is the reference on which we can base our changes in MDN.</p>
+<p>Scrolling down, we see the actual change itself. A comment tells us which version of the ECMAScript standard implemented the change ("// ES6 draft ES6 15.7.3.12"). If we search the internet for "ecmascript harmony number isinteger" we find the descriptions of the <code>isInteger</code> and <code>toInteger</code> methods in the <a href="http://wiki.ecmascript.org/doku.php?id=harmony:number.tointeger&amp;s=tointeger">ECMAScript Harmony specification</a>. This is the reference on which we can base our changes in MDN.</p>
 
 <h3 id="Changes_on_MDN">Changes on MDN</h3>
 
 <p>In MDN, we search for the JavaScript <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number"><code>Number</code> object</a>. In the Methods section of that page, we add the <code>isInteger</code> and <code>toInteger</code> methods. We note that the methods were added in version 16 of Firefox by changing the compatibility table.</p>
 
-<p>In the <a href="/en-US/docs/Firefox_16_for_developers" title="/en-US/docs/Firefox_16_for_developers">Firefox 16 for developers</a> article on MDN, we note that these methods have been added to the <code>Number</code> object.</p>
+<p>In the <a href="/en-US/docs/Firefox_16_for_developers">Firefox 16 for developers</a> article on MDN, we note that these methods have been added to the <code>Number</code> object.</p>
 
 <h3 id="Updating_Bugzilla">Updating Bugzilla</h3>
 

@@ -19,9 +19,9 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="http://asmjs.org/spec/latest/" title="http://asmjs.org/spec/latest/">Asm.js </a>optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.</li>
- <li>ES2015 <a href="/en-US/docs/JavaScript/Reference/arrow_functions" title="/en-US/docs/JavaScript/Reference/arrow_functions">Arrow Function</a> syntax has been implemented ({{bug(846406)}}).</li>
- <li>The new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> function has been added ({{bug(839979)}}).</li>
+ <li><a href="http://asmjs.org/spec/latest/">Asm.js </a>optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.</li>
+ <li>ES2015 <a href="/en-US/docs/JavaScript/Reference/arrow_functions">Arrow Function</a> syntax has been implemented ({{bug(846406)}}).</li>
+ <li>The new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> function has been added ({{bug(839979)}}).</li>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).</li>
  <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).</li>
 </ul>
@@ -30,7 +30,7 @@ tags:
 
 <ul>
  <li>Support for the <code>multipart</code> property on <code>XMLHttpRequest</code> and <code>multipart/x-mixed-replace</code> responses in <code>XMLHttpRequest</code> has been removed. This was a Gecko-only feature that was never standardized. <a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets" title="WebSockets">Web Sockets</a> or inspecting <code>responseText</code> from progress events can be used instead.</li>
- <li>Support for <a href="/en-US/docs/WebAPI/Using_Web_Notifications" title="/en-US/docs/WebAPI/Using_Web_Notifications">Web Notifications</a> has been landed ({{bug(782211)}}).</li>
+ <li>Support for <a href="/en-US/docs/WebAPI/Using_Web_Notifications">Web Notifications</a> has been landed ({{bug(782211)}}).</li>
  <li>The {{domxref("FormData")}}  <code>append</code> method now accepts a third optional <code>filename</code> parameter ({{bug(690659)}}).</li>
  <li>{{domxref("Node.isSupported")}} has been removed ({{bug(801562)}}).</li>
  <li>{{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
@@ -61,17 +61,17 @@ tags:
 
 <ul>
  <li>The <code>properties</code> parameter has been removed from the {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} and {{ifmethod('nsITreeView','getRowProperties')}} methods of {{interface('nsITreeView')}}. These methods should now return a string of space-separated property names. ({{bug('407956')}})</li>
- <li>The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported <a href="/en-US/docs/CSS/CSS_Reference" title="/en-US/docs/CSS/CSS_Reference">CSS property</a> names.</li>
- <li>See <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/" title="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">here </a>for more changes.</li>
+ <li>The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported <a href="/en-US/docs/CSS/CSS_Reference">CSS property</a> names.</li>
+ <li>See <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">here </a>for more changes.</li>
 </ul>
 
 <h3 id="Firefox_Developer_Tools">Firefox Developer Tools</h3>
 
 <ul>
- <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/" title="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">Font inspector</a> shows which fonts on your computer are applied to the page.</li>
+ <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">Font inspector</a> shows which fonts on your computer are applied to the page.</li>
  <li>Visual paint feedback mode shows when and where a page is repainted.</li>
  <li>The dev tools may now be docked to the right side, not just the bottom of the browser.</li>
- <li>Some panes within the dev tools have switched from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727" title="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL to HTML</a>. For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview.xhtml, not <span class="comment-copy"><code>cssruleview.xul</code></span>. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.</li>
+ <li>Some panes within the dev tools have switched from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL to HTML</a>. For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview.xhtml, not <span class="comment-copy"><code>cssruleview.xul</code></span>. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.</li>
  <li>The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.</li>
 </ul>
 

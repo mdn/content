@@ -139,9 +139,9 @@ tags:
 <p>These are some examples of APIs that make use of typed arrays; there are others, and more are being added all the time.</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()" title="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
+ <dt><a href="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
  <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/en-US/docs/Web/API/Blob" title="/en-US/docs/DOM/Blob"><code>Blob</code></a> or <a href="/en-US/docs/Web/API/File" title="/en-US/docs/DOM/File"><code>File</code></a>.</dd>
- <dt><a href="/en-US/docs/Web/API/XMLHttpRequest#send()" title="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
+ <dt><a href="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
  <dd><code>XMLHttpRequest</code> instances' <code>send()</code> method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.</dd>
  <dt><code><a href="/en-US/docs/Web/API/ImageData">ImageData.data</a></code></dt>
  <dd>Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between <code>0</code> and <code>255</code> inclusive.</dd>
@@ -226,7 +226,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Then you can access, for example, the amount due with <code>amountDueView[0]</code>.</p>
 
-<div class="note"><strong>Note:</strong> The <a href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
+<div class="note"><strong>Note:</strong> The <a href="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
@@ -260,7 +260,7 @@ normalArray.constructor === Array;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer" title="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
  <li><a href="/en-US/docs/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
