@@ -139,7 +139,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <h3 id="Build_option_discovery">Build option discovery</h3>
 
-<div class="note">This section requires that you have already <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build" title="https://developer.mozilla.org/En/Simple_Firefox_build">built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
+<div class="note">This section requires that you have already <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build">built your mozilla source tree</a> (so that you have an object directory for it), and it is strongly recommended that the object directory is up to date so that the just-print-mozilla-build.py script runs quickly.</div>
 
 <p>As explained in the {{ anch("Code assistance") }} section above, to provide good code assistance Eclipse CDT needs to collect build information for the source files by processing a build log from a full, clean build made using -j1 -w. Since such a non-parallel, full build would take a very long time, we're going to cheat and set Eclipse's "Build" action to run jwatt's just-print-mozilla-build.py script instead. This script will complete in about 30 seconds on a warm tree (files cached in RAM) if your object directory is up to date, although Eclipse will take several minutes to process the "build output" that it produces.</p>
 
