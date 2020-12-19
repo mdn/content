@@ -138,7 +138,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <p>The main disadvantage is that it <strong>only creates box bounding volumes</strong>, so if you need spheres vs AABB tests you need to create your own <code>Sphere</code> objects.</p>
 
-<p>To use it, we need to create a<strong> </strong>new <code>BoxHelper</code> instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the <code>three.js</code> scene in order to render it. We assume our scene variable to be simply called <code>scene</code>.</p>
+<p>To use it, we need to create a<strong> </strong>new <code>BoxHelper</code> instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the <code>three.js</code> scene in order to render it. We assume our scene variable to be called <code>scene</code>.</p>
 
 <pre class="brush: js notranslate">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),

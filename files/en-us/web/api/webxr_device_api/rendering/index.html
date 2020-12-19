@@ -160,7 +160,7 @@ async function runXR(xrSession) {
     drawMyObject()
 </pre>
 
-<p>Put simply, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
+<p>Put, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
 
 <p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
 

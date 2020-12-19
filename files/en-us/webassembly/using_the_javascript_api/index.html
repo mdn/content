@@ -108,7 +108,7 @@ tags:
 
   <p>The unit of <code>initial</code> and <code>maximum</code> is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.</p>
 
-  <p>WebAssembly memory exposes its bytes by simply providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:</p>
+  <p>WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:</p>
 
   <pre class="brush: js notranslate">new Uint32Array(memory.buffer)[0] = 42;</pre>
 

@@ -167,7 +167,7 @@ main(); // Start the cycle</pre>
 
 <h3 id="What_most_browser_games_should_look_like">What most browser games should look like</h3>
 
-<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can simply update, render, and then do nothing until VSync.</p>
+<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.</p>
 
 <pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
@@ -304,7 +304,7 @@ main(); // Start the cycle</pre>
   main(performance.now()); // Start the cycle
 })();</pre>
 
-<p>Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
+<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
 
 <p>This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.</p>
 
