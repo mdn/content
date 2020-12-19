@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for comparing the modification dates of documents. Here is a possible example of how to show an alert message when the page changes (see also: <a href="/en-US/docs/DOM/document.cookie" title="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a>):</p>
+<p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for comparing the modification dates of documents. Here is a possible example of how to show an alert message when the page changes (see also: <a href="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a>):</p>
 
 <pre class="brush: js notranslate">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;

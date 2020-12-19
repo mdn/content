@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Overview_of_IndexedDB">Overview of IndexedDB</h2>
 
-<p>IndexedDB lets you store and retrieve objects that are indexed with a "key." All changes that you make to the database happen within transactions. Like most web storage solutions, IndexedDB follows a <a class="external" href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
+<p>IndexedDB lets you store and retrieve objects that are indexed with a "key." All changes that you make to the database happen within transactions. Like most web storage solutions, IndexedDB follows a <a class="external" href="http://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
 
 <p>IndexedDB is an <a href="/en/IndexedDB#Asynchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Asynchronous_API">asynchronous</a> API that can be used in most contexts, including <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">Web Workers</a>. It used to include a <a href="/en/IndexedDB#Synchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Synchronous_API">synchronous</a> version also, for use in web workers, but this was removed from the spec due to lack of interest by the web community.</p>
 
@@ -81,7 +81,7 @@ tags:
 
 <dl>
  <dt><a name="gloss_database">database</a></dt>
- <dd>A repository of information, typically comprising one or more <a href="#gloss_object_store" title="#gloss_object_store"><em>object stores</em></a>. Each database must have the following:
+ <dd>A repository of information, typically comprising one or more <a href="#gloss_object_store"><em>object stores</em></a>. Each database must have the following:
  <ul>
   <li>Name. This identifies the database within a specific origin and stays constant throughout its lifetime. The name can be any string value (including an empty string).</li>
   <li>
@@ -109,7 +109,7 @@ tags:
  </dd>
  <dt><a name="gloss_version">version</a></dt>
  <dd>When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one. This will start a <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>transaction</em> and fire an <a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB"><code>upgradeneeded</code></a> event. The only place where the schema of the database can be updated is inside the handler of that event.</dd>
- <dd>Note: This definition describes the <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion()" title="/en-US/docs/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
+ <dd>Note: This definition describes the <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
  <dt><a name="gloss_database_connection">database connection</a></dt>
  <dd>An operation created by opening a <em><a href="#gloss_database">database</a></em>. A given database can have multiple connections at the same time.</dd>
  <dt><a name="gloss_transaction">transaction</a></dt>
@@ -209,8 +209,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API Specification</span></a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API Specification</span></a></li>
  <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
  <li><a href="/en/IndexedDB/Using_IndexedDB" title="en/IndexedDB/IndexedDB primer">Using IndexedDB</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>

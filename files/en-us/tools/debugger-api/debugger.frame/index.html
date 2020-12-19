@@ -117,11 +117,11 @@ slug: Tools/Debugger-API/Debugger.Frame
 	<dt><code>live</code></dt>
 	<dd>True if the frame this <code>Debugger.Frame</code> instance refers to is still on the stack; false if it has completed execution or been popped in some other way.</dd>
 	<dt><code>script</code></dt>
-	<dd>The script being executed in this frame (a <a href="Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> instance), or <code>null</code> on frames that do not represent calls to debuggee code. On frames whose <code>callee</code> property is not null, this is equal to <code>callee.script</code>.</dd>
+	<dd>The script being executed in this frame (a <a href="Debugger.Script"><code>Debugger.Script</code></a> instance), or <code>null</code> on frames that do not represent calls to debuggee code. On frames whose <code>callee</code> property is not null, this is equal to <code>callee.script</code>.</dd>
 	<dt><code>offset</code></dt>
 	<dd>The offset of the bytecode instruction currently being executed in <code>script</code>, or <code>undefined</code> if the frame’s <code>script</code> property is <code>null</code>. For a <code>wasmcall</code> frame, this property throws a <code>TypeError</code>.</dd>
 	<dt><code>environment</code></dt>
-	<dd>The lexical environment within which evaluation is taking place (a <a href="Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> instance), or <code>null</code> on frames that do not represent the evaluation of debuggee code, like calls non-debuggee functions, host functions or <code>"debugger"</code> frames.</dd>
+	<dd>The lexical environment within which evaluation is taking place (a <a href="Debugger.Environment"><code>Debugger.Environment</code></a> instance), or <code>null</code> on frames that do not represent the evaluation of debuggee code, like calls non-debuggee functions, host functions or <code>"debugger"</code> frames.</dd>
 	<dt><code>callee</code></dt>
 	<dd>The function whose application created this frame, as a debuggee value, or <code>null</code> if this is not a <code>"call"</code> frame.</dd>
 	<dt><code>generator</code></dt>

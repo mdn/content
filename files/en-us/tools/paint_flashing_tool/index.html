@@ -10,7 +10,7 @@ tags:
 
 <h2 id="Repaints_and_responsiveness">Repaints and responsiveness</h2>
 
-<p>When the browser renders a web page it parses the HTML and CSS, determines how to lay it out, and then paints it to actually display the content on the screen. Whenever an event happens that might change a visible part of the web page then the browser must repaint some portion of the page. For example, a repaint will be needed if the user scrolls the page or moves the mouse pointer over an element with a <a href="/en-US/docs/Web/CSS/:hover" title="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class that changes the element's style.</p>
+<p>When the browser renders a web page it parses the HTML and CSS, determines how to lay it out, and then paints it to actually display the content on the screen. Whenever an event happens that might change a visible part of the web page then the browser must repaint some portion of the page. For example, a repaint will be needed if the user scrolls the page or moves the mouse pointer over an element with a <a href="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class that changes the element's style.</p>
 
 <p>Repainting can be an expensive operation, so the browser tries to minimise the amount of repainting that it needs to do. It tries to work out which parts of the screen are "damaged" and repaint only those. The browser also splits its model of the page into layers that it expects will be updated independently of each other. Layers are painted independently and then composited, so a change in the appearance of one layer does not trigger a repaint in any other layers, and when only the relation of two layers changes (in an animation, for example) no repaints are required at all.</p>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Using_the_paint_flashing_tool">Using the paint flashing tool</h2>
 
-<p>Open the <a href="/en-US/docs/Tools_Toolbox" title="/en-US/docs/Tools_Toolbox">Toolbox</a>, then click the icon labeled "Highlight painted area":</p>
+<p>Open the <a href="/en-US/docs/Tools_Toolbox">Toolbox</a>, then click the icon labeled "Highlight painted area":</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5929/paint-flashing-open-from-toolbox.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
@@ -27,7 +27,7 @@ tags:
 <p><img alt="" src="https://mdn.mozillademos.org/files/5935/paint-flashing-activated.png" style="display: block; margin-left: auto; margin-right: auto;">In this example, there are two main sources of repaints:</p>
 
 <ul>
- <li>moving the mouse over links makes the browser repaint them, because they have a style applied using the <a href="/en-US/docs/Web/CSS/:hover" title="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class</li>
+ <li>moving the mouse over links makes the browser repaint them, because they have a style applied using the <a href="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class</li>
  <li>scrolling makes the browser repaint the new part of the page coming into view at the bottom of the screen, and also the scrollbar at the top-right</li>
 </ul>
 
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Example_CSS_transitions">Example: CSS transitions</h2>
 
-<p>One area where implementation choices can affect repaint efficiency is in <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions" title="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS transitions</a>. The example below shows two different ways to move an element using a CSS transition. The first way applies the transition to the element's <a href="/en-US/docs/Web/CSS/margin-left" title="/en-US/docs/Web/CSS/margin-left"><code>margin-left</code></a>, while the second way moves the element using the <a href="/en-US/docs/Web/CSS/transform" title="/en-US/docs/Web/CSS/transform"><code>transform</code></a> property.</p>
+<p>One area where implementation choices can affect repaint efficiency is in <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS transitions</a>. The example below shows two different ways to move an element using a CSS transition. The first way applies the transition to the element's <a href="/en-US/docs/Web/CSS/margin-left"><code>margin-left</code></a>, while the second way moves the element using the <a href="/en-US/docs/Web/CSS/transform"><code>transform</code></a> property.</p>
 
 <pre class="brush: html">&lt;body&gt;
     &lt;div id="container"&gt;

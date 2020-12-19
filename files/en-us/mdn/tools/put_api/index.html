@@ -26,9 +26,9 @@ tags:
 <p>In developing the software that runs MDN, we host instances of the site on servers in various stages of readiness:</p>
 
 <ul>
- <li>Production (<a href="http://developer.mozilla.org/" title="http://developer.mozilla.org/">http://developer.mozilla.org/</a>), the real site with stable code and where changes to content matter.</li>
- <li>Staging (<a href="http://developer.allizom.org/" title="http://developer.allizom.org/">http://developer.allizom.org/</a>), a version of the site where changes are throwaway and upcoming features are tested.</li>
- <li>Development (<a href="http://developer-dev.allizom.org/" title="http://developer-dev.allizom.org/">http://developer-dev.allizom.org/</a>), a version of the site running the absolute latest and untested code.</li>
+ <li>Production (<a href="http://developer.mozilla.org/">http://developer.mozilla.org/</a>), the real site with stable code and where changes to content matter.</li>
+ <li>Staging (<a href="http://developer.allizom.org/">http://developer.allizom.org/</a>), a version of the site where changes are throwaway and upcoming features are tested.</li>
+ <li>Development (<a href="http://developer-dev.allizom.org/">http://developer-dev.allizom.org/</a>), a version of the site running the absolute latest and untested code.</li>
 </ul>
 
 <p>To keep from cluttering up the Production site with throwaway content, you should try developing your application against Staging first. Then, when you are reasonably sure that it'll do what you want, reconfigure it to work against Production. You can also try working against Development, but you may run into issues.</p>
@@ -37,19 +37,19 @@ tags:
 
 <p>An API key allows an application to act on your behalf, without requiring your intervention to sign in with Persona every time. It provides a username and password for use with HTTP Basic authentication over SSL. It collects basic usage tracking, so you can see how it's been used. And, you can delete an API key to revoke access, in case it has been accidentally released to parties who shouldn't have it.</p>
 
-<p>If you have the correct privileges to do so, to create an API key, sign into MDN and <a href="https://developer.mozilla.org/en-US/users/account/keys" title="https://developer.mozilla.org/en-US/users/account/keys">visit the API keys management page</a>. This page lets you create and delete API keys, as well as inspect recent usage history.  Only Mozillians in good standing can currently get API keys, since they grant abilities to automate changes to content rapidly, so unprivileged users must request the ability by filing a bug.</p>
+<p>If you have the correct privileges to do so, to create an API key, sign into MDN and <a href="https://developer.mozilla.org/en-US/users/account/keys">visit the API keys management page</a>. This page lets you create and delete API keys, as well as inspect recent usage history.  Only Mozillians in good standing can currently get API keys, since they grant abilities to automate changes to content rapidly, so unprivileged users must request the ability by filing a bug.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The above link goes to the Production site, and the same keys do not work between Production and Staging. You can also get to this page by visiting your profile on the respective site: Click on your username in the upper right of the site. On your profile page, you should see a "Manage API Keys" button.</p>
 </div>
 
-<p>From there, clicking on the "<a href="https://developer.mozilla.org/en-US/users/account/keys/new" title="https://developer.mozilla.org/en-US/users/account/keys/new">Create a new API key</a>" button should take you to an entry form so you can submit a request for an API key.</p>
+<p>From there, clicking on the "<a href="https://developer.mozilla.org/en-US/users/account/keys/new">Create a new API key</a>" button should take you to an entry form so you can submit a request for an API key.</p>
 
 <p>After filling out and submitting the form, you will receive a key ID and secret. These are your username and password, respectively. Copy these down somewhere safe (eg. to your application's configuration settings); the site will never display them again, and there is no recovery method. If you lose them, simply delete the API key and create another.</p>
 
 <h2 id="Making_a_PUT_request">Making a PUT request</h2>
 
-<p>Since the PUT API works by way of HTTP, it should be compatible with the application environment and libraries of your choice. This first example uses <a href="http://curl.haxx.se/" title="http://curl.haxx.se/">the command-line tool cURL</a> and a UNIX shell to demonstrate how to issue a simple PUT request to MDN.</p>
+<p>Since the PUT API works by way of HTTP, it should be compatible with the application environment and libraries of your choice. This first example uses <a href="http://curl.haxx.se/">the command-line tool cURL</a> and a UNIX shell to demonstrate how to issue a simple PUT request to MDN.</p>
 
 <h3 id="Request">Request</h3>
 
@@ -205,7 +205,7 @@ curl -X PUT -H "Content-Type: $DOC_TYPE" -d @/tmp/mdn.json -u"$MDN_KEY_ID:$MDN_S
  <li>Add <code>?section={ID}</code> to the URL for the document, substituting the section ID for <code>{ID}</code>.<br>
   Example: <code>https://developer.mozilla.org/en-US/docs/User:lmorchard/PUT-API?section=Specifying_a_section</code></li>
  <li>If you view <a href="/en-US/docs/User:lmorchard/PUT-API?section=Specifying_a_section" title="https://developer.mozilla.org/en-US/docs/User:lmorchard/PUT-API?section=Specifying_a_section">that URL</a> in a browser (ie. HTTP GET), you'll see just that section of the document.<br>
-  (For more details on what you can do with HTTP GET, see also: <a href="/en-US/docs/Project:The_Kuma_API" title="/en-US/docs/Project:The_Kuma_API">Project:The_Kuma_API</a>)</li>
+  (For more details on what you can do with HTTP GET, see also: <a href="/en-US/docs/Project:The_Kuma_API">Project:The_Kuma_API</a>)</li>
  <li>If you issue a PUT request to that URL, you'll modify just that section of the document.<br>
   (But, don't do that to the example URL, or you'll clobber the page you're reading right now!)</li>
 </ul>

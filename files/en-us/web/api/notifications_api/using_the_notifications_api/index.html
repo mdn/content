@@ -107,7 +107,7 @@ tags:
 <p>To avoid duplicating code, we have stored a few bits of housekeeping code inside the <code>handlePermission()</code> function, which is the first main block inside this snippet. Inside here we explicitly set the <code>Notification.permission</code> value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the <code>load</code> event handler (see <a href="https://code.google.com/p/chromium/issues/detail?id=274284" title="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>).</p>
+<p><strong>Note:</strong> Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the <code>load</code> event handler (see <a href="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>).</p>
 </div>
 
 <h3 id="Feature-detecting_the_requestPermission_promise">Feature-detecting the requestPermission() promise</h3>

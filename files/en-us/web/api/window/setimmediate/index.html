@@ -14,7 +14,7 @@ tags:
 
 <p>This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.</p>
 
-<div class="note">This method is not expected to become standard, and is only implemented by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201" title="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) and <a href="http://code.google.com/p/chromium/issues/detail?id=146172" title="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</div>
+<div class="note">This method is not expected to become standard, and is only implemented by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) and <a href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,7 +33,7 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
 
 <p>The {{DOMxRef("Window.clearImmediate", "clearImmediate")}} method can be used to clear the immediate actions, just like {{DOMxRef("Window.clearTimeout", "clearTimeout")}} for {{DOMxRef("window.setTimeout", "setTimeout")}}.</p>
 
-<p>This method can be used instead of the <code>setTimeout(fn, 0)</code> method to execute <a href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/" title="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">heavy operations</a>. </p>
+<p>This method can be used instead of the <code>setTimeout(fn, 0)</code> method to execute <a href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">heavy operations</a>. </p>
 
 <p>The feature can be emulated in a few different ways:</p>
 
@@ -43,7 +43,7 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
  <li><code>setTimeout(fn, 0)</code> <em>can</em> potentially be used, however as it is clamped to 4ms for timers nested more than 5 levels deep <a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-settimeout">per the HTML spec</a>, it does not make for a suitable polyfill for the natural immediacy of <code>setImmediate</code>.</li>
 </ul>
 
-<p>All of these techniques are incorporated into a <a href="https://github.com/NobleJS/setImmediate" title="https://github.com/NobleJS/setImmediate">robust setImmediate polyfill</a>.</p>
+<p>All of these techniques are incorporated into a <a href="https://github.com/NobleJS/setImmediate">robust setImmediate polyfill</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

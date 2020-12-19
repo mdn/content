@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>The Browser Console is like the <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>, but applied to the whole browser rather than a single content tab.</p>
+<p>The Browser Console is like the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, but applied to the whole browser rather than a single content tab.</p>
 
 <p>So it logs the same sorts of information as the Web Console - network requests, JavaScript, CSS, and security errors and warnings, and messages explicitly logged by JavaScript code. However, rather than logging this information for a single content tab, it logs information for all content tabs, for add-ons, and for the browser's own code.</p>
 
 <p>If you also want to use the other web developer tools in the regular Web <a href="/en-US/docs/Tools/Tools_Toolbox">Toolbox</a> with add-on or browser code, consider using the <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a>.</p>
 
-<p>Similarly, you can execute JavaScript expressions using the Browser Console. But while the Web Console executes code in the page window scope, the Browser Console executes them in the scope of the browser's chrome window. This means you can interact with all the browser's tabs using the <a href="/en-US/docs/Code_snippets/Tabbed_browser" title="/en-US/docs/Code_snippets/Tabbed_browser"><code>gBrowser</code></a> global, and even with the XUL used to specify the browser's user interface.</p>
+<p>Similarly, you can execute JavaScript expressions using the Browser Console. But while the Web Console executes code in the page window scope, the Browser Console executes them in the scope of the browser's chrome window. This means you can interact with all the browser's tabs using the <a href="/en-US/docs/Code_snippets/Tabbed_browser"><code>gBrowser</code></a> global, and even with the XUL used to specify the browser's user interface.</p>
 
 <div class="blockIndicator geckoVersionNote">
 <p>NB: The Browser Console command line (to execute JavaScript expressions) is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in about:config, or set the "Enable browser {{Glossary("chrome")}} and add-on debugging toolboxes" (Firefox 40 and later)  option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
@@ -39,10 +39,10 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16787/browser_console_68.png" style="display: block; height: 339px; margin-left: auto; margin-right: auto; width: 800px;"></p>
 
-<p>You can see that the Browser Console looks and behaves very much like the <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console</a>:</p>
+<p>You can see that the Browser Console looks and behaves very much like the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>:</p>
 
 <ul>
- <li>most of the window is occupied by a <a href="/en-US/docs/Tools/Web_Console#Message_Display_Pane" title="/en-US/docs/Tools/Web_Console#Message_Display_Pane">pane that display messages</a>.</li>
+ <li>most of the window is occupied by a <a href="/en-US/docs/Tools/Web_Console#Message_Display_Pane">pane that display messages</a>.</li>
  <li>at the top, a <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/docs/Tools/Web_Console#Filtering_and_searching">toolbar</a> enables you to filter the messages that appear.</li>
  <li>at the bottom, a <a href="/en-US/docs/Tools/Web_Console#The_command_line_interpreter" title="/en-US/docs/docs/Tools/Web_Console#The_command_line_interpreter">command line interpreter</a> enables you to evaluate JavaScript expressions.</li>
 </ul>
@@ -56,9 +56,9 @@ tags:
 <p>The Browser console logs the same sorts of messages as the Web Console:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Web_Console#HTTP_requests" title="/en-US/docs/Tools/Web_Console#HTTP_requests">HTTP requests</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Warnings_and_errors" title="/en-US/docs/Tools/Web_Console#Warnings_and_errors">Warnings and errors</a> (including JavaScript, CSS, security warnings and errors, and messages explicitly logged by JavaScript code using the <a href="/en-US/docs/Web/API/console" title="/en-US/docs/Web/API/console">console</a> API)</li>
- <li><a href="/en-US/docs/Tools/Web_Console#Input.2Foutput_messages" title="/en-US/docs/Tools/Web_Console#Input.2Foutput_messages">Input/output messages</a>: commands send to the browser via the command line, and the result of executing them</li>
+ <li><a href="/en-US/docs/Tools/Web_Console#HTTP_requests">HTTP requests</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console#Warnings_and_errors">Warnings and errors</a> (including JavaScript, CSS, security warnings and errors, and messages explicitly logged by JavaScript code using the <a href="/en-US/docs/Web/API/console">console</a> API)</li>
+ <li><a href="/en-US/docs/Tools/Web_Console#Input.2Foutput_messages">Input/output messages</a>: commands send to the browser via the command line, and the result of executing them</li>
 </ul>
 
 <p>However, it displays such messages from:</p>
@@ -115,7 +115,7 @@ clearBtn.addEventListener('mouseover', function() {
 
 <h4 id="Bonus_Features_Available">Bonus Features Available</h4>
 
-<p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
+<p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
 
 <pre class="brush: js notranslate">widget = require("sdk/widget").Widget({
   id: "an-error-happened",
@@ -129,13 +129,13 @@ function logError() {
   console.error("something went wrong!");
 }</pre>
 
-<p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
+<p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5937/browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Click the icon. You'll see output like this in the Browser Console:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
+<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
 
 <h2 id="Browser_Console_command_line">Browser Console command line</h2>
 
@@ -143,7 +143,7 @@ function logError() {
 <p>The Browser Console command line is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in <code>about:config</code>, or set the "Enable chrome debugging" option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
 </div>
 
-<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="https://mdn.mozillademos.org/files/5855/browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#Autocomplete" title="/en-US/docs/Tools/Web_Console#Autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#Command_history" title="/en-US/docs/Tools/Web_Console#Command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#Keyboard_shortcuts" title="/en-US/docs/docs/Tools/Web_Console#Keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#Helper_commands" title="/en-US/docs/Tools/Web_Console#Helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects" title="/en-US/docs/Tools/Web_Console#Inspecting_objects">click on the object to see its details</a>.</p>
+<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="https://mdn.mozillademos.org/files/5855/browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#Autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#Command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#Keyboard_shortcuts" title="/en-US/docs/docs/Tools/Web_Console#Keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#Helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects">click on the object to see its details</a>.</p>
 
 <p>But while the Web Console executes code in the scope of the content window it's attached to, the browser console executes code in the scope of the chrome window of the browser. You can confirm this by evaluating <code>window</code>:</p>
 
@@ -153,7 +153,7 @@ function logError() {
 
 <h3 id="Controlling_the_browser">Controlling the browser</h3>
 
-<p>The command line interpreter gets access to the <a href="/en-US/docs/XUL/tabbrowser" title="/en-US/docs/XUL/tabbrowser"><code>tabbrowser</code></a> object, through the <code>gBrowser</code> global, and that enables you to control the browser through the command line. Try running this code in the Browser Console's command line (remember that to send multiple lines to the Browser Console, use <kbd>Shift</kbd>+<kbd>Enter</kbd>):</p>
+<p>The command line interpreter gets access to the <a href="/en-US/docs/XUL/tabbrowser"><code>tabbrowser</code></a> object, through the <code>gBrowser</code> global, and that enables you to control the browser through the command line. Try running this code in the Browser Console's command line (remember that to send multiple lines to the Browser Console, use <kbd>Shift</kbd>+<kbd>Enter</kbd>):</p>
 
 <pre class="brush: js notranslate">var newTabBrowser = gBrowser.getBrowserForTab(gBrowser.selectedTab);
 newTabBrowser.addEventListener("load", function() {

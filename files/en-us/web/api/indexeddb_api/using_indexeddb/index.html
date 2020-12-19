@@ -72,7 +72,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>See that? Opening a database is just like any other operation — you have to "request" it.</p>
 
-<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
+<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
 
 <p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
@@ -1322,8 +1322,8 @@ input {
 
 <ul>
  <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
  <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
 </ul>
@@ -1331,8 +1331,8 @@ input {
 <h3 id="Tutorials_and_guides">Tutorials and guides</h3>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="Libraries">Libraries</h3>

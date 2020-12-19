@@ -27,7 +27,7 @@ tags:
  <li>Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method <code>addColorStop()</code> now correctly throws <code>INDEX_SIZE_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
  <li>The {{ domxref("HTMLCanvasElement") }} method <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
  <li><code>getImageData()</code> now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.</li>
- <li><code>drawImage()</code> and <code>createImageData()</code> now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. <strong>We need an article about <a class="external" href="http://dev.w3.org/csswg/css3-images/#default-sizing" title="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> and how this works.</strong></li>
+ <li><code>drawImage()</code> and <code>createImageData()</code> now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. <strong>We need an article about <a class="external" href="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> and how this works.</strong></li>
  <li>Specifying non-finite values when calling <code>createImageData()</code> now properly throws a <code>NOT_SUPPORTED_ERR</code> exception.</li>
  <li><code>createImageData()</code> and <code>getImageData()</code> now correctly return at least one pixel's worth of image data if a rectangle smaller than one pixel is specified.</li>
  <li>Specifying a negative radius when calling <code>createRadialGradient()</code> now correctly throws <code>INDEX_SIZE_ERR</code>.</li>
@@ -86,7 +86,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>Support for <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3" title="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">embellished operators</a></li>
+ <li>Support for <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">embellished operators</a></li>
 </ul>
 
 <h3 id="Developer_tools">Developer tools</h3>
