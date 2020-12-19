@@ -127,7 +127,7 @@ tags:
 <p>If escape strings are not already part of your pattern you can add them using {{jsxref('String.replace')}}:</p>
 
 <pre class="brush: js notranslate">function escapeRegExp(string) {
-  return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
 }
 </pre>
 
