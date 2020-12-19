@@ -456,7 +456,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 }
 </pre>
 
-<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> instance, that is: the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel" title="/en-US/docs/">nsIHttpChannel</a>'s notification is of an <a href="/en-US/docs/nsIXMLHttpRequest">nsIXMLHttpRequest</a> interface.</p>
+<p>This packet is used to inform the Web Console of a new network event. For each request a new <code>NetworkEventActor</code> instance is created. The <code>isXHR</code> flag indicates if the request was initiated via an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> instance, that is: the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a>'s notification is of an <a href="/en-US/docs/nsIXMLHttpRequest">nsIXMLHttpRequest</a> interface.</p>
 
 <p>The <code>private</code> flag tells if the network request comes from a private window/tab (added in Firefox 24).</p>
 

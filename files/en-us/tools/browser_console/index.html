@@ -43,8 +43,8 @@ tags:
 
 <ul>
  <li>most of the window is occupied by a <a href="/en-US/docs/Tools/Web_Console#Message_Display_Pane">pane that display messages</a>.</li>
- <li>at the top, a <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/docs/Tools/Web_Console#Filtering_and_searching">toolbar</a> enables you to filter the messages that appear.</li>
- <li>at the bottom, a <a href="/en-US/docs/Tools/Web_Console#The_command_line_interpreter" title="/en-US/docs/docs/Tools/Web_Console#The_command_line_interpreter">command line interpreter</a> enables you to evaluate JavaScript expressions.</li>
+ <li>at the top, a <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching">toolbar</a> enables you to filter the messages that appear.</li>
+ <li>at the bottom, a <a href="/en-US/docs/Tools/Web_Console#The_command_line_interpreter">command line interpreter</a> enables you to evaluate JavaScript expressions.</li>
 </ul>
 
 <p>Beginning with Firefox 68, the Browser Console allows you to show or hide messages from the content process (i.e. the messages from scripts in all the opened pages) by setting or clearing the checkbox labeled <strong>Show Content Messages</strong>. The following image shows the browser console focused on the same page as above after clicking on the <strong>Show Content Messages</strong> checkbox.</p>
@@ -143,7 +143,7 @@ function logError() {
 <p>The Browser Console command line is disabled by default. To enable it set the <code>devtools.chrome.enabled</code> preference to <code>true</code> in <code>about:config</code>, or set the "Enable chrome debugging" option in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>.</p>
 </div>
 
-<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="https://mdn.mozillademos.org/files/5855/browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#Autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#Command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#Keyboard_shortcuts" title="/en-US/docs/docs/Tools/Web_Console#Keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#Helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects">click on the object to see its details</a>.</p>
+<p>Like the Web Console, the command line interpreter enables you to evaluate JavaScript expressions in real time:<img alt="" src="https://mdn.mozillademos.org/files/5855/browser-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;">Also like the Web Console's command line interpreter, this command line supports <a href="/en-US/docs/Tools/Web_Console#Autocomplete">autocomplete</a>, <a href="/en-US/docs/Tools/Web_Console#Command_history">history</a>, and various <a href="/en-US/docs/Tools/Web_Console#Keyboard_shortcuts">keyboard shortcuts </a>and <a href="/en-US/docs/Tools/Web_Console#Helper_commands">helper commands</a>. If the result of a command is an object, you can <a href="/en-US/docs/Tools/Web_Console#Inspecting_objects">click on the object to see its details</a>.</p>
 
 <p>But while the Web Console executes code in the scope of the content window it's attached to, the browser console executes code in the scope of the chrome window of the browser. You can confirm this by evaluating <code>window</code>:</p>
 
