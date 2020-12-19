@@ -174,7 +174,7 @@ tags:
   }
 }</pre>
 
-<p>As you can see, the report includes the full path to the violating resource in <code>blocked-uri</code>. This is not always the case. For example, if the <code>signup.html</code> attempted to load CSS from <code>http://anothercdn.example.com/stylesheet.css</code>, the browser would <em>not</em> include the full path, but only the origin (<code>http://anothercdn.example.com</code>). The CSP specification <a href="http://www.w3.org/TR/CSP/#security-violation-reports">gives an explanation</a> of this odd behaviour. In summary, this is done to prevent leaking sensitive information about cross-origin resources.</p>
+<p>As you can see, the report includes the full path to the violating resource in <code>blocked-uri</code>. This is not always the case. For example, if the <code>signup.html</code> attempted to load CSS from <code>http://anothercdn.example.com/stylesheet.css</code>, the browser would <em>not</em> include the full path, but only the origin (<code>http://anothercdn.example.com</code>). The CSP specification <a href="https://www.w3.org/TR/CSP/#security-violation-reports">gives an explanation</a> of this odd behaviour. In summary, this is done to prevent leaking sensitive information about cross-origin resources.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

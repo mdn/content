@@ -108,7 +108,7 @@ tags:
 
 <p>Before dealing with the individual buttons, a number of initialisation calls are required.</p>
 
-<p>To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports <a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype">the <code>canPlayType()</code> method</a>, which any supported HTML5 {{ htmlelement("video") }} element should.</p>
+<p>To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports <a href="https://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype">the <code>canPlayType()</code> method</a>, which any supported HTML5 {{ htmlelement("video") }} element should.</p>
 
 <pre class="brush: js">var supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {

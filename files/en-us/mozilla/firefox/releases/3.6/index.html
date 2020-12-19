@@ -37,7 +37,7 @@ tags:
 <h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/CSS/length#Relative_length_units" title="en-US/docs/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. {{bug(472195)}}</li>
+ <li>The <a href="/en-US/docs/CSS/length#Relative_length_units" title="en-US/docs/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="https://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. {{bug(472195)}}</li>
  <li>{{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. {{bug(423756)}}</li>
  <li>{{Cssxref("text-align")}}:end is now supported. {{bug(299837)}}</li>
  <li>DOM changes to elements using the table {{Cssxref("display")}} types now work much better.</li>
@@ -96,7 +96,7 @@ tags:
  <li>When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new <code>hashchange</code> event is sent to the page. See <a class="internal" href="/en-US/docs/DOM/window.onhashchange" title="window.onhashchange">window.onhashchange</a> for more information. {{bug(385434)}}</li>
  <li>The attribute <a class="internal" href="/en-US/docs/DOM/document.readyState" title="en-US/docs/DOM/document.readyState"><code>document.readyState</code></a> is now supported. {{bug(347174)}}</li>
  <li>Support for HTML5's <code><a class="internal" href="/en-US/docs/DOM/element.classList" title="element.classList">element.classList</a></code> to allow easier handling of the class attribute. {{bug(501257)}}</li>
- <li><code>localName</code> and <code>namespaceURI</code> in HTML documents now behave like they do in XHTML documents: <code>localName</code> returns in lower case and <code>namespaceURI</code> for HTML elements is <code>"<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"</code>.</li>
+ <li><code>localName</code> and <code>namespaceURI</code> in HTML documents now behave like they do in XHTML documents: <code>localName</code> returns in lower case and <code>namespaceURI</code> for HTML elements is <code>"<a class="external" href="https://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"</code>.</li>
  <li><a href="/en-US/docs/DOM/element.getElementsByTagNameNS" title="en-US/docs/DOM/element.getElementsByTagNameNS"><code>element.getElementsByTagNameNS</code></a> no longer lowercases its argument, so upper-case ASCII letters in the argument make matches against HTML elements fail. The same is true for <a href="/en-US/docs/DOM/document.getElementsByTagNameNS" title="en-US/docs/DOM/document.getElementsByTagNameNS"><code>document.getElementsByTagNameNS</code></a>.</li>
  <li>Support has been added for addresses in geolocation via the {{interface("nsIDOMGeoPositionAddress")}} interface and a new field added to {{interface("nsIDOMGeoPosition")}}.</li>
  <li>The {{domxref("window.getComputedStyle")}} function now returns quotes within <code>url()</code> values.</li>
