@@ -132,7 +132,7 @@ client.send()</pre>
 
 <p>Let's have a closer look what that means.</p>
 
-<p>In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these “states” IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an <strong>Intermediate Synchronious Document</strong> or <strong>ISD</strong>. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.</p>
+<p>In our HTML/CSS implementation we can think of IMSC subtitles as a rendering layer that is put on top of the video. At each point in time on the media timeline the rendering layer has one specific state. For these “states” IMSC has a conceptual model, the "intermediate synchronous document format", which represents what is eventually rendered in that layer. Each time the rendering needs to change, a new representation is created. What is created is called an <strong>Intermediate Synchronous Document</strong> or <strong>ISD</strong>. This ISD has no dependency on the ISD's that come before or after. It is completely stateless and has all information needed to render the subtitle.</p>
 
 <p>So how can we get the times when the ISD changes?</p>
 
