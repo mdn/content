@@ -325,7 +325,7 @@ Promise.all([a, b, c]).then(values =&gt; {
   ...
 });</pre>
 
-  <p>When the promise is fulfilled, the <code>values</code> passed into the fulfilment handler would contain three <code>Response</code> objects, one for each of the <code>fetch()</code> operations that have completed.</p>
+  <p>When the promise is fulfilled, the <code>values</code> passed into the fulfillment handler would contain three <code>Response</code> objects, one for each of the <code>fetch()</code> operations that have completed.</p>
 
   <p>However, we don't want to do this. Our code doesn't care when the <code>fetch()</code> operations are done. Instead, what we want is the loaded data. That means we want to run the <code>Promise.all()</code> block when we get back usable blobs representing the images, and a usable text string. We can write a function that does this; add the following inside your <code>&lt;script&gt;</code> element:</p>
 

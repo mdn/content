@@ -90,7 +90,7 @@ tags:
 
 <ol>
  <li>The first line of the body of function <code>foo</code> is executed synchronously, with the await expression configured with the pending promise. Progress through <code>foo</code> is then suspended and control is yielded back to the function that called <code>foo</code>.</li>
- <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfilment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
+ <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfillment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
  <li>Some time later, when the second promise has either been fulfilled or rejected, control re-enters <code>foo</code>. The result of the second promise resolution is returned from the second await expression. Here <code>2</code> is assigned to <code>result2</code>. Control moves to the return expression (if any). The default return value of <code>undefined</code> is returned as the resolution value of the current promise.</li>
 </ol>
 
