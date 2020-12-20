@@ -451,7 +451,7 @@ push your branch to your fork:
 
 ### Updating a browser compatibility table
 
-The browser compatibiliity table shown near the bottom of many of the MDN document pages,
+The browser compatibility table shown near the bottom of many of the MDN document pages,
 for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
 is generated from the `npm` package created from the https://github.com/mdn/browser-compat-data
