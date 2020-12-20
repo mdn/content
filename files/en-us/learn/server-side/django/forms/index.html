@@ -499,7 +499,7 @@ class RenewBookModelForm(ModelForm):
     model = BookInstance
     fields = ['due_back']
 <strong>    labels = {'due_back': _('New renewal date')}
-    help_texts = {'due_back</strong><strong>': _('Enter a date between now and 4 weeks (default 3).')} </strong>
+    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} </strong>
 </pre>
 
 <p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>". This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
@@ -510,7 +510,7 @@ from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
 <strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back</strong><strong>']
+       data = self.cleaned_data['due_back']
 
        # Check if a date is not in the past.
        if data &lt; datetime.date.today():
@@ -590,7 +590,7 @@ class AuthorDelete(DeleteView):
 
 <p>This is similar to our previous forms and renders the fields using a table. Note also how again we declare the <code>{% csrf_token %}</code> to ensure that our forms are resistant to CSRF attacks.</p>
 
-<p>The "delete" view expects to find a template named with the format <em>model_name</em><strong>_confirm_delete.html</strong> (again, you can change the suffix using <code>template_name_suffix</code> in your view). Create the template file <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> and copy in the text below.</p>
+<p>The "delete" view expects to find a template named with the format <em>model_name</em><strong>_confirm_delete.html</strong> (again, you can change the suffix using <code>template_name_suffix</code> in your view). Create the template file <strong>locallibrary/catalog/templates/catalog/author_confirm_delete.html</strong> and copy in the text below.</p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 

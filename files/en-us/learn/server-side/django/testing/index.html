@@ -534,7 +534,7 @@ response = self.client.get(reverse('authors'))
 <p>Once we have the response we query it for its status code, the template used, whether or not the response is paginated, the number of items returned, and the total number of items.</p>
 
 <div class="notecard note">
-<p class="brush: python">Note: If you set the <code>paginate_by</code> variable in your <strong>/c</strong><strong>atalog/views.py</strong> file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:</p>
+<p class="brush: python">Note: If you set the <code>paginate_by</code> variable in your <strong>/catalog/views.py</strong> file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:</p>
 
 <pre class="brush: python notranslate">self.assertTrue(len(response.context['author_list']) == 5)
 </pre>
@@ -861,7 +861,7 @@ class RenewBookInstancesViewTest(TestCase):
 <p>The <em>all-borrowed</em> view was added as a <em>challenge</em>, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The <code>follow=True</code> in the request ensures that the request returns the final destination URL (hence checking <code>/catalog/</code> rather than <code>/</code>).</p>
 
 <pre class="brush: python notranslate"> response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, <strong>follow=True</strong> )
- <strong>self.assertRedirects(</strong><strong>response, '/catalog/')</strong></pre>
+ <strong>self.assertRedirects(response, '/catalog/')</strong></pre>
 </div>
 
 <p>Copy the last two functions into the class, as seen below. These again test <code>POST</code> requests, but in this case with invalid renewal dates. We use <code>assertFormError() </code>to verify that the error messages are as expected.</p>
@@ -871,14 +871,14 @@ class RenewBookInstancesViewTest(TestCase):
         date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
         response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': date_in_past})
         self.assertEqual(response.status_code, 200)
-        <strong>self.assertFormError(</strong><strong>response, 'form', 'renewal_date', 'Invalid date - renewal in past')</strong>
+        <strong>self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')</strong>
 
     def test_form_invalid_renewal_date_future(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&amp;3iD')
         invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
         response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': invalid_date_in_future})
         self.assertEqual(response.status_code, 200)
-        <strong>self.assertFormError(</strong><strong>response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')</strong>
+        <strong>self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')</strong>
 </pre>
 
 <p>The same sorts of techniques can be used to test the other view.</p>
