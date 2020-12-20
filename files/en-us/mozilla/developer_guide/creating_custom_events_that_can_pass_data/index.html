@@ -89,13 +89,13 @@ window.dispatchEvent(event);
 
   nsCOMPtr&lt;nsIDOMEventTarget&gt; tWindow;
   // the target window (really the same window as above but you need
-  // a different inteface :/
+  // a different interface :/
 
   nsCOMPtr&lt;nsIDOMEvent&gt; event;
   //this will be the event we throw.
 
   nsCOMPtr&lt;nsIDOMMyEvent&gt; myEvent;
-  //this is a handle to the your inteface to the event.
+  //this is a handle to the your interface to the event.
 
   wwatcher-&gt;GetActiveWindow(getter_AddRefs(aWindow));
   //get the Active window.
