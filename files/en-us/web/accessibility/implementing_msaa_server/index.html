@@ -370,7 +370,7 @@ tags:
 
 <h3 id="Dueling_text_roles_2"><a id="Dueling_text_roles">Dueling text roles</a></h3>
 
-<p><span class="c1">Problem</span>: There are two different roles for text objects, ROLE_STATICTEXT and ROLE_TEXT. ROLE_TEXT is supposed to mean editable text, yet it is sometimes used in conjuction with STATE_READONLY. It's difficult to know when to use which role plus readonly state combination. For example, Internet Explorer uses ROLE_TEXT without STATE_READONLY and ROLE_TEXT with STATE_READONLY for ordinary web page text. However, it uses ROLE_STATICTEXT for labels.</p>
+<p><span class="c1">Problem</span>: There are two different roles for text objects, ROLE_STATICTEXT and ROLE_TEXT. ROLE_TEXT is supposed to mean editable text, yet it is sometimes used in conjunction with STATE_READONLY. It's difficult to know when to use which role plus readonly state combination. For example, Internet Explorer uses ROLE_TEXT without STATE_READONLY and ROLE_TEXT with STATE_READONLY for ordinary web page text. However, it uses ROLE_STATICTEXT for labels.</p>
 
 <p><span class="c1">Solution</span>: Use ROLE_STATICTEXT for labels specific to dialog and UI controls, and always use ROLE_TEXT for document text even if the text is not editable (in that case use ROLE_TEXT with STATE_READONLY). Use ROLE_TEXT with the readonly flag cleared for editable text fields.</p>
 
