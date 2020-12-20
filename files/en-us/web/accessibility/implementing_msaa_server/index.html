@@ -376,7 +376,7 @@ tags:
 
 <h3 id="Issues_with_Links_2"><a id="Issues_with_Links">Issues with Links</a></h3>
 
-<p><span class="c1">Problem</span>: Some assistive technologies have inflexible heuristics when it comes to reading links. They may not read the object unless the states are correctly set. Second, they can mishandle the object if it cannot parse the whitespace according to its own rules. Most assistive techologies don't know what to do with links embedded in a dialog, as is becoming more common.</p>
+<p><span class="c1">Problem</span>: Some assistive technologies have inflexible heuristics when it comes to reading links. They may not read the object unless the states are correctly set. Second, they can mishandle the object if it cannot parse the whitespace according to its own rules. Most assistive technologies don't know what to do with links embedded in a dialog, as is becoming more common.</p>
 
 <p><span class="c1">Solution</span>: For links inside documents, make sure the ROLE_LINK object and its child ROLE_TEXT objects all have STATE_LINKED set. For multi-line links with a line break in the middle, make sure there is no whitespace at the beginning or end of any of the accessible names, and make sure there is a \r\n where the line breaks occur in the accessible name for the ROLE_LINK. For an example of how to do this properly, see Internet Explorer or Gecko. Again, if it's not done exactly this way, some links will not be read.</p>
 
