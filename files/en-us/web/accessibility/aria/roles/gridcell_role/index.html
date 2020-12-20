@@ -63,7 +63,7 @@ tags:
 
 <h3 id="Describing_the_position_of_gridcells_when_the_overall_structure_is_unknown">Describing the position of gridcells when the overall structure is unknown</h3>
 
-<p>In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programatically described by using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>. The <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>s provided for <code>aria-describedby</code> should correspond to parent elements intended to be the rows and columns.</p>
+<p>In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>. The <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>s provided for <code>aria-describedby</code> should correspond to parent elements intended to be the rows and columns.</p>
 
 <p>By referencing the parent elements with roles of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role">rowheader</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role">columnheader</a></code> applied to them via <code>aria-describedby</code>, it allows assistive technology to understand the position and relationship of the <code>gridcell</code> element to the rest of the table-style grouping of content.</p>
 
