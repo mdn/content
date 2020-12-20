@@ -78,7 +78,7 @@ tags:
     payRequest.onshippingaddresschange = ev =&gt; ev.updateWith(checkAddress(payRequest));
     payRequest.onshippingoptionchange = ev =&gt; ev.updateWith(checkShipping(payRequest));
 
-    const repsonse = await payRequest.show();
+    const response = await payRequest.show();
     await validateResponse(response);
   } catch(err) {
     /* handle the error; AbortError usually means a user cancellation */
