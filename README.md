@@ -35,12 +35,13 @@ If you're not familiar with [`git`](https://git-scm.com) and
 helpful.
 
 There are several ways forward from this point. It's up to you. Here are some options:
-1. Go to https://github.com/mdn/content and just use the [GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github). This is the easiest approach if you just want to make a simple change to a single file, like fixing a typo.
+
+1. Go to <https://github.com/mdn/content> and just use the [GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github). This is the easiest approach if you just want to make a simple change to a single file, like fixing a typo.
 1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
 1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
-    - [`git` cheatsheet](https://training.github.com/)
+    * [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    * [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
 [Node.js (version >=12.11)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
@@ -48,13 +49,15 @@ If you choose an option other than the GitHub UI, you want to install
 ### Fundamental content concepts
 
 These are some important things to keep in mind about the MDN content.
-- **Documents are folders** --  Documents are always
+
+* **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)), and that folder will contain the content of that specific document as an
 `index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html)).
-- **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
-- **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
-- **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
-- **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
+* **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
+* **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
+* **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
+* **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
+
     ```yaml
     ---
     title: JavaScript
@@ -73,7 +76,7 @@ represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/ja
 If you just want to make a simple change to a single file, like fixing a typo, the
 GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](files/en-us/web/javascript/index.html),
-you can sign into GitHub, go to https://github.com/mdn/content, navigate to
+you can sign into GitHub, go to <https://github.com/mdn/content>, navigate to
 `files/en-us/web/javascript/index.html`, and then click on the edit (pencil) button. From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
 like automatically creating a
@@ -149,7 +152,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see the changes
 you'll make as they would look in production. Once started, this local preview
-service is available at http://localhost:5000 within your browser.
+service is available at `http://localhost:5000` within your browser.
 
     ```sh
     # Switch to a separate terminal.
@@ -193,20 +196,20 @@ service is available at http://localhost:5000 within your browser.
 1. Make your desired changes to one or more `index.html` files using
 your preferred code editor. **When thinking about your desired changes, it's
 important to keep the following in mind:**
-    - **Make sure you've read the
+    * **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
-    - **Large chunks of work can be difficult to review, so try to group your
+    * **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
 1. Once you've made and saved your changes, open a browser, and navigate to the page(s)
 you've changed. For example, if you changed `files/en-us/web/javascript/index.html`,
-open http://localhost:5000/en-us/docs/web/javascript in your browser.
+open `http://localhost:5000/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview, for example
-the http://localhost:5000/en-us/docs/web/javascript page, there is a `Show flaws` button.
+the `http://localhost:5000/en-us/docs/web/javascript` page, there is a `Show flaws` button.
 Click on that button to see if your changes have introduced flaws on the page.
 
 1. Once you're happy with your changes, add and commit them to your branch, and then
@@ -270,18 +273,21 @@ a separate pull request for each logical set of changes that belong together.
 
 Adding a new document is relatively straightforward, especially if you can start by copying
 the `index.html` of a similar document. There are only a few things to keep in mind:
-- Remember that a document is represented by an `index.html` file within its own folder.
-- Determine where in the document hierarchy your document belongs. For example, if you're
+
+* Remember that a document is represented by an `index.html` file within its own folder.
+* Determine where in the document hierarchy your document belongs. For example, if you're
 creating a new CSS document for a new property `foo`, you'll want to create a new folder
 `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` file must start with front-matter that defines
+* Remember that a document's `index.html` file must start with front-matter that defines
 the `title`, `slug`, and
 [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
 (if any) for the document. You might find it helpful to refer
 to the front-matter within a similar document's `index.html`.
 
 As we outlined above, the step-by-step process in general would be:
+
 1. Start a fresh, up-to-date branch to work within:
+
     ```sh
     cd ~/repos/mdn/content
     git checkout main
@@ -295,6 +301,7 @@ As we outlined above, the step-by-step process in general would be:
 1. Create one or more new document folders, each with their own `index.html` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
+
     ```sh
     git add files/en-us/folder/you/created
     git commit
@@ -454,31 +461,31 @@ push your branch to your fork:
 The browser compatibility table shown near the bottom of many of the MDN document pages,
 for example on
 [the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
-is generated from the `npm` package created from the https://github.com/mdn/browser-compat-data
+is generated from the `npm` package created from the <https://github.com/mdn/browser-compat-data>
 repository. If you'd like to make or suggest a change to the content of the browser-compatibility
 table on any given MDN document page, you can either use the `Report problems with this data on GitHub` link in the upper-right corner of the table on the page itself to create an issue,
-or go to https://github.com/mdn/browser-compat-data and
+or go to <https://github.com/mdn/browser-compat-data> and
 [read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
 
 ### Adding code examples
 
 There are a lot of code examples on MDN, and you'll probably want to add some as you contribute content to the project. There are four types of code example used on MDN:
 
-- [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples) — plain code blocks, possibly with a screenshot to statically show the
+* [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples) — plain code blocks, possibly with a screenshot to statically show the
 result of such code if it were to be run.
-- [Traditional MDN "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Traditional_live_samples) — A macro that takes plain code blocks, dynamically puts
+* [Traditional MDN "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Traditional_live_samples) — A macro that takes plain code blocks, dynamically puts
 them into a document inside an `<iframe>` element, and embeds it into the page to show the
 code running live.
-- [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples) — A macro that takes a document in a GitHub repo inside the [`mdn
-organization`](https://github.com/mdn), puts it inside an `<iframe>` element, and embeds
+* [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples) — A macro that takes a document in a GitHub repo inside the [mdn
+organization](https://github.com/mdn), puts it inside an `<iframe>` element, and embeds
 it into the page to show the code running live.
-- [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples) — Our system for creating live interactive examples that show the
+* [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples) — Our system for creating live interactive examples that show the
 code running live but also allow you to change code on the fly to see what the effect is.
 
 For a complete description of this topic, see
 [the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples).
 
-Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines). 
+Also make sure that your code examples follow the [MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines).
 
 ### Archiving and unarchiving pages
 
@@ -488,8 +495,8 @@ If you find a page that is marked archived and you think it shouldn't be, you ca
 
 * Submit an issue to check why the page is archived and if it should be unarchived.
 * Find the source code location of the archived page. Archived pages live in the [Archived content](https://github.com/mdn/archived-content/) repo, the structure of which is the same as this repo (except that there are also locale directories present other than `en-US`). As an example:
-   * Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge) page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
-   * This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
+  * Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge) page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
+  * This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
 * To unarchive the page, you need to open a pull request to move the page's directory into the appropriate place inside this repo, and update the page's meta data (like `slug`) if needed.
 
 Note: To archive a currently-non-archived page, you need to follow the above procedure, but move the page in question the opposite way between repos.
@@ -504,5 +511,5 @@ Sometimes you'll want to make a change to the content that relies on a macro cha
 
 In such situations:
 
-1. Make the required PR to `https://github.com/mdn/yari/blob/master/kumascript/macros/` first, and get that merged.
+1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/> first, and get that merged.
 2. Add the content to this repo.
