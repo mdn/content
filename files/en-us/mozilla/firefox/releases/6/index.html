@@ -125,7 +125,7 @@ tags:
 <ul>
  <li>Parsing of the <code>Content-Disposition</code> header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("_").</li>
  <li>The value of the path field on <code>Set-Cookie</code> headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. <strong>This change may affect compatibility with some web sites</strong>, so authors should check their code.</li>
- <li>The <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42" title="www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"><code>Upgrade</code></a> request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling {{ ifmethod("nsIHttpChannelInternal","HTTPUpgrade") }}.</li>
+ <li>The <a class="external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42" title="www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"><code>Upgrade</code></a> request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling {{ ifmethod("nsIHttpChannelInternal","HTTPUpgrade") }}.</li>
 </ul>
 
 <h3 id="Other_changes_2">Other changes</h3>

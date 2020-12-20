@@ -52,7 +52,7 @@ tags:
  </dl>
  </dd>
  <dt><code><var>useCapture</var></code> {{optional_inline}}</dt>
- <dd>A {{jsxref("Boolean")}} indicating whether events of this type will be dispatched to the registered <code><var>listener</var></code> <em>before</em> being dispatched to any <code>EventTarget</code> beneath it in the DOM tree. Events that are bubbling upward through the tree will not trigger a listener designated to use capture. Event bubbling and capturing are two ways of propagating events that occur in an element that is nested within another element, when both elements have registered a handle for that event. The event propagation mode determines the order in which elements receive the event. See <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events</a> and <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> for a detailed explanation. If not specified, <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
+ <dd>A {{jsxref("Boolean")}} indicating whether events of this type will be dispatched to the registered <code><var>listener</var></code> <em>before</em> being dispatched to any <code>EventTarget</code> beneath it in the DOM tree. Events that are bubbling upward through the tree will not trigger a listener designated to use capture. Event bubbling and capturing are two ways of propagating events that occur in an element that is nested within another element, when both elements have registered a handle for that event. The event propagation mode determines the order in which elements receive the event. See <a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events</a> and <a href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event order</a> for a detailed explanation. If not specified, <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
  <dd>
  <div class="note"><strong>Note:</strong> For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases. Events in the target phase will trigger all listeners on an element in the order they were registered, regardless of the <code><var>useCapture</var></code> parameter.</div>
 
@@ -650,7 +650,7 @@ window.setInterval(function() {
 
 <h3 id="Older_way_to_register_event_listeners">Older way to register event listeners</h3>
 
-<p><code>addEventListener()</code> was introduced with the DOM 2 <a href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a> specification. Before then, event listeners were registered as follows:</p>
+<p><code>addEventListener()</code> was introduced with the DOM 2 <a href="https://www.w3.org/TR/DOM-Level-2-Events">Events</a> specification. Before then, event listeners were registered as follows:</p>
 
 <pre class="brush: js notranslate">// Passing a function reference — do not add '()' after it, which would call the function!
 el.onclick = modifyText;

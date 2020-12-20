@@ -6,7 +6,7 @@ tags:
   - Accessibility
   - NeedsContent
 ---
-<p><span class="seoSummary">The <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow" rel="external" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow">aria-valuenow</a> attribute is used to define the current value for a range widget such as a slider, spinbutton or progressbar. If the current value is not known, the author should not set the <code>aria-valuenow</code> attribute. If the <code>aria-valuenow</code> has a known minimum and maximum value, authors should set the <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="Using the aria-valuemin attribute"><code>aria-valuemin</code></a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attributes.</span></p>
+<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow" rel="external">aria-valuenow</a> attribute is used to define the current value for a range widget such as a slider, spinbutton or progressbar. If the current value is not known, the author should not set the <code>aria-valuenow</code> attribute. If the <code>aria-valuenow</code> has a known minimum and maximum value, authors should set the <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="Using the aria-valuemin attribute"><code>aria-valuemin</code></a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attributes.</span></p>
 
 <p>When the rendered value cannot be accurately represented as a number, authors <strong class="rfc2119">SHOULD</strong> use the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute in conjunction with <code>aria-valuenow</code> to provide a user-friendly representation of the range's current value. For example, a slider may have rendered values of <code>small</code>, <code>medium</code>, and <code>large</code>. In this case, the values of <code>aria-valuenow</code> could range from 1 through 3, which indicate the position of each value in the value space, but the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> would be one of the strings: <code>small</code>, <code>medium</code>, or <code>large</code>.</p>
 
@@ -67,5 +67,5 @@ tags:
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-valuenow" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow">WAI-ARIA specification for the <code>aria-valuenow</code> attribute</a></li>
+ <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-valuenow">WAI-ARIA specification for the <code>aria-valuenow</code> attribute</a></li>
 </ul>

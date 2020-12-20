@@ -99,6 +99,6 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <p>Internet Explorer does not respect the <code>null</code> return value and will display this to users as "null" text. You have to use <code>undefined</code> to skip the prompt.</p>
 
-<p>In some browsers, calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored during this event. See the <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">HTML specification</a> for more details.</p>
+<p>In some browsers, calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored during this event. See the <a href="https://www.w3.org/TR/html5/webappapis.html#user-prompts">HTML specification</a> for more details.</p>
 
 <p>Note also, that various browsers ignore the result of the event and do not ask the user for confirmation at all. In such cases, the document will always be unloaded automatically. Firefox has a switch named <code>dom.disable_beforeunload</code> in <em>about:config</em> to enable this behaviour. As of Chrome 60, the confirmation <a href="https://www.chromestatus.com/feature/5082396709879808">will be skipped</a> if the user has not performed a gesture in the frame or page since it was loaded. Pressing F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as of Chrome 81).</p>
