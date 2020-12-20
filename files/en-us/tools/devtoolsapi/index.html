@@ -618,7 +618,7 @@ MyPanel.prototype = {
     this.window.document.body.removeEventListener("click", this.handleClick);
 
     // Async destruction.
-    return this.destroySomethingAsynchronosly()
+    return this.destroySomethingAsynchronously()
       .then(() =&gt; console.log("destroyed"));
   },
 
