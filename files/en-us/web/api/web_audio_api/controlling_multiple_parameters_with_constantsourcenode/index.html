@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by simply setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</span></p>
+<p><span class="seoSummary">This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</span></p>
 
 <p>You may have times when you want to have multiple audio parameters be linked so they share the same value even while being changed in some way. For example, perhaps you have a set of oscillators, and two of them need to share the same, configurable volume, or you have a filter that's been applied to certain inputs but not to all of them. You could use a loop and change the value of each affected {{domxref("AudioParam")}} one at a time, but there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.</p>
 
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="The_technique">The technique</h2>
 
-<p>This is actually a really easy way to do something that sounds like it might be hard to do. You simply need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is simply sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
+<p>This is actually a really easy way to do something that sounds like it might be hard to do. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
 
 <p>The diagram below shows how this works; an input value, <code>N</code>, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The <code>ConstantSourceNode</code> can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So <code>N</code> becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.</p>
 

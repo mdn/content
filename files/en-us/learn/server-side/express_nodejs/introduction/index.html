@@ -171,7 +171,7 @@ app.listen(port, () =&gt; {
 
 <p>The first two lines <code>require()</code> (import) the express module and create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. This object, which is traditionally named <code>app</code>, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying <a href="https://expressjs.com/en/4x/api.html#app.settings.table">application settings</a> that control how the application behaves (e.g. the environment mode, whether route definitions are case sensitive, etc.)</p>
 
-<p>The middle part of the code (the three lines starting with <code>app.get</code>) shows a <em>route definition</em>. The <code>app.get()</code> method specifies a callback function that will be invoked whenever there is an HTTP <code>GET</code> request with a path (<code>'/'</code>) relative to the site root. The callback function takes a request and a response object as arguments, and simply calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!"</p>
+<p>The middle part of the code (the three lines starting with <code>app.get</code>) shows a <em>route definition</em>. The <code>app.get()</code> method specifies a callback function that will be invoked whenever there is an HTTP <code>GET</code> request with a path (<code>'/'</code>) relative to the site root. The callback function takes a request and a response object as arguments, and calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!"</p>
 
 <p>The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to <code>localhost:3000</code> in your browser to see the example response returned.</p>
 
@@ -262,7 +262,7 @@ console.log('Second');
 });
 </pre>
 
-<p>The callback function takes a request and a response object as arguments. In this case, the method simply calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!" There are a <a href="https://expressjs.com/en/guide/routing.html#response-methods">number of other response methods</a> for ending the request/response cycle, for example, you could call <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> to send a JSON response or <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> to send a file.</p>
+<p>The callback function takes a request and a response object as arguments. In this case, the method calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!" There are a <a href="https://expressjs.com/en/guide/routing.html#response-methods">number of other response methods</a> for ending the request/response cycle, for example, you could call <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> to send a JSON response or <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> to send a file.</p>
 
 <div class="note">
 <p><strong>JavaScript tip:</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
@@ -387,7 +387,7 @@ http://localhost:3000/js/app.js
 http://localhost:3000/about.html
 </code></pre>
 
-<p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
+<p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
 
 <pre class="brush: js notranslate">app.use(express.static('public'));
 app.use(express.static('media'));

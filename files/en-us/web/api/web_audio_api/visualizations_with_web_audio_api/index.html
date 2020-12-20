@@ -154,7 +154,7 @@ canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
       canvasCtx.fillStyle = 'rgb(0, 0, 0)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
 
-<p>Now we set our <code>barWidth</code> to be equal to the canvas width divided by the number of bars (the buffer length). However, we are also multiplying that width by 2.5, because most of the frequencies will come back as having no audio in them, as most of the sounds we hear every day are in a certain lower frequency range. We don't want to display loads of empty bars, therefore we simply shift the ones that will display regularly at a noticeable height across so they fill the canvas display.</p>
+<p>Now we set our <code>barWidth</code> to be equal to the canvas width divided by the number of bars (the buffer length). However, we are also multiplying that width by 2.5, because most of the frequencies will come back as having no audio in them, as most of the sounds we hear every day are in a certain lower frequency range. We don't want to display loads of empty bars, therefore we shift the ones that will display regularly at a noticeable height across so they fill the canvas display.</p>
 
 <p>We also set a <code>barHeight</code> variable, and an <code>x</code> variable to record how far across the screen to draw the current bar.</p>
 

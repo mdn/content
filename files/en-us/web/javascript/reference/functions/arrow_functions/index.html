@@ -337,7 +337,7 @@ obj.doSomethingLater();</pre>
 
 <h3 id="No_binding_of_arguments">No binding of <code>arguments</code></h3>
 
-<p>Arrow functions do not have their own <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> object</a>. Thus, in this example, <code>arguments</code> is simply a reference to the arguments of the enclosing scope:</p>
+<p>Arrow functions do not have their own <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> object</a>. Thus, in this example, <code>arguments</code> is a reference to the arguments of the enclosing scope:</p>
 
 <pre class="brush: js notranslate">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];

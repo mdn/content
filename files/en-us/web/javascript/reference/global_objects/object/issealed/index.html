@@ -86,7 +86,7 @@ Object.isFrozen(s3); // === true
 
 <h3 id="Non-object_coercion">Non-object coercion</h3>
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it was a sealed ordinary object, simply return <code>true</code>.</p>
+<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it was a sealed ordinary object, return <code>true</code>.</p>
 
 <pre class="brush: js notranslate">Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)

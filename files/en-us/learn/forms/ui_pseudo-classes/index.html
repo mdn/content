@@ -48,7 +48,7 @@ tags:
  <li>{{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> with the <code>checked</code> attribute set, or an <code><a href="/en-US/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> element with the <code>selected</code> attribute set).</li>
 </ul>
 
-<p>There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or simply not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.</p>
+<p>There are many others too, but the ones listed above are the most obviously useful. Some of the others are aimed at solving very specific niche problems, or not very well supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — <a href="/en-US/docs/Learn/Forms/Form_validation">Client-side form validation</a> — but for now we'll keep things simple with regards to form validation, so it doesn't confuse things.</p>
@@ -184,7 +184,7 @@ input:required + span::after {
   left: -70px;
 }</pre>
 
-<p>We set the <code>&lt;span&gt;</code> to <code>position: relative</code> simply so that we can set the generated content to <code>position: absolute</code> and position it relative to the <code>&lt;span&gt;</code> rather than the &lt;body&gt; (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).</p>
+<p>We set the <code>&lt;span&gt;</code> to <code>position: relative</code> so that we can set the generated content to <code>position: absolute</code> and position it relative to the <code>&lt;span&gt;</code> rather than the &lt;body&gt; (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).</p>
 
 <p>Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below.</p>
 

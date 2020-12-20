@@ -157,14 +157,14 @@ canvas.addEventListener('click', function(event) {
 
 <p>The <code>dx</code> and <code>dy</code> parameters indicate the device coordinates within the context at which to paint the top left corner of the pixel data you wish to draw.</p>
 
-<p>For example, to paint the entire image represented by <code>myImageData</code> to the top left corner of the context, you can simply do the following:</p>
+<p>For example, to paint the entire image represented by <code>myImageData</code> to the top left corner of the context, you can do the following:</p>
 
 <pre class="brush: js notranslate">ctx.putImageData(myImageData, 0, 0);
 </pre>
 
 <h3 id="Grayscaling_and_inverting_colors">Grayscaling and inverting colors</h3>
 
-<p>In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. The invert function simply subtracts each color from the max value 255. The grayscale function simply uses the average of red, green and blue. You can also use a weighted average, given by the formula <code>x = 0.299r + 0.587g + 0.114b</code>, for example. See <a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a> on Wikipedia for more information.</p>
+<p>In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. The invert function subtracts each color from the max value 255. The grayscale function uses the average of red, green and blue. You can also use a weighted average, given by the formula <code>x = 0.299r + 0.587g + 0.114b</code>, for example. See <a href="http://en.wikipedia.org/wiki/Grayscale">Grayscale</a> on Wikipedia for more information.</p>
 
 <pre class="brush: js notranslate">var img = new Image();
 img.crossOrigin = 'anonymous';

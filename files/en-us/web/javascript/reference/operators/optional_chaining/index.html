@@ -37,7 +37,7 @@ tags:
 
 <pre class="brush: js notranslate">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
 
-<p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and non-<code>undefined</code>) before then accessing the value of <code>obj.first.second</code>. This prevents the error that would occur if you simply accessed <code>obj.first.second</code> directly without testing <code>obj.first</code>.</p>
+<p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and non-<code>undefined</code>) before then accessing the value of <code>obj.first.second</code>. This prevents the error that would occur if you accessed <code>obj.first.second</code> directly without testing <code>obj.first</code>.</p>
 
 <p>With the optional chaining operator (<code>?.</code>), however, you don't have to explicitly test and short-circuit based on the state of <code>obj.first</code> before trying to access <code>obj.first.second</code>:</p>
 

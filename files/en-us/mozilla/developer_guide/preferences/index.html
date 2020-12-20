@@ -34,7 +34,7 @@ foo.bar.baz_range.max
  <li>Other internal usage: for example to facilitate A/B testing via telemetry experiments, or to control automated test behavior. In these cases consider whether it would be better to use a runtime setting instead of a persistent preference to control the behavior.</li>
 </ul>
 
-<p>Preferences should <em>not</em> be used to expose features to power users via about:config settings. In order to make support better, it is far better for these users to install an addon to change the default behavior, even if the addon simply changes a runtime flag. This allows us to see non-default settings in about:support, Firefox Health Report, and crash-stats, and they are properly disabled when running in Firefox safe mode.</p>
+<p>Preferences should <em>not</em> be used to expose features to power users via about:config settings. In order to make support better, it is far better for these users to install an addon to change the default behavior, even if the addon changes a runtime flag. This allows us to see non-default settings in about:support, Firefox Health Report, and crash-stats, and they are properly disabled when running in Firefox safe mode.</p>
 
 <h2 id="How_to_add_new_preference">How to add new preference</h2>
 

@@ -25,7 +25,7 @@ tags:
 <div class="note"><strong>Note:</strong> This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.</div>
 <h2 id="Interface_changes">Interface changes</h2>
 <p>Instantiating certain services, including the {{ interface("nsICertOverrideService") }}, at startup can make Firefox unusable ({{ bug(650858) }}. This happens only if you try to instantiate a service before the <code>load</code> event is fired.</p>
-<p>To fix this, simply move your instantiation of these services into your <code>load</code> event handler:</p>
+<p>To fix this, move your instantiation of these services into your <code>load</code> event handler:</p>
 <pre class="brush: js">var MyObject = {
   comp : null,
   init: function() {

@@ -21,7 +21,7 @@ tags:
   Example: <code>\{{interface("nsIIOService")}}</code> results in: {{ Interface("nsIIOService") }}.</li>
  <li>{{TemplateLink("ifmethod")}} and {{TemplateLink("ifattribute")}} let you create a link to a particular method or attribute (respectively) on a Mozilla interface that's been created using our <a href="/en-US/docs/MDN/Contribute/Howto/Write_interface_reference_documentation" title="en-US/docs/Project:Writing_interface_reference_documentation">standard format for interface documentation</a>. For example, <code>\{\{ifmethod("nsIAutoCompleteSearch","stopSearch")\}\}</code> shows up as {{ ifmethod("nsIAutoCompleteSearch", "stopSearch") }}. Note that for {{TemplateLink("ifattribute")}}, <code>id="..."</code> must be added explicitly in the target, since attributes do not have headings.</li>
  <li>{{TemplateLink("Interwiki")}} makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, <code>\{\{interwiki("wikipedia", "Firefox")\}\}</code> shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.</li>
- <li>{{TemplateLink("RFC")}} creates a link to the specified RFC, given its number. The syntax is simply: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
+ <li>{{TemplateLink("RFC")}} creates a link to the specified RFC, given its number. The syntax is: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
 </ul>
 
 <h3 id="Landing_page_components">Landing page components</h3>
@@ -43,7 +43,7 @@ tags:
 <p>We have some macros specifically designed to create <a href="/en-US/docs/MDN/Contribute/Style_guide/Quicklinks">quicklinks</a>:</p>
 
 <ul>
- <li>The {{TemplateLink("MakeSimpleQuicklinks")}} macro creates a flat list of links in the quicklinks box. Simply give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
+ <li>The {{TemplateLink("MakeSimpleQuicklinks")}} macro creates a flat list of links in the quicklinks box. Give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
  <li>{{TemplateLink("QuickLinksWithSubpages")}} creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.</li>
 </ul>
 

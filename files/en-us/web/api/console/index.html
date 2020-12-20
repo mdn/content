@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>console</code></strong> object provides access to the browser's debugging console (e.g. the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> in Firefox). The specifics of how it works varies from browser to browser, but there is a <em>de facto</em> set of features that are typically provided.</p>
 
-<p>The <code>console</code> object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as simply <code>console</code>. For example:</p>
+<p>The <code>console</code> object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as <code>console</code>. For example:</p>
 
 <pre class="brush: js notranslate">console.log("Failed to open the specified link")</pre>
 
@@ -82,7 +82,7 @@ tags:
 
 <p>The most frequently-used feature of the console is logging of text and other data. There are four categories of output you can generate, using the {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, and {{domxref("console.error()")}} methods respectively. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.</p>
 
-<p>There are two ways to use each of the output methods; you can simply pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.</p>
+<p>There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.</p>
 
 <h4 id="Outputting_a_single_object">Outputting a single object</h4>
 
@@ -98,7 +98,7 @@ console.log(someObject);
 
 <h4 id="Outputting_multiple_objects">Outputting multiple objects</h4>
 
-<p>You can also output multiple objects by simply listing them when calling the logging method, like this:</p>
+<p>You can also output multiple objects by listing them when calling the logging method, like this:</p>
 
 <pre class="brush: js notranslate">var car = "Dodge Charger";
 var someObject = { str: "Some text", id: 5 };
@@ -185,7 +185,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.</p>
 
-<p>To exit the current group, simply call <code>console.groupEnd()</code>. For example, given this code:</p>
+<p>To exit the current group, call <code>console.groupEnd()</code>. For example, given this code:</p>
 
 <pre class="brush: js notranslate">console.log("This is the outer level");
 console.group("First group");

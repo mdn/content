@@ -37,7 +37,7 @@ tags:
 
 <h3 id="HTML_and_CSS">HTML and CSS</h3>
 
-<p>The HTML and CSS for the app is really trivial. We simply have a title, instructions paragraph, and a div into which we output diagnostic messages.</p>
+<p>The HTML and CSS for the app is really trivial. We have a title, instructions paragraph, and a div into which we output diagnostic messages.</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech color changer&lt;/h1&gt;
 &lt;p&gt;Tap/click then say a color to change the background color of the app.&lt;/p&gt;
@@ -186,7 +186,7 @@ document.body.onclick = function() {
 
 <h3 id="HTML_and_CSS_2">HTML and CSS</h3>
 
-<p>The HTML and CSS are again pretty trivial, simply containing a title, some instructions for use, and a form with some simple controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)</p>
+<p>The HTML and CSS are again pretty trivial, containing a title, some instructions for use, and a form with some simple controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech synthesiser&lt;/h1&gt;
 
@@ -298,7 +298,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 <h4 id="Updating_the_displayed_pitch_and_rate_values">Updating the displayed pitch and rate values</h4>
 
-<p>The last part of the code simply updates the <code>pitch</code>/<code>rate</code> values displayed in the UI, each time the slider positions are moved.</p>
+<p>The last part of the code updates the <code>pitch</code>/<code>rate</code> values displayed in the UI, each time the slider positions are moved.</p>
 
 <pre class="brush: js">pitch.onchange = function() {
   pitchValue.textContent = pitch.value;

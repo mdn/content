@@ -108,7 +108,7 @@ tags:
 
 <p>Before dealing with the individual buttons, a number of initialisation calls are required.</p>
 
-<p>To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by simply checking if a created {{ htmlelement("video") }} element supports <a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype">the <code>canPlayType()</code> method</a>, which any supported HTML5 {{ htmlelement("video") }} element should.</p>
+<p>To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports <a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype">the <code>canPlayType()</code> method</a>, which any supported HTML5 {{ htmlelement("video") }} element should.</p>
 
 <pre class="brush: js">var supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {
@@ -248,7 +248,7 @@ voldec.addEventListener('click', function(e) {
 });
 </pre>
 
-<p>This piece of code simply uses the clicked position to (roughly) work out where in the <code>progress</code> element the user has clicked, and to move the video to that position by setting its <code>currentTime</code> attribute.</p>
+<p>This piece of code uses the clicked position to (roughly) work out where in the <code>progress</code> element the user has clicked, and to move the video to that position by setting its <code>currentTime</code> attribute.</p>
 
 <h3 id="Fullscreen">Fullscreen</h3>
 
@@ -261,7 +261,7 @@ voldec.addEventListener('click', function(e) {
 <pre class="brush: js">var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
 </pre>
 
-<p>This simply tests all the different prefixed (and of course the non-prefixed!) booleans to see if fullscreen is possible. The final tested value, <code>document.createElement('video').webkitRequestFullScreen</code> is required for the last Presto version of Opera (12.14). Note the different letter casing in the various values.</p>
+<p>This tests all the different prefixed (and of course the non-prefixed!) booleans to see if fullscreen is possible. The final tested value, <code>document.createElement('video').webkitRequestFullScreen</code> is required for the last Presto version of Opera (12.14). Note the different letter casing in the various values.</p>
 
 <p>The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:</p>
 
@@ -317,14 +317,14 @@ voldec.addEventListener('click', function(e) {
 
 <p>Dealing with WebKit-specific code in this way will affect all WebKit browsers, but everything works as expected in more advanced WebKit browsers such as Chrome and the latest Opera.</p>
 
-<p>Another user defined function — <code>setFullscreenData()</code> — is also called, which simply sets the value of a <code>data-fullscreen</code> attribute on the <code>videoContainer</code> (this makes use of <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/"><code>data-states</code></a>).</p>
+<p>Another user defined function — <code>setFullscreenData()</code> — is also called, which sets the value of a <code>data-fullscreen</code> attribute on the <code>videoContainer</code> (this makes use of <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/"><code>data-states</code></a>).</p>
 
 <pre class="brush: js">var setFullscreenData = function(state) {
    videoContainer.setAttribute('data-fullscreen', !!state);
 }
 </pre>
 
-<p>This is used simply to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the <em>Esc</em> key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the <code>setFullscreenData()</code> function to ensure the control styling is correct:</p>
+<p>This is used to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the <em>Esc</em> key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the <code>setFullscreenData()</code> function to ensure the control styling is correct:</p>
 
 <pre class="brush: js">document.addEventListener('fullscreenchange', function(e) {
    setFullscreenData(!!(document.fullscreen || document.fullscreenElement));

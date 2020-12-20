@@ -50,7 +50,7 @@ tags:
 
 <h2 id="Creating_an_audio_worklet_processor">Creating an audio worklet processor</h2>
 
-<p>Fundamentally, an audio worklet processor (which we'll refer to usually as either an "audio processor" or simply as a "processor" because otherwise this article will be about twice as long) is implemented using a JavaScript module that defines and installs the custom audio processor class.</p>
+<p>Fundamentally, an audio worklet processor (which we'll refer to usually as either an "audio processor" or as a "processor" because otherwise this article will be about twice as long) is implemented using a JavaScript module that defines and installs the custom audio processor class.</p>
 
 <h3 id="Structure_of_an_audio_worklet_processor">Structure of an audio worklet processor</h3>
 
@@ -228,7 +228,7 @@ async function createMyAudioProcessor() {
 
 <p>In order to ensure the context is usable, this starts by creating the context if it's not already available, then adds the module containing the processor to the worklet. Once that's done, it instantiates and returns a new <code>AudioWorkletNode</code>. Once you have that in hand, you connect it to other nodes and otherwise use it just like any other node.</p>
 
-<p>You can then create a new audio processor node by simply doing this:</p>
+<p>You can then create a new audio processor node by doing this:</p>
 
 <pre class="brush: js notranslate">let newProcessorNode = createMyAudioProcessor();</pre>
 

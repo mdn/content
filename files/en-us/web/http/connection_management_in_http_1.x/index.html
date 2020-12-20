@@ -71,7 +71,7 @@ tags:
 
 <p>Pipelining is the process to send successive requests, over the same persistent connection, without waiting for the answer. This avoids latency of the connection. Theoretically, performance could also be improved if two HTTP requests were to be packed into the same TCP message. The typical <a href="https://en.wikipedia.org/wiki/Maximum_segment_size">MSS</a> (Maximum Segment Size), is big enough to contain several simple requests, although the demand in size of HTTP requests continues to grow.</p>
 
-<p>Not all types of HTTP requests can be pipelined: only {{glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely: should a failure happen, the pipeline content can simply be repeated.</p>
+<p>Not all types of HTTP requests can be pipelined: only {{glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely: should a failure happen, the pipeline content can be repeated.</p>
 
 <p>Today, every HTTP/1.1-compliant proxy and server should support pipelining, though many have limitations in practice: a significant reason no modern browser activates this feature by default.</p>
 

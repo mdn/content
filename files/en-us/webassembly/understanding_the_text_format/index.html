@@ -100,7 +100,7 @@ tags:
 
 <p>The instruction <code>local.get 0</code> would get the i32 parameter, <code>local.get 1</code> would get the f32 parameter, and <code>local.get 2</code> would get the f64 local.</p>
 
-<p>There is another issue here — using numeric indices to refer to items can be confusing and annoying, so the text format allows you to name parameters, locals, and most other items simply by including a name prefixed by a dollar symbol (<code>$</code>) just before the type declaration.</p>
+<p>There is another issue here — using numeric indices to refer to items can be confusing and annoying, so the text format allows you to name parameters, locals, and most other items by including a name prefixed by a dollar symbol (<code>$</code>) just before the type declaration.</p>
 
 <p>Thus you could rewrite our previous signature like so:</p>
 
@@ -128,7 +128,7 @@ tags:
 
 <h2 id="Our_first_function_body">Our first function body</h2>
 
-<p>As mentioned before, the function body is simply a list of instructions that are followed as the function is called. Putting this together with what we have already learned, we can finally define a module containing our own simple function:</p>
+<p>As mentioned before, the function body is a list of instructions that are followed as the function is called. Putting this together with what we have already learned, we can finally define a module containing our own simple function:</p>
 
 <pre class="brush: wasm; notranslate">(module
   (func (param $lhs i32) (param $rhs i32) (result i32)
@@ -348,7 +348,7 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 
 <p>WebAssembly could add an <code>anyfunc</code> type ("any" because the type could hold functions of any signature), but unfortunately this <code>anyfunc</code> type couldn’t be stored in linear memory for security reasons. Linear memory exposes the raw contents of stored values as bytes and this would allow wasm content to arbitrarily observe and corrupt raw function addresses, which is something that cannot be allowed on the web.</p>
 
-<p>The solution was to store function references in a table and pass around table indices instead, which are just i32 values. <code>call_indirect</code>’s operand can therefore simply be an i32 index value.</p>
+<p>The solution was to store function references in a table and pass around table indices instead, which are just i32 values. <code>call_indirect</code>’s operand can therefore be an i32 index value.</p>
 
 <h4 id="Defining_a_table_in_wasm">Defining a table in wasm</h4>
 

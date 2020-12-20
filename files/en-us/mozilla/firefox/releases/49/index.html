@@ -142,7 +142,7 @@ tags:
 
 <ul>
  <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>'s {{domxref("Response")}} object now implements the {{domxref("Response.redirected", "redirected")}} property, which indicates whether or not the response is for a request which was redirected. Please review the security related notes in the documentation before using this property ({{bug(1243792)}}).</li>
- <li>In the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, Firefox no longer supports the 'push' <code>PermissionDescriptor</code> dictionary type (referred to in the spec as <code>PushPermissionDescriptor</code>); this is because Firefox relies on a quota system for controlling the <code>userVisibleOnly</code> status instead, and was throwing an error when it encountered a <code>PushPermissionDescriptor</code> instance ({{bug(1266821)}}). With this dictionary removed, Firefox now simply ignores it.</li>
+ <li>In the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, Firefox no longer supports the 'push' <code>PermissionDescriptor</code> dictionary type (referred to in the spec as <code>PushPermissionDescriptor</code>); this is because Firefox relies on a quota system for controlling the <code>userVisibleOnly</code> status instead, and was throwing an error when it encountered a <code>PushPermissionDescriptor</code> instance ({{bug(1266821)}}). With this dictionary removed, Firefox now ignores it.</li>
 </ul>
 
 <h4 id="Media_Streams">Media Streams</h4>

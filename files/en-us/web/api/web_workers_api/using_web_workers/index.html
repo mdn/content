@@ -80,7 +80,7 @@ second.onchange = function() {
   postMessage(workerResult);
 }</pre>
 
-<p>The <code>onmessage</code> handler allows us to run some code whenever a message is received, with the message itself being available in the <code>message</code> event's <code>data</code> attribute. Here we simply multiply together the two numbers then use <code>postMessage()</code> again, to post the result back to the main thread.</p>
+<p>The <code>onmessage</code> handler allows us to run some code whenever a message is received, with the message itself being available in the <code>message</code> event's <code>data</code> attribute. Here we multiply together the two numbers then use <code>postMessage()</code> again, to post the result back to the main thread.</p>
 
 <p>Back in the main thread, we use <code>onmessage</code> again, to respond to the message sent back from the worker:</p>
 

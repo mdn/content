@@ -186,10 +186,10 @@ slug: Tools/Debugger-API/Debugger.Memory
   <p>Normal: the string’s text is counted in its size.</p>
  </li>
  <li>
-  <p>Substring: the string is a substring of some other string, and points to that string for its storage. This representation may result in a small string retaining a very large string. However, the memory consumed by the string itself is a small constant independent of its size, since it is simply a reference to the larger string, a start position, and a length.</p>
+  <p>Substring: the string is a substring of some other string, and points to that string for its storage. This representation may result in a small string retaining a very large string. However, the memory consumed by the string itself is a small constant independent of its size, since it is a reference to the larger string, a start position, and a length.</p>
  </li>
  <li>
-  <p>Concatenations: When asked to concatenate two strings, SpiderMonkey may elect to delay copying the strings’ data, and represent the result simply as a pointer to the two original strings. Again, such a string retains other strings, but the memory consumed by the string itself is a small constant independent of its size, since it is simply a pair of pointers.</p>
+  <p>Concatenations: When asked to concatenate two strings, SpiderMonkey may elect to delay copying the strings’ data, and represent the result as a pointer to the two original strings. Again, such a string retains other strings, but the memory consumed by the string itself is a small constant independent of its size, since it is a pair of pointers.</p>
  </li>
 </ul>
 

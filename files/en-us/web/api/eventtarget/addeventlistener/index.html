@@ -356,7 +356,7 @@ function nonePassiveHandler(event) {
 
 <p>If multiple identical <code>EventListener</code>s are registered on the same <code>EventTarget</code> with the same parameters, the duplicate instances are discarded. They do not cause the <code>EventListener</code> to be called twice, and they do not need to be removed manually with the {{domxref("EventTarget.removeEventListener()", "removeEventListener()")}} method.</p>
 
-<p>Note, however that when using an anonymous function as the handler, such listeners will NOT be identical, because anonymous functions are not identical even if defined using the SAME unchanging source-code simply called repeatedly, even if in a loop.</p>
+<p>Note, however that when using an anonymous function as the handler, such listeners will NOT be identical, because anonymous functions are not identical even if defined using the SAME unchanging source-code called repeatedly, even if in a loop.</p>
 
 <p>However, repeatedly defining the same named function in such cases can be more problematic. (See <a href="#Memory_issues">Memory issues</a>, below.)</p>
 
@@ -512,7 +512,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> Although inner scopes have access to <code>const</code>, <code>let</code> variables from outer scopes, you cannot expect any changes to these variables to be accessible after the event listener definition, within the same outer scope. Why? Simply because by the time the event listener would execute, the scope in which it was defined would have already finished executing.</p>
+<p><strong>Note:</strong> Although inner scopes have access to <code>const</code>, <code>let</code> variables from outer scopes, you cannot expect any changes to these variables to be accessible after the event listener definition, within the same outer scope. Why? Because by the time the event listener would execute, the scope in which it was defined would have already finished executing.</p>
 </div>
 
 <h4 id="Getting_data_into_and_out_of_an_event_listener_using_objects">Getting data into and out of an event listener using objects</h4>
@@ -686,7 +686,7 @@ for(let i=0 ; i &lt; els.length; i++){
 
 <p>In the first case above, a new (anonymous) handler function is created with each iteration of the loop. In the second case, the same previously declared function is used as an event handler, which results in smaller memory consumption because there is only one handler function created. Moreover, in the first case, it is not possible to call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} because no reference to the anonymous function is kept (or here, not kept to any of the multiple anonymous functions the loop might create.) In the second case, it's possible to do <code><var>myElement</var>.removeEventListener("click", processEvent, false)</code> because <code>processEvent</code> is the function reference.</p>
 
-<p>Actually, regarding memory consumption, the lack of keeping a function reference is not the real issue; rather it is the lack of keeping a STATIC function reference. In both problem-cases below, a function reference is kept, but since it is redefined on each iteration, it is not static. In the third case, the reference to the anonymous function is being reassigned with each iteration. In the fourth case, the entire function definition is unchanging, but it is still being repeatedly defined as if new (unless it was [[promoted]] by the compiler) and so is not static. Therefore, though appearing to be simply [[Multiple identical event listeners]], in both cases each iteration will instead create a new listener with its own unique reference to the handler function. However, since the function definition itself does not change, the SAME function may still be called for every duplicate listener (especially if the code gets optimized.)</p>
+<p>Actually, regarding memory consumption, the lack of keeping a function reference is not the real issue; rather it is the lack of keeping a STATIC function reference. In both problem-cases below, a function reference is kept, but since it is redefined on each iteration, it is not static. In the third case, the reference to the anonymous function is being reassigned with each iteration. In the fourth case, the entire function definition is unchanging, but it is still being repeatedly defined as if new (unless it was [[promoted]] by the compiler) and so is not static. Therefore, though appearing to be [[Multiple identical event listeners]], in both cases each iteration will instead create a new listener with its own unique reference to the handler function. However, since the function definition itself does not change, the SAME function may still be called for every duplicate listener (especially if the code gets optimized.)</p>
 
 <p>Also in both cases, because the function reference was kept but repeatedly redefined with each add, the remove-statement from above can still remove a listener, but now only the last one added.</p>
 

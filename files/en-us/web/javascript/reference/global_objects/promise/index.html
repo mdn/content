@@ -76,7 +76,7 @@ handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
 <p>The returned <code>nextValue</code> can be another promise object, in which case the promise gets dynamically inserted into the chain.</p>
 
-<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing simply continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
+<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
@@ -334,7 +334,7 @@ function promiseGetWord(parityInfo) {
 
 <p>This small example shows the mechanism of a <code>Promise</code>. The <code>testPromise()</code> method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("window.setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The <code>Promise()</code> constructor is used to create the promise.</p>
 
-<p>The fulfillment of the promise is simply logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
+<p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
 <pre class="brush: js; notranslate">"use strict";
 var promiseCount = 0;

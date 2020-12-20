@@ -23,7 +23,7 @@ tags:
 <div class="note">
  <strong>Note:</strong> This event is sent whenever the movement of the user's fingers exceeds the number of pixels indicated by the <code>browser.gesture.pinch.threshold</code> preference.</div>
 <h3 id="MozMagnifyGesture">MozMagnifyGesture</h3>
-<p>The <code>MozMagnifyGesture</code> event is sent when the user completes a "pinch" gesture. If you only care about the end results of the pinch gesture, you can simply watch for this event; however, if you want to provide feedback during the handling of the gesture, you should also watch the <code>MozMagnifyGestureStart</code> and <code>MozMagnifyGestureUpdate</code> events.</p>
+<p>The <code>MozMagnifyGesture</code> event is sent when the user completes a "pinch" gesture. If you only care about the end results of the pinch gesture, you can watch for this event; however, if you want to provide feedback during the handling of the gesture, you should also watch the <code>MozMagnifyGestureStart</code> and <code>MozMagnifyGestureUpdate</code> events.</p>
 <p>The <code>delta</code> value is the cumulative change over the course of handling the entire sequence of magnify gesture events.</p>
 <h3 id="MozRotateGestureStart">MozRotateGestureStart</h3>
 <p>The <code>MozRotateGestureStart</code> event is sent when the user begins performing a rotate gesture, by placing two fingers on the trackpad and rotating them around the center of the trackpad. Firefox uses this gesture to move backward and forward through the tabs in the current window.</p>
@@ -32,7 +32,7 @@ tags:
 <div class="note">
  <strong>Note:</strong> This event is sent whenever the movement of the user's fingers exceeds the number of pixels indicated by the <code>browser.gesture.pinch.threshold</code> preference.</div>
 <h3 id="MozRotateGesture">MozRotateGesture</h3>
-<p>The <code>MozRotateGesture</code> event is sent when the user completes a rotate gesture. If you only care about the end results of the rotate gesture, you can simply watch for this event; however, if you want to provide feedback during the handling of the gesture, you should also watch the <code>MozRotateGestureStart</code> and <code>MozRotateGestureUpdate</code> events.</p>
+<p>The <code>MozRotateGesture</code> event is sent when the user completes a rotate gesture. If you only care about the end results of the rotate gesture, you can watch for this event; however, if you want to provide feedback during the handling of the gesture, you should also watch the <code>MozRotateGestureStart</code> and <code>MozRotateGestureUpdate</code> events.</p>
 <p>The <code>delta</code> value is the cumulative change over the course of handling the entire sequence of rotate gesture events.</p>
 <h2 id="Event_fields">Event fields</h2>
 <p>Mouse gesture events have additional fields providing information about the gesture. These are:</p>

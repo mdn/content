@@ -186,7 +186,7 @@ let recordingTimeMS = 5000;
  <dt>Line 3</dt>
  <dd>Creates an empty array, <code>data</code>, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.ondataavailable", "ondataavailable")}} event handler.</dd>
  <dt>Line 5</dt>
- <dd>Sets up the handler for the {{event("dataavailable")}} event. The received event's <code>data</code> property is a {{domxref("Blob")}} that contains the media data. The event handler simply pushes the <code>Blob</code> onto the <code>data</code> array.</dd>
+ <dd>Sets up the handler for the {{event("dataavailable")}} event. The received event's <code>data</code> property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the <code>Blob</code> onto the <code>data</code> array.</dd>
  <dt>Lines 6-7</dt>
  <dd>Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.</dd>
  <dt>Lines 9-12</dt>
@@ -199,7 +199,7 @@ let recordingTimeMS = 5000;
 
 <h3 id="Stopping_the_input_stream">Stopping the input stream</h3>
 
-<p>The <code>stop()</code> function simply stops the input media:</p>
+<p>The <code>stop()</code> function stops the input media:</p>
 
 <pre class="brush: js notranslate">function stop(stream) {
   stream.getTracks().forEach(track =&gt; track.stop());
@@ -261,7 +261,7 @@ let recordingTimeMS = 5000;
   stop(preview.srcObject);
 }, false);</pre>
 
-<p>This simply calls the <code>{{anch("Stopping the input stream", "stop()")}}</code> function we covered earlier.</p>
+<p>This calls the <code>{{anch("Stopping the input stream", "stop()")}}</code> function we covered earlier.</p>
 </div>
 
 <h2 id="Result">Result</h2>

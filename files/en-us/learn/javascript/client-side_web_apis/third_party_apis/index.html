@@ -390,7 +390,7 @@ function previousPage(e) {
 
   <p>The first function is simple — we increment the <code>pageNumber</code> variable, then run the <code>fetchResults()</code> function again to display the next page's results.</p>
 
-  <p>The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that <code>pageNumber</code> is not already zero before decrementing it — if the fetch request runs with a minus <code>page</code> URL parameter, it could cause errors. If the <code>pageNumber</code> is already 0, we simply <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).</p>
+  <p>The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that <code>pageNumber</code> is not already zero before decrementing it — if the fetch request runs with a minus <code>page</code> URL parameter, it could cause errors. If the <code>pageNumber</code> is already 0, we <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).</p>
  </li>
 </ol>
 

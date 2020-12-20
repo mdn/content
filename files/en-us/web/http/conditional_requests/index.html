@@ -128,7 +128,7 @@ tags:
 
 <p><img alt="Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error." src="https://mdn.mozillademos.org/files/13751/HTTPLock3.png" style="height: 471px; width: 904px;"></p>
 
-<p>This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is simply rejected with a {{HTTPStatus("412")}} <code>Precondition Failed</code> error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a <em>diff </em>of both versions, helping them decide which changes they wish to keep.</p>
+<p>This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412")}} <code>Precondition Failed</code> error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a <em>diff </em>of both versions, helping them decide which changes they wish to keep.</p>
 
 <h3 id="Dealing_with_the_first_upload_of_a_resource">Dealing with the first upload of a resource</h3>
 

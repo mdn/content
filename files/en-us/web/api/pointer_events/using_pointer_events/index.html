@@ -60,7 +60,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 }
 </pre>
 
-<p>This simply sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.</p>
+<p>This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.</p>
 
 <h4 id="Tracking_new_touches">Tracking new touches</h4>
 
@@ -149,7 +149,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 }
 </pre>
 
-<p>This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a>, we simply remove the old entry from the ongoing touch list, without adding in the updated information. The result is that we stop tracking that touch point.</p>
+<p>This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a>, we remove the old entry from the ongoing touch list, without adding in the updated information. The result is that we stop tracking that touch point.</p>
 
 <h4 id="Handling_canceled_touches">Handling canceled touches</h4>
 
@@ -162,7 +162,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 }
 </pre>
 
-<p>Since the idea is to immediately abort the touch, we simply remove it from the ongoing touch list without drawing a final line segment.</p>
+<p>Since the idea is to immediately abort the touch, we remove it from the ongoing touch list without drawing a final line segment.</p>
 
 <h3 id="Convenience_functions">Convenience functions</h3>
 

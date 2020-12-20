@@ -23,7 +23,7 @@ tags:
 <p>It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} object. If the user denies permission, or matching media is not available, then the promise is rejected with <code>NotAllowedError</code> or <code>NotFoundError</code> respectively.</p>
 
 <div class="note">
-<p><strong>Note:</strong> It's possible for the returned promise to <em>neither</em> resolve nor reject, as the user is not required to make a choice at all and may simply ignore the request.</p>
+<p><strong>Note:</strong> It's possible for the returned promise to <em>neither</em> resolve nor reject, as the user is not required to make a choice at all and may ignore the request.</p>
 </div>
 
 <p>Generally, you will access the {{domxref("MediaDevices")}} singleton object using {{domxref("navigator.mediaDevices")}}, like this:</p>

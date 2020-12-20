@@ -1864,7 +1864,7 @@ For more up-to-date examples, see the <a class="external" href="http://oaa-acces
 <ol>
  <li><a class="external text" href="http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/test_MultiSelect.html" rel="nofollow">dojo nightly build</a></li>
  <li><a class="external text" href="http://codetalks.org/source/widgets/listbox/listbox.html" rel="nofollow">Single select listbox</a> using aria-activedescendant</li>
- <li><a class="external text" href="http://codetalks.org/source/widgets/listbox/listbox-owner.html" rel="nofollow">Listbox in an iframe</a> -- this is an important case as it's an example of how a mashup widget can be built (the widget source simply comes from another url, and is tied in using an iframe)</li>
+ <li><a class="external text" href="http://codetalks.org/source/widgets/listbox/listbox-owner.html" rel="nofollow">Listbox in an iframe</a> -- this is an important case as it's an example of how a mashup widget can be built (the widget source comes from another url, and is tied in using an iframe)</li>
  <li><a class="external text" href="http://developer.yahoo.com/yui/examples/carousel/carousel-ariaplugin_source.html" rel="nofollow">YUI "Carousel" listbox</a> -- a more advanced test case</li>
 </ol>
 
@@ -2615,7 +2615,7 @@ For more up-to-date examples, see the <a class="external" href="http://oaa-acces
 
 <ul>
  <li>As focus first lands on the tabs, screen reader announces the label and role of the focused tab item, and whether it is selected.</li>
- <li>As the user presses left and right arrows to change the tabs, the newly focused tab should be announced. When navigating over the currently selected tab, the fact that this is the tab currently being active should be indicated. Note that for tabs with AJAX content, for performance reasons it is optional that they only load the panel only once the user presses Space on the new tab. However, if there is no perf issues they can show the new content simply when the tab gets focus.</li>
+ <li>As the user presses left and right arrows to change the tabs, the newly focused tab should be announced. When navigating over the currently selected tab, the fact that this is the tab currently being active should be indicated. Note that for tabs with AJAX content, for performance reasons it is optional that they only load the panel only once the user presses Space on the new tab. However, if there is no perf issues they can show the new content when the tab gets focus.</li>
  <li>If a new tab is selected via Space, the now selected state should be indicated.</li>
  <li>As the user tabs into the panel, its name, role, and if present, description should be read, followed by the newly focused item.</li>
  <li>Subsequent navigation within the same tab panel should not repeat name, role, or description of the tab panel.</li>
@@ -4431,7 +4431,7 @@ For more up-to-date examples, see the <a class="external" href="http://oaa-acces
 <p><strong>Notes:</strong></p>
 
 <ul>
- <li>If the screen reader simply uses the accessible name property it should get the correct text to speak, even if several methods (aria-label, aria-labelledby, alt, label for, descendant text, title, etc.) are used.</li>
+ <li>If the screen reader uses the accessible name property it should get the correct text to speak, even if several methods (aria-label, aria-labelledby, alt, label for, descendant text, title, etc.) are used.</li>
 </ul>
 
 <p><strong>Results:</strong></p>
@@ -4525,7 +4525,7 @@ For more up-to-date examples, see the <a class="external" href="http://oaa-acces
 <p><strong>Notes:</strong></p>
 
 <ul>
- <li>If the screen reader simply uses the accessible name property it should get the correct text to speak, even if several methods (aria-label, aria-labelledby, alt, label for, descendant text, title, etc.) are used.</li>
+ <li>If the screen reader uses the accessible name property it should get the correct text to speak, even if several methods (aria-label, aria-labelledby, alt, label for, descendant text, title, etc.) are used.</li>
 </ul>
 
 <p><strong>Results:</strong></p>

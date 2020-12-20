@@ -50,7 +50,7 @@ tags:
 xywh=pixel:160,120,320,240  /* results in a 320x240 image at x=160 and y=120 */
 xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */</pre>
 
-<p>The image fragments can be used in <code>url()</code> notation as well. The <code>#xywh=#,#,#,#</code> media fragment syntax is 'backwards compatible' in that a media fragment will be ignored if not understood, and won't break the source call when used with <code>url()</code>. If the browser doesn't understand the media fragments notation, it simply ignores the fragment, displaying the entire image.</p>
+<p>The image fragments can be used in <code>url()</code> notation as well. The <code>#xywh=#,#,#,#</code> media fragment syntax is 'backwards compatible' in that a media fragment will be ignored if not understood, and won't break the source call when used with <code>url()</code>. If the browser doesn't understand the media fragments notation, it ignores the fragment, displaying the entire image.</p>
 
 <p>Browsers that understand <code>image()</code> also understand the fragment notation. Therefore, if the fragment is not understood within <code>image()</code>, the image will be considered invalid.</p>
 

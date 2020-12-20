@@ -176,7 +176,7 @@ tags:
  <li>{{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frecency order using the new <code>SORT_BY_FRECENCY_ASCENDING</code> and <code>SORT_BY_FRECENCY_DESCENDING</code> constants.</li>
  <li>{{ interface("nsIFilePicker") }} has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.</li>
  <li>{{ interface("nsINavBookmarkObserver") }} methods with item ID parameters now require a GUID as well.</li>
- <li>{{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it simply does nothing.</li>
+ <li>{{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.</li>
  <li>The {{ interface("nsIMemoryReporter") }} interface now provides support for indicating the kind of memory being described (mapped, heap, or other).</li>
  <li>The {{ interface("nsISHEntry") }} <code>stateData</code> attribute now returns a {{ interface("nsIStructuredCloneContainer") }}.</li>
  <li>{{ interface("nsIURI") }} has a new {{ ifattribute("nsIURI", "ref") }} attribute, which returns the reference portion (the part after the "#") of the URI. It also has new methods {{ ifmethod("nsIURI", "cloneIgnoringRef") }} which clones the {{ interface("nsIURI") }} without the ref member and {{ ifmethod("nsIURI", "equalsExceptRef") }} which compares to another {{ interface("nsIURI") }} ignoring the ref member.</li>

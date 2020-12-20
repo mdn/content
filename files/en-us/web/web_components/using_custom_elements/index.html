@@ -198,7 +198,7 @@ shadow.appendChild(linkElem);</pre>
  <li><code>attributeChangedCallback</code>: Invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get <code>observedAttributes</code> method</li>
 </ul>
 
-<p>Let's look at an example of these in use. The code below is taken from the <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">see it running live</a>). This is a trivial example that simply generates a colored square of a fixed size on the page. The custom element looks like this:</p>
+<p>Let's look at an example of these in use. The code below is taken from the <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">see it running live</a>). This is a trivial example that generates a colored square of a fixed size on the page. The custom element looks like this:</p>
 
 <pre class="brush: html notranslate">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
 
@@ -274,7 +274,7 @@ adoptedCallback() {
   }
 }</pre>
 
-<p>If you don't need to perform any operation in the constructor, you can simply omit it so that its native behavior (see following) will be preserved.</p>
+<p>If you don't need to perform any operation in the constructor, you can omit it so that its native behavior (see following) will be preserved.</p>
 
 <pre class="brush: js notranslate"> constructor(...args) { return super(...args); }
 </pre>

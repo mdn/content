@@ -67,7 +67,7 @@ function handleDown(evt) {
   evt.preventDefault();
 }</pre>
 
-<p>This simply uses <code>onpointerdown</code> to establish the function <code>handleDown()</code> as the event handler for pointer down events.</p>
+<p>This uses <code>onpointerdown</code> to establish the function <code>handleDown()</code> as the event handler for pointer down events.</p>
 
 <p>The <code>handleDown()</code> function, in turn, looks at the value of {{domxref("PointerEvent.pointerType", "pointerType")}} to determine what kind of pointing device was used, then uses that information to customize a string to replace the contents of the target box.</p>
 
@@ -101,7 +101,7 @@ function handleUp(evt) {
 <h4 id="CSS">CSS</h4>
 </summary>
 
-<p>The CSS simply sets up the appearance of the target, and doesn't affect its functionality at all.</p>
+<p>The CSS sets up the appearance of the target, and doesn't affect its functionality at all.</p>
 
 <pre class="brush: css notranslate">#target {
   width: 400px;

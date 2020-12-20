@@ -397,7 +397,7 @@ push your branch to your fork:
 ### Adding images
 
 Adding an image to a document is easy as well. All you need to do is add your image
-file within the document's folder, and then simply reference the image from within the
+file within the document's folder, and then reference the image from within the
 document's `index.html` file using an `<img>` element. It's as easy as that. Let's
 walk through an example:
 
@@ -457,7 +457,7 @@ for example on
 is generated from the `npm` package created from the https://github.com/mdn/browser-compat-data
 repository. If you'd like to make or suggest a change to the content of the browser-compatibility
 table on any given MDN document page, you can either use the `Report problems with this data on GitHub` link in the upper-right corner of the table on the page itself to create an issue,
-or simply go to https://github.com/mdn/browser-compat-data and
+or go to https://github.com/mdn/browser-compat-data and
 [read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
 
 ### Adding code examples

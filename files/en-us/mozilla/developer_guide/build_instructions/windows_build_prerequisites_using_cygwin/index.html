@@ -225,7 +225,7 @@ PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin
 <ul>
   <li>or add a .profile or .bash_profile to your home dir.</li>
 </ul>
-<p>This is required so that Make selects the right instance of the file "link.exe". If you decide not to mess with the Cygwin PATH, simply rename link.exe to something else. You can also make the batch file do this automatically on startup, and undo it on shutdown. To do that, replace the following line in your batch file:</p>
+<p>This is required so that Make selects the right instance of the file "link.exe". If you decide not to mess with the Cygwin PATH, rename link.exe to something else. You can also make the batch file do this automatically on startup, and undo it on shutdown. To do that, replace the following line in your batch file:</p>
 <pre>bash --login -i</pre>
 <p>with this:</p>
 <pre>rename link.exe cyglink.exe

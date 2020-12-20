@@ -17,7 +17,7 @@ tags:
 <p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
 <div class="note">
-<p>If one or both arguments are omitted or are provided non-functions, then <code>then</code> will be missing the handler(s), but will not generate any errors. If the <code>Promise</code> that <code>then</code> is called on adopts a state (<code>fulfillment</code> or <code>rejection</code>) for which <code>then</code> has no handler, the returned promise simply adopts the final state of the original <code>Promise</code> on which <code>then</code> was called.</p>
+<p>If one or both arguments are omitted or are provided non-functions, then <code>then</code> will be missing the handler(s), but will not generate any errors. If the <code>Promise</code> that <code>then</code> is called on adopts a state (<code>fulfillment</code> or <code>rejection</code>) for which <code>then</code> has no handler, the returned promise adopts the final state of the original <code>Promise</code> on which <code>then</code> was called.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -141,7 +141,7 @@ p1.then(value =&gt; {
 // foobar
 // foobarbaz</pre>
 
-<p>When a value is simply returned from within a <code>then</code> handler, it will effectively return <code>Promise.resolve(&lt;value returned by whichever handler was called&gt;)</code>.</p>
+<p>When a value is returned from within a <code>then</code> handler, it will effectively return <code>Promise.resolve(&lt;value returned by whichever handler was called&gt;)</code>.</p>
 
 <pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
   resolve(1);

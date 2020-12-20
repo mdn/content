@@ -56,7 +56,7 @@ async function runXR(xrSession) {
 
 <h2 id="Refresh_rate_and_frame_rate">Refresh rate and frame rate</h2>
 
-<p>Assuming you've called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} since the last time the screen refreshed, the browser will call your frame rendering callback every time it's ready to repaint your app or site window. In this context, "repaint" simply means the process of ensuring that the screen's displayed content matches what the DOM and the elements within are trying to present at the moment.</p>
+<p>Assuming you've called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} since the last time the screen refreshed, the browser will call your frame rendering callback every time it's ready to repaint your app or site window. In this context, "repaint" means the process of ensuring that the screen's displayed content matches what the DOM and the elements within are trying to present at the moment.</p>
 
 <h3 id="Hardware_vertical_refresh_rate">Hardware vertical refresh rate</h3>
 
@@ -87,11 +87,11 @@ async function runXR(xrSession) {
 
 <p>In the diagram above, frame 3 is dropped because frame 2 did not complete rendering until after frame 3 was due to be painted. The next frame drawn will be frame 4 instead. This is another reason the timestamp passed into your rendering callback is useful. By configuring the scene based on time rather than frame number, you can ensure your rendered frames match what's expected instead of falling behind.</p>
 
-<p>When a frame is dropped, the contents of the affected display area simply don't change for that pass through the frame loop. For that reason, the occasional dropped frame isn't usually particularly noticeable, but if it starts to happen a lot—especially if several frames are dropped in a very short span of time—it can become jarring or even leave your display unusable.</p>
+<p>When a frame is dropped, the contents of the affected display area don't change for that pass through the frame loop. For that reason, the occasional dropped frame isn't usually particularly noticeable, but if it starts to happen a lot—especially if several frames are dropped in a very short span of time—it can become jarring or even leave your display unusable.</p>
 
 <p>Fortunately, you can easily compute how much time you're allowed to use between frames as <code>1/refreshRate</code> seconds. That is, by dividing 1 by the display's refresh rate. The resulting value is the amount of time available for each frame to be rendered in order to not drop the frame. For example, a 60 Hz display has 1/60th of a second to render a single frame, or 0.0166667 seconds. And if the device's refresh rate is 120 Hz, you only have 0.00883333 seconds to render each frame if you want to avoid dropping frames.</p>
 
-<p>Even if the hardware is actually 120 Hz, though, you can get by with just refreshing 60 times per second anyway, and targeting that is usually a good baseline to follow. 60 FPS is already beyond the point at which most people can easily detect that the animation isn't simply a series of still images going by really fast. In other words, when in doubt, you can assume that the display is refreshing at 60 Hz. As long as your code is written properly, everything will be fine.</p>
+<p>Even if the hardware is actually 120 Hz, though, you can get by with just refreshing 60 times per second anyway, and targeting that is usually a good baseline to follow. 60 FPS is already beyond the point at which most people can easily detect that the animation isn't a series of still images going by really fast. In other words, when in doubt, you can assume that the display is refreshing at 60 Hz. As long as your code is written properly, everything will be fine.</p>
 
 <h3 id="Renderer_performance_concerns">Renderer performance concerns</h3>
 
@@ -101,7 +101,7 @@ async function runXR(xrSession) {
 
 <p>Your mission, then, is to keep your code tight and lightweight enough that you don't overrrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.</p>
 
-<p>For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By simply having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.</p>
+<p>For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.</p>
 
 <p>Fortunately, there are some tricks you can use to further reduce your impact and optimize performance if your rendering needs are particularly heavy. See the <a href="/en-US/docs/Web/API/WebXR_Device_API/Performance">WebXR performance guide</a> for recommendations and tips that will help you ensure your performance is as good as it can be.</p>
 
@@ -111,7 +111,7 @@ async function runXR(xrSession) {
 
 <h3 id="The_optics_of_3D">The optics of 3D</h3>
 
-<p>We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even simply our understanding of  how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.</p>
+<p>We have two eyes for a reason: by having two eyes, each inherently sees the world from a slightly different angle. Since they're a known, fixed distance apart, our brains can do basic geometry and trigonometry and figure out the 3D nature of reality from that information. We also make use of perspective, size differences, and even our understanding of  how things usually look to figure out the details of that third dimension. These factors, among others, are the source of our {{interwiki("wikipedia", "depth perception")}}.</p>
 
 <p>To create the illusion of three dimensions when rendering graphics, we need to simulate as many of these factors as we can. The more of these we simulate—and the more accurately we do so—the better able we are to trick the human brain into perceiving our images in 3D. The advantage to XR is that not only can we use the classic monocular techniques to simulate 3D graphics (perspective, size, and simulated parallax), but we can also simulate binocular vision—that is, vision using two eyes—by rendering the scene twice for each frame of animation—once for each eye.</p>
 
@@ -160,7 +160,7 @@ async function runXR(xrSession) {
     drawMyObject()
 </pre>
 
-<p>Put simply, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
+<p>Put, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
 
 <p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#Optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
 
@@ -309,7 +309,7 @@ const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaT
 
 <p>This computes the amount by which the object has rotated around each of the three axes since the last time the frame was drawn. Without this, the shape would rotate by the given amount every frame, regardless of the elapsed time. This could cause substantial stutter in many cases.</p>
 
-<p>The same concept applied for objects that are moving rather than simply rotating:</p>
+<p>The same concept applied for objects that are moving rather than rotating:</p>
 
 <pre class="brush: js notranslate">const xDistanceMoved = xSpeedPerSecond * deltaTime;
 const yDistanceMoved = ySpeedPerSecond * deltaTime;

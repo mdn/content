@@ -139,7 +139,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <pre class="brush: js notranslate">pc.onicecandidate = ({candidate}) =&gt; signaler.send({candidate});</pre>
 
-<p>This simply takes the <code>candidate</code> member of this ICE event and passes it through to the signaling channel's <code>send()</code> method to be sent over the signaling server to the remote peer.</p>
+<p>This takes the <code>candidate</code> member of this ICE event and passes it through to the signaling channel's <code>send()</code> method to be sent over the signaling server to the remote peer.</p>
 
 <h4 id="Handling_incoming_messages_on_the_signaling_channel">Handling incoming messages on the signaling channel</h4>
 
@@ -195,7 +195,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <h5 id="On_receiving_an_ICE_candidate">On receiving an ICE candidate</h5>
 
-<p>On the other hand, if the received message contains an ICE candidate, we simply deliver it to the local {{Glossary("ICE")}} layer by calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs and we've ignored the most recent offer, we also ignore any error that may occur when trying to add the candidate.</p>
+<p>On the other hand, if the received message contains an ICE candidate, we deliver it to the local {{Glossary("ICE")}} layer by calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs and we've ignored the most recent offer, we also ignore any error that may occur when trying to add the candidate.</p>
 
 <h2 id="Making_negotiation_perfect">Making negotiation perfect</h2>
 
@@ -298,7 +298,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>Finally, we process a received offer by calling <code>setLocalDescription()</code> to set our local description to the one returned by {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}. Then that gets sent to the polite peer using the signaling channel.</p>
 
-<p>If the incoming message is an ICE candidate rather than an SDP description, it's simply delivered to the ICE layer by passing it into the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs here and we didn't just discard an offer due to being the impolite peer during a collision, we <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/throw">throw</a></code> the error so the caller can handle it. Otherwise, we drop the error, ignoring it, since it doesn't matter in this context.</p>
+<p>If the incoming message is an ICE candidate rather than an SDP description, it's delivered to the ICE layer by passing it into the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}. If an error occurs here and we didn't just discard an offer due to being the impolite peer during a collision, we <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/throw">throw</a></code> the error so the caller can handle it. Otherwise, we drop the error, ignoring it, since it doesn't matter in this context.</p>
 
 <h4 id="Perfect_negotiation_with_the_updated_API_2">Perfect negotiation with the updated API</h4>
 
@@ -385,7 +385,7 @@ pc.oniceconnectionstatechange = () =&gt; {
   }
 };</pre>
 
-<p>With this improved technique, instead of directly calling <code>onnegotiationneeded</code> with options to trigger ICE restart, the <code>failed</code> <a href="/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState">ICE connection state</a> simply calls {{domxref("RTCPeerConnection.restartIce", "restartIce()")}}. <code>restartIce()</code> tells the ICE layer to automatically add the <code>iceRestart</code> flag to the next ICE message sent. Problem solved!</p>
+<p>With this improved technique, instead of directly calling <code>onnegotiationneeded</code> with options to trigger ICE restart, the <code>failed</code> <a href="/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState">ICE connection state</a> calls {{domxref("RTCPeerConnection.restartIce", "restartIce()")}}. <code>restartIce()</code> tells the ICE layer to automatically add the <code>iceRestart</code> flag to the next ICE message sent. Problem solved!</p>
 
 <h3 id="Rollback_no_longer_supported_in_the_pranswer_state">Rollback no longer supported in the pranswer state</h3>
 

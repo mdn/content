@@ -26,7 +26,7 @@ tags:
 
 <p>Most of the methods we use in <em>Express</em> are asynchronous—you specify an operation to perform, passing a callback. The method returns immediately, and the callback is invoked when the requested operation completes. By convention in <em>Express</em>, callback functions pass an <em>error</em> value as the first parameter (or <code>null</code> on success) and the results from the function (if there are any) as the second parameter.</p>
 
-<p>If a controller only needs to <em>perform <strong>one </strong>asynchronous operation</em> to get the information required to render a page then the implementation is easy—we simply render the template in the callback. The code fragment below shows this for a function that renders the count of a model <code>SomeModel</code> (using the Mongoose <code><a href="https://mongoosejs.com/docs/api.html#model_Model.countDocuments">countDocuments</a></code> method):</p>
+<p>If a controller only needs to <em>perform <strong>one </strong>asynchronous operation</em> to get the information required to render a page then the implementation is easy—we render the template in the callback. The code fragment below shows this for a function that renders the count of a model <code>SomeModel</code> (using the Mongoose <code><a href="https://mongoosejs.com/docs/api.html#model_Model.countDocuments">countDocuments</a></code> method):</p>
 
 <pre class="brush: js notranslate"><code>exports.some_model_count = function(req, res, next) {
 

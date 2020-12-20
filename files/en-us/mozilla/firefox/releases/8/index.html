@@ -120,7 +120,7 @@ tags:
 <h4 id="Other_XPCOM_related_changes">Other XPCOM related changes</h4>
 
 <ul>
- <li>You can now instantiate DOM {{ domxref("File") }} objects from component code by simply doing new File, instead of having to instantiate an {{ interface("nsIDOMFile") }} directly.</li>
+ <li>You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an {{ interface("nsIDOMFile") }} directly.</li>
  <li>The <code>nsTPtrArray</code> array type has been removed. Its functionality is now all available on <code>nsTArray</code>, which now offers the <code>SafeElementAt()</code> method when instantiated using a pointer type. See the section on <a href="/en/XPCOM_array_guide#Bounds-safe_access_to_elements" title="en/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> in the <a href="/en/XPCOM_array_guide" title="XPCOM array guide">XPCOM array guide</a> for more information.</li>
 </ul>
 

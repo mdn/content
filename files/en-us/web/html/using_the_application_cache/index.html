@@ -267,7 +267,7 @@ NETWORK:
 
 <p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
 
-<div class="note"><strong>Note</strong>: Simply omitting master entries (files that have the <code>manifest</code> attribute set in the <code>html</code> element) from the manifest file would not have the same result, because master entries will be added—and subsequently served from—the application cache.</div>
+<div class="note"><strong>Note</strong>: Omitting master entries (files that have the <code>manifest</code> attribute set in the <code>html</code> element) from the manifest file would not have the same result, because master entries will be added—and subsequently served from—the application cache.</div>
 
 <h3 id="Fallback_entries">Fallback entries</h3>
 
@@ -317,7 +317,7 @@ if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
 
 <ul>
  <li>Never access cached files by using traditional GET parameters (like <code>other-cached-page.html?parameterName=value</code>). This will make the browser bypass the cache and attempt to get it from network. To link to cached resources that have parameters parsed in JavaScript use parameters in the hash part of the link, such as <code>other-cached-page.html#whatever?parameterName=value</code>.</li>
- <li>When applications are cached, simply updating the resources (files) that are used in a web page is not enough to update the files that have been cached. You must update the cache manifest file itself before the browser retrieves and uses the updated files. You can do this programmatically using <code>window.applicationCache.swapCache()</code>, though resources that have already been loaded will not be affected. To make sure that resources are loaded from a new version of the application cache, refreshing the page is ideal.</li>
+ <li>When applications are cached, updating the resources (files) that are used in a web page is not enough to update the files that have been cached. You must update the cache manifest file itself before the browser retrieves and uses the updated files. You can do this programmatically using <code>window.applicationCache.swapCache()</code>, though resources that have already been loaded will not be affected. To make sure that resources are loaded from a new version of the application cache, refreshing the page is ideal.</li>
  <li>It's a good idea to set expires headers on your web server for <code>*.appcache</code> files to expire immediately. This avoids the risk of caching manifest files. For example, in Apache you can specify such a configuration as follows:<br>
   <code>ExpiresByType text/cache-manifest "access plus 0 seconds"</code></li>
 </ul>

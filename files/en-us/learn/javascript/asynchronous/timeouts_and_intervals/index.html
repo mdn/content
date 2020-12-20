@@ -63,7 +63,7 @@ tags:
 
 <ul>
  <li>A function to run, or a reference to a function defined elsewhere.</li>
- <li>A number representing the time interval in milliseconds (1000 miliseconds equals 1 second) to wait before executing the code. If you specify a value of <code>0</code> (or simply omit the value), the function will run as soon as possible. (See the note below on why it runs "as soon as possible" and not "immediately".) More on why you might want to do this later.</li>
+ <li>A number representing the time interval in milliseconds (1000 miliseconds equals 1 second) to wait before executing the code. If you specify a value of <code>0</code> (or omit the value), the function will run as soon as possible. (See the note below on why it runs "as soon as possible" and not "immediately".) More on why you might want to do this later.</li>
  <li>Zero or more values that represent any parameters you want to pass to the function when it is run.</li>
 </ul>
 
@@ -519,7 +519,7 @@ const result = document.querySelector('.result');</pre>
   </ol>
  </li>
  <li>
-  <p>Next, below the previous lines of code, add the following function. It simply takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.</p>
+  <p>Next, below the previous lines of code, add the following function. It takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.</p>
 
   <pre class="brush: js notranslate">function random(min,max) {
   var num = Math.floor(Math.random()*(max-min)) + min;
@@ -545,7 +545,7 @@ const result = document.querySelector('.result');</pre>
 }</pre>
  </li>
  <li>
-  <p>Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which simply hide the results paragraph and spinner container using <code>display: none;</code>.</p>
+  <p>Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which hide the results paragraph and spinner container using <code>display: none;</code>.</p>
 
   <pre class="brush: js notranslate">result.style.display = 'none';
 spinnerContainer.style.display = 'none';</pre>

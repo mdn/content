@@ -73,7 +73,7 @@ eval(expression.toString());            // returns 4
 
 <p>Additionally, modern javascript interpreters convert javascript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of <code>eval()</code> will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additonally, new things can be introduced to that variable through <code>eval()</code> such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.</p>
 
-<p>Fortunately, there's a very good alternative to <code>eval()</code>: simply using {{jsxref("Function", "window.Function()")}}. See this example of how to convert code using a dangerous <code>eval()</code> to using <code>Function()</code>, see below.</p>
+<p>Fortunately, there's a very good alternative to <code>eval()</code>: using {{jsxref("Function", "window.Function()")}}. See this example of how to convert code using a dangerous <code>eval()</code> to using <code>Function()</code>, see below.</p>
 
 <p>Bad code with <code>eval()</code>:</p>
 

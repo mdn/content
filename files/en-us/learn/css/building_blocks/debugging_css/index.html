@@ -41,7 +41,7 @@ tags:
 
 <p>In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.</p>
 
-<p>View Source in comparison, is simply the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
+<p>View Source in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
 
 <h2 id="Inspecting_the_applied_CSS">Inspecting the applied CSS</h2>
 
@@ -147,7 +147,7 @@ tags:
 
 <h3 id="Is_the_property_and_value_supported_by_the_browser_you_are_testing_in">Is the property and value supported by the browser you are testing in?</h3>
 
-<p>Browsers simply ignore CSS they don't understand. If the property or value you are using is not supported by the browser you are testing in then nothing will break, but that CSS won't be applied. DevTools will generally highlight unsupported properties and values in some way. In the screenshot below the browser does not support the subgrid value of {{cssxref("grid-template-columns")}}.</p>
+<p>Browsers ignore CSS they don't understand. If the property or value you are using is not supported by the browser you are testing in then nothing will break, but that CSS won't be applied. DevTools will generally highlight unsupported properties and values in some way. In the screenshot below the browser does not support the subgrid value of {{cssxref("grid-template-columns")}}.</p>
 
 <p><img alt="Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported." src="https://mdn.mozillademos.org/files/16641/no-support.png" style="height: 397px; width: 1649px;"></p>
 

@@ -10,13 +10,13 @@ tags:
 
 <p>This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.</p>
 
-<p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Simply use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
+<p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
 
 <h2 id="Step_1_Update_the_install_manifest">Step 1: Update the install manifest</h2>
 
 <p>The first step -- and, for most extensions, the only one that will be needed -- is to update the <a href="/en-US/docs/Install_Manifests" title="Install_Manifests">install manifest</a> file, <a href="/en-US/docs/Creating_a_Skin_for_Firefox/install.rdf"><code>install.rdf</code></a>, to indicate compatibility with Firefox 3.</p>
 
-<p>Simply find the line indicating the maximum compatible version of Firefox (which, for Firefox 2, might look like this):</p>
+<p>Find the line indicating the maximum compatible version of Firefox (which, for Firefox 2, might look like this):</p>
 
 <div style="overflow: hidden;">
 <pre class="brush:xml">&lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;

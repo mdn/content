@@ -45,7 +45,7 @@ tags:
 
 <p><code>freeze()</code> returns the same object that was passed into the function. It <em>does not</em> create a frozen copy.</p>
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it were a frozen ordinary object, and be simply returned.</p>
+<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it were a frozen ordinary object, and be returned.</p>
 
 <pre class="brush: js notranslate">&gt; Object.freeze(1)
 TypeError: 1 is not an object // ES5 code

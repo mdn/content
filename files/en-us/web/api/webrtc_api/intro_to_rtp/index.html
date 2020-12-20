@@ -27,7 +27,7 @@ tags:
 
 <p>Before examining RTP's use in WebRTC contexts, it's useful to have a general idea of what RTP does and does not offer. RTP is a data transport protocol, whose mission is to move data between two endpoints as efficiently as possible under current conditions. Those conditions may be affected by everything from the underlying layers of the network stack to the physical network connection, the intervening networks, the performance of the remote endpoint, noise levels, traffic levels, and so forth.</p>
 
-<p>Since RTP is simply a data transport, it is augmented by the closely-related <strong>RTP Control Protocol</strong> (<strong>RTCP</strong>), which is defined in {{RFC(3550, "", 6)}}. RTCP adds features including <strong>Quality of Service</strong> (<strong>QoS</strong>) monitoring, participant information sharing, and the like. It isn't adequate for the purposes of fully managing users, memberships, permissions, and so forth, but provides the basics needed for an unrestricted multi-user communication session.</p>
+<p>Since RTP is a data transport, it is augmented by the closely-related <strong>RTP Control Protocol</strong> (<strong>RTCP</strong>), which is defined in {{RFC(3550, "", 6)}}. RTCP adds features including <strong>Quality of Service</strong> (<strong>QoS</strong>) monitoring, participant information sharing, and the like. It isn't adequate for the purposes of fully managing users, memberships, permissions, and so forth, but provides the basics needed for an unrestricted multi-user communication session.</p>
 
 <p>The very fact that RTCP is defined in the same RFC as RTP is a clue as to just how closely-interrelated these two protocols are.</p>
 

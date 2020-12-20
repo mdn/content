@@ -50,7 +50,7 @@ tags:
 
 <h2 id="Optimizing_memory_use">Optimizing memory use</h2>
 
-<p>When using libraries that perform things such as matrix mathematics, you typically have a number of working variables through which various vectors, matrices, and quaternions pass over time. It makes sense, then, to have a limited set of these objects, simply replacing their contents with the new information each time you need to use them. They can be thought of as being similar to the registers in a microprocessor: a limited set of memory storage slots for specific kinds of data or use cases.</p>
+<p>When using libraries that perform things such as matrix mathematics, you typically have a number of working variables through which various vectors, matrices, and quaternions pass over time. It makes sense, then, to have a limited set of these objects, replacing their contents with the new information each time you need to use them. They can be thought of as being similar to the registers in a microprocessor: a limited set of memory storage slots for specific kinds of data or use cases.</p>
 
 <p>While an individual vector or matrix doesn't occupy an inordinate amount of memory, the sheer number of vectors and matrices and other structures that are used to build each frame of a 3D scene means the memory management becomes a problem eventually if you keep allocating and de-allocating memory objects.</p>
 

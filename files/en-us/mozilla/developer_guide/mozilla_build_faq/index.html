@@ -94,7 +94,7 @@ git config core.eof lf
 </pre>
 	</dd>
 	<dd>
-	<p>Simply set the integer value after -j to the max number of parallel processes to use. For optimal builds, this should be around the number of processor cores in your system.</p>
+	<p>Set the integer value after -j to the max number of parallel processes to use. For optimal builds, this should be around the number of processor cores in your system.</p>
 
 	<p>(<u><strong>note</strong></u>: I have found that relying on automatic setting may not yield optimum results, in my case manually setting make -j resulted in a 50% decrease in build time. -j1 may keep it from blocking / becoming unresponsive.)</p>
 	</dd>
@@ -171,7 +171,7 @@ cd obj-debug
 	<dd>There's no guarantee that any code written for Mozilla will be accepted into the default tree. Any build system that is implemented would have to show that it's better overall than the current build system. Speed, flexibility, portability and the ability for a large group of developers who have 3+ years experience with the current build system to easily transition to the new system would be the major factors in deciding to switch. If you are serious and willing to do lots of work, contact <a href="/User:Benjamin_Smedberg" title="User:Benjamin_Smedberg">User:Benjamin Smedberg</a> to discuss the details of your proposal.</dd>
 	<dt>Why doesn't Mozilla support autoconf 2.5x?</dt>
 	<dd>
-	<p>Simply put, autoconf 2.5x does not offer anything to make the upgrade worth the effort. Autoconf 2.5x is not backwards compatible with autoconf 2.13 and the additional restrictions made by the newer versions of autoconf would require a major rewrite of the Mozilla build system for questionable gain.</p>
+	<p>In other words, autoconf 2.5x does not offer anything to make the upgrade worth the effort. Autoconf 2.5x is not backwards compatible with autoconf 2.13 and the additional restrictions made by the newer versions of autoconf would require a major rewrite of the Mozilla build system for questionable gain.</p>
 
 	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatiblity is silly.</p>
 	</dd>

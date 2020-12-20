@@ -19,7 +19,7 @@ tags:
 
 <p>Echo cancellation is a feature which attempts to prevent echo effects on a two-way audio connection by attempting to reduce or eliminate crosstalk between the user's output device and their input device. For example, it might apply a filter that negates the sound being produced on the speakers from being included in the input track generated from the microphone.</p>
 
-<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will simply ignore any constraints they're unfamiliar with.</p>
+<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
 
 <p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}} will never include this property.</p>
 
