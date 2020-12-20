@@ -48,12 +48,12 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>The {{ domxref("selection") }} object's <a href="/en/DOM/Selection/modify" title="en/DOM/Selection/modify"><code>modify()</code></a> method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.</li>
+ <li>The {{ domxref("selection") }} object's <a href="/en/DOM/Selection/modify"><code>modify()</code></a> method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.</li>
  <li>The {{ domxref("window.setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).</li>
  <li>Similarly, the {{ domxref("window.setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.</li>
- <li><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> now <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition" title="en/XMLHttpRequest/Using XMLHttpRequest#Detecting any load end condition">supports the <code>loadend</code> event</a> for progress listeners. This is sent after any transfer is finished (that is, after the <code>abort</code>, <code>error</code>, or <code>load</code> event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.</li>
- <li>The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' <code>slice()</code> method has been removed and replaced with a new, proposed syntax that makes it more consistent with <a href="/en/JavaScript/Reference/Global_Objects/Array/slice" title="en/JavaScript/Reference/Global Objects/Array/slice"><code>Array.slice()</code></a> and <a href="/en/JavaScript/Reference/Global_Objects/String/slice" title="en/JavaScript/Reference/Global Objects/String/slice"><code>String.slice()</code></a> methods in JavaScript. This method is named <a href="/en/DOM/Blob#mozSlice()" title="en/DOM/Blob#mozSlice()"><code>mozSlice()</code></a> for now.</li>
- <li>The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the <code>Accept-Language</code> <a href="/en/HTTP/Headers" title="en/HTTP/Headers">HTTP header</a>.</li>
+ <li><a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> now <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition" title="en/XMLHttpRequest/Using XMLHttpRequest#Detecting any load end condition">supports the <code>loadend</code> event</a> for progress listeners. This is sent after any transfer is finished (that is, after the <code>abort</code>, <code>error</code>, or <code>load</code> event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.</li>
+ <li>The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' <code>slice()</code> method has been removed and replaced with a new, proposed syntax that makes it more consistent with <a href="/en/JavaScript/Reference/Global_Objects/Array/slice" title="en/JavaScript/Reference/Global Objects/Array/slice"><code>Array.slice()</code></a> and <a href="/en/JavaScript/Reference/Global_Objects/String/slice" title="en/JavaScript/Reference/Global Objects/String/slice"><code>String.slice()</code></a> methods in JavaScript. This method is named <a href="/en/DOM/Blob#mozSlice()"><code>mozSlice()</code></a> for now.</li>
+ <li>The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the <code>Accept-Language</code> <a href="/en/HTTP/Headers">HTTP header</a>.</li>
  <li>The {{ domxref("Node.prefix") }} property is now read only, as required by the DOM specification.</li>
  <li>The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.</li>
 </ul>
@@ -119,7 +119,7 @@ tags:
 
 <ul>
  <li>The {{ interface("nsIHttpChannelInternal") }} interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.</li>
- <li>The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see <a href="/en/DOM/HTMLCanvasElement" title="en/DOM/HTMLCanvasElement"><code>HTMLCanvasElement</code></a>).</li>
+ <li>The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see <a href="/en/DOM/HTMLCanvasElement"><code>HTMLCanvasElement</code></a>).</li>
  <li>The <code>nsIAppStartup2</code> and {{ interface("nsIAppStartup_MOZILLA_2_0") }} interfaces have been merged into the {{ interface("nsIAppStartup") }} interface.</li>
  <li>The <code>nsIDocShell_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("nsIDocShell") }} interface.</li>
  <li>The <code>nsIFocusManager_MOZILLA_2_0_BRANCH</code> interface has been merged into the {{ interface("<code><code>nsIFocusManager</code></code>") }} interface.</li>
@@ -146,13 +146,13 @@ tags:
 <h3 id="Debugging_aids">Debugging aids</h3>
 
 <ul>
- <li>The new <a href="/En/Namespace/Mozilla/DebugOnly%3CT%3E" title="En/Namespace/Mozilla/DebugOnly&lt;T&gt;"><code>DebugOnly&lt;T&gt;</code></a> helper makes it possible to declare variables only for <code>DEBUG</code> builds.</li>
+ <li>The new <a href="/En/Namespace/Mozilla/DebugOnly%3CT%3E"><code>DebugOnly&lt;T&gt;</code></a> helper makes it possible to declare variables only for <code>DEBUG</code> builds.</li>
 </ul>
 
 <h3 id="JavaScript_API_(SpiderMonkey)">JavaScript API (SpiderMonkey)</h3>
 
 <ul>
- <li><a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32" title="en/SpiderMonkey/JSAPI Reference/JS DoubleToInt32"><code>JS_DoubleToInt32()</code></a> and <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32" title="en/SpiderMonkey/JSAPI Reference/JS DoubleToInt32"><code>JS_DoubleToUint32()</code></a> have been added, for converting <code><a href="/en/SpiderMonkey/JSAPI_Reference/jsdouble" title="en/jsdouble">jsdouble</a></code> values into C integers and unsigned integers.</li>
+ <li><a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32" title="en/SpiderMonkey/JSAPI Reference/JS DoubleToInt32"><code>JS_DoubleToInt32()</code></a> and <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32" title="en/SpiderMonkey/JSAPI Reference/JS DoubleToInt32"><code>JS_DoubleToUint32()</code></a> have been added, for converting <code><a href="/en/SpiderMonkey/JSAPI_Reference/jsdouble">jsdouble</a></code> values into C integers and unsigned integers.</li>
 </ul>
 
 <h3 id="Build_system_changes">Build system changes</h3>

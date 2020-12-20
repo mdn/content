@@ -30,14 +30,14 @@ tags:
  <dt><a href="/en/Properly_Configuring_Server_MIME_Types" title="en/Properly Configuring Server MIME Types">Properly configuring server MIME types</a></dt>
  <dd>There are several ways incorrect MIME types can cause potential security problems with your site. This article explains some of those and shows how to configure your server to serve files with the correct MIME types.</dd>
  <dt><a href="/en/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></dt>
- <dd>The <code>Strict-Transport-Security:</code> <a href="/en/HTTP" title="en/HTTP">HTTP</a> header lets a website specify that it may only be accessed using HTTPS.</dd>
+ <dd>The <code>Strict-Transport-Security:</code> <a href="/en/HTTP">HTTP</a> header lets a website specify that it may only be accessed using HTTPS.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/CORS" title="En/HTTP access control">HTTP access control</a></dt>
  <dd>The Cross-Origin Resource Sharing standard provides a way to specify what content may be loaded from other domains. You can use this to prevent your site from being used improperly; in addition, you can use it to establish resources that other sites are expressly permitted to use.</dd>
  <dt><a href="/en/Security/CSP">Content Security Policy</a></dt>
  <dd>An added layer of security that helps to detect and mitigate certain types of attacks, including {{Glossary("Cross-site_scripting", "Cross Site Scripting (XSS)")}} and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. Code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the <a class="external external-icon" href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" rel="noopener">seventh most common Web app vulnerability</a> in 2017.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/X-Frame-Options">The X-Frame-Options response header</a></dt>
  <dd>
- <p>The <code>X-Frame-Options:</code> <a href="/en/HTTP" title="en/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.</p>
+ <p>The <code>X-Frame-Options:</code> <a href="/en/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.</p>
  </dd>
  <dt>Access control by configuring a website</dt>
  <dd>It is the best way to secure your site. You can ignore specific IPs, restrict access to certain areas of website, protect different files, protect against image hotlinking, and a lot more. For example, .htaccess file is used for websites hosted on <a href="https://httpd.apache.org/">Apache HTTP Server</a>.</dd>

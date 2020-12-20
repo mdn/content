@@ -33,19 +33,19 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DOMString <a href="#toURL">toURL</a>();</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
    <td><code>DirectoryEntrySync <a href="#getParent">getParent</a>();</code></td>
@@ -119,7 +119,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -177,7 +177,7 @@ tags:
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -239,7 +239,7 @@ tags:
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -281,7 +281,7 @@ tags:
 
 <h3 id="toURL">toURL()</h3>
 
-<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a class="external" href="/en/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a class="external" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a>.</code></p>
+<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a class="external" href="/en/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a class="external" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a>.</code></p>
 
 <p>The file system URL does not expire. Because the method describes a location on disk, the URL is valid for as long as that location exists. You can delete the file and recreate it, and it's all good. </p>
 
@@ -324,7 +324,7 @@ tags:
 
 <h5 id="Exceptions_5">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -364,7 +364,7 @@ tags:
 <h5 id="Returns_6">Returns</h5>
 
 <dl>
- <dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
+ <dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
  <dd>An object that represents a directory in the file system.</dd>
 </dl>
 
@@ -380,6 +380,6 @@ tags:
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

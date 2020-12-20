@@ -180,7 +180,7 @@ Boolean(234); // true
 
 <h2 id="Variables">Variables</h2>
 
-<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var" title="/en/JavaScript/Reference/Statements/var">var</a></code>.<br>
+<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.<br>
  <br>
  <strong><code>let</code> </strong>allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
 
@@ -236,7 +236,7 @@ x = x + 5;
 
 <p>You can use <code>++</code> and <code>--</code> to increment and decrement respectively. These can be used as a prefix or postfix operators.</p>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition" title="/en/JavaScript/Reference/Operators/String_Operators"><code>+</code> operator</a> also does string concatenation:</p>
+<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"><code>+</code> operator</a> also does string concatenation:</p>
 
 <pre class="brush: js notranslate">'hello' + ' world'; // "hello world"
 </pre>
@@ -249,7 +249,7 @@ x = x + 5;
 
 <p>Adding an empty string to something is a useful way of converting it to a string itself.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en/JavaScript/Reference/Operators/Comparison_Operators">Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
 
 <pre class="brush: js notranslate">123 == '123'; // true
 1 == true; // true
@@ -263,7 +263,7 @@ x = x + 5;
 
 <p>There are also <code>!=</code> and <code>!==</code> operators.</p>
 
-<p>JavaScript also has <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en/JavaScript/Reference/Operators/Bitwise_Operators">bitwise operations</a>. If you want to use them, they're there.</p>
+<p>JavaScript also has <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">bitwise operations</a>. If you want to use them, they're there.</p>
 
 <h2 id="Control_structures">Control structures</h2>
 
@@ -441,7 +441,7 @@ var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 </pre>
 
-<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords" title="/en/JavaScript/Reference/Reserved_Words">reserved words</a>:</p>
+<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">reserved words</a>:</p>
 
 <pre class="brush: js notranslate">obj.for = 'Simon'; // Syntax error, because 'for' is a reserved word
 obj['for'] = 'Simon'; // works fine
@@ -503,7 +503,7 @@ a.length; // 101
   // Do something with currentValue
 }</pre>
 
-<p>You could also iterate over an array using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="/en/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to <code>Array.prototype</code>, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.</p>
+<p>You could also iterate over an array using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to <code>Array.prototype</code>, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.</p>
 
 <p>Another way of iterating over an array that was added with ECMAScript 5 is <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>:</p>
 
@@ -601,7 +601,7 @@ a.length; // 101
 // added the first two; 4 was ignored
 </pre>
 
-<p>That may seem a little silly, but functions have access to an additional variable inside their body called <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="/en/JavaScript/Reference/Functions_and_function_scope/arguments"><code>arguments</code></a>, which is an array-like object holding all of the values passed to the function. Let's re-write the add function to take as many values as we want:</p>
+<p>That may seem a little silly, but functions have access to an additional variable inside their body called <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a>, which is an array-like object holding all of the values passed to the function. Let's re-write the add function to take as many values as we want:</p>
 
 <pre class="brush: js notranslate">function add() {
   var sum = 0;
@@ -769,7 +769,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 </pre>
 
-<p>Note on the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this" title="/en/JavaScript/Reference/Operators/this">this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties" title="/en/JavaScript/Reference/Operators/Member_Operators">dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
+<p>Note on the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties">dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
 
 <p>Note that <code>this</code> is a frequent cause of mistakes. For example:</p>
 
@@ -795,7 +795,7 @@ fullName(); // undefined undefined
 var s = new Person('Simon', 'Willison');
 </pre>
 
-<p>We have introduced another keyword: <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new" title="/en/JavaScript/Reference/Operators/new">new</a></code>. <code>new</code> is strongly related to <code>this</code>. It creates a brand new empty object, and then calls the function specified, with <code>this</code> set to that new object. Notice though that the function specified with <code>this</code> does not return a value but merely modifies the <code>this</code> object. It's <code>new</code> that returns the <code>this</code> object to the calling site. Functions that are designed to be called by <code>new</code> are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with <code>new</code>.</p>
+<p>We have introduced another keyword: <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code>. <code>new</code> is strongly related to <code>this</code>. It creates a brand new empty object, and then calls the function specified, with <code>this</code> set to that new object. Notice though that the function specified with <code>this</code> does not return a value but merely modifies the <code>this</code> object. It's <code>new</code> that returns the <code>this</code> object to the calling site. Functions that are designed to be called by <code>new</code> are called constructor functions. Common practice is to capitalize these functions as a reminder to call them with <code>new</code>.</p>
 
 <p>The improved function still has the same pitfall with calling <code>fullName()</code> alone.</p>
 
@@ -894,7 +894,7 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"
 
 <pre class="brush: js notranslate">var bill = new Person('William', 'Orange');</pre>
 
-<p><code>apply()</code> has a sister function named <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="/en/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, which again lets you set <code>this</code> but takes an expanded argument list as opposed to an array.</p>
+<p><code>apply()</code> has a sister function named <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, which again lets you set <code>this</code> but takes an expanded argument list as opposed to an array.</p>
 
 <pre class="brush: js notranslate">function lastNameCaps() {
   return this.last.toUpperCase();

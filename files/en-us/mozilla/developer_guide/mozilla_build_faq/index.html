@@ -9,7 +9,7 @@ tags:
 
 <dl>
 	<dt id="platform">Which systems are supported Mozilla build platforms?</dt>
-	<dd>See <a href="/en/Supported_build_configurations" title="en/Supported_build_configurations">Supported build configurations</a>.</dd>
+	<dd>See <a href="/en/Supported_build_configurations">Supported build configurations</a>.</dd>
 </dl>
 
 <h2 id="Locating_errors">Locating errors</h2>
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Windows-specific_questions">Windows-specific questions</h2>
 
-<div class="note"><strong>Note:</strong> See <strong><a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="en/Windows_Build_Prerequisites">Windows Build Prerequisites</a> for additional information. While you can still build FIrefox _for_ 32-bit Windows systems, building on 32-bit Windows machines is not supported. </strong></div>
+<div class="note"><strong>Note:</strong> See <strong><a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a> for additional information. While you can still build FIrefox _for_ 32-bit Windows systems, building on 32-bit Windows machines is not supported. </strong></div>
 
 <dl>
 	<dt>configure: error: installation or configuration problem: C compiler cannot create executables.</dt>
@@ -51,7 +51,7 @@ git config core.eof lf
 
 <dl>
 	<dt>How do I build on Solaris 10 x86?</dt>
-	<dd>See <a href="/En/Developer_Guide/Build_Instructions/Solaris_Prerequisites" title="en/Solaris_Build_Prerequisites">Solaris Build Prerequisites</a>.</dd>
+	<dd>See <a href="/En/Developer_Guide/Build_Instructions/Solaris_Prerequisites">Solaris Build Prerequisites</a>.</dd>
 </dl>
 
 <h2 id="Mac-specific_questions">Mac-specific questions</h2>
@@ -59,7 +59,7 @@ git config core.eof lf
 <dl>
 	<dt> </dt>
 	<dt>It doesn't work</dt>
-	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting" title="en/Mac_OS_X_Build_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites" title="en/Mac_OS_X_Build_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
+	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
 </dl>
 
 <pre>curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
@@ -67,7 +67,7 @@ git config core.eof lf
 <dl>
 	<dt> </dt>
 	<dt>Can I build a Mozilla application as a Universal Binary?</dt>
-	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries" title="en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
+	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
 </dl>
 
 <h2 id="Making_builds_faster">Making builds faster</h2>
@@ -82,7 +82,7 @@ git config core.eof lf
 		<li><a name="rebuild_from_objdir">On Mac, you will also have to build<code> make -C browser/app</code></a></li>
 	</ul>
 
-	<p><a name="rebuild_from_objdir">See also </a><a href="/en/Incremental_Build" title="en/Incremental_Build">Incremental Build</a>.</p>
+	<p><a name="rebuild_from_objdir">See also </a><a href="/en/Incremental_Build">Incremental Build</a>.</p>
 	</dd>
 	<dt>Do parallel (make -j) builds work for Mozilla?</dt>
 	<dd>
@@ -116,7 +116,7 @@ git config core.eof lf
 	</dd>
 	<dt>Can I use ccache to speed up builds?</dt>
 	<dd>
-	<p>Yes. See the <a href="/en/ccache" title="en/ccache">ccache</a> page for more details. Use of ccache is highly encouraged to speed up builds.</p>
+	<p>Yes. See the <a href="/en/ccache">ccache</a> page for more details. Use of ccache is highly encouraged to speed up builds.</p>
 	</dd>
 	<dt>Where else can I save cycles?</dt>
 	<dd>Redirecting stdout, rather than dumping it into a terminal, can save between 30 seconds and 5 minutes on a build. Displaying lots of text is slow!</dd>
@@ -182,5 +182,5 @@ cd obj-debug
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en/Debugging_Mozilla_on_Windows_FAQ" title="en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows</li>
+	<li><a href="/en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows</li>
 </ul>

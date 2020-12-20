@@ -16,7 +16,7 @@ tags:
 <p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBCursorSync</code> interface of the <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> represents a <a href="/en/IndexedDB#gloss_cursor" title="en/IndexedDB#gloss cursor">cursor</a> for iterating over multiple records in a database. You can have only one instance of <code>IDBCursorSync</code> representing a cursor, but you can have an unlimited number of cursors at the same time. Operations are performed on the underlying index or object store. It enables an application to synchronously process all the records in the cursor's range.</p>
+<p>The <code>IDBCursorSync</code> interface of the <a href="/en/IndexedDB">IndexedDB API</a> represents a <a href="/en/IndexedDB#gloss_cursor" title="en/IndexedDB#gloss cursor">cursor</a> for iterating over multiple records in a database. You can have only one instance of <code>IDBCursorSync</code> representing a cursor, but you can have an unlimited number of cursors at the same time. Operations are performed on the underlying index or object store. It enables an application to synchronously process all the records in the cursor's range.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -26,7 +26,7 @@ tags:
    <td><code>bool <a href="#continue">continue</a> (in optional any key);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove">remove</a> () raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a> () raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>

@@ -32,7 +32,7 @@ firefox -createProfile testBeta4
 <p>Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.</p>
 <p>See <a class="internal" href="/en/Submitting_an_add-on_to_AMO" title="En/Submitting an add-on to AMO">Submitting an add-on to AMO</a> for additional information.</p>
 <h2 id="Accessing_the_Places_database">Accessing the Places database</h2>
-<p>Prior to Firefox 3.5, accessing the Places database directly using the <a class="internal" href="/en/Storage" title="En/Storage">Storage API</a> required a little bit of trickery:</p>
+<p>Prior to Firefox 3.5, accessing the Places database directly using the <a class="internal" href="/en/Storage">Storage API</a> required a little bit of trickery:</p>
 <pre class="brush: js">var places = Components.classes["@mozilla.org/file/directory_service;1"].
                         getService(Components.interfaces.nsIProperties).
                         get("ProfD", Components.interfaces.nsIFile);
@@ -46,7 +46,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
                     getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 </pre>
 <h2 id="Search_textboxes">Search textboxes</h2>
-<p>The <a class="internal" href="/en/XUL/textbox" title="En/XUL/Textbox"><code>textbox</code></a> type <code>timed</code> is deprecated; instead, you should use <code>search</code>.</p>
+<p>The <a class="internal" href="/en/XUL/textbox"><code>textbox</code></a> type <code>timed</code> is deprecated; instead, you should use <code>search</code>.</p>
 <p>In Firefox 3, you might have used:</p>
 <pre class="brush: xml">&lt;textbox type="timed" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
@@ -54,7 +54,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <pre class="brush: xml">&lt;textbox type="search" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
 <h2 id="JSON">JSON</h2>
-<p>The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see <a class="internal" href="/En/Using_native_JSON" title="/en/Using JSON in Firefox">Using JSON in Firefox</a> and the article on <a class="internal" href="/en/JSON" title="En/JSON">JSON</a> for a more general overview of JSON and how to use it in various versions of Firefox.</p>
+<p>The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see <a class="internal" href="/En/Using_native_JSON" title="/en/Using JSON in Firefox">Using JSON in Firefox</a> and the article on <a class="internal" href="/en/JSON">JSON</a> for a more general overview of JSON and how to use it in various versions of Firefox.</p>
 <p>To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:</p>
 <pre class="brush: js">if (typeof(JSON) == "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");

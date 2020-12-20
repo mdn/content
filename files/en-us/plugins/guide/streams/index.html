@@ -140,7 +140,7 @@ int32 offset, int32 len, void *buf);
 
 <p>The stream processes all byte-range requests, and then is placed in seek mode (either explicitly in <code><a href="/en-US/Add-ons/Plugins/Reference/NPP_NewStream">NPP_NewStream</a></code>, or implicitly by a call to <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_RequestRead">NPN_RequestRead</a></code>). It remains open until the plug-in closes it by calling <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_DestroyStream">NPN_DestroyStream</a></code>, or until the instance is destroyed.</p>
 
-<p>NOTE: If you want to be sure that the NPN_*Stream functions are called in the order you want and behave the way you expect, combine NPN_<a href="/en/NewStream" title="en/NewStream">NewStream</a>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Destroy_Stream">NPN_Destroy_Stream</a></code> in the same callback.</p>
+<p>NOTE: If you want to be sure that the NPN_*Stream functions are called in the order you want and behave the way you expect, combine NPN_<a href="/en/NewStream">NewStream</a>, <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Write">NPN_Write</a></code>, and <code><a href="/en-US/Add-ons/Plugins/Reference/NPN_Destroy_Stream">NPN_Destroy_Stream</a></code> in the same callback.</p>
 
 <h3 id="Sending_the_Stream_in_Random-Access_Mode">Sending the Stream in Random-Access Mode</h3>
 

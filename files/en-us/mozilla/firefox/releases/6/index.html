@@ -82,8 +82,8 @@ tags:
  <li>The {{ domxref("window.top") }} property is now properly read only.</li>
  <li>DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.</li>
  <li>The <code>EventTarget</code> function <a href="/en/XPCOM_Interface_Reference/nsIDOMEventTarget" title="en/XPCOM Interface Reference/nsIDOMEventTarget"><code>addEventListener()</code></a>'s <code>useCapture</code> parameter is now optional, as it is in WebKit (and as per the latest version of the specification).</li>
- <li>The <code>mozResponseArrayBuffer</code> property of the <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> object has been replaced with the <code>responseType</code> and <code>response</code> properties.</li>
- <li>The {{ domxref("element.dataset") }} property has been added to the <a href="/en/DOM/HTMLElement" title="en/DOM/HTMLElement"><code>HTMLElement</code></a> interface allowing access to the <a href="/en/HTML/Global_attributes#attr-data-*"><code>data-*</code> global attributes</a> of an element.</li>
+ <li>The <code>mozResponseArrayBuffer</code> property of the <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> object has been replaced with the <code>responseType</code> and <code>response</code> properties.</li>
+ <li>The {{ domxref("element.dataset") }} property has been added to the <a href="/en/DOM/HTMLElement"><code>HTMLElement</code></a> interface allowing access to the <a href="/en/HTML/Global_attributes#attr-data-*"><code>data-*</code> global attributes</a> of an element.</li>
  <li>The {{ domxref("CustomEvent") }} interface has been implemented. (see {{ bug("427537") }})</li>
  <li>For security reasons, <code>data:</code> and <code>javascript:</code> URIs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering <code>javascript:</code> URIs in the location bar no longer has access to DOM methods and the like, for example. These URIs continue to work as before when used by script, however.</li>
 </ul>
@@ -92,7 +92,7 @@ tags:
 
 <ul>
  <li>In the past, it was possible to use the <code>new</code> operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the <code>new</code> operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.</li>
- <li>ECMAScript 2015 <a href="/en/JavaScript/Reference/Global_Objects/WeakMap" title="en/JavaScript/Reference/Global_Objects/WeakMap">WeakMaps</a> have been added as a prototype implementation.</li>
+ <li>ECMAScript 2015 <a href="/en/JavaScript/Reference/Global_Objects/WeakMap">WeakMaps</a> have been added as a prototype implementation.</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -118,7 +118,7 @@ tags:
 <h3 id="Networking">Networking</h3>
 
 <dl>
- <dt><a href="/en/WebSockets" title="en/WebSockets">WebSockets</a></dt>
+ <dt><a href="/en/WebSockets">WebSockets</a></dt>
  <dd>WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global <code>WebSocket</code> object has been renamed to <code>MozWebSocket</code> to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.</dd>
 </dl>
 
@@ -133,7 +133,7 @@ tags:
 <ul>
  <li>Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.</li>
  <li>WebGL now supports the <a class="external" href="http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt"><code>OES_texture_float</code></a> extension.</li>
- <li>The new <a href="/en/Tools/Scratchpad" title="en/Tools/Scratchpad">Scratchpad</a> tool provides a handy place to experiment with JavaScript code.</li>
+ <li>The new <a href="/en/Tools/Scratchpad">Scratchpad</a> tool provides a handy place to experiment with JavaScript code.</li>
  <li>The <code>console.trace()</code> method has been added to the <a href="/en/Tools/Web_Console">ConsoleAPI </a>(see {{ bug('585956') }}).</li>
 </ul>
 

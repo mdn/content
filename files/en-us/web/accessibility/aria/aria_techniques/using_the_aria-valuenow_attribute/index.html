@@ -6,11 +6,11 @@ tags:
   - Accessibility
   - NeedsContent
 ---
-<p><span class="seoSummary">The <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow" rel="external" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow">aria-valuenow</a> attribute is used to define the current value for a range widget such as a slider, spinbutton or progressbar. If the current value is not known, the author should not set the <code>aria-valuenow</code> attribute. If the <code>aria-valuenow</code> has a known minimum and maximum value, authors should set the <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="Using the aria-valuemin attribute"><code>aria-valuemin</code></a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attributes.</span></p>
+<p><span class="seoSummary">The <a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow" rel="external" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-valuenow">aria-valuenow</a> attribute is used to define the current value for a range widget such as a slider, spinbutton or progressbar. If the current value is not known, the author should not set the <code>aria-valuenow</code> attribute. If the <code>aria-valuenow</code> has a known minimum and maximum value, authors should set the <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="Using the aria-valuemin attribute"><code>aria-valuemin</code></a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attributes.</span></p>
 
-<p>When the rendered value cannot be accurately represented as a number, authors <strong class="rfc2119">SHOULD</strong> use the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute in conjunction with <code>aria-valuenow</code> to provide a user-friendly representation of the range's current value. For example, a slider may have rendered values of <code>small</code>, <code>medium</code>, and <code>large</code>. In this case, the values of <code>aria-valuenow</code> could range from 1 through 3, which indicate the position of each value in the value space, but the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> would be one of the strings: <code>small</code>, <code>medium</code>, or <code>large</code>.</p>
+<p>When the rendered value cannot be accurately represented as a number, authors <strong class="rfc2119">SHOULD</strong> use the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute in conjunction with <code>aria-valuenow</code> to provide a user-friendly representation of the range's current value. For example, a slider may have rendered values of <code>small</code>, <code>medium</code>, and <code>large</code>. In this case, the values of <code>aria-valuenow</code> could range from 1 through 3, which indicate the position of each value in the value space, but the <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> would be one of the strings: <code>small</code>, <code>medium</code>, or <code>large</code>.</p>
 
-<p><code>aria-valuenow</code> is a <strong>required</strong> attribute of role <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="Using the slider role">slider</a>, <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">scrollbar</a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role">spinbutton</a>.</p>
+<p><code>aria-valuenow</code> is a <strong>required</strong> attribute of role <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="Using the slider role">slider</a>, <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">scrollbar</a> and <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role">spinbutton</a>.</p>
 
 <h3 id="Value">Value</h3>
 
@@ -18,9 +18,9 @@ tags:
 
 <h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
-<p>For elements with role <code><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></code> and <code><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">scrollbar</a></code>, assistive technologies <strong>SHOULD </strong>render the actual value as a percentage, calculated as a position on the range from <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute"><code>aria-valuemin</code></a> to <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> if both are defined, otherwise the actual value with a percent indicator.</p>
+<p>For elements with role <code><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></code> and <code><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">scrollbar</a></code>, assistive technologies <strong>SHOULD </strong>render the actual value as a percentage, calculated as a position on the range from <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute"><code>aria-valuemin</code></a> to <a class="property-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> if both are defined, otherwise the actual value with a percent indicator.</p>
 
-<p>For elements with role <a class="role-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role"><code>slider</code></a> and <a class="role-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role"><code>spinbutton</code></a>, assistive technologies <strong class="rfc2119">SHOULD</strong> render the actual value to users.</p>
+<p>For elements with role <a class="role-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role"><code>slider</code></a> and <a class="role-reference" href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role"><code>spinbutton</code></a>, assistive technologies <strong class="rfc2119">SHOULD</strong> render the actual value to users.</p>
 
 <div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
@@ -46,7 +46,7 @@ tags:
 <h3 id="Used_With_ARIA_Roles">Used With ARIA Roles</h3>
 
 <ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></li>
+ <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">progressbar</a></li>
  <li>scrollbar</li>
  <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="Using the slider role">slider</a></li>
  <li>spinbutton</li>
@@ -55,8 +55,8 @@ tags:
 <h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
+ <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
+ <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
  <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="Using the aria-required attribute">aria-valuetext</a></li>
 </ul>
 

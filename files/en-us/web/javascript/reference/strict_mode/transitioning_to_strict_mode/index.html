@@ -24,8 +24,8 @@ tags:
 
 <ul>
  <li>Octal syntax <code>var n = 023;</code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with" title="/en-US/docs/JavaScript/Reference/Statements/with"><code>with</code></a> statement</li>
- <li>Using <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="/en-US/docs/JavaScript/Reference/Operators/delete">delete</a></code> on a variable name <code>delete myVariable</code>;</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with"><code>with</code></a> statement</li>
+ <li>Using <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> on a variable name <code>delete myVariable</code>;</li>
  <li>Using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval"><code>eval</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a> as variable or function argument name</li>
  <li>Using one of the newly <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">reserved keywords</a> (in prevision for ECMAScript 2015): <code>implements</code>, <code>interface</code>, <code>let</code>, <code>package</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>, and <code>yield</code></li>
  <li>Declaring function in blocks <code>if (a &lt; b) { function f() {} }</code></li>
@@ -105,7 +105,7 @@ s.opacity = 1;
 
 <h4 id="this_in_function_calls"><code>this</code> in function calls</h4>
 
-<p>In function calls like <code>f()</code>, the <code>this</code> value was the global object. In strict mode, it is now <code>undefined</code>. When a function was called with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="/en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call">call</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="/en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply">apply</a></code>, if the value was a primitive value, this one was boxed into an object (or the global object for <code>undefined</code> and <code>null</code>). In strict mode, the value is passed directly without conversion or replacement.</p>
+<p>In function calls like <code>f()</code>, the <code>this</code> value was the global object. In strict mode, it is now <code>undefined</code>. When a function was called with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>, if the value was a primitive value, this one was boxed into an object (or the global object for <code>undefined</code> and <code>null</code>). In strict mode, the value is passed directly without conversion or replacement.</p>
 
 <h4 id="arguments_doesnt_alias_named_function_arguments"><code>arguments</code> doesn't alias named function arguments</h4>
 

@@ -20,7 +20,7 @@ tags:
 
 <p>A panel's purpose is to manage available <strong>viewers</strong>. At the top of each panel is a toolbar which contains a menu button allowing you to choose which viewer to display from the <strong>viewer list</strong>, a label displaying the name of the currently active viewer, and another menu button allowing you to issue viewer-specific commands.</p>
 
-<p>Viewers are dynamically loaded; when the panel is made to switch from one viewer to another, the old viewer is destroyed, and the new viewer is loaded in its place. In this way, the panelset and panels function like a frameset and frames. This comparison turns out to be quite apt, since each panel actually contains an anonymous <code><a href="/en/XUL/browser" title="en/XUL/browser">browser</a></code>, and individual viewers exist in separate documents loaded in the browser. This separation allows for viewers to be self-contained, with a viewer's XUL defined in its own document and loaded in its own scope, without fear of collisions in the XUL, CSS, or JS. Another convenient consequence of this is that if you use a properly set up <a href="/en/Setting_up_an_extension_development_environment" title="en/Setting up an extension development environment">development profile</a>, then for the most part, the effects of development changes can be seen by switching away from the current viewer and back.</p>
+<p>Viewers are dynamically loaded; when the panel is made to switch from one viewer to another, the old viewer is destroyed, and the new viewer is loaded in its place. In this way, the panelset and panels function like a frameset and frames. This comparison turns out to be quite apt, since each panel actually contains an anonymous <code><a href="/en/XUL/browser">browser</a></code>, and individual viewers exist in separate documents loaded in the browser. This separation allows for viewers to be self-contained, with a viewer's XUL defined in its own document and loaded in its own scope, without fear of collisions in the XUL, CSS, or JS. Another convenient consequence of this is that if you use a properly set up <a href="/en/Setting_up_an_extension_development_environment">development profile</a>, then for the most part, the effects of development changes can be seen by switching away from the current viewer and back.</p>
 
 <p>Knowing this about the way viewers are written, we should now be at a place where we can look at the way the DOM Inspector source is organized.</p>
 
@@ -170,7 +170,7 @@ overlay chrome://inspector/content/inspector.xul chrome://communicator/content/t
 
 <h4 id="Shared_structure_overlays">Shared structure overlays</h4>
 
-<p>Taking a look at the contents of inspector.xul, DOM Inspector's primary UI, will reveal that it contains almost no visible elements. As of this writing, there's a <code><a href="/en/XUL/toolbox" title="en/XUL/toolbox">toolbox</a></code> containing an empty <code><a href="/en/XUL/menubar" title="en/XUL/menubar">menubar</a></code> and an empty <code><a href="/en/XUL/toolbar" title="en/XUL/toolbar">toolbar</a></code>, as well as an empty <code><a href="/en/XUL/vbox" title="en/XUL/vbox">vbox</a></code>:</p>
+<p>Taking a look at the contents of inspector.xul, DOM Inspector's primary UI, will reveal that it contains almost no visible elements. As of this writing, there's a <code><a href="/en/XUL/toolbox">toolbox</a></code> containing an empty <code><a href="/en/XUL/menubar">menubar</a></code> and an empty <code><a href="/en/XUL/toolbar">toolbar</a></code>, as well as an empty <code><a href="/en/XUL/vbox">vbox</a></code>:</p>
 
 <pre><code>  &lt;toolbox id="tbxInsToolbox"&gt;
     &lt;menubar id="mbrInspectorMain"/&gt;
@@ -180,7 +180,7 @@ overlay chrome://inspector/content/inspector.xul chrome://communicator/content/t
   &lt;vbox id="bxInspectorMain" flex="1"/&gt;</code>
 </pre>
 
-<p>There are no menus, toolbar items, et cetera defined here. Even most of the elements that aren't visible, such as <code><a href="/en/XUL/keyset" title="en/XUL/keyset">key</a></code>- and <code><a href="/en/XUL/commandset" title="en/XUL/commandset">commandset</a></code>s, are not defined in inspector.xul. These are pulled in from a series of overlays, so that the XUL defining DOM Inspector's UI can be organized into discrete units. inspector.xul itself is only a skeleton describing the basic structure and layout of the primary DOM Inspector window, leaving most of its contents to be added by the overlays.</p>
+<p>There are no menus, toolbar items, et cetera defined here. Even most of the elements that aren't visible, such as <code><a href="/en/XUL/keyset">key</a></code>- and <code><a href="/en/XUL/commandset">commandset</a></code>s, are not defined in inspector.xul. These are pulled in from a series of overlays, so that the XUL defining DOM Inspector's UI can be organized into discrete units. inspector.xul itself is only a skeleton describing the basic structure and layout of the primary DOM Inspector window, leaving most of its contents to be added by the overlays.</p>
 
 <p>Using modular overlays also allows for common XUL to be shared across the various documents that make up the DOM Inspector's UI, although not all overlays are shared by multiple consumers. Single-consumer overlays exist solely for organization.</p>
 
@@ -215,7 +215,7 @@ overlay chrome://inspector/content/inspector.xul chrome://communicator/content/t
  </li>
 </ul>
 
-<p>(Note that the overlays from the viewer subdirectories—viewers/dom and viewers/styleRules—are loaded as a result of <a href="/en/Chrome_Registration#overlay" title="/en/chrome.manifest#overlay"><code>overlay</code> directives</a> in DOM Inspector's chrome manifest, rather than being explicitly imported using a <code>xul-overlay</code> processing instruction in the overlaid file.)</p>
+<p>(Note that the overlays from the viewer subdirectories—viewers/dom and viewers/styleRules—are loaded as a result of <a href="/en/Chrome_Registration#overlay"><code>overlay</code> directives</a> in DOM Inspector's chrome manifest, rather than being explicitly imported using a <code>xul-overlay</code> processing instruction in the overlaid file.)</p>
 
 <dl>
  <dt>inspectorOverlay.xul</dt>
@@ -235,9 +235,9 @@ overlay chrome://inspector/content/inspector.xul chrome://communicator/content/t
  <p>The tooltip used for the Inspect menus—the one used to show a document's title (if any) and its URI for a given menuitem—is also defined here.</p>
  </dd>
  <dt>commandOverlay.xul</dt>
- <dd>The popupOverlay.xul-provided menuitems that delegate to external <code><a href="/en/XUL/command" title="en/XUL/command">command</a></code> elements have their commands defined here.</dd>
+ <dd>The popupOverlay.xul-provided menuitems that delegate to external <code><a href="/en/XUL/command">command</a></code> elements have their commands defined here.</dd>
  <dt>keysetOverlay.xul</dt>
- <dd>Some popupOverlay.xul-provided menuitems have their <code><a href="/en/XUL/key" title="en/XUL/key">key</a></code>s defined here. As of this writing, all of the keys that correspond to Edit menu items live in editingOverlay for no good reason.</dd>
+ <dd>Some popupOverlay.xul-provided menuitems have their <code><a href="/en/XUL/key">key</a></code>s defined here. As of this writing, all of the keys that correspond to Edit menu items live in editingOverlay for no good reason.</dd>
  <dt>statusbarOverlay.xul</dt>
  <dd>This defines the contents of the DOM Inspector's status bar. DOM Inspector doesn't have a status bar, so this is entirely useless.</dd>
 </dl>
