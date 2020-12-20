@@ -66,7 +66,7 @@ tags:
 
 <p>In the following example we open a transaction and an object store, then get the index <code>lName</code> from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an <code>ObjectStore</code> using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.</p>
 
-<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://mdn.github.io/indexeddb-examples/idbindex/">IDBIndex-example demo repo</a> (<a href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">View the example live</a>.)</p>
+<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the example live</a>.)</p>
 
 <pre class="brush: js" style="font-size: 14px;">function displayDataByIndex() {
   tableEntry.innerHTML = '';
