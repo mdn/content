@@ -132,7 +132,7 @@ h3 {
 
 <p>Once the two things above have been checked, check if the other rule you are overriding contains <code>!important</code>, if that is case, try putting it in question, because it might have become obsolete.</p>
 
-<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overriden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
+<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overridden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
 
 <p>Finally, once you have checked all the things above, you can permit yourself to use <code>!important</code> along with a comment why it is needed.</p>
 
@@ -144,7 +144,7 @@ h3 {
 
 <ol>
  <li><strong>Is the variable value changed at runtime?</strong><br>
-  <em>(Either from JavaScript or overriden by another CSS file)</em><br>
+  <em>(Either from JavaScript or overridden by another CSS file)</em><br>
   <br>
   <strong>If the answer is no</strong>, consider using a preprocessor variable or inlining the value.<br>
    </li>
@@ -320,7 +320,7 @@ h3 {
 
 <p>Using the background/text pairs is especially important to ensure the contrast is respected in all situations. Never mix custom text colors with a system background color and vice-versa.</p>
 
-<p>Note that using system colors is only useful for the chrome area, since content area colors are overriden by Gecko anyway.</p>
+<p>Note that using system colors is only useful for the chrome area, since content area colors are overridden by Gecko anyway.</p>
 
 <h3 id="Writing_media_queries">Writing media queries</h3>
 
