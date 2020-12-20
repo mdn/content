@@ -22,4 +22,4 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          npx markdownlint-cli *.md
+          npx markdownlint-cli '*.md' -i LICENSE.md -i CODE_OF_CONDUCT.md
