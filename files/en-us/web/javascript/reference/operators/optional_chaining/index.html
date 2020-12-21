@@ -64,7 +64,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 </div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be raised (<code>someInterface is null</code>). If you expect that <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>, you have to use <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">?.</span></font> at this position as well: <code>someInterface?.customMethod?.()</code></p>
+<p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be raised (<code>someInterface is null</code>). If you expect that <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>, you have to use <code>?.</code> at this position as well: <code>someInterface?.customMethod?.()</code></p>
 </div>
 
 <h4 id="Dealing_with_optional_callbacks_or_event_handlers">Dealing with optional callbacks or event handlers</h4>

@@ -77,7 +77,7 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 loadFile("message.txt", showMessage, "New message!\n\n");
 </pre>
 
-<p>The signature of the utility function <em><strong>loadFile</strong></em> declares (i) a target URL to read (via an HTTP GET request), (ii) a function to execute on successful completion of the XHR operation, and (iii) an arbitrary list of additional arguments that are passed through the XHR object (via the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">arguments</span></font> property) to the success callback function.</p>
+<p>The signature of the utility function <em><strong>loadFile</strong></em> declares (i) a target URL to read (via an HTTP GET request), (ii) a function to execute on successful completion of the XHR operation, and (iii) an arbitrary list of additional arguments that are passed through the XHR object (via the <code>arguments</code> property) to the success callback function.</p>
 
 <p>Line 1 declares a function invoked when the XHR operation completes successfully. It, in turn, invokes the callback function specified in the invocation of the <code>loadFile</code> function (in this case, the function <code>showMessage</code>) which has been assigned to a property of the XHR object (Line 11). The additional arguments (if any) supplied to the invocation of function loadFile are "applied" to the running of the callback function.</p>
 

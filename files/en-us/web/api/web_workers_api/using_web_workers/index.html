@@ -290,7 +290,7 @@ onmessage = function(oEvent) {
 
 <p>If you have to pass some complex data and have to call many different functions both on the main page and in the Worker, you can create a system which groups everything together.</p>
 
-<p>First, we create a QueryableWorker class that takes the <font face="Consolas, Liberation Mono, Courier, monospace">url</font> of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
+<p>First, we create a QueryableWorker class that takes the <code>url</code> of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
 
 <pre class="brush: js notranslate">function QueryableWorker(url, defaultListener, onError) {
     var instance = this,

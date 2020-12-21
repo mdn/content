@@ -204,7 +204,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>Unfortunately we can't directly specify the <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>field in <code>list_display</code> because it is a <code>ManyToManyField</code> (Django prevents this because there would be a large database access "cost" in doing so). Instead we'll define a <code>display_genre</code> function to get the information as a string (this is the function we've called above; we'll define it below).</p>
+<p>Unfortunately we can't directly specify the <code>genre</code> field in <code>list_display</code> because it is a <code>ManyToManyField</code> (Django prevents this because there would be a large database access "cost" in doing so). Instead we'll define a <code>display_genre</code> function to get the information as a string (this is the function we've called above; we'll define it below).</p>
 
 <div class="note">
 <p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete </em>link next to every item in the list.</p>
