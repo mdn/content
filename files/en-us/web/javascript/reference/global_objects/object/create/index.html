@@ -158,7 +158,7 @@ ocn.prototype.toString = Object.toString; // since new object lacks method then 
 </pre>
 
 <p><br>
- Adding the missing object-method by using the standard-object<strong></strong> as new object's prototype does not work either:</p>
+ Adding the missing object-method by using the standard-object as new object's prototype does not work either:</p>
 
 <pre class="brush: js notranslate">ocn = Object.create( null );        // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standard-object
