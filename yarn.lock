@@ -28,20 +28,20 @@
     winston "3.2.1"
     wrap-ansi "^6.2.0"
 
-"@mdn/browser-compat-data@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.0.tgz#023f7057e75ac26adb3546a4f43450caadcf5ccc"
-  integrity sha512-J2kn2zBbgAvOoHRiPikMnZWJ8qWKrpdlHepoozYbTbwwUGrFXP4opIitH8Dn68e36nUrhUu/NL4lGq7ZOqh+xg==
+"@mdn/browser-compat-data@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.1.tgz#2a4e6aeb4ddc627075f18c02f5abf71a3254a85f"
+  integrity sha512-m8uDiEsOz6n543SbQYoWG5s0/vHEw6B+57Px05HOVX+aiBUhp/RGtyB8vTjU0lDJea79crk6ovpvsHDaa3Vq4g==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.409":
-  version "0.1.409"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.409.tgz#94c4d06eb0c5c70a39d96a27f46f9cecc7bc961d"
-  integrity sha512-HpcSVgF0h26VFc07DGJA0/JNISKqmUXJl4WZ9JOKoAQTBOkKeU/g7MAndaCnA5AGbFCeCtZqaagKXUWsnmK4PA==
+"@mdn/yari@0.1.419":
+  version "0.1.419"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.419.tgz#817b6fce4c5398325a558c09380842f03e15bc02"
+  integrity sha512-G+82L/24psXaCuOo4iC77o4oTAUtVHIwZmdtDvQMtDveSnlkSLak6HzuXCmP8p1oPrSxrQ/Hod6uKyKKs7rPQA==
   dependencies:
     "@caporal/core" "2.0.2"
-    "@mdn/browser-compat-data" "3.0.0"
+    "@mdn/browser-compat-data" "3.0.1"
     accept-language-parser "1.5.0"
     braces "^3.0.2"
     chalk "4.1.0"
