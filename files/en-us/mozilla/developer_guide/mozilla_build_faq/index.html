@@ -173,7 +173,7 @@ cd obj-debug
 	<dd>
 	<p>In other words, autoconf 2.5x does not offer anything to make the upgrade worth the effort. Autoconf 2.5x is not backwards compatible with autoconf 2.13 and the additional restrictions made by the newer versions of autoconf would require a major rewrite of the Mozilla build system for questionable gain.</p>
 
-	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatiblity is silly.</p>
+	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatibility is silly.</p>
 	</dd>
 	<dt>Why doesn't NSS use autoconf?</dt>
 	<dd>The NSS project is also used outside of the Mozilla project and the NSS project members did not feel that moving to autoconf was worth the cost. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=52990">bug 52990</a> for details.</dd>

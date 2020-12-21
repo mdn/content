@@ -30,7 +30,7 @@ tags:
  <dd>A string qualifying how the user verification should be part of the authentication process. The values may be:
  <ul>
   <li>"<code>required</code>": user verification is required, the operation will fail if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does not have the UV flag (as part of the <code>authenticatorData</code> property of {{domxref("AuthenticatorAttestationResponse.attestationObject")}})</li>
-  <li>"<code>preferred</code>": user verification is prefered, the operation will not fail if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does not have the UV flag (as part of the <code>authenticatorData</code> property of {{domxref("AuthenticatorAttestationResponse.attestationObject")}})</li>
+  <li>"<code>preferred</code>": user verification is preferred, the operation will not fail if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does not have the UV flag (as part of the <code>authenticatorData</code> property of {{domxref("AuthenticatorAttestationResponse.attestationObject")}})</li>
   <li>"<code>discouraged</code>": user verification should not be employed as to minimize the user interaction during the process.</li>
  </ul>
  The default value is "<code>preferred</code>".</dd>

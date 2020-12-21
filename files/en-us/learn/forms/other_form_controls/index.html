@@ -60,9 +60,9 @@ tags:
 
 <dl>
  <dt>{{htmlattrxref("cols","textarea")}}</dt>
- <dd>Specifies the visible width (columns) of the text control, measured in average character widths. This is effectively the starting width, as it can be changed by resizing the <code>&lt;textarea&gt;</code>, and overriden using CSS. The default value if none is specified is 20.</dd>
+ <dd>Specifies the visible width (columns) of the text control, measured in average character widths. This is effectively the starting width, as it can be changed by resizing the <code>&lt;textarea&gt;</code>, and overridden using CSS. The default value if none is specified is 20.</dd>
  <dt>{{htmlattrxref("rows","textarea")}}</dt>
- <dd>Specifies the number of visible text rows for the control. This is effectively the starting height, as it can be changed by resizing the <code>&lt;textarea&gt;</code>, and overriden using CSS. The default value if none is specified is 2.</dd>
+ <dd>Specifies the number of visible text rows for the control. This is effectively the starting height, as it can be changed by resizing the <code>&lt;textarea&gt;</code>, and overridden using CSS. The default value if none is specified is 2.</dd>
  <dt>{{htmlattrxref("wrap","textarea")}}</dt>
  <dd>Specifies how the control wraps text. The values are <code>soft</code> (the default value), which means the text submitted is not wrapped but the text rendered by the browser is wrapped; <code>hard</code> (the <code>cols</code> attribute must be specified when using this value), which means both the submitted and rendered texts are wrapped, and <code>off</code>, which stops wrapping.</dd>
 </dl>
@@ -268,11 +268,11 @@ tags:
    <li>The higher part of the range is between the {{htmlattrxref("high","meter")}} and {{htmlattrxref("max","meter")}} values, inclusive.</li>
   </ul>
  </li>
- <li>The {{htmlattrxref("optimum","meter")}} value defines the optimum value for the {{HTMLElement("meter")}} element. In conjuction with the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} value, it defines which part of the range is prefered:
+ <li>The {{htmlattrxref("optimum","meter")}} value defines the optimum value for the {{HTMLElement("meter")}} element. In conjunction with the {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} value, it defines which part of the range is preferred:
   <ul>
-   <li>If the {{htmlattrxref("optimum","meter")}} value is in the lower part of the range, the lower range is considered to be the prefered part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.</li>
-   <li>If the {{htmlattrxref("optimum","meter")}} value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the prefered part, and the higher range is considered to be average as well.</li>
-   <li>If the {{htmlattrxref("optimum","meter")}} value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the prefered part.</li>
+   <li>If the {{htmlattrxref("optimum","meter")}} value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.</li>
+   <li>If the {{htmlattrxref("optimum","meter")}} value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the preferred part, and the higher range is considered to be average as well.</li>
+   <li>If the {{htmlattrxref("optimum","meter")}} value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the preferred part.</li>
   </ul>
  </li>
 </ul>
@@ -280,7 +280,7 @@ tags:
 <p>All browsers that implement the {{HTMLElement("meter")}} element use those values to change the color of the meter bar:</p>
 
 <ul>
- <li>If the current value is in the prefered part of the range, the bar is green.</li>
+ <li>If the current value is in the preferred part of the range, the bar is green.</li>
  <li>If the current value is in the average part of the range, the bar is yellow.</li>
  <li>If the current value is in the worst part of the range, the bar is red.</li>
 </ul>

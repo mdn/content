@@ -17,7 +17,7 @@ foo.bar.baz_range.min
 foo.bar.baz_range.max
 </pre>
 
-<p>If code may want to observe preference changes for a group of preferences, they should be grouped together with a common prefix to improve observer performane.</p>
+<p>If code may want to observe preference changes for a group of preferences, they should be grouped together with a common prefix to improve observer performance.</p>
 
 <p>Preferences which enable or disable a feature should be named &lt;root&gt;.featurename.enabled with a boolean type. If an <code>"enabled"</code> pref does not always enable or disable the feature, you may need to add another pref which enables or disables the feature forcibly (i.e., ignoring the condition). The pref name should be <code>"force_disable"</code> or <code>"force_enable"</code>.</p>
 
@@ -48,10 +48,10 @@ foo.bar.baz_range.max
 
 <p>If you need to get a preference value at very hot path, you shouldn't use <code>Preferences::Get*()</code>. Instead of that there are two kinds of API sets.</p>
 
-<p>One is <code>Preferences::Add*VarCache()</code>. This API modifies registed static variable to the latest preference value automatically. Therefore, this is very useful if you don't need to reinitialize someting when the pref is changed.</p>
+<p>One is <code>Preferences::Add*VarCache()</code>. This API modifies registered static variable to the latest preference value automatically. Therefore, this is very useful if you don't need to reinitialize someting when the pref is changed.</p>
 
 <p>The other is <code>Preferences::RegisterCallback()</code>. You can register a call back method for preferences which you want to observe the changes. If you use this, you need to call <code>Preferences::UnregisterCallback()</code> when you don't need it anymore. If you need a whole time while our process is running, you should call it at shutting down XPCOM. Most modules have an observer of XPCOM shudown and calls <code>Shutdown()</code> method of a lot of classes. See <code>nsLayoutStatics::Shutdown()</code> ({{Source("layout/build/nsLayoutStatics.cpp")}}) for the example.</p>
 
 <h2 id="Float_values">Float values</h2>
 
-<p>The prerefences system doesn't support float types natively. One workaround is to use integer preference whose value is mutilplied by 10, 100 or 1000. You should explain the value meaning in {{Source("modules/libpref/src/init/all.js")}} if you define its initial value. The other is to use string preference and convert to float using <code>parseFloat</code> (JavaScript) or <code>atof</code> (C++).</p>
+<p>The preferences system doesn't support float types natively. One workaround is to use integer preference whose value is multiplied by 10, 100 or 1000. You should explain the value meaning in {{Source("modules/libpref/src/init/all.js")}} if you define its initial value. The other is to use string preference and convert to float using <code>parseFloat</code> (JavaScript) or <code>atof</code> (C++).</p>

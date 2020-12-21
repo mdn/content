@@ -151,9 +151,9 @@ tags:
 
 <p>To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an <code>onclick="doSomething()"</code>, you should bind <code>doSomething()</code> to the key down event as well: <code>onkeydown="return event.keyCode != 13 || doSomething();"</code>.</p>
 
-<h4 id="Always_draw_the_focus_for_tabindex-1_items_and_elements_that_receive_focus_programatically">Always draw the focus for tabindex="-1" items and elements that receive focus programatically</h4>
+<h4 id="Always_draw_the_focus_for_tabindex-1_items_and_elements_that_receive_focus_programmatically">Always draw the focus for tabindex="-1" items and elements that receive focus programmatically</h4>
 
-<p>IE will not automatically draw the focus outline for items that programatically receive focus. Choose between changing the background color via something like <code>this.style.backgroundColor = "gray";</code> or add a dotted border via <code>this.style.border = "1px dotted invert"</code>. In the dotted border case you will need to make sure those elements have an invisible 1px border to start with, so that the element doesn't grow when the border style is applied (borders take up space, and IE doesn't implement CSS outlines).</p>
+<p>IE will not automatically draw the focus outline for items that programmatically receive focus. Choose between changing the background color via something like <code>this.style.backgroundColor = "gray";</code> or add a dotted border via <code>this.style.border = "1px dotted invert"</code>. In the dotted border case you will need to make sure those elements have an invisible 1px border to start with, so that the element doesn't grow when the border style is applied (borders take up space, and IE doesn't implement CSS outlines).</p>
 
 <h4 id="Prevent_used_key_events_from_performing_browser_functions">Prevent used key events from performing browser functions</h4>
 

@@ -46,10 +46,10 @@ tags:
 
 <h2 id="Active_learning_classic_embedding_uses">Active learning: classic embedding uses</h2>
 
-<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">Youtube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how Youtube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
+<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">YouTube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
 
 <ol>
- <li>First, go to Youtube and find a video you like.</li>
+ <li>First, go to YouTube and find a video you like.</li>
  <li>Below the video, you'll find a <em>Share</em> button — select this to display the sharing options.</li>
  <li>Select the <em>Embed</em> button and you'll be given some <code>&lt;iframe&gt;</code> code — copy this.</li>
  <li>Insert it into the <em>Input</em> box below, and see what the result is in the <em>Output</em>.</li>
@@ -255,7 +255,7 @@ textarea.onkeyup = function(){
  <li>HTTPS prevents embedded content from accessing content in your parent document, and vice versa.</li>
 </ol>
 
-<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or Youtube, for example.</p>
+<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or YouTube, for example.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>

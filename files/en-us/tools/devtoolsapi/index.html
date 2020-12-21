@@ -127,7 +127,7 @@ tags:
  <dt>
  <h5 id="getThemeDefinitionArray()"><code>getThemeDefinitionArray()</code></h5>
  </dt>
- <dd>Returns an {{jsxref("Array")}} of <code>ThemeDefinition</code> objects for avialble themes.</dd>
+ <dd>Returns an {{jsxref("Array")}} of <code>ThemeDefinition</code> objects for available themes.</dd>
 </dl>
 
 <h4 id="Events">Events</h4>
@@ -160,7 +160,7 @@ tags:
  </dt>
  <dd>The toolbox for the specified target is about to be destroyed.</dd>
  <dt>
- <h5 id="toolbox-destoyed(target)"><code>toolbox-destoyed(target)</code></h5>
+ <h5 id="toolbox-destroyed(target)"><code>toolbox-destroyed(target)</code></h5>
  </dt>
  <dd>The toolbox for the specified target has been destroyed.</dd>
  <dt>
@@ -496,7 +496,7 @@ tags:
  <dt>
  <h5 id="visibilityswitch"><code>visibilityswitch</code></h5>
  </dt>
- <dd><strong>String, optional.</strong> A preference name that controls the visiblity of the tool. <strong>Default: </strong><code>devtools.{id}.enabled</code></dd>
+ <dd><strong>String, optional.</strong> A preference name that controls the visibility of the tool. <strong>Default: </strong><code>devtools.{id}.enabled</code></dd>
  <dt>
  <h5 id="icon"><code>icon</code></h5>
  </dt>
@@ -593,7 +593,7 @@ gDevTools.registerTool(def);
 
 <p>Here's a basic template for a ToolPanel implementation.</p>
 
-<pre class="brush: js"><code>// In the ToolDefintion object, do
+<pre class="brush: js"><code>// In the ToolDefinition object, do
 //   build: (window, target) =&gt; new MyPanel(window, target),
 
 function MyPanel(window, target) {
@@ -618,7 +618,7 @@ MyPanel.prototype = {
     this.window.document.body.removeEventListener("click", this.handleClick);
 
     // Async destruction.
-    return this.destroySomethingAsynchronosly()
+    return this.destroySomethingAsynchronously()
       .then(() =&gt; console.log("destroyed"));
   },
 

@@ -137,7 +137,7 @@ curl -si -X PUT -H"Content-Type: $DOC_TYPE" -d"$DOC_DATA" -u"$MDN_KEY_ID:$MDN_SE
  <li>The contents of <code>&lt;body&gt;</code> is extracted as the content for a new revision. </li>
 </ul>
 
-<p>This is a more complex way to update documents, but is intended as a convenience to accomodate submission of existing HTML pages.</p>
+<p>This is a more complex way to update documents, but is intended as a convenience to accommodate submission of existing HTML pages.</p>
 
 <h3 id="applicationjson"><code>application/json</code></h3>
 
@@ -185,7 +185,7 @@ curl -X PUT -H "Content-Type: $DOC_TYPE" -d @/tmp/mdn.json -u"$MDN_KEY_ID:$MDN_S
 
 <h4 id="Using_headers">Using headers</h4>
 
-<p>Headers (ie. <code>&lt;h2&gt;</code> .. <code>&lt;h6&gt;</code>) make sections in MDN documents. The text of each header is transformed automatically into an ID, and that's used for anchor links in the table of contents sidebar on most documents. Those auto-generated IDs can be overriden with the <code>name</code> attribute on headers. Either way, looking at the table of contents is the easiest way to see how a document is broken up into sections, and to discover the IDs for those sections.</p>
+<p>Headers (ie. <code>&lt;h2&gt;</code> .. <code>&lt;h6&gt;</code>) make sections in MDN documents. The text of each header is transformed automatically into an ID, and that's used for anchor links in the table of contents sidebar on most documents. Those auto-generated IDs can be overridden with the <code>name</code> attribute on headers. Either way, looking at the table of contents is the easiest way to see how a document is broken up into sections, and to discover the IDs for those sections.</p>
 
 <p>The contents of a section include its header and everything following the header up to (but not including) another header of the same or higher level. So, a section that starts with an <code>&lt;h2&gt;</code> continues until the next <code>&lt;h2&gt;</code>, including any subsections started by <code>&lt;h3&gt;</code> .. <code>&lt;h6&gt;</code>. That also means sections can be nested: An <code>&lt;h3&gt;</code> appearing after an <code>&lt;h2&gt;</code> creates a subsection, including any further nested subsections started by <code>&lt;h4&gt;</code> .. <code>&lt;h6&gt;</code>, up to the next <code>&lt;h3&gt;</code> or <code>&lt;h2&gt;</code>.</p>
 
@@ -215,7 +215,7 @@ curl -X PUT -H "Content-Type: $DOC_TYPE" -d @/tmp/mdn.json -u"$MDN_KEY_ID:$MDN_S
 <p>A common use for the PUT API is for automatically updating MDN's contents based on external data sources, or to automate applying the same kind of fix to a large set of pages. This can be done safely if your script is written carefully.</p>
 
 <div class="warning">
-<p><strong>Warning:</strong> Be sure to test any content updating script agianst a local copy of Kuma or the staging server before running it against the production site.</p>
+<p><strong>Warning:</strong> Be sure to test any content updating script against a local copy of Kuma or the staging server before running it against the production site.</p>
 </div>
 
 <p>An automatic content update is performed step by step; for each page that needs to be updated, the following steps are taken:</p>
