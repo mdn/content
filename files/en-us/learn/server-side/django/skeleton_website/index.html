@@ -309,7 +309,7 @@ urlpatterns = [
 
 <p>Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in <strong>/locallibrary/catalog/migrations/</strong>) to automatically migrate the underlying data structure in the database to match the model.</p>
 
-<p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains<strong> manage.py</strong>):</p>
+<p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains <strong>manage.py</strong>):</p>
 
 <pre class="brush: bash notranslate">python3 manage.py makemigrations
 python3 manage.py migrate

@@ -57,7 +57,7 @@ exports<span class="punctuation token">.</span>book_update_get <span class="oper
 <p><strong>Note:</strong> Not finding any book results is <strong>not an error</strong> for a search — but it is for this application because we know there must be a matching book record! The code above compares for (<code>results==null</code>) in the callback, but it could equally well have daisy chained the method <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> to the query. </p>
 </div>
 
-<p>We then mark the currently selected genres as checked and then render the<strong> book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
+<p>We then mark the currently selected genres as checked and then render the <strong>book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
 
 <h2 class="highlight-spanned" id="Controller—post_route"><span class="highlight-span">Controller—post route</span></h2>
 
