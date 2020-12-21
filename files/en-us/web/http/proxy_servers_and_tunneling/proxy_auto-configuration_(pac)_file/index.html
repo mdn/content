@@ -325,7 +325,7 @@ function FindProxyForURL(url, host) {
 <p>Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.</p>
 
 <div class="warning">
-<p>myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code> </strong>on a Linux machine. It does not return the public IP address.</p>
+<p>myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code></strong> on a Linux machine. It does not return the public IP address.</p>
 </div>
 
 <h4 id="Example_3">Example</h4>
@@ -404,7 +404,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 <p>If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.</p>
 
-<p>If both <strong>wd1 </strong>and <strong>wd1 </strong>are defined, the condition is true if the current weekday is in between those two <em>ordered </em>weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
+<p>If both <strong>wd1</strong> and <strong>wd1</strong> are defined, the condition is true if the current weekday is in between those two <em>ordered </em>weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
 
 <div class="warning">
 <p><strong>The order of the days matters</strong>; Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to true. Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate true if the current day is Wednesday or Sunday.</p>

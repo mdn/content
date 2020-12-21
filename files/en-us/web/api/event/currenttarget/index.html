@@ -44,7 +44,7 @@ document.body.addEventListener('click', hide, false);
 </pre>
 
 <div class="note">
-<p><strong>Note: </strong>The value of <code>event.currentTarget</code> is <strong>only</strong> available while the event is being handled. If you <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> the <code>event</code> object, storing it in a variable, and <em>then</em> look for the <code>currentTarget</code> key in the console, its value will be <code>null</code>. Instead, you can either directly <code>console.log(event.currentTarget)</code> to be able to view it in the console or use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> statement, which will pause the execution of your code thus showing you the value of <code>event.currentTarget</code>.</p>
+<p><strong>Note:</strong> The value of <code>event.currentTarget</code> is <strong>only</strong> available while the event is being handled. If you <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> the <code>event</code> object, storing it in a variable, and <em>then</em> look for the <code>currentTarget</code> key in the console, its value will be <code>null</code>. Instead, you can either directly <code>console.log(event.currentTarget)</code> to be able to view it in the console or use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> statement, which will pause the execution of your code thus showing you the value of <code>event.currentTarget</code>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

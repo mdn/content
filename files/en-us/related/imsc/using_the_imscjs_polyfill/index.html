@@ -184,7 +184,7 @@ client.send()</pre>
 <pre class="brush: js">var myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");</pre>
 
 <div class="notecard note">
-<p><strong>Note: </strong>In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.</p>
+<p><strong>Note:</strong> In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.</p>
 </div>
 
 <p>But how should we calculate the end time of the last time event? It does not have a "next" time event we can take the end time from.</p>

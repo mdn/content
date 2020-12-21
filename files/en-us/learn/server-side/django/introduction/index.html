@@ -115,8 +115,8 @@ tags:
 <p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns) </em>and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
 
 <pre class="notranslate">urlpatterns = [
-    <strong>path('admin/', admin.site.urls),
-    </strong>path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
+    <strong>path('admin/', admin.site.urls),</strong>
+    path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
     re_path(r'^([0-9]+)/$', views.best),
 ]

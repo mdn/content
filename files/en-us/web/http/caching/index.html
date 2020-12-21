@@ -164,7 +164,7 @@ Cache-Control: public
 
 <p>For example, by default all of the following result in a separate request to the origin and a separate cache entry: <code>Accept-Encoding: gzip,deflate,sdch</code>, <code>Accept-Encoding: gzip,deflate</code>, <code>Accept-Encoding: gzip</code>. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!</p>
 
-<p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization </strong>to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
+<p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization</strong> to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
 
 <pre class="notranslate"><code>// Normalize Accept-Encoding
 if (req.http.Accept-Encoding) {

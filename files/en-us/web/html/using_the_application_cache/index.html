@@ -106,7 +106,7 @@ tags:
 
 <p>The <code>manifest</code> attribute in a web application can specify either the relative path of a cache manifest file or an absolute URL. (Absolute URLs must be from the same origin as the application). A cache manifest file can have any file extension, but it must be served with the MIME type <code>text/cache-manifest</code>.</p>
 
-<div class="note"><strong>Note: </strong>On Apache servers, the MIME type for manifest (.appcache) files can be set by adding <code>AddType text/cache-manifest .appcache</code> to a .htaccess file within either the root directory, or the same directory as the application.</div>
+<div class="note"><strong>Note:</strong> On Apache servers, the MIME type for manifest (.appcache) files can be set by adding <code>AddType text/cache-manifest .appcache</code> to a .htaccess file within either the root directory, or the same directory as the application.</div>
 
 <h3 id="Entries_in_a_cache_manifest_file">Entries in a cache manifest file</h3>
 
@@ -214,7 +214,7 @@ FALLBACK:
  <dd>The section header line may include whitespaces, but must include the colon (<code>:</code>) in the section name.</dd>
  <dt>Section data</dt>
  <dd>The format for lines of data varies from section to section. In the explicit (<code>CACHE:</code>) section, each line is a valid URI or IRI reference to a resource to cache (no wildcard characters are allowed in this sections). Whitespace is allowed before and after the URI or IRI on each line. In the Fallback section each line is a valid URI or IRI reference to a resource, followed by a fallback resource that is to be served up when a connection with the server cannot be made. In the network section, each line is a valid URI or IRI reference to a resource to fetch from the network (or the wildcard character <code>*</code> can be used in this section).
- <div class="note"><strong>Note: </strong>Relative URIs are relative to the cache manifest's URI, not to the URI of the document referencing the manifest.</div>
+ <div class="note"><strong>Note:</strong> Relative URIs are relative to the cache manifest's URI, not to the URI of the document referencing the manifest.</div>
  </dd>
 </dl>
 

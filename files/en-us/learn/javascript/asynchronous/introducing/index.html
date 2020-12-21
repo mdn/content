@@ -107,7 +107,7 @@ let blob = response.blob();
 
 <p>The first parameter is the type of event to be listened for, and the second parameter is a callback function that is invoked when the event is fired.</p>
 
-<p>When we pass a callback function as an argument to another function, we are only passing the function's reference as an argument, i.e, the callback function is <strong>not </strong>executed immediately. It is “called back” (hence the name) asynchronously somewhere inside the containing function’s body. The containing function is responsible for executing the callback function when the time comes.</p>
+<p>When we pass a callback function as an argument to another function, we are only passing the function's reference as an argument, i.e, the callback function is <strong>not</strong> executed immediately. It is “called back” (hence the name) asynchronously somewhere inside the containing function’s body. The containing function is responsible for executing the callback function when the time comes.</p>
 
 <p>You can write your own function containing a callback easily enough. Let's look at another example that loads a resource via the <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>):</p>
 

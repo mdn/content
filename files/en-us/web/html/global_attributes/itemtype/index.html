@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a><strong> <code>itemtype</code> </strong>specifies the URL of the vocabulary that will be used to define <code>itemprop</code>'s (item properties) in the data structure. </span>{{htmlattrxref("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by <code>itemtype</code> will be active.</p>
+<p><span class="seoSummary">The <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a><strong> <code>itemtype</code></strong> specifies the URL of the vocabulary that will be used to define <code>itemprop</code>'s (item properties) in the data structure. </span>{{htmlattrxref("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by <code>itemtype</code> will be active.</p>
 
 <p>Google and other major search engines support the <a href="http://schema.org/">schema.org</a> vocabulary for structured data. This vocabulary defines a standard set of type names and property names. For example, <code><a href="http://schema.org/MusicEvent">MusicEvent</a> </code>indicates a concert performance, with <code><a href="http://schema.org/startDate">startDate</a></code> and <code><a href="http://schema.org/location">location</a></code> properties specifying the concert's key details. In this case, <a href="http://schema.org/MusicEvent"><code>MusicEvent</code> </a>would be the URL used by <code>itemtype</code>, with <code>startDate</code> and location as <code>itemprop</code>'s which <code><a href="http://schema.org/MusicEvent">MusicEvent</a></code> defines.</p>
 
@@ -20,7 +20,7 @@ tags:
 </div>
 
 <ul>
- <li>The <strong>itemtype </strong>attribute must have a value that is an unordered set of unique tokens which are case-sensitive, each is a valid and absolute URL, and all defined to use the same vocabulary. The attribute's value must have at least one token.</li>
+ <li>The <strong>itemtype</strong> attribute must have a value that is an unordered set of unique tokens which are case-sensitive, each is a valid and absolute URL, and all defined to use the same vocabulary. The attribute's value must have at least one token.</li>
  <li>The item types must all be types defined in applicable specifications (such as <a href="http://schema.org/">schema.org</a>), and must all be defined to use the same vocabulary.</li>
  <li>The itemtype attribute can only be specified on elements which have an itemscope attribute specified.</li>
  <li>The itemid attribute can only be specified on elements which have both an itemscope attribute and an itemtype attribute specified. They must only be specified on elements with an itemscope attribute, whose itemtype attribute specifies a vocabulary not supporting global identifiers for items, as defined by that vocabulary's specification.</li>

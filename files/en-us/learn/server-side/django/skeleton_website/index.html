@@ -90,7 +90,7 @@ cd locallibrary</pre>
 <p>The <em>locallibrary</em> project sub-folder is the entry point for the website:</p>
 
 <ul>
- <li><strong>__init__.py </strong>is an empty file that instructs Python to treat this directory as a Python package.</li>
+ <li><strong>__init__.py</strong> is an empty file that instructs Python to treat this directory as a Python package.</li>
  <li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
  <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all </em>the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
  <li><strong style="line-height: 1.5;">wsgi.py</strong><span style="line-height: 1.5;"> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</span></li>
