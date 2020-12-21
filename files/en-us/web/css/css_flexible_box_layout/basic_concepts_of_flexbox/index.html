@@ -197,7 +197,7 @@ tags:
 
 <p>The {{cssxref("align-items")}} property will align the items on the cross axis.</p>
 
-<p>The initial value for this property is <code>stretch</code> and this is why flex items stretch to the height of the tallest one by default. They are in fact stretching to fill the flex container — the tallest item is defining the height of that.</p>
+<p>The initial value for this property is <code>stretch</code> and this is why flex items stretch to the height of the flex container by default. This might be dictated by the height of the tallest item in the container, or by a size set on the flex container itself.</p>
 
 <p>You could instead set <code>align-items</code> to <code>flex-start</code> in order to make the items line up at the start of the flex container, <code>flex-end</code> to align them to the end, or <code>center</code> to align them in the centre. Try this in the live example — I have given the flex container a height in order that you can see how the items can be moved around inside the container. See what happens if you set the value of align-items to:</p>
 
