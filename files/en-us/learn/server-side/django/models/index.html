@@ -108,7 +108,7 @@ class MyModelName(models.Model):
  <li><code>help_text='Enter field documentation'</code> — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.</li>
 </ul>
 
-<p>The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (<code>verbose_name</code>), the default value of which is <code>None</code>, meaning replacing any underscores in the field name with a space (for example <code>my_field_name</code> would have a default label of <em>my field name</em>). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example <code>my_field_name</code><em> </em>would be <em>My field name</em>).</p>
+<p>The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (<code>verbose_name</code>), the default value of which is <code>None</code>, meaning replacing any underscores in the field name with a space (for example <code>my_field_name</code> would have a default label of <em>my field name</em>). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example <code>my_field_name</code> would be <em>My field name</em>).</p>
 
 <p>The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.</p>
 
@@ -401,7 +401,7 @@ class BookInstance(models.Model):
         return f'{self.last_name}, {self.first_name}'
 </pre>
 
-<p>All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the <code>__str__()</code> returns the name in <em>last name</em>, <em>firstname </em>order. The <code>get_absolute_url()</code> method reverses the <code>author-detail</code> URL mapping to get the URL for displaying an individual author.</p>
+<p>All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the <code>__str__()</code> returns the name in <em>last name</em>, <em>firstname</em> order. The <code>get_absolute_url()</code> method reverses the <code>author-detail</code> URL mapping to get the URL for displaying an individual author.</p>
 
 <h2 id="Re-run_the_database_migrations">Re-run the database migrations</h2>
 

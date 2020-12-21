@@ -92,7 +92,7 @@ cd locallibrary</pre>
 <ul>
  <li><strong>__init__.py</strong> is an empty file that instructs Python to treat this directory as a Python package.</li>
  <li><strong>settings.py</strong> contains all the website settings, including registering any applications we create, the location of our static files, database configuration details, etc.  </li>
- <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all </em>the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
+ <li><strong>urls.py</strong> defines the site URL-to-view mappings. While this could <span style="line-height: 1.5;">contain <em>all</em> the URL mapping code, it is more common to delegate some of the mappings to particular applications, as you'll see later. </span></li>
  <li><strong style="line-height: 1.5;">wsgi.py</strong><span style="line-height: 1.5;"> is used to help your Django application communicate with the webserver. You can treat this as boilerplate.</span></li>
  <li><strong>asgi.py</strong> is a standard for Python asynchronous web apps and servers to communicate with each other. ASGI is the asynchronous successor to WSGI and provides a standard for both asynchronous and synchronous Python apps (whereas WSGI provided a standard for synchronous apps only). It is backward-compatible with WSGI and supports multiple servers and application frameworks.</li>
 </ul>
@@ -101,7 +101,7 @@ cd locallibrary</pre>
 
 <h2 id="Creating_the_catalog_application">Creating the catalog application</h2>
 
-<p>Next, run the following command to create the <em>catalog</em> application that will live inside our <em>locallibrary </em>project. Make sure to run this command from the same folder as your project's <strong>manage.py</strong>:</p>
+<p>Next, run the following command to create the <em>catalog</em> application that will live inside our <em>locallibrary</em> project. Make sure to run this command from the same folder as your project's <strong>manage.py</strong>:</p>
 
 <pre class="brush: bash notranslate">python3 manage.py startapp catalog</pre>
 
@@ -309,7 +309,7 @@ urlpatterns = [
 
 <p>Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in <strong>/locallibrary/catalog/migrations/</strong>) to automatically migrate the underlying data structure in the database to match the model.</p>
 
-<p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains<strong> manage.py</strong>):</p>
+<p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains <strong>manage.py</strong>):</p>
 
 <pre class="brush: bash notranslate">python3 manage.py makemigrations
 python3 manage.py migrate

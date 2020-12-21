@@ -14,8 +14,8 @@ tags:
 <p>On receiving the message, the <strong>verification process </strong></p>
 
 <ul>
- <li><em>authenticates the sender - </em>uses the sender's public key to {{glossary("decryption","decrypt")}} the signature and recover the hash, which can only be created with the sender's private key, and</li>
- <li><em>checks message integrity - </em>compares the hash with a newly calculated one from the received document (the two hashes will differ if the document has been tampered with)</li>
+ <li><em>authenticates the sender -</em> uses the sender's public key to {{glossary("decryption","decrypt")}} the signature and recover the hash, which can only be created with the sender's private key, and</li>
+ <li><em>checks message integrity -</em> compares the hash with a newly calculated one from the received document (the two hashes will differ if the document has been tampered with)</li>
 </ul>
 
 <p>The system fails if the private key is compromised or the recipient is deceitfully given the wrong public key.</p>

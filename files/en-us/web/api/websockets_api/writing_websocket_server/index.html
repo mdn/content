@@ -143,8 +143,7 @@ if (Regex.IsMatch(data, "^GET")) {
  <li>Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response</li>
 </ol>
 
-<pre class="brush: cpp notranslate"><em>
-</em>if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+<pre class="brush: cpp notranslate"> if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 

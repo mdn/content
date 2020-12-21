@@ -102,7 +102,7 @@ server.listen(port, hostname, () =&gt; {
  <li>Add additional request processing "middleware" at any point within the request handling pipeline.</li>
 </ul>
 
-<p>While <em>Express</em> itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, <code>POST</code> data, security headers, and <em>many </em>more. You can find a list of middleware packages maintained by the Express team at <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a> (along with a list of some popular 3rd party packages).</p>
+<p>While <em>Express</em> itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, <code>POST</code> data, security headers, and <em>many</em> more. You can find a list of middleware packages maintained by the Express team at <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a> (along with a list of some popular 3rd party packages).</p>
 
 <div class="note">
 <p><strong>Note:</strong> This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.</p>
@@ -182,7 +182,7 @@ const app = express();
 <p>You can also create your own modules that can be imported in the same way.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> You will <em>want </em>to create your own modules, because this allows you to organise your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
+<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organise your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
 </div>
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
@@ -312,7 +312,7 @@ app.use('/wiki', wiki);</pre>
 <p>Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client, middleware functions <em>typically</em> perform some operation on the request or response and then call the next function in the "stack", which might be more middleware or a route handler. The order in which middleware is called is up to the app developer.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can<em> also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
+<p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can <em>also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
 </div>
 
 <p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="http://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>

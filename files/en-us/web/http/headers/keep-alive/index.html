@@ -42,7 +42,7 @@ tags:
  <dt><code><var>parameters</var></code></dt>
  <dd>A comma-separated list of parameters, each consisting of an identifier and a value separated by the equal sign (<code>'='</code>). The following identifiers are possible:
  <ul>
-  <li><code>timeout</code>: indicating the <em>minimum </em>amount of time an idle connection has to be kept opened (in seconds). Note that timeouts longer than the TCP timeout may be ignored if no keep-alive TCP message is set at the transport level.</li>
+  <li><code>timeout</code>: indicating the <em>minimum</em> amount of time an idle connection has to be kept opened (in seconds). Note that timeouts longer than the TCP timeout may be ignored if no keep-alive TCP message is set at the transport level.</li>
   <li><code>max</code>: indicating the maximum number of requests that can be sent on this connection before closing it. Unless <code>0</code>, this value is ignored for non-pipelined connections as another request will be sent in the next response. An HTTP pipeline can use it to limit the pipelining.</li>
  </ul>
  </dd>

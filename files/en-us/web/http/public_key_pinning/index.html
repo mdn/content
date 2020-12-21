@@ -19,7 +19,7 @@ tags:
 
 <p>HPKP is a <em>Trust on First Use</em> ({{Glossary("TOFU")}}) technique. The first time a web server tells a client via a special HTTP header which public keys belong to it, the client stores this information for a given period of time. When the client visits the server again, it expects at least one certificate in the certificate chain to contain a public key whose fingerprint is already known via HPKP. If the server delivers an unknown public key, the client should present a warning to the user.</p>
 
-<p class="note">Firefox and Chrome<strong> disable pin validation</strong> for pinned hosts whose validated certificate chain terminates at a <strong>user-defined trust anchor</strong> (rather than a built-in trust anchor). This means that for users who imported custom root certificates all pinning violations are ignored.</p>
+<p class="note">Firefox and Chrome <strong>disable pin validation</strong> for pinned hosts whose validated certificate chain terminates at a <strong>user-defined trust anchor</strong> (rather than a built-in trust anchor). This means that for users who imported custom root certificates all pinning violations are ignored.</p>
 
 <h2 id="Enabling_HPKP">Enabling HPKP</h2>
 

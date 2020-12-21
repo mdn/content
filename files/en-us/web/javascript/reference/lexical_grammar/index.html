@@ -328,14 +328,14 @@ console.log("Hello world");
 
 <h3 id="Reserved_word_usage">Reserved word usage</h3>
 
-<p>Reserved words actually only apply to <em>Identifier</em>s (vs.<em> IdentifierName</em>s) . As described in <a href="https://es5.github.com/#A.1">es5.github.com/#A.1</a>, these are all <em>IdentifierName</em>s which do not exclude<em> ReservedWords</em>.</p>
+<p>Reserved words actually only apply to <em>Identifier</em>s (vs.<em> IdentifierName</em>s) . As described in <a href="https://es5.github.com/#A.1">es5.github.com/#A.1</a>, these are all <em>IdentifierName</em>s which do not exclude <em>ReservedWords</em>.</p>
 
 <pre class="brush: js notranslate">a.import
 a['import']
 a = { import: 'test' }.
 </pre>
 
-<p>On the other hand the following is illegal because it's an<em> Identifier</em>, which is an <em>IdentifierName</em> without the reserved words. Identifiers are used for <em>FunctionDeclaration</em>, <em>FunctionExpression</em>,<em> VariableDeclaration</em> and so on. <em>IdentifierNames</em> are used for<em> MemberExpression</em>,<em> CallExpression</em> and so on.</p>
+<p>On the other hand the following is illegal because it's an <em>Identifier</em>, which is an <em>IdentifierName</em> without the reserved words. Identifiers are used for <em>FunctionDeclaration</em>, <em>FunctionExpression</em>,<em> VariableDeclaration</em> and so on. <em>IdentifierNames</em> are used for <em>MemberExpression</em>,<em> CallExpression</em> and so on.</p>
 
 <pre class="brush: js notranslate">function import() {} // Illegal.</pre>
 
@@ -382,7 +382,7 @@ false</pre>
 
 <h5 id="Exponential">Exponential</h5>
 
-<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and<em> </em><code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
+<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and <code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
 
 <pre class="brush: js notranslate">0e-5   // =&gt; 0
 0e+5   // =&gt; 0

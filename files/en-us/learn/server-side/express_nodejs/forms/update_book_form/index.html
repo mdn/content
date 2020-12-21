@@ -57,7 +57,7 @@ exports<span class="punctuation token">.</span>book_update_get <span class="oper
 <p><strong>Note:</strong> Not finding any book results is <strong>not an error</strong> for a search — but it is for this application because we know there must be a matching book record! The code above compares for (<code>results==null</code>) in the callback, but it could equally well have daisy chained the method <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> to the query. </p>
 </div>
 
-<p>We then mark the currently selected genres as checked and then render the<strong> book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
+<p>We then mark the currently selected genres as checked and then render the <strong>book_form.pug</strong> view, passing variables for <code>title</code>, book, all <code>authors</code>, and all <code>genres</code>.</p>
 
 <h2 class="highlight-spanned" id="Controller—post_route"><span class="highlight-span">Controller—post route</span></h2>
 
@@ -176,9 +176,9 @@ exports<span class="punctuation token">.</span>book_update_post <span class="ope
 
 <h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books </em>link, then select a particular book. Finally select the <em>Update Book </em>link.</p>
+<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, select the <em>All books</em> link, then select a particular book. Finally select the <em>Update Book</em> link.</p>
 
-<p>The form should look just like the<em> Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
+<p>The form should look just like the <em>Create book</em> page, only with a title of 'Update book', and pre-populated with record values.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14498/LocalLibary_Express_Book_Update_NoErrors.png" style="border-style: solid; border-width: 1px; display: block; height: 443px; margin: 0px auto; width: 1000px;"></p>
 

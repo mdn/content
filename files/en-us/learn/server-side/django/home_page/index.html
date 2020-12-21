@@ -82,7 +82,7 @@ tags:
 
 <h3 id="URL_mapping">URL mapping</h3>
 
-<p>When we created the <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">skeleton website</a>, we updated the <strong>locallibrary/urls.py</strong> file to ensure that whenever a URL that starts with <code>catalog/</code>  is received, the <em>URLConf </em>module <code>catalog.urls</code> will process the remaining substring.</p>
+<p>When we created the <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">skeleton website</a>, we updated the <strong>locallibrary/urls.py</strong> file to ensure that whenever a URL that starts with <code>catalog/</code>  is received, the <em>URLConf</em> module <code>catalog.urls</code> will process the remaining substring.</p>
 
 <p>The following code snippet from <strong>locallibrary/urls.py </strong>includes the <code>catalog.urls</code> module:</p>
 
@@ -95,7 +95,7 @@ tags:
 <p><strong>Note</strong>: Whenever Django encounters the import function <code><a href="https://docs.djangoproject.com/en/3.1/ref/urls/#django.urls.include" title="django.conf.urls.include">django.urls.include()</a></code>, it splits the URL string at the designated end character and sends the remaining substring to the included <em>URLconf</em> module for further processing.</p>
 </div>
 
-<p>We also created a placeholder file for the <em>URLConf </em>module, named <strong>/catalog/urls.py</strong>. Add the following lines to that file: </p>
+<p>We also created a placeholder file for the <em>URLConf</em> module, named <strong>/catalog/urls.py</strong>. Add the following lines to that file: </p>
 
 <pre class="brush: python notranslate">urlpatterns = [
 <strong>    path('', views.index, name='index'),</strong>
@@ -172,7 +172,7 @@ def index(request):
 
 <p>A template is a text file that defines the structure or layout of a file (such as an HTML page), it uses placeholders to represent actual content. </p>
 
-<p>A Django application created using <strong>startapp</strong> (like the skeleton of this example) will look for templates in a subdirectory named '<strong>templates</strong>' of your applications. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong> </em>in<em> </em><strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
+<p>A Django application created using <strong>startapp</strong> (like the skeleton of this example) will look for templates in a subdirectory named '<strong>templates</strong>' of your applications. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong></em> in <strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
 
 <p>You can check this by saving the previous changes and accessing <code>127.0.0.1:8000</code> in your browser - it will display a fairly intuitive error message: "<code>TemplateDoesNotExist at /catalog/</code>", and other details.</p>
 
@@ -256,7 +256,7 @@ def index(request):
 
 <p>The template includes CSS from <a href="http://getbootstrap.com/">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap (or another client-side web framework) is a quick way to create an attractive page that displays well on different screen sizes.</p>
 
-<p>The base template also references a local css file (<strong>styles.css</strong>) that provides additional styling. Create a <strong>styles.css</strong> file in<strong> /locallibrary/catalog/static/css/</strong> and paste the following code in the file:</p>
+<p>The base template also references a local css file (<strong>styles.css</strong>) that provides additional styling. Create a <strong>styles.css</strong> file in <strong>/locallibrary/catalog/static/css/</strong> and paste the following code in the file:</p>
 
 <pre class="brush: css notranslate">.sidebar-nav {
     margin-top: 20px;
@@ -283,7 +283,7 @@ def index(request):
   &lt;/ul&gt;
 {% endblock %}</pre>
 
-<p>In the <em>Dynamic content </em>section we declare placeholders (<em>template variables</em>) for the information from the view that we want to include. The variables are enclosed with double brace (handlebars), as shown in bold in the code sample. </p>
+<p>In the <em>Dynamic content</em> section we declare placeholders (<em>template variables</em>) for the information from the view that we want to include. The variables are enclosed with double brace (handlebars), as shown in bold in the code sample. </p>
 
 <div class="note">
 <p><strong>Note:</strong> You can easily recognise template variables and template tags (functions) - variables are enclosed in double braces (<code>\{{ num_books }}</code>), and tags are enclosed in single braces with percentage signs (<code>{% extends "base_generic.html" %}</code>).</p>

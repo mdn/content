@@ -68,9 +68,9 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>NOTE:</strong> The specified amount of time (or the delay) is <strong>not</strong><em> </em>the <em>guaranteed time </em>to execution, but rather the <em>minimum time </em>to execution. The callbacks you pass to these functions cannot run until the stack on the main thread is empty.</p>
+<p><strong>NOTE:</strong> The specified amount of time (or the delay) is <strong>not</strong> the <em>guaranteed time</em> to execution, but rather the <em>minimum time</em> to execution. The callbacks you pass to these functions cannot run until the stack on the main thread is empty.</p>
 
-<p>As a consequence, code like <code>setTimeout(fn, 0)</code><em> </em>will execute as soon as the stack is empty, <strong>not</strong> immediately. If you execute code like <code>setTimeout(fn, 0)</code> but then immediately after run a loop that counts from 1 to 10 billion, your callback will be executed after a few seconds.</p>
+<p>As a consequence, code like <code>setTimeout(fn, 0)</code> will execute as soon as the stack is empty, <strong>not</strong> immediately. If you execute code like <code>setTimeout(fn, 0)</code> but then immediately after run a loop that counts from 1 to 10 billion, your callback will be executed after a few seconds.</p>
 </div>
 
 <p>In the following example, the browser will wait two seconds before executing the anonymous function, then will display the alert message (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>):</p>

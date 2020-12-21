@@ -74,7 +74,7 @@ let a = 4;
 let b = 2;
 () =&gt; a + b + 100;</pre>
 
-<p>Likewise, if the body requires<strong> additional lines</strong> of processing, you'll need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not magically guess what or when you want to "return"):</p>
+<p>Likewise, if the body requires <strong>additional lines</strong> of processing, you'll need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not magically guess what or when you want to "return"):</p>
 
 <pre class="brush: js notranslate">// Traditional Function
 function (a, b){
@@ -175,7 +175,7 @@ var p = new Person();
 
 </pre>
 
-<p><strong>Arrow functions</strong> do<strong> not</strong> default <code>this</code> to the window <a href="/en-US/docs/Glossary/Scope">scope</a>, rather they execute in the <a href="/en-US/docs/Glossary/Scope">scope</a> they are created:</p>
+<p><strong>Arrow functions</strong> do <strong>not</strong> default <code>this</code> to the window <a href="/en-US/docs/Glossary/Scope">scope</a>, rather they execute in the <a href="/en-US/docs/Glossary/Scope">scope</a> they are created:</p>
 
 <pre class="brush: js notranslate">window.age = 10; // &lt;-- notice me?
 function Person() {

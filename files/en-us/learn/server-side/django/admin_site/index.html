@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>The Django admin <em>application</em> can use your models to automatically build a site area that you can use to create, view, update, and delete records. This can save you a lot of time during development, making it very easy to test your models and get a feel for whether you have the <em>right </em>data. The admin application can also be useful for managing data in production, depending on the type of website. The Django project recommends it only for internal data management (i.e. just for use by admins, or people internal to your organization), as the model-centric approach is not necessarily the best possible interface for all users, and exposes a lot of unnecessary detail about the models. </p>
+<p>The Django admin <em>application</em> can use your models to automatically build a site area that you can use to create, view, update, and delete records. This can save you a lot of time during development, making it very easy to test your models and get a feel for whether you have the <em>right</em> data. The admin application can also be useful for managing data in production, depending on the type of website. The Django project recommends it only for internal data management (i.e. just for use by admins, or people internal to your organization), as the model-centric approach is not necessarily the best possible interface for all users, and exposes a lot of unnecessary detail about the models. </p>
 
 <p>All the configuration required to include the admin application in your website was done automatically when you <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the skeleton project</a> (for information about actual dependencies needed, see the <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/">Django docs here</a>). As a result, all you <strong>must</strong> do to add your models to the admin application is to <em>register</em> them. At the end of this article we'll provide a brief demonstration of how you might further configure the admin area to better display our model data.</p>
 
@@ -207,7 +207,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>Unfortunately we can't directly specify the <code>genre</code> field in <code>list_display</code> because it is a <code>ManyToManyField</code> (Django prevents this because there would be a large database access "cost" in doing so). Instead we'll define a <code>display_genre</code> function to get the information as a string (this is the function we've called above; we'll define it below).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete </em>link next to every item in the list.</p>
+<p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete</em> link next to every item in the list.</p>
 </div>
 
 <p>Add the following code into your <code>Book</code> model (<strong>models.py</strong>). This creates a string from the first three values of the <code>genre</code> field (if they exist) and creates a <code>short_description</code> that can be used in the admin site for this method.</p>

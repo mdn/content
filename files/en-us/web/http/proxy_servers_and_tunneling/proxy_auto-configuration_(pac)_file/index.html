@@ -404,7 +404,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 <p>If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.</p>
 
-<p>If both <strong>wd1</strong> and <strong>wd1</strong> are defined, the condition is true if the current weekday is in between those two <em>ordered </em>weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
+<p>If both <strong>wd1</strong> and <strong>wd1</strong> are defined, the condition is true if the current weekday is in between those two <em>ordered</em> weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
 
 <div class="warning">
 <p><strong>The order of the days matters</strong>; Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to true. Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate true if the current day is Wednesday or Sunday.</p>
@@ -570,7 +570,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 <p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
 
 <div class="note">
-<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the<em> or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behaviour.</p>
+<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behaviour.</p>
 </div>
 
 <h2 id="Example_3_2">Example 3</h2>

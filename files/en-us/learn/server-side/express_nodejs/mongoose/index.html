@@ -166,7 +166,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
 <h3 id="Defining_and_creating_models">Defining and creating models</h3>
 
-<p>Models are <em>defined </em>using the <code>Schema</code> interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. In addition, you can define static and instance helper methods to make it easier to work with your data types, and also virtual properties that you can use like any other field, but which aren't actually stored in the database (we'll discuss a bit further below).</p>
+<p>Models are <em>defined</em> using the <code>Schema</code> interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. In addition, you can define static and instance helper methods to make it easier to work with your data types, and also virtual properties that you can use like any other field, but which aren't actually stored in the database (we'll discuss a bit further below).</p>
 
 <p>Schemas are then "compiled" into models using the <code>mongoose.model()</code> method. Once you have a model you can use it to find, create, update, and delete objects of the given type.</p>
 
@@ -481,7 +481,7 @@ bob.save(function (err) {
 </pre>
 </div>
 
-<p>This is almost everything you need to know about working with related items<em> for this tutorial</em>. For more detailed information see <a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
+<p>This is almost everything you need to know about working with related items <em>for this tutorial</em>. For more detailed information see <a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
 
 <h3 id="One_schemamodel_per_file">One schema/model per file</h3>
 
@@ -531,7 +531,7 @@ SomeModel.find(callback_function);</pre>
  <li>This will open the <em>Create New Cluster</em> screen.<br>
   <img alt="Choose a cloud provider when using MongoDB Atlas." src="https://mdn.mozillademos.org/files/16511/MongoDB_Atlas_-_ChooseProviderRegion.jpg" style="border-style: solid; border-width: 1px; height: 656px; width: 742px;">
   <ul>
-   <li>Select any provider from the <em>Cloud Provider &amp; Region </em>section. Different providers offer different regions.</li>
+   <li>Select any provider from the <em>Cloud Provider &amp; Region</em> section. Different providers offer different regions.</li>
    <li>Select any region marked "FREE TIER AVAILABLE".</li>
    <li>Click the <strong>Create Cluster</strong> button (creation of the cluster will take some minutes).</li>
   </ul>
@@ -700,10 +700,10 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema(
   {
     title: {type: String, required: true},
-  <strong>  author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
+    <strong>author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
     summary: {type: String, required: true},
     isbn: {type: String, required: true},
-  <strong>  genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
+    <strong>genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
   }
 );
 
@@ -790,7 +790,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li>Enter the following commands in the project root to install the <em>async</em> module that is required by the script (we'll discuss this in later tutorials, )
   <pre class="brush: bash notranslate">npm install async</pre>
  </li>
- <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here </em>placeholder with, inside <code>app.js</code> earlier):
+ <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here</em> placeholder with, inside <code>app.js</code> earlier):
   <pre class="brush: bash notranslate">node populatedb &lt;your mongodb url&gt;</pre>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>

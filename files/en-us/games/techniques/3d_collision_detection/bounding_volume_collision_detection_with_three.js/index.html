@@ -37,7 +37,7 @@ var knotBBox = new Box3(
 <p><strong>Note</strong>: The <code>boundingBox</code> property takes the <code>Geometry</code> itself as reference, and not the <code>Mesh</code>. So any transformations such as scale, position, etc. applied to the <code>Mesh</code> will be ignored while computing the calculating box.</p>
 </div>
 
-<p>A more simple alternative that fixes the previous issue is to set those boundaries later on with <code>Box3.setFromObject</code>, which will compute the dimensions taking into account a 3D entity's<strong> transformations <em>and</em> any child meshes</strong> as well.</p>
+<p>A more simple alternative that fixes the previous issue is to set those boundaries later on with <code>Box3.setFromObject</code>, which will compute the dimensions taking into account a 3D entity's <strong>transformations <em>and</em> any child meshes</strong> as well.</p>
 
 <pre class="brush: js notranslate">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
@@ -48,7 +48,7 @@ knotBBox.setFromObject(knot);</pre>
 
 <h3 id="Instantiating_spheres">Instantiating spheres</h3>
 
-<p>Instantiating<strong> <code>Sphere</code> objects</strong> is similar. We need to provide the sphere's center and radius, which can be added to the <code>boundingSphere</code> property available in <code>Geometry</code>.</p>
+<p>Instantiating <strong><code>Sphere</code> objects</strong> is similar. We need to provide the sphere's center and radius, which can be added to the <code>boundingSphere</code> property available in <code>Geometry</code>.</p>
 
 <pre class="brush: js notranslate">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),

@@ -265,7 +265,7 @@ def renew_book_librarian(request, pk):
  <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: A Python library for manipulating dates and times.</li>
 </ul>
 
-<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not </em>a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
+<p>In the view, we first use the <code>pk</code> argument in <code>get_object_or_404()</code> to get the current <code>BookInstance</code> (if this does not exist, the view will immediately exit and the page will display a "not found" error). If this is <em>not</em> a <code>POST</code> request (handled by the <code>else</code> clause) then we create the default form passing in an <code>initial</code> value for the <code>renewal_date</code> field (as shown in bold below, this is 3 weeks from the current date). </p>
 
 <pre class="brush: python notranslate">    book_instance = get_object_or_404(BookInstance, pk=pk)
 

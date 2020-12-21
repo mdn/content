@@ -114,7 +114,7 @@ user.save()
  <li>Press <strong>SAVE</strong> to create the user.<br>
   <br>
   The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).<img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
- <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the<strong> right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
+ <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
  <li>We don't need to do anything else here, so just select <strong>SAVE</strong> again, to go to the list of users.</li>
 </ol>
 
@@ -608,7 +608,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     ...
     class Meta:
         ...
-<strong>        permissions = (("can_mark_returned", "Set book as returned"),)  </strong> </pre>
+        <strong>permissions = (("can_mark_returned", "Set book as returned"),)</strong></pre>
 
 <p>We could then assign the permission to a "Librarian" group in the Admin site.</p>
 

@@ -48,7 +48,7 @@ $ ./mach eslint --warnings &lt;path&gt;  # Show issues including warnings</em></
 
 <h3 id="Scripting_Prettier">Scripting Prettier</h3>
 
-<pre dir="ltr"><em>$ ./mach </em>prettier-format -p<em> &lt;path&gt; </em>--assume-filename &lt;name&gt;
+<pre dir="ltr"><em>$ ./mach</em> prettier-format -p <em>&lt;path&gt; </em>--assume-filename &lt;name&gt;
 </pre>
 
 <p>Both <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> expect that the path being passed to them is the path on-disk. If this is not the case, for example when formatting a temporary file, the "real" path must be specified. This can be done with the <code>--assume-filename &lt;name&gt;</code> argument.</p>
@@ -149,7 +149,7 @@ $ ln -s $(pwd)/tools/lint/hooks_js_format.py .git/hooks/pre-commit</pre>
 my code which should not be reformated
 </pre>
 
-<p>Disabling <a href="https://prettier.io">Prettier</a> by using <code>/* eslint-disable prettier/prettier */</code> or by using <code>// p<em>rettier-ignore</em></code><em> </em>for any reasons other than technical ones is <strong>not allowed</strong>.</p>
+<p>Disabling <a href="https://prettier.io">Prettier</a> by using <code>/* eslint-disable prettier/prettier */</code> or by using <code>// p<em>rettier-ignore</em></code> for any reasons other than technical ones is <strong>not allowed</strong>.</p>
 
 <h2 id="Merging_formatted_and_unformatted_code">Merging formatted and unformatted code</h2>
 

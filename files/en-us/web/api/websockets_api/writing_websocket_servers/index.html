@@ -125,7 +125,7 @@ Connection: Upgrade
      |                     Payload Data continued ...                |
      +---------------------------------------------------------------+</pre>
 
-<p>The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, <a href="http://tools.ietf.org/html/rfc6455#section-5.1">section 5.1 of the spec</a> says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. <em>Note: You must mask messages even when using a secure socket. </em>RSV1-3 can be ignored, they are for extensions.</p>
+<p>The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, <a href="http://tools.ietf.org/html/rfc6455#section-5.1">section 5.1 of the spec</a> says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. <em>Note: You must mask messages even when using a secure socket.</em> RSV1-3 can be ignored, they are for extensions.</p>
 
 <p>The opcode field defines how to interpret the payload data: <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>0x0</code> </span><span style="line-height: 1.5;">for continuation,</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">0x1</code><span style="line-height: 1.5;"> for text (which is always encoded in UTF-8), </span><code style="font-style: normal; line-height: 1.5;">0x2</code><span style="line-height: 1.5;"> for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, <code>0x3</code> to <code>0x7</code> and <code>0xB</code> to <code>0xF</code> have no meaning.</span></p>
 
@@ -159,13 +159,13 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 <p><span style="line-height: 1.5;">Recall that the opcode tells what a frame is meant to do. If it's <code>0x1</code>, the payload is text. If it's <code>0x2</code>, the payload is binary data.</span><span style="line-height: 1.5;"> However, if it's </span><code style="font-style: normal; line-height: 1.5;">0x0,</code><span style="line-height: 1.5;"> the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.</span><span style="line-height: 1.5;"> Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:</span></p>
 
 <pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
-<strong>Server:</strong> <em>(process complete message immediately) </em>Hi.
+<strong>Server:</strong> <em>(process complete message immediately)</em> Hi.
 <strong>Client:</strong> FIN=0, opcode=0x1, msg="and a"
 <strong>Server:</strong> <em>(listening, new message containing text started)</em>
 <strong>Client:</strong> FIN=0, opcode=0x0, msg="happy new"
 <strong>Server:</strong> <em>(listening, payload concatenated to previous message)</em>
 <strong>Client:</strong> FIN=1, opcode=0x0, msg="year!"
-<strong>Server:</strong> <em>(process complete message) </em>Happy new year to you too!</pre>
+<strong>Server:</strong> <em>(process complete message)</em> Happy new year to you too!</pre>
 
 <p>Notice the first frame contains an entire message (has <code>FIN=1</code> and <code>opcode!=0x0</code>), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (<code>opcode=0x1</code>), but the entire message has not arrived yet (<code>FIN=0</code>). All remaining parts of that message are sent with continuation frames (<code>opcode=0x0</code>), and the final frame of the message is marked by <code>FIN=1</code>. <a href="http://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a> describes message fragmentation.</p>
 
