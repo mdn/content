@@ -21,7 +21,7 @@ p::first-letter {
 
 <ul>
  <li>Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), and <em>other punctuation</em> (Po) classes.</li>
- <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element. (This is poorly supported by browsers; see the <a href="/en-US/docs/Web/CSS/::first-letter#Browser_compatibility" title="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter#Browser_compatibility">browser compatibility table</a> below.)</li>
+ <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element. (This is poorly supported by browsers; see the <a href="/en-US/docs/Web/CSS/::first-letter#Browser_compatibility">browser compatibility table</a> below.)</li>
  <li>A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, <code>::first-letter</code> will match the first letter of this generated content.</li>
 </ul>
 

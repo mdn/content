@@ -193,7 +193,7 @@ cd ..
  </li>
  <li>Check to make sure that the path in which you placed the source code has no spaces, and is not too long.</li>
  <li>Searched the <a class="link-https" href="https://bugzilla.mozilla.org/">bug database</a> for issues relating to your problem (e.g., platform-specific issues).</li>
- <li>Try asking in <a class="external" href="https://groups.google.com/group/mozilla.dev.builds/" title="http://groups.google.com/group/mozilla.dev.builds/">mozilla.dev.builds</a> - include details of what is in your mozconfig, and what the actual error is.</li>
+ <li>Try asking in <a class="external" href="https://groups.google.com/group/mozilla.dev.builds/">mozilla.dev.builds</a> - include details of what is in your mozconfig, and what the actual error is.</li>
  <li>Check if your mozilla/ is a symlink. A symlink there is not supported.</li>
  <li>Check for <code>@TOPSRCDIR@</code> or relative paths in your mozconfig. Those have caused several problems historically and tend to be poorly tested when the build system changes.</li>
  <li>If on Windows you get link errors like "LNK1102: out of memory" or "LNK1318: Unexpected PDB error; OK (0)", try deleting the largest .PDB files before rushing out the door to buy more RAM. Clobbering (see below) will also remove those files.</li>
