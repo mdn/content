@@ -122,7 +122,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <h2 id="Using_BoxHelper">Using <code>BoxHelper</code></h2>
 
-<p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong><strong> </strong>(previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
+<p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong> (previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
 
 <div>
 <p><code>BoxHelper</code> is the <strong>recommended</strong> way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.</p>
@@ -138,7 +138,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <p>The main disadvantage is that it <strong>only creates box bounding volumes</strong>, so if you need spheres vs AABB tests you need to create your own <code>Sphere</code> objects.</p>
 
-<p>To use it, we need to create a<strong> </strong>new <code>BoxHelper</code> instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the <code>three.js</code> scene in order to render it. We assume our scene variable to be called <code>scene</code>.</p>
+<p>To use it, we need to create a new <code>BoxHelper</code> instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the <code>three.js</code> scene in order to render it. We assume our scene variable to be called <code>scene</code>.</p>
 
 <pre class="brush: js notranslate">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),

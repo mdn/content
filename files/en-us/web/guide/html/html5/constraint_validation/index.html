@@ -39,17 +39,17 @@ tags:
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="URL"&gt;</a></code></td>
    <td>The value must be an absolute <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL</a>, as defined in the <a href="https://url.spec.whatwg.org/">URL Living Standard</a>.</td>
-   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a> </strong>constraint violation</td>
+   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a></strong> constraint violation</td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code></td>
    <td>The value must be a syntactically valid email address, which generally has the format <code><em>username</em>@<em>hostname</em>.<em>tld</em></code>.</td>
-   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a> </strong>constraint violation</td>
+   <td><strong><a href="/en-US/docs/Web/API/ValidityState/typeMismatch">TypeMismatch</a></strong> constraint violation</td>
   </tr>
  </tbody>
 </table>
 
-<p>For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list, for this input. If any of these do not satisfy the condition described here, the <strong>Type mismatch </strong>constraint violation is triggered.</p>
+<p>For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list, for this input. If any of these do not satisfy the condition described here, the <strong>Type mismatch</strong> constraint violation is triggered.</p>
 
 <p>Note that most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.</p>
 
@@ -117,7 +117,7 @@ tags:
    <td><code>date</code></td>
    <td>An integer number of days</td>
    <td rowspan="5">Unless the step is set to the <code>any</code> literal, the value must be <strong>min</strong> + an integral multiple of the step.</td>
-   <td rowspan="5"><strong><code><a href="/en-US/docs/Web/API/ValidityState/stepMismatch">stepMismatch</a></code> </strong>constraint violation</td>
+   <td rowspan="5"><strong><code><a href="/en-US/docs/Web/API/ValidityState/stepMismatch">stepMismatch</a></code></strong> constraint violation</td>
   </tr>
   <tr>
    <td><code>month</code></td>

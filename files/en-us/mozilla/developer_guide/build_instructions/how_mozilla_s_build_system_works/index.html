@@ -24,18 +24,18 @@ tags:
 
 <h3 id="Phase_1_configure">Phase 1: configure</h3>
 
-<p>Phase 1 centers around the <strong>configure </strong>script. The <strong>configure </strong>script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="http://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure </strong>script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
+<p>Phase 1 centers around the <strong>configure</strong> script. The <strong>configure</strong> script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="http://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure</strong> script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
 
-<p>The primary job of <strong>configure </strong>is to determine characteristics of the system and compiler, apply options passed into it, and validate everything looks OK to build. The primary output of the <strong>configure </strong>script is an executable file in the object directory called <strong>config.status</strong>. <strong>configure</strong> also produces some additional files (like <strong>autoconf.mk</strong>). However, the most important file in terms of architecture is <strong>config.status</strong>.</p>
+<p>The primary job of <strong>configure</strong> is to determine characteristics of the system and compiler, apply options passed into it, and validate everything looks OK to build. The primary output of the <strong>configure</strong> script is an executable file in the object directory called <strong>config.status</strong>. <strong>configure</strong> also produces some additional files (like <strong>autoconf.mk</strong>). However, the most important file in terms of architecture is <strong>config.status</strong>.</p>
 
-<p>The existence of a <strong>config.status</strong> file may be familiar to those who have worked with Autoconf before. However, Mozilla's <strong>config.status</strong> is different from many other <strong>config.status</strong> files, as it's written in Python! Instead of our <strong>configure </strong>script producing a shell script, it generates a Python script.</p>
+<p>The existence of a <strong>config.status</strong> file may be familiar to those who have worked with Autoconf before. However, Mozilla's <strong>config.status</strong> is different from many other <strong>config.status</strong> files, as it's written in Python! Instead of our <strong>configure</strong> script producing a shell script, it generates a Python script.</p>
 
 <p>Python 2 is prevalent in a Mozilla build system. If we need to write code for the build system, we do it in <strong>Python 2</strong> instead of editing a <em>makefile</em>.</p>
 
 <p><strong>config.status</strong> contains 2 parts:</p>
 
 <ul>
- <li>data structures representing the output of <strong>configure </strong>and</li>
+ <li>data structures representing the output of <strong>configure</strong> and</li>
  <li>a command-line interface for preparing, configuring, or generating an appropriate <em>build backend</em>. A <em>build backend</em> is merely a tool used to build the tree — like <strong>GNU Make</strong> or <em>Tup</em>.</li>
 </ul>
 
@@ -45,7 +45,7 @@ tags:
 
 <h3 id="Phase_2_Build_Backend_Preparation_and_the_Build_Definition">Phase 2: Build Backend Preparation and the Build Definition</h3>
 
-<p>Once <strong>configure </strong>has determined what the current build configuration is, we need to apply this to the source tree so we can actually build.</p>
+<p>Once <strong>configure</strong> has determined what the current build configuration is, we need to apply this to the source tree so we can actually build.</p>
 
 <p>What essentially happens is the automatically produced <strong>config.status</strong> Python script is executed as soon as <strong>configure</strong> has generated it. <strong>config.status</strong> is charged with the task of <em>telling a tool how to build the tree.</em> To do this, <strong>config.status</strong> must first scan the build system definition.</p>
 
@@ -114,7 +114,7 @@ Total wall time: 5.03s; CPU time: 3.79s; Efficiency: 75%</pre>
 
 <p><strong>moz.build</strong> files are how each part of the source tree defines how it is integrated with the build system. Think of each <strong>moz.build</strong> file as a data structure telling the build system what to do.</p>
 
-<p>During build backend generation, all <strong>moz.build </strong>files relevant to the current build configuration are read and converted into files and actions used to build the tree (such as makefiles). In this section, we'll talk about how <strong>moz.build</strong> files actually work.</p>
+<p>During build backend generation, all <strong>moz.build</strong> files relevant to the current build configuration are read and converted into files and actions used to build the tree (such as makefiles). In this section, we'll talk about how <strong>moz.build</strong> files actually work.</p>
 
 <p><strong>An individual moz.build file is actually a Python script.</strong> However, they are unlike most Python scripts. The execution environment is strictly controlled, so <strong>moz.build</strong> files can only perform a limited set of operations. <strong>moz.build</strong> files are limited to performing the following actions:</p>
 

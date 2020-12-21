@@ -499,7 +499,7 @@ class RenewBookModelForm(ModelForm):
     model = BookInstance
     fields = ['due_back']
 <strong>    labels = {'due_back': _('New renewal date')}
-    help_texts = {'due_back</strong><strong>': _('Enter a date between now and 4 weeks (default 3).')} </strong>
+    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')} </strong>
 </pre>
 
 <p>To add validation you can use the same approach as for a normal <code>Form</code> — you define a function named <code>clean_<em>field_name</em>()</code> and raise <code>ValidationError</code> exceptions for invalid values. The only difference with respect to our original form is that the model field is named <code>due_back</code> and not "<code>renewal_date</code>". This change is necessary since the corresponding field in <code>BookInstance</code> is called <code>due_back</code>. </p>
@@ -510,7 +510,7 @@ from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
 <strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back</strong><strong>']
+       data = self.cleaned_data['due_back']
 
        # Check if a date is not in the past.
        if data &lt; datetime.date.today():
@@ -537,7 +537,7 @@ class RenewBookModelForm(ModelForm):
 <p>The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/">generic editing views</a> for creating, editing, and deleting views based on models. Not only do these handle the "view" behavior, but they automatically create the form class (a <code>ModelForm</code>) for you from the model.</p>
 
 <div class="note">
-<p><strong>Note: </strong>In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
+<p><strong>Note:</strong> In addition to the editing views described here, there is also a <a href="https://docs.djangoproject.com/en/3.1/ref/class-based-views/generic-editing/#formview">FormView</a> class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using <code>FormView</code>, you still need to create your <code>Form</code>, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.</p>
 </div>
 
 <p>In this section, we're going to use generic editing views to create pages to add functionality to create, edit, and delete <code>Author</code> records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way that can be provided by the admin site).</p>
@@ -590,7 +590,7 @@ class AuthorDelete(DeleteView):
 
 <p>This is similar to our previous forms and renders the fields using a table. Note also how again we declare the <code>{% csrf_token %}</code> to ensure that our forms are resistant to CSRF attacks.</p>
 
-<p>The "delete" view expects to find a template named with the format <em>model_name</em><strong>_confirm_delete.html</strong> (again, you can change the suffix using <code>template_name_suffix</code> in your view). Create the template file <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> and copy in the text below.</p>
+<p>The "delete" view expects to find a template named with the format <em>model_name</em><strong>_confirm_delete.html</strong> (again, you can change the suffix using <code>template_name_suffix</code> in your view). Create the template file <strong>locallibrary/catalog/templates/catalog/author_confirm_delete.html</strong> and copy in the text below.</p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 

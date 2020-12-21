@@ -45,7 +45,7 @@ slug: Mozilla/Developer_guide/Build_Instructions/Old_Thunderbird_build
 <pre>python client.py checkout
 </pre>
 
-<div class="warning">On some types of network connections, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. (Make sure the unbundled folder's name is now "mozilla" and not "mozilla-central"). Then run "python client.py checkout" <strong> </strong>to ensure you are up-to-date.</div>
+<div class="warning">On some types of network connections, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. (Make sure the unbundled folder's name is now "mozilla" and not "mozilla-central"). Then run "python client.py checkout"  to ensure you are up-to-date.</div>
 
 <p class="editable">The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. For more on getting the source code, see the page <a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
 

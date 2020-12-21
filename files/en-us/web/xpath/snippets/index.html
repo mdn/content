@@ -33,7 +33,7 @@ function evaluateXPath(aNode, aExpr) {
 }
 </pre>
 
-<p>This function uses the <strong><code>new XPathEvaluator()</code></strong> constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to <strong><code>new XPathEvaluator()</code> </strong>with the following fragment:</p>
+<p>This function uses the <strong><code>new XPathEvaluator()</code></strong> constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to <strong><code>new XPathEvaluator()</code></strong> with the following fragment:</p>
 
 <pre class="brush: js">  // XPathEvaluator is implemented on objects that implement Document
   var xpe = aNode.ownerDocument || aNode;

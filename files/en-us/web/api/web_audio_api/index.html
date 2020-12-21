@@ -74,9 +74,9 @@ tags:
 	<dt>{{domxref("AudioContextOptions")}}</dt>
 	<dd>The <code><strong>AudioContextOptions</strong></code> dictionary is used to provide options when instantiating a new <code>AudioContext</code>.</dd>
 	<dt>{{domxref("AudioNode")}}</dt>
-	<dd>The <strong><code>AudioNode</code></strong><strong> </strong>interface represents an audio-processing module like an <em>audio source</em> (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), <em>audio destination</em>, <em>intermediate processing module</em> (e.g. a filter like {{domxref("BiquadFilterNode")}}, or <em>volume control</em> like {{domxref("GainNode")}}).</dd>
+	<dd>The <strong><code>AudioNode</code></strong> interface represents an audio-processing module like an <em>audio source</em> (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), <em>audio destination</em>, <em>intermediate processing module</em> (e.g. a filter like {{domxref("BiquadFilterNode")}}, or <em>volume control</em> like {{domxref("GainNode")}}).</dd>
 	<dt>{{domxref("AudioParam")}}</dt>
-	<dd>The <strong><code>AudioParam</code></strong><strong> </strong>interface represents an audio-related parameter, like one of an {{domxref("AudioNode")}}. It can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</dd>
+	<dd>The <strong><code>AudioParam</code></strong> interface represents an audio-related parameter, like one of an {{domxref("AudioNode")}}. It can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</dd>
 	<dt>{{domxref("AudioParamMap")}}</dt>
 	<dd>Provides a maplike interface to a group of {{domxref("AudioParam")}} interfaces, which means it provides the methods <code>forEach()</code>, <code>get()</code>, <code>has()</code>, <code>keys()</code>, and <code>values()</code>, as well as a <code>size</code> property.</dd>
 	<dt>{{domxref("BaseAudioContext")}}</dt>
@@ -96,7 +96,7 @@ tags:
 
 <dl>
 	<dt>{{domxref("OscillatorNode")}}</dt>
-	<dd>The <strong><code style="font-size: 14px;">OscillatorNode</code></strong><strong> </strong>interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>frequency</em> of wave to be created.</dd>
+	<dd>The <strong><code style="font-size: 14px;">OscillatorNode</code> </strong>interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>frequency</em> of wave to be created.</dd>
 	<dt>{{domxref("AudioBuffer")}}</dt>
 	<dd>The <strong><code>AudioBuffer</code></strong> interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("AudioContext.decodeAudioData()") }} method, or created with raw data using {{ domxref("AudioContext.createBuffer()") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.</dd>
 	<dt>{{domxref("AudioBufferSourceNode")}}</dt>
@@ -115,17 +115,17 @@ tags:
 
 <dl>
 	<dt>{{domxref("BiquadFilterNode")}}</dt>
-	<dd>The <strong><code>BiquadFilterNode</code></strong><strong> </strong>interface represents a simple low-order filter. It is an {{domxref("AudioNode")}} that can represent different kinds of filters, tone control devices, or graphic equalizers. A <code>BiquadFilterNode</code> always has exactly one input and one output.</dd>
+	<dd>The <strong><code>BiquadFilterNode</code></strong> interface represents a simple low-order filter. It is an {{domxref("AudioNode")}} that can represent different kinds of filters, tone control devices, or graphic equalizers. A <code>BiquadFilterNode</code> always has exactly one input and one output.</dd>
 	<dt>{{domxref("ConvolverNode")}}</dt>
-	<dd>The <code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>interface is an <span style="line-height: 1.5;">{{domxref("AudioNode")}} that</span><span style="line-height: 1.5;"> performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, and is often used to achieve a reverb effect</span><span style="line-height: 1.5;">.</span></dd>
+	<dd>The <code><strong>Convolver</strong></code><strong><code>Node</code></strong> interface is an <span style="line-height: 1.5;">{{domxref("AudioNode")}} that</span><span style="line-height: 1.5;"> performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, and is often used to achieve a reverb effect</span><span style="line-height: 1.5;">.</span></dd>
 	<dt>{{domxref("DelayNode")}}</dt>
-	<dd>The <strong><code>DelayNode</code></strong><strong> </strong>interface represents a <a href="http://en.wikipedia.org/wiki/Digital_delay_line">delay-line</a>; an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.</dd>
+	<dd>The <strong><code>DelayNode</code></strong> interface represents a <a href="http://en.wikipedia.org/wiki/Digital_delay_line">delay-line</a>; an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.</dd>
 	<dt>{{domxref("DynamicsCompressorNode")}}</dt>
 	<dd>The <strong><code>DynamicsCompressorNode</code></strong> interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once.</dd>
 	<dt>{{domxref("GainNode")}}</dt>
-	<dd>The <strong><code>GainNode</code></strong><strong> </strong>interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>gain</em> to be applied to the input data before its propagation to the output.</dd>
+	<dd>The <strong><code>GainNode</code></strong> interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>gain</em> to be applied to the input data before its propagation to the output.</dd>
 	<dt>{{domxref("WaveShaperNode")}}</dt>
-	<dd>The <strong><code>WaveShaperNode</code></strong><strong> </strong>interface represents a non-linear distorter. It is an {{domxref("AudioNode")}} that use a curve to apply a waveshaping distortion to the signal. Beside obvious distortion effects, it is often used to add a warm feeling to the signal.</dd>
+	<dd>The <strong><code>WaveShaperNode</code></strong> interface represents a non-linear distorter. It is an {{domxref("AudioNode")}} that use a curve to apply a waveshaping distortion to the signal. Beside obvious distortion effects, it is often used to add a warm feeling to the signal.</dd>
 	<dt>{{domxref("PeriodicWave")}}</dt>
 	<dd>Describes a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.</dd>
 	<dt>{{domxref("IIRFilterNode")}}</dt>
@@ -169,7 +169,7 @@ tags:
 
 <dl>
 	<dt>{{domxref("AudioListener")}}</dt>
-	<dd>The <strong><code>AudioListener</code></strong><strong> </strong>interface represents the position and orientation of the unique person listening to the audio scene used in audio spatialization.</dd>
+	<dd>The <strong><code>AudioListener</code></strong> interface represents the position and orientation of the unique person listening to the audio scene used in audio spatialization.</dd>
 	<dt>{{domxref("PannerNode")}}</dt>
 	<dd>The <code><strong>PannerNode</strong></code> interface represents the position and behavior of an audio source signal in 3D space, allowing you to create complex panning effects.</dd>
 	<dt>{{domxref("StereoPannerNode")}}</dt>
@@ -197,7 +197,7 @@ tags:
 
 <dl>
 	<dt>{{domxref("ScriptProcessorNode")}} {{deprecated_inline}}</dt>
-	<dd>The <strong><code>ScriptProcessorNode</code></strong><strong> </strong>interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</dd>
+	<dd>The <strong><code>ScriptProcessorNode</code></strong> interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</dd>
 	<dt>{{event("audioprocess")}} (event) {{deprecated_inline}}</dt>
 	<dd>The <code>audioprocess</code> event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.</dd>
 	<dt>{{domxref("AudioProcessingEvent")}} {{deprecated_inline}}</dt>

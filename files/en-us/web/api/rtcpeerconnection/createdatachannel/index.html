@@ -42,7 +42,7 @@ tags:
  <dt><code>maxRetransmits</code> {{optional_inline}}</dt>
  <dd>The maximum number of times the user agent should attempt to retransmit a message which fails the first time in unreliable mode. While this value is a16-bit unsigned number, each user agent may clamp it to whatever maximum it deems appropriate. <strong>Default: <code>null</code>.</strong></dd>
  <dt><code>protocol</code> {{optional_inline}}</dt>
- <dd>The name of the sub-protocol being used on the {{domxref("RTCDataChannel")}}, if any; otherwise, the empty string (""). <strong>Default: empty string, <code>""</code>. </strong> This string may not be longer than 65,535 <em>bytes</em>.</dd>
+ <dd>The name of the sub-protocol being used on the {{domxref("RTCDataChannel")}}, if any; otherwise, the empty string (""). <strong>Default: empty string, <code>""</code>.</strong> This string may not be longer than 65,535 <em>bytes</em>.</dd>
  <dt><code>negotiated</code> {{optional_inline}}</dt>
  <dd>By default (<code>false</code>), data channels are negotiated in-band, where one side calls <code>createDataChannel</code>, and the other side listens to the {{domxref("RTCDataChannelEvent")}} event using the <code>ondatachannel</code> <code>EventHandler</code> . Alternatively (<code>true</code>), they can be negotiated out of-band, where both sides call <code>createDataChannel </code>with an agreed-upon id. <strong>Default: <code>false</code>.</strong></dd>
  <dt><code>id</code> {{optional_inline}}</dt>
