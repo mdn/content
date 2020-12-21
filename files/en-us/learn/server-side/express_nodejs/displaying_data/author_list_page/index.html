@@ -48,12 +48,12 @@ block content
     else
       li There are no authors.</pre>
 
-<p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors </em>link. If everything is set up correctly, the page should look something like the following screenshot.</p>
+<p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>All authors</em> link. If everything is set up correctly, the page should look something like the following screenshot.</p>
 
 <p><img alt="Author List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png" style="display: block; height: 453px; margin: 0px auto; width: 1200px;"></p>
 
 <div class="note">
-<p><strong>Note:</strong> The appearance of the author <em>lifespan </em>dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
+<p><strong>Note:</strong> The appearance of the author <em>lifespan</em> dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model).<br>
  <br>
  However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:</p>
 

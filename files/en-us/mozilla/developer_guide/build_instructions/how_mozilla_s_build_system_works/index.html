@@ -69,7 +69,7 @@ Total wall time: 5.03s; CPU time: 3.79s; Efficiency: 75%</pre>
 
 <h4 id="Build_Tiers">Recursive <em>Make</em> Backend</h4>
 
-<p>The recursive <em>make</em> backend is the tried-and-true backend used to build the tree. It's what's been used since the dawn of Mozilla. Essentially, there are makefiles in each directory. <em>make </em>starts processing the makefile in the root directory and then recursively descends into child directories until it's done. But there's more to the process than that.</p>
+<p>The recursive <em>make</em> backend is the tried-and-true backend used to build the tree. It's what's been used since the dawn of Mozilla. Essentially, there are makefiles in each directory. <em>make</em> starts processing the makefile in the root directory and then recursively descends into child directories until it's done. But there's more to the process than that.</p>
 
 <p>The recursive <em>make</em> backend divides the source tree into <em>tiers</em>. A tier is a grouping of related directories containing makefiles of their own. For example, there is a tier for the Netscape Portable Runtime (nspr), one for the JavaScript engine, one for the core Gecko platform, one for the XUL app being built, and so on.</p>
 

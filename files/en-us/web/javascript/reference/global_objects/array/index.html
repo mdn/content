@@ -142,7 +142,7 @@ console.log(years[0])  // works properly
 renderer['3d'].setTexture(model, 'character.png')  // works properly
 </pre>
 
-<p>In the <code>3d</code> example, <code>'3d'</code> <em>had </em>to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., <code>years['2']</code> instead of <code>years[2]</code>), although it's not necessary.</p>
+<p>In the <code>3d</code> example, <code>'3d'</code> <em>had</em> to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., <code>years['2']</code> instead of <code>years[2]</code>), although it's not necessary.</p>
 
 <p>The <code>2</code> in <code>years[2]</code> is coerced into a string by the JavaScript engine through an implicit <code>toString</code> conversion. As a result, <code>'2'</code> and <code>'02'</code> would refer to two different slots on the <code>years</code> object, and the following example could be <code>true</code>:</p>
 

@@ -37,7 +37,7 @@ tags:
 
 <p><img alt="This chart visualises how the PannerNode orientation vectors affect the direction of the sound cone." src="https://mdn.mozillademos.org/files/16238/pannernode-orientation.png" style="height: 381px; width: 935px;"></p>
 
-<p>First, let's start by writing a utility function to figure out our <em>orientation vector. </em>The X and Z components are always at a 90° to each other, so we can use the sine and cosine functions, which are offset by the same amount in radians. However, normally this would mean the {{ domxref("PannerNode") }} points to the <strong>left</strong> of the listener at 0° rotation – since `x = cos(0) = 1` and `z = sin(0) = 0`. It's more useful to offset the angle by -90°, which means the {{ domxref("PannerNode") }} will point <strong>directly at the listener</strong> at 0° rotation.</p>
+<p>First, let's start by writing a utility function to figure out our <em>orientation vector.</em> The X and Z components are always at a 90° to each other, so we can use the sine and cosine functions, which are offset by the same amount in radians. However, normally this would mean the {{ domxref("PannerNode") }} points to the <strong>left</strong> of the listener at 0° rotation – since `x = cos(0) = 1` and `z = sin(0) = 0`. It's more useful to offset the angle by -90°, which means the {{ domxref("PannerNode") }} will point <strong>directly at the listener</strong> at 0° rotation.</p>
 
 <pre class="brush: js">// this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
