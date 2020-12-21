@@ -114,7 +114,7 @@ function onMessage(e) {
 }
 </pre>
 
-<p>When the initial message is received from the main page via the {{domxref("window.postMessage")}} method, we run the <code>initPort</code> function. This saves the transferred port and register an <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">onmessage</span></font> handler that will be called each time a message is passed through our {{domxref("MessageChannel")}}.</p>
+<p>When the initial message is received from the main page via the {{domxref("window.postMessage")}} method, we run the <code>initPort</code> function. This saves the transferred port and register an <code>onmessage</code> handler that will be called each time a message is passed through our {{domxref("MessageChannel")}}.</p>
 
 <p>When a message is received from the main page we create a list item and insert it in the unordered list, setting the {{domxref("Node.textContent","textContent")}} of the list item equal to the event's <code>data</code> attribute (this contains the actual message).</p>
 
