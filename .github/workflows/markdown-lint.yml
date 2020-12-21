@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '*.md'
+      - .github/workflows/markdown-lint.yml
 
 
 jobs:
