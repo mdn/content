@@ -4,11 +4,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 ---
 <div class="note">
 <ul>
- <li>This page is part of the <a href="https://developer.mozilla.org/en-US/docs/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="https://developer.mozilla.org/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+ <li>This page is part of the <a href="/en-US/docs/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
 </ul>
 
 <ul>
- <li>Upgraded documentation may be found in the <a href="https://developer.mozilla.org/NSS_reference">Current NSS Reference</a>
+ <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
 
   <p> </p>
  </li>
@@ -91,7 +91,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1067615"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1067618"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
+ <li><a name="1067618"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
 <h5 id="Description"><a name="Head4;"></a> <a name="1067619"> Description </a></h5>
@@ -100,7 +100,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <p><a name="1237166"> <code>NSS_Init</code> opens the database files read-only. If you are performing operations that require write permission, for example S/MIME operations such as adding a certificate, use </a><a href="sslfnc.html#1237143"><code>NSS_InitReadWrite</code></a> instead.</p>
 
-<p><a name="1237200"> Before calling <code>NSS_Init</code>, your program must call </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
+<p><a name="1237200"> Before calling <code>NSS_Init</code>, your program must call </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
 
 <p><a name="1107512"> The policy flags for all cipher suites are turned off by default, disallowing all cipher suites. Therefore, an application cannot use NSS to perform any cryptographic operations until after it enables appropriate cipher suites by calling one of the </a><a href="sslfnc.html#1098841">SSL Export Policy Functions</a>:</p>
 
@@ -142,7 +142,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1236535"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1236538"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
+ <li><a name="1236538"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
 <h5 id="Description_2"><a name="Head4;"></a> <a name="1236539"> Description </a></h5>
@@ -151,7 +151,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <p><a name="1237207"> Use <code>NSS_InitReadWrite</code> rather than </a><a href="sslfnc.html#1067601"><code>NSS_Init</code></a> if you are performing operations that require write permission, such as some S/MIME operations.</p>
 
-<p><a name="1236543"> Before calling <code>NSS_InitReadWrite</code>, your program must call </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
+<p><a name="1236543"> Before calling <code>NSS_InitReadWrite</code>, your program must call </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
 
 <p><a name="1236544"> The policy flags for all cipher suites are turned off by default, disallowing all cipher suites. Therefore, an application cannot use NSS to perform any cryptographic operations until after it enables appropriate cipher suites by calling one of the </a><a href="sslfnc.html#1098841">SSL Export Policy Functions</a>.</p>
 
@@ -188,7 +188,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1234287"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1234290"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
+ <li><a name="1234290"> If unsuccessful, <code>SECFailure</code>. Use </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError">PR_GetError</a></code> to retrieve the error code.</li>
 </ul>
 
 <h5 id="Description_3"><a name="Head4;"></a> <a name="1234291"> Description </a></h5>
@@ -197,7 +197,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <p><a name="1234976"> <code>NSS_NoDB_Init</code> is<em>not</em> idempotent, so call it only once. </a></p>
 
-<p><a name="1234295"> Before calling <code>NSS_NoDB_Init</code>, your program must call </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
+<p><a name="1234295"> Before calling <code>NSS_NoDB_Init</code>, your program must call </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Init">PR_Init</a></code>.</p>
 
 <p><a name="1234296"> The policy flags for all cipher suites are turned off by default, disallowing all cipher suites. Therefore, an application cannot use NSS to perform any cryptographic operations until after it enables appropriate cipher suites by calling one of the </a><a href="sslfnc.html#1098841">SSL Export Policy Functions</a>.</p>
 
@@ -241,10 +241,10 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
      <li><a name="1202777"> <code>SSL_REQUIRE_CERTIFICATE</code> is a server option that requires a client to authenticate itself (only if <code>SSL_REQUEST_CERTIFICATE</code> is also on). If client does not provide certificate, the connection terminates. Default state is a third state similar to on, that provides backward compatibility with older Netscape server products.</a>
       <p> </p>
      </li>
-     <li><a name="1202778"> <code>SSL_HANDSHAKE_AS_CLIENT</code> controls the behavior of </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code>,. If this option is off, the <code>PR_Accept</code> configures the SSL socket to handshake as a server. If it is on, then <code>PR_Accept</code> configures the SSL socket to handshake as a client, even though it accepted the connection as a TCP server.
+     <li><a name="1202778"> <code>SSL_HANDSHAKE_AS_CLIENT</code> controls the behavior of </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code>,. If this option is off, the <code>PR_Accept</code> configures the SSL socket to handshake as a server. If it is on, then <code>PR_Accept</code> configures the SSL socket to handshake as a client, even though it accepted the connection as a TCP server.
       <p> </p>
      </li>
-     <li><a name="1202781"> <code>SSL_HANDSHAKE_AS_SERVER</code> controls the behavior of </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code>. If this option is off, then <code>PR_Connect</code> configures the SSL socket to handshake as a client. If it is on, then <code>PR_Connect</code> configures the SSL socket to handshake as a server, even though it connected as a TCP client.
+     <li><a name="1202781"> <code>SSL_HANDSHAKE_AS_SERVER</code> controls the behavior of </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code>. If this option is off, then <code>PR_Connect</code> configures the SSL socket to handshake as a client. If it is on, then <code>PR_Connect</code> configures the SSL socket to handshake as a server, even though it connected as a TCP client.
       <p> </p>
      </li>
      <li><a name="1202784"> <code>SSL_ENABLE_FDX</code> tells the SSL library whether the application will have two threads, one reading and one writing, or just one thread doing reads and writes alternately. The factory setting for this option (which is the default, unless the application changes the default) is off (<code>PR_FALSE</code>), which means that the application will not do simultaneous reads and writes. An application that wishes to do sumultaneous reads and writes should set this to <code>PR_TRUE</code>.</a></li>
@@ -304,7 +304,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1068492"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1068495"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1068495"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_4"><a name="Head4;"></a> <a name="1068496"> Description </a></h5>
@@ -316,7 +316,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 <p><a name="1224898"> Enabling the <code>SSL_REQUIRE_CERTIFICATE</code> option is not recommended. If the client has no certificate and this option is enabled, the client's connection terminates with an error. The user is likely to think something is wrong with either the client or the server, and is unlikely to realize that the problem is the lack of a certificate. It is better to allow the SSL handshake to complete and then have your application return an error message to the client that informs the user of the need for a certificate.</a></p>
 
 <ul>
- <li><a name="1173455"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_Enable</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server. For a complete discussion of the use of <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> with <code>SSL_EnableDefault</code> and <code>SSL_Enable</code>, see <a href="sslfnc.html#1086543">SSL_OptionSet</a>.</li>
+ <li><a name="1173455"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_Enable</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server. For a complete discussion of the use of <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> with <code>SSL_EnableDefault</code> and <code>SSL_Enable</code>, see <a href="sslfnc.html#1086543">SSL_OptionSet</a>.</li>
  <li><a name="1185684"> The SSL protocol is defined to be able to handle simultaneous two-way communication between applications at each end of an SSL connection. Two-way simultaneous communication is also known as "Full Duplex", abbreviated FDX. However, most application protocols that use SSL are not two-way simultaneous, but two-way alternate, also known as "Half Dupled"; that is, each end takes turns sending, and each end is either sending, or receiving, but not both at the same time. </a></li>
 </ul>
 
@@ -385,7 +385,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1206100"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1206103"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
+ <li><a name="1206103"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
 </ul>
 
 <h5 id="Description_5"><a name="Head4;"></a> <a name="1206069"> Description </a></h5>
@@ -475,7 +475,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1084769"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1116247"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1116247"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_6"><a name="Head4;"></a> <a name="1116248"> Description </a></h5>
@@ -541,7 +541,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1208254"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1208257"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
+ <li><a name="1208257"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
 </ul>
 
 <h5 id="Description_7"><a name="Head4;"></a> <a name="1209473"> Description </a></h5>
@@ -639,7 +639,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1085406"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1085409"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
+ <li><a name="1085409"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
 </ul>
 
 <h5 id="Description_9"><a name="Head4;"></a> <a name="1085410"> Description </a></h5>
@@ -736,7 +736,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1142651"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1142654"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
+ <li><a name="1142654"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain error code.</li>
 </ul>
 
 <h5 id="Description_10"><a name="Head4;"></a> <a name="1142655"> Description </a></h5>
@@ -792,7 +792,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1162415"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1162418"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1162418"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_11"><a name="Head4;"></a> <a name="1162419"> Description </a></h5>
@@ -851,7 +851,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1100731"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1100734"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1100734"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_12"><a name="Head4;"></a> <a name="1100278"> Description </a></h5>
@@ -882,7 +882,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1101657"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1101660"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1101660"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_13"><a name="Head4;"></a> <a name="1100287"> Description </a></h5>
@@ -928,7 +928,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1106030"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1106033"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1106033"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_14"><a name="Head4;"></a> <a name="1105955"> Description </a></h5>
@@ -1048,7 +1048,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1104672"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1104675"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1104675"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_15"><a name="Head4;"></a> <a name="1104676"> Description </a></h5>
@@ -1237,8 +1237,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
      <li><a name="1190125"> <code>SSL_SECURITY</code> enables use of security protocol. WARNING: If you turn this option off, the session will not be an SSL session and will not have certificate-based authentication, tamper detection, or encryption.</a></li>
      <li><a name="1190126"> <code>SSL_REQUEST_CERTIFICATE</code> is a server option that requests a client to authenticate itself. </a></li>
      <li><a name="1190127"> <code>SSL_REQUIRE_CERTIFICATE</code> is a server option that requires a client to authenticate itself (only if <code>SSL_REQUEST_CERTIFICATE</code> is also on). If client does not provide certificate, the connection terminates. </a></li>
-     <li><a name="1190128"> <code>SSL_HANDSHAKE_AS_CLIENT</code> controls the behavior of </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code>,. If this option is off, the <code>PR_Accept</code> configures the SSL socket to handshake as a server. If it is on, then <code>PR_Accept</code> configures the SSL socket to handshake as a client, even though it accepted the connection as a TCP server.</li>
-     <li><a name="1190131"> <code>SSL_HANDSHAKE_AS_SERVER</code> controls the behavior of </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code>. If this option is off, then <code>PR_Connect</code> configures the SSL socket to handshake as a client. If it is on, then <code>PR_Connect</code> configures the SSL socket to handshake as a server, even though it connected as a TCP client.</li>
+     <li><a name="1190128"> <code>SSL_HANDSHAKE_AS_CLIENT</code> controls the behavior of </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code>,. If this option is off, the <code>PR_Accept</code> configures the SSL socket to handshake as a server. If it is on, then <code>PR_Accept</code> configures the SSL socket to handshake as a client, even though it accepted the connection as a TCP server.</li>
+     <li><a name="1190131"> <code>SSL_HANDSHAKE_AS_SERVER</code> controls the behavior of </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code>. If this option is off, then <code>PR_Connect</code> configures the SSL socket to handshake as a client. If it is on, then <code>PR_Connect</code> configures the SSL socket to handshake as a server, even though it connected as a TCP client.</li>
      <li><a name="1192615"> <code>SSL_ENABLE_FDX</code> tells the SSL library whether the application will have two threads, one reading and one writing, or just one thread doing reads and writes alternately. The factory setting for this option (which is the default, unless the application changes the default) is off (<code>PR_FALSE</code>), which means that the application will not do simultaneous reads and writes. An application that needs to do simultaneous reads and writes should set this to <code>PR_TRUE</code>.</a></li>
     </ul>
     <a name="1192616"> In NSS 2.8, the <code>SSL_ENABLE_FDX</code> option only affects the behavior of nonblocking SSL sockets. See the description below for more information on this option.</a>
@@ -1281,7 +1281,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1086573"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1086576"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1086576"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_18"><a name="Head4;"></a> <a name="1086577"> Description </a></h5>
@@ -1302,7 +1302,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <p><a name="1192775"> Note that SSL3 and TLS share the same set of cipher suites. When both SSL3 and TLS are enabled, all SSL3/TLS cipher suites that are enabled are enabled for both SSL3 and TLS.</a></p>
 
-<p><a name="1167934"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <a href="sslfnc.html#1058001">SSL_ResetHandshake</a> to indicate whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_OptionSet</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server.</p>
+<p><a name="1167934"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <a href="sslfnc.html#1058001">SSL_ResetHandshake</a> to indicate whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_OptionSet</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server.</p>
 
 <p><a name="1164782"> If a socket file descriptor is imported as an SSL socket before it is connected, it is implicitly configured to handshake as a client or handshake as a server when the connection is made. If the application calls <code>PR_Connect</code> (connecting as a TCP client), then the SSL socket is (by default) configured to handshake as an SSL client. If the application calls <code>PR_Accept</code> (connecting the socket as a TCP server) then the SSL socket is (by default) configured to handshake as an SSL server. <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> control this implicit configuration.</a></p>
 
@@ -1372,7 +1372,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1196782"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1196785"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1196785"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_19"><a name="Head4;"></a> <a name="1196786"> Description </a></h5>
@@ -1598,12 +1598,12 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1087185"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1087188"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1087188"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_22"><a name="Head4;"></a> <a name="1087189"> Description </a></h5>
 
-<p><a name="1174386"> Before SSL can handshake as a server on a socket, it must be configured to do so with a call to SSL_ConfigSecureServer (among other things). This function configures a listen socket. Child sockets created by </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> inherit the configuration.</p>
+<p><a name="1174386"> Before SSL can handshake as a server on a socket, it must be configured to do so with a call to SSL_ConfigSecureServer (among other things). This function configures a listen socket. Child sockets created by </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> inherit the configuration.</p>
 
 <p><a name="1127390"> Servers can be configured with more than one certificate for a given port, and different certificates can support different key-exchange algorithms. To find out what key-exchange algorithm a particular certificate supports, pass the certificate structure to </a><a href="sslcrt.html#1056950"><code>NSS_FindCertKEAType</code></a>. You can then pass the <code>SSLKEAType</code> value returned by <code>NSS_FindCertKEAType</code> in the <code>keaType</code> parameter of <code>SSL_ConfigSecureServer</code>. The server uses the specified key-exchange algorithm with the specified certificate and key.</p>
 
@@ -1658,7 +1658,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1087810"> If successful, zero.</a></li>
- <li><a name="1087813"> If unsuccessful, <code>-1</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1087813"> If unsuccessful, <code>-1</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_23"><a name="Head4;"></a> <a name="1130686"> Description </a></h5>
@@ -1712,7 +1712,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1088061"> If successful, zero.</a></li>
- <li><a name="1088064"> If unsuccessful, <code>-1</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1088064"> If unsuccessful, <code>-1</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_24"><a name="Head4;"></a> <a name="1088065"> Description </a></h5>
@@ -1798,7 +1798,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1088830"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1088833"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1088833"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_25"><a name="Head4;"></a> <a name="1088834"> Description </a></h5>
@@ -1860,7 +1860,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1088857"> If authentication is successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1088858"> If authentication is not successful, <code>SECFailure</code>. If the callback returns <code>SECFailure</code>, the callback should indicate the reason for the failure (if possible) by calling </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> with the appropriate error code.</li>
+ <li><a name="1088858"> If authentication is not successful, <code>SECFailure</code>. If the callback returns <code>SECFailure</code>, the callback should indicate the reason for the failure (if possible) by calling </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> with the appropriate error code.</li>
 </ul>
 
 <p><a name="1088859"> The callback function obtains the certificate to be authenticated by calling </a><a href="sslfnc.html#1096168"><code>SSL_PeerCertificate</code></a>.</p>
@@ -2008,7 +2008,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1088954"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1088957"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1088957"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_27"><a name="Head4;"></a> <a name="1088958"> Description </a></h5>
@@ -2053,7 +2053,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
  <li><a name="1088977"> <code>SECFailure</code>: The certificate is not authorized for this SSL connection. The SSL connection will be terminated immediately. </a></li>
 </ul>
 
-<p><a name="1088978"> To obtain the certificate that was rejected by the certificate authentication callback, the bad-certificate callback function calls </a><a href="sslfnc.html#1096168"><code>SSL_PeerCertificate</code></a>. Since it is called immediately after the certificate authentication callback returns, the bad-certificate callback function can obtain the error code set by the certificate authentication callback by calling <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> immediately, as the first operation it performs. Note: once the bad-certificate callback function returns, the peer certificate is destroyed, and SSL_PeerCertificate will fail.</p>
+<p><a name="1088978"> To obtain the certificate that was rejected by the certificate authentication callback, the bad-certificate callback function calls </a><a href="sslfnc.html#1096168"><code>SSL_PeerCertificate</code></a>. Since it is called immediately after the certificate authentication callback returns, the bad-certificate callback function can obtain the error code set by the certificate authentication callback by calling <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> immediately, as the first operation it performs. Note: once the bad-certificate callback function returns, the peer certificate is destroyed, and SSL_PeerCertificate will fail.</p>
 
 <p><a name="1126612"> The callback may need to call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see </a><a href="sslfnc.html#1088040"><code>SSL_SetPKCS11PinArg</code></a> for details). To obtain the value previously passed, the callback calls <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a></p>
 
@@ -2113,7 +2113,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1089014"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1089017"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1089017"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_28"><a name="Head4;"></a> <a name="1089018"> Description </a></h5>
@@ -2261,7 +2261,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1114455"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1114458"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1114458"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_29"><a name="Head4;"></a> <a name="1114347"> Description </a></h5>
@@ -2328,7 +2328,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1089070"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1089073"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1089073"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_30"><a name="Head4;"></a> <a name="1089074"> Description </a></h5>
@@ -2413,7 +2413,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1089434"> If successful, zero.</a></li>
- <li><a name="1089437"> If unsuccessful, -1. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1089437"> If unsuccessful, -1. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_31"><a name="Head4;"></a> <a name="1089438"> Description </a></h5>
@@ -2460,7 +2460,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <h5 id="Description_32"><a name="Head4;"></a> <a name="1092801"> Description </a></h5>
 
-<p><a name="1092802"> The <code>SSL_DataPending</code> function determines whether there is any received and decrypted application data remaining in the SSL socket's receive buffers after a prior read operation. This function does not reveal any information about data that has been received but has not yet been decrypted. Hence, if this function returns zero, that does not necessarily mean that a subsequent call to </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Read"><code>PR_Read</code></a> would block.</p>
+<p><a name="1092802"> The <code>SSL_DataPending</code> function determines whether there is any received and decrypted application data remaining in the SSL socket's receive buffers after a prior read operation. This function does not reveal any information about data that has been received but has not yet been decrypted. Hence, if this function returns zero, that does not necessarily mean that a subsequent call to </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Read"><code>PR_Read</code></a> would block.</p>
 
 <p> </p>
 
@@ -2599,12 +2599,12 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1092861"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1092864"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1092864"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_33"><a name="Head4;"></a> <a name="1092865"> Description </a></h5>
 
-<p><a name="1115835"> The <code>SSL_SecurityStatus</code> function fills in values only if you supply pointers to values of the appropriate type. Pointers passed can be <code>NULL</code>, in which case the function does not supply values. When you are finished with them, you should free all the returned values using </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Free"><code>PR_Free</code></a>.</p>
+<p><a name="1115835"> The <code>SSL_SecurityStatus</code> function fills in values only if you supply pointers to values of the appropriate type. Pointers passed can be <code>NULL</code>, in which case the function does not supply values. When you are finished with them, you should free all the returned values using </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Free"><code>PR_Free</code></a>.</p>
 
 <p> </p>
 
@@ -2692,7 +2692,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1124791"> If successful, zero.</a></li>
- <li><a name="1124794"> If unsuccessful, -1. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1124794"> If unsuccessful, -1. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_35"><a name="Head4;"></a> <a name="1127887"> Description </a></h5>
@@ -2701,7 +2701,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <p><a name="1128163"> For a direct connection with a server, the hostname and port number are sufficient for the client to identify the server as one for which it has an entry in its session cache. However, the situation is more complicated if the client is on an intranet and is connecting to a server on the Internet through a proxy. In this case, the client first connects to the proxy, and the client and proxy exchange messages specified by the proxy protocol that allow the proxy, in turn, to connect to the requested server on behalf of the client. This arrangement is known as SSL tunneling.</a></p>
 
-<p><a name="1128016"> Client session cache entries for SSL connections that tunnel through a particular proxy all have the same hostname and port number--that is, the hostname and port number of the proxy. To determine whether a particular server with which the client is attempting to connect has an entry in the session cache, the session cache needs some additional information that identifies that server. This additional identifying information is known as a peer ID. The peer ID is associated with a socket, and must be set before the SSL handshake occurs--that is, before the SSL handshake is initiated by a call to a function such as </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Read">PR_Read</a></code> or <a href="sslfnc.html#1133431"><code>SSL_ForceHandshake</code></a>. To set the peer ID, you use <code>SSL_SetSockPeerID</code>.</p>
+<p><a name="1128016"> Client session cache entries for SSL connections that tunnel through a particular proxy all have the same hostname and port number--that is, the hostname and port number of the proxy. To determine whether a particular server with which the client is attempting to connect has an entry in the session cache, the session cache needs some additional information that identifies that server. This additional identifying information is known as a peer ID. The peer ID is associated with a socket, and must be set before the SSL handshake occurs--that is, before the SSL handshake is initiated by a call to a function such as </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Read">PR_Read</a></code> or <a href="sslfnc.html#1133431"><code>SSL_ForceHandshake</code></a>. To set the peer ID, you use <code>SSL_SetSockPeerID</code>.</p>
 
 <p><a name="1128510"> In summary, SSL uses three pieces of information to identify a server's entry in the client session cache: the hostname, port number, and peer ID. In the case of a client that is tunneling through a proxy, the hostname and port number identify the proxy, and the peer ID identifies the desired server. Netscape recommends that the client set the peer ID to a string that consists of the server's hostname and port number, like this: "<code>www.hostname.com:387</code>". This convention guarantees that each server has a unique entry in the client session cache.</a></p>
 
@@ -2799,7 +2799,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <h5 id="Description_37"><a name="Head4;"></a> <a name="1081967"> Description </a></h5>
 
-<p><a name="1123381"> The <code>SSL_RevealURL</code> function is used by certificate authentication callback function to obtain the domain name of the desired SSL server for the purpose of comparing it with the domain name in the certificate presented by the server actually contacted. When the callback function is finished with the string returned, the string should be freed with a call to </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Free"><code>PR_Free</code></a>.</p>
+<p><a name="1123381"> The <code>SSL_RevealURL</code> function is used by certificate authentication callback function to obtain the domain name of the desired SSL server for the purpose of comparing it with the domain name in the certificate presented by the server actually contacted. When the callback function is finished with the string returned, the string should be freed with a call to </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Free"><code>PR_Free</code></a>.</p>
 
 <p> </p>
 
@@ -2884,7 +2884,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1057844"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1083148"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1083148"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_39"><a name="Head4;"></a> <a name="1083120"> Description </a></h5>
@@ -2896,8 +2896,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 <p><a name="1179565"> <code>SSL_ForceHandshake</code> does not prepare a socket to do a handshake by itself. The following functions prepare a socket (previously imported into SSL and configured as necessary) to do a handshake:</a></p>
 
 <ul>
- <li><a name="1179566"> </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code></li>
- <li><a name="1179567"> </a><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code></li>
+ <li><a name="1179566"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect">PR_Connect</a></code></li>
+ <li><a name="1179567"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept">PR_Accept</a></code></li>
  <li><a name="1179568"> </a><a href="sslfnc.html#1232052"><code>SSL_ReHandshake</code></a> (after the first handshake is finished)</li>
  <li><a name="1179569"> </a><a href="sslfnc.html#1058001"><code>SSL_ResetHandshake</code></a> (for sockets that were connected or accepted prior to being imported)</li>
 </ul>
@@ -3013,14 +3013,14 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1058069"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1058072"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1058072"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_41"><a name="Head4;"></a> <a name="1057927"> Description </a></h5>
 
 <p><a name="1070424"> Calling <code>SSL_ResetHandshake</code> causes the SSL handshake protocol to start from the beginning on the next I/O operation. That is, the handshake starts with no cipher suite already in use, just as it does on the first handshake on a new socket.</a></p>
 
-<p><a name="1177661"> When an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether SSL should behave like an SSL client or an SSL server. Note that this step would not be necessary if the socket weren't already connected. For an SSL socket that is configured before it is connected, SSL figures this out when the application calls </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a>. If the socket is already connected before SSL gets involved, you must provide this extra hint.</p>
+<p><a name="1177661"> When an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether SSL should behave like an SSL client or an SSL server. Note that this step would not be necessary if the socket weren't already connected. For an SSL socket that is configured before it is connected, SSL figures this out when the application calls </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> or <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a>. If the socket is already connected before SSL gets involved, you must provide this extra hint.</p>
 
 <p> </p>
 
@@ -3096,7 +3096,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1198655"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1198658"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1198658"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_43"><a name="Head4;"></a> <a name="1207098"> Description </a></h5>
@@ -3159,7 +3159,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1220218"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1220221"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1220221"> If unsuccessful, returns <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_44"><a name="Head4;"></a> <a name="1220222"> Description </a></h5>
@@ -3210,7 +3210,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1198780"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1198783"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1198783"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_45"><a name="Head4;"></a> <a name="1198784"> Description </a></h5>
@@ -3269,7 +3269,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1198854"> If successful, <code>SECSuccess</code>.</a></li>
- <li><a name="1198857"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1198857"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_46"><a name="Head4;"></a> <a name="1198858"> Description </a></h5>
@@ -3311,7 +3311,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <ul>
  <li><a name="1231839"> If successful, zero.</a></li>
- <li><a name="1231842"> If unsuccessful, -1. Use </a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
+ <li><a name="1231842"> If unsuccessful, -1. Use </a><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_GetError"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
 
 <h5 id="Description_47"><a name="Head4;"></a> <a name="1231843"> Description </a></h5>

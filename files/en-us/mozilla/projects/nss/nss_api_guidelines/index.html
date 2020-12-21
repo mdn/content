@@ -22,7 +22,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Each separate component of the API should live in its own layer. The functions in these APIs should never call API layers above them. In addition, some low-level APIs may be completely opaque to higher level layers. That is, access to these functions should only be provided by the API directly above them. The NSS APIs are layered, as shown in this diagram:</p>
 
-<p><img alt='A diagram of the different layers that collectively make up "NSS". Dependencies are only permitted between siblings and layers below them.' src="https://mdn.mozillademos.org/files/5379/layer.gif" style="height: 507px; line-height: 1.572; width: 427px;"></p>
+<p><img alt='A diagram of the different layers that collectively make up "NSS". Dependencies are only permitted between siblings and layers below them.' src="layer.gif" style="height: 507px; line-height: 1.572; width: 427px;"></p>
 
 <p><span style="line-height: 1.572;">The boxes in the gray section, towards the center, are exported only through PKCS #11. PKCS #11 is only exported through the Wrappers. The areas which need the most work (both here and throughout the code) is: </span></p>
 
