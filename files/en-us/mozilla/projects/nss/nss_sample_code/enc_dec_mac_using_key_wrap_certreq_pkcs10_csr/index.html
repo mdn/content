@@ -1,0 +1,2085 @@
+---
+title: Enc Dec MAC Using Key Wrap CertReq PKCS10 CSR
+slug: >-
+  Mozilla/Projects/NSS/NSS_Sample_Code/Enc_Dec_MAC_Using_Key_Wrap_CertReq_PKCS10_CSR
+---
+<h2 id="NSS_Sample_Code_6_EncryptionDecryption_and_MAC_and_output_Public_as_a_PKCS_11_CSR.">NSS Sample Code 6: Encryption/Decryption and MAC and output Public as a PKCS 11 CSR.</h2>
+
+<p class="summary">Generates encryption/mac keys and outputs public key as pkcs11 certificate signing request</p>
+
+<p class="brush: cpp">
+ /* This Source Code Form is subject to the terms of the Mozilla Public<br>
+  * License, v. 2.0. If a copy of the MPL was not distributed with this<br>
+  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */</p>
+
+<p>/* NSPR Headers */<br>
+ #include &lt;prthread.h&gt;<br>
+ #include &lt;plgetopt.h&gt;<br>
+ #include &lt;prerror.h&gt;<br>
+ #include &lt;prinit.h&gt;<br>
+ #include &lt;prlog.h&gt;<br>
+ #include &lt;prtypes.h&gt;<br>
+ #include &lt;plstr.h&gt;</p>
+
+<p>/* NSS headers */<br>
+ #include &lt;keyhi.h&gt;<br>
+ #include &lt;pk11priv.h&gt;</p>
+
+<p>/* our samples utilities */<br>
+ #include "util.h"</p>
+
+<p>/* Constants */<br>
+ #define BLOCKSIZE             32<br>
+ #define MODBLOCKSIZE          128<br>
+ #define DEFAULT_KEY_BITS      1024</p>
+
+<p>/* Header file Constants */<br>
+ #define ENCKEY_HEADER         "-----BEGIN WRAPPED ENCKEY-----"<br>
+ #define ENCKEY_TRAILER        "-----END WRAPPED ENCKEY-----"<br>
+ #define MACKEY_HEADER         "-----BEGIN WRAPPED MACKEY-----"<br>
+ #define MACKEY_TRAILER        "-----END WRAPPED MACKEY-----"<br>
+ #define IV_HEADER             "-----BEGIN IV-----"<br>
+ #define IV_TRAILER            "-----END IV-----"<br>
+ #define MAC_HEADER            "-----BEGIN MAC-----"<br>
+ #define MAC_TRAILER           "-----END MAC-----"<br>
+ #define PAD_HEADER            "-----BEGIN PAD-----"<br>
+ #define PAD_TRAILER           "-----END PAD-----"<br>
+ #define LAB_HEADER            "-----BEGIN KEY LABEL-----"<br>
+ #define LAB_TRAILER           "-----END KEY LABEL-----"<br>
+ #define PUBKEY_HEADER         "-----BEGIN PUB KEY -----"<br>
+ #define PUBKEY_TRAILER        "-----END PUB KEY -----"<br>
+ #define NS_CERTREQ_HEADER     "-----BEGIN NEW CERTIFICATE REQUEST-----"<br>
+ #define NS_CERTREQ_TRAILER    "-----END NEW CERTIFICATE REQUEST-----"<br>
+ #define NS_CERT_ENC_HEADER    "-----BEGIN CERTIFICATE FOR ENCRYPTION-----"<br>
+ #define NS_CERT_ENC_TRAILER   "-----END CERTIFICATE FOR ENCRYPTION-----"<br>
+ #define NS_CERT_VFY_HEADER    "-----BEGIN CERTIFICATE FOR SIGNATURE VERIFICATION-----"<br>
+ #define NS_CERT_VFY_TRAILER   "-----END CERTIFICATE FOR SIGNATURE VERIFICATION-----"<br>
+ #define NS_SIG_HEADER         "-----BEGIN SIGNATURE-----"<br>
+ #define NS_SIG_TRAILER        "-----END SIGNATURE-----"<br>
+ #define NS_CERT_HEADER        "-----BEGIN CERTIFICATE-----"<br>
+ #define NS_CERT_TRAILER       "-----END CERTIFICATE-----"</p>
+
+<p>/* sample 6 commands */<br>
+ typedef enum {<br>
+     GENERATE_CSR,<br>
+     ADD_CERT_TO_DB,<br>
+     SAVE_CERT_TO_HEADER,<br>
+     ENCRYPT,<br>
+     DECRYPT,<br>
+     SIGN,<br>
+     VERIFY,<br>
+     UNKNOWN<br>
+ } CommandType;</p>
+
+<p>typedef enum {<br>
+    SYMKEY = 0,<br>
+    MACKEY = 1,<br>
+    IV     = 2,<br>
+    MAC    = 3,<br>
+    PAD    = 4,<br>
+    PUBKEY = 5,<br>
+    LAB    = 6,<br>
+    CERTENC= 7,<br>
+    CERTVFY= 8,<br>
+    SIG    = 9<br>
+ } HeaderType;</p>
+
+<p><br>
+ /*<br>
+  * Print usage message and exit<br>
+  */<br>
+ static void<br>
+ Usage(const char *progName)<br>
+ {<br>
+     fprintf(stderr, "\nUsage:  %s %s %s %s %s %s %s %s %s %s\n\n",<br>
+             progName,<br>
+             " -&lt;G|A|H|E|DS|V&gt; -d &lt;dbdirpath&gt; ",<br>
+             "[-p &lt;dbpwd&gt; | -f &lt;dbpwdfile&gt;] [-z &lt;noisefilename&gt;] [-a &lt;\"\"&gt;]",<br>
+             "-s &lt;subject&gt; -r &lt;csr&gt; | ",<br>
+             "-n &lt;nickName&gt; -t &lt;trust&gt; -c &lt;cert&gt; [ -r &lt;csr&gt; -u &lt;issuerNickname&gt; [-x &lt;\"\"&gt;] -m &lt;serialNumber&gt; ] | ",<br>
+             "-n &lt;nickName&gt; -b &lt;headerfilename&gt; | ",<br>
+             "-b &lt;headerfilename&gt; -i &lt;ipfilename&gt; -e &lt;encryptfilename&gt; | ",<br>
+             "-b &lt;headerfilename&gt; -i &lt;ipfilename&gt; | ",<br>
+             "-b &lt;headerfilename&gt; -i &lt;ipfilename&gt; | ",<br>
+             "-b &lt;headerfilename&gt; -e &lt;encryptfilename&gt; -o &lt;opfilename&gt; \n");<br>
+     fprintf(stderr, "commands:\n\n");<br>
+     fprintf(stderr, "%s %s\n --for generating cert request (for CA also)\n\n",<br>
+              progName, "-G -s &lt;subject&gt; -r &lt;csr&gt;");<br>
+     fprintf(stderr, "%s %s\n --to input and store cert (for CA also)\n\n",<br>
+              progName, "-A -n &lt;nickName&gt; -t &lt;trust&gt; -c &lt;cert&gt; [ -r &lt;csr&gt; -u &lt;issuerNickname&gt; [-x &lt;\"\"&gt;] -m &lt;serialNumber&gt; ]");<br>
+     fprintf(stderr, "%s %s\n --to put cert in header\n\n",<br>
+              progName, "-H -n &lt;nickname&gt; -b &lt;headerfilename&gt; [-v &lt;\"\"&gt;]");<br>
+     fprintf(stderr, "%s %s\n --to find public key from cert in header and encrypt\n\n",<br>
+              progName, "-E -b &lt;headerfilename&gt; -i &lt;ipfilename&gt; -e &lt;encryptfilename&gt; ");<br>
+     fprintf(stderr, "%s %s\n --decrypt using corresponding private key \n\n",<br>
+              progName, "-D -b &lt;headerfilename&gt; -e &lt;encryptfilename&gt; -o &lt;opfilename&gt;");<br>
+     fprintf(stderr, "%s %s\n --Sign using private key \n\n",<br>
+              progName, "-S -b &lt;headerfilename&gt; -i &lt;infilename&gt; ");<br>
+     fprintf(stderr, "%s %s\n --Verify using public key \n\n",<br>
+              progName, "-V -b &lt;headerfilename&gt; -i &lt;ipfilename&gt; ");<br>
+     fprintf(stderr, "options:\n\n");<br>
+     fprintf(stderr, "%-30s - db directory path\n\n",<br>
+              "-d &lt;dbdirpath&gt;");<br>
+     fprintf(stderr, "%-30s - db password [optional]\n\n",<br>
+              "-p &lt;dbpwd&gt;");<br>
+     fprintf(stderr, "%-30s - db password file [optional]\n\n",<br>
+              "-f &lt;dbpwdfile&gt;");<br>
+     fprintf(stderr, "%-30s - noise file name [optional]\n\n",<br>
+              "-z &lt;noisefilename&gt;");<br>
+     fprintf(stderr, "%-30s - input file name\n\n",<br>
+              "-i &lt;ipfilename&gt;");<br>
+     fprintf(stderr, "%-30s - header file name\n\n",<br>
+              "-b &lt;headerfilename&gt;");<br>
+     fprintf(stderr, "%-30s - encrypt file name\n\n",<br>
+              "-e &lt;encryptfilename&gt;");<br>
+     fprintf(stderr, "%-30s - output file name\n\n",<br>
+              "-o &lt;opfilename&gt;");<br>
+     fprintf(stderr, "%-30s - certificate serial number\n\n",<br>
+              "-m &lt;serialNumber&gt;");<br>
+     fprintf(stderr, "%-30s - certificate nickname\n\n",<br>
+              "-n &lt;nickname&gt;");<br>
+     fprintf(stderr, "%-30s - certificate trust\n\n",<br>
+              "-t &lt;trustargs&gt;");<br>
+     fprintf(stderr, "%-30s - certificate issuer nickname\n\n",<br>
+              "-u &lt;issuerNickname&gt;");<br>
+     fprintf(stderr, "%-30s - certificate signing request \n\n",<br>
+              "-r &lt;csr&gt;");<br>
+     fprintf(stderr, "%-30s - generate a self-signed cert [optional]\n\n",<br>
+              "-x");<br>
+     fprintf(stderr, "%-30s - to enable ascii [optional]\n\n",<br>
+              "-a");<br>
+     fprintf(stderr, "%-30s - to save certificate to header file as sig verification [optional]\n\n",<br>
+              "-v");<br>
+     exit(-1);<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Generate CSR command<br>
+  */<br>
+ static void<br>
+ ValidateGenerateCSRCommand(const char *progName,<br>
+                            const char *dbdir,<br>
+                            CERTName   *subject,<br>
+                            const char *subjectStr,<br>
+                            const char *certReqFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!subject) {<br>
+         PR_fprintf(PR_STDERR, "%s -G -d %s -s: improperly formatted name: \"%s\"\n",<br>
+                    progName, dbdir, subjectStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!certReqFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -G -d %s -s %s -r: certificate request file name not found\n",<br>
+                    progName, dbdir, subjectStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-G -d &lt;dbdirpath&gt; -s &lt;subject&gt; -r &lt;csr&gt; \n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Add Cert to DB command<br>
+  */<br>
+ static void<br>
+ ValidateAddCertToDBCommand(const char *progName,<br>
+                            const char *dbdir,<br>
+                            const char *nickNameStr,<br>
+                            const char *trustStr,<br>
+                            const char *certFileName,<br>
+                            const char *certReqFileName,<br>
+                            const char *issuerNameStr,<br>
+                            const char *serialNumberStr,<br>
+                            PRBool      selfsign)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!nickNameStr) {<br>
+         PR_fprintf(PR_STDERR, "%s -A -d %s -n : nick name is missing\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!trustStr) {<br>
+         PR_fprintf(PR_STDERR, "%s -A -d %s -n %s -t: trust flag is missing\n",<br>
+                    progName, dbdir, nickNameStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!certFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -A -d %s -n %s -t %s -c: certificate file name not found\n",<br>
+                    progName, dbdir, nickNameStr, trustStr, serialNumberStr, certReqFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (PR_Access(certFileName, PR_ACCESS_EXISTS) == PR_FAILURE) {<br>
+         if (!certReqFileName) {<br>
+             PR_fprintf(PR_STDERR, "%s -A -d %s -n %s -t %s -c %s -r: certificate file or certificate request file is not found\n",<br>
+                        progName, dbdir, nickNameStr, trustStr, certFileName);<br>
+             validationFailed = PR_TRUE;<br>
+         }<br>
+         if (!selfsign &amp;&amp; !issuerNameStr) {<br>
+             PR_fprintf(PR_STDERR, "%s -A -d %s -n %s -t %s -c %s -r %s -u : issuer name is missing\n",<br>
+                        progName, dbdir, nickNameStr, trustStr, certFileName, certReqFileName);<br>
+             validationFailed = PR_TRUE;<br>
+         }<br>
+         if (!serialNumberStr) {<br>
+             PR_fprintf(PR_STDERR, "%s -A -d %s -n %s -t %s -c %s -r %s -u %s -m : serial number is missing\n",<br>
+                        progName, dbdir, nickNameStr, trustStr, certFileName, certReqFileName, issuerNameStr);<br>
+             validationFailed = PR_TRUE;<br>
+         }<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 " -A -d &lt;dbdirpath&gt; -n &lt;nickName&gt; -t &lt;trust&gt; -c &lt;cert&gt; \n");<br>
+         fprintf(stderr, "     OR\n");<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-A -d &lt;dbdirpath&gt; -n &lt;nickName&gt; -t &lt;trust&gt; -c &lt;cert&gt; -r &lt;csr&gt; -u &lt;issuerNickname&gt; -m &lt;serialNumber&gt; [-x &lt;\"\"&gt;] \n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Save Cert To Header command<br>
+  */<br>
+ static void<br>
+ ValidateSaveCertToHeaderCommand(const char *progName,<br>
+                                 const char *dbdir,<br>
+                                 const char *nickNameStr,<br>
+                                 const char *headerFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!nickNameStr) {<br>
+         PR_fprintf(PR_STDERR, "%s -S -d %s -n : nick name is missing\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!headerFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -S -d %s -n %s -b : header file name is not found\n",<br>
+                    progName, dbdir, nickNameStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-S -d &lt;dbdirpath&gt; -n &lt;nickname&gt; -b &lt;headerfilename&gt; [-v &lt;\"\"&gt;]\n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Encrypt command<br>
+  */<br>
+ static void<br>
+ ValidateEncryptCommand(const char *progName,<br>
+                        const char *dbdir,<br>
+                        const char *nickNameStr,<br>
+                        const char *headerFileName,<br>
+                        const char *inFileName,<br>
+                        const char *encryptedFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!nickNameStr) {<br>
+         PR_fprintf(PR_STDERR, "%s -E -d %s -n : nick name is missing\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!headerFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -E -d %s -n %s -b : header file name is not found\n",<br>
+                    progName, dbdir, nickNameStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!inFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -E -d %s -n %s -b %s -i : input file name is not found\n",<br>
+                    progName, dbdir, nickNameStr, headerFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!encryptedFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -E -d %s -n %s -b %s -i %s -e : encrypt file name is not found\n",<br>
+                    progName, dbdir, nickNameStr, headerFileName, inFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-E -d &lt;dbdirpath&gt; -b &lt;headerfilename&gt; -i &lt;ipfilename&gt; -e &lt;encryptfilename&gt; -n &lt;nickname&gt; \n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Sign command<br>
+  */<br>
+ static void<br>
+ ValidateSignCommand(const char *progName,<br>
+                        const char *dbdir,<br>
+                        const char *nickNameStr,<br>
+                        const char *headerFileName,<br>
+                        const char *inFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!nickNameStr) {<br>
+         PR_fprintf(PR_STDERR, "%s -I -d %s -n : nick name is missing\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!headerFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -I -d %s -n %s -b : header file name is not found\n",<br>
+                    progName, dbdir, nickNameStr);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!inFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -I -d %s -n %s -b %s -i : input file name is not found\n",<br>
+                    progName, dbdir, nickNameStr, headerFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-I -d &lt;dbdirpath&gt; -b &lt;headerfilename&gt; -i &lt;ipfilename&gt; -n &lt;nickname&gt; \n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for verify command<br>
+  */<br>
+ static void<br>
+ ValidateVerifyCommand(const char *progName,<br>
+                        const char *dbdir,<br>
+                        const char *headerFileName,<br>
+                        const char *inFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!headerFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -V -d %s -b : header file name is not found\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!inFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -I -d %s -b %s -i : input file name is not found\n",<br>
+                    progName, dbdir, headerFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-I -d &lt;dbdirpath&gt; -b &lt;headerfilename&gt; -i &lt;ipfilename&gt; \n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Validate the options used for Decrypt command<br>
+  */<br>
+ static void<br>
+ ValidateDecryptCommand(const char *progName,<br>
+                        const char *dbdir,<br>
+                        const char *headerFileName,<br>
+                        const char *encryptedFileName,<br>
+                        const char *outFileName)<br>
+ {<br>
+     PRBool validationFailed = PR_FALSE;<br>
+     if (!headerFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -D -d %s -b : header file name is not found\n",<br>
+                    progName, dbdir);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!encryptedFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -D -d %s -b %s -e : encrypt file name is not found\n",<br>
+                    progName, dbdir, headerFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (!outFileName) {<br>
+         PR_fprintf(PR_STDERR, "%s -D -d %s -b %s -e %s -o : output file name is not found\n",<br>
+                    progName, dbdir, headerFileName, encryptedFileName);<br>
+         validationFailed = PR_TRUE;<br>
+     }<br>
+     if (validationFailed) {<br>
+         fprintf(stderr, "\nUsage:  %s %s \n\n", progName,<br>
+                 "-D -d &lt;dbdirpath&gt; -b &lt;headerfilename&gt; -e &lt;encryptfilename&gt; -o &lt;opfilename&gt;\n");<br>
+         exit(-1);<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * Sign the contents of input file using private key and<br>
+  * return result as SECItem<br>
+  */<br>
+ SECStatus<br>
+ SignData(const char *inFileName, SECKEYPrivateKey *pk, SECItem *res)<br>
+ {<br>
+     SECStatus     rv         = SECFailure;<br>
+     unsigned int  nb;<br>
+     unsigned char ibuf[4096];<br>
+     PRFileDesc   *inFile     = NULL;<br>
+     SGNContext   *sgn        = NULL;</p>
+
+<p>    /*  Open the input file for reading */<br>
+     inFile = PR_Open(inFileName, PR_RDONLY, 0);<br>
+     if (!inFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for reading.\n",<br>
+                    inFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Sign using private key */</p>
+
+<p>    sgn = SGN_NewContext(SEC_OID_PKCS1_MD5_WITH_RSA_ENCRYPTION, pk);<br>
+     if (!sgn) {<br>
+         PR_fprintf(PR_STDERR, "unable to create context for signing\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv = SGN_Begin(sgn);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "problem while SGN_Begin\n");<br>
+         goto cleanup;<br>
+     }<br>
+     while ((nb = PR_Read(inFile, ibuf, sizeof(ibuf))) &gt; 0) {<br>
+         rv = SGN_Update(sgn, ibuf, nb);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "problem while SGN_Update\n");<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+     rv = SGN_End(sgn, res);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "problem while SGN_End\n");<br>
+         goto cleanup;<br>
+     }<br>
+ cleanup:<br>
+     if (inFile) {<br>
+         PR_Close(inFile);<br>
+     }<br>
+     if (sgn) {<br>
+         SGN_DestroyContext(sgn, PR_TRUE);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Verify the signature using public key<br>
+  */<br>
+ SECStatus<br>
+ VerifyData(const char *inFileName, SECKEYPublicKey *pk,<br>
+            SECItem *sigItem, secuPWData *pwdata)<br>
+ {<br>
+     unsigned int  nb;<br>
+     unsigned char ibuf[4096];<br>
+     SECStatus     rv     = SECFailure;<br>
+     VFYContext   *vfy    = NULL;<br>
+     PRFileDesc   *inFile = NULL;</p>
+
+<p>    /*  Open the input file for reading */<br>
+     inFile = PR_Open(inFileName, PR_RDONLY, 0);<br>
+     if (!inFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for reading.\n",<br>
+                    inFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    vfy = VFY_CreateContext(pk,<br>
+                            sigItem,<br>
+                            SEC_OID_PKCS1_MD5_WITH_RSA_ENCRYPTION,<br>
+                            pwdata);<br>
+     if (!vfy) {<br>
+         PR_fprintf(PR_STDERR, "unable to create context for verifying signature\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     rv = VFY_Begin(vfy);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "problem while VFY_Begin\n");<br>
+         goto cleanup;<br>
+     }<br>
+     while ((nb = PR_Read(inFile, ibuf, sizeof(ibuf))) &gt; 0) {<br>
+         rv = VFY_Update(vfy, ibuf, nb);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "problem while VFY_Update\n");<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+     rv = VFY_End(vfy);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "problem while VFY_End\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>cleanup:<br>
+     if (inFile) {<br>
+         PR_Close(inFile);<br>
+     }<br>
+     if (vfy) {<br>
+         VFY_DestroyContext(vfy, PR_TRUE);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Write Cryptographic parameters to header file<br>
+  */<br>
+ SECStatus<br>
+ WriteToHeaderFile(const char *buf, unsigned int len, HeaderType type,<br>
+                   PRFileDesc *outFile)<br>
+ {<br>
+     SECStatus      rv;<br>
+     const char    *header;<br>
+     const char    *trailer;</p>
+
+<p>    switch (type) {<br>
+     case SYMKEY:<br>
+         header = ENCKEY_HEADER;<br>
+         trailer = ENCKEY_TRAILER;<br>
+         break;<br>
+     case MACKEY:<br>
+         header =  MACKEY_HEADER;<br>
+         trailer = MACKEY_TRAILER;<br>
+         break;<br>
+     case IV:<br>
+         header = IV_HEADER;<br>
+         trailer = IV_TRAILER;<br>
+         break;<br>
+     case MAC:<br>
+         header = MAC_HEADER;<br>
+         trailer = MAC_TRAILER;<br>
+         break;<br>
+     case PAD:<br>
+         header = PAD_HEADER;<br>
+         trailer = PAD_TRAILER;<br>
+         break;<br>
+     case PUBKEY:<br>
+         header = PUBKEY_HEADER;<br>
+         trailer = PUBKEY_TRAILER;<br>
+         break;<br>
+     case CERTENC:<br>
+         header  = NS_CERT_ENC_HEADER;<br>
+         trailer = NS_CERT_ENC_TRAILER;<br>
+         break;<br>
+     case CERTVFY:<br>
+         header  = NS_CERT_VFY_HEADER;<br>
+         trailer = NS_CERT_VFY_TRAILER;<br>
+         break;<br>
+     case SIG:<br>
+         header  = NS_SIG_HEADER;<br>
+         trailer = NS_SIG_TRAILER;<br>
+         break;<br>
+     case LAB:<br>
+         header = LAB_HEADER;<br>
+         trailer = LAB_TRAILER;<br>
+         PR_fprintf(outFile, "%s\n", header);<br>
+         PR_fprintf(outFile, "%s\n", buf);<br>
+         PR_fprintf(outFile, "%s\n\n", trailer);<br>
+         return SECSuccess;<br>
+         break;<br>
+     default:<br>
+         return SECFailure;<br>
+     }</p>
+
+<p>    PR_fprintf(outFile, "%s\n", header);<br>
+     PrintAsHex(outFile, buf, len);<br>
+     PR_fprintf(outFile, "%s\n\n", trailer);<br>
+     return SECSuccess;<br>
+ }</p>
+
+<p>/*<br>
+  * Read cryptographic parameters from the header file<br>
+  */<br>
+ SECStatus<br>
+ ReadFromHeaderFile(const char *fileName, HeaderType type,<br>
+                    SECItem *item, PRBool isHexData)<br>
+ {<br>
+     SECStatus      rv = SECSuccess;<br>
+     PRFileDesc*    file = NULL;<br>
+     SECItem        filedata;<br>
+     SECItem        outbuf;<br>
+     unsigned char *nonbody;<br>
+     unsigned char *body;<br>
+     char          *header;<br>
+     char          *trailer;</p>
+
+<p>    outbuf.type = siBuffer;<br>
+     file = PR_Open(fileName, PR_RDONLY, 0);<br>
+     if (!file) {<br>
+         PR_fprintf(PR_STDERR, "Failed to open %s\n", fileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     switch (type) {<br>
+     case PUBKEY:<br>
+         header = PUBKEY_HEADER;<br>
+         trailer = PUBKEY_TRAILER;<br>
+         break;<br>
+     case SYMKEY:<br>
+         header = ENCKEY_HEADER;<br>
+         trailer = ENCKEY_TRAILER;<br>
+         break;<br>
+     case MACKEY:<br>
+         header = MACKEY_HEADER;<br>
+         trailer = MACKEY_TRAILER;<br>
+         break;<br>
+     case IV:<br>
+         header = IV_HEADER;<br>
+         trailer = IV_TRAILER;<br>
+         break;<br>
+     case MAC:<br>
+         header = MAC_HEADER;<br>
+         trailer = MAC_TRAILER;<br>
+         break;<br>
+     case PAD:<br>
+         header = PAD_HEADER;<br>
+         trailer = PAD_TRAILER;<br>
+         break;<br>
+     case LAB:<br>
+         header = LAB_HEADER;<br>
+         trailer = LAB_TRAILER;<br>
+         break;<br>
+     case CERTENC:<br>
+         header  = NS_CERT_ENC_HEADER;<br>
+         trailer = NS_CERT_ENC_TRAILER;<br>
+         break;<br>
+     case CERTVFY:<br>
+         header  = NS_CERT_VFY_HEADER;<br>
+         trailer = NS_CERT_VFY_TRAILER;<br>
+         break;<br>
+     case SIG:<br>
+         header  = NS_SIG_HEADER;<br>
+         trailer = NS_SIG_TRAILER;<br>
+         break;<br>
+     default:<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv = FileToItem(&amp;filedata, file);<br>
+     nonbody = (char *)filedata.data;<br>
+     if (!nonbody) {<br>
+         PR_fprintf(PR_STDERR, "unable to read data from input file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* check for headers and trailers and remove them */<br>
+     if ((body = strstr(nonbody, header)) != NULL) {<br>
+         char *trail = NULL;<br>
+         nonbody = body;<br>
+         body = PORT_Strchr(body, '\n');<br>
+         if (!body)<br>
+             body = PORT_Strchr(nonbody, '\r'); /* maybe this is a MAC file */<br>
+         if (body)<br>
+             trail = strstr(++body, trailer);<br>
+         if (trail != NULL) {<br>
+             *trail = '\0';<br>
+         } else {<br>
+             PR_fprintf(PR_STDERR,  "input has header but no trailer\n");<br>
+             PORT_Free(filedata.data);<br>
+             rv = SECFailure;<br>
+             goto cleanup;<br>
+         }<br>
+     } else {<br>
+         /* headers didn't exist */<br>
+         char *trail = NULL;<br>
+         body = nonbody;<br>
+         if (body) {<br>
+             trail = strstr(++body, trailer);<br>
+             if (trail != NULL) {<br>
+                 PR_fprintf(PR_STDERR,  "input has no header but has trailer\n");<br>
+                 PORT_Free(filedata.data);<br>
+                 rv = SECFailure;<br>
+                 goto cleanup;<br>
+             }<br>
+         }<br>
+     }<br>
+     HexToBuf(body, item, isHexData);<br>
+ cleanup:<br>
+     if (file) {<br>
+         PR_Close(file);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Generate the private key   <br>
+  */<br>
+ SECKEYPrivateKey *<br>
+ GeneratePrivateKey(KeyType keytype, PK11SlotInfo *slot, int size,<br>
+                    int publicExponent, const char *noise,<br>
+                    SECKEYPublicKey **pubkeyp, const char *pqgFile,<br>
+                    secuPWData *pwdata)<br>
+ {<br>
+     CK_MECHANISM_TYPE  mechanism;<br>
+     SECOidTag          algtag;<br>
+     PK11RSAGenParams   rsaparams;<br>
+     void              *params;<br>
+     SECKEYPrivateKey  *privKey    = NULL;<br>
+     SECStatus          rv;<br>
+     unsigned char      randbuf[BLOCKSIZE + 1];</p>
+
+<p>    rv = GenerateRandom(randbuf, BLOCKSIZE);<br>
+     if (rv != SECSuccess) {<br>
+         fprintf(stderr, "Error while generating the random numbers : %s\n",<br>
+                 PORT_ErrorToString(rv));<br>
+         goto cleanup;<br>
+     }<br>
+     PK11_RandomUpdate(randbuf, BLOCKSIZE);<br>
+     switch (keytype) {<br>
+         case rsaKey:<br>
+             rsaparams.keySizeInBits = size;<br>
+             rsaparams.pe            = publicExponent;<br>
+             mechanism               = CKM_RSA_PKCS_KEY_PAIR_GEN;<br>
+             algtag                  = SEC_OID_PKCS1_MD5_WITH_RSA_ENCRYPTION;<br>
+             params                  = &amp;rsaparams;<br>
+             break;<br>
+         default:<br>
+             goto cleanup;<br>
+     }<br>
+     fprintf(stderr, "\n\n");<br>
+     fprintf(stderr, "Generating key.  This may take a few moments...\n\n");<br>
+     privKey = PK11_GenerateKeyPair(slot, mechanism, params, pubkeyp,<br>
+                                        PR_TRUE /*isPerm*/, PR_TRUE /*isSensitive*/,<br>
+                                        pwdata);<br>
+ cleanup:<br>
+     return privKey;<br>
+ }</p>
+
+<p>/*<br>
+  * Get the certificate request from CSR<br>
+  */<br>
+ static CERTCertificateRequest *<br>
+ GetCertRequest(char *inFileName, PRBool ascii)<br>
+ {<br>
+     CERTSignedData signedData;<br>
+     SECItem reqDER;<br>
+     CERTCertificateRequest *certReq = NULL;<br>
+     SECStatus rv                    = SECSuccess;<br>
+     PRArenaPool *arena              = NULL;</p>
+
+<p>    reqDER.data = NULL;<br>
+     arena = PORT_NewArena(DER_DEFAULT_CHUNKSIZE);<br>
+     if (arena == NULL) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv = ReadDERFromFile(&amp;reqDER, inFileName, ascii);<br>
+     if (rv) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     certReq = (CERTCertificateRequest*) PORT_ArenaZAlloc<br>
+                (arena, sizeof(CERTCertificateRequest));<br>
+     if (!certReq) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     certReq-&gt;arena = arena;</p>
+
+<p>    /* Since cert request is a signed data, must decode to get the inner data */<br>
+     PORT_Memset(&amp;signedData, 0, sizeof(signedData));<br>
+     rv = SEC_ASN1DecodeItem(arena, &amp;signedData,<br>
+                             SEC_ASN1_GET(CERT_SignedDataTemplate), &amp;reqDER);<br>
+     if (rv) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     rv = SEC_ASN1DecodeItem(arena, certReq,<br>
+                             SEC_ASN1_GET(CERT_CertificateRequestTemplate), &amp;signedData.data);<br>
+     if (rv) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     rv = CERT_VerifySignedDataWithPublicKeyInfo(&amp;signedData,<br>
+                 &amp;certReq-&gt;subjectPublicKeyInfo, NULL /* wincx */);<br>
+     if (reqDER.data) {<br>
+         SECITEM_FreeItem(&amp;reqDER, PR_FALSE);<br>
+     }</p>
+
+<p>cleanup:<br>
+     if (rv) {<br>
+         PR_fprintf(PR_STDERR, "bad certificate request\n");<br>
+         if (arena) {<br>
+             PORT_FreeArena(arena, PR_FALSE);<br>
+         }<br>
+         certReq = NULL;<br>
+     }<br>
+     return certReq;<br>
+ }</p>
+
+<p>/*<br>
+  * Sign Cert<br>
+  */<br>
+ static SECItem *<br>
+ SignCert(CERTCertDBHandle *handle, CERTCertificate *cert,<br>
+          PRBool selfsign, SECOidTag hashAlgTag,<br>
+          SECKEYPrivateKey *privKey, char *issuerNickName, void *pwarg)<br>
+ {<br>
+     SECItem der;<br>
+     SECStatus rv;<br>
+     SECOidTag algID;<br>
+     void *dummy;<br>
+     PRArenaPool *arena             = NULL;<br>
+     SECItem *result                = NULL;<br>
+     SECKEYPrivateKey *caPrivateKey = NULL;</p>
+
+<p>    if (!selfsign) {<br>
+         CERTCertificate *issuer = PK11_FindCertFromNickname(issuerNickName, pwarg);<br>
+         if ((CERTCertificate *)NULL == issuer) {<br>
+             PR_fprintf(PR_STDERR, "unable to find issuer with nickname %s\n",<br>
+                        issuerNickName);<br>
+             goto cleanup;<br>
+         }<br>
+         privKey = caPrivateKey = PK11_FindKeyByAnyCert(issuer, pwarg);<br>
+         CERT_DestroyCertificate(issuer);<br>
+         if (caPrivateKey == NULL) {<br>
+             PR_fprintf(PR_STDERR, "unable to retrieve key  %s\n",<br>
+                        issuerNickName);<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+     arena = cert-&gt;arena;<br>
+     algID = SEC_GetSignatureAlgorithmOidTag(privKey-&gt;keyType, hashAlgTag);<br>
+     if (algID == SEC_OID_UNKNOWN) {<br>
+         PR_fprintf(PR_STDERR, "Unknown key or hash type for issuer.\n");<br>
+         goto cleanup;<br>
+     }<br>
+     rv = SECOID_SetAlgorithmID(arena, &amp;cert-&gt;signature, algID, 0);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not set signature algorithm id.\n%s\n",<br>
+                    PORT_ErrorToString(rv));<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* we only deal with cert v3 here */<br>
+     *(cert-&gt;version.data) = 2;<br>
+     cert-&gt;version.len = 1;</p>
+
+<p>    der.len = 0;<br>
+     der.data = NULL;<br>
+     dummy = SEC_ASN1EncodeItem (arena, &amp;der, cert,<br>
+                                 SEC_ASN1_GET(CERT_CertificateTemplate));<br>
+     if (!dummy) {<br>
+         PR_fprintf(PR_STDERR, "Could not encode certificate.\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    result = (SECItem *) PORT_ArenaZAlloc (arena, sizeof (SECItem));<br>
+     if (result == NULL) {<br>
+         PR_fprintf(PR_STDERR, "Could not allocate item for certificate data.\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv = SEC_DerSignData(arena, result, der.data, der.len, privKey, algID);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not sign encoded certificate data : %s\n",<br>
+                    PORT_ErrorToString(rv));<br>
+         /* result allocated out of the arena, it will be freed<br>
+          * when the arena is freed */<br>
+         result = NULL;<br>
+         goto cleanup;<br>
+     }<br>
+     cert-&gt;derCert = *result;<br>
+ cleanup:<br>
+     if (caPrivateKey) {<br>
+         SECKEY_DestroyPrivateKey(caPrivateKey);<br>
+     }<br>
+     return result;<br>
+ }</p>
+
+<p>/*<br>
+  * MakeV1Cert<br>
+  */<br>
+ static CERTCertificate *<br>
+ MakeV1Cert(CERTCertDBHandle       *handle,<br>
+            CERTCertificateRequest *req,<br>
+            char *                  issuerNickName,<br>
+            PRBool                  selfsign,<br>
+            unsigned int            serialNumber,<br>
+            int                     warpmonths,<br>
+            int                     validityMonths)<br>
+ {<br>
+     PRExplodedTime  printableTime;<br>
+     PRTime          now;<br>
+     PRTime          after;<br>
+     CERTValidity    *validity   = NULL;<br>
+     CERTCertificate *issuerCert = NULL;<br>
+     CERTCertificate *cert       = NULL;</p>
+
+<p>    if ( !selfsign ) {<br>
+         issuerCert = CERT_FindCertByNicknameOrEmailAddr(handle, issuerNickName);<br>
+         if (!issuerCert) {<br>
+             PR_fprintf(PR_STDERR, "could not find certificate named %s\n",<br>
+                        issuerNickName);<br>
+             goto cleanup;<br>
+         }<br>
+     }</p>
+
+<p>    now = PR_Now();<br>
+     PR_ExplodeTime (now, PR_GMTParameters, &amp;printableTime);<br>
+     if ( warpmonths ) {<br>
+         printableTime.tm_month += warpmonths;<br>
+         now = PR_ImplodeTime (&amp;printableTime);<br>
+         PR_ExplodeTime (now, PR_GMTParameters, &amp;printableTime);<br>
+     }<br>
+     printableTime.tm_month += validityMonths;<br>
+     after = PR_ImplodeTime (&amp;printableTime);</p>
+
+<p>    /* note that the time is now in micro-second unit */<br>
+     validity = CERT_CreateValidity (now, after);<br>
+     if (validity) {<br>
+         cert = CERT_CreateCertificate(serialNumber,<br>
+                      (selfsign ? &amp;req-&gt;subject : &amp;issuerCert-&gt;subject),<br>
+                      validity, req);</p>
+
+<p>        CERT_DestroyValidity(validity);<br>
+     }<br>
+ cleanup:<br>
+     if ( issuerCert ) {<br>
+         CERT_DestroyCertificate (issuerCert);<br>
+     }<br>
+     return cert;<br>
+ }</p>
+
+<p>/*<br>
+  * Add a certificate to the nss database<br>
+  */<br>
+ SECStatus<br>
+ AddCert(PK11SlotInfo *slot, CERTCertDBHandle *handle,<br>
+         const char *name, char *trusts, char *inFileName,<br>
+         PRBool ascii, PRBool emailcert, void *pwdata)<br>
+ {<br>
+     SECItem         certDER;<br>
+     SECStatus       rv;<br>
+     CERTCertTrust   *trust = NULL;<br>
+     CERTCertificate *cert = NULL;</p>
+
+<p>    certDER.data = NULL;</p>
+
+<p>    /* Read in the entire file specified with the -i argument */<br>
+     rv = ReadDERFromFile(&amp;certDER, inFileName, ascii);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "unable to read input file %s : %s\n",<br>
+                    inFileName, PORT_ErrorToString(rv));<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Read in an ASCII cert and return a CERTCertificate */<br>
+     cert = CERT_DecodeCertFromPackage((char *)certDER.data, certDER.len);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate from file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Create a cert trust */<br>
+     trust = (CERTCertTrust *)PORT_ZAlloc(sizeof(CERTCertTrust));<br>
+     if (!trust) {<br>
+         PR_fprintf(PR_STDERR, "unable to allocate cert trust\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv = CERT_DecodeTrustString(trust, trusts);<br>
+     if (rv) {<br>
+         PR_fprintf(PR_STDERR, "unable to decode trust string\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    rv =  PK11_ImportCert(slot, cert, CK_INVALID_HANDLE, name, PR_FALSE);<br>
+     if (rv != SECSuccess) {<br>
+         /* sigh, PK11_Import Cert and CERT_ChangeCertTrust should have<br>
+          * been coded to take a password arg. */<br>
+         if (PORT_GetError() == SEC_ERROR_TOKEN_NOT_LOGGED_IN) {<br>
+             rv = PK11_Authenticate(slot, PR_TRUE, pwdata);<br>
+             if (rv != SECSuccess) {<br>
+                 PR_fprintf(PR_STDERR, "could not authenticate to token  %s : %s\n",<br>
+                            PK11_GetTokenName(slot), PORT_ErrorToString(rv));<br>
+                 rv = SECFailure;<br>
+                 goto cleanup;<br>
+             }<br>
+             rv = PK11_ImportCert(slot, cert, CK_INVALID_HANDLE,<br>
+                                  name, PR_FALSE);<br>
+         }<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR,<br>
+                        "could not add certificate to token or database : %s\n",<br>
+                        PORT_ErrorToString(rv));<br>
+             rv = SECFailure;<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+     rv = CERT_ChangeCertTrust(handle, cert, trust);<br>
+     if (rv != SECSuccess) {<br>
+         if (PORT_GetError() == SEC_ERROR_TOKEN_NOT_LOGGED_IN) {<br>
+             rv = PK11_Authenticate(slot, PR_TRUE, pwdata);<br>
+             if (rv != SECSuccess) {<br>
+                 PR_fprintf(PR_STDERR, "could not authenticate to token  %s : %s\n",<br>
+                            PK11_GetTokenName(slot), PORT_ErrorToString(rv));<br>
+                 rv = SECFailure;<br>
+                 goto cleanup;<br>
+             }<br>
+             rv = CERT_ChangeCertTrust(handle, cert, trust);<br>
+         }<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "could not change trust on certificate : %s\n",<br>
+                        PORT_ErrorToString(rv));<br>
+             rv = SECFailure;<br>
+             goto cleanup;<br>
+         }<br>
+     }</p>
+
+<p>    if (emailcert) {<br>
+         CERT_SaveSMimeProfile(cert, NULL, pwdata);<br>
+     }</p>
+
+<p>cleanup:<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate (cert);<br>
+     }<br>
+     if (trust) {<br>
+         PORT_Free(trust);<br>
+     }<br>
+     if (certDER.data) {<br>
+         PORT_Free(certDER.data);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Create a certificate<br>
+  */<br>
+ static SECStatus<br>
+ CreateCert(<br>
+         CERTCertDBHandle *handle,<br>
+         PK11SlotInfo *slot,<br>
+         char *  issuerNickName,<br>
+         char *inFileName,<br>
+         char *outFileName,<br>
+         SECKEYPrivateKey **selfsignprivkey,<br>
+         void    *pwarg,<br>
+         SECOidTag hashAlgTag,<br>
+         unsigned int serialNumber,<br>
+         int     warpmonths,<br>
+         int     validityMonths,<br>
+         const char *dnsNames,<br>
+         PRBool  ascii,<br>
+         PRBool  selfsign)<br>
+ {<br>
+     void                   *extHandle;<br>
+     SECItem                reqDER;<br>
+     CERTCertExtension      **CRexts;<br>
+     SECStatus              rv               = SECSuccess;<br>
+     CERTCertificate        *subjectCert     = NULL;<br>
+     CERTCertificateRequest *certReq         = NULL;<br>
+     PRFileDesc             *outFile         = NULL;<br>
+     SECItem                *certDER         = NULL;</p>
+
+<p>    reqDER.data = NULL;<br>
+     outFile = PR_Open(outFileName,<br>
+                       PR_RDWR | PR_CREATE_FILE | PR_TRUNCATE, 00660);</p>
+
+<p>    /* Create a cert request object from the input cert request der */<br>
+     certReq = GetCertRequest(inFileName, ascii);<br>
+     if (certReq == NULL) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     subjectCert = MakeV1Cert(handle, certReq, issuerNickName, selfsign,<br>
+                              serialNumber, warpmonths, validityMonths);<br>
+     if (subjectCert == NULL) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    extHandle = CERT_StartCertExtensions (subjectCert);<br>
+     if (extHandle == NULL) {<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    if (certReq-&gt;attributes != NULL &amp;&amp;<br>
+         certReq-&gt;attributes[0] != NULL &amp;&amp;<br>
+         certReq-&gt;attributes[0]-&gt;attrType.data != NULL &amp;&amp;<br>
+         certReq-&gt;attributes[0]-&gt;attrType.len   &gt; 0    &amp;&amp;<br>
+         SECOID_FindOIDTag(&amp;certReq-&gt;attributes[0]-&gt;attrType)<br>
+                 == SEC_OID_PKCS9_EXTENSION_REQUEST) {<br>
+         rv = CERT_GetCertificateRequestExtensions(certReq, &amp;CRexts);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "%s\n", PORT_ErrorToString(rv));<br>
+             goto cleanup;<br>
+         }<br>
+         rv = CERT_MergeExtensions(extHandle, CRexts);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "%s\n", PORT_ErrorToString(rv));<br>
+             goto cleanup;<br>
+         }<br>
+     }</p>
+
+<p>    CERT_FinishExtensions(extHandle);</p>
+
+<p>    /* self-signing a cert request, find the private key */<br>
+     if (*selfsignprivkey == NULL) {<br>
+         *selfsignprivkey = PK11_FindKeyByDERCert(slot, subjectCert, pwarg);<br>
+         if (!*selfsignprivkey) {<br>
+             PR_fprintf(PR_STDERR, "Failed to locate private key.\n");<br>
+             rv = SECFailure;<br>
+             goto cleanup;<br>
+         }<br>
+     }</p>
+
+<p>    certDER = SignCert(handle, subjectCert, selfsign, hashAlgTag,<br>
+                        *selfsignprivkey, issuerNickName,pwarg);<br>
+     if (certDER) {<br>
+         if (ascii) {<br>
+             PR_fprintf(outFile, "%s\n%s\n%s\n", NS_CERT_HEADER,<br>
+                        BTOA_DataToAscii(certDER-&gt;data, certDER-&gt;len),<br>
+                        NS_CERT_TRAILER);<br>
+         } else {<br>
+             PR_Write(outFile, certDER-&gt;data, certDER-&gt;len);<br>
+         }<br>
+     }<br>
+     if (rv != SECSuccess) {<br>
+         PRErrorCode  perr = PR_GetError();<br>
+         PR_fprintf(PR_STDERR, "unable to create cert %s\n",<br>
+                    perr);<br>
+     }<br>
+ cleanup:<br>
+     if (outFile) {<br>
+         PR_Close(outFile);<br>
+     }<br>
+     if (*selfsignprivkey) {<br>
+         SECKEY_DestroyPrivateKey(*selfsignprivkey);<br>
+     }<br>
+     if (certReq) {<br>
+         CERT_DestroyCertificateRequest(certReq);<br>
+     }<br>
+     if (subjectCert) {<br>
+         CERT_DestroyCertificate(subjectCert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  *  Generate the certificate request with subject<br>
+  */<br>
+ static SECStatus<br>
+ CertReq(SECKEYPrivateKey *privk, SECKEYPublicKey *pubk, KeyType keyType,<br>
+         SECOidTag hashAlgTag, CERTName *subject, PRBool ascii,<br>
+         const char *certReqFileName)<br>
+ {<br>
+     SECOidTag                 signAlgTag;<br>
+     SECItem                   result;<br>
+     PRInt32                   numBytes;<br>
+     SECStatus                 rv            = SECSuccess;<br>
+     PRArenaPool              *arena         = NULL;<br>
+     void                     *extHandle     = NULL;<br>
+     PRFileDesc               *outFile       = NULL;<br>
+     CERTSubjectPublicKeyInfo *spki          = NULL;<br>
+     CERTCertificateRequest   *cr            = NULL;<br>
+     SECItem                  *encoding      = NULL;</p>
+
+<p>    /* If the certificate request file already exists, delete it */<br>
+     if (PR_Access(certReqFileName, PR_ACCESS_EXISTS) == PR_SUCCESS) {<br>
+         PR_Delete(certReqFileName);<br>
+     }<br>
+     /*  Open the certificate request file to write */<br>
+     outFile = PR_Open(certReqFileName, PR_CREATE_FILE | PR_RDWR | PR_TRUNCATE, 00660);<br>
+     if (!outFile) {<br>
+         PR_fprintf(PR_STDERR,<br>
+                    "unable to open \"%s\" for writing (%ld, %ld).\n",<br>
+                    certReqFileName, PR_GetError(), PR_GetOSError());<br>
+         goto cleanup;<br>
+     }<br>
+     /* Create info about public key */<br>
+     spki = SECKEY_CreateSubjectPublicKeyInfo(pubk);<br>
+     if (!spki) {<br>
+         PR_fprintf(PR_STDERR, "unable to create subject public key\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Generate certificate request */<br>
+     cr = CERT_CreateCertificateRequest(subject, spki, NULL);<br>
+     if (!cr) {<br>
+         PR_fprintf(PR_STDERR, "unable to make certificate request\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+    <br>
+     arena = PORT_NewArena(DER_DEFAULT_CHUNKSIZE);<br>
+     if (!arena) {<br>
+         fprintf(stderr, "out of memory");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    extHandle = CERT_StartCertificateRequestAttributes(cr);<br>
+     if (extHandle == NULL) {<br>
+         PORT_FreeArena (arena, PR_FALSE);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    CERT_FinishExtensions(extHandle);<br>
+     CERT_FinishCertificateRequestAttributes(cr);<br>
+     <br>
+     /* Der encode the request */<br>
+     encoding = SEC_ASN1EncodeItem(arena, NULL, cr,<br>
+                                   SEC_ASN1_GET(CERT_CertificateRequestTemplate));<br>
+     if (encoding == NULL) {<br>
+         PR_fprintf(PR_STDERR, "der encoding of request failed\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Sign the request */<br>
+     signAlgTag = SEC_GetSignatureAlgorithmOidTag(keyType, hashAlgTag);<br>
+     if (signAlgTag == SEC_OID_UNKNOWN) {<br>
+         PR_fprintf(PR_STDERR, "unknown Key or Hash type\n");<br>
+         rv = SECFailure;<br>
+     goto cleanup;<br>
+     }<br>
+     rv = SEC_DerSignData(arena, &amp;result, encoding-&gt;data, encoding-&gt;len,<br>
+                          privk, signAlgTag);<br>
+     if (rv) {<br>
+         PR_fprintf(PR_STDERR, "signing of data failed\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Encode request in specified format */<br>
+     if (ascii) {<br>
+         char *obuf;<br>
+         char *name, *email, *org, *state, *country;<br>
+         SECItem *it;<br>
+         int total;</p>
+
+<p>        it = &amp;result;</p>
+
+<p>        obuf = BTOA_ConvertItemToAscii(it);<br>
+         total = PL_strlen(obuf);</p>
+
+<p>        name = CERT_GetCommonName(subject);<br>
+         if (!name) {<br>
+             name = strdup("(not specified)");<br>
+         }</p>
+
+<p>        email = CERT_GetCertEmailAddress(subject);<br>
+         if (!email)<br>
+             email = strdup("(not specified)");</p>
+
+<p>        org = CERT_GetOrgName(subject);<br>
+         if (!org)<br>
+             org = strdup("(not specified)");</p>
+
+<p>        state = CERT_GetStateName(subject);<br>
+         if (!state)<br>
+             state = strdup("(not specified)");</p>
+
+<p>        country = CERT_GetCountryName(subject);<br>
+         if (!country)<br>
+             country = strdup("(not specified)");</p>
+
+<p>        PR_fprintf(outFile,<br>
+                    "\nCertificate request generated by Netscape certutil\n");<br>
+         PR_fprintf(outFile, "Common Name: %s\n", name);<br>
+         PR_fprintf(outFile, "Email: %s\n", email);<br>
+         PR_fprintf(outFile, "Organization: %s\n", org);<br>
+         PR_fprintf(outFile, "State: %s\n", state);<br>
+         PR_fprintf(outFile, "Country: %s\n\n", country);</p>
+
+<p>        PR_fprintf(outFile, "%s\n", NS_CERTREQ_HEADER);<br>
+         numBytes = PR_Write(outFile, obuf, total);<br>
+         if (numBytes != total) {<br>
+             PR_fprintf(PR_STDERR, "write error\n");<br>
+             return SECFailure;<br>
+         }<br>
+         PR_fprintf(outFile, "\n%s\n", NS_CERTREQ_TRAILER);<br>
+     } else {<br>
+         numBytes = PR_Write(outFile, result.data, result.len);<br>
+         if (numBytes != (int)result.len) {<br>
+             PR_fprintf(PR_STDERR, "write error\n");<br>
+             rv = SECFailure;<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+ cleanup:<br>
+     if (outFile) {<br>
+         PR_Close(outFile);<br>
+     }<br>
+     if (privk) {<br>
+         SECKEY_DestroyPrivateKey(privk);<br>
+     }<br>
+     if (pubk) {<br>
+         SECKEY_DestroyPublicKey(pubk);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Create certificate request with subject<br>
+  */<br>
+ SECStatus CreateCertRequest(PK11SlotInfo *slot,<br>
+     secuPWData   *pwdata,<br>
+     CERTName     *subject,<br>
+     char   *certReqFileName,<br>
+     PRBool       ascii)<br>
+ {<br>
+     SECStatus rv;<br>
+     SECKEYPrivateKey    *privkey         = NULL;<br>
+     SECKEYPublicKey     *pubkey          = NULL;<br>
+     KeyType             keytype          = rsaKey;<br>
+     int                 keysize          = DEFAULT_KEY_BITS;<br>
+     int                 publicExponent   = 0x010001;<br>
+     SECOidTag           hashAlgTag       = SEC_OID_UNKNOWN;</p>
+
+<p>    privkey = GeneratePrivateKey(keytype, slot, keysize,<br>
+                                  publicExponent, NULL,<br>
+                                  &amp;pubkey, NULL, pwdata);<br>
+     if (privkey == NULL) {<br>
+         PR_fprintf(PR_STDERR, "unable to generate key(s)\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     privkey-&gt;wincx = pwdata;<br>
+     PORT_Assert(pubkey != NULL);<br>
+     rv = CertReq(privkey, pubkey, keytype, hashAlgTag, subject,<br>
+                  ascii, certReqFileName);<br>
+     <br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Failed to create Certificate Request\n");<br>
+     }<br>
+ cleanup:<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Creates the certificate using CSR and adds the certificate to DB<br>
+  */<br>
+ SECStatus AddCertificateToDB(PK11SlotInfo     *slot,<br>
+                              secuPWData       *pwdata,<br>
+                              char             *certReqFileName,<br>
+                              char             *certFileName,<br>
+                              char             *issuerNameStr,<br>
+                              CERTCertDBHandle *certHandle,<br>
+                              const char       *nickNameStr,<br>
+                              char             *trustStr,<br>
+                              unsigned int     serialNumber,<br>
+                              PRBool           selfsign,<br>
+                              PRBool           ascii)<br>
+ {<br>
+     SECStatus rv;<br>
+     SECKEYPrivateKey    *privkey         = NULL;<br>
+     SECKEYPublicKey     *pubkey          = NULL;<br>
+     SECOidTag           hashAlgTag       = SEC_OID_UNKNOWN;</p>
+
+<p>    if (PR_Access(certFileName, PR_ACCESS_EXISTS) == PR_FAILURE) {<br>
+         rv = CreateCert(certHandle, slot, issuerNameStr,<br>
+                         certReqFileName, certFileName, &amp;privkey, &amp;pwdata, hashAlgTag,<br>
+                         serialNumber, 0, 3, NULL, ascii, selfsign);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Failed to create Certificate\n");<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+     rv = AddCert(slot, certHandle, nickNameStr,<br>
+                  trustStr, certFileName, ascii, 0, &amp;pwdata);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Failed to add Certificate\n");<br>
+     }<br>
+ cleanup:<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Finds the certificate using nickname and saves it to the header file<br>
+  */<br>
+ SECStatus AddCertificateToHeader(PK11SlotInfo     *slot,<br>
+                                  secuPWData       *pwdata,<br>
+                                  const char       *headerFileName,<br>
+                                  CERTCertDBHandle *certHandle,<br>
+                                  const char       *nickNameStr,<br>
+                                  PRBool           sigVerify)<br>
+                 <br>
+ {<br>
+     SECStatus            rv              = SECSuccess;<br>
+     PRFileDesc          *headerFile      = NULL;<br>
+     CERTCertificate     *cert            = NULL;<br>
+     HeaderType           hType           = CERTENC;</p>
+
+<p>    /* If the intermediate header file already exists, delete it */<br>
+     if (PR_Access(headerFileName, PR_ACCESS_EXISTS) == PR_SUCCESS) {<br>
+         PR_Delete(headerFileName);<br>
+     }<br>
+     headerFile = PR_Open(headerFileName, PR_CREATE_FILE | PR_RDWR | PR_TRUNCATE, 00660);<br>
+     if (!headerFile) {<br>
+         PR_fprintf(PR_STDERR,<br>
+         "unable to open \"%s\" for writing (%ld, %ld).\n",<br>
+         headerFileName, PR_GetError(), PR_GetOSError());<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     cert = CERT_FindCertByNicknameOrEmailAddr(certHandle, nickNameStr);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate from file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     if (sigVerify) {<br>
+         hType = CERTVFY;<br>
+     }<br>
+     WriteToHeaderFile(cert-&gt;derCert.data, cert-&gt;derCert.len, hType, headerFile);<br>
+ cleanup:<br>
+     if (headerFile) {<br>
+         PR_Close(headerFile);<br>
+     }<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate(cert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Finds the public key from the certificate saved in the header file<br>
+  * and encrypts with it the contents of inFileName to encryptedFileName.<br>
+  */<br>
+ SECStatus FindKeyAndEncrypt(PK11SlotInfo *slot,<br>
+                             secuPWData *pwdata,<br>
+                             const char *headerFileName,<br>
+                             const char *encryptedFileName,<br>
+                             const char *inFileName)<br>
+ {<br>
+     SECStatus           rv;<br>
+     PRFileDesc          *headerFile      = NULL;<br>
+     PRFileDesc          *encFile         = NULL;<br>
+     PRFileDesc          *inFile          = NULL;<br>
+     CERTCertificate     *cert            = NULL;<br>
+     SECItem             data;<br>
+     unsigned char       ptext[MODBLOCKSIZE];<br>
+     unsigned char       encBuf[MODBLOCKSIZE];<br>
+     unsigned int        ptextLen;<br>
+     int                 index;<br>
+     unsigned int        nWritten;<br>
+     unsigned int        pad[1];<br>
+     SECItem             padItem;<br>
+     unsigned int        paddingLength    = 0;<br>
+     SECKEYPublicKey     *pubkey          = NULL;</p>
+
+<p>    /* If the intermediate encrypted file already exists, delete it*/<br>
+     if (PR_Access(encryptedFileName, PR_ACCESS_EXISTS) == PR_SUCCESS) {<br>
+         PR_Delete(encryptedFileName);<br>
+     }</p>
+
+<p>    /* Read certificate from header file */<br>
+     rv = ReadFromHeaderFile(headerFileName, CERTENC, &amp;data, PR_TRUE);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not read certificate from header file\n");<br>
+         goto cleanup;<br>
+     }<br>
+     /* Read in an ASCII cert and return a CERTCertificate */<br>
+     cert = CERT_DecodeCertFromPackage((char *)data.data, data.len);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate from file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     /* Extract the public key from certificate */<br>
+     pubkey = CERT_ExtractPublicKey(cert);<br>
+     if (!pubkey) {<br>
+         PR_fprintf(PR_STDERR, "could not get key from certificate\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /*  Open the encrypted file for writing */<br>
+     encFile = PR_Open(encryptedFileName,<br>
+                       PR_CREATE_FILE | PR_TRUNCATE | PR_RDWR, 00660);<br>
+     if (!encFile) {<br>
+         PR_fprintf(PR_STDERR,<br>
+                    "Unable to open \"%s\" for writing.\n",<br>
+                    encryptedFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /*  Open the input file for reading */<br>
+     inFile = PR_Open(inFileName, PR_RDONLY, 0);<br>
+     if (!inFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for reading.\n",<br>
+                    inFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /*  Open the header file to write padding */<br>
+     headerFile = PR_Open(headerFileName, PR_CREATE_FILE | PR_RDWR | PR_APPEND, 00660);<br>
+     if (!headerFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for writing.\n",<br>
+                    headerFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+         <br>
+     /* Read input file  */<br>
+     while ((ptextLen = PR_Read(inFile, ptext, sizeof(ptext))) &gt; 0) {<br>
+         if (ptextLen != MODBLOCKSIZE) {<br>
+             paddingLength = MODBLOCKSIZE - ptextLen;<br>
+             for ( index=0; index &lt; paddingLength; index++) {<br>
+                 ptext[ptextLen+index] = (unsigned char)paddingLength;<br>
+             }<br>
+             ptextLen = MODBLOCKSIZE;<br>
+          }<br>
+          rv = PK11_PubEncryptRaw(pubkey, encBuf, ptext, ptextLen, NULL);<br>
+          nWritten = PR_Write(encFile, encBuf, ptextLen);<br>
+     }</p>
+
+<p>    /* Write the padding to header file */<br>
+     pad[0] = paddingLength;<br>
+     padItem.type = siBuffer;<br>
+     padItem.data = (unsigned char *)pad;<br>
+     padItem.len  = sizeof(pad[0]);<br>
+     WriteToHeaderFile(padItem.data, padItem.len, PAD, headerFile);</p>
+
+<p>cleanup:<br>
+     if (headerFile) {<br>
+         PR_Close(headerFile);<br>
+     }<br>
+     if (encFile) {<br>
+         PR_Close(encFile);<br>
+     }<br>
+     if (inFile) {<br>
+         PR_Close(inFile);<br>
+     }<br>
+     if (pubkey) {<br>
+         SECKEY_DestroyPublicKey(pubkey);<br>
+     }<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate(cert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Finds the private key from db and signs the contents<br>
+  * of inFileName and writes to signatureFileName<br>
+  */<br>
+ SECStatus FindKeyAndSign(PK11SlotInfo *slot,<br>
+                          CERTCertDBHandle* certHandle,<br>
+                          secuPWData *pwdata,<br>
+                          const char *nickNameStr,<br>
+                          const char *headerFileName,<br>
+                          const char *inFileName)<br>
+ {<br>
+     SECStatus           rv;<br>
+     PRFileDesc          *headerFile      = NULL;<br>
+     PRFileDesc          *inFile          = NULL;<br>
+     CERTCertificate     *cert            = NULL;<br>
+     unsigned int        signatureLen     = 0;<br>
+     SECKEYPrivateKey    *privkey         = NULL;<br>
+     SECItem             sigItem;<br>
+     SECOidTag           hashOIDTag;<br>
+     <br>
+     /*  Open the header file to write padding */<br>
+     headerFile = PR_Open(headerFileName, PR_CREATE_FILE | PR_RDWR | PR_APPEND, 00660);<br>
+     if (!headerFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for writing.\n",<br>
+                    headerFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Get the certificate by nick name  and write to header file */<br>
+     cert = CERT_FindCertByNicknameOrEmailAddr(certHandle, nickNameStr);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate by name - %s\n", nickNameStr);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     WriteToHeaderFile(cert-&gt;derCert.data, cert-&gt;derCert.len, CERTVFY, headerFile);</p>
+
+<p><br>
+     /* Find private key from certificate  */<br>
+     privkey = PK11_FindKeyByAnyCert(cert, NULL);<br>
+     if (privkey == NULL) {<br>
+         fprintf(stderr, "Couldn't find private key for cert\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+         <br>
+     /* Sign the contents of the input file */<br>
+     rv = SignData(inFileName, privkey, &amp;sigItem);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "could not sign the contents from file - %s \n", inFileName);<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* write signature to header file */<br>
+     WriteToHeaderFile(sigItem.data, sigItem.len, SIG, headerFile);</p>
+
+<p>cleanup:<br>
+     if (headerFile) {<br>
+         PR_Close(headerFile);<br>
+     }<br>
+     if (privkey) {<br>
+         SECKEY_DestroyPrivateKey(privkey);<br>
+     }<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate(cert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Finds the public key from certificate and verifies signature<br>
+  */<br>
+ SECStatus FindKeyAndVerify(PK11SlotInfo *slot,<br>
+                          CERTCertDBHandle* certHandle,<br>
+                          secuPWData *pwdata,<br>
+                          const char *headerFileName,<br>
+                          const char *inFileName)<br>
+ {<br>
+     SECStatus           rv               = SECFailure;<br>
+     PRFileDesc          *headerFile      = NULL;<br>
+     PRFileDesc          *inFile          = NULL;<br>
+     CERTCertificate     *cert            = NULL;<br>
+     SECKEYPublicKey     *pubkey          = NULL;<br>
+     SECItem             sigItem;<br>
+     SECItem             certData;<br>
+     </p>
+
+<p>    /* Open the input file  */<br>
+     inFile = PR_Open(inFileName, PR_RDONLY, 0);<br>
+     if (!inFile) {<br>
+         PR_fprintf(PR_STDERR,<br>
+                    "Unable to open \"%s\" for reading.\n",<br>
+                    inFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Open the header file to read the certificate and signature */<br>
+     headerFile = PR_Open(headerFileName, PR_RDONLY, 0);<br>
+     if (!headerFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for writing.\n",<br>
+                    headerFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Read certificate from header file */<br>
+     rv = ReadFromHeaderFile(headerFileName, CERTVFY, &amp;certData, PR_TRUE);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not read certificate from header file\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Read in an ASCII cert and return a CERTCertificate */<br>
+     cert = CERT_DecodeCertFromPackage((char *)certData.data, certData.len);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate from file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Extract the public key from certificate */<br>
+     pubkey = CERT_ExtractPublicKey(cert);<br>
+     if (!pubkey) {<br>
+         PR_fprintf(PR_STDERR, "Could not get key from certificate\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Read signature from header file */<br>
+     rv = ReadFromHeaderFile(headerFileName, SIG, &amp;sigItem, PR_TRUE);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not read signature from header file\n");<br>
+         goto cleanup;<br>
+     }<br>
+         <br>
+     /* Verify with the public key */<br>
+     rv = VerifyData(inFileName, pubkey, &amp;sigItem, pwdata);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Couldn't verify the signature for file - %s\n", inFileName);<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>cleanup:<br>
+     if (headerFile) {<br>
+         PR_Close(headerFile);<br>
+     }<br>
+     if (pubkey) {<br>
+         SECKEY_DestroyPublicKey(pubkey);<br>
+     }<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate(cert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/*<br>
+  * Finds the private key corresponding to the certificate saved in the header file<br>
+  * and decrypts with it the contents of encryptedFileName to outFileName.<br>
+  */<br>
+ SECStatus FindKeyAndDecrypt(PK11SlotInfo *slot,<br>
+                             secuPWData *pwdata,<br>
+                             const char *headerFileName,<br>
+                             const char *encryptedFileName,<br>
+                             const char *outFileName)<br>
+ {<br>
+     SECStatus           rv;<br>
+     PRFileDesc          *encFile        = NULL;<br>
+     PRFileDesc          *outFile        = NULL;<br>
+     SECKEYPrivateKey    *pvtkey         = NULL;<br>
+     unsigned int        inFileLength    = 0;<br>
+     unsigned int        paddingLength   = 0;<br>
+     unsigned int        count           = 0;<br>
+     unsigned int        temp            = 0;<br>
+     unsigned char       ctext[MODBLOCKSIZE];<br>
+     unsigned char       decBuf[MODBLOCKSIZE];<br>
+     unsigned int        ctextLen;<br>
+     unsigned int        decBufLen;<br>
+     SECItem             padItem;<br>
+     SECItem             data;<br>
+     SECItem             signature;<br>
+     CERTCertificate     *cert            = NULL;</p>
+
+<p>    /* Read certificate from header file */<br>
+     rv = ReadFromHeaderFile(headerFileName, CERTENC, &amp;data, PR_TRUE);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "Could not read certificate from header file\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Read padding from header file */<br>
+     rv = ReadFromHeaderFile(headerFileName, PAD, &amp;padItem, PR_TRUE);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR,<br>
+                 "Could not retrieve PAD detail from header file\n");<br>
+         goto cleanup;<br>
+     }<br>
+     paddingLength = (unsigned int)padItem.data[0];<br>
+     inFileLength = FileSize(encryptedFileName);</p>
+
+<p>    /* Read in an ASCII cert and return a CERTCertificate */<br>
+     cert = CERT_DecodeCertFromPackage((char *)data.data, data.len);<br>
+     if (!cert) {<br>
+         PR_fprintf(PR_STDERR, "could not obtain certificate from file\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Find private key from certificate  */<br>
+     pvtkey = PK11_FindKeyByAnyCert(cert, NULL);<br>
+     if (pvtkey == NULL) {<br>
+         fprintf(stderr, "Couldn't find private key for cert\n");<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    /* Open the out file to write */<br>
+     outFile = PR_Open(outFileName,<br>
+                       PR_CREATE_FILE | PR_TRUNCATE | PR_RDWR, 00660);<br>
+     if (!outFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for writing.\n",<br>
+                    outFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     /* Open the encrypted file for reading */<br>
+     encFile = PR_Open(encryptedFileName, PR_RDONLY, 0);<br>
+     if (!encFile) {<br>
+         PR_fprintf(PR_STDERR, "Unable to open \"%s\" for reading.\n",<br>
+                    encryptedFileName);<br>
+         rv = SECFailure;<br>
+         goto cleanup;<br>
+     }<br>
+     /* Read the encrypt file, decrypt and write to out file */<br>
+     while ((ctextLen = PR_Read(encFile, ctext, sizeof(ctext))) &gt; 0) {<br>
+         count += ctextLen;<br>
+         rv = PK11_PubDecryptRaw(pvtkey, decBuf, &amp;decBufLen, sizeof(decBuf), ctext, ctextLen);<br>
+         if (rv != SECSuccess) {<br>
+             fprintf(stderr, "Couldn't decrypt\n");<br>
+             goto cleanup;<br>
+         }<br>
+         if (decBufLen == 0) {<br>
+             break;<br>
+         }<br>
+         if (count == inFileLength) {<br>
+             decBufLen = decBufLen - paddingLength;<br>
+         }<br>
+         /* write the plain text to out file */<br>
+         temp = PR_Write(outFile, decBuf, decBufLen);<br>
+         if (temp != decBufLen) {<br>
+             PR_fprintf(PR_STDERR, "write error\n");<br>
+             rv = SECFailure;<br>
+             break;<br>
+         }<br>
+      }<br>
+ cleanup:<br>
+     if (encFile) {<br>
+         PR_Close(encFile);<br>
+     }<br>
+     if (outFile) {<br>
+         PR_Close(outFile);<br>
+     }<br>
+     if (pvtkey) {<br>
+         SECKEY_DestroyPrivateKey(pvtkey);<br>
+     }<br>
+     if (cert) {<br>
+         CERT_DestroyCertificate(cert);<br>
+     }<br>
+     return rv;<br>
+ }</p>
+
+<p>/* Map option letter to command */<br>
+ static CommandType option2Command(char c)<br>
+ {<br>
+     switch (c) {<br>
+     case 'G': return GENERATE_CSR;<br>
+     case 'A': return ADD_CERT_TO_DB;<br>
+     case 'H': return SAVE_CERT_TO_HEADER;<br>
+     case 'E': return ENCRYPT;<br>
+     case 'D': return DECRYPT;<br>
+     case 'S': return SIGN;<br>
+     case 'V': return VERIFY;<br>
+     default:  return UNKNOWN;<br>
+     }<br>
+ }</p>
+
+<p>/*<br>
+  * This example illustrates basic encryption/decryption and MACing<br>
+  * Generates the RSA key pair as token object and outputs public key as cert request.<br>
+  * Reads cert request file and stores certificate in DB.<br>
+  * Input, store and trust CA certificate.<br>
+  * Write certificate to intermediate header file<br>
+  * Extract public key from certificate, encrypts the input file and write to external file.<br>
+  * Finds the matching private key, decrypts and write to external file<br>
+  *<br>
+  * How this sample is different from sample 5 ?<br>
+  *<br>
+  * 1. As in sample 5, output is a PKCS#10 CSR<br>
+  * 2. Input and store a cert in cert DB and also used to input, store and trust CA cert.<br>
+  * 3. Like sample 5, but puts cert in header<br>
+  * 4. Like sample 5, but finds key matching cert in header<br>
+ */<br>
+ int<br>
+ main(int argc, char **argv)<br>
+ {<br>
+     SECStatus           rv;<br>
+     PLOptState          *optstate;<br>
+     PLOptStatus         status;<br>
+     PRBool              initialized             = PR_FALSE;</p>
+
+<p>    CommandType         cmd                     = UNKNOWN;<br>
+     const char          *dbdir                  = NULL;<br>
+     secuPWData          pwdata                  = { PW_NONE, 0 };</p>
+
+<p>    char                *subjectStr             = NULL;<br>
+     CERTName            *subject                = 0;</p>
+
+<p>    unsigned int        serialNumber            = 0;<br>
+     char                *serialNumberStr        = NULL;<br>
+     char                *trustStr               = NULL;<br>
+     CERTCertDBHandle    *certHandle;<br>
+     const char          *nickNameStr            = NULL;<br>
+     char                *issuerNameStr          = NULL;<br>
+     PRBool              selfsign                = PR_FALSE;<br>
+     PRBool              ascii                   = PR_FALSE;<br>
+     PRBool              sigVerify               = PR_FALSE;<br>
+     <br>
+     const char          *headerFileName         = NULL;<br>
+     const char          *encryptedFileName      = NULL;<br>
+     const char          *inFileName             = NULL;<br>
+     const char          *outFileName            = NULL;<br>
+     char                *certReqFileName        = NULL;<br>
+     char                *certFileName           = NULL;<br>
+     const char          *noiseFileName          = NULL;<br>
+     PK11SlotInfo        *slot                   = NULL;</p>
+
+<p>    char * progName = strrchr(argv[0], '/');<br>
+     progName = progName ? progName + 1 : argv[0];</p>
+
+<p>    /* Parse command line arguments */<br>
+     optstate = PL_CreateOptState(argc, argv, "GAHEDSVad:i:o:f:p:z:s:r:n:x:m:t:c:u:e:b:v:");<br>
+     while ((status = PL_GetNextOpt(optstate)) == PL_OPT_OK) {<br>
+         switch (optstate-&gt;option) {<br>
+         case 'a':<br>
+             ascii = PR_TRUE;<br>
+             break;<br>
+         case 'G':   /* Generate a CSR */<br>
+         case 'A':   /* Add cert to database */<br>
+         case 'H':   /* Save cert to the header file */<br>
+         case 'E':   /* Encrypt with public key from cert in header file */<br>
+         case 'S':   /* Sign with private key */<br>
+         case 'D':   /* Decrypt with the matching private key */<br>
+         case 'V':   /* Verify with the matching public key */<br>
+             cmd = option2Command(optstate-&gt;option);<br>
+             break;<br>
+         case 'd':<br>
+             dbdir = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'f':<br>
+             pwdata.source = PW_FROMFILE;<br>
+             pwdata.data = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'p':<br>
+             pwdata.source = PW_PLAINTEXT;<br>
+             pwdata.data = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'i':<br>
+             inFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'b':<br>
+             headerFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'e':<br>
+             encryptedFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'o':<br>
+             outFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'z':<br>
+             noiseFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 's':<br>
+             subjectStr  = strdup(optstate-&gt;value);<br>
+             subject     = CERT_AsciiToName(subjectStr);<br>
+             break;<br>
+         case 'r':<br>
+             certReqFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'c':<br>
+             certFileName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'u':<br>
+             issuerNameStr = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'n':<br>
+             nickNameStr = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'x':<br>
+             selfsign = PR_TRUE;<br>
+             break;<br>
+         case 'm':<br>
+             serialNumberStr = strdup(optstate-&gt;value);<br>
+             serialNumber    = atoi(serialNumberStr);<br>
+             break;<br>
+         case 't':<br>
+             trustStr = strdup(optstate-&gt;value);<br>
+             break;<br>
+         case 'v':<br>
+             sigVerify = PR_TRUE;<br>
+             break;<br>
+         default:<br>
+             Usage(progName);<br>
+             break;<br>
+         }<br>
+     }<br>
+     PL_DestroyOptState(optstate);</p>
+
+<p>    if (cmd == UNKNOWN || !dbdir)<br>
+         Usage(progName);</p>
+
+<p>    /* Open DB for read/write and authenticate to it */<br>
+     PR_Init(PR_USER_THREAD, PR_PRIORITY_NORMAL, 0);<br>
+     initialized = PR_TRUE;<br>
+     rv = NSS_InitReadWrite(dbdir);<br>
+     if (rv != SECSuccess) {<br>
+         PR_fprintf(PR_STDERR, "NSS_InitReadWrite Failed\n");<br>
+         goto cleanup;<br>
+     }</p>
+
+<p>    PK11_SetPasswordFunc(GetModulePassword);<br>
+     slot = PK11_GetInternalKeySlot();<br>
+     if (PK11_NeedLogin(slot)) {<br>
+         rv = PK11_Authenticate(slot, PR_TRUE, &amp;pwdata);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Could not authenticate to token %s.\n",<br>
+                        PK11_GetTokenName(slot));<br>
+             goto cleanup;<br>
+         }<br>
+     }</p>
+
+<p>    switch (cmd) {<br>
+     case GENERATE_CSR:<br>
+         ValidateGenerateCSRCommand(progName, dbdir, subject, subjectStr,<br>
+                                    certReqFileName);<br>
+         /* Generate a CSR */<br>
+         rv = CreateCertRequest(slot, &amp;pwdata, subject,<br>
+                                certReqFileName, ascii);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Create Certificate Request: Failed\n");<br>
+             goto cleanup;<br>
+         }<br>
+         break;<br>
+     case ADD_CERT_TO_DB:<br>
+         ValidateAddCertToDBCommand(progName, dbdir, nickNameStr, trustStr,<br>
+                                    certFileName, certReqFileName,<br>
+                                    issuerNameStr, serialNumberStr, selfsign);<br>
+         /* Add cert to database */<br>
+         rv = AddCertificateToDB(slot, &amp;pwdata, certReqFileName, certFileName,<br>
+                                 issuerNameStr, certHandle, nickNameStr,<br>
+                                 trustStr, serialNumber, selfsign, ascii);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Add Certificate to DB: Failed\n");<br>
+              goto cleanup;<br>
+         }<br>
+         break;<br>
+     case SAVE_CERT_TO_HEADER:<br>
+         ValidateSaveCertToHeaderCommand(progName, dbdir, nickNameStr, headerFileName);<br>
+         /* Save cert to the header file */<br>
+         rv = AddCertificateToHeader(slot, &amp;pwdata, headerFileName, certHandle, nickNameStr, sigVerify);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Saving Certificate to header: Failed\n");<br>
+             goto cleanup;<br>
+         }<br>
+         break;<br>
+     case ENCRYPT:<br>
+         ValidateEncryptCommand(progName, dbdir, nickNameStr, headerFileName, inFileName, encryptedFileName);<br>
+         /* Encrypt with public key from cert in header file */<br>
+         rv = FindKeyAndEncrypt(slot, &amp;pwdata, headerFileName, encryptedFileName, inFileName);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Find public key and Encrypt : Failed\n");<br>
+             goto cleanup;<br>
+         }<br>
+         break;<br>
+     case SIGN:<br>
+         ValidateSignCommand(progName, dbdir, nickNameStr, headerFileName, inFileName);<br>
+         /* Sign with private key */<br>
+         rv = FindKeyAndSign(slot, certHandle, &amp;pwdata, nickNameStr, headerFileName, inFileName);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Find private key and sign : Failed\n");<br>
+             goto cleanup;<br>
+         }<br>
+         break;<br>
+     case DECRYPT:<br>
+         ValidateDecryptCommand(progName, dbdir, headerFileName, encryptedFileName, outFileName);<br>
+         /* Decrypt with the matching private key */<br>
+         rv = FindKeyAndDecrypt(slot, &amp;pwdata, headerFileName, encryptedFileName, outFileName);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Find private key and Decrypt : Failed\n");<br>
+         }<br>
+         break;<br>
+     case VERIFY:<br>
+         ValidateVerifyCommand(progName, dbdir, headerFileName, inFileName);<br>
+         /* Verify with the matching public key */<br>
+         rv = FindKeyAndVerify(slot, certHandle, &amp;pwdata, headerFileName, inFileName);<br>
+         if (rv != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Find public key and verify signature : Failed\n");<br>
+             goto cleanup;<br>
+         }<br>
+     }<br>
+ cleanup:<br>
+     if (slot) {<br>
+         PK11_FreeSlot(slot);<br>
+     }<br>
+     if (initialized) {<br>
+         SECStatus rvShutdown = NSS_Shutdown();<br>
+         if (rvShutdown != SECSuccess) {<br>
+             PR_fprintf(PR_STDERR, "Failed : NSS_Shutdown() - %s",<br>
+                        PORT_ErrorToString(rvShutdown));<br>
+             rv = SECFailure;<br>
+         }<br>
+         PR_Cleanup();<br>
+     }<br>
+     return rv;<br>
+ }<br>
+ &lt;/pre&gt;</p>

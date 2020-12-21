@@ -1,0 +1,33 @@
+---
+title: FC_FindObjects
+slug: Mozilla/Projects/NSS/Reference/FC_FindObjects
+tags:
+  - NSS
+---
+<p>
+</p>
+<h3 id="Name" name="Name"> Name </h3>
+<p>FC_FindObjects - Search for one or more objects
+</p>
+<h3 id="Syntax" name="Syntax"> Syntax </h3>
+<pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_FindObjects(
+  <a href="en/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="en/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE_PTR</a> phObject,
+  <a href="en/CK_ULONG">CK_ULONG</a> usMaxObjectCount,
+  <a href="en/CK_ULONG">CK_ULONG_PTR</a> pusObjectCount
+);
+</pre>
+<h3 id="Parameters" name="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pTemplate</code></dt><dd> {{ mediawiki.external('out') }} pointer to location to receive the object handles.
+</dd><dt><code>usMaxObjectCount</code></dt><dd> {{ mediawiki.external('in') }} maximum number of handles to retrieve.
+</dd><dt><code>pusObjectCount</code></dt><dd> {{ mediawiki.external('out') }} pointer to location to receive the number of returned handles.
+</dd></dl>
+<h3 id="Description" name="Description"> Description </h3>
+<p><code>FC_FindObjects</code> returns the next set of object handles matching the criteria set up by the previous call to <code>FC_FindObjectsInit</code> and sets the object count variable to their number or to zero if there are none.
+</p>
+<h3 id="Return_value" name="Return_value"> Return value </h3>
+<h3 id="Examples" name="Examples"> Examples </h3>
+<h3 id="See_also" name="See_also"> See also </h3>
+<ul><li> <a href="en/FC_FindObjectsInit">FC_FindObjectsInit</a>, <a href="en/NSC_FindObjects">NSC_FindObjects</a>
+</li></ul>

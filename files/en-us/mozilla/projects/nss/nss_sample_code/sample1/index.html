@@ -1,0 +1,229 @@
+---
+title: sample1
+slug: Mozilla/Projects/NSS/NSS_Sample_Code/sample1
+tags:
+  - Example
+  - NSS
+---
+<p>1. A program to compute the hash of a file and save it to another file.<br>
+ <br>
+ /* NSPR Headers */<br>
+ #include &lt;prprf.h&gt;<br>
+ #include &lt;prtypes.h&gt;<br>
+ #include &lt;plgetopt.h&gt;<br>
+ #include &lt;prio.h&gt;<br>
+ #include &lt;prprf.h&gt;<br>
+ <br>
+ /* NSS headers */<br>
+ #include &lt;secoid.h&gt;<br>
+ #include &lt;secmodt.h&gt;<br>
+ #include &lt;sechash.h&gt;<br>
+ <br>
+ typedef struct {<br>
+     const char *hashName;<br>
+     SECOidTag oid;<br>
+ } NameTagPair;<br>
+ <br>
+ /* The hash algorithms supported */<br>
+ static const NameTagPair HASH_NAMES[] = {<br>
+     { "MD2", SEC_OID_MD2 },<br>
+     { "MD5", SEC_OID_MD5 },<br>
+     { "SHA1", SEC_OID_SHA1 },<br>
+     { "SHA256", SEC_OID_SHA256 },<br>
+     { "SHA384", SEC_OID_SHA384 },<br>
+     { "SHA512", SEC_OID_SHA512 }<br>
+ };<br>
+ <br>
+ /* Maps a hash name to a SECOidTag.<br>
+  * Returns NULL if the name is not a supported algorithm<br>
+  */<br>
+ static SECOidTag HashNameToOIDTag(const char *hashName)<br>
+ {<br>
+     int i, nhashes = sizeof(HASH_NAMES);<br>
+     SECOidTag hashtag = SEC_OID_UNKNOWN;<br>
+ <br>
+     for (i = 0; i &lt; nhashes; i++) {<br>
+         if (PORT_Strcasecmp(hashName, HASH_NAMES[i].hashName) == 0) {<br>
+             hashtag = HASH_NAMES[i].oid;<br>
+             break;<br>
+         }<br>
+     }<br>
+     return hashtag;<br>
+ }<br>
+ <br>
+ /*  Newline  */<br>
+ static void Newline(PRFileDesc* out)<br>
+ {<br>
+     PR_fprintf(out, "\n");<br>
+ }<br>
+ <br>
+ /*  PrintAsHex  */<br>
+ void PrintAsHex(PRFileDesc* out, unsigned char *data, unsigned int len)<br>
+ {<br>
+     unsigned i;<br>
+     int column;<br>
+     unsigned int limit = 15;<br>
+     unsigned int level = 1;<br>
+ <br>
+     column = level;<br>
+     if (!len) {<br>
+         PR_fprintf(out, "(empty)\n");<br>
+         return;<br>
+     }<br>
+ <br>
+     for (i = 0; i &lt; len; i++) {<br>
+         if (i != len - 1) {<br>
+             PR_fprintf(out, "%02x:", data[i]);<br>
+             column += 3;<br>
+         } else {<br>
+             PR_fprintf(out, "%02x", data[i]);<br>
+             column += 2;<br>
+             break;<br>
+         }<br>
+         if (column &gt; 76 || (i % 16 == limit)) {<br>
+             Newline(out);<br>
+             column = level;<br>
+             limit = i % 16;<br>
+         }<br>
+     }<br>
+     if (column != level) {<br>
+         Newline(out);<br>
+     }<br>
+ }</p>
+
+<p><br>
+ /*  Prints a usage message and exits  */<br>
+ static void Usage(const char *progName)<br>
+ {<br>
+     int htype;<br>
+     int HASH_AlgTOTAL = sizeof(HASH_NAMES) / sizeof(HASH_NAMES[0]);<br>
+ <br>
+     fprintf(stderr, "Usage:  %s -t type [ &lt; input ] [ &gt; output ]\n", progName);<br>
+     fprintf(stderr, "%-20s Specify the digest method (must be one of\n",<br>
+             "-t type");<br>
+     fprintf(stderr, "%-20s ", "");<br>
+     for (htype = 0; htype &lt; HASH_AlgTOTAL; htype++) {<br>
+         fprintf(stderr, HASH_NAMES[htype].hashName);<br>
+         if (htype == (HASH_AlgTOTAL - 2))<br>
+             fprintf(stderr, " or ");<br>
+         else if (htype != (HASH_AlgTOTAL - 1))<br>
+             fprintf(stderr, ", ");<br>
+     }<br>
+     fprintf(stderr, " (case ignored))\n");<br>
+     fprintf(stderr, "%-20s Define an input file to use (default is stdin)\n",<br>
+             "&lt; input");<br>
+     fprintf(stderr, "%-20s Define an output file to use (default is stdout)\n",<br>
+             "&gt; output");<br>
+     exit(-1);<br>
+ }<br>
+ <br>
+ /*  Check for the missing arguments  */<br>
+ static void<br>
+ PrintMsgAndExit(const char *progName, char opt)<br>
+ {<br>
+     fprintf(stderr, "%s: option -%c requires an argument\n", progName, opt);<br>
+     Usage(progName);<br>
+ }<br>
+ <br>
+ #define REQUIRE_ARG(opt,value) if (!(value)) PrintMsgAndExit(progName, opt)<br>
+ <br>
+ /* Digests a file according to the specified algorithm.<br>
+  * It writes out the digest as a hexadecimal string.<br>
+  */<br>
+ static int<br>
+ DigestFile(PRFileDesc *outFile, PRFileDesc *inFile, SECOidTag hashOIDTag)<br>
+ {<br>
+     unsigned int  nb;<br>
+     unsigned char ibuf[4096];<br>
+     unsigned char digest[64];<br>
+     unsigned int  len;<br>
+     unsigned int  digestLen;<br>
+     HASH_HashType hashType;<br>
+     HASHContext   *hashContext = NULL;<br>
+ <br>
+     hashType    = HASH_GetHashTypeByOidTag(hashOIDTag);<br>
+     hashContext = HASH_Create(hashType);<br>
+     if (hashContext == NULL) {<br>
+         return SECFailure;<br>
+     }<br>
+ <br>
+     do {<br>
+         HASH_Begin(hashContext);<br>
+ <br>
+         /* Incrementally hash the file contents */<br>
+         while ((nb = PR_Read(inFile, ibuf, sizeof(ibuf))) &gt; 0) {<br>
+             HASH_Update(hashContext, ibuf, nb);<br>
+         }<br>
+ <br>
+         HASH_End(hashContext, digest, &amp;len, 64);<br>
+ <br>
+         /*  Normally we would write it out in binary with<br>
+          *  nb = PR_Write(outFile, digest, len);<br>
+          *  but for illustration let's print it in hex.<br>
+          */<br>
+         PrintAsHex(outFile, digest, len);<br>
+ <br>
+     } while (0);<br>
+ <br>
+     /* cleanup */<br>
+     if (hashContext != NULL)<br>
+         HASH_Destroy(hashContext);<br>
+ <br>
+     return SECSuccess;<br>
+ }<br>
+ <br>
+ /*<br>
+  * This sample computes the hash of a file and saves it to another file. It illustrates the use of NSS message APIs.<br>
+  */<br>
+ int main(int argc, char **argv)<br>
+ {<br>
+     SECOidTag     hashOIDTag;<br>
+     PLOptState    *optstate;<br>
+     PLOptStatus   status;<br>
+     SECStatus  rv;<br>
+     char *hashName  = NULL;<br>
+     char  *progName = strrchr(argv[0], '/');<br>
+ <br>
+     progName = progName ? progName + 1 : argv[0];<br>
+ <br>
+     rv = NSS_NoDB_Init("/tmp");<br>
+     if (rv != SECSuccess) {<br>
+         fprintf(stderr, "%s: NSS_Init failed in directory %s\n", progName, "/tmp");<br>
+         return -1;<br>
+     }<br>
+ <br>
+     /* Parse command line arguments */<br>
+     optstate = PL_CreateOptState(argc, argv, "t:");<br>
+     while ((status = PL_GetNextOpt(optstate)) == PL_OPT_OK) {<br>
+         switch (optstate-&gt;option) {<br>
+         case 't':<br>
+             REQUIRE_ARG(optstate-&gt;option, optstate-&gt;value);<br>
+             hashName = strdup(optstate-&gt;value);<br>
+             break;<br>
+         }<br>
+     }<br>
+ <br>
+     if (!hashName)<br>
+         Usage(progName);<br>
+ <br>
+     /* convert and validate */<br>
+     hashOIDTag = HashNameToOIDTag(hashName);<br>
+     if (hashOIDTag == SEC_OID_UNKNOWN) {<br>
+         fprintf(stderr, "%s: invalid digest type - %s\n", progName, hashName);<br>
+         Usage(progName);<br>
+     }<br>
+ <br>
+     /* Digest it and print the result */<br>
+     rv = DigestFile(PR_STDOUT, PR_STDIN, hashOIDTag);<br>
+     if (rv != SECSuccess) {<br>
+         fprintf(stderr, "%s: problem digesting data (%d)\n", progName, PORT_GetError());<br>
+     }<br>
+ <br>
+     rv = NSS_Shutdown();<br>
+     if (rv != SECSuccess) {<br>
+         exit(-1);<br>
+     }<br>
+ <br>
+     return 0;<br>
+ }<br>
+  </p>

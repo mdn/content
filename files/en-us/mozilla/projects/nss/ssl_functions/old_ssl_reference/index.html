@@ -1,0 +1,430 @@
+---
+title: OLD SSL Reference
+slug: Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference
+tags:
+  - NSS
+---
+<h1 id="OLD_SSL_Reference">OLD SSL Reference</h1>
+<div class="note">
+  <ul>
+    <li>We are migrating this SSL Reference into the format described in the <a href="https://developer.mozilla.org/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+  </ul>
+  <ul>
+    <li>Upgraded documentation may be found in the <a href="https://developer.mozilla.org/NSS_reference">Current NSS Reference</a>
+      <p> </p>
+    </li>
+  </ul>
+</div>
+<h2 id="SSL_Reference"><a name="43011"> SSL Reference </a></h2>
+<p><a name="66305"><i><font size="-1"> <i>Newsgroup: </i></font></i></a><i><font size="-1"><i><a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a><br>
+  Writer: Sean Cotter<br>
+  Manager: Wan-Teh Chang </i></font></i></p>
+<h4 id="Chapter_1_Overview_of_an_SSL_Application"><a href="sslintro.html#1028068">Chapter 1  Overview of an SSL Application </a></h4>
+<blockquote>
+  SSL and related APIs allow compliant applications to configure sockets for authenticated, tamper-proof, and encrypted communications. This chapter introduces some of the basic SSL functions. Chapter 2, "Getting Started With SSL" illustrates their use in sample client and server applications.</blockquote>
+<dl>
+  <dd>
+    <a href="sslintro.html#1027662">Initialization </a>
+    <dl>
+      <dd>
+        <a href="sslintro.html#1039943">Initializing Caches </a></dd>
+    </dl>
+  </dd>
+  <dd>
+    <a href="sslintro.html#1027742">Configuration </a><a href="sslintro.html#1027816"> </a></dd>
+  <dd>
+    <a href="sslintro.html#1027816">Communication </a><a href="sslintro.html#1027820"> </a></dd>
+  <dd>
+    <a href="sslintro.html#1027820">Functions Used by Callbacks </a><a href="sslintro.html#1030535"> </a></dd>
+  <dd>
+    <a href="sslintro.html#1030535">Cleanup </a></dd>
+</dl>
+<h4 id="Chapter_2_Getting_Started_With_SSL"><a href="gtstd.html#1005439">Chapter 2  Getting Started With SSL </a></h4>
+<blockquote>
+  This chapter describes how to set up your environment, including certificate and key databases, to run the NSS sample code. The sample code and makefiles are available via LXR in the SSLSamples directory.</blockquote>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="gtstd.html#1011970">SSL, PKCS #11, and the Default Security Databases</a> <a href="gtstd.html#1011987"> </a></dd>
+  <dd>
+    <a href="gtstd.html#1011987">Setting Up the Certificate and Key Databases </a>
+    <dl>
+      <dd>
+        <a href="gtstd.html#1012301">Setting Up the CA DB and Certificate </a> <a href="gtstd.html#1012351"> </a></dd>
+      <dd>
+        <a href="gtstd.html#1012351">Setting Up the Server DB and Certificate</a> <a href="gtstd.html#1012067"> </a></dd>
+      <dd>
+        <a href="gtstd.html#1012067">Setting Up the Client DB and Certificate </a> <a href="gtstd.html#1012108"> </a></dd>
+      <dd>
+        <a href="gtstd.html#1012108">Verifying the Server and Client Certificates </a></dd>
+    </dl>
+  </dd>
+  <dd>
+    <a href="gtstd.html#1013274">Building NSS Programs</a></dd>
+</dl>
+<h4 id="Chapter_3_Selected_SSL_Types_and_Structures"><a href="ssltyp.html#1029792">Chapter 3  Selected SSL Types and Structures </a></h4>
+<blockquote>
+  This chapter describes some of the most important types and structures used with the functions described in the rest of this document, and how to manage the memory used for them. Additional types are described with the functions that use them or in the header files.</blockquote>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="ssltyp.html#1030559">Types and Structures </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="ssltyp.html#1028465">CERTCertDBHandle </a><a href="ssltyp.html#1027387"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1027387">CERTCertificate </a><a href="ssltyp.html#1028593"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1028593">PK11SlotInfo </a><a href="ssltyp.html#1026076"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1026076">SECItem </a><a href="ssltyp.html#1026727"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1026727">SECKEYPrivateKey </a><a href="ssltyp.html#1026722"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1026722">SECStatus </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dd>
+    <a href="ssltyp.html#1029645">Managing SECItem Memory </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="ssltyp.html#1030620">SECItem_FreeItem </a><a href="ssltyp.html#1030773"> </a></dd>
+      <dd>
+        <a href="ssltyp.html#1030773">SECItem_ZfreeItem </a></dd>
+    </dl>
+  </dd>
+</dl>
+<h4 id="Chapter_4_SSL_Functions"><a href="sslfnc.html#1047959">Chapter 4  SSL Functions </a></h4>
+<blockquote>
+  This chapter describes the core SSL functions.</blockquote>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1022864">SSL Initialization Functions </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1067601">NSS_Init </a><a href="sslfnc.html#1237143"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1237143">NSS_InitReadWrite </a><a href="sslfnc.html#1234224"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1234224">NSS_NoDB_Init </a><a href="sslfnc.html#1068466"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1068466">SSL_OptionSetDefault </a><a href="sslfnc.html#1204897"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1204897">SSL_OptionGetDefault </a><a href="sslfnc.html#1084747"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1084747">SSL_CipherPrefSetDefault </a><a href="sslfnc.html#1208119"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1208119">SSL_CipherPrefGetDefault </a><a href="sslfnc.html#1138601"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1138601">SSL_ClearSessionCache </a><a href="sslfnc.html#1143851"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1143851">SSL_ConfigServerSessionIDCache </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1154189">Initializing Multi-Processing with a Shared SSL Server Cache </a>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1142625">SSL_ConfigMPServerSIDCache </a><a href="sslfnc.html#1162055"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1162055">SSL_InheritMPServerSIDCache </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1098841">SSL Export Policy Functions </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1228530">NSS_SetDomesticPolicy </a><a href="sslfnc.html#1100285"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1100285">NSS_SetExportPolicy </a><a href="sslfnc.html#1105952"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1105952">NSS_SetFrancePolicy </a><a href="sslfnc.html#1104647"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1104647">SSL_CipherPolicySet </a><a href="sslfnc.html#1210463"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1210463">SSL_CipherPolicyGet </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1163855">SSL Configuration Functions </a>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1090577">SSL Configuration </a>
+        <dl>
+          <dd>
+            <a href="sslfnc.html#1085950">SSL_ImportFD </a><a href="sslfnc.html#1086543"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1086543">SSL_OptionSet </a><a href="sslfnc.html#1194921"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1194921">SSL_OptionGet </a><a href="sslfnc.html#1214758"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1214758">SSL_CipherPrefSet </a><a href="sslfnc.html#1214800"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1214800">SSL_CipherPrefGet </a><a href="sslfnc.html#1217647"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1217647">SSL_ConfigSecureServer </a><a href="sslfnc.html#1087792"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1087792">SSL_SetURL </a><a href="sslfnc.html#1088040"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1088040">SSL_SetPKCS11PinArg </a></dd>
+        </dl>
+      </dd>
+      <dt>
+         </dt>
+      <dd>
+        <a href="sslfnc.html#1089578">Callback Configuration </a>
+        <dl>
+          <dd>
+            <a href="sslfnc.html#1088805">SSL_AuthCertificateHook </a><a href="sslfnc.html#1088888"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1088888">SSL_AuthCertificate </a><a href="sslfnc.html#1088928"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1088928">SSL_BadCertHook </a><a href="sslfnc.html#1126622"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1126622">SSL_GetClientAuthDataHook </a><a href="sslfnc.html#1106762"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1106762">NSS_GetClientAuthData </a><a href="sslfnc.html#1112702"> </a></dd>
+          <dd>
+            <a href="sslfnc.html#1112702">SSL_HandshakeCallback </a></dd>
+        </dl>
+      </dd>
+    </dl>
+  </dd>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1127321">SSL Communication Functions </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1089420">SSL_InvalidateSession </a><a href="sslfnc.html#1092785"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1092785">SSL_DataPending </a><a href="sslfnc.html#1092805"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1092805">SSL_SecurityStatus </a><a href="sslfnc.html#1092869"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1092869">SSL_GetSessionID </a><a href="sslfnc.html#1124562"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1124562">SSL_SetSockPeerID </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1127893">SSL Functions Used by Callbacks </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1096168">SSL_PeerCertificate </a><a href="sslfnc.html#1081175"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1081175">SSL_RevealURL </a><a href="sslfnc.html#1123385"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1123385">SSL_RevealPinArg </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1061582">SSL Handshake Functions </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1133431">SSL_ForceHandshake </a><a href="sslfnc.html#1232052"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1232052">SSL_ReHandshake </a><a href="sslfnc.html#1058001"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1058001">SSL_ResetHandshake </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1095840">NSS Shutdown Function </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1061858">NSS_Shutdown </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslfnc.html#1198429">Deprecated Functions </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslfnc.html#1206365">SSL_EnableDefault </a><a href="sslfnc.html#1220189"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1220189">SSL_Enable </a><a href="sslfnc.html#1207298"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1207298">SSL_EnableCipher </a><a href="sslfnc.html#1207350"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1207350">SSL_SetPolicy </a><a href="sslfnc.html#1231825"> </a></dd>
+      <dd>
+        <a href="sslfnc.html#1231825">SSL_RedoHandshake </a></dd>
+    </dl>
+  </dd>
+</dl>
+<h4 id="Chapter_5_Certificate_Functions"><a href="sslcrt.html#1047959">Chapter 5  Certificate Functions </a></h4>
+<blockquote>
+  This chapter describes the functions and related types used to work with a certificate database such as the cert7.db database provided with Communicator.</blockquote>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslcrt.html#1060423">Validating Certificates </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslcrt.html#1058011">CERT_VerifyCertNow </a><a href="sslcrt.html#1050342"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1050342">CERT_VerifyCertName </a><a href="sslcrt.html#1056662"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1056662">CERT_CheckCertValidTimes </a><a href="sslcrt.html#1056760"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1056760">NSS_CmpCertChainWCANames </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslcrt.html#1056436">Manipulating Certificates </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslcrt.html#1058344">CERT_DupCertificate </a><a href="sslcrt.html#1050532"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1050532">CERT_DestroyCertificate </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslcrt.html#1056475">Getting Certificate Information </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslcrt.html#1050345">CERT_FindCertByName </a><a href="sslcrt.html#1050346"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1050346">CERT_GetCertNicknames </a><a href="sslcrt.html#1050349"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1050349">CERT_FreeNicknames </a><a href="sslcrt.html#1052308"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1052308">CERT_GetDefaultCertDB </a><a href="sslcrt.html#1056950"> </a></dd>
+      <dd>
+        <a href="sslcrt.html#1056950">NSS_FindCertKEAType </a></dd>
+    </dl>
+  </dd>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslcrt.html#1055384">Comparing SecItem Objects </a>
+    <dl>
+    </dl>
+    <dl>
+      <dd>
+        <a href="sslcrt.html#1057028">SECITEM_CompareItem </a></dd>
+    </dl>
+  </dd>
+</dl>
+<h4 id="Chapter_6_Key_Functions"><a href="sslkey.html#1047959">Chapter 6  Key Functions </a></h4>
+<blockquote>
+  This chapter describes two functions used to manipulate private keys and key databases such as the key3.db database provided with Communicator.</blockquote>
+<dl>
+</dl>
+<dl>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslkey.html#1051479">SECKEY_GetDefaultKeyDB </a><a href="sslkey.html#1051017"> </a></dd>
+  <dd>
+    <a href="sslkey.html#1051017">SECKEY_DestroyPrivateKey </a></dd>
+</dl>
+<h4 id="Chapter_7_PKCS_11_Functions"><a href="pkfnc.html#1027946">Chapter 7  PKCS #11 Functions </a></h4>
+<blockquote>
+  This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords.</blockquote>
+<dl>
+</dl>
+<dl>
+</dl>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="pkfnc.html#1035673">PK11_FindCertFromNickname </a><a href="pkfnc.html#1026891"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1026891">PK11_FindKeyByAnyCert </a><a href="pkfnc.html#1030779"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1030779">PK11_GetSlotName </a><a href="pkfnc.html#1026964"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1026964">PK11_GetTokenName </a><a href="pkfnc.html#1026762"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1026762">PK11_IsHW </a><a href="pkfnc.html#1022948"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1022948">PK11_IsPresent </a><a href="pkfnc.html#1022991"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1022991">PK11_IsReadOnly </a><a href="pkfnc.html#1023128"> </a></dd>
+  <dd>
+    <a href="pkfnc.html#1023128">PK11_SetPasswordFunc </a></dd>
+</dl>
+<h4 id="Chapter_8_NSS_and_SSL_Error_Codes"><a href="sslerr.html#1013897">Chapter 8  NSS and SSL Error Codes </a></h4>
+<blockquote>
+  NSS error codes are retrieved using the NSPR function PR_GetError. In addition to the error codes defined by NSPR, PR_GetError retrieves the error codes described in this chapter.</blockquote>
+<dl>
+  <dt>
+     </dt>
+  <dd>
+    <a href="sslerr.html#1040263">SSL Error Codes </a><a href="sslerr.html#1039257"> </a></dd>
+  <dd>
+    <a href="sslerr.html#1039257">SEC Error Codes </a></dd>
+</dl>

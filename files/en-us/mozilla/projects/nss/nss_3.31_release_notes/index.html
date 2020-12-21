@@ -1,0 +1,93 @@
+---
+title: NSS 3.31 release notes
+slug: Mozilla/Projects/NSS/NSS_3.31_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The Network Security Services (NSS) team has released NSS 3.31, which is a minor release.</p>
+
+<h2 id="Distribution_information">Distribution information</h2>
+
+<p>The hg tag is NSS_3_31_RTM. NSS 3.31 requires Netscape Portable Runtime (NSPR) 4.15 or newer.</p>
+
+<p>NSS 3.31 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_31_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_31_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.31">New in NSS 3.31</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>Allow certificates to be specified by RFC7512 PKCS#11 URIs.</li>
+ <li>Allow querying a certificate object for its temporary or permanent storage status in a thread safe way.</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in cert.h</em>
+
+  <ul>
+   <li><strong>CERT_GetCertIsPerm</strong> - retrieve the permanent storage status attribute of a certificate in a thread safe way.</li>
+   <li><strong>CERT_GetCertIsTemp</strong> - retrieve the temporary storage status attribute of a certificate in a thread safe way.</li>
+  </ul>
+ </li>
+ <li><em>in pk11pub.h</em>
+  <ul>
+   <li><strong>PK11_FindCertFromURI</strong> - find a certificate identified by the given URI.</li>
+   <li><strong>PK11_FindCertsFromURI</strong> - find a list of certificates identified by the given URI.</li>
+   <li><strong>PK11_GetModuleURI</strong> - retrieve the URI of the given module.</li>
+   <li><strong>PK11_GetTokenURI</strong> - retrieve the URI of a token based on the given slot information.</li>
+  </ul>
+ </li>
+ <li><em>in pkcs11uri.h</em>
+  <ul>
+   <li><strong>PK11URI_CreateURI</strong> - create a new PK11URI object from a set of attributes.</li>
+   <li><strong>PK11URI_DestroyURI</strong> - destroy a PK11URI object.</li>
+   <li><strong>PK11URI_FormatURI</strong> - format a PK11URI object to a string.</li>
+   <li><strong>PK11URI_GetPathAttribute</strong> - retrieve a path attribute with the given name.</li>
+   <li><strong>PK11URI_GetQueryAttribute</strong> - retrieve a query attribute with the given name.</li>
+   <li><strong>PK11URI_ParseURI</strong> - parse PKCS#11 URI and return a new PK11URI object.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in pkcs11uri.h</em>
+
+  <ul>
+   <li>Several new macros that start with <strong>PK11URI_PATTR_</strong> for path attributes defined in RFC7512.</li>
+   <li>Several new macros that start with <strong>PK11URI_QATTR_</strong> for query attributes defined in RFC7512.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.31">Notable Changes in NSS 3.31</h2>
+
+<ul>
+ <li>The APIs that set a TLS version range have been changed to trim the requested range to the overlap with a systemwide crypto policy, if configured. <strong>SSL_VersionRangeGetSupported</strong> can be used to query the overlap between the library's supported range of TLS versions and the systemwide policy.</li>
+ <li>Previously, <strong>SSL_VersionRangeSet</strong> and <strong>SSL_VersionRangeSetDefault</strong> returned a failure if the requested version range wasn't fully allowed by the systemwide crypto policy. They have been changed to return success, if at least one TLS version overlaps between the requested range and the systemwide policy. An application may call <strong>SSL_VersionRangeGet </strong>and <strong>SSL_VersionRangeGetDefault</strong> to query the TLS version range that was effectively activated.</li>
+ <li>Corrected the encoding of Domain Name Constraints extensions created by certutil</li>
+ <li>NSS supports a clean seeding mechanism for *NIX systems now using only /dev/urandom. This is used only when SEED_ONLY_DEV_URANDOM is set at compile time.</li>
+ <li>CERT_AsciiToName can handle OIDs in dotted decimal form now.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.31">Bugs fixed in NSS 3.31</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.31:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.31">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.31</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.31 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.31 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>
