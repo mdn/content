@@ -58,11 +58,11 @@ tags:
 
 <h3 id="Bookmarks__History">Bookmarks &amp; History</h3>
 
-<p>If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new <a href="/en-US/docs/Places" title="Places">Places</a> architecture. See the <a href="/en-US/docs/Places_Developer_Guide" title="Places_migration_guide">Places migration guide</a> for details on updating your existing extension to use the Places API.</p>
+<p>If your extension accesses bookmark or history data in any way, it will need substantial work to be compatible with Firefox 3. The old APIs for accessing this information have been replaced by the new <a href="/en-US/docs/Places">Places</a> architecture. See the <a href="/en-US/docs/Places_Developer_Guide" title="Places_migration_guide">Places migration guide</a> for details on updating your existing extension to use the Places API.</p>
 
 <h3 id="Download_Manager">Download Manager</h3>
 
-<p>The Download Manager API has changed slightly due to the transition from an RDF data store to using the <a href="/en-US/docs/Storage" title="Storage">Storage</a> API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See {{ Interface("nsIDownloadManager") }}, {{ Interface("nsIDownloadProgressListener") }}, and <a href="/en-US/docs/Monitoring_downloads" title="Monitoring_downloads">Monitoring downloads</a> for more information.</p>
+<p>The Download Manager API has changed slightly due to the transition from an RDF data store to using the <a href="/en-US/docs/Storage">Storage</a> API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See {{ Interface("nsIDownloadManager") }}, {{ Interface("nsIDownloadProgressListener") }}, and <a href="/en-US/docs/Monitoring_downloads" title="Monitoring_downloads">Monitoring downloads</a> for more information.</p>
 
 <h3 id="Password_Manager">Password Manager</h3>
 
@@ -70,8 +70,8 @@ tags:
 
 <ul>
  <li>The article <a href="/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager" title="Using_nsILoginManager">Using nsILoginManager</a> includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions.</li>
- <li><code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo" title="nsILoginInfo">nsILoginInfo</a></code></li>
- <li><code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager" title="nsILoginManager">nsILoginManager</a></code></li>
+ <li><code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo">nsILoginInfo</a></code></li>
+ <li><code><a href="/en-US/docs/XPCOM_Interface_Reference/nsILoginManager">nsILoginManager</a></code></li>
 </ul>
 
 <p>You can also override the built-in password manager storage if you want to provide your own password storage implementation in your extensions. See <a href="/en-US/docs/Creating_a_Login_Manager_storage_module" title="Creating_a_Login_Manager_storage_module">Creating a Login Manager storage module</a> for details.</p>

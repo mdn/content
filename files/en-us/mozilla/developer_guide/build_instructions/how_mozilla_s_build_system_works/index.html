@@ -185,15 +185,15 @@ include $(topsrcdir)/config/rules.mk
 </pre>
 
 <ul>
- <li>The <code><a href="/en-US/docs/DEPTH" title="DEPTH">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
+ <li>The <code><a href="/en-US/docs/DEPTH">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
  <li><code>topsrcdir</code> is substituted in by configure and points to the top-level Mozilla directory.</li>
  <li><code>srcdir</code> is also substituted in by configure and points to the source directory for the current directory. In source tree builds, this will point to "." (the current directory).</li>
- <li><code><a href="/en-US/docs/VPATH" title="VPATH">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
+ <li><code><a href="/en-US/docs/VPATH">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
 </ul>
 
-<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/DIRS" title="DIRS">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
+<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/DIRS">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
 
-<pre class="eval"><a href="/en-US/docs/DIRS" title="DIRS">DIRS</a> = \
+<pre class="eval"><a href="/en-US/docs/DIRS">DIRS</a> = \
   public \
   resources \
   src \
@@ -239,10 +239,10 @@ include $(topsrcdir)/config/rules.mk
 
  include $(DEPTH)/config/autoconf.mk
 
- <a href="/en-US/docs/MODULE" title="MODULE">MODULE</a>          = msgbaseutil
- <a href="/en-US/docs/LIBRARY_NAME" title="LIBRARY_NAME">LIBRARY_NAME</a>    = msgbaseutil
- <a href="/en-US/docs/EXPORT_LIBRARY" title="EXPORT_LIBRARY">EXPORT_LIBRARY</a> = 1
- <a href="/en-US/docs/SHORT_LIBNAME" title="SHORT_LIBNAME">SHORT_LIBNAME</a>   = msgbsutl
+ <a href="/en-US/docs/MODULE">MODULE</a>          = msgbaseutil
+ <a href="/en-US/docs/LIBRARY_NAME">LIBRARY_NAME</a>    = msgbaseutil
+ <a href="/en-US/docs/EXPORT_LIBRARY">EXPORT_LIBRARY</a> = 1
+ <a href="/en-US/docs/SHORT_LIBNAME">SHORT_LIBNAME</a>   = msgbsutl
 </pre>
 
 <p>Notice that the only change from the component example above is that <strong>IS_COMPONENT</strong> is not set. When this is not set, a shared library will be created and installed to dist/bin.</p>
@@ -264,7 +264,7 @@ include $(topsrcdir)/config/rules.mk
  # REQUIRES and CPPSRCS omitted here for brevity #
 
  # we don't want the shared lib, but we want to force the creation of a static lib.
- <a href="/en-US/docs/FORCE_STATIC_LIB" title="FORCE_STATIC_LIB">FORCE_STATIC_LIB</a> = 1
+ <a href="/en-US/docs/FORCE_STATIC_LIB">FORCE_STATIC_LIB</a> = 1
 
  include $(topsrcdir)/config/rules.mk
 </pre>
@@ -281,14 +281,14 @@ include $(topsrcdir)/config/rules.mk
  MODULE          = layout
  LIBRARY_NAME    = gklayout
  EXPORT_LIBRARY = 1
- <a href="/en-US/docs/IS_COMPONENT" title="IS_COMPONENT">IS_COMPONENT</a>    = 1
- <a href="/en-US/docs/MODULE_NAME" title="MODULE_NAME">MODULE_NAME</a>     = nsLayoutModule
+ <a href="/en-US/docs/IS_COMPONENT">IS_COMPONENT</a>    = 1
+ <a href="/en-US/docs/MODULE_NAME">MODULE_NAME</a>     = nsLayoutModule
 
- <a href="/en-US/docs/CPPSRCS" title="CPPSRCS">CPPSRCS</a>         = \
+ <a href="/en-US/docs/CPPSRCS">CPPSRCS</a>         = \
                  nsLayoutModule.cpp \
                  $(NULL)
 
- <a href="/en-US/docs/SHARED_LIBRARY_LIBS" title="SHARED_LIBRARY_LIBS">SHARED_LIBRARY_LIBS</a> = \
+ <a href="/en-US/docs/SHARED_LIBRARY_LIBS">SHARED_LIBRARY_LIBS</a> = \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmlbase_s.$(LIB_SUFFIX) \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmldoc_s.$(LIB_SUFFIX) \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmlforms_s.$(LIB_SUFFIX) \

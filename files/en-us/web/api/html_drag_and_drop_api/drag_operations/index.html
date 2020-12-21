@@ -228,7 +228,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 <p><strong>Note:</strong> You must cancel the <code>{{event("dragenter")}}</code> event for this pseudoclass to apply, as this state is not checked for the <code>{{event("dragover")}}</code> event.</p>
 </div>
 
-<p>For more complex visual effects, you can also perform other operations during the <code>{{event("dragenter")}}</code> event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an <a href="/en-US/docs/XUL/image" title="image">image</a> or <a href="/en-US/docs/XUL/separator" title="separator">separator</a> element and insert it into the document during the <code>{{event("dragenter")}}</code> event.</p>
+<p>For more complex visual effects, you can also perform other operations during the <code>{{event("dragenter")}}</code> event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an <a href="/en-US/docs/XUL/image">image</a> or <a href="/en-US/docs/XUL/separator">separator</a> element and insert it into the document during the <code>{{event("dragenter")}}</code> event.</p>
 
 <p>The <code>{{event("dragover")}}</code> event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a <code>{{event("dragover")}}</code> event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.</p>
 
@@ -272,7 +272,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 }
 </pre>
 
-<p>This example inserts a link from the dragged data. As the name implies, the <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code> type actually may contain a list of URLs, each on a separate line. The above code uses <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="split">split</a></code> to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (<code>#</code>) are skipped, as these are comments.)</p>
+<p>This example inserts a link from the dragged data. As the name implies, the <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code> type actually may contain a list of URLs, each on a separate line. The above code uses <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split">split</a></code> to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (<code>#</code>) are skipped, as these are comments.)</p>
 
 <p>For simple cases, you can use the special type <code>URL</code> just to retrieve the first valid URL in the list. For example:</p>
 
