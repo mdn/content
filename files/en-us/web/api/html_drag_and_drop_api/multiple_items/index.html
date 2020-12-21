@@ -86,7 +86,7 @@ dt.mozClearDataAt("text/plain", 1);
 
 <h2 id="Dragging_Non-String_Data">Dragging Non-String Data</h2>
 
-<p>The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the <a href="/En/DragDrop/Recommended_Drag_Types#file" title="application/x-moz-file">application/x-moz-file</a> type stored as <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.</p>
+<p>The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the <a href="/En/DragDrop/Recommended_Drag_Types#file" title="application/x-moz-file">application/x-moz-file</a> type stored as <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.</p>
 
 <pre>dt.mozSetDataAt("application/x-moz-file", file, 0);
 </pre>

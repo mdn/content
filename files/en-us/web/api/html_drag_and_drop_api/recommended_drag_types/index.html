@@ -85,7 +85,7 @@ dt.setData("text/plain", "Hello there, stranger");
 
 <h2 id="file">Dragging Files</h2>
 
-<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> object. Non-privileged web pages canot retrieve or modify data of this type.</p>
+<p>A local file is dragged using the <code>application/x-moz-file</code> type with a data value that is an <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> object. Non-privileged web pages canot retrieve or modify data of this type.</p>
 
 <p>Because a file is not a string, you must use the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method to assign the data. Similarly, when retrieving the data, you must use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method.</p>
 
@@ -136,7 +136,7 @@ function doDrop(event) {
 
 <p>As with links, the data for the <code>text/plain</code> type should also contain the URL. However, a <code>data:</code> URL is not usually useful in a text context, so you may wish to exclude the <code>text/plain</code> data in this situation.</p>
 
-<p>In chrome or other privileged code, you may also use the <code>image/jpeg</code>, <code>image/png</code> or <code>image/gif</code> types, depending on the type of image. The data should be an object which implements the <a href="/en/XPCOM_Interface_Reference/nsIInputStream" title="nsIInputStream">nsIInputStream</a> interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.</p>
+<p>In chrome or other privileged code, you may also use the <code>image/jpeg</code>, <code>image/png</code> or <code>image/gif</code> types, depending on the type of image. The data should be an object which implements the <a href="/en/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a> interface. When this stream is read, it should provide the data bits for the image, as if the image was a file of that type.</p>
 
 <p>You should also include the <code>application/x-moz-file</code> type if the image is located on disk. In fact, this a common way in which image files are dragged.</p>
 

@@ -47,7 +47,7 @@ tags:
  <li>Sound can be generated directly in JavaScript by an audio node (such as an oscillator).</li>
  <li>Created from raw PCM data (the audio context has methods to decode supported audio formats).</li>
  <li>Taken from HTML media elements (such as {{HTMLElement("video")}} or {{HTMLElement("audio")}}).</li>
- <li>Taken directly from a <a href="/en-US/docs/WebRTC" title="WebRTC">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
+ <li>Taken directly from a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (such as a webcam or microphone).</li>
 </ul>
 
 <h2 id="Audio_data_whats_in_a_sample">Audio data: what's in a sample</h2>
@@ -89,7 +89,7 @@ var buffer = context.createBuffer(2, 22050, 44100);</pre>
  <br>
  Firstly, because the <a href="https://en.wikipedia.org/wiki/Hearing_range" title="Hearing range">hearing range</a> of human ears is roughly 20 Hz to 20,000 Hz. Via the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem" title="Nyquist–Shannon sampling theorem">Nyquist–Shannon sampling theorem</a>, the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be greater than 40 kHz.<br>
  <br>
- Secondly, signals must be <a href="https://en.wikipedia.org/wiki/Low-pass_filter" title="Low-pass filter">low-pass filtered</a> before sampling, otherwise <a href="https://en.wikipedia.org/wiki/Aliasing" title="Aliasing">aliasing</a> occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice a <a href="https://en.wikipedia.org/wiki/Transition_band" title="Transition band">transition band</a> is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an <a href="https://en.wikipedia.org/wiki/Anti-aliasing_filter" title="Anti-aliasing filter">anti-aliasing filter</a>. The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.</p>
+ Secondly, signals must be <a href="https://en.wikipedia.org/wiki/Low-pass_filter" title="Low-pass filter">low-pass filtered</a> before sampling, otherwise <a href="https://en.wikipedia.org/wiki/Aliasing">aliasing</a> occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice a <a href="https://en.wikipedia.org/wiki/Transition_band" title="Transition band">transition band</a> is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an <a href="https://en.wikipedia.org/wiki/Anti-aliasing_filter" title="Anti-aliasing filter">anti-aliasing filter</a>. The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.</p>
 </div>
 
 <p>If you use this call above, you will get a stereo buffer with two channels, that when played back on an AudioContext running at 44100Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22050 frames/44100Hz = 0.5 seconds.</p>
