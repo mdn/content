@@ -70,7 +70,7 @@ tags:
 
 <p>Moreover, when your app becomes complicated and your component hierarchy gets complex, it might become too difficult for components to relay data between each other. In that case, moving to a global data store might be a good option. If you’ve already worked with <a href="https://redux.js.org/">Redux</a> or <a href="https://vuex.vuejs.org/">Vuex</a>, then you'll be familiar with how this kind of store works. Svelte stores offer similar features for state management.</p>
 
-<p>A store is simply an object with a <code>subscribe()</code> method that allows interested parties to be notified whenever the store value changes, and an optional <code>set()</code> method that allows you to set new values for the store. This minimal API is known as the <a href="https://svelte.dev/docs#Store_contract">store contract</a>.</p>
+<p>A store is an object with a <code>subscribe()</code> method that allows interested parties to be notified whenever the store value changes, and an optional <code>set()</code> method that allows you to set new values for the store. This minimal API is known as the <a href="https://svelte.dev/docs#Store_contract">store contract</a>.</p>
 
 <p>Svelte provides functions for creating <a href="https://svelte.dev/docs#readable">readable</a>, <a href="https://svelte.dev/docs#writable">writable</a>, and <a href="https://svelte.dev/docs#derived">derived</a> stores in the <code>svelte/store</code> module.</p>
 

@@ -21,13 +21,13 @@ tags:
 
 <p>This introduction discusses essential concepts and terminology in the File and Directory Entries API. It gives you the big picture and orients you to <a href="#concepts">key concepts</a>. It also describes <a href="#restrictions">restrictions</a> that raise security errors if you ignore them. To learn more about terminology used in this API, see the <a href="#definitions">Definitions</a> section. </p>
 
-<p>For the reference documentation on the File and Directory Entries API, see the <a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">reference</a> landing page and its subpages.</p>
+<p>For the reference documentation on the File and Directory Entries API, see the <a href="/en/DOM/File_API/File_System_API/FileSystem">reference</a> landing page and its subpages.</p>
 
 <p>The specification is still being defined and is subject to change.</p>
 
 <h2 id="Overview">Overview</h2>
 
-<p>The File and Directory Entries API includes both <a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs" title="en/DOM/File_API/File_System_API#Asynchronous_APIs">asynchronous</a> and <a href="/en/DOM/File_API/File_System_API#Synchronous_APIs" title="en/DOM/File_API/File_System_API#Synchronous_APIs">synchronous</a> versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with <a href="/En/Using_web_workers">WebWorkers</a>. </p>
+<p>The File and Directory Entries API includes both <a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs">asynchronous</a> and <a href="/en/DOM/File_API/File_System_API#Synchronous_APIs">synchronous</a> versions of the interfaces. The asynchronous API can be used in cases where you don't want an outstanding operation to block the UI. The synchronous API, on the other hand, allows for simpler programming model, but it must be used with <a href="/En/Using_web_workers">WebWorkers</a>. </p>
 
 <h3 id="Usefulness_of_the_API">Usefulness of the API</h3>
 
@@ -44,7 +44,7 @@ tags:
 
 <h3 id="The_File_and_Directory_Entries_API_and_other_storage_APIs">The File and Directory Entries API and other storage APIs</h3>
 
-<p>The File and Directory Entries API is an alternative to other storage APIs like <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:</p>
+<p>The File and Directory Entries API is an alternative to other storage APIs like <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB">IndexedDB</a>, WebSQL (which has been deprecated since November18, 2010), and AppCache. The API is a better choice for apps that deal with blobs for the following reasons:</p>
 
 <ul>
  <li>The File and Directory Entries API offers client-side storage for use cases that are not addressed by databases. If you want to have large mutable chunks of data, the File and Directory Entries API is a much more efficient storage solution than a database.</li>

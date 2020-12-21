@@ -35,7 +35,7 @@ tags:
 
 <p>A given {{domxref("RTCPeerConnection")}} can have multiple media tracks sent or received on it. When you wish to transmit DTMF signals, you first need to decide which track to send them on, since DTMF is sent as a series of out-of-band payloads on the {{domxref("RTCRtpSender")}} responsible for transmitting that track's data to the other peer.</p>
 
-<p>Once the track is selected, you can obtain from its <code>RTCRtpSender</code> the {{domxref("RTCDTMFSender")}} object you'll use for sending DTMF. From there, you can simply call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue DTMF signals to be sent on the track to the other peer. The <code>RTCRtpSender</code> will then send the tones to the other peer as packets alongside the track's audio data.</p>
+<p>Once the track is selected, you can obtain from its <code>RTCRtpSender</code> the {{domxref("RTCDTMFSender")}} object you'll use for sending DTMF. From there, you can call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue DTMF signals to be sent on the track to the other peer. The <code>RTCRtpSender</code> will then send the tones to the other peer as packets alongside the track's audio data.</p>
 
 <p>Each time a tone is sent, the <code>RTCPeerConnection</code> receives a {{event("tonechange")}} event with a {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property specifying which tone finished playing, which is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a <code>tonechange</code> event with its <code>tone</code> property set to "" (an empty string) is delivered to the connection object.</p>
 
@@ -46,7 +46,7 @@ tags:
 <p>This simple example constructs two {{domxref("RTCPeerConnection")}}s, establishes a connection between them, then waits for the user to click a "Dial" button. When the button is clicked, a DTMF string is sent over the connection using {{domxref("RTCDTMFSender.insertDTMF()")}}. Once the tones finish transmitting, the connection is closed.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This example is obviously somewhat contrived, since normally the two <code>RTCPeerConnection</code> objects would exist on different devices, and signaling would be done over the network instead of it all being simply linked up inline as it is here.</p>
+<p><strong>Note</strong>: This example is obviously somewhat contrived, since normally the two <code>RTCPeerConnection</code> objects would exist on different devices, and signaling would be done over the network instead of it all being linked up inline as it is here.</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -331,7 +331,7 @@ let logElement = null;
 
 <h4 id="Tracking_other_state_changes">Tracking other state changes</h4>
 
-<p>We can also watch for changes to the signaling state (by accepting {{event("signalingstatechange")}} events) and the ICE gathering state (by accepting {{event("icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could simply have not set up these event listeners at all.</p>
+<p>We can also watch for changes to the signaling state (by accepting {{event("signalingstatechange")}} events) and the ICE gathering state (by accepting {{event("icegatheringstatechange")}} events). We aren't using these for anything, so all we do is log them. We could have not set up these event listeners at all.</p>
 
 <pre class="brush: js notranslate">function handleCallerSignalingStateChangeEvent() {
   log("Caller's signaling state changed to " + callerPC.signalingState);
@@ -379,7 +379,7 @@ function handleReceiverAddStreamEvent(event) {
 
 <p>The <code>track</code> event includes a {{domxref("RTCTrackEvent.streams", "streams")}} property containing an array of the streams the track is a member of (one track can be part of many streams). We take the first stream and attach it to the {{HTMLElement("audio")}} element.</p>
 
-<p>The <code>addstream</code> event includes a {{domxref("RTCTrackEvent.stream", "stream")}} property specifying a single stream added to the track. We simply attach it to the <code>&lt;audio&gt;</code> element.</p>
+<p>The <code>addstream</code> event includes a {{domxref("RTCTrackEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the <code>&lt;audio&gt;</code> element.</p>
 
 <h4 id="Logging">Logging</h4>
 

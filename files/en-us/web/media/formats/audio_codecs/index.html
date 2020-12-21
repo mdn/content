@@ -438,7 +438,7 @@ tags:
 
 <p>The <strong><a href="http://www.voiceage.com/AMR-NB.AMR.html">Adaptive Multi-Rate audio codec</a></strong> is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both {{interwiki("wikipedia", "GSM")}} and {{interwiki("wikipedia", "UMTS")}} cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.</p>
 
-<p>AMR audio which is stored in files may simply be typed <code>.amr</code>, but may also be encapsulated in <code>.3gp</code> files.</p>
+<p>AMR audio which is stored in files may be typed <code>.amr</code>, but may also be encapsulated in <code>.3gp</code> files.</p>
 
 <p>As a speech-specific codec, AMR is essentially useless for any other content, including audio containing only singing voices. Additionally, because AMR is designed to minimize capacity requirements, it only captures the portion of the full audio frequency bandwidth of human speech which is absolutely necessary to understand what's being said, so quality is reduced accordingly. If you need the ability to record audio at a minimal impact to network and/or storage capacity, AMR can be a great choice. However, if you need high-fidelity reproduction of human speech—or even low-quality music reproduction—you need to choose another format.</p>
 
@@ -805,7 +805,7 @@ tags:
 
 <p>Of the audio formats specified by the MPEG/MPEG-2 standards, <strong>MPEG-1 Audio Layer III</strong>—otherwise known as<strong> {{interwiki("wikipedia", "MP3")}}</strong>—is by far the most widely used and best-known. The MP3 codec is defined by <a href="https://www.iso.org/standard/22412.html">MPEG-1 Part 3</a> and <a href="https://www.iso.org/standard/26797.html">MPEG-2 Part 3</a>, and was introduced in 1991 (and finalized in 1992).</p>
 
-<p>When MP3-format audio is stored inside an MPEG container, the resulting file is also referred to as just an "MP3 file" or simply "MP3." Files with the ubiquitous <code>.mp3</code> extension are stored in what is perhaps the most widely distributed audio file format in the world, which is in large part responsible for the digital audio revolution of the late 1990s and early 2000s.</p>
+<p>When MP3-format audio is stored inside an MPEG container, the resulting file is also referred to as just an "MP3 file" or "MP3." Files with the ubiquitous <code>.mp3</code> extension are stored in what is perhaps the most widely distributed audio file format in the world, which is in large part responsible for the digital audio revolution of the late 1990s and early 2000s.</p>
 
 <p>MPEG-1 MP3 audio supports higher bit rates as well as higher sampling rates than MP3 audio in MPEG-2 files. MPEG-1 format MP3 is generally best for music or other complex audio, while MPEG-2 mode MP3 audio is acceptable for speech and other simpler sounds.</p>
 
@@ -1232,7 +1232,7 @@ tags:
 
 <p>The specific characteristics of human speech allow speech-specific codecs to compress the audio far more than most general-purpose codecs can. That's because although humans hear frequencies ranging from around 20 Hz to 20,000 Hz, and human speech sounds range from about 300 Hz to 18,000 Hz, the majority of the speech sounds that we need in order to understand what's being said lie in the frequency range of 500 Hz to 3,000 Hz or so. That means voice-only codecs can throw away everything else.</p>
 
-<p>The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than simply speaking, will likely not be of acceptable quality in one of these formats.</p>
+<p>The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.</p>
 
 <p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, {{anch("G.722")}}, for example, has 4 ms latency (compared with over 100 ms for MP3), and {{anch("AMR")}}'s latency is around 25 ms.</p>
 

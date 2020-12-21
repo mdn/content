@@ -46,7 +46,7 @@ tags:
 
 <pre class="brush: python notranslate">urlpatterns = [
     path('', views.index, name='index'),
-<strong>    </strong>path<strong>('books/', views.BookListView.as_view(), name='books'),</strong>
+    path<strong>('books/', views.BookListView.as_view(), name='books'),</strong>
 ]</pre>
 
 <p>As discussed in the previous tutorial the URL must already have matched <code>/catalog</code>, so the view will actually be called for the URL: <code>/catalog/books/</code>.</p>
@@ -209,7 +209,7 @@ class BookListView(generic.ListView):
 
 <p>For the <em>book-detail</em> path the URL pattern uses a special syntax to capture the specific id of the book that we want to see. The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data. For example, <strong>&lt;something&gt;</strong> , will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#path-converters">converter specification</a> that defines the type of data (int, str, slug, uuid, path).</p>
 
-<p>In this case we use <code>'&lt;int:pk&gt;'</code><strong> </strong>to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named <code>pk</code> (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.</p>
+<p>In this case we use <code>'&lt;int:pk&gt;'</code> to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named <code>pk</code> (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.</p>
 
 <div class="note">
 <p><strong>Note</strong>: As discussed previously, our matched URL is actually <code>catalog/book/&lt;digits&gt;</code> (because we are in the <strong>catalog</strong> application, <code>/catalog/</code> is assumed).</p>

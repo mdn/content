@@ -92,7 +92,7 @@ tags:
 
 <h3 id="Ubuntu_20.04">Ubuntu 20.04</h3>
 
-<p>The easiest way to install the most recent LTS version of Node 12.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done very simply by running the following two commands on your terminal:</p>
+<p>The easiest way to install the most recent LTS version of Node 12.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done very by running the following two commands on your terminal:</p>
 
 <pre class="notranslate">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -117,7 +117,7 @@ v12.18.4</pre>
 <pre class="brush: bash notranslate">&gt; npm -v
 6.14.6</pre>
 
-<p>As a slightly more exciting test let's create a very basic "pure node" server that simply prints out "Hello World" in the browser when you visit the correct URL in your browser:</p>
+<p>As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:</p>
 
 <ol>
  <li>Copy the following text into a file named <strong>hellonode.js</strong>. This uses pure <em>Node</em> features (nothing from Express) and some ES6 syntax:
@@ -142,7 +142,7 @@ server.listen(port, hostname, () =&gt; {
 });
 </pre>
 
-  <p>The code imports the "http" module and uses it to create a server (<code>createServer()</code>) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The <code>createServer()</code> function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".</p>
+  <p>The code imports the "http" module and uses it to create a server (<code>createServer()</code>) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The <code>createServer()</code> function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".</p>
 
   <div class="note">
   <p><strong>Note:</strong>  Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!</p>
@@ -153,7 +153,7 @@ server.listen(port, hostname, () =&gt; {
 Server running at http://127.0.0.1:3000/
 </pre>
  </li>
- <li>Navigate to the URL <a href="http://127.0.0.1:3000">http://127.0.0.1:3000 </a>. If everything is working, the browser should simply display the string "Hello World".</li>
+ <li>Navigate to the URL <a href="http://127.0.0.1:3000">http://127.0.0.1:3000 </a>. If everything is working, the browser should display the string "Hello World".</li>
 </ol>
 
 <h2 id="Using_NPM">Using NPM</h2>
@@ -244,7 +244,7 @@ app.listen(port, () =&gt; {
 Example app listening on port 8000
 </pre>
  </li>
- <li>Navigate to the URL (<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>). If everything is working, the browser should simply display the string "Hello World!".</li>
+ <li>Navigate to the URL (<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>). If everything is working, the browser should display the string "Hello World!".</li>
 </ol>
 
 <h3 id="Development_dependencies">Development dependencies</h3>

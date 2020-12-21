@@ -38,7 +38,7 @@ addIceCandidate(<em>candidate</em>, <em>successCallback</em>, <em>failureCallbac
 	<dd>
 	<p>An object conforming to the {{domxref("RTCIceCandidateInit")}} dictionary, or an {{domxref("RTCIceCandidate")}} object; the contents of the object should be constructed from a message received over the signaling channel, describing a newly received ICE candidate that's ready to be delivered to the local ICE agent.</p>
 
-	<p>If no <code>candidate</code> object is specified, or its value is <code>null</code>, an end-of-candidates signal is sent to the remote peer using the <code>end-of-candidates</code> a-line, formatted simply like this:</p>
+	<p>If no <code>candidate</code> object is specified, or its value is <code>null</code>, an end-of-candidates signal is sent to the remote peer using the <code>end-of-candidates</code> a-line, formatted like this:</p>
 
 	<pre>a=end-of-candidates</pre>
 	</dd>

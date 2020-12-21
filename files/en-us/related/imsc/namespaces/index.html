@@ -24,8 +24,8 @@ tags:
 <p>So normally you use longer strings as namespace names. A URL is a very popular form of namespace. It is easy to remember and can also point to further information about that XML vocabulary.</p>
 
 <ul>
- <li>The W3C standard IMSC uses the URL <code><a href="http://www.w3.org/ns/ttml">http://www.w3.org/ns/ttml</a></code> as the namespace for the <code>&lt;p&gt;</code> element.</li>
- <li>For the <code>&lt;p&gt;</code> in HTML the namespace is <code><a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>.</li>
+ <li>The W3C standard IMSC uses the URL <code><a href="https://www.w3.org/ns/ttml">http://www.w3.org/ns/ttml</a></code> as the namespace for the <code>&lt;p&gt;</code> element.</li>
+ <li>For the <code>&lt;p&gt;</code> in HTML the namespace is <code><a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>.</li>
 </ul>
 
 <p>If you use the namespace <code>http://www.w3.org/ns/ttml</code> it is quite safe to assume that you are referring to elements from the IMSC vocabulary.</p>
@@ -74,7 +74,7 @@ tags:
   &lt;/body&gt;
 &lt;/tt&gt;</pre>
 
-<p>The element <code>&lt;documentPublisher&gt;</code> comes from the <a href="https://tech.ebu.ch/publications/tech3390">EBU Part M metadata</a> vocabulary. The elements in this vocabulary have the namespace <code>urn:ebu:tt:metadata</code>. By setting the <code>xmlns</code> attribute on the element <code>&lt;documentPublisher&gt;</code> to <code>urn:ebu:tt:metadata</code>, the namespace <code>http://www.w3.org/ns/ttml</code> gets overwritten. Now the <code>&lt;documentPublisher&gt;</code> element and all its descendents have the namespace <code>urn:ebu:tt:metadata</code>.</p>
+<p>The element <code>&lt;documentPublisher&gt;</code> comes from the <a href="https://tech.ebu.ch/publications/tech3390">EBU Part M metadata</a> vocabulary. The elements in this vocabulary have the namespace <code>urn:ebu:tt:metadata</code>. By setting the <code>xmlns</code> attribute on the element <code>&lt;documentPublisher&gt;</code> to <code>urn:ebu:tt:metadata</code>, the namespace <code>http://www.w3.org/ns/ttml</code> gets overwritten. Now the <code>&lt;documentPublisher&gt;</code> element and all its descendants have the namespace <code>urn:ebu:tt:metadata</code>.</p>
 
 <p>A better way to overwrite a default namespace is by using prefixes.</p>
 

@@ -11,7 +11,7 @@ tags:
 
 <p>The <strong><code>Range.surroundContents()</code></strong> method moves content of the {{ domxref("Range") }} into a new node, placing the new node at the start of the specified range.</p>
 
-<p>This method is nearly equivalent to <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. After surrounding, the boundary points of the <code>range</code> include <code>newNode</code>.</p>
+<p>This method is nearly equivalent to <code>newNode.appendChild(<a href="/en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. After surrounding, the boundary points of the <code>range</code> include <code>newNode</code>.</p>
 
 <p>An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{ domxref("Text") }} node with only one of its boundary points. That is, unlike the alternative above, if there are partially selected nodes, they will not be cloned and instead the operation will fail.</p>
 

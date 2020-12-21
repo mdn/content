@@ -18,7 +18,7 @@ tags:
 
 <p>A Web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.</p>
 
-<p>The <a class="external" href="http://www.w3.org/DOM/">W3C DOM</a> and <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
+<p>The <a class="external" href="https://www.w3.org/DOM/">W3C DOM</a> and <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
 
 <p>For example, the standard DOM specifies that the <code>querySelectorAll</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
 
@@ -133,11 +133,11 @@ p_list = doc.getElementsByTagName("para")
  </tbody>
 </table>
 
-<p>There are also some common terminology considerations to keep in mind. It's common to refer to any {{domxref("Attribute")}} node as simply an <code>attribute</code>, for example, and to refer to an array of DOM nodes as a <code>nodeList</code>. You'll find these terms and others to be introduced and used throughout the documentation.</p>
+<p>There are also some common terminology considerations to keep in mind. It's common to refer to any {{domxref("Attribute")}} node as an <code>attribute</code>, for example, and to refer to an array of DOM nodes as a <code>nodeList</code>. You'll find these terms and others to be introduced and used throughout the documentation.</p>
 
 <h2 id="DOM_interfaces">DOM interfaces</h2>
 
-<p>This guide is about the objects and the actual <em>things</em> you can use to manipulate the DOM hierarchy. There are many points where understanding how these work can be confusing. For example, the object representing the HTML <code>form</code> element gets its <code>name</code> property from the <code>HTMLFormElement</code> interface but its <code>className</code> property from the <code>HTMLElement</code> interface. In both cases, the property you want is simply in that form object.</p>
+<p>This guide is about the objects and the actual <em>things</em> you can use to manipulate the DOM hierarchy. There are many points where understanding how these work can be confusing. For example, the object representing the HTML <code>form</code> element gets its <code>name</code> property from the <code>HTMLFormElement</code> interface but its <code>className</code> property from the <code>HTMLElement</code> interface. In both cases, the property you want is in that form object.</p>
 
 <p>But the relationship between objects and the interfaces that they implement in the DOM can be confusing, and so this section attempts to say a little something about the actual interfaces in the DOM specification and how they are made available.</p>
 

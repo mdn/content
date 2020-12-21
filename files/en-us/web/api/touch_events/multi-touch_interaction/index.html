@@ -99,8 +99,8 @@ function handle_pinch_zoom(ev) {
      var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
      // This threshold is device dependent as well as application specific
-     var PINCH_THRESHHOLD = ev.target.clientWidth / 10;
-     if (diff1 &gt;= PINCH_THRESHHOLD &amp;&amp; diff2 &gt;= PINCH_THRESHHOLD)
+     var PINCH_THRESHOLD = ev.target.clientWidth / 10;
+     if (diff1 &gt;= PINCH_THRESHOLD &amp;&amp; diff2 &gt;= PINCH_THRESHOLD)
          ev.target.style.background = "green";
    }
    else {

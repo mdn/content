@@ -14,7 +14,7 @@ tags:
 
 <p>Nodes from external documents should be cloned using <a href="/en-US/docs/Web/API/Document/importNode" title="The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later."><code>document.importNode()</code></a> (or adopted using <a href="/en-US/docs/Web/API/Document/adoptNode" title="Document.adoptNode() transfers a node from another document into the method's document. The adopted node and its subtree is removed from its original document (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document."><code>document.adoptNode()</code></a>) before they
     can be inserted into the current document. For more on the <a href="/en-US/docs/Web/API/Node/ownerDocument" title="The Node.ownerDocument read-only property returns the top-level document object for this node."><code>Node.ownerDocument</code></a> issues, see the
-    <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+    <a class="external" href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
     <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
     sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for

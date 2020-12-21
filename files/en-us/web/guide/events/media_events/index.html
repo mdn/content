@@ -127,7 +127,7 @@ v.addEventListener("seeked", function() { v.play(); }, true);
 v.currentTime = 10.0;
 </pre>
 
-<p>This example fetches the first video element in the document and attaches an event listener to it, watching for the <code>seeked</code> event, which is sent whenever a seek operation completes.  The listener simply calls the element's <code>play()</code> method, which starts playback.</p>
+<p>This example fetches the first video element in the document and attaches an event listener to it, watching for the <code>seeked</code> event, which is sent whenever a seek operation completes.  The listener calls the element's <code>play()</code> method, which starts playback.</p>
 
 <p>Then, in line 3, the example sets the element's <code>currentTime</code> attribute to 10.0, which initiates a seek operation to the 10-second mark in the media.  This causes a <code>seeking</code> event to be sent when the operation begins, then a <code>seeked</code> event to be dispatched when the seek is completed.</p>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
 
-<p>The <code>LocalFileSystem</code> interface of the <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a> gives you access to a sandboxed file system.  The methods are implemented by <a href="/cn/DOM/window" title="cn/DOM/window">window</a> and <a href="/en/DOM/Worker" title="En/DOM/Worker">worker</a> objects.</p>
+<p>The <code>LocalFileSystem</code> interface of the <a href="/en/DOM/File_API/File_System_API">File System API</a> gives you access to a sandboxed file system.  The methods are implemented by <a href="/cn/DOM/window" title="cn/DOM/window">window</a> and <a href="/en/DOM/Worker">worker</a> objects.</p>
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Creating_new_storage">Creating new storage</h3>
 
-<p>You request access to a sandboxed file system by calling <code>window.requestFileSystem().</code> The argument of a successful callback is the <code><a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> object, which has two properties: the name and root of the file system.</p>
+<p>You request access to a sandboxed file system by calling <code>window.requestFileSystem().</code> The argument of a successful callback is the <code><a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> object, which has two properties: the name and root of the file system.</p>
 
 <p>You can call the method more than once if you want to create two file systems: one that's temporary and one that's persistent. (To learn more about the storage types, see the <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types">Basic Concepts</a> article.) In most cases, you need to create only one file system, but in a few cases, it might be useful to create a second one. For example, if you were to create a mail app, you might create a temporary storage for caching assets (like images and attachments) to speed up performance, while creating persistent storage for unique data—such as drafts of emails that were composed while offline—that should not be lost before they are backed up into the cloud.  </p>
 
@@ -124,7 +124,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
  <dt>size</dt>
  <dd>The storage space—in bytes—that you need for your app.</dd>
  <dt>successCallback</dt>
- <dd>The success callback that is called when the browser provides a file system. Its argument is the <code><a href="/en/DOM/File_API/File_System_API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> object with two properties:
+ <dd>The success callback that is called when the browser provides a file system. Its argument is the <code><a href="/en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> object with two properties:
  <ul>
   <li>name - the unique name assigned by the browser to the file system.</li>
   <li>root - the read-only <code>DirectoryEntry</code> object representing the root of the file system.</li>
@@ -142,7 +142,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise an <a href="/en/DOM/File_API/File_System_API/FileError" title="en/DOM/File_API/File_System_API/FileException">FileError</a> with the following code:</p>
+<p>This method can raise an <a href="/en/DOM/File_API/File_System_API/FileError">FileError</a> with the following code:</p>
 
 <table class="standard-table">
  <thead>
@@ -187,7 +187,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise an <a href="/en/DOM/File_API/File_System_API/FileError" title="en/DOM/File_API/File_System_API/FileException">FileError</a> with the following code:</p>
+<p>This method can raise an <a href="/en/DOM/File_API/File_System_API/FileError">FileError</a> with the following code:</p>
 
 <table class="standard-table">
  <thead>
@@ -220,6 +220,6 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

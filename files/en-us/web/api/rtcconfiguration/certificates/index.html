@@ -42,7 +42,7 @@ let <em>certificates</em> = <em>rtcConfiguration</em>.certificates;
 
 <p>If this property isn't included in the configuration, a set of certificates is automatically generated for each instance of {{domxref("RTCPeerConnection")}}. Although a given {{Glossary("DTLS")}} connection only uses a single certificate, providing multiple options in the <code>certificates</code> list may improve the odds of establishing a connection by increasing the chances a mutually-compatible encryption algorithm and key size may be found.</p>
 
-<p>The method by which a browser decides which certificate to use is implementation-dependent. Some browsers may simply choose the first listed certificate and ignore the rest of the list; others may take a different approach.</p>
+<p>The method by which a browser decides which certificate to use is implementation-dependent. Some browsers may choose the first listed certificate and ignore the rest of the list; others may take a different approach.</p>
 
 <h3 id="Using_certificates">Using certificates</h3>
 

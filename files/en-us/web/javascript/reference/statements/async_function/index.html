@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">An async function is a function declared with the <code>async</code><strong> </strong>keyword<strong>. </strong>Async functions are instances of the {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} constructor, and the <code>await</code> keyword is permitted within them. The <code>async</code> and <code>await</code> keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</span></p>
+<p><span class="seoSummary">An async function is a function declared with the <code>async</code> keyword<strong>.</strong> Async functions are instances of the {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} constructor, and the <code>await</code> keyword is permitted within them. The <code>async</code> and <code>await</code> keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</span></p>
 
 <p>Async functions may also be defined {{jsxref("Operators/async_function", "as expressions", "", 1)}}.</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <ol>
  <li>The first line of the body of function <code>foo</code> is executed synchronously, with the await expression configured with the pending promise. Progress through <code>foo</code> is then suspended and control is yielded back to the function that called <code>foo</code>.</li>
- <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfilment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
+ <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfillment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
  <li>Some time later, when the second promise has either been fulfilled or rejected, control re-enters <code>foo</code>. The result of the second promise resolution is returned from the second await expression. Here <code>2</code> is assigned to <code>result2</code>. Control moves to the return expression (if any). The default return value of <code>undefined</code> is returned as the resolution value of the current promise.</li>
 </ol>
 

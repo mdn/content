@@ -357,7 +357,7 @@ timeTest().then(() =&gt; {
   await timeoutPromise(3000);
 }</pre>
 
-<p>Here we simply await all three <code>timeoutPromise()</code> calls directly, making each one alert for 3 seconds. Each subsequent one is forced to wait until the last one finished — if you run the first example, you'll see the alert box reporting a total run time of around 9 seconds.</p>
+<p>Here we await all three <code>timeoutPromise()</code> calls directly, making each one alert for 3 seconds. Each subsequent one is forced to wait until the last one finished — if you run the first example, you'll see the alert box reporting a total run time of around 9 seconds.</p>
 
 <p>In the <code>fast-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
 

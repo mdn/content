@@ -50,7 +50,7 @@ tags:
 
 <p>In this example, the <code>getData()</code> function uses XHR to load an audio track, setting the <code>responseType</code> of the request to <code>arraybuffer</code> so that it returns an array buffer as its <code>response</code> that we then store in the <code>audioData</code> variable . We then pass this buffer into a <code>decodeAudioData()</code> function; the success callback takes the successfully decoded PCM data, puts it into an {{ domxref("AudioBufferSourceNode") }} created using {{ domxref("AudioContext.createBufferSource()") }}, connects the source to the {{domxref("AudioContext.destination") }} and sets it to loop.</p>
 
-<p>The buttons in the example simply run <code>getData()</code> to load the track and start it playing, and stop it playing, respectively. When the <code>stop()</code> method is called on the source, the source is cleared out.</p>
+<p>The buttons in the example run <code>getData()</code> to load the track and start it playing, and stop it playing, respectively. When the <code>stop()</code> method is called on the source, the source is cleared out.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can <a href="https://mdn.github.io/webaudio-examples/decode-audio-data/">run the example live</a> (or <a href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">view the source</a>.)</p>

@@ -25,7 +25,7 @@ tags:
 
 <h2 id="requestAnimationFrame">requestAnimationFrame</h2>
 
-<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by simply changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
+<p>The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}}, which need a specific delay parameter, <code>requestAnimationFrame()</code> is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)</p>
 
 <div class="note">
 <p><strong>Note</strong>: Like CSS transitions and animations, <code>requestAnimationFrame()</code> pauses when the current tab is pushed into the background.</p>
@@ -36,7 +36,7 @@ tags:
 <h2 id="Performance_comparison_transitions_vs._requestAnimationFrame">Performance comparison:<br>
  transitions vs. requestAnimationFrame</h2>
 
-<p>The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like <a href="http://greensock.com/gsap">GSAP</a> and <a href="http://velocityjs.org/">Velocity.JS</a>, even claim that they are able to achieve better performance than <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript/">native CSS transitions/animations</a>. This can occur because CSS transitions/animations are simply resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a <code>requestAnimationFrame()</code> callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.</p>
+<p>The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like <a href="http://greensock.com/gsap">GSAP</a> and <a href="http://velocityjs.org/">Velocity.JS</a>, even claim that they are able to achieve better performance than <a href="https://css-tricks.com/myth-busting-css-animations-vs-javascript/">native CSS transitions/animations</a>. This can occur because CSS transitions/animations are resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a <code>requestAnimationFrame()</code> callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.</p>
 
 <p>In this section we'll walk you through a performance test, using Firefox, to see what animation method seems better overall.</p>
 

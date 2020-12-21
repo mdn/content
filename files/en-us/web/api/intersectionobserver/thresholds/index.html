@@ -26,10 +26,10 @@ tags:
 
 <p>An array of intersection thresholds, originally specified using the <code>threshold</code> property when instantiating the observer. If only one observer was specified, without being in an array, this value is a one-entry array containing that threshold. Regardless of the order your original <code>threshold</code> array was in, this one is always sorted in numerically increasing order.</p>
 
-<p>If no <code>threshold</code> option was included when <code>IntersectionObserver()</code> was used to instantiate the observer, the value of <code>thresholds</code> is simply <code>[0]</code>.</p>
+<p>If no <code>threshold</code> option was included when <code>IntersectionObserver()</code> was used to instantiate the observer, the value of <code>thresholds</code> is <code>[0]</code>.</p>
 
 <div class="note">
-<p>Be careful! Although the <code>options</code> object you can specify when creating an {{domxref("IntersectionObserver")}} has a field named {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called <code>thresholds</code>. Confusing? Yes. If you accidentally use <code>thresholds</code> as the name of the field in your <code>options</code>, the <code>thresholds</code> array will wind up being simply <code>[0.0]</code>, which is likely not what you expect. Debugging chaos may ensue.</p>
+<p>Be careful! Although the <code>options</code> object you can specify when creating an {{domxref("IntersectionObserver")}} has a field named {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called <code>thresholds</code>. Confusing? Yes. If you accidentally use <code>thresholds</code> as the name of the field in your <code>options</code>, the <code>thresholds</code> array will wind up being <code>[0.0]</code>, which is likely not what you expect. Debugging chaos may ensue.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

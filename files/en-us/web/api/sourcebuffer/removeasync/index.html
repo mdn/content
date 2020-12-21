@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example establishes an asynchronous function, <code>emptySourceBuffer()</code>, which simply clears the contents of the specified <code>SourceBuffer</code>.</p>
+<p>This example establishes an asynchronous function, <code>emptySourceBuffer()</code>, which clears the contents of the specified <code>SourceBuffer</code>.</p>
 
 <pre class="brush: js">async function emptySourceBuffer(msBuffer) {
   await msBuffer.removeAsync(0, Infinity).catch(function(e) {

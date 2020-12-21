@@ -46,10 +46,10 @@ tags:
 
 <h2 id="Active_learning_classic_embedding_uses">Active learning: classic embedding uses</h2>
 
-<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">Youtube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how Youtube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
+<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">YouTube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
 
 <ol>
- <li>First, go to Youtube and find a video you like.</li>
+ <li>First, go to YouTube and find a video you like.</li>
  <li>Below the video, you'll find a <em>Share</em> button — select this to display the sharing options.</li>
  <li>Select the <em>Embed</em> button and you'll be given some <code>&lt;iframe&gt;</code> code — copy this.</li>
  <li>Insert it into the <em>Input</em> box below, and see what the result is in the <em>Output</em>.</li>
@@ -255,7 +255,7 @@ textarea.onkeyup = function(){
  <li>HTTPS prevents embedded content from accessing content in your parent document, and vice versa.</li>
 </ol>
 
-<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or Youtube, for example.</p>
+<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or YouTube, for example.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
@@ -363,13 +363,13 @@ textarea.onkeyup = function(){
 <p>Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For virtually all applications, it's time to stop delivering content that depends on plugins and start taking advantage of Web technologies instead.</p>
 
 <ul>
- <li><strong>Broaden your reach to everyone. </strong>Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.</li>
+ <li><strong>Broaden your reach to everyone.</strong> Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.</li>
  <li><strong>Give yourself a break from the <a href="https://webaim.org/techniques/flash/">extra accessibility headaches </a>that come with Flash and other plugins.</strong></li>
- <li><strong>Stay clear of additional security hazards. </strong>Adobe Flash is <a href="https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">notoriously insecure,</a> even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook,  <a href="https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">requested that Adobe discontinue Flash.</a></li>
+ <li><strong>Stay clear of additional security hazards.</strong> Adobe Flash is <a href="https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">notoriously insecure,</a> even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook,  <a href="https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">requested that Adobe discontinue Flash.</a></li>
 </ul>
 
 <div class="notecard note">
-<p><strong>Note: </strong>Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.</p>
+<p><strong>Note:</strong> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.</p>
 </div>
 
 <p>So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use <a href="/en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage">HTML5 video</a> for your media needs, <a href="/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage">SVG</a> for vector graphics, and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas</a> for complex images and animations. <a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp">Peter Elst was already writing some years ago</a> that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.</p>

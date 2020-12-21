@@ -34,7 +34,7 @@ tags:
  <dd>One or more local {{domxref("MediaStream")}} objects to which the track should be added.</dd>
 </dl>
 
-<p>The specified <code>track</code> doesn't necessarily have to already be part of any of the specified <code>stream</code>s. Instead, the <code>stream</code>s are simply a way to group tracks together on the receiving end of the connection, making sure they are synchronized. Any tracks that are added to the same stream on the local end of the connection will be on the same stream on the remote end.</p>
+<p>The specified <code>track</code> doesn't necessarily have to already be part of any of the specified <code>stream</code>s. Instead, the <code>stream</code>s are a way to group tracks together on the receiving end of the connection, making sure they are synchronized. Any tracks that are added to the same stream on the local end of the connection will be on the same stream on the remote end.</p>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -73,7 +73,7 @@ tags:
   }
 }</pre>
 
-<p>The result is a set of tracks being sent to the remote peer, with no stream associations. The handler for the {{event("track")}} event on the remote peer will be responsible for determining what stream to add each track to, even if that means simply adding them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}} handler might look like this:</p>
+<p>The result is a set of tracks being sent to the remote peer, with no stream associations. The handler for the {{event("track")}} event on the remote peer will be responsible for determining what stream to add each track to, even if that means adding them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}} handler might look like this:</p>
 
 <pre class="brush: js">let inboundStream = null;
 

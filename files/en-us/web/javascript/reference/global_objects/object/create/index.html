@@ -48,7 +48,7 @@ tags:
 
 <h2 id="Custom_and_Null_objects">Custom and Null objects</h2>
 
-<p>A new object created from a completely custom object (especially one created from the <code>null</code> object, which is basically a custom object with NO members) can behave in unexpected ways. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or simply lose information (especially if using silent error-traps that ignore errors). For example, here are two objects:</p>
+<p>A new object created from a completely custom object (especially one created from the <code>null</code> object, which is basically a custom object with NO members) can behave in unexpected ways. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or lose information (especially if using silent error-traps that ignore errors). For example, here are two objects:</p>
 
 <pre class="brush: js notranslate">oco = Object.create( {} );   // create a normal object
 ocn = Object.create( null ); // create a "null" object
@@ -110,7 +110,7 @@ function ShowProperties(obj){
 Note that only first property gets shown.
 </pre>
 
-<p><em>(But if the same object is created simply in a different order -- at least in some implementations...)</em></p>
+<p><em>(But if the same object is created in a different order -- at least in some implementations...)</em></p>
 
 <pre class="brush: js notranslate">ob={}; ob.pn=ocn; ob.po=oco; // create same compound object again, but create same properties in different order
 
@@ -158,7 +158,7 @@ ocn.prototype.toString = Object.toString; // since new object lacks method then 
 </pre>
 
 <p><br>
- Adding the missing object-method by using the standard-object<strong> </strong>as new object's prototype does not work either:</p>
+ Adding the missing object-method by using the standard-object as new object's prototype does not work either:</p>
 
 <pre class="brush: js notranslate">ocn = Object.create( null );        // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standard-object
@@ -168,7 +168,7 @@ Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standar
 
 <h4 id="Some_OK_solutions">Some OK solutions</h4>
 
-<p>Again, adding the missing object-method directly from the <strong>standard-object </strong>does NOT work. However, adding the <strong>generic</strong> method directly, DOES:</p>
+<p>Again, adding the missing object-method directly from the <strong>standard-object</strong> does NOT work. However, adding the <strong>generic</strong> method directly, DOES:</p>
 
 <pre class="brush: js notranslate">ocn = Object.create( null ); // create "null" object (same as before)
 

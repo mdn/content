@@ -267,7 +267,7 @@ const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.r
 const result3 = transformData(data);
 </pre>
 
-<p>In ECMAScript 2017, sequential composition can be done more simply with async/await:</p>
+<p>In ECMAScript 2017, sequential composition can be done more with async/await:</p>
 
 <pre class="brush: js notranslate">let result;
 for (const f of [func1, func2, func3]) {

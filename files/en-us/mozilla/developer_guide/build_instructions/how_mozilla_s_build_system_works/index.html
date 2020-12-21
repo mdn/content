@@ -24,18 +24,18 @@ tags:
 
 <h3 id="Phase_1_configure">Phase 1: configure</h3>
 
-<p>Phase 1 centers around the <strong>configure </strong>script. The <strong>configure </strong>script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="http://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure </strong>script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
+<p>Phase 1 centers around the <strong>configure</strong> script. The <strong>configure</strong> script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="http://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure</strong> script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
 
-<p>The primary job of <strong>configure </strong>is to determine characteristics of the system and compiler, apply options passed into it, and validate everything looks OK to build. The primary output of the <strong>configure </strong>script is an executable file in the object directory called <strong>config.status</strong>. <strong>configure</strong> also produces some additional files (like <strong>autoconf.mk</strong>). However, the most important file in terms of architecture is <strong>config.status</strong>.</p>
+<p>The primary job of <strong>configure</strong> is to determine characteristics of the system and compiler, apply options passed into it, and validate everything looks OK to build. The primary output of the <strong>configure</strong> script is an executable file in the object directory called <strong>config.status</strong>. <strong>configure</strong> also produces some additional files (like <strong>autoconf.mk</strong>). However, the most important file in terms of architecture is <strong>config.status</strong>.</p>
 
-<p>The existence of a <strong>config.status</strong> file may be familiar to those who have worked with Autoconf before. However, Mozilla's <strong>config.status</strong> is different from many other <strong>config.status</strong> files, as it's written in Python! Instead of our <strong>configure </strong>script producing a shell script, it generates a Python script.</p>
+<p>The existence of a <strong>config.status</strong> file may be familiar to those who have worked with Autoconf before. However, Mozilla's <strong>config.status</strong> is different from many other <strong>config.status</strong> files, as it's written in Python! Instead of our <strong>configure</strong> script producing a shell script, it generates a Python script.</p>
 
 <p>Python 2 is prevalent in a Mozilla build system. If we need to write code for the build system, we do it in <strong>Python 2</strong> instead of editing a <em>makefile</em>.</p>
 
 <p><strong>config.status</strong> contains 2 parts:</p>
 
 <ul>
- <li>data structures representing the output of <strong>configure </strong>and</li>
+ <li>data structures representing the output of <strong>configure</strong> and</li>
  <li>a command-line interface for preparing, configuring, or generating an appropriate <em>build backend</em>. A <em>build backend</em> is merely a tool used to build the tree — like <strong>GNU Make</strong> or <em>Tup</em>.</li>
 </ul>
 
@@ -45,7 +45,7 @@ tags:
 
 <h3 id="Phase_2_Build_Backend_Preparation_and_the_Build_Definition">Phase 2: Build Backend Preparation and the Build Definition</h3>
 
-<p>Once <strong>configure </strong>has determined what the current build configuration is, we need to apply this to the source tree so we can actually build.</p>
+<p>Once <strong>configure</strong> has determined what the current build configuration is, we need to apply this to the source tree so we can actually build.</p>
 
 <p>What essentially happens is the automatically produced <strong>config.status</strong> Python script is executed as soon as <strong>configure</strong> has generated it. <strong>config.status</strong> is charged with the task of <em>telling a tool how to build the tree.</em> To do this, <strong>config.status</strong> must first scan the build system definition.</p>
 
@@ -114,7 +114,7 @@ Total wall time: 5.03s; CPU time: 3.79s; Efficiency: 75%</pre>
 
 <p><strong>moz.build</strong> files are how each part of the source tree defines how it is integrated with the build system. Think of each <strong>moz.build</strong> file as a data structure telling the build system what to do.</p>
 
-<p>During build backend generation, all <strong>moz.build </strong>files relevant to the current build configuration are read and converted into files and actions used to build the tree (such as makefiles). In this section, we'll talk about how <strong>moz.build</strong> files actually work.</p>
+<p>During build backend generation, all <strong>moz.build</strong> files relevant to the current build configuration are read and converted into files and actions used to build the tree (such as makefiles). In this section, we'll talk about how <strong>moz.build</strong> files actually work.</p>
 
 <p><strong>An individual moz.build file is actually a Python script.</strong> However, they are unlike most Python scripts. The execution environment is strictly controlled, so <strong>moz.build</strong> files can only perform a limited set of operations. <strong>moz.build</strong> files are limited to performing the following actions:</p>
 
@@ -157,7 +157,7 @@ Total wall time: 5.03s; CPU time: 3.79s; Efficiency: 75%</pre>
 
 <p>The <code>MozbuildSandbox</code> stream produced by the <code>BuildReader</code> is typically fed into the <code>TreeMetadataEmitter</code> class from <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/frontend/emitter.py">emitter.py</a>. The role of <code>TreeMetadataEmitter</code> is to convert the low-level <code>MozbuildSandbox</code> dictionaries into higher-level function-specific data structures. These data structures are the classes defined in <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/frontend/data.py">data.py</a>. Each class defines a specific aspect of the build system, such as directories to traverse, C++ files to compile, and so on. The <code>TreeMetadataEmitter</code> output is a stream of instances of these classes.</p>
 
-<p>The build system stream describing class instances emitted from <code>TreeMetadataEmitter</code> is then fed into a build backend. A build backend is simply an instance of a child class of a <code>BuildBackend</code> from <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/backend/base.py">base.py</a> (in the <code>mozbuild.backend</code> package now, not <code>mozbuild.frontend</code>). The child class implements methods for processing individual class instances as well as common hook points, such as <em>processing has finished</em>. See <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/backend/recursivemake.py">recursivemake.py</a> for an implementation of a <code>BuildBackend</code>.</p>
+<p>The build system stream describing class instances emitted from <code>TreeMetadataEmitter</code> is then fed into a build backend. A build backend is an instance of a child class of a <code>BuildBackend</code> from <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/backend/base.py">base.py</a> (in the <code>mozbuild.backend</code> package now, not <code>mozbuild.frontend</code>). The child class implements methods for processing individual class instances as well as common hook points, such as <em>processing has finished</em>. See <a href="https://hg.mozilla.org/mozilla-central/file/default/python/mozbuild/mozbuild/backend/recursivemake.py">recursivemake.py</a> for an implementation of a <code>BuildBackend</code>.</p>
 
 <p>Although we call the base class <code>BuildBackend</code>, the class doesn't need to be focused with <em>building</em> at all. If you wanted to create a consumer that performed a line count of all C++ files or generated a Clang compilation database, for example, this would be an acceptable use of a <code>BuildBackend</code>.</p>
 
@@ -185,15 +185,15 @@ include $(topsrcdir)/config/rules.mk
 </pre>
 
 <ul>
- <li>The <code><a href="/en-US/docs/DEPTH" title="DEPTH">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
+ <li>The <code><a href="/en-US/docs/DEPTH">DEPTH</a></code> variable should be set to the relative path from your Makefile.in to the top-level Mozilla directory.</li>
  <li><code>topsrcdir</code> is substituted in by configure and points to the top-level Mozilla directory.</li>
- <li><code>srcdir</code> is also substituted in by configure and points to the source directory for the current directory. In source tree builds, this will simply point to "." (the current directory).</li>
- <li><code><a href="/en-US/docs/VPATH" title="VPATH">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
+ <li><code>srcdir</code> is also substituted in by configure and points to the source directory for the current directory. In source tree builds, this will point to "." (the current directory).</li>
+ <li><code><a href="/en-US/docs/VPATH">VPATH</a></code> is a list of directories where <em>make</em> will look for prerequisites (i.e., source files).</li>
 </ul>
 
-<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/DIRS" title="DIRS">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
+<p>One other frequently used variable not specific to a particular build target is <code><a href="/en-US/docs/DIRS">DIRS</a></code>. <code>DIRS</code> is a list of subdirectories of the current directory to recursively build in. Subdirectories are traversed <em>after</em> their parent directories. For example, you could have:</p>
 
-<pre class="eval"><a href="/en-US/docs/DIRS" title="DIRS">DIRS</a> = \
+<pre class="eval"><a href="/en-US/docs/DIRS">DIRS</a> = \
   public \
   resources \
   src \
@@ -239,10 +239,10 @@ include $(topsrcdir)/config/rules.mk
 
  include $(DEPTH)/config/autoconf.mk
 
- <a href="/en-US/docs/MODULE" title="MODULE">MODULE</a>          = msgbaseutil
- <a href="/en-US/docs/LIBRARY_NAME" title="LIBRARY_NAME">LIBRARY_NAME</a>    = msgbaseutil
- <a href="/en-US/docs/EXPORT_LIBRARY" title="EXPORT_LIBRARY">EXPORT_LIBRARY</a> = 1
- <a href="/en-US/docs/SHORT_LIBNAME" title="SHORT_LIBNAME">SHORT_LIBNAME</a>   = msgbsutl
+ <a href="/en-US/docs/MODULE">MODULE</a>          = msgbaseutil
+ <a href="/en-US/docs/LIBRARY_NAME">LIBRARY_NAME</a>    = msgbaseutil
+ <a href="/en-US/docs/EXPORT_LIBRARY">EXPORT_LIBRARY</a> = 1
+ <a href="/en-US/docs/SHORT_LIBNAME">SHORT_LIBNAME</a>   = msgbsutl
 </pre>
 
 <p>Notice that the only change from the component example above is that <strong>IS_COMPONENT</strong> is not set. When this is not set, a shared library will be created and installed to dist/bin.</p>
@@ -264,7 +264,7 @@ include $(topsrcdir)/config/rules.mk
  # REQUIRES and CPPSRCS omitted here for brevity #
 
  # we don't want the shared lib, but we want to force the creation of a static lib.
- <a href="/en-US/docs/FORCE_STATIC_LIB" title="FORCE_STATIC_LIB">FORCE_STATIC_LIB</a> = 1
+ <a href="/en-US/docs/FORCE_STATIC_LIB">FORCE_STATIC_LIB</a> = 1
 
  include $(topsrcdir)/config/rules.mk
 </pre>
@@ -281,14 +281,14 @@ include $(topsrcdir)/config/rules.mk
  MODULE          = layout
  LIBRARY_NAME    = gklayout
  EXPORT_LIBRARY = 1
- <a href="/en-US/docs/IS_COMPONENT" title="IS_COMPONENT">IS_COMPONENT</a>    = 1
- <a href="/en-US/docs/MODULE_NAME" title="MODULE_NAME">MODULE_NAME</a>     = nsLayoutModule
+ <a href="/en-US/docs/IS_COMPONENT">IS_COMPONENT</a>    = 1
+ <a href="/en-US/docs/MODULE_NAME">MODULE_NAME</a>     = nsLayoutModule
 
- <a href="/en-US/docs/CPPSRCS" title="CPPSRCS">CPPSRCS</a>         = \
+ <a href="/en-US/docs/CPPSRCS">CPPSRCS</a>         = \
                  nsLayoutModule.cpp \
                  $(NULL)
 
- <a href="/en-US/docs/SHARED_LIBRARY_LIBS" title="SHARED_LIBRARY_LIBS">SHARED_LIBRARY_LIBS</a> = \
+ <a href="/en-US/docs/SHARED_LIBRARY_LIBS">SHARED_LIBRARY_LIBS</a> = \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmlbase_s.$(LIB_SUFFIX) \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmldoc_s.$(LIB_SUFFIX) \
                  $(DIST)/lib/$(LIB_PREFIX)gkhtmlforms_s.$(LIB_SUFFIX) \

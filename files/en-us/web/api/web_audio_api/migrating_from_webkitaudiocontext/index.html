@@ -40,7 +40,7 @@ var delay = context.createDelayNode();
 var js = context.createJavascriptNode(1024);
 </pre>
 
-<p>you can simply rename the methods to look like this:</p>
+<p>you can rename the methods to look like this:</p>
 
 <pre class="brush: js">// New method names
 var gain = context.createGain();
@@ -65,7 +65,7 @@ src.noteGrainOn(1, 0.25);
 src.noteOff(2);
 </pre>
 
-<p>you can simply change it like this in order to port it to the standard AudioContext API:</p>
+<p>you can change it like this in order to port it to the standard AudioContext API:</p>
 
 <pre class="brush: js">var osc = context.createOscillator();
 osc.start(1);
@@ -115,7 +115,7 @@ xhr.onload = function() {
 
 <h2 id="Renaming_of_AudioParam.setTargetValueAtTime">Renaming of AudioParam.setTargetValueAtTime</h2>
 
-<p>The <code>setTargetValueAtTime()</code> method on the {{domxref("AudioParam")}} interface has been renamed to <code>setTargetAtTime()</code>.  This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same.  If your code is using <code>setTargetValueAtTime()</code>, you can simply rename it to use <code>setTargetAtTime()</code>. For example, if we have code that looks like this:</p>
+<p>The <code>setTargetValueAtTime()</code> method on the {{domxref("AudioParam")}} interface has been renamed to <code>setTargetAtTime()</code>.  This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same.  If your code is using <code>setTargetValueAtTime()</code>, you can rename it to use <code>setTargetAtTime()</code>. For example, if we have code that looks like this:</p>
 
 <pre class="brush: js">  var gainNode = context.createGain();
   gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
@@ -367,7 +367,7 @@ osc.setPeriodicWave(table);
 <p>The following read-only attributes have been removed from AudioParam: <code>name</code>, <code>units</code>, <code>minValue</code>, and <code>maxValue</code>.  These used to be informational attributes.  Here is some information on how you can get these values if you need them:</p>
 
 <ul>
- <li>The <code>name</code> attribute is a string representing the name of the {{domxref("AudioParam")}} object.  For example, the name of {{domxref("GainNode.gain")}} is <code>"gain"</code>.  You can simply track where the {{domxref("AudioParam")}} object is coming from in your code if you need this information.</li>
+ <li>The <code>name</code> attribute is a string representing the name of the {{domxref("AudioParam")}} object.  For example, the name of {{domxref("GainNode.gain")}} is <code>"gain"</code>.  You can track where the {{domxref("AudioParam")}} object is coming from in your code if you need this information.</li>
  <li>The <code>minValue</code> and <code>maxValue</code> attributes are read-only values representing the nominal range for the {{domxref("AudioParam")}}.  For example, for {{domxref("GainNode") }}, these values are 0 and 1, respectively.  Note that these bounds are not enforced by the engine, and are merely used for informational purposes.  As an example, it's perfectly valid to set a gain value to 2, or even -1.  In order to find out these nominal values, you can consult the <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">specification</a>.</li>
  <li>The <code>units</code> attribute as implemented in <code>webkitAudioContext</code> implementations is unused, and always returns 0.  There is no reason why you should need this attribute.</li>
 </ul>

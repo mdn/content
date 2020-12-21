@@ -97,7 +97,7 @@ tags:
 
 <p>To tab to another view, use Cmd-F7/Ctrl-F7. This is useful if you have maximized the editor using Ctrl-M and you want to quickly see your search results. For example, without un-maximizing the editor.</p>
 
-<p>To side-by-side edit the same file in two different tabs, select the tab of the file that you want to edit, then from the menu bar select "Window &gt; New Editor". This will open another tab containing the same file. Now simply drag that tab to position it beside, above, or below the original. Changes you make in one editor will be immediately reflected in the other.</p>
+<p>To side-by-side edit the same file in two different tabs, select the tab of the file that you want to edit, then from the menu bar select "Window &gt; New Editor". This will open another tab containing the same file. Now drag that tab to position it beside, above, or below the original. Changes you make in one editor will be immediately reflected in the other.</p>
 
 <p>Note that the Search, Call Hierarchy, and other tabs have a "Pin" button that allows you to open multiple tabs of these type. This is useful if you want to keep your existing search results open, for example, and have a new search open in a separate tab rather than overriding the contents of the existing Search tab.</p>
 
@@ -256,7 +256,7 @@ subprocess.Popen([eclipse_app_path, "-data", workspace_path])
 
 <h3 id="How_can_I_delete_my_Eclipse_project_and_start_over">How can I delete my Eclipse project and start over?</h3>
 
-<p>If you followed the recommendation above to create one workspace containing only one project for each Mozilla tree, then this is easy. (If you didn't, and you have projects for more than one source tree entangled in a workspace directory, well, you're on your own.) Simply delete the <code>.project</code> and <code>.cproject</code> files and the <code>.settings</code> directory (if it exists) from the root of your Mozilla tree, and then delete the workspace directory corresponding to your tree. That's it; you can now create a new Eclipse workspace and project for your tree from scratch.</p>
+<p>If you followed the recommendation above to create one workspace containing only one project for each Mozilla tree, then this is easy. (If you didn't, and you have projects for more than one source tree entangled in a workspace directory, well, you're on your own.) Delete the <code>.project</code> and <code>.cproject</code> files and the <code>.settings</code> directory (if it exists) from the root of your Mozilla tree, and then delete the workspace directory corresponding to your tree. That's it; you can now create a new Eclipse workspace and project for your tree from scratch.</p>
 
 <h3 id="Isnt_there_a_better_method_of_build_option_discovery">Isn't there a better method of build option discovery?</h3>
 

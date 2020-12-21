@@ -28,7 +28,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
-<p>The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: <em>WebXR does not have cameras</em>. There's no magic object provided by either the <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> API that represents the viewer that you can simply rotate and move around to automatically change what's seen on the screen. <span class="seoSummary">In this guide we show how use <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.</span></p>
+<p>The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: <em>WebXR does not have cameras</em>. There's no magic object provided by either the <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. <span class="seoSummary">In this guide we show how use <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.</span></p>
 
 <p>Animating 3D graphics is an area of software development that brings together multiple disciplines in computer science, mathematics, art, graphic design, kinematics, anatomy, physiology, physics, and cinematography. Since we don't have a real camera, we imagine one, reproducing the <em>effect</em> of having a camera, without actually having the ability to move the user around the scene.</p>
 
@@ -65,7 +65,7 @@ tags:
 
 <ul>
  <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#Simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
- <li>In business applications, the 3D camera is used to simply set the apparent size and perspective when rendering things such as graphs and charts.</li>
+ <li>In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.</li>
  <li>In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.</li>
  <li>When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.</li>
  <li>When accelerating bitmapped graphics, the renderer would draw the 2D image into a WebGL texture's buffer, then redraw the texture to refresh the screen. This essentially uses the texture as a backbuffer for performing {{interwiki("wikipedia", "multiple buffering")}} in your 2D graphics application.</li>
@@ -91,7 +91,7 @@ tags:
 
 <p>There's another aspect of the spatial relationship of an object to the origin in space left to be considered: <strong>perspective</strong>. Perspective, properly applied to the objects in a scene, can take a scene that would otherwise look as flat as a typical 2D screen and make it pop as if it were truly 3D. There are several kinds of perspective; those are defined and their mathematics explained in the article <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection">WebGL model view projection</a>. Importantly, the effect of perspective on a vector can be represented by adding a fourth component to the vector: the perspective component, called <code>w</code>.</p>
 
-<p>The value of <code>w</code> is applied by dividing each of the other three components by it to get the final position or vector; that is, for a coordinate given as (<code>x</code>, <code>y</code>, <code>z</code>, <code>w</code>), the point in the 3D space is actually (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>, 1) or simply (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>). If you're not using perspective, <code>w</code> is always 1. In that situation, the complete coordinates for an object located at (1, 0, 3) are (1, 0, 3, 1).</p>
+<p>The value of <code>w</code> is applied by dividing each of the other three components by it to get the final position or vector; that is, for a coordinate given as (<code>x</code>, <code>y</code>, <code>z</code>, <code>w</code>), the point in the 3D space is actually (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>, 1) or (<code>x</code>/<code>w</code>, <code>y</code>/<code>w</code>, <code>z</code>/<code>w</code>). If you're not using perspective, <code>w</code> is always 1. In that situation, the complete coordinates for an object located at (1, 0, 3) are (1, 0, 3, 1).</p>
 
 <p>But the location isn't enough to describe an object in 3D space because an object's state in space isn't only about its location, but about its rotation or facing direction, otherwise known as its <strong>orientation</strong>. The orientation can be represented using a 3D vector, which is typically normalized so that its length is 1.0. For example, if the object is facing an object located at (3, 1, -2)—that is, three meters to the right, one meter up, and two meters away from the origin point—the result is:</p>
 
@@ -226,7 +226,7 @@ mat4.translate(transform, transform, translateVec);
 }
 </pre>
 
-<p>With the transform matrix in hand, we simply apply the transform <code>scaleTransform</code> to the vector (or vertex) <code>myVector</code>:</p>
+<p>With the transform matrix in hand, we apply the transform <code>scaleTransform</code> to the vector (or vertex) <code>myVector</code>:</p>
 
 <pre class="brush: js notranslate">let myVector = [2, 1, -3];
 let scaleTransform = [
@@ -258,7 +258,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <h3 id="Tilting_Pitching_up_or_down">Tilting (Pitching up or down)</h3>
 
-<p>When you <strong>tilt</strong> or <strong>pitch</strong> the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It simply adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.</p>
+<p>When you <strong>tilt</strong> or <strong>pitch</strong> the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.</p>
 
 <div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera tilting up and down" src="https://mdn.mozillademos.org/files/17094/Camera-Tilt.png" style="height: 265px; width: 277px;"></div>
 
@@ -296,7 +296,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <h3 id="Pedestaling_Moving_up_or_down">Pedestaling (Moving up or down)</h3>
 
-<p>A <strong>pedestal</strong> shot is one involving keeping the camera fixed horizontally relative to the floor, but moved straight up or down. Picture the camera on a pedestal (or pole) that gets taller or shorter. This is useful when tracking a subject that's getting taller or shorter, or is standing up or sitting down from a chair, or simply moving straight up and down.</p>
+<p>A <strong>pedestal</strong> shot is one involving keeping the camera fixed horizontally relative to the floor, but moved straight up or down. Picture the camera on a pedestal (or pole) that gets taller or shorter. This is useful when tracking a subject that's getting taller or shorter, or is standing up or sitting down from a chair, or moving straight up and down.</p>
 
 <div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera moving up and down using a pedestal motion" src="https://mdn.mozillademos.org/files/17092/Camera-Pedestal.png" style="height: 282px; width: 279px;"></div>
 
@@ -415,7 +415,7 @@ mat4.multiply(viewMatrix, viewMatrix, rotateMatrix);</pre>
 
 <p>The callback begins by calling a custom function, <code>applyPositionOffsets()</code>, which takes a reference space and applies to its transform matrix any changes that need to be made to take into account things such as user inputs from devices not controlled by WebXR, such as the keyboard and mouse. The adjusted {{domxref("XRReferenceSpace")}} returned by this function is then passed into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} to get the {{domxref("XRViewerPose")}} representing the viewer's position and viewing angle.</p>
 
-<p>Next, we go ahead and queue up the request to render the next frame of video, so we don't have to worry about doing it later, by simply calling <code>requestAnimationFrame()</code> again.</p>
+<p>Next, we go ahead and queue up the request to render the next frame of video, so we don't have to worry about doing it later, by calling <code>requestAnimationFrame()</code> again.</p>
 
 <p>Now it's time to render the scene. If we did successfully obtain a pose, we get the {{domxref("XRWebGLLayer")}} we need to use for rendering from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property. We bind this to WebGL's <code>gl.FRAMEBUFFER</code> target using the {{domxref("WebGLRenderingContext")}} method {{domxref("WebGLRenderingContext.bindFrameBuffer", "gl.bindFrameBuffer()")}}.</p>
 

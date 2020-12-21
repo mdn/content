@@ -23,7 +23,7 @@ tags:
  <li>An <em>instance</em>, on the other hand, is the instantiation of a class; that is. For example, <code>Victoria</code> could be an instance of the <code>Employee</code> class, representing a particular individual as an employee. An instance has exactly the same properties of its parent class (no more, no less).</li>
 </ul>
 
-<p>A prototype-based language, such as JavaScript, does not make this distinction: it simply has objects. A prototype-based language has the notion of a <em>prototypical object</em>, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the <em>prototype</em> for another object, allowing the second object to share the first object's properties.</p>
+<p>A prototype-based language, such as JavaScript, does not make this distinction: it has objects. A prototype-based language has the notion of a <em>prototypical object</em>, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the <em>prototype</em> for another object, allowing the second object to share the first object's properties.</p>
 
 <h3 id="Defining_a_class">Defining a class</h3>
 
@@ -122,7 +122,7 @@ tags:
 
 <p>There are several ways to define appropriate constructor functions to implement the Employee hierarchy. How you choose to define them depends largely on what you want to be able to do in your application.</p>
 
-<p>This section shows how to use very simple (and comparatively inflexible) definitions to demonstrate how to get the inheritance to work. In these definitions, you cannot specify any property values when you create an object. The newly-created object simply gets the default values, which you can change at a later time.</p>
+<p>This section shows how to use very simple (and comparatively inflexible) definitions to demonstrate how to get the inheritance to work. In these definitions, you cannot specify any property values when you create an object. The newly-created object gets the default values, which you can change at a later time.</p>
 
 <p>In a real application, you would probably define constructors that allow you to provide property values at object creation time (see <a href="#More_flexible_constructors">More flexible constructors</a> for information). For now, these simple definitions demonstrate how the inheritance occurs.</p>
 
@@ -437,7 +437,7 @@ jane.machine == 'belau';
 <ol>
  <li>The <code>new</code> operator creates a generic object and sets its <code>__proto__</code> property to <code>Engineer.prototype</code>.</li>
  <li>The <code>new</code> operator passes the new object to the <code>Engineer</code> constructor as the value of the <code>this</code> keyword.</li>
- <li>The constructor creates a new property called <code>base</code> for that object and assigns the value of the <code>WorkerBee</code> constructor to the <code>base</code> property. This makes the <code>WorkerBee</code> constructor a method of the <code>Engineer</code> object. The name of the <code>base</code> property is not special. You can use any legal property name; <code>base</code> is simply evocative of its purpose.</li>
+ <li>The constructor creates a new property called <code>base</code> for that object and assigns the value of the <code>WorkerBee</code> constructor to the <code>base</code> property. This makes the <code>WorkerBee</code> constructor a method of the <code>Engineer</code> object. The name of the <code>base</code> property is not special. You can use any legal property name; <code>base</code> is evocative of its purpose.</li>
  <li>The constructor calls the <code>base</code> method, passing as its arguments two of the arguments passed to the constructor (<code>"Doe, Jane"</code> and <code>["navigator", "javascript"]</code>) and also the string <code>"engineering"</code>. Explicitly using <code>"engineering"</code> in the constructor indicates that all <code>Engineer</code> objects have the same value for the inherited <code>dept</code> property, and this value overrides the value inherited from <code>Employee</code>.</li>
  <li>Because <code>base</code> is a method of <code>Engineer</code>, within the call to <code>base</code>, JavaScript binds the <code>this</code> keyword to the object created in Step 1. Thus, the <code>WorkerBee</code> function in turn passes the <code>"Doe, Jane"</code> and <code>"engineering"</code> arguments to the <code>Employee</code> constructor function. Upon return from the <code>Employee</code> constructor function, the <code>WorkerBee</code> function uses the remaining argument to set the <code>projects</code> property.</li>
  <li>Upon return from the <code>base</code> method, the <code>Engineer</code> constructor initializes the object's <code>machine</code> property to <code>"belau"</code>.</li>

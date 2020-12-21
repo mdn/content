@@ -109,7 +109,7 @@ main(); // Start the cycle</pre>
 
 <h2 id="Building_a_more_optimized_main_loop_in_JavaScript">Building a <em>more</em> <em>optimized</em> main loop in JavaScript</h2>
 
-<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="http://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
+<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="https://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
 
 <p>Modern versions of Firefox and Google Chrome (and probably others) <em>attempt</em> to connect <code>requestAnimationFrame</code> callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus <em>tries</em> to look like the following:</p>
 
@@ -167,7 +167,7 @@ main(); // Start the cycle</pre>
 
 <h3 id="What_most_browser_games_should_look_like">What most browser games should look like</h3>
 
-<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can simply update, render, and then do nothing until VSync.</p>
+<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.</p>
 
 <pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
@@ -304,7 +304,7 @@ main(); // Start the cycle</pre>
   main(performance.now()); // Start the cycle
 })();</pre>
 
-<p>Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
+<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
 
 <p>This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.</p>
 

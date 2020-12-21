@@ -30,7 +30,7 @@ validationResult = validator.validationResult();
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
-<p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
+<p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
 
 <pre class="brush: js notranslate">// Display Genre create form on GET.
 exports.genre_create_get = function(req, res, next) {
@@ -177,7 +177,7 @@ block content
 
 <p>The form defines a single required field of type "text" called "name". The default <em>value</em> of the field depends on whether the <code>genre</code> variable is defined. If called from the <code>GET</code> route it will be empty as this is a new form. If called from a <code>POST</code> route it will contain the (invalid) value originally entered by the user.</p>
 
-<p>The last part of the page is the error code. This simply prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
+<p>The last part of the page is the error code. This prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
 
 <div class="note">
 <p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>

@@ -237,7 +237,7 @@
 /en-US/docs/Building_XXX_Standalone	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_XXX_Standalone
 /en-US/docs/Building_a_SeaMonkey_package	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_a_SeaMonkey_package
 /en-US/docs/Building_an_Extension	/en-US/docs/Mozilla/Add-ons
-/en-US/docs/Building_on_Fedora_Core_5	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Buidling_on_Fedora_Core_5
+/en-US/docs/Building_on_Fedora_Core_5	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_on_Fedora_Core_5
 /en-US/docs/Building_on_Windows_using_the_MSVC_Toolkit	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /en-US/docs/Building_on_Windows_with_MSYS	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /en-US/docs/Building_on_Windows_with_SFU_(Interix)	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_on_Windows_with_SFU_(Interix)
@@ -7844,6 +7844,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_Firefox_on_Windows_with_clang-cl	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
+/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Buidling_on_Fedora_Core_5	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_on_Fedora_Core_5
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS_2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial

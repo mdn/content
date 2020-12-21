@@ -19,7 +19,7 @@ tags:
 <p>From <a href="/en-US/docs/Developer_Guide/Build_Instructions">Build_Instructions</a></p>
 
 <dl>
- <dt><a href="/En/Developer_Guide/Source_Code/CVS" title="en/Mozilla_Source_Code_(CVS)">Older Mozilla Source Code via CVS</a></dt>
+ <dt><a href="/En/Developer_Guide/Source_Code/CVS">Older Mozilla Source Code via CVS</a></dt>
  <dd>Those who need to work with the code for Firefox 3/Mozilla 1.9 and earlier can check out the latest source using CVS. In reality, you should probably not need to do this, since that code is very obsolete.</dd>
  <dt>This note below seems redundant as this is true by default https://msdn.microsoft.com/en-us/library/dh8che7s%28v=vs.110%29.aspx</dt>
 </dl>
@@ -82,7 +82,7 @@ cd 191src
 
 <h3 id="Visual_C_7.1_or_Visual_C_8_(VS2005)_Express">Visual C++ 7.1 or Visual C++ 8 (VS2005) Express</h3>
 
-<p>These versions are <strong>not supported </strong>and the Windows 7 SDK will not work with them. You need to upgrade to one of the newer Visual C++ versions above.</p>
+<p>These versions are <strong>not supported</strong> and the Windows 7 SDK will not work with them. You need to upgrade to one of the newer Visual C++ versions above.</p>
 
 
 <p><strong>For Gecko 11 or below</strong>: you could also download the <a href="#Windows_Vista_SDK">Windows Vista SDK</a> and follow the instructions there to allow you to build against it.</p>
@@ -127,7 +127,7 @@ cd 191src
  <li>Use Visual Studio 2008 Professional.</li>
 </ol>
 
-<p><strong>Gecko 1.9.2 through 11: </strong>If you would like to use this SDK, add <code>ac_add_options --with-windows-version=600</code> to your .mozconfig.</p>
+<p><strong>Gecko 1.9.2 through 11:</strong> If you would like to use this SDK, add <code>ac_add_options --with-windows-version=600</code> to your .mozconfig.</p>
 
 <h2 id="Windows_Server_2003_R2_Platform_SDK">Windows Server 2003 R2 Platform SDK</h2>
 
@@ -142,7 +142,7 @@ cd 191src
  <li>For all SDKs, you may choose not to install Sample Code and Documentation to save space and download time.</li>
 </ul>
 
-<p><strong>Gecko 1.9.2 through 11: </strong>If you're building with this SDK, you will need to add <code>ac_add_options --with-windows-version=502</code> to your .mozconfig.</p>
+<p><strong>Gecko 1.9.2 through 11:</strong> If you're building with this SDK, you will need to add <code>ac_add_options --with-windows-version=502</code> to your .mozconfig.</p>
 
 <div class="note">For mozilla-1.9.1 and mozilla-1.9.0, you need to add <code>ac_add_options --disable-vista-sdk-requirements</code> to your .mozconfig instead.</div>
 
@@ -189,7 +189,7 @@ cd 191src
 <p>From <a href="/en-US/docs/Configuring_Build_Options">Configuring Build Options [en-US]</a></p>
 
 <div class="note">
-<p><strong>Note:</strong> Starting with {{Gecko ("5.0")}}, building Firefox has become extremely simple. The default application is now Firefox, so you can build Firefox by simply doing <code>configure &amp;&amp; make</code> (for standalone source tarballs) or <code>make -f client.mk</code> (for code from the Mercurial repository); this will build something roughly the same as the shipped version of Firefox corresponding to the code you have. You only need to follow the steps below if you want to customize the build (e.g., to create a debug build or a release build with debug symbols), you want to build something other than Firefox, or you want to build pre-gecko 5.0 source.</p>
+<p><strong>Note:</strong> Starting with {{Gecko ("5.0")}}, building Firefox has become extremely simple. The default application is now Firefox, so you can build Firefox by doing <code>configure &amp;&amp; make</code> (for standalone source tarballs) or <code>make -f client.mk</code> (for code from the Mercurial repository); this will build something roughly the same as the shipped version of Firefox corresponding to the code you have. You only need to follow the steps below if you want to customize the build (e.g., to create a debug build or a release build with debug symbols), you want to build something other than Firefox, or you want to build pre-gecko 5.0 source.</p>
 </div>
 
 <p>If you are building Mozilla source code from before Firefox 5, then you <strong>must</strong> first select the Mozilla application that you want to build (see below), and you will probably <em>also</em> need to set at least <em>some</em> of the other basic configuration options (such as whether to build a debug build or not) to get the type of build that you need.</p>

@@ -158,7 +158,7 @@ tags:
 <ul>
  <li><strong>Don't create single subsections.</strong> Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.</li>
  <li><strong>Don't use styles and classes within headings.</strong> This includes the {{HTMLElement("code")}} element for code terms. So don't make a heading "Using the <code>SuperAmazingThing</code> interface". It should instead just be "Using the SuperAmazingThing interface".</li>
- <li><strong>Avoid using macros within headings</strong> (except for certain macros that are especifically designed to be used in headings).</li>
+ <li><strong>Avoid using macros within headings</strong> (except for certain macros that are specifically designed to be used in headings).</li>
  <li><strong>Don't create "bumping heads."</strong> These are headings followed immediately by a subheading, with no content text in between. This doesn't look good, and leaves readers without any explanatory text at the beginning of the outer section.</li>
 </ul>
 
@@ -299,7 +299,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Attribute names</dt>
  <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.</dd>
  <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages easily by simply using the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("type","element")}}</span>) to reference attribute definitions.</dd>
+ <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("type","element")}}</span>) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
  <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.</dd>
  <dd><strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
@@ -467,8 +467,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Hyphenate compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
 
 <ul>
- <li><font color="green"><strong>Correct</strong></font>: email, re-elect, co-op</li>
- <li><font color="red"><strong>Incorrect</strong></font>: e-mail, reelect, coop</li>
+ <li><span class="correct"><strong>Correct</strong></span>: email, re-elect, co-op</li>
+ <li><span class="incorrect"><strong>Incorrect</strong></span>: e-mail, reelect, coop</li>
 </ul>
 
 <h3 id="Gender-neutral_language">Gender-neutral language</h3>
@@ -742,7 +742,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Landing_pages">Landing pages</h3>
 
-<p><strong>Landing pages</strong> are pages at the root of a topic area of the site, such as the main <a href="/en-US/docs/CSS" title="CSS">CSS</a> or <a href="/en-US/docs/HTML" title="HTML">HTML</a> pages. They have a standard format that consists of three areas:</p>
+<p><strong>Landing pages</strong> are pages at the root of a topic area of the site, such as the main <a href="/en-US/docs/CSS">CSS</a> or <a href="/en-US/docs/HTML">HTML</a> pages. They have a standard format that consists of three areas:</p>
 
 <ol>
  <li>A brief overview (typically one paragraph) of what the technology is and how it's used. See {{anch("Writing a landing page overview")}} for tips.</li>
@@ -787,7 +787,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>To include an image:</p>
 
 <ol>
- <li>Before uploading your image, please ensure that it's as small as possible by using an image optiization tool.
+ <li>Before uploading your image, please ensure that it's as small as possible by using an image optimization tool.
   <ul>
    <li>For bitmap images (JPG or PNG), consider a tool such as <a href="https://imageoptim.com/mac">ImageOptim</a> (macOS), <a href="https://tinypng.com/">TinyPNG</a> (web service), or <a href="https://trimage.org/">Trimage</a> (Linux).</li>
    <li>For SVG images, use the <code><a href="https://github.com/svg/svgo">svgo</a></code> tool to optimize the SVG file before sending it. The default configuration is fine.</li>

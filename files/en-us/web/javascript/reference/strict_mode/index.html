@@ -102,13 +102,13 @@ Object.preventExtensions(fixed);
 fixed.newProp = 'ohai'; // throws a TypeError
 </pre>
 
-<p>Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would simply have no effect):</p>
+<p>Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would have no effect):</p>
 
 <pre class="brush: js notranslate">'use strict';
 delete Object.prototype; // throws a TypeError
 </pre>
 
-<p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. The normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is simply a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
+<p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. The normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
 
 <div class="note">
 <p>This is no longer the case in ECMAScript 2015 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1041128">bug 1041128</a>).</p>
@@ -141,7 +141,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is simply ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js notranslate">(function() {
 'use strict';
@@ -245,7 +245,7 @@ console.assert(pair[0] === 42);
 console.assert(pair[1] === 17);
 </pre>
 
-<p>Third, <code>arguments.callee</code> is no longer supported. In normal code <code>arguments.callee</code> refers to the enclosing function. This use case is weak: simply name the enclosing function! Moreover, <code>arguments.callee</code> substantially hinders optimizations like inlining functions, because it must be made possible to provide a reference to the un-inlined function if <code>arguments.callee</code> is accessed. <code>arguments.callee</code> for strict mode functions is a non-deletable property which throws an error when set or retrieved:</p>
+<p>Third, <code>arguments.callee</code> is no longer supported. In normal code <code>arguments.callee</code> refers to the enclosing function. This use case is weak: name the enclosing function! Moreover, <code>arguments.callee</code> substantially hinders optimizations like inlining functions, because it must be made possible to provide a reference to the un-inlined function if <code>arguments.callee</code> is accessed. <code>arguments.callee</code> for strict mode functions is a non-deletable property which throws an error when set or retrieved:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var f = function() { return arguments.callee; };

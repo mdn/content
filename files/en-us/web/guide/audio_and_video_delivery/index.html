@@ -293,7 +293,7 @@ mediaElement.<code>load();</code>
 
 <h3 id="Seeking_through_media">Seeking through media</h3>
 
-<p>Media elements provide support for moving the current playback position to specific points in the media's content. This is done by setting the value of the <code>currentTime</code> property on the element; see {{ domxref("HTMLMediaElement") }} for further details on the element's properties. Simply set the value to the time, in seconds, at which you want playback to continue.</p>
+<p>Media elements provide support for moving the current playback position to specific points in the media's content. This is done by setting the value of the <code>currentTime</code> property on the element; see {{ domxref("HTMLMediaElement") }} for further details on the element's properties. Set the value to the time, in seconds, at which you want playback to continue.</p>
 
 <p>You can use the element's <code>seekable</code> property to determine the ranges of the media that are currently available for seeking to. This returns a {{ domxref("TimeRanges") }} object listing the ranges of times that you can seek to.</p>
 
@@ -328,7 +328,7 @@ mediaElement.played.end(0);      // Returns the number of seconds the browser ha
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the <a class="external" href="http://www.w3.org/TR/media-frags/">Media Fragments URI specification</a> implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.</p>
+<p><strong>Note</strong>: The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the <a class="external" href="https://www.w3.org/TR/media-frags/">Media Fragments URI specification</a> implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.</p>
 </div>
 
 <h2 id="Error_handling">Error handling</h2>

@@ -25,6 +25,24 @@ tags:
 
 <pre class="syntaxbox notranslate">let bboxRect = <var>object</var>.getBBox();</pre>
 
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code><var>Options</var></code> {{experimental_inline}} {{optional_inline}}</dt>
+  <dd>An options dictionary used to control which parts of the element are included in the bounding box. The available options are:
+    <dl>
+     <dt><code>fill</code></dt>
+     <dd>A boolean value indicating that the fill should be included in the bounding box, defaults to <code>true</code>.</dd>
+     <dt><code>stroke</code></dt>
+     <dd>A boolean value indicating that the stroke should be included in the bounding box, defaults to <code>false</code>.</dd>
+     <dt><code>markers</code></dt>
+     <dd>A boolean value indicating that the markers should be included in the bounding box, defaults to <code>false</code>.</dd>
+     <dt><code>clipped</code></dt>
+     <dd>A boolean value indicating that the bounding box should be clipped, defaults to <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
+
 <h3 id="Return_value">Return value</h3>
 
 <p>The returned value is a {{domxref("SVGRect")}} object, which defines the bounding box. This value is irrespective of any transformation attribute applied to it or the parent elements.</p>

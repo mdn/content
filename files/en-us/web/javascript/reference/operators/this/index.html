@@ -367,7 +367,7 @@ o = new C2();
 console.log(o.a); // 38
 </pre>
 
-<p>In the last example (<code>C2</code>), because an object was returned during construction, the new object that <code>this</code> was bound to simply gets discarded. (This essentially makes the statement "<code>this.a = 37;</code>" dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)</p>
+<p>In the last example (<code>C2</code>), because an object was returned during construction, the new object that <code>this</code> was bound to gets discarded. (This essentially makes the statement "<code>this.a = 37;</code>" dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)</p>
 
 <h3 id="As_a_DOM_event_handler">As a DOM event handler</h3>
 

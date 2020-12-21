@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Is_link_prefetching_standards_compliant.3F">Is link prefetching standards compliant?</h3>
 
-<p>Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types (<a class="external" href="http://www.w3.org/TR/html4/types.html#type-links">see Section 6.12: Link types</a>). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.</p>
+<p>Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types (<a class="external" href="https://www.w3.org/TR/html4/types.html#type-links">see Section 6.12: Link types</a>). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.</p>
 
 <p>Standardization of this technique is part of the scope of HTML 5, see the current working draft, <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch">section §5.11.3.13. Link type "prefetch"</a> .</p>
 
@@ -98,7 +98,7 @@ tags:
 
 <p>Basically, there are two ways of looking at this issue: websites can already cause things to be silently downloaded using JS/DOM hacks. Prefetching is a browser feature; users should be able to disable it easily.</p>
 
-<p>It is important that websites adopt <code>&lt;link&gt;</code> tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The <code>&lt;link&gt;</code> tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable <code>&lt;link&gt;</code> tag prefetching may simply encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.</p>
+<p>It is important that websites adopt <code>&lt;link&gt;</code> tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The <code>&lt;link&gt;</code> tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable <code>&lt;link&gt;</code> tag prefetching may encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.</p>
 
 <h3 id="Which_browsers_support_link_prefetching.3F">Which browsers support link prefetching?</h3>
 

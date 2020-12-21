@@ -140,7 +140,7 @@ tags:
 
 <dl>
  <dt><a href="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
- <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/en-US/docs/Web/API/Blob" title="/en-US/docs/DOM/Blob"><code>Blob</code></a> or <a href="/en-US/docs/Web/API/File" title="/en-US/docs/DOM/File"><code>File</code></a>.</dd>
+ <dd>The <code>FileReader.prototype.readAsArrayBuffer()</code> method starts reading the contents of the specified <a href="/en-US/docs/Web/API/Blob"><code>Blob</code></a> or <a href="/en-US/docs/Web/API/File"><code>File</code></a>.</dd>
  <dt><a href="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
  <dd><code>XMLHttpRequest</code> instances' <code>send()</code> method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.</dd>
  <dt><code><a href="/en-US/docs/Web/API/ImageData">ImageData.data</a></code></dt>
@@ -200,11 +200,11 @@ console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
 
 <p>The output from this is <code>"Entry 0 in the 32-bit array is now 32"</code>.</p>
 
-<p>In other words, the two arrays are indeed simply viewed on the same data buffer, treating it as different formats. You can do this with any <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects" title="JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a>.</p>
+<p>In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects" title="JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a>.</p>
 
 <h3 id="Working_with_complex_data_structures">Working with complex data structures</h3>
 
-<p>By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from <a href="/en-US/docs/Web/WebGL" title="WebGL">WebGL</a>, data files, or C structures you need to use while using <a href="/en-US/docs/Mozilla/js-ctypes" title="js-ctypes">js-ctypes</a>.</p>
+<p>By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from <a href="/en-US/docs/Web/WebGL">WebGL</a>, data files, or C structures you need to use while using <a href="/en-US/docs/Mozilla/js-ctypes" title="js-ctypes">js-ctypes</a>.</p>
 
 <p>Consider this C structure:</p>
 
@@ -261,7 +261,7 @@ normalArray.constructor === Array;
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
- <li><a href="/en-US/docs/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/en-US/docs/Code_snippets/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
  <li><a href="/en-US/docs/Glossary/Endianness">Endianness</a></li>

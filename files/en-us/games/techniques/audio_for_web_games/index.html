@@ -28,7 +28,7 @@ tags:
  <li>on mobile the user has <a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">added the site to their home screen</a>.</li>
 </ul>
 
-<p>Many browsers will simply ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.</p>
+<p>Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.</p>
 
 <p>For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect <em>any</em> user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a <em>Start</em> button is pressed.</p>
 
@@ -264,7 +264,7 @@ myAudio.addEventListener('timeupdate', function() {
     &lt;li data-loading="true"&gt;
       &lt;a href="leadguitar.mp3" class="track"&gt;Lead Guitar&lt;/a&gt;
       &lt;p class="loading-text"&gt;Loading...&lt;/p&gt;
-      &lt;button data-playing="false" aria-decribedby="guitar-play-label"&gt;
+      &lt;button data-playing="false" aria-describedby="guitar-play-label"&gt;
         &lt;span id="guitar-play-label"&gt;Play&lt;/span&gt;
       &lt;/button&gt;
     &lt;/li&gt;
@@ -447,7 +447,7 @@ function playTrack(audioBuffer) {
 
 <p>This is especially useful in a three-dimensional environment rendered using WebGL, where the Web Audio API makes it possible to tie audio to the objects and viewpoints.</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API on MDN</a></li>

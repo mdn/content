@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>filter()</code> method calls a provided <code><var>callback</var></code> function once for each element in a typed array, and constructs a new typed array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the typed array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Typed array elements which do not pass the <code><var>callback</var></code> test are simply skipped, and are not included in the new typed array.</p>
+<p>The <code>filter()</code> method calls a provided <code><var>callback</var></code> function once for each element in a typed array, and constructs a new typed array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the typed array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Typed array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new typed array.</p>
 
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 

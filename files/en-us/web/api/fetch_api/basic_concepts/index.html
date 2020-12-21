@@ -67,7 +67,7 @@ tags:
 <p>A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A <code>TypeError</code> is thrown if you try to modify a {{domxref("Headers")}} object whose guard is <code>immutable</code>. However, the operation will work if</p>
 
 <ul>
- <li>guard is <code title="">request</code> and the header <var>name</var> isn't a {{Glossary("forbidden header name")}} .</li>
- <li>guard is <code title="">request-no-cors</code> and the header <var>name</var>/<var>value</var> is a {{Glossary("simple header")}} .</li>
- <li>guard is <code title="">response</code> and the header <var>name</var> isn't a {{Glossary("forbidden response header name")}} .</li>
+ <li>guard is <code>request</code> and the header <var>name</var> isn't a {{Glossary("forbidden header name")}} .</li>
+ <li>guard is <code>request-no-cors</code> and the header <var>name</var>/<var>value</var> is a {{Glossary("simple header")}} .</li>
+ <li>guard is <code>response</code> and the header <var>name</var> isn't a {{Glossary("forbidden response header name")}} .</li>
 </ul>

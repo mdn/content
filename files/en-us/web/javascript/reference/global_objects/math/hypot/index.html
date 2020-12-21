@@ -36,7 +36,7 @@ tags:
 
 <p>Calculating the hypotenuse of a right triangle, or the magnitude of a complex number, uses the formula <code>Math.sqrt(v1*v1 + v2*v2)</code>, where v1 and v2 are the lengths of the triangle's legs, or the complex number's real and complex components. The corresponding distance in 2 or more dimensions can be calculated by adding more squares under the square root: <code>Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)</code>.</p>
 
-<p>This function makes this calculation easier and faster; you simply call <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code>.</p>
+<p>This function makes this calculation easier and faster; you call <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code>.</p>
 
 <p><code>Math.hypot</code> also avoids overflow/underflow problems if the magnitude of your numbers is very large. The largest number you can represent in JS is <code>Number.MAX_VALUE</code>, which is around 10<sup>308</sup>. If your numbers are larger than about 10<sup>154</sup>, taking the square of them will result in Infinity. For example, <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. If you use <code>hypot()</code> instead, you get better answer: <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code> . This is also true with very small numbers. <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, but <code>Math.hypot(1e-200, 1e-200) = 1.4142...e-200</code>.</p>
 

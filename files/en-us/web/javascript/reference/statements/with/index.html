@@ -50,7 +50,7 @@ tags:
 
 <p>Only when <code>f</code> is called is <code>x</code> either found or not, and if found, either in <code>o</code> or (if no such property exists) in <code>f</code>'s activation object, where <code>x</code> names the first formal argument. If you forget to define <code>x</code> in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error -- just unexpected results.</p>
 
-<p><strong>Contra: </strong>Code using <code>with</code> may not be forward compatible, especially when used with something other than a plain object. Consider this example:</p>
+<p><strong>Contra:</strong> Code using <code>with</code> may not be forward compatible, especially when used with something other than a plain object. Consider this example:</p>
 
 <div>
 <pre class="brush:js notranslate">function f(foo, values) {

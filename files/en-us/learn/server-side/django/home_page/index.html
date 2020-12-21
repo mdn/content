@@ -105,7 +105,7 @@ tags:
 
 <ul>
  <li>A URL pattern, which is an empty string: <code>''</code>. We'll discuss URL patterns in detail when working on the other views.</li>
- <li>A view function that will be called if the URL pattern is detected: <code>views.index</code>,  which is the function named <code>index()</code> in the <strong>views.py </strong>file. </li>
+ <li>A view function that will be called if the URL pattern is detected: <code>views.index</code>,  which is the function named <code>index()</code> in the <strong>views.py</strong> file. </li>
 </ul>
 
 <p>The <code>path()</code> function also specifies a <code>name</code> parameter, which is a unique identifier for <em>this</em> particular URL mapping. You can use the name to "reverse" the mapper, i.e.  to dynamically create a URL that  points to the resource that the mapper is designed to handle. For example, we can use the name parameter to link to our home page from any other page by adding the following link in a template:</p>
@@ -256,7 +256,7 @@ def index(request):
 
 <p>The template includes CSS from <a href="http://getbootstrap.com/">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap (or another client-side web framework) is a quick way to create an attractive page that displays well on different screen sizes.</p>
 
-<p>The base template also references a local css file (<strong>styles.css</strong>) that provides additional styling. Create a <strong>styles.css </strong>file in<strong> </strong><strong>/locallibrary/catalog/static/css/</strong> and paste the following code in the file:</p>
+<p>The base template also references a local css file (<strong>styles.css</strong>) that provides additional styling. Create a <strong>styles.css</strong> file in<strong> /locallibrary/catalog/static/css/</strong> and paste the following code in the file:</p>
 
 <pre class="brush: css notranslate">.sidebar-nav {
     margin-top: 20px;

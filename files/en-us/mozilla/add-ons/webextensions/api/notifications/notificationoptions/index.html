@@ -56,7 +56,7 @@ tags:
  <dd>
  <p><code>string</code>. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs">relative URL</a> of a file within the extension.</p>
 
- <p><em>This property is only permitted if <code>type</code> is <code>"image"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p>
+ <p><em>This property is only permitted if <code>type</code> is <code>"image"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></p>
  </dd>
  <dt><a id="items"><code>items</code></a></dt>
  <dd><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</dd>
@@ -67,10 +67,10 @@ tags:
   <dt><code>message</code></dt>
   <dd><code>string</code>. Message to display in the item.</dd>
  </dl>
- <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></dd>
  <dt><a id="progress"><code>progress</code></a></dt>
  <dd><code>integer</code>. An integer between 0 and 100, used to represent the current progress in a progress indicator.</dd>
- <dd><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
+ <dd><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></dd>
 </dl>
 
 <p>Note that <code>appIconMaskUrl</code> and <code>isClickable</code> are not supported.</p>

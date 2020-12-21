@@ -111,7 +111,7 @@ tags:
 
 <h3 id="Sphere_vs._AABB">Sphere vs. AABB</h3>
 
-<p>Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's <em>closest</em><em> point</em> (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.</p>
+<p>Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's <em>closest point</em> (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11837/sphere_vs_aabb.png" style="display: block; height: 282px; margin: 0px auto; width: 377px;"></p>
 

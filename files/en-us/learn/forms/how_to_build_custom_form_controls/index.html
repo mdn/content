@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Design_structure_and_semantics">Design, structure, and semantics</h2>
 
-<p>Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can simply mimic those as much as possible.</p>
+<p>Before building a custom control, you should start by figuring out exactly what you want. This will save you some precious time. In particular, it's important to clearly define all the states of your control. To do this, it's good to start with an existing control whose states and behavior are well known, so that you can mimic those as much as possible.</p>
 
 <p>In our example, we will rebuild the {{HTMLElement("select")}} element. Here is the result we want to achieve:</p>
 
@@ -101,7 +101,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note: </strong>Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the <code>click</code> event.</p>
+<p><strong>Note:</strong> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the <code>click</code> event.</p>
 </div>
 
 <h2 id="Defining_the_HTML_structure_and_some_semantics">Defining the HTML structure and (some) semantics</h2>
@@ -589,7 +589,7 @@ window.addEventListener('load', function () {
 
 <p>The easiest way to do this is to use a native control under the hood. Such a control will keep track of the value with all the built-in controls provided by the browser, and the value will be sent as usual when a form is submitted. There's no point in reinventing the wheel when we can have all this done for us.</p>
 
-<p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can simply synchronize its value with that of our custom control:</p>
+<p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can synchronize its value with that of our custom control:</p>
 
 <pre class="brush: js notranslate">// This function updates the displayed value and synchronizes it with the native control.
 // It takes two parameters:
@@ -696,7 +696,7 @@ window.addEventListener('load', function () {
 
 <p>We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!</p>
 
-<p>Fortunately, there is a solution and it's called <a href="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA stands for "Accessible Rich Internet Application", and it's <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">a W3C specification</a> specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.</p>
+<p>Fortunately, there is a solution and it's called <a href="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA stands for "Accessible Rich Internet Application", and it's <a href="https://www.w3.org/TR/wai-aria/" rel="external">a W3C specification</a> specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.</p>
 
 <h3 id="The_role_attribute">The <code>role</code> attribute</h3>
 
@@ -763,7 +763,7 @@ window.addEventListener('load', function () {
    <td>{{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2">Check out the final source code</a></td>
+   <td style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5">Check out the final source code</a></td>
   </tr>
  </tbody>
 </table>

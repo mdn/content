@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Inputs_in_WebXR">Inputs in WebXR</h2>
 
-<p>Fundamentally, inputs in WebXR fall into two basic categories: targeting and actions. Targeting is the specification of a point in space by the user's input. This may involve the user simply tapping on a spot on the screen, tracking their eyes, or the use of a joystick or motion-sensing controller to move a cursor.</p>
+<p>Fundamentally, inputs in WebXR fall into two basic categories: targeting and actions. Targeting is the specification of a point in space by the user's input. This may involve the user tapping on a spot on the screen, tracking their eyes, or the use of a joystick or motion-sensing controller to move a cursor.</p>
 
 <p>Actions include both selection actions, such as clicking on a button, and squeeze actions, such as pulling a trigger or tightening your grip while wearing haptic gloves.</p>
 
@@ -77,7 +77,7 @@ tags:
 
 <p>The targeting ray mode is a string found in the {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} property. It describes the technique used to determine the targeting ray and how it should be shown to the user if presented visually.</p>
 
-<p>When the targeting ray mode is <code>gaze</code>, the ray's origin is at the viewer and simply aims in the direction the user is facing. This gaze input method is fairly simple, and doesn't need any special controls, as it will be based on the facing direction reported by the headset or whatever device is used to determine what direction the viewer's face is pointing in. The target ray should extend outward from between the eyes in a direction perpendicular to the viewer's face.</p>
+<p>When the targeting ray mode is <code>gaze</code>, the ray's origin is at the viewer and aims in the direction the user is facing. This gaze input method is fairly simple, and doesn't need any special controls, as it will be based on the facing direction reported by the headset or whatever device is used to determine what direction the viewer's face is pointing in. The target ray should extend outward from between the eyes in a direction perpendicular to the viewer's face.</p>
 
 <p>More flexible is the <code>tracked-pointer</code> mode, in which the ray's origin is at a handheld controller or hand tracking system's origin and extends outward in the direction in which the controller is pointing. The ray extends outward in a direction defined by whatever platform and controller are being used, if that's defined; otherwise, the ray extends in the same direction the user is pointing in with their index finger, if it were currently outstretched.</p>
 
@@ -255,7 +255,7 @@ xrSession.onselect = function(event) {
 };
 </pre>
 
-<p>The effect is that we set the primary input source the first time a <code>select</code> event is received, regardless of which input source it comes from, handle the event as normal from there, and from then on simply handle the events as usual without any further worries about which input source is primary.</p>
+<p>The effect is that we set the primary input source the first time a <code>select</code> event is received, regardless of which input source it comes from, handle the event as normal from there, and from then on handle the events as usual without any further worries about which input source is primary.</p>
 
 <h4 id="User-selected">User-selected</h4>
 
@@ -321,7 +321,7 @@ xrSession.onselect = function(event) {
 
 <h3 id="Primary_action">Primary action</h3>
 
-<p>Each input source should define a <strong>primary action</strong>. A primary action (which will sometimes be shortened to simply "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.</p>
+<p>Each input source should define a <strong>primary action</strong>. A primary action (which will sometimes be shortened to "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> If an input source doesn't have a primary action, the input source is considered to be an <strong>auxiliary input source</strong>.</p>
@@ -339,7 +339,7 @@ xrSession.onselect = function(event) {
 
 <p>The <code>select</code> event, on the other hand, is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing an object that they were dragging around the world back down again in a new location.</p>
 
-<p>If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the <code>selectstart</code> and <code>selectend</code> events and simply act on the <code>start</code> event.</p>
+<p>If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the <code>selectstart</code> and <code>selectend</code> events and act on the <code>start</code> event.</p>
 
 <pre class="brush: js notranslate">xrSession.addEventListener("select", event =&gt; {
   let inputSource = event.inputSource;
@@ -433,7 +433,7 @@ xrSession.onselect = function(event) {
 
 <h5 id="Canceling_the_squeeze_in_the_squeezeend_handler">Canceling the squeeze in the squeezeend handler</h5>
 
-<p>The {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is received after the squeeze is complete, even if it fails. We handle it by simply returning the currently-held object to where it was when it was picked up.</p>
+<p>The {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is received after the squeeze is complete, even if it fails. We handle it by returning the currently-held object to where it was when it was picked up.</p>
 
 <pre class="brush: js notranslate">xrSession.addEventListener("squeezeend", event =&gt; {
   const targetRaySpace = event.inputSource.targetRaySpace;
@@ -524,7 +524,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>An input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property identifies an {{domxref("XRSpace")}} describing the origin and orienation to use when rendering an object so that it appears to be held in the same hand as its input source. This space is intended to be used when drawing a model of the handheld WebXR input controller represented by the objec{{domxref("XRInputSource")}}, but can just as well be used to draw any object, such as a ball, a tool, or a weapon. We covered the {{anch("Grip space", "grip space")}} above, but let's see how it can be used to draw objects representative of the hand or in the hand.</p>
 
-<p>Since the origin of the grip space is located at the center of the hand's grip, you can use it as a starting point for rendering your object. Simply apply any needed offset transform to shift the origin to the start point for rendering your object as you apply any rotation needed to orient your model correctly to align with the grip space's orientation.</p>
+<p>Since the origin of the grip space is located at the center of the hand's grip, you can use it as a starting point for rendering your object. Apply any needed offset transform to shift the origin to the start point for rendering your object as you apply any rotation needed to orient your model correctly to align with the grip space's orientation.</p>
 
 <p><strong>&lt;&lt;&lt;--- diagram needed: applying transform to grip space to position/orient object ---&gt;&gt;&gt;</strong></p>
 
@@ -536,7 +536,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 <p><strong>Note:</strong> While <code>Gamepad</code> is defined by the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.</p>
 </div>
 
-<p>If the value of <code>gamepad</code> is <code>null</code>, the input source doesn't define any controls using the <code>Gamepad</code> record, either because it doesn't support it or because it simply doesn't have any added controls on it.</p>
+<p>If the value of <code>gamepad</code> is <code>null</code>, the input source doesn't define any controls using the <code>Gamepad</code> record, either because it doesn't support it or because it doesn't have any added controls on it.</p>
 
 <p>This <code>gamepad</code> object is not only used to obtain access to specialty buttons, trackpads, and so forth, but also provides a way to more directly access and monitor the controls that serve as the primary select and squeeze inputs, since these are included in its {{domxref("Gamepad.buttons", "buttons")}} list.</p>
 

@@ -46,7 +46,7 @@ tags:
 	<li>Display the payment request ({{domxref("PaymentRequest.show()")}}</li>
 	<li>If <code>show()</code> resolves, the returned {{domxref("PaymentResponse")}} describes the requested payment and the options chosen by the user. Continue by...
 	<ol>
-		<li>Validate the returned reponse; if there are any fields whose values are not acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of <code>"fail"</code> to indicate failure.</li>
+		<li>Validate the returned response; if there are any fields whose values are not acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of <code>"fail"</code> to indicate failure.</li>
 		<li>If the response's data is valid and acceptable, call <code>complete("success")</code> to finalize the payment and proces it.</li>
 	</ol>
 	</li>

@@ -118,7 +118,7 @@ function itemTouched(button, pointer) {
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);</pre>
 
-<p>The code above will create a new button using a transparent image that covers the right half of the screen. You can assign functions on input down and input up separately if you'd like to perform more complicated actions, but in this game touching the right side of the screen will simply fire the bullets to the right — this is all we need in this case.</p>
+<p>The code above will create a new button using a transparent image that covers the right half of the screen. You can assign functions on input down and input up separately if you'd like to perform more complicated actions, but in this game touching the right side of the screen will fire the bullets to the right — this is all we need in this case.</p>
 
 <p>Moving the player could be managed by creating the four directional buttons, but we can take the advantage of touch screens and drag the player's ship around:</p>
 

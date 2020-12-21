@@ -15,26 +15,26 @@ tags:
 <p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>DatabaseSync</code> interface in the <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> represents a synchronous <a href="/en/IndexedDB#gloss_database_connection" title="en/IndexedDB#gloss database connection">connection to a database</a>.</p>
+<p>The <code>DatabaseSync</code> interface in the <a href="/en/IndexedDB">IndexedDB API</a> represents a synchronous <a href="/en/IndexedDB#gloss_database_connection" title="en/IndexedDB#gloss database connection">connection to a database</a>.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync" title="en/IndexedDB/ObjectStoreSync">IDBObjectStoreSync</a> <a href="#createObjectStore">createObjectStore</a> (in DOMString <code>name</code>, in DOMString keypath, in optional boolean autoIncrement) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/DatabaseException">IDBDatabaseException</a>); </code></td>
+   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#createObjectStore">createObjectStore</a> (in DOMString <code>name</code>, in DOMString keypath, in optional boolean autoIncrement) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync" title="en/IndexedDB/ObjectStoreSync">IDBObjectStoreSync</a> <a href="#openObjectStore">openObjectStore</a> (in DOMString name, in optional unsigned short mode) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/DatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#openObjectStore">openObjectStore</a> (in DOMString name, in optional unsigned short mode) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#removeObjectStore">removeObjectStore</a> (in DOMString storeName) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#removeObjectStore">removeObjectStore</a> (in DOMString storeName) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
    <td><code>void <a href="#setVersion">setVersion</a> (in DOMString version);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBTransactionSync" title="en/IndexedDB/TransactionSync">IDBTransactionSync</a> <a href="#transaction">transaction</a> (in optional DOMStringList storeNames, in optional unsigned int timeout) raises (<a href="/en/IndexedDB/IDBDatabaseException" title="en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBTransactionSync">IDBTransactionSync</a> <a href="#transaction">transaction</a> (in optional DOMStringList storeNames, in optional unsigned int timeout) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -100,7 +100,7 @@ tags:
 <h5 id="Returns">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBObjectStoreSync" title="en/IndexedDB/ObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
+ <dt><a href="/en/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
  <dd>An object to access the newly created object store.</dd>
 </dl>
 
@@ -135,7 +135,7 @@ tags:
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBObjectStoreSync" title="en/IndexedDB/ObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
+ <dt><a href="/en/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
  <dd>An object to access the opened object store.</dd>
 </dl>
 
@@ -222,7 +222,7 @@ tags:
 <h5 id="Returns_5">Returns</h5>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBTransactionSync" title="en/IndexedDB/TransactionSync">IDBTransactionSync</a></code></dt>
+ <dt><code><a href="/en/IndexedDB/IDBTransactionSync">IDBTransactionSync</a></code></dt>
  <dd>An object to access the newly created transaction.</dd>
 </dl>
 

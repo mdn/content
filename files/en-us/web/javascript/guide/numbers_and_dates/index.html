@@ -385,7 +385,7 @@ IPOdate.setTime(Date.parse('Aug 9, 1995'));
 
 <p>The <code>JSClock</code> function first creates a new <code>Date</code> object called <code>time</code>; since no arguments are given, time is created with the current date and time. Then calls to the <code>getHours</code>, <code>getMinutes</code>, and <code>getSeconds</code> methods assign the value of the current hour, minute, and second to <code>hour</code>, <code>minute</code>, and <code>second</code>.</p>
 
-<p>The next four statements build a string value based on the time. The first statement creates a variable <code>temp</code>, assigning it a value using a conditional expression; if <code>hour</code> is greater than 12, (<code>hour - 12</code>), otherwise simply hour, unless hour is 0, in which case it becomes 12.</p>
+<p>The next four statements build a string value based on the time. The first statement creates a variable <code>temp</code>, assigning it a value using a conditional expression; if <code>hour</code> is greater than 12, (<code>hour - 12</code>), otherwise hour, unless hour is 0, in which case it becomes 12.</p>
 
 <p>The next statement appends a <code>minute</code> value to <code>temp</code>. If the value of <code>minute</code> is less than 10, the conditional expression adds a string with a preceding zero; otherwise it adds a string with a demarcating colon. Then a statement appends a seconds value to <code>temp</code> in the same way.</p>
 

@@ -13,7 +13,7 @@ tags:
 
 <p class="summary"><strong>Content Security Policy</strong> ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting ({{Glossary("XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.</p>
 
-<p>CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details <a href="https://www.w3.org/TR/CSP2">here</a> section 1.1). Browsers that don't support it still work with servers that implement it, and vice-versa: browsers that don't support CSP simply ignore it, functioning as usual, defaulting to the standard same-origin policy for web content. If the site doesn't offer the CSP header, browsers likewise use the standard <a href="/en-US/docs/Web/Security/Same-origin_policy" title="En/Same origin policy for JavaScript">same-origin policy</a>.</p>
+<p>CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details <a href="https://www.w3.org/TR/CSP2">here</a> section 1.1). Browsers that don't support it still work with servers that implement it, and vice-versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content. If the site doesn't offer the CSP header, browsers likewise use the standard <a href="/en-US/docs/Web/Security/Same-origin_policy" title="En/Same origin policy for JavaScript">same-origin policy</a>.</p>
 
 <p>To enable CSP, you need to configure your web server to return the {{HTTPHeader("Content-Security-Policy")}} HTTP header. (Sometimes you may see mentions of the <code>X-Content-Security-Policy</code> header, but that's an older version and you don't need to specify it anymore.)</p>
 
@@ -174,7 +174,7 @@ tags:
   }
 }</pre>
 
-<p>As you can see, the report includes the full path to the violating resource in <code>blocked-uri</code>. This is not always the case. For example, if the <code>signup.html</code> attempted to load CSS from <code>http://anothercdn.example.com/stylesheet.css</code>, the browser would <em>not</em> include the full path, but only the origin (<code>http://anothercdn.example.com</code>). The CSP specification <a href="http://www.w3.org/TR/CSP/#security-violation-reports">gives an explanation</a> of this odd behaviour. In summary, this is done to prevent leaking sensitive information about cross-origin resources.</p>
+<p>As you can see, the report includes the full path to the violating resource in <code>blocked-uri</code>. This is not always the case. For example, if the <code>signup.html</code> attempted to load CSS from <code>http://anothercdn.example.com/stylesheet.css</code>, the browser would <em>not</em> include the full path, but only the origin (<code>http://anothercdn.example.com</code>). The CSP specification <a href="https://www.w3.org/TR/CSP/#security-violation-reports">gives an explanation</a> of this odd behaviour. In summary, this is done to prevent leaking sensitive information about cross-origin resources.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

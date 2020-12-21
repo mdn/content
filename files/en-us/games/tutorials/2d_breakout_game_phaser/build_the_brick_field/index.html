@@ -111,7 +111,7 @@ var brickInfo;
 var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 </pre>
 
-<p>Each <code>brickX</code> position is worked out as <code>brickInfo.width</code> plus <code>brickInfo.padding</code>, multiplied by the column number, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">c</span></font>, plus the <code>brickInfo.offset.left</code>; the logic for the <code>brickY</code> is identical except that it uses the values for row number, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">r</span></font>, <code>brickInfo.height</code>, and <code>brickInfo.offset.top</code>. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.</p>
+<p>Each <code>brickX</code> position is worked out as <code>brickInfo.width</code> plus <code>brickInfo.padding</code>, multiplied by the column number, <code>c</code>, plus the <code>brickInfo.offset.left</code>; the logic for the <code>brickY</code> is identical except that it uses the values for row number, <code>r</code>, <code>brickInfo.height</code>, and <code>brickInfo.offset.top</code>. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.</p>
 
 <h2 id="Checking_the_initBricks_code">Checking the initBricks() code</h2>
 

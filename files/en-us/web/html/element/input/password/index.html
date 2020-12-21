@@ -158,7 +158,7 @@ tags:
  <dt><code>current-password</code></dt>
  <dd>Allow the browser or password manager to enter the current password for the site. This provides more information than <code>on</code> does, since it lets the browser or password manager automatically enter currently-known password for the site in the field, but not to suggest a new one.</dd>
  <dt><code>new-password</code></dt>
- <dd>Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may simply fill in a new suggested password, or it might show the user an interface for creating one.</dd>
+ <dd>Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may fill in a new suggested password, or it might show the user an interface for creating one.</dd>
 </dl>
 
 <div id="Autocomplete_sample1">
@@ -170,7 +170,7 @@ tags:
 
 <h3 id="Making_the_password_mandatory">Making the password mandatory</h3>
 
-<p>To tell the user's browser that the password field must have a valid value before the form can be submitted, simply specify the Boolean {{htmlattrxref("required", "input")}} attribute.</p>
+<p>To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean {{htmlattrxref("required", "input")}} attribute.</p>
 
 <pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password" required&gt;

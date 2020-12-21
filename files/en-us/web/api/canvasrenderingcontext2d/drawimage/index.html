@@ -158,14 +158,14 @@ function drawImageActualSize() {
  <li>Starting with {{geckoRelease("5.0")}}, <code>drawImage()</code> handles negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis.</li>
  <li>Specifying a <code>null</code> or <code>undefined</code> image when calling or <code>drawImage()</code> correctly throws a <code>TYPE_MISMATCH_ERR</code> exception starting with {{geckoRelease("5.0")}}.</li>
  <li>Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox threw an exception if any of the coordinate values was non-finite or zero. As per the specification, this no longer happens.</li>
- <li>Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images across domains without <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
- <li>Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a canvas without <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
+ <li>Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images across domains without <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
+ <li>Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a canvas without <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
 </ul>
 
 <h2 id="Notes">Notes</h2>
 
 <ul>
- <li><code>drawImage()</code> only works correctly on an {{domxref("HTMLVideoElement")}} when its {{domxref("HTMLMediaElement.readyState")}}<strong> </strong>is greater than 1 (i.e., <strong>seek</strong> event fired after setting the <code>currentTime</code> property).</li>
+ <li><code>drawImage()</code> only works correctly on an {{domxref("HTMLVideoElement")}} when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e., <strong>seek</strong> event fired after setting the <code>currentTime</code> property).</li>
  <li><code>drawImage()</code> will always use the source element's <em>intrinsic size in CSS pixels</em> when drawing, cropping, and/or scaling.</li>
  <li>In some older browser verisons, <code>drawImage()</code> will ignore all EXIF metadata in images, including the Orientation. This behavior is especially troublesome on iOS devices. You should detect the Orientation yourself and use <code>rotate()</code> to make it right.</li>
 </ul>

@@ -52,7 +52,7 @@ tags:
  <dt>Selector</dt>
  <dd>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, {{HTMLElement("p")}} elements). To style a different element, change the selector.</dd>
  <dt>Declaration</dt>
- <dd>This is a single rule like <code>color: red;</code>. It specifies which of the element's <strong>properties</strong><strong> </strong>you want to style.</dd>
+ <dd>This is a single rule like <code>color: red;</code>. It specifies which of the element's <strong>properties</strong> you want to style.</dd>
  <dt>Properties</dt>
  <dd>These are ways in which you can style an HTML element. (In this example, <code>color</code> is a property of the {{htmlelement("p")}} elements.) In CSS, you choose which properties you want to affect in the rule.</dd>
  <dt>Property value</dt>
@@ -263,7 +263,7 @@ p, li {
 
 <p>Next, we center the image to make it look better. We could use the <code>margin: 0 auto</code> trick again as we did for the body. But there are differences that require an additional setting to make the CSS work. </p>
 
-<p>The {{htmlelement("body")}} is a <strong>block </strong>element, meaning it takes up space on the page. A block element can have margin and other spacing values applied to it. In contrast, images are <strong>inline</strong> elements. It is not possible to apply margin or spacing values to inline elements. So to apply margins to the image, we must give the image block-level behavior using <code>display: block;</code>.</p>
+<p>The {{htmlelement("body")}} is a <strong>block</strong> element, meaning it takes up space on the page. A block element can have margin and other spacing values applied to it. In contrast, images are <strong>inline</strong> elements. It is not possible to apply margin or spacing values to inline elements. So to apply margins to the image, we must give the image block-level behavior using <code>display: block;</code>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">graphics editor</a>, or 2)  use CSS to size the image by setting the {{cssxref("width")}} property on the <code>&lt;img&gt;</code> element with a smaller value.</p>

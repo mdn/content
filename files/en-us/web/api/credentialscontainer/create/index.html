@@ -27,7 +27,7 @@ tags:
  <dt>options</dt>
  <dd>An object of type {{domxref("CredentialCreationOptions")}} that contains options for the requested new <code>Credentials</code> object. It must include one of the options "password", "federated", or "publicKey". The options are:
  <ul>
-  <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">password</span></font>: {{optional_inline}} Either an {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object. TBD
+  <li><code>password</code>: {{optional_inline}} Either an {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object. TBD
    <ul>
     <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from {{domxref("CredentialData")}}.</li>
     <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
@@ -35,7 +35,7 @@ tags:
     <li><code>password</code>: (required) {{domxref("USVString")}} TBD</li>
    </ul>
   </li>
-  <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">federated</span></font>: {{optional_inline}} An {{domxref("FederatedCredentialInit")}} object. Contains requirements for creating/obtaining federated credentials. The available options are:
+  <li><code>federated</code>: {{optional_inline}} An {{domxref("FederatedCredentialInit")}} object. Contains requirements for creating/obtaining federated credentials. The available options are:
    <ul>
     <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from {{domxref("CredentialData")}}.</li>
     <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
