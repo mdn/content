@@ -19,7 +19,7 @@ tags:
 <ul>
  <li><code>linear</code>: A <em>linear distance model</em> calculating the gain induced by the distance according to:<br>
   <code>1 - rolloffFactor * (distance - refDistance) / (maxDistance - refDistance)</code></li>
- <li><code>inverse</code>: An <em>inverse distance model </em> calculating the gain induced by the distance according to:<br>
+ <li><code>inverse</code>: An <em>inverse distance model</em> calculating the gain induced by the distance according to:<br>
   <code>refDistance / (refDistance + rolloffFactor * (Math.max(distance, refDistance) - refDistance))</code></li>
  <li><code>exponential</code>: An <em>exponential distance model</em> calculating the gain induced by the distance according to:<br>
   <code>pow((Math.max(distance, refDistance) / refDistance, -rolloffFactor)</code>.</li>
