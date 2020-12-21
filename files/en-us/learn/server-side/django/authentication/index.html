@@ -410,7 +410,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>As you can see, we use <code>if</code>-<code>else</code>-<code>endif</code> template tags to conditionally display text based on whether <code>\{{ user.is_authenticated }}</code> is true. If the user is authenticated then we know that we have a valid user, so we call <code>\{{ user.get_username }}</code><strong> </strong>to display their name.</p>
 
-<p>We create the login and logout link URLs using the <code>url</code> template tag and the names of the respective URL configurations. Note also how we have appended <code>?next=\{{request.path}}</code> to the end of the URLs. What this does is add a URL parameter <font face="Consolas, Liberation Mono, Courier, monospace">next</font> containing the address (URL) of the <em>current</em> page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "<code>next</code>" value to redirect the user back to the page where they first clicked the login/logout link.</p>
+<p>We create the login and logout link URLs using the <code>url</code> template tag and the names of the respective URL configurations. Note also how we have appended <code>?next=\{{request.path}}</code> to the end of the URLs. What this does is add a URL parameter <code>next</code> containing the address (URL) of the <em>current</em> page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "<code>next</code>" value to redirect the user back to the page where they first clicked the login/logout link.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.</p>
