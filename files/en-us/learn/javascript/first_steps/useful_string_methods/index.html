@@ -80,9 +80,6 @@ browserType.length;</pre>
  <li>Try this:
   <pre class="brush: js notranslate">browserType.indexOf('zilla');</pre>
   This gives us a result of 2, because the substring "zilla" starts at position 2 (0, 1, 2  — so 3 characters in) inside "mozilla". Such code could be used to filter strings. For example, we may have a list of web addresses and only want to print out the ones that contain "mozilla".</li>
-</ol>
-
-<ol start="2">
  <li>This can be done in another way, which is possibly even more effective. Try the following:
   <pre class="brush: js notranslate">browserType.indexOf('vanilla');</pre>
   This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
