@@ -172,7 +172,7 @@ def index(request):
 
 <p>A template is a text file that defines the structure or layout of a file (such as an HTML page), it uses placeholders to represent actual content. </p>
 
-<p>A Django application created using <strong>startapp</strong> (like the skeleton of this example) will look for templates in a subdirectory named '<strong>templates</strong>' of your applications. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong> </em>in <em></em><strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
+<p>A Django application created using <strong>startapp</strong> (like the skeleton of this example) will look for templates in a subdirectory named '<strong>templates</strong>' of your applications. For example, in the index view that we just added, the <code>render()</code> function will expect to find the file <em><strong>index.html</strong> </em>in <strong>/locallibrary/catalog/templates/</strong> and will raise an error if the file is not present.</p>
 
 <p>You can check this by saving the previous changes and accessing <code>127.0.0.1:8000</code> in your browser - it will display a fairly intuitive error message: "<code>TemplateDoesNotExist at /catalog/</code>", and other details.</p>
 
