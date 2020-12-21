@@ -700,10 +700,10 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema(
   {
     title: {type: String, required: true},
-  <strong>  author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
+    <strong>author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},</strong>
     summary: {type: String, required: true},
     isbn: {type: String, required: true},
-  <strong>  genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
+    <strong>genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]</strong>
   }
 );
 
