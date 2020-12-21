@@ -72193,15 +72193,9 @@
     "contributors": [
       "bershanskiy",
       "estelle",
-      "Puddingsan"
-    ]
-  },
-  "Web/API/PaintWorklet/devicePizelRatio": {
-    "modified": "2020-10-15T22:17:26.519Z",
-    "contributors": [
-      "estelle",
       "Puddingsan",
-      "jpmedley"
+      "jpmedley",
+      "toastal"
     ]
   },
   "Web/API/PaintWorklet/registerPaint": {
