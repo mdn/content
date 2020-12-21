@@ -53,7 +53,7 @@ tags:
 
 <p>When using the box alignment properties you will align content on one of two axes — the inline (or main) axis, and the block (or cross) axis. The inline axis is the axis along which words in a sentence flow in the writing mode being used — for English, for example, the inline axis is horizontal. The block axis is the axis along which blocks, such as paragraph elements, are laid out and it runs across the Inline axis.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15952/two-axes.png"></p>
+<p><img alt="" src="two-axes.png"></p>
 
 <p>When aligning items on the inline axis you will use the properties which begin with <code>justify-</code>:</p>
 
@@ -83,7 +83,7 @@ tags:
 
 <p>The below image shows an alignment container with two alignment subjects inside.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15953/align-container-subjects.png" style="height: 170px; width: 248px;"></p>
+<p><img alt="" src="align-container-subjects.png" style="height: 170px; width: 248px;"></p>
 
 <h3 id="Fallback_alignment">Fallback alignment</h3>
 
@@ -121,7 +121,7 @@ tags:
 
 <p>Both of these examples have <code>justify-content: start</code>, however the location of start changes according to the writing mode.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15956/writing-mode-start.png" style="height: 101px; width: 478px;"></p>
+<p><img alt="" src="writing-mode-start.png" style="height: 101px; width: 478px;"></p>
 
 <h3 id="Baseline_alignment">Baseline alignment</h3>
 
@@ -150,11 +150,11 @@ tags:
 
 <p>For example, in Flex Layout items are aligned with <code>flex-start</code> initially. Working in a horizontal top to bottom writing mode such as English, with <code>flex-direction</code> as <code>row</code> the items start on the far left and any available space after displaying the items is placed after the items.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15954/justify-content-start.png" style="height: 100px; width: 559px;"></p>
+<p><img alt="" src="justify-content-start.png" style="height: 100px; width: 559px;"></p>
 
 <p>If you set <code>justify-content: space-between</code> on the flex container, the available space is now shared out and placed between the items.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15955/justify-content-space-between.png" style="height: 100px; width: 559px;"></p>
+<p><img alt="" src="justify-content-space-between.png" style="height: 100px; width: 559px;"></p>
 
 <p>There needs to be space available in the dimension you wish to align the items in, in order for these keywords to take effect. With no space, there is nothing to distribute.</p>
 
@@ -180,12 +180,12 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}</p>
 
-<p>In this example I am using the {{cssxref("grid-gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with <code>grid-</code> in the Grid Layout specification and some browsers only support these prefixed versions.</p>
+<p>In this example I am using the {{cssxref("gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with <code>grid-</code> in the Grid Layout specification and some browsers only support these prefixed versions.</p>
 
 <ul>
- <li>{{cssxref("grid-row-gap")}}</li>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
+ <li>{{cssxref("row-gap")}}</li>
+ <li>{{cssxref("column-gap")}}</li>
+ <li>{{cssxref("gap")}}</li>
 </ul>
 
 <p>The prefixed versions will be maintained as an alias of the unprefixed ones, however you can always double up in the way that you would with vendor prefixes, adding the <code>grid-gap</code> property and then the <code>gap</code> property with the same values.</p>
