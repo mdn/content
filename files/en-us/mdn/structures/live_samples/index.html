@@ -68,7 +68,12 @@ tags:
  <dt>screenshot_URL</dt>
  <dd>The URL of a screenshot that shows what the live sample should look like. This is optional, but can be useful for new technologies that may not work in the user's browser, so they can see what the sample would look like if it were supported by their browser. If you include this parameter, the screenshot is shown next to the live sample, with appropriate headings.</dd>
  <dt>page_slug</dt>
- <dd>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</dd>
+ <dd>
+   <p>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</p>
+   <div class="warning">
+   <strong>Warning:</strong>To show a live sample from one code-containing page in a different, target page, the code-containing page must itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro to embed a live sample in its own page. Otherwise, if the code-containing page doesn't itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro its own page, the live sample will fail to display at all on the target page. (See <a href="https://github.com/mdn/yari/issues/2243">Yari issue #2243</a>.)
+   </div>
+ </dd>
 </dl>
 
 <ol>
