@@ -40,7 +40,7 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
 <ul>
  <li><span style="line-height: 22px;">{{DOMxRef("Window.postMessage", "postMessage")}} </span>can be used to trigger an immediate but yielding callback. Do note that Internet Explorer 8 includes a synchronous version of <code>postMessage</code>, which means it cannot be used as a fallback.</li>
  <li>{{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the semantics of postMessage mean it cannot be used there.</li>
- <li><code>setTimeout(fn, 0)</code> <em>can</em> potentially be used, however as it is clamped to 4ms for timers nested more than 5 levels deep <a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-settimeout">per the HTML spec</a>, it does not make for a suitable polyfill for the natural immediacy of <code>setImmediate</code>.</li>
+ <li><code>setTimeout(fn, 0)</code> <em>can</em> potentially be used, however as it is clamped to 4ms for timers nested more than 5 levels deep <a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers">per the HTML spec</a>, it does not make for a suitable polyfill for the natural immediacy of <code>setImmediate</code>.</li>
 </ul>
 
 <p>All of these techniques are incorporated into a <a href="https://github.com/NobleJS/setImmediate">robust setImmediate polyfill</a>.</p>

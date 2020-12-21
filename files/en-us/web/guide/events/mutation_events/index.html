@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Performance">Performance</h3>
 
-<p>Adding DOM mutation listeners to a document <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1" rel="external" title="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1">profoundly degrades the performance</a> of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.</p>
+<p>Adding DOM mutation listeners to a document <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1" rel="external">profoundly degrades the performance</a> of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.</p>
 
 <p>The performance effect is <a class="link-https" href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA">limited to the documents that have the mutation event listeners</a>.</p>
 
