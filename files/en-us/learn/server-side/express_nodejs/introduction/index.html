@@ -312,7 +312,7 @@ app.use('/wiki', wiki);</pre>
 <p>Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client, middleware functions <em>typically</em> perform some operation on the request or response and then call the next function in the "stack", which might be more middleware or a route handler. The order in which middleware is called is up to the app developer.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can<em> also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
+<p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can <em>also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
 </div>
 
 <p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="http://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
