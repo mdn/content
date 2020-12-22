@@ -98,7 +98,6 @@ jobs:
           # node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
 
       - uses: technote-space/get-diff-action@v4.0.5
-        # id: git_diff_files
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -110,8 +109,5 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           export CONTENT_ROOT=$(pwd)/files
-          # echo ${{ env.GIT_DIFF }}
-          # # # Need to run from the yari we've cleanly cloned.
-          # # cd yari
-
-          # # yarn filecheck ${{ env.GIT_DIFF }}
+          node node_modules/@mdn/yari/filecheck/cli.js ${{ env.GIT_DIFF_FILES }}
+          # yarn filecheck ${{ env.GIT_DIFF_FILES }}
