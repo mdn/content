@@ -47,8 +47,11 @@ jobs:
           PATTERNS: files/**/*.html
 
       - name: Build changed content
+        env:
+          GIT_DIFF_CONTENT: ${{ steps.get_diff_content.outputs }}
         run: |
           echo ${{ steps.get_diff_content.outputs }}
+          echo $GIT_DIFF_CONTENT
           # export CONTENT_ROOT=$(pwd)/files
 
           # # Some day, when our number of flaws have reached 0 we'll change
@@ -102,8 +105,11 @@ jobs:
           ABSOLUTE: true
 
       - name: Check changed files
+        env:
+          GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs }}
         run: |
           echo ${{ steps.get_diff_files.outputs }}
+          echo $GIT_DIFF_FILES
 
           # export CONTENT_ROOT=$(pwd)/files
           # ls -l
