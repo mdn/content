@@ -13,7 +13,7 @@ tags:
 
 <p>A <strong>function's <code>this</code> keyword</strong> behaves a little differently in JavaScript compared to other languages. It also has some differences between <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> and non-strict mode.</p>
 
-<p>In most cases, the value of <code>this</code> is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the {{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this', "set the value of a function's <code>this</code> regardless of how it's called", 'The_bind_method', 1)}}, and ES2015 introduced <a href="../Functions/Arrow_functions">arrow functions</a> which don't provide their own <code>this</code> binding (it retains the <code>this</code> value of the enclosing lexical context).</p>
+<p>In most cases, the value of <code>this</code> is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the {{jsxref("Function.prototype.bind()", "bind()")}} method to {{jsxref('Operators/this', "set the value of a function's <code>this</code> regardless of how it's called", 'The_bind_method', 1)}}, and ES2015 introduced <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> which don't provide their own <code>this</code> binding (it retains the <code>this</code> value of the enclosing lexical context).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</div>
 
