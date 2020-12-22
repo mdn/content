@@ -50,7 +50,7 @@ slug: Web/Security/Types_of_attacks
  There are a few techniques that should be used to prevent this from happening:</p>
 
 <ul>
- <li>GET endpoints should be idempotent—actions that enact a change and do not simply retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.</li>
+ <li>GET endpoints should be idempotent—actions that enact a change and do not retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.</li>
  <li>A CSRF token should be included in &lt;form&gt; elements via a hidden input field. This token should be unique per user and stored (for example, in a cookie) such that the server can look up the expected value when the request is sent. For all non-GET requests that have the potential to perform an action, this input field should be compared against the expected value. If there is a mismatch, the request should be aborted.</li>
  <li>This method of protection relies on an attacker being unable to predict the user's assigned CSRF token. The token should be regenerated on sign-in.</li>
  <li>Cookies that are used for sensitive actions (such as session cookies) should have a short lifetime with the SameSite attribute set to Strict or Lax. (See SameSite cookies above). In supporting browsers, this will have the effect of ensuring that the session cookie is not sent along with cross-site requests and so the request is effectively unauthenticated to the application server.</li>

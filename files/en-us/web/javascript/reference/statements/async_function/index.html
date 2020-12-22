@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">An async function is a function declared with the <code>async</code><strong> </strong>keyword<strong>. </strong>Async functions are instances of the {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} constructor, and the <code>await</code> keyword is permitted within them. The <code>async</code> and <code>await</code> keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</span></p>
+<p><span class="seoSummary">An async function is a function declared with the <code>async</code> keyword<strong>.</strong> Async functions are instances of the {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} constructor, and the <code>await</code> keyword is permitted within them. The <code>async</code> and <code>await</code> keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</span></p>
 
 <p>Async functions may also be defined {{jsxref("Operators/async_function", "as expressions", "", 1)}}.</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <ol>
  <li>The first line of the body of function <code>foo</code> is executed synchronously, with the await expression configured with the pending promise. Progress through <code>foo</code> is then suspended and control is yielded back to the function that called <code>foo</code>.</li>
- <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfilment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
+ <li>Some time later, when the first promise has either been fulfilled or rejected, control moves back into <code>foo</code>. The result of the first promise fulfillment (if it was not rejected) is returned from the await expression. Here <code>1</code> is assigned to <code>result1</code>. Progress continues, and the second await expression is evaluated. Again, progress through <code>foo</code> is suspended and control is yielded.</li>
  <li>Some time later, when the second promise has either been fulfilled or rejected, control re-enters <code>foo</code>. The result of the second promise resolution is returned from the second await expression. Here <code>2</code> is assigned to <code>result2</code>. Control moves to the return expression (if any). The default return value of <code>undefined</code> is returned as the resolution value of the current promise.</li>
 </ol>
 
@@ -194,7 +194,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 <p>In <code>concurrentStart</code>, both timers are created and then <code>await</code>ed. The timers run concurrently, which means the code finishes in 2 rather than 3 seconds, i.e. the slowest timer.<br>
  However, the <code>await</code> calls still run in series, which means the second <code>await</code> will wait for the first one to finish. In this case, the result of the fastest timer is processed after the slowest.</p>
 
-<p>If you wish to safely perform two or more jobs in parallel, you must await a call to <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all</a></code>, or <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled</a></code>.</p>
+<p>If you wish to safely perform two or more jobs in parallel, you must await a call to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled</a></code>.</p>
 
 <div class="warning">
 <h4 id="Error_Handling">Error Handling</h4>
@@ -236,7 +236,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <p>In the above example, notice there is no <code>await</code> statement after the <code>return</code> keyword, although that would be valid too: The return value of an <code>async function</code> is implicitly wrapped in {{jsxref("Promise.resolve")}} - if it's not already a promise itself (as in this example).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <h4 id="return_await_promiseValue_vs._return_promiseValue">return await promiseValue vs. return promiseValue</h4>
 
 <p>The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not imply that <code>return await promiseValue</code> is functionally equivalent to <code>return promiseValue</code>.</p>
@@ -260,7 +260,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <p>Writing <code>return processDataInWorker(v)</code> would have caused the {{jsxref("Promise")}} returned by the function to reject, instead of resolving to <code>null</code> if <code>processDataInWorker(v)</code> rejects.</p>
 
-<p>This highlights the subtle difference between <code>return foo;</code> and <code>return await foo;</code> — <code>return foo</code> immediately returns <code>foo</code> and never throws, even if <code>foo</code> is a Promise that rejects. <code>return await foo</code> will <em>wait </em>for <code>foo</code> to resolve or reject if it's a Promise, and throws <strong>before returning</strong> if it rejects.</p>
+<p>This highlights the subtle difference between <code>return foo;</code> and <code>return await foo;</code> — <code>return foo</code> immediately returns <code>foo</code> and never throws, even if <code>foo</code> is a Promise that rejects. <code>return await foo</code> will <em>wait</em> for <code>foo</code> to resolve or reject if it's a Promise, and throws <strong>before returning</strong> if it rejects.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -281,7 +281,6 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.statements.async_function")}}</p>
 </div>

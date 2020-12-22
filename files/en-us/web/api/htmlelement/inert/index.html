@@ -4,7 +4,7 @@ slug: Web/API/HTMLElement/inert
 ---
 <p>{{ APIRef("HTML DOM") }}</p>
 
-<p>The {{domxref("HTMLElement")}} property <strong><code>inert</code></strong> is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
+<p>The {{domxref("HTMLElement")}} property <strong><code>inert</code></strong> is a {{jsxref("Boolean")}} that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,8 +38,8 @@ slug: Web/API/HTMLElement/inert
 
 <p>{{ EmbedLiveSample('Example', 560, 200) }}</p>
 
-<div class="blockIndicator note">
-<p>Note that the attribute will not cause any visual change to the content as displayed in the browser. In the example above I have made any elements which are a child of an element with inert semi-opaque.</p>
+<div class="notecard note">
+<p>Note that the attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -61,11 +61,9 @@ slug: Web/API/HTMLElement/inert
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.HTMLElement.inert")}}</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://github.com/WICG/inert">Inert Polyfill</a></li>

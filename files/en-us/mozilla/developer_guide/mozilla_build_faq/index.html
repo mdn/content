@@ -9,7 +9,7 @@ tags:
 
 <dl>
 	<dt id="platform">Which systems are supported Mozilla build platforms?</dt>
-	<dd>See <a href="/en/Supported_build_configurations" title="en/Supported_build_configurations">Supported build configurations</a>.</dd>
+	<dd>See <a href="/en/Supported_build_configurations">Supported build configurations</a>.</dd>
 </dl>
 
 <h2 id="Locating_errors">Locating errors</h2>
@@ -20,20 +20,20 @@ tags:
 	<dt>
 	<h2 id="Getting_Help">Getting Help</h2>
 	</dt>
-	<dt id="platform">I'm running into a problem and I don't see a solution for it. Where can I get help?</dt>
+	<dt>I'm running into a problem and I don't see a solution for it. Where can I get help?</dt>
 	<dd>We have an IRC channel dedicated to helping people getting started with the Mozilla codebase called #introduction on the IRC.mozilla.org server. <a href="https://wiki.mozilla.org/IRC">You can learn more about connecting with Mozillians on IRC here.</a> You can also send your question directly to Mike Hoye - <a href="mailto:mhoye@mozilla.com">mhoye@mozilla.com</a> - and he will steer it to the right people.</dd>
 </dl>
 
 <h2 id="Windows-specific_questions">Windows-specific questions</h2>
 
-<div class="note"><strong>Note:</strong> See <strong><a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="en/Windows_Build_Prerequisites">Windows Build Prerequisites</a> for additional information. While you can still build FIrefox _for_ 32-bit Windows systems, building on 32-bit Windows machines is not supported. </strong></div>
+<div class="note"><strong>Note:</strong> See <strong><a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a> for additional information. While you can still build FIrefox _for_ 32-bit Windows systems, building on 32-bit Windows machines is not supported. </strong></div>
 
 <dl>
 	<dt>configure: error: installation or configuration problem: C compiler cannot create executables.</dt>
 	<dd>Look at the <code>config.log</code> in the obj... directory. Try checking to make sure your PATH variable includes all the necessary directories. If you are using mozilla-build, then you need to start ming32 with one of the <code>start-msvc*.bat</code> files. If your build environment has changed, you may need to delete your config.cache file (in your mozilla or object directory) and then build again.</dd>
 	<dt>client.mk:121 *** This source tree appears to have Windows-style line endings.</dt>
 	<dd>This occurs when you are using git and do not have the proper line ending settings. The commands to set the proper line endings are (note this will remove local changes):
-	<pre class="bz_comment_text" id="comment_text_12"><span class="quote">git config core.autocrlf false
+	<pre><span class="quote">git config core.autocrlf false
 git config core.eof lf
 <span class="command">git rm --cached -r .</span>
 <span class="command">git reset --hard</span></span>
@@ -51,7 +51,7 @@ git config core.eof lf
 
 <dl>
 	<dt>How do I build on Solaris 10 x86?</dt>
-	<dd>See <a href="/En/Developer_Guide/Build_Instructions/Solaris_Prerequisites" title="en/Solaris_Build_Prerequisites">Solaris Build Prerequisites</a>.</dd>
+	<dd>See <a href="/En/Developer_Guide/Build_Instructions/Solaris_Prerequisites">Solaris Build Prerequisites</a>.</dd>
 </dl>
 
 <h2 id="Mac-specific_questions">Mac-specific questions</h2>
@@ -59,15 +59,15 @@ git config core.eof lf
 <dl>
 	<dt> </dt>
 	<dt>It doesn't work</dt>
-	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting" title="en/Mac_OS_X_Build_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites" title="en/Mac_OS_X_Build_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
+	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
 </dl>
 
-<pre class="bz_comment_text" id="comment_text_12">curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
+<pre>curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
 
 <dl>
 	<dt> </dt>
 	<dt>Can I build a Mozilla application as a Universal Binary?</dt>
-	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries" title="en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
+	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
 </dl>
 
 <h2 id="Making_builds_faster">Making builds faster</h2>
@@ -82,7 +82,7 @@ git config core.eof lf
 		<li><a name="rebuild_from_objdir">On Mac, you will also have to build<code> make -C browser/app</code></a></li>
 	</ul>
 
-	<p><a name="rebuild_from_objdir">See also </a><a href="/en/Incremental_Build" title="en/Incremental_Build">Incremental Build</a>.</p>
+	<p><a name="rebuild_from_objdir">See also </a><a href="/en/Incremental_Build">Incremental Build</a>.</p>
 	</dd>
 	<dt>Do parallel (make -j) builds work for Mozilla?</dt>
 	<dd>
@@ -94,7 +94,7 @@ git config core.eof lf
 </pre>
 	</dd>
 	<dd>
-	<p>Simply set the integer value after -j to the max number of parallel processes to use. For optimal builds, this should be around the number of processor cores in your system.</p>
+	<p>Set the integer value after -j to the max number of parallel processes to use. For optimal builds, this should be around the number of processor cores in your system.</p>
 
 	<p>(<u><strong>note</strong></u>: I have found that relying on automatic setting may not yield optimum results, in my case manually setting make -j resulted in a 50% decrease in build time. -j1 may keep it from blocking / becoming unresponsive.)</p>
 	</dd>
@@ -116,7 +116,7 @@ git config core.eof lf
 	</dd>
 	<dt>Can I use ccache to speed up builds?</dt>
 	<dd>
-	<p>Yes. See the <a href="/en/ccache" title="en/ccache">ccache</a> page for more details. Use of ccache is highly encouraged to speed up builds.</p>
+	<p>Yes. See the <a href="/en/ccache">ccache</a> page for more details. Use of ccache is highly encouraged to speed up builds.</p>
 	</dd>
 	<dt>Where else can I save cycles?</dt>
 	<dd>Redirecting stdout, rather than dumping it into a terminal, can save between 30 seconds and 5 minutes on a build. Displaying lots of text is slow!</dd>
@@ -128,7 +128,7 @@ git config core.eof lf
 	<dt>Can I build multiple Mozilla-based projects from a single source tree?</dt>
 	<dd>Yes! Each project must be built in its own objdir.</dd>
 	<dt>What is a .mozconfig file?</dt>
-	<dd>It tells which Mozilla application to build and contains configuration options. See <a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File" title="https://developer.mozilla.org/en/configuring_build_options#Using_a_.mozconfig_Configuration_File">Using a .mozconfig configuration file</a>.</dd>
+	<dd>It tells which Mozilla application to build and contains configuration options. See <a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">Using a .mozconfig configuration file</a>.</dd>
 	<dt>What is an objdir?</dt>
 	<dd>
 	<p>An objdir build refers to the process of creating the output files in a different place than where the source lives. This is a standard feature of most configure-based projects. It allows you to build for multiple configurations, including multiple platforms if you use a network filesystem, from a single source tree. It also avoids tainting your source tree so that you know that the files in your tree have not been modified by the build process.</p>
@@ -171,16 +171,16 @@ cd obj-debug
 	<dd>There's no guarantee that any code written for Mozilla will be accepted into the default tree. Any build system that is implemented would have to show that it's better overall than the current build system. Speed, flexibility, portability and the ability for a large group of developers who have 3+ years experience with the current build system to easily transition to the new system would be the major factors in deciding to switch. If you are serious and willing to do lots of work, contact <a href="/User:Benjamin_Smedberg" title="User:Benjamin_Smedberg">User:Benjamin Smedberg</a> to discuss the details of your proposal.</dd>
 	<dt>Why doesn't Mozilla support autoconf 2.5x?</dt>
 	<dd>
-	<p>Simply put, autoconf 2.5x does not offer anything to make the upgrade worth the effort. Autoconf 2.5x is not backwards compatible with autoconf 2.13 and the additional restrictions made by the newer versions of autoconf would require a major rewrite of the Mozilla build system for questionable gain.</p>
+	<p>In other words, autoconf 2.5x does not offer anything to make the upgrade worth the effort. Autoconf 2.5x is not backwards compatible with autoconf 2.13 and the additional restrictions made by the newer versions of autoconf would require a major rewrite of the Mozilla build system for questionable gain.</p>
 
-	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatiblity is silly.</p>
+	<p>Some of the 2.13 features, such as the ability to pass additional arguments to sub-configures, are not available in 2.5x. People have asked repeated about those features on the autoconf mailing list without any favorable response. Rewriting the configures of the sub-projects of Mozilla (NSPR &amp; LDAP) is not an acceptable tradeoff. The sub-projects are also standalone projects and forking an entire codebase because of a build system incompatibility is silly.</p>
 	</dd>
 	<dt>Why doesn't NSS use autoconf?</dt>
-	<dd>The NSS project is also used outside of the Mozilla project and the NSS project members did not feel that moving to autoconf was worth the cost. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=52990" title="https://bugzilla.mozilla.org/show_bug.cgi?id=52990">bug 52990</a> for details.</dd>
+	<dd>The NSS project is also used outside of the Mozilla project and the NSS project members did not feel that moving to autoconf was worth the cost. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=52990">bug 52990</a> for details.</dd>
 </dl>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en/Debugging_Mozilla_on_Windows_FAQ" title="en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows</li>
+	<li><a href="/en/Debugging_Mozilla_on_Windows_FAQ">Debugging Mozilla on Windows FAQ</a>: Tips on how to debug Mozilla on Windows</li>
 </ul>

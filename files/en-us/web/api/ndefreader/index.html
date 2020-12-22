@@ -25,7 +25,7 @@ tags:
  <dt>{{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}</dt>
  <dd>An event handler for <code>reading</code> event, that notifies about availability of a new reading.</dd>
  <dt>{{DOMxRef("NDEFReader.onerror")}} {{Experimental_Inline}}</dt>
- <dd>An event handler for <code>error</code> event which is called to notify that an error occured during reading.</dd>
+ <dd>An event handler for <code>error</code> event which is called to notify that an error occurred during reading.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -35,6 +35,8 @@ tags:
 <dl>
  <dt>{{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}</dt>
  <dd>Called to activate the reader (after ensuring hardware and UA compatibility and obtaining permission from the user) or get an error explaining why feature is not available.</dd>
+ <dt>{{DOMxRef("NDEFWriter.write", "NDEFWriter.write()")}} {{Experimental_Inline}}</dt>
+ <dd>Called to write NDEF message to a tag (after ensuring hardware and UA compatibility and obtaining permission from the user) or get an error explaining why feature is not available.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -55,7 +57,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.NDEFReader")}}</p>

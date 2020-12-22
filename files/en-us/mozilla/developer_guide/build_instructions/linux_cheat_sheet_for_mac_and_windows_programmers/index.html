@@ -13,7 +13,7 @@ tags:
 
 <p>If you want more information on the linux mozilla build system, or are setting up your own linux build machine, be sure to read the official <a href="en/Linux_Build_Prerequisites">Linux_Build_Prerequisites</a>.</p>
 
-<h3 id="How_do_I_log_in_to_a_linux_box_from_another_machine.3F" name="How_do_I_log_in_to_a_linux_box_from_another_machine.3F">How do I log in to a linux box from another machine?</h3>
+<h3 id="How_do_I_log_in_to_a_linux_box_from_another_machine.3F">How do I log in to a linux box from another machine?</h3>
 
 <p>Use telnet on your preferred platform to log in to a remote linux (or other Unix) machine. You'll have to provide the machine's hostname (if it uses dhcp instead of a static IP, this will be something byzantine and different every time the machine is rebooted).</p>
 
@@ -21,7 +21,7 @@ tags:
 
 <p>Once you're in, you can use "cd" (change directory; chdir also works, if you want to type more) to go to wherever the build tree is.</p>
 
-<h3 id="How_do_I_start_a_new_build.3F" name="How_do_I_start_a_new_build.3F">How do I start a new build?</h3>
+<h3 id="How_do_I_start_a_new_build.3F">How do I start a new build?</h3>
 
 <p>First, decide where the build will go. Make sure first that there's enough space. A fully built debug tree currently takes about 1.6Gb. <code>df -k</code> will show you the disk space available on all filesystems mounted on the machine. Many Linux Mozilla developers here set up a /builds directory to put build trees; <code>df -k /builds</code> will tell you whether that exists and how much spaces is there. (The -k prints the result in kilobytes rather than disk blocks; on some systems, these are the same.)</p>
 
@@ -65,7 +65,7 @@ tags:
 
 <pre>./mozilla</pre>
 
-<h3 id="How_do_I_rebuild_part_of_the_tree.3F" name="How_do_I_rebuild_part_of_the_tree.3F">How do I rebuild part of the tree?</h3>
+<h3 id="How_do_I_rebuild_part_of_the_tree.3F">How do I rebuild part of the tree?</h3>
 
 <p>Change directory to the right place (e.g. cd layout/base/src), and type "make".</p>
 
@@ -79,7 +79,7 @@ tags:
 
 <pre>make -f client.mk</pre>
 
-<h3 id="How_do_I_apply_a_patch.3F" name="How_do_I_apply_a_patch.3F">How do I apply a patch?</h3>
+<h3 id="How_do_I_apply_a_patch.3F">How do I apply a patch?</h3>
 
 <p>Save the patch somewhere where the machine can get to it. You can use mozilla or 4.x to read mail and save it that way, ftp it from somewhere using command-line ftp or a gui client, or <a href="#How_do_I_read_something_off_a_floppy.3F">move it on a floppy</a>. I recommend saving it in /tmp, e.g. /tmp/my.diff or my.patch (the extension doesn't matter, use something you'll remember). It's okay if it has mail headers and stuff before the meat of the patch.</p>
 
@@ -91,7 +91,7 @@ tags:
 
 <pre>setenv POSIXLY_CORRECT 1 ; patch -p0 &lt; mypatch.diffs</pre>
 
-<h3 id="How_do_I_read_something_off_a_floppy.3F" name="How_do_I_read_something_off_a_floppy.3F">How do I read something off a floppy?</h3>
+<h3 id="How_do_I_read_something_off_a_floppy.3F">How do I read something off a floppy?</h3>
 
 <p>Good question. Some systems set up an automounted floppy, so you can insert the floppy then type:</p>
 
@@ -105,7 +105,7 @@ tags:
 
 <pre>/dev/fd0        /mnt/floppy        auto    noauto,owner    0 0</pre>
 
-<h3 id="How_do_I_generate_a_patch.3F" name="How_do_I_generate_a_patch.3F">How do I generate a patch?</h3>
+<h3 id="How_do_I_generate_a_patch.3F">How do I generate a patch?</h3>
 
 <p>In a directory at or above the level where the changed files live, run cvs diff:</p>
 
@@ -113,16 +113,16 @@ tags:
 
 <p>You can add a -N to the diff arguments if you want it to include new files in the patch as well.</p>
 
-<h3 id="How_do_I_debug.3F" name="How_do_I_debug.3F">How do I debug?</h3>
+<h3 id="How_do_I_debug.3F">How do I debug?</h3>
 
 <p>That's a whole separate topic. See the <a href="en/Debugging_on_Linux">Debugging FAQ</a> for more details.</p>
 
-<h3 id="How_do_I_find_out_how_to_do_other_things.3F" name="How_do_I_find_out_how_to_do_other_things.3F">How do I find out how to do other things?</h3>
+<h3 id="How_do_I_find_out_how_to_do_other_things.3F">How do I find out how to do other things?</h3>
 
 <p>The mozilla-unix alias (see the <a class="external" href="http://www.mozilla.org/community/developer-forums.html">community page</a> to find out how to subscribe or how to read it as a newsgroup) for is a good place to ask questions on the linux build, or you can often find Xheads hanging out on the irc.mozilla.org channel #mozilla.</p>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Last Updated Date: August 15, 2002</li>

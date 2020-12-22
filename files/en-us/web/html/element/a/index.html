@@ -16,11 +16,11 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;a&gt;</code> element</strong> (or <em>anchor</em> element), with <a href="#href">its <code>href</code> attribute</a>, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</span> Content within each <code>&lt;a&gt;</code> <strong>should</strong> indicate the link's destination.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;a&gt;</code> element</strong> (or <em>anchor</em> element), with <a href="#href">its <code>href</code> attribute</a>, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</span> Content within each <code>&lt;a&gt;</code> <strong>should</strong> indicate the link's destination. If <span class="seoSummary"><a href="#href">the <code>href</code> attribute</a></span> is present, pressing the enter key while focused on the <code>&lt;a&gt;</code> element will activate it.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/a.html")}}</div>
 
-
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -53,7 +53,7 @@ tags:
      <p>If the header specifies a <code>filename</code>, it takes priority over a filename specified in the <code>download</code> attribute.</p>
     </li>
     <li>
-     <p>If the header specifies a disposition of <code>inline</code>, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.</p>
+     <p>If the header specifies a disposition of <code>inline</code>, Chrome, and Firefox 82 and later, prioritize the attribute and treat it as a download. Firefox versions before 82 prioritize the header and will display the content inline.</p>
     </li>
    </ul>
   </li>
@@ -131,12 +131,12 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>) or <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>) or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -144,7 +144,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -226,7 +226,7 @@ tags:
 &lt;h2 id="Section_further_down"&gt;Section further down&lt;/h2&gt;
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can use <code>href="#top"</code> or the empty fragment (<code>href="#"</code>) to link to the top of the current page, <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier">as defined in the HTML specification</a>.</p>
 </div>
 
@@ -236,7 +236,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
 
-<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Web/Guide/HTML/Email_links">Email links</a> or {{RFC(6068)}}.</p>
+<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="Linking_to_telephone_numbers">Linking to telephone numbers</h3>
 
@@ -254,7 +254,7 @@ tags:
 
 <p>See {{RFC(3966)}} for syntax, additional features, and other details about the <code>tel:</code> URL scheme.</p>
 
-<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas>_as_a_PNG">Using the download attribute to save a &lt;canvas&gt; as a PNG</h3>
+<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas&gt;_as_a_PNG">Using the download attribute to save a &lt;canvas&gt; as a PNG</h3>
 
 <p>To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a <code>download</code> attribute and the canvas data as a <code>data:</code> URL:</p>
 
@@ -422,7 +422,7 @@ document.querySelector('a').addEventListener('click', event =&gt;
 
 <ul>
  <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
- <li><a href="https://a11yproject.com/posts/skip-nav-links/">How-to: Use Skip Navigation links</a></li>
+ <li><a href="https://a11yproject.com/posts/2013-05-11-skip-nav-links/">How-to: Use Skip Navigation links</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN / Understanding WCAG, Guideline 2.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1</a></li>
 </ul>
@@ -486,8 +486,6 @@ document.querySelector('a').addEventListener('click', event =&gt;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.a")}}</p>
 

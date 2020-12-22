@@ -12,7 +12,7 @@ tags:
 
 <p class="summary">CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a> (CORB), which is a mechanism to prevent some cross-origin reads by default.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>The policy is only effective for <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><samp>no-cors</samp></a> requests, which are issued by default for CORS-safelisted methods/headers.</p>
 </div>
 
@@ -41,7 +41,7 @@ tags:
  <dd>
  <p>Only requests from the same <em>{{Glossary("Site")}}</em> can read the resource.</p>
 
- <div class="blockIndicator warning">
+ <div class="notecard warning">
  <p><strong>Warning:</strong> This is less secure than an {{Glossary("origin")}}. The <a href="https://html.spec.whatwg.org/multipage/origin.html#same-site">algorithm for checking if two origins are same site</a> is defined in the HTML standard and involves checking the <em>registrable domain</em>.</p>
  </div>
  </dd>

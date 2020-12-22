@@ -27,16 +27,16 @@ tags:
 <p class="summary">With most of the gory details of OOJS now explained, this article shows how to create "child" object classes (constructors) that inherit features from their "parent" classes. In addition, we present some advice on when and where you might use OOJS, and look at how classes are dealt with in modern ECMAScript syntax.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand how it is possible to implement inheritance in JavaScript.</td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th scope="row">Prerequisites:</th>
+			<td>Basic computer literacy, a basic understanding of HTML and CSS, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+		</tr>
+		<tr>
+			<th scope="row">Objective:</th>
+			<td>To understand how it is possible to implement inheritance in JavaScript.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Prototypal_inheritance">Prototypal inheritance</h2>
@@ -47,9 +47,9 @@ tags:
 
 <h2 id="Getting_started">Getting started</h2>
 
-<p>First of all, make yourself a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> file (see it <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">running live</a> also). Inside here you'll find the same <code>Person()</code> constructor example that we've been using all the way through the module, with a slight difference — we've defined only the properties inside the constructor:</p>
+<p>First of all, make yourself a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> file (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">running live</a> also). Inside here you'll find the same <code>Person()</code> constructor example that we've been using all the way through the module, with a slight difference — we've defined only the properties inside the constructor:</p>
 
-<pre class="brush: js">function Person(first, last, age, gender, interests) {
+<pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
   this.name = {
     first,
     last
@@ -61,7 +61,7 @@ tags:
 
 <p>The methods are <em>all</em> defined on the constructor's prototype. For example:</p>
 
-<pre class="brush: js">Person.prototype.greeting = function() {
+<pre class="brush: js notranslate">Person.prototype.greeting = function() {
   alert('Hi! I\'m ' + this.name.first + '.');
 };</pre>
 
@@ -72,15 +72,15 @@ tags:
 <p>Say we wanted to create a <code>Teacher</code> class, like the one we described in our initial object-oriented definition, which inherits all the members from <code>Person</code>, but also includes:</p>
 
 <ol>
- <li>A new property, <code>subject</code> — this will contain the subject the teacher teaches.</li>
- <li>An updated <code>greeting()</code> method, which sounds a bit more formal than the standard <code>greeting()</code> method — more suitable for a teacher addressing some students at school.</li>
+	<li>A new property, <code>subject</code> — this will contain the subject the teacher teaches.</li>
+	<li>An updated <code>greeting()</code> method, which sounds a bit more formal than the standard <code>greeting()</code> method — more suitable for a teacher addressing some students at school.</li>
 </ol>
 
 <h2 id="Defining_a_Teacher_constructor_function">Defining a Teacher() constructor function</h2>
 
 <p>The first thing we need to do is create a <code>Teacher()</code> constructor — add the following below the existing code:</p>
 
-<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
   Person.call(this, first, last, age, gender, interests);
 
   this.subject = subject;
@@ -90,11 +90,11 @@ tags:
 
 <p>We want the <code>Teacher()</code> constructor to take the same parameters as the <code>Person()</code> constructor it is inheriting from, so we specify them all as parameters in the <code>call()</code> invocation.</p>
 
-<p>The last line inside the constructor simply defines the new <code>subject</code> property that teachers are going to have, which generic people don't have.</p>
+<p>The last line inside the constructor defines the new <code>subject</code> property that teachers are going to have, which generic people don't have.</p>
 
-<p>As a note, we could have simply done this:</p>
+<p>As a note, we could have done this:</p>
 
-<pre class="brush: js">function Teacher(first, last, age, gender, interests, subject) {
+<pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
     last
@@ -111,14 +111,14 @@ tags:
 
 <p>Note that if the constructor you are inheriting from doesn't take its property values from parameters, you don't need to specify them as additional arguments in <code>call()</code>. So, for example, if you had something really simple like this:</p>
 
-<pre class="brush: js">function Brick() {
+<pre class="brush: js notranslate">function Brick() {
   this.width = 10;
   this.height = 20;
 }</pre>
 
 <p>You could inherit the <code>width</code> and <code>height</code> properties by doing this (as well as the other steps described below, of course):</p>
 
-<pre class="brush: js">function BlueGlassBrick() {
+<pre class="brush: js notranslate">function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
@@ -132,17 +132,17 @@ tags:
 <p>All is good so far, but we have a problem. We have defined a new constructor, and it has a <code>prototype</code> property, which by default just contains an object with a reference to the constructor function itself. It does not contain the methods of the Person constructor's <code>prototype</code> property. To see this, enter <code>Object.getOwnPropertyNames(Teacher.prototype)</code> into either the text input field or your JavaScript console. Then enter it again, replacing <code>Teacher</code> with <code>Person</code>. Nor does the new constructor <em>inherit</em> those methods. To see this, compare the outputs of <code>Person.prototype.greeting</code> and <code>Teacher.prototype.greeting</code>. We need to get <code>Teacher()</code> to inherit the methods defined on <code>Person()</code>'s prototype. So how do we do that?</p>
 
 <ol>
- <li>Add the following line below your previous addition:
-  <pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
-  Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
- <li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
- <li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
-  <pre class="brush: js">Object.defineProperty(Teacher.prototype, 'constructor', {
+	<li>Add the following line below your previous addition:
+	<pre class="brush: js notranslate">Teacher.prototype = Object.create(Person.prototype);</pre>
+	Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
+	<li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
+	<li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
+	<pre class="brush: js notranslate">Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // so that it does not appear in 'for in' loop
     writable: true });</pre>
- </li>
- <li>Now if you save and refresh, entering <code>Teacher.prototype.constructor</code> should return <code>Teacher()</code>, as desired, plus we are now inheriting from <code>Person()</code>!</li>
+	</li>
+	<li>Now if you save and refresh, entering <code>Teacher.prototype.constructor</code> should return <code>Teacher()</code>, as desired, plus we are now inheriting from <code>Person()</code>!</li>
 </ol>
 
 <h2 id="Giving_Teacher_a_new_greeting_function">Giving Teacher() a new greeting() function</h2>
@@ -151,7 +151,7 @@ tags:
 
 <p>The easiest way to do this is to define it on <code>Teacher()</code>'s prototype — add the following at the bottom of your code:</p>
 
-<pre class="brush: js">Teacher.prototype.greeting = function() {
+<pre class="brush: js notranslate">Teacher.prototype.greeting = function() {
   let prefix;
 
   if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
@@ -171,11 +171,11 @@ tags:
 
 <p>Now that you've entered all the code, try creating an object instance from <code>Teacher()</code> by putting the following at the bottom of your JavaScript (or something similar of your choosing):</p>
 
-<pre class="brush: js">let teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
+<pre class="brush: js notranslate">let teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
 
 <p>Now save and refresh, and try accessing the properties and methods of your new <code>teacher1</code> object, for example:</p>
 
-<pre class="brush: js">teacher1.name.first;
+<pre class="brush: js notranslate">teacher1.name.first;
 teacher1.interests[0];
 teacher1.bio();
 teacher1.subject;
@@ -185,7 +185,7 @@ teacher1.farewell();</pre>
 <p>These should all work just fine. The queries on lines 1, 2, 3, and 6 access members inherited from the generic <code>Person()</code> constructor (class). The query on line 4 accesses a member that is available only on the more specialized <code>Teacher()</code> constructor (class). The query on line 5 would have accessed a member inherited from <code>Person()</code>, except for the fact that <code>Teacher()</code> has its own member with the same name, so the query accesses that member.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, compare your code to our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html">finished version</a> (see it <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html">running live</a> also).</p>
+<p><strong>Note</strong>: If you have trouble getting this to work, compare your code to our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html">running live</a> also).</p>
 </div>
 
 <p>The technique we covered here is not the only way to create inheriting classes in JavaScript, but it works OK, and it gives you a good idea about how to implement inheritance in JavaScript.</p>
@@ -199,7 +199,7 @@ teacher1.farewell();</pre>
 <p>In our <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">OOP theory section</a>, we also included a <code>Student</code> class as a concept, which inherits all the features of <code>Person</code>, and also has a different <code>greeting()</code> method from <code>Person</code> that is much more informal than the <code>Teacher</code>'s greeting. Have a look at what the student's greeting looks like in that section, and try implementing your own <code>Student()</code> constructor that inherits all the features of <code>Person()</code>, and implements the different <code>greeting()</code> function.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">finished version</a> (see it <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">running live</a> also).</p>
+<p><strong>Note</strong>: If you have trouble getting this to work, have a look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">finished version</a> (see it <a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">running live</a> also).</p>
 </div>
 
 <h2 id="Object_member_summary">Object member summary</h2>
@@ -207,10 +207,10 @@ teacher1.farewell();</pre>
 <p>To summarize, you've got four types of property/method to worry about:</p>
 
 <ol>
- <li>Those defined inside a constructor function that are given to object instances. These are fairly easy to spot — in your own custom code, they are the members defined inside a constructor using the <code>this.x = x</code> type lines; in built in browser code, they are the members only available to object instances (usually created by calling a constructor using the <code>new</code> keyword, e.g. <code>let myInstance = new myConstructor()</code>).</li>
- <li>Those defined directly on the constructor themselves, that are available only on the constructor. These are commonly only available on built-in browser objects, and are recognized by being chained directly onto a constructor, <em>not</em> an instance. For example, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>. These are also known as <strong>static properties/methods</strong>.</li>
- <li>Those defined on a constructor's prototype, which are inherited by all instances and inheriting object classes. These include any member defined on a Constructor's <code>prototype</code> property, e.g. <code>myConstructor.prototype.x()</code>.</li>
- <li>Those available on an object instance, which can either be an object created when a constructor is instantiated like we saw above (so for example <code>var teacher1 = new Teacher( name = 'Chris' );</code> and then <code>teacher1.name</code>), or an object literal (<code>let teacher1 = { name = 'Chris' }</code> and then <code>teacher1.name</code>).</li>
+	<li>Those defined inside a constructor function that are given to object instances. These are fairly easy to spot — in your own custom code, they are the members defined inside a constructor using the <code>this.x = x</code> type lines; in built in browser code, they are the members only available to object instances (usually created by calling a constructor using the <code>new</code> keyword, e.g. <code>let myInstance = new myConstructor()</code>).</li>
+	<li>Those defined directly on the constructor themselves, that are available only on the constructor. These are commonly only available on built-in browser objects, and are recognized by being chained directly onto a constructor, <em>not</em> an instance. For example, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>. These are also known as <strong>static properties/methods</strong>.</li>
+	<li>Those defined on a constructor's prototype, which are inherited by all instances and inheriting object classes. These include any member defined on a Constructor's <code>prototype</code> property, e.g. <code>myConstructor.prototype.x()</code>.</li>
+	<li>Those available on an object instance, which can either be an object created when a constructor is instantiated like we saw above (so for example <code>let teacher1 = new Teacher( 'Chris' );</code> and then <code>teacher1.name</code>), or an object literal (<code>let teacher1 = { name : 'Chris' }</code> and then <code>teacher1.name</code>).</li>
 </ol>
 
 <p>If you are not sure which is which, don't worry about it just yet — you are still learning, and familiarity will come with practice.</p>
@@ -225,7 +225,7 @@ teacher1.farewell();</pre>
 
 <p>Let's look at a rewritten version of the Person example, class-style:</p>
 
-<pre class="brush: js">class Person {
+<pre class="brush: js notranslate">class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
@@ -249,13 +249,13 @@ teacher1.farewell();</pre>
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a> statement indicates that we are creating a new class. Inside this block, we define all the features of the class:</p>
 
 <ul>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> method defines the constructor function that represents our <code>Person</code> class.</li>
- <li><code>greeting()</code> and <code>farewell()</code> are class methods. Any methods you want associated with the class are defined inside it, after the constructor. In this example, we've used <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> rather than string concatenation to make the code easier to read.</li>
+	<li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> method defines the constructor function that represents our <code>Person</code> class.</li>
+	<li><code>greeting()</code> and <code>farewell()</code> are class methods. Any methods you want associated with the class are defined inside it, after the constructor. In this example, we've used <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> rather than string concatenation to make the code easier to read.</li>
 </ul>
 
 <p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
 
-<pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+<pre class="brush: js notranslate">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting();
 // Hi! I'm Han
 
@@ -274,7 +274,7 @@ leia.farewell();
 
 <p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on,</p>
 
-<pre class="brush: js">class Teacher extends Person {
+<pre class="brush: js notranslate">class Teacher extends Person {
   constructor(subject, grade) {
     this.subject = subject;
     this.grade = grade;
@@ -287,16 +287,16 @@ leia.farewell();
 
 <p>Therefore running the above code will give an error:</p>
 
-<pre class="brush: js">Uncaught ReferenceError: Must call super constructor in derived class before
+<pre class="brush: js notranslate">Uncaught ReferenceError: Must call super constructor in derived class before
 accessing 'this' or returning from derived constructor</pre>
 
-<p>For sub-classes, the <code>this</code> intialization to a newly allocated object is always dependant on the parent class constructor, i.e the constructor function of the class from which you're extending.</p>
+<p>For sub-classes, the <code>this</code> initialization to a newly allocated object is always dependant on the parent class constructor, i.e the constructor function of the class from which you're extending.</p>
 
 <p>Here we are extending the <code>Person</code> class — the <code>Teacher</code> sub-class is an extension of the <code>Person</code> class. So for <code>Teacher</code>, the <code>this</code> initialization is done by the <code>Person</code> constructor.</p>
 
 <p>To call the parent constructor we have to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a>, like so:</p>
 
-<pre class="brush: js">class Teacher extends Person {
+<pre class="brush: js notranslate">class Teacher extends Person {
   constructor(subject, grade) {
     super(); // Now 'this' is initialized by calling the parent constructor.
     this.subject = subject;
@@ -305,11 +305,11 @@ accessing 'this' or returning from derived constructor</pre>
 }</pre>
 
 <p>There is no point having a sub-class if it doesn't inherit properties from the parent class.<br>
- It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> also accepts arguments for the parent constructor.</p>
+It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> also accepts arguments for the parent constructor.</p>
 
 <p>Looking back to our <code>Person</code> constructor, we can see it has the following block of code in its constructor method:</p>
 
-<pre class="brush: js"> constructor(first, last, age, gender, interests) {
+<pre class="brush: js notranslate"> constructor(first, last, age, gender, interests) {
    this.name = {
      first,
      last
@@ -321,7 +321,7 @@ accessing 'this' or returning from derived constructor</pre>
 
 <p>Since the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> operator is actually the parent class constructor, passing it the necessary arguments of the <code>Parent</code> class constructor will also initialize the parent class properties in our sub-class, thereby inheriting it:</p>
 
-<pre class="brush: js">class Teacher extends Person {
+<pre class="brush: js notranslate">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
 
@@ -334,7 +334,7 @@ accessing 'this' or returning from derived constructor</pre>
 
 <p>Now when we instantiate <code>Teacher</code> object instances, we can call methods and properties defined on both <code>Teacher</code>and <code>Person</code> as we'd expect:</p>
 
-<pre class="brush: js">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+<pre class="brush: js notranslate">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
 snape.greeting(); // Hi! I'm Severus.
 snape.farewell(); // Severus has left the building. Bye for now.
 snape.age // 58
@@ -359,7 +359,7 @@ snape.subject; // Dark arts
 
 <p>The modified <code>Teacher</code> class looks like this:</p>
 
-<pre class="brush: js">class Teacher extends Person {
+<pre class="brush: js notranslate">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
     // subject and grade are specific to Teacher
@@ -377,16 +377,16 @@ snape.subject; // Dark arts
 }
 </pre>
 
-<p>In our class above we have a getter and setter for the <code>subject</code> property. We use <strong><code>_</code> </strong> to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:</p>
+<p>In our class above we have a getter and setter for the <code>subject</code> property. We use <strong><code>_</code></strong> to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:</p>
 
 <ul>
- <li>To show the current value of the <code>_subject</code> property of the <code>snape</code> object we can use the <code>snape.subject</code> getter method.</li>
- <li>To assign a new value to the <code>_subject</code> property we can use the <code>snape.subject="new value"</code> setter method.</li>
+	<li>To show the current value of the <code>_subject</code> property of the <code>snape</code> object we can use the <code>snape.subject</code> getter method.</li>
+	<li>To assign a new value to the <code>_subject</code> property we can use the <code>snape.subject="new value"</code> setter method.</li>
 </ul>
 
 <p>The example below shows the two features in action:</p>
 
-<pre class="brush: js">// Check the default value
+<pre class="brush: js notranslate">// Check the default value
 console.log(snape.subject) // Returns "Dark arts"
 
 // Change the value
@@ -400,7 +400,7 @@ console.log(snape.subject) // Returns "Balloon animals"
 <p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html">see it live also</a>).</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Getters and setters can be very useful at times, for example when you want to run some code every time a property is requested or set. For simple cases, however, plain property access without a getter or setter will do just fine.</p>
 </div>
 
@@ -437,9 +437,9 @@ console.log(snape.subject) // Returns "Balloon animals"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.objectplayground.com/">ObjectPlayground.com</a> — A really useful interactive learning site for learning about objects.</li>
- <li><a href="https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition">Secrets of the JavaScript Ninja</a>, Chapter 7 — A good book on advanced JavaScript concepts and techniques, by John Resig, Bear Bibeault, and Josip Maras. Chapter 7 covers aspects of prototypes and inheritance really well; you can probably track down a print or online copy fairly easily.</li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/README.md">You Don't Know JS: this &amp; Object Prototypes</a> — Part of Kyle Simpson's excellent series of JavaScript manuals, Chapter 5 in particular looks at prototypes in much more detail than we do here. We've presented a simplified view in this series of articles aimed at beginners, whereas Kyle goes into great depth and provides a more complex but more accurate picture.</li>
+	<li><a href="http://www.objectplayground.com/">ObjectPlayground.com</a> — A really useful interactive learning site for learning about objects.</li>
+	<li><a href="https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition">Secrets of the JavaScript Ninja</a>, Chapter 7 — A good book on advanced JavaScript concepts and techniques, by John Resig, Bear Bibeault, and Josip Maras. Chapter 7 covers aspects of prototypes and inheritance really well; you can probably track down a print or online copy fairly easily.</li>
+	<li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/README.md">You Don't Know JS: this &amp; Object Prototypes</a> — Part of Kyle Simpson's excellent series of JavaScript manuals, Chapter 5 in particular looks at prototypes in much more detail than we do here. We've presented a simplified view in this series of articles aimed at beginners, whereas Kyle goes into great depth and provides a more complex but more accurate picture.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}</p>
@@ -447,11 +447,11 @@ console.log(snape.subject) // Returns "Balloon animals"
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
 </ul>

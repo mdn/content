@@ -61,15 +61,15 @@ tags:
 
 <p><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.</p>
 
-<p>There are numerous request headers available. They can be divided in several groups:</p>
+<p>Many different headers can appear in requests. They can be divided in several groups:</p>
 
 <ul>
  <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the message as a whole.</li>
  <li><em>Request headers</em>, like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).</li>
- <li><em>Entity headers</em>, like {{HTTPHeader("Content-Length")}} which apply to the body of the request. Obviously, there is no such header transmitted if there is no body in the request.</li>
+ <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
 </ul>
 
-<p><img alt="Example of headers in an HTTP request" src="https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png" style="height: 280px; width: 872px;"></p>
+<p><img alt="Example of headers in an HTTP request" src="https://mdn.mozillademos.org/files/17444/HTTP_request_headers3.png" style="height: 279px; width: 851px;"></p>
 
 <h3 id="Body">Body</h3>
 
@@ -100,15 +100,15 @@ tags:
 
 <p><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> for responses follow the same structure as any other header: a case-insensitive string followed by a colon (<code>':'</code>) and a value whose structure depends upon the type of the header. The whole header, including its value, presents as a single line.</p>
 
-<p>There are numerous response headers available. These can be divided into several groups:</p>
+<p>Many different headers can appear in responses. These can be divided into several groups:</p>
 
 <ul>
  <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the whole message.</li>
  <li><em>Response headers</em>, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.</li>
- <li><em>Entity headers</em>, like {{HTTPHeader("Content-Length")}}, apply to the body of the response. Typically, no such headers are transmitted when there is no body in the response.</li>
+ <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
 </ul>
 
-<p><img alt="Example of headers in an HTTP response" src="https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png" style="height: 344px; width: 805px;"></p>
+<p><img alt="Example of headers in an HTTP response" src="https://mdn.mozillademos.org/files/17445/HTTP_response_headers3.png" style="height: 344px; width: 805px;"></p>
 
 <h3 id="Body_2">Body</h3>
 
@@ -132,7 +132,7 @@ tags:
  <li>No multiplexing can be done. Several connections need opening on the same server: and warm TCP connections are more efficient than cold ones.</li>
 </ul>
 
-<p>HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, this allows header compression. Several streams can be combined together, a process called <em>multiplexing</em>, allowing more efficient underlying TCP connections.</p>
+<p>HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, this allows header compression. Several streams can be combined together, a process called <em>multiplexing</em>, allowing more efficient use of underlying TCP connections.</p>
 
 <p><img alt="HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization." src="https://mdn.mozillademos.org/files/13819/Binary_framing2.png" style="height: 735px; width: 810px;"></p>
 

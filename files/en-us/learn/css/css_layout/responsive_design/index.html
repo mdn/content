@@ -44,7 +44,7 @@ tags:
 <figcaption></figcaption>
 </figure>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See this simple liquid layout: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">source code</a>. When viewing the example, drag your browser window in and out to see how this looks at different sizes.</p>
 </div>
 
@@ -54,11 +54,11 @@ tags:
 <figcaption></figcaption>
 </figure>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See this simple fixed-width layout: <a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">source code</a>. Again, observe the result as you change the browser window size.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The screenshots above are taken using the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> in Firefox DevTools.</p>
 </div>
 
@@ -137,7 +137,7 @@ tags:
 <figcaption></figcaption>
 </figure>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can find the <a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">live example</a> and <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">source code</a> for this example on GitHub.</p>
 </div>
 
@@ -176,7 +176,7 @@ tags:
 } </code>
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: As an example, we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: <a href="https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html">source code</a>.</p>
 </div>
 
@@ -190,7 +190,7 @@ tags:
 } </code>
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The grid layout version is even simpler as we can define the columns on the .wrapper: <a href="https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html">source code</a>.</p>
 </div>
 
@@ -203,7 +203,7 @@ tags:
 } </code>
 </pre>
 
-<p>There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by simply scaling down an image.</p>
+<p>There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.</p>
 
 <p>Responsive Images, using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} <code>srcset</code> and <code>sizes</code> attributes solve both of these problems. You can provide multiple sizes along with "hints" (meta data that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using.</p>
 
@@ -246,7 +246,7 @@ h1 {
 <figcaption></figcaption>
 </figure>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See this example in action: <a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">source code</a>.</p>
 </div>
 
@@ -270,7 +270,7 @@ h1 {
 
 <p>This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>See an example of this in action: <a href="https://mdn.github.io/css-examples/learn/rwd/type-vw.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html">source code</a>.</p>
 </div>
 
@@ -303,7 +303,7 @@ h1 {
 
 <p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: There is a CSS @ rule designed to replace the viewport meta tag — <a href="/en-US/docs/Web/CSS/@viewport">@viewport</a> — however, it has poor browser support. When both are used the meta tag overrides @viewport.</p>
 </div>
 

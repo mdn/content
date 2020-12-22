@@ -13,9 +13,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}</div>
 
-<div></div>
-
-
+<p>Note that while in most languages, ‘%’ is a remainder operator, in some (e.g. <a href="https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages">Python, Perl</a>) it is a modulo operator. For positive values, the two are equivalent, but when the dividend and divisor are of different signs, they give different results. To obtain a modulo in JavaScript, in place of <code>a % n</code>, use <code>((a % n ) + n ) % n</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -43,6 +41,13 @@ tags:
 
 <pre class="brush: js notranslate">NaN % 2 // NaN</pre>
 
+<h3 id="Remainder_with_Infinity">Remainder with Infinity</h3>
+
+<pre class="brush: js notranslate">Infinity % 2 // NaN
+Infinity % 0 // NaN
+Infinity % Infinity // NaN
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -58,20 +63,18 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("javascript.operators.remainder")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
 </ul>

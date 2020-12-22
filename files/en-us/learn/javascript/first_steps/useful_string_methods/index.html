@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Finding_the_length_of_a_string">Finding the length of a string</h3>
 
-<p>This is easy — you simply use the {{jsxref("String.prototype.length", "length")}} property. Try entering the following lines:</p>
+<p>This is easy — you use the {{jsxref("String.prototype.length", "length")}} property. Try entering the following lines:</p>
 
 <pre class="brush: js notranslate">let browserType = 'mozilla';
 browserType.length;</pre>
@@ -80,18 +80,22 @@ browserType.length;</pre>
  <li>Try this:
   <pre class="brush: js notranslate">browserType.indexOf('zilla');</pre>
   This gives us a result of 2, because the substring "zilla" starts at position 2 (0, 1, 2  — so 3 characters in) inside "mozilla". Such code could be used to filter strings. For example, we may have a list of web addresses and only want to print out the ones that contain "mozilla".</li>
-</ol>
-
-<ol start="2">
  <li>This can be done in another way, which is possibly even more effective. Try the following:
   <pre class="brush: js notranslate">browserType.indexOf('vanilla');</pre>
   This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
   <br>
-  You could use this to find all instances of strings that <strong>don't</strong> contain the substring 'mozilla', or <strong>do,</strong> if you use the negation operator, as shown below. You could do something like this:
+  You could use this to find all instances of strings that <strong>don't</strong> contain the substring 'mozilla' (or <strong>do,</strong> if you use the negation operator, <code>!==</code>):
 
-  <pre class="brush: js notranslate">if(browserType.indexOf('mozilla') !== -1) {
-  // do stuff with the string
-}</pre>
+  <pre class="brush: js notranslate">if(browserType.indexOf('mozilla') === -1) {
+  // do stuff with the string if the 'mozilla'
+  // substring is NOT contained within it
+}
+
+if(browserType.indexOf('mozilla') !== -1) {
+  // do stuff with the string if the 'mozilla'
+  // substring IS contained within it
+}
+</pre>
  </li>
  <li>When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
   <pre class="brush: js notranslate">browserType.slice(0,3);</pre>
@@ -118,7 +122,7 @@ radData.toUpperCase();</pre>
 
 <h3 id="Updating_parts_of_a_string">Updating parts of a string</h3>
 
-<p>You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
+<p>You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
 
 <p>It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:</p>
 

@@ -26,7 +26,7 @@ tags:
 <p><strong>Note</strong>: <a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
 </div>
 
-<pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
+<pre class="brush: js notranslate">window.addEventListener("deviceorientation", handleOrientation, true);
 </pre>
 
 <p>After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.</p>
@@ -42,7 +42,7 @@ tags:
 
 <p>The event handler function can look something like this:</p>
 
-<pre class="brush: js">function handleOrientation(event) {
+<pre class="brush: js notranslate">function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
@@ -57,9 +57,9 @@ tags:
 <p>The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the <a href="/en-US/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a> article which is summarized below.</p>
 
 <ul>
- <li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 to 360.</li>
- <li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 to 180. This represents a front to back motion of the device.</li>
- <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 to 90. This represents a left to right motion of the device.</li>
+ <li>The {{domxref("DeviceOrientationEvent.alpha")}} value represents the motion of the device around the z axis, represented in degrees with values ranging from 0 (inclusive) to 360 (exclusive).</li>
+ <li>The {{domxref("DeviceOrientationEvent.beta")}} value represents the motion of the device around the x axis, represented in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.</li>
+ <li>The {{domxref("DeviceOrientationEvent.gamma")}} value represents the motion of the device around the y axis, represented in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</li>
 </ul>
 
 <h3 id="Orientation_example">Orientation example</h3>
@@ -68,7 +68,7 @@ tags:
 
 <p>So let's imagine a ball in a garden:</p>
 
-<pre class="brush: html">&lt;div class="garden"&gt;
+<pre class="brush: html notranslate">&lt;div class="garden"&gt;
   &lt;div class="ball"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -77,7 +77,7 @@ tags:
 
 <p>This garden is 200 pixel wide (Yes, it's a tiny one), and the ball is in the center:</p>
 
-<pre class="brush: css">.garden {
+<pre class="brush: css notranslate">.garden {
   position: relative;
   width : 200px;
   height: 200px;
@@ -98,7 +98,7 @@ tags:
 
 <p>Now, if we move our device, the ball will move accordingly:</p>
 
-<pre class="brush: js">var ball   = document.querySelector('.ball');
+<pre class="brush: js notranslate">var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
@@ -106,11 +106,11 @@ var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  var x = event.beta;  // In degree in the range [-180,180]
-  var y = event.gamma; // In degree in the range [-90,90]
+  var x = event.beta;  // In degree in the range [-180,180)
+  var y = event.gamma; // In degree in the range [-90,90)
 
-  output.innerHTML  = "beta : " + x + "\n";
-  output.innerHTML += "gamma: " + y + "\n";
+  output.textContent  = `beta : ${x}\n`;
+  output.textContent += `gamma: ${y}\n`;
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
@@ -135,17 +135,11 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 <div>{{EmbedLiveSample('Orientation_example', '230', '260')}}</div>
 
-<div></div>
-
-<div class="warning">
-<p><strong>Warning:</strong> Chrome and Firefox do not handle the angles the same way, so on some axes the direction are reversed.</p>
-</div>
-
 <h2 id="Processing_motion_events">Processing motion events</h2>
 
 <p>Motion events are handled the same way as the orientation events except that they have their own event's name: {{event("devicemotion")}}</p>
 
-<pre class="brush: js">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
+<pre class="brush: js notranslate">window.addEventListener("devicemotion", <em>handleMotion</em>, true);</pre>
 
 <p>What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the <em>HandleMotion</em> function.</p>
 
@@ -202,8 +196,6 @@ window.addEventListener('deviceorientation', handleOrientation);
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="DeviceMotionEvent"><code>DeviceMotionEvent</code></h3>
-
-
 
 <p>{{Compat("api.DeviceMotionEvent")}}</p>
 

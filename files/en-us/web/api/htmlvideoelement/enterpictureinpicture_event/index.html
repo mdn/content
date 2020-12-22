@@ -1,0 +1,105 @@
+---
+title: 'HTMLVideoElement: enterpictureinpicture event'
+slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
+tags:
+  - API
+  - Event
+  - Interface
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Video
+  - pip
+---
+<p>{{APIRef("HTMLVideoElement")}}</p>
+
+<p class="seoSummary">The <code>enterpictureinpicture</code> event is fired when the {{DOMxRef("HTMLVideoElement")}} enters picture-in-picture mode successfully.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{DOMxRef("PictureInPictureEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Target</th>
+   <td>{{DOMxRef("HTMLVideoElement")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Default Action</th>
+   <td>None</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref("HTMLVideoElement.onenterpictureinpicture")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<p>These examples add an event listener for the HTMLVideoElement's <code>enterpictureinpicture</code> event, then post a message when that event handler has reacted to the event firing.</p>
+
+<p>Using <code>addEventListener()</code>:</p>
+
+<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">const</span> button <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">onEnterPip</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Picture-in-Picture mode activated!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+video<span class="punctuation token">.</span>addEventListener('enterpictureinpicture', onEnterPip<span class="punctuation token">, false);</span>
+
+button<span class="punctuation token">.</span><span class="function function-variable token">onclick</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
+  video<span class="punctuation token">.</span><span class="function token">requestPictureInPicture</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<p>Using the <code>onenterpictureinpicture</code> event handler property:</p>
+
+<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">const</span> button <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">onEnterPip</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Picture-in-Picture mode activated!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+video<span class="punctuation token">.</span>onenterpictureinpicture <span class="operator token">=</span> onEnterPip<span class="punctuation token">;</span>
+
+button<span class="punctuation token">.</span><span class="function function-variable token">onclick</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
+  video<span class="punctuation token">.</span><span class="function token">requestPictureInPicture</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Picture-in-Picture', "#eventdef-htmlvideoelement-enterpictureinpicture", "enterpictureinpicture event")}}</td>
+   <td>{{Spec2('Picture-in-Picture')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLVideoElement.enterpictureinpicture_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("HTMLVideoElement")}}</li>
+ <li>{{domxref("Picture-in-Picture_API")}}</li>
+</ul>

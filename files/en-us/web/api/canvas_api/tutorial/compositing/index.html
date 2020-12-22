@@ -15,7 +15,7 @@ tags:
 <p>In all of our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">previous examples</a>, shapes were always drawn one on top of the other. This is more than adequate for most situations, but it limits the order in which composite shapes are built. We can, however, change this behaviour by setting the <code>globalCompositeOperation</code> property. In addition, the <code>clip</code> property allows us to hide unwanted parts of shapes.</p>
 </div>
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
 
 <p>We can not only draw new shapes behind existing shapes but we can also use it to mask off certain areas, clear sections from the canvas (not limited to rectangles like the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method does) and more.</p>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
 
-<h2 id="Clipping_paths" name="Clipping_paths">Clipping paths</h2>
+<h2 id="Clipping_paths">Clipping paths</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>By default the {{HTMLElement("canvas")}} element has a clipping path that's the exact same size as the canvas itself. In other words, no clipping occurs.</p>
 
-<h3 id="A_clip_example" name="A_clip_example">A <code>clip</code> example</h3>
+<h3 id="A_clip_example">A <code>clip</code> example</h3>
 
 <p>In this example, we'll use a circular clipping path to restrict the drawing of a set of random stars to a particular region.</p>
 

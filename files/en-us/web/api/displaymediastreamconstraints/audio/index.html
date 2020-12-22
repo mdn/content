@@ -20,17 +20,17 @@ tags:
 ---
 <p>{{APIRef("Screen Capture API")}}</p>
 
-<p>The {{domxref("DisplayMediaStreamConstraints")}} dictionary's <strong><code>audio</code></strong> property is used to specify whether or not to request that the {{domxref("MediaStream")}} containing screen display contents also include an audio track. This value may simply be a Boolean, where <code>true</code> indicates that an audio track should be included an <code>false</code> (the default) indicates that no audio should be included in the stream.</p>
+<p>The {{domxref("DisplayMediaStreamConstraints")}} dictionary's <strong><code>audio</code></strong> property is used to specify whether or not to request that the {{domxref("MediaStream")}} containing screen display contents also include an audio track. This value may be a Boolean, where <code>true</code> indicates that an audio track should be included an <code>false</code> (the default) indicates that no audio should be included in the stream.</p>
 
 <p>More precise control over the audio data may be exercised by instead providing a {{domxref("MediaTrackConstraints")}} object, which is used to process the audio prior to adding it to the stream.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The specification for the Screen Capture API does not define what the contents of the audio track should be. This is left up to the {{Glossary("user agent")}} to decide. Likely sources are the computer's system audio output and the user's microphone, but there is no way to specify which source to use.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>displayMediaStreamConstraints</em>.audio = <em>allowAudioFlag</em>;
+<pre class="syntaxbox notranslate"><em>displayMediaStreamConstraints</em>.audio = <em>allowAudioFlag</em>;
 <em>displayMediaStreamConstraints</em>.audio = <em>mediaTrackConstraints</em>;
 
 <em>displayMediaStreamConstraints</em> = {
@@ -50,8 +50,6 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p> </p>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -62,8 +60,8 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('Screen Capture API', '#dom-displaymediastreamconstraints-audio', 'DisplayMediaStreamConstraints.audio')}}</td>
-   <td>{{Spec2('Screen Capture API')}}</td>
+   <td>{{SpecName('Screen Capture', '#dom-displaymediastreamconstraints-audio', 'DisplayMediaStreamConstraints.audio')}}</td>
+   <td>{{Spec2('Screen Capture')}}</td>
    <td>Initial definition</td>
   </tr>
  </tbody>
@@ -72,7 +70,6 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.DisplayMediaStreamConstraints.audio")}}</p>
 </div>
@@ -84,5 +81,3 @@ tags:
  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a></li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a></li>
 </ul>
-
-<p> </p>

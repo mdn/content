@@ -118,8 +118,6 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  <dd>Other possible values in WebGL2 for the versions of <code>texImage2D</code> that take an <code>ArrayBufferView</code> or a <code>GLintptr offset</code></dd>
 </dl>
 
-
-
 <table>
  <thead>
   <tr>
@@ -811,10 +809,6 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </dd>
  <dt>offset</dt>
  <dd>(WebGL 2 only) A {{domxref("GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the <code>WebGLBuffer</code> bound to the <code>PIXEL_UNPACK_BUFFER</code> target.</dd>
- <dd>
- <ul>
- </ul>
- </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -876,5 +870,6 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  <li>{{domxref("WEBGL_depth_texture")}}</li>
  <li>{{domxref("OES_texture_float")}}</li>
  <li>{{domxref("OES_texture_half_float")}}</li>
+ <li>{{domxref("EXT_texture_norm16")}}</li>
  <li>{{domxref("EXT_sRGB")}}</li>
 </ul>

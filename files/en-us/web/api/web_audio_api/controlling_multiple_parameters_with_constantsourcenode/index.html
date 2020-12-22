@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by simply setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</span></p>
+<p><span class="seoSummary">This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</span></p>
 
 <p>You may have times when you want to have multiple audio parameters be linked so they share the same value even while being changed in some way. For example, perhaps you have a set of oscillators, and two of them need to share the same, configurable volume, or you have a filter that's been applied to certain inputs but not to all of them. You could use a loop and change the value of each affected {{domxref("AudioParam")}} one at a time, but there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.</p>
 
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="The_technique">The technique</h2>
 
-<p>This is actually a really easy way to do something that sounds like it might be hard to do. You simply need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is simply sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
+<p>This is actually a really easy way to do something that sounds like it might be hard to do. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
 
 <p>The diagram below shows how this works; an input value, <code>N</code>, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The <code>ConstantSourceNode</code> can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So <code>N</code> becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>As a result, every time you change <code>N</code> (the value of the input {{domxref("AudioParam")}}, the values of the two <code>GainNode</code>s' <code>gain</code> properties and the value of the <code>StereoPannerNode</code>'s <code>pan</code> propertry are all set to <code>N</code> as well.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>Let's take a look at this technique in action. In this simple example, we create three {{domxref("OscillatorNode")}}s. Two of them have adjustable gain, controlled using a shared input control. The other oscillator has a fixed volume.</p>
 
@@ -37,7 +37,7 @@ tags:
 
 <p>The HTML content for this example is primarily a button to toggle the oscillator tones on and off and an {{HTMLElement("input")}} element of type <code>range</code> to control the volume of two of the three oscillators.</p>
 
-<pre class="brush: html">&lt;div class="controls"&gt;
+<pre class="brush: html notranslate">&lt;div class="controls"&gt;
   &lt;div class="left"&gt;
     &lt;div id="playButton" class="button"&gt;
       ▶️
@@ -56,7 +56,7 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 <div class="hidden">
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">.controls {
+<pre class="brush: css notranslate">.controls {
   width: 400px;
   position: relative;
   vertical-align: middle;
@@ -111,7 +111,7 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 
 <p>Let's start by looking at the global variable initialization.</p>
 
-<pre class="brush: js">let context = null;
+<pre class="brush: js notranslate">let context = null;
 
 let playButton = null;
 let volumeControl = null;
@@ -145,7 +145,7 @@ let playing = false;</pre>
 
 <p>Now let's look at the <code>setup()</code> function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.</p>
 
-<pre class="brush: js">function setup() {
+<pre class="brush: js notranslate">function setup() {
   context = new (window.AudioContext || window.webkitAudioContext)();
 
   playButton = document.querySelector("#playButton");
@@ -192,12 +192,12 @@ window.addEventListener("load", setup, false);
 
 <p>Because {{domxref("OscillatorNode")}} doesn't support the notion of being in a paused state, we have to simulate it by terminating the oscillators and starting them again when the play button is clicked again to toggle them back on. Let's look at the code.</p>
 
-<pre class="brush: js">function togglePlay(event) {
+<pre class="brush: js notranslate">function togglePlay(event) {
   if (playing) {
-    playButton.innerHTML = "▶️";
+    playButton.textContent = "▶️";
     stopOscillators();
   } else {
-    playButton.innerHTML = "⏸";
+    playButton.textContent = "⏸";
     startOscillators();
   }
 }</pre>
@@ -210,7 +210,7 @@ window.addEventListener("load", setup, false);
 
 <p>The <code>changeVolume()</code> function—the event handler for the slider control for the gain on the linked oscillator pair—looks like this:</p>
 
-<pre class="brush: js">function changeVolume(event) {
+<pre class="brush: js notranslate">function changeVolume(event) {
   constantNode.offset.value = volumeControl.value;
 }</pre>
 
@@ -222,7 +222,7 @@ window.addEventListener("load", setup, false);
 
 <p>When the user clicks the play/pause toggle button while the oscillators aren't playing, the <code>startOscillators()</code> function gets called.</p>
 
-<pre class="brush: js">function startOscillators() {
+<pre class="brush: js notranslate">function startOscillators() {
   oscNode1 = context.createOscillator();
   oscNode1.type = "sine";
   oscNode1.frequency.value = 261.625565300598634; // middle C
@@ -260,7 +260,7 @@ window.addEventListener("load", setup, false);
 
 <p>Stopping the oscillators when the user toggles the play state to pause the tones is as simple as stopping each node.</p>
 
-<pre class="brush: js">function stopOscillators() {
+<pre class="brush: js notranslate">function stopOscillators() {
   oscNode1.stop();
   oscNode2.stop();
   oscNode3.stop();

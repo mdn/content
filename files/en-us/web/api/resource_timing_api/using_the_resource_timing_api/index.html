@@ -77,11 +77,11 @@ Figure 1. Resource timing properties</p>
     t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
     console.log("... Fetch until response end time = " + t);
 
-    // Request start until reponse end
+    // Request start until response end
     t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
     console.log("... Request start until response end time = " + t);
 
-    // Start until reponse end
+    // Start until response end
     t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
     console.log("... Start until response end time = " + t);
   }
@@ -206,7 +206,7 @@ function init() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Firefox Performance Tool</a></li>
+	<li><a href="/en-US/docs/Tools/Performance">Firefox Performance Tool</a></li>
 	<li><a href="https://w3c.github.io/resource-timing/">Resource Timing Standard</a>; W3C Editor's Draft</li>
 	<li><a href="http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/">Resource Timing practical tips</a>; Steve Souders; 2014 August 21</li>
 	<li><a href="http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html">Measuring network performance with Resource Timing API</a>; Ilya Grigorik; 2013 December 11</li>

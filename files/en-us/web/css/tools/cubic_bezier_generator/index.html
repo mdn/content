@@ -103,8 +103,6 @@ function drawBezierCurve(x1, y1, x2, y2) {
         // use getContext to use the canvas for drawing
         var ctx = canvas.getContext('2d');
 
-
-
         // Clear canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -166,8 +164,6 @@ function drawBezierCurve(x1, y1, x2, y2) {
         ctx.stroke();
         ctx.closePath();
 
-
-
         // Draw the P2 point (with a line to P0)
         ctx.beginPath();
         ctx.strokeStyle = 'red';
@@ -182,8 +178,6 @@ function drawBezierCurve(x1, y1, x2, y2) {
         ctx.fillStyle = 'white';
         ctx.fill();
         ctx.closePath();
-
-
 
         // Draw the P3 point (with a line to P1)
         ctx.beginPath();
@@ -218,14 +212,12 @@ function drawBezierCurve(x1, y1, x2, y2) {
         ctx.stroke();
         ctx.closePath();
 
-
         // Draw the P0(0,0) point
         ctx.beginPath();
         ctx.arc(cX(0), cY(0), radius, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
-
 
     } else {
         alert('You need Safari or Firefox 1.5+ to see this demo.');
@@ -244,7 +236,6 @@ function mouseDown(e) {
 
     var output = document.getElementById('output');
     output.value = "(" + x + "," + y + ") should be (" + x1 + "," + y1 + ")";
-
 
     if ((x1 + radius &gt;= x) &amp;&amp; (x1 - radius &lt;= x) &amp;&amp; (y1 + radius &gt;= y) &amp;&amp; (y1 - radius &lt;= y)) {
         var output = document.getElementById('output');

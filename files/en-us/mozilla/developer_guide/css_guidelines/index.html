@@ -126,13 +126,13 @@ h3 {
 
 <h2 id="Overriding_CSS">Overriding CSS</h2>
 
-<p>Before overriding any CSS rules, check whether overriding is really needed. Sometimes, when copy-pasting older code, it happens that the code in question contains unnecessary overrides. This could be because the CSS that it was overriding got removed in the meantime. In this case, simply dropping the override should work.</p>
+<p>Before overriding any CSS rules, check whether overriding is really needed. Sometimes, when copy-pasting older code, it happens that the code in question contains unnecessary overrides. This could be because the CSS that it was overriding got removed in the meantime. In this case, dropping the override should work.</p>
 
 <p>It is also good practice to look at whether the rule you are overriding is still needed: maybe the UX spec for the component has changed and that rule can actually be updated or removed. When this is the case, don't be afraid to remove or update that rule.</p>
 
 <p>Once the two things above have been checked, check if the other rule you are overriding contains <code>!important</code>, if that is case, try putting it in question, because it might have become obsolete.</p>
 
-<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overriden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
+<p>Afterwards, check the specificity of the other selector; if it is causing your rule to be overridden, you can try reducing its specificity, either by simplifying the selector or by changing where the rule is placed in the stylesheet. If this isn't possible, you can also try introducing a <code>:not()</code> to prevent the other rule from applying, this is especially relevant for different element states (<code>:hover</code>, <code>:active</code>, <code>[checked]</code> or <code>[disabled]</code>). However, never try to increase the selector of the rule you are adding as it can easily become hard to understand.</p>
 
 <p>Finally, once you have checked all the things above, you can permit yourself to use <code>!important</code> along with a comment why it is needed.</p>
 
@@ -144,9 +144,9 @@ h3 {
 
 <ol>
  <li><strong>Is the variable value changed at runtime?</strong><br>
-  <em>(Either from JavaScript or overriden by another CSS file)</em><br>
+  <em>(Either from JavaScript or overridden by another CSS file)</em><br>
   <br>
-  <strong>If the answer is no</strong>, consider using a preprocessor variable or simply inlining the value.<br>
+  <strong>If the answer is no</strong>, consider using a preprocessor variable or inlining the value.<br>
    </li>
  <li><strong>Is the variable value used multiple times?</strong><br>
   <br>
@@ -191,11 +191,9 @@ h3 {
  <li>Write {{cssxref("padding")}}<code>: 0 3px 4px;</code> instead of <code>padding: 0 3px 4px 3px;</code>. This makes it more obvious that the padding is symmetrical (so RTL won't be an issue).</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: See <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties and Values</a> for more information.</p>
 </div>
-
-
 
 <h3 id="Testing">Testing</h3>
 
@@ -279,8 +277,6 @@ h3 {
 
 <p>[2] However there is probably a better way than using absolute positioning.</p>
 
-
-
 <h3 id="Colors">Colors</h3>
 
 <p>For common areas of the Firefox interface (panels, toolbar buttons, etc.), mozilla-central often comes with some useful CSS variables that are adjusted with the correct values for different platform configurations, so using those CSS variables can definitively save some testing time, as you can assume they already work correctly.</p>
@@ -310,7 +306,7 @@ h3 {
 
 <p>The automatic adjustments previously mentioned only apply to pages rendered in the content area. The chrome area of Firefox uses colors as authored, which is why using pre-defined variables, <code>currentcolor</code> or inheritance is useful to integrate with the system theme with little hassle.</p>
 
-<p>If not, as a last resort, using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">system colors</a> also works for non-default Windows themes or Linux. In general, the following colors are used:</p>
+<p>If not, as a last resort, using <a href="/en-US/docs/Web/CSS/color_value#System_Colors">system colors</a> also works for non-default Windows themes or Linux. In general, the following colors are used:</p>
 
 <ul>
  <li><code>-moz-Field</code>: textbox or field background colors, also used as the background color of listboxes or trees.</li>
@@ -324,7 +320,7 @@ h3 {
 
 <p>Using the background/text pairs is especially important to ensure the contrast is respected in all situations. Never mix custom text colors with a system background color and vice-versa.</p>
 
-<p>Note that using system colors is only useful for the chrome area, since content area colors are overriden by Gecko anyway.</p>
+<p>Note that using system colors is only useful for the chrome area, since content area colors are overridden by Gecko anyway.</p>
 
 <h3 id="Writing_media_queries">Writing media queries</h3>
 
@@ -370,7 +366,7 @@ h3 {
 
 <h2 id="Theme_support">Theme support</h2>
 
-<p>Firefox comes built-in with 3 themes: default, light and dark. The built-in light/dark themes are a bit special as they load the <code>compacttheme.css</code> stylesheet. In addition to this, Firefox supports a variety of <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes">WebExtension themes</a> that can be installed from AMO. For testing purposes, <a href="https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/">here is an example of a WebExtension theme.</a></p>
+<p>Firefox comes built-in with 3 themes: default, light and dark. The built-in light/dark themes are a bit special as they load the <code>compacttheme.css</code> stylesheet. In addition to this, Firefox supports a variety of <a href="/en-US/docs/Mozilla/Add-ons/Themes">WebExtension themes</a> that can be installed from AMO. For testing purposes, <a href="https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/">here is an example of a WebExtension theme.</a></p>
 
 <h3 id="Writing_theme-friendly_CSS">Writing theme-friendly CSS</h3>
 

@@ -13,13 +13,13 @@ tags:
 
 <p>The <strong><code>charCode</code></strong> read-only property of the {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key pressed during a {{Event("keypress")}} event.</p>
 
-<div class="blockIndicator note">
-<p><strong>Do not use this property, as it is deprecated.</strong> Use the {{domxref("KeyboardEvent.key", "key")}} property instead.</p>
+<div class="notecard note">
+<p><strong>Do not use this property, as it is deprecated.</strong> Instead, get the Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}} property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>code</em> = <em>event</em>.charCode;
+<pre class="syntaxbox notranslate">var <em>code</em> = <em>event</em>.charCode;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -30,13 +30,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
 &lt;input type="text" /&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">let input = document.querySelector('input');
+<pre class="brush: js notranslate">let input = document.querySelector('input');
 let log = document.querySelector('#log');
 
 input.addEventListener('keypress', function(e) {
@@ -55,7 +55,7 @@ input.addEventListener('keypress', function(e) {
  <li><code>charCode</code> is never set in the {{Event("keydown")}} and {{Event("keyup")}} events. In these cases, <code>keyCode</code> is set instead.</li>
  <li>To get the code of the key regardless of whether it was stored in <code>keyCode</code> or <code>charCode</code>, query the {{ domxref("KeyboardEvent.which", "which") }} property.</li>
  <li>Characters entered through an IME do not register through <code>keyCode</code> or <code>charCode</code>. <span class="comment">Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</span></li>
- <li>For a list of the <code>charCode</code> values associated with particular keys, run <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_7:_Displaying_Event_Object_Properties" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Example 7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
+ <li>For a list of the <code>charCode</code> values associated with particular keys, run <a href="/en-US/docs/Web/API/Document_Object_Model/Examples#Example_7:_Displaying_Event_Object_Properties">Example 7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
@@ -78,7 +78,5 @@ input.addEventListener('keypress', function(e) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.KeyboardEvent.charCode")}}</p>

@@ -10,7 +10,7 @@ tags:
 
 <div id="placement_1">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -28,14 +28,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
 }
 </pre>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -59,7 +59,7 @@ tags:
 
 <div id="placement_2">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -77,7 +77,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
     &lt;div&gt;One&lt;/div&gt;
     &lt;div&gt;Two&lt;/div&gt;
     &lt;div&gt;Three&lt;/div&gt;
@@ -86,10 +86,10 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px;
 }
 </pre>
@@ -101,7 +101,7 @@ tags:
 
 <div id="placement_3">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -119,7 +119,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
      &lt;div&gt;One&lt;/div&gt;
      &lt;div&gt;Two&lt;/div&gt;
      &lt;div&gt;Three&lt;/div&gt;
@@ -134,10 +134,10 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 </pre>
@@ -149,7 +149,7 @@ tags:
 
 <div id="placement_4">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -167,7 +167,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -179,10 +179,10 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px 200px;
 }
 </pre>
@@ -197,17 +197,17 @@ tags:
 <p>In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.</p>
 
 <div id="placement_5">
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
-    grid-gap: 10px;
+    gap: 10px;
     grid-auto-flow: column;
     grid-auto-columns: 300px 100px;
 }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -225,7 +225,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -254,7 +254,7 @@ tags:
 
 <div id="placement_6">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -272,7 +272,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -288,11 +288,11 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
  .wrapper div:nth-child(2) {
    grid-column: 3;
@@ -315,7 +315,7 @@ tags:
 
 <div id="placement_7">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -332,7 +332,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -348,11 +348,11 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
 .wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
@@ -382,7 +382,7 @@ tags:
 
 <div id="placement_8">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -399,7 +399,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -415,7 +415,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.wrapper div:nth-child(4n+1) {
+<pre class="brush: css notranslate">.wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
@@ -432,7 +432,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-flow: dense;
 }
 </pre>
@@ -444,7 +444,7 @@ tags:
 
 <p>There is a mention in the specification of anonymous grid items. These are created if you have a string of text inside your grid container, that is not wrapped in any other element. In the example below we have three grid items, assuming you had set the parent with a class of <code>grid</code> to <code>display: grid</code>. The first is an anonymous item as it has no enclosing markup, this item will always be dealt with via the auto-placement rules. The other two are grid items enclosed in a div, they might be auto-placed or you could place these with a positioning method onto your grid.</p>
 
-<pre class="brush: css">&lt;div class="grid"&gt;
+<pre class="brush: css notranslate">&lt;div class="grid"&gt;
   I am a string and will become an anonymous item
   &lt;div&gt;A grid item&lt;/div&gt;
   &lt;div&gt;A grid item&lt;/div&gt;
@@ -458,10 +458,10 @@ tags:
 <p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
 
 <div id="placement_9">
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 10px;
+    gap: 10px;
     grid-auto-flow: dense;
     list-style: none;
     margin: 1em auto;
@@ -482,7 +482,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html">&lt;ul class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;ul class="wrapper"&gt;
    &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
    &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
    &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
@@ -503,7 +503,7 @@ tags:
 
 <div id="placement_10">
 <div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css notranslate">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -513,7 +513,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
    &lt;dl&gt;
        &lt;dt&gt;Mammals&lt;/dt&gt;
        &lt;dd&gt;Cat&lt;/dd&gt;
@@ -528,7 +528,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">dl {
+<pre class="brush: css notranslate">dl {
   display: grid;
   grid-template-columns: auto 1fr;
   max-width: 300px;
@@ -571,28 +571,34 @@ dd {
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
    <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
+   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
+   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
+   <li></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>

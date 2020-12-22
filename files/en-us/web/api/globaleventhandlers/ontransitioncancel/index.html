@@ -46,7 +46,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<p>This simply creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a box that resizes and changes color and such.</p>
+<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a box that resizes and changes color and such.</p>
 
 <pre class="brush: html; notranslate">&lt;div class="box"&gt;&lt;/div&gt;
 </pre>
@@ -87,10 +87,10 @@ tags:
 
 <pre class="brush: js notranslate">let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
-  box.innerHTML = "Zooming...";
+  box.textContent = "Zooming...";
 }
 box.ontransitionend = function(event) {
-  box.innerHTML = "Done!";
+  box.textContent = "Done!";
 }
 
 box.onclick = function() {
@@ -115,7 +115,7 @@ box.ontransitioncancel = function(event) {
 
 <p>Also note the log that appears in the JavaScript console when you click the box, or move the cursor away before the transition has run to completion.</p>
 
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -135,8 +135,6 @@ box.ontransitioncancel = function(event) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.GlobalEventHandlers.ontransitioncancel")}}</p>
 

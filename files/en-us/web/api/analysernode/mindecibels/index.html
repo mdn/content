@@ -24,7 +24,7 @@ tags:
 
 <p>A double, representing the minimum <a href="https://en.wikipedia.org/wiki/Decibel" title="Decibel on Wikipedia">decibel</a> value for scaling the FFT analysis data, where <code>0</code> dB is the loudest possible sound, <code>-10</code> dB is a 10th of that, etc. The default value is <code>-100</code> dB.</p>
 
-<p>When getting data from <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>minDecibels</code> or lower will be returned as <code>0.0</code> or <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">0</span></font>, respectively.</p>
+<p>When getting data from <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>minDecibels</code> or lower will be returned as <code>0.0</code> or <code>0</code>, respectively.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If a value greater than <code>AnalyserNode.maxDecibels</code> is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -92,7 +92,6 @@ draw();</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.AnalyserNode.minDecibels")}}</p>
 </div>

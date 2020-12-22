@@ -82,7 +82,7 @@ handlePermission();</pre>
 
 <h3 id="Permission_descriptors">Permission descriptors</h3>
 
-<p>The {{domxref("Permissions.query()")}} method takes a <code>PermissionDescriptor</code> dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex <code>PermissionDescriptor</code>s containing additional information, which inherit from the default <code>PermissionDescriptor</code>. For example, the <code>PushPermissionDescriptor</code> should also contain a Boolean that specifies if <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe#Parameters">userVisibleOnly</a></code> is <code>true</code> or <code>false</code>.</p>
+<p>The {{domxref("Permissions.query()")}} method takes a <code>PermissionDescriptor</code> dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex <code>PermissionDescriptor</code>s containing additional information, which inherit from the default <code>PermissionDescriptor</code>. For example, the <code>PushPermissionDescriptor</code> should also contain a Boolean that specifies if <code><a href="/en-US/docs/Web/API/PushManager/subscribe#Parameters">userVisibleOnly</a></code> is <code>true</code> or <code>false</code>.</p>
 
 <h3 id="Revoking_permissions">Revoking permissions</h3>
 
@@ -121,4 +121,4 @@ function revokePermission() {
  <li><strong>Chrome</strong>: <em>Hamburger Menu &gt; Settings &gt; Show advanced settings</em>. In the <em>Privacy</em> section, click <em>Content Settings</em>. In the resulting dialog, find the <em>Location</em> section and select <em>Ask when a site tries to...</em> . Finally, click <em>Manage Exceptions</em> and remove the permissions you granted to the sites you are interested in.</li>
 </ul>
 
-<p>However, future additions to browser functionality should provide the <code>request()</code> method, which will allow us to programatically request permissions, any time we like. These should hopefully be available soon.</p>
+<p>However, future additions to browser functionality should provide the <code>request()</code> method, which will allow us to programmatically request permissions, any time we like. These should hopefully be available soon.</p>

@@ -30,7 +30,7 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</dt>
- <dd>Sets an event handler for a <a href="/en-US/docs/Web/API/MediaSessionAction">media session action</a>, such as play or pause.</dd>
+ <dd>Sets an action handler for a <a href="/en-US/docs/Web/API/MediaSessionAction">media session action</a>, such as play or pause.</dd>
  <dt>{{domxref("MediaSession.setPositionState", "setPositionState()")}}</dt>
  <dd>Sets the current playback position and speed of the media currently being presented.</dd>
 </dl>
@@ -39,37 +39,66 @@ tags:
 
 <p>The following example creates a new media session and assigns action handlers to it:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator){
+<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
-    title: "Podcast Episode Title",
-    artist: "Podcast Host",
-    album: "Podcast Name",
-    artwork: [{src: "podcast.jpg"}]
+    title: 'Unforgettable',
+    artist: 'Nat King Cole',
+    album: 'The Ultimate Collection (Remastered)',
+    artwork: [
+      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
+      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
+      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
+      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
+      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
+      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
+    ]
   });
-  navigator.mediaSession.setActionHandler('play', function() {});
-  navigator.mediaSession.setActionHandler('pause', function() {});
-  navigator.mediaSession.setActionHandler('seekbackward', function() {});
-  navigator.mediaSession.setActionHandler('seekforward', function() {});
-  navigator.mediaSession.setActionHandler('previoustrack', function() {});
-  navigator.mediaSession.setActionHandler('nexttrack', function() {});
+
+  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
 }</pre>
 
-<p>The following example sets up event handlers for pausing and playing:</p>
+<p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
 
-<pre class="brush: js notranslate">var audio = document.querySelector("#player");
-audio.src = "song.mp3";
+<pre class="brush: js notranslate">const actionHandlers = [
+  // play
+  [
+    'play',
+    async function() {
+      // play our audio
+      await audioEl.play();
+      // set playback state
+      navigator.mediaSession.playbackState = "playing";
+      // update our status element
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+    }
+  ],
+  [
+    'pause',
+    () =&gt; {
+      // pause out audio
+      audioEl.pause();
+      // set playback state
+      navigator.mediaSession.playbackState = "paused";
+      // update our status element
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+    }
+  ],
+]
 
-navigator.mediaSession.setActionHandler('play', play);
-navigator.mediaSession.setActionHandler('pause', pause);
-
-function play() {
-  audio.play();
-  navigator.mediaSession.playbackState = "playing";
-}
-
-function pause() {
-  audio.pause();
-  navigator.mediaSession.playbackState = "paused";
+for (const [action, handler] of actionHandlers) {
+  try {
+    navigator.mediaSession.setActionHandler(action, handler);
+  } catch (error) {
+    console.log(`The media session action "${action}" is not supported yet.`);
+  }
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>

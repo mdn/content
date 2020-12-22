@@ -34,7 +34,7 @@ touch-action: unset;
 
 <p>When a gesture is started, the browser intersects the <code>touch-action</code> values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, <code>touch-action</code> is typically applied only to top-level elements which have some custom behavior, without needing to specify <code>touch-action</code> explicitly on any of that element's descendants.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>After a gesture starts, changes to <code>touch-action</code> will not have any impact on the behavior of the current gesture.</p>
 </div>
 
@@ -64,7 +64,7 @@ touch-action: unset;
 
 <dl>
  <dt id="pan-keywords"><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
- <dd>Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (<strong>pan-up</strong>) means that the user is dragging their finger downward on the screen surface, and likewise <strong>pan-left</strong> means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, <strong>"</strong><strong>pan-left pan-right</strong>" is invalid since "<strong>pan-x</strong>" is simpler, but "<strong>pan-left pan-down</strong>" is valid).</dd>
+ <dd>Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (<strong>pan-up</strong>) means that the user is dragging their finger downward on the screen surface, and likewise <strong>pan-left</strong> means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, <strong>"pan-left pan-right</strong>" is invalid since "<strong>pan-x</strong>" is simpler, but "<strong>pan-left pan-down</strong>" is valid).</dd>
  <dt id="pinch-zoom"><code>pinch-zoom</code></dt>
  <dd>Enable multi-finger panning and zooming of the page. This may be combined with any of the <strong>pan-</strong> values.</dd>
 </dl>
@@ -100,9 +100,9 @@ touch-action: unset;
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css notranslate">#map {
-  height: 400px;
-  width: 400px;
-  background: blue;
+  height: 150vh;
+  width: 70vw;
+  background: linear-gradient(blue, green);
   touch-action: none;
 }
 </pre>

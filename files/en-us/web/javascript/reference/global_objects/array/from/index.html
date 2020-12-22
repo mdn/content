@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">Array.from(<var>arrayLike </var>[, <var>mapFn </var>[, <var>thisArg</var>]])
@@ -58,7 +56,6 @@ tags:
 
 <p>In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as <code>Array.from()</code> are "inherited" by subclasses of <code>Array</code>, and create new instances <em>of the subclass</em>, not <code>Array</code>.</p>
 
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Array_from_a_String">Array from a <code>String</code></h3>
@@ -86,6 +83,13 @@ Array.from(mapper.keys());
 // ['1', '2'];
 </pre>
 
+<h3 id="Array_from_a_NodeList">Array from a <code>NodeList</code></h3>
+
+<pre class="brush: js notranslate">// Create an array based on a property of DOM Elements
+const images = document.getElementsByTagName('img');
+const sources = Array.from(images, image =&gt; image.src);
+const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</pre>
+
 <h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object (arguments)</h3>
 
 <pre class="brush: js notranslate">function f() {
@@ -102,7 +106,6 @@ f(1, 2, 3);
 // manipulate the elements
 Array.from([1, 2, 3], x =&gt; x + x);
 // [2, 4, 6]
-
 
 // Generate a sequence of numbers
 // Since the array is initialized with `undefined` on each position,
@@ -148,8 +151,6 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("javascript.builtins.Array.from")}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -158,7 +159,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <p>You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>Array.from()</code> in implementations that don't natively support it.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Polyfill Notes:</strong> This algorithm is exactly as specified in ECMA-262 6<sup>th</sup> Edition (assuming <code>Object</code> and <code>TypeError</code> have their original values and that <code><var>callback</var>.call()</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}).</p>
 
 <p>In addition, since true iterables cannot be polyfilled, this implementation does not support generic iterables as defined in the 6<sup>th</sup> Edition of ECMA-262.</p>

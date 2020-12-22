@@ -16,7 +16,7 @@ tags:
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
 exports<span class="punctuation token">.</span>bookinstance_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> <strong>next</strong><span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
   <strong>BookInstance<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
@@ -37,7 +37,7 @@ exports<span class="punctuation token">.</span>bookinstance_list <span class="op
 
 <p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
 
 block content
   h1<span class="operator token">=</span> title
@@ -62,7 +62,7 @@ block content
 
 <h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances </em>link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
 <p><img alt="BookInstance List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png" style="border-style: solid; border-width: 1px; display: block; height: 322px; margin: 0px auto; width: 1200px;"></p>
 
@@ -70,5 +70,5 @@ block content
 
 <ul>
  <li>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
- <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">Date formatting using moment</a>.</li>
+ <li>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment">Date formatting using luxon</a>.</li>
 </ul>

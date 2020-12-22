@@ -44,7 +44,7 @@ console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You can always easily get the global object using the global {{jsxref("globalThis")}} property, regardless of the current context in which your code is running.</p>
 </div>
 
@@ -80,7 +80,7 @@ f2() === undefined; // true
 
 <h3 id="Class_context">Class context</h3>
 
-<p>The behavior of <code>this</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> and functions is similar, since classes are functions under the hood. But there are some differences and caveats.</p>
+<p>The behavior of <code>this</code> in <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> and functions is similar, since classes are functions under the hood. But there are some differences and caveats.</p>
 
 <p>Within a class constructor, <code>this</code> is a regular object. All non-static methods within the class are added to the prototype of <code>this</code>:</p>
 
@@ -97,7 +97,7 @@ f2() === undefined; // true
 new Example(); // ['constructor', 'first', 'second']
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Static methods are not properties of <code>this</code>. They are properties of the class itself.</p>
 </div>
 
@@ -107,7 +107,7 @@ new Example(); // ['constructor', 'first', 'second']
 
 <pre class="brush: js">this = new Base();</pre>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Referring to <code>this</code> before calling <code>super()</code> will throw an error.</p>
 </div>
 
@@ -132,7 +132,7 @@ new Bad(); // ReferenceError</pre>
 
 <h3 id="this_in_function_contexts">this in function contexts</h3>
 
-<pre class="brush:js" dir="rtl">// An object can be passed as the first argument to call or apply and this will be bound to it.
+<pre class="brush:js">// An object can be passed as the first argument to call or apply and this will be bound to it.
 var obj = {a: 'Custom'};
 
 // We declare a variable and the variable is assigned to the global window as its property.
@@ -358,7 +358,6 @@ function C() {
 var o = new C();
 console.log(o.a); // 37
 
-
 function C2() {
   this.a = 37;
   return {a: 38};
@@ -368,7 +367,7 @@ o = new C2();
 console.log(o.a); // 38
 </pre>
 
-<p>In the last example (<code>C2</code>), because an object was returned during construction, the new object that <code>this</code> was bound to simply gets discarded. (This essentially makes the statement "<code>this.a = 37;</code>" dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)</p>
+<p>In the last example (<code>C2</code>), because an object was returned during construction, the new object that <code>this</code> was bound to gets discarded. (This essentially makes the statement "<code>this.a = 37;</code>" dead code. It's not exactly dead because it gets executed, but it can be eliminated with no outside effects.)</p>
 
 <h3 id="As_a_DOM_event_handler">As a DOM event handler</h3>
 
@@ -412,7 +411,7 @@ for (var i = 0; i &lt; elements.length; i++) {
 
 <h3 id="this_in_classes">this in classes</h3>
 
-<div class="blockIndicator note"></div>
+<div class="notecard note"></div>
 
 <p>Just like with regular functions, the value of <code>this</code> within methods depends on how they are called. Sometimes it is useful to override this behavior so that <code>this</code> within classes always refers to the class instance. To achieve this, bind the class methods in the constructor:</p>
 
@@ -450,7 +449,7 @@ bird.sayHi(); // Hello from Tweety
 bird.sayBye = car.sayBye;
 bird.sayBye();  // Bye from Ferrari</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Classes are always strict mode code. Calling methods with an undefined <code>this</code> will throw an error.</p>
 </div>
 
@@ -470,8 +469,6 @@ bird.sayBye();  // Bye from Ferrari</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.operators.this")}}</p>
 

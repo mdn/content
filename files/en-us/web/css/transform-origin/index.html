@@ -16,8 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
 
-
-
 <p>The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the <code><a href="/en-US/docs/Web/CSS/transform-function/rotate">rotate()</a></code> function is the center of rotation.</p>
 
 <p>This property is applied by first translating the element by the value of the property, then applying the element's transform, then translating by the negated property value.<br>
@@ -71,6 +69,8 @@ transform-origin: unset;
 </pre>
 
 <p>The <code>transform-origin</code> property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding <a href="/en-US/docs/Web/CSS/initial_value">initial values</a>.</p>
+
+<p>If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.</p>
 
 <p>If two or more values are defined and either no value is a keyword, or the only used keyword is <code>center</code>, then the first value represents the horizontal offset and the second represents the vertical offset.</p>
 
@@ -148,11 +148,17 @@ transform-origin: unset;
 
 <p>{{CSSInfo}}</p>
 
+<div class="notecard note">
+<p>The initial value of <code>transform-origin</code> is <code>0 0</code> for all SVG elements except for root <code>&lt;svg&gt;</code> elements and <code>&lt;svg&gt;</code> elements that are a direct child of a <a href="/en-US/docs/Web/SVG/Element/foreignObject">foreignObject</a>, and whose <code>transform-origin</code> is <code>50% 50%</code>, like other CSS elements. See the <a href="/en-US/docs/Web/SVG/Attribute/transform-origin">SVG transform-origin</a> attribute for more information.</p>
+</div>
+
 <h2 id="Formal_syntax">Formal syntax</h2>
 
 <pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
+
+<h3 id="A_demonstration_of_various_transform_values">A demonstration of various transform values</h3>
 
 <table class="standard-table">
  <tbody>
@@ -464,8 +470,6 @@ transform-origin: 100% -30%;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.properties.transform-origin")}}</p>
 

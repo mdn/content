@@ -42,7 +42,7 @@ tags:
 
 <p>The space inside the boundary is then the user's safe movement area, within which they are tracked and their movements replicated into the virtual world. Although the user's XR system may provide automated detection and protection against exiting the safe area, it is always good practice to handle this yourself, watching for collisions between the user's position and the boundary of the world, and providing guidance to move back toward the origin point, or at least to stay inside the safe zone.</p>
 
-<p>XR hardware that does not have an inherent boundary defined may or may not support the bounded reference space. If it does, it likely has a system in place to allow the user to specify or select the boundaries to apply if a bounded space is to be used. However, it's entirely possible that the device will simply decline to support bounded spaces at all, so you should be prepared to fall back to some other type of reference space.</p>
+<p>XR hardware that does not have an inherent boundary defined may or may not support the bounded reference space. If it does, it likely has a system in place to allow the user to specify or select the boundaries to apply if a bounded space is to be used. However, it's entirely possible that the device will decline to support bounded spaces at all, so you should be prepared to fall back to some other type of reference space.</p>
 
 <h2 id="Understanding_boundaries">Understanding boundaries</h2>
 
@@ -61,8 +61,6 @@ tags:
 <p>You should consider including proactive checks for the user approaching the boundary. This is useful both for their safety (in case the boundary represents a physical obstacle of some nature) and to avoid possible conditions in which the accuracy is reduced near the boundaries. It's also useful because the user may be engrossed in gameplay or other activity, not realize they're approaching the boundary, and could become confused or distressed if they wander out of tracking range (especially if doing so causes them to lose a game).</p>
 
 <p>The easiest solution is to just treat the each boundary segment as if it were an object to hit test against. As the user grows close to the boundary, you might warn them by displaying a message, flashing a warning indicator, playing an audio warning, or the like. And if the user actually collides with the boundary, don't let them continue past it.</p>
-
-<p><strong>&lt;&lt;&lt;--- example ---&gt;&gt;&gt;</strong></p>
 
 <h2 id="Creating_a_bounded_reference_space">Creating a bounded reference space</h2>
 
@@ -93,7 +91,7 @@ tags:
 
 <h3 id="Creating_the_reference_space">Creating the reference space</h3>
 
-<p>Simply requesting support for <code>bounded-floor</code> when calling the {{domxref("XRSystem")}} method {{domxref("XRSystem.requestSession", "requestSession()")}} isn't enough to get a bounded space. You need to ask for one when you call {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} as well. That means you need to change the code that calls <code>requestReferenceSpace()</code> to ask for a bounded reference space, then if that fails fall back to your backup choice, like this:</p>
+<p>Requesting support for <code>bounded-floor</code> when calling the {{domxref("XRSystem")}} method {{domxref("XRSystem.requestSession", "requestSession()")}} isn't enough to get a bounded space. You need to ask for one when you call {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} as well. That means you need to change the code that calls <code>requestReferenceSpace()</code> to ask for a bounded reference space, then if that fails fall back to your backup choice, like this:</p>
 
 <pre class="brush: js">let xrSession = null;
 let xrReferenceSpace = null;

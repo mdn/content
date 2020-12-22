@@ -616,7 +616,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 });</pre>
  </li>
  <li>
-  <p>Let's look at <code>storeVideo()</code> first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a <code>readwrite</code> transaction and get a reference to our <code>videos_os</code> object store, create an object representing the record to add to the database, then simply add it using {{domxref("IDBObjectStore.add()")}}.</p>
+  <p>Let's look at <code>storeVideo()</code> first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a <code>readwrite</code> transaction and get a reference to our <code>videos_os</code> object store, create an object representing the record to add to the database, then add it using {{domxref("IDBObjectStore.add()")}}.</p>
 
   <pre class="brush: js   notranslate">function storeVideo(mp4Blob, webmBlob, name) {
   // Open transaction, get object store; make it a readwrite so we can write to the IDB
@@ -667,7 +667,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>This is where <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> and the closely-related <a href="/en-US/docs/Web/API/Cache">Cache API</a> come in.</p>
 
-<p>A service worker is a JavaScript file that, simply put, is registered against a particular origin (web site, or part of a web site at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.</p>
+<p>A service worker is a JavaScript file that, put, is registered against a particular origin (web site, or part of a web site at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.</p>
 
 <p>When it intercepts a request, it can do anything you wish to it (see <a href="/en-US/docs/Web/API/Service_Worker_API#Other_use_case_ideas">use case ideas</a>), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.</p>
 
@@ -734,7 +734,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or <code>undefined</code> if it isn't.</p>
 
-<p>If a match is found, we simply return it as the custom response. If not, we <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> the response from the network and return that instead.</p>
+<p>If a match is found, we return it as the custom response. If not, we <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> the response from the network and return that instead.</p>
 
 <pre class="brush: js   notranslate">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);

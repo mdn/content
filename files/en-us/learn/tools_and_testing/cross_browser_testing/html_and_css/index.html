@@ -196,12 +196,12 @@ tags:
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 150) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also see this running live as <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html</a> on GitHub (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">source code</a> also).</p>
+<p><strong>Note</strong>: You can also see this running live as <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html</a> on GitHub (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">source code</a> also).</p>
 </div>
 
 <p>If you view the example on a supporting browser like desktop/Android Chrome or iOS Safari, you'll see the special widgets/features in action as you try to input data. On a non-supporting platform such as Firefox or Internet Explorer, the inputs will just fallback to normal text inputs, so at least the user can still enter some information.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note: Of course, this may not be a great solution for your project's needs — the difference in visual presentation is not great, plus it is harder to guarantee the data will be entered in the format you want it in. For cross browser forms, It is probably better to rely on simple form elements, or selectively use advanced form elements only in supporting browsers, or using a library that provides decent cross browser form widgets, such as <a href="http://jqueryui.com/">jQuery UI</a> or <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap datepicker</a>.</p>
 </div>
 
@@ -214,7 +214,7 @@ tags:
 <p><img alt="" src="https://mdn.mozillademos.org/files/14141/blingy-button.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also see this example running live on GitHub as <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (also see the <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">source code</a>).</p>
+<p><strong>Note</strong>: You can also see this example running live on GitHub as <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html</a> (also see the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">source code</a>).</p>
 </div>
 
 <p>The button has a number of declarations that style, but the two we are most interested in are as follows:</p>
@@ -262,13 +262,13 @@ button:active {
 <p><strong>Note</strong>: Sitepoint's <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</span></p>
 </div>
 
-<p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements styleable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
+<p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
 
 <pre class="brush: css">aside, main, article, section, nav, figure, figcaption {
   display: block;
 }</pre>
 
-<p>It isn't that simple, however — you also need to create a copy of each element you want to style in the DOM via JavaScript, for them to be styleable; this is a strange quirk, and we won't bore you with the details here. For example:</p>
+<p>It isn't that simple, however — you also need to create a copy of each element you want to style in the DOM via JavaScript, for them to be stylable; this is a strange quirk, and we won't bore you with the details here. For example:</p>
 
 <pre class="brush: js">const asideElem = document.createElement('aside');
  ...</pre>
@@ -368,9 +368,9 @@ transform: rotate(90deg);</pre>
 
 <p>Of course, doing this for lots of different CSS rules can get really tedious. It is better to use an automation tool to do it for you. And such tools exist:</p>
 
-<p>The <a href="http://leaverou.github.io/prefixfree/">prefix-free JavaScript library</a> can be attached to a page, and will automatically detect what capabilities are possessed by browsers viewing the page and add prefixes as appropriate. It is really easy and convenient to use, although it does have some downsides (see the link above for details), and it is arguable that parsing every stylesheet in your site and add prefixes at run time can be a drain on the computer's processing power for a large site.</p>
+<p>The <a href="https://leaverou.github.io/prefixfree/">prefix-free JavaScript library</a> can be attached to a page, and will automatically detect what capabilities are possessed by browsers viewing the page and add prefixes as appropriate. It is really easy and convenient to use, although it does have some downsides (see the link above for details), and it is arguable that parsing every stylesheet in your site and add prefixes at run time can be a drain on the computer's processing power for a large site.</p>
 
-<p>Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and <a href="http://postcss.org/">PostCSS</a>. These tools can be used in a variety of ways, for example <a href="https://tools.hubsadda.com/autoprefixer/">Autoprefixer</a> has an <a href="http://autoprefixer.github.io/">online version</a> that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer options</a>; also see <a href="https://github.com/ai/browserslist#queries">Browserslist queries</a>, which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.</p>
+<p>Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and <a href="http://postcss.org/">PostCSS</a>. These tools can be used in a variety of ways, for example <a href="https://tools.hubsadda.com/autoprefixer/">Autoprefixer</a> has an <a href="https://autoprefixer.github.io/">online version</a> that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer options</a>; also see <a href="https://github.com/ai/browserslist#queries">Browserslist queries</a>, which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.</p>
 
 <pre>last 2 versions, ie &gt; 9</pre>
 
@@ -417,7 +417,7 @@ transform: rotate(90deg);</pre>
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>
 
-<p>Much of the layout work on the web today is done using <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> — this is because floats are well-supported (way back to IE4, albeit with a number of bugs that would also need to be investigated if you were to try to support IE that far back). However, they are not really meant for layout purposes — using floats the way we do is really a hack — and they do have some serious limitations (e.g. see <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
+<p>Much of the layout work on the web today is done using <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> — this is because floats are well-supported (way back to IE4, albeit with a number of bugs that would also need to be investigated if you were to try to support IE that far back). However, they are not really meant for layout purposes — using floats the way we do is really a hack — and they do have some serious limitations (e.g. see <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox">Why Flexbox?</a>)</p>
 
 <p>More recently, dedicated layout mechanisms have appeared, like <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a>, which make common layout tasks far easier and remove such shortcomings. These however are not as well-supported in browsers:</p>
 

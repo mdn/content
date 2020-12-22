@@ -11,9 +11,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
-
 <p>The <strong><code>Promise</code></strong> object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+
+<p>{{AvailableInWorkers}}</p>
 
 <p>To learn about the way promises work and how you can use them, we advise you to read <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> first.</p>
 
@@ -35,11 +35,11 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15911/promises.png" style="height: 297px; width: 801px;"></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Not to be confused with:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
 </div>
 
@@ -66,9 +66,9 @@ const myPromise =
  </dd>
 </dl>
 
-<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately. (See <code>throw -999</code> in the example, below, for a technique to handle the consequences.) On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final .catch() statement.</p>
+<p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
 
-<p>The signatures of these two functions are simple, they accept a single parameter of any type. These functions are written by you, the programmer. The termination condition of these functions determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
+<p>The termination condition of a promise determines the "settled" state of the next promise in the chain. Any termination other than a <code>throw</code> creates a "resolved" state while terminating with a <code>throw</code> creates a "rejected" state.</p>
 
 <pre class="brush: js notranslate">handleFulfilled(value)       { /*...*/; return nextValue;  }
 handleRejection(reason)  { /*...*/; throw  nextReason; }
@@ -76,7 +76,7 @@ handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
 <p>The returned <code>nextValue</code> can be another promise object, in which case the promise gets dynamically inserted into the chain.</p>
 
-<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing simply continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
+<p>When a <code>.then()</code> lacks the appropriate function that returns a Promise object, processing continues to the next link of the chain. Therefore, a chain can safely omit every <code>handleRejection</code> until the final <code>.catch()</code>. Similarly, <code>.catch()</code> is really just a <code>.then()</code> without a slot for <code>handleFulfilled</code>.</p>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
@@ -106,6 +106,76 @@ console.log("immediate logging");
 // immediate logging
 // asynchronous logging has val: 777
 </pre>
+
+<h3 id="Incumbent_settings_object_tracking">Incumbent settings object tracking</h3>
+
+<p>A settings object is an <a href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object">environment</a> that provides additional information when JavaScript code is running. This includes the realm and module map, as well as HTML specific information such as the origin. The incumbent settings object is tracked in order to ensure that the browser knows which one to use for a given piece of user code.</p>
+
+<p>To better picture this, we can take a closer look at how the realm might be an issue. A <strong>realm</strong> can be roughly thought of as the global object. What is unique about realms is that they hold all of the necessary information to run JavaScript code. This includes objects like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></code>. Each settings object has its own "copy" of these and they are not shared. That can cause some unexpected behavior in relation to promises. In order to get around this, we track something called the <strong>incumbent settings object</strong>. This represents information specific to the context of the user code responsible for a certain function call.</p>
+
+<p>To illustrate this a bit further we can take a look at how an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:</p>
+
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
+&lt;script&gt; // we have a realm here as well
+  const bound = frames[0].postMessage.bind(
+    frames[0], "some data", "*");
+    // bound is a built-in function -- there is no user
+    // code on the stack, so which realm do we use?
+  window.setTimeout(bound);
+  // this still works, because we use the youngest
+  // realm (the incumbent) on the stack
+&lt;/script&gt;
+</pre>
+
+<p>The same concept applies to promises. If we modify the above example a little bit, we get this:</p>
+
+<div id="htmlOutputWrapper">
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
+&lt;script&gt; // we have a realm here as well
+  const bound = frames[0].postMessage.bind(
+    frames[0], "some data", "*");
+    // bound is a built in function -- there is no user
+    // code on the stack -- which realm do we use?
+  Promise.resolve(undefined).then(bound);
+  // this still works, because we use the youngest
+  realm (the incumbent) on the stack
+&lt;/script&gt;
+</pre>
+</div>
+
+<p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent settings object:</p>
+
+<div id="htmlOutputWrapper">
+<pre class="brush: html notranslate">&lt;!-- y.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;iframe src="x.html"&gt;&lt;/iframe&gt;
+&lt;script&gt;
+  const bound = frames[0].postMessage.bind(frames[0], "some data", "*");
+  Promise.resolve(undefined).then(bound);
+&lt;/script&gt;
+</pre>
+</div>
+
+<div id="htmlOutputWrapper">
+<pre class="brush: html notranslate">&lt;!-- x.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;script&gt;
+window.addEventListener("message", (event) =&gt; {
+  document.querySelector("#text").textContent = "hello";
+  // this code will only run in browsers that track the incumbent settings object
+  console.log(event);
+}, false);
+&lt;/script&gt;
+</pre>
+</div>
+
+<p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
+
+<div class="notecard note">
+<p><strong>Note</strong>: Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
+</div>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -264,7 +334,7 @@ function promiseGetWord(parityInfo) {
 
 <p>This small example shows the mechanism of a <code>Promise</code>. The <code>testPromise()</code> method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("window.setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The <code>Promise()</code> constructor is used to create the promise.</p>
 
-<p>The fulfillment of the promise is simply logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
+<p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
 <pre class="brush: js; notranslate">"use strict";
 var promiseCount = 0;
@@ -306,7 +376,7 @@ function testPromise() {
   btn.addEventListener("click",testPromise);
 } else {
   log = document.getElementById('log');
-  log.innerHTML = "Live example not available as your browser doesn't support the &lt;code&gt;Promise&lt;code&gt; interface.";
+  log.textContent = "Live example not available as your browser doesn't support the &lt;code&gt;Promise&lt;code&gt; interface.";
 }
 </pre>
 </div>

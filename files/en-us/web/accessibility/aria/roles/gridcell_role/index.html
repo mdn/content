@@ -63,7 +63,7 @@ tags:
 
 <h3 id="Describing_the_position_of_gridcells_when_the_overall_structure_is_unknown">Describing the position of gridcells when the overall structure is unknown</h3>
 
-<p>In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programatically described by using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>. The <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>s provided for <code>aria-describedby</code> should correspond to parent elements intended to be the rows and columns.</p>
+<p>In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>. The <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>s provided for <code>aria-describedby</code> should correspond to parent elements intended to be the rows and columns.</p>
 
 <p>By referencing the parent elements with roles of <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role">rowheader</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role">columnheader</a></code> applied to them via <code>aria-describedby</code>, it allows assistive technology to understand the position and relationship of the <code>gridcell</code> element to the rest of the table-style grouping of content.</p>
 
@@ -78,7 +78,7 @@ tags:
 &lt;div role="gridcell" contenteditable="true"&gt;Item cost&lt;/div&gt;
 </pre>
 
-<p><code>contenteditable</code> will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle <code><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute">aria-readonly</a></code> on the gridcell element.</p>
+<p><code>contenteditable</code> will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute">aria-readonly</a></code> on the gridcell element.</p>
 
 <h4 id="Expandable_cells">Expandable cells</h4>
 
@@ -87,12 +87,9 @@ tags:
 <h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">Associated WAI-ARIA Roles, States, and Properties</h3>
 
 <dl>
-</dl>
-
-<dl>
  <dt>grid</dt>
  <dd>
- <p>Communicates that a parent element is a a table or tree style grouping of information.</p>
+ <p>Communicates that a parent element is a table or tree style grouping of information.</p>
  </dd>
  <dt>row</dt>
  <dd>
@@ -158,7 +155,7 @@ tags:
 
 <p>The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the utilize <a href="/en-US/docs/Web/HTML/Element/table">native HTML table markup</a> instead of recreating a table's form and functionality with ARIA and JavaScript.</p>
 
-<h2 id="See_also">See also:</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTML/Element/table">The Table element</a></li>

@@ -1,0 +1,41 @@
+---
+title: Building on Fedora Core 5
+slug: Mozilla/Developer_guide/Build_Instructions/Building_on_Fedora_Core_5
+tags:
+  - Build documentation
+  - Developing Mozilla
+---
+<p>Building Mozilla applications (Firefox, Thunderbird, SeaMonkey, etc.) on modern Linux distributions is generally relatively trouble-free, although each new distribution tends to introduce a few new issues that need to be fixed in the source. Fedora Core 5 introduces a few of these issues:
+</p>
+<h3 id="SELinux_execmod_denials"> SELinux execmod denials </h3>
+<p>For those with SELinux in enforcing mode, you are likely to run into problems both with the shlibsign during the build process and with the running the final build related to SELinux denying <a class="external" href="http://people.redhat.com/~drepper/selinux-mem.html">execmod permission</a> due at least primarily (if not completely) to <a class="link-https" href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=175442">a compiler bug</a>. </p><p>This problem can be worked around in one of the following two ways
+</p>
+<h4 id="Workaround_.231_.28sacrifice_performance.29"> Workaround #1 (sacrifice performance) </h4>
+<p>Disable the visibility optimizations by adding the following line to your mozconfig:
+</p>
+<pre class="eval"> ac_cv_visibility_pragma=no
+</pre>
+<p>(Don’t prefix this with ac_add_options!)
+</p>
+<h4 id="Workaround_.232_.28sacrifice_security.3B_have_to_use_workaround_more_often.29"> Workaround #2 (sacrifice security; have to use workaround more often) </h4>
+<p>Use a command like (using bash syntax):
+</p>
+<pre class="eval"> chcon -t texrel_shlib_t $(find . -name "*.so")
+</pre>
+<p>within dist/bin to give the shared libraries a security context type that allows execmod (i.e., making previously-writable memory executable).
+</p>
+<h3 id="Debugging_tools_involving_stack_traces"> Debugging tools involving stack traces </h3>
+<h4 id="Compilation_errors_relating_to_JB_BP"> Compilation errors relating to JB_BP </h4>
+<p>Depending on the version of your source and configuration options, you may see compilation errors related to the removal of JB_BP, which was a constant used in code that took stack traces for debugging purposes by getting the frame address by calling setjmp. Patches to fix these problems are in {{ Bug(323853) }}.
+</p><p>The patch that affects the default build options has been checked in to the trunk, the MOZILLA_1_8_BRANCH, and the MOZILLA_1_8_0_BRANCH. However, if you are using other debugging tools, particularly on older branches, or building from older branches or release tags, you may need to apply some of these patches yourself.
+</p>
+<h4 id="No_stack_traces_due_to___builtin_frame_address.280.29_malfunction"> No stack traces due to __builtin_frame_address(0) malfunction </h4>
+<p>Because of changes in the meaning of __builtin_frame_address(0), patches from {{ Bug(331436) }} are needed; they should be checked in to the trunk reasonably soon.
+</p>
+<h4 id="Need_-fno-omit-frame-pointer"> Need -fno-omit-frame-pointer </h4>
+<p>With gcc 4.1, some optimization levels (e.g., -O, -Os, -O2) have started to imply -fomit-frame-pointer. (Verify this? Which levels?) If you want to use jprof or any of the other stack walking tools, you probably need to use
+</p>
+<pre class="eval"> ac_add_options --enable-optimize="-O2 -fno-omit-frame-pointer"
+</pre>
+<p>when enabling optimization. (Perhaps retest this once patches from {{ Bug(331436) }} are landed.)
+</p>

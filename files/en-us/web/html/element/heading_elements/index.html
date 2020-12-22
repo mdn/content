@@ -14,17 +14,17 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, heading content, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, heading content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -32,7 +32,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>; don't use a heading element as a child of the {{HTMLElement("hgroup")}} element — it is now deprecated.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>; don't use a heading element as a child of the {{HTMLElement("hgroup")}} element — it is now deprecated.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -51,7 +51,7 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>These elements only include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>These elements only include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <div class="note">
 <p>The <code>align</code> attribute is obsolete; don't use it.</p>
@@ -60,10 +60,12 @@ tags:
 <h2 id="Usage_notes">Usage notes</h2>
 
 <ul>
- <li>Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.</li>
- <li>Avoid using heading tags to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property. Headings use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.</li>
- <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, next use <code>&lt;h2&gt;</code> and so on.</li>
- <li>You should only use one <code>&lt;h1&gt;</code> per page. Using more than one will not result in an error, but using only one is seen as a best practice. It makes logical sense — <code>&lt;h1&gt;</code> is the most important heading, and tells you what the purpose of the overall page is. You wouldn't have a book with more than one title, or a movie with more than one name! Having a single top-level title is also arguably better for screenreader users, and {{glossary("SEO")}}.</li>
+ <li>Heading information can be used by user agents to construct a table of contents for a document automatically.</li>
+ <li>Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.</li>
+ <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, followed by <code>&lt;h2&gt;</code> and so on.</li>
+ <li>Use only one <code>&lt;h1&gt;</code> per page or view. It should concisely describe the overall purpose of the content.</li>
+ <li>Using more than one <code>&lt;h1&gt;</code> will not result in an error, but is not considered a best practice. It is beneficial for screenreader users, and {{glossary("SEO")}}.</li>
+ <li>While HTML5 allows a <code>&lt;h1&gt;</code> per <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5">sectioning element</a>, it is not considered best practice, and may subvert the expectations of how screen reader users navigate.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -72,7 +74,7 @@ tags:
 
 <p>The following code shows all the heading levels, in use.</p>
 
-<pre class="brush: html">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h2&gt;Heading level 2&lt;/h2&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 &lt;h4&gt;Heading level 4&lt;/h4&gt;
@@ -88,7 +90,7 @@ tags:
 
 <p>The following code shows a few headings with some content under them.</p>
 
-<pre class="brush: html">&lt;h1&gt;Heading elements&lt;/h1&gt;
+<pre class="brush: html notranslate">&lt;h1&gt;Heading elements&lt;/h1&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Some text here...&lt;/p&gt;
 
@@ -115,14 +117,14 @@ tags:
 
 <h4 id="Dont">Don't</h4>
 
-<pre class="brush: html example-bad">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html example-bad notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 &lt;h4&gt;Heading level 4&lt;/h4&gt;
 </pre>
 
 <h4 id="Do">Do</h4>
 
-<pre class="brush: html example-good">&lt;h1&gt;Heading level 1&lt;/h1&gt;
+<pre class="brush: html example-good notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
 &lt;h2&gt;Heading level 2&lt;/h2&gt;
 &lt;h3&gt;Heading level 3&lt;/h3&gt;
 </pre>
@@ -187,7 +189,7 @@ tags:
 
 <h4 id="Example">Example</h4>
 
-<pre class="brush: html">&lt;header&gt;
+<pre class="brush: html notranslate">&lt;header&gt;
   &lt;nav aria-labelledby="primary-navigation"&gt;
     &lt;h2 id="primary-navigation"&gt;Primary navigation&lt;/h2&gt;
     &lt;!-- navigation items --&gt;
@@ -242,7 +244,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.h1")}}</p>
 

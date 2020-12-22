@@ -62,7 +62,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 &lt;/html&gt;
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you are reading this on a device or an environment where you can't easily create files, then don't worry — live code editors are provided below to allow you to write example code right here in the page.</p>
 </div>
 
@@ -108,7 +108,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
 
-<p>However, you will often want something other than the choice the browser has made. This can be done by simply choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our <code>&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
+<p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our <code>&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
 
 <pre class="brush: css">li {
   list-style-type: none;
@@ -150,7 +150,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
   font-weight: bold;
 }</pre>
 
-<p>This syntax means "target any <code>li</code> element that has a class of special". If you were to do this then you would no longer be able to apply the class to a <code>&lt;span&gt;</code> or another element by simply adding the class to it; you would have to add that element to the list of selectors:</p>
+<p>This syntax means "target any <code>li</code> element that has a class of special". If you were to do this then you would no longer be able to apply the class to a <code>&lt;span&gt;</code> or another element by adding the class to it; you would have to add that element to the list of selectors:</p>
 
 <pre class="brush: css">li.special,
 span.special {
@@ -158,11 +158,11 @@ span.special {
   font-weight: bold;
 }</pre>
 
-<p>As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and simply refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.</p>
+<p>As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.</p>
 
 <h2 id="Styling_things_based_on_their_location_in_a_document">Styling things based on their location in a document</h2>
 
-<p>There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document are two <code>&lt;em&gt;</code> elements — one inside a paragraph and the other inside a list item. To select only an <code>&lt;em&gt;</code> that is nested inside an <code>&lt;li&gt;</code> element I can use a selector called the <strong>descendant combinator</strong>, which simply takes the form of a space between two other selectors.</p>
+<p>There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document are two <code>&lt;em&gt;</code> elements — one inside a paragraph and the other inside a list item. To select only an <code>&lt;em&gt;</code> that is nested inside an <code>&lt;li&gt;</code> element I can use a selector called the <strong>descendant combinator</strong>, which takes the form of a space between two other selectors.</p>
 
 <p>Add the following rule to your stylesheet.</p>
 
@@ -184,7 +184,7 @@ span.special {
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors</a> articles later on in the course.</p>
 </div>
 
@@ -212,7 +212,7 @@ a:visited {
 
 <p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place, can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: you will often see mention of <a href="/en-US/docs/Learn/Accessibility">accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>
 
 <p>Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.</p>

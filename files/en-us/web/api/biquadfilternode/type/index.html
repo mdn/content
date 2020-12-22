@@ -24,7 +24,7 @@ biquadFilter.type = 'lowpass';</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A string (enum) representing a <a href="http://webaudio.github.io/web-audio-api/#idl-def-BiquadFilterType">BiquadFilterType</a>.</p>
+<p>A string (enum) representing a <a href="https://webaudio.github.io/web-audio-api/#idl-def-BiquadFilterType">BiquadFilterType</a>.</p>
 
 <h2 id="type_values_and_their_meaning"><code>type</code> values and their meaning</h2>
 
@@ -81,15 +81,15 @@ biquadFilter.type = 'lowpass';</pre>
 		</tr>
 		<tr>
 			<th scope="row"><code>notch</code></th>
-			<td>Standard <a href="http://en.wikipedia.org/wiki/Band-stop_filter" title="/en-US/docs/">notch</a> filter, also called a <em>band-stop</em> or <em>band-rejection</em> filter. It is the opposite of a bandpass filter: frequencies outside the give range of frequencies pass through; frequencies inside it are attenuated.</td>
+			<td>Standard <a href="http://en.wikipedia.org/wiki/Band-stop_filter">notch</a> filter, also called a <em>band-stop</em> or <em>band-rejection</em> filter. It is the opposite of a bandpass filter: frequencies outside the give range of frequencies pass through; frequencies inside it are attenuated.</td>
 			<td>The center of the range of frequencies.</td>
 			<td>Controls the width of the frequency band. The greater the <code>Q</code> value, the larger the frequency band.</td>
 			<td><em>Not used</em></td>
 		</tr>
 		<tr>
 			<th scope="row"><code>allpass</code></th>
-			<td>Standard second-order <a href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation" title="/en-US/docs/">allpass</a> filter. It Lets all frequencies through, but changes the phase-relationship between the various frequencies.</td>
-			<td>The frequency with the maximal <a href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay" title="/en-US/docs/">group delay</a>, that is, the frequency where the center of the phase transition occurs.</td>
+			<td>Standard second-order <a href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation">allpass</a> filter. It Lets all frequencies through, but changes the phase-relationship between the various frequencies.</td>
+			<td>The frequency with the maximal <a href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay">group delay</a>, that is, the frequency where the center of the phase transition occurs.</td>
 			<td>Controls how sharp the transition is at the medium frequency. The larger this parameter is, the sharper and larger the transition will be.</td>
 			<td><em>Not used</em></td>
 		</tr>
@@ -98,7 +98,7 @@ biquadFilter.type = 'lowpass';</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> demo (look at the <a href="https://github.com/mdn/voice-change-o-matic">source code</a> too).</p>
+<p>The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our <a href="https://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> demo (look at the <a href="https://github.com/mdn/voice-change-o-matic">source code</a> too).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -146,7 +146,6 @@ biquadFilter.gain.value = 25;
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.BiquadFilterNode.type")}}</p>
 </div>

@@ -25,7 +25,7 @@ tags:
 
 <p>When contributing to the documentation on the MDN web docs site, you will often need to locate and identify version-specific details for a given browser, such as which versions of each major browser implement support for the feature you're documenting. <span class="seoSummary">This article provides tips and pointers to help you figure out which version of each major browser introduced a given feature, and when it was enabled by default.</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>In this article, the term <strong>feature</strong> is used to refer to anything that might need to be documented on MDN. This includes APIs, HTML elements, new HTML attributes, new CSS properties, new possible values for CSS properties, and so forth. Anything that needs to be documented, from very small to very large.</p>
 </div>
 
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Version_numbers_for_Chrome_for_Android">Version numbers for Chrome for Android</h3>
 
-<p>Chrome for Android shares version numbers with the desktop release, although not every desktop Chroime version has a corresponding Android version. The table below will help map features to versions of Chrome for Android</p>
+<p>Chrome for Android shares version numbers with the desktop release, although not every desktop Chrome version has a corresponding Android version. The table below will help map features to versions of Chrome for Android</p>
 
 <table class="standard-table">
  <thead>
@@ -91,7 +91,7 @@ tags:
 
 <p>The Android WebView component switched to being based off the latest version of Chrome during the Chrome 37 lifecycle, so any feature that's present in Android WebView <em>and</em> was introduced during or after the Chrome 37 time period should have the same versions as the Chrome release at the same time. For example, if a feature is added to WebView while Chrome 55 is current, then the value of <code>version_added</code> is <code>55</code>.</p>
 
-<p>If a feature is added to WebView prior to the Chrome 37 time period, and its version number is not known (looking these up is a more difficult process), specify <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.498039);">≤37</span></font> as the version. Otherwise, if you do know the WebView component's version number, use that instead.</p>
+<p>If a feature is added to WebView prior to the Chrome 37 time period, and its version number is not known (looking these up is a more difficult process), specify <code>≤37</code> as the version. Otherwise, if you do know the WebView component's version number, use that instead.</p>
 
 <h4 id="Features_excluded_from_WebView">Features excluded from WebView</h4>
 
@@ -126,13 +126,9 @@ tags:
 
 <p>Before Edge switched to Chromium, it used an engine developed by Microsoft called EdgeHTML. These resources will help you identify when features were added or removed in EdgeHTML-based versions of Edge—that is, Edge version 18 and earlier.</p>
 
-<p><strong>&lt;&lt;&lt;--- add content here ---&gt;&gt;&gt;</strong></p>
-
 <h3 id="Blink_Chromium">Blink (Chromium)</h3>
 
 <p>After Edge 18, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 79, to match the Chromium version number. While most features will be the same between all Chromium browsers at the same version number, there may be some exceptions. Here are some resources to help you identify those:</p>
-
-<p><strong>&lt;&lt;&lt;--- add content here ---&gt;&gt;&gt;</strong></p>
 
 <h2 id="Firefox">Firefox</h2>
 
@@ -144,7 +140,7 @@ tags:
 
 <p>The specific appearance of the display will vary depending on what tool you're using to view the blame information; for example, Mozilla DXR's <a href="https://hg.mozilla.org/mozilla-central/annotate/c2593a3058afdfeaac5c990e18794ee8257afe99/dom/webidl/RTCPeerConnection.webidl#l">output for the <code>RTCPeerConnection.webidl</code> file</a> looked like this when this article was written:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; height: 156px; width: 676px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; width: 676px;"></p>
 
 <p>Here, the mouse is pointing at a row with the revision number <code>199991</code> beside it. This has opened up a tooltip with details about that revision: It was created for bug 1032835, entitled "addTrack/removeTrack on-top of existing implementation". The tooltip includes several links which can be helpful:</p>
 
@@ -158,20 +154,20 @@ tags:
  <dt><code>diff</code></dt>
  <dd>A link that will produce a diff showing the differences between the parent changeset and the changeset that introduced the change you're looking at.</dd>
  <dt><code>changeset</code></dt>
- <dd>A link to the overview page for the entire changeset that includles the changes made to this line of code. This page should give you the information you require; see {{anch("From a Mercurial changeset number")}} for details.</dd>
+ <dd>A link to the overview page for the entire changeset that includes the changes made to this line of code. This page should give you the information you require; see {{anch("From a Mercurial changeset number")}} for details.</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong><strong>:</strong> If you aren't able to find the change because it apparently happens before Firefox was migrated to Mercurial from CVS, try using Mercurial blame on the <a href="https://hg.mozilla.org/mozilla-unified/">Unified Firefox repository</a>, which has tags in place, each representing the code state at specific points in the history of the project, including each beta and each release build. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Processes/Browser_information_resources", "Unified Firefox repository")}} for details.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> If you aren't able to find the change because it apparently happens before Firefox was migrated to Mercurial from CVS, try using Mercurial blame on the <a href="https://hg.mozilla.org/mozilla-unified/">Unified Firefox repository</a>, which has tags in place, each representing the code state at specific points in the history of the project, including each beta and each release build. See {{SectionOnPage("/en-US/docs/MDN/Contribute/Processes/Browser_information_resources", "Unified Firefox repository")}} for details.</p>
 </div>
 
 <h3 id="Getting_the_Firefox_release_for_a_bug_number">Getting the Firefox release for a bug number</h3>
 
 <p>If you have the bug number corresponding to the bug that implemented the feature, and the bug isn't incredibly old, you can usually get the version number corresponding to the implementation of the feature straight from the bug. This information can be found in one of a few different ways.</p>
 
-<p>Consider {{bug(1435161)}}. This bug covers implementing the {{domxref("PaymentReponse.retry()")}} method. If you look at that bug, you'll see the information you need right there at the top:</p>
+<p>Consider {{bug(1435161)}}. This bug covers implementing the {{domxref("PaymentResponse.retry()")}} method. If you look at that bug, you'll see the information you need right there at the top:</p>
 
-<p><img alt='Screenshot showing "RESOLVED FIXED in Firefox 64" at the top of the Bugzilla screen' src="https://mdn.mozillademos.org/files/16494/bugzilla-fixedin-top.png" style="border-style: solid; border-width: 1px; height: 104px; width: 487px;"></p>
+<p><img alt='Screenshot showing "RESOLVED FIXED in Firefox 64" at the top of the Bugzilla screen' src="https://mdn.mozillademos.org/files/16494/bugzilla-fixedin-top.png" style="border-style: solid; border-width: 1px; width: 487px;"></p>
 
 <p>Right below the bug summary, you see the text "RESOLVED FIXED in Firefox 64". This corresponds to the presence of the tracking flag named <code>firefox45</code> having the value <code>fixed</code>.  On older bugs, before the release-numbered tracking flags were added, you might instead find one of these:</p>
 
@@ -179,12 +175,12 @@ tags:
  <li>
   <p>A tracking flag named <code>relnote-firefox</code> with the status set to the version of Firefox the feature arrived in. This tracking flag is intended to indicate when a feature needs to be mentioned in the release notes for the browser, but serves just as well to tell us when a feature was added.</p>
 
-  <p><img alt="Screenshot showing the relnote-firefox tracking flag used to indicate a version number" src="https://mdn.mozillademos.org/files/16495/bugzilla-relnote-firefox.png" style="border-style: solid; border-width: 1px; height: 71px; width: 347px;"></p>
+  <p><img alt="Screenshot showing the relnote-firefox tracking flag used to indicate a version number" src="https://mdn.mozillademos.org/files/16495/bugzilla-relnote-firefox.png" style="border-style: solid; border-width: 1px; width: 347px;"></p>
  </li>
  <li>
   <p>The Target field in the Tracking group in Bugzilla is set to <code>mozillaN</code>, where <code>N</code> is the version number of Firefox. The trick to watch for is that this is sometimes inaccurate, as it represents when it was hoped to ship, not necessarily when it was actually released. Be sure to review the comments on the bug to ensure that it didn't miss its planned release.</p>
 
-  <p><img alt='Screenshot showing the Bugzilla Target field indicating a release target of "mozilla15" or Firefox 15' src="https://mdn.mozillademos.org/files/16496/bugzilla-target.png" style="border-style: solid; border-width: 1px; height: 116px; width: 449px;"></p>
+  <p><img alt='Screenshot showing the Bugzilla Target field indicating a release target of "mozilla15" or Firefox 15' src="https://mdn.mozillademos.org/files/16496/bugzilla-target.png" style="border-style: solid; border-width: 1px; width: 449px;"></p>
  </li>
 </ul>
 
@@ -219,7 +215,7 @@ tags:
  <li>A data type (enum, typedef, or similar)</li>
 </ul>
 
-<p>The easiest way to identify the compatiblity of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the <a href="/en-US/docs/Glossary/WebIDL">WebIDL</a> file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:</p>
+<p>The easiest way to identify the compatibility of a feature is to look for when the feature was added to or altered to match the compatibility point you're looking for within the <a href="/en-US/docs/Glossary/WebIDL">WebIDL</a> file that describes the corresponding interface. There are a few ways you can locate this file, depending on how the API is implemented and how old it is. From most to least likely to work, here they are:</p>
 
 <ol>
  <li>
@@ -235,17 +231,17 @@ tags:
 
 <p>Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.</p>
 
-<p><img alt="Screenshot of the DXR Navigation box" src="https://mdn.mozillademos.org/files/16526/dxr-navigation-box.png" style="border-style: solid; border-width: 1px; height: 255px; width: 197px;"></p>
+<p><img alt="Screenshot of the DXR Navigation box" src="https://mdn.mozillademos.org/files/16526/dxr-navigation-box.png" style="border-style: solid; border-width: 1px; width: 197px;"></p>
 
 <p>Once in the blame view, hover the mouse cursor over the revision number at the left side of the WebIDL on the same line as (or the first revision number found immediately above) the line of WebIDL corresponding to the feature you're interested in. For example, if you're looking for when the <code>RTCPeerConnection</code> method <code>addTrack()</code> was added to Firefox:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; height: 156px; width: 676px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; width: 676px;"></p>
 
 <p>This shows you information about the changeset; if the information shown is what you're looking for, click the <code>changeset</code> link in the tooltip popup, then see {{anch("From a Mercurial changeset number")}} for details on how to get the version information you need from there.</p>
 
-<p>If you can't find the changeset you need just by browsing the blame page, the next thing to try is to look through the  the revision history. Click on the <code>revisions</code> link at the top of the Mercurial blame page, or the "Log" link in the Navigation box on the DXR page. This will present a list of every changeset that altered the file you're looking at. Look for a revision that matches the feature change you're interested in; if you find a promising revision, click the <code>diff</code> link next to that revision.</p>
+<p>If you can't find the changeset you need just by browsing the blame page, the next thing to try is to look through the revision history. Click on the <code>revisions</code> link at the top of the Mercurial blame page, or the "Log" link in the Navigation box on the DXR page. This will present a list of every changeset that altered the file you're looking at. Look for a revision that matches the feature change you're interested in; if you find a promising revision, click the <code>diff</code> link next to that revision.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16502/hg-revisions-ontrack.png" style="border-style: solid; border-width: 1px; height: 61px; width: 878px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16502/hg-revisions-ontrack.png" style="border-style: solid; border-width: 1px; width: 878px;"></p>
 
 <p>This takes you to the changeset details page. From here, you can collect the information you need as covered in {{anch("From a Mercurial changeset number")}}.</p>
 
@@ -270,7 +266,7 @@ tags:
  <li>To locate the code implementing a property or other ID on an element, run the command file: <kbd>file:Elementname id:propertyname</kbd>. For instance, to locate the code implementing the <code>HTMLMediaElement</code> property <code>duration</code>, run the search <kbd>file:HTMLMediaElement id:duration</kbd>.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If none of those tips for searching DXR help, click on the "Operators" button at the far right end of the search box. This will open a panel listing all the keywords you can use to perform special searches, such as <code>type:</code> to look for data types or classes in C, Python, or Rust source files.</p>
 </div>
 
@@ -301,7 +297,7 @@ tags:
 
 <p>For example, if I have the changeset number <code>79525105ef9a</code>, I want to visit <a href="https://hg.mozilla.org/mozilla-central/rev/79525105ef9a">https://hg.mozilla.org/mozilla-central/rev/79525105ef9a</a>. This brings up a page that looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16505/hg-changeset.png" style="border-style: solid; border-width: 1px; height: 1376px; width: 1788px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16505/hg-changeset.png" style="border-style: solid; border-width: 1px; width: 1788px;"></p>
 
 <p>Below this is a list of the files that changed followed by the actual diffs showing the specific changes made.</p>
 
@@ -343,6 +339,11 @@ skip-if = os == 'android'</pre>
  </li>
 </ul>
 
+<h3 id="Searchfox">Searchfox</h3>
+
+<p>The <a href="https://searchfox.org/">Searchfox</a> web site provides another method you can use to search Firefox source code. Searchfox is a tool that indexes the Firefox repositories (most usefully, the main <a href="https://searchfox.org/mozilla-central/source">mozilla-central source code</a> and, interesting, the <a href="https://searchfox.org/whatwg-html/source">WHATWG HTML specification is indexed</a> as well).</p>
+
+
 <h2 id="Opera">Opera</h2>
 
 <p><em>If you have insights into locating release versions for changes to Opera, please consider helping us write this section...</em></p>
@@ -351,15 +352,11 @@ skip-if = os == 'android'</pre>
 
 <p>Before Opera switched to Chromium, it used an engine developed by Opera called Presto. These resources will help you identify when features were added or removed in Presto-based versions of Opera—that is, Opera version 12.1 and earlier.</p>
 
-<p><strong>&lt;&lt;&lt;--- add content here ---&gt;&gt;&gt;</strong></p>
-
 <h3 id="Blink_Chromium_2">Blink (Chromium)</h3>
 
 <p>After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see <a href="https://github.com/mdn/browser-compat-data/blob/master/browsers/opera.json">browsers/opera.json</a> and <a href="https://github.com/mdn/browser-compat-data/blob/master/browsers/opera_android.json">browsers/opera_android.json</a>.</p>
 
 <p>While most features will be the same between all Chromium browsers, there may be some exceptions. Here are some resources to help you identify those:</p>
-
-<p><strong>&lt;&lt;&lt;--- add content here ---&gt;&gt;&gt;</strong></p>
 
 <h2 id="Safari">Safari</h2>
 
@@ -384,8 +381,6 @@ skip-if = os == 'android'</pre>
  </li>
 </ul>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Version numbers listed in the documentation at <a href="https://developer.apple.com/documentation/webkitjs">https://developer.apple.com/documentation/webkitjs</a> are inaccurate.  Please use other resources to determine the version numbers.</p>
 </div>
-
-<p><strong>&lt;&lt;&lt;--- add content here ---&gt;&gt;&gt;</strong></p>

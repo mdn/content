@@ -15,12 +15,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>&lt;flex&gt;</code> data type is specified as a {{cssxref("&lt;number&gt;")}} followed by the unit <a id="fr" name="fr"><code>fr</code></a>. The <code>fr</code> unit represents a fraction of the leftover space in the grid container. As with all CSS dimensions, there is no space between the unit and the number.</p>
+<p>The <code>&lt;flex&gt;</code> data type is specified as a {{cssxref("&lt;number&gt;")}} followed by the unit <a id="fr"><code>fr</code></a>. The <code>fr</code> unit represents a fraction of the leftover space in the grid container. As with all CSS dimensions, there is no space between the unit and the number.</p>
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Examples_of_correct_values_for_the_fr_data_type">Examples of correct values for the fr data type</h3>
+
 <pre class="brush: css notranslate">1fr    /* Using an integer value */
 2.5fr  /* Using a float value */
+</pre>
+
+<h3 id="Example_of_use_in_a_tracklisting_for_CSS_Grid_layout">Example of use in a tracklisting for CSS Grid layout</h3>
+
+<pre class="brush: css notranslate">.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -43,8 +53,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.types.flex")}}</p>
 

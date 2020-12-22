@@ -20,9 +20,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
-    // return element for new_array
-}[, <var>thisArg</var>])
+<pre class="syntaxbox notranslate">let <var>newArray</var> = <var>arr</var>.map(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
+  // return element for <em>newArray,</em> after executing something
+}[, <var>thisArg</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -30,7 +30,7 @@ tags:
 <dl>
  <dt><code><var>callback</var></code></dt>
  <dd>
- <p>Function that is called for every element of <code><var>arr</var></code>. Each time <code><var>callback</var></code> executes, the returned value is added to <code><var>new_array</var></code>.</p>
+ <p>Function that is called for every element of <code><var>arr</var></code>. Each time <code><var>callback</var></code> executes, the returned value is added to <code><var>newArray</var></code>.</p>
 
  <p>The <code><var>callback</var></code> function accepts the following arguments:</p>
 
@@ -59,13 +59,12 @@ tags:
 
 <ul>
  <li>indexes that have never been set;</li>
- <li>which have been deleted; or</li>
- <li>which have never been assigned a value.</li>
+ <li>indexes which have been deleted.</li>
 </ul>
 
 <h3 id="When_not_to_use_map">When not to use map()</h3>
 
-<p>Since <code>map</code> builds a new array, using it when you aren't using the returned array is an anti-pattern; use {{jsxref("Array/forEach", "forEach")}} or {{jsxref("for...of", "for-of")}} instead.</p>
+<p>Since <code>map</code> builds a new array, using it when you aren't using the returned array is an anti-pattern; use {{jsxref("Array/forEach", "forEach")}} or {{jsxref("Statements/for...of", "for...of")}} instead.</p>
 
 <p>You shouldn't be using <code>map</code> if:</p>
 
@@ -82,7 +81,7 @@ tags:
 
 <p><code>map</code> does not mutate the array on which it is called (although <code><var>callback</var></code>, if invoked, may do so).</p>
 
-<p>The range of elements processed by <code>map</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>map</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed, their value as passed to <code><var>callback</var></code> will be the value at the time <code>map</code> visits them. Elements that are deleted after the call to <code>map</code> begins and before being visited are not visited.</p>
+<p>The range of elements processed by <code>map</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array after the call to <code>map</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are changed after the call to <code>map</code>, their value will be the value at the time <code><var>callback</var></code> visits them. Elements that are deleted after the call to <code>map</code> begins and before being visited are not visited.</p>
 
 <p>Due to the algorithm defined in the specification, if the array which <code>map</code> was called upon is sparse, resulting array will also be sparse keeping same indices blank.</p>
 
@@ -93,7 +92,7 @@ tags:
 <p>You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>map</code> in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that <code>callback.call</code> evaluates to the original value of <code>{{jsxref("Function.prototype.call")}}</code>.</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.19
-// Reference: http://es5.github.io/#x15.4.4.19
+// Reference: https://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
   Array.prototype.map = function(callback/*, thisArg*/) {
@@ -114,7 +113,7 @@ if (!Array.prototype.map) {
     var len = O.length &gt;&gt;&gt; 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
+    // See: https://es5.github.com/#x9.11
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' is not a function');
     }
@@ -351,7 +350,6 @@ let filteredNumbers = numbers.map(function(num, index) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Array.map")}}</p>
 </div>

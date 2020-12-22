@@ -1,0 +1,27 @@
+---
+title: Connecting the Peers
+slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers
+---
+<p>{{WebRTCSidebar}}</p>
+
+<div>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/build_the_server", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/get_microphone_permission")}}</div>
+
+<p id="c19e">This is the part you’ve been waiting for, actually creating the peer connection and call logic. This is going to be an involved process so strap in. First up, create a <code>script.js</code> file, this is where all your logic will live.</p>
+
+<p id="e46f">We need to create a peer object with an ID. The ID will be used to connect two peers together and if you don’t create one, one will be assigned to the peer.</p>
+
+<pre class="brush: js notranslate">const <strong><em>peer </em></strong>= new Peer(''+<strong><em>Math</em></strong>.floor(<strong><em>Math</em></strong>.random()*2**18).toString(36).padStart(4,0), {
+    host: <strong><em>location</em></strong>.hostname,
+    debug: 1,
+    path: '/myapp'
+});</pre>
+
+<p id="45da">You’ll then need to attach the peer to the window so that it’s accessible</p>
+
+<pre class="brush: js notranslate"><strong><em>window</em></strong>.<strong><em>peer </em></strong>= <strong><em>peer</em></strong>;</pre>
+
+<p id="153b">In another tab in your terminal, start the peer server by running:</p>
+
+<pre class="brush: js notranslate">peerjs --port 443 --key peerjs --path /myapp</pre>
+
+<div>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/build_the_server", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/get_microphone_permission")}}</div>

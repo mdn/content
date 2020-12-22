@@ -36,8 +36,8 @@ tags:
  <img alt='Screenshot of the Link dialog box, showing a lookup menu for the text "Array"' src="https://mdn.mozillademos.org/files/15291/link%20dialog%20with%20lookup%20menu.png" style="border-style: solid; border-width: 1px; height: 388px; width: 496px;"></dd>
 </dl>
 
+<p>Here, you can see a list of all the pages on MDN whose titles include the text you've typed. You can then scroll through the list and select one of those pages, or keep typing to narrow down the list. Note that the items in the list display their locale ("[en-US]" in this case). That text is not used in the link target text; it is there to help you ensure that you are linking to an article in the same locale as the one you are editing.</p>
 <dl>
- <dd>Here, you can see a list of all the pages on MDN whose titles include the text you've typed. You can then scroll through the list and select one of those pages, or keep typing to narrow down the list. Note that the items in the list display their locale ("[en-US]" in this case). That text is not used in the link target text; it is there to help you ensure that you are linking to an article in the same locale as the one you are editing.</dd>
  <dt>Attachments</dt>
  <dd>Alternatively, you may make the link be a link to one of the files attached to the current page by selecting the attachment from this list. This is a great way to offer links to download code samples and the like.</dd>
  <dt>URL</dt>
@@ -124,7 +124,7 @@ tags:
 <h3 id="Linking_to_information_about_XPCOM_interfaces">Linking to information about XPCOM interfaces</h3>
 
 <div class="note">
-<p>The MDN staff no longer actively maintains the XPCOM documentation, but volunteer contributions are welcomel</p>
+<p>The MDN staff no longer actively maintains the XPCOM documentation, but volunteer contributions are welcome.</p>
 </div>
 
 <p>If you're documenting Mozilla internals, being able to easily create links to XPCOM interface documentation is helpful. There are a few macros used for this.</p>
@@ -149,7 +149,7 @@ tags:
 
 <h3 id="Linking_to_a_Mozilla_source_file">Linking to a Mozilla source file</h3>
 
-<p>You can link to files in Mozilla's source tree (although you probably won't do this often) using the {{TemplateLink("source")}} macro. Instead of specifying the full URL of the file, you can simply specify the path relative to the <code>/source/</code> directory. For example: \{{source("browser/Makefile.in")}} creates this link: {{source("browser/Makefile.in")}}.</p>
+<p>You can link to files in Mozilla's source tree (although you probably won't do this often) using the {{TemplateLink("source")}} macro. Instead of specifying the full URL of the file, you can specify the path relative to the <code>/source/</code> directory. For example: \{{source("browser/Makefile.in")}} creates this link: {{source("browser/Makefile.in")}}.</p>
 
 <p>You may also, optionally, specify alternative text to use for the link. For example, you can use \{{source("browser/Makefile.in", "the browser's makefile")}} to get the result: {{source("browser/Makefile.in", "the browser's makefile")}}.</p>
 

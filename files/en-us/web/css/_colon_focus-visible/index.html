@@ -5,7 +5,6 @@ tags:
   - ':focus'
   - ':focus-visible'
   - CSS
-  - Experimental
   - Layout
   - Pseudo-class
   - Reference
@@ -14,11 +13,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:focus-visible</code></strong> pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA (<a href="/en-US/docs/Glossary/User_agent">User Agent</a>) determines via heuristics that the focus should be made evident on the element. (Many browsers show a “focus ring” by default in this case.)</p>
+<p>The <strong><code>:focus-visible</code></strong> pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a “focus ring” by default in this case.)</p>
 
 <p>This selector is useful to provide a different focus indicator based on the user’s input modality (mouse vs. keyboard).</p>
-
-<p>Note that Firefox supports similar functionality through an older, prefixed pseudo-class — {{CSSxRef(":-moz-focusring")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,7 +25,7 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>In this example, the <code>:focus-visible</code> selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with <code>:focus</code>.</p>
+<p>In this example, the <code>:focus-visible</code> selector uses the UA's behavior to determine when to match. Compare what happens when you click on the different controls with a mouse, versus when you tab through them using a keyboard. Note the difference in behavior from elements styled with <code>:focus</code>.</p>
 
 <pre class="brush: html notranslate">&lt;input value="Default styles"&gt;&lt;br&gt;
 &lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
@@ -54,7 +51,7 @@ tags:
 
 <h3 id="Selectively_showing_the_focus_indicator">Selectively showing the focus indicator</h3>
 
-<p>A custom control, such as a <a href="/en-US/docs/User:Andreas_Wuest/Custom_Elements">custom element</a> button, can use <code>:focus-visible</code> to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.</p>
+<p>A custom control, such as a custom element button, can use <code>:focus-visible</code> to selectively apply a focus indicator only on keyboard-focus. This matches the native focus behavior for controls like {{htmlelement("button")}}.</p>
 
 <pre class="brush: html notranslate">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
 
@@ -84,7 +81,7 @@ custom-button:focus-visible {
   background: transparent;
 }</pre>
 
-<p>{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}</p>
+<p>{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 60)}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -97,7 +94,7 @@ custom-button:focus-visible {
 <p>Make sure the visual focus indicator can be seen by people with low vision. This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Non-Text Contrast</a> requires that the visual focus indicator be at least 3 to 1.</p>
 
 <ul>
- <li>Accessible Visual Focus Indicators: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators</a></li>
+ <li>Accessible Visual Focus Indicators: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators</a></li>
 </ul>
 
 <h3 id="Cognition">Cognition</h3>
@@ -124,8 +121,6 @@ custom-button:focus-visible {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.selectors.focus-visible")}}</p>
 

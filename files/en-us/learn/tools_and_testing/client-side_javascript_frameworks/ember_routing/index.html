@@ -202,7 +202,7 @@ export default class ActiveRoute extends Route {
 
 <pre class="brush: js notranslate">&lt;TodoList @todos=\{{ @model.activeTodos }}/&gt;</pre>
 
-<p>Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more simply just the static list of todos (for example, <code>this.todos.completed</code>). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.</p>
+<p>Note that, in each of the route model hooks, we are returning an object with a getter instead of a static object, or more just the static list of todos (for example, <code>this.todos.completed</code>). The reason for this is that we want the template to have a dynamic reference to the todo list, and if we returned the list directly, the data would never re-compute, which would result in the navigations appearing to fail / not actually filter. By having a getter defined in the return object from the model data, the todos are re-looked-up so that our changes to the todo list are represented in the rendered list.</p>
 
 <h2 id="Getting_the_footer_links_working">Getting the footer links working</h2>
 

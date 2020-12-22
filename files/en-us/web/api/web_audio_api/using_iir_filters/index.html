@@ -31,7 +31,7 @@ tags:
 
 <p>An IIR filter is a <strong>infinite impulse response filter</strong>. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — <strong>finite impulse response filter</strong>. There's a really good overview to <a href="https://dspguru.com/dsp/faqs/iir/basics/">IIF filters and FIR filters here</a>.</p>
 
-<p>A biquad filter is actually a <em>specific type</em> of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/type">type</a> to <code>highpass</code> and then set which frequency to filter from (or cut off). <a href="http://www.earlevel.com/main/2003/02/28/biquads/">There's more information on how biquad filters work here</a>.</p>
+<p>A biquad filter is actually a <em>specific type</em> of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the <a href="/en-US/docs/Web/API/BiquadFilterNode/type">type</a> to <code>highpass</code> and then set which frequency to filter from (or cut off). <a href="http://www.earlevel.com/main/2003/02/28/biquads/">There's more information on how biquad filters work here</a>.</p>
 
 <p>When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the alaready available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.</p>
 
@@ -112,7 +112,7 @@ const iirFilter = audioCtx.createIIRFilter(feedForward, feedBack);
 
 <p>Let's draw a frequency plot of the filter we've created with the data we get back from this method.</p>
 
-<p>We need to create three arrays. One of frequency values for which we want to receive the magnitude response and phase response for, and two empty arrays to receive the data. All three of these have to be of type <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array"><code>float32array</code></a> and all be of the same size.</p>
+<p>We need to create three arrays. One of frequency values for which we want to receive the magnitude response and phase response for, and two empty arrays to receive the data. All three of these have to be of type <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array"><code>float32array</code></a> and all be of the same size.</p>
 
 <pre class="brush: js">// arrays for our frequency response
 const totalArrayItems = 30;

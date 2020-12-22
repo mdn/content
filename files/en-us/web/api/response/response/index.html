@@ -34,7 +34,7 @@ tags:
  <dt><em>init</em> {{optional_inline}}</dt>
  <dd>An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
  <ul>
-  <li><code>status</code>: The status code for the reponse, e.g., <code>200</code>.</li>
+  <li><code>status</code>: The status code for the response, e.g., <code>200</code>.</li>
   <li><code>statusText</code>: The status message associated with the status code, e.g., <code>OK</code>.</li>
   <li><code>headers</code>: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> for a reference).</li>
  </ul>
@@ -43,7 +43,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response example</a> (see <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new <code>Response</code> object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom <code>status</code> and <code>statusText</code>:</p>
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response example</a> (see <a href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new <code>Response</code> object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom <code>status</code> and <code>statusText</code>:</p>
 
 <pre class="brush: js">var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
@@ -67,8 +67,6 @@ var myResponse = new Response(myBlob,init);</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Response.Response")}}</p>
 

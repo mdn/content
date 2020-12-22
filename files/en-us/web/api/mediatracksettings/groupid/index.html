@@ -17,7 +17,7 @@ tags:
 
 <p>The {{domxref("MediaTrackSettings")}} dictionary's <code><strong>groupId</strong></code> property is a browsing-session unique {{domxref("DOMString")}} which identifies the group of devices which includes the source for the {{domxref("MediaStreamTrack")}}. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the {{domxref("MediaTrackConstraints.groupId")}} property you provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
 
-<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will simply ignore any constraints they're unfamiliar with.</p>
+<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
 
 <p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}} will never include this property.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>Since this property isn't stable across browsing sessions, its usefulness when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} is generally limited to ensuring that tasks performed during the same browsing session use devices from the same group (or that they don't use devices from the same group). There is no situation in which the groupId is useful when calling <code>applyConstraints()</code>, since the value can't be changed.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.</p>
 
@@ -60,8 +60,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.MediaTrackSettings.groupId")}}</p>
 

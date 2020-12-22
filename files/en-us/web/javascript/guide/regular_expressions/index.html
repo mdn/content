@@ -41,7 +41,7 @@ tags:
 
 <p>A regular expression pattern is composed of simple characters, such as <code>/abc/</code>, or a combination of simple and special characters, such as <code>/ab*c/</code> or <code>/Chapter (\d+)\.\d*/</code>. The last example includes parentheses, which are used as a memory device. The match made with this part of the pattern is remembered for later use, as described in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups">Using groups</a>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If you are already familiar with the forms of a regular expression, you may also read <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">the cheatsheet</a> for a quick lookup for a specific pattern/construct.</p>
 </div>
 
@@ -110,7 +110,7 @@ tags:
  </tbody>
 </table>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">A larger cheatsheet is also available</a> (only aggregating parts of those individual articles).</p>
 </div>
 
@@ -127,11 +127,11 @@ tags:
 <p>If escape strings are not already part of your pattern you can add them using {{jsxref('String.replace')}}:</p>
 
 <pre class="brush: js notranslate">function escapeRegExp(string) {
-  return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
 }
 </pre>
 
-<p>The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches. It is explained in detail below in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">Advanced Searching With Flags</a>.</p>
+<p>The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches. It is explained in detail below in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">Advanced Searching With Flags</a>.</p>
 
 <p><em>Why isn't this built into JavaScript?</em> There is a proposal to add such a function to RegExp, but it was <a href="https://github.com/benjamingr/RegExp.escape/issues/37">rejected by TC39.</a></p>
 
@@ -371,7 +371,7 @@ console.log(myArray);
 
 <h2 id="Examples">Examples</h2>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Several examples are also available in:</p>
 
 <ul>
@@ -384,7 +384,15 @@ console.log(myArray);
 
 <p>In the following example, the user is expected to enter a phone number. When the user presses the "Check" button, the script checks the validity of the number. If the number is valid (matches the character sequence specified by the regular expression), the script shows a message thanking the user and confirming the number. If the number is invalid, the script informs the user that the phone number is not valid.</p>
 
-<p>Within non-capturing parentheses <code>(?:</code> , the regular expression looks for three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code> followed by three digits<code> \d{3}</code>, followed by a close parenthesis <code>\)</code>, (end non-capturing parenthesis <code>)</code>), followed by one dash, forward slash, or decimal point and when found, remember the character <code>([-\/\.])</code>, followed by three digits <code>\d{3}</code>, followed by the remembered match of a dash, forward slash, or decimal point <code>\1</code>, followed by four digits <code>\d{4}</code>.</p>
+<p>The regular expression looks for:</p>
+
+<ol>
+ <li>three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code>, followed by three digits<code> \d{3}</code>, followed by a close parenthesis <code>\)</code>, in a non-capturing group <code>(?:)</code></li>
+ <li>followed by one dash, forward slash, or decimal point in a capturing group <code>()</code></li>
+ <li>followed by three digits <code>\d{3}</code></li>
+ <li>followed by the match remembered in the (first) captured group <code>\1</code></li>
+ <li>followed by four digits <code>\d{4}</code></li>
+</ol>
 
 <p>The <code>Change</code> event activated when the user presses <kbd>Enter</kbd> sets the value of <code>RegExp.input</code>.</p>
 
@@ -408,12 +416,12 @@ function testInfo(phoneInput) {
   if (!OK) {
     console.error(phoneInput.value + ' isn\'t a phone number with area code!');
   } else {
-    console.log('Thanks, your phone number is ' + OK[0]);}
+    console.log('Thanks, your phone number is ' + OK[0]);
+  }
 } </pre>
 
 <h4 id="Result">Result</h4>
 
-<div>
 <p>{{ EmbedLiveSample('Using_special_characters_to_verify_input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}</p>
 
 <h2 id="Tools">Tools</h2>
@@ -442,11 +450,6 @@ function testInfo(phoneInput) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("javascript.builtins.RegExp")}}</p>
-</div>
-</div>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>

@@ -89,7 +89,7 @@ tags:
 
 <p>Let's get started.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: In the process of creating our first couple of components, we will also learn different techniques to communicate between components, and the pros and cons of each.</p>
 </div>
 
@@ -138,7 +138,7 @@ tags:
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Remember that when the HTML attribute name and variable matches, they can be replaced with <code>{variable}</code>, that's why we could replace <code>&lt;FilterButton filter={filter} /&gt;</code> with <code>&lt;FilterButton {filter} /&gt;</code>.</p>
 </div>
 
@@ -272,7 +272,7 @@ tags:
 
 <p>To create custom events we'll use the <code>createEventDispatcher</code> utility. This will return a <code>dispatch()</code> function that will allow us to emit custom events. When you dispatch an event you have to pass the name of the event and, optionally, an object with additional information that you want to pass to every listener. This additional data will be available on the <code>detail</code> property of the event object.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Custom events in Svelte share the same API as regular DOM events. Moreover, you can bubble up an event to your parent component by specifying <code>on:event</code> without any handler.</p>
 </div>
 
@@ -494,7 +494,7 @@ function onToggle() {
 {/if}
 &lt;/div&gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: We could further split this into two different components, one for editing the todo and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.</p>
   </div>
  </li>
@@ -526,7 +526,7 @@ function onToggle() {
 
 <p>As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components <code>bind</code> can be a good choice; Svelte will let you choose.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Svelte provides more advanced mechanisms to share information among components: the <a href="https://svelte.dev/docs#setContext">Context API</a> and <a href="https://svelte.dev/docs#svelte_store">Stores</a>. The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.</p>
 </div>
 

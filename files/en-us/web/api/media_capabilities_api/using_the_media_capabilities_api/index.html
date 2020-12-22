@@ -22,7 +22,7 @@ tags:
  <li>Support for getting real-time feedback about the playback of media, so your code can make informed decisions about adapting the stream's quality or other settings to manage the user's perceived media performance and quality. One feature of this is the ability to detect when the device switches GPUs, so you can make appropriate adjustments based on the new GPU's capabilities.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.</p>
 </div>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter a media decoding configuration. There are very specific ways to go about creating the configuration defined by the {{domxref("MediaDecodingConfiguration")}} dictionary.</p>
 
-<p>In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain <code>file</code> or {{domxref("MediaSource")}} — and a {{domxref("VideoConfiguration")}} including values for the<strong> </strong><code>contentType</code>, <code>width</code>, <code>height</code>, <code>bitrate</code>, and <code>framerate</code><strong>:</strong></p>
+<p>In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain <code>file</code> or {{domxref("MediaSource")}} — and a {{domxref("VideoConfiguration")}} including values for the <code>contentType</code>, <code>width</code>, <code>height</code>, <code>bitrate</code>, and <code>framerate</code><strong>:</strong></p>
 
 <ul>
  <li>The <code>contentType</code> must be a string specifying a <a href="/en-US/docs/Web/Media/Formats/Video_codecs">valid video MIME type</a>.</li>
@@ -77,7 +77,7 @@ tags:
    }
 };</pre>
 
-<p>Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either <code>record</code> (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or <code>transmission</code> (for media transmitted over electronic means like <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>) — plus either an audio or video configuration as described above.</p>
+<p>Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either <code>record</code> (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or <code>transmission</code> (for media transmitted over electronic means like <a href="/en-US/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>) — plus either an audio or video configuration as described above.</p>
 
 <h3 id="Querying_the_browser_about_decoding_abilities">Querying the browser about decoding abilities</h3>
 

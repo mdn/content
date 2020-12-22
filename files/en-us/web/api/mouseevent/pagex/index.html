@@ -24,7 +24,7 @@ tags:
 
 <p>See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for some additional information about coordinates specified in this fashion.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision floating-point number to allow for subpixel precision. Even though numeric types both are represented by <code>Number</code> in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences. See {{anch("Browser compatibility")}} to learn which browsers have been updated to use the revised data type.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <div class="moreinfo pull-aside">
 <h4 id="More_examples">More examples</h4>
@@ -59,7 +59,7 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 
 <p>The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function <code>updateDisplay()</code> as the event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and {{event("mouseleave")}} events.</p>
 
-<p><code>updateDisplay()</code> simply replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of <code>pageX</code> and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
+<p><code>updateDisplay()</code> replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of <code>pageX</code> and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -124,8 +124,6 @@ box.addEventListener("mouseleave", updateDisplay, false);</pre>
 <p>Prior to being added to the CSSOM View specification, <code>pageX</code> and <code>pageY</code> were available on the {{domxref("UIEvent")}} interface in a limited subset of browsers for a short time.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.MouseEvent.pageX")}}</p>
 

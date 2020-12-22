@@ -85,10 +85,6 @@ tags:
  <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://httpwg.org/http-extensions/client-hints.html#RFC6454"><cite>[RFC6454]</cite></a>).</dd>
  <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
  <dd>Indicates that the request has been conveyed in early data.</dd>
- <dt>{{HTTPHeader("Content-DPR")}} {{experimental_inline}}</dt>
- <dd>A number that indicates the ratio between physical pixels over CSS pixels of the selected image response.</dd>
- <dt>{{HTTPHeader("DPR")}} {{experimental_inline}}</dt>
- <dd>A number that indicates the client’s current Device Pixel Ratio (DPR), which is the ratio of physical pixels over CSS pixels (Section 5.2 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSSVAL"><cite>[CSSVAL]</cite></a>) of the layout viewport (Section 9.1.1 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSS2"><cite>[CSS2]</cite></a>) on the device.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
  <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
@@ -317,6 +313,14 @@ tags:
  <dd>Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.</dd>
  <dt>{{HTTPHeader("Feature-Policy")}}</dt>
  <dd>Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.</dd>
+</dl>
+
+<dl>
+ <dt>{{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}</dt>
+ <dd>Provides a mechanism to allow web applications to isolate their origins.</dd>
+</dl>
+
+<dl>
  <dt>{{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})</dt>
  <dd>Force communication using HTTPS instead of HTTP.</dd>
  <dt>{{HTTPHeader("Upgrade-Insecure-Requests")}}</dt>
@@ -328,7 +332,7 @@ tags:
  <dt>{{HTTPHeader("X-Frame-Options")}} (XFO)</dt>
  <dd>Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.</dd>
  <dt>{{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}</dt>
- <dd>Specifies if a cross-domain policy file (<code>crossdomain.xml</code>) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player, Adobe Acrobat, Microsoft Silverlight, or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the <a href="/en-US/docs/Web/Security/Same-origin_policy">Same-Origin Policy</a>. See the <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain Policy File Specification</a> for more information.</dd>
+ <dd>Specifies if a cross-domain policy file (<code>crossdomain.xml</code>) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the <a href="/en-US/docs/Web/Security/Same-origin_policy">Same-Origin Policy</a>. See the <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain Policy File Specification</a> for more information.</dd>
  <dt>{{HTTPHeader("X-Powered-By")}}</dt>
  <dd>May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.</dd>
  <dt>{{HTTPHeader("X-XSS-Protection")}}</dt>

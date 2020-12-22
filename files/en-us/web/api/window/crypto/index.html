@@ -22,27 +22,27 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
+<pre class="syntaxbox notranslate">let <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
 </pre>
 
 <h3 id="Value">Value</h3>
 
 <p>An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose cryptography and a strong random-number generator.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p id="Using_the_domxrefWindow.crypto_property_to_access_the_getRandomValues_method.">This example uses the {{domxref("Window.crypto")}} property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js notranslate">genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
+  const array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
-    randText.innerHTML += array[i] + " ";
+  const randText = document.getElementById("myRandText");
+  randText.textContent = "The random numbers are: "
+  for (let i = 0; i &lt; array.length; i++) {
+    randText.textContent += array[i] + " ";
   }
 }</pre>
 
@@ -73,8 +73,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Window.crypto")}}</p>
 

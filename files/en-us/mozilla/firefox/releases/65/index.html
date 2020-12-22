@@ -62,7 +62,7 @@ tags:
     <pre class="brush: html">&lt;div style="-webkit-user-select: all"&gt;All
   &lt;div style="-webkit-user-select: none"&gt;None&lt;/div&gt;
 &lt;/div&gt;</pre>
-    The <code>&lt;div&gt;</code> with <code>none</code> set on it is now non-selectable. Previously this value would have been overriden by the <code>all</code> value set on the parent element.</li>
+    The <code>&lt;div&gt;</code> with <code>none</code> set on it is now non-selectable. Previously this value would have been overridden by the <code>all</code> value set on the parent element.</li>
    <li>non-<code>contenteditable</code> elements nested inside <code>contenteditable</code> elements  are now selectable.</li>
    <li><code>user-select</code> now behaves consistently inside and outside shadow DOM.</li>
    <li>The proprietary <code>-moz-text</code> value has been removed.</li>
@@ -127,7 +127,7 @@ tags:
 
 <ul>
  <li>The {{domxref("Response.redirect()")}} method now correctly throws a <code>TypeError</code> if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).</li>
- <li>The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript">JavaScript MIME type</a> ({{bug(1354577)}}).</li>
+ <li>The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript">JavaScript MIME type</a> ({{bug(1354577)}}).</li>
  <li>The {{domxref("FetchEvent.replacesClientId")}} and {{domxref("FetchEvent.resultingClientId")}} properties are now supported ({{bug(1264177)}}).</li>
  <li>The {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ({{bug(1399446)}}).</li>
  <li>The {{httpheader("Origin")}} header is no longer set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} ({{bug(1508661)}}).</li>
@@ -198,7 +198,7 @@ tags:
  <li>Support for <a href="/en-US/docs/Glossary/webp">WebP</a> images has been added ({{bug(1294490)}}).
 
   <ul>
-   <li>In addition, to faciliate cross-browser compatibility in certain situations the WebP MIMEType (<code>image/webp</code>) has been added to the standard HTTP Request {{httpheader("Accept")}} header for HTML files ({{bug(1507691)}}).</li>
+   <li>In addition, to facilitate cross-browser compatibility in certain situations the WebP MIMEType (<code>image/webp</code>) has been added to the standard HTTP Request {{httpheader("Accept")}} header for HTML files ({{bug(1507691)}}).</li>
   </ul>
  </li>
  <li>The AV1 codec is now supported by default on Windows ({{bug(1452146)}}).</li>
@@ -242,4 +242,4 @@ tags:
 
 <h2 id="Older_versions">Older versions</h2>
 
-<p>{{Firefox_for_developers(65)}}</p>
+<p>{{Firefox_for_developers(64)}}</p>

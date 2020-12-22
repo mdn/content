@@ -14,13 +14,12 @@ tags:
 
 <div>When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardised across browsers.</div>
 
-<div> </div>
 
 <p>Given the text of a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, this function returns the permission warnings that would be given for the resulting add-on, as an array of strings.</p>
 
 <p>This API <em>does not</em> require the "management" <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,7 +37,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of strings, each of which contains the text of a permission warning.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of strings, each of which contains the text of a permission warning.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

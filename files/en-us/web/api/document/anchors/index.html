@@ -44,7 +44,7 @@ function init() {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
-    newAnchor.innerHTML = document.anchors[i].text;
+    newAnchor.textContent = document.anchors[i].text;
     li.appendChild(newAnchor);
     toc.appendChild(li);
   }
@@ -106,7 +106,5 @@ function init() {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <div>{{Compat("api.Document.anchors")}}</div>

@@ -15,7 +15,9 @@ tags:
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>getClientRects()</strong></code> method of the {{domxref("Element")}} interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the bounding rectangles for each <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS border box</a> in a client.</p>
+<p>The <strong><code>getClientRects()</code></strong> method of the {{domxref("Element")}} interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the bounding rectangles for each <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS border box</a> in a client.</p>
+
+<p>Most elements only have one border box each, but a multiline <a href="/en-US/docs/Web/HTML/Inline_elements">inline element</a> (such as a multiline {{HTMLElement("span")}} element, by default) has a border box around each line.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -216,8 +218,6 @@ span, li, th, td {
 <p><code>getClientRects()</code> was first introduced in the MS IE DHTML object model.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Element.getClientRects")}}</p>
 

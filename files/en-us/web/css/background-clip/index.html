@@ -18,11 +18,11 @@ tags:
 
 <p>If the element has no {{cssxref("background-image")}} or {{cssxref("background-color")}}, this property will only have a visual effect when the border has transparent regions or partially opaque regions (due to {{cssxref("border-style")}} or {{cssxref("border-image")}}); otherwise, the border masks the difference.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Because the <a href="/en-US/docs/Web/HTML/Element/html">root element</a> has a different background painting area, the <code>background-clip</code> property has no effect when specified on it. See "<a href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">The backgrounds of special elements.</a>"</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> For documents whose <a href="/en-US/docs/Web/HTML/Element/html">root element</a> is an HTML element: if the computed value of {{cssxref("background-image")}} on the root element is <code>none</code> and its {{cssxref("background-color")}} is <code>transparent</code>, user agents must instead propagate the computed values of the <code>background</code> properties from that element’s first HTML {{HTMLElement("body")}} child element. The used values of that <code>&lt;body&gt;</code> element’s <code>background</code> properties are their initial values, and the propagated values are treated as if they were specified on the root element. It is recommended that authors of HTML documents specify the canvas background for the <code>&lt;body&gt;</code> element rather than the HTML element.</p>
 </div>
 
@@ -63,7 +63,7 @@ background-clip: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<h4 id="HTML">HTML</h4>
+<h3 id="HTML">HTML</h3>
 
 <pre class="brush: html notranslate">&lt;p class="border-box"&gt;The background extends behind the border.&lt;/p&gt;
 &lt;p class="padding-box"&gt;The background extends to the inside edge of the border.&lt;/p&gt;
@@ -71,7 +71,7 @@ background-clip: unset;
 &lt;p class="text"&gt;The background is clipped to the foreground text.&lt;/p&gt;
 </pre>
 
-<h4 id="CSS">CSS</h4>
+<h3 id="CSS">CSS</h3>
 
 <pre class="brush: css notranslate">p {
   border: .8em darkviolet;
@@ -122,8 +122,6 @@ background-clip: unset;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.properties.background-clip")}}</p>
 

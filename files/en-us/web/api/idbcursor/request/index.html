@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre>var <em>request = cursor</em>.request;</pre>
+<pre class="notranslate"><em>IDBCursor</em>.request;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,17 +29,17 @@ tags:
 
 <p>When you open a cursor, the <code>request</code> property is then available on that cursor object, to tell you what request object the cursor originated from. For example:</p>
 
-<pre class="brush: js">function displayData() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], 'readonly');
-  var objectStore = transaction.objectStore('rushAlbumList');
+<pre class="brush: js notranslate">function displayData() {
+  list.textContent = '';
+  const transaction = db.transaction(['rushAlbumList'], 'readonly');
+  const objectStore = transaction.objectStore('rushAlbumList');
 
-  var request = objectStore.openCursor();
+  const request = objectStore.openCursor();
 
   request.onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
       if(cursor) {
-        var listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
         list.appendChild(listItem);
         console.log(cursor.request);
@@ -50,7 +50,7 @@ tags:
   };
 };</pre>
 
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -60,14 +60,14 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-request", "request")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
+   <td>{{SpecName("IndexedDB 3", "#dom-idbcursor-request", "request")}}</td>
+   <td>{{Spec2("IndexedDB 3")}}</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
@@ -84,5 +84,5 @@ tags:
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

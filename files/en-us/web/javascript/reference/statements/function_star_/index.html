@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}</div>
 
-
-
 <p>You can also define generator functions using the {{jsxref("GeneratorFunction")}} constructor, or the function expression syntax.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -194,7 +192,7 @@ console.log(bar.next()); // {value: 10, done: false}</pre>
 
 <h3 id="Generator_example">Generator example</h3>
 
-<pre class="syntaxbox notranslate">function* powers(n){
+<pre class="brush: js notranslate">function* powers(n){
      //endless loop to generate
      for(let current =n;; current *= n){
          yield current;
@@ -231,7 +229,6 @@ for(let power of powers(2)){
 
 <div>
 
-
 <p>{{Compat("javascript.statements.generator_function")}}</p>
 </div>
 
@@ -249,7 +246,7 @@ for(let power of powers(2)){
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}</li>
  <li>Other web resources:
   <ul>
-   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
+   <li><a href="https://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
    <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
    <li><a href="https://github.com/mozilla/task.js">Task.js</a></li>
    <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously">Iterating generators asynchronously</a></li>

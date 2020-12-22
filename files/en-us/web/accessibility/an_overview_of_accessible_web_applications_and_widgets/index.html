@@ -12,7 +12,7 @@ tags:
 
 <h2 id="The_problem">The problem</h2>
 
-<p>Dynamic content on a web page can be particularly problematic for users who, for whatever reason, are unable to view the screen. Stock tickers, live twitter feed updates, progress indicators, and similar content modify the DOM in ways that an assistive technology (AT) may not be aware of. That's where <a href="/en/ARIA" title="ARIA">ARIA</a> comes in.</p>
+<p>Dynamic content on a web page can be particularly problematic for users who, for whatever reason, are unable to view the screen. Stock tickers, live twitter feed updates, progress indicators, and similar content modify the DOM in ways that an assistive technology (AT) may not be aware of. That's where <a href="/en/ARIA">ARIA</a> comes in.</p>
 
 <p><em>Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function.</em></p>
 
@@ -92,7 +92,7 @@ tags:
  <li><strong><code>aria-grabbed</code></strong>: indicates the 'grabbed' state of an object in a drag-and-drop operation</li>
 </ul>
 
-<p>(For a full list of ARIA states, consult the <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#introstates" title="http://www.w3.org/TR/wai-aria/states_and_properties">ARIA list of states and properties</a>.)</p>
+<p>(For a full list of ARIA states, consult the <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#introstates">ARIA list of states and properties</a>.)</p>
 
 <p>Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).</p>
 
@@ -156,7 +156,7 @@ tags:
 <p>Here's a summary of how keyboard navigation should work in an ARIA-enabled web application:</p>
 
 <ul>
- <li>The Tab key should provide focus to the widget as a whole. For example, tabbing to a menu bar <strong>should NOT </strong>put focus on the menu's first element.</li>
+ <li>The Tab key should provide focus to the widget as a whole. For example, tabbing to a menu bar <strong>should NOT</strong> put focus on the menu's first element.</li>
  <li>The arrow keys should allow for selection or navigation within the widget. For example, using the left and right arrow keys should move focus to the previous and next menu items.</li>
  <li>When the widget is not inside a form, both the Enter and Spacebar keys should select or activate the control.</li>
  <li>Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.</li>
@@ -168,7 +168,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/ARIA" title="ARIA">ARIA</a></li>
+ <li><a href="/en/ARIA">ARIA</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Writing Keyboard-navigable JavaScript widgets</a></li>
  <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA Specification</a></li>
  <li><a class="external" href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a></li>

@@ -22,7 +22,7 @@ tags:
  <li>control whether to clear cookies only set from normal web pages or to clear cookies set from hosted apps and extensions as well.</li>
 </ul>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -76,7 +76,7 @@ then(onRemoved, onError);</pre>
 <p><strong>Warning</strong><br>
  Using the API to remove all cookies will, simultaneously, clear all  local storage objects (including those of other extensions).<br>
  <br>
- If you simply want to clear all cookies without disrupting local storage facilities, use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> to loop through and remove the contents of all cookie stores.</p>
+ If you want to clear all cookies without disrupting local storage facilities, use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> to loop through and remove the contents of all cookie stores.</p>
 </div>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onRemoved</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>

@@ -66,7 +66,7 @@ tags:
  <li><a class="external" href="http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers">HTTP Conditional Get for RSS Hackers</a></li>
  <li><a class="external" href="http://annevankesteren.nl/archives/2005/05/http-304">HTTP 304: Not Modified</a></li>
  <li><a class="external" href="http://en.wikipedia.org/wiki/HTTP_ETag">HTTP ETag on Wikipedia</a></li>
- <li><a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">Caching in HTTP</a></li>
+ <li><a class="external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">Caching in HTTP</a></li>
 </ol>
 
 <h3 id="Optimally_order_the_components_of_the_page">Optimally order the components of the page</h3>
@@ -75,7 +75,7 @@ tags:
 
 <p>Any dynamic features that require the page to complete loading before being used, should be initially disabled, and then only enabled after the page has loaded. This will cause the JavaScript to be loaded after the page contents, which will improve the overall appearance of the page load.</p>
 
-<h3 id="Reduce_the_number_of_inline_scripts" name="Reduce_the_number_of_inline_scripts">Reduce the number of inline scripts</h3>
+<h3 id="Reduce_the_number_of_inline_scripts">Reduce the number of inline scripts</h3>
 
 <p>Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of <code>document.write()</code> to output content in particular, can improve overall page loading. Use modern <a href="/en-US/docs/AJAX" title="en-US/docs/AJAX">AJAX</a> methods to manipulate page content for modern browsers, rather than the older approaches based on <code>document.write()</code>.</p>
 
@@ -110,7 +110,7 @@ tags:
 &lt;table&gt;...&lt;/table&gt;
 </pre>
 
-<p>See also: <a class="external" href="https://www.w3.org/TR/css-flexbox-1/" title="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout</a> and <a class="external" href="https://www.w3.org/TR/css-grid-1/" title="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a> specifications.</p>
+<p>See also: <a class="external" href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout</a> and <a class="external" href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a> specifications.</p>
 
 <h3 id="Minify_and_compress_SVG_assets">Minify and compress SVG assets</h3>
 
@@ -151,13 +151,13 @@ tags:
 
 <h3 id="Use_async_and_defer_if_possible">Use async and defer, if possible</h3>
 
-<p>Make the JavaScript scripts such that they are compatible with both the <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> and the <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">defer</a> attributes, and use <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> whenever possible, especially if you have multiple script tags.<br>
+<p>Make the JavaScript scripts such that they are compatible with both the <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> and the <a href="/en-US/docs/HTML/Element/script#Attributes">defer</a> attributes, and use <a href="/en-US/docs/HTML/Element/script#Attributes">async</a> whenever possible, especially if you have multiple script tags.<br>
  <br>
  With that, the page can stop rendering while JavaScript is still loading. Otherwise, the browser will not render anything that is after the script tags that do not have these attributes.</p>
 
 <p>Note: Even though these attributes do help a lot the first time a page is loaded, you should use them but not assume they will work in all browsers. If you already follow all JavaScript best practices, there is no need to change your code.</p>
 
-<h2 id="Example_page_structure" name="Example_page_structure">Example page structure</h2>
+<h2 id="Example_page_structure">Example page structure</h2>
 
 <p>· <code>{{htmlelement('html')}}</code></p>
 
@@ -204,7 +204,7 @@ tags:
 
 <ul>
  <li>Book: <a class="external" href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
- <li>The excellent and very complete <a class="external" href="http://developer.yahoo.com/performance/rules.html" title="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
- <li>Tools for analyzing and optimizing performance: <a href="https://developers.google.com/speed/pagespeed/" title="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
+ <li>The excellent and very complete <a class="external" href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
+ <li>Tools for analyzing and optimizing performance: <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
  <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool">Paint Flashing Tool</a></li>
 </ul>

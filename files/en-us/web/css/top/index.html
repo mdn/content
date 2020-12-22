@@ -10,16 +10,14 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>top</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property participates in specifying the vertical position of a <a href="/en-US/docs/Web/CSS/position">positioned element</a>. It has no effect on non-positioned elements.</p>
+<p>The <strong><code>top</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property participates in specifying the vertical position of a <a href="/en-US/docs/Web/CSS/position">positioned element</a>. It has no effect on non-positioned elements.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/top.html")}}</div>
-
-
 
 <p>The effect of <code>top</code> depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):</p>
 
 <ul>
- <li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>top</code> property specifies the distance between the element's top edge and the top edge of its containing block.</li>
+ <li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>top</code> property specifies the distance between the element's outer margin of top edge and the inner boarder of the top edge of its containing block.</li>
  <li>When <code>position</code> is set to <code>relative</code>, the <code>top</code> property specifies the distance the element's top edge is moved below its normal position.</li>
  <li>When <code>position</code> is set to <code>sticky</code>, the <code>top</code> property is used to compute the sticky-constraint rectangle.</li>
  <li>When <code>position</code> is set to <code>static</code>, the <code>top</code> property has <em>no effect</em>.</li>
@@ -78,6 +76,8 @@ top: unset;
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="A_positioned_element_set_10_from_the_top">A positioned element set 10% from the top</h3>
+
 <pre class="brush: css notranslate">body {
   background: beige;
 }
@@ -121,8 +121,6 @@ div {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.properties.top")}}</p>
 

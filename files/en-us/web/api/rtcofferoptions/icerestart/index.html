@@ -20,13 +20,13 @@ tags:
 
 <p>The <code><strong>iceRestart</strong></code> property of the <strong>{{domxref("RTCOfferOptions")}}</strong> dictionary is a Boolean value which, when <code>true</code>, tells the {{domxref("RTCPeerConnection")}} to start ICE renegotiation.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Rather than manually creating and submitting an offer with <code>iceRestart</code> set to <code>true</code>, you should consider calling the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} instead.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>options</em> = {
+<pre class="syntaxbox notranslate">var <em>options</em> = {
   iceRestart: <em>trueOrFalse</em>
 };
 </pre>
@@ -41,11 +41,11 @@ tags:
 
 <p>Fundamentally, this renegotiation is triggered by generating and using new values for the ICE username fragment ("ufrag")}}</p>
 
-<h2 id="Example"><span style="">Example</span></h2>
+<h2 id="Example"><span>Example</span></h2>
 
 <p>This example shows a handler for the {{event("iceconnectionstatechange")}} event. It watches for the ICE connection state to transition to <code>"failed"</code>, which indicates that an ICE restart should be tried in order to attempt to bring the connection back up.</p>
 
-<pre class="brush: js">pc.oniceconnectionstatechange = function(evt) {
+<pre class="brush: js notranslate">pc.oniceconnectionstatechange = function(evt) {
   if (pc.iceConnectionState === "failed") {
     if (pc.restartIce) {
       pc.restartIce();
@@ -70,7 +70,7 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('WebRTC 1.0', '#dom-rtcofferoptions-icerestart ', 'RTCOfferOptions.iceRestart')}}</td>
+   <td>{{SpecName('WebRTC 1.0', '#dom-rtcofferoptions-icerestart', 'RTCOfferOptions.iceRestart')}}</td>
    <td>{{Spec2('WebRTC 1.0')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -78,7 +78,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.RTCOfferOptions.iceRestart")}}</p>

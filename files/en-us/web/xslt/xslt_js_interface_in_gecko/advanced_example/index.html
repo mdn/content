@@ -4,7 +4,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 tags:
   - XSLT
 ---
-<h2 id="Advanced_Example" name="Advanced_Example">Advanced example</h2>
+<h2 id="Advanced_Example">Advanced example</h2>
 
 <p>This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the <code>xslloaded</code> variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.</p>
 
@@ -14,7 +14,7 @@ tags:
 
 <p><small><strong>Figure 7: Sorting based on div content<span class="comment">view example</span></strong></small></p>
 
-<pre class="brush: js">// XHTML Fragment:
+<pre class="brush: js notranslate">// XHTML Fragment:
 
 &lt;div id="example"&gt;
   &lt;div&gt;1&lt;/div&gt;
@@ -72,7 +72,7 @@ function sort() {
   var fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
   // clear the contents
-  document.getElementById("example").innerHTML = "";
+  document.getElementById("example").textContent = "";
 
   myDOM = fragment;
   // add the new content from the transformation

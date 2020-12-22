@@ -22,9 +22,9 @@ tags:
 <p>Depending on your Operating System you will need to carry out a different process to prepare your machine. So firstly complete the instructions for your OS and then continue following these build instructions.</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation" title="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Simple_Firefox_build/Linux_and_MacOS_build_preparation">GNU/Linux Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a></li>
 </ul>
 
 <p><strong>TIP</strong>: After completing Setup for your OS, and before you Get the source, you can opt to add the progressExtension to your mercurial.ini (for Windows) or .hgrc (for *Nix / Mac) file. This will provide status feedback during the lengthy clone / download process. see: <a class="external external-icon" href="http://mercurial.selenic.com/wiki/ProgressExtension">Configure Mercurial .hgrc file for Progress Extension</a>.</p>
@@ -49,11 +49,11 @@ tags:
 <pre>python client.py checkout
 </pre>
 
-<div class="warning"><strong>Note: </strong>Unless you have a very good network connection, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. Then run <span style="color: #ffff00;">python client.py checkout</span> to ensure you are up-to-date.</div>
+<div class="warning"><strong>Note:</strong> Unless you have a very good network connection, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. Then run <span style="color: #ffff00;">python client.py checkout</span> to ensure you are up-to-date.</div>
 
 <p class="editable">The source code requires 1.5GB of free space or more.</p>
 
-<p class="editable">For more on getting the source code, see the page <a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central" title="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
+<p class="editable">For more on getting the source code, see the page <a href="/en-US/docs/Developer_Guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
 
 <h2 class="editable" id="Build_configuration">Build configuration</h2>
 
@@ -76,7 +76,7 @@ tags:
 <pre>./mozilla/mach build
 </pre>
 
-<p>mach is our command-line tool to streamline common developer tasks. See the <a href="/en-US/docs/Developer_Guide/mach" title="/en-US/docs/Developer_Guide/mach">mach</a> article for more.</p>
+<p>mach is our command-line tool to streamline common developer tasks. See the <a href="/en-US/docs/Developer_Guide/mach">mach</a> article for more.</p>
 
 <p>Building can take a significant amount of time, depending on your system, OS, and chosen build options. Linux builds on a fast box may take under 15 minutes, but Windows builds on a slow box may take several hours.</p>
 
@@ -115,7 +115,7 @@ tags:
 
 <h2 id="How_to_update_and_build_again">How to update and build again</h2>
 
-<p>Simply re-run the <em>mach</em> command above. This will only recompile files that changed.</p>
+<p>Re-run the <em>mach</em> command above. This will only recompile files that changed.</p>
 
 <h3 id="Incremental_builds">Incremental builds</h3>
 
@@ -140,21 +140,21 @@ tags:
 
   <pre>mach clobber</pre>
  </li>
- <li>Checked the <a class="external" href="http://buildbot.instantbird.org/grid" title="http://tinderbox.mozilla.org/showbuilds.cgi?tree=ThunderbirdTrunk">Instantbird buildbot</a> for known failures at the time you pulled the code?
+ <li>Checked the <a class="external" href="http://buildbot.instantbird.org/grid">Instantbird buildbot</a> for known failures at the time you pulled the code?
   <ul>
-   <li>If the trunk is broken, you may wish to consider building <a href="/En/Developer_Guide/Source_Code/Getting_comm-central" title="https://developer.mozilla.org/En/Developer_Guide/Source_Code/Getting_comm-central">one of the branches</a> (to pull the source code from a branch, just replace the url to the repository in the hg clone instruction).</li>
+   <li>If the trunk is broken, you may wish to consider building <a href="/En/Developer_Guide/Source_Code/Getting_comm-central">one of the branches</a> (to pull the source code from a branch, just replace the url to the repository in the hg clone instruction).</li>
   </ul>
  </li>
  <li>Checked to make sure that the path in which you placed the source code has no spaces, and is not too long?</li>
- <li>Have you searched the <a class="link-https" href="https://bugzilla.mozilla.org/" title="https://bugzilla.mozilla.org/">bug database</a> for issues relating to your problem (e.g., platform-specific issues)?</li>
- <li>Try asking in <a class="external" href="http://groups.google.com/group/mozilla.dev.chat/" title="http://groups.google.com/group/mozilla.dev.builds/">mozilla.dev.chat</a> - don't forget to include details of what is in your mozconfig, and what the actual error is.</li>
+ <li>Have you searched the <a class="link-https" href="https://bugzilla.mozilla.org/">bug database</a> for issues relating to your problem (e.g., platform-specific issues)?</li>
+ <li>Try asking in <a class="external" href="http://groups.google.com/group/mozilla.dev.chat/">mozilla.dev.chat</a> - don't forget to include details of what is in your mozconfig, and what the actual error is.</li>
 </ul>
 
 <h3 id="References">References</h3>
 
 <ul>
  <li><a class="internal" href="/En/Developer_Guide/Build_Instructions" title="En/Developer Guide/Build Instructions">General Build Documentation</a></li>
- <li><a class="internal" href="/en/comm-central" title="en/comm-central">comm-central</a></li>
+ <li><a class="internal" href="/en/comm-central">comm-central</a></li>
 </ul>
 
 <p><a href="/docs/Simple_Thunderbird_build">Simple Thunderbird build</a></p>

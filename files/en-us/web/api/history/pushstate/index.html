@@ -56,7 +56,14 @@ tags:
 const title = ''
 const url = 'hello-world.html'
 
-history.pushState(state, title, url)</pre>
+history.pushState(state, title, url)
+</pre>
+
+<h3 id="Change_a_query_parameter">Change a query parameter</h3>
+
+<pre class="brush: js notranslate">const url = new URL(window.location);
+url.searchParams.set('foo', 'bar');
+window.history.pushState({}, '', url);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -82,12 +89,11 @@ history.pushState(state, title, url)</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.History.pushState")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
+ <li><a href="/en-US/docs/Web/API/Window/popstate_event">Window: popstate event</a></li>
 </ul>

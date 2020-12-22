@@ -29,10 +29,8 @@ tags:
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMString")}} representing the base URL of the document containing the <code>Node</code>.</dd>
- <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}} {{ReadOnlyInline}}{{Fx_MinVersion_Inline("3")}}</dt>
- <dd>(Not available to web content.) The {{ Interface("nsIURI") }} object representing the base URI for the element.</dd>
  <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a live {{DOMxRef("NodeList")}} containing all the children of this node. {{DOMxRef("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{DOMxRef("NodeList")}} object is automatically updated.</dd>
+ <dd>Returns a live {{DOMxRef("NodeList")}} containing all the children of this node (including elements, text and comments). {{DOMxRef("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{DOMxRef("NodeList")}} object is automatically updated.</dd>
  <dt>{{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("Node")}} representing the first direct child node of the node, or <code>null</code> if the node has no child.</dd>
  <dt>{{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}</dt>
@@ -123,22 +121,18 @@ tags:
 <dl>
  <dt>{{DOMxRef("Node.localName")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMString")}} representing the local part of the qualified name of an element.
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.</p>
  </div>
  </dd>
  <dt>{{DOMxRef("Node.namespaceURI")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
- <div class="blockIndicator note">
+ <div class="notecard note">
  <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code> namespace in both HTML and XML trees.</p>
  </div>
  </dd>
- <dt>{{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}{{Fx_MinVersion_Inline("3")}}</dt>
- <dd>A {{Interface("nsIPrincipal")}} representing the node principal.</dd>
  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} object representing the topmost node in the tree, or the current node if it's the topmost node in the tree. This has been replaced by {{DOMxRef("Node.getRootNode()")}}.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -206,7 +200,7 @@ tags:
 
 <h4 id="Sample_usage">Sample usage</h4>
 
-<pre class="brush: js; notranslate">/* ... an alternative to document.body.innerHTML = "" ... */
+<pre class="brush: js; notranslate">/* Note: or use document.body.textContent = "" */
 removeAllChildren(document.body)</pre>
 
 <h3 id="Recurse_through_child_nodes">Recurse through child nodes</h3>
@@ -279,7 +273,7 @@ eachNode(box, function(node) {
 
 <pre class="brush: js; notranslate">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Whitespace forms part of a {{DOMxRef("Text")}} node, meaning indentation and newlines form separate <code>Text</code> between the <code>Element</code> nodes.</p>
 </div>
 
@@ -376,7 +370,5 @@ console.log(mistakes)
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Node")}}</p>

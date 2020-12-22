@@ -98,8 +98,8 @@ tags:
 <p>You’ll notice a few differences here from how equivalent values are represented in CSS:</p>
 
 <ul>
-	<li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowTimers.setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
-	<li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
+ <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowTimers.setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
+ <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
 <div class="note">
@@ -158,7 +158,7 @@ tags:
 ], {
   fill: 'forwards',
   easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
+  duration: aliceChange.effect.getComputedTiming().duration / 2
 });</pre>
 
 <p>The {{domxref("Element.animate()")}} method will immediately run after it is called. To prevent the cake from eating itself up before the user has had the chance to click on it, we call {{domxref("Animation.pause()")}} on it immediately after it is defined, like so:</p>
@@ -191,9 +191,9 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 <p>In addition to pausing and playing, we can use the following Animation methods:</p>
 
 <ul>
-	<li>{{domxref("Animation.finish()")}} skips to the end of the animation.</li>
-	<li>{{domxref("Animation.cancel()")}} aborts the animation and removes its effects.</li>
-	<li>{{domxref("Animation.reverse()")}} sets the animation’s playback rate ({{domxref("Animation.playbackRate")}}) to a negative value so it runs backward.</li>
+ <li>{{domxref("Animation.finish()")}} skips to the end of the animation.</li>
+ <li>{{domxref("Animation.cancel()")}} aborts the animation and removes its effects.</li>
+ <li>{{domxref("Animation.reverse()")}} sets the animation’s playback rate ({{domxref("Animation.playbackRate")}}) to a negative value so it runs backward.</li>
 </ul>
 
 <p>Let’s take a look at <code>playbackRate</code> first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation’s playbackRate from 1 to -1:</p>
@@ -327,8 +327,8 @@ drinking.pause();</pre>
 <p>CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:</p>
 
 <ul>
-	<li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
-	<li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
+ <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
+ <li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
 </ul>
 
 <p>Here we set the callbacks for the cake, bottle, and Alice to fire the <code>endGame</code> function:</p>
@@ -351,7 +351,7 @@ aliceChange.onfinish = endGame;
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li class="post__title">The <a href="http://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
-	<li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods</li>
-	<li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
+ <li class="post__title">The <a href="http://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
+ <li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods</li>
+ <li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
 </ul>

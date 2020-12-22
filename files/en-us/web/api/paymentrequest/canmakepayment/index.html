@@ -31,7 +31,7 @@ tags:
 
 <p>A {{jsxref("Promise")}} to a {{jsxref("Boolean")}} that resolves to <code>true</code> if the user agent supports any of the payment methods supplied when instantiating the request using the {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}} constructor. If the payment can't be processed, the promise receives a value of <code>false</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If you call this too often, the browser may reject the returned promise with a <code>DOMException</code>.</p>
 </div>
 
@@ -102,11 +102,10 @@ async function initPaymentRquest() {
 
 <div>
 
-
 <p>{{Compat("api.PaymentRequest.canMakePayment")}}</p>
 </div>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref('PaymentRequest.show','PaymentRequest.show()')}}</li>

@@ -13,7 +13,7 @@ tags:
 
 <p><strong><code>userVerification</code></strong> is an optional property of the {{domxref("PublicKeyCredentialRequestOptions")}}. This is a string which indicates how the user verification should be part of the authentication process.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> An analogous option exists for the creation operation ({{domxref("CredentialsContainer.create","navigators.credentials.create()")}}), see the <code>userVerification</code> property of {{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}}.</p>
 </div>
 
@@ -27,7 +27,7 @@ tags:
 
 <ul>
  <li><code>"required"</code>: user verification is required, the operation will fail if the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not have the UV flag (as part of {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})</li>
- <li><code>"preferred"</code>: user verification is prefered, the operation will not fail if the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not have the UV flag (as part of {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})</li>
+ <li><code>"preferred"</code>: user verification is preferred, the operation will not fail if the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not have the UV flag (as part of {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})</li>
  <li><code>"discouraged"</code>: user verification should not be employed as to minimize the user interaction during the process.</li>
 </ul>
 
@@ -69,8 +69,6 @@ navigator.credentials.get({ "publicKey": options })
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.PublicKeyCredentialRequestOptions.userVerification")}}</p>
 

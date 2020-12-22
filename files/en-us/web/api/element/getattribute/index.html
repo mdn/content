@@ -14,22 +14,32 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
+<pre class="syntaxbox notranslate">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
 </pre>
 
 <p>where</p>
 
 <ul>
- <li><code><var>attribute</var></code> is a string containing the value of <code><var>attributeName</var></code>.</li>
- <li><code><var>attributeName</var></code> is the name of the attribute whose value you want to get.</li>
+	<li><code><var>attribute</var></code> is a string containing the value of <code><var>attributeName</var></code>.</li>
+	<li><code><var>attributeName</var></code> is the name of the attribute whose value you want to get.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js">const div1 = document.getElementById('div1');
-const align = div1.getAttribute('align');
+<pre class="brush:js notranslate">&lt;!-- example div in an html DOC --&gt;
+&lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
 
-alert(align); // Shows the value of align for the element with id="div1"</pre>
+// in a console
+const div1 = document.getElementById('div1');
+//=&gt; &lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
+
+const exampleAttr= div1.getAttribute('id');
+//=&gt; "div1"
+
+const align = div1.getAttribute('align')
+//=&gt; null
+
+</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -45,37 +55,36 @@ alert(align); // Shows the value of align for the element with id="div1"</pre>
 
 <p>For security reasons, <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls are hidden.</p>
 
-<pre class="brush: js example-bad">let nonce =  script.getAttribute('nonce');
+<pre class="brush: js example-bad notranslate">let nonce =  script.getAttribute('nonce');
 // returns empty string
 </pre>
 
 <p>Instead of retrieving the nonce from the content attribute, use the {{domxref("HTMLOrForeignElement/nonce", "nonce")}} property:</p>
 
-<pre class="brush: js">let nonce =  script.nonce;</pre>
+<pre class="brush: js notranslate">let nonce =  script.nonce;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('DOM WHATWG','#dom-element-getattribute','getAttribute()')}}</td>
+			<td>{{Spec2('DOM WHATWG')}}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.Element.getAttribute")}}</p>
 </div>

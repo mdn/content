@@ -76,7 +76,7 @@ tags:
  <dt>{{cssxref("border-block-start-color")}} and {{cssxref("border-block-end-color")}}</dt>
  <dd>With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).</dd>
  <dt>{{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}</dt>
- <dd>These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the <code>border-inline-start-color</code> is applied to the right side of the border.</dd>
+ <dd>These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the <code>border-inline-start-color</code> is applied to the right side of the border.</dd>
 </dl>
 
 <h3 id="Other_ways_to_use_color">Other ways to use color</h3>
@@ -236,7 +236,7 @@ th {
 
 <h3 id="Specifying_colors_in_stylesheets">Specifying colors in stylesheets</h3>
 
-<p>The easiest way to apply color to elements—and the way you'll usually do it—is to simply specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.</p>
+<p>The easiest way to apply color to elements—and the way you'll usually do it—is to specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.</p>
 
 <p>Let's take a look at an example, starting by looking at the results we're trying to achieve:</p>
 
@@ -317,7 +317,7 @@ th {
   text-shadow: 2px 2px 3px black;
 }</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>When you try to show it in Safari, it will not show properly. Because Safari doesn't support <code>text-decoration: underline wavy #88ff88</code>.</p>
 </div>
 
@@ -359,7 +359,7 @@ th {
 
 <h4 id="CSS_2">CSS</h4>
 
-<p>The CSS simply establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below...</p>
+<p>The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below...</p>
 
 <pre class="brush: css notranslate">#box {
   width: 500px;

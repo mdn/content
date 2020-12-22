@@ -117,7 +117,7 @@ tags:
  <li><code>bold 1em bold</code>, as both components must appear only one time.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> juxtaposition has precedence over the double ampersand, meaning that <code>bold thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>[ bold thin ] &amp;&amp; &lt;length&gt;</code>. It describes <code>bold thin &lt;length&gt;</code> or <code>&lt;length&gt; bold thin</code> but not <code>bold &lt;length&gt; thin</code>.</p>
 </div>
 
@@ -143,7 +143,7 @@ tags:
  <li><code>bold</code>, as it isn't a keyword allowed as value of any of the entity.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> the double ampersand has precedence over the double bar, meaning that <code>bold || thin &amp;&amp; &lt;length&gt;</code> is equivalent to <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin &lt;length&gt;</code>, <code>bold thin &lt;length&gt;</code>, or <code>thin &lt;length&gt; bold</code> but not <code>&lt;length&gt; bold thin</code> as bold, if not omitted, must be placed before or after the whole <code>thin &amp;&amp; &lt;length&gt;</code> component.</p>
 </div>
 
@@ -173,7 +173,7 @@ tags:
  <li><code>3em 4.5em</code>, as a component must be present at most one time.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> the double bar has precedence over the single bar, meaning that <code>bold | thin || &lt;length&gt;</code> is equivalent to <code>bold | [ thin || &lt;length&gt; ]</code>. It describes <code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, or <code>thin &lt;length&gt; </code>but not <code>bold &lt;length&gt;</code> as only one entity from each side of the <code>|</code> combinator can be present.</p>
 </div>
 
@@ -183,7 +183,7 @@ tags:
 
 <p>Note that multipliers cannot be added and have all precedence over combinators.</p>
 
-<h3 id="Asterisk" name="Asterisk"><a id="Asterisk_(*)" name="Asterisk_(*)">Asterisk (<code>*</code>)</a></h3>
+<h3 id="Asterisk"><a id="Asterisk_(*)">Asterisk (<code>*</code>)</a></h3>
 
 <p>The <em>asterisk multiplier</em> indicates that the entity may appear <strong>zero, one or several times</strong>.</p>
 
@@ -204,7 +204,7 @@ tags:
  <li><code>smaller</code>, as <code>bold</code> is juxtaposed, and must appear before any <code>smaller</code> keyword.</li>
 </ul>
 
-<h3 id="Plus" name="Plus"><a id="Plus_()" name="Plus_()">Plus (<code>+</code>)</a></h3>
+<h3 id="Plus"><a id="Plus_()">Plus (<code>+</code>)</a></h3>
 
 <p>The <em>plus multiplier</em> indicates that the entity may appear <strong>one or several times</strong>.</p>
 
@@ -225,7 +225,7 @@ tags:
  <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
 </ul>
 
-<h3 id="Question_mark" name="Question_mark"><a id="Question_mark_()" name="Question_mark_()">Question mark (<code>?</code>)</a></h3>
+<h3 id="Question_mark"><a id="Question_mark_()">Question mark (<code>?</code>)</a></h3>
 
 <p>The <em>question mark multiplier</em> indicates that the entity is optional, and <strong>must appear zero or one time</strong>.</p>
 
@@ -245,7 +245,7 @@ tags:
  <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
 </ul>
 
-<h3 id="Curly_braces" name="Curly_braces"><a id="Curly_braces_(_)" name="Curly_braces_(_)">Curly braces (<code>{ }</code>)</a></h3>
+<h3 id="Curly_braces"><a id="Curly_braces_(_)">Curly braces (<code>{ }</code>)</a></h3>
 
 <p>The <em>curly braces multiplier</em>, enclosing two integers separated by a comma, A and B, indicates that the entity <strong>must appear at least A times and at most B times</strong>.</p>
 
@@ -267,7 +267,7 @@ tags:
  <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword</li>
 </ul>
 
-<h3 id="Hash_mark" name="Hash_mark"><a id="Hash_mark_()" name="Hash_mark_()">Hash mark (<code>#</code>)</a></h3>
+<h3 id="Hash_mark"><a id="Hash_mark_()">Hash mark (<code>#</code>)</a></h3>
 
 <p>The <em>hash mark multiplier</em> indicates that the entity may be repeated one or more times (for example, the plus multiplier), but each occurrence is separated by a comma (',').</p>
 
@@ -289,7 +289,7 @@ tags:
  <li><code>smaller</code>, as <code>bold</code> is juxtaposed and must appear before any <code>smaller</code> keyword.</li>
 </ul>
 
-<h3 id="Exclamation_point" name="Exclamation_point"><a id="Exclamation_point_(!)" name="Exclamation_point_(!)">Exclamation point (<code>!</code>)</a></h3>
+<h3 id="Exclamation_point"><a id="Exclamation_point_(!)">Exclamation point (<code>!</code>)</a></h3>
 
 <p>The <em>exclamation point multiplier</em> after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.</p>
 

@@ -16,8 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/clip-path.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css no-line-numbers notranslate">/* Keyword values */
@@ -38,6 +36,7 @@ clip-path: view-box;
 /* <var>&lt;basic-shape&gt;</var> values */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
+clip-path: ellipse(50px 60px at 0 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
 
@@ -188,8 +187,6 @@ clip-path: unset;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-
-
 
     &lt;div class="note"&gt;clip-path: circle(25%)&lt;/div&gt;
     &lt;div class="row"&gt;
@@ -602,8 +599,6 @@ clipPathSelect.addEventListener("change", function (evt) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("css.properties.clip-path")}}</p>
 
 <h2 id="See_also">See also</h2>
@@ -618,5 +613,4 @@ clipPathSelect.addEventListener("change", function (evt) {
    <li>{{SVGAttr("clip-rule")}}</li>
   </ul>
  </li>
- <li><a href="http://www.coding-dude.com/wp/css/css-circle-image/">CSS Circle Image</a> (using {{SVGAttr("clip-path")}} and other methods)</li>
 </ul>

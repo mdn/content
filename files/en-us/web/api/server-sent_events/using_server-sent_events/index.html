@@ -33,7 +33,7 @@ tags:
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
-  newElement.innerHTML = "message: " + event.data;
+  newElement.textContent = "message: " + event.data;
   eventList.appendChild(newElement);
 }
 </pre>
@@ -45,14 +45,14 @@ tags:
 <pre class="brush: js notranslate">evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
-  newElement.innerHTML = "ping at " + time;
+  newElement.textContent = "ping at " + time;
   eventList.appendChild(newElement);
 });
 </pre>
 
 <p>This code is similar, except that it will be called automatically whenever the server sends a message with the <code>event</code> field set to "ping"; it then parses the JSON in the <code>data</code> field and outputs that information.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is <em>per browser</em> and is set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com</code> (per <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
 </div>
 
@@ -96,8 +96,8 @@ while (true) {
 </pre>
 
 <p>The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.<br>
-The loop will keep running independent of the connection status, so a check is included<br>
-to break the loop if the connection has been closed (e.g. client closes the page).</p>
+ The loop will keep running independent of the connection status, so a check is included<br>
+ to break the loop if the connection has been closed (e.g. client closes the page).</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find a full example that uses the code shown in this article on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
@@ -105,7 +105,7 @@ to break the loop if the connection has been closed (e.g. client closes the page
 
 <h2 id="Error_handling">Error handling</h2>
 
-<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
+<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
 
 <pre class="brush: js notranslate">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
@@ -131,14 +131,14 @@ to break the loop if the connection has been closed (e.g. client closes the page
 <p>Each message received has some combination of the following fields, one per line:</p>
 
 <dl>
-	<dt><code>event</code></dt>
-	<dd>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</dd>
-	<dt><code>data</code></dt>
-	<dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
-	<dt><code>id</code></dt>
-	<dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
-	<dt><code>retry</code></dt>
-	<dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
+ <dt><code>event</code></dt>
+ <dd>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</dd>
+ <dt><code>data</code></dt>
+ <dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="https://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
+ <dt><code>id</code></dt>
+ <dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
+ <dt><code>retry</code></dt>
+ <dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
 </dl>
 
 <p>All other field names are ignored.</p>
@@ -197,7 +197,6 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}</pre>
 <h3 id="EventSource"><code>EventSource</code></h3>
 
 <div>
-
 
 <p>{{Compat("api.EventSource")}}</p>
 </div>

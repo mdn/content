@@ -43,7 +43,7 @@ tags:
 <p>The first thing to understand is the concept of link states — different states that links can exist in, which can be styled using different <a href="/en-US/Learn/CSS/Introduction_to_CSS/Selectors#Pseudo-classes">pseudo-classes</a>:</p>
 
 <ul>
- <li><strong>Link (unvisited)</strong>: The default state that a link resides in, when it isn't in any other state. This can be specifically styled using the {{cssxref(":link")}} pseudo class.</li>
+ <li><strong>Link</strong>: A link which has a destination (i.e. not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.</li>
  <li><strong>Visited</strong>: A link when it has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.</li>
  <li><strong>Hover</strong>: A link when it is being hovered over by a user's mouse pointer, styled using the {{cssxref(":hover")}} pseudo class.</li>
  <li><strong>Focus</strong>: A link when it has been focused (for example moved to by a keyboard user using the <kbd>Tab</kbd> key or similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.</li>
@@ -52,7 +52,7 @@ tags:
 
 <h3 id="Default_styles">Default styles</h3>
 
-<p>The following example illustrates what a link will behave like by default (the CSS is simply enlarging and centering the text to make it stand out more.)</p>
+<p>The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more.)</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;&lt;a href="#"&gt;A simple link&lt;/a&gt;&lt;/p&gt;
 </pre>
@@ -108,7 +108,6 @@ tags:
 
 }
 
-
 a:link {
 
 }
@@ -129,7 +128,7 @@ a:active {
 
 }</pre>
 
-<p>This order is important because the link styles build on one another, for example the styles in the first rule will apply to all the subsequent ones, and when a link is being activated, it is also being hovered over. If you put these in the wrong order, things won't work properly. To remember the order, you could try using a mnemonic like <strong>L</strong>o<strong>V</strong>e <strong>F</strong>ears <strong>HA</strong>te.</p>
+<p>This order is important because the link styles build on one another, for example the styles in the first rule will apply to all the subsequent ones, and when a link is being activated, it is usually also being hovered over. If you put these in the wrong order, and you're changing the same properties in each ruleset, things won't work as you expect. To remember the order, you could try using a mnemonic like <strong>L</strong>o<strong>V</strong>e <strong>F</strong>ears <strong>HA</strong>te.</p>
 
 <p>Now let's add some more information to get this styled properly:</p>
 
@@ -346,7 +345,7 @@ a[href*="http"] {
 
 <p>So that's it — try revisiting the active learning section above and trying this new technique out!</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
 </div>
 

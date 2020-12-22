@@ -12,12 +12,12 @@ tags:
 
 <p>The <strong><code>TreeWalker.lastChild()</code></strong> method moves the current {{domxref("Node")}} to the last <em>visible</em> child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns <code>null</code> and the current node is not changed.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"><em>node</em> = <em>treeWalker</em>.lastChild();
 </pre>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
     document.body,
@@ -28,7 +28,7 @@ tags:
 var node = treeWalker.lastChild(); // returns the last visible child of the root element
 </pre>
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -51,8 +51,6 @@ var node = treeWalker.lastChild(); // returns the last visible child of the root
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.TreeWalker.lastChild")}}</p>
 

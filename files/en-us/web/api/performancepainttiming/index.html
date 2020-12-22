@@ -10,9 +10,9 @@ tags:
   - Reference
   - Web Performance
 ---
-<p>{{SeeCompatTable}}{{APIRef("Performance Timeline API")}}</p>
+<p>{{APIRef("Performance Timeline API")}}</p>
 
-<p>The <strong><code>PerformancePaintTiming</code></strong> interface of the <a href="/en-US/docs/Web/API/Paint Timing">Paint Timing</a> provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.</p>
+<p>The <strong><code>PerformancePaintTiming</code></strong> interface of the <a href="/en-US/docs/Web/API/Paint_Timing_API">Paint Timing API</a> provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.</p>
 
 <p>An application can register a {{domxref("PerformanceObserver")}} for "<code>paint</code>" {{domxref("PerformanceEntry","performance entry types")}} and the observer can retrieve the times that paint events occur. Use this information to help identify areas that take too long to provide a good user experience.</p>
 
@@ -28,7 +28,7 @@ tags:
  <dt>{{domxref("PerformanceEntry.name")}}</dt>
  <dd>Returns either <code>"first-paint"</code> or <code>"first-contentful-paint"</code>.</dd>
  <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint ocurred.</dd>
+ <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.</dd>
  <dt>{{domxref("PerformanceEntry.duration")}}</dt>
  <dd>Returns 0.</dd>
 </dl>
@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function showPaintTimings() {
+<pre class="brush: js notranslate">function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
     let performanceEntries = performance.getEntriesByType('paint');
@@ -53,7 +53,7 @@ tags:
 
 <p>The code above produces console output something like the following:</p>
 
-<pre>The time to first-paint was 2785.915 milliseconds.
+<pre class="notranslate">The time to first-paint was 2785.915 milliseconds.
 The time to first-contentful-paint was 2787.460 milliseconds.</pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -74,7 +74,5 @@ The time to first-contentful-paint was 2787.460 milliseconds.</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.PerformancePaintTiming")}}</p>

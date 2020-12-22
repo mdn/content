@@ -21,7 +21,7 @@ tags:
 
 <div class="callout-box">The term "Progressive Web App" isn't a formal or official name. It's just a shorthand used initially by Google for the concept of creating a flexible, adaptable app using only web technologies.</div>
 
-<p>PWAs are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features. For example, web apps are more discoverable than native apps; it's a lot easier and faster to visit a website than to install an application, and you can also share web apps by simply sending a link.</p>
+<p>PWAs are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features. For example, web apps are more discoverable than native apps; it's a lot easier and faster to visit a website than to install an application, and you can also share web apps by sending a link.</p>
 
 <p>On the other hand, native apps are better integrated with the operating system and therefore offer a more seamless experience for the users. You can install a native app so that it works offline, and users love tapping their icons to easily access their favorite apps, rather than navigating to it using a browser.</p>
 
@@ -42,7 +42,7 @@ tags:
 <ul>
 	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Discoverable">Discoverable</a>, so the contents can be found through search engines.</li>
 	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Installable">Installable</a>, so it can be available on the device's home screen or app launcher.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Linkable">Linkable</a>, so you can share it by simply sending a URL.</li>
+	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Linkable">Linkable</a>, so you can share it by sending a URL.</li>
 	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Network_independent">Network independent</a>, so it works offline or with a poor network connection.</li>
 	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Progressive">Progressive</a>, so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.</li>
 	<li><a href="/en-US/docs/Web/Progressive_web_apps/Advantages#Re-engageable">Re-engageable</a>, so it's able to send notifications whenever there's new content available.</li>
@@ -117,7 +117,7 @@ tags:
 	<li>Control what is shown to the user in situations where there is no connectivity.</li>
 </ul>
 
-<p>This is achieved using a combination of technologies: <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> to control page requests (for example storing them offline), the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> for storing responses to network requests offline (very useful for storing site assets), and client-side data storage technologies such as <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> and <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> to store application data offline.</p>
+<p>This is achieved using a combination of technologies: <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> to control page requests (for example storing them offline), the <a href="/en-US/docs/Web/API/Cache">Cache API</a> for storing responses to network requests offline (very useful for storing site assets), and client-side data storage technologies such as <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> and <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> to store application data offline.</p>
 
 <h3 id="Progressive_enhancement_support">Progressive enhancement support</h3>
 
@@ -149,9 +149,9 @@ tags:
 
 <p>As mentioned before, PWAs don't depend on a single API, but rather using various technologies to achieve the goal of delivering the best web experience possible.</p>
 
-<p>The key ingredient required for PWAs is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"> service worker</a> support. Thankfully service workers are <a href="https://jakearchibald.github.io/isserviceworkerready/"> now supported on all major browsers</a> on desktop and mobile.</p>
+<p>The key ingredient required for PWAs is <a href="/en-US/docs/Web/API/Service_Worker_API"> service worker</a> support. Thankfully service workers are <a href="https://jakearchibald.github.io/isserviceworkerready/"> now supported on all major browsers</a> on desktop and mobile.</p>
 
-<p>Other features such as<a href="https://developer.mozilla.org/en-US/docs/Web/Manifest"> Web App Manifest</a>,<a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API"> Push</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications</a>, and<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen"> Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
+<p>Other features such as<a href="/en-US/docs/Web/Manifest"> Web App Manifest</a>,<a href="/en-US/docs/Web/API/Push_API"> Push</a> <a href="/en-US/docs/Web/API/Notifications_API">Notifications</a>, and<a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen"> Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
 
 <p>Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.</p>
 

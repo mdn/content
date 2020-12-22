@@ -15,7 +15,7 @@ tags:
 
 <p>Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is <code>this</code> at the time of creation of the {{domxref("XMLHttpRequest")}} object.</p>
 
-<h3 id="Example_of_pushState_method_2"><a id="Example_of_pushState_method" name="Example_of_pushState_method">Example of pushState() method</a></h3>
+<h3 id="Example_of_pushState_method_2"><a id="Example_of_pushState_method">Example of pushState() method</a></h3>
 
 <p>Suppose <code><span class="nowiki">http://mozilla.org/foo.html</span></code> executes the following JavaScript:</p>
 
@@ -32,7 +32,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>If the user clicks <strong>Back</strong> once again, the URL will change to <code><span class="nowiki">http://mozilla.org/foo.html</span></code>, and the document will get a <code>popstate</code> event, this time with a <code>null</code> state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the <code>popstate</code> event.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Calling <code>history.back()</code> normally behaves the same way as clicking the <strong>Back</strong> button. But there is one important exception:</p>
 
 <p><em>After</em> using <code>history.pushState()</code>, calling <code>history.back()</code> <em>does not</em> raise a <code>popstate</code> event. Clicking the browser's <strong>Back</strong> button (still) does.</p>

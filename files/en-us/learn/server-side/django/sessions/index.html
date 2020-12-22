@@ -18,7 +18,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">This tutorial extends our <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behaviour for anonymous users in your own sites.</p>
+<p class="summary">This tutorial extends our <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behaviour for anonymous users in your own sites.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -35,15 +35,15 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website we created in the previous tutorials allows users to browse books and authors in the catalog. While the content is dynamically generated from the database, every user will essentially have access to the same pages and types of information when they use the site.</p>
+<p>The <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website we created in the previous tutorials allows users to browse books and authors in the catalog. While the content is dynamically generated from the database, every user will essentially have access to the same pages and types of information when they use the site.</p>
 
-<p>In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc. For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (e.g. the number of search results they want displayed on each page). </p>
+<p>In a "real" library you may wish to provide individual users with a customized experience, based on their previous use of the site, preferences, etc. For example, you could hide warning messages that the user has previously acknowledged next time they visit the site, or store and respect their preferences (e.g. the number of search results that they want to be displayed on each page). </p>
 
 <p>The session framework lets you implement this sort of behaviour, allowing you to store and retrieve arbitrary data on a per-site-visitor basis. </p>
 
 <h2 id="What_are_sessions">What are sessions?</h2>
 
-<p>All communication between web browsers and servers is via the HTTP protocol, which is <em>stateless</em>. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other— there is no notion of "sequence" or behaviour based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.</p>
+<p>All communication between web browsers and servers is via {{Glossary("HTTP")}}, which is <em>stateless</em>. The fact that the protocol is stateless means that messages between the client and server are completely independent of each other— there is no notion of "sequence" or behaviour based on previous messages. As a result, if you want to have a site that keeps track of the ongoing relationships with a client, you need to implement that yourself.</p>
 
 <p>Sessions are the mechanism used by Django (and most of the Internet) for keeping track of the "state" between the site and a particular browser. Sessions allow you to store arbitrary data per browser, and have this data available to the site whenever the browser connects. Individual data items associated with the session are then referenced by a "key", which is used both to store and retrieve the data.</p>
 
@@ -90,7 +90,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 </pre>
 
-<p>The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in <a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> (Django docs).</p>
+<p>The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> (Django docs).</p>
 
 <h2 id="Saving_session_data">Saving session data</h2>
 
@@ -124,7 +124,7 @@ request.session['my_car']['wheels'] = 'alloy'
     num_authors = Author.objects.count()  # The 'all()' is implied by default.
 
 <strong>    # Number of visits to this view, as counted in the session variable.
-    num_visits = request.session.get('num_visits', 0)
+    num_visits = request.session.get('num_visits', 1)
     request.session['num_visits'] = num_visits + 1</strong>
 
     context = {
@@ -138,10 +138,10 @@ request.session['my_car']['wheels'] = 'alloy'
     # Render the HTML template index.html with the data in the context variable.
     return render(request, 'index.html', context=context)</pre>
 
-<p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 0 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
+<p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
 <div class="note">
-<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
+<p><strong>Note</strong>: We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
 </div>
 
 <p>Add the line seen at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the context variable:</p>
@@ -156,7 +156,7 @@ request.session['my_car']['wheels'] = 'alloy'
   &lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
 &lt;/ul&gt;
 
-<strong>&lt;p&gt;You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.&lt;/p&gt;</strong>
+<strong>&lt;p&gt;You have visited this page \{{ num_visits }} time{% if num_visits &gt; 1 %}s{% endif %}.&lt;/p&gt;</strong>
 </pre>
 
 <p>Save your changes and restart the test server. Every time you refresh the page, the number should update.</p>
@@ -173,7 +173,7 @@ request.session['my_car']['wheels'] = 'alloy'
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}</p>

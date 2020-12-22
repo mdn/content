@@ -20,13 +20,13 @@ tags:
 ---
 <p>{{APIRef("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("DisplayMediaStreamConstraints")}} dictionary's <strong><code>video</code></strong> property is used to configure the video track in the stream returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.</span> This value may simply be a Boolean, where <code>true</code> specifies that a default selection of input source be made (typically the entire display area of the device in use, spanning every screen in a multiple screen configuration). Since a video track must always be included, a value of <code>false</code> results in a <code>TypeError</code> exception being thrown.</p>
+<p><span class="seoSummary">The {{domxref("DisplayMediaStreamConstraints")}} dictionary's <strong><code>video</code></strong> property is used to configure the video track in the stream returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.</span> This value may be a Boolean, where <code>true</code> specifies that a default selection of input source be made (typically the entire display area of the device in use, spanning every screen in a multiple screen configuration). Since a video track must always be included, a value of <code>false</code> results in a <code>TypeError</code> exception being thrown.</p>
 
 <p>More precise control over the format of the returned video track may be exercised by instead providing a {{domxref("MediaTrackConstraints")}} object, which is used to process the video data after obtaining it from the device but prior to adding it to the stream.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>displayMediaStreamConstraints</em>.video = <em>allowVideoFlag</em>;
+<pre class="syntaxbox notranslate"><em>displayMediaStreamConstraints</em>.video = <em>allowVideoFlag</em>;
 <em>displayMediaStreamConstraints</em>.video = <em>mediaTrackConstraints</em>;
 
 <em>displayMediaStreamConstraints</em> = {
@@ -48,8 +48,6 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p> </p>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -60,8 +58,8 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('Screen Capture API', '#dom-displaymediastreamconstraints-video', 'DisplayMediaStreamConstraints.video')}}</td>
-   <td>{{Spec2('Screen Capture API')}}</td>
+   <td>{{SpecName('Screen Capture', '#dom-displaymediastreamconstraints-video', 'DisplayMediaStreamConstraints.video')}}</td>
+   <td>{{Spec2('Screen Capture')}}</td>
    <td>Initial definition</td>
   </tr>
  </tbody>
@@ -70,7 +68,6 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.DisplayMediaStreamConstraints.video")}}</p>
 </div>
@@ -82,7 +79,3 @@ tags:
  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a></li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a></li>
 </ul>
-
-<p> </p>
-
-<p> </p>

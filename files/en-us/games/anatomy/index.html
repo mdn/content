@@ -9,10 +9,8 @@ tags:
 ---
 <div>{{GamesSidebar}}</div>
 
-<p>{{IncludeSubnav("/en-US/docs/Games")}}</p>
-
 <div class="summary">
-<p><span class="seoSummary">This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to the modern game development arena understand what is required when building a game and how web standards like JavaScript lend themselves as tools.</span> Experienced game programmers who are new to web development could also benefit, too.</p>
+<p><span class="seoSummary">This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools.</span> Experienced game programmers who are new to web development could also benefit, too.</p>
 </div>
 
 <h2 id="Present_accept_interpret_calculate_repeat">Present, accept, interpret, calculate, repeat</h2>
@@ -35,7 +33,7 @@ tags:
 
 <p>Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, <code>{{ domxref("window.requestAnimationFrame()") }}</code> will be the foundation of most well-programmed per-frame main loops.  A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:</p>
 
-<pre class="brush: js">window.main = function () {
+<pre class="brush: js notranslate">window.main = function () {
   window.requestAnimationFrame( main );
 
   // Whatever your main loop needs to do
@@ -59,7 +57,7 @@ main(); // Start the cycle</pre>
 
 <p>There are two obvious issues with our previous main loop: <code>main()</code> pollutes the <code>{{ domxref("window") }}</code> object (where all global variables are stored) and the example code did not leave us with a way to <em>stop</em> the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).</p>
 
-<pre class="brush: js">/*
+<pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -84,7 +82,7 @@ main(); // Start the cycle</pre>
 
 <p>For the second issue, stopping the main loop, you will need to cancel the call to <code>main()</code> with <code>{{ domxref("window.cancelAnimationFrame()") }}</code>. You will need to pass <code>cancelAnimationFrame()</code> the ID token given by <code>requestAnimationFrame()</code> when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called <code>MyGame</code>. Expanding our last example, the main loop would now look like:</p>
 
-<pre class="brush: js">/*
+<pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -105,13 +103,13 @@ main(); // Start the cycle</pre>
 
 <p>We now have a variable declared in our <code>MyGame</code> namespace, which we call <code>stopMain</code>, that contains the ID returned from our main loop's most recent call to <code>requestAnimationFrame()</code>. At any point, we can stop the main loop by telling the browser to cancel the request that corresponds to our token.</p>
 
-<pre class="brush: js">window.cancelAnimationFrame( MyGame.stopMain );</pre>
+<pre class="brush: js notranslate">window.cancelAnimationFrame( MyGame.stopMain );</pre>
 
 <p>The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.</p>
 
 <h2 id="Building_a_more_optimized_main_loop_in_JavaScript">Building a <em>more</em> <em>optimized</em> main loop in JavaScript</h2>
 
-<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="http://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
+<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="https://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
 
 <p>Modern versions of Firefox and Google Chrome (and probably others) <em>attempt</em> to connect <code>requestAnimationFrame</code> callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus <em>tries</em> to look like the following:</p>
 
@@ -132,12 +130,12 @@ main(); // Start the cycle</pre>
 
 <p>This value is not too useful alone, since it is relative to a fairly uninteresting event, but it can be subtracted from another timestamp to accurately and precisely determine how much time elapsed between those two points. To acquire one of these timestamps, you can call <code>window.performance.now()</code> and store the result as a variable.</p>
 
-<pre class="brush: js">var tNow = window.performance.now();
+<pre class="brush: js notranslate">var tNow = window.performance.now();
 </pre>
 
 <p>Back to the topic of the main loop. You will often want to know when your main function was invoked. Because this is common, <code>window.requestAnimationFrame()</code> always provides a <code>DOMHighResTimeStamp</code> to callbacks as an argument when they are executed. This leads to another enhancement to our previous main loops.</p>
 
-<pre class="brush: js">/*
+<pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -169,9 +167,9 @@ main(); // Start the cycle</pre>
 
 <h3 id="What_most_browser_games_should_look_like">What most browser games should look like</h3>
 
-<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can simply update, render, and then do nothing until VSync.</p>
+<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.</p>
 
-<pre class="brush: js">/*
+<pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -243,7 +241,7 @@ main(); // Start the cycle</pre>
 <p><strong>Note:</strong> This example, specifically, is in need of technical review.</p>
 </div>
 
-<pre class="brush: js">/*
+<pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -306,7 +304,7 @@ main(); // Start the cycle</pre>
   main(performance.now()); // Start the cycle
 })();</pre>
 
-<p>Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
+<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
 
 <p>This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.</p>
 

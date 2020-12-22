@@ -21,13 +21,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])</pre>
+<pre class="syntaxbox notranslate">var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
  <li><em>bound</em> specifies the upper bound of the new key range.</li>
- <li><em>open </em>indicates whether the upper bound excludes the endpoint value. The default is false. {{optional_inline}}</li>
+ <li><em>open</em> indicates whether the upper bound excludes the endpoint value. The default is false. {{optional_inline}}</li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
@@ -47,7 +47,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">DataError</span></font></td>
+   <td><code>DataError</code></td>
    <td>
     <p>The value parameter passed was not a valid key.</p>
    </td>
@@ -65,7 +65,7 @@ tags:
 <p><strong>Note</strong>: For a more complete example allowing you to experiment with key range, have a look at our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live too</a>.)</p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js notranslate" style="font-size: 14px;">function displayData() {
   var keyRangeValue = IDBKeyRange.upperBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -85,12 +85,7 @@ tags:
     };
   };</pre>
 
-<div> </div>
-
 <h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span></h2>
-
-<dl>
-</dl>
 
 <table class="standard-table">
  <tbody>
@@ -100,22 +95,21 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbkeyrange-upperbound', 'upperBound()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td>{{SpecName('IndexedDB 2', '#dom-idbkeyrange-upperbound-upper-upperopen', 'upperBound()')}}</td>
+   <td>{{Spec2('IndexedDB 2')}}</td>
+   <td></td>
   </tr>
   <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-upperbound-upper-open-upper", "upperBound()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td>{{SpecName("IndexedDB 3", "#dom-idbkeyrange-upperbound", "upperBound()")}}</td>
+   <td>{{Spec2("IndexedDB 3")}}</td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.IDBKeyRange.upperBound")}}</p>
 </div>
@@ -129,5 +123,5 @@ tags:
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

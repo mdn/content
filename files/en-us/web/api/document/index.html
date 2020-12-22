@@ -64,6 +64,8 @@ tags:
  <dd>Returns a list of all the hyperlinks in the document.</dd>
  <dt>{{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}</dt>
  <dd>Returns a {{JSxRef("Boolean")}} that is <code>true</code> only if this document is synthetic, such as a standalone image, video, audio file, or the like.</dd>
+ <dt>{{DOMxRef("Document.pictureInPictureEnabled")}}{{ReadOnlyInline}}</dt>
+ <dd>Returns true if the picture-in-picture feature is enabled</dd>
  <dt>{{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the available plugins.</dd>
  <dt>{{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
@@ -247,10 +249,10 @@ tags:
  <dd>Creates a {{DOMxRef("TreeWalker")}} object.</dd>
  <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}}</dt>
  <dd>Enables the style sheets for the specified style sheet set.</dd>
+ <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
+ <dd>Remove the video from the floating picture-in-picture window back to its original container.</dd>
  <dt>{{DOMxRef("Document.exitPointerLock()")}} {{Experimental_Inline}}</dt>
  <dd>Release the pointer lock.</dd>
- <dt>{{DOMxRef("Document.getAnimations()")}} {{Experimental_Inline}}</dt>
- <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code>.</dd>
  <dt>{{DOMxRef("Document.getElementsByClassName()")}}</dt>
  <dd>Returns a list of elements with the given class name.</dd>
  <dt>{{DOMxRef("Document.getElementsByTagName()")}}</dt>
@@ -290,7 +292,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document.createExpression()")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression" title="XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
+ <dd>Compiles an <code><a href="/en-US/docs/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
  <dt>{{DOMxRef("Document.createNSResolver()")}}</dt>
  <dd>Creates an {{DOMxRef("XPathNSResolver")}} object.</dd>
  <dt>{{DOMxRef("Document.evaluate()")}}</dt>
@@ -335,14 +337,19 @@ tags:
 <p><em>The <code>Document</code> interface includes the following methods defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{DOMxRef("Document")}} interface.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.getSelection()")}}</dt>
- <dd>Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
+ <dt>{{DOMxRef("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
+ <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
+</dl>
+
+<dl>
  <dt>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
  <dd>Returns the topmost element at the specified coordinates.</dd>
  <dt>{{DOMxRef("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
  <dd>Returns an array of all elements at the specified coordinates.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
- <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
+ <dt>{{DOMxRef("DocumentOrShadowRoot.getAnimations()")}} {{Experimental_Inline}}</dt>
+ <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code></dd>
+ <dt>{{DOMxRef("DocumentOrShadowRoot.getSelection()")}}</dt>
+ <dd>Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -455,7 +462,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}</dt>
- <dd>Fired when when an element captures a pointer using <code><a href="/en-US/docs/Web/API/Element/setPointerCapture">setPointerCapture()</a></code>.<br>
+ <dd>Fired when an element captures a pointer using <code><a href="/en-US/docs/Web/API/Element/setPointerCapture">setPointerCapture()</a></code>.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.</dd>
  <dt>{{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}</dt>
  <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#Pointer_capture">captured pointer</a> is released.<br>
@@ -648,7 +655,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Document")}}</p>

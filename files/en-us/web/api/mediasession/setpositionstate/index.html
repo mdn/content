@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">navigator.mediaSession.setPositionState(<em>stateDict</em>);
+<pre class="syntaxbox notranslate">navigator.mediaSession.setPositionState(<em>stateDict</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -56,21 +56,29 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, a player for a non-standard media file format, written in JavaScript, uses {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} to establish a callback which fires once per second to refresh the position information by calling <code>setPositionState()</code>. If the media is still playing when the interval is fired, <code>setPositionState()</code> is called with an object that specifies the duration, playback rate, and position as reported by a <code>myMedia</code> object that describes the track being played.</p>
+<p>Below is a function which updates the position state of the current {{domxref('MediaSession')}} track.</p>
 
-<p>If the media is not playing, {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} is used to remove the interval handler.</p>
+<pre class="brush: js notranslate">function updatePositionState() {
+  navigator.mediaSession.setPositionState({
+    duration: audioEl.duration,
+    playbackRate: audioEl.playbackRate,
+    position: audioEl.currentTime
+  });
+}
+</pre>
 
-<pre class="brush: js">let positionInterval = window.setInterval(() =&gt; {
-  if (myMedia.isPlaying) {
-    navigator.mediaSession.setPositionState({
-      duration: myMedia.trackDurationInSeconds,
-      playbackRate: myMedia.playbackRate,
-      position: myMedia.trackPlayPositionInSeconds
-    });
-  } else {
-    window.clearInterval(positionInterval);
-  }
-}, 1000);
+<p>We can use this function when updating {{domxref('MediaMetadata', 'media session metadata')}} and within callbacks for actions, such as below.</p>
+
+<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
+
+  // our time to skip
+  const skipTime = details.seekOffset || 10;
+
+  // set our position
+  audioEl.currentTime = Math.max(audioEl.currentTime - skipTime, 0);
+  updatePositionState();
+
+});
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

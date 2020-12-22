@@ -26,7 +26,7 @@ tags:
 
 <h3 id="Objects_vs._Maps">Objects vs. Maps</h3>
 
-<p>{{jsxref("Object")}} is similar to <code>Map</code>—both let you set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. For this reason (and because there were no built-in alternatives), <code>Object</code>s have been used as <code>Map</code>s historically.</p>
+<p>{{jsxref("Object")}} is similar to <code>Map</code>—both let you set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. For this reason (and because there were no built-in alternatives), <code>Object</code> has been used as <code>Map</code> historically.</p>
 
 <p>However, there are important differences that make <code>Map</code> preferable in certain cases:</p>
 
@@ -45,7 +45,7 @@ tags:
    <td>
     <p>An <code>Object</code> has a prototype, so it contains default keys that could collide with your own keys if you're not careful.</p>
 
-    <div class="blockIndicator note">
+    <div class="notecard note">
     <p><strong>Note:</strong> As of ES5, this can be bypassed by using {{jsxref("Object.create", "Object.create(null)")}}, but this is seldom done.</p>
     </div>
    </td>
@@ -58,12 +58,12 @@ tags:
   <tr>
    <th scope="row">Key Order</th>
    <td>
-    <p>The keys in <code>Map</code> are ordered in a simple, straightforward way: A <code>Map</code> object iterates entries, keys, and values in the order of entry insertion.</p>
+    <p>The keys in <code>Map</code> are ordered in a simple, straightforward way: A <code>Map</code> object iterates entries, keys, and values in the order of entry insertion.</p>
    </td>
    <td>
-    <p>Although the keys of an ordinary <code>Object</code> are ordered now, they didn't used to be, and the order is complex. As a result, it's best not to rely on property order.</p>
+    <p>Although the keys of an ordinary <code>Object</code> are ordered now, they didn't used to be, and the order is complex. As a result, it's best not to rely on property order.</p>
 
-    <p>The order was first defined for own properties only in ECMAScript 2015; ECMAScript 2020 defines order for inherited properties as well. See the <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> and <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties">EnumerateObjectProperties</a> abstract specification operations. But note that no single mechanism iterates <strong>all</strong> of an object's properties; the various mechanisms each include different subsets of properties. (<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for-in</a></code> includes only enumerable string-keyed properties; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code> includes only own, enumerable, string-keyed properties; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">Object.getOwnPropertyNames</a></code> includes own, string-keyed properties even if non-enumerable; <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols">Object.getOwnPropertySymbols</a></code> does the same for just <code>Symbol</code>-keyed properties, etc.)</p>
+    <p>The order was first defined for own properties only in ECMAScript 2015; ECMAScript 2020 defines order for inherited properties as well. See the <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> and <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties">EnumerateObjectProperties</a> abstract specification operations. But note that no single mechanism iterates <strong>all</strong> of an object's properties; the various mechanisms each include different subsets of properties. ({{jsxref("Statements/for...in", "for-in")}} includes only enumerable string-keyed properties; {{jsxref("Object.keys")}} includes only own, enumerable, string-keyed properties; {{jsxref("Object.getOwnPropertyNames")}} includes own, string-keyed properties even if non-enumerable; {{jsxref("Object.getOwnPropertySymbols")}} does the same for just <code>Symbol</code>-keyed properties, etc.)</p>
    </td>
   </tr>
   <tr>
@@ -76,7 +76,18 @@ tags:
   <tr>
    <th scope="row">Iteration</th>
    <td>A <code>Map</code> is an <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>, so it can be directly iterated.</td>
-   <td>Iterating over an <code>Object</code> requires obtaining its keys in some fashion and iterating over them.</td>
+   <td>
+    <p><code>Object</code> does not implement an <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iteration protocol</a>, and so objects are not directly iterable using the JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> statement (by default).</p>
+
+    <div class="notecard note">
+    <p><strong>Note:</strong></p>
+
+    <ul>
+     <li>An object can implement the iteration protocol, or you can get an iterable for an object using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries</code></a>.</li>
+     <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> statement allows you to iterate over the <em>enumerable</em> properties of an object.</li>
+    </ul>
+    </div>
+   </td>
   </tr>
   <tr>
    <th scope="row">Performance</th>
@@ -94,7 +105,7 @@ tags:
 
 <p>Setting Object properties works for Map objects as well, and can cause considerable confusion.</p>
 
-<p>Therefore, this appears to work in a way:</p>
+<p>Therefore, this appears to work in a way:</p>
 
 <pre class="syntaxbox example-bad brush js notranslate">let wrongMap = new Map()
 wrongMap['bla'] = 'blaa'
@@ -163,13 +174,13 @@ console.log(contacts.size) // 1
 
 <dl>
  <dt>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</dt>
- <dd>Returns a new <code>Iterator</code> object that contains <strong>an array of <code>[<var>key</var>, <var>value</var>]</code></strong> for each element in the <code>Map</code> object in insertion order.</dd>
+ <dd>Returns a new Iterator object that contains <strong>an array of <code>[<var>key</var>, <var>value</var>]</code></strong> for each element in the <code>Map</code> object in insertion order.</dd>
  <dt>{{jsxref("Map.prototype.keys()")}}</dt>
- <dd>Returns a new <code>Iterator</code> object that contains the <strong>keys</strong> for each element in the <code>Map</code> object in insertion order.</dd>
+ <dd>Returns a new Iterator object that contains the <strong>keys</strong> for each element in the <code>Map</code> object in insertion order.</dd>
  <dt>{{jsxref("Map.prototype.values()")}}</dt>
- <dd>Returns a new <code>Iterator</code> object that contains the <strong>values</strong> for each element in the <code>Map</code> object in insertion order.</dd>
+ <dd>Returns a new Iterator object that contains the <strong>values</strong> for each element in the <code>Map</code> object in insertion order.</dd>
  <dt>{{jsxref("Map.prototype.entries()")}}</dt>
- <dd>Returns a new <code>Iterator</code> object that contains <strong>an array of <code>[<var>key</var>, <var>value</var>]</code></strong> for each element in the <code>Map</code> object in insertion order.</dd>
+ <dd>Returns a new <strong>Iterator</strong> object that contains <strong>an array of <code>[<var>key</var>, <var>value</var>]</code></strong> for each element in the <code>Map</code> object in insertion order.</dd>
  <dt>{{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}</dt>
  <dd>Calls <code><var>callbackFn</var></code> once for each key-value pair present in the <code>Map</code> object, in insertion order. If a <code><var>thisArg</var></code> parameter is provided to <code>forEach</code>, it will be used as the <code>this</code> value for each callback.</dd>
 </dl>
@@ -293,7 +304,7 @@ let clone = new Map(original)
 console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Important:</strong> Keep in mind that <em>the data itself</em> is not cloned.</p>
 </div>
 
@@ -354,8 +365,6 @@ console.log(merged.get(3)) // three</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Map")}}</p>
 

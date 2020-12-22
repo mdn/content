@@ -21,7 +21,7 @@ tags:
  The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of Firefox 44, when <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> is used to provide offline support for a page a warning message is now displayed in the console advising developers to use <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> instead ({{bug("1204581")}}.)</p>
+<p><strong>Note</strong>: From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
 </div>
 
 <p>Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as <a href="http://offlinefirst.org/">Offline First</a>). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.</p>
@@ -31,7 +31,7 @@ tags:
 <p>Many service workers features are now enabled by default in newer versions of supporting browsers. If however you find that demo code is not working in your installed versions, you might need to enable a pref:</p>
 
 <ul>
- <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser.</li>
+ <li><strong>Firefox Nightly</strong>: Go to <code>about:config</code> and set <code>dom.serviceWorkers.enabled</code> to true; restart browser. If you are testing with a non-https local server, you'll need to also set <code>dom.serviceWorkers.testing.enabled</code> to true.</li>
  <li><strong>Chrome Canary</strong>: Go to <code>chrome://flags</code> and turn on <code>experimental-web-platform-features</code>; restart browser (note that some features are now enabled by default in Chrome.)</li>
  <li><strong>Opera</strong>: Go to <code>opera://flags</code> and enable <code>Support for ServiceWorker</code>; restart browser.</li>
  <li><strong>Microsoft Edge</strong>: Go to <code>about:flags</code> and tick <code>Enable service workers</code>; restart browser.</li>
@@ -205,7 +205,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <ol>
  <li>You are not running your application through HTTPS.</li>
  <li>The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at <code>https://mdn.github.io/sw-test/sw.js</code>, and the app’s root is <code>https://mdn.github.io/sw-test/</code>. But the path needs to be written as <code>/sw-test/sw.js</code>, not <code>/sw.js</code>.</li>
- <li>The service worker being pointed to is on a different origin to that of your app. This is also not allowed.</li>
+ <li>It is also not allowed to point to a service worker of a different origin than that of your app.</li>
 </ol>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12630/important-notes.png" style="display: block; height: 277px; margin: 0px auto; width: 574px;"></p>
@@ -281,7 +281,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
   );
 });</pre>
 
-<p>We could start by simply responding with the resource whose url matches that of the network request, in each case:</p>
+<p>We could start by responding with the resource whose url matches that of the network request, in each case:</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
@@ -289,7 +289,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
   );
 });</pre>
 
-<p><code>caches.match(event.request)</code> allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via url and vary headers, just like with normal HTTP requests.</p>
+<p><code>caches.match(event.request)</code> allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.</p>
 
 <p>Let’s look at a few other options we have when defining our magic (see our <a href="/en-US/docs/Web/API/Fetch_API">Fetch API documentation</a> for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
 
@@ -307,7 +307,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 });</pre>
  </li>
  <li>
-  <p>If a match wasn’t found in the cache, you could tell the browser to simply {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
+  <p>If a match wasn’t found in the cache, you could tell the browser to {{domxref("GlobalFetch.fetch","fetch")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
 
   <pre class="brush: js notranslate">fetch(event.request);</pre>
  </li>
@@ -330,7 +330,7 @@ event.request.body</pre>
 
 <p>So <code>caches.match(event.request)</code> is great when there is a match in the service worker cache, but what about cases when there isn’t a match? If we didn’t provide any kind of failure handling, our promise would resolve with <code>undefined</code> and we wouldn't get anything returned.</p>
 
-<p>Fortunately service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
+<p>Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
@@ -373,16 +373,16 @@ event.request.body</pre>
         });
 
         return response;
-      });
-    }).catch(() =&gt; {
-      return caches.match('./sw-test/gallery/myLittleVader.jpg');
-    })
+      }).catch(() =&gt; {
+        return caches.match('./sw-test/gallery/myLittleVader.jpg');
+      })
+    });
   );
 });</pre>
 
 <p>We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the <code>install</code> event listener we saw earlier.</p>
 
-<h2 id="Updating_your_service_worker"><a id="Updating your service worker" name="Updating your service worker">Updating your service worker</a></h2>
+<h2 id="Updating_your_service_worker">Updating your service worker</h2>
 
 <p>If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.</p>
 

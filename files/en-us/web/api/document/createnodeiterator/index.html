@@ -12,7 +12,7 @@ tags:
 
 <p>Returns a new <a class="internal" href="/en/DOM/NodeIterator" title="NodeIterator"><code>NodeIterator</code></a> object.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate">const nodeIterator = document.createNodeIterator(<var>root</var>[, <var>whatToShow</var>[, <var>filter</var>]]);
 </pre>
@@ -23,7 +23,7 @@ tags:
  <dt><code><var>root</var></code></dt>
  <dd>The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.</dd>
  <dt><code><var>whatToShow</var></code> {{ optional_inline() }}</dt>
- <dd>Is an optional <code>unsigned long</code> representing a bitmask created by combining the constant properties of <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>. It is a convenient way of filtering for certain types of node. It defaults to <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
+ <dd>Is an optional <code>unsigned long</code> representing a bitmask created by combining the constant properties of <code><a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>. It is a convenient way of filtering for certain types of node. It defaults to <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
  <table class="standard-table">
   <thead>
    <tr>
@@ -109,7 +109,7 @@ tags:
  <dd>An object implementing the {{ domxref("NodeFilter") }} interface. Its <code>acceptNode()</code> method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes (a simple callback function may also be used instead). The method should return one of <code>NodeFilter.FILTER_ACCEPT</code>, <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code>. See the {{ anch("Example") }}.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js notranslate">const nodeIterator = document.createNodeIterator(
     document.body,
@@ -128,7 +128,7 @@ while (currentNode = nodeIterator.nextNode()) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -148,7 +148,5 @@ while (currentNode = nodeIterator.nextNode()) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Document.createNodeIterator")}}</p>

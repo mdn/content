@@ -113,7 +113,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
 
-<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and and the <code>bold</code> keyword.</p>
+<p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
 
 <h3 id="CSSUnitValue_and_CSSKeywordValue">CSSUnitValue and CSSKeywordValue</h3>
 
@@ -259,7 +259,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <h2 id="CSSStyleValue">CSSStyleValue</h2>
 
-<p>The <code>CSSStyleValue</code> interface of the the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
+<p>The <code>CSSStyleValue</code> interface of the the <a href="/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API, including {{domxref('CSSImageValue')}}, {{domxref('CSSKeywordValue')}}, {{domxref('CSSNumericValue')}}, {{domxref('CSSPositionValue')}}, {{domxref('CSSTransformValue')}}, and {{domxref('CSSUnparsedValue')}}.</p>
 
 <p>It has two methods:</p>
 
@@ -421,7 +421,7 @@ console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/1
 
 <p>This should get you started with understanding the CSS Typed OM. Take a look at all the <a href="/en-US/docs/Web/Houdini/learn/CSS_Typed_OM">CSS Typed OM</a> interfaces to learn more.</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/CSS_Painting_API/Guide">Using the CSS Painting API</a></li>

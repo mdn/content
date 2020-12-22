@@ -45,7 +45,7 @@ tags:
 
 <dl>
  <dt>{{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}</dt>
- <dd>Creates a new instance of an <code>OscillatorNode</code> object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  If the default values are acceptable, you can simply call the {{domxref("BaseAudioContext.createOscillator()")}} factory method.</dd>
+ <dd>Creates a new instance of an <code>OscillatorNode</code> object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  If the default values are acceptable, you can call the {{domxref("BaseAudioContext.createOscillator()")}} factory method.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -89,7 +89,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our <a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
+<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
 
 <pre class="brush: js">// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -122,7 +122,6 @@ oscillator.start();</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.OscillatorNode")}}</p>
 </div>

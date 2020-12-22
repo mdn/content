@@ -9,13 +9,13 @@
   "scripts": {
     "start": "env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true node node_modules/@mdn/yari/server",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/filecheck/cli.js --cwd=$(pwd)",
-    "redirects": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/redirects/cli.js"
+    "content": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/tool/cli.js"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.92",
+    "@mdn/yari": "0.1.419",
     "env-cmd": "10.1.0"
   },
   "devDependencies": {
-    "cross-env": "7.0.2"
+    "cross-env": "7.0.3"
   }
 }

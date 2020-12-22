@@ -35,16 +35,13 @@ tags:
  <dd>Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.</dd>
 </dl>
 
-<dl>
-</dl>
-
 <h2 id="Methods">Methods</h2>
 
 <p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
 
 <h2 id="Example">Example</h2>
 
-<p>In our <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">run shared worker</a>), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.</p>
+<p>In our <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.</p>
 
 <p>The following code snippet shows creation of a <code>SharedWorker</code> object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:</p>
 
@@ -103,8 +100,6 @@ myWorker.port.onmessage = function(e) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.SharedWorker")}}</p>
 

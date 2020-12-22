@@ -15,6 +15,8 @@ tags:
 
 <p><span class="seoSummary">The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.</span></p>
 
+<p>{{AvailableInWorkers}}</p>
+
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
 <p>The Console API started as a largely proprietary API, with different browsers implementing it, albeit it in inconsistent ways. <a href="https://console.spec.whatwg.org/">The Console API spec</a> was created to define consistent behavior, and all modern browsers eventually settled on implementing this behavior — although some implementations still have their own additional proprietary functions. Find out about these at:</p>
@@ -37,7 +39,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">let myString = 'Hello world';
+<pre class="brush: js notranslate">let myString = 'Hello world';
 
 // Output "Hello world" to the console
 console.log(myString)</pre>
@@ -63,14 +65,12 @@ console.log(myString)</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.Console")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Tools" title="Tools">Tools</a></li>
+ <li><a href="/en-US/docs/Tools">Tools</a></li>
  <li><a href="/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> — how the Web Console in Firefox handles console API calls</li>
  <li><a href="/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> — how to see console output when the debugging target is a mobile device</li>
 </ul>

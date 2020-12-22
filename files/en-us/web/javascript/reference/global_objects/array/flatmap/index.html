@@ -14,8 +14,6 @@ tags:
 
 <p>The <code><strong>flatMap()</strong></code> method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1, but slightly more efficient than calling those two methods separately.</p>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
@@ -28,7 +26,6 @@ tags:
  <dt><code>callback</code></dt>
  <dd>Function that produces an element of the new Array, taking three arguments:
  <dl>
-  <dt></dt>
   <dt><code>currentValue</code></dt>
   <dd>The current element being processed in the array.</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
@@ -100,7 +97,7 @@ arr1.flatMap(x =&gt; x.split(" "));
 
 <h3 id="For_adding_and_removing_items_during_a_map">For adding and removing items during a <code>map()</code></h3>
 
-<p><code>flatMap</code> can be used as a way to add and remove items (modify the number of items) during a <code>map</code>. In other words, it allows you to map <em>many items to many items</em> (by handling each input item separately), rather than always <em>one-to-one</em>. In this sense, it works like the opposite of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>. Simply return a 1-element array to keep the item, a multiple-element array to add items, or a 0-element array to remove the item.</p>
+<p><code>flatMap</code> can be used as a way to add and remove items (modify the number of items) during a <code>map</code>. In other words, it allows you to map <em>many items to many items</em> (by handling each input item separately), rather than always <em>one-to-one</em>. In this sense, it works like the opposite of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>. Return a 1-element array to keep the item, a multiple-element array to add items, or a 0-element array to remove the item.</p>
 
 <pre class="brush: js notranslate">// Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
@@ -133,7 +130,6 @@ a.flatMap( (n) =&gt;
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Array.flatMap")}}</p>
 </div>

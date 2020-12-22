@@ -53,7 +53,7 @@ btn.addEventListener('click', () =&gt; {
   Say hi!
 &lt;/button&gt;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: This may seem counter-intuitive regarding best-practice advice that tends to advise against use of inline event handlers on HTML, but remember that JSX is actually part of your JavaScript.</p>
 </div>
 
@@ -110,7 +110,7 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Clicking on the "Add" button in your browser will prove that the <code>addTask()</code> callback function works, but it'd be nice if we could get the alert to show us what we're typing in our input field! This is what we'll do next.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: We decided to name our callback prop <code>addTask</code> to make it easy to understand what the prop will do. Another common convention you may well come across in React code is to prefix callback prop names with the word <code>on</code>, followed by the name of the event that will cause them to be run. For instance, we could have given our form a prop of <code>onSubmit</code> with the value of <code>addTask</code>.</p>
 </div>
 
@@ -251,7 +251,7 @@ function Form(props) {
 
 export default Form;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: One thing you'll notice is that you are able to submit empty tasks by just pressing the Add button without entering a task name. Can you think of a way to disallow empty tasks from being added? As a hint, you probably need to add some kind of check into the <code>handleSubmit()</code> function.</p>
 </div>
 
@@ -306,7 +306,7 @@ export default Form;</pre>
 
 <pre class="brush: bash notranslate">npm install nanoid</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: If you're using yarn, you'll need the following instead: <code>yarn add nanoid</code></p>
 </div>
 

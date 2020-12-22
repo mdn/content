@@ -21,19 +21,19 @@ tags:
 <p>This property will round the value to an integer. If you need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
-<h2 id="Syntax_and_values" name="Syntax_and_values">Syntax</h2>
+<h2 id="Syntax_and_values">Syntax</h2>
 
 <pre class="syntaxbox">var <em>intElemOffsetHeight</em> = <em>element</em>.offsetHeight;</pre>
 
 <p><code><em>intElemOffsetHeight</em></code> is a variable storing an integer corresponding to the <code>offsetHeight</code> pixel value of the element. The <code>offsetHeight</code> property is read-only.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>             <img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
 
 <p>The example image above shows a scrollbar and an <code>offsetHeight</code> which fits on the window. However, non-scrollable elements may have large <code>offsetHeight</code> values, much larger than the visible content. These elements are typically contained within scrollable elements; consequently, these non-scrollable elements may be completely or partly invisible, depending on the <code>scrollTop</code> setting of the scrollable container.</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -52,22 +52,20 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <p><code>offsetHeight</code> is a property of the <abbr title="Dynamic HyperText Markup Language">DHTML</abbr> object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.HTMLElement.offsetHeight")}}</p>
 
-<h2 id="See_Also" name="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Element.clientHeight")}}</li>
  <li>{{domxref("Element.scrollHeight")}}</li>
  <li>{{domxref("HTMLElement.offsetWidth")}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements" title="en/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN Measuring Element Dimension and Location</a></li>
+ <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)">MSDN Measuring Element Dimension and Location</a></li>
 </ul>

@@ -30,7 +30,7 @@ tags:
  <li>A single frame of high definition (1920x1080) video in full color (4 bytes per pixel) is 8,294,400 bytes.</li>
  <li>At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (~249 MB).</li>
  <li>A minute of HD video would need 14.93 GB of storage.</li>
- <li>A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take <em>almost 1.79 <strong>TB</strong> (that is, 1790 GB)</em>.</li>
+ <li>A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take <em>almost 1.79 <strong>TB</strong> (that is, 1790 GB)</em>.</li>
 </ul>
 
 <p>Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.</p>
@@ -109,7 +109,7 @@ tags:
 
 <p>As is the case with any encoder, there are two basic groups of factors affecting the size and quality of the encoded video: specifics about the source video's format and contents, and the characteristics and configuration of the codec used while encoding the video.</p>
 
-<p>The simplest guideline is this: anything that makes the encoded video look more like the original, uncompressed, video will generally make the resulting data larger as well. Thus, it's always a tradeoff of size versus quality. In some situations, a greater sacrifice of quality in order to bring down the data size is worth that lost quality; other times, the loss of quality is unacceptable and it's necessary to accept a codec configuration that  results in a correspondingly larger file.</p>
+<p>The simplest guideline is this: anything that makes the encoded video look more like the original, uncompressed, video will generally make the resulting data larger as well. Thus, it's always a tradeoff of size versus quality. In some situations, a greater sacrifice of quality in order to bring down the data size is worth that lost quality; other times, the loss of quality is unacceptable and it's necessary to accept a codec configuration that results in a correspondingly larger file.</p>
 
 <h3 id="Effect_of_source_video_format_on_encoded_output">Effect of source video format on encoded output</h3>
 
@@ -241,7 +241,7 @@ tags:
 
 <p><strong>Color edging</strong> is a type of visual artifact that presents as spurious colors introduced along the edges of colored objects within the scene. These colors have no intentional color relationship to the contents of the frame.</p>
 
-<h3 id="Loss_of_sharpness"> Loss of sharpness</h3>
+<h3 id="Loss_of_sharpness">Loss of sharpness</h3>
 
 <p>The act of removing data in the process of encoding video requires that some details be lost. If enough compression is applied, parts or potentially all of the image could lose sharpness, resulting in a slightly fuzzy or hazy appearance.</p>
 
@@ -334,7 +334,7 @@ tags:
 
 <h3 id="AV1">AV1</h3>
 
-<p>The <strong>AOMedia Video 1</strong> (<strong>AV1</strong>) codec is an open format designed by the <a href="https://aomedia.org/">Alliance for Open Media</a> specifically for internet video. It achieves higher data compression rates than {{anch("VP9")}} and {{anch("HEVC", "H.265/HEVC")}}, and as much as 50% higher rates than <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a>. AV1 is fully royalty-free and is designed for use by both the {{HTMLElement("video")}} element and by <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>.</p>
+<p>The <strong>AOMedia Video 1</strong> (<strong>AV1</strong>) codec is an open format designed by the <a href="https://aomedia.org/">Alliance for Open Media</a> specifically for internet video. It achieves higher data compression rates than {{anch("VP9")}} and {{anch("HEVC", "H.265/HEVC")}}, and as much as 50% higher rates than <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a>. AV1 is fully royalty-free and is designed for use by both the {{HTMLElement("video")}} element and by <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>.</p>
 
 <p>AV1 currently offers three profiles: <strong>main</strong>, <strong>high</strong>, and <strong>professional</strong> with increasing support for color depths and chroma subsampling. In addition, a series of <strong>levels</strong> are specified, each defining limits on a range of attributes of the video. These attributes include frame dimensions, image area in pixels, display and decode rates, average and maximum bit rates, and limits on the number of tiles and tile columns used in the encoding/decoding process.</p>
 
@@ -451,7 +451,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="av1-foot-1" name="av1-foot-1">[1]</a> {{interwiki("wikipedia", "ISO Base Media File Format")}}</p>
+<p><a id="av1-foot-1">[1]</a> {{interwiki("wikipedia", "ISO Base Media File Format")}}</p>
 
 <p><a name="av1-foot-2">[2]</a> See the AV1 specification's <a href="https://aomediacodec.github.io/av1-spec/#levels">tables of levels</a>, which describe the maximum resolutions and rates at each level.</p>
 
@@ -607,7 +607,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="avc-foot-1" name="avc-foot-1">[1]</a> Firefox support for AVC is dependent upon the operating system's built-in or preinstalled codecs for AVC and its container in order to avoid patent concerns.</p>
+<p><a id="avc-foot-1">[1]</a> Firefox support for AVC is dependent upon the operating system's built-in or preinstalled codecs for AVC and its container in order to avoid patent concerns.</p>
 
 <h3 id="H.263">H.263</h3>
 
@@ -641,7 +641,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Supported color modes</th>
-   <td>YCbCr; each picture format (sub-QCIF, QCIF, CIF, 4CIF, or 16CIF)  defines the frame size in pixels as well as how many rows each of luminance and chrominance samples are used for each frame</td>
+   <td>YCbCr; each picture format (sub-QCIF, QCIF, CIF, 4CIF, or 16CIF) defines the frame size in pixels as well as how many rows each of luminance and chrominance samples are used for each frame</td>
   </tr>
   <tr>
    <th scope="row">HDR support</th>
@@ -701,11 +701,11 @@ tags:
  </tbody>
 </table>
 
-<p><a id="h263-foot-1" name="h263-foot-1">[1]</a> While Firefox does not generally support H.263, the OpenMax platform implementation (used for the Boot to Gecko project upon which Firefox OS was based) did support H.263 in 3GP files.</p>
+<p><a id="h263-foot-1">[1]</a> While Firefox does not generally support H.263, the OpenMax platform implementation (used for the Boot to Gecko project upon which Firefox OS was based) did support H.263 in 3GP files.</p>
 
-<p><a id="h263-foot-2" name="h263-foot-2">[2]</a> Version 1 of H.263 specifies a set of picture sizes which are supported. Later versions may support additional resolutions.</p>
+<p><a id="h263-foot-2">[2]</a> Version 1 of H.263 specifies a set of picture sizes which are supported. Later versions may support additional resolutions.</p>
 
-<h3 id="HEVC_H.265"><a id="HEVC" name="HEVC">HEVC</a> (H.265)</h3>
+<h3 id="HEVC_H.265"><a id="HEVC">HEVC</a> (H.265)</h3>
 
 <p>The <strong><a href="http://hevc.info/">High Efficiency Video Coding</a></strong> (<strong>HVEC</strong>) codec is defined by ITU's <strong>H.265</strong> as well as by MPEG-H Part 2 (the still in-development follow-up to MPEG-4). HEVC was designed to support efficient encoding and decoding of video in sizes including very high resolutions (including 8K video), with a structure specifically designed to let software take advantage of modern processors. Theoretically, HEVC can achieve compressed file sizes half that of {{anch("AVC")}} but with comparable image quality.</p>
 
@@ -713,7 +713,7 @@ tags:
 
 <p>An interesting feature of HEVC is that the main profile supports only 8 bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.</p>
 
-<p>HEVC is a proprietary format and is covered by a number of patents.  Licensing is <a href="https://www.mpegla.com/programs/hevc/">managed by MPEG LA</a>; fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!</p>
+<p>HEVC is a proprietary format and is covered by a number of patents. Licensing is <a href="https://www.mpegla.com/programs/hevc/">managed by MPEG LA</a>; fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or web site!</p>
 
 <table class="standard-table">
  <tbody>
@@ -855,9 +855,9 @@ tags:
  </tbody>
 </table>
 
-<p><a id="hevc-foot--1" name="hevc-foot--1">[1]</a> Internet Explorer and Edge only supports HEVC on devices with a hardware codec.</p>
+<p><a id="hevc-foot--1">[1]</a> Internet Explorer and Edge only supports HEVC on devices with a hardware codec.</p>
 
-<p><a id="hevc-foot-2" name="hevc-foot-2">[2]</a> Mozilla will not support HEVC while it is encumbered by patents.</p>
+<p><a id="hevc-foot-2">[2]</a> Mozilla will not support HEVC while it is encumbered by patents.</p>
 
 <h3 id="MP4V-ES">MP4V-ES</h3>
 
@@ -947,11 +947,11 @@ tags:
  </tbody>
 </table>
 
-<p><a id="mp4ves-foot-1" name="mp4ves-foot-1">[1]</a> Firefox supports MP4V-ES in <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a> containers only.</p>
+<p><a id="mp4ves-foot-1">[1]</a> Firefox supports MP4V-ES in <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a> containers only.</p>
 
 <p><a name="mp4ves-foot-2">[2]</a> Chrome does not support MP4V-ES; however, Chrome OS does.</p>
 
-<h3 id="MPEG-1_Part_2_Video"><a id="MPEG-1" name="MPEG-1">MPEG-1</a> Part 2 Video</h3>
+<h3 id="MPEG-1_Part_2_Video"><a id="MPEG-1">MPEG-1</a> Part 2 Video</h3>
 
 <p><strong>MPEG-1 Part 2 Video</strong> was unveiled at the beginning of the 1990s. Unlike the later MPEG video standards, MPEG-1 was created solely by MPEG, without the {{Glossary("ITU", "ITU's")}} involvement.</p>
 
@@ -1037,13 +1037,13 @@ tags:
  </tbody>
 </table>
 
-<h3 id="MPEG-2_Part_2_Video"><a id="MPEG-2" name="MPEG-2">MPEG-2</a> Part 2 Video</h3>
+<h3 id="MPEG-2_Part_2_Video"><a id="MPEG-2">MPEG-2</a> Part 2 Video</h3>
 
 <p><span class="seoSummary"><strong><a href="https://en.wikipedia.org/wiki/H.262/MPEG-2_Part_2">MPEG-2 Part 2</a></strong> is the video format defined by the MPEG-2 specification, and is also occasionally referred to by its {{Glossary("ITU")}} designation, H.262.</span> It is very similar to MPEG-1 video—in fact, any MPEG-2 player can automatically handle MPEG-1 without any special work—except it has been expanded to support higher bit rates and enhanced encoding techniques.</p>
 
 <p>The goal was to allow MPEG-2 to compress standard definition television, so interlaced video is also supported. The standard definition compression rate and the quality of the resulting video met needs well enough that MPEG-2 is the primary video codec used for DVD video media.</p>
 
-<p>MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers  support for larger frame dimensions and bit rates. For example, the {{interwiki("wikipedia", "ATSC standards", "ATSC")}} specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.</p>
+<p>MPEG-2 has several profiles available with different capabilities. Each profile is then available four levels, each of which increases attributes of the video, such as frame rate, resolution, bit rate, and so forth. Most profiles use Y'CbCr with 4:2:0 chroma subsampling, but more advanced profiles support 4:2:2 as well. In addition, there are four levels, each of which offers support for larger frame dimensions and bit rates. For example, the {{interwiki("wikipedia", "ATSC standards", "ATSC")}} specification for television used in North America supports MPEG-2 video in high definition using the Main Profile at High Level, allowing 4:2:0 video at both 1920 x 1080 (30 FPS) and 1280 x 720 (60 FPS), at a maximum bit rate of 80 Mbps.</p>
 
 <p>However, few web browsers support MPEG-2 without the support of a plugin, and with plugin use deprecated in web browsers, these are generally no longer available. This makes MPEG-2 a poor choice for use in web sites and web applications.</p>
 
@@ -1192,7 +1192,7 @@ tags:
 
 <h3 id="Theora">Theora</h3>
 
-<p><strong>{{interwiki("wikipedia", "Theora")}}</strong>, developed by <a href="https://xiph.org/">Xiph.org</a>, is an open and free video codec which may be used without royalties  or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.</p>
+<p><strong>{{interwiki("wikipedia", "Theora")}}</strong>, developed by <a href="https://xiph.org/">Xiph.org</a>, is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.</p>
 
 <p>Theora was originally based upon the VC3 codec by On2 Technologies. The codec and its specification were released under the LGPL license and entrusted to Xiph.org, which then developed it into the Theora standard.</p>
 
@@ -1280,7 +1280,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="theora-foot-1" name="theora-foot-1">[1]</a> While Theora doesn't support Variable Frame Rate (VFR) within a single stream, multiple streams can be chained together within a single file, and each of those can have its own frame rate, thus allowing what is essentially VFR. However, this is impractical if the frame rate needs to change frequently.</p>
+<p><a id="theora-foot-1">[1]</a> While Theora doesn't support Variable Frame Rate (VFR) within a single stream, multiple streams can be chained together within a single file, and each of those can have its own frame rate, thus allowing what is essentially VFR. However, this is impractical if the frame rate needs to change frequently.</p>
 
 <p><a name="theora-foot-2">[2]</a> Edge supports Theora with the optional <a href="https://www.microsoft.com/en-us/p/web-media-extensions/9n5tdp8vcmhs?activetab=pivot:overviewtab">Web Media Extensions</a> add-on.</p>
 
@@ -1383,9 +1383,9 @@ tags:
 
 <p><a name="vp8-foot-1">[1]</a> Edge support for VP8 requires the use of <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a>.</p>
 
-<p><a id="vp8-foot-2" name="vp8-foot-2">[2]</a> Safari only supports VP8 in WebRTC connections.</p>
+<p><a id="vp8-foot-2">[2]</a> Safari only supports VP8 in WebRTC connections.</p>
 
-<p><a id="vp8-foot-3" name="vp8-foot-3">[3]</a> Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
+<p><a id="vp8-foot-3">[3]</a> Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
 
 <h3 id="VP9">VP9</h3>
 
@@ -1520,7 +1520,7 @@ tags:
  </tbody>
 </table>
 
-<p><a id="vp9-foot-1" name="vp9-foot-1">[1]</a> Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
+<p><a id="vp9-foot-1">[1]</a> Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
 
 <h2 id="Choosing_a_video_codec">Choosing a video codec</h2>
 
@@ -1561,7 +1561,7 @@ tags:
  </li>
 </ol>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Keep in mind that the {{HTMLElement("video")}} element requires a closing <code>&lt;/video&gt;</code> tag, whether or not you have any {{HTMLElement("source")}} elements inside it.</p>
 </div>
 
@@ -1577,7 +1577,7 @@ tags:
 </pre>
  </li>
  <li>
-  <p>An MP4 container using the {{anch("HEVC")}} codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction.  In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.</p>
+  <p>An MP4 container using the {{anch("HEVC")}} codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.</p>
 
   <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source type="video/webm"
@@ -1687,6 +1687,6 @@ let recorder = new MediaRecorder(sourceStream, options);</pre>
  <li>{{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files</li>
  <li>{{RFC(4337)}}: MIME Type Registrations for MPEG-4</li>
  <li><a href="http://dev.opera.com/articles/view/introduction-html5-video/#codecs">Video codecs in Opera</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx">Video</a> and <a href="http://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx">audio</a> codecs in Internet Explorer</li>
+ <li><a href="http://msdn.microsoft.com/en-us/library/ff975073%28v=VS.85%29.aspx">Video</a> and <a href="http://msdn.microsoft.com/en-us/library/ff975061%28v=vs.85%29.aspx">audio</a> codecs in Internet Explorer</li>
  <li><a href="http://www.chromium.org/audio-video">Video and audio codecs in Chrome</a></li>
 </ul>

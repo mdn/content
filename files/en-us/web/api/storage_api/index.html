@@ -11,11 +11,9 @@ tags:
   - Storage API
   - Usage
 ---
-<p>{{securecontext_header}}{{DefaultAPISidebar("Storage")}}</p>
+<p>{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}</p>
 
 <p>The Storage Standard defines a common, shared storage system to be used by all APIs and technologies that store content-accessible data for individual Web sites. The Storage API gives sites' code the ability to find out how much space they can use, how much they are already using, and even control whether or not they need to be alerted before the {{Glossary("user agent")}} disposes of site data in order to make room for other things.</p>
-
-<p>{{AvailableInWorkers}}</p>
 
 <p>Site storage—the data stored for a Web site which is managed by the Storage Standard—includes:</p>
 
@@ -25,7 +23,7 @@ tags:
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker registrations</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API data</a> managed using {{domxref("window.localStorage")}}</li>
  <li>History state information saved using {{domxref("History.pushState()")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Application caches</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Application caches</a> (highly deprecated!)</li>
  <li><a href="/en-US/docs/Web/API/Notifications_API">Notification data</a></li>
  <li>Other kinds of site-accessible, site-specific data that may be maintained</li>
 </ul>
@@ -83,7 +81,7 @@ tags:
 
 <p>To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:</p>
 
-<pre class="brush: js">navigator.storage.estimate().then(estimate =&gt; {
+<pre class="brush: js notranslate">navigator.storage.estimate().then(estimate =&gt; {
   // estimate.quota is the estimated quota
   // estimate.usage is the estimated number of bytes used
 });</pre>
@@ -111,7 +109,6 @@ tags:
 <h3 id="StorageManager"><code>StorageManager</code></h3>
 
 <div>
-
 
 <p>{{Compat("api.StorageManager")}}</p>
 </div>

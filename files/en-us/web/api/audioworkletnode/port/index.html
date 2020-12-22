@@ -13,7 +13,7 @@ tags:
 
 <p class="summary">The read-only <strong><code>port</code></strong> property of the {{domxref("AudioWorkletNode")}} interface returns the associated {{domxref("MessagePort")}}. It can be used to communicate between the node and its associated {{domxref("AudioWorkletProcessor")}}.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p class="summary"><strong>Note</strong>: The port at the other end of the channel is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.</p>
 </div>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>To demonstrate bidirectional communication capabilities, we'll create an <code>AudioWorkletProcessor</code>, which will output silence and respond to ping requests from its <code>AudioWorkletNode</code>.</p>
 
-<p>First, we need to define a custom <code>AudioWorkletProcessor</code>, and register it. Note that that this should be done in a separate file.</p>
+<p>First, we need to define a custom <code>AudioWorkletProcessor</code>, and register it. Note that this should be done in a separate file.</p>
 
 <pre class="brush: js notranslate">// ping-pong-processor.js
 class PingPongProcessor extends AudioWorkletProcessor {
@@ -82,7 +82,6 @@ pingPongNode.connect(audioContext.destination)
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.AudioWorkletNode.port")}}</p>
 </div>

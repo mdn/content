@@ -13,15 +13,15 @@ tags:
 
 <p class="summary"><span class="seoSummary">This page lists features that are in Nightly versions of Firefox along with information on how to activate them, if necessary.</span> You can test your Web sites and applications before these features get released and ensure everything will still work with the latest Web technology capabilities.</p>
 
-<p>To test these experimental features, you need to download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a>. Which you need is described alongside each feature's description below.</p>
+<p>To test these experimental features, you need to download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a> and set the appropriate preference in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a>. The preference that you need to set is described alongside each feature's description below.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Editor's note:</strong> When adding features to these tables, please try to include a link to the relevant bug or bugs using the {{TemplateLink("bug")}} macro: <code>\{{bug(<em>bug-number</em>)}}</code>.</p>
 </div>
 
 <h2 id="HTML">HTML</h2>
 
-<h3 id="Element_&lt;dialog>">Element: &lt;dialog&gt;</h3>
+<h3 id="Element_&lt;dialog&gt;">Element: &lt;dialog&gt;</h3>
 
 <p>The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes. The current implementation is a little inelegant but is basically functional. See {{bug(840640)}} for more details.</p>
 
@@ -101,7 +101,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="&lt;link_relpreload>">&lt;link rel="preload"&gt;</h3>
+<h3 id="&lt;link_relpreload&gt;">&lt;link rel="preload"&gt;</h3>
 
 <p>The {{HTMLElement("link")}} element's {{htmlattrxref("rel", "link")}} attribute is intended to help provide performance gains by letting you download resources earlier in the page lifecycle, ensuring that they're available earlier and are less likely to block page rendering. Read <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details. For more details on the status of this feature, see {{bug(1639607)}}.</p>
 
@@ -122,7 +122,7 @@ tags:
   <tr>
    <th scope="row">Developer Edition</th>
    <td>78</td>
-   <td>Yes</td>
+   <td>No</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
@@ -180,8 +180,6 @@ tags:
   </tr>
  </tbody>
 </table>
-
-
 
 <h3 id="Layout_for_input_typesearch">Layout for input type="search"</h3>
 
@@ -309,9 +307,11 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Conic_gradients">Conic gradients</h3>
+<h3 id="Property_aspect-ratio">Property: aspect-ratio</h3>
 
-<p><a href="/en-US/docs/Web/CSS/gradient#Conic_gradient">Conic gradients</a> expand CSS gradients to allow the color transitions to be rendered circling around a center point rather than radiating from it. See {{bug(1175958)}} for more details.</p>
+<p>The {{cssxref("aspect-ratio")}} CSS property is part of the {{SpecName("CSS4 Sizing")}} specification and allows you to create boxes which conform to an aspect ratio.<br>
+ <br>
+ See {{bug(1639963)}} and {{bug(1646096)}} for more details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -324,32 +324,32 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Nightly</th>
-   <td>75</td>
-   <td>No</td>
+   <td>81</td>
+   <td>Yes</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Release</th>
-   <td>75</td>
+   <td>81</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.conic-gradient.enabled</code> and <code>gfx.webrender.all</code></th>
+   <th colspan="2"><code>layout.css.aspect-ratio.enabled</code></th>
   </tr>
  </tbody>
 </table>
 
-<h3 id="Pseudo-class_focus-visible">Pseudo-class: :focus-visible</h3>
+<h3 id="Pseudo-class_focus-visible"><span>Pseudo-class: :focus-visible</span></h3>
 
 <p>Allows focus styles to be applied to elements like buttons and form controls, only when they are focused using the keyboard (e.g. when tabbing between elements), and not when they are focused using a mouse or other pointing device. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617600">bug 1617600</a> for more details.</p>
 
@@ -471,7 +471,7 @@ tags:
 
 <h3 id="Grid_Masonry_layout">Grid: Masonry layout</h3>
 
-<p>Adds support for a masonry style layout based on grid layout where one axis has a masonry layout while having normal grid layout on the other. This allows to create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.</p>
+<p>Adds support for a <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry-style layout</a> based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -485,7 +485,7 @@ tags:
   <tr>
    <th scope="row">Nightly</th>
    <td>77</td>
-   <td>No</td>
+   <td>Yes</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
@@ -544,7 +544,92 @@ tags:
   </tr>
   <tr>
    <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.prefers-contrast.enabled</code></th>
+   <th colspan="2">
+    <p><code>layout.css.prefers-contrast.enabled</code></p>
+   </th>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Property_math-style">Property: math-style </h3>
+
+<p>The {{cssxref("math-style")}} property  indicates whether MathML equations should render with normal or compact height. See {{bug(1665975)}} for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>layout.css.math-style.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="JavaScript">JavaScript</h2>
+
+<h3 id="Private_class_fields">Private class fields</h3>
+
+<p>See <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private class fields</a> for more details.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference names</th>
+   <th colspan="2"><code>javascript.options.experimental.private_fields<br>
+    javascript.options.experimental.private_methods</code></th>
   </tr>
  </tbody>
 </table>
@@ -719,6 +804,46 @@ tags:
  </tbody>
 </table>
 
+<h4 id="InputEvent.getTargetRanges">InputEvent.getTargetRanges()</h4>
+
+<p>The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>83</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.input_events.beforeinput.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
 <h4 id="HTMLMediaElement_method_setSinkId">HTMLMediaElement method: setSinkId()</h4>
 
 <p>{{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See {{bug(934425)}} for more details.</p>
@@ -800,6 +925,46 @@ tags:
 </table>
 
 <h3 id="DOM">DOM</h3>
+
+<h4 id="HTML_Sanitizer_API">HTML Sanitizer API</h4>
+
+<p>The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>84</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>84</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>84</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>84</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code><strong>dom.security.sanitizer.enabled</strong></code></th>
+  </tr>
+ </tbody>
+</table>
 
 <h4 id="Document_property_autoplayPolicy">Document property: autoplayPolicy</h4>
 
@@ -1087,47 +1252,7 @@ tags:
 
 <h3 id="WebRTC_and_media">WebRTC and media</h3>
 
-<p>The following experimental features include those found in the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a>, the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a>, the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, and the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
-
-<h4 id="Media_Session_API">Media Session API</h4>
-
-<p>The entire Firefox implementation of the Media Session API is currently experimental. This API is used to customize the handling of media-related notifications, to manage events and data useful for presenting a user interface for managing media playback, and to obtain media file metadata. See {{bug(1112032)}} for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>dom.media.mediasession.enabled</code></th>
-  </tr>
- </tbody>
-</table>
+<p>The following experimental features include those found in the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>, the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a>, the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a>, and the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
 
 <h4 id="Asynchronous_SourceBuffer_add_and_remove">Asynchronous SourceBuffer add and remove</h4>
 
@@ -1171,7 +1296,7 @@ tags:
 
 <h4 id="AVIF_AV1_Image_File_format_support">AVIF (AV1 Image File format) support</h4>
 
-<p>With this feature enabled, Firefox supports the AV1 Image File (AVIF) format. This is a still image file format that leverages the capabilities of the AV1 video compression algorithms to reduce image size. See {{bug(1443863)}} for more details.</p>
+<p>With this feature enabled, Firefox supports the <a href="/en-US/docs/Web/Media/Formats/Image_types#AVIF">AV1 Image File (AVIF)</a> format. This is a still image file format that leverages the capabilities of the AV1 video compression algorithms to reduce image size. See {{bug(1443863)}} for more details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -1211,7 +1336,7 @@ tags:
 
 <h4 id="AV1_support_for_Firefox_on_Android">AV1 support for Firefox on Android</h4>
 
-<p>This feature allows Firefox on Android to use <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#AV1">AV1 format media</a>. This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.</p>
+<p>This feature allows Firefox on Android to use <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AV1">AV1 format media</a>. This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>
@@ -1348,8 +1473,8 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Nightly</th>
-   <td>60</td>
-   <td>No</td>
+   <td>84</td>
+   <td>Yes</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
@@ -1541,47 +1666,7 @@ tags:
 
 <p>[1] Support for zooming using the double-tap gesture was added in Firefox 76. The other gestures were added for Firefox 79.</p>
 
-<h4 id="Compatibility_panel">Compatibility panel</h4>
-
-<p>A side panel for the Page Inspector that shows you information detailing your app's cross-browser compatibility status. See {{bug(1584464)}} for more details.</p>
-
-<table class="standard-table" style="max-width: 42rem;">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>71</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>71</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>devtools.inspector.compatibility.enabled</code></th>
-  </tr>
- </tbody>
-</table>
-
-<h4 id="Server-sent_events_in_Network_Monitor">Server-sent events in Network Monitor</h4>
+<h4 id="Server-sent_events_in_Network_Monitor"><span>Server-sent events in Network Monitor</span></h4>
 
 <p>The Network Monitor displays information for <a href="/en-US/docs/Web/API/Server-sent_events">server-sent</a> events. See {{bug(1405706)}}.</p>
 
@@ -1621,11 +1706,51 @@ tags:
  </tbody>
 </table>
 
+<h4 id="CSS_browser_compatibility_tooltips">CSS browser compatibility tooltips</h4>
+
+<p>The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Browser_compat_warnings">Examine and edit HTML &gt; Browser Compat Warnings</a>.</p>
+
+<table class="standard-table" style="max-width: 42rem;">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>81</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
 <h2 id="UI">UI</h2>
 
 <h4 id="Desktop_zooming">Desktop zooming</h4>
 
-<p>This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. See {{bug(1245183)}} for further details.</p>
+<p>This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. See {{bug(1245183)}} and {{bug(1620055)}} for further details.</p>
 
 <table class="standard-table" style="max-width: 42rem;">
  <thead>

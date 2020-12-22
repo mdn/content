@@ -68,7 +68,7 @@ let random = ['tree', 795, [0, 1, 2]];</pre>
   <pre class="brush: js">shopping[0];
 // returns "bread"</pre>
  </li>
- <li>You can also modify an item in an array by simply giving a single array item a new value. Try this:
+ <li>You can also modify an item in an array by giving a single array item a new value. Try this:
   <pre class="brush: js">shopping[0] = 'tahini';
 shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
@@ -297,7 +297,6 @@ textarea.onkeydown = function(e){
     insertAtCaret('\t');
   }
 
-
   if (e.keyCode === 27) {
     textarea.blur();
   }
@@ -388,7 +387,6 @@ body {
 &lt;h2&gt;Editable code&lt;/h2&gt;
 
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
 
 &lt;textarea id="code" class="playable-code" style="height: 370px; width: 95%"&gt;
 const list = document.querySelector('.output ul');

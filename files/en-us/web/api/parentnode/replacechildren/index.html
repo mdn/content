@@ -10,7 +10,7 @@ tags:
   - Reference
   - replaceChildren
 ---
-<div>{{APIRef("DOM")}}{{seecompattable}}</div>
+<div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>ParentNode.replaceChildren()</code></strong> method replaces the existing children of a {{domxref("Node")}} with a specified new set of children. These can be {{domxref("DOMString")}} or {{domxref("Node")}} objects.</p>
 
@@ -37,7 +37,7 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 
 <h3 id="Emptying_a_node">Emptying a node</h3>
 
-<p><code>replaceChildren()</code> provides a very convenient mechanism for emptying a node of all its children. You simply call it on the parent node without any argument specified:</p>
+<p><code>replaceChildren()</code> provides a very convenient mechanism for emptying a node of all its children. You call it on the parent node without any argument specified:</p>
 
 <pre class="brush: js notranslate">myNode.replaceChildren();</pre>
 
@@ -135,7 +135,7 @@ noBtn.addEventListener('click', () =&gt; {
 
 <p>{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}</p>
 
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -153,8 +153,6 @@ noBtn.addEventListener('click', () =&gt; {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.ParentNode.replaceChildren")}}</p>
 

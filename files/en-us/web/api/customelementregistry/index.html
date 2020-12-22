@@ -57,7 +57,6 @@ class WordCount extends HTMLParagraphElement {
     // Append it to the shadow root
     shadow.appendChild(text);
 
-
     // Update count when element content changes
     setInterval(function() {
       var count = 'Words: ' + countWords(wcParent);
@@ -92,7 +91,5 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.CustomElementRegistry")}}</p>

@@ -23,9 +23,9 @@ tags:
  <li>Can not use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>, within its body.</li>
 </ul>
 
-<p>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</p>
+<div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
 
-<h3 id="Comparing_traditional_functions_to_arrow_functions"><strong>Comparing traditional functions to arrow functions</strong></h3>
+<h3 id="Comparing_traditional_functions_to_arrow_functions">Comparing traditional functions to arrow functions</h3>
 
 <p>Let's decompose a "traditional function" down to the simplest "arrow function" step-by-step:<br>
  NOTE: Each step along the way is a valid "arrow function"</p>
@@ -48,7 +48,7 @@ function (a){
 // 3. Remove the argument parentheses
 a =&gt; a + 100;</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>As shown above, the { brackets } and ( parentheses ) and "return" are optional, but may be required.</p>
 </div>
 
@@ -74,7 +74,7 @@ let a = 4;
 let b = 2;
 () =&gt; a + b + 100;</pre>
 
-<p>Likewise, if the body requires<strong> additional lines</strong> of processing, you'll need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not magically guess what or when you want to "return"):</p>
+<p>Likewise, if the body requires <strong>additional lines</strong> of processing, you'll need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not magically guess what or when you want to "return"):</p>
 
 <pre class="brush: js notranslate">// Traditional Function
 function (a, b){
@@ -100,10 +100,6 @@ function bob (a){
 let bob = a =&gt; a + 100;</pre>
 </div>
 
-<div></div>
-
-<div></div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <h3 id="Basic_syntax">Basic syntax</h3>
@@ -120,14 +116,14 @@ let bob = a =&gt; a + 100;</pre>
 
 <pre class="brush: js notranslate">param =&gt; {
   let a = 1;
-  return a + param1;
+  return a + param;
 }</pre>
 
 <p class="syntaxbox notranslate">Multiple params require parentheses. Multiline statements require body brackets and return:</p>
 
 <pre class="brush: js notranslate">(param1, paramN) =&gt; {
    let a = 1;
-   return a + param1;
+   return a + param1 + paramN;
 }</pre>
 
 <h3 id="Advanced_syntax">Advanced syntax</h3>
@@ -156,10 +152,10 @@ let bob = a =&gt; a + 100;</pre>
 
 <h3 id="this_and_Arrow_Functions">"this" and Arrow Functions</h3>
 
-<p class="brush: js notranslate">One reason arrow functions were introduced was to alleviate scope ( <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> ) complexities and make executing functions much more intuitive.</p>
+<p class="brush: js notranslate">One reason arrow functions were introduced was to alleviate scope ( <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> ) complexities and make executing functions much more intuitive.</p>
 
-<div class="blockIndicator note">
-<p class="brush: js notranslate">If <code>this</code> is a mystery, please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this document</a> for more information on how <code>this</code> works. To summarize, <code>this</code> refers to the instance. Instances are created when the <code>new</code> keyword is invoked. Otherwise, <code>this</code> will default to the window <a href="/en-US/docs/Glossary/Scope">scope</a>.</p>
+<div class="notecard note">
+<p class="brush: js notranslate">If <code>this</code> is a mystery, please refer to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this document</a> for more information on how <code>this</code> works. To summarize, <code>this</code> refers to the instance. Instances are created when the <code>new</code> keyword is invoked. Otherwise, <code>this</code> will default to the window <a href="/en-US/docs/Glossary/Scope">scope</a>.</p>
 </div>
 
 <p class="brush: js notranslate"><strong>Traditional functions</strong> default <code>this</code> to the window scope:</p>
@@ -179,7 +175,7 @@ var p = new Person();
 
 </pre>
 
-<p><strong>Arrow functions</strong> do<strong> not </strong>default <code>this</code> to the window <a href="/en-US/docs/Glossary/Scope">scope</a>, rather they execute in the <a href="/en-US/docs/Glossary/Scope">scope</a> they are created:</p>
+<p><strong>Arrow functions</strong> do <strong>not</strong> default <code>this</code> to the window <a href="/en-US/docs/Glossary/Scope">scope</a>, rather they execute in the <a href="/en-US/docs/Glossary/Scope">scope</a> they are created:</p>
 
 <pre class="brush: js notranslate">window.age = 10; // &lt;-- notice me?
 function Person() {
@@ -208,7 +204,7 @@ f() === window; // or the global object</pre>
 
 <p>All other <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> rules apply normally.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>NOTE: Please fact-check notes on <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
 </div>
 
@@ -309,7 +305,7 @@ const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
 </pre>
 
-<p>Perhaps the greatest benefit of using Arrow functions is with DOM-level methods (setTimeout, setInterval, addEventListener) that usually required some kind of closure, call, appy or bind to ensure the function executed in the proper scope.</p>
+<p>Perhaps the greatest benefit of using Arrow functions is with DOM-level methods (setTimeout, setInterval, addEventListener) that usually required some kind of closure, call, apply or bind to ensure the function executed in the proper scope.</p>
 
 <p><strong>Traditional Example:</strong></p>
 
@@ -341,7 +337,7 @@ obj.doSomethingLater();</pre>
 
 <h3 id="No_binding_of_arguments">No binding of <code>arguments</code></h3>
 
-<p>Arrow functions do not have their own <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> object</a>. Thus, in this example, <code>arguments</code> is simply a reference to the arguments of the enclosing scope:</p>
+<p>Arrow functions do not have their own <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> object</a>. Thus, in this example, <code>arguments</code> is a reference to the arguments of the enclosing scope:</p>
 
 <pre class="brush: js notranslate">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
@@ -518,7 +514,6 @@ setTimeout( () =&gt; {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.functions.arrow_functions")}}</p>
 </div>

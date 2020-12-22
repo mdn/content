@@ -19,10 +19,10 @@ tags:
 <p><span class="seoSummary">The <code>FileSystemEntrySync</code> interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("DirectoryEntry")}}.</span> It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about the file it points to—including the file name and its path from the root to the entry.</p>
 
 <div class="warning">
-<p><strong>Warning</strong><strong>:</strong> This API was never accepted and never became standardized. Various browsers implement pieces of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (otherwise known as the File System API) but you should try to avoid using it.</p>
+<p><strong>Warning:</strong> This API was never accepted and never became standardized. Various browsers implement pieces of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (otherwise known as the File System API) but you should try to avoid using it.</p>
 </div>
 
-<h2 id="basic" name="basic">Basic concepts</h2>
+<h2 id="basic">Basic concepts</h2>
 
 <p>The <code>FileSystemEntrySync</code> interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: <code><a href="#toURL">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
 
@@ -33,22 +33,22 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>Metadata <a href="#getMetada" title="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>Metadata <a href="#getMetada">getMetadata</a> () raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#moveTo" title="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#moveTo">moveTo</a> (in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>FileSystemEntrySync <a href="#copyTo" title="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>FileSystemEntrySync <a href="#copyTo">copyTo</a>(in <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a> <em>parent</em>, optional DOMString <em>newName</em>) raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DOMString <a href="#toURL" title="#toURL">toURL</a>();</code></td>
+   <td><code>DOMString <a href="#toURL">toURL</a>();</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#remove" title="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
+   <td><code>void <a href="#remove">remove</a>() raises (<a href="/en/DOM/File_API/File_System_API/FileException">FileException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>DirectoryEntrySync <a href="#getParent" title="#getParent">getParent</a>();</code></td>
+   <td><code>DirectoryEntrySync <a href="#getParent">getParent</a>();</code></td>
   </tr>
  </tbody>
 </table>
@@ -84,12 +84,12 @@ tags:
    <td>True if FileSystemEntrySync is a directory.</td>
   </tr>
   <tr>
-   <td><a id="attr_isfile" name="attr_isfile"><code>isFile</code></a></td>
+   <td><a id="attr_isfile"><code>isFile</code></a></td>
    <td><code>readonly boolean</code></td>
    <td>True if the FileSystemEntrySync is a file.</td>
   </tr>
   <tr>
-   <td><a id="attr_name" name="attr_name"><code>name</code></a></td>
+   <td><a id="attr_name"><code>name</code></a></td>
    <td><code>readonly DOMString</code></td>
    <td>The name of the entry, excluding the path leading to it.</td>
   </tr>
@@ -98,7 +98,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<h3 id="getMetadata" name="getMetadata">getMetadata()</h3>
+<h3 id="getMetadata">getMetadata()</h3>
 
 <p>Look up metadata about this entry. [ todo: specify what kind of metadata ]</p>
 
@@ -119,7 +119,7 @@ tags:
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -140,7 +140,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="moveTo" name="moveTo">moveTo()</h3>
+<h3 id="moveTo">moveTo()</h3>
 
 <p>Move an entry to a different location on the file system. Moving a file over an existing file replaces that existing file. Moving a directory over an existing empty directory replaces that directory. [todo: What if the directory is not empty? ]</p>
 
@@ -177,7 +177,7 @@ tags:
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -213,9 +213,9 @@ tags:
  </tbody>
 </table>
 
-<h3 id="copyTo" name="copyTo">copyTo()</h3>
+<h3 id="copyTo">copyTo()</h3>
 
-<p>Copy an entry to a different location on the file system. You cannot copy an entry inside itself if it is a directory, nor can you copy it into its parent without providing a new name. Directory copies are always recursive—that is, all contents of the directory are copied. You cannot change this behavior. Files are simply duplicated.</p>
+<p>Copy an entry to a different location on the file system. You cannot copy an entry inside itself if it is a directory, nor can you copy it into its parent without providing a new name. Directory copies are always recursive—that is, all contents of the directory are copied. You cannot change this behavior. Files are duplicated.</p>
 
 <pre>void copyTo (
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
@@ -239,7 +239,7 @@ tags:
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -279,9 +279,9 @@ tags:
  </tbody>
 </table>
 
-<h3 id="toURL" name="toURL">toURL()</h3>
+<h3 id="toURL">toURL()</h3>
 
-<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a class="external" href="/en/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a class="external" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a>.</code></p>
+<p>Returns a URL that can be used to identify this entry. It exposes a new URL scheme—<code>filesystem:</code>—that you can use to fill <code>src</code> or <code>href </code>attributes. For example, if you wanted to display an image and have its <a class="external" href="/en/DOM/File_API/File_System_API/FileEntry">fileEntry</a>, calling <code>toURL()</code> gives you the image file's file system URL. You get something like: <code>filesystem:<a class="external" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a>.</code></p>
 
 <p>The file system URL does not expire. Because the method describes a location on disk, the URL is valid for as long as that location exists. You can delete the file and recreate it, and it's all good. </p>
 
@@ -305,9 +305,9 @@ tags:
 
 <p>None</p>
 
-<h3 id="remove" name="remove">remove()</h3>
+<h3 id="remove">remove()</h3>
 
-<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
+<p>Deletes a file or directory. You cannot delete an empty directory or the root directory of a file system. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" rel="internal"><code>removeRecursively()</code></a> instead.</p>
 
 <pre>void remove (
 ) raises (<a href="https://developer.mozilla.org/en/DOM/File_API/File_System_API/FileException">FileException</a>);</pre>
@@ -324,7 +324,7 @@ tags:
 
 <h5 id="Exceptions_5">Exceptions</h5>
 
-<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -341,7 +341,7 @@ tags:
   <tr>
    <td><code>INVALID_MODIFICATION_ERR</code></td>
    <td>
-    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
+    <p>You tried to remove a directory that is not empty. If you want to remove an empty directory, use <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync#removeRecursively()"><code>removeRecursively()</code></a> instead.</p>
    </td>
   </tr>
   <tr>
@@ -351,9 +351,9 @@ tags:
  </tbody>
 </table>
 
-<h3 id="getParent" name="getParent">getParent()</h3>
+<h3 id="getParent">getParent()</h3>
 
-<p>Look up the parent <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
+<p>Look up the parent <a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> containing the entry. If this entry is the root of its file system, then the parent is itself.</p>
 
 <pre>void getParent ();</pre>
 
@@ -364,7 +364,7 @@ tags:
 <h5 id="Returns_6">Returns</h5>
 
 <dl>
- <dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync" title="en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
+ <dt><code><a href="/en/DOM/File_API/File_System_API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
  <dd>An object that represents a directory in the file system.</dd>
 </dl>
 
@@ -374,14 +374,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.FileSystemEntrySync")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

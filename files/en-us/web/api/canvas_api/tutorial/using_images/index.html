@@ -54,7 +54,7 @@ tags:
 
 <h3 id="Using_images_from_other_domains">Using images from other domains</h3>
 
-<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal">taint the canvas</a>.</p>
+<p>Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to <code>drawImage()</code>. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will <a href="/en-US/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal">taint the canvas</a>.</p>
 
 <h3 id="Using_other_canvas_elements">Using other canvas elements</h3>
 
@@ -85,13 +85,13 @@ img.src = 'myImage.png'; // Set source path
 
 <h3 id="Embedding_an_image_via_data_URL">Embedding an image via data: URL</h3>
 
-<p>Another possible way to include images is via the <a class="external" href="/en-US/docs/Web/HTTP/data_URIs" rel="external" title="http://en.wikipedia.org/wiki/Data:_URL">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
+<p>Another possible way to include images is via the <a class="external" href="/en-US/docs/Web/HTTP/data_URIs" rel="external">data: url</a>. Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.</p>
 
 <pre class="brush: js">var img = new Image();   // Create new img element
 img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
 </pre>
 
-<p>One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your <a href="/en-US/docs/Web/CSS" title="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/JavaScript" title="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML</a>, and images, making it more portable to other locations.</p>
+<p>One advantage of data URLs is that the resulting image is available immediately without another round trip to the server. Another potential advantage is that it is also possible to encapsulate in one file all of your <a href="/en-US/docs/Web/CSS">CSS</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/HTML">HTML</a>, and images, making it more portable to other locations.</p>
 
 <p>Some disadvantages of this method are that your image is not cached, and for larger images the encoded url can become quite long.</p>
 
@@ -167,7 +167,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 <h3 id="Example_Tiling_an_image">Example: Tiling an image</h3>
 
-<p>In this example, we'll use an image as a wallpaper and repeat it several times on the canvas. This is done simply by looping and placing the scaled images at different positions. In the code below, the first <code>for</code> loop iterates over the rows. The second <code>for</code> loop iterates over the columns. The image is scaled to one third of its original size, which is 50x38 pixels.</p>
+<p>In this example, we'll use an image as a wallpaper and repeat it several times on the canvas. This is done by looping and placing the scaled images at different positions. In the code below, the first <code>for</code> loop iterates over the rows. The second <code>for</code> loop iterates over the columns. The image is scaled to one third of its original size, which is 50x38 pixels.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.</p>
@@ -243,7 +243,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 <p>{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}</p>
 
-<p>The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then simply use <code>drawImage()</code> to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second <code>drawImage()</code> call.</p>
+<p>The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then use <code>drawImage()</code> to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second <code>drawImage()</code> call.</p>
 
 <h2 id="Art_gallery_example">Art gallery example</h2>
 

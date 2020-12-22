@@ -20,9 +20,6 @@ tags:
 
 <p>The {{domxref("MediaStreamConstraints")}} dictionary's <strong><code>audio</code></strong> property is used to indicate what kind of audio track, if any, should be included in the {{domxref("MediaStream")}} returned by a call to {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
 
-<dl>
-</dl>
-
 <p>To learn more about how constraints work, see <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -36,12 +33,12 @@ tags:
 
 <dl>
  <dt>{{jsxref("Boolean")}}</dt>
- <dd>If a Boolean value is specified, it simply indicates whether or not an audio track should be included in the returned stream; if it's <code>true</code>, an audio track is included; if no audio source is available or if permission is not given to use the audio source, the call to <code>getUserMedia()</code> will fail. If <code>false</code>, no audio track is included.</dd>
+ <dd>If a Boolean value is specified, it indicates whether or not an audio track should be included in the returned stream; if it's <code>true</code>, an audio track is included; if no audio source is available or if permission is not given to use the audio source, the call to <code>getUserMedia()</code> will fail. If <code>false</code>, no audio track is included.</dd>
  <dt>{{domxref("MediaTrackConstraints")}}</dt>
  <dd>A constraints dictionary detailing the preferable and/or required values or ranges of values for the track's constrainable properties. If you specify constraints, an audio track meeting the constraints is required.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Examples</h2>
+<h2 id="Example">Examples</h2>
 
 <p>For browsers with <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> enabled, the samples below need the <code>microphone</code> feature enabled. See {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Security")}} for details and examples on how to configure this.</p>
 
@@ -192,8 +189,6 @@ function log(msg) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.MediaStreamConstraints.audio")}}</p>
 

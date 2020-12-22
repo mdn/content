@@ -38,7 +38,7 @@ break-inside: unset;
 
 <p>Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding <code>avoid</code> value.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <p>The <code>break-inside</code> property is specified as one of the keyword values from the list below.</p>
 
@@ -46,7 +46,7 @@ break-inside: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>Allows, but does not force, any break (page, column, or region) to be be inserted within the principal box.</dd>
+ <dd>Allows, but does not force, any break (page, column, or region) to be inserted within the principal box.</dd>
  <dt><code>avoid</code></dt>
  <dd>Avoids any break (page, column, or region) from being inserted within the principal box.</dd>
  <dt><code>avoid-page</code></dt>
@@ -193,9 +193,7 @@ article {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
-
-
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("css.properties.break-inside", 4)}}</p>
 
@@ -204,3 +202,10 @@ article {
 <p>Prior to Firefox 65, the older property of {{cssxref("page-break-inside")}} will work in Firefox to prevent breaks in columns, as well as pages. Add both properties for backwards compatibility.</p>
 
 <p>For older WebKit-based browsers, the prefixed property <code>-webkit-column-break-inside</code> can be used to control column breaks.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
+ <li><a href="https://www.smashingmagazine.com/2019/02/css-fragmentation/">Breaking Boxes With CSS Fragmentation</a></li>
+</ul>

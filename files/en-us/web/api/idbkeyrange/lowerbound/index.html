@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>);
+<pre class="syntaxbox notranslate" style="font-size: 14px;">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>);
 var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em>open</em>);
 </pre>
 
@@ -30,7 +30,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
 <dl>
  <dt>lower </dt>
  <dd>specifies the lower bound of the new key range. </dd>
- <dt>open<em> </em>{{optional_inline}}</dt>
+ <dt>open {{optional_inline}}</dt>
  <dd>indicates whether the lower bound excludes the endpoint value. The default is false. </dd>
 </dl>
 
@@ -51,11 +51,9 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
  </thead>
  <tbody>
   <tr>
-   <td><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">DataError</span></font></td>
+   <td><code>DataError</code></td>
    <td>
     <p>The value parameter passed was not a valid key.</p>
-
-    <div> </div>
    </td>
   </tr>
  </tbody>
@@ -69,7 +67,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
 <p><strong>Note</strong>: For a more complete example allowing you to experiment with key range, have a look at our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live too</a>.)</p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js notranslate" style="font-size: 14px;">function displayData() {
   var keyRangeValue = IDBKeyRange.lowerBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -89,9 +87,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
     };
   };</pre>
 
-<div> </div>
-
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -101,25 +97,21 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbkeyrange-lowerbound', 'lowerBound()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-lowerbound-lower-loweropen", "lowerBound()")}}</td>
+   <td>{{Spec2("IndexedDB 2")}}</td>
+   <td></td>
   </tr>
   <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-lowerbound-lower-open-lower", "lowerBound()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td>{{SpecName("IndexedDB 3", "#dom-idbkeyrange-lowerbound", "lowerBound()")}}</td>
+   <td>{{Spec2("IndexedDB 3")}}</td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
-
-<div>
-
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.IDBKeyRange.lowerBound")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
@@ -130,5 +122,5 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

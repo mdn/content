@@ -37,7 +37,7 @@ tags:
 
 <pre class="brush: js notranslate">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
 
-<p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and non-<code>undefined</code>) before then accessing the value of <code>obj.first.second</code>. This prevents the error that would occur if you simply accessed <code>obj.first.second</code> directly without testing <code>obj.first</code>.</p>
+<p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and non-<code>undefined</code>) before then accessing the value of <code>obj.first.second</code>. This prevents the error that would occur if you accessed <code>obj.first.second</code> directly without testing <code>obj.first</code>.</p>
 
 <p>With the optional chaining operator (<code>?.</code>), however, you don't have to explicitly test and short-circuit based on the state of <code>obj.first</code> before trying to access <code>obj.first.second</code>:</p>
 
@@ -59,12 +59,12 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <pre class="brush: js notranslate">let result = someInterface.customMethod?.();</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> If there is a property with such a name and which is not a function, using <code>?.</code> will still raise a {{JSxRef("TypeError")}} exception (<code>someInterface.customMethod is not a function</code>).</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be raised (<code>someInterface is null</code>). If you expect that <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>, you have to use <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">?.</span></font> at this position as well: <code>someInterface?.customMethod?.()</code></p>
+<div class="notecard note">
+<p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be raised (<code>someInterface is null</code>). If you expect that <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>, you have to use <code>?.</code> at this position as well: <code>someInterface?.customMethod?.()</code></p>
 </div>
 
 <h4 id="Dealing_with_optional_callbacks_or_event_handlers">Dealing with optional callbacks or event handlers</h4>
@@ -147,7 +147,7 @@ console.log(x); // 0 as x was not incremented
 let customerCity = customer.details?.address?.city;
 
 // … this also works with optional chaining function call
-let duration = vacations.trip?.getTime?.();
+let customerName = customer.name?.getName?.(); // method does not exists, customerName is undefined
 </pre>
 
 <h3 id="Combining_with_the_nullish_coalescing_operator">Combining with the nullish coalescing operator</h3>
@@ -179,7 +179,6 @@ console.log(customerCity); // Unknown city</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.operators.optional_chaining")}}</p>
 </div>

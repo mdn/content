@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("Generic Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>RelativeOrientationSensor</code></strong> interface of the the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> describes the device's physical orientation without regard to the Earth's reference coordinate system. </span></p>
+<p><span class="seoSummary">The <strong><code>RelativeOrientationSensor</code></strong> interface of the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> describes the device's physical orientation without regard to the Earth's reference coordinate system. </span></p>
 
 <p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code>, and <code>'gyroscope'</code> device sensors through the {{domxref('Permissions')}} API.</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>The following example, which is loosely based on <a href="https://intel.github.io/generic-sensor-demos/orientation-phone/">Intel's Orientation Phone demo</a>,  instantiates an <code>RelativeOrientationSensor</code> with a frequency of 60 times a second.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note that the Intel demo this is based on uses the <code>AbsoluteOreintationSensor</code>. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.</p>
 </div>
 
@@ -98,7 +98,5 @@ Promise.all([navigator.permissions.query({ name: "accelerometer" }),
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.RelativeOrientationSensor")}}</p>

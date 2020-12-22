@@ -75,18 +75,18 @@ tags:
   </ol>
  </li>
  <li>Now open the file in your browser. You should see something like this:
-  <p><img alt="A simple web page with the title set to &lt;title> element, and the &lt;h1> set to &lt;h1> element." src="https://mdn.mozillademos.org/files/12323/title-example.png" style="display: block; margin: 0 auto;">It should now be completely obvious where the <code>&lt;h1&gt;</code> content appears, and where the <code>&lt;title&gt;</code> content appears!</p>
+  <p><img alt="A simple web page with the title set to &lt;title&gt; element, and the &lt;h1&gt; set to &lt;h1&gt; element." src="https://mdn.mozillademos.org/files/12323/title-example.png" style="display: block; margin: 0 auto;">It should now be completely obvious where the <code>&lt;h1&gt;</code> content appears, and where the <code>&lt;title&gt;</code> content appears!</p>
  </li>
  <li>You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.</li>
 </ol>
 
 <p>The <code>&lt;title&gt;</code> element contents are also used in other ways. For example, if you try bookmarking the page (<em>Bookmarks &gt; Bookmark This Page</em> or the star icon in the URL bar in Firefox), you will see the <code>&lt;title&gt;</code> contents filled in as the suggested bookmark name.</p>
 
-<p><img alt="A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the &lt;title> element " src="https://mdn.mozillademos.org/files/12337/bookmark-example.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the &lt;title&gt; element " src="https://mdn.mozillademos.org/files/12337/bookmark-example.png" style="display: block; margin: 0 auto;"></p>
 
 <p>The <code>&lt;title&gt;</code> contents are also used in search results, as you'll see below.</p>
 
-<h2 id="Metadata_the_&lt;meta>_element">Metadata: the &lt;meta&gt; element</h2>
+<h2 id="Metadata_the_&lt;meta&gt;_element">Metadata: the &lt;meta&gt; element</h2>
 
 <p>Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the {{htmlelement("meta")}} element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of <code>&lt;meta&gt;</code> elements that can be included in your page's &lt;head&gt;, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.</p>
 
@@ -96,7 +96,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;meta charset="utf-8"&gt;</pre>
 
-<p>This element simply specifies the document's character encoding — the character set that the document is permitted to use. <code>utf-8</code> is a universal character set that includes pretty much any character from any human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! For example, your page could handle English and Japanese just fine:</p>
+<p>This element specifies the document's character encoding — the character set that the document is permitted to use. <code>utf-8</code> is a universal character set that includes pretty much any character from any human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! For example, your page could handle English and Japanese just fine:</p>
 
 <p><img alt="a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine," src="https://mdn.mozillademos.org/files/12343/correct-encoding.png" style="display: block; margin: 0 auto;">If you set your character encoding to <code>ISO-8859-1</code>, for example (the character set for the Latin alphabet), your page rendering may appear all messed up:</p>
 
@@ -233,7 +233,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
   <pre class="brush: html notranslate">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
 
-  <div class="blockIndicator note">
+  <div class="notecard note">
   <p><strong>Note</strong>: The <code>&lt;script&gt;</code> element may look like an empty element, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <code>&lt;script&gt;</code> element.</p>
   </div>
  </li>

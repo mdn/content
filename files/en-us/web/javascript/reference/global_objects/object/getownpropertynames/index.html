@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>Object.getOwnPropertyNames()</code> returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object <code><var>obj</var></code>. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. The ordering of the non-enumerable properties in the array and the ordering among the enumerable properties is not defined.</p>
+<p><code>Object.getOwnPropertyNames()</code> returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object <code><var>obj</var></code>. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. According to ES6, the integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.</p>
 
 <p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.</p>
 
@@ -45,7 +45,7 @@ Object.getOwnPropertyNames('foo');
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Using_Object.getOwnPropertyNames">Using <code>Object.getOwnPropertyNames()</code></h3>
+<h3 id="Using_Object.getOwnPropertyNames">Using Object.getOwnPropertyNames()</h3>
 
 <pre class="brush: js notranslate">var arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() is an array method.
@@ -139,8 +139,6 @@ console.log(nonenum_only);
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}</p>
 

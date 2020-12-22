@@ -29,7 +29,7 @@ tags:
 </div>
 
 <div id="simple-color-animation-source">
-<pre class="brush: html">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
 &lt;p&gt;You can click the button below to toggle the
     color animation on or off.&lt;/p&gt;
 &lt;canvas id="canvas-view"&gt;Your browser does not seem to support
@@ -41,7 +41,7 @@ tags:
 &lt;/button&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css notranslate">body {
   text-align : center;
 }
 canvas {
@@ -61,7 +61,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
+<pre class="brush: js notranslate" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -74,7 +74,7 @@ button {
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
     button.addEventListener("click", stopAnimation, false);
-    verb.innerHTML="stop";
+    verb.textContent ="stop";
     // Setup animation loop by redrawing every second.
     timer = setInterval(drawAnimation, 1000);
     // Give immediate feedback to user after clicking, by
@@ -84,7 +84,7 @@ button {
   function stopAnimation(evt) {
     button.removeEventListener(evt.type, stopAnimation, false);
     button.addEventListener("click", startAnimation, false);
-    verb.innerHTML="start";
+    verb.textContent ="start";
     // Stop animation by clearing the timer.
     clearInterval(timer);
   }

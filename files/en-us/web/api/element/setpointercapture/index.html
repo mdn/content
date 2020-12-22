@@ -48,7 +48,7 @@ tags:
   <tr>
    <td><code>NotFoundError</code></td>
    <td><code><var>pointerId</var></code> does not match any of the active pointers.
-    <div class="note"><strong>Note:</strong> Firefox versions <em>before</em> Firefox 82 instead throw <code>InvalidPointerId</code>.</div>
+    <div class="note"><strong>Note:</strong> Firefox versions <em>before</em> Firefox 82 incorrectly throw <code>InvalidPointerId</code>.</div>
    </td>
   </tr>
  </tbody>
@@ -111,7 +111,7 @@ slider.onpointerup = stopSliding;
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('Pointer Events 2','#idl-def-element-setpointercapture-pointerid', 'setPointerCapture')}}</td>
+   <td>{{SpecName('Pointer Events 2','#dom-element-setpointercapture', 'setPointerCapture')}}</td>
    <td>{{Spec2('Pointer Events 2')}}</td>
    <td>Non-stable version.</td>
   </tr>
@@ -124,8 +124,6 @@ slider.onpointerup = stopSliding;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Element.setPointerCapture")}}</p>
 

@@ -26,7 +26,7 @@ tags:
  <li>Set various properties of the window, such as whether it is focused or private.</li>
 </ul>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This <code>Window</code> object will always have its <code>tabs</code> property set, unlike the <code>Window</code> objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain <code>tabs</code> if the <code>populate</code> option is passed. If any error occurs, the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This <code>Window</code> object will always have its <code>tabs</code> property set, unlike the <code>Window</code> objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain <code>tabs</code> if the <code>populate</code> option is passed. If any error occurs, the promise will be rejected with an error message.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -146,17 +146,11 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.windows.create", 10)}}</p>
-
-
-
-
 
 <div class="note"><strong>Acknowledgements</strong>
 

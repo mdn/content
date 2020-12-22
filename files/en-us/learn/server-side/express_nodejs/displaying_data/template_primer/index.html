@@ -14,7 +14,7 @@ tags:
 
 <p>Express can be used with many different <a class="external external-icon" href="https://expressjs.com/en/guide/using-template-engines.html" rel="noopener">template rendering engines</a>. In this tutorial we use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> (formerly known as <em>Jade</em>) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>".</p>
 
-<p>Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a <em>representation </em>of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.</p>
+<p>Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a <em>representation</em> of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.</p>
@@ -22,7 +22,7 @@ tags:
 
 <h2 class="highlight-spanned" id="Template_configuration"><span class="highlight-span">Template configuration</span></h2>
 
-<p>The <em>LocalLibrary</em> was configured to use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> when we <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
+<p>The <em>LocalLibrary</em> was configured to use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> when we <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">created the skeleton website</a>. You should see the pug module included as a dependency in the website's <strong>package.json</strong> file, and the following configuration settings in the <strong>app.js</strong> file. The settings tell us that we're using pug as the view engine, and that <em>Express</em> should search for templates in the <strong>/views</strong> subdirectory.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
 app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -126,7 +126,7 @@ else
 
 <p>Across a site, it is usual for all pages to have a common structure, including standard HTML markup for the head, footer, navigation, etc. Rather than forcing developers to duplicate this "boilerplate" in every page, <em>Pug</em> allows you to declare a base template and then extend it, replacing just the bits that are different for each specific page.</p>
 
-<p>For example, the base template <strong>layout.pug</strong> created in our <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
+<p>For example, the base template <strong>layout.pug</strong> created in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">skeleton project</a> looks like this:</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html

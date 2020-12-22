@@ -21,7 +21,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<h2 id="&lt;input>_types">&lt;input&gt; types</h2>
+<h2 id="&lt;input&gt;_types">&lt;input&gt; types</h2>
 
 <p>How an <code>&lt;input&gt;</code> works varies considerably depending on the value of its {{htmlattrxref("type", "input")}} attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is <code>text</code>.</p>
 
@@ -31,6 +31,7 @@ tags:
  <colgroup>
   <col>
   <col style="width: 50%;">
+  <col>
   <col>
  </colgroup>
  <thead>
@@ -421,7 +422,7 @@ tags:
   <tr>
    <td>{{anch('htmlattrdefvalue', 'value')}}</td>
    <td>all</td>
-   <td>Current value of the form control. Submitted with the form as part of a name/value pair.</td>
+   <td>At first, the initial value if specified explicitly in HTML. More generally, the current value of the form control. Submitted with the form as part of a name/value pair.</td>
   </tr>
   <tr>
    <td>{{anch('htmlattrdefwidth', 'width')}}</td>
@@ -446,7 +447,7 @@ tags:
  </dd>
  <dt id="htmlattrdefautocomplete">{{htmlattrdef("autocomplete")}}</dt>
  <dd>
- <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
+ <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
 
  <p>The <code>autocomplete</code> attribute is valid on <code>hidden</code>, <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code>, <code>color</code>, and <code>password</code>. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
@@ -551,7 +552,7 @@ tags:
  </dd>
  <dt id="htmlattrdeflist">{{htmlattrdef("list")}}</dt>
  <dd id="datalist">
- <p>The value given to the <code>list</code> attribute should be. the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code> provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
+ <p>The value given to the <code>list</code> attribute should be the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code> provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
  <pre class="brush: html hidden notranslate">&lt;datalist id="colorsxx"&gt;
   &lt;option&gt;#ff0000&lt;/option&gt;
@@ -716,9 +717,16 @@ let hatSize = form.elements["hat-size"];
  <div id="step-include">
  <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
- <p>If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+ <p>If not explicitly included:</p>
 
- <p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping - the <code>{{anch("min")}}</code> value and increments of the step value, up to the <code>{{anch("max")}}</code> value, if specified.</p>
+ <ul>
+  <li><code>step</code> defaults to 1 for <code>number</code> and <code>range</code>.</li>
+  <li>For the date/time input types, <code>step</code> is expressed in seconds, with the <strong>default step being 60 seconds</strong>. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).</li>
+ </ul>
+
+ <p>The value must be a positive number—integer or float—or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+ <p>If <code>any</code> is not explicity set, valid values for the <code>number</code>, date/time input types, and <code>range</code> input types are equal to the basis for stepping — the <code>{{anch("min")}}</code> value and increments of the step value, up to the <code>{{anch("max")}}</code> value, if specified.</p>
 
  <p>For example, if you have <code>&lt;input type="number" min="10" step="2"&gt;</code>, then any even integer, <code>10</code> or greater, is valid. If omitted, <code>&lt;input type="number"&gt;</code>, any integer is valid, but floats (like <code>4.2</code>) are not valid, because <code>step</code> defaults to <code>1</code>. For <code>4.2</code> to be valid, <code>step</code> would have had to be set to <code>any</code>, 0.1, 0.2, or any the <code>min</code> value would have had to be a number ending in <code>.2</code>, such as <code>&lt;input type="number" min="-5.2"&gt;</code></p>
 
@@ -726,8 +734,6 @@ let hatSize = form.elements["hat-size"];
  <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in contraint validation and will match the <code>:invalid</code> pseudoclass.</p>
  </div>
  </div>
-
- <p>The step attribute is expressed in seconds. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in the other algorithms). The <strong>default step is 60 seconds</strong>.</p>
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
  </dd>
@@ -865,7 +871,7 @@ let hatSize = form.elements["hat-size"];
   </tr>
   <tr>
    <td>{{Cssxref(":placeholder-shown")}}</td>
-   <td>Element that is currently displaying <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td>{{Cssxref(":default")}}</td>
@@ -942,12 +948,12 @@ input[type="password"] {}
 /* matches a form control whose valid values are limited to a range of values*/
 input[min][max] {}
 
-/* matches a form control with with a pattern attribute */
+/* matches a form control with a pattern attribute */
  input[pattern] {}</pre>
 
 <h3 id="placeholder">::placeholder</h3>
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
 
 <pre class="brush: css no-line-numbers notranslate">::placeholder {
   color: blue;
@@ -1000,8 +1006,8 @@ input[min][max] {}
 <p>Also see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">advanced styling for HTML forms</a>, and</li>
- <li>the<a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets"> compatibility table of CSS properties</a>.</li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/Forms/Advanced_form_styling">advanced styling for HTML forms</a>, and</li>
+ <li>the<a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls"> compatibility table of CSS properties</a>.</li>
 </ul>
 
 <h2 id="Additional_features">Additional features</h2>
@@ -1037,13 +1043,13 @@ input[min][max] {}
 
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Don't use the {{htmlattrxref("placeholder", "input")}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
 </div>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
@@ -1062,7 +1068,7 @@ input[min][max] {}
  <thead>
   <tr>
    <th scope="col">Attribute</th>
-   <th scope="col">Relevent property</th>
+   <th scope="col">Relevant property</th>
    <th scope="col">Description</th>
   </tr>
  </thead>
@@ -1132,7 +1138,7 @@ input[min][max] {}
 
 <p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
 
-<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
+<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
 
 <pre class="brush: js notranslate">function validate(input) {
   let validityState_object = input.validity;
@@ -1192,11 +1198,11 @@ nameInput.addEventListener('invalid', () =&gt; {
  <li>If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking <code>setCustomValidity()</code> with an empty string value. We therefore do this every time the <code>input</code> event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the <em>server side</em>. Invalid values can still be sent by older browsers or by bad actors.</p>
 </div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).</p>
 </div>
 
@@ -1217,8 +1223,8 @@ nameInput.addEventListener('invalid', () =&gt; {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -1230,7 +1236,7 @@ nameInput.addEventListener('invalid', () =&gt; {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -1336,7 +1342,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h3 id="Labels_2">Labels</h3>
 
-<p>When including inputs, it is an accessibilty requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. this is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see {{anch("Labels")}} .</p>
+<p>When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see {{anch("Labels")}} .</p>
 
 <p>The following is an example of how to associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element in the above style. You need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>.</p>
 
@@ -1356,22 +1362,20 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <div>{{Compat("html.elements.input")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">CSS property compatibility table</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS property compatibility table</a></li>
 </ul>

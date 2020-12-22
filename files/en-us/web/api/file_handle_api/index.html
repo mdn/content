@@ -185,7 +185,7 @@ IDBReq.onsuccess = function () {
 }
 </pre>
 
-<p>A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29" title="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a>, meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.</p>
+<p>A file stored that way is physically put on the device. The database itself only stores a pointer to that file. It means that if the {{domxref("FileHandle")}} object is stored several times in several DBs or several data stores, all those objects will reference the same unique file. This is not a problem because to access the file, a {{domxref("LockedFile")}} object is required and operations on such object are performed in <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a>, meaning that once a {{domxref("LockedFile")}} is active, all operations of this {{domxref("LockedFile")}} are guaranteed to happen sequentially on the underlying file without being interleaved with operations from other {{domxref("LockedFile")}}.</p>
 
 <h3 id="Secured_write_operation">Secured write operation</h3>
 
@@ -215,7 +215,7 @@ writing.onerror = function () {
 
 <h3 id="Why_a_different_API_than_FileWriter">Why a different API than FileWriter?</h3>
 
-<p>The <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html" title="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter specification</a> defines FileWriters, objects aiming at representing editable files. <a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html" title="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Discussions on public-webapps</a> led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.</p>
+<p>The <a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter specification</a> defines FileWriters, objects aiming at representing editable files. <a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Discussions on public-webapps</a> led to the conclusion that the API would behave poorly in the case of different entities writing concurrently to the same file. The outcome of this discussion is the FileHandle API with its LockedFile and transaction mechanism.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

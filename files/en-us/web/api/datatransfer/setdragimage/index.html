@@ -17,7 +17,7 @@ tags:
 
 <p>This method must be called in the {{event("dragstart")}} event handler.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">void <em>dataTransfer</em>.setDragImage(img | element, xOffset, yOffset);
 </pre>
@@ -25,7 +25,7 @@ tags:
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
- <dt><em>img | </em>element</dt>
+ <dt><em>img |</em> element</dt>
  <dd>An image {{domxref("Element")}} element to use for the drag feedback image.</dd>
  <dd>If {{domxref("Element")}} is an img element, then set the drag data store bitmap to the element's image (at its intrinsic size); otherwise, set the drag data store bitmap to an image generated from the given element (the exact mechanism for doing so is not currently specified).</dd>
  <dt><em>xOffset</em></dt>
@@ -34,7 +34,7 @@ tags:
  <dd>A <code>long</code> indicating the vertical offset within the image.</dd>
 </dl>
 
-<h3 id="Return_Value" name="Return_Value">Return value</h3>
+<h3 id="Return_Value">Return value</h3>
 
 <dl>
  <dt>void</dt>
@@ -120,18 +120,14 @@ function drop_handler(ev) {
    <td>{{Spec2('HTML5.1')}}</td>
    <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
   </tr>
-  <tr>
-  </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.DataTransfer.setDragImage")}}</p>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
 

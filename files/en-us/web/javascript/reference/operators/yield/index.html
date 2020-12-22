@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The <code>yield</code> keyword is used to pause and resume a generator function ({{jsxref("Statements/function*", "function*")}} or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">legacy generator function</a>).</p>
+<p>The <code>yield</code> keyword is used to pause and resume a generator function ({{jsxref("Statements/function*", "function*")}} or <a href="/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function_statement">legacy generator function</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}</div>
 
@@ -51,7 +51,7 @@ tags:
 
 <p>Between the generator's code path, its <code>yield</code> operators, and the ability to specify a new starting value by passing it to {{jsxref("Generator.prototype.next()")}}, generators offer enormous power and control.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Unfortunately, <code>next()</code> is asymmetric, but that can’t be helped: It always sends a value to the currently suspended <code>yield</code>, but returns the operand of the following <code>yield</code>.</p>
 </div>
 
@@ -114,8 +114,6 @@ console.log(generatorFunc.next(10).value); // 26</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.operators.yield")}}</p>
 

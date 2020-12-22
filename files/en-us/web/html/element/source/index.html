@@ -21,7 +21,7 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
    <td>None.</td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ tags:
   <tr>
    <th scope="row"><dfn>Permitted parents</dfn></th>
    <td>
-    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
+    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
 
     <div>A {{HTMLElement("picture")}} element, and it must be placed before the {{HTMLElement("img")}} element.</div>
    </td>
@@ -61,7 +61,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
+ <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
  <dt>{{htmlattrdef("sizes")}}</dt>
  <dd>
  <p>Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that <code>sizes</code> will have its effect only if width dimension descriptors are provided with <code>srcset</code> instead of pixel ratio values (200w instead of 2x for example).</p>
@@ -90,7 +90,7 @@ tags:
 
 <p>If the <code>type</code> attribute isn't specified, the media's type is retrieved from the server and checked to see if the user agent can handle it; if it can't be rendered, the next <code>&lt;source&gt;</code> is checked. If the <code>type</code> attribute is specified, it's compared against the types the user agent can present, and if it's not recognized, the server doesn't even get queried; instead, the next <code>&lt;source&gt;</code> element is checked at once.</p>
 
-<p>When used in the context of a <code>&lt;picture&gt;</code> element, the browser will fall back to using the image specified by the <code>&lt;picture&gt;</code> element's {{HTMLElement("img")}} child if it is unable to find a suitable image to use after examing every provided <code>&lt;source&gt;</code>.</p>
+<p>When used in the context of a <code>&lt;picture&gt;</code> element, the browser will fall back to using the image specified by the <code>&lt;picture&gt;</code> element's {{HTMLElement("img")}} child if it is unable to find a suitable image to use after examining every provided <code>&lt;source&gt;</code>.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -147,8 +147,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.source")}}</p>
 

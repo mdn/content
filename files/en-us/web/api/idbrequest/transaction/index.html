@@ -16,7 +16,7 @@ tags:
 <div>
 <p>The <strong><code>transaction</code></strong> read-only property of the IDBRequest interface returns the transaction for the request, that is, the transaction the request is being made inside.</p>
 
-<p>This property can be <code>null</code> for requests not made within transactions, such as for requests returned from {{domxref("IDBFactory.open")}} — in this case you're just connecting to a database, so there is no transaction to return. If a version upgrade is needed when opening a database then during the {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the <strong><code>transaction</code></strong> property will be an {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal to <code>"versionchange"</code>, and can be used to access existing object stores and indexes, or abort the the upgrade. Following the upgrade, the <strong><code>transaction</code></strong> ​property will again be <code>null</code>.</p>
+<p>This property can be <code>null</code> for requests not made within transactions, such as for requests returned from {{domxref("IDBFactory.open")}} — in this case you're just connecting to a database, so there is no transaction to return. If a version upgrade is needed when opening a database then during the {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the <strong><code>transaction</code></strong> property will be an {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal to <code>"versionchange"</code>, and can be used to access existing object stores and indexes, or abort the upgrade. Following the upgrade, the <strong><code>transaction</code></strong> property will again be <code>null</code>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 </div>
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example requests a given record title, <code>onsuccess</code> gets the associated record from the {{domxref("IDBObjectStore")}} (made available as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates one property of the record, and then puts the updated record back into the object store in another request. The source of the requests is logged to the developer console — both originate from the same transaction. For a full working example, see our </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>The following example requests a given record title, <code>onsuccess</code> gets the associated record from the {{domxref("IDBObjectStore")}} (made available as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates one property of the record, and then puts the updated record back into the object store in another request. The source of the requests is logged to the developer console — both originate from the same transaction. For a full working example, see our </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
 <pre class="brush: js">var title = "Walk dog";
 
@@ -64,7 +64,7 @@ objectStoreTitleRequest.onsuccess = function() {
 
 </pre>
 
-<p>This example shows how a the <strong><code>transaction</code></strong> property can be used during a version upgrade to access existing object stores:​</p>
+<p>This example shows how a the <strong><code>transaction</code></strong> property can be used during a version upgrade to access existing object stores:</p>
 
 <pre class="brush: js">var openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
@@ -110,10 +110,9 @@ openRequest.onsuccess = function() {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.IDBRequest.transaction")}}</p>
 </div>
@@ -127,5 +126,5 @@ openRequest.onsuccess = function() {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

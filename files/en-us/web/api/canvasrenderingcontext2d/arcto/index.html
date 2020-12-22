@@ -14,7 +14,7 @@ tags:
 
 <p>This method is commonly used for making rounded corners.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Be aware that you may get unexpected results when using a relatively large radius: the arc's connecting line will go in whatever direction it must to meet the specified radius.</p>
 </div>
 
@@ -212,7 +212,6 @@ const drawArc = function ([p0, p1, p2], r) {
   ctx.stroke();
 }
 
-
 let t0 = 0;
 let rr = 0; // the radius that changes over time
 let a  = 0; // angle
@@ -253,8 +252,6 @@ loop(0);</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.CanvasRenderingContext2D.arcTo")}}</p>
 

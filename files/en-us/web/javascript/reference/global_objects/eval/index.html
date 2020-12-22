@@ -11,15 +11,13 @@ tags:
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p><strong>Warning:</strong> Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use <code>eval()</code>. See <a href="#Never_use_eval!">Never use eval()!</a>, below.</p>
 </div>
 
 <p>The <code><strong>eval()</strong></code> function evaluates JavaScript code represented as a string.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}</div>
-
-
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -75,7 +73,7 @@ eval(expression.toString());            // returns 4
 
 <p>Additionally, modern javascript interpreters convert javascript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of <code>eval()</code> will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additonally, new things can be introduced to that variable through <code>eval()</code> such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.</p>
 
-<p>Fortunately, there's a very good alternative to <code>eval()</code>: simply using {{jsxref("Function", "window.Function()")}}. See this example of how to convert code using a dangerous <code>eval()</code> to using <code>Function()</code>, see below.</p>
+<p>Fortunately, there's a very good alternative to <code>eval()</code>: using {{jsxref("Function", "window.Function()")}}. See this example of how to convert code using a dangerous <code>eval()</code> to using <code>Function()</code>, see below.</p>
 
 <p>Bad code with <code>eval()</code>:</p>
 
@@ -215,7 +213,7 @@ elt.addEventListener('click', function() { ... } , false); </pre>
 
 <h3 id="Pass_data_instead_of_code">Pass data instead of code</h3>
 
-<p>For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in <a href="/en-US/docs/XPath" title="XPath">XPath</a> instead of JavaScript code.</p>
+<p>For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in <a href="/en-US/docs/XPath">XPath</a> instead of JavaScript code.</p>
 
 <h3 id="Run_code_with_limited_privileges">Run code with limited privileges</h3>
 
@@ -290,8 +288,6 @@ var fct2 = eval(fctStr2)  // return a function
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.eval")}}</p>
 

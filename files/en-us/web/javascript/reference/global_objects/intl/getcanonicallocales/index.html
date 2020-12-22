@@ -13,11 +13,9 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Intl.getCanonicalLocales(locales)</pre>
+<pre class="syntaxbox notranslate">Intl.getCanonicalLocales(locales)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,12 +32,16 @@ tags:
 
 <h3 id="Using_getCanonicalLocales">Using getCanonicalLocales</h3>
 
-<pre class="brush: js">Intl.getCanonicalLocales('EN-US'); // ["en-US"]
+<pre class="brush: js notranslate">Intl.getCanonicalLocales('EN-US'); // ["en-US"]
 Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales('EN_US');
 // RangeError:'EN_US' is not a structurally valid language tag
 </pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><a href="https://formatjs.io/docs/polyfills/intl-getcanonicallocales">formatjs Intl.getCanonicalLocales polyfill</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -57,7 +59,6 @@ Intl.getCanonicalLocales('EN_US');
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}</p>
 </div>

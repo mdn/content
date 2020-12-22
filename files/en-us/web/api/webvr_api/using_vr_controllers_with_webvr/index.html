@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}</div>
 
-<p class="summary">Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more. This article explains the basics.</p>
+<p class="summary">Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more. This article explains the basics.</p>
 
 <h2 id="The_WebVR_API">The WebVR API</h2>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.</p>
 
-<p>We've written up a simple example to demonstrate — see our <a href="https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html">vr-controller-basic-info</a> source code (<a href="https://mdn.github.io/webvr-tests/vr-controller-basic-info/">see it running live here also</a>). This demo simply outputs information on the VR displays and gamepads connected to your computer.</p>
+<p>We've written up a simple example to demonstrate — see our <a href="https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html">vr-controller-basic-info</a> source code (<a href="https://mdn.github.io/webvr-tests/vr-controller-basic-info/">see it running live here also</a>). This demo outputs information on the VR displays and gamepads connected to your computer.</p>
 
 <h3 id="Getting_the_display_information">Getting the display information</h3>
 
@@ -137,7 +137,7 @@ if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
     reportGamepads();
 }</pre>
 
-<p>This function simply grabs references to all list items with a class name of <code>gamepad</code>, and removes them from the DOM. Then it re-runs <code>reportGamepads()</code> to populate the list with the updated list of connected controllers.</p>
+<p>This function grabs references to all list items with a class name of <code>gamepad</code>, and removes them from the DOM. Then it re-runs <code>reportGamepads()</code> to populate the list with the updated list of connected controllers.</p>
 
 <p><code>removeGamepads()</code> will be run each time a gamepad is connected or disconnected, via the following event handlers:</p>
 

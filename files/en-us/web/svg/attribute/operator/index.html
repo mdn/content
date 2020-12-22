@@ -9,19 +9,19 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>operator</code></strong> attribute as two meanings based on the context itʼs used in. Either it defines the compositing or morphing operation to be performed.</p>
+<p>The <strong><code>operator</code></strong> attribute has two meanings based on the context itʼs used in. Either it defines the compositing or morphing operation to be performed.</p>
 
 <p>Two elements are using this attribute: {{SVGElement("feComposite")}} and {{SVGElement("feMorphology")}}</p>
 
 <div id="topExample">
 <div class="hidden">
-<pre class="brush: css">html, body, svg {
+<pre class="brush: css notranslate">html, body, svg {
   height: 100%;
   font: 20px Arial, Helvetica, sans-serif;
 }</pre>
 </div>
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html; highlight[3,6] notranslate">&lt;svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="erode"&gt;
     &lt;feMorphology operator="erode" radius="0.4"/&gt;
   &lt;/filter&gt;

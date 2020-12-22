@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary">The {{domxref("KeyboardEvent")}} interface's <code><strong>key</strong></code> read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.</span> Its value is determined as follows:</p>
+<p><span class="seoSummary">The {{domxref("KeyboardEvent")}} interface's <code><strong>key</strong></code> read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.</span> The Unicode value of the key pressed can be derived from it using {{jsxref("String.prototype.charCodeAt()", "charCodeAt()")}}. Its value is determined as follows:</p>
 
 <div class="moreinfo pull-aside">
 <h4 id="Key_values">Key values</h4>
@@ -135,7 +135,7 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
 
 <p>{{EmbedLiveSample('KeyboardEvent_sequence_example')}}</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events, you may get incorrect output on those lines of the log output.</p>
 </div>
 
@@ -201,7 +201,7 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
 }, true);
 </pre>
 
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -226,7 +226,5 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.KeyboardEvent.key")}}</p>

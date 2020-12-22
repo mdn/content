@@ -24,7 +24,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><code><var>functionRef</var></code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole argument. Within the function, {{jsxref("Operators/this", "this")}} will be the element upon which the event was triggered.</p>
+<p><code><var>functionRef</var></code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object that <code>onclick</code> was bound too (which will also match <code>event.currentTarget</code>)</p>
 
 <p>Only one <code>onclick</code> handler can be assigned to an object at a time. You may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since it's more flexible.</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Detecting_clicks">Detecting clicks</h3>
 
-<p>This example simply changes the color of an element when it's clicked upon.</p>
+<p>This example changes the color of an element when it's clicked upon.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -42,7 +42,7 @@ tags:
 
 <pre class="brush: js notranslate">document.getElementById('demo').onclick = function changeContent() {
 
-   document.getElementById('demo').innerHTML = "Help me";
+   document.getElementById('demo').textContent = "Help me";
    document.getElementById('demo').style = "Color: red";
 
 }</pre>
@@ -74,9 +74,9 @@ function inputChange(e) {
 
 <p>{{EmbedLiveSample("Getting_the_coordinates_of_clicks")}}</p>
 
-<h2 id="Specification">Specification</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<table class="spectable standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Specification</th>
@@ -96,7 +96,6 @@ function inputChange(e) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.GlobalEventHandlers.onclick")}}</p>
 </div>

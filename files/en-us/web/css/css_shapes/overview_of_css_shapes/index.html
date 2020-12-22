@@ -100,7 +100,7 @@ tags:
 
 <h2 id="Using_Generated_Content_as_the_floated_item">Using Generated Content as the floated item</h2>
 
-<p>In the examples above we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might simply want to cause some text to flow along a non-rectangular invisible line. You can do this with Shapes, however you will still need a floated item, which you can then make invisible. That could be a redundant element inserted into the document, an empty {{htmlelement("div")}} or {{htmlelement("span")}} perhaps, but our preference is to use generated content. This means we can keep things used for styling inside the CSS.</p>
+<p>In the examples above we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to cause some text to flow along a non-rectangular invisible line. You can do this with Shapes, however you will still need a floated item, which you can then make invisible. That could be a redundant element inserted into the document, an empty {{htmlelement("div")}} or {{htmlelement("span")}} perhaps, but our preference is to use generated content. This means we can keep things used for styling inside the CSS.</p>
 
 <p>In this next example, we use generated content to insert an element with height and width of 150px. We can then use Basic Shapes, Box Values or even the Alpha Channel of an image to create a shape for the text to wrap around.</p>
 
@@ -116,7 +116,7 @@ tags:
 
 <h2 id="Developer_Tools_for_Shapes">Developer Tools for Shapes</h2>
 
-<p>Along with CSS Shapes support in the browser, Firefox are shipping a <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn’t quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.</p>
+<p>Along with CSS Shapes support in the browser, Firefox are shipping a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shape Path Editor</a> in the Firefox DevTools. This tool means that you can inspect any shapes on your page, and even change the values in the live page. If your polygon isn’t quite right you can use the Shapes Editor to tweak it, then copy the new value back into your CSS.</p>
 
 <p>The Shape Path Editor will be enabled by default in Firefox 60 for shapes generated via <code>clip-path</code>. You can also use it to edit shapes generated via <code>shape-outside</code>, but only when you enable it via the <code>layout.css.shape-outside.enabled</code> pref.</p>
 

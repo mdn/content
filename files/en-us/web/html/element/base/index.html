@@ -12,12 +12,12 @@ tags:
 
 <p id="Summary"><span class="seoSummary">The <strong>HTML <code>&lt;base&gt;</code> element</strong> specifies the base URL to use for all <em>relative</em> URLs in a document.</span> There can be only one <code>&lt;base&gt;</code> element in a document.</p>
 
-<p>A document's used base URL can be accessed by scripts with {{domxref('document.baseURI')}}. If the document has no <code>&lt;base&gt;</code> elements, then <code>baseURI</code> defaults to {{domxref("location.href")}}.</p>
+<p>A document's used base URL can be accessed by scripts with {{domxref('Node/baseURI')}}. If the document has no <code>&lt;base&gt;</code> elements, then <code>baseURI</code> defaults to {{domxref("location.href")}}.</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
    <td>Metadata content.</td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ tags:
 
 <p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>If either of the following attributes are specified, this element <strong>must</strong> come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}’s <code>href</code> attribute.</p>
 </div>
 
@@ -72,7 +72,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<h3 id="Multiple_&lt;base>_elements">Multiple &lt;base&gt; elements</h3>
+<h3 id="Multiple_&lt;base&gt;_elements">Multiple &lt;base&gt; elements</h3>
 
 <p>If multiple <code>&lt;base&gt;</code> elements are used, only the first <code>href</code> and first <code>target</code> are obeyed — all others are ignored.</p>
 
@@ -129,7 +129,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.base")}}</p>

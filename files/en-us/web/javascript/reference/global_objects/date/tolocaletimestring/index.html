@@ -59,7 +59,7 @@ console.log(date.toLocaleTimeString());
   try {
     new Date().toLocaleTimeString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -136,8 +136,6 @@ console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Date.toLocaleTimeString")}}</p>
 

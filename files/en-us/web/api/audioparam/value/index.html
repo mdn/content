@@ -94,8 +94,6 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.AudioParam.value")}}</p>
 
 <p>When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to version 64 (January 2018) would perform a smooth interpolation to prevent dezippering. Starting with version 64, the value is changed instantly to bring it in line with the Web Audio spec. See <a href="https://www.chromestatus.com/feature/5287995770929152">Chrome Platform Status</a> for details.</p>

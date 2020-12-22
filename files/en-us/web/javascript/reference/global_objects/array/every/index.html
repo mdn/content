@@ -15,8 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox notranslate"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
@@ -47,7 +45,7 @@ tags:
 
 <p>The <code>every</code> method executes the provided <code><var>callback</var></code> function once for each element present in the array until it finds the one where <code><var>callback</var></code> returns a {{Glossary("falsy")}} value. If such an element is found, the <code>every</code> method immediately returns <code>false</code>. Otherwise, if <code><var>callback</var></code> returns a {{Glossary("truthy")}} value for all elements, <code>every</code> returns <code>true</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Caution</strong>: Calling this method on an empty array will return <code>true</code> for any condition!</p>
 </div>
 
@@ -227,7 +225,6 @@ arr.every( (elem, index, arr) =&gt; {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Array.every")}}</p>
 </div>

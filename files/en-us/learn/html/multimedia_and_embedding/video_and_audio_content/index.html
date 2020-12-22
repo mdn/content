@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Video_and_audio_on_the_web">Video and audio on the web</h2>
 
-<p>Web developers have wanted to use video and audio on the Web for a long time, ever since the early 2000s when we started to have bandwidth fast enough to support any kind of video (video files are much larger than text or even images.) In the early days, native web technologies such as HTML didn't have the ability to embed video and audio on the Web, so proprietary (or plugin-based) technologies like <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> (and later, <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight">Silverlight</a>) became popular for handling such content. This kind of technology worked ok, but it had a number of problems, including not working well with HTML/CSS features, security issues, and accessibility issues.</p>
+<p>Web developers have wanted to use video and audio on the Web for a long time, ever since the early 2000s when we started to have bandwidth fast enough to support any kind of video (video files are much larger than text or even images.) In the early days, native web technologies such as HTML didn't have the ability to embed video and audio on the Web, so proprietary (or plugin-based) technologies like <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Flash</a> — and later, <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight">Silverlight</a> (both of which are now obsolete) — became popular for handling such content. This kind of technology worked ok, but it had a number of problems, including not working well with HTML/CSS features, security issues, and accessibility issues.</p>
 
 <p>A native solution would solve much of this if implemented correctly. Fortunately, a few years later the {{glossary("HTML5")}} specification had such features added, with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements, and some shiny new {{Glossary("JavaScript")}} {{Glossary("API","APIs")}} for controlling them. We'll not be looking at JavaScript here — just the basic foundations that can be achieved with HTML.</p>
 
@@ -43,7 +43,7 @@ tags:
 <p><strong>Note</strong>: Before you begin here, you should also know that there are quite a few OVPs (online video providers) like <a href="https://www.youtube.com/">YouTube</a>, <a href="https://www.dailymotion.com">Dailymotion</a>, and <a href="https://vimeo.com/">Vimeo</a>, and online audio providers like <a href="https://soundcloud.com/">Soundcloud</a>. Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.</p>
 </div>
 
-<h3 id="The_&lt;video>_element">The &lt;video&gt; element</h3>
+<h3 id="The_&lt;video&gt;_element">The &lt;video&gt; element</h3>
 
 <p>The {{htmlelement("video")}} element allows you to embed a video very easily. A really simple example looks like this:</p>
 
@@ -66,7 +66,7 @@ tags:
 
 <p><img alt="A simple video player showing a video of a small white rabbit" src="https://mdn.mozillademos.org/files/12794/simple-video.png" style="display: block; height: 592px; margin: 0px auto; width: 589px;"></p>
 
-<p>You can <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">try the example live</a> here (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">source code</a>.)</p>
+<p>You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">try the example live</a> here (see also the <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html">source code</a>.)</p>
 
 <h3 id="Using_multiple_source_formats_to_improve_compatibility">Using multiple source formats to improve compatibility</h3>
 
@@ -101,18 +101,18 @@ tags:
 <div class="callout-box">
 <p>Why do we have this problem? It turns out that several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.</p>
 
-<p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people simply prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
+<p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
 </div>
 
 <p>The codecs described in the previous section exist to compress video and audio into manageable files, since raw audio and video are both exceedingly large. Each web browser supports an assortment of <strong>{{Glossary("Codec","codecs")}}</strong>, like Vorbis or H.264, which are used to convert the compressed audio and video into binary data and back. Each codec offers its own advantages and drawbacks, and each container may also offer its own positive and negative features affecting your decisions about which to use.</p>
 
-<p>Things become slightly more complicated because not only does each browser support a different set of container file formats, they also each support a different selection of codecs. In order to maximize the likelihood that your web site or app will work on a user's browser, you may need to provide each media file you use in multiple formats. If your site and the user's browser don't share a media format in common, your media simply won't play.</p>
+<p>Things become slightly more complicated because not only does each browser support a different set of container file formats, they also each support a different selection of codecs. In order to maximize the likelihood that your web site or app will work on a user's browser, you may need to provide each media file you use in multiple formats. If your site and the user's browser don't share a media format in common, your media won't play.</p>
 
 <p>Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} and {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.</p>
 
 <p>One additional thing to keep in mind: mobile browsers may support additional formats not supported by their desktop equivalents, just like they may not support all the same formats the desktop version does. On top of that, both desktop and mobile browsers <em>may</em> be designed to offload handling of media playback (either for all media or only for specific types it can't handle internally). This means media support is partly dependent on what software the user has installed.</p>
 
-<p>So how do we do this? Take a look at the following <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">updated example</a> (<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">try it live here</a>, also):</p>
+<p>So how do we do this? Take a look at the following <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">updated example</a> (<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">try it live here</a>, also):</p>
 
 <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -126,7 +126,7 @@ tags:
 
 <p>Refer to our <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats</a> for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.</p>
 
-<h3 id="Other_&lt;video>_features">Other &lt;video&gt; features</h3>
+<h3 id="Other_&lt;video&gt;_features">Other &lt;video&gt; features</h3>
 
 <p>There are a number of other features you can include when displaying an HTML video. Take a look at our next example:</p>
 
@@ -168,9 +168,9 @@ tags:
  </dd>
 </dl>
 
-<p>You can find the above example available to <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html">play live on Github</a> (also <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html">see the source code</a>.) Note that we haven't included the <code>autoplay</code> attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!</p>
+<p>You can find the above example available to <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html">play live on Github</a> (also <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html">see the source code</a>.) Note that we haven't included the <code>autoplay</code> attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!</p>
 
-<h3 id="The_&lt;audio>_element">The &lt;audio&gt; element</h3>
+<h3 id="The_&lt;audio&gt;_element">The &lt;audio&gt; element</h3>
 
 <p>The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}} element, with a few small differences as outlined below. A typical example might look like so:</p>
 
@@ -185,7 +185,7 @@ tags:
 <p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="https://mdn.mozillademos.org/files/12798/audio-player.png" style="display: block; height: 413px; margin: 0px auto; width: 626px;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">run the audio demo live</a> on Github (also see the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">audio player source code</a>.)</p>
+<p><strong>Note</strong>: You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">run the audio demo live</a> on Github (also see the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">audio player source code</a>.)</p>
 </div>
 
 <p>This takes up less space than a video player, as there is no visual component — you just need to display controls to play the audio. Other differences from HTML video are as follows:</p>
@@ -196,25 +196,6 @@ tags:
 </ul>
 
 <p>Other than this, <code>&lt;audio&gt;</code> supports all the same features as <code>&lt;video&gt;</code> — review the above sections for more information about them.</p>
-
-<h3 id="Restarting_media_playback_requires_JavaScript">Restarting media playback (requires JavaScript)</h3>
-
-<p>At any time, you can reset the media to the beginning—including the process of selecting the best media source, if more than one is specified using {{HTMLElement("source")}} elements—by calling the element's {{domxref("HTMLMediaElement.load", "load()")}} method:</p>
-
-<pre class="brush: js notranslate">const mediaElem = document.getElementById("my-media-element");
-mediaElem.load();</pre>
-
-<h3 id="Detecting_track_addition_and_removal_requires_JavaScript">Detecting track addition and removal (requires JavaScript)</h3>
-
-<p>You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:</p>
-
-<pre class="brush: js notranslate">const mediaElem = document.querySelector("video");
-mediaElem.audioTracks.onaddtrack = function(event) {
-  audioTrackAdded(event.track);
-}
-</pre>
-
-<p>You'll find more information about this in our {{domxref("TrackEvent")}} documentation.</p>
 
 <h2 id="Displaying_video_text_tracks">Displaying video text tracks</h2>
 
@@ -263,7 +244,7 @@ This is the second.
 
 <ol>
  <li>Save it as a <code>.vtt</code> file in a sensible place.</li>
- <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in.</li>
+ <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identifying the language they are searching for.</li>
 </ol>
 
 <p>Here's an example:</p>
@@ -271,14 +252,14 @@ This is the second.
 <pre class="brush: html notranslate">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
-    &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es"&gt;
+    &lt;track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish"&gt;
 &lt;/video&gt;</pre>
 
 <p>This will result in a video that has subtitles displayed, kind of like this:</p>
 
 <p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>For more details, please read <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
+<p>For more details, including on how to add labels please read <a href="/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>

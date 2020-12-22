@@ -16,11 +16,9 @@ tags:
 ---
 <div>{{JsSidebar("Operators")}}</div>
 
-<p>Objects can be initialized using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object"><code>new Object()</code></a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, or using the <em>literal</em> notation (<em>initializer</em> notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
+<p>Objects can be initialized using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object"><code>new Object()</code></a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, or using the <em>literal</em> notation (<em>initializer</em> notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}</div>
-
-
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -68,7 +66,7 @@ let o = {
 <ul>
  <li>JSON permits <em>only</em> property definition using <code>"property": value</code> syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.</li>
  <li>In JSON the values can only be strings, numbers, arrays, <code>true</code>, <code>false</code>, <code>null</code>, or another (JSON) object.</li>
- <li>A function value (see "Methods" above) can not be assigned to a value in JSON.</li>
+ <li>A function value (see "Methods" below) can not be assigned to a value in JSON.</li>
  <li>Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</li>
  <li>{{jsxref("JSON.parse()")}} will reject computed property names and an error will be thrown.</li>
 </ul>
@@ -81,7 +79,7 @@ let o = {
 
 <pre class="brush: js notranslate">let object = {}</pre>
 
-<p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You simply notate a list of <code>key: value</code> pairs delimited by commas.</p>
+<p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You notate a list of <code>key: value</code> pairs delimited by commas.</p>
 
 <p>The following code creates an object with three properties and the keys are <code>"foo"</code>, <code>"age"</code> and <code>"baz"</code>. The values of these keys are a string <code>"bar"</code>, the number <code>42</code>, and another object.</p>
 
@@ -211,8 +209,6 @@ const obj = {
 console.log(obj); // A,B,C: "Hello"
 console.log(obj["A,B,C"]) // "Hello"
 
-
-
 let param = 'size'
 let config = {
   [param]: 12,
@@ -236,7 +232,7 @@ let clonedObj = { ...obj1 }
 let mergedObj = { ...obj1, ...obj2 }
 // Object { foo: "baz", x: 42, y: 13 }</pre>
 
-<div class="blockIndicator warning">
+<div class="notecard warning">
 <p>Note that {{jsxref("Object.assign()")}} triggers <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>, whereas the spread operator doesn't!</p>
 </div>
 
@@ -296,7 +292,6 @@ assert(obj3.__proto__ === 17)
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.operators.object_initializer")}}</p>
 </div>

@@ -122,10 +122,9 @@ console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
 // → "2:00:00 pm AEDT"
 
 // sometimes you want to be very precise
-options.fractionalSecondDigits = 3;
+options.fractionalSecondDigits = 3; //number digits for fraction-of-seconds
 console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
 // → "2:00:00.200 pm AEDT"
-
 
 // sometimes even the US needs 24-hour time
 options = {
@@ -136,7 +135,6 @@ options = {
 };
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → "12/19/2012, 19:00:00"
-
 
 // to specify options but use the browser's default locale, use 'default'
 console.log(new Intl.DateTimeFormat('default', options).format(date));
@@ -164,6 +162,10 @@ console.log(usedOptions.timeZone);
 // → "America/New_York" (the users default timezone)
 </pre>
 
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><a href="https://formatjs.io/docs/polyfills/intl-datetimeformat">formatjs Intl.DateTimeFormat polyfill</a></p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -182,7 +184,6 @@ console.log(usedOptions.timeZone);
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Intl.DateTimeFormat")}}</p>
 </div>

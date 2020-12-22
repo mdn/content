@@ -29,11 +29,11 @@ tags:
 
 <p>The chunks inside the stream are read by a <strong>reader</strong> — this processes the data one chunk at a time, allowing you to do whatever kind of operation you want to do on it. The reader plus the other processing code that goes along with it is called a <strong>consumer</strong>.</p>
 
-<p>There is also a construct you’ll use called a <strong>controller</strong> — each reader has an associated controller that allows you to control the stream (for example, to cancel it if wished).</p>
+<p>There is also a construct you’ll use called a <strong>controller</strong> — each reader has an associated controller that allows you to control the stream (for example, to close it if wished).</p>
 
 <p>Only one reader can read a stream at a time; when a reader is created and starts reading a stream (an <strong>active reader</strong>), we say it is <strong>locked</strong> to it. If you want another reader to start reading your stream, you typically need to cancel the first reader before you do anything else (although you can <strong>tee</strong> streams, see the Teeing section below)</p>
 
-<p>Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources (otherwise known as BYOB, or “bring your own buffer”) sources. These allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor page).</p>
+<p>Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources. Compared with the conventional readable stream, byte streams are allowed to be read by BYOB readers (BYOB, "bring your own buffer"). This kind of readers allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor page).</p>
 
 <div class="warning">
 <p><strong>Important</strong>: Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.</p>
@@ -107,7 +107,7 @@ tags:
 
 <p>The calculation performed is</p>
 
-<pre>high water mark - total size of chunks in queue = desired size</pre>
+<pre class="notranslate">high water mark - total size of chunks in queue = desired size</pre>
 
 <p>The <strong>desired size</strong> is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.</p>
 

@@ -13,7 +13,7 @@ tags:
 
 <p>The <code><strong>deriveBits()</strong></code> method of the {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base key.</p>
 
-<p>It takes as its arguments the base key, the derivation algorithm to use, and the length of the bit string to derive. It returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the derived bits.</p>
+<p>It takes as its arguments the base key, the derivation algorithm to use, and the length of the bit string to derive. It returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> which will be fulfilled with an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the derived bits.</p>
 
 <p>This method is very similar to <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code>, except that <code>deriveKey()</code> returns a <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> object rather than an <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of <code>deriveBits()</code> followed by <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a></code>.</p>
 
@@ -46,7 +46,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> that fulfills with an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> containing the derived bits.</li>
+ <li><code><em>result</em></code> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> that fulfills with an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> containing the derived bits.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can <a href="https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html">try the working examples</a> on GitHub.</p>
 </div>
 
@@ -200,8 +200,6 @@ deriveBitsButton.addEventListener("click", () =&gt; {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.SubtleCrypto.deriveBits")}}</p>
 

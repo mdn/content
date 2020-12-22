@@ -18,7 +18,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16799/proxy_register_warning.png" style="border: 1px solid black; display: block; height: 65px; margin: 0px auto; width: 800px;"></p>
 
-<p>Registers a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
+<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
 
 <p>If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>Each extension can only register a single PAC file: if you call <code>register()</code> twice, the second PAC file will replace the first.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Communicating_with_PAC_files">Communicating with PAC files</h2>
 
@@ -68,7 +68,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <h3 id="FindProxyForURL_return_value">FindProxyForURL() return value</h3>
 
-<p>The standard <code>FindProxyForURL()</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+<p>The standard <code>FindProxyForURL()</code> <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
 
 <p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.</p>
 
@@ -138,7 +138,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.</p>
 
 <h2 id="Examples">Examples</h2>
 

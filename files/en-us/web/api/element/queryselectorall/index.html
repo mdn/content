@@ -103,7 +103,7 @@ var matches = container.querySelectorAll("li[data-active='1']");</pre>
 
 <p>Once the {{domxref("NodeList")}} of matching elements is returned, you can examine it just like any array. If the array is empty (that is, its <code>length</code> property is 0), then no matches were found.</p>
 
-<p>Otherwise, you can simply use standard array notation to access the contents of the list. You can use any common looping statement, such as:</p>
+<p>Otherwise, you can use standard array notation to access the contents of the list. You can use any common looping statement, such as:</p>
 
 <pre class="brush: js">var highlightedItems = userList.querySelectorAll(".highlighted");
 
@@ -112,7 +112,7 @@ highlightedItems.forEach(function(userItem) {
 });</pre>
 
 <div class="note">
-<p><strong>Note: </strong>NodeList is not a genuine array, that is to say it doesn't have the array methods like slice, some, map etc. To convert it into an array, try Array.from(nodeList).</p>
+<p><strong>Note:</strong> NodeList is not a genuine array, that is to say it doesn't have the array methods like slice, some, map etc. To convert it into an array, try Array.from(nodeList).</p>
 </div>
 
 <h2 id="User_notes">User notes</h2>
@@ -181,7 +181,6 @@ inner.length; // 0
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.Element.querySelectorAll")}}</p>
 </div>

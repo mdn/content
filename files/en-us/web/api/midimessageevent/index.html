@@ -24,7 +24,7 @@ tags:
 
 <dl>
  <dt>{{domxref("MIDIConnectionEvent.data")}}</dt>
- <dd>A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the <a href="https://www.midi.org/specifications/item/table-1-summary-of-midi-message">MIDI specification</a> for more information on its form.</dd>
+ <dd>A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the <a href="https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message">MIDI specification</a> for more information on its form.</dd>
 </dl>
 
 <div class="note">
@@ -33,10 +33,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">// Printing all messages to console
+<pre class="brush: js notranslate">// Printing all messages to console
 navigator.requestMIDIAccess().then(midiAccess =&gt; {
   Array.from(midiAccess.inputs).forEach(input =&gt; {
-    input[1].onmidimessage = console.log;
+    input[1].onmidimessage = (msg) =&gt; { console.log(msg); }
   })
 });</pre>
 

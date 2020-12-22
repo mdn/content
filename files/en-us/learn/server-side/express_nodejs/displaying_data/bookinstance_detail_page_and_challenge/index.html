@@ -17,7 +17,7 @@ tags:
 
 <p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_detail()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js">// Display detail page for a specific BookInstance.
+<pre class="brush: js notranslate">// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <strong>    BookInstance.findById(req.params.id)
@@ -42,7 +42,7 @@ exports.bookinstance_detail = function(req, res, <strong>next</strong>) {
 
 <p>Create <strong>/views/bookinstance_detail.pug</strong> and copy in the content below.</p>
 
-<pre class="brush: js">extends layout
+<pre class="brush: js notranslate">extends layout
 
 block content
 
@@ -74,17 +74,17 @@ block content
 
 <h2 id="Challenge">Challenge</h2>
 
-<p>Currently most <em>dates</em> displayed on the site use the default JavaScript format (e.g. <em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>. The challenge for this article is to improve the appearance of the date display for <code>Author</code> lifespan information (date of death/birth) and for <em>BookInstance detail</em> pages to use the format: December 6th, 2016.</p>
+<p>Currently most <em>dates</em> displayed on the site use the default JavaScript format (e.g. <em>Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))</em>. The challenge for this article is to improve the appearance of the date display for <code>Author</code> lifespan information (date of death/birth) and for <em>BookInstance detail</em> pages to use the format: Oct 6th, 2016.</p>
 
 <div class="note">
-<p><strong>Note:</strong> You can use the <a href="#date_formatting">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="https://www.npmjs.com/package/moment">moment</a> to format the date strings).</p>
+<p><strong>Note:</strong> You can use the <a href="#">same approach</a> as we used for the <em>Book Instance List</em> (adding the virtual property for the lifespan to the <code>Author</code> model and use <a href="/en-US/docs/https://www.npmjs.com/package/luxon">luxon</a> to format the date strings).</p>
 </div>
 
 <p>To complete this challenge, you must:</p>
 
 <ol>
  <li>Replace the variable <code>due_back</code> with <code>due_back_formatted</code> in the <em>BookInstance detail</em> page.</li>
- <li>Update the <font face="Consolas, Liberation Mono, Courier, monospace">Author</font> model to add a lifespan virtual property. The lifespan should look like: <em>date_of_birth - date_of_death</em>, where both values have the same date format as <code>BookInstance.due_back_formatted</code>.</li>
+ <li>Update the <code>Author</code> model to add a lifespan virtual property. The lifespan should look like: <em>date_of_birth - date_of_death</em>, where both values have the same date format as <code>BookInstance.due_back_formatted</code>.</li>
  <li>Use <code>Author.lifespan</code> in all views where you currently explicitly use <code>date_of_birth</code> and <code>date_of_death</code>.</li>
 </ol>
 

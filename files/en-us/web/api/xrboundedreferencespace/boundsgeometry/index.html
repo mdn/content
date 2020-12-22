@@ -30,13 +30,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>bounds</em> = <em>xrReferenceSpace</em>.boundsGeometry;</pre>
+<pre class="syntaxbox notranslate"><em>bounds</em> = <em>xrReferenceSpace</em>.boundsGeometry;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>The <code>boundsGeometry</code> property is an array of {{domxref("DOMPointReadOnly")}} objects, each of which defines one vertex in a polygon inside which the viewer is required to remain. Each point must be at floor level, with its <code>y</code> coordinate's value set to 0. Additionally, the value of <code>w</code> is always 1 in every point in the array. Additionally, the points <em>must</em> be listed in clockwise order.</p>
 
-<p>Each entry in <code>boundsGeometry</code> is equal to an entry in the list of native bounds geometry points for the room, premultiplied by the inverse of the origin offset. In other words, the bounds are the physical limitations of the available space, shifted so that the reference space's bounds points are all defined relative to the <code>XRBoundedReferenceSpace</code>'s effective origiin.</p>
+<p>Each entry in <code>boundsGeometry</code> is equal to an entry in the list of native bounds geometry points for the room, premultiplied by the inverse of the origin offset. In other words, the bounds are the physical limitations of the available space, shifted so that the reference space's bounds points are all defined relative to the <code>XRBoundedReferenceSpace</code>'s effective origin.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

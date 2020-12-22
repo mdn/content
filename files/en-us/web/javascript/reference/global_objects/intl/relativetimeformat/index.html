@@ -14,30 +14,28 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
 
-
-
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}</dt>
+ <dt>{{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}</dt>
  <dd>Creates a new <code>Intl.RelativeTimeFormat</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
+ <dt>{{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
  <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
- <dd>Formats a <code>value</code> and a <code>unit</code> according to the locale and formatting options of the given <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat"><code>Intl.RelativeTimeFormat</code></a> object.</dd>
- <dt>{{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
+ <dt>{{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
+ <dd>Formats a <code>value</code> and a <code>unit</code> according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.</dd>
+ <dt>{{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
  <dd>Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.</dd>
- <dt>{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
+ <dt>{{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
  <dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
 </dl>
 
@@ -63,7 +61,7 @@ rtf.format(-1, "day");
 rtf.format(1, "day");
 // &gt; "in 1 day"</pre>
 
-<h3 id="Using_formatToParts">Using <code>formatToParts</code></h3>
+<h3 id="Using_formatToParts">Using formatToParts</h3>
 
 <p>The following example shows how to create a relative time formatter returning formatted parts</p>
 
@@ -79,15 +77,21 @@ rtf.formatToParts(100, "day");
 // &gt;  { type: "literal", value: " days" }]
 </pre>
 
+<h2 id="Polyfill">Polyfill</h2>
+
+<p><a href="https://formatjs.io/docs/polyfills/intl-relativetimeformat">formatjs Intl.RelativeTimeFormat polyfill</a></p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
    <td>Stage 4</td>
@@ -97,8 +101,6 @@ rtf.formatToParts(100, "day");
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</p>
 

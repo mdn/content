@@ -44,9 +44,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>fetchEvent</em>.respondWith(
+<pre class="syntaxbox notranslate"><em>fetchEvent</em>.respondWith(
   // Promise that resolves to a Response.
-​);</pre>
+);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -72,7 +72,7 @@ tags:
 		</tr>
 		<tr>
 			<td><code>InvalidStateError</code></td>
-			<td>The event has not been dispatched or <code>respondWithWith()</code> has already been invoked.</td>
+			<td>The event has not been dispatched or <code>respondWith()</code> has already been invoked.</td>
 		</tr>
 	</tbody>
 </table>
@@ -81,7 +81,7 @@ tags:
 
 <p>This fetch event tries to return a response from the cache API, falling back to the network otherwise.</p>
 
-<pre class="brush: js">addEventListener('fetch', event =&gt; {
+<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
   // Prevent the default, and handle the request ourselves.
   event.respondWith(async function() {
     // Try to get the response from a cache.
@@ -93,7 +93,7 @@ tags:
   }());
 });</pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} is a convenience method. Equivalent functionality is to call {{domxref("cache.match()")}} on each cache (in the order returned by {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is returned.</p>
 </div>
 
@@ -117,7 +117,6 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.FetchEvent.respondWith")}}</p>
 </div>

@@ -41,19 +41,19 @@ tags:
 
 <p><img alt="An audio waveform with samples taken periodically" src="https://mdn.mozillademos.org/files/16653/audio-waveform-samples1.svg" style="height: 287px; width: 691px;"></p>
 
-<p>In this example, the blue line represents the samples taken from the audio waveform, which is black. At regular intervals, the A/D converter circuitry reads the voltage of the signal as a value between (in this case) -1.0 and +1.0. Since the amplitude varies over the duration of that time slice, the A/D converter must choose a value to represent that slice, whether by simply taking the value at a particular moment (in the diagram above, the midpoint of each slice is used as the value), or by averaging the amplitude over the duration of each sample. Those sample values are then recorded as the amplitude of the waveform at that time.</p>
+<p>In this example, the blue line represents the samples taken from the audio waveform, which is black. At regular intervals, the A/D converter circuitry reads the voltage of the signal as a value between (in this case) -1.0 and +1.0. Since the amplitude varies over the duration of that time slice, the A/D converter must choose a value to represent that slice, whether by taking the value at a particular moment (in the diagram above, the midpoint of each slice is used as the value), or by averaging the amplitude over the duration of each sample. Those sample values are then recorded as the amplitude of the waveform at that time.</p>
 
 <p>When it comes time to play back that sound later, these amplitudes are used to generate an approximation of the original waveform; instead of playing back an exact duplicate of the original, smooth wave, the rougher, blue wave is played.</p>
 
-<p>The more often you take samples of the original audio, the closer to the original you can get. The number of samples taken per second is called the <a id="Sample_rate" name="Sample_rate"><strong>sample rate</strong></a>. Consider the wave above, and how much different the blue, digital wave would look if you took samples twice as often. Or ten times as often. The more samples you take, the smoother the wave becomes.</p>
+<p>The more often you take samples of the original audio, the closer to the original you can get. The number of samples taken per second is called the <a id="Sample_rate"><strong>sample rate</strong></a>. Consider the wave above, and how much different the blue, digital wave would look if you took samples twice as often. Or ten times as often. The more samples you take, the smoother the wave becomes.</p>
 
 <h2 id="Audio_data_format_and_structure">Audio data format and structure</h2>
 
-<p>At the most basic level, audio is represented by a stream of samples, each specifying the amplitude of the audio waveform as measured for a given slice of the overall waveform of the audio signal. There are several formats used for the individual samples within an audio file. Most audio files use 16-bit signed integers for each sample, but others use 32-bit floating-point values or 24-bit or 32-bit integers. Some older audio file formats—which you won't find in use on the web—used 8-bit integer samples. In addition, samples may use signed or unsigned values, as well. The size of an individual sample is called the <a id="Sample_size" name="Sample_size"><strong>sample size</strong></a>.</p>
+<p>At the most basic level, audio is represented by a stream of samples, each specifying the amplitude of the audio waveform as measured for a given slice of the overall waveform of the audio signal. There are several formats used for the individual samples within an audio file. Most audio files use 16-bit signed integers for each sample, but others use 32-bit floating-point values or 24-bit or 32-bit integers. Some older audio file formats—which you won't find in use on the web—used 8-bit integer samples. In addition, samples may use signed or unsigned values, as well. The size of an individual sample is called the <a id="Sample_size"><strong>sample size</strong></a>.</p>
 
-<p>The position of each audio source within the audio signal is called a <a id="Channels" name="Channels"><strong>channel</strong></a>. Each channel contains a sample indicating the amplitude of the audio being produced by that source at a given moment in time. For instance, in stereo sound, there are two audio sources: one speaker on the left, and one on the right. Each of these is represented by one channel, and the number of channels contained in the audio signal is called the <a id="Channel_count" name="Channel_count"><strong>channel count</strong></a>.</p>
+<p>The position of each audio source within the audio signal is called a <a id="Channels"><strong>channel</strong></a>. Each channel contains a sample indicating the amplitude of the audio being produced by that source at a given moment in time. For instance, in stereo sound, there are two audio sources: one speaker on the left, and one on the right. Each of these is represented by one channel, and the number of channels contained in the audio signal is called the <a id="Channel_count"><strong>channel count</strong></a>.</p>
 
-<p>While recording or generating multi-channel audio files, the channels are assembled into a series of <a id="Audio_frames" name="Audio_frames"><strong>audio frames</strong></a>, each consisting of one sample for each of the audio's channels. An individual sample is a numeric value representing the amplitude of the sound {{interwiki("wikipedia", "waveform")}} at a single moment in time, and may be represented in various formats.</p>
+<p>While recording or generating multi-channel audio files, the channels are assembled into a series of <a id="Audio_frames"><strong>audio frames</strong></a>, each consisting of one sample for each of the audio's channels. An individual sample is a numeric value representing the amplitude of the sound {{interwiki("wikipedia", "waveform")}} at a single moment in time, and may be represented in various formats.</p>
 
 <p>Stereo audio is probably the most commonly used channel arrangement in web audio, and 16-bit samples are used for the majority of day-to-day audio in use today. For 16-bit stereo audio, each sample taken from the analog signal is recorded as two 16-bit integers, one for the left channel and one for the right. That means each sample requires 32 bits of memory. At the common sample rate of 48 kHz (48,000 samples per second), this means each second of audio occupies 192 kB of memory. Therefore, a typical three-minute song requires about 34.5 MB of memory. That's a lot of storage, but worse, it's an insane amount of network bandwidth to use for a relatively short piece of audio. That's why most digital audio is compressed.</p>
 
@@ -61,11 +61,11 @@ tags:
 
 <h3 id="Audio_channels_and_frames">Audio channels and frames</h3>
 
-<p>There are two types of audio channel. Standard audio channels are used to present the majority of the audible sound. The sound for the left and right main channels, as well as all of your surround sound speakers (center, left and right rear, left and right sides, ceiling channels, and so forth) are all standard audio channels. Special <a id="Low_Frequency_Enhancement_channel" name="Low_Frequency_Enhancement_channel"><strong>Low Frequency Enhancement</strong></a> (<strong>LFE</strong>) channels provide the signal for special speakers designed to produce the low frequency sounds and vibration to create a visceral sensation when listening to the audio. The LFE channels typically drive subwoofers and similar devices.</p>
+<p>There are two types of audio channel. Standard audio channels are used to present the majority of the audible sound. The sound for the left and right main channels, as well as all of your surround sound speakers (center, left and right rear, left and right sides, ceiling channels, and so forth) are all standard audio channels. Special <a id="Low_Frequency_Enhancement_channel"><strong>Low Frequency Enhancement</strong></a> (<strong>LFE</strong>) channels provide the signal for special speakers designed to produce the low frequency sounds and vibration to create a visceral sensation when listening to the audio. The LFE channels typically drive subwoofers and similar devices.</p>
 
-<p>Monophonic audio has one channel, stereo sound has two channels, 5.1 surround sound has 6 channels (five standard and one LFE), and so forth. Each audio frame is a data record that contains the samples for all of the channels available in an audio signal. The size of an audio frame is calculated by multiplying the sample size in bytes by the number of channels, so a single frame of stereo 16-bit audio is<em> </em>4 bytes long and a single frame of 5.1 floating-point audio is 24 (4 bytes per sample multiplied by 6 channels).</p>
+<p>Monophonic audio has one channel, stereo sound has two channels, 5.1 surround sound has 6 channels (five standard and one LFE), and so forth. Each audio frame is a data record that contains the samples for all of the channels available in an audio signal. The size of an audio frame is calculated by multiplying the sample size in bytes by the number of channels, so a single frame of stereo 16-bit audio is 4 bytes long and a single frame of 5.1 floating-point audio is 24 (4 bytes per sample multiplied by 6 channels).</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> It's worth noting that some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels.</p>
 </div>
 
@@ -104,7 +104,7 @@ tags:
 
 <p>To solve this problem, the audio must be made smaller using compression.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in {{anch("Sampling audio")}}, above.</p>
 </div>
 
@@ -132,7 +132,7 @@ tags:
 
 <p>If loss of detail and potentially fidelity is unacceptable or undesirable, a <strong>lossless</strong> codec is preferred. On the other hand, if some degree of reduction of audio fidelity is okay, a <strong>lossy</strong> codec can be used. Generally, lossy compression results in significantly smaller output than lossless compression methods; also, many lossy codecs are excellent, with the loss in quality and detail being difficult or even impossible for the average listener to discern.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> While a high-quality lossy compression algorithm's effect on sound quality may be difficult for the average person to detect, certain people have exceptionally good hearing, or are particularly adept at noticing the kinds of changes introduced to music by lossy compression techniques.</p>
 </div>
 
@@ -184,7 +184,7 @@ tags:
 
 <p>Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing a codec")}}.</p>
 </div>
 

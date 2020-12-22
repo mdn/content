@@ -12,11 +12,14 @@ tags:
 <ul>
  <li>{{HTTPHeader("Cache-Control")}}</li>
  <li>{{HTTPHeader("Content-Language")}}</li>
+ <li>{{HTTPHeader("Content-Length")}}</li>
  <li>{{HTTPHeader("Content-Type")}}</li>
  <li>{{HTTPHeader("Expires")}}</li>
  <li>{{HTTPHeader("Last-Modified")}}</li>
  <li>{{HTTPHeader("Pragma")}}</li>
 </ul>
+
+<p>{{HTTPHeader("Content-Length")}} was not part of the original set safelisted response headers [<a href="https://github.com/whatwg/fetch/pull/626">ref</a>]</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -24,7 +27,7 @@ tags:
 
 <p>You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:</p>
 
-<pre>Access-Control-Expose-Headers: X-Custom-Header, Content-Length</pre>
+<pre class="notranslate">Access-Control-Expose-Headers: X-Custom-Header, Content-Length</pre>
 
 <section class="Quick_links" id="Quick_Links">
 <ol>

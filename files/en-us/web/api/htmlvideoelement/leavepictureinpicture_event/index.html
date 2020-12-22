@@ -1,0 +1,109 @@
+---
+title: 'HTMLVideoElement: leavepictureinpicture event'
+slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
+tags:
+  - API
+  - Event
+  - Interface
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Video
+  - pip
+---
+<p>{{APIRef("HTMLVideoElement")}}</p>
+
+<p class="seoSummary">The <code>leavepictureinpicture</code> event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{DOMxRef("PictureInPictureEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Target</th>
+   <td>{{DOMxRef("HTMLVideoElement")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Default Action</th>
+   <td>None</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref("HTMLVideoElement.onleavepictureinpicture")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<p>These examples add an event listener for the HTMLVideoElement's <code>leavepictureinpicture</code> event, then post a message when that event handler has reacted to the event firing.</p>
+
+<p>Using <code>addEventListener()</code>:</p>
+
+<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">const</span> button <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">onExitPip</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Picture-in-Picture mode deactivated!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+video<span class="punctuation token">.addEventListener("</span>leavepictureinpicture", onExitPip<span class="punctuation token">, false);</span>
+
+button<span class="punctuation token">.</span><span class="function function-variable token">onclick</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
+  <span class="keyword token">if</span> <span class="punctuation token">(</span>document<span class="punctuation token">.</span>pictureInPictureElement<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    document<span class="punctuation token">.</span><span class="function token">exitPictureInPicture</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span>
+<span class="punctuation token">}</span></code></pre>
+
+<p>Using the <code>onleavepictureinpicture</code> event handler property:</p>
+
+<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">const</span> button <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#button'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">function</span> <span class="function token">onExitPip</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Picture-in-Picture mode deactivated!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+
+video<span class="punctuation token">.</span>onleavepictureinpicture <span class="operator token">=</span> onExitPip<span class="punctuation token">;</span>
+
+button<span class="punctuation token">.</span><span class="function function-variable token">onclick</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
+  <span class="keyword token">if</span> <span class="punctuation token">(</span>document<span class="punctuation token">.</span>pictureInPictureElement<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    document<span class="punctuation token">.</span><span class="function token">exitPictureInPicture</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Picture-in-Picture', "#eventdef-htmlvideoelement-leavepictureinpicture", "leavepictureinpicture event")}}</td>
+   <td>{{Spec2('Picture-in-Picture')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLVideoElement.leavepictureinpicture_event")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("HTMLVideoElement")}}</li>
+ <li>{{domxref("Picture-in-Picture_API")}}</li>
+</ul>

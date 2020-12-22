@@ -31,10 +31,10 @@ color-adjust: exact;</pre>
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>economy</code></dt>
- <dd>The user agent is allowed to make adjustments to the element as it deems appropriate and prudent in order to optimize the output for the device it's being rendered for. For example, when printing, a browser might opt to leave out all background images and to adjust text colors to be sure the contrast is optimized for reading on white paper. This is the default.</dd>
- <dt><code><strong>exact</strong></code></dt>
- <dd>The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better. The appearance of the content should not be changed except by the user's request. For example, a page might include a list of information with rows whose background colors alternate between white and a light grey. Removing the background color would decrease the legibility of the content.</dd>
+	<dt><code>economy</code></dt>
+	<dd>The user agent is allowed to make adjustments to the element as it deems appropriate and prudent in order to optimize the output for the device it's being rendered for. For example, when printing, a browser might opt to leave out all background images and to adjust text colors to be sure the contrast is optimized for reading on white paper. This is the default.</dd>
+	<dt><code><strong>exact</strong></code></dt>
+	<dd>The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better. The appearance of the content should not be changed except by the user's request. For example, a page might include a list of information with rows whose background colors alternate between white and a light grey. Removing the background color would decrease the legibility of the content.</dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -42,13 +42,12 @@ color-adjust: exact;</pre>
 <p>There are a number of reasons a browser might wish to deviate from the specified appearance, such as:</p>
 
 <ul>
- <li>The content uses text and background colors that will be too similar on the output device for legibility purposes.</li>
- <li>If the output device is a printer, and to save ink, dark or extremely dense background images might be removed.</li>
- <li>When printing a page, the browser might want to replace light-colored text on a dark background with dark text on a white background.</li>
+	<li>The content uses text and background colors that will be too similar on the output device for legibility purposes.</li>
+	<li>If the output device is a printer, and to save ink, dark or extremely dense background images might be removed.</li>
+	<li>When printing a page, the browser might want to replace light-colored text on a dark background with dark text on a white background.</li>
 </ul>
 
 <p>Any options the user agent offers the user to allow them to control the use of color and images will take priority over the value of <code>color-adjust</code>. In other words, there isn't any guarantee that <code>color-adjust</code> will do anything. Not only can the user override the behavior, but each user agent is allowed to decide for itself how to handle <code>color-adjust</code> in any given situation.</p>
-
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -94,20 +93,20 @@ color-adjust: exact;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Color Adjust', '#propdef-color-adjust', 'color-adjust')}}</td>
-   <td>{{Spec2('CSS Color Adjust')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS Color Adjust', '#propdef-color-adjust', 'color-adjust')}}</td>
+			<td>{{Spec2('CSS Color Adjust')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -119,7 +118,8 @@ color-adjust: exact;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("background-image")}}</li>
+	<li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
+	<li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
+	<li>{{cssxref("background-image")}}</li>
+	<li>{{cssxref("-webkit-print-color-adjust")}}</li>
 </ul>

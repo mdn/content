@@ -215,7 +215,7 @@ return pump();</pre>
 
 <p>But a custom stream is still a <code>ReadableStream</code> instance, meaning you can attach a reader to it. As an example, have a look at our <a href="https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html">Simple random stream demo</a> (<a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">see it live also</a>), which creates a custom stream, enqueues some random strings into it, and then reads the data out of the stream again once the <em>Stop string generation</em> button is pressed.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.</p>
 </div>
 

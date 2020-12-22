@@ -200,7 +200,7 @@ Hello #2</pre>
 
 <h4 id="Built-in_methods">Built-in methods</h4>
 
-<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175" title="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L208">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
+<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
 
 <dl>
  <dt><code class="language-javascript">md5(string)</code></dt>
@@ -221,7 +221,7 @@ Hello #2</pre>
  <dt><code class="language-javascript">cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
  <dt><code class="language-javascript">request</code></dt>
- <dd>Access to <a class="link-https" href="https://github.com/mikeal/request" title="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
+ <dd>Access to <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
  <dt><code class="language-javascript">log.debug(string)</code></dt>
  <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
 </dl>
@@ -313,7 +313,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
  <dt>Tags{{Optional_Inline}}</dt>
  <dd>A list of tags used to organize your bookmarks; these are entirely optional and what (if any) tags you use is up to you.</dd>
  <dt>Keyword</dt>
- <dd>The shortcut text you wish to use to access the template. Ideally, this should be something short and quick to type, such as simply "t" or "mdnt".</dd>
+ <dd>The shortcut text you wish to use to access the template. Ideally, this should be something short and quick to type, such as "t" or "mdnt".</dd>
  <dt>Description{{Optional_Inline}}</dt>
  <dd>A suitable description explaining what the search keyword does.</dd>
 </dl>
@@ -384,13 +384,13 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 <pre class="brush: js no-line-numbers notranslate">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</p>
 </div>
 
 <p>If the file isn't found, an empty string is returned. There is currently no way to tell the difference between an empty file and a nonexistent one. But if you're putting empty files on the wiki, you're doing it wrong.</p>
 
-<h3 id="Localizing_template_content" name="Localizing_template_content">テンプレートのローカライズ</h3>
+<h3 id="Localizing_template_content">テンプレートのローカライズ</h3>
 
 <p>Templates are not translated like wiki pages, rather any single template might be used for any number of locales.</p>
 

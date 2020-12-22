@@ -13,18 +13,18 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>createConvolver()</code> method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply reverb effects to your audio. See the <a href="http://webaudio.github.io/web-audio-api/#background-3">spec definition of Convolution</a> for more information.</p>
+<p>The <code>createConvolver()</code> method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply reverb effects to your audio. See the <a href="https://webaudio.github.io/web-audio-api/#background-3">spec definition of Convolution</a> for more information.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">baseAudioContext.createConvolver();</pre>
 
-<h3 id="Description" name="Description">Returns</h3>
+<h3 id="Description">Returns</h3>
 
 <p>A {{domxref("ConvolverNode")}}.</p>
 
-<h2 id="Examples" name="Examples">Example</h2>
+<h2 id="Examples">Example</h2>
 
 <p>The following example shows basic usage of an AudioContext to create a convolver node. The basic premise is that you create an AudioBuffer containing a sound sample to be used as an ambience to shape the convolution (called the <em>impulse response</em>,) and apply that to the convolver. The example below uses a short sample of a concert hall crowd, so the reverb effect applied is really deep and echoey.</p>
 
@@ -78,7 +78,6 @@ convolver.buffer = concertHallBuffer;</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.BaseAudioContext.createConvolver")}}</p>
 </div>

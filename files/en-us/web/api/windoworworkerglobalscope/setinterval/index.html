@@ -29,7 +29,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
 
 <dl>
  <dt><code>func</code></dt>
- <dd>A {{jsxref("function")}} to be executed every <code>delay</code> milliseconds. The function is not passed any arguments, and no return value is expected.</dd>
+ <dd>A {{jsxref("function")}} to be executed every <code>delay</code> milliseconds.</dd>
  <dt><code>code</code></dt>
  <dd>An optional syntax allows you to include a string instead of a function, which is compiled and executed every <code>delay</code> milliseconds. This syntax is <em>not recommended</em> for the same reasons that make using {{jsxref("eval", "eval()")}} a security risk.</dd>
  <dt><code>delay</code>{{optional_inline}}</dt>
@@ -44,7 +44,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the timeout.</p>
+<p>The returned <code>intervalID</code> is a numeric, non-zero value which identifies the timer created by the call to <code>setInterval()</code>; this value can be passed to {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} to cancel the interval.</p>
 
 <p>It may be helpful to be aware that <code>setInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that <code>clearInterval()</code> and {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.</p>
 
@@ -86,8 +86,11 @@ function myCallback(a, b)
 
     function flashText() {
       var oElem = document.getElementById('my_box');
-      oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
-      // oElem.style.color == 'red' ? 'blue' : 'red' is a conditional or ternary operator.
+      if(oElem.style.color === 'red') {
+        oElem.style.color = 'blue'
+      } else {
+        oElem.style.color = 'red'
+      }
     }
 
     function stopTextColor() {
@@ -271,7 +274,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <h2 id="Callback_arguments">Callback arguments</h2>
 
-<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
+<p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, add the following code to the top of your script.</p>
 
 <pre class="brush:js notranslate">/*\
 |*|
@@ -389,9 +392,9 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 </pre>
 
-<p>Another, more complex, solution for<strong> </strong>the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> problem<strong> </strong>is <a href="#MiniDaemon_-_A_framework_for_managing_timers">the following framework</a>.</p>
+<p>Another, more complex, solution for the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> problem is <a href="#MiniDaemon_-_A_framework_for_managing_timers">the following framework</a>.</p>
 
-<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
+<div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
 <h2 id="MiniDaemon_-_A_framework_for_managing_timers">MiniDaemon - A framework for managing timers</h2>
 
@@ -622,7 +625,6 @@ MiniDaemon.prototype.start = function (bReverse) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
 </div>

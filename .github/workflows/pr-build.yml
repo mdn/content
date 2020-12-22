@@ -15,6 +15,9 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - files/**/*.html
+      - .github/workflows/pr-build.yml
 
 jobs:
   build:
@@ -23,52 +26,34 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: technote-space/get-diff-action@v3
-        id: git_diff_content
+      - uses: technote-space/get-diff-action@v4.0.5
         with:
-          SEPARATOR: ","
-          SUFFIX_FILTER: .html
-          PREFIX_FILTER: files/
-
-      - uses: actions/checkout@v2
-        if: steps.git_diff_content.outputs.diff
-        with:
-          repository: mdn/yari
-          path: yari
+          PATTERNS: files/**/*.html
 
       - name: Setup Node.js environment
-        if: steps.git_diff_content.outputs.diff
-        uses: actions/setup-node@v2.1.2
+        if: env.GIT_DIFF
+        uses: actions/setup-node@v2.1.4
         with:
           node-version: "12"
 
-      - name: Get yarn cache directory path
-        if: steps.git_diff_content.outputs.diff
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2.1.2
-        if: steps.git_diff_content.outputs.diff
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      - name: Cache node_modules
+        if: env.GIT_DIFF
+        uses: actions/cache@v2.1.3
+        id: cached-node_modules
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          # TODO: Is this correct?! We wanna make sure it's the yarn.lock
-          # from ./yari/ and not ./ which is just the content.
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          path: |
+            node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install all yarn packages
-        if: steps.git_diff_content.outputs.diff
+        if: env.GIT_DIFF && steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
-          cd yari
           yarn --frozen-lockfile
 
       - name: Build changed content
-        if: steps.git_diff_content.outputs.diff
+        if: env.GIT_DIFF
         run: |
           export CONTENT_ROOT=$(pwd)/files
-          # Need to run from the yari we've cleanly cloned.
-          cd yari
 
           # Some day, when our number of flaws have reached 0 we'll change
           # this to "*:error" which means the slightest flaw in the build
@@ -102,49 +87,14 @@ jobs:
           # This environment variable will disable that functionality entirely.
           export REACT_APP_DISABLE_AUTH=true
 
+          # If we don't do this the built files will end up in
+          # `node_modules/@mdn/yari/client/build/` and we don't want that
+          # to get pushed into the cache.
+          export BUILD_OUT_ROOT=/tmp/
+
           export BUILD_NO_PROGRESSBAR=true
-          export BUILD_FILES="${{ env.GIT_DIFF }}"
-          yarn prepare-build
-          yarn build
-
-  check_redirects:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: technote-space/get-diff-action@v3
-        id: git_diff_content
-        with:
-          SUFFIX_FILTER: _redirects.txt
-          PREFIX_FILTER: files/
-
-      - name: Setup Node.js environment
-        if: steps.git_diff_content.outputs.diff
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: "12"
-
-      - name: Get yarn cache directory path
-        if: steps.git_diff_content.outputs.diff
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2.1.2
-        if: steps.git_diff_content.outputs.diff
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install all yarn packages
-        if: steps.git_diff_content.outputs.diff
-        run: yarn --frozen-lockfile
-
-      - name: Check redirects file(s)
-        if: steps.git_diff_content.outputs.diff
-        run: |
-          echo ${{ env.GIT_DIFF }}
-          echo ${{ env.MATCHED_FILES }}
-          yarn redirects validate
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}

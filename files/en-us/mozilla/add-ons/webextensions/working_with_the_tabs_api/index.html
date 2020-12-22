@@ -25,7 +25,7 @@ tags:
 
 <p>We then conclude by looking at some other, miscellaneous features offered by the API.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note:</strong> There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> and the how-to guide <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a>.</p>
 </div>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> example adds the list of “switch to tabs” to its toolbar button popup.</p>
 
-<p><img alt="The tabs tabs tabs toolbar menu showing the switch to tap area" src="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png" style="height: 645px; width: 369px;"></p>
+<p><img alt="The tabs toolbar menu showing the switch to tap area" src="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png" style="height: 645px; width: 369px;"></p>
 
 <h3 id="manifest.json">manifest.json</h3>
 
@@ -90,7 +90,7 @@ tags:
 }
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p>Note the following:</p>
 
 <ul>
@@ -124,7 +124,6 @@ tags:
     &lt;/div&gt;
 
     &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
-
 
 &lt;!--
 Define the other menu items
@@ -273,7 +272,7 @@ Define the other menu items
 	<li>reload the tab’s page ({{WebExtAPIRef("tabs.reload()")}}).</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>NOTE: </strong></p>
 
 <p>These functions all require the ID (or IDs) of the tab they are manipulating:</p>
@@ -312,7 +311,6 @@ Define the other menu items
     &lt;a href="#" id="tabs-move-end"&gt;Move active tab to the end of the window&lt;/a&gt;&lt;br&gt;
 
     &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
-
 
     &lt;a href="#" id="tabs-duplicate"&gt;Duplicate active tab&lt;/a&gt;&lt;br&gt;
 
@@ -398,7 +396,7 @@ Define the other menu items
 <p>In Firefox the default zoom settings are:</p>
 
 <ul>
-	<li><strong>default zoom level: </strong>100%.</li>
+	<li><strong>default zoom level:</strong> 100%.</li>
 	<li><strong>zoom mode:</strong> automatic (so the browser manages how zoom levels are set).</li>
 	<li><strong>scope of zoom changes:</strong> <code>"per-origin"</code>, meaning that when you visit a site again, it takes the zoom level set in your last visit.</li>
 </ul>
@@ -580,7 +578,6 @@ gettingAllTabs.then((tabs) =&gt; {
 </ul>
 
 <pre class="brush: js">function toggleCSS(tab) {
-
 
  function gotTitle(title) {
 

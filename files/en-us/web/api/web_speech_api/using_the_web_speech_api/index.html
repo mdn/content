@@ -37,7 +37,7 @@ tags:
 
 <h3 id="HTML_and_CSS">HTML and CSS</h3>
 
-<p>The HTML and CSS for the app is really trivial. We simply have a title, instructions paragraph, and a div into which we output diagnostic messages.</p>
+<p>The HTML and CSS for the app is really trivial. We have a title, instructions paragraph, and a div into which we output diagnostic messages.</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech color changer&lt;/h1&gt;
 &lt;p&gt;Tap/click then say a color to change the background color of the app.&lt;/p&gt;
@@ -66,7 +66,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 <pre class="brush: js">var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ... ];
 var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.join(' | ') + ' ;'</pre>
 
-<p>The grammar format used is <a class="external external-icon" href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:</p>
+<p>The grammar format used is <a class="external external-icon" href="https://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:</p>
 
 <ul>
  <li>The lines are separated by semi-colons, just like in JavaScript.</li>
@@ -123,7 +123,7 @@ document.body.onclick = function() {
 
 <h4 id="Receiving_and_handling_results">Receiving and handling results</h4>
 
-<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
+<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
 
 <pre class="brush: js">recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;
@@ -142,7 +142,7 @@ document.body.onclick = function() {
 
 <h4 id="Handling_errors_and_unrecognised_speech">Handling errors and unrecognised speech</h4>
 
-<p>The last two handlers are there to handle cases where speech was recognised that wasn't in the defined grammar, or an error occured. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognised anyway:</p>
+<p>The last two handlers are there to handle cases where speech was recognised that wasn't in the defined grammar, or an error occurred. {{domxref("SpeechRecognition.onnomatch")}} seems to be supposed to handle the first case mentioned, although note that at the moment it doesn't seem to fire correctly; it just returns whatever was recognised anyway:</p>
 
 <pre class="brush: js">recognition.onnomatch = function(event) {
   diagnostic.textContent = 'I didnt recognise that color.';
@@ -186,7 +186,7 @@ document.body.onclick = function() {
 
 <h3 id="HTML_and_CSS_2">HTML and CSS</h3>
 
-<p>The HTML and CSS are again pretty trivial, simply containing a title, some instructions for use, and a form with some simple controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)</p>
+<p>The HTML and CSS are again pretty trivial, containing a title, some instructions for use, and a form with some simple controls. The {{htmlelement("select")}} element is initially empty, but is populated with {{htmlelement("option")}}s via JavaScript (see later on.)</p>
 
 <pre class="brush: html">&lt;h1&gt;Speech synthesiser&lt;/h1&gt;
 
@@ -298,7 +298,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 <h4 id="Updating_the_displayed_pitch_and_rate_values">Updating the displayed pitch and rate values</h4>
 
-<p>The last part of the code simply updates the <code>pitch</code>/<code>rate</code> values displayed in the UI, each time the slider positions are moved.</p>
+<p>The last part of the code updates the <code>pitch</code>/<code>rate</code> values displayed in the UI, each time the slider positions are moved.</p>
 
 <pre class="brush: js">pitch.onchange = function() {
   pitchValue.textContent = pitch.value;

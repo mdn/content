@@ -13,8 +13,6 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
-
 <p class="summary">On MDN, you'll see numerous code examples inserted throughout the pages to demonstrate usage of web platform features. This article discusses the different mechanisms available for adding code examples to pages, along with which ones you should use and when.</p>
 
 <h2 id="What_types_of_code_example_are_available">What types of code example are available?</h2>
@@ -102,7 +100,6 @@ console.log(test);</pre>
   &lt;body&gt;
     &lt;h1&gt;Your example?&lt;/h1&gt;
 
-
     &lt;script type="text/javascript"&gt;
       document.querySelector('h1').onclick = function() {
         document.querySelector('h1').textContent = 'Your example?';
@@ -114,7 +111,7 @@ console.log(test);</pre>
 
 <h3 id="Other_macro_parameters">Other macro parameters</h3>
 
-<p>The call we've used in the below example only uses one parameter — \{{EmbedLiveSample('test')}}. This simply defines which section of the document the code blocks should be grabbed from — <code>test</code> is the ID defined on the heading "test" below, so the macro will will grab all the code blocks inside that heading. Put another way, it will grab all the blocks below that heading, up until another {{htmlelement("h2")}} is encountered.</p>
+<p>The call we've used in the below example only uses one parameter — \{{EmbedLiveSample('test')}}. This defines which section of the document the code blocks should be grabbed from — <code>test</code> is the ID defined on the heading "test" below, so the macro will grab all the code blocks inside that heading. Put another way, it will grab all the blocks below that heading, up until another {{htmlelement("h2")}} is encountered.</p>
 
 <p>There are some other optional parameters available too. You can include a second and third parameter, which will be a set width and height for the <code>&lt;iframe&gt;</code>. For example \{{EmbedLiveSample('test', '100%', '100px')}}. You can use pixel values or percentage values. Reasonable defaults are used if you omit these.</p>
 
@@ -164,7 +161,7 @@ console.log(test);</pre>
 
 <p>These work in a very similar way to the {{anch("Traditional live samples")}}, but they are a lot simpler:</p>
 
-<p>You don't have to worry about placement of code blocks on the page — it simply grabs an HTML document in a GitHub repo, and puts it in the <code>&lt;iframe&gt;</code>.</p>
+<p>You don't have to worry about placement of code blocks on the page — it grabs an HTML document in a GitHub repo, and puts it in the <code>&lt;iframe&gt;</code>.</p>
 
 <p>The macro only has three parameters:</p>
 
@@ -211,7 +208,5 @@ console.log(test);</pre>
 <p>The \{{EmbedInteractiveExample}} macro is used to embed finished examples into MDN pages. For example, the macro call \{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
-
-<div></div>
 
 <div>Try adjusting the code to see what happens, and playing with the controls.</div>

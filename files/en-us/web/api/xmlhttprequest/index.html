@@ -22,6 +22,8 @@ tags:
 
 <p>If your communication needs to involve receiving event data or message data from a server, consider using <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a> through the {{domxref("EventSource")}} interface. For full-duplex communication, <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> may be a better choice.</p>
 
+<p>{{AvailableInWorkers}}</p>
+
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
@@ -87,7 +89,7 @@ tags:
 
 <p><code>onreadystatechange</code> as a property of the <code>XMLHttpRequest</code> instance is supported in all browsers.</p>
 
-<p>Since then, a number of additional event handlers have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Since then, a number of additional event handlers have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>More recent browsers, including Firefox, also support listening to the <code>XMLHttpRequest</code> events via standard {{domxref("EventTarget.addEventListener", "addEventListener()")}} APIs in addition to setting <code>on*</code> properties to a handler function.</p>
 
@@ -169,8 +171,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <div>{{Compat("api.XMLHttpRequest")}}</div>
 

@@ -36,7 +36,7 @@ tags:
   <li>If <code><var>separator</var></code> is an empty string (<code>""</code>), <code><var>str</var></code> is converted to an array of each of its UTF-16 "characters".</li>
  </ul>
 
- <div class="blockIndicator warning">
+ <div class="notecard warning">
  <p><strong>Warning:</strong> When the empty string (<code>""</code>) is used as a separator, the string is <strong>not</strong> split by <em>user-perceived characters</em> (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme clusters</a>) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys <a href="http://unicode.org/faq/utf_bom.html#utf16-2">surrogate pairs</a>. See <a href="https://stackoverflow.com/a/34717402">“How do you get a string to a character array in JavaScript?” on StackOverflow</a>.</p>
  </div>
  </dd>
@@ -165,7 +165,7 @@ console.log(splits)
 <pre class="notranslate">[ "Hello ", "1", " word. Sentence number ", "2", "." ]
 </pre>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note: </strong><code>\d</code> matches the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character class</a> for digits between 0 and 9.</p>
 </div>
 

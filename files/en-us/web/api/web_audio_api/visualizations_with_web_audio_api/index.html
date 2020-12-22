@@ -154,7 +154,7 @@ canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
       canvasCtx.fillStyle = 'rgb(0, 0, 0)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);</pre>
 
-<p>Now we set our <code>barWidth</code> to be equal to the canvas width divided by the number of bars (the buffer length). However, we are also multiplying that width by 2.5, because most of the frequencies will come back as having no audio in them, as most of the sounds we hear every day are in a certain lower frequency range. We don't want to display loads of empty bars, therefore we simply shift the ones that will display regularly at a noticeable height across so they fill the canvas display.</p>
+<p>Now we set our <code>barWidth</code> to be equal to the canvas width divided by the number of bars (the buffer length). However, we are also multiplying that width by 2.5, because most of the frequencies will come back as having no audio in them, as most of the sounds we hear every day are in a certain lower frequency range. We don't want to display loads of empty bars, therefore we shift the ones that will display regularly at a noticeable height across so they fill the canvas display.</p>
 
 <p>We also set a <code>barHeight</code> variable, and an <code>x</code> variable to record how far across the screen to draw the current bar.</p>
 
@@ -185,7 +185,6 @@ var x = 0;</pre>
 <p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too) — this is exactly the same as the original <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, except that it uses Float data, not unsigned byte data.</p>
+<p><strong>Note</strong>: The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too) — this is exactly the same as the original <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, except that it uses Float data, not unsigned byte data.</p>
 </div>
 
-<p> </p>

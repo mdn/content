@@ -10,13 +10,11 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>text-emphasis</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property applies emphasis marks to text (except spaces and control characters). It is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.</p>
+<p>The <strong><code>text-emphasis</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property applies emphasis marks to text (except spaces and control characters). It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}</div>
 
-
-
-<p>The <code>text-emphasis</code> property is quite different from {{cssxref("text-decoration")}}. The <code>text-decoration</code> property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendents.</p>
+<p>The <code>text-emphasis</code> property is quite different from {{cssxref("text-decoration")}}. The <code>text-decoration</code> property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.</p>
 
 <p>The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and <code>text-emphasis</code> may affect line height when the current leading is not enough for the marks.</p>
 
@@ -80,7 +78,7 @@ text-emphasis: unset;
  <dt><code>sesame</code></dt>
  <dd>Display sesames as marks. The filled sesame is <code>'﹅'</code> (<code>U+FE45</code>), and the open sesame is <code>'﹆'</code> (<code>U+FE46</code>). This is the default shape in vertical writing modes when no other shape is given.</dd>
  <dt><code>&lt;string&gt;</code></dt>
- <dd>Display the given string as marks. Authors should not specify more than one<em> character</em> in <code>&lt;string&gt;</code>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.</dd>
+ <dd>Display the given string as marks. Authors should not specify more than one <em>character</em> in <code>&lt;string&gt;</code>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.</dd>
  <dt><code>&lt;color&gt;</code></dt>
  <dd>Defines the color of the mark. If no color is present, it defaults to <code>currentcolor</code>.</dd>
 </dl>

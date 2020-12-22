@@ -18,7 +18,7 @@ tags:
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's <code><strong>latency</strong></code> property is a {{domxref("ConstrainDouble")}} describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.latency", "latency")}} constrainable property.</p>
 
-<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.latency")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will simply ignore any constraints they're unfamiliar with.</p>
+<p>If needed, you can determine whether or not this constraint is supported by checking the value of {{domxref("MediaTrackSupportedConstraints.latency")}} as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
 
 <p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}} will never include this property.</p>
 
@@ -39,7 +39,7 @@ tags:
 <p>Latency is always prone to some variation due to hardware usage demands, network constraints, and so forth, so even in an "exact" match, some variation should be expected.</p>
 </div>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.</p>
 
@@ -63,8 +63,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.MediaTrackConstraints.latency")}}</p>
 

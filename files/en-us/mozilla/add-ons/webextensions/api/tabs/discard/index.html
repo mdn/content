@@ -20,7 +20,7 @@ tags:
 
 <p>The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a <code><a href="/en-US/docs/Web/Events/beforeunload">beforeunload</a></code> listener that would display a prompt.</p>
 
-<p>This is an asynchronous function that returns a <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.</p>
+<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.</p>
 
 <p>If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.</p>
 

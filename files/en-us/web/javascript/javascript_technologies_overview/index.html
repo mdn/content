@@ -51,7 +51,7 @@ tags:
 
 <h3 id="WebIDL">WebIDL</h3>
 
-<p>The <a href="http://www.w3.org/TR/WebIDL/">WebIDL specification</a> provides the glue between the DOM technologies and ECMAScript.</p>
+<p>The <a href="https://www.w3.org/TR/WebIDL/">WebIDL specification</a> provides the glue between the DOM technologies and ECMAScript.</p>
 
 <h3 id="The_Core_of_the_DOM">The Core of the DOM</h3>
 
@@ -60,16 +60,16 @@ tags:
 <ul>
  <li>The document structure, a tree model, and the DOM Event architecture in <a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a>: <a href="/en-US/docs/Web/API/Node" title="Node is an interface from which various types of DOM API objects inherit, allowing those types to be treated similarly; for example, inheriting the same set of methods, or being testable in the same way."><code>Node</code></a>, <a href="/en-US/docs/Web/API/Element" title="Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."><code>Element</code></a>, <a href="/en-US/docs/Web/API/DocumentFragment" title="The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document."><code>DocumentFragment</code></a>, <a href="/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."><code>Document</code></a>, <a href="/en-US/docs/Web/API/DOMImplementation" title="The DOMImplementation interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property."><code>DOMImplementation</code></a>, <a href="/en-US/docs/Web/API/Event" title="The Event interface represents an event which takes place in the DOM."><code>Event</code></a>, <a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a>, …</li>
  <li>A less rigorous definition of the DOM Event Architecture, as well as specific events in <a href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>.</li>
- <li>Other things such as <a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> and <a href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
+ <li>Other things such as <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> and <a href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
 </ul>
 
 <p>From the ECMAScript point of view, objects defined in the DOM specification are called "host objects".</p>
 
 <h3 id="HTML_DOM">HTML DOM</h3>
 
-<p><a href="http://www.whatwg.org/html">HTML</a>, the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the <em>meaning</em> of elements. The HTML DOM includes such things as the <code>className</code> property on HTML elements, or APIs such as <a href="/en-US/docs/Web/API/Document/body" title="The Document.body property represents the &lt;body> or &lt;frameset> node of the current document, or null if no such element exists."><code>document.body</code></a>.</p>
+<p><a href="http://www.whatwg.org/html">HTML</a>, the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the <em>meaning</em> of elements. The HTML DOM includes such things as the <code>className</code> property on HTML elements, or APIs such as <a href="/en-US/docs/Web/API/Document/body" title="The Document.body property represents the &lt;body&gt; or &lt;frameset&gt; node of the current document, or null if no such element exists."><code>document.body</code></a>.</p>
 
-<p>The HTML specification also defines restrictions on documents; for example, it requires all children of a <a href="/en-US/docs/Web/HTML/Element/ul" title="The HTML &lt;ul> element represents an unordered list of items, typically rendered as a bulleted list."><code>&lt;ul&gt;</code></a> element, which represents an unordered list, to be <a href="/en-US/docs/Web/HTML/Element/li" title="The HTML &lt;li> element is used to represent an item in a list."><code>&lt;li&gt;</code></a> elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.</p>
+<p>The HTML specification also defines restrictions on documents; for example, it requires all children of a <a href="/en-US/docs/Web/HTML/Element/ul" title="The HTML &lt;ul&gt; element represents an unordered list of items, typically rendered as a bulleted list."><code>&lt;ul&gt;</code></a> element, which represents an unordered list, to be <a href="/en-US/docs/Web/HTML/Element/li" title="The HTML &lt;li&gt; element is used to represent an item in a list."><code>&lt;li&gt;</code></a> elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.</p>
 
 <p>Looking for the <a href="/en-US/docs/Web/API/Document" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."><code>Document</code></a> object, <a href="/en-US/docs/Web/API/Window" title="The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a> object, and the other DOM elements? Read the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM documentation</a>.</p>
 
@@ -81,5 +81,5 @@ tags:
  <li>The <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a> abstract CSS rules as objects.</li>
  <li><a href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers </a>allows parallel computation.</li>
  <li><a href="http://www.whatwg.org/C/#network">WebSockets</a> allows low-level bidirectional communication.</li>
- <li><a href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> is a drawing API for <a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a>.</li>
+ <li><a href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> is a drawing API for <a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas&gt; element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a>.</li>
 </ul>

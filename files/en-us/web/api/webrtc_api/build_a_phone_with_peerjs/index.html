@@ -1,0 +1,24 @@
+---
+title: Building an Internet-Connected Phone with PeerJS
+slug: Web/API/WebRTC_API/build_a_phone_with_peerjs
+---
+<p>{{WebRTCSidebar}}</p>
+
+<p>Recently I’ve been fiddling around with WebRTC. WebRTC is a group of API endpoints and protocols that make it possible to send data (in the form of audio, video or anything else really) from one peer/device to another without the need of a traditional server. The issue is, WebRTC is pretty complicated to use and develop with in and of itself, handling the signalling service and knowing when to call the right endpoint can get confusing. But I come bearing good news; PeerJS is a WebRTC framework that abstracts all of the ice and signalling logic so that you can focus on the functionality of your application. There are two parts to PeerJS, the client-side framework and the server, we’ll be using both but most of our work will be handling the client-side code.</p>
+
+<h3 id="Prerequisites">Prerequisites</h3>
+
+<p id="b41b">Before we get started, this is an intermediate level tutorial so you should already be comfortable with:</p>
+
+<ul>
+ <li id="dc6c">Vanilla JavaScript</li>
+ <li id="cccc">Node</li>
+ <li id="b0e5">Express</li>
+ <li id="ba0f">HTML</li>
+</ul>
+
+<p id="1e3e">I’ll be focussing solely on the JavaScript side of things, so you can copy the <a href="https://gist.github.com/578d692e4700dfe2c9d239c80bbdbabc" rel="noopener nofollow">HTML</a> &amp; <a href="https://gist.github.com/b4498288b86ddce995603546a64abb29" rel="noopener nofollow">CSS</a> files directly, we won’t be fiddling with them too much. Before we get started, you’ll want to make sure you’ve <a href="https://nodejs.org/en/download/package-manager/" rel="noopener nofollow">installed node </a>and your favourite package manager, I’ll be using <a href="https://classic.yarnpkg.com/en/docs/install" rel="noopener nofollow">Yarn</a> but you can use <a href="https://docs.npmjs.com/getting-started/" rel="noopener nofollow">npm</a> or any manager you’re comfortable with.</p>
+
+<p id="6a47"><strong><em>If you learn better by looking at code and following step by step code, I’ve also written this </em></strong><a href="https://github.com/SamsungInternet/WebPhone/tree/master/tutorial" rel="noopener nofollow"><strong><em>tutorial in code, which you can use instead.</em></strong></a></p>
+
+<p>{{NextMenu("Web/API/WebRTC_API/build_a_phone_with_peerjs/setup")}}</p>

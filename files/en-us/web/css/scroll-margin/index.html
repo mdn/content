@@ -17,8 +17,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}</div>
 
-
-
 <h2 id="Constituent_properties">Constituent properties</h2>
 
 <p>This property is a shorthand for the following CSS properties:</p>
@@ -30,7 +28,7 @@ tags:
  <li><a href="/en-US/docs/Web/CSS/scroll-margin-top"><code>scroll-margin-top</code></a></li>
 </ul>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css notranslate">/* &lt;length&gt; values */
 scroll-margin: 10px;
@@ -42,7 +40,7 @@ scroll-margin: initial;
 scroll-margin: unset;
 </pre>
 
-<h3 id="Values" name="Values">Values</h3>
+<h3 id="Values">Values</h3>
 
 <dl>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
@@ -132,7 +130,7 @@ scroll-margin: unset;
 
 <p>This means that when scrolling past the middle child elements, the scrolling will snap to <code>1rem</code> outside the left edge of the second <code>&lt;div&gt;</code>, and <code>2rems</code> outside the left edge of the third <code>&lt;div&gt;</code>.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Note</strong>: Here we are setting <code>scroll-margin</code> on all sides at once, but only the start edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with <code>scroll-margin-inline-start: 1rem</code>, or <code>scroll-margin: 0 0 0 1rem</code>.</p>
 </div>
 
@@ -163,6 +161,11 @@ scroll-margin: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("css.properties.scroll-margin")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
+  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
+</ul>

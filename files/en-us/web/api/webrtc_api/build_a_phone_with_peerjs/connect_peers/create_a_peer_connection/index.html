@@ -1,0 +1,32 @@
+---
+title: Creating a Peer Connection
+slug: >-
+  Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/create_a_peer_connection
+---
+<p>{{WebRTCSidebar}}</p>
+
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/show_hide_html", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/creating_a_call")}}</p>
+
+<p id="d3cd">Next, you want to ensure your users have a way of connecting their peers. In order to connect two peers, you’ll need the peer ID for one of them. You can create a variable with let then assign it in a function to be called later.</p>
+
+<pre class="brush: js notranslate">let <strong><em>code</em></strong>;
+function getStreamCode() {
+    <strong><em>code </em></strong>= <strong><em>window</em></strong>.prompt('Please enter the sharing code');
+}</pre>
+
+<p id="f09c">A convenient way of getting the relevant peer ID is by using a window prompt, you can use this when you want to collect the peerID needed to create the connection.</p>
+
+<p id="4846">Using the peerJS framework, you’ll want to connect the <code>localPeer</code> to the <code>remotePeer</code>. PeerJS gives us the <code>connect</code> function which takes in a peer ID to create the connection.</p>
+
+<pre class="brush: js notranslate">function connectPeers() {
+    <strong><em>peer</em></strong>.connect(<strong><em>code</em></strong>)
+}</pre>
+
+<p id="f1a1">When a connection is created, using the PeerJS framework’s <code>on(‘connection')</code>you should set the remote peer’s ID and the open connection. The function for this listener accepts a <code>connection</code> object which is an instance of the <code>DataConnection</code> object (which is a wrapper around WebRTC’s <code>DataChannel</code>), so within this function you’ll want to assign it to a variable. Again you’ll want to create the variable outside of the function so that you can assign it later.</p>
+
+<pre class="brush: js notranslate">let <strong><em>conn</em></strong>;
+<strong><em>peer</em></strong>.on('connection', function(connection){
+    <strong><em>conn </em></strong>= connection;
+});</pre>
+
+<p>{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/show_hide_html", "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/creating_a_call")}}</p>

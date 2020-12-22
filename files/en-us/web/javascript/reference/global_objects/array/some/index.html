@@ -58,7 +58,7 @@ tags:
 
 <p>The range of elements processed by <code>some()</code> is set before the first invocation of <code><var>callback</var></code>. Elements appended to the array after the call to <code>some()</code> begins will not be visited by <code><var>callback</var></code>. If an existing, unvisited element of the array is changed by <code><var>callback</var></code>, its value passed to the visiting <code><var>callback</var></code> will be the value at the time that <code>some()</code> visits that element's index. Elements that are deleted are not visited.</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>Caution</strong>: Calling this method on an empty array returns <code>false</code> for any condition!</p>
 </div>
 
@@ -69,7 +69,7 @@ tags:
 <p>This algorithm is exactly the one specified in ECMA-262, 5<sup>th</sup> edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that <code><var>fun</var>.call</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}.</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.17
-// Reference: http://es5.github.io/#x15.4.4.17
+// Reference: https://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
   Array.prototype.some = function(fun, thisArg) {
     'use strict';
@@ -181,7 +181,6 @@ getBoolean('true');  // true</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Array.some")}}</p>
 </div>

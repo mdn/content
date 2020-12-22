@@ -80,20 +80,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="Cacheability">Cacheability</h3>
 
-<p>A response is normally cached by the browser if:</p>
-
-<ul>
- <li>it has a status code of {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}, or {{HTTPStatus("410")}} <strong>and</strong></li>
- <li><code>Cache-Control</code> does not have <code>no-store</code>, or <em>if proxy</em>, does not have <code>private</code> <strong>and</strong></li>
- <li>{{HTTPHeader("Authorization")}} is unset</li>
- <li>either
-  <ul>
-   <li>has a status code of {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}, or {{HTTPStatus("410")}} <strong>or</strong></li>
-   <li>has <code>public</code>, <code>max-age</code> or <code>s-maxage</code> in <code>Cache-Control</code> <strong>or</strong></li>
-   <li>has {{HTTPHeader("Expires")}} set</li>
-  </ul>
- </li>
-</ul>
+<p>Directives that define whether a response/request can be cached, where it may be cached, and whether it must be validated with the origin server before caching.</p>
 
 <dl>
  <dt><code>public</code></dt>
@@ -103,7 +90,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt><code>no-cache</code></dt>
  <dd>The response may be stored by <em>any</em> cache, even if the response is normally non-cacheable. However, the stored response MUST <em>always</em> go through validation with the origin server first before using it, therefore, you cannot use <code>no-cache</code> in-conjunction with <code>immutable</code>. <strong>If you mean to not store the response in any cache, use <code>no-store</code> instead.</strong> <em>This directive is not effective in preventing caches from storing your response.</em></dd>
  <dt><code>no-store</code></dt>
- <dd>The response may <strong>not</strong> be stored in <em>any</em> cache. Although other directives may be set, this alone is <em>the only directive you need in preventing cached responses</em> on modern browsers. <code>max-age=0</code> <strong>is already implied</strong>. <strong>Setting</strong> <code>must-revalidate</code> <strong>does not make sense</strong> because in order to go through revalidation you need the response to be stored in a cache, which <code>no-store</code> prevents.</dd>
+ <dd>The response may <strong>not</strong> be stored in <em>any</em> cache. Note that this will not prevent a valid <em>pre-existing</em> cached response being returned. Clients can set <code>max-age=0</code> to also clear existing cache responses, as this forces the cache to revalidate with the server (no other directives have an effect when used with <code>no-store</code>).</dd>
 </dl>
 
 <h3 id="Expiration">Expiration</h3>
@@ -153,6 +140,13 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt>Good:</dt>
  <dd>
  <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store</pre>
+
+ <div class="notecard note">
+ <p>The <code>no-store</code> directive will prevent a new resource being cached, but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request. Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
+
+ <pre class="syntaxbox notranslate">Cache-Control: no-store, max-age=0
+</pre>
+ </div>
  </dd>
  <dt>Bad:</dt>
  <dd>
@@ -169,11 +163,16 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="Requiring_revalidation">Requiring revalidation</h3>
 
-<p>Specifying <code>no-cache</code> or <code>max-age=0</code> indicates that clients can cache a resource and must revalidate each time before using it. This means HTTP request occurs each time, but it can skip downloading HTTP body if the content is valid.</p>
+<p><code>no-cache</code> and <code>max-age=0, must-revalidate</code> indicates same meaning.<br>
+ Clients can cache a resource but must revalidate each time before using it. This means HTTP request occurs each time though, it can skip downloading HTTP body if the content is valid.</p>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache
-Cache-Control: no-cache, max-age=0
-</pre>
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache</pre>
+
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0, must-revalidate</pre>
+
+<p><strong>Note</strong>: Following may serve stale resource if server is down or lose connectivity.</p>
+
+<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -205,8 +204,6 @@ Cache-Control: no-cache, max-age=0
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("http.headers.Cache-Control")}}</p>
 
