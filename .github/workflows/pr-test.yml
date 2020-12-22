@@ -103,14 +103,15 @@ jobs:
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
+          SET_ENV_NAME: GIT_DIFF_FILES
 
       - name: Check changed files
-        env:
-          GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs.diff }}
+        # env:
+        #   GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs.diff }}
         run: |
-          echo
           echo ${{ steps.get_diff_files.outputs.diff }}
           echo $GIT_DIFF_FILES
+          echo ${{ GIT_DIFF_FILES }}
 
           # export CONTENT_ROOT=$(pwd)/files
           # ls -l
