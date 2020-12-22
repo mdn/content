@@ -35,7 +35,7 @@ tags:
 
 <p>a {{jsxref("Promise")}} that resolves to <code>true</code> if the {{domxref("Cache")}} object is found and deleted, and <code>false</code> otherwise.</p>
 
-<h2 id="Examples" style="line-height: 30px; font-size: 2.14285714285714rem;">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>In this code snippet we wait for an activate event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have an array of cache names we want to keep (<code>cachesToKeep</code>). We return the keys of the caches in the {{domxref("CacheStorage")}} object using {{domxref("CacheStorage.keys")}}, then check each key to see if it is in the array. If not, we delete it using <code>delete()</code>.</p>
 

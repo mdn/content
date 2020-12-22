@@ -33,7 +33,7 @@ tags:
 
 <p>a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names inside the {{domxref("CacheStorage")}} object.</p>
 
-<h2 id="Examples" style="line-height: 30px; font-size: 2.14285714285714rem;">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p>In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have a whitelist containing the names of the caches we want to keep (<code>cacheWhitelist</code>). We return the keys of the caches in the {{domxref("CacheStorage")}} object using <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we delete it using {{domxref("CacheStorage.delete()")}}.</p>
 
