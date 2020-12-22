@@ -48,7 +48,7 @@ jobs:
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
-        if: GIT_DIFF_CONTENT
+        if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
           echo ${{ env.GIT_DIFF_CONTENT }}
           export CONTENT_ROOT=$(pwd)/files
@@ -105,7 +105,7 @@ jobs:
           SET_ENV_NAME: GIT_DIFF_FILES
 
       - name: Check changed files
-        if: GIT_DIFF_FILES
+        if: ${{ env.GIT_DIFF_FILES }}
         run: |
           echo ${{ env.GIT_DIFF_FILES }}
 
