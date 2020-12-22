@@ -13,203 +13,203 @@ tags:
 
 <h3 id="HTML_Content">HTML Content</h3>
 
-<pre class="brush: html">&lt;div id="container"&gt;
-    &lt;div class="group section"&gt;
-        &lt;div id="layer_manager"&gt;
-            &lt;div class="group section"&gt;
-                &lt;div class="button" data-type="add"&gt; &lt;/div&gt;
-                &lt;div class="button" data-type="move-up"&gt; &lt;/div&gt;
-                &lt;div class="button" data-type="move-down"&gt; &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id="stack_container"&gt;&lt;/div&gt;
-        &lt;/div&gt;
+<pre class="brush: html"><div id="container">
+    <div class="group section">
+        <div id="layer_manager">
+            <div class="group section">
+                <div class="button" data-type="add"> </div>
+                <div class="button" data-type="move-up"> </div>
+                <div class="button" data-type="move-down"> </div>
+            </div>
+            <div id="stack_container"></div>
+        </div>
 
-        &lt;div id="preview_zone"&gt;
-            &lt;div id="layer_menu" class="col span_12"&gt;
-                &lt;div class="button" id="element" data-type="subject" data-title="element"&gt; element &lt;/div&gt;
-                &lt;div class="button" id="before" data-type="subject" data-title=":before"&gt;
+        <div id="preview_zone">
+            <div id="layer_menu" class="col span_12">
+                <div class="button" id="element" data-type="subject" data-title="element"> element </div>
+                <div class="button" id="before" data-type="subject" data-title=":before">
                     :before
-                    &lt;span class="delete" data-type="disable"&gt;&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="button" id="after" data-type="subject" data-title=":after"&gt;
+                    <span class="delete" data-type="disable"></span>
+                </div>
+                <div class="button" id="after" data-type="subject" data-title=":after">
                     :after
-                    &lt;span class="delete" data-type="disable"&gt;&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='before' data-label=":before"&gt;&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='after' data-label=":after"&gt;&lt;/div&gt;
-            &lt;/div&gt;
+                    <span class="delete" data-type="disable"></span>
+                </div>
+                <div class="ui-checkbox" data-topic='before' data-label=":before"></div>
+                <div class="ui-checkbox" data-topic='after' data-label=":after"></div>
+            </div>
 
-            &lt;div id="preview"&gt;
-                &lt;div id="obj-element"&gt;
-                    &lt;div class="content"&gt; &lt;/div&gt;
-                    &lt;div id="obj-before"&gt; &lt;/div&gt;
-                    &lt;div id="obj-after"&gt; &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+            <div id="preview">
+                <div id="obj-element">
+                    <div class="content"> </div>
+                    <div id="obj-before"> </div>
+                    <div id="obj-after"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    &lt;div id="controls" class="group section"&gt;
-        &lt;div class="wrap-left"&gt;
-            &lt;div class="colorpicker category"&gt;
-                &lt;div class="title"&gt; &lt;/div&gt;
-                &lt;div id="colorpicker" class="group"&gt;
-                    &lt;div id="gradient" class="gradient"&gt;
-                        &lt;div id="gradient_picker"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="hue" data-topic="hue" class="hue"&gt;
-                        &lt;div id="hue_selector"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="info"&gt;
-                        &lt;div class="input" data-topic="hue" data-title='H:' data-action="HSV"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="saturation" data-title='S:' data-action="HSV"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="value" data-title='V:' data-action="HSV"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="alpha"&gt;
-                        &lt;div id="alpha" data-topic="alpha"&gt;
-                            &lt;div id="alpha_selector"&gt; &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="info"&gt;
-                        &lt;div class="input" data-topic="r" data-title='R:' data-action="RGB"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="g" data-title='G:' data-action="RGB"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="b" data-title='B:' data-action="RGB"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="preview block"&gt;
-                        &lt;div id="output_color"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="block info"&gt;
-                        &lt;div class="input" data-topic="a" data-title='alpha:' data-action="alpha"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="hexa" data-title='' data-action="hexa"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+    <div id="controls" class="group section">
+        <div class="wrap-left">
+            <div class="colorpicker category">
+                <div class="title"> </div>
+                <div id="colorpicker" class="group">
+                    <div id="gradient" class="gradient">
+                        <div id="gradient_picker"> </div>
+                    </div>
+                    <div id="hue" data-topic="hue" class="hue">
+                        <div id="hue_selector"> </div>
+                    </div>
+                    <div class="info">
+                        <div class="input" data-topic="hue" data-title='H:' data-action="HSV"></div>
+                        <div class="input" data-topic="saturation" data-title='S:' data-action="HSV"></div>
+                        <div class="input" data-topic="value" data-title='V:' data-action="HSV"></div>
+                    </div>
+                    <div class="alpha">
+                        <div id="alpha" data-topic="alpha">
+                            <div id="alpha_selector"> </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="input" data-topic="r" data-title='R:' data-action="RGB"></div>
+                        <div class="input" data-topic="g" data-title='G:' data-action="RGB"></div>
+                        <div class="input" data-topic="b" data-title='B:' data-action="RGB"></div>
+                    </div>
+                    <div class="preview block">
+                        <div id="output_color"> </div>
+                    </div>
+                    <div class="block info">
+                        <div class="input" data-topic="a" data-title='alpha:' data-action="alpha"></div>
+                        <div class="input" data-topic="hexa" data-title='' data-action="hexa"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        &lt;div class="wrap-right"&gt;
+        <div class="wrap-right">
 
-            &lt;div id="shadow_properties" class="category"&gt;
-                &lt;div class="title"&gt; Shadow properties &lt;/div&gt;
-                &lt;div class="group"&gt;
-                    &lt;div class="group property"&gt;
-                        &lt;div class="ui-slider-name"&gt; inset &lt;/div&gt;
-                        &lt;div class="ui-checkbox" data-topic='inset'&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Position x &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posX" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="posX"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posX" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="posX" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Position y &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posY" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="posY"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posY" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="posY" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Blur &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="blur" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="blur"
-                            data-min="0" data-max="200" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="blur" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="blur" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Spread &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="spread" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="spread"
-                            data-min="-100"    data-max="100" data-step="1" data-value="50"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="spread" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="spread" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <div id="shadow_properties" class="category">
+                <div class="title"> Shadow properties </div>
+                <div class="group">
+                    <div class="group property">
+                        <div class="ui-slider-name"> inset </div>
+                        <div class="ui-checkbox" data-topic='inset'></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Position x </div>
+                        <div class="ui-slider-btn-set" data-topic="posX" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="posX"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="posX" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="posX" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Position y </div>
+                        <div class="ui-slider-btn-set" data-topic="posY" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="posY"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="posY" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="posY" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Blur </div>
+                        <div class="ui-slider-btn-set" data-topic="blur" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="blur"
+                            data-min="0" data-max="200" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="blur" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="blur" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Spread </div>
+                        <div class="ui-slider-btn-set" data-topic="spread" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="spread"
+                            data-min="-100"    data-max="100" data-step="1" data-value="50">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="spread" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="spread" data-unit="px"></div>
+                    </div>
+                </div>
+            </div>
 
-            &lt;div id="element_properties" class="category"&gt;
-                &lt;div class="title"&gt; Class element properties &lt;/div&gt;
-                &lt;div class="group"&gt;
-                    &lt;div class="group property"&gt;
-                        &lt;div class="ui-slider-name"&gt; border &lt;/div&gt;
-                        &lt;div class="ui-checkbox" data-topic='border-state' data-state="true"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="z-index" class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; z-index &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="z-index" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="z-index"
-                            data-min="-10" data-max="10" data-step="1"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="z-index" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="z-index"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; top &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="top" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="top"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="top" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="top" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; left &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="left" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="left"
-                            data-min="-300" data-max="700" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="left" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="left" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="transform_rotate" class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Rotate &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="rotate" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="rotate"
-                            data-min="-360" data-max="360" data-step="1" data-value="0"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="rotate" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="rotate" data-unit="deg"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Width &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="width" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="width"
-                            data-min="0" data-max="1000" data-step="1" data-value="200"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="width" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="width"  data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Height &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="height" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="height"
-                            data-min="0" data-max="400" data-step="1" data-value="200"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="height" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="height" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <div id="element_properties" class="category">
+                <div class="title"> Class element properties </div>
+                <div class="group">
+                    <div class="group property">
+                        <div class="ui-slider-name"> border </div>
+                        <div class="ui-checkbox" data-topic='border-state' data-state="true"></div>
+                    </div>
+                    <div id="z-index" class="slidergroup">
+                        <div class="ui-slider-name"> z-index </div>
+                        <div class="ui-slider-btn-set" data-topic="z-index" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="z-index"
+                            data-min="-10" data-max="10" data-step="1"></div>
+                        <div class="ui-slider-btn-set" data-topic="z-index" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="z-index"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> top </div>
+                        <div class="ui-slider-btn-set" data-topic="top" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="top"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="top" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="top" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> left </div>
+                        <div class="ui-slider-btn-set" data-topic="left" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="left"
+                            data-min="-300" data-max="700" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="left" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="left" data-unit="px"></div>
+                    </div>
+                    <div id="transform_rotate" class="slidergroup">
+                        <div class="ui-slider-name"> Rotate </div>
+                        <div class="ui-slider-btn-set" data-topic="rotate" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="rotate"
+                            data-min="-360" data-max="360" data-step="1" data-value="0">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="rotate" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="rotate" data-unit="deg"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Width </div>
+                        <div class="ui-slider-btn-set" data-topic="width" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="width"
+                            data-min="0" data-max="1000" data-step="1" data-value="200">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="width" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="width"  data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Height </div>
+                        <div class="ui-slider-btn-set" data-topic="height" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="height"
+                            data-min="0" data-max="400" data-step="1" data-value="200">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="height" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="height" data-unit="px"></div>
+                    </div>
+                </div>
+            </div>
 
-            &lt;div id="output" class="category"&gt;
-                &lt;div id="menu" class="menu"&gt;&lt;/div&gt;
-                &lt;div class="title"&gt;    CSS Code &lt;/div&gt;
-                &lt;div class="group" style="border-top-left-radius: 0;"&gt;
-                    &lt;div class="output" data-topic="element" data-name="element"
-                        data-prop="width height background-color position=[relative] box-shadow"&gt;
-                    &lt;/div&gt;
-                    &lt;div class="output" data-topic="before" data-name="element:before"
-                        data-prop="content=[&amp;quot;&amp;quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform"&gt;
-                    &lt;/div&gt;
-                    &lt;div class="output" data-topic="after" data-name="element:after"
-                        data-prop="content=[&amp;quot;&amp;quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+            <div id="output" class="category">
+                <div id="menu" class="menu"></div>
+                <div class="title">    CSS Code </div>
+                <div class="group" style="border-top-left-radius: 0;">
+                    <div class="output" data-topic="element" data-name="element"
+                        data-prop="width height background-color position=[relative] box-shadow">
+                    </div>
+                    <div class="output" data-topic="before" data-name="element:before"
+                        data-prop="content=[&quot;&quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform">
+                    </div>
+                    <div class="output" data-topic="after" data-name="element:after"
+                        data-prop="content=[&quot;&quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </pre>
 
 <h3 id="CSS_Content">CSS Content</h3>
@@ -369,7 +369,7 @@ tags:
 	cursor: pointer;
 }
 
-.ui-slider-input &gt; input {
+.ui-slider-input > input {
 	margin: 0 10px;
 	padding: 0;
 	width: 50px;
@@ -399,11 +399,11 @@ tags:
 	user-select: none;
 }
 
-.ui-checkbox &gt; input {
+.ui-checkbox > input {
  	display: none;
 }
 
-.ui-checkbox &gt; label {
+.ui-checkbox > label {
 	font-size: 12px;
 	padding: 0.333em 1.666em 0.5em;
 	height: 1em;
@@ -431,11 +431,11 @@ tags:
 	background-position: center right 10px;
 }
 
-.ui-checkbox &gt; label:hover {
+.ui-checkbox > label:hover {
 	cursor: pointer;
 }
 
-.ui-checkbox &gt; input:checked + label {
+.ui-checkbox > input:checked + label {
 	background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
 	background-color: #379B4A;
 }
@@ -717,7 +717,7 @@ body {
 
 /* Checkbox */
 
-#layer_menu .ui-checkbox &gt; label {
+#layer_menu .ui-checkbox > label {
 	height: 15px;
 	line-height: 17px;
 	font-weight: normal;
@@ -725,7 +725,7 @@ body {
 	margin: 0 5px 0 0;
 }
 
-#layer_menu .ui-checkbox &gt; input:checked + label {
+#layer_menu .ui-checkbox > input:checked + label {
 	display: none;
 }
 
@@ -808,11 +808,11 @@ body {
 	overflow: hidden;
 }
 
-.wrap-left &gt; * {
+.wrap-left > * {
 	float: left;
 }
 
-.wrap-right &gt; * {
+.wrap-right > * {
 	float: right;
 }
 
@@ -858,7 +858,7 @@ body {
 	text-align: right;
 }
 
-#controls .category &gt; .group {
+#controls .category > .group {
 	border: 1px solid #CCC;
 	border-radius: 3px;
 }
@@ -1006,7 +1006,7 @@ body {
 	z-index: 1;
 }
 
-#colorpicker .preview &gt; * {
+#colorpicker .preview > * {
 	width: 50%;
 	height: 100%;
 }
@@ -1022,7 +1022,7 @@ body {
 	float: right;
 }
 
-#colorpicker [data-topic="a"] &gt; span {
+#colorpicker [data-topic="a"] > span {
 	width: 50px;
 }
 
@@ -1031,11 +1031,11 @@ body {
 	margin: 10px 0 0 0;
 }
 
-#colorpicker [data-topic="hexa"] &gt; span {
+#colorpicker [data-topic="hexa"] > span {
 	display: none;
 }
 
-#colorpicker [data-topic="hexa"] &gt; input {
+#colorpicker [data-topic="hexa"] > input {
 	width: 85px;
 	padding: 2px 0;
 	-moz-box-sizing: border-box;
