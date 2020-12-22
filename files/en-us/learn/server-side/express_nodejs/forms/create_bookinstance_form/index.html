@@ -87,7 +87,7 @@ exports.bookinstance_create_post = [
     }
 ];</pre>
 
-<p>The structure and behaviour of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new <code>BookInstance</code> record and redirect the user to the detail page.</p>
+<p>The structure and behavior of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new <code>BookInstance</code> record and redirect the user to the detail page.</p>
 
 <h2 id="View">View</h2>
 
@@ -131,7 +131,7 @@ block content
       for error in errors
         li!= error.msg</pre>
 
-<p>The view structure and behaviour is almost the same as for the <strong>book_form.pug</strong> template, so we won't go over it again.</p>
+<p>The view structure and behavior is almost the same as for the <strong>book_form.pug</strong> template, so we won't go over it again.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The above template hard-codes the <em>Status</em> values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.</p>

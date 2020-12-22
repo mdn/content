@@ -84,7 +84,7 @@ function sendData( data ) {
   }
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
-  // the '+' character; matches the behaviour of browser form submissions.
+  // the '+' character; matches the behavior of browser form submissions.
   urlEncodedData = urlEncodedDataPairs.join( '&amp;' ).replace( /%20/g, '+' );
 
   // Define what happens on successful data submission

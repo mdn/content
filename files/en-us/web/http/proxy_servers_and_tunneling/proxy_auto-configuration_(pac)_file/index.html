@@ -570,7 +570,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 <p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
 
 <div class="note">
-<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behaviour.</p>
+<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
 </div>
 
 <h2 id="Example_3_2">Example 3</h2>

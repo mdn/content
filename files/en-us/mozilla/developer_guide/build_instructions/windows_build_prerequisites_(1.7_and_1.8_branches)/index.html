@@ -149,7 +149,7 @@ set MOZ_TOOLS=<var>C:\moztools</var>
 
 rem --- Set CYGWINBASE to wherever cygwin is installed
 rem --- Do not use CYGWIN or else cygserver, cygrunsrv, and other cygwin services will not function properly.
-rem --- The CYGWIN variable is also used to sort of change the behaviour of Cygwin.
+rem --- The CYGWIN variable is also used to sort of change the behavior of Cygwin.
 set CYGWINBASE=<var>C:\cygwin</var>
 rem --- Make sure Cygwin does not print out a DOS style path warning
 set CYGWIN=<var>nodosfilewarning</var>
@@ -204,7 +204,7 @@ Fix above errors and restart with "make -f client.mk build"
  <li>The build may fail if your PATH environment variable contains quotes ("). Quotes are not properly translated when passed down to the cygwin sub-shells. Quotes are usually not needed so they can be removed.</li>
  <li>Currently the build system is incompatible with make 3.81, so make sure you're using make 3.80. This issue is being tracked in <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=325148">bug 325148</a>, where a partial patch exists.
   <ul>
-   <li>From the Cygwin Mailing Lists, the cause of the change of behaviour on make 3.81 is because of a DOS style path patch removal. That patch is still on make 3.80.</li>
+   <li>From the Cygwin Mailing Lists, the cause of the change of behavior on make 3.81 is because of a DOS style path patch removal. That patch is still on make 3.80.</li>
   </ul>
  </li>
  <li>Double-check to make sure that you have the complete cygwin package list. If not, launch the cygwin installer and add the missing packages.</li>

@@ -115,7 +115,7 @@ exports.book_create_post = [
     }
 ];</code></pre>
 
-<p>The structure and behaviour of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
+<p>The structure and behavior of this code is almost exactly the same as for creating a <code>Genre</code> or <code>Author</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new <code>Book</code> record and redirect the user to the book detail page.</p>
 
 <p>The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of <code>Genre</code> items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).</p>
 
@@ -186,7 +186,7 @@ block content
       for error in errors
         li!= error.msg</code></pre>
 
-<p>The view structure and behaviour is almost the same as for the <strong>genre_form.pug</strong> template.</p>
+<p>The view structure and behavior is almost the same as for the <strong>genre_form.pug</strong> template.</p>
 
 <p>The main differences are in how we implement the selection-type fields: <code>Author</code> and <code>Genre</code>.</p>
 

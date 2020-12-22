@@ -72,7 +72,7 @@ class BookListView(generic.ListView):
 <p><strong>Note</strong>: This awkward path for the template location isn't a misprint — the generic views look for templates in <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> in this case) inside the application's <code>/<em>application_name</em>/templates/</code> directory (<code>/catalog/templates/)</code>.</p>
 </div>
 
-<p>You can add attributes to change the default behaviour above. For example, you can specify another template file if you need to have multiple views that use this same model, or you might want to use a different template variable name if <code>book_list</code> is not intuitive for your particular template use-case. Possibly the most useful variation is to change/filter the subset of results that are returned — so instead of listing all books you might list top 5 books that were read by other users.</p>
+<p>You can add attributes to change the default behavior above. For example, you can specify another template file if you need to have multiple views that use this same model, or you might want to use a different template variable name if <code>book_list</code> is not intuitive for your particular template use-case. Possibly the most useful variation is to change/filter the subset of results that are returned — so instead of listing all books you might list top 5 books that were read by other users.</p>
 
 <pre class="brush: python notranslate">class BookListView(generic.ListView):
     model = Book
@@ -330,7 +330,7 @@ class BookListView(generic.ListView):
 
 <h4 id="Passing_additional_options_in_your_URL_maps">Passing additional options in your URL maps</h4>
 
-<p>One feature that we haven't used here, but which you may find valuable, is that you can declare and pass <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#views-extra-options">additional options</a> to the view. The options are declared as a dictionary that you pass as the third un-named argument to the <code>path()</code> function. This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behaviour in each case (below we supply a different template in each case).</p>
+<p>One feature that we haven't used here, but which you may find valuable, is that you can declare and pass <a href="https://docs.djangoproject.com/en/3.1/topics/http/urls/#views-extra-options">additional options</a> to the view. The options are declared as a dictionary that you pass as the third un-named argument to the <code>path()</code> function. This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case (below we supply a different template in each case).</p>
 
 <pre class="brush: python notranslate">path('url/', views.my_reused_view, <strong>{'my_template_name': 'some_path'}</strong>, name='aurl'),
 path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_path'}</strong>, name='anotherurl'),
@@ -565,7 +565,7 @@ def book_detail_view(request, primary_key):
  <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— The detail view for the specific author with a primary key field named <em><code>&lt;id&gt;</code></em></li>
 </ul>
 
-<p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different but will share similar behaviour.</p>
+<p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different but will share similar behavior.</p>
 
 <div class="note">
 <p><strong>Note</strong>:</p>

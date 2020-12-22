@@ -24,7 +24,7 @@ tags:
  <dd>Defines the resource that you wish to fetch. This can either be:
  <ul>
   <li>A {{domxref("USVString")}} containing the direct URL of the resource you want to fetch.</li>
-  <li>A {{domxref("Request")}} object, effectively creating a copy. Note the following behavioural updates to retain security while making the constructor less likely to throw exceptions:
+  <li>A {{domxref("Request")}} object, effectively creating a copy. Note the following behavioral updates to retain security while making the constructor less likely to throw exceptions:
    <ul>
     <li>If this object exists on another origin to the constructor call, the {{domxref("Request.referrer")}} is stripped out.</li>
     <li>If this object has a {{domxref("Request.mode")}} of <code>navigate</code>, the <code>mode</code> value is converted to <code>same-origin</code>.</li>

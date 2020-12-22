@@ -16,7 +16,7 @@ tags:
 
 <p>Normal Flow is defined in the <a href="https://www.w3.org/TR/CSS2/visuren.html#normal-flow">CSS 2.1 specification</a>, which explains that any boxes in normal flow will be part of a <em>formatting context</em>. They can be either block or inline, but not both at once. We describe block-level boxes as participating in a <em>block formatting context</em>, and inline-level boxes as participating in an <em>inline formatting context</em>.</p>
 
-<p>The behaviour of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:</p>
+<p>The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:</p>
 
 <blockquote>
 <p>“In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.<br>
@@ -90,7 +90,7 @@ tags:
 
 <h2 id="The_display_property_and_flow_layout">The display property and flow layout</h2>
 
-<p>In addition to the rules existing in CSS2.1, new levels of CSS further describe the behaviour of block and inline boxes. The {{cssxref("display")}} property defines how a box and any boxes inside it behave. In the CSS Display Model Level 3, we can learn more about how the <code>display</code> property changes the behaviour of boxes and the boxes they generate.</p>
+<p>In addition to the rules existing in CSS2.1, new levels of CSS further describe the behavior of block and inline boxes. The {{cssxref("display")}} property defines how a box and any boxes inside it behave. In the CSS Display Model Level 3, we can learn more about how the <code>display</code> property changes the behavior of boxes and the boxes they generate.</p>
 
 <p>The display type of an element defines the outer display type; this dictates how the box displays alongside other elements in the same formatting context. It also defines the inner display type, which dictates how boxes inside this element behave. We can see this very clearly when considering a flex layout. In the example below I have a {{HTMLElement("div")}}, which I have given <code>display: flex</code>. The flex container behaves like a block element: it displays on a new line and takes up all of the space it can in the inline direction. This is the outer display type of <code>block</code>.</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <h2 id="Summary">Summary</h2>
 
-<p>In this guide, we have looked at how elements display in normal flow, as block and inline elements. Due to the default behaviour of these elements, an HTML document with no CSS styling at all, will display in a readable way. By understanding how normal flow works you will find layout easier, as you understand the starting point for making changes to how elements are displayed.</p>
+<p>In this guide, we have looked at how elements display in normal flow, as block and inline elements. Due to the default behavior of these elements, an HTML document with no CSS styling at all, will display in a readable way. By understanding how normal flow works you will find layout easier, as you understand the starting point for making changes to how elements are displayed.</p>
 
 <h2 id="See_also">See also</h2>
 

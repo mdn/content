@@ -211,7 +211,7 @@ tags:
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
-<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behaviour matches the behaviour of IE and WebKit.</p>
+<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behavior matches the behavior of IE and WebKit.</p>
 
 <p>To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4), set <code>async="false"</code> on the scripts you want to maintain order.</p>
 

@@ -136,7 +136,7 @@ server.listen(port, hostname, () =&gt; {
 
 <p>In a traditional data-driven website, a web application waits for HTTP requests from the web browser (or other client). When a request is received the application works out what action is needed based on the URL pattern and possibly associated information contained in <code>POST</code> data or <code>GET</code> data. Depending on what is required it may then read or write information from a database or perform other tasks required to satisfy the request. The application will then return a response to the web browser, often dynamically creating an HTML page for the browser to display by inserting the retrieved data into placeholders in an HTML template.</p>
 
-<p>Express provides methods to specify what function is called for a particular HTTP verb (<code>GET</code>, <code>POST</code>, <code>SET</code>, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting <code>POST</code>/<code>GET</code> parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behaviour).</p>
+<p>Express provides methods to specify what function is called for a particular HTTP verb (<code>GET</code>, <code>POST</code>, <code>SET</code>, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting <code>POST</code>/<code>GET</code> parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behavior).</p>
 
 <p>The following sections explain some of the common things you'll see when working with <em>Express</em> and <em>Node</em> code.</p>
 
@@ -429,7 +429,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <h3 id="Using_databases">Using databases</h3>
 
-<p><em>Express</em> apps can use any database mechanism supported by <em>Node</em> (<em>Express</em> itself doesn't define any specific additional behaviour/requirements for database management). There are many options, including PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</p>
+<p><em>Express</em> apps can use any database mechanism supported by <em>Node</em> (<em>Express</em> itself doesn't define any specific additional behavior/requirements for database management). There are many options, including PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</p>
 
 <p>In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:</p>
 
