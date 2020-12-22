@@ -45,7 +45,7 @@ tags:
   <li><code>dir</code> : The direction of the notification; it can be <code>auto</code>,  <code>ltr</code> or <code>rtl</code></li>
   <li><code>icon</code>: a {{domxref("USVString")}} containing the URL of an image to be used as an icon by the notification.</li>
   <li><code>image</code>: a {{domxref("USVString")}} containing the URL of an image to be displayed in the notification.</li>
-  <li><code>lang</code>: Specify the lang used within the notification. This string must be a valid <a href="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a>.</li>
+  <li><code>lang</code>: Specify the lang used within the notification. This string must be a valid <a href="https://tools.ietf.org/html/bcp47">BCP 47 language tag</a>.</li>
   <li><code>renotify</code>: A boolean that indicates whether to suppress vibrations and audible alerts when reusing a <code>tag</code> value. If <var>options</var>’s <code>renotify</code> is true and <var>options</var>’s <code>tag</code> is the empty string a TypeError will be thrown. The default is <code>false</code>.</li>
   <li><code>requireInteraction</code>: Indicates that on devices with sufficiently large screens, a notification should remain active until the user clicks or dismisses it. If this value is absent or false, the desktop version of Chrome will auto-minimize notifications after approximately twenty seconds. The default value is <code>false</code>.</li>
   <li><code>silent</code>: When set indicates that no sounds or vibrations should be made. If <var>options</var>’s <code>silent</code> is true and <var>options</var>’s <code>vibrate</code> is present a TypeError exception will be thrown. The default value is <code>false</code>.</li>
