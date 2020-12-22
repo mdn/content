@@ -106,9 +106,10 @@ jobs:
 
       - name: Check changed files
         env:
-          GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs }}
+          GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs.diff }}
         run: |
-          echo ${{ steps.get_diff_files.outputs }}
+          echo
+          echo ${{ steps.get_diff_files.outputs.diff }}
           echo $GIT_DIFF_FILES
 
           # export CONTENT_ROOT=$(pwd)/files
