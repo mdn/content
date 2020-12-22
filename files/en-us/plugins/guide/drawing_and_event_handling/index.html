@@ -325,23 +325,15 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <dl>
  <dt>Windows</dt>
-</dl>
-
-<p>The plug-in receives a <code>WM_PAINT</code> message. The <code>lParam</code> parameter of <code>WM_PAINT</code> holds a pointer to a <code>RECT</code> structure specifying the bounding box of the update area. Some plug-ins will choose to ignore this paint rect and always update the entire plug-in window instead, though. Also, because the plug-in and the browser share the same HDC, the plug-in must save the current settings on the HDC, set up its own environment, draw itself, and restore the HDC to the previous settings. The HDC settings must be restored whenever control returns to the browser, either before returning from <code>NPP_HandleEvent</code> or before calling a drawing-related browser-side method.</p>
-
-<dl>
+ <dd>The plug-in receives a <code>WM_PAINT</code> message. The <code>lParam</code> parameter of <code>WM_PAINT</code> holds a pointer to a <code>RECT</code> structure specifying the bounding box of the update area. Some plug-ins will choose to ignore this paint rect and always update the entire plug-in window instead, though. Also, because the plug-in and the browser share the same HDC, the plug-in must save the current settings on the HDC, set up its own environment, draw itself, and restore the HDC to the previous settings. The HDC settings must be restored whenever control returns to the browser, either before returning from <code>NPP_HandleEvent</code> or before calling a drawing-related browser-side method.</dd>
  <dt>Mac OS</dt>
-</dl>
-
-<p>The plug-in receives an update event. The clip region of the drawable's <code>CGrafPtr</code> port is set to the update region. As is the case for windowed plug-ins on Mac OS, the plug-in must first save the current settings of the port, setting up the drawing environment as appropriate, drawing, and restoring the port to the previous setting. This should happen before the plug-in returns from <code>NP_HandleEvent</code> or before the plug-in calls a drawing-related browser method.</p>
-
-<dl>
+ <dd>The plug-in receives an update event. The clip region of the drawable's <code>CGrafPtr</code> port is set to the update region. As is the case for windowed plug-ins on Mac OS, the plug-in must first save the current settings of the port, setting up the drawing environment as appropriate, drawing, and restoring the port to the previous setting. This should happen before the plug-in returns from <code>NP_HandleEvent</code> or before the plug-in calls a drawing-related browser method.</dd>
  <dt>Unix/X11</dt>
+ <dd>
+ <p>The plug-in receives a <code>GraphicsExpose</code> event. The <code>XGraphicsExposeEvent</code> structure contains the Xlib <code>Drawable</code> (which is an offscreen Pixmap), its <code>Display</code>, and the dirty rectangle (optional clip rectangle) specified relative to the top-left corner of the drawable.</p>
+ <p>The plugin should draw to the <code>Drawable</code> with the offset specified in the <code>x</code> and <code>y</code> members of the <a href="/en/NPWindow">NPWindow</a> structure, with the clip rectangle specified in the <code>clipRect</code> member, and with the <code>Visual</code> and <code>Colormap</code> specified in the <code>ws_info</code> member.</p>
+ </dd>
 </dl>
-
-<p>The plug-in receives a <code>GraphicsExpose</code> event. The <code>XGraphicsExposeEvent</code> structure contains the Xlib <code>Drawable</code> (which is an offscreen Pixmap), its <code>Display</code>, and the dirty rectangle (optional clip rectangle) specified relative to the top-left corner of the drawable.</p>
-
-<p>The plugin should draw to the <code>Drawable</code> with the offset specified in the <code>x</code> and <code>y</code> members of the <a href="/en/NPWindow">NPWindow</a> structure, with the clip rectangle specified in the <code>clipRect</code> member, and with the <code>Visual</code> and <code>Colormap</code> specified in the <code>ws_info</code> member.</p>
 
 <h4 id="Making_a_Plug-in_Opaque">Making a Plug-in Opaque</h4>
 
@@ -377,17 +369,14 @@ void NPN_InvalidateRegion(NPP instance, NPRegion invalidRegion);
 
 <dl>
  <dt>Windows</dt>
-</dl>
-
-<p>The requested information, a value of type HWND, is returned from <a href="/en/NPN_GetValue">NPN_GetValue</a> in the value parameter.</p>
-
-<p>In many cases, a plug-in may still have to create its own window (a transparent child window of the browser window) to act as the owner window for pop-up menus and modal dialog boxes. You can give this transparent child window its own WindowProc process. The plug-in can use this to deal with <code>WM_COMMAND</code> messages sent to it as a result of tracking the pop-up menu or modal dialog box.</p>
-
-<dl>
+ <dd>
+  <p>The requested information, a value of type HWND, is returned from <a href="/en/NPN_GetValue">NPN_GetValue</a> in the value parameter.</p>
+  <p>In many cases, a plug-in may still have to create its own window (a transparent child window of the browser window) to act as the owner window for pop-up menus and modal dialog boxes. You can give this transparent child window its own WindowProc process. The plug-in can use this to deal with <code>WM_COMMAND</code> messages sent to it as a result of tracking the pop-up menu or modal dialog box.</p>
+ </dd>
  <dt>Unix/X11</dt>
+ <dd>The value parameter for <a href="/en/NPN_GetValue">NPN_GetValue</a> must point to an Xlib <code>Window</code>. On successful return this will contain the browser toplevel window. Use this <code>Window</code> to set the WM_TRANSIENT_FOR property on dialog boxes.</dd>
 </dl>
 
-<p>The value parameter for <a href="/en/NPN_GetValue">NPN_GetValue</a> must point to an Xlib <code>Window</code>. On successful return this will contain the browser toplevel window. Use this <code>Window</code> to set the WM_TRANSIENT_FOR property on dialog boxes.</p>
 
 <h4 id="Event_Handling_for_Windowless_Plug-ins">Event Handling for Windowless Plug-ins</h4>
 

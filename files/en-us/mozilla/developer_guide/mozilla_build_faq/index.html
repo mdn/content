@@ -57,7 +57,6 @@ git config core.eof lf
 <h2 id="Mac-specific_questions">Mac-specific questions</h2>
 
 <dl>
-	<dt> </dt>
 	<dt>It doesn't work</dt>
 	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
 </dl>
@@ -65,7 +64,6 @@ git config core.eof lf
 <pre>curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
 
 <dl>
-	<dt> </dt>
 	<dt>Can I build a Mozilla application as a Universal Binary?</dt>
 	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
 </dl>
@@ -149,7 +147,6 @@ cd obj-debug
 	<dd>Yes, see the <a class="external" href="http://www.mozilla.org/build/cross-compiling.html">Cross-Compiling Mozilla</a> document for details.</dd>
 	<dt>How do I force the build system to pick up any of the changes made to my mozconfig file?</dt>
 	<dd>Touch any of the configure scripts in the tree. There is no explicit dependency upon the mozconfig file as the file can reside anywhere via the MOZCONFIG environment variable.</dd>
-	<dt> </dt>
 </dl>
 
 <h2 id="Implementation_questions">Implementation questions</h2>
