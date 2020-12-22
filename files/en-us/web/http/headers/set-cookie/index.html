@@ -106,19 +106,19 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <p>Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
 
  <ol>
-  <li>The cookie-sending behaviour if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+  <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
   <li>Cookies with <code>SameSite=None</code> must now<br>
    also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
  </ol>
 
- <p>The options below covers the new behaviour. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
  </div>
  Inline options are:
 
  <ul>
   <li><code>Strict</code>: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the <code>SameSite=Strict</code> attribute are sent.</li>
   <li><code>Lax</code>: The cookie is not sent on cross-site requests, such as calls to load images or frames, but is sent when a user is navigating to the origin site from an external site (e.g. if following a link).<br>
-   This is the default behaviour if the <code>SameSite</code> attribute is not specified.</li>
+   This is the default behavior if the <code>SameSite</code> attribute is not specified.</li>
   <li><code>None</code>: The browser sends the cookie with both cross-site and same-site requests. The <code>Secure</code> attribute must also be set when <code>SameSite=None</code>!</li>
  </ul>
  </dd>

@@ -150,7 +150,7 @@ setTimeout(function() {
 // Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[2] }
 </pre>
 
-<h3 id="Promise.all_fail-fast_behaviour"><code>Promise.all</code> fail-fast behaviour</h3>
+<h3 id="Promise.all_fail-fast_behavior"><code>Promise.all</code> fail-fast behavior</h3>
 
 <p><code>Promise.all</code> is rejected if any of the elements are rejected. For example, if you pass in four promises that resolve after a timeout and one promise that rejects immediately, then <code>Promise.all</code> will reject immediately.</p>
 
@@ -184,7 +184,7 @@ Promise.all([p1, p2, p3, p4, p5])
 
 </pre>
 
-<p>It is possible to change this behaviour by handling possible rejections:</p>
+<p>It is possible to change this behavior by handling possible rejections:</p>
 
 <pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; resolve('p1_delayed_resolution'), 1000);

@@ -50,7 +50,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p>There is a provenance restriction on private static fields. Only the class which defines the private static field can access the field.</p>
 
-<p>This can lead to unexpected behaviour when using <strong><code>this</code></strong>.</p>
+<p>This can lead to unexpected behavior when using <strong><code>this</code></strong>.</p>
 
 <pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
@@ -117,7 +117,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 </pre>
 
-<p>This can lead to unexpected behaviour when using <strong><code>this</code></strong>. In the following example <code>this</code> refers to the <code>Derived</code> class (not the <code>Base</code> class) when we try to call <code>Derived.publicStaticMethod2()</code>, and thus exhibits the same "provenance restriction" as mentioned above:</p>
+<p>This can lead to unexpected behavior when using <strong><code>this</code></strong>. In the following example <code>this</code> refers to the <code>Derived</code> class (not the <code>Base</code> class) when we try to call <code>Derived.publicStaticMethod2()</code>, and thus exhibits the same "provenance restriction" as mentioned above:</p>
 
 <pre class="brush: js notranslate">class Base {
   static #privateStaticMethod() {

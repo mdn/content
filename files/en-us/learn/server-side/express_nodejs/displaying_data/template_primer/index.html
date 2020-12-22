@@ -88,7 +88,7 @@ html(lang="en")
 
 <p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent JavaScript injection or cross-site scripting attacks.</p>
 
-<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
+<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the <code>title</code> variable. In both cases the default behavior is to <em>escape</em> the line.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
 p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>

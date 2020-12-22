@@ -60,7 +60,7 @@ tags:
 
 <p>CSS specifications contain information that explains what the browser does when two layout methods are applied to the same item. This means that there is a definition for what happens if a floated item, for example, is also a Grid Item using CSS Grid Layout. Couple this information with the knowledge that browsers ignore CSS that they don’t understand, and you have a way to create simple layouts using the <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">legacy techniques</a> we have already covered, which are then overwritten by your Grid layout in modern browsers that understand it.</p>
 
-<p>In the below example, we have floated three <code>&lt;div&gt;</code>s so they display in a row. Any browser that does not support <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid Layout</a> will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behaviour, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the <code>display: grid</code> and related properties and the floated layout is used.</p>
+<p>In the below example, we have floated three <code>&lt;div&gt;</code>s so they display in a row. Any browser that does not support <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid Layout</a> will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the <code>display: grid</code> and related properties and the floated layout is used.</p>
 
 <div id="Example1">
 <pre class="brush: css notranslate">* {box-sizing: border-box;}
@@ -103,11 +103,11 @@ tags:
  <dt>Float and clear</dt>
  <dd>As shown above, the float and clear properties cease to affect the layout if floated or cleared items become flex or grid items.</dd>
  <dt>display: inline-block</dt>
- <dd>This method can be used to create column layouts, if an item has <code>display: inline-block</code> set but then becomes a flex or grid item, the inline-block behaviour is ignored.</dd>
+ <dd>This method can be used to create column layouts, if an item has <code>display: inline-block</code> set but then becomes a flex or grid item, the inline-block behavior is ignored.</dd>
  <dt>display: table</dt>
- <dd>The method of creating CSS Tables described in the <a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">introduction</a> to these lessons can be used as a fallback. Items that have CSS table layouts set on them will lose this behaviour if they become flex or grid items. Importantly, the anonymous boxes created to fix up the table structure are not created.</dd>
+ <dd>The method of creating CSS Tables described in the <a href="/en-US/docs/Learn/CSS/CSS_layout/Introduction">introduction</a> to these lessons can be used as a fallback. Items that have CSS table layouts set on them will lose this behavior if they become flex or grid items. Importantly, the anonymous boxes created to fix up the table structure are not created.</dd>
  <dt>Multiple-column Layout</dt>
- <dd>For certain layouts you could use <a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">multi-col</a> as a fallback, if your container has any of the <code>column-*</code> properties defined on it and then becomes a grid container, the multicol behaviour will not happen.</dd>
+ <dd>For certain layouts you could use <a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">multi-col</a> as a fallback, if your container has any of the <code>column-*</code> properties defined on it and then becomes a grid container, the multicol behavior will not happen.</dd>
  <dt>Flexbox as a Fallback for Grid</dt>
  <dd><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> has greater browser support than Grid due to being supported by IE10 and 11, although do check out the information later in this lesson explaining the rather patchy and confusing support for Flexbox in older browsers. If you make a flex container into a grid container, any <code>flex</code> property applied to the children will be ignored.</dd>
 </dl>

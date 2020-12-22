@@ -74,7 +74,7 @@ exports<span class="punctuation token">.</span>author_create_post <span class="o
     <span class="punctuation token">}</span>
 <span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
 
-<p>The structure and behaviour of this code is almost exactly the same as for creating a <code>Genre</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.</p>
+<p>The structure and behavior of this code is almost exactly the same as for creating a <code>Genre</code> object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.</p>
 
 <div class="note">
 <p><strong>Note:</strong>  Unlike with the <code>Genre</code> post handler, we don't check whether the <code>Author</code> object already exists before saving it. Arguably we should, though as it is now we can have multiple authors with the same name.</p>
@@ -123,7 +123,7 @@ block content
       for error in errors
         li!= error.msg</code></pre>
 
-<p>The structure and behaviour for this view is exactly the same as for the <strong>genre_form.pug</strong> template, so we won't describe it again.</p>
+<p>The structure and behavior for this view is exactly the same as for the <strong>genre_form.pug</strong> template, so we won't describe it again.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Some browsers don’t support the input <code>type=“date”</code>, so you won’t get the datepicker widget or the default <em><code>dd/mm/yyyy</code></em> placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute <code>placeholder='dd/mm/yyyy'</code> so that on less capable browsers you will still get information about the desired text format.</p>

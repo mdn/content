@@ -135,7 +135,7 @@ user.save()
 </div>
 
 <div class="note">
-<p><strong>Note: </strong>In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behaviour and have it available across the whole site, so that is what we've shown here!</p>
+<p><strong>Note: </strong>In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!</p>
 </div>
 
 <h3 id="Project_URLs">Project URLs</h3>
@@ -258,7 +258,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Logout_template">Logout template</h3>
 
-<p>If you navigate to the logout URL (<a href="http://127.0.0.1:8000/accounts/logout/">http://127.0.0.1:8000/accounts/logout/</a>) then you'll see some odd behaviour — your user will be logged out sure enough, but you'll be taken to the <strong>Admin</strong> logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the <code>is_staff</code> permission).</p>
+<p>If you navigate to the logout URL (<a href="http://127.0.0.1:8000/accounts/logout/">http://127.0.0.1:8000/accounts/logout/</a>) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the <strong>Admin</strong> logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the <code>is_staff</code> permission).</p>
 
 <p>Create and open /<strong>locallibrary/templates/registration/logged_out.html</strong>. Copy in the text below:</p>
 
@@ -437,7 +437,7 @@ def my_view(request):
 class MyView(LoginRequiredMixin, View):
     ...</pre>
 
-<p>This has exactly the same redirect behaviour as the <code>login_required</code> decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (<code>login_url</code>), and a URL parameter name instead of "<code>next</code>" to insert the current absolute path (<code>redirect_field_name</code>).</p>
+<p>This has exactly the same redirect behavior as the <code>login_required</code> decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (<code>login_url</code>), and a URL parameter name instead of "<code>next</code>" to insert the current absolute path (<code>redirect_field_name</code>).</p>
 
 <pre class="brush: python notranslate">class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
@@ -651,14 +651,14 @@ class MyView(PermissionRequiredMixin, View):
     # the catalog application doesn't have such permission!</pre>
 
 <div class="note">
-<p><strong>Note</strong>: There is a small default difference in the behaviour above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
+<p><strong>Note</strong>: There is a small default difference in the behavior above. By <strong>default</strong> for a logged-in user with a permission violation:</p>
 
 <ul>
  <li><code>@permission_required</code> redirects to login screen (HTTP Status 302).</li>
  <li><code>PermissionRequiredMixin</code> returns 403 (HTTP Status Forbidden).</li>
 </ul>
 
-<p>Normally you will want the <code>PermissionRequiredMixin</code> behaviour: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
+<p>Normally you will want the <code>PermissionRequiredMixin</code> behavior: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
 
 <pre class="syntaxbox notranslate">from django.contrib.auth.decorators import login_required, permission_required
 

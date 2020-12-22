@@ -306,7 +306,7 @@ setInterval(f, 0);</pre>
 
 <p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge its the 3rd one. Gecko started to treat <code>setInterval()</code> like this in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it already did this with <code>setTimeout()</code>; see below).</p>
 
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behaviour a bit differently (e.g. Firefox) — on <code>setInterval()</code> calls made from anywhere, or when a nested <code>setTimeout()</code> is called where the nesting level is at least a certain depth.</p>
+<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> some browsers implemented this throttling behavior a bit differently (e.g. Firefox) — on <code>setInterval()</code> calls made from anywhere, or when a nested <code>setTimeout()</code> is called where the nesting level is at least a certain depth.</p>
 
 <p>To implement a 0 ms timeout in a modern browser, you can use {{domxref("window.postMessage()")}} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
 
@@ -334,7 +334,7 @@ setInterval(f, 0);</pre>
 
 <p>Since Firefox 55, tracking scripts (e.g. Google Analytics, any script URL that Firefox recognises as a tracking script through its <a href="https://wiki.mozilla.org/Security/Tracking_protection#Lists">TP lists</a>) have been subject to further throttling. When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however, the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a document has first loaded.</p>
 
-<p>The prefs that control this behaviour are:</p>
+<p>The prefs that control this behavior are:</p>
 
 <ul>
  <li><code>dom.min_tracking_timeout_value</code>: 4</li>
@@ -367,7 +367,7 @@ foo has been called</pre>
 
 <p>In <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtension</a> background pages, timers don't work properly. This is because background pages don't actually stay loaded all the time: the browser can unload them if they are not being used, and restore them when they are needed. This is mostly transparent to the extension, but some things (including JS timers) won't work across an unload/restore cycle, so background pages are encouraged instead to use alarms, which will work. There's some more detail on this at <a href="https://developer.chrome.com/extensions/background_migration">Migrate to Event Driven Background Scripts</a>.</p>
 
-<p>At the time of writing, only Chrome exhibited the above behaviour — Firefox doesn't yet do the unload/restore behavior, so timers will work. But it's still a good idea to avoid timers in WebExtensions, for a couple of reasons:</p>
+<p>At the time of writing, only Chrome exhibited the above behavior — Firefox doesn't yet do the unload/restore behavior, so timers will work. But it's still a good idea to avoid timers in WebExtensions, for a couple of reasons:</p>
 
 <ol>
  <li>Compat with Chrome.</li>

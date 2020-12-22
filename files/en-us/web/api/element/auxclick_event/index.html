@@ -41,7 +41,7 @@ tags:
 
 <p>For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an <code>auxclick</code> event handler.</p>
 
-<p>When listening for <code>auxclick</code> events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behaviour of the {{event("mousedown")}} or {{event("pointerdown")}} event.</p>
+<p>When listening for <code>auxclick</code> events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{event("mousedown")}} or {{event("pointerdown")}} event.</p>
 
 <p>Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of <code>auxclick</code>. Instead, this can be done by preventing the default behavior of the {{event("contextmenu")}} event.</p>
 
