@@ -100,3 +100,27 @@ jobs:
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
+
+  filecheck:
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_content
+        with:
+          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
+          ABSOLUTE: true
+
+      - name: Check changed files
+        if: env.GIT_DIFF
+        run: |
+          export CONTENT_ROOT=$(pwd)/files
+          ls -l
+          echo ${{ env.GIT_DIFF }}
+          # # Need to run from the yari we've cleanly cloned.
+          # cd yari
+
+          # yarn filecheck ${{ env.GIT_DIFF }}
