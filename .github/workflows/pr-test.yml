@@ -9,7 +9,7 @@
 #
 # That way, you can behave on your laptop like, this action behaves here.
 
-name: PR Build
+name: PR Test
 
 on:
   pull_request:
