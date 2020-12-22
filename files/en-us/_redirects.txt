@@ -607,7 +607,7 @@
 /en-US/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/Getting_Started/Why_use_CSS-redirect-1	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/en-US/docs/CSS/Getting_Started/Why_use_CSS?	/en-US/docs/CSS/Getting_Started/Why_use_CSS
+/en-US/docs/CSS/Getting_Started/Why_use_CSS?	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
@@ -1081,7 +1081,7 @@
 /en-US/docs/CSS:Getting_Started:What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS:Getting_Started:What_is_CSS?	/en-US/docs/CSS/Getting_Started/What_is_CSS?
 /en-US/docs/CSS:Getting_Started:Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/en-US/docs/CSS:Getting_Started:Why_use_CSS?	/en-US/docs/CSS/Getting_Started/Why_use_CSS?
+/en-US/docs/CSS:Getting_Started:Why_use_CSS?	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /en-US/docs/CSS:Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS:Media:Visual	/en-US/docs/CSS/Media/Visual
 /en-US/docs/CSS:Other_Resources	/en-US/docs/Web/CSS
@@ -7631,7 +7631,7 @@
 /en-US/docs/MDN/Contribute/Tasks/Web_API_technical_review_list	/en-US/docs/MDN/Doc_status/API/Firefox_OS#Technical_reviews
 /en-US/docs/MDN/Contribute/Tools	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/Contribute/Tools/Add-ons_and_plug-ins	/en-US/docs/MDN/Tools/Add-ons_and_plug-ins
-/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN/Tools/Document_parameters
+/en-US/docs/MDN/Contribute/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/Contribute/Tools/Feeds	/en-US/docs/MDN/Tools/Feeds
 /en-US/docs/MDN/Contribute/Tools/KumaScript	/en-US/docs/MDN/Tools/KumaScript
 /en-US/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting
@@ -7655,7 +7655,7 @@
 /en-US/docs/MDN/Getting_started	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
-/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Document_parameters
+/en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/Kuma/Changelog	/en-US/docs/MDN/Kuma
 /en-US/docs/MDN/Kuma/Contributing	/en-US/docs/MDN/Kuma
 /en-US/docs/MDN/Kuma/Contributing/Getting_started	/en-US/docs/MDN/Kuma
@@ -7686,9 +7686,9 @@
 /en-US/docs/MDN/RFPs/Performance_Audit	/en-US/docs/MDN/Jobs/RFPs/Performance_Audit
 /en-US/docs/MDN/Structures/:-ms-input-placeholder_pseudo-class	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/Tools/Kuma_API	/en-US/docs/Project:MDN/Kuma/API
 /en-US/docs/MDN/Tools/MDN-related_projects	/en-US/docs/MDN/Tools/Add-ons_and_plug-ins
-/en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Advanced_search	/en-US/docs/MDN/Tools/Search
 /en-US/docs/MDN/User_guide/Deleting_pages	/en-US/docs/MDN/Tools/Page_deletion
@@ -7843,8 +7843,8 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox/OnInputEnteredDisposition	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
-/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_Firefox_on_Windows_with_clang-cl	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Buidling_on_Fedora_Core_5	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_on_Fedora_Core_5
+/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_Firefox_on_Windows_with_clang-cl	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS_2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
@@ -8675,6 +8675,7 @@
 /en-US/docs/Tools/Profiler	/en-US/docs/Tools/Performance
 /en-US/docs/Tools/Release_notes	/en-US/docs/Mozilla/Firefox/Releases
 /en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi	/en-US/docs/Tools/about:debugging#Connecting_over_the_Network
+/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /en-US/docs/Tools/Remote_Debugging/Debugging_over_USB	/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device
 /en-US/docs/Tools/Remote_Debugging/Debugging_over_a_network	/en-US/docs/Tools/about:debugging#Connecting_over_the_Network
 /en-US/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/en-US/docs/Tools/Responsive_Design_Mode
