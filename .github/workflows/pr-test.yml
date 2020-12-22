@@ -111,7 +111,7 @@ jobs:
         run: |
           echo ${{ steps.get_diff_files.outputs.diff }}
           echo $GIT_DIFF_FILES
-          echo ${{ GIT_DIFF_FILES }}
+          echo ${{ env.GIT_DIFF_FILES }}
 
           # export CONTENT_ROOT=$(pwd)/files
           # ls -l
