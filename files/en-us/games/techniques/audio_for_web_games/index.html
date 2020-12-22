@@ -32,7 +32,7 @@ tags:
 
 <p>For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect <em>any</em> user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a <em>Start</em> button is pressed.</p>
 
-<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practises with the autoplay policy here</a>.</p>
+<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practices with the autoplay policy here</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Playing part of your file at zero volume could also work if the browser allows you to change volume (see below). Also note that playing and immediately pausing your audio does not guarantee that a small piece of audio won't be played.</p>
