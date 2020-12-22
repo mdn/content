@@ -45,14 +45,13 @@ jobs:
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
+          SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
-        env:
-          GIT_DIFF_CONTENT: ${{ steps.get_diff_content.outputs }}
+        if: GIT_DIFF_CONTENT
         run: |
-          echo ${{ steps.get_diff_content.outputs }}
-          echo $GIT_DIFF_CONTENT
-          # export CONTENT_ROOT=$(pwd)/files
+          echo ${{ env.GIT_DIFF_CONTENT }}
+          export CONTENT_ROOT=$(pwd)/files
 
           # # Some day, when our number of flaws have reached 0 we'll change
           # # this to "*:error" which means the slightest flaw in the build
@@ -99,22 +98,18 @@ jobs:
           # node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
 
       - uses: technote-space/get-diff-action@v4.0.5
-        id: git_diff_files
+        # id: git_diff_files
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
           SET_ENV_NAME: GIT_DIFF_FILES
 
       - name: Check changed files
-        # env:
-        #   GIT_DIFF_FILES: ${{ steps.get_diff_files.outputs.diff }}
+        if: GIT_DIFF_FILES
         run: |
-          echo ${{ steps.get_diff_files.outputs.diff }}
-          echo $GIT_DIFF_FILES
           echo ${{ env.GIT_DIFF_FILES }}
 
-          # export CONTENT_ROOT=$(pwd)/files
-          # ls -l
+          export CONTENT_ROOT=$(pwd)/files
           # echo ${{ env.GIT_DIFF }}
           # # # Need to run from the yari we've cleanly cloned.
           # # cd yari
