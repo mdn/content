@@ -29759,14 +29759,6 @@
       "Sole"
     ]
   },
-  "Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone": {
-    "modified": "2020-07-16T22:35:40.454Z",
-    "contributors": [
-      "wbamberg",
-      "kscarfone",
-      "Nikki813"
-    ]
-  },
   "Tools/Remote_Debugging/Firefox_for_Android": {
     "modified": "2020-07-16T22:35:38.705Z",
     "contributors": [
@@ -166850,6 +166842,14 @@
     "contributors": [
       "ohaver",
       "lolaodelola"
+    ]
+  },
+  "Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE": {
+    "modified": "2020-07-16T22:35:40.454Z",
+    "contributors": [
+      "wbamberg",
+      "kscarfone",
+      "Nikki813"
     ]
   }
 }
