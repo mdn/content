@@ -29,7 +29,7 @@ tags:
 
 <p>Web performance is all about user experience and perceived performance. As we learned in the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">critical rendering path</a> document, linking CSS with a tradional link tag with rel="stylesheet" is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.</p>
 
-<p>To load CSS asynchronously one can simpy set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring Javascript, so it is important to include a noscript tag with a traditional fallback.</p>
+<p>To load CSS asynchronously one can set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring Javascript, so it is important to include a noscript tag with a traditional fallback.</p>
 
 <pre class="brush: html">&lt;link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'"&gt;
 &lt;noscript&gt;&lt;link rel="stylesheet" href="/path/to/my.css"&gt;&lt;/noscript&gt;
