@@ -82,7 +82,7 @@ tags:
 
 <p>All the direct children are now grid items. In a web browser, you won’t see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>, available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value <code>grid</code>. Click this and then the grid on this element will be overlaid in the browser window.</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14631/1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
+<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
 
 <p>As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <p>We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A <em>grid track</em> is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 261px; width: 392px;"></p>
+<p><img alt="" src="1_grid_track.png" style="height: 261px; width: 392px;"></p>
 
 <p>I can add to our earlier example by adding the <code>grid-template-columns</code> property, then defining the size of the column tracks.</p>
 
@@ -280,7 +280,7 @@ tags:
 
 <p>When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.</p>
 
-<p>Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using <code>minmax()</code> in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of <code>auto</code>. Using <code>auto</code> means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
+<p>Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} function. In this next example I am using <code>minmax()</code> in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of <code>auto</code>. Using <code>auto</code> means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.</p>
 
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
@@ -326,7 +326,7 @@ tags:
 
 <p>It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items. In our three column, two row grid we have four column lines.</p>
 
-<p><img alt="Diagram showing numbered grid lines." src="https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
+<p><img alt="Diagram showing numbered grid lines." src="1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
 
 <p>Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.</p>
 
@@ -394,13 +394,13 @@ tags:
 
 <p>A <em>grid cell</em> is the smallest unit on a grid. Conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. In the below image, I have highlighted the first cell of the grid.</p>
 
-<p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 233px; width: 350px;"></p>
+<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png" style="height: 233px; width: 350px;"></p>
 
 <h2 id="Grid_areas">Grid areas</h2>
 
 <p>Items can span one or more cells both by row or by column, and this creates a <em>grid area</em>. Grid areas must be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.</p>
 
-<p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 238px; width: 357px;"></p>
+<p><img alt="A grid area" src="1_grid_area.png" style="height: 238px; width: 357px;"></p>
 
 <h2 id="Gutters">Gutters</h2>
 
@@ -415,7 +415,7 @@ tags:
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the <code>grid-</code> prefix as {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} and {{cssxref("grid-gap")}} respectively.<br>
+<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the <code>grid-</code> prefix as {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} respectively.<br>
  <br>
  Browsers are updating to remove this prefix, however the prefixed versions will be maintained as aliases making them safe to use. </p>
 </div>
@@ -472,7 +472,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png" style="height: 512px; width: 900px;"></p>
+<p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png" style="height: 512px; width: 900px;"></p>
 
 <p>If I set <code>box1</code> to <code>display: grid</code> I can give it a track definition and it too will become a grid. The items then lay out on this new grid.</p>
 
@@ -521,7 +521,7 @@ tags:
 
 <p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
 
-<p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
+<p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
 
 <h3 id="Subgrid">Subgrid</h3>
 
