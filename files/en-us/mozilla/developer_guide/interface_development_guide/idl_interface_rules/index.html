@@ -6,7 +6,7 @@ tags:
 ---
 <p>For support and discussion:</p>
 <p><span style="font-family: Helvetica;">{{ DiscussionList("dev-embedding", "mozilla.dev.embedding") }}</span></p>
-<p>This document describes some dos and don'ts when writing an interface in IDL for Mozilla. For a complete guide, see the <a class="external" href="http://www.mozilla.org/projects/embedding/HowToFreeze.html">How To Freeze</a> document.</p>
+<p>This document describes some dos and don'ts when writing an interface in IDL for Mozilla. For a complete guide, see the <a class="external" href="https://www.mozilla.org/projects/embedding/HowToFreeze.html">How To Freeze</a> document.</p>
 <dl> <dt><strong>Rule:</strong> Use interCaps for naming.</dt> <dd>All methods and attributes should begin with a lowercase letter. Every subsequent word in the method or attribute name should be capitalized. Avoid capitalizing first letters and using underscores to separate words.</dd> <dt><strong>Why:</strong> IDL usually follows Java and JavaScript convention, which is intercaps.</dt> <dd>In addition, the first letter of all names are promoted to upper case in C++. The C++ signature is the same whether or not the first letter is capitalized. <ul> <li>Incorrect:</li> </ul> </dd>
 </dl>
 <pre class="eval">    /* don't capitalize first letters! */
@@ -166,5 +166,5 @@ tags:
     #define NS_FOO_CONTRACTID "@mozilla.org/foo/component;1"
     ...
 </pre>
-<div class="originaldocinfo"> <h2 id="Original_Document_Information">Original Document Information</h2> <ul> <li>Author: <a class="link-mailto" href="mailto:alecf@flett.org">Alec Flett</a></li> <li>Last Updated Date: April 27, 2004</li> <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li> </ul>
+<div class="originaldocinfo"> <h2 id="Original_Document_Information">Original Document Information</h2> <ul> <li>Author: <a class="link-mailto" href="mailto:alecf@flett.org">Alec Flett</a></li> <li>Last Updated Date: April 27, 2004</li> <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="https://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li> </ul>
 </div>

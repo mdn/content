@@ -19,7 +19,7 @@ tags:
 </ul>
 <h2 id="Why_HyperLink_is_often_not_a_link">Why HyperLink is often not a link</h2>
 <p>As explained above, anything that is embedded in text implements the Hyperlink interface.</p>
-<p>While it is odd to call non-link objects a link, this was a necessary compromise in the <a class="external" href="http://www.mozilla.org/access/unix/new-atk.html">newatk design</a> because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.</p>
+<p>While it is odd to call non-link objects a link, this was a necessary compromise in the <a class="external" href="https://www.mozilla.org/access/unix/new-atk.html">newatk design</a> because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.</p>
 <h2 id="API_comparison">API comparison</h2>
 <ul>
   <li>nsIAccessible (internal). When you have an nsIAccessibleHyperText, you can ask for its links, which is the subset of children from the nsIAccessible hierarchy that are not text or whitespace.</li>
@@ -28,7 +28,7 @@ tags:
 </ul>
 <h2 id="Example">Example</h2>
 <p>Take the following HTML code:</p>
-<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a class="external" href="http://www.mozilla.org/access" rel="freelink">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
+<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a class="external" href="https://www.mozilla.org/access" rel="freelink">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
 </pre>
 <p>Both the &lt;a&gt; and &lt;img&gt; are hyperlinks Also, both the &lt;div&gt; and &lt;a&gt; are hypertexts So the &lt;a&gt; is both a hypertext and a hyperlink, because it contains text and is contained within text.</p>
 <p>This means that we have an exact mirror to the dom, but text lives in the parents instead of in the leaves, which now don't really provide additional useful information. They are only provided under MSAA/IA2 for backward compatibility.</p>
@@ -107,4 +107,4 @@ tags:
   <li><code>#define CHAR_OFFSET_CARET = -2</code></li>
 </ul>
 <h2 id="More_information">More information</h2>
-<p>Many more details on the Mozilla document hierarchy are in the <a class="external" href="http://www.mozilla.org/access/unix/new-atk.html">original design document for newatk</a>. There are also details on the <a class="external" href="http://www.mozilla.org/access/architecture">general implementation of Mozilla accessibility architecture</a> (needs updating).</p>
+<p>Many more details on the Mozilla document hierarchy are in the <a class="external" href="https://www.mozilla.org/access/unix/new-atk.html">original design document for newatk</a>. There are also details on the <a class="external" href="https://www.mozilla.org/access/architecture">general implementation of Mozilla accessibility architecture</a> (needs updating).</p>
