@@ -172,7 +172,7 @@ console.log(obj == undefined);
 
 <h2 id="Same-value_equality">Same-value equality</h2>
 
-<p>Same-value equality addresses a final use case: determining whether two values are <em>functionally identical</em> in all contexts. (This use case demonstrates an instance of the <a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>.) One instance occurs when an attempt is made to mutate an immutable property:</p>
+<p>Same-value equality addresses a final use case: determining whether two values are <em>functionally identical</em> in all contexts. (This use case demonstrates an instance of the <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>.) One instance occurs when an attempt is made to mutate an immutable property:</p>
 
 <pre class="brush: js notranslate">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
 Object.defineProperty(Number, 'NEGATIVE_ZERO',

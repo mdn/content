@@ -20,7 +20,7 @@ tags:
 <p>Suppose you have the following simple paragraph within your webpage (with some whitespace added to aid formatting throughout the code samples here), whose DOM node is stored in the variable <code>para</code>:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great!  &lt;strong&gt;No insipid election coverage!&lt;/strong&gt;
-  However, &lt;a href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  However, &lt;a href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
@@ -37,7 +37,7 @@ tags:
 <p>All set, right? <em>Wrong!</em> What happened was you removed the <code>strong</code> element, but the removed sentence’s element separated two text nodes. One for the first sentence, and one for the first word of the last. Instead, you now effectively have this:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great, but However, &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
@@ -56,7 +56,7 @@ tags:
 <p>We’re removing every adjacent text node (all the ones that constituted the whole text) but the one on which <code>replaceWholeText()</code> is called, and we’re changing the remaining one to the new text. What we have now is this:</p>
 
 <pre class="brush: html">&lt;p&gt;Thru-hiking is great, but &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
+  href="https://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
   ballot&lt;/a&gt; is tricky.&lt;/p&gt;
 </pre>
 
