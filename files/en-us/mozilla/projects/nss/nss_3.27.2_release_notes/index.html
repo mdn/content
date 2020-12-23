@@ -23,9 +23,6 @@ slug: Mozilla/Projects/NSS/NSS_3.27.2_Release_Notes
 
 <p>No new functionality is introduced in this release. This is a patch release to address a memory leak in the <code>SSL_SetTrustAnchors()</code> function.</p>
 
-<ul>
-</ul>
-
 <h2 id="Notable_Changes_in_NSS_3.27.2">Notable Changes in NSS 3.27.2</h2>
 
 <p>The <code>SSL_SetTrustAnchors()</code> function is used to set the distinguished names that an NSS server includes in its TLS CertificateRequest message.  If this function is not used, NSS will include the distinguished names for all trust anchors installed in the database.  This can be a lengthy list.</p>
