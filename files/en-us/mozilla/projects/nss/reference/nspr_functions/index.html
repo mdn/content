@@ -2,7 +2,7 @@
 title: NSPR functions
 slug: Mozilla/Projects/NSS/Reference/NSPR_functions
 ---
-<p><a class="external" href="http://www.mozilla.org/projects/nspr/" title="http://www.mozilla.org/projects/nspr/">NSPR</a> is a platform abstraction library that provides a cross-platform API to common OS services.  NSS uses NSPR internally as the porting layer.  However, a small number of NSPR functions are required for using the certificate verification and SSL functions in NSS.  These NSPR functions are listed in this section.</p>
+<p><a class="external" href="https://www.mozilla.org/projects/nspr/" title="http://www.mozilla.org/projects/nspr/">NSPR</a> is a platform abstraction library that provides a cross-platform API to common OS services.  NSS uses NSPR internally as the porting layer.  However, a small number of NSPR functions are required for using the certificate verification and SSL functions in NSS.  These NSPR functions are listed in this section.</p>
 <h3 id="NSPR_initialization_and_shutdown">NSPR initialization and shutdown</h3>
 <p>NSPR is automatically initialized by the first NSPR function called by the application.  Call <a class="internal" href="/en-US/PR_Cleanup" title="En/PR Cleanup"><code>PR_Cleanup</code></a> to shut down NSPR and clean up its resources.<a class="internal" href="/en-US/PR_Init" title="En/PR Init"><br>
 </a></p>

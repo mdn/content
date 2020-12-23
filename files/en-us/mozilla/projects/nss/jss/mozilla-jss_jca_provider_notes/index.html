@@ -5,14 +5,14 @@ slug: Mozilla/Projects/NSS/JSS/Mozilla-JSS_JCA_Provider_notes
 <h2 id="The_Mozilla-JSS_JCA_Provider">The Mozilla-JSS JCA Provider</h2>
 <p><em>Newsgroup: <a class="link-news" href="news://news.mozilla.org/mozilla.dev.tech.crypto"> mozilla.dev.tech.crypto</a> </em></p>
 <h3 id="Overview">Overview</h3>
-<p>This document describes the JCA Provider shipped with JSS. The provider's name is "Mozilla-JSS". It implements cryptographic operations in native code using the <a href="http://www.mozilla.org/projects/security/pki/nss">NSS</a> libraries.</p>
+<p>This document describes the JCA Provider shipped with JSS. The provider's name is "Mozilla-JSS". It implements cryptographic operations in native code using the <a href="https://www.mozilla.org/projects/security/pki/nss">NSS</a> libraries.</p>
 <h3 id="Contents">Contents</h3>
 <ul>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#signed-jar">Signed JAR file</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#installing-provider">Installing the Provider</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#specifying-token">Specifying the CryptoToken</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#supported-classes">Supported Classes</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#not-supported">What's Not Supported</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#signed-jar">Signed JAR file</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#installing-provider">Installing the Provider</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#specifying-token">Specifying the CryptoToken</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#supported-classes">Supported Classes</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#not-supported">What's Not Supported</a></li>
 </ul>
 <h3 id="Signed_JAR_file">Signed JAR file</h3>
 <p>JSS implements several JCE (Java Cryptography Extension) algorithms. These algorithms have at various times been export-controlled by the US government. JRE therefore requires that JAR files implementing JCE algorithms be digitally signed by an approved organization. The maintainers of JSS, Sun, Red Hat, and Mozilla, have this approval and signs the official builds of <code>jss4.jar</code>. At runtime, the JRE automatically verifies this signature whenever a JSS class is loaded that implements a JCE algorithm. The verification is transparent to the application (unless it fails and throws an exception). If you are curious, you can verify the signature on the JAR file using the <code>jarsigner</code> tool, which is distributed with the JDK.</p>
@@ -22,7 +22,7 @@ slug: Mozilla/Projects/NSS/JSS/Mozilla-JSS_JCA_Provider_notes
  <li>Apply for your own JCE code-signing certificate following the procedure at <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/crypto/HowToImplAProvider.html#Step61">How to Implement a Provider for the Java<sup><font size="-2">TM</font></sup> Cryptography Extension</a>. Then you can sign your own JSS JAR file.</li>
 </ol>
 <h3 id="Installing_the_Provider">Installing the Provider</h3>
-<p>In order to use any part of JSS, including the JCA provider, you must first call <code> <a href="http://www.mozilla.org/projects/security/pki/jss/javadoc/org/mozilla/jss/CryptoManager.html">CryptoManager</a>.initialize()</code>. By default, the JCA provider will be installed in the list of providers maintained by the <code>java.security.Security</code> class. If you do not wish the provider to be installed, create a <a href="http://www.mozilla.org/projects/security/pki/jss/javadoc/org/mozilla/jss/CryptoManager.InitializationValues.html"><code> CryptoManager.InitializationValues</code></a> object, set its <code>installJSSProvider</code> field to <code>false</code>, and pass the <code>InitializationValues</code> object to <code>CryptoManager.initialize()</code>.</p>
+<p>In order to use any part of JSS, including the JCA provider, you must first call <code> <a href="https://www.mozilla.org/projects/security/pki/jss/javadoc/org/mozilla/jss/CryptoManager.html">CryptoManager</a>.initialize()</code>. By default, the JCA provider will be installed in the list of providers maintained by the <code>java.security.Security</code> class. If you do not wish the provider to be installed, create a <a href="https://www.mozilla.org/projects/security/pki/jss/javadoc/org/mozilla/jss/CryptoManager.InitializationValues.html"><code> CryptoManager.InitializationValues</code></a> object, set its <code>installJSSProvider</code> field to <code>false</code>, and pass the <code>InitializationValues</code> object to <code>CryptoManager.initialize()</code>.</p>
 <h3 id="Specifying_the_CryptoToken">Specifying the CryptoToken</h3>
 <p>All cryptographic operations in JSS and NSS occur on a particular PKCS #11 token, implemented in software or hardware. There is no clean way to specify this token through the JCA API. By default, the JSS provider carries out all operations except MessageDigest on the Internal Key Storage Token, a software token included in JSS/NSS. MessageDigest operations take place by default on the Internal Crypto Token, another internal software token in JSS/NSS. There is no good design reason for this difference, but it is necessitated by a quirk in the NSS implementation.</p>
 <p>In order to use a different token, use <code>CryptoManager.setThreadToken()</code>. This sets the token to be used by the JSS JCA provider in the current thread. When you call <code>getInstance()</code> on a JCA class, the JSS provider checks the current per-thread default token (by calling <code>CryptoManager.getThreadToken()</code>) and instructs the new object to use that token for cryptographic operations. The per-thread default token setting is only consulted inside <code>getInstance()</code>. Once a JCA object has been created it will continue to use the same token, even if the application later changes the per-thread default token.</p>
@@ -53,20 +53,20 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
 </code></pre>
 <h3 id="Supported_Classes">Supported Classes</h3>
 <ul>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Cipher">Cipher</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#DSAPrivateKey">DSAPrivateKey</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Cipher">Cipher</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#DSAPrivateKey">DSAPrivateKey</a></li>
  <li>DSAPublicKey</li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyFactory">KeyFactory</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyGenerator">KeyGenerator</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyPairGenerator">KeyPairGenerator</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Mac">Mac</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#MessageDigest">MessageDigest</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#RSAPrivateKey">RSAPrivateKey</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyFactory">KeyFactory</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyGenerator">KeyGenerator</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#KeyPairGenerator">KeyPairGenerator</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Mac">Mac</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#MessageDigest">MessageDigest</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#RSAPrivateKey">RSAPrivateKey</a></li>
  <li>RSAPublicKey</li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecretKeyFactory">SecretKeyFactory</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecretKey">SecretKey</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecureRandom">SecureRandom</a></li>
- <li><a href="http://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Signature">Signature</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecretKeyFactory">SecretKeyFactory</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecretKey">SecretKey</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#SecureRandom">SecureRandom</a></li>
+ <li><a href="https://www.mozilla.org/projects/security/pki/jss/provider_notes.html#Signature">Signature</a></li>
 </ul>
 <h3 id="Cipher">Cipher</h3>
 <h4 id="Supported_Algorithms">Supported Algorithms</h4>
