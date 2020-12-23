@@ -165,7 +165,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.</p>
 
-<pre class="brush: html notranslate">  const vsSource = `
+<pre class="brush: js notranslate">  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -187,7 +187,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
 <p>The fragment shader likewise needs to be updated:</p>
 
-<pre class="brush: html notranslate">  const fsSource = `
+<pre class="brush: js notranslate">  const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;

@@ -57,11 +57,11 @@ tags:
  <dt>{{domxref("BiquadFilterNode.frequency")}} {{readonlyInline}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).</dd>
  <dt>{{domxref("BiquadFilterNode.detune")}} {{readonlyInline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of the frequency in <a class="external external-icon" href="http://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of the frequency in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</dd>
  <dt>{{domxref("BiquadFilterNode.Q")}} {{readonlyInline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}, a double representing a <a href="http://en.wikipedia.org/wiki/Q_factor">Q factor</a>, or <em>quality factor</em>.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}, a double representing a <a href="https://en.wikipedia.org/wiki/Q_factor">Q factor</a>, or <em>quality factor</em>.</dd>
  <dt>{{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}, a double representing the <a href="http://en.wikipedia.org/wiki/Gain">gain</a> used in the current filtering algorithm.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}, a double representing the <a href="https://en.wikipedia.org/wiki/Gain">gain</a> used in the current filtering algorithm.</dd>
  <dt>{{domxref("BiquadFilterNode.type")}}</dt>
  <dd>Is a string value defining the kind of filtering algorithm the node is implementing.<br>
 
@@ -121,15 +121,15 @@ tags:
    </tr>
    <tr>
     <th scope="row"><code>notch</code></th>
-    <td>Standard <a href="http://en.wikipedia.org/wiki/Band-stop_filter">notch</a> filter, also called a <em>band-stop</em> or <em>band-rejection</em> filter. It is the opposite of a bandpass filter: frequencies outside the give range of frequencies pass through; frequencies inside it are attenuated.</td>
+    <td>Standard <a href="https://en.wikipedia.org/wiki/Band-stop_filter">notch</a> filter, also called a <em>band-stop</em> or <em>band-rejection</em> filter. It is the opposite of a bandpass filter: frequencies outside the give range of frequencies pass through; frequencies inside it are attenuated.</td>
     <td>The center of the range of frequencies.</td>
     <td>Controls the width of the frequency band. The greater the <code>Q</code> value, the smaller the frequency band.</td>
     <td><em>Not used</em></td>
    </tr>
    <tr>
     <th scope="row"><code>allpass</code></th>
-    <td>Standard second-order <a href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation">allpass</a> filter. It lets all frequencies through, but changes the phase-relationship between the various frequencies.</td>
-    <td>The frequency with the maximal <a href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay">group delay</a>, that is, the frequency where the center of the phase transition occurs.</td>
+    <td>Standard second-order <a href="https://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation">allpass</a> filter. It lets all frequencies through, but changes the phase-relationship between the various frequencies.</td>
+    <td>The frequency with the maximal <a href="https://en.wikipedia.org/wiki/Group_delay_and_phase_delay">group delay</a>, that is, the frequency where the center of the phase transition occurs.</td>
     <td>Controls how sharp the transition is at the medium frequency. The larger this parameter is, the sharper and larger the transition will be.</td>
     <td><em>Not used</em></td>
    </tr>

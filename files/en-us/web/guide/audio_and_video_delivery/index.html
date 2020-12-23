@@ -210,13 +210,13 @@ myVideo.height = 320;</pre>
  <br>
  The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.<br>
  <br>
- One of the principle uses of EME is to allow browsers to implement DRM (<a href="http://en.wikipedia.org/wiki/Digital_rights_management">Digital Rights Management</a>), which helps to prevent web-based content (especially video) from being copied.</p>
+ One of the principle uses of EME is to allow browsers to implement DRM (<a href="https://en.wikipedia.org/wiki/Digital_rights_management">Digital Rights Management</a>), which helps to prevent web-based content (especially video) from being copied.</p>
 
 <h3 id="Adaptive_Streaming">Adaptive Streaming</h3>
 
 <p>New formats and protocols are being rolled out to facilitate adaptive streaming. Adaptive streaming media means that the bandwidth and typically quality of the stream can change in real-time in reaction to the user's available bandwidth. Adaptive streaming is often used in conjunction with live streaming where smooth delivery of audio or video is paramount.</p>
 
-<p>The main formats used for adaptive streaming are <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS">HLS</a> and <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH">MPEG-DASH</a>. MSE has been designed with DASH in mind. MSE defines byte streams according to <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html">ISOBMFF</a> and <a href="http://en.wikipedia.org/wiki/M2ts">M2TS</a> (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.</p>
+<p>The main formats used for adaptive streaming are <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#HLS">HLS</a> and <a href="/en-US/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video#MPEG-DASH">MPEG-DASH</a>. MSE has been designed with DASH in mind. MSE defines byte streams according to <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html">ISOBMFF</a> and <a href="https://en.wikipedia.org/wiki/M2ts">M2TS</a> (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.</p>
@@ -512,7 +512,7 @@ lastsource.addEventListener('error', function(ev) {
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: Firefox OS versions 1.3 and above support the <a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> protocol for streaming video delivery. A fallback solution for older versions would be to use <code>&lt;video&gt;</code> along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.</p>
+<p><strong>Note</strong>: Firefox OS versions 1.3 and above support the <a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> protocol for streaming video delivery. A fallback solution for older versions would be to use <code>&lt;video&gt;</code> along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.</p>
 </div>
 
 <h2 id="References">References</h2>
