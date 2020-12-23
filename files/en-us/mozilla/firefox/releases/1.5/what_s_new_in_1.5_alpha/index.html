@@ -167,44 +167,24 @@ tags:
 <dl>
  <dt>E4X</dt>
  <dd>The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">the ECMA specification</a>. {{bug(246441)}}</dd>
-</dl>
-
-<dl>
  <dt>Translucent Windows (Windows/Linux)</dt>
  <dd>On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.</dd>
-</dl>
-
-<dl>
  <dt>Adding tokens to the User-Agent string</dt>
  <dd>It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other. See <a class="external" href="http://www.mozilla.org/build/revised-user-agent-strings.html">documentation</a>. {{bug(274928) }}</dd>
-</dl>
-
-<dl>
  <dt>Toolkit chrome registry</dt>
  <dd>Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache. See <a href="en/Chrome_Registration">Chrome Registration</a>.</dd>
-</dl>
-
-<dl>
  <dt>Extension Manager</dt>
-</dl>
-
-<ul>
- <li>It is now possible to have Extensions outside the profile and application Extensions directories.</li>
- <li>Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.</li>
- <li>Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.</li>
-</ul>
-
-<dl>
+ <dd>
+ <ul>
+   <li>It is now possible to have Extensions outside the profile and application Extensions directories.</li>
+   <li>Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.</li>
+   <li>Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.</li>
+  </ul>
+ </dd>
  <dt>New Preferences bindings</dt>
  <dd>These <a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=263028">new bindings</a> make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.</dd>
-</dl>
-
-<dl>
  <dt>API for implementing new command-line switches</dt>
  <dd>An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces {{ Interface("nsICommandLine") }} and {{ Interface("nsICommandLineHandler") }}.</dd>
-</dl>
-
-<dl>
  <dt>XTF Support</dt>
  <dd>The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example, the <a class="external" href="http://www.mozilla.org/projects/xforms">Mozilla XForms Project</a> uses XTF to add support for the XForms namespace. See <a class="external" href="http://www.croczilla.com/xtf">XTF Home Page</a></dd>
 </dl>
