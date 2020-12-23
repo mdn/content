@@ -254,9 +254,6 @@ tags:
  <li>Selectors 5–7 are competing over the styling of the link's border when hovered. Selector six clearly loses to five with a specificity of 23 vs. 24 — it has one fewer element selectors in the chain. Selector seven, however, beats both five and six — it has the same number of sub-selectors in the chain as five, but an element has been swapped out for a class selector. So the winning specificity is 33 vs. 23 and 24.</li>
 </ul>
 
-<ol>
-</ol>
-
 <div class="note">
 <p><strong>Note</strong>: This has only been an approximate example for ease of understanding. In actuality, each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a <em>million</em> <strong>class</strong> selectors combined would not be able to overwrite the rules of <em>one</em> <strong>id</strong> selector.</p>
 

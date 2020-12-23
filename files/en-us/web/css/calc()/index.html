@@ -148,9 +148,6 @@ width: calc(100% - 80px);</pre>
 
 <p>After all variables are expanded, <code>widthC</code>'s value will be <code>calc( calc( 100px / 2) / 2)</code>, then when it's assigned to <code>.foo</code>'s width property, all inner <code>calc()</code>s (no matter how deeply nested) will be flattened to just parentheses, so the <code>width</code> property's value will be eventually <code>calc( ( 100px / 2) / 2)</code>, i.e. <code>25px</code>. In short: a <code>calc()</code> inside of a <code>calc()</code> is identical to just parentheses.</p>
 
-<ul>
-</ul>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
