@@ -440,9 +440,6 @@ function attemptMutation(v) {
  <dt>{{jsxref("Math.pow")}}</dt>
  <dt>{{jsxref("Math.round")}}</dt>
  <dd>In some cases,it's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods even when no <code>-0</code> exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Math.floor")}}</dt>
  <dt>{{jsxref("Math.max")}}</dt>
  <dt>{{jsxref("Math.min")}}</dt>
@@ -450,9 +447,6 @@ function attemptMutation(v) {
  <dt>{{jsxref("Math.sqrt")}}</dt>
  <dt>{{jsxref("Math.tan")}}</dt>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>

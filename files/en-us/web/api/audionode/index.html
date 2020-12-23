@@ -77,24 +77,12 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 <dl>
  <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
  <dd>Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of inputs feeding the node. Source nodes are defined as nodes having a <code>numberOfInputs</code> property with a value of <code>0</code>.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}</dt>
  <dd>Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of <code>0</code> for this attribute.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.channelCount")}}</dt>
  <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
