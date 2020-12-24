@@ -297,7 +297,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Sometimes it can make sense to be able to add associated records at the same time. For example, it may make sense to have both the book information and information about the specific copies you've got on the same detail page.</p>
 
-<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizonal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
+<p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizontal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
 
 <pre class="brush: python notranslate"><strong>class BooksInstanceInline(admin.TabularInline):
     model = BookInstance</strong>
