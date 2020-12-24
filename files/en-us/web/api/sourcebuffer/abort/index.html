@@ -51,7 +51,7 @@ tags:
 
 <p>The spec description of <code>abort()</code> is somewhat confusing — consider for example step 1 of <a href="https://w3c.github.io/media-source/index.html#sourcebuffer-reset-parser-state">reset parser state</a>. The MSE API is fully asynchronous, but this step seems to suggest a synchronous (blocking) operation, which doesn't make sense.</p>
 
-<p>Saying that, current implementations can be useful in certain situations, when you want to stop the current append (or whatever) operation occuring on a sourcebuffer, and then immediately start performing operations on it again. For example, consider this code:</p>
+<p>Saying that, current implementations can be useful in certain situations, when you want to stop the current append (or whatever) operation occurring on a sourcebuffer, and then immediately start performing operations on it again. For example, consider this code:</p>
 
 <pre class="brush: js">sourceBuffer.addEventListener('updateend', function (_) {
   ...
