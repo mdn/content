@@ -4,7 +4,6 @@ slug: Web/API/CSSRule/cssText
 tags:
   - API
   - CSSOM
-  - NeedsSpecTable
   - Property
   - Reference
 ---
@@ -25,17 +24,13 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:html;">&lt;style&gt;
-  body {
-    background-color: darkblue;
-  }
-&lt;/style&gt;
+<pre class="brush:css;">body {
+  background-color: darkblue;
+}</pre>
 
-&lt;script&gt;
-  var stylesheet = document.styleSheets[0];
-  alert(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
-&lt;/script&gt;
-</pre>
+
+<pre class="brush:js;">let stylesheet = document.styleSheets[0];
+console.log(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

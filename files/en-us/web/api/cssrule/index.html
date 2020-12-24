@@ -9,13 +9,29 @@ tags:
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p>The <strong><code>CSSRule</code></strong> interface represents a single CSS rule. There are several types of rules, listed in the {{anch("Type constants")}} section below.</p>
+<p>The <strong><code>CSSRule</code></strong> interface represents a single CSS rule. There are several types of rules, which inherit properties from <code>CSSRule</code>.</p>
 
-<p>The <code>CSSRule</code> interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.</p>
-
-<p>References to a <code>CSSRule</code> may be obtained by looking at a {{domxref("CSSStyleSheet")}}'s <code>cssRules</code> list.</p>
+<div class="index">
+  <ul>
+    <li>{{DOMXRef("CSSStyleRule")}}</li>
+    <li>{{DOMXRef("CSSImportRule")}}</li>
+    <li>{{DOMXRef("CSSMediaRule")}}</li>
+    <li>{{DOMXRef("CSSFontFaceRule")}}</li>
+    <li>{{DOMXRef("CSSPageRule")}}</li>
+    <li>{{DOMXRef("CSSNamespaceRule")}}</li>
+    <li>{{DOMXRef("CSSKeyframesRule")}}</li>
+    <li>{{DOMXRef("CSSKeyframeRule")}}</li>
+    <li>{{DOMXRef("CSSCounterStyleRule")}}</li>
+    <li>{{DOMXRef("CSSDocumentRule")}}</li>
+    <li>{{DOMXRef("CSSSupportsRule")}}</li>
+    <li>{{DOMXRef("CSSFontFeatureValuesRule")}}</li>
+    <li>{{DOMXRef("CSSViewportRule")}}</li>
+  </ul>
+</div>
 
 <h2 id="Properties_common_to_all_CSSRule_instances">Properties common to all CSSRule instances</h2>
+
+<p>The <code>CSSRule</code> interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.</p>
 
 <dl>
  <dt id="cssText">{{domxref("CSSRule.cssText")}}</dt>
@@ -24,131 +40,16 @@ tags:
  <dd>Returns the containing rule, otherwise <code>null</code>. E.g. if this rule is a style rule inside an {{cssxref("@media")}} block, the parent rule would be that {{domxref("CSSMediaRule")}}.</dd>
  <dt id="parentStyleSheet">{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
  <dd>Returns the {{domxref("CSSStyleSheet")}} object for the style sheet that contains this rule</dd>
- <dt id="type">{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
- <dd>One of the {{anch("Type constants")}} indicating the type of CSS rule.</dd>
+ <dt id="type">{{domxref("CSSRule.type")}} {{readonlyinline}}{{deprecated_inline}}</dt>
+ <dd>Returns one of the Type constants to determine which type of rule is represented.</dd>
 </dl>
 
-<h2 id="CSSRule">Constants</h2>
+<h2 id="Examples">Examples</h2>
 
-<h3 id="Type_constants">Type constants</h3>
+<p>References to a <code>CSSRule</code> may be obtained by looking at a {{domxref("CSSStyleSheet")}}'s <code>cssRules</code> list.</p>
 
-<p>The <code>CSSRule</code> interface specifies integer constants that can be used in conjunction with a <code>CSSRule</code>'s {{domxref("cssRule/type","type")}} property to discern the rule type (and therefore, which specialized interface it implements). The relationships between these constants and the interfaces are:</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Type</th>
-   <th>Value</th>
-   <th>Rule-specific interface</th>
-   <th>Comments and examples</th>
-  </tr>
-  <tr>
-   <td><code>CSSRule.STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>1</code></td>
-   <td>{{domxref("CSSStyleRule")}}</td>
-   <td>The most common kind of rule:<br>
-    <code>selector { prop1: val1; prop2: val2; }</code></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.IMPORT_RULE</code></td>
-   <td style="text-align: center;"><code>3</code></td>
-   <td>{{domxref("CSSImportRule")}}</td>
-   <td>An {{cssxref("@import")}} rule. (Until the documentation is completed, see the interface definition in the Mozilla source code: <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9">nsIDOMCSSImportRule</a>.)</td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.MEDIA_RULE</code></td>
-   <td style="text-align: center;"><code>4</code></td>
-   <td>{{domxref("CSSMediaRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.FONT_FACE_RULE</code></td>
-   <td style="text-align: center;"><code>5</code></td>
-   <td>{{domxref("CSSFontFaceRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.PAGE_RULE</code></td>
-   <td style="text-align: center;"><code>6</code></td>
-   <td>{{domxref("CSSPageRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.KEYFRAMES_RULE</code></td>
-   <td style="text-align: center;"><code>7</code></td>
-   <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.KEYFRAME_RULE</code></td>
-   <td style="text-align: center;"><code>8</code></td>
-   <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><em>Reserved for future use</em></td>
-   <td style="text-align: center;"><code>9</code></td>
-   <td></td>
-   <td>Should be used to define color profiles in the future</td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.NAMESPACE_RULE</code></td>
-   <td style="text-align: center;"><code>10</code></td>
-   <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>11</code></td>
-   <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.SUPPORTS_RULE</code></td>
-   <td style="text-align: center;"><code>12</code></td>
-   <td>{{domxref("CSSSupportsRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.DOCUMENT_RULE</code></td>
-   <td style="text-align: center;"><code>13</code></td>
-   <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
-   <td style="text-align: center;"><code>14</code></td>
-   <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.VIEWPORT_RULE</code></td>
-   <td style="text-align: center;"><code>15</code></td>
-   <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.REGION_STYLE_RULE</code></td>
-   <td style="text-align: center;"><code>16</code></td>
-   <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.UNKNOWN_RULE</code></td>
-   <td style="text-align: center;"><code>0</code></td>
-   <td>{{domxref("CSSUnknownRule")}} {{obsolete_inline}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.CHARSET_RULE</code></td>
-   <td style="text-align: center;"><code>2</code></td>
-   <td><code>CSSCharsetRule</code> {{obsolete_inline}}</td>
-   <td>(Removed in most browsers.)</td>
-  </tr>
- </tbody>
-</table>
-
-<p>An up-to-date informal list of constants can be found on the <a href="http://wiki.csswg.org/spec/cssom-constants">CSSWG Wiki</a>.</p>
+<pre class="brush: js notranslate">let myRules = document.styleSheets[0].cssRules; // Returns a CSSRuleList
+console.log(myRules);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -162,34 +63,34 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('CSSOM', '#css-rules', 'CSSRule')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Obsoleted values <code>CHARSET_RULE</code> and <code>UNKNOWN_RULE</code>. Added value <code>NAMESPACE_RULE</code>.</td>
+    <td>{{SpecName('CSSOM', '#css-rules', 'CSSRule')}}</td>
+    <td>{{Spec2('CSSOM')}}</td>
+    <td>Obsoleted values <code>CHARSET_RULE</code> and <code>UNKNOWN_RULE</code>. Added value <code>NAMESPACE_RULE</code>. Deprecates <code>CSSRule.type</code>.</td>
   </tr>
   <tr>
-   <td>{{SpecName("CSS3 Animations",'#interface-cssrule', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Added values <code>KEYFRAMES_RULE</code> and <code>KEYFRAME_RULE</code>.</td>
+    <td>{{SpecName("CSS3 Animations",'#interface-cssrule', 'CSSRule')}}</td>
+    <td>{{Spec2('CSS3 Animations')}}</td>
+    <td>Added values <code>KEYFRAMES_RULE</code> and <code>KEYFRAME_RULE</code>.</td>
   </tr>
   <tr>
-   <td>{{SpecName('CSS4 Fonts', '#om-fontfeaturevalues', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Added value <code>FONT_FEATURE_VALUES_RULE</code>.</td>
+    <td>{{SpecName('CSS4 Fonts', '#om-fontfeaturevalues', 'CSSRule')}}</td>
+    <td>{{Spec2('CSS4 Fonts')}}</td>
+    <td>Added value <code>FONT_FEATURE_VALUES_RULE</code>.</td>
   </tr>
   <tr>
-   <td>{{SpecName("CSS3 Counter Styles", "#extentions-to-cssrule-interface", 'CSSRule')}}</td>
-   <td>{{Spec2("CSS3 Counter Styles")}}</td>
-   <td>Added value <code>COUNTER_STYLE_RULE</code>.</td>
+    <td>{{SpecName("CSS3 Counter Styles", "#extentions-to-cssrule-interface", 'CSSRule')}}</td>
+    <td>{{Spec2("CSS3 Counter Styles")}}</td>
+    <td>Added value <code>COUNTER_STYLE_RULE</code>.</td>
   </tr>
   <tr>
-   <td>{{SpecName("CSS3 Conditional", '#extentions-to-cssrule-interface', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Added value <code>SUPPORTS_RULE</code>. (<code>DOCUMENT_RULE</code> has been pushed to CSS Conditional Rules Level 4)</td>
+    <td>{{SpecName("CSS3 Conditional", '#extentions-to-cssrule-interface', 'CSSRule')}}</td>
+    <td>{{Spec2('CSS3 Conditional')}}</td>
+    <td>Added value <code>SUPPORTS_RULE</code>. (<code>DOCUMENT_RULE</code> has been pushed to CSS Conditional Rules Level 4)</td>
   </tr>
   <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSRule', 'CSSRule')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition.</td>
+    <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSRule', 'CSSRule')}}</td>
+    <td>{{Spec2('DOM2 Style')}}</td>
+    <td>Initial definition.</td>
   </tr>
  </tbody>
 </table>
@@ -204,5 +105,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+ <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
 </ul>
