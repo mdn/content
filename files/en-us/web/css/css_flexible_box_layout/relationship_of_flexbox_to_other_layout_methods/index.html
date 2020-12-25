@@ -112,7 +112,7 @@ tags:
 
 <p>In the following live example I have a flex container with three child elements. One of these flex items has two elements nested inside it, which would not ordinarily participate in flex layout. Flex layout only applies to the direct children of a flex container.</p>
 
-<p>By adding <code>display: contents</code> to the wrapper around the nested elements, you can see that that item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the <code>display: contents</code> line to see it return.</p>
+<p>By adding <code>display: contents</code> to the wrapper around the nested elements, you can see that the item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the <code>display: contents</code> line to see it return.</p>
 
 <p>Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.</p>
 

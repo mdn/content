@@ -196,7 +196,7 @@ volumeControl.addEventListener('input', function() {
 
 <p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="https://mdn.mozillademos.org/files/16229/graphPan.jpg" style="border-style: solid; border-width: 1px; height: 532px; width: 2236px;"></p>
 
-<p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that that particular node may take:</p>
+<p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that the particular node may take:</p>
 
 <pre class="brush: js notranslate">const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
