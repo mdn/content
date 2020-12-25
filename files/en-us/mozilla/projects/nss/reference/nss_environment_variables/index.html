@@ -177,7 +177,7 @@ tags:
     or any other non-empty value)</td>
    <td>It is an error to try to use a PKCS#11 crypto module in a process before it has been initialized in that process, even if the module was initialized in the parent process. Beginning in NSS 3.12.3, Softoken will detect this error. This environment variable controls Softoken's response to that error.
     <ul>
-     <li>If set to to "1" or unset, Softoken will trigger an assertion failure in debug builds, and will report an error in non-DEBUG builds.</li>
+     <li>If set to "1" or unset, Softoken will trigger an assertion failure in debug builds, and will report an error in non-DEBUG builds.</li>
      <li>If set  to "DISABLED", Softoken will ignore forks, and behave as it did in older versions.</li>
      <li>If set to any other non-empty value, Softoken will report an error in both DEBUG and non-DEBUG builds.</li>
     </ul>

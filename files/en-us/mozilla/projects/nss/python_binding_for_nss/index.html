@@ -669,7 +669,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
       <p>Certificate(data, certdb=cert_get_default_certdb(), perm=False, nickname=None)</p>
 
-      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to to that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
+      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to do that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
      </li>
      <li>
       <p>Fix bug #922247, PKCS12Decoder.database_import() method. Importing into a NSS database would sometimes fail or segfault.</p>
