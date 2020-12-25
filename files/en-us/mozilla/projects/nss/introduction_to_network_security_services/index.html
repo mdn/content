@@ -8,7 +8,7 @@ tags:
 ---
 <p><strong>Network Security Services (NSS)</strong> is a set of libraries designed to support cross-platform development of communications applications that support SSL, S/MIME, and other Internet security standards. For a general overview of NSS and the standards it supports, see <a href="/en-US/docs/Mozilla/Projects/NSS/Overview">Overview of NSS</a>.</p>
 
-<h3 id="Shared_Libraries" name="Shared_Libraries">Shared libraries</h3>
+<h3 id="Shared_Libraries">Shared libraries</h3>
 
 <p>Network Security Services provides both static libraries and shared libraries. Applications that use the shared libraries must use only the APIs that they export. Three shared libraries export public functions:</p>
 
@@ -30,7 +30,7 @@ tags:
 
 <p><img alt="Diagram showing the relationships among core NSS libraries and NSPR." src="/files/577/Nss.gif"></p>
 
-<h3 id="Naming_Conventions_and_Special_Libraries" name="Naming_Conventions_and_Special_Libraries">Naming conventions and special libraries</h3>
+<h3 id="Naming_Conventions_and_Special_Libraries">Naming conventions and special libraries</h3>
 
 <p>Windows and Unix use different naming conventions for static and dynamic libraries:</p>
 
@@ -89,7 +89,7 @@ tags:
  <li><code>libnssckbi.so</code>/<code>libnssckbi.sl</code>/<code>nssckbi.dll</code> defines the default set of trusted root certificates.</li>
 </ul>
 
-<h3 id="Support_for_ILP32" name="Support_for_ILP32">Support for ILP32</h3>
+<h3 id="Support_for_ILP32">Support for ILP32</h3>
 
 <p>In NSS 3.2 and later versions, there are two new shared libraries for the platforms HP-UX for PARisc CPUs and Solaris for (Ultra)Sparc (not x86) CPUs. These HP and Solaris platforms allow programs that use the ILP32 program model to run on both 32-bit CPUs and 64-bit CPUs. The two libraries exist to provide optimal performance on each of the two types of CPUs.</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>Note that NSS 3.x is also available in the LP64 model for these platforms, but the LP64 model of NSS 3.x does not have these two extra shared libraries.</p>
 
-<h3 id="What_You_Should_Already_Know" name="What_You_Should_Already_Know">What you should already know</h3>
+<h3 id="What_You_Should_Already_Know">What you should already know</h3>
 
 <p>Before using NSS, you should be familiar with the following topics:</p>
 
@@ -137,7 +137,7 @@ tags:
  <li>Cross-platform development issues and techniques</li>
 </ul>
 
-<h3 id="Where_to_Find_More_Information" name="Where_to_Find_More_Information">Where to find more information</h3>
+<h3 id="Where_to_Find_More_Information">Where to find more information</h3>
 
 <p>For information about PKI and SSL that you should understand before using NSS, see the following:</p>
 

@@ -6,19 +6,19 @@ tags:
 ---
 <p>
 </p>
-<h3 id="Name" name="Name"> Name </h3>
+<h3 id="Name"> Name </h3>
 <p>FC_GetTokenInfo - obtain information about a particular token in the system.
 </p>
-<h3 id="Syntax" name="Syntax"> Syntax </h3>
+<h3 id="Syntax"> Syntax </h3>
 <pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_GetTokenInfo(<a href="en/CK_SLOT_ID">CK_SLOT_ID</a> slotID, <a href="en/CK_TOKEN_INFO">CK_TOKEN_INFO_PTR</a> pInfo);
 </pre>
-<h3 id="Parameters" name="Parameters"> Parameters </h3>
+<h3 id="Parameters"> Parameters </h3>
 <p><code>FC_GetTokenInfo</code> has two parameters:
 </p>
 <dl><dt><code>slotID</code></dt><dd> the ID of the token's slot
 </dd><dt><code>pInfo</code></dt><dd> points to a <a href="en/CK_TOKEN_INFO">CK_TOKEN_INFO</a> structure
 </dd></dl>
-<h3 id="Description" name="Description"> Description </h3>
+<h3 id="Description"> Description </h3>
 <p><code>FC_GetTokenInfo</code> returns information about the token in the specified slot. On return, the <code>CK_TOKEN_INFO</code> structure that <code>pInfo</code> points to has the following information:
 </p>
 <ul><li> <code>label</code>: the label of the token, assigned during token initialization, padded with spaces to 32 bytes and not null-terminated.
@@ -40,7 +40,7 @@ tags:
 </li></ul>
 <p>A user may call <code>FC_GetTokenInfo</code> without logging into the token (to assume the NSS User role).
 </p>
-<h3 id="Return_value" name="Return_value"> Return value </h3>
+<h3 id="Return_value"> Return value </h3>
 <p><code>CKR_OK</code>
 </p>
 <dl><dd> Token information was successfully copied.
@@ -57,9 +57,9 @@ tags:
 <p>FC_GetTokenInfo should return CKR_ARGUMENTS_BAD if pInfo is NULL.
 </p>
 </div>
-<h3 id="Examples" name="Examples"> Examples </h3>
+<h3 id="Examples"> Examples </h3>
 <p>Note the use of the <code>%.32s</code> format string to print the <code>label</code> and <code>manufacturerID</code> members of the <code>CK_TOKEN_INFO</code> structure.
 </p>
-<h3 id="See_also" name="See_also"> See also </h3>
+<h3 id="See_also"> See also </h3>
 <ul><li> <a href="en/FC_GetSlotInfo">FC_GetSlotInfo</a>, <a href="en/NSC_GetTokenInfo">NSC_GetTokenInfo</a>
 </li></ul>

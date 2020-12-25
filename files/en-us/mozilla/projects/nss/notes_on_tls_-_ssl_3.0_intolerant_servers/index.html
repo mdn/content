@@ -8,23 +8,23 @@ tags:
 ---
 <p> </p>
 
-<h3 id="Problem" name="Problem">Problem</h3>
+<h3 id="Problem">Problem</h3>
 
 <p>A number of Netscape 6.x/7.x and Mozilla users have reported that some secure sites -- typically sites featuring online transactions or online banking over the HTTPS protocol -- do not display any content at all. The connection seems terminated and a blank page is displayed. This is the main symptom of the problem when Mozilla based browsers encounter TLS/SSL 3.0 intolerant servers.</p>
 
-<h3 id="Cause" name="Cause">Cause</h3>
+<h3 id="Cause">Cause</h3>
 
 <p>There are some number of web servers in production today which incorrectly implement the SSL 3.0 specification. This incorrect implementation causes them to reject connection attempts from clients that are compliant with the <strong>SSL 3.0</strong> and <strong>TLS (aka SSL 3.1)</strong> specifications.</p>
 
 <p>Netscape 6.x/7.x and Mozilla browsers (0.9.1 and later versions) correctly implement the TLS specification, and the users cannot utilize sites which have this problem.</p>
 
-<h3 id="Technical_Information" name="Technical_Information">Technical Information</h3>
+<h3 id="Technical_Information">Technical Information</h3>
 
 <p>The <strong>SSL 3.0</strong> and <strong>TLS (aka SSL 3.1)</strong> specs both contain a provision -- the same provision -- for detecting "version rollback attacks". It is designed to permit a server to detect a man-in-the-middle that is altering the SSL client hello (connection) requests as they pass from the client to the server, altering them by changing the protocol version number to a lower version number. This feature was kind of meaningless until <strong>TLS (SSL 3.1)</strong> came along because there was no version higher than 3.0 from which to be rolled back. TLS is now available and used, and products that have implemented the roll-back detection incorrectly are not interoperable with TLS/SSL spec-compliant clients. Normally the servers which have this problem are not equipped to deal with the TLS protocol, but instead of rolling back to SSL 3.0 as the rollback provision provides, they terminate/drop the connection, thus resulting in most cases a blank page display.</p>
 
 <p>For up-to-date information, you can read a Bugzilla bug report which keeps track of this problem with Mozilla-based browsers. See {{ Bug(59321) }}.</p>
 
-<h3 id="Servers_currently_known_to_exhibit_this_intolerant_behavior" name="Servers_currently_known_to_exhibit_this_intolerant_behavior">Servers currently known to exhibit this intolerant behavior</h3>
+<h3 id="Servers_currently_known_to_exhibit_this_intolerant_behavior">Servers currently known to exhibit this intolerant behavior</h3>
 
 <p>As of this writing, this problem has been reported for the following servers: (Wherever there is an upgraded version which fixes the problem, it is indicated by an asterisked remark in the parentheses. )</p>
 
@@ -40,21 +40,21 @@ tags:
 
 <p>N.B. There might be servers other than those listed above which exhibit this problem. If you find such a server, feel free to add it to this page. For up-to-date information, you can read this {{bug(59321)}} which keeps a list of TLS/SSL 3.0 intolerant servers.</p>
 
-<h3 id="Users:_How_to_avoid_this_problem.3F" name="Users:_How_to_avoid_this_problem.3F">Users: How to avoid this problem?</h3>
+<h3 id="Users:_How_to_avoid_this_problem.3F">Users: How to avoid this problem?</h3>
 
-<h4 id="Netscape_6.1_Preview_Release_1.2C_or_Mozilla_0.9.1_and_earlier" name="Netscape_6.1_Preview_Release_1.2C_or_Mozilla_0.9.1_and_earlier">Netscape 6.1 Preview Release 1, or Mozilla 0.9.1 and earlier</h4>
+<h4 id="Netscape_6.1_Preview_Release_1.2C_or_Mozilla_0.9.1_and_earlier">Netscape 6.1 Preview Release 1, or Mozilla 0.9.1 and earlier</h4>
 
 <p>These versions shipped with the TLS option turned <strong>ON</strong> as the default but with no way to deal with the problem servers. If you are using these old versions, please update to the latest Netscape or Mozilla versions. You can also avoid such a problem by editing an existing profile -- check the preference option setting at: Edit | Preferences | Privacy and Security | SSL | Enable TLS, and turn it <strong>OFF</strong> if it is <strong>ON</strong> for these earlier browsers.</p>
 
-<h4 id="Netscape_6.1_or_Mozilla_0.9.2_and_later" name="Netscape_6.1_or_Mozilla_0.9.2_and_later">Netscape 6.1 or Mozilla 0.9.2 and later</h4>
+<h4 id="Netscape_6.1_or_Mozilla_0.9.2_and_later">Netscape 6.1 or Mozilla 0.9.2 and later</h4>
 
 <p>These browsers shipped with the TLS option <strong>ON</strong> but also included a graceful rollback mechanism on the client side when they encounter known TLS/SSL 3.0 intolerant servers.</p>
 
-<h4 id="Firefox_2_and_later" name="Firefox_2_and_later">Firefox 2 and later</h4>
+<h4 id="Firefox_2_and_later">Firefox 2 and later</h4>
 
 <p>Starting with Firefox 2, support for SSL 2.0 has been disabled by default; unless it is expressly re-enabled by the user using about:config. See <a href="/en-US/docs/Mozilla/Firefox/Releases/2/Security_changes">Security in Firefox 2</a> for details.</p>
 
-<h3 id="Website_Administrators:_How_to_avoid_this_problem.3F" name="Website_Administrators:_How_to_avoid_this_problem.3F">Website Administrators: How to avoid this problem?</h3>
+<h3 id="Website_Administrators:_How_to_avoid_this_problem.3F">Website Administrators: How to avoid this problem?</h3>
 
 <ul>
  <li>Upgrade to a newer version if available, which corrects this problem. There will be other network clients which implement TLS/SSL 3.0 specification correctly and have a problem with your site. Let's not perpetuate the problem servers.</li>
@@ -63,7 +63,7 @@ tags:
  <li>If you have questions concerning Netscape browsers and problem servers, please contact us using the feedback address at the top of this page.</li>
 </ul>
 
-<h3 id="Detecting_intolerant_servers" name="Detecting_intolerant_servers">Detecting intolerant servers</h3>
+<h3 id="Detecting_intolerant_servers">Detecting intolerant servers</h3>
 
 <p>Because newer versions of Netscape and Mozilla have built-in workaround for the problem servers, it is now unlikely that you will experience this problem. But if you're running Netscape 6.0/6.01/6.1 PR 1 or Mozilla build (prior to 6/11/2001), you should look out for the symptom described below. You may also run this test with versions later than the older versions of Netscape 6.x or Mozilla -- just in case code changes in Netscape 6.1/Mozilla 0.9.2 or later may not catch all problem servers.</p>
 
@@ -73,7 +73,7 @@ tags:
  <li>Report such a problem to the server's administrator.</li>
 </ul>
 
-<h3 id="How_to_report_an_intolerant_server" name="How_to_report_an_intolerant_server">How to report an intolerant server</h3>
+<h3 id="How_to_report_an_intolerant_server">How to report an intolerant server</h3>
 
 <ul>
  <li><em>Optional:</em>Get the name of the SSL server software used by the website. To do so, add <span class="nowiki">http://toolbar.netcraft.com/site_report?url=</span> to the beginning of the URL. The server software will appear next to <strong>Server</strong> under <strong>SSL Certificate Information</strong>.<br>
@@ -83,7 +83,7 @@ tags:
 </ul>
 
 <div class="originaldocinfo">
-<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+<h3 id="Original_Document_Information">Original Document Information</h3>
 
 <ul>
  <li>Author : Katsuhiko Momoi</li>

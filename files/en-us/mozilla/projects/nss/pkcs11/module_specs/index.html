@@ -4,7 +4,7 @@ slug: Mozilla/Projects/NSS/PKCS11/Module_Specs
 tags:
   - NSS
 ---
-<h3 id="PKCS_.2311_Module_Specs" name="PKCS_.2311_Module_Specs">PKCS #11 Module Specs</h3>
+<h3 id="PKCS_.2311_Module_Specs">PKCS #11 Module Specs</h3>
 
 <p>The following is a proposal to the <a class="external" href="https://en.wikipedia.org/wiki/PKCS">PKCS</a> #11 working group made in August 2001 for configuring PKCS #11 modules. NSS currently implements this proposal internally.</p>
 
@@ -16,7 +16,7 @@ tags:
 
 <p>These modules specs can be passed by the application directly to NSS via the <code>SECMOD_LoadUserModule()</code> call. To initialize a PKCS #11 module 'on-the-fly'.</p>
 
-<h4 id="Recognized_Names" name="Recognized_Names">Recognized Names</h4>
+<h4 id="Recognized_Names">Recognized Names</h4>
 
 <p>All applications/libraries must be able recognize the following name values:</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>If the application/library does not find its application/library specific data, it should use it's defaults for this pkcs #11 library.</p>
 
-<h4 id="Parameter_Passing" name="Parameter_Passing">Parameter Passing</h4>
+<h4 id="Parameter_Passing">Parameter Passing</h4>
 
 <p>If the parameter is specified, the application/library will strip the value out, processing any outter quotes and escapes appropriately, and pass the parameter to the pkcs #11 library when it calls <code>C_Initialize()</code>.</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <p>Applications/libraries must set LibraryParameters to <code>NULL</code> if no parameter value is specified. PKCS #11 libraries which accept parameters must check if the 'new' <code>pReserved</code> field is <code>NULL</code> if and only if <code>LibraryParameters</code> field is not <code>NULL</code>.</p>
 
-<h3 id="NSS_Specific_Parameters_in_Module_Specs" name="NSS_Specific_Parameters_in_Module_Specs">NSS Specific Parameters in Module Specs</h3>
+<h3 id="NSS_Specific_Parameters_in_Module_Specs">NSS Specific Parameters in Module Specs</h3>
 
 <p>Here are the NSS Application specific parameters in use. This data is currently stored in <code>secmod.db</code> or pkcs11.txt. This isn't part of the generic spec (that is other applications need not parse it, nor pkcs #11 modules need supply them or use them).</p>
 
@@ -131,7 +131,7 @@ library=swft32.dll name="Netscape Software Fortezza" parameters="keyfile=/u/rely
 library=core32.dll name="Litronic Netsign"
 </pre>
 
-<h3 id="Softoken_Specific_Parameters" name="Softoken_Specific_Parameters">Softoken Specific Parameters</h3>
+<h3 id="Softoken_Specific_Parameters">Softoken Specific Parameters</h3>
 
 <p>The internal NSS PKCS #11 implementation (softoken) requires Applications parameters. It will not initialize if the <strong>parameters</strong>= is not specified. If another application wishes to load the softoken, that application must supply a non-<code>NULL</code> <code>libraryParameters</code> value in the <code>CK_C_INITIALIZE_ARGS</code> structure passed at <code>C_INITIALIZE</code> time. The parameter passed to softoken is a space separated list of name/value pairs exactly like those specified in the PKCS #11 module spec.</p>
 
@@ -168,7 +168,7 @@ library=core32.dll name="Litronic Netsign"
  <dd>comma separated list of flag values, parsed case-insensitive.</dd>
 </dl>
 
-<h4 id="Flags" name="Flags">Flags</h4>
+<h4 id="Flags">Flags</h4>
 
 <p>Valid flags are:</p>
 

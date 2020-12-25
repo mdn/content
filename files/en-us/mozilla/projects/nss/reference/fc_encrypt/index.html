@@ -6,10 +6,10 @@ tags:
 ---
 <p>
 </p>
-<h3 id="Name" name="Name"> Name </h3>
+<h3 id="Name"> Name </h3>
 <p>FC_Encrypt - Encrypt a block of data.
 </p>
-<h3 id="Syntax" name="Syntax"> Syntax </h3>
+<h3 id="Syntax"> Syntax </h3>
 <pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_Encrypt(
   <a href="en/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
   <a href="en/CK_BYTE">CK_BYTE_PTR</a> pData,
@@ -18,19 +18,19 @@ tags:
   <a href="en/CK_ULONG">CK_ULONG_PTR</a> pusEncryptedDataLen
 );
 </pre>
-<h3 id="Parameters" name="Parameters"> Parameters </h3>
+<h3 id="Parameters"> Parameters </h3>
 <dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
 </dd><dt><code>pData</code></dt><dd> {{ mediawiki.external('in') }} pointer to the data buffer
 </dd><dt><code>usDataLen</code></dt><dd> {{ mediawiki.external('in') }} length of the data buffer in bytes.
 </dd><dt><code>pEncryptedData</code></dt><dd> {{ mediawiki.external('out') }} pointer to location where encrypted data is to be stored.
 </dd><dt><code>pusEncryptedDataLen</code></dt><dd> {{ mediawiki.external('in/out') }} number of bytes.
 </dd></dl>
-<h3 id="Description" name="Description"> Description </h3>
+<h3 id="Description"> Description </h3>
 <p><code>FC_Encrypt</code> encrypts a block of data according to the attributes of the previous call to <code>FC_EncryptInit</code>.
 </p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_Encrypt</code>.
 </p>
-<h3 id="Return_value" name="Return_value"> Return value </h3>
-<h3 id="Examples" name="Examples"> Examples </h3>
-<h3 id="See_also" name="See_also"> See also </h3>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
 <ul><li> <a href="en/FC_EncryptInit">FC_EncryptInit</a>, <a href="en/NSC_Encrypt">NSC_Encrypt</a>
 </li></ul>
