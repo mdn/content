@@ -28,11 +28,11 @@ outlining their differences. </span>
 <p style="color: rgb(0,0,0);">The main non-streaming APIs for these
 two decoders have an identical prototype : </p>
 <ul style="color: rgb(0,0,0);">
-  <li> <font size="-1">SECStatus SEC_ASN1DecodeItem(PRArenaPool
-*pool, void *dest, const SEC_ASN1Template *t, SECItem *item);</font></li>
-  <li> <font size="-1">SECStatus
+  <li> SECStatus SEC_ASN1DecodeItem(PRArenaPool
+*pool, void *dest, const SEC_ASN1Template *t, SECItem *item);</li>
+  <li> SECStatus
 SEC_QuickDERDecodeItem(PRArenaPool* arena, void* dest, const
-SEC_ASN1Template* templateEntry, SECItem* src);</font></li>
+SEC_ASN1Template* templateEntry, SECItem* src);</li>
 </ul>
 <span style="color: rgb(0,0,0);">Here is a description of the
 arguments : </span>
@@ -44,10 +44,10 @@ pointer to one or more <a href="#Templates">decoder templates</a>. The
 number of required templates is determined by the type of the first
 template.When multiple templates are required, the pointer must point to
 a NULL-terminated array of templates. The syntax of these templates is
-identical for both decoders, except where noted. <font>A "NULL Template" is a template
+identical for both decoders, except where noted. A "NULL Template" is a template
 that is all zeros, having a zero kind.† The term "NULL-terminated
 array", as used throughout this document, means an array of templates,
-the last of which is a NULL template.</font></li>
+the last of which is a NULL template.</li>
   <li> <u>void* dest</u> is a pointer to the target area. This
 is where the decoder stores its output. The type is undefined as it is
 completely dependent on the content of the decoder templates.† This
@@ -111,7 +111,7 @@ specification of ASN.1; multibyte tags are not currently supported. </p>
 <p style="color: rgb(0,0,0);">The 8-bit ASN.1 tags that we support
 are made of three parts : </p>
 <ol style="color: rgb(0,0,0);">
-  <li> The <font>ASN.1 component</font>
+  <li> The ASN.1 component
 class type. It is specified in the upper 2 tag bits (number 6 and 7).
 There are four classes of ASN.1 tags : universal, application-specific,
 context-specific, and private. You can specify the class of the tag
@@ -126,7 +126,7 @@ constructed component type. A SEC_ASN1_PRIMITIVE macro is also
 provided, but does not need to be included as it is zero.</li>
   <li> The tag number. It is stored in the lower 5 tag bits (number 0
 through 4). The ASN.1 standard only defines tag numbers in the universal
-class. If you you are using a tag of a different classes, you can define
+class. If you are using a tag of a different classes, you can define
 your own tag number macros or specify the tag value within the template
 definition. The following macros are provided for tag numbers within
 the universal class :</li>
@@ -167,10 +167,10 @@ subtemplate to continue processing. This is typically used for SEC_ASN1_SEQUENCE
 or SEC_ASN1_CHOICE definitions, which always need to be the
 first template in a template array of their own.</li>
   <li> <u>SEC_ASN1_POINTER</u>: similar to SEC_ASN1_INLINE,
-except<font> that</font> the memory in the
-target will be allocated dynamically<font>
+except that the memory in the
+target will be allocated dynamically
 and a pointer to the dynamically allocated memory will be stored in the <i>dest</i>
-struct at the <i>offset</i>.</font> This requires that the subtemplate
+struct at the <i>offset</i>. This requires that the subtemplate
 contains a non-zero size field.</li>
   <li> <u>SEC_ASN1_GROUP</u>: can only be used in conjunction
 with a SEC_ASN1_SET or SEC_ASN1_SEQUENCE. It tells
