@@ -45,7 +45,7 @@ slug: Mozilla/Projects/NSS/NSS_3.35_release_notes
    <li>If NSS is initialized, in read-write mode with a database directory provided, it uses database files to store certificates, key, trust, and other information. NSS supports two different database file formats:
     <ul>
      <li>DBM: The legacy file format, based on Berkeley DB, using filenames cert8.db, key3.db and secmod.db. Parallel database access, by multiple applications, is forbidden as it will likely result in data corruption.</li>
-     <li>SQL: The newer file format, based on SQLite, using filenames cert9.db, key4.and and pkcs11.txt. Parallel database access, by multiple applications, is supported.</li>
+     <li>SQL: The newer file format, based on SQLite, using filenames cert9.db, key4.db and pkcs11.txt. Parallel database access, by multiple applications, is supported.</li>
     </ul>
    </li>
    <li>Applications using NSS may explicitly request to use a specific database format, by adding a type prefix to the database directory, provided at NSS initialization time. Without a prefix, the default database type will be used (DBM in versions prior to 3.35, and SQL in version 3.35 and later.)</li>

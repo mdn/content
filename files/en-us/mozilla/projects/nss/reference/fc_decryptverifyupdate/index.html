@@ -26,7 +26,7 @@ tags:
 </dd><dt><code>pulDataLen</code></dt><dd> {{ mediawiki.external('in') }} pointer to the length of the recovered part buffer.
 </dd></dl>
 <h3 id="Description" name="Description"> Description </h3>
-<p><code>FC_DecryptVerifyUpdate</code> continues a multi-part decryption and and signature verification operation. After calling both <code>FC_DecryptInit</code> and <code>FC_VerifyInit</code> to set up the operations this function may be called multiple times. The operation is finished by calls to <code>FC_DecryptFinal</code> and <code>FC_VerifyFinal</code>.
+<p><code>FC_DecryptVerifyUpdate</code> continues a multi-part decryption and signature verification operation. After calling both <code>FC_DecryptInit</code> and <code>FC_VerifyInit</code> to set up the operations this function may be called multiple times. The operation is finished by calls to <code>FC_DecryptFinal</code> and <code>FC_VerifyFinal</code>.
 </p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_DecryptVerifyUpdate</code>.
 </p>
 <h3 id="Return_value" name="Return_value"> Return value </h3>
