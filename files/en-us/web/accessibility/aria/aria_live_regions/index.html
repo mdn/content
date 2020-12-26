@@ -19,11 +19,11 @@ tags:
 <p>Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. Below is a list of each related ARIA live region property with a description.</p>
 
 <ol>
- <li><code><strong>aria-live</strong></code>: The <code>aria-live=POLITENESS_SETTING</code> is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: <code>off</code>, <code>polite</code> or <code>assertive</code>. The default setting is <code>off</code>. This attribute is by far the most important.</li>
+ <li><code><strong>aria-live</strong></code>: The <code>aria-live=<var>POLITENESS_SETTING</var></code> is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: <code>off</code>, <code>polite</code> or <code>assertive</code>. The default setting is <code>off</code>. This attribute is by far the most important.</li>
  <li>
-  <p class="comment"><code><strong>aria-controls</strong></code>: The <code>aria-controls=[IDLIST]</code> is used to associate a control with the regions that it controls. Regions are identified just like an <code>id</code> in a <code>div</code>, and multiple regions can be associated with a control using a space, e.g. <code>aria-controls="myRegionID1 myRegionsID2"</code>.</p>
+  <p class="comment"><code><strong>aria-controls</strong></code>: The <code>aria-controls=<var>[IDLIST]</var></code> is used to associate a control with the regions that it controls. Regions are identified just like an <code>id</code> in a <code>div</code>, and multiple regions can be associated with a control using a space (e.g., <code>aria-controls="myRegionID1 myRegionsID2"</code>).</p>
 
-  <div class="warning">Not known if the aria-controls aspect of live regions is implemented in current ATs, or which. Needs research.</div>
+	 <div class="warning"><strong>TODO:</strong> Determine if the <code>aria-controls</code> aspect of <code>live</code> regions is implemented in current assistive technologies (and which ones). Needs research.</div>
  </li>
 </ol>
 
@@ -127,33 +127,35 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
  </thead>
  <tbody>
   <tr>
-   <td>log</td>
-   <td>Chat, error, game or other type of log</td>
+   <td><code>log</code></td>
+   <td>Chat, error, game, or other type of log</td>
    <td>To maximize compatibility, add a redundant <code>aria-live="polite"</code> when using this role.</td>
   </tr>
   <tr>
-   <td>status</td>
+   <td><code>status<code></td>
    <td>A status bar or area of the screen that provides an updated status of some kind. Screen reader users have a special command to read the current status.</td>
    <td>To maximize compatibility, add a redundant <code>aria-live="polite"</code> when using this role.</td>
   </tr>
   <tr>
-   <td>alert</td>
-   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. (TBD: link to ARIA form tutorial with aria info)</td>
+   <td><code>alert</code></td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users.<br>
+    (TODO: link to ARIA form tutorial with aria info)</td>
    <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
   </tr>
   <tr>
-   <td>progressbar</td>
-   <td>A hybrid between a widget and a live region. Use this with aria-valuemin, aria-valuenow and aria-valuemax. (TBD: add more info here).</td>
+   <td><code>progressbar</code></td>
+   <td>A hybrid between a widget and a live region. Use this with <code>aria-valuemin</code>, <code>aria-valuenow</code> and <code>aria-valuemax</code>.<br>
+       (TODO: add more info here).</td>
    <td></td>
   </tr>
   <tr>
-   <td>marquee</td>
-   <td>for text which scrolls, such as a stock ticker.</td>
+   <td><code>marquee</code></td>
+   <td>For text that scrolls, such as a stock ticker.</td>
    <td></td>
   </tr>
   <tr>
-   <td>timer</td>
-   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td><code>timer</code></td>
+   <td>For any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
    <td></td>
   </tr>
  </tbody>
@@ -165,13 +167,13 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).</p>
 
-<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions </a>(2014). Paul J. Adam has researched<a href="http://pauljadam.com/demos/aria-atomic-relevant.html"> the support of Aria-Atomic and Aria-Relevant</a> in particular. </p>
+<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions</a> (2014). Paul J. Adam has researched <a href="http://pauljadam.com/demos/aria-atomic-relevant.html">the support of Aria-Atomic and Aria-Relevant</a> in particular. </p>
 
 <ol>
- <li><code><strong>aria-atomic</strong></code>: The <code>aria-atomic=BOOLEAN</code> is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: <code>false</code> or <code>true</code>. The default setting is <code>false</code>.</li>
- <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>: The <code>aria-relevant=[LIST_OF_CHANGES]</code> is used to set what types of changes are relevant to a live region. The possible settings are one or more of: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>. The default setting is: <code>additions text</code>.</li>
- <li><code><strong>aria-labelledby</strong></code>: The <code>aria-labelledby=[IDLIST]</code> is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.</li>
- <li><code><strong>aria-describedby</strong></code>: The <code>aria-describedby=[IDLIST]</code> is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.</li>
+ <li><code><strong>aria-atomic</strong></code>: The <code>aria-atomic=<var>BOOLEAN</var></code> is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: <code>false</code> or <code>true</code>. The default setting is <code>false</code>.</li>
+ <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>: The <code>aria-relevant=<var>[LIST_OF_CHANGES]</var></code> is used to set what types of changes are relevant to a live region. The possible settings are one or more of: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>. The default setting is: <code>additions text</code>.</li>
+ <li><code><strong>aria-labelledby</strong></code>: The <code>aria-labelledby=<var>[IDLIST]</var></code> is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.</li>
+ <li><code><strong>aria-describedby</strong></code>: The <code>aria-describedby=<var>[IDLIST]</var></code> is used to associate a region with its descriptions, similar to <code>aria-controls</code>, but instead associating descriptions to the region and description identifiers are separated with a space.</li>
 </ol>
 
 <h3 id="Advanced_use_case_Clock"><span class="mw-headline" id="Use_Case:_Clock">Advanced use case: Clock</span></h3>
@@ -189,20 +191,20 @@ setInterval(function() {
 }, 60000);
 </pre>
 
-<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from "17:33" to "17:34", assistive technologies will only announce "4", which won't be very useful to users.</p>
+<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from <code>"17:33"</code> to <code>"17:34"</code>, assistive technologies will only announce <samp>"4"</samp>, which won't be very useful to users.</p>
 
 <p>One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.</p>
 
-<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").</p>
+<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. <samp>"Time: 17:34"</samp>).</p>
 
 <pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: As observed, setting/updating the innerHTML again would cause the whole text to be read again, whether or not you set aria-atomic="true", so the above Clock example does not work as expected.</p>
+<p><strong>Note</strong>: As observed, setting/updating the <code>innerHTML</code> again would cause the whole text to be read again, whether or not you set <code>aria-atomic="true"</code>, so the above Clock example does not work as expected.</p>
 </div>
 
-<p class="syntaxbox">A working example of a simple year control for better understanding:</p>
+<p class="syntaxbox">A working example of a simple year control, for better understanding:</p>
 
 <pre class="syntaxbox notranslate">&lt;div id="date-input"&gt;
   &lt;label&gt;Year:
@@ -230,9 +232,9 @@ setInterval(function() {
 
 <p class="syntaxbox"></p>
 
-<p>Without <code>aria-atomic="true" </code>the screenreader announces only the changed value of year.</p>
+<p>Without <code>aria-atomic="true"</code> the screenreader announces only the changed value of year.</p>
 
-<p>With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changedvalue</em>"</p>
+<p>With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <var>changedvalue</var>".</p>
 
 <h3 id="Advanced_use_case_Roster"><span class="mw-headline" id="Use_Case:_Roster">Advanced use case: Roster</span></h3>
 
@@ -246,8 +248,8 @@ setInterval(function() {
 <p>Breakdown of ARIA live properties:</p>
 
 <ul>
- <li><code>aria-live="polite"</code> indicates that the screen reader should wait until the user is idle before presenting updates to the user. This is the most commonly used value, as interrupting the user with "assertive" might interrupt their flow.</li>
- <li><code>aria-atomic</code> is not set (<code>false</code> by default) so that only the added or removed users should be spoken and not the entire roster each time.</li>
+ <li><code>aria-live="polite"</code> indicates that the screen reader should wait until the user is idle before presenting updates to the user. This is the most commonly used value, as interrupting the user with <code>"assertive"</code> might interrupt their flow.</li>
+ <li><code>aria-atomic</code> is not set (<code>false</code> by default), so that only the added or removed users should be spoken and not the entire roster each time.</li>
  <li><code>aria-relevant="additions removals"</code> ensures that both users added or removed to the roster will be spoken.</li>
 </ul>
 
