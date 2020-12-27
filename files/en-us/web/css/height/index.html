@@ -24,15 +24,18 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
-height: auto;
-
-/* &lt;length&gt; values */
+<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
 height: 120px;
 height: 10em;
 
 /* &lt;percentage&gt; value */
 height: 75%;
+
+/* Keyword values */
+height: max-content;
+height: min-content;
+height: fit-content(20em);
+height: auto;
 
 /* Global values */
 height: inherit;
@@ -54,12 +57,12 @@ height: unset;
  <dt><code>min-content</code></dt>
  <dd>The intrinsic minimum height.</dd>
  <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Uses the fit-content formula with the available space replaced by the specified argument, i.e. min(max-content, max(min-content, )).</dd>
+ <dd>Uses the fit-content formula with the available space replaced by the specified argument, i.e. <code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code>.</dd>
 </dl>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Ensure that elements set with a <code>height</code> are not truncated and/or do not obscure other content when the page is zoomed to increase text size.</p>
+<p>Ensure that elements set with a <code>height</code> aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
@@ -68,7 +71,7 @@ height: unset;
 
 <h2 id="Formal_definition">Formal definition</h2>
 
-<p>{{cssinfo}}</p>
+<p>{{CSSInfo}}</p>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
@@ -160,7 +163,9 @@ height: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a>, {{cssxref("box-sizing")}}</li>
- <li>{{cssxref("max-height")}}, {{cssxref("min-height")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a></li>
+ <li>{{cssxref("width")}}</li>
+ <li>{{cssxref("box-sizing")}}</li>
+ <li>{{cssxref("min-height")}}, {{cssxref("max-height")}}</li>
  <li>The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}</li>
 </ul>
