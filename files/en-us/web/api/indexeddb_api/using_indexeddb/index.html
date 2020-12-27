@@ -19,9 +19,9 @@ tags:
 
 <h2 id="About_this_document">About this document</h2>
 
-<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts About IndexedDB</a>.</p>
+<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</p>
 
-<p>For the reference documentation on the IndexedDB API, see the <a href="/en-US/docs/Web/API/IndexedDB_API/">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
+<p>For the reference documentation on the IndexedDB API, see the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
 
 <h2 id="pattern">Basic pattern</h2>
 
@@ -142,8 +142,6 @@ request.onupgradeneeded = function(event) {
 
 <p>If the <code>onupgradeneeded</code> event exits successfully, the <code>onsuccess</code> handler of the open database request will then be triggered. </p>
 
-<p>Blink/Webkit supports the current version of the spec, as shipped in Chrome 23+ and Opera 17+; IE10+ does too. Other and older implementations don't implement the current version of the spec, and thus do not support the <code>indexedDB.open(name, version).onupgradeneeded</code> signature yet. For more information on how to upgrade the version of the database in older Webkit/Blink, see the <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
-
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
 <p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key generator</a>.</p>
@@ -240,7 +238,7 @@ request.onupgradeneeded = function(event) {
 
 <p>We've also asked for an index named "name" that looks at the <code>name</code> property of the stored objects. As with <code>createObjectStore()</code>, <code>createIndex()</code> takes an optional <code>options</code> object that refines the type of index that you want to create. Adding objects that don't have a <code>name</code> property still succeeds, but the objects won't appear in the "name" index.</p>
 
-<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index">using an index</a>.</p>
+<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="#Using_an_index">using an index</a>.</p>
 
 <h3 id="Using_a_key_generator">Using a key generator</h3>
 
@@ -275,7 +273,7 @@ request.onupgradeneeded = function (event) {
 
 <p>Before you can do anything with your new database, you need to start a transaction. Transactions come from the database object, and you have to specify which object stores you want the transaction to span. Once you are inside the transaction, you can access the object stores that hold your data and make your requests. Next, you need to decide if you're going to make changes to the database or if you just need to read from it. Transactions have three available modes: <code>readonly</code>, <code>readwrite</code>, and <code>versionchange</code>.</p>
 
-<p>To change the "schema" or structure of the database—which involves creating or deleting object stores or indexes—the transaction must be in <code>versionchange</code> mode. This transaction is opened by calling the {{domxref("IDBFactory.open")}} method with a <code>version</code> specified. (In WebKit browsers, which have not implemented the latest specification, the {{domxref("IDBFactory.open")}} method takes only one parameter, the <code>name</code> of the database; then you must call {{domxref("IDBVersionChangeRequest.setVersion")}} to establish the <code>versionchange</code> transaction.)</p>
+<p>To change the "schema" or structure of the database—which involves creating or deleting object stores or indexes—the transaction must be in <code>versionchange</code> mode. This transaction is opened by calling the {{domxref("IDBFactory.open")}} method with a <code>version</code> specified.</p>
 
 <p>To read the records of an existing object store, the transaction can either be in <code>readonly</code> or <code>readwrite</code> mode. To make changes to an existing object store, the transaction must be in <code>readwrite</code> mode. You open such transactions with {{domxref("IDBDatabase.transaction")}}. The method accepts two parameters: the <code>storeNames</code> (the scope, defined as an array of object stores that you want to access) and the <code>mode</code> (<code>readonly</code> or <code>readwrite</code>) for the transaction. The method returns a transaction object containing the {{domxref("IDBIndex.objectStore")}} method, which you can use to access your object store. By default, where no mode is specified, transactions open in <code>readonly</code> mode.</p>
 
@@ -287,7 +285,7 @@ request.onupgradeneeded = function (event) {
 
 <ul>
  <li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <dfn><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> in the <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
+ <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
 </ul>
 
 <h3 id="Adding_data_to_the_database">Adding data to the database</h3>
@@ -364,7 +362,7 @@ request.onsuccess = function(event) {
 
 <ul>
  <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>
