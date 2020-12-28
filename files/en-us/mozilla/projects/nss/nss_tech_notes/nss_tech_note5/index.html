@@ -270,7 +270,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <small>&lt;big&gt;<small>&lt;big&gt;<small><i>PK11SymKey* UnwrappedSymKey = PK11_UnwrapSymKey(WrappingSymKey,<br>
                                                                                             wrapMech</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>, SecParam, &amp;WrappedKey,<br>
                                                                                             keyTypeMech,</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><br>
-        <small>&lt;big&gt;<small>&lt;big&gt;<small><i>                                                                                   CKA_UNWRAP, <font color="#ff0000"><font color="#000000">/* or CKA_DECRYPT? */</font></font><br>
+        <small>&lt;big&gt;<small>&lt;big&gt;<small><i>                                                                                   CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
                                                                                            size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
     </ul>
   </li>
@@ -425,8 +425,8 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
       <li><small>&lt;big&gt;Do the unwrap&lt;/big&gt;<br>
         <i>PK11SymKey *UnwrappedSymKey =<br>
                   PK11_PubUnwrapSymKey(UnWrappingPvtKey, WrappedKey, keyTypeMech,<br>
-                                                                     </i></small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>CKA_UNWRAP, <font color="#ff0000"><font color="#000000">/* or CKA_DECRYPT? */</font><br>
-                                                                     </font></i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
+                                                                     </i></small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
+                                                                     </i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
     </ul>
   </li>
   <li>Clean up<br>

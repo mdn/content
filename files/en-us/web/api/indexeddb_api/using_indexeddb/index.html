@@ -19,9 +19,9 @@ tags:
 
 <h2 id="About_this_document">About this document</h2>
 
-<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic Concepts Behind IndexedDB">Basic Concepts About IndexedDB</a>.</p>
+<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts About IndexedDB</a>.</p>
 
-<p>For the reference documentation on the IndexedDB API, see the <a href="/en/IndexedDB">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
+<p>For the reference documentation on the IndexedDB API, see the <a href="/en-US/docs/Web/API/IndexedDB_API/">IndexedDB</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
 
 <h2 id="pattern">Basic pattern</h2>
 
@@ -72,7 +72,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>See that? Opening a database is just like any other operation — you have to "request" it.</p>
 
-<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
+<p>The open request doesn't open the database or start the transaction right away. The call to the <code>open()</code> function returns an <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an <a href="/en-US/docs/Web/API/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> object with the result or error. The result for the open function is an instance of an <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a>.</code></p>
 
 <p>The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the <code>open</code> operation, then an <code>onupgradeneeded</code> event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an <code>onupgradeneeded</code> event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> below, and the {{ domxref("IDBFactory.open") }} reference page. </p>
 
@@ -146,7 +146,7 @@ request.onupgradeneeded = function(event) {
 
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
-<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> or a <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator" title="en/IndexedDB#gloss key generator">key generator</a>.</p>
+<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key generator</a>.</p>
 
 <p>The following table shows the different ways the keys are supplied:</p>
 
@@ -240,7 +240,7 @@ request.onupgradeneeded = function(event) {
 
 <p>We've also asked for an index named "name" that looks at the <code>name</code> property of the stored objects. As with <code>createObjectStore()</code>, <code>createIndex()</code> takes an optional <code>options</code> object that refines the type of index that you want to create. Adding objects that don't have a <code>name</code> property still succeeds, but the objects won't appear in the "name" index.</p>
 
-<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="/en/IndexedDB/Using_IndexedDB#Using_an_index" title="Using IndexedDB#Using an index">using an index</a>.</p>
+<p>We can now retrieve the stored customer objects using their <code>ssn</code> from the object store directly, or using their name by using the index. To learn how this is done, see the section on <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index">using an index</a>.</p>
 
 <h3 id="Using_a_key_generator">Using a key generator</h3>
 
@@ -364,7 +364,7 @@ request.onsuccess = function(event) {
 
 <ul>
  <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>
@@ -541,7 +541,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>Please see "<a href="/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
+<p>Please see "<a href="/en-US/docs/Web/API/IDBCursor#Constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
 
 <h2 id="Version_changes_while_a_web_app_is_open_in_another_tab">Version changes while a web app is open in another tab</h2>
 
@@ -1321,11 +1321,9 @@ input {
 <h3 id="Reference">Reference</h3>
 
 <ul>
- <li><a href="/en/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API Reference</a></li>
  <li><a class="external" href="https://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
- <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">interface files</a> in the Firefox source code</li>
+ <li>IndexedDB <a class="link-https" href="https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true">interface files</a> in the Firefox source code</li>
 </ul>
 
 <h3 id="Tutorials_and_guides">Tutorials and guides</h3>

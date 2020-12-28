@@ -72,11 +72,6 @@ tags:
 <pre class="brush: js notranslate">function askNotificationPermission() {
   // function to actually ask the permissions
   function handlePermission(permission) {
-    // Whatever the user answers, we make sure Chrome stores the information
-    if(!('permission' in Notification)) {
-      Notification.permission = permission;
-    }
-
     // set the button to shown or hidden, depending on what the user answers
     if(Notification.permission === 'denied' || Notification.permission === 'default') {
       notificationBtn.style.display = 'block';
@@ -189,16 +184,6 @@ document.addEventListener('visibilitychange', function() {
 <p>It's possible to handle multiple notifications this way:</p>
 
 <pre class="brush: js notranslate">window.addEventListener('load', function () {
-  // At first, let's check if we have permission for notification
-  // If not, let's ask for it
-  if (window.Notification &amp;&amp; Notification.permission !== "granted") {
-    Notification.requestPermission(function (status) {
-      if (Notification.permission !== status) {
-        Notification.permission = status;
-      }
-    });
-  }
-
   var button = document.getElementsByTagName('button')[0];
 
   button.addEventListener('click', function () {

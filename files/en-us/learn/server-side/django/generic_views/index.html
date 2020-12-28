@@ -515,13 +515,15 @@ def book_detail_view(request, primary_key):
 
 <h3 id="Templates">Templates</h3>
 
-<p>Now that the data is paginated, we need to add support to the template to scroll through the results set. Because we might want to do this in all list views, we'll do this in a way that can be added to the base template. </p>
+<p>Now that the data is paginated, we need to add support to the template to scroll through the results set. Because we might want paginate all list views, we'll add this to the base template. </p>
 
-<p>Open <strong>/locallibrary/catalog/templates/<em>base_generic.html</em></strong> and copy in the following pagination block below our content block (highlighted below in bold). The code first checks if pagination is enabled on the current page. If so then it adds next and previous links as appropriate (and the current page number). </p>
+<p>Open <strong>/locallibrary/catalog/templates/<em>base_generic.html</em></strong> and find the "content block" (as shown below).</p>
+<pre class="brush: python notranslate">{% block content %}{% endblock %}</pre>
+<p>Copy in the following pagination block immediately following the <code>{% endblock %}</code>. The code first checks if pagination is enabled on the current page. If so, it adds <em>next</em> and <em>previous</em> links as appropriate (and the current page number). </p>
 
-<pre class="brush: python notranslate">{% block content %}{% endblock %}
 
-<strong>  {% block pagination %}
+<pre class="brush: python notranslate">
+{% block pagination %}
     {% if is_paginated %}
         &lt;div class="pagination"&gt;
             &lt;span class="page-links"&gt;
@@ -537,7 +539,7 @@ def book_detail_view(request, primary_key):
             &lt;/span&gt;
         &lt;/div&gt;
     {% endif %}
-  {% endblock %} </strong></pre>
+  {% endblock %}</pre>
 
 <p>The <code>page_obj</code> is a <a href="https://docs.djangoproject.com/en/3.1/topics/pagination/#paginator-objects">Paginator</a> object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc. </p>
 

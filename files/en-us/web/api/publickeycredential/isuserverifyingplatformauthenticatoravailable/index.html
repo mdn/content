@@ -15,8 +15,6 @@ tags:
 
 <p>A user-verifying platform authenticator is a kind of multi-factor authenticator that is part of the client device (it is generally not removable) and that involves an action from the user in order to identify them.</p>
 
-<p>At the time of this writing, this method's result only resolves to <code>true</code> on Windows when <a href="https://support.microsoft.com/help/17215/windows-10-what-is-hello">Windows Hello</a> capabilities are available (on recent versions of this OS).</p>
-
 <div class="note">
 <p><strong>Note:</strong> This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.</p>
 </div>
@@ -31,7 +29,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} which resolves to a {{jsxref("Boolean")}} indicating whether or a not a user-verifying platform authenticator is available. As of today (March 2019), this is basically indicating if <a href="https://support.microsoft.com/help/17215/windows-10-what-is-hello">Windows Hello</a> may be used with the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> and that the user has accepted its use.</p>
+<p>A {{jsxref("Promise")}} which resolves to a {{jsxref("Boolean")}} indicating whether or a not a user-verifying platform authenticator is available.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> This is a static method which is directly called on the {{domxref("PublicKeyCredential")}} interface and not on an instance.</p>
