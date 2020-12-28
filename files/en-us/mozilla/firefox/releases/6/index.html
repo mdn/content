@@ -173,7 +173,7 @@ tags:
 <h3 id="Interface_changes">Interface changes</h3>
 
 <ul>
- <li>{{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frecency order using the new <code>SORT_BY_FRECENCY_ASCENDING</code> and <code>SORT_BY_FRECENCY_DESCENDING</code> constants.</li>
+ <li>{{ interface("nsINavHistoryQueryOptions") }} now supports sorting in frequency order using the new <code>SORT_BY_FREQUENCY_ASCENDING</code> and <code>SORT_BY_FREQUENCY_DESCENDING</code> constants.</li>
  <li>{{ interface("nsIFilePicker") }} has a new {{ ifattribute("nsIFilePicker", "addToRecentDocs") }} attribute, which lets you indicate that the selected file should be added to the user's "recent documents" list if there is one. This attribute has no effect when in private browsing mode.</li>
  <li>{{ interface("nsINavBookmarkObserver") }} methods with item ID parameters now require a GUID as well.</li>
  <li>{{ ifmethod("nsIPrefBranch", "clearUserPref") }} no longer throws an exception if the specified preference doesn't exist or has no user-set value. Instead, it does nothing.</li>
