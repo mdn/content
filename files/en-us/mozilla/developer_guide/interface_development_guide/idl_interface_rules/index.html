@@ -148,7 +148,7 @@ tags:
     interface nsIArena;
 
 </pre>
-<dl> <dt><strong>Rule:</strong> Avoid CID and ContractID declarations in IDL or C++ interface declarations</dt> <dd> </dd><dt><strong>Why:</strong> IDL is for declaring interfaces, and interfaces alone. CIDs and ContractIDs are implementation details.</dt> <dd>Instead of putting these details in an IDL file, put them in a seperate header file. The seperate header file could contain all ContractIDs/CIDs for your module, or you could create a single C++ header which contains the ContractID/CID. <ul> <li>Incorrect:</li> </ul> </dd>
+<dl> <dt><strong>Rule:</strong> Avoid CID and ContractID declarations in IDL or C++ interface declarations</dt> <dd> </dd><dt><strong>Why:</strong> IDL is for declaring interfaces, and interfaces alone. CIDs and ContractIDs are implementation details.</dt> <dd>Instead of putting these details in an IDL file, put them in a separate header file. The separate header file could contain all ContractIDs/CIDs for your module, or you could create a single C++ header which contains the ContractID/CID. <ul> <li>Incorrect:</li> </ul> </dd>
 </dl>
 <pre class="eval">    // nsIFoo.idl:
     %{C
