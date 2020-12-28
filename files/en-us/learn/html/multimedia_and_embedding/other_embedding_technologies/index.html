@@ -214,7 +214,7 @@ textarea.onkeyup = function(){
  <dd>This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.</dd>
  <dt>{{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}</dt>
  <dd>These attributes specify the width and height you want the iframe to be.</dd>
- <dt><strong>F</strong>allback content</dt>
+ <dt>Fallback content</dt>
  <dd>In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing <code>&lt;iframe&gt;&lt;/iframe&gt;</code> tags that will appear if the browser doesn't support the <code>&lt;iframe&gt;</code>. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support <code>&lt;iframe&gt;</code>s these days.</dd>
  <dt>{{htmlattrxref('sandbox','iframe')}}</dt>
  <dd>This attribute, which works in slightly more modern browsers than the rest of the <code>&lt;iframe&gt;</code> features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.</dd>
@@ -369,7 +369,7 @@ textarea.onkeyup = function(){
 </ul>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.</p>
+<p><strong>Note:</strong> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completely removed all Flash functionality. Any existing Flash content will be inaccessible after that date.</p>
 </div>
 
 <p>So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use <a href="/en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage">HTML5 video</a> for your media needs, <a href="/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage">SVG</a> for vector graphics, and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas</a> for complex images and animations. <a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp">Peter Elst was already writing some years ago</a> that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.</p>

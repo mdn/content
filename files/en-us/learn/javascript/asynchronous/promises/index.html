@@ -482,7 +482,7 @@ document.body.appendChild(para);</pre>
 
 <h3 id="Using_the_Promise_constructor">Using the Promise() constructor</h3>
 
-<p>It is possible to build your own promises using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> constructor. The main situation in which you'll want to do this is when you've got code based on an old-school asynchronous API that is not promise-based, which you want to promis-ify. This comes in handy when you need to use existing, older project code, libraries, or frameworks along with modern promise-based code.</p>
+<p>It is possible to build your own promises using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> constructor. The main situation in which you'll want to do this is when you've got code based on an old-school asynchronous API that is not promise-based, which you want to promisify. This comes in handy when you need to use existing, older project code, libraries, or frameworks along with modern promise-based code.</p>
 
 <p>Let's have a look at a simple example to get you started — here we wrap a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call with a promise — this runs a function after two seconds that resolves the promise (using the passed <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code> call) with a string of "Success!".</p>
 
