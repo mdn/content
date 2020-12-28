@@ -140,7 +140,7 @@ tags:
 <h4 id="Encrypted_Media_Extensions_API">Encrypted Media Extensions API</h4>
 
 <ul>
- <li>Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are ouptut to the <a href="/en-US/docs/Tools/Web_Console">web console</a> when this is done. ({{bug(1361000)}}).</li>
+ <li>Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are output to the <a href="/en-US/docs/Tools/Web_Console">web console</a> when this is done. ({{bug(1361000)}}).</li>
  <li>Firefox currently doesn't require that at least one {{domxref("MediaKeySystemCapabilities")}} object be included in the <code>suggestedConfigurations</code> parameter passed into {{domxref("Navigator.requestMediaKeySystemAccess()")}}, which the specification does mandate. Starting in Firefox 55, a warning is output to the web console when any audio or video configuration is specified without specifying supported codecs. Soon, failure to include a valid configuration for one or more of audio and video will throw an exception {{bug(1368683)}}).</li>
 </ul>
 
