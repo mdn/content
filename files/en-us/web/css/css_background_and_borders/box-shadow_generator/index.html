@@ -1181,7 +1181,7 @@ var SliderManager = (function SliderManager() {
 		this.min = min;
 		this.max = max &gt; 0 ? max : 100;
 		this.step = step === 0 ? 1 : step;
-		this.value = value <= max && value >= min ? value : (min + max) / 2 | 0;
+		this.value = value &lt;= max && value >= min ? value : (min + max) / 2 | 0;
 		this.snap = snap === "true" ? true : false;
 		this.topic = topic;
 		this.node = node;
