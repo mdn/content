@@ -8,7 +8,7 @@ tags:
 <p>VC6 does not build trunk, for twenty-&lt;strike&gt;nine&lt;/strike&gt;eight reasons:</p>
 <ul><li> VC6 incorrectly compiles libpixman which causes it to display complex graphics incorrectly.
 </li></ul>
-<ul><li> VC6 cannot compile parental controls because that requires the Vista SDK which does not support VC6. <a href="index.php?title=en/Windows_Build_Prerequisites_(1.7_%26_1.8_Branches)#Platform_SDK">(More information on supported SDKs.)</a> This can be worked around by disabling the Vista SDK requirements using the --disable-vista-sdk-requiements configure option.
+<ul><li> VC6 cannot compile parental controls because that requires the Vista SDK which does not support VC6. <a href="index.php?title=en/Windows_Build_Prerequisites_(1.7_%26_1.8_Branches)#Platform_SDK">(More information on supported SDKs.)</a> This can be worked around by disabling the Vista SDK requirements using the --disable-vista-sdk-requirements configure option.
 </li></ul>
 <ul><li> VC6 doesn't recognise inner classes as friends of outer classes and thus fails to compile nsSVGClipPathFrame, nsSVGMaskFrame, nsTreeBodyFrame, gfxSparseBitSet, NodePool, nsSVGCircleElement, GlyphWidths or nsTObserverArray correctly. For nsSVGClipPathFrame, nsSVGMaskFrame, nsSVGLength2, nsTreeBodyFrame and nsTObserverArray an explicit friend declaration is required while for GlyphWidths the enum needs to be moved into the inner class while for gfxSparseBitSet and NodePool the constant needs to be made public and for nsSVGElement, nsSVGLength2 and nsSVGAngle the related classes need to be made public using these patches:
 </li></ul>
