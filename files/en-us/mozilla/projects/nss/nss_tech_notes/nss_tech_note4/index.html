@@ -45,7 +45,7 @@ server's    cert handle <br>
 <h4 id="Some_info_is_readily_available">Some info is readily available </h4>
        cert-&gt;subjectName (char*)<br>
        cert-&gt;issuerName (char*)<br>
-       cert-&gt;emailAddr (char*<b><font color="#ff0000"></font></b>)<br>
+       cert-&gt;emailAddr (char*)<br>
             OR char *CERT_GetCertificateEmailAddress(CERTCertificate
    *cert);<br>
        cert-&gt;keyUsage (unsigned int)<br>
@@ -76,7 +76,7 @@ server's    cert handle <br>
          <li>Object Id (OID) : A unique OID represents an algorithm, a mechanism,
    a piece of information, etc. Examples: X500 RSA Encryption,  Certificate
    Basic Constraints, PKCS#7 Digested Data, etc. <br>
-       There is a long list of pre-defined OIDs, and new ones can be <font color="#000000">added dynamically by an application.</font><br>
+       There is a long list of pre-defined OIDs, and new ones can be <em>added dynamically by an application.</em><br>
        The OID data structure contains an array of identifier bytes (each
 byte   is a "level" in a hierarchical namespace), a text description, and
 some other  things.<br>
