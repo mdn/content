@@ -65,7 +65,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
  <li>
   <h4 id="Individual_date_and_time_component_values">Individual date and time component values</h4>
 
-  <p>Given at least a year and month, this form of <code>Date()</code> returns a <code>Date</code> object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (<code>1</code> for <code><var>day</var></code> and <code>0</code> for every other component).</p>
+  <p>Given at least a year and month, this form of <code>Date()</code> returns a <code>Date</code> object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (<code>1</code> for <code><var>day</var></code> and <code>0</code> for every other component). The parameter values are all evaluated against the local time zone, rather than UTC.</p>
 
   <dl>
    <dt><code><var>year</var></code></dt>
