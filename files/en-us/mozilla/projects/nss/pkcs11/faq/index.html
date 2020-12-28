@@ -154,7 +154,7 @@ tags:
 
 <h6 id="Are_persistent_objects_that_are_stored_on_the_token.2C_such_as_private_keys_and_certificates.2C_created_by_the_PKCS_.2311_module.3F_Is_it_safe_to_assume_that_NSS_never_calls_C_CreateObject_for_those_persistent_objects.3F">Are persistent objects that are stored on the token, such as private keys and certificates, created by the PKCS #11 module? Is it safe to assume that NSS never calls C_CreateObject for those persistent objects?</h6>
 
-<p>No. As stated in the answer to the preceding question, when NSS does a keygen it uses C_GenerateKeyPair if the token supports the keygen method. If the token does not support keygen, NSS generates the key internally and uses C_CreateObject to load the private key into the token. When the certificate is received after the keygen, NSS loads it into the token with C_CreateObject. NSS also does a similiar operation for importing private keys and certificates through pkcs12.</p>
+<p>No. As stated in the answer to the preceding question, when NSS does a keygen it uses C_GenerateKeyPair if the token supports the keygen method. If the token does not support keygen, NSS generates the key internally and uses C_CreateObject to load the private key into the token. When the certificate is received after the keygen, NSS loads it into the token with C_CreateObject. NSS also does a similar operation for importing private keys and certificates through pkcs12.</p>
 
 <p>The above statement is true for read-write tokens only.</p>
 
