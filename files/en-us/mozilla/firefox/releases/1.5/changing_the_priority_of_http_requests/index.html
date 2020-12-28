@@ -23,9 +23,9 @@ tags:
 
 <p>To change the priority of an HTTP request, you need access to the <a href="/en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a> that the request is being made on. If you do not have an existing channel, then you can create one as follows:</p>
 
-<pre class="eval">var ios = Components.classes["@<a class="linkification-ext external" href="http://mozilla.org/network/io-service;1" title="Linkification: http://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
+<pre class="eval">var ios = Components.classes["@<a class="linkification-ext external" href="https://mozilla.org/network/io-service;1" title="Linkification: https://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
                     .getService(Components.interfaces.nsIIOService);
-var ch = ios.newChannel("<a class="linkification-ext external" href="http://www.example.com/" title="Linkification: http://www.example.com/">http://www.example.com/</a>", null, null);
+var ch = ios.newChannel("<a class="linkification-ext external" href="https://www.example.com/" title="Linkification: https://www.example.com/">https://www.example.com/</a>", null, null);
 </pre>
 
 <p><br>
@@ -43,7 +43,7 @@ var ch = ios.newChannel("<a class="linkification-ext external" href="http://www.
 <p>If you are programming in <a href="/en/JavaScript">JavaScript</a>, you will probably want to use <a href="/en/XMLHttpRequest">XMLHttpRequest</a>, a much higher level abstraction of an HTTP request. You can access the <code>channel</code> member of an <a href="/en/XMLHttpRequest">XMLHttpRequest</a> once you have called the <code>open</code> method on it, as follows:</p>
 
 <pre class="eval">var req = new XMLHttpRequest();
-req.open("GET", "<a class="linkification-ext external" href="http://www.example.com" title="Linkification: http://www.example.com">http://www.example.com</a>", false);
+req.open("GET", "<a class="linkification-ext external" href="https://www.example.com" title="Linkification: https://www.example.com">https://www.example.com</a>", false);
 if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
   req.channel.priority = Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
 }
