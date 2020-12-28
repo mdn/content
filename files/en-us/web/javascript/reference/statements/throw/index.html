@@ -2,6 +2,7 @@
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 tags:
+  - Exception
   - JavaScript
   - Language feature
   - Statement
@@ -10,20 +11,22 @@ tags:
 
 <p>The <strong><code>throw</code> statement</strong> throws a user-defined exception. Execution of the current function will stop (the statements after <code>throw</code> won't be executed), and control will be passed to the first <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a> block in the call stack. If no <code>catch</code> block exists among caller functions, the program will terminate.</p>
 
-<div>{{EmbedInteractiveExample("pages/js/statement-throw.html", "taller")}}</div>
+<div>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</div>
+
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">throw <em>expression</em>; </pre>
+<pre class="syntaxbox notranslate">throw <var>expression</var>; </pre>
 
 <dl>
- <dt><code>expression</code></dt>
+ <dt><code><var>expression</var></code></dt>
  <dd>The expression to throw.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>Use the <code>throw</code> statement to throw an exception. When you throw an exception, <code>expression</code> specifies the value of the exception. Each of the following throws an exception:</p>
+<p>Use the <code>throw</code> statement to throw an exception. When you throw an exception, <code><var>expression</var></code> specifies the value of the exception. Each of the following throws an exception:</p>
 
 <pre class="brush: js">throw 'Error2'; // generates an exception with a string value
 throw 42;       // generates an exception with the value 42
@@ -39,28 +42,28 @@ throw new Error('Required');  // generates an error object with the message of R
 
 <p>You can specify an object when you throw an exception. You can then reference the object's properties in the <code>catch</code> block. The following example creates an object of type <code>UserException</code> and uses it in a <code>throw</code> statement.</p>
 
-<pre class="brush: js">function UserException(message) {
-   this.message = message;
-   this.name = 'UserException';
+<pre class="brush: js notranslate">function UserException(message) {
+  this.message = message;
+  this.name = 'UserException';
 }
 function getMonthName(mo) {
-   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-      'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-   if (months[mo] !== undefined) {
-      return months[mo];
-   } else {
-      throw new UserException('InvalidMonthNo');
-   }
+  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+    'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  if (months[mo] !== undefined) {
+    return months[mo];
+  } else {
+    throw new UserException('InvalidMonthNo');
+  }
 }
 
 try {
-   // statements to try
-   var myMonth = 15; // 15 is out of bound to raise the exception
-   var monthName = getMonthName(myMonth);
+  // statements to try
+  var myMonth = 15; // 15 is out of bound to raise the exception
+  var monthName = getMonthName(myMonth);
 } catch (e) {
-   monthName = 'unknown';
-   console.error(e.message, e.name); // pass exception object to err handler
+  monthName = 'unknown';
+  console.error(e.message, e.name); // pass exception object to err handler
 }
 </pre>
 
@@ -82,28 +85,28 @@ try {
  */
 
 function ZipCode(zip) {
-   zip = new String(zip);
-   pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-   if (pattern.test(zip)) {
-      // zip code value will be the first match in the string
-      this.value = zip.match(pattern)[0];
-      this.valueOf = function() {
-         return this.value
-      };
-      this.toString = function() {
-         return String(this.value)
-      };
-   } else {
-      throw new ZipCodeFormatException(zip);
-   }
+  zip = new String(zip);
+  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattern.test(zip)) {
+    // zip code value will be the first match in the string
+    this.value = zip.match(pattern)[0];
+    this.valueOf = function() {
+      return this.value
+    };
+    this.toString = function() {
+      return String(this.value)
+    };
+  } else {
+    throw new ZipCodeFormatException(zip);
+  }
 }
 
 function ZipCodeFormatException(value) {
-   this.value = value;
-   this.message = 'does not conform to the expected format for a zip code';
-   this.toString = function() {
-      return this.value + this.message;
-   };
+  this.value = value;
+  this.message = 'does not conform to the expected format for a zip code';
+  this.toString = function() {
+    return this.value + this.message;
+  };
 }
 
 /*
@@ -115,16 +118,16 @@ const ZIPCODE_INVALID = -1;
 const ZIPCODE_UNKNOWN_ERROR = -2;
 
 function verifyZipCode(z) {
-   try {
-      z = new ZipCode(z);
-   } catch (e) {
-      if (e instanceof ZipCodeFormatException) {
-         return ZIPCODE_INVALID;
-      } else {
-         return ZIPCODE_UNKNOWN_ERROR;
-      }
-   }
-   return z;
+  try {
+    z = new ZipCode(z);
+  } catch (e) {
+    if (e instanceof ZipCodeFormatException) {
+      return ZIPCODE_INVALID;
+    } else {
+      return ZIPCODE_UNKNOWN_ERROR;
+    }
+  }
+  return z;
 }
 
 a = verifyZipCode(95060);         // returns 95060
@@ -138,15 +141,15 @@ e = verifyZipCode('95060 1234');  // returns 95060 1234
 
 <p>You can use <code>throw</code> to rethrow an exception after you catch it. The following example catches an exception with a numeric value and rethrows it if the value is over 50. The rethrown exception propagates up to the enclosing function or to the top level so that the user sees it.</p>
 
-<pre class="brush: js">try {
-   throw n; // throws an exception with a numeric value
+<pre class="brush: js notranslate">try {
+  throw n; // throws an exception with a numeric value
 } catch (e) {
-   if (e &lt;= 50) {
-      // statements to handle exceptions 1-50
-   } else {
-      // cannot handle this exception, so rethrow
-      throw e;
-   }
+  if (e &lt;= 50) {
+    // statements to handle exceptions 1-50
+  } else {
+    // cannot handle this exception, so rethrow
+    throw e;
+  }
 }
 </pre>
 

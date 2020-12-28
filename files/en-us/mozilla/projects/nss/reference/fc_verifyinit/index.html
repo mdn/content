@@ -6,27 +6,27 @@ tags:
 ---
 <p>
 </p>
-<h3 id="Name" name="Name"> Name </h3>
+<h3 id="Name"> Name </h3>
 <p>FC_VerifyInit - initialize a verification operation.
 </p>
-<h3 id="Syntax" name="Syntax"> Syntax </h3>
+<h3 id="Syntax"> Syntax </h3>
 <pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_VerifyInit(
   <a href="en/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
   <a href="en/CK_MECHANISM">CK_MECHANISM_PTR</a> pMechanism,
   <a href="en/CK_OBJECT_HANDLE">CK_OBJECT_HANDLE</a> hKey
 );
 </pre>
-<h3 id="Parameters" name="Parameters"> Parameters </h3>
+<h3 id="Parameters"> Parameters </h3>
 <dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
 </dd><dt><code>pMechanism</code></dt><dd> {{ mediawiki.external('in') }} mechanism to be used for the verification operation.
 </dd><dt><code>hKey</code></dt><dd> {{ mediawiki.external('in') }} handle of the key to be used.
 </dd></dl>
-<h3 id="Description" name="Description"> Description </h3>
+<h3 id="Description"> Description </h3>
 <p><code>FC_VerifyInit</code> initializes a verification operation where the signature is an appendix to the data.
 </p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_VerifyInit</code>.
 </p>
-<h3 id="Return_value" name="Return_value"> Return value </h3>
-<h3 id="Examples" name="Examples"> Examples </h3>
-<h3 id="See_also" name="See_also"> See also </h3>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
 <ul><li> <a href="en/NSC_VerifyInit">NSC_VerifyInit</a>
 </li></ul>

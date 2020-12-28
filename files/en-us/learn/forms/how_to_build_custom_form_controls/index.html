@@ -16,7 +16,7 @@ tags:
 <p>In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trival JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.</p>
+<p><strong>Note:</strong> We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.</p>
 </div>
 
 <h2 id="Design_structure_and_semantics">Design, structure, and semantics</h2>
@@ -428,7 +428,7 @@ tags:
   Array.prototype.forEach.call(this, callback);
 }</pre>
 
-<p>If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or pollyfill.</p>
+<p>If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.</p>
 
 <h3 id="Building_event_callbacks">Building event callbacks</h3>
 
@@ -556,7 +556,7 @@ window.addEventListener('load', function () {
 <code class="language-js"><span class="comment token">  </span></code>  // Loose focus if the user hits `esc`
 <code class="language-js">    select<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'keyup'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
-      <span class="comment token">// deactive on keyup of `esc`</span>
+      <span class="comment token">// deactivate on keyup of `esc`</span>
       <span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">27</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
 </code>         deactivateSelect(select);
 <code class="language-js"><span class="punctuation token">     </span> <span class="punctuation token">}</span></code>

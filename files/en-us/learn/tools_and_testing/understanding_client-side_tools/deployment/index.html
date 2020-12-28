@@ -332,7 +332,7 @@ git push github master</pre>
 <p>Let's summarise all the parts of the toolchain:</p>
 
 <ul>
- <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependancies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
+ <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependencies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
  <li>There are two configuration files that the code quality tools read: <code>.eslintrc</code> and <code>.prettierrc</code>.</li>
  <li>During development, we use Parcel to handle our dependencies. <code>parcel src/index.html</code> is running in the background to watch for changes and to automatically build our source.</li>
  <li>Deployment is handled by pushing our changes to Github (on the "master" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is <a href="near-misses.netlify.com">near-misses.netlify.com</a>; you will have your own unique URL.</li>

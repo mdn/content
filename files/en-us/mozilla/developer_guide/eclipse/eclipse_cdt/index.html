@@ -260,7 +260,7 @@ subprocess.Popen([eclipse_app_path, "-data", workspace_path])
 
 <h3 id="Isnt_there_a_better_method_of_build_option_discovery">Isn't there a better method of build option discovery?</h3>
 
-<p>Yes, but Eclipse doesn't currently support it. Instead of processing build console output, Eclipse could use something like LD_PRELOAD to load its own little library into all the processes that are invoked as part of the build process. This library could then check whether the process is a compiler instance and, if so, use the processes' current working directory and the arguments that were passed to it to reliably obtain the information it needs for each source file that is compiled. This would eliminate the requirement for non-parallelized, non-silenced builds. You could also build from Eclipse and get the benefits that that brings.</p>
+<p>Yes, but Eclipse doesn't currently support it. Instead of processing build console output, Eclipse could use something like LD_PRELOAD to load its own little library into all the processes that are invoked as part of the build process. This library could then check whether the process is a compiler instance and, if so, use the processes' current working directory and the arguments that were passed to it to reliably obtain the information it needs for each source file that is compiled. This would eliminate the requirement for non-parallelized, non-silenced builds. You could also build from Eclipse and get the benefits that it brings.</p>
 
 <h3 id="How_can_I_run_a_more_recent_CDT_version">How can I run a more recent CDT version?</h3>
 
