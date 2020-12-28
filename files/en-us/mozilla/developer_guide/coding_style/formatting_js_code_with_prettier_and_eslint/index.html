@@ -55,7 +55,7 @@ $ ./mach eslint --warnings &lt;path&gt;  # Show issues including warnings</em></
 
 <h2 id="Commit_hook">Commit hook</h2>
 
-<p>To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
+<p>To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach bootstrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
 <pre class="comment-text " id="ct-11">[extensions]
 js-format = ~/.mozbuild/version-control-tools/hgext/js-format
@@ -159,7 +159,7 @@ my code which should not be reformatted
 
 <p>The <code><a href="https://bitbucket.org/octobus/format-source">format-source</a></code> extension, now bundled with <code>version-control-tools</code>, and installed by <code>./mach bootstrap</code>, may be used to seamlessly handle this situation.</p>
 
-<p>To reformat your commits during the rebase or merge phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
+<p>To reformat your commits during the rebase or merge phase, run <code>./mach bootstrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
 <pre class="comment-text " id="ct-11">[extensions]
 format-source = ~/.mozbuild/version-control-tools/hgext/format-source</pre>
