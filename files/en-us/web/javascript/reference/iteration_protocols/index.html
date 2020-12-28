@@ -85,7 +85,7 @@ tags:
 <p>Doing so allows an iterator to be consumed by the various syntaxes expecting iterables. Thus, it is seldom useful to implement the Iterator Protocol without also implementing Iterable.</p>
 
 <pre class="brush: js notranslate">// Satisfies both the Iterator Protocol and Iterable
-let myIterator = {
+const myIterator = {
     next: function() {
         // ...
     },
@@ -100,13 +100,15 @@ let myIterator = {
 
 <p>A {{jsxref("String")}} is an example of a built-in iterable object:</p>
 
-<pre class="brush: js notranslate">let someString = 'hi';
+<pre class="brush: js notranslate">
+const someString = 'hi';
 console.log(typeof someString[Symbol.iterator]); // "function"
 </pre>
 
 <p><code>String</code>'s {{jsxref("String/@@iterator", "default iterator", "", 1)}} returns the string's code points one by one:</p>
 
-<pre class="brush: js notranslate">let iterator = someString[Symbol.iterator]();
+<pre class="brush: js notranslate">
+const iterator = someString[Symbol.iterator]();
 console.log(iterator + ''); // "[object String Iterator]"
 
 console.log(iterator.next()); // { value: "h", done: false }
@@ -120,7 +122,7 @@ console.log(iterator.next()); // { value: undefined, done: true }</pre>
 <p>You can redefine the iteration behavior by supplying our own <code>@@iterator</code>:</p>
 
 <pre class="brush: js notranslate">// need to construct a String object explicitly to avoid auto-boxing
-let someString = new String('hi');
+const someString = new String('hi');
 
 someString[Symbol.iterator] = function () {
   return {
@@ -154,7 +156,8 @@ console.log(someString + ''); // "hi"
 
 <p>You can make your own iterables like this:</p>
 
-<pre class="brush: js notranslate">let myIterable = {};
+<pre class="brush: js notranslate">
+const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
@@ -174,9 +177,10 @@ console.log([...myIterable]); // [1, 2, 3]
  <li>{{jsxref("WeakSet", "new WeakSet([<var>iterable</var>])")}}</li>
 </ul>
 
-<pre class="brush: js notranslate">new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
+<pre class="brush: js notranslate">
+new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2); // "b"
 
-let myObj = {};
+const myObj = {};
 
 new WeakMap([
     [{}, 'a'],
@@ -206,7 +210,8 @@ new WeakSet(function* () {
 
 <p>Some statements and expressions expect iterables, for example the {{jsxref("Statements/for...of", "for...of")}} loops, the {{jsxref("Operators/Spread_syntax", "spread operator", "", 1)}}), {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring_assignment", "destructuring assignment")}}:</p>
 
-<pre class="brush: js notranslate">for (let value of ['a', 'b', 'c']) {
+<pre class="brush: js notranslate">
+for (const value of ['a', 'b', 'c']) {
     console.log(value);
 }
 // "a"
@@ -232,7 +237,8 @@ console.log(a);            // "a"
 
 <p>Using one is likely to result in runtime errors or buggy behavior:</p>
 
-<pre class="brush: js example-bad notranslate">let nonWellFormedIterable = {};
+<pre class="brush: js example-bad notranslate">
+const nonWellFormedIterable = {};
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1;
 [...nonWellFormedIterable]; // TypeError: [] is not a function
 </pre>
@@ -255,7 +261,7 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1;
   };
 }
 
-let it = makeIterator(['yo', 'ya']);
+const it = makeIterator(['yo', 'ya']);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
@@ -276,7 +282,7 @@ console.log(it.next().done);  // true
   };
 }
 
-let it = idMaker();
+const it = idMaker();
 
 console.log(it.next().value); // '0'
 console.log(it.next().value); // '1'
@@ -293,7 +299,7 @@ console.log(it.next().value); // '2'
   }
 }
 
-let gen = makeSimpleGenerator(['yo', 'ya']);
+const gen = makeSimpleGenerator(['yo', 'ya']);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
@@ -306,11 +312,11 @@ function* idMaker() {
   }
 }
 
-let gen = idMaker()
+const it = idMaker()
 
-console.log(gen.next().value); // '0'
-console.log(gen.next().value); // '1'
-console.log(gen.next().value); // '2'
+console.log(it.next().value); // '0'
+console.log(it.next().value); // '1'
+console.log(it.next().value); // '2'
 // ...
 </pre>
 
@@ -350,7 +356,8 @@ for (const val of simple) {
 
 <p>A {{jsxref("Generator", "generator object", "", 1)}} is <em>both</em> iterator and iterable:</p>
 
-<pre class="brush: js notranslate">let aGeneratorObject = function* () {
+<pre class="brush: js notranslate">
+const aGeneratorObject = function* () {
   yield 1;
   yield 2;
   yield 3;
