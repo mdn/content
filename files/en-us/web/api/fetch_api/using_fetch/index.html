@@ -368,7 +368,7 @@ try {
 
 <ul>
  <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
- <li>{{domxref("Response.statusText")}} — A string (default value "OK"), which corresponds to the HTTP status code message.</li>
+ <li>{{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 <a href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</a> status messages.</li>
  <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.</li>
 </ul>
 
