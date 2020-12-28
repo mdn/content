@@ -19,14 +19,14 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc.html
 <h2 id="Chapter_7_PKCS_11_Functions">Chapter 7<br>
   <a name="1027946"> PKCS #11 Functions</a></h2>
 <p><a name="1034215"> This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords. </a></p>
-<p><a name="1035644"> </a><a href="pkfnc.html#1035673"><code>PK11_FindCertFromNickname</code></a><br>
-  <a href="pkfnc.html#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
-  <a href="pkfnc.html#1030779"><code>PK11_GetSlotName</code></a><br>
-  <a href="pkfnc.html#1026964"><code>PK11_GetTokenName</code></a><br>
-  <a href="pkfnc.html#1026762"><code>PK11_IsHW</code></a><br>
-  <a href="pkfnc.html#1022948"><code>PK11_IsPresent</code></a><br>
-  <a href="pkfnc.html#1022991"><code>PK11_IsReadOnly</code></a><br>
-  <a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a></p>
+<p><a name="1035644"> </a><a href="#1035673"><code>PK11_FindCertFromNickname</code></a><br>
+  <a href="#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
+  <a href="#1030779"><code>PK11_GetSlotName</code></a><br>
+  <a href="#1026964"><code>PK11_GetTokenName</code></a><br>
+  <a href="#1026762"><code>PK11_IsHW</code></a><br>
+  <a href="#1022948"><code>PK11_IsPresent</code></a><br>
+  <a href="#1022991"><code>PK11_IsReadOnly</code></a><br>
+  <a href="#1023128"><code>PK11_SetPasswordFunc</code></a></p>
 <p> </p>
 <h4 id="PK11_FindCertFromNickname"><a name="Head3;"></a> <a name="1035673"> PK11_FindCertFromNickname </a></h4>
 <p><a name="1026864"> Finds a certificate from its nickname.</a></p>
@@ -68,7 +68,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc.html
 </ul>
 <h5 id="Description"><a name="Head4;"></a> <a name="1032008"> Description </a></h5>
 <p><a name="1032009"> A nickname is an alias for a certificate subject. There may be multiple certificates with the same subject, and hence the same nickname. This function will return the newest certificate that matches the subject, based on the NotBefore / NotAfter fields of the certificate. When you are finished with the certificate structure returned by <code>PK11_FindCertFromNickname</code>, you must free it by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a>.</p>
-<p><a name="1036272"> The <code>PK11_FindCertFromNickname</code> function calls the password callback function set with </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
+<p><a name="1036272"> The <code>PK11_FindCertFromNickname</code> function calls the password callback function set with </a><a href="#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
 <p> </p>
 <h4 id="PK11_FindKeyByAnyCert"><a name="Head3;"></a> <a name="1026891"> PK11_FindKeyByAnyCert </a></h4>
 <p><a name="1026892"> Finds the private key associated with a specified certificate in any available slot.</a></p>
@@ -111,7 +111,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc.html
 </ul>
 <h5 id="Description_2"><a name="Head4;"></a> <a name="1031834"> Description </a></h5>
 <p><a name="1035317"> When you are finished with the private key structure returned by <code>PK11_FindKeyByAnyCert</code>, you must free it by calling </a><a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
-<p><a name="1036323"> The <code>PK11_FindKeyByAnyCert</code> function calls the password callback function set with </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
+<p><a name="1036323"> The <code>PK11_FindKeyByAnyCert</code> function calls the password callback function set with </a><a href="#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
 <p> </p>
 <h4 id="PK11_GetSlotName"><a name="Head3;"></a> <a name="1030779"> PK11_GetSlotName </a></h4>
 <p><a name="1026930"> Gets the name of a slot.</a></p>

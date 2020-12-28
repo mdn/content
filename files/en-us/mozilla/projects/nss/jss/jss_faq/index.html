@@ -19,23 +19,19 @@ tags:
   <dd>
     <a href="#setCipherPolicy">If I don't call setCipherPolicy, is the DOMESTIC policy used by default?</a></dd>
   <dd>
-    <a href="#SSL Hanging">My SSL connection is hanging on Windows?</a></dd>
-</dl>
-<dl>
+    <a href="#SSL_Hanging">My SSL connection is hanging on Windows?</a></dd>
   <dd>
-    <a href="#SSLTLS cipher">How can I tell which SSL/TLS ciphers JSS supports?</a></dd>
-</dl>
-<dl>
+    <a href="#SSLTLS_cipher">How can I tell which SSL/TLS ciphers JSS supports?</a></dd>
   <dd>
-    <a href="#SSL Debug">How can I debug my SSL connection?</a></dd>
+    <a href="#SSL_Debug">How can I debug my SSL connection?</a></dd>
   <dd>
-    <a href="#SSL Callback">Can you explain JSS SSL certificate approval callbacks?</a></dd>
+    <a href="#SSL_Callback">Can you explain JSS SSL certificate approval callbacks?</a></dd>
   <dd>
-    <a href="#JSS instance">Can I have multiple JSS instances reading separate db's?</a></dd>
+    <a href="#JSS_instance">Can I have multiple JSS instances reading separate db's?</a></dd>
   <dd>
-    <a href="#JSS init">Once JSS initialized, I can't get anymore instances with CertificateFactory.getInstance(X.509)?</a></dd>
+    <a href="#JSS_init">Once JSS initialized, I can't get anymore instances with CertificateFactory.getInstance(X.509)?</a></dd>
   <dd>
-    <a href="#Sign Date">Is it possible to sign data in Java with JSS?</a></dd>
+    <a href="#Sign_Date">Is it possible to sign data in Java with JSS?</a></dd>
   <dd>
     <a href="#convertX509">How do I convert org.mozilla.jss.crypto.X509Certificate to org.mozilla.jss.pkix.cert.Certificate?</a></dd>
   <dd>
@@ -43,7 +39,7 @@ tags:
   <dd>
     <a href="#pkc11">Is it possible to use JSS to access cipher functionality from pkcs11 modules?</a></dd>
   <dd>
-    <a href="#token name">Can you explain token names and keys with regards to JSS?</a></dd>
+    <a href="#token_name">Can you explain token names and keys with regards to JSS?</a></dd>
   <dd>
     <a href="#JSSJSSE">JSS 3.2 has JCA support. When will JSS have JSSE support?</a></dd>
 </dl>
@@ -113,21 +109,23 @@ tags:
   <dd>
     Yes, domestic is the default because we call NSS_SetDomesticPolicy() during CryptoManager.initialize(). setCipherPolicy does not need to be called by a JSS app unless that app wants to limit itself to export-allowed cipher suites.</dd>
 </dl>
-<p><a name="SSL Hanging"></a><b>My SSL connection is hanging on Windows?</b></p>
+<p><a name="SSL_Hanging"></a><b>My SSL connection is hanging on Windows?</b></p>
 <dl>
   <dd>
     NSPR makes use of NT vs. Windows distinction and provides different NT and Windows builds. Many Netscape products, including NSS, have NT and Windows builds that are essentially the same except one difference: one is linked with the NT version of NSPR and the other is linked with the Windows version of NSPR. The NT fiber problem affects applications that call blocking system calls from the primordial thread. Either use the WIN 95 version of NSPR/NSS/JSS components (essentially all non-fiber builds) or set the environment variable NSPR_NATIVE_THREADS_ONLY=1. You can find more information in bugzilla bug <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=102251">102251</a> SSL session cache locking issue with NT fibers</dd>
+</dl>
+<p><a name="SSLTLS_cipher"></a><b>How can I tell which SSL/TLS ciphers JSS supports?</b></p>
+<dl>
   <dd>
-    <b>How can I tell which SSL/TLS ciphers JSS supports?</b>
-    <p>           Check <a href="http://lxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/ssl/SSLSocket.java#730">http://lxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/ssl/SSLSocket.java#730</a></p>
+    <p>Check <a href="http://lxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/ssl/SSLSocket.java#730">http://lxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/ssl/SSLSocket.java#730</a></p>
   </dd>
 </dl>
-<p><a name="SSL Debug"></a><b>How can I debug my SSL connection?</b></p>
+<p><a name="SSL_Debug"></a><b>How can I debug my SSL connection?</b></p>
 <dl>
   <dd>
     By using the NSS tool <a href="../NSS/tools/NSS_Tools_ssltap">ssltap</a></dd>
 </dl>
-<p><a name="SSL Callback"></a><b>Can you explain JSS SSL certificate approval callbacks?</b></p>
+<p><a name="SSL_Callback"></a><b>Can you explain JSS SSL certificate approval callbacks?</b></p>
 <dl>
   <dd>
     NSS has three callbacks related to certificates. JSS has two. But JSS combines two of the NSS callbacks into one.</dd>
@@ -148,17 +146,17 @@ tags:
   </dd>
 </dl>
 <p><br>
-  <a name="JSS instance"></a><b>Can I have multiple JSS instances reading separate db's?</b></p>
+  <a name="JSS_instance"></a><b>Can I have multiple JSS instances reading separate db's?</b></p>
 <dl>
   <dd>
     No, you can only have one initialized instance of JSS for each database.</dd>
 </dl>
-<p><a name="JSS init"></a><b>Once JSS initialized, I can't get anymore instances with CertificateFactory.getInstance("X.509")?</b></p>
+<p><a name="JSS_init"></a><b>Once JSS initialized, I can't get anymore instances with CertificateFactory.getInstance("X.509")?</b></p>
 <dl>
   <dd>
     In version previous to JSS 3.1, JSS removes the default SUN provider on startup. Upgrade to the latest JSS, or, in the <code>CryptoManager.InitializationValues</code> object you pass to <code>CryptoManager.initialize()</code>, set <code>removeSunProivider=true</code>.</dd>
 </dl>
-<p><a name="Sign Date"></a><b>Is it possible to sign data in Java with JSS? What I am trying to do is write a Java applet that will access the Netscape certificate store, retrieve a X509 certificate and then sign some data.</b></p>
+<p><a name="Sign_Date"></a><b>Is it possible to sign data in Java with JSS? What I am trying to do is write a Java applet that will access the Netscape certificate store, retrieve a X509 certificate and then sign some data.</b></p>
 <dl>
   <dd>
     The best way to do this is with the PKCS #7 signedData type. Check out the <a href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_RTM/doc/JSS_4_3_RTM-doc.zip">javadoc</a>.</dd>
@@ -185,7 +183,7 @@ Certificate cert = (Certificate) ASN1Util.decode(
   <dd>
     Yes. Before JSS 3.2 you would use CryptoManager to obtain the CryptoToken you want to use, then call CryptoToken.getCipherContext() to get an encryption engine. But as of JSS 3.2 you would use the <a href="JSS_Provider_Notes">JSS JCA provider</a>.</dd>
 </dl>
-<p><a name="token name"></a><b>Can you explain token names and keys with regards to JSS?</b></p>
+<p><a name="token_name"></a><b>Can you explain token names and keys with regards to JSS?</b></p>
 <dl>
   <dd>
     The token name is different depending on which application you are running. In JSS, the token is called "Internal Key Storage Token". You can look it up by name using CryptoManager.getTokenByName(), but a better way is to call CryptoManager.getInternalKeyStorageToken(), which works no matter what the token is named. In general, a key is a handle to an underlying object on a PKCS #11 token, not merely a Java object residing in memory. Symmetric Key usage:  basically encrypt/decrypt is for data and wrap/unwrap is for keys.</dd>
