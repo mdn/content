@@ -14796,3 +14796,4 @@
 /en-US/docs/xml:id	/en-US/docs/xml/id
 /en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
 /en-US/docs/zh_cn	/zh-CN/docs/Web
+/en-US/docs/Mozilla/Mobile/Viewport_meta_tag	/en-US/docs/Web/HTML/Viewport_meta_tag
