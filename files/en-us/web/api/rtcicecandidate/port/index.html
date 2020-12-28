@@ -29,7 +29,7 @@ tags:
 
 <p>A 16-bit number indicating the port number on the device at the address indicated by {{domxref("RTCIceCandidate.ip", "ip")}} at which the candidate's peer can be reached.</p>
 
-<p><code>port</code> is initialized to <code>null</code> if it is not specified in the <code>candidate</code>, or if the <code>candidate</code> string can't be parsed propertly.</p>
+<p><code>port</code> is initialized to <code>null</code> if it is not specified in the <code>candidate</code>, or if the <code>candidate</code> string can't be parsed properly.</p>
 
 <div class="note">
 <p><strong>Note:</strong> If <code>port</code> is <code>null</code>, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} will fail, throwing an <code>OperationError</code> exception. This applies only if the candidate implements <code>port</code>.</p>
