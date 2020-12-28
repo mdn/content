@@ -257,7 +257,7 @@ console.info = msg =&gt; logElem.innerHTML += `&lt;span class="info"&gt;${msg}&l
 
 <h5 id="Stopping_display_capture">Stopping display capture</h5>
 
-<p>The <code>stopCapture()</code> method is called when the "Stop Capture" button is clicked. It stops the stream by getting its track list using {{domxref("MediaStream.getTracks()")}}, then calling each track's {domxref("MediaStreamTrack.stop, "stop()")}} method. Once that's done, <code>srcObject</code> is set to <code>null</code> to make sure it's understood by anyone interested that there's no stream connected.</p>
+<p>The <code>stopCapture()</code> method is called when the "Stop Capture" button is clicked. It stops the stream by getting its track list using {{domxref("MediaStream.getTracks()")}}, then calling each track's {{domxref("MediaStreamTrack.stop, "stop()")}} method. Once that's done, <code>srcObject</code> is set to <code>null</code> to make sure it's understood by anyone interested that there's no stream connected.</p>
 
 <pre class="brush: js">function stopCapture(evt) {
   let tracks = videoElem.srcObject.getTracks();
