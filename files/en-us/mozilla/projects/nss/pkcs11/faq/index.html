@@ -33,7 +33,7 @@ tags:
 
 <h6 id="What_permanent_PKCS_.2311_objects_are_used_by_NSS_or_read_from_the_token.3F_Example:_RSA_private_key.2C_CA_certificate.2C_user.27s_own_certificate.2C_user.27s_name.">What permanent PKCS #11 objects are used by NSS or read from the token? Example: RSA private key, CA certificate, user's own certificate, user's name.</h6>
 
-<p>Private keys (RSA and DSA) and the corresponding certificates are read from the token. Other certificates on the token are also loaded (to allow building certificate chains), but it's not necessary to include the full chain, as long as the full chain is available in the regular certificate database. For the sake of completeness, it's also a good idea to expose public key objects. NSS falls back to looking for for the existance of public keys to determine if the token may have the corresponding private key while the token is not logged in.</p>
+<p>Private keys (RSA and DSA) and the corresponding certificates are read from the token. Other certificates on the token are also loaded (to allow building certificate chains), but it's not necessary to include the full chain, as long as the full chain is available in the regular certificate database. For the sake of completeness, it's also a good idea to expose public key objects. NSS falls back to looking for the existance of public keys to determine if the token may have the corresponding private key while the token is not logged in.</p>
 
 <h6 id="How_are_permanent_PKCS_.2311_objects_found_by_NSS.3F_That_is.2C_which_PKCS_.2311_attributes_are_used_in_the_object_searches.3F_Labels.3F_Key_IDs.3F_Key_types.3F">How are permanent PKCS #11 objects found by NSS? That is, which PKCS #11 attributes are used in the object searches? Labels? Key IDs? Key types?</h6>
 
@@ -72,7 +72,7 @@ tags:
 
 <h6 id="Will_NSS_get_the_user.27s_CA_certificate_via_PKCS_.2311_and_push_it_into_the_CA_certificate_database_or_is_the_CA_certificate_database_expected_to_obtain_the_CA_certificate_by_some_other_means.3F">Will NSS get the user's CA certificate via PKCS #11 and push it into the CA certificate database or is the CA certificate database expected to obtain the CA certificate by some other means?</h6>
 
-<p>PKCS #11 certificates that have private keys associated with them are are loaded into the temporary database (in memory) and marked as user certificates. All other certificates in the module are loaded into the temporary database with no special trust bits associated with them. NSS is perfectly capable of using token certificates in place.</p>
+<p>PKCS #11 certificates that have private keys associated with them are loaded into the temporary database (in memory) and marked as user certificates. All other certificates in the module are loaded into the temporary database with no special trust bits associated with them. NSS is perfectly capable of using token certificates in place.</p>
 
 <h6 id="Which_function_does_NSS_use_to_get_login_state_information.3F">Which function does NSS use to get login state information?</h6>
 
@@ -176,7 +176,7 @@ tags:
 
 <h6 id="If_I_have_my_smart_card_which_has_initial_PIN_set_at__.279999.27.2C_I_insert_it_into_my_reader_and_download_with_my_certificate_.28keygen_completed.29.2C_can_I_issue_.27Change_Password.27_from_the_Firefox_to_set_a_new_PIN_to_the_smart_card.3F_Any_scenario_that_you_can_give_me_similar_to_this_process_.28a_way_to_issue_a_certificate_on_an_initialized_new_card.29.3F">If I have my smart card which has initial PIN set at '9999', I insert it into my reader and download with my certificate (keygen completed), can I issue 'Change Password' from the Firefox to set a new PIN to the smart card? Any scenario that you can give me similar to this process (a way to issue a certificate on an initialized new card)?</h6>
 
-<p>Yes. First open the Tools/Options/Advanced/Security window in Mozilla and click Security Devices. Then select your PKCS #11 module, click View/Edit, select the token, and click Change Password. For this to work, you must supply a C_SetPIN function that operates as CKU_USER. Mozilla, Thunderbird, and Netscape products that use NSS have different UI to get the the Security Devices dialog.</p>
+<p>Yes. First open the Tools/Options/Advanced/Security window in Mozilla and click Security Devices. Then select your PKCS #11 module, click View/Edit, select the token, and click Change Password. For this to work, you must supply a C_SetPIN function that operates as CKU_USER. Mozilla, Thunderbird, and Netscape products that use NSS have different UI to get the Security Devices dialog.</p>
 
 <p>To get a key into an initialized token, go to your local Certificate Authority and initiate a certificate request. Somewhere along the way you will be prompted with a keygen dialog. Normally this dialog does not have any options and just provides information; however, if you have more than one token that can be used in this key generation process (for example, your smartcard and the NSS internal PKCS#11 module), you will see a selection of "cards and databases" that can be used to generate your new key info.</p>
 

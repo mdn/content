@@ -24,8 +24,10 @@ tags:
 <p>The function returns one of these values:</p>
 <ul> <li>If successful, a pointer to a SECMODModule. Caller owns the reference</li> <li>If unsuccessful, NULL.</li>
 </ul>
-<h6 id="Description">Description</h6>
-<p>SECMOD_LoadUserModule loads a new PKCS #11 module into NSS and connects it to the current NSS trust infrastructure. Once the the module has been successfully loaded, other NSS calls will use it in the normal course of searching.</p>
+
+<h6 id="Description" name="Description">Description</h6>
+<p>SECMOD_LoadUserModule loads a new PKCS #11 module into NSS and connects it to the current NSS trust infrastructure. Once the module has been successfully loaded, other NSS calls will use it in the normal course of searching.</p>
+
 <p><em>modulespec</em> specifies how the module should be loaded. More information about module spec is available at <a href="/en-US/PKCS11_Module_Specs" title="en/PKCS11_Module_Specs">PKCS11_Module_Specs</a>. NSS parameters may be specified in module specs used by SECMOD_LoadUserModule.</p>
 <p>Module will continue to function in the NSS infrastructure until unloaded with SECMOD_UnloadUserModule.</p>
 <h5 id="SECMOD_UnloadUserModule">SECMOD_UnloadUserModule</h5>
@@ -54,8 +56,10 @@ tags:
 </pre>
 <h6 id="Parameters_3">Parameters</h6>
 <p>This function has the following parameter:</p>
-<p><em>slot</em> A pointer to a slot info structure. This slot must a a slot created by SECMOD_OpenUserDB() at some point in the past.</p>
-<h6 id="Returns_3">Returns</h6>
+
+<p><em>slot</em> A pointer to a slot info structure. This slot must a slot created by SECMOD_OpenUserDB() at some point in the past.</p>
+<h6 id="Returns_3" name="Returns_3">Returns</h6>
+
 <p>The function returns one of these values:</p>
 <ul> <li>If successful, SECSuccess).</li> <li>If unsuccessful, SECFailure.</li>
 </ul>

@@ -20,7 +20,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>NSS_NoDB_Init(".")</i></small></li>
   <li>Choose a cipher mechanism. Note that some mechanisms (*_PAD) imply the padding is handled for you by NSS. If you choose something else, then data padding is the application's responsibility. You can find a list of cipher mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_EN_DE_.<br>
     <small><i>CK_MECHANISM_TYPE cipherMech = CKM_DES_CBC_PAD </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
-  <li>Choose a slot on which to to do the operation<br>
+  <li>Choose a slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(cipherMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* alwys returns internal slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
@@ -107,7 +107,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>NSS_NoDB_Init(".")</i></small></li>
   <li>Choose a digest mechanism. You can find a list of digest mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_DIGEST.<br>
     <small><i>CK_MECHANISM_TYPE digestMech = CKM_MD5 </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
-  <li>Choose a slot on which to to do the operation<br>
+  <li>Choose a slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(digestMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
@@ -156,7 +156,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>NSS_NoDB_Init(".")</i></small></li>
   <li>Choose a  HMAC mechanism. You can find a list of HMAC mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_SN_VR, and choose the mechanisms that contain HMAC in the name<br>
     <small><i>CK_MECHANISM_TYPE hmacMech = CKM_MD5_HMAC; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
-  <li>Choose a slot on which to to do the operation<br>
+  <li>Choose a slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(hmacMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
@@ -211,7 +211,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>NSS_NoDB_Init(".")</i></small></li>
   <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
-  <li>Choose a slot on which to to do the operation<br>
+  <li>Choose a slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i><br>
     <br>
@@ -291,7 +291,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
   <li>Make sure NSS is initialized.</li>
   <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example).&lt;/big&gt;</small></li>
-  <li>Slot on which to to do the operation<br>
+  <li>Slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small><br>
     This should be the slot that is best suited for the wrapping. This may or may not be the slot that contains the private key or the slot that contains the Symmetric key.<br>
@@ -382,7 +382,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
   <li>Make sure NSS is initialized.</li>
   <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
-  <li>Slot on which to to do the operation<br>
+  <li>Slot on which to do the operation<br>
     <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small><br>
     This should be the slot that is best suited for the wrapping. This may or may not be the slot that contains the public/private key or the slot that contains the Symmetric key.<br>
