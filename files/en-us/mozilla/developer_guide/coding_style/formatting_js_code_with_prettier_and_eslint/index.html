@@ -57,7 +57,7 @@ $ ./mach eslint --warnings &lt;path&gt;  # Show issues including warnings</em></
 
 <p>To run <a href="https://prettier.io">Prettier</a> and <a href="http://eslint.org">ESLint</a> at the commit phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
-<pre class="comment-text " id="ct-11">[extensions]
+<pre class="comment-text">[extensions]
 js-format = ~/.mozbuild/version-control-tools/hgext/js-format
 </pre>
 
@@ -161,7 +161,7 @@ my code which should not be reformated
 
 <p>To reformat your commits during the rebase or merge phase, run <code>./mach boostrap</code> or just add the following line in the <code>hgrc</code> file:</p>
 
-<pre class="comment-text " id="ct-11">[extensions]
+<pre class="comment-text">[extensions]
 format-source = ~/.mozbuild/version-control-tools/hgext/format-source</pre>
 
 <p>The parent changeset of the reformat (<a href="https://hg.mozilla.org/mozilla-central/rev/b7030ce607ec56690829e8fb6dbcd27dd54a044c" title="Open revision b7030ce607ec56690829e8fb6dbcd27dd54a044c on https://hg.mozilla.org/mozilla-central">b7030ce607ec</a>) <a href="https://hg.mozilla.org/mozilla-central/rev/8484541d66d7f30289f295c2f72c79ac660b6560">has been tagged</a> as <code>PRE_TREEWIDE_PRETTIER_FORMAT</code>. We also recommend first rebasing to this parent changeset if your patches are old.</p>

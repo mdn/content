@@ -147,7 +147,7 @@ tags:
 
 <p>Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:</p>
 
-<pre class="brush: javascript" id="line96">// Find the progress bar &lt;div&gt; in the DOM.
+<pre class="brush: javascript">// Find the progress bar &lt;div&gt; in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -191,7 +191,7 @@ function updateProgress(percentComplete) {
 
 <p>Here is an example of the markup used for an HTML5 progress bar:</p>
 
-<pre class="brush: html" id="line96">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;&lt;title&gt;Gracefully degrading progress bar&lt;/title&gt;&lt;/head&gt;
   &lt;body&gt;
@@ -203,7 +203,7 @@ function updateProgress(percentComplete) {
 
 <p>... and here is the JavaScript code that will ensure the progress bar still works in older browsers:</p>
 
-<pre class="brush: javascript" id="line96">var progressBar = document.getElementById("progress-bar");
+<pre class="brush: javascript">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");

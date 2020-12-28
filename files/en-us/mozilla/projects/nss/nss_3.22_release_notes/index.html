@@ -30,10 +30,10 @@ slug: Mozilla/Projects/NSS/NSS_3.22_release_notes
  </li>
  <li>Pseudorandom functions based on hashes other than SHA-1 are now supported with PBKDF (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=554827">bug 554827</a>).
   <ul>
-   <li><span class="difflineplus" id="l3.65"><code>PK11_CreatePBEV2AlgorithmID()</code> now supports</span><span class="difflineplus" id="l3.65"> <code>SEC_OID_PKCS5_PBKDF2</code></span> with<span class="difflineplus" id="l3.100"> <code>cipherAlgTag</code> and <code>prfAlgTag</code></span> set to <span class="difflineplus"><code>SEC_OID_HMAC_SHA256</code></span>, <span class="difflineplus"><code>SEC_OID_HMAC_SHA224</code></span>, <span class="difflineplus"><code>SEC_OID_HMAC_SHA384</code></span>, or <span class="difflineplus"><code>SEC_OID_HMAC_SHA512</code>.</span></li>
+   <li><code>PK11_CreatePBEV2AlgorithmID()</code> now supports <code>SEC_OID_PKCS5_PBKDF2</code> with <code>cipherAlgTag</code> and <code>prfAlgTag</code> set to <code>SEC_OID_HMAC_SHA256</code>, <code>SEC_OID_HMAC_SHA224</code>, <code>SEC_OID_HMAC_SHA384</code>, or <code>SEC_OID_HMAC_SHA512</code>.</li>
   </ul>
  </li>
- <li><span class="difflineplus">Enforce an External Policy on NSS from a config file (</span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1009429">bug 1009429</a>)
+ <li>Enforce an External Policy on NSS from a config file (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1009429">bug 1009429</a>)
   <ul>
    <li>you can now add a config= line to pkcs11.txt (assuming you are using sql databases), which will force NSS to restrict the application to certain cryptographic algorithms and protocols. A complete list can be found in <a href="/en-US/docs/NSS_Config_Options">NSS Config Options</a>.</li>
   </ul>
@@ -49,12 +49,12 @@ slug: Mozilla/Projects/NSS/NSS_3.22_release_notes
    <li><strong>PK11_SignWithMechanism</strong> - This function is an extended version <code>PK11_Sign()</code>.</li>
    <li><strong>PK11_VerifyWithMechanism</strong> - This function is an extended version of <code>PK11_Verify()</code>.
     <ul>
-     <li>These functions take an explicit mechanism and parameters as arguments rather than inferring it from the key type using <code>PK11_MapSignKeyType()</code>.  The mechanism type<span class="difflineplus" id="l6.215"> CKM_RSA_PKCS_PSS is now supported for RSA in addition </span>to CKM_RSA_PKCS.  The<span class="difflineplus" id="l6.210"> CK_RSA_PKCS_PSS mechanism takes a parameter of type </span><span class="difflineplus">CK_RSA_PKCS_PSS_PARAMS.</span></li>
+     <li>These functions take an explicit mechanism and parameters as arguments rather than inferring it from the key type using <code>PK11_MapSignKeyType()</code>.  The mechanism type CKM_RSA_PKCS_PSS is now supported for RSA in addition to CKM_RSA_PKCS.  The CK_RSA_PKCS_PSS mechanism takes a parameter of type CK_RSA_PKCS_PSS_PARAMS.</li>
     </ul>
    </li>
   </ul>
  </li>
- <li><em><span class="difflineplus">in ssl.h</span></em>
+ <li><em>in ssl.h</em>
   <ul>
    <li><strong>SSL_PeerSignedCertTimestamps</strong> - Get signed_certificate_timestamp TLS extension data</li>
    <li><strong>SSL_SetSignedCertTimestamps</strong> - Set signed_certificate_timestamp TLS extension data</li>
@@ -125,13 +125,13 @@ slug: Mozilla/Projects/NSS/NSS_3.22_release_notes
  </li>
  <li><em>in pkcs11t.h</em>
   <ul>
-   <li><span class="difflineplus" id="l10.17"><strong>CKP_PKCS5_PBKD2_HMAC_GOSTR3411</strong> - PRF based on HMAC with GOSTR3411 for PBKDF (not supported</span>)</li>
-   <li><span class="difflineplus" id="l10.18"><strong>CKP_PKCS5_PBKD2_HMAC_SHA224</strong> - PRF based on HMAC with SHA-224 for PBKDF</span></li>
-   <li><span class="difflineplus" id="l10.19"><strong>CKP_PKCS5_PBKD2_HMAC_SHA256</strong> - </span><span class="difflineplus" id="l10.18">PRF based on </span><span class="difflineplus">HMAC with SHA-256 for PBKDF</span></li>
-   <li><span class="difflineplus" id="l10.20"><strong>CKP_PKCS5_PBKD2_HMAC_SHA384</strong> </span><span class="difflineplus" id="l10.19">- </span><span class="difflineplus" id="l10.18">PRF based on </span><span class="difflineplus">HMAC with SHA-256 for PBKDF</span></li>
-   <li><span class="difflineplus" id="l10.21"><strong>CKP_PKCS5_PBKD2_HMAC_SHA512</strong> </span><span class="difflineplus" id="l10.19">- </span><span class="difflineplus" id="l10.18">PRF based on </span><span class="difflineplus">HMAC with SHA-256 for PBKDF</span></li>
-   <li><span class="difflineplus" id="l10.22"><strong>CKP_PKCS5_PBKD2_HMAC_SHA512_224</strong> </span><span class="difflineplus" id="l10.19">- </span><span class="difflineplus" id="l10.18">PRF based on </span><span class="difflineplus">HMAC with SHA-512 truncated to 224 bits for PBKDF</span> (not supported)</li>
-   <li><span class="difflineplus" id="l10.23"><strong>CKP_PKCS5_PBKD2_HMAC_SHA512_256 </strong></span><span class="difflineplus" id="l10.19">- </span><span class="difflineplus" id="l10.18">PRF based on </span><span class="difflineplus">HMAC with SHA-512 truncated to 256 bits for PBKDF</span> (not supported)</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_GOSTR3411</strong> - PRF based on HMAC with GOSTR3411 for PBKDF (not supported)</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA224</strong> - PRF based on HMAC with SHA-224 for PBKDF</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA256</strong> - PRF based on HMAC with SHA-256 for PBKDF</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA384</strong> - PRF based on HMAC with SHA-256 for PBKDF</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA512</strong> - PRF based on HMAC with SHA-256 for PBKDF</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA512_224</strong> - PRF based on HMAC with SHA-512 truncated to 224 bits for PBKDF (not supported)</li>
+   <li><strong>CKP_PKCS5_PBKD2_HMAC_SHA512_256 </strong>- PRF based on HMAC with SHA-512 truncated to 256 bits for PBKDF (not supported)</li>
   </ul>
  </li>
  <li><em>in secoidt.h</em>

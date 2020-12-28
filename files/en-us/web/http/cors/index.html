@@ -107,7 +107,7 @@ tags:
 
 <p>For example, suppose web content at <code class="plain">https://foo.example</code> wishes to invoke content on domain <code class="plain">https://bar.other</code>. Code of this sort might be used in JavaScript deployed on <code>foo.example</code>:</p>
 
-<pre class="brush: js notranslate" id="line1">const xhr = new XMLHttpRequest();
+<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
 const url = 'https://bar.other/resources/public-data/';
 
 xhr.open('GET', url);
@@ -161,7 +161,7 @@ Content-Type: application/xml
 
 <p>The following is an example of a request that will be preflighted:</p>
 
-<pre class="brush: js notranslate" id="line1">const xhr = new XMLHttpRequest();
+<pre class="brush: js notranslate">const xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://bar.other/resources/post-here/');
 xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
 xhr.setRequestHeader('Content-Type', 'application/xml');
@@ -296,7 +296,7 @@ Content-Type: text/plain
 
 <p>In this example, content originally loaded from <code class="plain">http://foo.example</code> makes a simple GET request to a resource on <code class="plain">http://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
 
-<pre class="brush: js notranslate" id="line1">const invocation = new XMLHttpRequest();
+<pre class="brush: js notranslate">const invocation = new XMLHttpRequest();
 const url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain() {
