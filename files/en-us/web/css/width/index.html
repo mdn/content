@@ -4,6 +4,7 @@ slug: Web/CSS/width
 tags:
   - CSS
   - CSS Property
+  - Layout
   - Reference
   - dimensions
   - 'recipe:css-property'
@@ -18,7 +19,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override {{cssxref("width")}}.</p>
+<p>The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override <code>width</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -41,13 +42,6 @@ width: initial;
 width: unset;
 </pre>
 
-<p>The <code>width</code> property is specified as either:</p>
-
-<ul>
- <li>one of the following keyword values: <code><a href="#min-content">min-content</a></code>, <code><a href="#max-content">max-content</a></code>, <code><a href="#fit-content">fit-content</a></code>, <code><a href="#auto">auto</a></code>.</li>
- <li>a <code><a href="#&lt;length&gt;">&lt;length&gt;</a></code> or a <code><a href="#&lt;percentage&gt;">&lt;percentage&gt;</a></code>.</li>
-</ul>
-
 <h3 id="Values">Values</h3>
 
 <dl>
@@ -67,11 +61,11 @@ width: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Ensure that elements set with a <code>width</code> aren't truncated and don't obscure other content when the page is zoomed to increase text size. </p>
+<p>Ensure that elements set with a <code>width</code> aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.</p>
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -196,7 +190,7 @@ width: unset;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">box model</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a></li>
  <li>{{cssxref("height")}}</li>
  <li>{{cssxref("box-sizing")}}</li>
  <li>{{cssxref("min-width")}}, {{cssxref("max-width")}}</li>

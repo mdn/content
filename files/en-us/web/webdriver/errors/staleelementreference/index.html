@@ -9,7 +9,7 @@ tags:
 ---
 <p>The <strong>stale element reference</strong> error is a <a href="/en-US/docs/Web/WebDriver/Errors">WebDriver error</a> that occurs because the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a> is no longer attached to the <a href="/en-US/docs/Glossary/DOM">DOM</a>.</p>
 
-<p>Every DOM element is represented in WebDriver by a unique identifying reference, known as a <em><a href="/en-US/docs/Web/WebDriver/WebElement">web element</a></em>. The web element reference is a UUID used to execute commands targetting specific elements, such as <a href="/en-US/docs/Web/WebDriver/Commands/GetElementTagName">getting an element’s tag name</a> and <a href="/en-US/docs/Web/WebDriver/Commands/GetElementProperty">retreiving a property</a> off an element.</p>
+<p>Every DOM element is represented in WebDriver by a unique identifying reference, known as a <em><a href="/en-US/docs/Web/WebDriver/WebElement">web element</a></em>. The web element reference is a UUID used to execute commands targeting specific elements, such as <a href="/en-US/docs/Web/WebDriver/Commands/GetElementTagName">getting an element’s tag name</a> and <a href="/en-US/docs/Web/WebDriver/Commands/GetElementProperty">retreiving a property</a> off an element.</p>
 
 <p>When an element is no longer attached to the DOM, i.e. it has been removed from the document or the document has changed, it is said to be <em>stale</em>. Staleness occurs for example when you have a web element reference and the document it was retrieved from navigates.</p>
 

@@ -61,11 +61,11 @@ tags:
 
 <p>This example has the rather unusual looking parameter <code>xmlns:xlink</code>. As you may guess from the first 'xmlns' part, this is another namespace declaration. However, instead of setting the default namespace, this namespace declaration sets the namespace for something called a "namespace prefix". In this case, we have chosen to use the prefix <code>xlink</code> (the second part) since the prefix will be used to tell the user agent about attributes that belong to XLink.</p>
 
-<p>As their name suggests, namespace prefixes are used to prefix parameter and element names. This is done by putting the namespace prefix and a colon before the parameter name as shown on the <code>&lt;script&gt;</code> element in the example above. This tells the user agent that that particular parameter belongs to the namespace assigned to the namespace prefix (XLink), and is a parameter that can be used with the same meaning on other elements.</p>
+<p>As their name suggests, namespace prefixes are used to prefix parameter and element names. This is done by putting the namespace prefix and a colon before the parameter name as shown on the <code>&lt;script&gt;</code> element in the example above. This tells the user agent that the particular parameter belongs to the namespace assigned to the namespace prefix (XLink), and is a parameter that can be used with the same meaning on other elements.</p>
 
 <p>Note that it is an XML error to use a prefix that hasn't been bound to a namespace name. The binding created by the <code>xmlns:xlink</code> parameter in the example above is absolutely essential for the <code>xlink:href</code> parameter to not cause an error. This XLink parameter is also frequently used in SVG on the <code>&lt;a&gt;</code>, <code>&lt;use&gt;</code> and <code>&lt;image&gt;</code> elements among others, so it's a good idea to always include the XLink declaration in your documents.</p>
 
-<p>As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that that particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:</p>
+<p>As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that the particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:</p>
 
 <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg"&gt;

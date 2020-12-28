@@ -96,7 +96,7 @@ tags:
 
 <h3 id="Database_configuration">Database configuration</h3>
 
-<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js</strong> file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parseable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
+<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js</strong> file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parsable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
 
 <pre class="brush: json">{
  "VCAP_SERVICES": {

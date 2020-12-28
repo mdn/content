@@ -4,7 +4,7 @@ slug: Mozilla/Projects/NSS/Reference/NSS_Certificate_Functions
 tags:
   - NSS
 ---
-<h3 id="Certificate_Functions" name="Certificate_Functions">Certificate Functions</h3>
+<h3 id="Certificate_Functions">Certificate Functions</h3>
 
 <p>This chapter describes the functions and related types used to work with a certificate database such as the cert8.db database provided with NSS. This was converted from <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/ssl/sslcrt.html">"Chapter 5: Certificate Functions"</a>.</p>
 
@@ -16,7 +16,7 @@ tags:
  <li><a href="NSS_Certificate_Functions#Comparing_SecItem_Objects">Comparing SecItem Objects</a></li>
 </ul>
 
-<h4 id="Validating_Certificates" name="Validating_Certificates">Validating Certificates</h4>
+<h4 id="Validating_Certificates">Validating Certificates</h4>
 
 <ul>
  <li><a href="NSS_Certificate_Functions#CERT_VerifyCertNow">CERT_VerifyCertNow</a></li>
@@ -26,11 +26,11 @@ tags:
  <li><a href="NSS_Certificate_Functions#NSS_CmpCertChainWCANames">NSS_CmpCertChainWCANames</a></li>
 </ul>
 
-<h5 id="CERT_VerifyCertNow" name="CERT_VerifyCertNow">CERT_VerifyCertNow</h5>
+<h5 id="CERT_VerifyCertNow">CERT_VerifyCertNow</h5>
 
 <p>Checks that the current date is within the certificate's validity period and that the CA signature on the certificate is valid.</p>
 
-<h6 id="Syntax" name="Syntax">Syntax</h6>
+<h6 id="Syntax">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -43,7 +43,7 @@ tags:
   void *wincx);
 </pre>
 
-<h6 id="Parameters" name="Parameters">Parameters</h6>
+<h6 id="Parameters">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -75,7 +75,7 @@ tags:
 
 <p><em>wincx</em>The PIN argument value to pass to PK11 functions. See description below for more information.</p>
 
-<h6 id="Returns" name="Returns">Returns</h6>
+<h6 id="Returns">Returns</h6>
 
 <p>The function returns one of these values:</p>
 
@@ -84,15 +84,15 @@ tags:
  <li>If unsuccessful, SECFailure. Use PR_GetError to obtain the error code.</li>
 </ul>
 
-<h6 id="Description" name="Description">Description</h6>
+<h6 id="Description">Description</h6>
 
 <p>The CERT_VerifyCertNow function must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see SSL_SetPKCS11PinArg for details), which must be specified in the wincx parameter. To obtain the value to pass in the wincx parameter, call SSL_RevealPinArg.</p>
 
-<h5 id="CERT_VerifyCert" name="CERT_VerifyCert">CERT_VerifyCert</h5>
+<h5 id="CERT_VerifyCert">CERT_VerifyCert</h5>
 
 <p>Checks that the a given aribrary date is within the certificate's validity period and that the CA signature on the certificate is valid. It also optionally returns a log of all the problems with the chain. Calling CERT_VerifyCert with the paramters: CERT_VerifyCert(handle, cert, checkSig, certUsage, PR_Now(), wincx, NULL) is equivalent to calling CERT_VerifyNow(handle, cert, checkSig, certUsage, wincx).</p>
 
-<h6 id="Syntax_2" name="Syntax_2">Syntax</h6>
+<h6 id="Syntax_2">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -107,7 +107,7 @@ tags:
   CERTVerifyLog *log);
 </pre>
 
-<h6 id="Parameters_2" name="Parameters_2">Parameters</h6>
+<h6 id="Parameters_2">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -143,7 +143,7 @@ tags:
 
 <p><em>log</em>Optional certificate log which returns all the errors in processing a given certificate chain. See <a href="en/NSS_CERTVerify_Log">Using CERTVerifyLog</a> for more information.</p>
 
-<h6 id="Returns_2" name="Returns_2">Returns</h6>
+<h6 id="Returns_2">Returns</h6>
 
 <p>The function returns one of these values:</p>
 
@@ -152,15 +152,15 @@ tags:
  <li>If unsuccessful, SECFailure. Use PR_GetError to obtain the error code.</li>
 </ul>
 
-<h6 id="Description_2" name="Description_2">Description</h6>
+<h6 id="Description_2">Description</h6>
 
 <p>The CERT_VerifyCert function must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see SSL_SetPKCS11PinArg for details), which must be specified in the wincx parameter. To obtain the value to pass in the wincx parameter, call SSL_RevealPinArg.</p>
 
-<h5 id="CERT_VerifyCertName" name="CERT_VerifyCertName">CERT_VerifyCertName</h5>
+<h5 id="CERT_VerifyCertName">CERT_VerifyCertName</h5>
 
 <p>Compares the common name specified in the subject DN for a certificate with a specified hostname.</p>
 
-<h6 id="Syntax_3" name="Syntax_3">Syntax</h6>
+<h6 id="Syntax_3">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -170,7 +170,7 @@ tags:
   char *hostname);
 </pre>
 
-<h6 id="Parameters_3" name="Parameters_3">Parameters</h6>
+<h6 id="Parameters_3">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -178,7 +178,7 @@ tags:
 
 <p><em>hostname</em>The hostname to be checked.</p>
 
-<h6 id="Returns_3" name="Returns_3">Returns</h6>
+<h6 id="Returns_3">Returns</h6>
 
 <p>The function returns one of these values:</p>
 
@@ -187,7 +187,7 @@ tags:
  <li>If the common name in the subject DN for the certificate is not identical to the domain name passed in the hostname parameter, SECFailure. Use PR_GetError to obtain the error code.</li>
 </ul>
 
-<h6 id="Description_3" name="Description_3">Description</h6>
+<h6 id="Description_3">Description</h6>
 
 <p>The comparison performed by CERT_VerifyCertName is not a simple string comparison. Instead, it takes account of the following rules governing the construction of common names in SSL server certificates:</p>
 
@@ -203,11 +203,11 @@ tags:
  <li>(foo|bar) matches either the substring foo or the substring bar. These can be shell expressions as well.</li>
 </ul>
 
-<h5 id="CERT_CheckCertValidTimes" name="CERT_CheckCertValidTimes">CERT_CheckCertValidTimes</h5>
+<h5 id="CERT_CheckCertValidTimes">CERT_CheckCertValidTimes</h5>
 
 <p>Checks whether a specified time is within a certificate's validity period.</p>
 
-<h6 id="Syntax_4" name="Syntax_4">Syntax</h6>
+<h6 id="Syntax_4">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
@@ -218,7 +218,7 @@ tags:
   int64 t);
 </pre>
 
-<h6 id="Parameters_4" name="Parameters_4">Parameters</h6>
+<h6 id="Parameters_4">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -226,7 +226,7 @@ tags:
 
 <p><em>t</em>The time to check against the certificate's validity period. For more information, see the NSPR header pr_time.h.</p>
 
-<h6 id="Returns_4" name="Returns_4">Returns</h6>
+<h6 id="Returns_4">Returns</h6>
 
 <p>The function returns an enumerator of type SECCertTimeValidity:</p>
 
@@ -237,11 +237,11 @@ tags:
 } SECCertTimeValidity;
 </pre>
 
-<h5 id="NSS_CmpCertChainWCANames" name="NSS_CmpCertChainWCANames">NSS_CmpCertChainWCANames</h5>
+<h5 id="NSS_CmpCertChainWCANames">NSS_CmpCertChainWCANames</h5>
 
 <p>Determines whether any of the signers in the certificate chain for a specified certificate are on a specified list of CA names.</p>
 
-<h6 id="Syntax_5" name="Syntax_5">Syntax</h6>
+<h6 id="Syntax_5">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;nss.h&gt;
 
@@ -250,7 +250,7 @@ SECStatus NSS_CmpCertChainWCANames(
   CERTDistNames *caNames);
 </pre>
 
-<h6 id="Parameters_5" name="Parameters_5">Parameters</h6>
+<h6 id="Parameters_5">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -258,7 +258,7 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p><em>caNames</em>A pointer to a structure that contains a list of distinguished names (DNs) against which to check the DNs for the signers in the certificate chain.</p>
 
-<h6 id="Returns_5" name="Returns_5">Returns</h6>
+<h6 id="Returns_5">Returns</h6>
 
 <p>The function returns one of these values:</p>
 
@@ -267,18 +267,18 @@ SECStatus NSS_CmpCertChainWCANames(
  <li>If unsuccessful, SECFailure. Use PR_GetError to obtain the error code.</li>
 </ul>
 
-<h4 id="Manipulating_Certificates" name="Manipulating_Certificates">Manipulating Certificates</h4>
+<h4 id="Manipulating_Certificates">Manipulating Certificates</h4>
 
 <ul>
  <li><a href="en/NSS_Certificate_Functions#CERT_DupCertificate">CERT_DupCertificate</a></li>
  <li><a href="en/NSS_Certificate_Functions#CERT_DestroyCertificate">CERT_DestroyCertificate</a></li>
 </ul>
 
-<h5 id="CERT_DupCertificate" name="CERT_DupCertificate">CERT_DupCertificate</h5>
+<h5 id="CERT_DupCertificate">CERT_DupCertificate</h5>
 
 <p>Makes a shallow copy of a specified certificate.</p>
 
-<h6 id="Syntax_6" name="Syntax_6">Syntax</h6>
+<h6 id="Syntax_6">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -286,25 +286,25 @@ SECStatus NSS_CmpCertChainWCANames(
 <pre class="eval notranslate">CERTCertificate *CERT_DupCertificate(CERTCertificate *c)
 </pre>
 
-<h6 id="Parameter" name="Parameter">Parameter</h6>
+<h6 id="Parameter">Parameter</h6>
 
 <p>This function has the following parameter:</p>
 
 <p><em>c</em>A pointer to the certificate object to be duplicated.</p>
 
-<h6 id="Returns_6" name="Returns_6">Returns</h6>
+<h6 id="Returns_6">Returns</h6>
 
 <p>If successful, the function returns a pointer to a certificate object of type CERTCertificate.</p>
 
-<h6 id="Description_4" name="Description_4">Description</h6>
+<h6 id="Description_4">Description</h6>
 
 <p>The CERT_DupCertificate function increments the reference count for the certificate passed in the c parameter.</p>
 
-<h5 id="CERT_DestroyCertificate" name="CERT_DestroyCertificate">CERT_DestroyCertificate</h5>
+<h5 id="CERT_DestroyCertificate">CERT_DestroyCertificate</h5>
 
 <p>Destroys a certificate object.</p>
 
-<h6 id="Syntax_7" name="Syntax_7">Syntax</h6>
+<h6 id="Syntax_7">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
@@ -313,19 +313,19 @@ SECStatus NSS_CmpCertChainWCANames(
 <pre class="eval notranslate">void CERT_DestroyCertificate(CERTCertificate *cert);
 </pre>
 
-<h6 id="Parameters_6" name="Parameters_6">Parameters</h6>
+<h6 id="Parameters_6">Parameters</h6>
 
 <p>This function has the following parameter:</p>
 
 <p><em>cert</em>A pointer to the certificate to destroy.</p>
 
-<h6 id="Description_5" name="Description_5">Description</h6>
+<h6 id="Description_5">Description</h6>
 
 <p>Certificate and key structures are shared objects. When an application makes a copy of a particular certificate or key structure that already exists in memory, SSL makes a shallow copy--that is, it increments the reference count for that object rather than making a whole new copy. When you call CERT_DestroyCertificate or SECKEY_DestroyPrivateKey, the function decrements the reference count and, if the reference count reaches zero as a result, both frees the memory and sets all the bits to zero. The use of the word "destroy" in function names or in the description of a function implies reference counting.</p>
 
 <p>Never alter the contents of a certificate or key structure. If you attempt to do so, the change affects all the shallow copies of that structure and can cause severe problems.</p>
 
-<h4 id="Getting_Certificate_Information" name="Getting_Certificate_Information">Getting Certificate Information</h4>
+<h4 id="Getting_Certificate_Information">Getting Certificate Information</h4>
 
 <ul>
  <li><a href="en/NSS_Certificate_Functions#CERT_FindCertByName">CERT_FindCertByName</a></li>
@@ -335,11 +335,11 @@ SECStatus NSS_CmpCertChainWCANames(
  <li><a href="en/NSS_Certificate_Functions#NSS_FindCertKEAType">NSS_FindCertKEAType</a></li>
 </ul>
 
-<h5 id="CERT_FindCertByName" name="CERT_FindCertByName">CERT_FindCertByName</h5>
+<h5 id="CERT_FindCertByName">CERT_FindCertByName</h5>
 
 <p>Finds the certificate in the certificate database with a specified DN.</p>
 
-<h6 id="Syntax_8" name="Syntax_8">Syntax</h6>
+<h6 id="Syntax_8">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -349,7 +349,7 @@ SECStatus NSS_CmpCertChainWCANames(
   SECItem *name);
 </pre>
 
-<h6 id="Parameters_7" name="Parameters_7">Parameters</h6>
+<h6 id="Parameters_7">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -357,15 +357,15 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p><em>name</em>The subject DN of the certificate you wish to find.</p>
 
-<h6 id="Returns_7" name="Returns_7">Returns</h6>
+<h6 id="Returns_7">Returns</h6>
 
 <p>If successful, the function returns a certificate object of type CERTCertificate.</p>
 
-<h5 id="CERT_GetCertNicknames" name="CERT_GetCertNicknames">CERT_GetCertNicknames</h5>
+<h5 id="CERT_GetCertNicknames">CERT_GetCertNicknames</h5>
 
 <p>Returns the nicknames of the certificates in a specified certificate database.</p>
 
-<h6 id="Syntax_9" name="Syntax_9">Syntax</h6>
+<h6 id="Syntax_9">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
@@ -377,7 +377,7 @@ SECStatus NSS_CmpCertChainWCANames(
   void *wincx);
 </pre>
 
-<h6 id="Parameters_8" name="Parameters_8">Parameters</h6>
+<h6 id="Parameters_8">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -394,19 +394,19 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p><em>wincx</em>The PIN argument value to pass to PK11 functions. See description below for more information.</p>
 
-<h6 id="Returns_8" name="Returns_8">Returns</h6>
+<h6 id="Returns_8">Returns</h6>
 
 <p>The function returns a CERTCertNicknames object containing the requested nicknames.</p>
 
-<h6 id="Description_6" name="Description_6">Description</h6>
+<h6 id="Description_6">Description</h6>
 
 <p>CERT_GetCertNicknames must call one or more PK11 functions to obtain the services of a PKCS #11 module. Some of the PK11 functions require a PIN argument (see SSL_SetPKCS11PinArg for details), which must be specified in the wincx parameter. To obtain the value to pass in the wincx parameter, call SSL_RevealPinArg.</p>
 
-<h5 id="CERT_FreeNicknames" name="CERT_FreeNicknames">CERT_FreeNicknames</h5>
+<h5 id="CERT_FreeNicknames">CERT_FreeNicknames</h5>
 
 <p>Frees a CERTCertNicknames structure. This structure is returned by CERT_GetCertNicknames.</p>
 
-<h6 id="Syntax_10" name="Syntax_10">Syntax</h6>
+<h6 id="Syntax_10">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -414,17 +414,17 @@ SECStatus NSS_CmpCertChainWCANames(
 <pre class="eval notranslate">void CERT_FreeNicknames(CERTCertNicknames *nicknames);
 </pre>
 
-<h6 id="Parameters_9" name="Parameters_9">Parameters</h6>
+<h6 id="Parameters_9">Parameters</h6>
 
 <p>This function has the following parameter:</p>
 
 <p><em>nicknames</em>A pointer to the CERTCertNicknames structure to be freed.</p>
 
-<h5 id="CERT_GetDefaultCertDB" name="CERT_GetDefaultCertDB">CERT_GetDefaultCertDB</h5>
+<h5 id="CERT_GetDefaultCertDB">CERT_GetDefaultCertDB</h5>
 
 <p>Returns a handle to the default certificate database.</p>
 
-<h6 id="Syntax_11" name="Syntax_11">Syntax</h6>
+<h6 id="Syntax_11">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;cert.h&gt;
 </pre>
@@ -432,19 +432,19 @@ SECStatus NSS_CmpCertChainWCANames(
 <pre class="eval notranslate">CERTCertDBHandle *CERT_GetDefaultCertDB(void);
 </pre>
 
-<h6 id="Returns_9" name="Returns_9">Returns</h6>
+<h6 id="Returns_9">Returns</h6>
 
 <p>The function returns the CERTCertDBHandle for the default certificate database.</p>
 
-<h6 id="Description_7" name="Description_7">Description</h6>
+<h6 id="Description_7">Description</h6>
 
 <p>This function is useful for determining whether the default certificate database has been opened.</p>
 
-<h5 id="NSS_FindCertKEAType" name="NSS_FindCertKEAType">NSS_FindCertKEAType</h5>
+<h5 id="NSS_FindCertKEAType">NSS_FindCertKEAType</h5>
 
 <p>Returns key exchange type of the keys in an SSL server certificate.</p>
 
-<h6 id="Syntax_12" name="Syntax_12">Syntax</h6>
+<h6 id="Syntax_12">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;nss.h&gt;
 </pre>
@@ -452,13 +452,13 @@ SECStatus NSS_CmpCertChainWCANames(
 <pre class="eval notranslate">SSLKEAType NSS_FindCertKEAType(CERTCertificate * cert);
 </pre>
 
-<h6 id="Parameter_2" name="Parameter_2">Parameter</h6>
+<h6 id="Parameter_2">Parameter</h6>
 
 <p>This function has the following parameter:</p>
 
 <p><em>a</em>The certificate to check.</p>
 
-<h6 id="Returns_10" name="Returns_10">Returns</h6>
+<h6 id="Returns_10">Returns</h6>
 
 <p>The function returns one of these values:</p>
 
@@ -470,13 +470,13 @@ SECStatus NSS_CmpCertChainWCANames(
  <li>kt_kea_size</li>
 </ul>
 
-<h4 id="Comparing_SecItem_Objects" name="Comparing_SecItem_Objects">Comparing SecItem Objects</h4>
+<h4 id="Comparing_SecItem_Objects">Comparing SecItem Objects</h4>
 
-<h5 id="SECITEM_CompareItem" name="SECITEM_CompareItem">SECITEM_CompareItem</h5>
+<h5 id="SECITEM_CompareItem">SECITEM_CompareItem</h5>
 
 <p>Compares two SECItem objects and returns a SECComparison enumerator that shows the difference between them.</p>
 
-<h6 id="Syntax_13" name="Syntax_13">Syntax</h6>
+<h6 id="Syntax_13">Syntax</h6>
 
 <pre class="eval notranslate">#include &lt;secitem.h&gt;
 #include &lt;seccomon.h&gt;
@@ -487,7 +487,7 @@ SECStatus NSS_CmpCertChainWCANames(
   SECItem *b);
 </pre>
 
-<h6 id="Parameters_10" name="Parameters_10">Parameters</h6>
+<h6 id="Parameters_10">Parameters</h6>
 
 <p>This function has the following parameters:</p>
 
@@ -495,7 +495,7 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p><em>b</em>A pointer to one of the items to be compared.</p>
 
-<h6 id="Returns_11" name="Returns_11">Returns</h6>
+<h6 id="Returns_11">Returns</h6>
 
 <p>The function returns an enumerator of type SECComparison.</p>
 

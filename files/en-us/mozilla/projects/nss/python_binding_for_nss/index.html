@@ -49,7 +49,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
 <h2 id="Project_History">Project History</h2>
 
-<p>Red Hat utilizes both NSS and Python in many of it's projects, however it was not previously possible to call NSS directly from Python. To solve this problem Red Hat generously funded the initial development of python-nss as well as it's continued maintenance. Red Hat following it's open source philosophy has contributed the source to the Mozilla security project. Red Hat welcomes all interested contributors who would like to contribute the the python-nss project as part of an open source community. The initial release of python-nss occurred in September 2008 with it's inclusion in the Fedora distribution. The source code to python-nss was first imported into the Mozilla CVS repository on June 9th 2009. python-nss is currently available in:</p>
+<p>Red Hat utilizes both NSS and Python in many of it's projects, however it was not previously possible to call NSS directly from Python. To solve this problem Red Hat generously funded the initial development of python-nss as well as it's continued maintenance. Red Hat following it's open source philosophy has contributed the source to the Mozilla security project. Red Hat welcomes all interested contributors who would like to contribute the python-nss project as part of an open source community. The initial release of python-nss occurred in September 2008 with it's inclusion in the Fedora distribution. The source code to python-nss was first imported into the Mozilla CVS repository on June 9th 2009. python-nss is currently available in:</p>
 
 <ul>
  <li>Fedora</li>
@@ -669,7 +669,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
       <p>Certificate(data, certdb=cert_get_default_certdb(), perm=False, nickname=None)</p>
 
-      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to to that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
+      <p>This change was necessary because all certs should be added to the NSS temporary database when they are loaded, but earlier code failed to do that. It's is not likely that an previous code was failing to pass initialization data or the der_is_signed flag so this change should be backwards compatible.</p>
      </li>
      <li>
       <p>Fix bug #922247, PKCS12Decoder.database_import() method. Importing into a NSS database would sometimes fail or segfault.</p>

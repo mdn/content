@@ -187,9 +187,9 @@ npm run dev                                       # start the app in development
 
 <p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="https://mdn.mozillademos.org/files/17357/03-vscode-hints-in-main-ts.png" style="display: block; height: 287px; margin: 0 auto; width: 480px;"></p>
 
-<p>We also get type-checking for free. If we pass an unknown property in the options parameter of the <code>App</code> constructor (for example a typo like <code>traget</code> instead of <code>target</code>) TypeScript will complain:</p>
+<p>We also get type-checking for free. If we pass an unknown property in the options parameter of the <code>App</code> constructor (for example a typo like <code>target</code> instead of <code>target</code>) TypeScript will complain:</p>
 
-<p><img alt="type checking in vs code - App object has been given an unknown property traget" src="https://mdn.mozillademos.org/files/17358/04-vscode-type-checking-in-main-ts.png" style="height: 277px; width: 895px;"></p>
+<p><img alt="type checking in vs code - App object has been given an unknown property target" src="https://mdn.mozillademos.org/files/17358/04-vscode-type-checking-in-main-ts.png" style="height: 277px; width: 895px;"></p>
 
 <p>In the <code>App.svelte</code> component, the <code>setupTypeScript.js</code> script has added the <code>lang="ts"</code> attribute to the <code>&lt;script&gt;</code> tag. Moreover, thanks to type inference, in many cases we won't even need to specify types to get code assistance. For example, if you start adding an <code>ms</code> property to the <code>Alert</code> component call, TypeScript will infer from the default value that the <code>ms</code> property should be a number:</p>
 
@@ -197,7 +197,7 @@ npm run dev                                       # start the app in development
 
 <p>And if you pass something that is not a number it will complain about it:</p>
 
-<p><img alt="type checking in vs code - App object has been given an unknown property traget" src="https://mdn.mozillademos.org/files/17360/06-vscode-type-checking-in-components.png" style="height: 236px; width: 678px;"></p>
+<p><img alt="type checking in vs code - App object has been given an unknown property target" src="https://mdn.mozillademos.org/files/17360/06-vscode-type-checking-in-components.png" style="height: 236px; width: 678px;"></p>
 
 <p>The application template has a <code>validate</code> script configured that runs <code>svelte-check</code> against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run <code>npm run validate</code> to check for unused CSS, and return A11y hints and TypeScript compile errors.</p>
 
@@ -277,7 +277,7 @@ export let todo: TodoType</pre>
 	<li>Also remove the import of <code>TodoType</code> and the <code>lang='ts'</code> from <code>Todo.svelte</code>.</li>
 </ol>
 
-<p>We'll take care of them propertly, later on.</p>
+<p>We'll take care of them properly, later on.</p>
 
 <h2 id="Porting_our_to-do_list_app_to_TypeScript">Porting our to-do list app to TypeScript</h2>
 
