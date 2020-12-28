@@ -13,7 +13,7 @@ tags:
 ---
 <h2 id="Summary">Summary</h2>
 
-<p><a href="http://microformats.org/"><dfn>Microformats</dfn></a> (sometimes abbreviated <strong>μF</strong>) are standards used to embed semantics &amp; structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax &amp; vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.</p>
+<p><a href="https://microformats.org/"><dfn>Microformats</dfn></a> (sometimes abbreviated <strong>μF</strong>) are standards used to embed semantics &amp; structured data in HTML, and provide an API to be used by search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes. Microformats2 is an update to microformats that provides a simpler way of annotating HTML structured syntax &amp; vocabularies than previous approaches of using RDFa and microdata which require learning new attributes.</p>
 
 <p>Microformats are supported by all major search engines. Search engines benefit greatly from direct access to this structured data because it allows them to understand the information on web pages and provide more relevant results to users. In addition to being machine-readable, their format is designed to be easily read by humans.</p>
 
@@ -22,18 +22,18 @@ tags:
 	<li>To add a property to an object, the p-*, u-*, dt-*, e-* class names are used on one of the object's descendants.</li>
 </ul>
 
-<p>There are <a href="http://microformats.org/wiki/microformats2#Parsers">open source parsing libraries for most languages</a> for microformats2.</p>
+<p>There are <a href="https://microformats.org/wiki/microformats2#Parsers">open source parsing libraries for most languages</a> for microformats2.</p>
 
 <h2 id="How_Microformats_Work"><span id="How_do_Microformats_Work">How Microformats Work</span></h2>
 
-<p>An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an <a href="http://microformats.org/wiki/h-card">h-card</a> such as:</p>
+<p>An author of a webpage can add microformats to their HTML. For example if they wanted to identify themselves they could use an <a href="https://microformats.org/wiki/h-card">h-card</a> such as:</p>
 
 <h3 id="HTML_Example">HTML Example</h3>
 
 <div dir="ltr" style="text-align: left;">
-<pre class="source-html4strict">&lt;a class="h-card" href="http://alice.example.com"&gt;Alice Blogger&lt;/a&gt;</pre>
+<pre class="source-html4strict">&lt;a class="h-card" href="https://alice.example.com"&gt;Alice Blogger&lt;/a&gt;</pre>
 
-<p>When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named <code>Alice Blogger</code> with a URL of <code>http://alice.example.com/</code>. The parser makes this data available via APIs that can be used for different applications.</p>
+<p>When a parser encounters this data, it will know that this page contains a "card" which describes a person or organization named <code>Alice Blogger</code> with a URL of <code>https://alice.example.com/</code>. The parser makes this data available via APIs that can be used for different applications.</p>
 
 <p>As in this example, some markup patterns require only a single microformat root class name, which parsers use to find a few generic properties such as <code>name</code>, <code>url</code>, <code>photo</code>.</p>
 </div>
@@ -48,10 +48,10 @@ tags:
 	<li><strong>"h-*" for root class names</strong>, e.g. "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
 
 	<ul>
-		<li><a href="http://microformats.org/wiki/h-card">h-card</a> describes a person or organization</li>
-		<li><a href="http://microformats.org/wiki/h-entry">h-entry</a> describes episodic or date stamped online content like a blog post</li>
-		<li><a href="http://microformats.org/wiki/h-feed">h-feed</a> describes a stream or feed of posts</li>
-		<li>You can find many more <a href="http://microformats.org/wiki/microformats2#v2_vocabularies">vocabularies on the microformats2 wiki.</a></li>
+		<li><a href="https://microformats.org/wiki/h-card">h-card</a> describes a person or organization</li>
+		<li><a href="https://microformats.org/wiki/h-entry">h-entry</a> describes episodic or date stamped online content like a blog post</li>
+		<li><a href="https://microformats.org/wiki/h-feed">h-feed</a> describes a stream or feed of posts</li>
+		<li>You can find many more <a href="https://microformats.org/wiki/microformats2#v2_vocabularies">vocabularies on the microformats2 wiki.</a></li>
 	</ul>
 	</li>
 	<li><strong>"p-*" for plain (text) properties</strong>, e.g. "p-name", "p-summary"
@@ -66,7 +66,7 @@ tags:
 	</li>
 	<li><strong>"dt-*" for datetime properties</strong>, e.g. "dt-start", "dt-end", "dt-bday"
 	<ul>
-		<li>Special parsing: time element datetime attribute, <a href="http://microformats.org/wiki/value-class-pattern" title="value-class-pattern">value-class-pattern</a> and separate date time value parsing for readability.</li>
+		<li>Special parsing: time element datetime attribute, <a href="https://microformats.org/wiki/value-class-pattern" title="value-class-pattern">value-class-pattern</a> and separate date time value parsing for readability.</li>
 	</ul>
 	</li>
 	<li><strong>"e-*" for element tree properties</strong> where the entire contained element hierarchy is the value, e.g. "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".</li>
@@ -76,7 +76,7 @@ tags:
 
 <h3 id="h-card">h-card</h3>
 
-<p>The <a href="http://microformats.org/wiki/h-card">h-card</a> microformat represents a person or organization.</p>
+<p>The <a href="https://microformats.org/wiki/h-card">h-card</a> microformat represents a person or organization.</p>
 
 <p>The value of each property is defined in HTML using the class property any element can carry</p>
 
@@ -84,8 +84,8 @@ tags:
 
 <div dir="ltr" style="text-align: left;">
 <pre class="source-html4strict">&lt;p class="h-card"&gt;
-  &lt;img class="u-photo" src="http://example.org/photo.png" alt="" /&gt;
-  &lt;a class="p-name u-url" href="http://example.org"&gt;Joe Bloggs&lt;/a&gt;
+  &lt;img class="u-photo" src="https://example.org/photo.png" alt="" /&gt;
+  &lt;a class="p-name u-url" href="https://example.org"&gt;Joe Bloggs&lt;/a&gt;
   &lt;a class="u-email" href="mailto:joebloggs@example.com"&gt;joebloggs@example.com&lt;/a&gt;,
   &lt;span class="p-street-address"&gt;17 Austerstræti&lt;/span&gt;
   &lt;span class="p-locality"&gt;Reykjavík&lt;/span&gt;
@@ -139,10 +139,10 @@ tags:
 <div dir="ltr" style="text-align: left;">
 <pre class="source-html4strict">&lt;div class="h-card"&gt;
   &lt;a class="p-name u-url"
-   href="http://blog.lizardwrangler.com/"
+   href="https://blog.lizardwrangler.com/"
   &gt;Mitchell Baker&lt;/a&gt;
   (&lt;a class="p-org h-card"
-    href="http://mozilla.org/"
+    href="https://mozilla.org/"
    &gt;Mozilla Foundation&lt;/a&gt;)
 &lt;/div&gt;</pre>
 </div>
@@ -155,13 +155,13 @@ tags:
   "type": ["h-card"],
   "properties": {
     "name": ["Mitchell Baker"],
-    "url": ["http://blog.lizardwrangler.com/"],
+    "url": ["https://blog.lizardwrangler.com/"],
     "org": [{
     "value": "Mozilla Foundation",
     "type": ["h-card"],
     "properties": {
       "name": ["Mozilla Foundation"],
-      "url": ["http://mozilla.org/"]
+      "url": ["https://mozilla.org/"]
     }
     }]
   }
@@ -173,14 +173,14 @@ tags:
 
 <h3 id="h-entry">h-entry</h3>
 
-<p>The <a href="http://microformats.org/wiki/h-entry">h-entry</a> microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts.</p>
+<p>The <a href="https://microformats.org/wiki/h-entry">h-entry</a> microformat represents episodic or datestamped content on the web. h-entry is often used with content intended to be syndicated, e.g. blog posts.</p>
 
 <p>Example h-entry as a blog post:</p>
 
 <div dir="ltr" style="text-align: left;">
 <pre class="source-html4strict">&lt;article class="h-entry"&gt;
   &lt;h1 class="p-name"&gt;Microformats are amazing&lt;/h1&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
+  &lt;p&gt;Published by &lt;a class="p-author h-card" href="https://example.com"&gt;W. Developer&lt;/a&gt;
    on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;&lt;/p&gt;
 
   &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
@@ -273,7 +273,7 @@ tags:
 
 <h3 id="h-feed">h-feed</h3>
 
-<p>The <a href="http://microformats.org/wiki/h-feed">h-feed</a> is a stream or feed of <a href="http://microformats.org/wiki/h-entry" title="h-entry">h-entry</a> posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts</p>
+<p>The <a href="https://microformats.org/wiki/h-feed">h-feed</a> is a stream or feed of <a href="https://microformats.org/wiki/h-entry" title="h-entry">h-entry</a> posts, like complete posts on a home page or archive pages, or summaries or other brief lists of posts</p>
 
 <h4 id="Example_h-feed">Example h-feed</h4>
 
@@ -282,7 +282,7 @@ tags:
   &lt;h1 class="p-name"&gt;Microformats Blogs&lt;/h1&gt;
   &lt;article class="h-entry"&gt;
   &lt;h2 class="p-name"&gt;Microformats are amazing&lt;/h2&gt;
-  &lt;p&gt;Published by &lt;a class="p-author h-card" href="http://example.com"&gt;W. Developer&lt;/a&gt;
+  &lt;p&gt;Published by &lt;a class="p-author h-card" href="https://example.com"&gt;W. Developer&lt;/a&gt;
      on &lt;time class="dt-published" datetime="2013-06-13 12:00:00"&gt;13&lt;sup&gt;th&lt;/sup&gt; June 2013&lt;/time&gt;
   &lt;/p&gt;
   &lt;p class="p-summary"&gt;In which I extoll the virtues of using microformats.&lt;/p&gt;
@@ -458,7 +458,7 @@ tags:
 <ul>
 	<li><a href="/en-US/docs/Web/HTML/Global_attributes/class">class attribute</a></li>
 	<li>{{Interwiki("wikipedia", "Microformat")}} on Wikipedia</li>
-	<li><a href="http://microformats.org/">Microformats official website</a></li>
-	<li><a href="http://microformats.org/wiki/search_engines">Search engines support</a> on Microformats official website</li>
+	<li><a href="https://microformats.org/">Microformats official website</a></li>
+	<li><a href="https://microformats.org/wiki/search_engines">Search engines support</a> on Microformats official website</li>
 	<li><a href="https://indiewebcamp.com/microformats">Microformats on IndieWebCamp</a></li>
 </ul>

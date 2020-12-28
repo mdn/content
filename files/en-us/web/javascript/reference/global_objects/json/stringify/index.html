@@ -233,7 +233,7 @@ JSON.stringify([ obj ]);
 
 <h3 id="Issue_with_JSON.stringify_when_serializing_circular_references">Issue with JSON.stringify() when serializing circular references</h3>
 
-<p>Note that since the <a href="https://www.json.org/">JSON format</a> doesn't support object references (although an <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF draft exists</a>), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an object with circular references.</p>
+<p>Note that since the <a href="https://www.json.org/">JSON format</a> doesn't support object references (although an <a href="https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF draft exists</a>), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an object with circular references.</p>
 
 <pre class="brush: js example-bad notranslate">const circularReference = {};
 circularReference.myself = circularReference;

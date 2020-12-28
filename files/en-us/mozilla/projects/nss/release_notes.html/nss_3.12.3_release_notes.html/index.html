@@ -23,7 +23,7 @@ slug: Mozilla/Projects/NSS/release_notes.html/NSS_3.12.3_release_notes.html
 <hr>
 <p><a name="distribution"></a></p>
 <h3 id="Distribution_Information">Distribution Information</h3>
-<p>The CVS tag for the NSS 3.12.3 release is NSS_3_12_3_RTM.  NSS 3.12.3 requires <a href="http://www.mozilla.org/projects/nspr/release-notes/nspr474.html">NSPR 4.7.4</a>.<br>
+<p>The CVS tag for the NSS 3.12.3 release is NSS_3_12_3_RTM.  NSS 3.12.3 requires <a href="https://www.mozilla.org/projects/nspr/release-notes/nspr474.html">NSPR 4.7.4</a>.<br>
   <br>
   See the <a href="#docs">Documentation</a> section for the build instructions.</p>
 <p>NSS 3.12.3 source and binary distributions are also available on ftp.mozilla.org for secure HTTPS download:</p>
@@ -33,7 +33,7 @@ slug: Mozilla/Projects/NSS/release_notes.html/NSS_3.12.3_release_notes.html
     <ul>
       <li>include - NSS header files</li>
       <li>lib - NSS shared libraries</li>
-      <li>bin - <a href="http://www.mozilla.org/projects/security/pki/nss/tools/">NSS Tools</a> and test programs</li>
+      <li>bin - <a href="https://www.mozilla.org/projects/security/pki/nss/tools/">NSS Tools</a> and test programs</li>
     </ul>
   </li>
 </ul>
@@ -53,9 +53,9 @@ slug: Mozilla/Projects/NSS/release_notes.html/NSS_3.12.3_release_notes.html
     <table>
       <tbody>
         <tr>
-          <td><b><font face="Helvetica, Arial, sans-serif">Environment Variable</font></b></td>
-          <td><b><font face="Helvetica, Arial, sans-serif">Value Type</font></b></td>
-          <td><b><font face="Helvetica, Arial, sans-serif">Description</font></b></td>
+          <td><b>Environment Variable</b></td>
+          <td><b>Value Type</b></td>
+          <td><b>Description</b></td>
         </tr>
         <tr>
           <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT" rel="external nofollow" title="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT">NSRANDCOUNT</a></td>
@@ -82,7 +82,7 @@ slug: Mozilla/Projects/NSS/release_notes.html/NSS_3.12.3_release_notes.html
             or any other non-empty value)</td>
           <td>It is an error to try to use a PKCS#11 crypto module in a process before it has been initialized in that process, even if the module was initialized in the parent process. Beginning in NSS 3.12.3, Softoken will detect this error. This environment variable controls Softoken's response to that error.
             <ul>
-              <li>If set to to "1" or unset, Softoken will trigger an assertion failure in debug builds, and will report an error in non-DEBUG builds.</li>
+              <li>If set to "1" or unset, Softoken will trigger an assertion failure in debug builds, and will report an error in non-DEBUG builds.</li>
               <li>If set to "DISABLED", Softoken will ignore forks, and behave as it did in older versions.</li>
               <li>If set to any other non-empty value, Softoken will report an error in both DEBUG and non-DEBUG builds.</li>
             </ul>

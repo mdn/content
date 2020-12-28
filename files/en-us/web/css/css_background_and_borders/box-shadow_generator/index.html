@@ -1158,7 +1158,519 @@ body {
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
 <pre class="brush: js"><code class="language-js">
+<<<<<<< HEAD
 	'use strict';
+=======
+
+'use strict';
+
+/**
+ * UI-SlidersManager
+ */
+
+var SliderManager = (function SliderManager() {
+
+	var subscribers = {};
+	var sliders = [];
+
+	var Slider = function(node) {
+		var min = node.getAttribute('data-min') | 0;
+		var max = node.getAttribute('data-max') | 0;
+		var step = node.getAttribute('data-step') | 0;
+		var value = node.getAttribute('data-value') | 0;
+		var snap = node.getAttribute('data-snap');
+		var topic = node.getAttribute('data-topic');
+
+		this.min = min;
+		this.max = max &gt; 0 ? max : 100;
+		this.step = step === 0 ? 1 : step;
+		this.value = value <= max && value >= min ? value : (min + max) / 2 | 0;
+		this.snap = snap === "true" ? true : false;
+		this.topic = topic;
+		this.node = node;
+
+		var pointer = document.createElement('div');
+		pointer.className = 'ui-slider-pointer';
+		node.appendChild(pointer);
+		this.pointer = pointer;
+
+		setMouseTracking(node, updateSlider.bind(this));
+
+		sliders[topic] = this;
+		setValue(topic, this.value);
+	}
+
+	var setButtonComponent = function setButtonComponent(node) {
+		var type = node.getAttribute('data-type');
+		var topic = node.getAttribute('data-topic');
+		if (type === "sub") {
+			node.textContent = '-';
+			node.addEventListener("click", function() {
+				decrement(topic);
+			});
+		}
+		if (type === "add") {
+			node.textContent = '+';
+			node.addEventListener("click", function() {
+				increment(topic);
+			});
+		}
+	}
+
+	var setInputComponent = function setInputComponent(node) {
+		var topic		= node.getAttribute('data-topic');
+		var unit_type	= node.getAttribute('data-unit');
+
+		var input = document.createElement('input');
+		var unit = document.createElement('span');
+		unit.textContent = unit_type;
+
+		input.setAttribute('type', 'text');
+		node.appendChild(input);
+		node.appendChild(unit);
+
+		input.addEventListener('click', function(e) {
+			this.select();
+		});
+
+		input.addEventListener('change', function(e) {
+			setValue(topic, e.target.value | 0);
+		});
+
+		subscribe(topic, function(value) {
+			node.children[0].value = value;
+		});
+	}
+
+	var increment = function increment(topic) {
+		var slider = sliders[topic];
+		if (slider === null || slider === undefined)
+			return;
+
+		if (slider.value + slider.step &lt;= slider.max) {
+			slider.value += slider.step;
+			setValue(slider.topic, slider.value)
+			notify.call(slider);
+		}
+	};
+
+	var decrement = function decrement(topic) {
+		var slider = sliders[topic];
+		if (slider === null || slider === undefined)
+			return;
+
+		if (slider.value - slider.step &gt;= slider.min) {
+			slider.value -= slider.step;
+			setValue(topic, slider.value)
+			notify.call(slider);
+		}
+	}
+
+	// this = Slider object
+	var updateSlider = function updateSlider(e) {
+		var node = this.node;
+		var pos = e.pageX - node.offsetLeft;
+		var width = node.clientWidth;
+		var delta = this.max - this.min;
+		var offset = this.pointer.clientWidth + 4; // border width * 2
+
+		if (pos &lt; 0) pos = 0;
+		if (pos &gt; width) pos = width;
+
+		var value = pos * delta / width | 0;
+		var precision = value % this.step;
+		value = value - precision + this.min;
+		if (precision &gt; this.step / 2)
+			value = value + this.step;
+
+		if (this.snap)
+			pos =  (value - this.min) * width / delta;
+
+		this.pointer.style.left = pos - offset/2 + "px";
+		this.value = value;
+		node.setAttribute('data-value', value);
+		notify.call(this);
+	}
+
+	var setValue = function setValue(topic, value) {
+		var slider = sliders[topic];
+
+		if (value &gt; slider.max || value &lt; slider.min)
+			return;
+
+		var delta = slider.max - slider.min;
+		var width = slider.node.clientWidth;
+		var offset = slider.pointer.clientWidth;
+		var pos =  (value - slider.min) * width / delta;
+		slider.value = value;
+		slider.pointer.style.left = pos - offset / 2 + "px";
+		slider.node.setAttribute('data-value', value);
+		notify.call(slider);
+	}
+
+	var setMouseTracking = function setMouseTracking(elem, callback) {
+		elem.addEventListener("mousedown", function(e) {
+			callback(e);
+			document.addEventListener("mousemove", callback);
+		});
+
+		document.addEventListener("mouseup", function(e) {
+			document.removeEventListener("mousemove", callback);
+		});
+	}
+
+	var subscribe = function subscribe(topic, callback) {
+		if (subscribers[topic] === undefined)
+			subscribers[topic] = [];
+		subscribers[topic].push(callback);
+	}
+
+	var unsubscribe = function unsubscribe(topic, callback) {
+		subscribers[topic].indexOf(callback);
+		subscribers[topic].splice(index, 1);
+	}
+
+	var notify = function notify() {
+		if (subscribers[this.topic] === undefined)
+			return;
+
+		for (var i in subscribers[this.topic]) {
+			subscribers[this.topic][i](this.value);
+		}
+	}
+
+	var init = function init() {
+		var elem, size;
+
+		elem = document.querySelectorAll('.ui-slider-btn-set');
+		size = elem.length;
+		for (var i = 0; i &lt; size; i++)
+			setButtonComponent(elem[i]);
+
+		elem = document.querySelectorAll('.ui-slider-input');
+		size = elem.length;
+		for (var i = 0; i &lt; size; i++)
+			setInputComponent(elem[i]);
+
+		elem = document.querySelectorAll('.ui-slider');
+		size = elem.length;
+		for (var i = 0; i &lt; size; i++)
+			new Slider(elem[i]);
+	}
+
+	return {
+		init : init,
+		setValue : setValue,
+		subscribe : subscribe,
+		unsubscribe : unsubscribe
+	}
+
+})();
+
+/**
+ * UI-ButtonManager
+ */
+
+var ButtonManager = (function CheckBoxManager() {
+
+	var subscribers = [];
+	var buttons = [];
+
+	var CheckBox = function CheckBox(node) {
+		var topic = node.getAttribute('data-topic');
+		var state = node.getAttribute('data-state');
+		var name = node.getAttribute('data-label');
+		var align = node.getAttribute('data-text-on');
+
+		state = (state === "true");
+
+		var checkbox = document.createElement("input");
+		var label = document.createElement("label");
+
+		var id = 'checkbox-' + topic;
+		checkbox.id = id;
+		checkbox.setAttribute('type', 'checkbox');
+		checkbox.checked = state;
+
+		label.setAttribute('for', id);
+		if (name) {
+			label.className = 'text';
+			if (align)
+				label.className += ' ' + align;
+			label.textContent = name;
+		}
+
+		node.appendChild(checkbox);
+		node.appendChild(label);
+
+		this.node = node;
+		this.topic = topic;
+		this.checkbox = checkbox;
+
+		checkbox.addEventListener('change', function(e) {
+			notify.call(this);
+		}.bind(this));
+
+		buttons[topic] = this;
+	}
+
+	var getNode =  function getNode(topic) {
+		return buttons[topic].node;
+	}
+
+	var setValue = function setValue(topic, value) {
+		try {
+			buttons[topic].checkbox.checked = value;
+			notify.call(buttons[topic]);
+		}
+		catch(error) {
+			console.log(error, topic, value);
+		}
+	}
+
+	var subscribe = function subscribe(topic, callback) {
+		if (subscribers[topic] === undefined)
+			subscribers[topic] = [];
+
+		subscribers[topic].push(callback);
+	}
+
+	var unsubscribe = function unsubscribe(topic, callback) {
+		subscribers[topic].indexOf(callback);
+		subscribers[topic].splice(index, 1);
+	}
+
+	var notify = function notify() {
+		if (subscribers[this.topic] === undefined)
+			return;
+		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+			subscribers[this.topic][i](this.checkbox.checked);
+	}
+
+	var init = function init() {
+		var elem = document.querySelectorAll('.ui-checkbox');
+		var size = elem.length;
+		for (var i = 0; i &lt; size; i++)
+			new CheckBox(elem[i]);
+	}
+
+	return {
+		init : init,
+		setValue : setValue,
+		subscribe : subscribe,
+		unsubscribe : unsubscribe
+	}
+
+})();
+
+window.addEventListener("load", function(){
+	BoxShadow.init();
+});
+
+var BoxShadow = (function BoxShadow() {
+
+	function getElemById(id) {
+		return document.getElementById(id);
+	}
+
+	/**
+	 * RGBA Color class
+	 */
+
+	function Color() {
+		this.r = 0;
+		this.g = 0;
+		this.b = 0;
+		this.a = 1;
+		this.hue = 0;
+		this.saturation = 0;
+		this.value = 0;
+	}
+
+	Color.prototype.copy = function copy(obj) {
+		if(obj instanceof Color !== true) {
+			console.log("Typeof instance not Color");
+			return;
+		}
+
+		this.r = obj.r;
+		this.g = obj.g;
+		this.b = obj.b;
+		this.a = obj.a;
+		this.hue = obj.hue;
+		this.saturation = obj.saturation;
+		this.value = obj.value;
+	}
+
+	Color.prototype.setRGBA = function setRGBA(red, green, blue, alpha) {
+		if (red != undefined)
+			this.r = red | 0;
+		if (green != undefined)
+			this.g = green | 0;
+		if (blue != undefined)
+			this.b = blue | 0;
+		if (alpha != undefined)
+			this.a = alpha | 0;
+	}
+
+	/**
+	 * HSV/HSB (hue, saturation, value / brightness)
+	 * @param hue			0-360
+	 * @param saturation	0-100
+	 * @param value 		0-100
+	 */
+	Color.prototype.setHSV = function setHSV(hue, saturation, value) {
+		this.hue = hue;
+		this.saturation = saturation;
+		this.value = value;
+		this.updateRGB();
+	}
+
+	Color.prototype.updateRGB = function updateRGB() {
+		var sat = this.saturation / 100;
+		var value = this.value / 100;
+		var C = sat * value;
+		var H = this.hue / 60;
+		var X = C * (1 - Math.abs(H % 2 - 1));
+		var m = value - C;
+		var precision = 255;
+
+		C = (C + m) * precision;
+		X = (X + m) * precision;
+		m = m * precision;
+
+		if (H &gt;= 0 &amp;&amp; H &lt; 1) {	this.setRGBA(C, X, m);	return; }
+		if (H &gt;= 1 &amp;&amp; H &lt; 2) {	this.setRGBA(X, C, m);	return; }
+		if (H &gt;= 2 &amp;&amp; H &lt; 3) {	this.setRGBA(m, C, X);	return; }
+		if (H &gt;= 3 &amp;&amp; H &lt; 4) {	this.setRGBA(m, X, C);	return; }
+		if (H &gt;= 4 &amp;&amp; H &lt; 5) {	this.setRGBA(X, m, C);	return; }
+		if (H &gt;= 5 &amp;&amp; H &lt; 6) {	this.setRGBA(C, m, X);	return; }
+	}
+
+	Color.prototype.updateHSV = function updateHSV() {
+		var red		= this.r / 255;
+		var green	= this.g / 255;
+		var blue	= this.b / 255;
+
+		var cmax = Math.max(red, green, blue);
+		var cmin = Math.min(red, green, blue);
+		var delta = cmax - cmin;
+		var hue = 0;
+		var saturation = 0;
+
+		if (delta) {
+			if (cmax === red ) { hue = ((green - blue) / delta); }
+			if (cmax === green ) { hue = 2 + (blue - red) / delta; }
+			if (cmax === blue ) { hue = 4 + (red - green) / delta; }
+			if (cmax) saturation = delta / cmax;
+		}
+
+		this.hue = 60 * hue | 0;
+		if (this.hue &lt; 0) this.hue += 360;
+		this.saturation = (saturation * 100) | 0;
+		this.value = (cmax * 100) | 0;
+	}
+
+	Color.prototype.setHexa = function setHexa(value) {
+		var valid  = /(^#{0,1}[0-9A-F]{6}$)|(^#{0,1}[0-9A-F]{3}$)/i.test(value)
+		if (valid !== true)
+			return;
+
+		if (value[0] === '#')
+			value = value.slice(1, value.length);
+
+		if (value.length === 3)
+			value = value.replace(/([0-9A-F])([0-9A-F])([0-9A-F])/i,"$1$1$2$2$3$3");
+
+		this.r = parseInt(value.substr(0, 2), 16);
+		this.g = parseInt(value.substr(2, 2), 16);
+		this.b = parseInt(value.substr(4, 2), 16);
+
+		this.alpha	= 1;
+	}
+
+	Color.prototype.getHexa = function getHexa() {
+		var r = this.r.toString(16);
+		var g = this.g.toString(16);
+		var b = this.b.toString(16);
+		if (this.r &lt; 16) r = '0' + r;
+		if (this.g &lt; 16) g = '0' + g;
+		if (this.b &lt; 16) b = '0' + b;
+		var value = '#' + r + g + b;
+		return value.toUpperCase();
+	}
+
+	Color.prototype.getRGBA = function getRGBA() {
+
+		var rgb = "(" + this.r + ", " + this.g + ", " + this.b;
+		var a = '';
+		var v = '';
+		if (this.a !== 1) {
+			a = 'a';
+			v = ', ' + this.a;
+		}
+
+		var value = "rgb" + a + rgb + v + ")";
+		return value;
+	}
+
+	Color.prototype.getColor = function getColor() {
+		if (this.a | 0 === 1)
+			return this.getHexa();
+		return this.getRGBA();
+	}
+
+	/**
+	 * Shadow Object
+	 */
+	function Shadow() {
+		this.inset  = false;
+		this.posX   = 5;
+		this.posY   = -5;
+		this.blur   = 5;
+		this.spread = 0;
+		this.color  = new Color();
+
+		var hue			= (Math.random() * 360) | 0;
+		var saturation	= (Math.random() * 75) | 0;
+		var value 		= (Math.random() * 50 + 50) | 0;
+		this.color.setHSV(hue, saturation, value, 1);
+	}
+
+	Shadow.prototype.computeCSS = function computeCSS() {
+		var value = "";
+		if (this.inset === true)
+			value += "inset ";
+		value += this.posX + "px ";
+		value += this.posY + "px ";
+		value += this.blur + "px ";
+		value += this.spread + "px ";
+		value += this.color.getColor();
+
+		return value;
+	}
+
+	Shadow.prototype.toggleInset = function toggleInset(value) {
+		if (value !== undefined || typeof value === "boolean")
+			this.inset = value;
+		else
+			this.inset = this.inset === true ? false : true;
+	}
+
+	Shadow.prototype.copy = function copy(obj) {
+		if(obj instanceof Shadow !== true) {
+			console.log("Typeof instance not Shadow");
+			return;
+		}
+
+		this.inset  = obj.inset;
+		this.posX   = obj.posX;
+		this.posY   = obj.posY;
+		this.blur   = obj.blur;
+		this.spread = obj.spread;
+		this.color.copy(obj.color);
+	}
+>>>>>>> mdn/main
 
 	/**
 	 * UI-SlidersManager

@@ -49,8 +49,7 @@ tags:
 
 <p>This code uses <code>requestAnimationFrame</code> to ask the browser to call the function "<code>render</code>" on each frame. <code>requestAnimationFrame</code> passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute <code>deltaTime</code> which is the number of second since the last frame was rendered. At the end of drawscene we add the code to update <code>squareRotation.</code></p>
 
-<pre class="brush: js notranslate"><code>  squareRotation += deltaTime;</code>
-</pre>
+<pre class="brush: js notranslate">squareRotation += deltaTime;</pre>
 
 <p>This code uses the amount of time that's passed since the last time we updated the value of <code>squareRotation</code> to determine how far to rotate the square.</p>
 

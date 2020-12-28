@@ -52,7 +52,7 @@ tags:
 
 <ul>
  <li>If <code>compareFunction(a, b)</code> returns less than 0, sort <code>a</code> to an index lower than <code>b</code> (i.e. <code>a</code> comes first).</li>
- <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and <code>b</code> unchanged with respect to each other, but sorted with respect to all different elements. Note: the ECMAscript standard does not guarantee this behavior, thus, not all browsers (e.g. Mozilla versions dating back to at least 2003) respect this.</li>
+ <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and <code>b</code> unchanged with respect to each other, but sorted with respect to all different elements. Note: the ECMAScript standard only started guaranteeing this behavior <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">in 2019</a>, thus, older browsers may not respect this.</li>
  <li>If <code>compareFunction(a, b)</code> returns greater than 0, sort <code>b</code> to an index lower than <code>a</code> (i.e. <code>b</code> comes first).</li>
  <li><code>compareFunction(a, b)</code> must always return the same value when given a specific pair of elements <code>a</code> and <code>b</code> as its two arguments. If inconsistent results are returned, then the sort order is undefined.</li>
 </ul>
@@ -97,7 +97,7 @@ console.log(numbers);
 
 // [1, 2, 3, 4, 5]</pre>
 
-<p>Objects can be sorted, given the value of one of their properties.</p>
+<p>Arrays of objects can be sorted by comparing the value of one of their properties.</p>
 
 <pre class="brush: js notranslate">var items = [
   { name: 'Edward', value: 21 },

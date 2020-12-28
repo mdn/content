@@ -56,11 +56,7 @@ tags:
  <dd>Some codecs and hardware are able to detect when audio begins and ends by watching for "silence" (or relatively low sound levels) to occur. This reduces network bandwidth used for audio by only sending audio data when there's actually something to broadcast. However, in some cases, this is unwanted. For example, in the case of music or other non-voice transmission, this can cause loss of important low-volume sounds. Also, emergency calls should never cut audio when quiet. <strong>This option defaults to <code>true</code></strong> (voice activity detection <em>enabled</em>).</dd>
 </dl>
 
-<dl>
- <dt>
- <h3 id="Deprecated_parameters">Deprecated parameters</h3>
- </dt>
-</dl>
+<h3 id="Deprecated_parameters">Deprecated parameters</h3>
 
 <p>In older code and documentation, you may see a callback-based version of this function. This has been deprecated and its use is <strong>strongly</strong> discouraged. You should update any existing code to use the {{jsxref("Promise")}}-based version of <code>createOffer()</code> instead. The parameters for this form of <code>createOffer()</code> are described below, to aid in updating existing code.<strong> </strong></p>
 

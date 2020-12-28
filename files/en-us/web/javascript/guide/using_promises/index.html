@@ -305,7 +305,7 @@ console.log(1); // 1, 2, 3, 4
 });
 
 setTimeout(function() {
-  console.log("event-loop cycle: Promise (fullfilled)", promise)
+  console.log("event-loop cycle: Promise (fulfilled)", promise)
 }, 0);
 
 console.log("Promise (pending)", promise);
@@ -316,7 +316,7 @@ console.log("Promise (pending)", promise);
 <pre class="notranslate">Promise callback
 Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
-event-loop cycle: Promise (fullfilled) Promise {&lt;fulfilled&gt;}</pre>
+event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
 <p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#Tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
 

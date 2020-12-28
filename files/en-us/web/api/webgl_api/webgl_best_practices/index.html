@@ -186,7 +186,7 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>Instead of:</p>
 
-<pre><code>function compileOnce(gl, shader) {
+<pre class="brush: js notranslate">function compileOnce(gl, shader) {
   if (shader.compiled) return;
   gl.compileShader(shader);
   shader.compiled = true;
@@ -201,11 +201,11 @@ for (const [vs, fs, prog] of programs) {
     console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
   }
 }
-</code></pre>
+</pre>
 
 <p>Consider:</p>
 
-<pre><code>function compileOnce(gl, shader) {
+<pre class="brush: js notranslate">function compileOnce(gl, shader) {
   if (shader.compiled) return;
   gl.compileShader(shader);
   shader.compiled = true;
@@ -224,7 +224,7 @@ for (const [vs, fs, prog] of programs) {
     console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
   }
 }
-</code></pre>
+</pre>
 
 <h3 id="KHR_parallel_shader_compile_for_non-blocking_compilelink_status">KHR_parallel_shader_compile for non-blocking compile/link status</h3>
 
@@ -232,7 +232,7 @@ for (const [vs, fs, prog] of programs) {
 
 <p>Example usage:</p>
 
-<pre><code>ext = gl.getExtension('KHR_parallel_shader_compile');
+<pre class="brush: js notranslate">ext = gl.getExtension('KHR_parallel_shader_compile');
 gl.compileProgram(vs);
 gl.compileProgram(fs);
 gl.attachShader(prog, vs);
@@ -250,7 +250,7 @@ if (ext) {
   // Program linking is synchronous.
   // Check program link status; if OK, use and draw with it.
 }
-</code></pre>
+</pre>
 
 <p>This technique may not work in all applications, for example those which require programs to be immediately available for rendering. Still, consider how variations may work.</p>
 
@@ -275,7 +275,7 @@ if (ext) {
 
 <p>Instead of:</p>
 
-<pre><code>gl.compileShader(vs);
+<pre class="brush: js notranslate">gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
   console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
 }
@@ -289,11 +289,11 @@ gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
   console.error('Link failed: ' + gl.getProgramInfoLog(prog));
 }
-</code></pre>
+</pre>
 
 <p>Consider:</p>
 
-<pre><code>gl.compileShader(vs);
+<pre class="brush: js notranslate">gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
@@ -301,7 +301,7 @@ if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
   console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
   console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
 }
-</code></pre>
+</pre>
 
 <h3 id="Be_precise_with_GLSL_variable_precision_annotations">Be precise with GLSL variable precision annotations</h3>
 
@@ -493,10 +493,10 @@ precision mediump float;
 
 <p>However, for 2d resources that are never "zoomed out", don't pay the 30% memory surcharge for mipmaps:</p>
 
-<pre><code>const tex = gl.createTexture();
+<pre class="brush: js notranslate">const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults to NEAREST_MIPMAP_LINEAR, for mipmapping!
-</code></pre>
+</pre>
 
 <p>(In WebGL 2, you should just use <code>texStorage</code> with <code>levels=1</code>)</p>
 
@@ -645,7 +645,7 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
 
-<pre><code>function clientWaitAsync(gl, sync, flags, interval_ms) {
+<pre class="brush: js notranslate">function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) =&gt; {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
@@ -691,7 +691,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
   gl.deleteBuffer(buf);
   return dest;
 }
-</code></pre>
+</pre>
 
 <h2 id="Canvas_and_WebGL-Related">Canvas and WebGL-Related</h2>
 
@@ -719,7 +719,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>On supporting browsers (Chromium?), <code>ResizeObserver</code> can be used with <code>'device-pixel-content-box'</code> to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:</p>
 
-<pre><code>window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
+<pre class="brush: js notranslate">window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
    await new Promise(fn_resolve =&gt; {
       const observer = new ResizeObserver(entries =&gt; {
          for (const cur of entries) {
@@ -737,7 +737,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
 };
-</code></pre>
+</pre>
 
 <p>Please refer to <a href="https://www.w3.org/TR/resize-observer/#resize-observer-interface">the specification</a> for more details.</p>
 

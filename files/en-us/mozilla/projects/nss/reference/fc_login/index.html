@@ -6,11 +6,11 @@ tags:
 ---
 <p> </p>
 
-<h3 id="Name" name="Name">Name</h3>
+<h3 id="Name">Name</h3>
 
 <p><code>FC_Login()</code> - log a user into a token.</p>
 
-<h3 id="Syntax" name="Syntax">Syntax</h3>
+<h3 id="Syntax">Syntax</h3>
 
 <pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_Login(
   <a href="en/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
@@ -20,7 +20,7 @@ tags:
 );
 </pre>
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <p><code>FC_Login()</code> takes four parameters:</p>
 
@@ -35,13 +35,13 @@ tags:
  <dd>{{ mediawiki.external('in') }} the length of the PIN</dd>
 </dl>
 
-<h3 id="Description" name="Description">Description</h3>
+<h3 id="Description">Description</h3>
 
 <p><code>FC_Login()</code> logs a user into a token.</p>
 
 <p>The Security Officer (<code>CKU_SO</code>) only logs in to initialize the normal user's PIN. The SO PIN is the empty string. The NSS cryptographic module doesn't allow the SO to log in if the normal user's PIN is already initialized.</p>
 
-<h3 id="Return_value" name="Return_value">Return value</h3>
+<h3 id="Return_value">Return value</h3>
 
 <p><code>FC_Login()</code> returns the following return codes.</p>
 
@@ -63,7 +63,7 @@ tags:
  </li>
 </ul>
 
-<h3 id="See_also" name="See_also">See also</h3>
+<h3 id="See_also">See also</h3>
 
 <ul>
  <li><a href="en/NSC_Login">NSC_Login</a></li>

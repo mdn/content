@@ -12,6 +12,7 @@ tags:
 
 <h3 id="HTML_Content">HTML Content</h3>
 
+<<<<<<< HEAD
 <pre class="brush: html">    <div id="container">
 
         <div id="gallery">
@@ -148,6 +149,144 @@ tags:
 
         </div>
     </div></pre>
+=======
+<pre class="brush: html">    &lt;div id="container"&gt;
+
+        &lt;div id="gallery"&gt;
+            &lt;div id="image-gallery"&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6007/border-image-1.png" data-stateID="border1"/&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6009/border-image-2.png" data-stateID="border2"/&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6011/border-image-3.png" data-stateID="border3"/&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6013/border-image-4.png" data-stateID="border4"/&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6015/border-image-5.png" data-stateID="border5"/&gt;
+                &lt;img class="image" src="https://mdn.mozillademos.org/files/6017/border-image-6.svg" data-stateID="border6"/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="load-actions" class="group section"&gt;
+            &lt;div id="toggle-gallery" data-action="hide"&gt; &lt;/div&gt;
+            &lt;div id="load-image" class="button"&gt; Upload image &lt;/div&gt;
+            &lt;input id="remote-url" type="text" placeholder="Load an image from URL"/&gt;
+            &lt;div id="load-remote" class="button"&gt; &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="general-controls" class="group section"&gt;
+            &lt;div class="name"&gt; Control Box &lt;/div&gt;
+            &lt;div class="separator"&gt;&lt;/div&gt;
+            &lt;div class="property"&gt;
+                &lt;div class="name"&gt;scale&lt;/div&gt;
+                &lt;div class="ui-input-slider" data-topic="scale"
+                    data-unit="%" data-max="300" data-sensivity="10"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="separator"&gt;&lt;/div&gt;
+            &lt;div class="property"&gt;
+                &lt;div class="name"&gt;draggable&lt;/div&gt;
+                &lt;div class="ui-checkbox" data-topic='drag-subject'&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="property right"&gt;
+                &lt;div class="name"&gt;section height&lt;/div&gt;
+                &lt;div class="ui-input-slider" data-topic="preview-area-height"
+                    data-min="400" data-max="1000"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="preview_section" class="group section"&gt;
+            &lt;div id="subject"&gt;
+                &lt;div class="guideline" data-axis="Y" data-topic="slice-top"&gt;&lt;/div&gt;
+                &lt;div class="guideline" data-axis="X" data-topic="slice-right"&gt;&lt;/div&gt;
+                &lt;div class="guideline" data-axis="Y" data-topic="slice-bottom"&gt;&lt;/div&gt;
+                &lt;div class="guideline" data-axis="X" data-topic="slice-left"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="preview"&gt; &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- controls --&gt;
+        &lt;div id="controls" class="group section"&gt;
+
+            &lt;!-- border-image-slice --&gt;
+            &lt;div id="border-slice-control" class="category"&gt;
+                &lt;div class="title"&gt; border-image-slice &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="name"&gt;fill&lt;/div&gt;
+                    &lt;div class="ui-checkbox" data-topic='slice-fill'&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- border-image-width --&gt;
+            &lt;div id="border-width-control" class="category"&gt;
+                &lt;div class="title"&gt; border-image-width &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- border-image-outset --&gt;
+            &lt;div id="border-outset-control" class="category"&gt;
+                &lt;div class="title"&gt; border-image-outset &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- other-settings --&gt;
+            &lt;div id="additional-properties" class="category"&gt;
+                &lt;div class="title"&gt; additional-properties &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="name"&gt; repeat-x &lt;/div&gt;
+                    &lt;div class="ui-dropdown border-repeat" data-topic="image-repeat-X" data-selected="2"&gt;
+                        &lt;div data-value="0"&gt;repeat&lt;/div&gt;
+                        &lt;div data-value="0"&gt;stretch&lt;/div&gt;
+                        &lt;div data-value="0"&gt;round&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="name"&gt; repeat-y &lt;/div&gt;
+                    &lt;div class="ui-dropdown border-repeat" data-topic="image-repeat-Y" data-selected="2"&gt;
+                        &lt;div data-value="1"&gt;repeat&lt;/div&gt;
+                        &lt;div data-value="1"&gt;stretch&lt;/div&gt;
+                        &lt;div data-value="1"&gt;round&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="ui-input-slider" data-topic="font-size" data-info="em size"
+                        data-unit="px" data-value="12" data-sensivity="3"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="property"&gt;
+                    &lt;div class="ui-input-slider" data-topic="preview-width" data-info="width"
+                         data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="property"&gt;
+                    &lt;div class="ui-input-slider" data-topic="preview-height" data-info="height"
+                        data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div id="output" class="category"&gt;
+                &lt;div class="title"&gt; CSS Code &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-image-slice: &lt;/span&gt;
+                    &lt;span id="out-border-slice" class="value"&gt; &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-image-width: &lt;/span&gt;
+                    &lt;span id="out-border-width" class="value"&gt; &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-image-outset: &lt;/span&gt;
+                    &lt;span id="out-border-outset" class="value"&gt; &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-image-repeat: &lt;/span&gt;
+                    &lt;span id="out-border-repeat" class="value"&gt; &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-image-source: &lt;/span&gt;
+                    &lt;span id="out-border-source" class="value"&gt;  &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;</pre>
+>>>>>>> mdn/main
 
 <h3 id="CSS_Content">CSS Content</h3>
 
@@ -1057,11 +1196,15 @@ body[data-move='Y'] {
 	height: 4.3em;
 }
 
-#aditional-properties .property {
+#additional-properties .property {
 	width: 200px;
 }
 
+<<<<<<< HEAD
 #aditional-properties .ui-input-slider > input {
+=======
+#additional-properties .ui-input-slider &gt; input {
+>>>>>>> mdn/main
 	width: 80px !important;
 }
 

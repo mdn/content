@@ -65,7 +65,7 @@ tags:
 <ol>
  <li><a class="external" href="http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers">HTTP Conditional Get for RSS Hackers</a></li>
  <li><a class="external" href="http://annevankesteren.nl/archives/2005/05/http-304">HTTP 304: Not Modified</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/HTTP_ETag">HTTP ETag on Wikipedia</a></li>
+ <li><a class="external" href="https://en.wikipedia.org/wiki/HTTP_ETag">HTTP ETag on Wikipedia</a></li>
  <li><a class="external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">Caching in HTTP</a></li>
 </ol>
 
@@ -133,7 +133,7 @@ tags:
 
 <h3 id="Use_lazy_loading_for_images">Use lazy loading for images</h3>
 
-<p>By default, imags are loaded <strong>eagerly</strong>; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.</p>
+<p>By default, images are loaded <strong>eagerly</strong>; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.</p>
 
 <p>To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of <code>lazy</code>. With this set, the image will only be loaded when it's needed.</p>
 
@@ -163,18 +163,12 @@ tags:
 
 <dl>
  <dd>· <code>{{htmlelement('head')}}</code></dd>
-</dl>
-
-<dl>
  <dd>
  <dl>
   <dd>· <code>{{htmlelement('link')}} </code>...<br>
   CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.</dd>
  </dl>
  </dd>
-</dl>
-
-<dl>
  <dd>
  <dl>
   <dd>· <code>{{htmlelement('script')}} </code>...<br>
@@ -182,14 +176,8 @@ tags:
   <dd>Minimize the number of files for performance while keeping unrelated JavaScript in separate files for maintenance.</dd>
  </dl>
  </dd>
-</dl>
-
-<dl>
  <dd>· <code>{{htmlelement('body')}}</code></dd>
  <dd>· User visible page content in small chunks ( <code>{{htmlelement('header')}}</code>/ <code>{{htmlelement('main')}}/</code> <code>{{htmlelement('table')}}</code>) that can be displayed without waiting for the full page to download.</dd>
-</dl>
-
-<dl>
  <dd>
  <dl>
   <dd>· <code>{{htmlelement('script')}} </code>...<br>
