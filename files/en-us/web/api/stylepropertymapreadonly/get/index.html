@@ -44,8 +44,8 @@ tags:
   font-weight: bold;
 }
 a {
-   --colour: red;
-   color: var(--colour);
+   --color: red;
+   color: var(--color);
 }</pre>
 
 <p>We use the Element's <code><a href="/en-US/docs/Web/API/Element/computedStyleMap">computedStyleMap()</a></code> to return a <em>StylePropertyMapReadOnly</em> object. We create an array of properties of interest and use the StylePropertyMapReadOnly's <code>get()</code> method to get only those values.</p>
@@ -60,7 +60,7 @@ const styleMap = myElement.computedStyleMap();
 const stylesList = document.querySelector('#results');
 
 // array of properties we're interested in
-const ofInterest = ['font-weight', 'border-left-color', 'color', '--colour'];
+const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate over our properties of interest
 for ( let i = 0; i &lt; ofInterest.length; i++ ) {
