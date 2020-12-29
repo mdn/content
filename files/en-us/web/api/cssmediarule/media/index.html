@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>media</var> = CSSMediaRule.media;</pre>
+<pre class="syntaxbox notranslate">var <var>media</var> = <var>CSSMediaRule</var>.media;</pre>
 
 <h3>Value</h3>
 <p>a {{domxref("MediaList")}}</p>
@@ -25,8 +25,8 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>
-  The CSS includes a media query with one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>. 
-  <code>myRules[0].media</code> therefore returns a {{domxref("MediaList")}} object representing the media query.
+  The CSS includes a media query with one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+  Calling <code>myRules[0].media</code> therefore returns a {{domxref("MediaList")}} object representing the media query.
 </p>
 
 <pre class="brush: css">@media (min-width: 500px) {
