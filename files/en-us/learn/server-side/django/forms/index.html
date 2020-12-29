@@ -204,7 +204,7 @@ class RenewBookForm(forms.Form):
     path('book/&lt;uuid:pk&gt;/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
+<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
@@ -449,7 +449,7 @@ def renew_book_librarian(request, pk):
 <p><strong>Note</strong>: Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
 </div>
 
-<p>You can alternatively manually construct a test URL like this — <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
+<p>You can alternatively manually construct a test URL like this — <code>http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</code> (a valid <code>bookinstance_id</code> can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
 
 <h3 id="What_does_it_look_like">What does it look like?</h3>
 
