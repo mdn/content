@@ -10,13 +10,13 @@ tags:
 <p>FC_GetTokenInfo - obtain information about a particular token in the system.
 </p>
 <h3 id="Syntax"> Syntax </h3>
-<pre class="eval"><a href="en/CK_RV">CK_RV</a> FC_GetTokenInfo(<a href="en/CK_SLOT_ID">CK_SLOT_ID</a> slotID, <a href="en/CK_TOKEN_INFO">CK_TOKEN_INFO_PTR</a> pInfo);
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_GetTokenInfo(<a href="/en-US/CK_SLOT_ID">CK_SLOT_ID</a> slotID, <a href="/en-US/CK_TOKEN_INFO">CK_TOKEN_INFO_PTR</a> pInfo);
 </pre>
 <h3 id="Parameters"> Parameters </h3>
 <p><code>FC_GetTokenInfo</code> has two parameters:
 </p>
 <dl><dt><code>slotID</code></dt><dd> the ID of the token's slot
-</dd><dt><code>pInfo</code></dt><dd> points to a <a href="en/CK_TOKEN_INFO">CK_TOKEN_INFO</a> structure
+</dd><dt><code>pInfo</code></dt><dd> points to a <a href="/en-US/CK_TOKEN_INFO">CK_TOKEN_INFO</a> structure
 </dd></dl>
 <h3 id="Description"> Description </h3>
 <p><code>FC_GetTokenInfo</code> returns information about the token in the specified slot. On return, the <code>CK_TOKEN_INFO</code> structure that <code>pInfo</code> points to has the following information:
@@ -61,5 +61,5 @@ tags:
 <p>Note the use of the <code>%.32s</code> format string to print the <code>label</code> and <code>manufacturerID</code> members of the <code>CK_TOKEN_INFO</code> structure.
 </p>
 <h3 id="See_also"> See also </h3>
-<ul><li> <a href="en/FC_GetSlotInfo">FC_GetSlotInfo</a>, <a href="en/NSC_GetTokenInfo">NSC_GetTokenInfo</a>
+<ul><li> <a href="/en-US/FC_GetSlotInfo">FC_GetSlotInfo</a>, <a href="/en-US/NSC_GetTokenInfo">NSC_GetTokenInfo</a>
 </li></ul>
