@@ -50,7 +50,7 @@ tags:
 
 <h3 id="Internet_Explorer">Internet Explorer</h3>
 
-<p>Internet Explorer 8 &amp; 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Any <code>click</code> events will be fired at the underlying element(s) instead. See <a href="http://jsfiddle.net/YUKma/show/">this live example</a> for a demonstration.</p>
+<p>Internet Explorer 8 &amp; 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Any <code>click</code> events will be fired at the underlying element(s) instead. See <a href="https://jsfiddle.net/YUKma/show/">this live example</a> for a demonstration.</p>
 
 <p>Known workarounds for this bug:</p>
 
@@ -66,7 +66,7 @@ tags:
 
 <h3 id="Safari_Mobile">Safari Mobile</h3>
 
-<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="http://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="http://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
+<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="http://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="https://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
 
 <p>Known workarounds for this bug:</p>
 
