@@ -211,13 +211,13 @@ let sendMessage = message =&gt; {
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
 </div>
 
-<p>In the following code, we see a call to {{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to <code>log()</code>, a custom function that outputs text to the screen.</p>
+<p>In the following code, we see a call to {{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}} used to schedule a microtask to run.</p>
 
-<pre class="brush: js">log("Before enqueueing the microtask");
+<pre class="brush: js">console.log("Before enqueueing the microtask");
 queueMicrotask(() =&gt; {
-  log("The microtask has run.")
+  console.log("The microtask has run.")
 });
-log("After enqueueing the microtask");</pre>
+console.log("After enqueueing the microtask");</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -243,18 +243,18 @@ log("After enqueueing the microtask");</pre>
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
 </div>
 
-<p>In the following code, we see a call to {{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to <code>log()</code>, a custom function that outputs text to the screen.</p>
+<p>In the following code, we see a call to {{domxref("WindowOrWorkerGlobalScope.queueMicrotask", "queueMicrotask()")}} used to schedule a microtask to run.</p>
 
-<p>The code below schedules a timeout to occur in zero milliseconds, then enqueues a microtask. This is bracketed by calls to <code>log()</code> to output additional messages.</p>
+<p>The code below schedules a timeout to occur in zero milliseconds, then enqueues a microtask.</p>
 
-<pre class="brush: js">let callback = () =&gt; log("Regular timeout callback has run");
+<pre class="brush: js">let callback = () =&gt; console.log("Regular timeout callback has run");
 
-let urgentCallback = () =&gt; log("*** Oh noes! An urgent callback has run!");
+let urgentCallback = () =&gt; console.log("*** Oh noes! An urgent callback has run!");
 
-log("Main program started");
+console.log("Main program started");
 setTimeout(callback, 0);
 queueMicrotask(urgentCallback);
-log("Main program exiting");</pre>
+console.log("Main program exiting");</pre>
 
 <h4 id="Result_2">Result</h4>
 
@@ -284,9 +284,9 @@ let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
 
 <p>The main program code follows. The <code>doWork()</code> function here calls <code>queueMicrotask()</code>, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.</p>
 
-<pre class="brush: js">let callback = () =&gt; log("Regular timeout callback has run");
+<pre class="brush: js">let callback = () =&gt; console.log("Regular timeout callback has run");
 
-let urgentCallback = () =&gt; log("*** Oh noes! An urgent callback has run!");
+let urgentCallback = () =&gt; console.log("*** Oh noes! An urgent callback has run!");
 
 let doWork = () =&gt; {
   let result = 1;
@@ -299,10 +299,10 @@ let doWork = () =&gt; {
   return result;
 };
 
-log("Main program started");
+console.log("Main program started");
 setTimeout(callback, 0);
-log(`10! equals ${doWork()}`);
-log("Main program exiting");</pre>
+console.log(`10! equals ${doWork()}`);
+console.log("Main program exiting");</pre>
 
 <h4 id="Result_3">Result</h4>
 
