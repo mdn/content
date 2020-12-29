@@ -7,7 +7,7 @@ tags:
 <p>For support and discussion:</p>
 <p><span style="font-family: Helvetica;">{{ DiscussionList("dev-embedding", "mozilla.dev.embedding") }}</span></p>
 <p>This document describes some dos and don'ts when writing an interface in IDL for Mozilla. For a complete guide, see the <a class="external" href="https://www.mozilla.org/projects/embedding/HowToFreeze.html">How To Freeze</a> document.</p>
-<dl> <dt><strong>Rule:</strong> Use interCaps for naming.</dt> <dd>All methods and attributes should begin with a lowercase letter. Every subsequent word in the method or attribute name should be capitalized. Avoid capitalizing first letters and using underscores to separate words.</dd> <dt><strong>Why:</strong> IDL usually follows Java and JavaScript convention, which is intercaps.</dt> <dd>In addition, the first letter of all names are promoted to upper case in C++. The C++ signature is the same whether or not the first letter is capitalized. <ul> <li>Incorrect:</li> </ul> </dd>
+<dl> <dt><strong>Rule:</strong> Use camel case for naming.</dt> <dd>All methods and attributes should begin with a lowercase letter. Every subsequent word in the method or attribute name should be capitalized. Avoid capitalizing first letters and using underscores to separate words.</dd> <dt><strong>Why:</strong> IDL usually follows Java and JavaScript convention, which is camel case.</dt> <dd>In addition, the first letter of all names are promoted to upper case in C++. The C++ signature is the same whether or not the first letter is capitalized. <ul> <li>Incorrect:</li> </ul> </dd>
 </dl>
 <pre class="eval">    /* don't capitalize first letters! */
     void OpenFile(in nsIFile file);
@@ -148,7 +148,7 @@ tags:
     interface nsIArena;
 
 </pre>
-<dl> <dt><strong>Rule:</strong> Avoid CID and ContractID declarations in IDL or C++ interface declarations</dt> <dd> </dd><dt><strong>Why:</strong> IDL is for declaring interfaces, and interfaces alone. CIDs and ContractIDs are implementation details.</dt> <dd>Instead of putting these details in an IDL file, put them in a seperate header file. The seperate header file could contain all ContractIDs/CIDs for your module, or you could create a single C++ header which contains the ContractID/CID. <ul> <li>Incorrect:</li> </ul> </dd>
+<dl> <dt><strong>Rule:</strong> Avoid CID and ContractID declarations in IDL or C++ interface declarations</dt> <dd> </dd><dt><strong>Why:</strong> IDL is for declaring interfaces, and interfaces alone. CIDs and ContractIDs are implementation details.</dt> <dd>Instead of putting these details in an IDL file, put them in a separate header file. The separate header file could contain all ContractIDs/CIDs for your module, or you could create a single C++ header which contains the ContractID/CID. <ul> <li>Incorrect:</li> </ul> </dd>
 </dl>
 <pre class="eval">    // nsIFoo.idl:
     %{C

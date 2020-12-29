@@ -84,7 +84,7 @@ tags:
 <p><em>configDir</em> The location of the databases for this token. If configDir is not specified, and noCertDB and noKeyDB is not specified, the load will fail.</p>
 <p><em>certPrefix</em> Cert prefix for this token.</p>
 <p><em>keyPrefix</em> Prefix for the key database for this token. (if not specified, certPrefix will be used).</p>
-<p><em>tokenDescription</em> The label value for this token returned in the CK_TOKEN_INFO structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped). You should specify a user friendly name here as this is the value the token will be refered to in most application UI's. You should make sure tokenDescription is unique.</p>
+<p><em>tokenDescription</em> The label value for this token returned in the CK_TOKEN_INFO structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped). You should specify a user friendly name here as this is the value the token will be referred to in most application UI's. You should make sure tokenDescription is unique.</p>
 <p><em>slotDescription</em> The slotDescription value for this token returned in the CK_SLOT_INFO structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partialUTF8 characters dropped). This name will not change after thedatabase is closed. It should have some number to make this unique.</p>
 <p><em>minPWLen</em> Then minimum password length for this token.</p>
 <p><em>flags</em> A comma separated list of flag values, parsed case-insensitive.<br>

@@ -71,7 +71,7 @@ tags:
  </tbody>
 </table>
 
-<p>When there is no special RTL-aware property available, or when left/right properies must be used specifically for RTL, use the pseudo <code>{{cssxref(":-moz-locale-dir(rtl)")}}</code> (for XUL files) or <code><a href="/en-US/docs/Web/CSS/:dir">:dir(rtl)</a></code> (for HTML files).<br>
+<p>When there is no special RTL-aware property available, or when left/right properties must be used specifically for RTL, use the pseudo <code>{{cssxref(":-moz-locale-dir(rtl)")}}</code> (for XUL files) or <code><a href="/en-US/docs/Web/CSS/:dir">:dir(rtl)</a></code> (for HTML files).<br>
  For example, this rule covers LTR to display searchicon.svg 7 pixels from the left:</p>
 
 <pre class="brush: css">.search-box {
@@ -176,7 +176,7 @@ tags:
 </pre>
 
 <div class="notecard note">
-<p>The LTR rule is seperate from the global rule to avoid having the left padding apply on RTL without having to reset it in the RTL rule.</p>
+<p>The LTR rule is separate from the global rule to avoid having the left padding apply on RTL without having to reset it in the RTL rule.</p>
 </div>
 
 <h4 id="Auto-directionality">Auto-directionality</h4>
@@ -191,7 +191,7 @@ tags:
 <div class="notecard note">
 <p>When testing with <code>intl.uidirection</code> set to <code>1</code>, you may see some oddities regarding text ordering due to the nature of displaying LTR text in RTL layout.</p>
 
-<p><img alt="about:protections in RTL layour- English vs. Hebrew" src="https://mdn.mozillademos.org/files/16970/about-protections-rtl.png" style="height: 124px; width: 350px;"></p>
+<p><img alt="about:protections in RTL layout- English vs. Hebrew" src="https://mdn.mozillademos.org/files/16970/about-protections-rtl.png" style="height: 124px; width: 350px;"></p>
 
 <p>This shouldn't be an issue when using an actual RTL locale or with <span dir="auto"><code class="c-mrkdwn__code"><span class="c-mrkdwn__highlight">intl.l10n.pseudo</span></code> set to <code class="c-mrkdwn__code">bidi</code> .</span></p>
 </div>
