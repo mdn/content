@@ -19,19 +19,19 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp.html
 <h2 id="Chapter_3_Selected_SSL_Types_and_Structures">Chapter 3<br>
   <a name="1029792"> Selected SSL Types and Structures </a></h2>
 <p><a name="1029793"> This chapter describes some of the most important types and structures used with the functions described in the rest of this document, and how to manage the memory used for them. Additional types are described with the functions that use them or in the header files.</a></p>
-<p><a name="1030889"> </a><a href="ssltyp.html#1030559">Types and Structures</a><br>
-  <a href="ssltyp.html#1029645">Managing SECItem Memory</a></p>
+<p><a name="1030889"> </a><a href="#1030559">Types and Structures</a><br>
+  <a href="#1029645">Managing SECItem Memory</a></p>
 <p> </p>
 <h2 id="Types_and_Structures"><a name="Types and Structures"></a> <a name="1030559"> Types and Structures </a></h2>
 <p><a name="1030587"> These types and structures are described here:</a></p>
-<p><a name="1028704"> </a><a href="ssltyp.html#1028465"><code>CERTCertDBHandle</code></a><br>
-  <a href="ssltyp.html#1027387"><code>CERTCertificate</code></a><br>
-  <a href="ssltyp.html#1028593"><code>PK11SlotInfo</code></a><br>
-  <a href="ssltyp.html#1026076"><code>SECItem</code></a><br>
-  <a href="ssltyp.html#1026727"><code>SECKEYPrivateKey</code></a><br>
-  <a href="ssltyp.html#1026722"><code>SECStatus</code></a></p>
+<p><a name="1028704"> </a><a href="#1028465"><code>CERTCertDBHandle</code></a><br>
+  <a href="#1027387"><code>CERTCertificate</code></a><br>
+  <a href="#1028593"><code>PK11SlotInfo</code></a><br>
+  <a href="#1026076"><code>SECItem</code></a><br>
+  <a href="#1026727"><code>SECKEYPrivateKey</code></a><br>
+  <a href="#1026722"><code>SECStatus</code></a></p>
 <p><a name="1029417"> Additional types used by a single function only are described with the function's entry in each chapter. Some of these functions also use types defined by NSPR and described in the </a><a href='"../../../../../../docs/refList/refNSPR/contents.html'>NSPR Reference</a>.</p>
-<p>&lt;a name="&gt; Many of the structures presented here (<a href=" ssltyp.html#1028465"><code>CERTCertDBHandle</code></a>, <a href="ssltyp.html#1027387"><code>CERTCertificate</code></a>, <a href="ssltyp.html#1028593"><code>PK11SlotInfo</code></a>, and <a href="ssltyp.html#1026727"><code>SECKEYPrivateKey</code></a>) are opaque--that is, they are types defined as structures (for example, <code>CERTCertDBHandleStr</code>) that may change in future releases of Network Security Services. As long as you use the form shown here, your code will not need revision.</p>
+<p>&lt;a name="&gt; Many of the structures presented here (<a href="#1028465"><code>CERTCertDBHandle</code></a>, <a href="#1027387"><code>CERTCertificate</code></a>, <a href="#1028593"><code>PK11SlotInfo</code></a>, and <a href="#1026727"><code>SECKEYPrivateKey</code></a>) are opaque--that is, they are types defined as structures (for example, <code>CERTCertDBHandleStr</code>) that may change in future releases of Network Security Services. As long as you use the form shown here, your code will not need revision.</p>
 <h4 id="CERTCertDBHandle"><a name="Head3;"></a> <a name="1028465"> CERTCertDBHandle </a></h4>
 <p><a name="1027307"> An opaque handle structure for open certificate databases.</a></p>
 <p> </p>
@@ -77,7 +77,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp.html
 };</a></pre>
 <h5 id="Description_2"><a name="Head4;"></a> <a name="1030926"> Description </a></h5>
 <p><a name="1030934"> A <code>SECItem</code> structure can be used to associate your own data with an SSL socket.</a></p>
-<p><a name="1030983"> To free a structure pointed to by a <code>SECItem</code>, and, if desired, the <code>SECItem</code> structure itself, use one the functions </a><a href="ssltyp.html#1030620"><code>SECItem_FreeItem</code></a> or <a href="ssltyp.html#1030773"><code>SECItem_ZfreeItem</code></a>.</p>
+<p><a name="1030983"> To free a structure pointed to by a <code>SECItem</code>, and, if desired, the <code>SECItem</code> structure itself, use one the functions </a><a href="#1030620"><code>SECItem_FreeItem</code></a> or <a href="#1030773"><code>SECItem_ZfreeItem</code></a>.</p>
 <h4 id="SECKEYPrivateKey"><a name="Head3;"></a> <a name="1026727"> SECKEYPrivateKey </a></h4>
 <p><a name="1027674"> An opaque, generic key structure.</a></p>
 <h5 id="Syntax_5"><a name="Head4;"></a> <a name="1029313"> Syntax </a></h5>
@@ -131,8 +131,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp.html
 <p> </p>
 <h2 id="Managing_SECItem_Memory"><a name="Managing SECItem Memory"></a> <a name="1029645"> Managing SECItem Memory </a></h2>
 <p><a name="1030704"> These functions are available for managing the memory associated with <code>SECItem</code> structures and the structures to which they point.</a></p>
-<p><a name="1030852"> </a><a href="ssltyp.html#1030620"><code>SECItem_FreeItem</code></a><br>
-  <a href="ssltyp.html#1030773"><code>SECItem_ZfreeItem</code></a></p>
+<p><a name="1030852"> </a><a href="#1030620"><code>SECItem_FreeItem</code></a><br>
+  <a href="#1030773"><code>SECItem_ZfreeItem</code></a></p>
 <h4 id="SECItem_FreeItem"><a name="Head3;"></a> <a name="1030620"> SECItem_FreeItem </a></h4>
 <p><a name="1030621"> Frees the memory associated with a <code>SECItem</code> structure.</a></p>
 <h5 id="Syntax_7"><a name="Head4;"></a> <a name="1030622"> Syntax </a></h5>
@@ -207,4 +207,4 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp.html
   <li><a name="1030794"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="../../../../../nspr/reference/html/prerr.html#26127">PR_GetError</a> to retrieve the error code.</li>
 </ul>
 <h5 id="Description_5"><a name="Head4;"></a> <a name="1030795"> Description </a></h5>
-<p><a name="1030796"> This function is similar to </a><a href="ssltyp.html#1030620"><code>SECItem_FreeItem</code></a>, except that it overwrites the structures to be freed with zeroes before it frees them. Zeros and frees the memory associated with the structure to which the specified item points, when that structure is no longer used. When <code>freeItem</code> is not <code>PR_FALSE</code>, also zeroes and frees the item structure itself.<a name="1030611"></a></p>
+<p><a name="1030796"> This function is similar to </a><a href="#1030620"><code>SECItem_FreeItem</code></a>, except that it overwrites the structures to be freed with zeroes before it frees them. Zeros and frees the memory associated with the structure to which the specified item points, when that structure is no longer used. When <code>freeItem</code> is not <code>PR_FALSE</code>, also zeroes and frees the item structure itself.<a name="1030611"></a></p>
