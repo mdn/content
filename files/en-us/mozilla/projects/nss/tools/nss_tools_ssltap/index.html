@@ -14,23 +14,23 @@ Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev
 <a name="1031698">
  Availability
 </a></h2><a name="1037781">
-This tool is known to build on Solaris 2.5.1 (SunOS 5.5.1) and Windows NT 4.0. </a><p></p>
+This tool is known to build on Solaris 2.5.1 (SunOS 5.5.1) and Windows NT 4.0. </a>
 
 <h2 id="Description_2"><a name="Description"></a>
 <a name="1039196">
  Description
 </a></h2><a name="1039197">
-The <code>ssltap</code> command opens a socket on a rendezvous port and waits for an incoming connection from the client side. Once this connection arrives, the tool makes another connection to the specified host name and port on the server side. It passes any data sent by the client to the server and vice versa. The tool also displays the data to the shell window from which it was called. It can do this for plain HTTP connections or any TCP protocol, as well as for SSL streams, as described here. </a><p></p>
+The <code>ssltap</code> command opens a socket on a rendezvous port and waits for an incoming connection from the client side. Once this connection arrives, the tool makes another connection to the specified host name and port on the server side. It passes any data sent by the client to the server and vice versa. The tool also displays the data to the shell window from which it was called. It can do this for plain HTTP connections or any TCP protocol, as well as for SSL streams, as described here. </a>
 <a name="1039603">
-The tool cannot and does not decrypt any encrypted message data. You use the tool to look at the plain text and binary data that are part of the handshake procedure, before the secure connection is established. </a><p></p>
+The tool cannot and does not decrypt any encrypted message data. You use the tool to look at the plain text and binary data that are part of the handshake procedure, before the secure connection is established. </a>
 
 <h2 id="Syntax_2"><a name="Syntax"></a>
 <a name="1028268">
  Syntax
 </a></h2><a name="1038163">
-To run the SSL Debugging Tool, type this command in a command shell:</a><p></p>
+To run the SSL Debugging Tool, type this command in a command shell:</a>
 <a name="1038190">
-<code>ssltap</code> [<code>-vhfsxl</code>] [<code>-p</code> <i>port</i>] <i>hostname</i>:<i>port</i> </a><p></p>
+<code>ssltap</code> [<code>-vhfsxl</code>] [<code>-p</code> <i>port</i>] <i>hostname</i>:<i>port</i> </a>
 
 <h3 id="Options"><a name="Head2;"></a>
 <a name="1038316">
@@ -81,31 +81,31 @@ NNTPS   563 (NNTP over SSL)</a></p>
 <table>
 <tbody><tr><td>
 </td></tr></tbody></table>
- </a><p></p>
+ </a>
 
 <h2 id="Examples_2"><a name="Examples"></a>
 <a name="1039388">
  Examples
 </a></h2><a name="1039390">
-You can use the SSL Debugging Tool to intercept any connection information. Although you can run the tool at its most basic by issuing the <code>ssltap</code> command with no options other than <i>hostname:port</i>, the information you get in this way is not very useful.</a><p></p>
+You can use the SSL Debugging Tool to intercept any connection information. Although you can run the tool at its most basic by issuing the <code>ssltap</code> command with no options other than <i>hostname:port</i>, the information you get in this way is not very useful.</a>
 <a name="1039406">
-For example, assume your development machine is called <code>intercept</code>. The simplest way to use the debugging tool is to execute the following command from a command shell:</a><p></p>
+For example, assume your development machine is called <code>intercept</code>. The simplest way to use the debugging tool is to execute the following command from a command shell:</a>
 <pre><a name="1039391">ssltap www.netscape.com:80 </a></pre><a name="1039392">
-The program waits for an incoming connection on the default port 1924. In your browser window, enter the URL <code>http://intercept:1924</code>. The browser retrieves the requested page from the server at <code>www.netscape.com</code>, but the page is intercepted and passed on to the browser by the debugging tool on <code>intercept</code>. </a><p></p>
+The program waits for an incoming connection on the default port 1924. In your browser window, enter the URL <code>http://intercept:1924</code>. The browser retrieves the requested page from the server at <code>www.netscape.com</code>, but the page is intercepted and passed on to the browser by the debugging tool on <code>intercept</code>. </a>
 <a name="1039393">
-On its way to the browser, the data is printed to the command shell from which you issued the command. Data sent from the client to the server is surrounded by the following symbols:</a><p></p>
+On its way to the browser, the data is printed to the command shell from which you issued the command. Data sent from the client to the server is surrounded by the following symbols:</a>
 <a name="1039394">
-<code>--&gt; [ </code><i>data</i><code> ]</code></a><p></p>
+<code>--&gt; [ </code><i>data</i><code> ]</code></a>
 <a name="1039395">
-Data sent from the server to the client is surrounded by the following symbols:</a><p></p>
+Data sent from the server to the client is surrounded by the following symbols:</a>
 <a name="1039396">
-<code>&lt;-- [ </code><i>data</i><code> ]</code></a><p></p>
+<code>&lt;-- [ </code><i>data</i><code> ]</code></a>
 <a name="1039397">
-The raw data stream is sent to standard output and is not interpreted in any way. This can result in peculiar effects, such as sounds, flashes, and even crashes of the command shell window. To output a basic, printable interpretation of the data, use the <code>-h</code> option, or, if you are looking at an SSL connection, the <code>-s</code> option.</a><p></p>
+The raw data stream is sent to standard output and is not interpreted in any way. This can result in peculiar effects, such as sounds, flashes, and even crashes of the command shell window. To output a basic, printable interpretation of the data, use the <code>-h</code> option, or, if you are looking at an SSL connection, the <code>-s</code> option.</a>
 <a name="1039413">
-You will notice that the page you retrieved looks incomplete in the browser. This is because, by default, the tool closes down after the first connection is complete, so the browser is not able to load images. To make the tool continue to accept connections, switch on looping mode with the <code>-l</code> option. </a><p></p>
+You will notice that the page you retrieved looks incomplete in the browser. This is because, by default, the tool closes down after the first connection is complete, so the browser is not able to load images. To make the tool continue to accept connections, switch on looping mode with the <code>-l</code> option. </a>
 <a name="1039780">
-The following examples show the output from commonly used combinations of options. </a><p></p>
+The following examples show the output from commonly used combinations of options. </a>
 
 <h4 id="Example_1"><a name="Head3;"></a>
 <a name="1039790">
@@ -113,7 +113,7 @@ The following examples show the output from commonly used combinations of option
 </a></h4>
 
 <a name="1039998">
-The <code>s</code> and <code>x</code> options in this example turn on SSL parsing and show undecoded values in hex/ASCII format. The output is routed to a text file.</a><p></p>
+The <code>s</code> and <code>x</code> options in this example turn on SSL parsing and show undecoded values in hex/ASCII format. The output is routed to a text file.</a>
 <h5 id="Command"><a name="Head4;"></a>
 <a name="1039797">
  Command
@@ -134,7 +134,7 @@ Output
 </a></h4>
 
 <a name="1040010">
-The <code>-s</code> option turns on SSL parsing. Because the <code>-x</code> option is not used in this example, undecoded values are output as raw data. The output is routed to a text file.</a><p></p>
+The <code>-s</code> option turns on SSL parsing. Because the <code>-x</code> option is not used in this example, undecoded values are output as raw data. The output is routed to a text file.</a>
 <h5 id="Command_2"><a name="Head4;"></a>
 <a name="1040011">
  Command
@@ -153,7 +153,7 @@ The <code>-s</code> option turns on SSL parsing. Because the <code>-x</code> opt
 </a></h4>
 
 <a name="1040016">
-In this example, the <code>-h</code> option turns hex/ASCII format. There is no SSL parsing or decoding. The output is routed to a text file.</a><p></p>
+In this example, the <code>-h</code> option turns hex/ASCII format. There is no SSL parsing or decoding. The output is routed to a text file.</a>
 <h5 id="Command_3"><a name="Head4;"></a>
 <a name="1040017">
  Command
@@ -171,7 +171,7 @@ In this example, the <code>-h</code> option turns hex/ASCII format. There is no 
 </a></h4>
 
 <a name="1040033">
-In this example, the <code>-s</code> option turns on SSL parsing, and the <code>-h</code> options turns on hex/ASCII format. Both formats are shown for each record. The output is routed to a text file.</a><p></p>
+In this example, the <code>-s</code> option turns on SSL parsing, and the <code>-h</code> options turns on hex/ASCII format. Both formats are shown for each record. The output is routed to a text file.</a>
 <h5 id="Command_4"><a name="Head4;"></a>
 <a name="1040034">
  Command
@@ -186,9 +186,9 @@ In this example, the <code>-s</code> option turns on SSL parsing, and the <code>
 <h2 id="Usage_Tips"><a name="Usage Tips"></a>
 <a name="1040652">
  Usage Tips
-</a></h2><ul><p></p><li><a name="1040653">
+</a></h2><ul><li><a name="1040653">
 When SSL restarts a previous session, it makes use of cached information to do a partial handshake. If you wish to capture a full SSL handshake, restart the browser to clear the session id cache.</a></li>
-<p></p><li><a name="1040654">
+<li><a name="1040654">
 If you run the tool on a machine other than the SSL server to which you are trying to connect, the browser will complain that the host name you are trying to connect to is different from the certificate. If you are using the default BadCert callback, you can still connect through a dialog. If you are not using the default BadCert callback, the one you supply must allow for this possibility.</a></li>
 </ul>
 
