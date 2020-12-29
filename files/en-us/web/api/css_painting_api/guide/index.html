@@ -31,7 +31,7 @@ tags:
   /*
        define if alphatransparency  is allowed alpha
        is set to true by default. If set to false, all
-       colours used on the canvas will be fully opaque
+       colors used on the canvas will be fully opaque
     */
   static get contextOptions() {
            return { alpha: true };
@@ -357,7 +357,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 	// if stroke arg is 'stroke', don't fill
 	if (hasStroke === 'stroke') {
 		ctx.fillStyle = 'transparent';
-		ctx.strokeStyle = colour;
+		ctx.strokeStyle = color;
 	}
 	...
 }
@@ -435,7 +435,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 		const blockHeight = size.height * 0.85;
 
 		// the values passed in the paint() function in the CSS
-		const colour = props.get( '--boxColor' );
+		const color = props.get( '--boxColor' );
 		const strokeType = args[0].toString();
 		const strokeWidth = parseInt(args[1]);
 
@@ -448,10 +448,10 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 		// set the fill type
 		if ( strokeType === 'stroke' ) {
 			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = colour;
+			ctx.strokeStyle = color;
 		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = colour;
-			ctx.strokeStyle = colour;
+			ctx.fillStyle = color;
+			ctx.strokeStyle = color;
 		} else {
 			ctx.fillStyle = 'none';
 			ctx.strokeStyle = 'none';

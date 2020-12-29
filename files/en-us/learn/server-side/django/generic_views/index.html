@@ -474,7 +474,7 @@ def book_detail_view(request, primary_key):
 <p>Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.</p>
 </div>
 
-<p>The second interesting (and non-obvious) thing in the template is where we set a class (<code>text-success</code>, <code>text-danger</code>, <code>text-warning</code>) to colour-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method <code>BookInstance.get_status_display()</code> that we use to get the status text does not appear elsewhere in the code.</p>
+<p>The second interesting (and non-obvious) thing in the template is where we set a class (<code>text-success</code>, <code>text-danger</code>, <code>text-warning</code>) to color-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method <code>BookInstance.get_status_display()</code> that we use to get the status text does not appear elsewhere in the code.</p>
 
 <pre class="brush: python notranslate"> &lt;p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}"&gt;
  <strong>\{{ copy.get_status_display }}</strong> &lt;/p&gt;</pre>
