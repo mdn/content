@@ -98,15 +98,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
 });
 
 xhrButtonError.addEventListener('click', () =&gt; {
-    runXHR('https://somewhere.org/i-dont-exist');
+    runXHR('http://i-dont-exist');
 });
 
 xhrButtonAbort.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json').abort();
 });</pre>
 
 <h4 id="Result">Result</h4>
