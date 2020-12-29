@@ -57,6 +57,21 @@ tags:
  </tbody>
 </table>
 
+<h2 id="iossafari">iOS Safari</h2>
+
+In iOS Safari, when a user leaves the page (e.g. switches tabs, minimizes the browser, turns off the screen) 
+the audio context's state changes to "interrupted" and needs to be resumed. For example:
+
+<pre class="brush: js">
+function play() {
+  if (audioContext.state === 'interrupted') {
+    audioContext.resume().then(() => play());
+    return;
+  }
+  // ... rest of the play() function
+}
+</pre>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
