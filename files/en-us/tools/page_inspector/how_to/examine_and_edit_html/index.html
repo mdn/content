@@ -19,7 +19,7 @@ tags:
 
 <p>At the bottom on the HTML pane is a breadcrumbs toolbar. This shows the complete hierarchy through the document for the branch containing the selected element:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16387/HTML_breadcrumbs.png" style="border: 1px solid black; display: block; height: 403px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16387/HTML_breadcrumbs.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
 <p>Hovering over a breadcrumb highlights that element in the page.</p>
 
@@ -41,7 +41,7 @@ tags:
 
 <p>As you type, an autocomplete popup shows any class or ID attributes that match the current search term:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16388/search_html.png" style="border: 1px solid black; display: block; height: 402px; margin-left: auto; margin-right: auto; width: 333px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16388/search_html.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 333px;"></p>
 
 <p>Press <kbd>Up</kbd> and <kbd>Down</kbd> to cycle through suggestions, <kbd>Tab</kbd> to choose the current suggestion, then <kbd>Enter</kbd> to select the first node with that attribute.</p>
 
@@ -53,17 +53,17 @@ tags:
 
 <p>It is also possible to search via <a href="/en-US/docs/Web/XPath">XPaths</a>. This allows you to search for specific elements without the conflict of matching words within the text. For example, <code>//a</code> matches all {{HTMLElement("a")}} elements but not the letter "a" within the text content. Furthermore it allows for some more advanced searches like finding elements that start with a specific text, for example.</p>
 
-<p><img alt="Match of an Inspector search using an XPath expression" src="https://mdn.mozillademos.org/files/17139/XPath_search.png" style="border: 1px solid black; display: block; height: 261px; margin-left: auto; margin-right: auto; width: 482px;"></p>
+<p><img alt="Match of an Inspector search using an XPath expression" src="https://mdn.mozillademos.org/files/17139/XPath_search.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 482px;"></p>
 
 <h3 id="HTML_tree">HTML tree</h3>
 
-<p>The rest of the pane shows you the page's HTML as a tree (this UI is also called the Markup View). Just to the left of each node is an arrow: click the arrow to expand the node. If you hold the Alt key while clicking the arrow, it expands the node and all the nodes underneath it.<img alt="The new Firefox 57 inspector HTML tree." src="https://mdn.mozillademos.org/files/16389/HTML_tree.png" style="border: 1px solid black; display: block; height: 403px; margin-left: auto; margin-right: auto; width: 476px;"></p>
+<p>The rest of the pane shows you the page's HTML as a tree (this UI is also called the Markup View). Just to the left of each node is an arrow: click the arrow to expand the node. If you hold the Alt key while clicking the arrow, it expands the node and all the nodes underneath it.<img alt="The new Firefox 57 inspector HTML tree." src="https://mdn.mozillademos.org/files/16389/HTML_tree.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 476px;"></p>
 
 <p>Moving the mouse over a node in the tree highlights that element in the page.</p>
 
 <p>Nodes that are not visible are shown faded/desaturated. This can happen for different reasons such as using <code><a href="/en-US/docs/Web/CSS/display">display: none</a></code> or that the element doesn't have any dimensions.</p>
 
-<p>There is an ellipsis shown between the opening and closing tag of an element when the node is collapsed if it has larger contents. Now children are indicated in the tree with this icon: <img alt="" src="https://mdn.mozillademos.org/files/14925/child-node-indicator.png" style="height: 24px; width: 32px;"></p>
+<p>There is an ellipsis shown between the opening and closing tag of an element when the node is collapsed if it has larger contents. Now children are indicated in the tree with this icon: <img alt="" src="https://mdn.mozillademos.org/files/14925/child-node-indicator.png" style="width: 32px;"></p>
 
 <p>Markers ("badges") are displayed to the right of some nodes. The table below explains the meaning of each badge:</p>
 
@@ -129,11 +129,11 @@ tags:
  <li>Click on the word <code>custom</code></li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16306/custom_pc_01.png" style="display: block; height: 580px; margin: 0px auto; width: 852px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16306/custom_pc_01.png" style="display: block; margin: 0px auto; width: 852px;"></p>
 
 <p>The source for the element's class will be displayed in the Debugger.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16307/custom_pc_02.png" style="display: block; height: 290px; margin: 0px auto; width: 852px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16307/custom_pc_02.png" style="display: block; margin: 0px auto; width: 852px;"></p>
 
 <h3 id="Whitespace-only_text_nodes">Whitespace-only text nodes</h3>
 
@@ -143,9 +143,9 @@ tags:
 
 <p>If these auto generated text nodes are <a href="/en-US/docs/Web/Guide/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">inline level</a>, browsers will give them a non-zero width and height. Then you will find strange gaps between elements, even if you haven’t set any margin or padding on them.</p>
 
-<p>Since Firefox 52, the Inspector displays these whitespace nodes, so you can see where the gaps in your markup come from. Whitespace nodes are represented with a dot: <img alt="" src="https://mdn.mozillademos.org/files/14931/new-whitespace-text-indicator.png" style="height: 23px; width: 30px;"> and you get an explanatory tooltip when you hover over them:</p>
+<p>Since Firefox 52, the Inspector displays these whitespace nodes, so you can see where the gaps in your markup come from. Whitespace nodes are represented with a dot: <img alt="" src="https://mdn.mozillademos.org/files/14931/new-whitespace-text-indicator.png" style="width: 30px;"> and you get an explanatory tooltip when you hover over them:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16394/white_space_only.png" style="display: block; height: 382px; margin-left: auto; margin-right: auto; width: 815px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16394/white_space_only.png" style="display: block; margin-left: auto; margin-right: auto; width: 815px;"></p>
 
 <p>To see this in action, see the demo at <a href="https://mdn.github.io/devtools-examples/whitespace-only-demo/index.html">https://mdn.github.io/devtools-examples/whitespace-only-demo/index.html</a>.</p>
 
@@ -153,11 +153,11 @@ tags:
 
 <p>Any shadow roots present in the DOM are exposed in the HTML page in the same manner as the regular DOM. The shadow root is signified by a node named <code>#shadow-root</code> — you can click its expansion arrow to see the full contents of the shadow DOM, and then manipulate the contained nodes in a similar way to other part of the page's DOM (although with a limited featureset — you can't, for example, drag and drop or delete shadow DOM nodes).</p>
 
-<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16414/inspector_shadowDom.png" style="display: block; height: 300px; margin: 0 auto; width: 481px;"></p>
+<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16414/inspector_shadowDom.png" style="display: block; margin: 0 auto; width: 481px;"></p>
 
 <p>If a shadow DOM contains a "slotted" element (an element with a <code>slot</code> attribute after it has been inserted inside a {{htmlelement("slot")}} element — see <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots#Adding_flexibility_with_slots">Adding flexibility with slots</a> for an explanation of how these are used), the "slotted" element will be shown inside its corresponding {{htmlelement("slot")}} element, with a "reveal" link alongside it. Clicking the "reveal" link will highlight the element with the <code>slot</code> attribute as it exists outside the shadow DOM</p>
 
-<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16413/inspector_slot.png" style="display: block; height: 300px; margin: 0 auto; width: 481px;"></p>
+<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16413/inspector_slot.png" style="display: block; margin: 0 auto; width: 481px;"></p>
 
 <p>This is very useful when you've got a <code>&lt;slot&gt;</code> element and you can't find the source of its content.</p>
 
@@ -197,6 +197,7 @@ tags:
    <li><a href="#:hover">hover</a></li>
    <li><a href="#:active">active</a></li>
    <li><a href="#:focus">focus</a></li>
+   <li><a href="#focus-visible">focus-visible</a></li>
    <li><a href="#focus-within">focus-within</a></li>
    <li><a href="#visited">visited</a></li>
   </ul>
@@ -375,8 +376,12 @@ tags:
    <td>Set the <a href="/en-US/docs/Web/CSS/:focus">:focus</a> CSS pseudo-class.</td>
   </tr>
   <tr>
+    <td><a id="focus-visible">(Change Pseudo-class) focus-visible</a></td>
+    <td>Set the <a href="/en-US/docs/Web/CSS/:focus-visible">:focus-visible</a> CSS pseudo-class.</td>
+   </tr>
+  <tr>
    <td><a id="focus-within">(Change Pseudo-class) focus-within</a></td>
-   <td>Set the :focus-within CSS pseudo-class.</td>
+   <td>Set the <a href="/en-US/docs/Web/CSS/:focus-within">:focus-within</a> CSS pseudo-class.</td>
   </tr>
   <tr>
    <td><a id="visited">(Change Pseudo-class) visited</a></td>
@@ -391,11 +396,11 @@ tags:
 
 <p>To edit an element's {{domxref("Element.outerHTML", "outerHTML")}}, activate the element's popup menu and select "Edit As HTML". You'll see a text box in the HTML pane:</p>
 
-<p><img alt="Edit HTML directly in the Inspector panel in Firefox 57" src="https://mdn.mozillademos.org/files/16395/edit_html.png" style="border: 1px solid black; display: block; height: 335px; margin-left: auto; margin-right: auto; width: 600px;">You can add any HTML in here: changing the element's tag, changing existing elements, or adding new ones. Once you click outside the box, the changes are applied to the page.</p>
+<p><img alt="Edit HTML directly in the Inspector panel in Firefox 57" src="https://mdn.mozillademos.org/files/16395/edit_html.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 600px;">You can add any HTML in here: changing the element's tag, changing existing elements, or adding new ones. Once you click outside the box, the changes are applied to the page.</p>
 
 <p>When you're editing HTML, the context menu you'll see is the normal one for working with editable text:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14522/editable-context-menu.png" style="display: block; height: 241px; margin-left: auto; margin-right: auto; width: 200px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14522/editable-context-menu.png" style="display: block; margin-left: auto; margin-right: auto; width: 200px;"></p>
 
 <h3 id="Copy_and_paste">Copy and paste</h3>
 
@@ -413,7 +418,7 @@ tags:
 
 <p>There's a "+" icon at the top of the markup view:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16389/HTML_tree.png" style="border: 1px solid black; display: block; height: 403px; margin-left: auto; margin-right: auto; width: 476px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/16389/HTML_tree.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto; width: 476px;"></p>
 
 <p>Click this icon to insert an empty {{HTMLElement("div")}} into the document as the last child of the currently selected element. You can then edit the new node's content and styling just as you would any other node in the document.</p>
 
