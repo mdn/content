@@ -4,7 +4,9 @@ slug: Web/HTML/Attributes/step
 tags:
   - Attribute
   - Attributes
-  - constrain validation
+  - Constraint validation
+  - HTML
+  - Reference
   - step
 ---
 <p>{{HTMLSidebar}}{{draft}}</p>
@@ -14,6 +16,8 @@ tags:
 <p>The <code>step</code> sets the <em>stepping interval</em> when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, <code>step</code> defaults to 1 for <code>number</code> and <code>range</code>, and 1 unit type (minute, week, month, day) for the date/time input types. The value can must be a positive number - integer or float -- or the special value <code>any</code>, which means no stepping is implied, and any value is allowed (barring other constraints, such as <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>).</p>
 
 <p>The default stepping value for <code>number</code> inputs is 1, allowing only integers to be entered, <em>unless</em> the stepping base is not an integer. The default stepping value for <code>time</code> is 1 second, with 900 being equal to 15 minutes.</p>
+
+<h3 id="Syntax">Syntax</h3>
 
 <table class="standard-table">
  <caption>Default values for step</caption>
@@ -48,9 +52,7 @@ tags:
   <tr>
    <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
    <td>1 (day)</td>
-   <td>
-    <p><code class="brush: html">&lt;input type="datetime-local" min="019-12-25T19:30" step="7"&gt;</code></p>
-   </td>
+   <td><code class="brush: html">&lt;input type="datetime-local" min="019-12-25T19:30" step="7"&gt;</code></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
@@ -93,7 +95,7 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the min attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using  <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
+<p>Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the <code>min</code> attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -122,10 +124,12 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a></li>
- <li>{{domxref('Constraint validation', "", 1)}} API</li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a></li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/min"><code>min</code></a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
+ <li><a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a></li>
  <li>{{domxref('validityState.stepMismatch')}}</li>
  <li>{{cssxref(':out-of-range')}}</li>
  <li>{{htmlelement('input')}}</li>
+ <li>{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}}</li>
 </ul>
