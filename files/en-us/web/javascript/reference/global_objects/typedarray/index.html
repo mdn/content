@@ -154,6 +154,15 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
  <dd>When called with a <code><var>buffer</var></code>, and optionally a <code><var>byteOffset</var></code> and a <code><var>length</var></code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code><var>byteOffset</var></code> and <code><var>length</var></code> parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of <code><var>buffer</var></code> is viewed; if only <code><var>length</var></code> is omitted, the remainder of <code><var>buffer</var></code> is viewed.</dd>
 </dl>
 
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+ <dt><code>TypeError</code></dt>
+ <dd>An attempt was made to freeze a <code><var>typedarray</var></code> that has elements.</dd>
+ <dt><code>RangeError</code></dt>
+ <dd>Byte length of buffer isn't a multiple of the <code><var>TypedArray</var></code> subclass' byte length</dd>
+</dl>
+
 <h2 id="Static_properties">Static properties</h2>
 
 <dl>
