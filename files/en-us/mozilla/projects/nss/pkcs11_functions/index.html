@@ -19,13 +19,12 @@ tags:
 <h6 id="Parameters">Parameters</h6>
 <p>This function has the following parameters:</p>
 <p><em>moduleSpec</em> is a pkcs #11 moduleSpec. <em>parent</em> is the moduleDB that presented this module spec. For applications this value should be NULL. <em>recurse</em> is a boolean indicates whether or not the module should also launch additional pkcs #11 modules. This is only applicable if the loaded module is actually a moduleDB rather than a PKCS #11 module (see <a href="/en-US/PKCS11_Module_Specs" title="en/PKCS11_Module_Specs">PKCS11_Module_Specs</a>).</p>
-<p> </p>
 <h6 id="Returns">Returns</h6>
 <p>The function returns one of these values:</p>
 <ul> <li>If successful, a pointer to a SECMODModule. Caller owns the reference</li> <li>If unsuccessful, NULL.</li>
 </ul>
 
-<h6 id="Description" name="Description">Description</h6>
+<h6 id="Description">Description</h6>
 <p>SECMOD_LoadUserModule loads a new PKCS #11 module into NSS and connects it to the current NSS trust infrastructure. Once the module has been successfully loaded, other NSS calls will use it in the normal course of searching.</p>
 
 <p><em>modulespec</em> specifies how the module should be loaded. More information about module spec is available at <a href="/en-US/PKCS11_Module_Specs" title="en/PKCS11_Module_Specs">PKCS11_Module_Specs</a>. NSS parameters may be specified in module specs used by SECMOD_LoadUserModule.</p>
@@ -58,7 +57,7 @@ tags:
 <p>This function has the following parameter:</p>
 
 <p><em>slot</em> A pointer to a slot info structure. This slot must a slot created by SECMOD_OpenUserDB() at some point in the past.</p>
-<h6 id="Returns_3" name="Returns_3">Returns</h6>
+<h6 id="Returns_3">Returns</h6>
 
 <p>The function returns one of these values:</p>
 <ul> <li>If successful, SECSuccess).</li> <li>If unsuccessful, SECFailure.</li>
