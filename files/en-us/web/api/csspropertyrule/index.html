@@ -11,7 +11,7 @@ tags:
   - Interface
   - Reference
 ---
-<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}{{draft}}</div>
+<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>CSSPropertyRule</code></strong> interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.</p>
 
@@ -32,11 +32,20 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p>No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.</p>
+<p><em>No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>To do</p>
+<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> with the properties and values as defined by the rule in CSS.</p>
+
+<pre class="brush:css">@property --property-name {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #c0ffee;
+}</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSPropertyRule</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
