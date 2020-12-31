@@ -294,7 +294,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code>, which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously <em>sent</em> offer with the newly <em>received</em> offer. The impolite peer has now become the callee instead of the caller.</p>
 
-<p>Alll other descriptions received from the impolite peer are processed as normal, by passing them into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.</p>
+<p>All other descriptions received from the impolite peer are processed as normal, by passing them into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.</p>
 
 <p>Finally, we process a received offer by calling <code>setLocalDescription()</code> to set our local description to the one returned by {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}. Then that gets sent to the polite peer using the signaling channel.</p>
 
