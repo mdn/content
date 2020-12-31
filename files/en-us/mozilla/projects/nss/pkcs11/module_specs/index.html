@@ -12,7 +12,7 @@ tags:
 
 <p>Names can be any alpha/numeric combination, and are parsed case-insensitive.</p>
 
-<p>Values can contain any printable ASCII value, including UTF8 characters. Values can contain embedded blanks either through quoting the entire value, or by escaping the embedded blanks with '\'. The value is considered quoted if the first character after the '=' is ', ", {, [, or &lt;. If the value is quoted, then the value is terminated with and ending quote of the form ', ", ), ], }, or &gt; matching the respective starting quote. Ending quotes can be escaped. Embedded '\' charaters are considered escape characters for the next character in the stream. Note that case must be preserved in the values.</p>
+<p>Values can contain any printable ASCII value, including UTF8 characters. Values can contain embedded blanks either through quoting the entire value, or by escaping the embedded blanks with '\'. The value is considered quoted if the first character after the '=' is ', ", {, [, or &lt;. If the value is quoted, then the value is terminated with and ending quote of the form ', ", ), ], }, or &gt; matching the respective starting quote. Ending quotes can be escaped. Embedded '\' characters are considered escape characters for the next character in the stream. Note that case must be preserved in the values.</p>
 
 <p>These modules specs can be passed by the application directly to NSS via the <code>SECMOD_LoadUserModule()</code> call. To initialize a PKCS #11 module 'on-the-fly'.</p>
 
