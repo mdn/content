@@ -191,7 +191,7 @@ setInterval(function() {
 }, 60000);
 </pre>
 
-<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from <code>"17:33"</code> to <code>"17:34"</code>, assistive technologies will only announce <samp>"4"</samp>, which won't be very useful to users.</p>
+<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from <code>"17:33"</code> to <code>"17:34"</code>, assistive technologies will only announce "<samp>4</samp>", which won't be very useful to users.</p>
 
 <p>One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.</p>
 
