@@ -195,7 +195,7 @@ setInterval(function() {
 
 <p>One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.</p>
 
-<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. <samp>"Time: 17:34"</samp>).</p>
+<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "<samp>Time: 17:34</samp>").</p>
 
 <pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>
