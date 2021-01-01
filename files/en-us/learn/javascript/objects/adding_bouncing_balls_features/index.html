@@ -75,8 +75,9 @@ tags:
 	<li>It should also define a <code>color</code> and a <code>size</code> property, like the original <code>Ball()</code> constructor did.</li>
 	<li>Remember to set the <code>Ball()</code> constructor's <code>prototype</code> and <code>constructor</code> appropriately.</li>
 	<li>
-		The Ball prototype's <code>collisionDetect()</code> method needs a small update. As you would read below, the <code>EvilCircle</code> would start eating the bouncing balls by setting the <code>exists</code> property to <code>false</code>. And that would reduce the number of balls involved in collision detection. A ball needs to be considered for collision detection only if the <code>exists</code> property is <code>true</code>. Replace the <code>collisionDetect()</code>'s code with the following code:
-		<pre class="brush: js">Ball.prototype.collisionDetect = function() {
+		The <code>Ball</code> prototype's <code>collisionDetect()</code> method needs a small update. If the code were kept as-is, the <code>EvilCircle</code> would start eating the bouncing balls by setting the <code>exists</code> property to <code>false</code>. And that would reduce the number of balls involved in collision detection. A ball needs to be considered for collision detection only if the <code>exists</code> property is <code>true</code>. So, replace the existing <code>collisionDetect()</code> code with the following code:
+		<pre class="brush: js">
+Ball.prototype.collisionDetect = function() {
   for (let j = 0; j &lt; balls.length; j++) {
     if (!(this === balls[j]) && balls[j].exists) {
       const dx = this.x - balls[j].x;
@@ -89,7 +90,7 @@ tags:
     }
   }
 }</pre>
-    As discussed above, the only addition is to check if the ball exists (i.e. <code>balls[j].exists</code>) in the <code>if</code> conditional.
+As discussed above, the only addition is to check if the ball exists — by using <code>balls[j].exists</code> in the <code>if</code> conditional.
 	</li>
   
 
