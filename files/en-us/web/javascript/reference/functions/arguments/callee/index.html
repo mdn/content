@@ -83,9 +83,9 @@ sillyFunction();</pre>
 
 <h3 id="Using_arguments.callee_in_an_anonymous_recursive_function">Using <code>arguments.callee</code> in an anonymous recursive function</h3>
 
-<p>A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">function expression</a> or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a>) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by <code>arguments.callee</code>.</p>
+<p>A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a> or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a>) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by <code>arguments.callee</code>.</p>
 
-<p>The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">named function expressions</a>.</p>
+<p>The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">named function expressions</a>.</p>
 
 <pre class="brush: js">function create() {
    return function(n) {

@@ -16,7 +16,7 @@ tags:
 <p><strong>Note:</strong> Do not confuse this property with element-style {{domxref("CSSStyleDeclaration.cssText")}}.</p>
 </div>
 
-<p>Be aware that this property can no longer be set directly, as it is <a href="https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013">now specified</a> to be <em>functionally</em> modify-only, and silently so. In other words, attempting to set it <em>does absolutely nothing</em>, and doesn't even omit a warning or error. Furthermore, it has no settable sub-properties. Therefore, to modify it, use the stylesheet's {{domxref("CSSRuleList", "cssRules")}}<code>[index]</code> properties {{domxref("CSSStyleRule.selectorText", ".selectorText")}} and {{domxref("CSSStyleRule.style", ".style")}} (or its sub-properties). See <a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information" title="DOM/Using_dynamic_styling_information">Using dynamic styling information</a> for details.</p>
+<p>Be aware that this property can no longer be set directly, as it is <a href="https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013">now specified</a> to be <em>functionally</em> modify-only, and silently so. In other words, attempting to set it <em>does absolutely nothing</em>, and doesn't even omit a warning or error. Furthermore, it has no settable sub-properties. Therefore, to modify it, use the stylesheet's {{domxref("CSSRuleList", "cssRules")}}<code>[index]</code> properties {{domxref("CSSStyleRule.selectorText", ".selectorText")}} and {{domxref("CSSStyleRule.style", ".style")}} (or its sub-properties). See <a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
