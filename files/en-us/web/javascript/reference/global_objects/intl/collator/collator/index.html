@@ -4,13 +4,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 tags:
   - Collator
   - Constructor
+  - Internationalization
   - Intl
   - JavaScript
   - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.Collator</code></strong> object is a constructor for collators, objects that enable language sensitive string comparison.</p>
+<p>The <strong><code>Intl.Collator()</code></strong> constructor creates {{jsxref("Collator", "Intl.Collator")}} objects that enable language-sensitive string comparison.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
 
@@ -18,14 +19,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code>new Intl.Collator([<var>locales</var>[, <var>options</var>]])</code></pre>
+<pre class="syntaxbox notranslate">new Intl.Collator([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>locales</var></code></dt>
+ <dt><code><var>locales</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. The following Unicode extension keys are allowed:</p>
+ <p>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code><var>locales</var></code> argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode extension keys are allowed:</p>
 
  <dl>
   <dt><code>co</code></dt>
@@ -36,13 +37,13 @@ tags:
   <dd>Whether upper case or lower case should sort first. Possible values are "<code>upper</code>", "<code>lower</code>", or "<code>false</code>" (use the locale's default). This option can be set through an <code><var>options</var></code> property or through a Unicode extension key; if both are provided, the <code><var>options</var></code> property takes precedence.</dd>
  </dl>
  </dd>
- <dt><code><var>options</var></code></dt>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. An object with some or all of the following properties:</p>
+ <p>An object with some or all of the following properties:</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
   <dt><code>usage</code></dt>
   <dd>Whether the comparison is for sorting or for searching for matching strings. Possible values are "<code>sort</code>" and "<code>search</code>"; the default is "<code>sort</code>".</dd>
   <dt><code>sensitivity</code></dt>
@@ -50,10 +51,10 @@ tags:
   <p>Which differences in the strings should lead to non-zero result values. Possible values are:</p>
 
   <ul>
-   <li>"<code>base</code>": Only strings that differ in base letters compare as unequal. Examples: <code>a ≠ b</code>, <code>a = á</code>, <code>a = A</code>.</li>
-   <li>"<code>accent</code>": Only strings that differ in base letters or accents and other diacritic marks compare as unequal. Examples: <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a = A</code>.</li>
-   <li>"<code>case</code>": Only strings that differ in base letters or case compare as unequal. Examples: <code>a ≠ b</code>, <code>a = á</code>, <code>a ≠ A</code>.</li>
-   <li>"<code>variant</code>": Strings that differ in base letters, accents and other diacritic marks, or case compare as unequal. Other differences may also be taken into consideration. Examples: <code>a ≠ b</code>, <code>a ≠ á</code>, <code>a ≠ A</code>.</li>
+   <li>"<code>base</code>": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A.</li>
+   <li>"<code>accent</code>": Only strings that differ in base letters or accents and other diacritic marks compare as unequal. Examples: a ≠ b, a ≠ á, a = A.</li>
+   <li>"<code>case</code>": Only strings that differ in base letters or case compare as unequal. Examples: a ≠ b, a = á, a ≠ A.</li>
+   <li>"<code>variant</code>": Strings that differ in base letters, accents and other diacritic marks, or case compare as unequal. Other differences may also be taken into consideration. Examples: a ≠ b, a ≠ á, a ≠ A.</li>
   </ul>
 
   <p>The default is "<code>variant</code>" for usage "<code>sort</code>"; it's locale dependent for usage "<code>search</code>".</p>
@@ -98,13 +99,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.Collator.Collator")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.Collator.Collator")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+ <li>{{jsxref("Intl.Collator")}}</li>
+ <li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
 </ul>
