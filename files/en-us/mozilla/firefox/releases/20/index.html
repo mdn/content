@@ -67,7 +67,7 @@ tags:
 <h3 id="MathML">MathML</h3>
 
 <ul>
- <li>To help MathML authors debugging "invalid-markup" errors in their documents, MathML parsing errors (such as having too many / too few child elements) and warnings about deprecated attributes or wrong attribute values are now reported to the <a href="/en-US/docs/Error_Console" title="Error_Console">Error Console</a>.</li>
+ <li>To help MathML authors debugging "invalid-markup" errors in their documents, MathML parsing errors (such as having too many / too few child elements) and warnings about deprecated attributes or wrong attribute values are now reported to the <a href="/en-US/docs/Error_Console">Error Console</a>.</li>
  <li>The <code>scriptminsize</code> attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value ("<code>8pt</code>").</li>
  <li>Unitless values are now also allowed for the <code>mathsize</code> and <code>fontsize</code> attributes; they multiply the default value.</li>
 </ul>
@@ -75,7 +75,7 @@ tags:
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <ul>
- <li><a href="/en-US/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a> is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.</li>
+ <li><a href="/en-US/docs/E4X">ECMAScript for XML (E4X)</a> is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.</li>
  <li>The {{interface("nsIDOMParserJS")}} interface no longer exists {{bug('816410')}}. See {{interface("nsIDOMParser")}} for alternatives.</li>
  <li>Content Preferences: The {{Interface("nsIContentPrefService")}} interface is now deprecated and the asynchronous {{Interface("nsIContentPrefService2")}} storage API has been implemented.</li>
  <li>The {{interface("nsIProfile")}} and {{interface("nsIProfileChangeStatus")}} interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.</li>

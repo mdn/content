@@ -47,7 +47,7 @@ tags:
 <ul>
  <li>The {{ domxref("Node.contains()") }} method is now implemented; this lets you determine if a given node is a descendant of another node.</li>
  <li>The {{ domxref("Node.parentElement") }} attribute has been implemented; this returns the parent {{ domxref("Element") }} of a DOM node, or <code>null</code> if the parent isn't an element.</li>
- <li>DOM Level 3 <a href="/en-US/docs/DOM/CompositionEvent" title="CompositionEvent">composition events</a> are now supported.</li>
+ <li>DOM Level 3 <a href="/en-US/docs/DOM/CompositionEvent">composition events</a> are now supported.</li>
  <li>The {{ domxref("Document.scripts") }} attribute has been implemented; this returns an {{ domxref("HTMLCollection") }} of all the {{ HTMLElement("script") }} elements on the document.</li>
  <li>The {{ domxref("Document.queryCommandSupported()") }} method has been implemented.</li>
  <li>The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the <a href="/en-US/docs/DOM/DOM_event_reference" title="DOM event reference">DOM event reference</a> reflects which events can be listened for on {{ HTMLElement("body") }}.</li>
@@ -84,7 +84,7 @@ tags:
 <h3 id="Networking">Networking</h3>
 
 <ul>
- <li>You can now send the contents of <a href="/en-US/docs/JavaScript_typed_arrays" title="JavaScript typed arrays">JavaScript typed arrays</a> (that is, the contents of an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> object) <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data">using XMLHttpRequest</a>.</li>
+ <li>You can now send the contents of <a href="/en-US/docs/JavaScript_typed_arrays" title="JavaScript typed arrays">JavaScript typed arrays</a> (that is, the contents of an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> object) <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data">using XMLHttpRequest</a>.</li>
  <li>WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.</li>
  <li>The HTTP <code>Accept</code> header for XSLT requests has been changed to "*/*" for simplicity. Since fetching XSLT has always fallen back to "*/*" anyway, it made sense to simplify the initial request.</li>
  <li>Attempts by a server to use the <code>301 Moved Permanently</code> or <code>307 Temporary Redirect</code> response codes to redirect the user to a <code>javascript:</code> URI now <a href="/en-US/docs/HTTP#More_on_redirection_responses">result in a "bad connection" error</a> instead of actually redirecting. This prevents certain types of cross-site scripting attacks.</li>

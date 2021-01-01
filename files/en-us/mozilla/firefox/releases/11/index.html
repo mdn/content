@@ -24,7 +24,7 @@ tags:
  <li><a href="/en-US/docs/HTML_in_XMLHttpRequest"><code>XMLHttpRequest</code> supports HTML parsing</a>.</li>
  <li>Removed support for using the {{domxref("XMLHttpRequest")}} <code>responseType</code> and <code>withCredentials</code> attributes when performing synchronous requests. Attempting to do so throws an <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> exception. This change has been proposed to the W3C for standardization.</li>
  <li>The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as <code>mozVibrate()</code> on Gecko.</li>
- <li>{{domxref("window.navigator.mozApps")}} returns an <a href="/en-US/docs/DOM/Apps" title="Apps"><code>Apps</code></a> object you can use to install and manage <a href="/en-US/docs/Apps">open web applications</a>.</li>
+ <li>{{domxref("window.navigator.mozApps")}} returns an <a href="/en-US/docs/DOM/Apps"><code>Apps</code></a> object you can use to install and manage <a href="/en-US/docs/Apps">open web applications</a>.</li>
  <li><code>MozBeforePaint</code> events are no longer fired. {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} consumers who used these should pass a callback function instead.</li>
  <li>Support for canceling animation frame requests has been added; {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} now returns a request ID value, which you can pass to {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} to cancel the request.</li>
  <li>Several {{domxref("Event")}} constructors (<code>Event</code>, HTML events, <code>UIEvent</code>, and <code>MouseEvent</code>) introduced in DOM4 specifications are now supported.</li>
@@ -42,7 +42,7 @@ tags:
 
 <ul>
  <li>the <a href="/en-US/docs/CSS/text-size-adjust" title="text-size-adjust"><code>text-size-adjust</code></a> property is now supported</li>
- <li><a href="/en-US/docs/CSS/CSS3">CSS3</a> <a href="/en-US/docs/CSS/CSS3#Conditional_Rules" title="CSS3 Conditional Rules">Conditional Rules</a> are now better supported: nested statements can now be added to <a href="/en-US/docs/CSS/@media" title="@media">@media</a>, <a href="/en-US/docs/CSS/@document" title="@document">@-moz-document</a>. (See <a href="/en-US/docs/CSS/Syntax" title="Syntax">CSS Syntax</a> and <a href="/en-US/docs/CSS/At-rule" title="At-rule">CSS at-rules</a>).</li>
+ <li><a href="/en-US/docs/CSS/CSS3">CSS3</a> <a href="/en-US/docs/CSS/CSS3#Conditional_Rules" title="CSS3 Conditional Rules">Conditional Rules</a> are now better supported: nested statements can now be added to <a href="/en-US/docs/CSS/@media" title="@media">@media</a>, <a href="/en-US/docs/CSS/@document" title="@document">@-moz-document</a>. (See <a href="/en-US/docs/CSS/Syntax">CSS Syntax</a> and <a href="/en-US/docs/CSS/At-rule" title="At-rule">CSS at-rules</a>).</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>

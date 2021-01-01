@@ -97,7 +97,7 @@ tags:
  <li>The <a href="/en/IndexedDB/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en/IndexedDB/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
  <li>The <a href="/en/IndexedDB/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
  <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
- <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest" title="IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
+ <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
  <li>The methods <a href="/en/IndexedDB/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en/IndexedDB/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
  <li>The method <a href="/en/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en/IndexedDB/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
  <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
@@ -150,7 +150,7 @@ tags:
 
 <p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
 
-<div class="note"><strong>Note:</strong> The old <a href="/en/PRBool" title="PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
+<div class="note"><strong>Note:</strong> The old <a href="/en/PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
 
 <h3 id="Manifests">Manifests</h3>
 
