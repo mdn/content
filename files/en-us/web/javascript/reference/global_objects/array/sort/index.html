@@ -29,18 +29,15 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>compareFunction</code> {{optional_inline}}</dt>
-  <dd>Specifies a function that defines the sort order. If omitted, the array elements are
-    converted to strings, then sorted according to each character's <a
-      href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a>
-    code point value.
-    <dl>
-      <dt><code>firstEl</code></dt>
-      <dd>The first element for comparison.</dd>
-      <dt><code>secondEl</code></dt>
-      <dd>The second element for comparison.</dd>
-    </dl>
-  </dd>
+ <dt><code>compareFunction</code> {{optional_inline}}</dt>
+ <dd>Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+ <dl>
+  <dt><code>firstEl</code></dt>
+  <dd>The first element for comparison.</dd>
+  <dt><code>secondEl</code></dt>
+  <dd>The second element for comparison.</dd>
+ </dl>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -182,19 +179,19 @@ function compareNumbers(a, b) {
 }
 
 console.log('stringArray:', stringArray.join());
-console.log('Sorted:', stringArray.sort());
-
+console.log('Sorted:', stringArray.sort().join());
+console.log('\n');
 console.log('numberArray:', numberArray.join());
-console.log('Sorted without a compare function:', numberArray.sort());
-console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers));
-
+console.log('Sorted without a compare function:', numberArray.sort().join());
+console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers).join());
+console.log('\n');
 console.log('numericStringArray:', numericStringArray.join());
-console.log('Sorted without a compare function:', numericStringArray.sort());
-console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers));
-
+console.log('Sorted without a compare function:', numericStringArray.sort().join());
+console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers).join());
+console.log('\n');
 console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Sorted without a compare function:', mixedNumericArray.sort());
-console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers));
+console.log('Sorted without a compare function:', mixedNumericArray.sort().join());
+console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers).join());
 </pre>
 
 <p>This example produces the following output. As the output shows, when a compare
