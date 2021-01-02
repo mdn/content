@@ -176,14 +176,14 @@ console.log(b); // [2, 3]</pre>
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/Web/JavaScript",
-      "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript'));
+console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
 // "https"
 </pre>
 
