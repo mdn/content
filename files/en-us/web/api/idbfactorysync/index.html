@@ -31,7 +31,7 @@ tags:
 
 <h3 id="open">open()</h3>
 
-<p>Opens and returns a <a href="/en/IndexedDB#gloss_database_connection" title="en/IndexedDB#gloss database connection">connection to a database</a>. Blocks the calling thread until the connection object is ready to return. If there is already a database with the specified name, it uses that one; otherwise, it creates the database using the specified name and description.</p>
+<p>Opens and returns a <a href="/en/IndexedDB#gloss_database_connection">connection to a database</a>. Blocks the calling thread until the connection object is ready to return. If there is already a database with the specified name, it uses that one; otherwise, it creates the database using the specified name and description.</p>
 
 <pre>IDBDatabaseSync open (
   in DOMString name,
@@ -60,8 +60,8 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following codes:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NON_TRANSIENT_ERR" title="en/IndexedDB/DatabaseException#NON TRANSIENT ERR">NON_TRANSIENT_ERR</a></code></dt>
+ <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NON_TRANSIENT_ERR">NON_TRANSIENT_ERR</a></code></dt>
  <dd>If the <code>name</code> parameter is not valid. A valid name is any string including the empty string.</dd>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#UNKNOWN_ERR" title="en/IndexedDB/DatabaseException#UNKNOWN ERR">UNKNOWN_ERR</a></code></dt>
+ <dt><code><a href="/en/IndexedDB/IDBDatabaseException#UNKNOWN_ERR">UNKNOWN_ERR</a></code></dt>
  <dd>If an error occurs while the database is being opened.</dd>
 </dl>
