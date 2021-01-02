@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>animation-fill-mode</code></strong> <a href="/en/CSS">CSS</a> property sets how a CSS animation applies styles to its target before and after its execution.</p>
+<p>The <strong><code>animation-fill-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how a CSS animation applies styles to its target before and after its execution.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}</div>
 
@@ -32,79 +32,81 @@ animation-fill-mode: both, forwards, none;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>none</code></dt>
- <dd>The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.</dd>
- <dt><code>forwards</code></dt>
- <dd>The target will retain the computed values set by the last <a href="/en-US/docs/CSS/@keyframes">keyframe</a> encountered during execution. The last keyframe depends on the value of {{cssxref("animation-direction")}} and {{cssxref("animation-iteration-count")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">last keyframe encountered</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>even or odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>even or odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>even</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>even</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>The animation will apply the values defined in the first relevant <a href="/en-US/docs/CSS/@keyframes">keyframe</a> as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">first relevant keyframe</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> or <code>alternate</code></td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> or <code>alternate-reverse</code></td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.</dd>
+	<dt><code>none</code></dt>
+	<dd>The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.</dd>
+	<dt><code>forwards</code></dt>
+	<dd>
+		<p>The target will retain the computed values set by the last <a href="/en-US/docs/CSS/@keyframes">keyframe</a> encountered during execution. The last keyframe depends on the value of {{cssxref("animation-direction")}} and {{cssxref("animation-iteration-count")}}:</p>
+		<table class="standard-table">
+			<thead>
+				<tr>
+					<th scope="col"><code>animation-direction</code></th>
+					<th scope="col"><code>animation-iteration-count</code></th>
+					<th scope="col">last keyframe encountered</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>normal</code></td>
+					<td>even or odd</td>
+					<td><code>100%</code> or <code>to</code></td>
+				</tr>
+				<tr>
+					<td><code>reverse</code></td>
+					<td>even or odd</td>
+					<td><code>0%</code> or <code>from</code></td>
+				</tr>
+				<tr>
+					<td><code>alternate</code></td>
+					<td>even</td>
+					<td><code>0%</code> or <code>from</code></td>
+				</tr>
+				<tr>
+					<td><code>alternate</code></td>
+					<td>odd</td>
+					<td><code>100%</code> or <code>to</code></td>
+				</tr>
+				<tr>
+					<td><code>alternate-reverse</code></td>
+					<td>even</td>
+					<td><code>100%</code> or <code>to</code></td>
+				</tr>
+				<tr>
+					<td><code>alternate-reverse</code></td>
+					<td>odd</td>
+					<td><code>0%</code> or <code>from</code></td>
+				</tr>
+			</tbody>
+		</table>
+	</dd>
+	<dt><code>backwards</code></dt>
+	<dd>
+		<p>The animation will apply the values defined in the first relevant <a href="/en-US/docs/CSS/@keyframes">keyframe</a> as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:</p>
+		<table class="standard-table">
+			<thead>
+				<tr>
+					<th scope="col"><code>animation-direction</code></th>
+					<th scope="col">first relevant keyframe</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>normal</code> or <code>alternate</code></td>
+					<td><code>0%</code> or <code>from</code></td>
+				</tr>
+				<tr>
+					<td><code>reverse</code> or <code>alternate-reverse</code></td>
+					<td><code>100%</code> or <code>to</code></td>
+				</tr>
+			</tbody>
+		</table>
+	</dd>
+	<dt><code>both</code></dt>
+	<dd>The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
+	<p><strong>Note</strong>: When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -152,34 +154,34 @@ animation-fill-mode: both, forwards, none;
 
 <p>{{EmbedLiveSample('Examples',700,300)}}</p>
 
-<p>See <a href="/en/CSS/CSS_animations">CSS animations</a> for more examples.</p>
+<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a> for more examples.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}}</td>
+			<td>{{Spec2('CSS3 Animations')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.animation-fill-mode")}}</p>
+<div>{{Compat("css.properties.animation-fill-mode")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
+	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
 </ul>
