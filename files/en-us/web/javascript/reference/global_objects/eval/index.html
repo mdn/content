@@ -207,7 +207,7 @@ elt.addEventListener('click', function() { ... } , false); </pre>
 
 <h3 id="Parsing_JSON_converting_strings_to_JavaScript_objects">Parsing JSON (converting strings to JavaScript objects)</h3>
 
-<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
+<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
 
 <p>Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.</p>
 

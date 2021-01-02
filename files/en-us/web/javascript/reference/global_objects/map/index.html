@@ -61,7 +61,7 @@ tags:
     <p>The keys in <code>Map</code> are ordered in a simple, straightforward way: A <code>Map</code> object iterates entries, keys, and values in the order of entry insertion.</p>
    </td>
    <td>
-    <p>Although the keys of an ordinary <code>Object</code> are ordered now, they didn't used to be, and the order is complex. As a result, it's best not to rely on property order.</p>
+    <p>Although the keys of an ordinary <code>Object</code> are ordered now, they didn't use to be, and the order is complex. As a result, it's best not to rely on property order.</p>
 
     <p>The order was first defined for own properties only in ECMAScript 2015; ECMAScript 2020 defines order for inherited properties as well. See the <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> and <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties">EnumerateObjectProperties</a> abstract specification operations. But note that no single mechanism iterates <strong>all</strong> of an object's properties; the various mechanisms each include different subsets of properties. ({{jsxref("Statements/for...in", "for-in")}} includes only enumerable string-keyed properties; {{jsxref("Object.keys")}} includes only own, enumerable, string-keyed properties; {{jsxref("Object.getOwnPropertyNames")}} includes own, string-keyed properties even if non-enumerable; {{jsxref("Object.getOwnPropertySymbols")}} does the same for just <code>Symbol</code>-keyed properties, etc.)</p>
    </td>

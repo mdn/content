@@ -15,28 +15,28 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>new Intl.PluralRules([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+<pre class="syntaxbox notranslate">new Intl.PluralRules([<var>locales</var>[, <var>options</var>]])
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>locales</code></dt>
+ <dt><code><var>locales</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
+ <p>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code><var>locales</var></code> argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.</p>
  </dd>
- <dt><code>options</code></dt>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd>
- <p>Optional. An object with some or all of the following properties:</p>
+ <p>An object with some or all of the following properties:</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>The locale matching algorithm to use. Possible values are <code>"lookup"</code> and <code>"best fit"</code>; the default is <code>"best fit"</code>. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
   <dt><code>type</code></dt>
   <dd>The type to use. Possible values are:
   <ul>
-   <li><code>"cardinal"</code> for cardinal numbers (refering to the quantity of things). This is the default value.</li>
-   <li><code>"ordinal"</code> for ordinal number (refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).</li>
+   <li>"<code>cardinal</code>" for cardinal numbers (refering to the quantity of things). This is the default value.</li>
+   <li>"<code>ordinal</code>" for ordinal number (refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).</li>
   </ul>
   </dd>
  </dl>
@@ -100,10 +100,12 @@ pr.select(42);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('ES Int Draft', '#sec-intl-pluralrules-constructor', 'Intl.PluralRules() constructor')}}</td>
   </tr>
@@ -112,13 +114,11 @@ pr.select(42);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.PluralRules.PluralRules")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.PluralRules.PluralRules")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+ <li>{{jsxref("Intl.PluralRules")}}</li>
+ <li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
 </ul>

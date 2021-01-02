@@ -19,7 +19,7 @@ tags:
 <p>You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.</p>
 
 <div class="note">
-<p>Web developers shouldn't use the <code>keyCode</code> attribute for printable characters when handling <code>keydown</code> and <code>keyup</code> events. As described above, the <code>keyCode</code> attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use). See <a href="/en-US/docs/Gecko_Keypress_Event" title="en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a> for details.</p>
+<p>Web developers shouldn't use the <code>keyCode</code> attribute for printable characters when handling <code>keydown</code> and <code>keyup</code> events. As described above, the <code>keyCode</code> attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{event("keypress")}} event is usually better (at least when Gecko is the runtime in use). See <a href="/en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a> for details.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -128,22 +128,22 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by printable keys in standard position</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th colspan="3" rowspan="1" scope="col">Internet Explorer 11</th>
-   <th colspan="6" rowspan="1" scope="col">Google Chrome 34</th>
-   <th colspan="3" rowspan="1" scope="col">Chromium 34</th>
-   <th colspan="3" rowspan="1" scope="col">Safari 7</th>
-   <th colspan="9" rowspan="1" scope="col">Gecko 29</th>
+   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th colspan="6" scope="col">Google Chrome 34</th>
+   <th colspan="3" scope="col">Chromium 34</th>
+   <th colspan="3" scope="col">Safari 7</th>
+   <th colspan="9" scope="col">Gecko 29</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
    <th scope="col">US</th>
@@ -167,14 +167,14 @@ tags:
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
-   <th colspan="1" scope="col">US</th>
+   <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
   </tr>
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
@@ -196,432 +196,432 @@ tags:
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
-   <th colspan="1" scope="col">US</th>
+   <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Internet Explorer 11</th>
-   <th colspan="6" rowspan="1" scope="col">Google Chrome 34</th>
-   <th colspan="3" rowspan="1" scope="col">Chromium 34</th>
-   <th colspan="3" rowspan="1" scope="col">Safari 7</th>
-   <th colspan="9" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th colspan="6" scope="col">Google Chrome 34</th>
+   <th colspan="3" scope="col">Chromium 34</th>
+   <th colspan="3" scope="col">Safari 7</th>
+   <th colspan="9" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
   <tr>
    <th scope="row"><code>"Digit1"</code></th>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
-   <td colspan="3" rowspan="1"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
+   <td colspan="3"><code>0x31 (49)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit2"</code></th>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
-   <td colspan="3" rowspan="1"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
+   <td colspan="3"><code>0x32 (50)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit3"</code></th>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
-   <td colspan="3" rowspan="1"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
+   <td colspan="3"><code>0x33 (51)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit4"</code></th>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
-   <td colspan="3" rowspan="1"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
+   <td colspan="3"><code>0x34 (52)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit5"</code></th>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
-   <td colspan="3" rowspan="1"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
+   <td colspan="3"><code>0x35 (53)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit6"</code></th>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
-   <td colspan="3" rowspan="1"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
+   <td colspan="3"><code>0x36 (54)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit7"</code></th>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
-   <td colspan="3" rowspan="1"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
+   <td colspan="3"><code>0x37 (55)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit8"</code></th>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
-   <td colspan="3" rowspan="1"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
+   <td colspan="3"><code>0x38 (56)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit9"</code></th>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
-   <td colspan="3" rowspan="1"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
+   <td colspan="3"><code>0x39 (57)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Digit0"</code></th>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
-   <td colspan="3" rowspan="1"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
+   <td colspan="3"><code>0x30 (48)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyA"</code></th>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
-   <td colspan="3" rowspan="1"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
+   <td colspan="3"><code>0x41 (65)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyB"</code></th>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
-   <td colspan="3" rowspan="1"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
+   <td colspan="3"><code>0x42 (66)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyC"</code></th>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
-   <td colspan="3" rowspan="1"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
+   <td colspan="3"><code>0x43 (67)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyD"</code></th>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)<span style="display: none;"> </span></code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
+   <td colspan="3"><code>0x44 (68)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyE"</code></th>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
-   <td colspan="3" rowspan="1"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
+   <td colspan="3"><code>0x45 (69)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyF"</code></th>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
-   <td colspan="3" rowspan="1"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
+   <td colspan="3"><code>0x46 (70)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyG"</code></th>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
-   <td colspan="3" rowspan="1"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
+   <td colspan="3"><code>0x47 (71)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyH"</code></th>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
-   <td colspan="3" rowspan="1"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
+   <td colspan="3"><code>0x48 (72)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyI"</code></th>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
-   <td colspan="3" rowspan="1"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
+   <td colspan="3"><code>0x49 (73)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyJ"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
+   <td colspan="3"><code>0x4A (74)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyK"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
+   <td colspan="3"><code>0x4B (75)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyL"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
+   <td colspan="3"><code>0x4C (76)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyM"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
+   <td colspan="3"><code>0x4D (77)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyN"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
+   <td colspan="3"><code>0x4E (78)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyO"</code></th>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
-   <td colspan="3" rowspan="1"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
+   <td colspan="3"><code>0x4F (79)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyP"</code></th>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
-   <td colspan="3" rowspan="1"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
+   <td colspan="3"><code>0x50 (80)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyQ"</code></th>
-   <td colspan="3" rowspan="1"><code>0x51 (81)</code></td>
-   <td colspan="3" rowspan="1"><code>0x51 (81)</code></td>
-   <td rowspan="1"><code>0x51 (81)</code></td>
-   <td rowspan="1"><code>0x51 (81)</code></td>
+   <td colspan="3"><code>0x51 (81)</code></td>
+   <td colspan="3"><code>0x51 (81)</code></td>
+   <td><code>0x51 (81)</code></td>
+   <td><code>0x51 (81)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td rowspan="1"><code>0x51 (81)</code></td>
-   <td rowspan="1"><code>0x51 (81)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td colspan="3" rowspan="1"><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td colspan="3" rowspan="1"><code>0x51 (81)</code></td>
+   <td colspan="3"><code>0x51 (81)</code></td>
+   <td><code>0x51 (81)</code></td>
+   <td><code>0x51 (81)</code></td>
+   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td colspan="3"><code>0x51 (81)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyR"</code></th>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
-   <td colspan="3" rowspan="1"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
+   <td colspan="3"><code>0x52 (82)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyS"</code></th>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
-   <td colspan="3" rowspan="1"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
+   <td colspan="3"><code>0x53 (83)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyT"</code></th>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
-   <td colspan="3" rowspan="1"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
+   <td colspan="3"><code>0x54 (84)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyU"</code></th>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
-   <td colspan="3" rowspan="1"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
+   <td colspan="3"><code>0x55 (85)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyV"</code></th>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
-   <td colspan="3" rowspan="1"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
+   <td colspan="3"><code>0x56 (86)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyW"</code></th>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
-   <td colspan="3" rowspan="1"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
+   <td colspan="3"><code>0x57 (87)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyX"</code></th>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
-   <td colspan="3" rowspan="1"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
+   <td colspan="3"><code>0x58 (88)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyY"</code></th>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
-   <td colspan="3" rowspan="1"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
+   <td colspan="3"><code>0x59 (89)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"KeyZ"</code></th>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
-   <td colspan="3" rowspan="1"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
+   <td colspan="3"><code>0x5A (90)</code></td>
   </tr>
  </tbody>
 </table>
@@ -630,22 +630,22 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by printable keys in standard position (punctuations in US layout):</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th colspan="3" rowspan="1" scope="col">Internet Explorer 11</th>
-   <th colspan="6" rowspan="1" scope="col">Google Chrome 34</th>
-   <th colspan="3" rowspan="1" scope="col">Chromium 34</th>
-   <th colspan="3" rowspan="1" scope="col">Safari 7</th>
-   <th colspan="9" rowspan="1" scope="col">Gecko 29</th>
+   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th colspan="6" scope="col">Google Chrome 34</th>
+   <th colspan="3" scope="col">Chromium 34</th>
+   <th colspan="3" scope="col">Safari 7</th>
+   <th colspan="9" scope="col">Gecko 29</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Windows (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Windows (10.9)</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
    <th scope="col">US</th>
@@ -669,14 +669,14 @@ tags:
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
-   <th colspan="1" scope="col">US</th>
+   <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
   </tr>
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
@@ -698,26 +698,26 @@ tags:
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
-   <th colspan="1" scope="col">US</th>
+   <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Windows</th>
-   <th colspan="3" rowspan="1" scope="col">Mac (10.9)</th>
-   <th colspan="3" rowspan="1" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Windows</th>
+   <th colspan="3" scope="col">Mac (10.9)</th>
+   <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
-   <th colspan="3" rowspan="1" scope="col">Internet Explorer 11</th>
-   <th colspan="6" rowspan="1" scope="col">Google Chrome 34</th>
-   <th colspan="3" rowspan="1" scope="col">Chromium 34</th>
-   <th colspan="3" rowspan="1" scope="col">Safari 7</th>
-   <th colspan="9" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th colspan="6" scope="col">Google Chrome 34</th>
+   <th colspan="3" scope="col">Chromium 34</th>
+   <th colspan="3" scope="col">Safari 7</th>
+   <th colspan="9" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
@@ -751,29 +751,29 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"Semicolon"</code></th>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
    <td><code>0xBA (186)</code> *1</td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *2</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
    <td><code>0xBA (186)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *3</code></td>
-   <td colspan="1" rowspan="2"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code></td>
    <td><code>0xBA (186)</code> *1</td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *2</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code> *1</td>
+   <td rowspan="2"><code>0x3B (59)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3B (59)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code> *1</td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
   </tr>
   <tr>
@@ -784,30 +784,30 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"Quote"</code></th>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186) *1</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code> *1</td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Quote"</code> with Shift</th>
@@ -817,30 +817,30 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"BracketLeft"</code></th>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
    <td><code>0xDB (219)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0x32 (50)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
    <td><code>0xDB (219) *1 </code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code> *1</td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"BracketLeft"</code> with <kbd>Shift</kbd></th>
@@ -850,78 +850,78 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"BracketRight"</code></th>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219) *1</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219) *1</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219) *1</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"BracketRight"</code> with <kbd>Shift</kbd></th>
   </tr>
   <tr>
    <th scope="row"><code>"Backquote"</code></th>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
    <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xF4 (244)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
    <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
    <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Backquote"</code> with <kbd>Shift</kbd></th>
   </tr>
   <tr>
    <th scope="row"><code>"Backslash"</code></th>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Backslash"</code> with <kbd>Shift</kbd></th>
@@ -930,15 +930,15 @@ tags:
    <th scope="row"><code>"Minus"</code></th>
    <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
    <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
    <td><code>0xBD (189)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
    <td><code>0xBD (189)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
-   <td rowspan="1"><code>0xBD (189)</code></td>
-   <td rowspan="1"><code>0xBD (189) *1</code></td>
-   <td rowspan="1"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
+   <td><code>0xBD (189)</code></td>
+   <td><code>0xBD (189) *1</code></td>
+   <td><code>0xBD (189)</code></td>
    <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
    <td rowspan="2"><code>0xAD (173)</code></td>
    <td rowspan="2"><code>0xAD (173) *1</code></td>
@@ -955,30 +955,30 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"Equal"</code></th>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
    <td><code>0xBB (187) *1</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
    <td style="background-color: rgb(255, 255, 204);"><code>0x36 (54)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBB (187)</code></td>
-   <td rowspan="1"><code>0xBB (187)</code></td>
-   <td rowspan="1"><code>0xBB (187) *1</code></td>
-   <td rowspan="1"><code>0xBB (187)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3D (61)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3D (61)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3D (61)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code> *1</td>
-   <td colspan="1" rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code></td>
+   <td><code>0xBB (187)</code></td>
+   <td><code>0xBB (187) *1</code></td>
+   <td><code>0xBB (187)</code></td>
    <td rowspan="2"><code>0x3D (61)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code></td>
-   <td colspan="1" rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code> *1</td>
+   <td rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2"><code>0x3D (61)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code></td>
+   <td rowspan="2"><code>0x3D (61)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Equal"</code> with <kbd>Shift</kbd></th>
@@ -990,61 +990,61 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"IntlRo"</code></th>
-   <td colspan="1" rowspan="2"><code>0xC1 (193)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC1 (193)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC1 (193)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
-   <td colspan="1" rowspan="2"><code>0xC1 (193)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
-   <td colspan="1" rowspan="2"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xC1 (193)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
+   <td rowspan="2"><code>0xC1 (193)</code></td>
+   <td rowspan="2"><code>0xC1 (193)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
+   <td rowspan="2"><code>0xC1 (193)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
+   <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2">*4</td>
+   <td rowspan="2">*4</td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code><br>
      </td>
-   <td colspan="1" rowspan="2">*4</td>
+   <td rowspan="2">*4</td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 </code>(229) *5</td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0xA7 (167)</code></td>
-   <td colspan="1" rowspan="2"><code>0xA7 (167)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 </code>(229) *5</td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0xA7 (167)</code></td>
+   <td rowspan="2"><code>0xA7 (167)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"IntlRo"</code> with <kbd>Shift</kbd></th>
   </tr>
   <tr>
    <th scope="row"><code>"IntlYen"</code></th>
-   <td colspan="1" rowspan="2"><code>0xFF (255)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xFF (255)</code></td>
-   <td colspan="1" rowspan="2"><code>0xFF (255)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0xFF (255)</code></td>
+   <td rowspan="2"><code>0xFF (255)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xFF (255)</code></td>
+   <td rowspan="2"><code>0xFF (255)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xFF (255)</code></td>
    <td><code>0x00 (0)</code></td>
    <td><code>0x00 (0)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2">*4</td>
+   <td rowspan="2">*4</td>
    <td style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2">*4</td>
-   <td rowspan="1"><code>0x00 (0)</code></td>
-   <td rowspan="1"><code>0x00 (0)</code></td>
+   <td rowspan="2">*4</td>
+   <td><code>0x00 (0)</code></td>
+   <td><code>0x00 (0)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 </code>(229) *5</td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC </code>(220)</td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0xDC </code>(220)</td>
-   <td colspan="1" rowspan="2"><code>0xDC </code>(220)</td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC </code>(220)</td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0xDC </code>(220)</td>
+   <td rowspan="2"><code>0xDC </code>(220)</td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td colspan="1" rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"IntlYen"</code> with <kbd>Shift</kbd></th>
@@ -1073,12 +1073,12 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by modifier keys:</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
   <tr>
    <th scope="col">Windows</th>
@@ -1093,7 +1093,7 @@ tags:
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
    <th scope="col">Mac (10.9)</th>
@@ -1105,10 +1105,10 @@ tags:
   </tr>
   <tr>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
@@ -1235,12 +1235,12 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by non-printable keys:</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
   <tr>
    <th scope="col">Windows</th>
@@ -1255,7 +1255,7 @@ tags:
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
    <th scope="col">Mac (10.9)</th>
@@ -1267,10 +1267,10 @@ tags:
   </tr>
   <tr>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
@@ -1502,12 +1502,12 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by function keys:</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
   <tr>
    <th scope="col">Windows</th>
@@ -1522,7 +1522,7 @@ tags:
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
    <th scope="col">Mac (10.9)</th>
@@ -1534,10 +1534,10 @@ tags:
   </tr>
   <tr>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
@@ -1830,12 +1830,12 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by keys in numpad in NumLock state</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
   <tr>
    <th scope="col">Windows</th>
@@ -1850,7 +1850,7 @@ tags:
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
    <th scope="col">Mac (10.9)</th>
@@ -1862,10 +1862,10 @@ tags:
   </tr>
   <tr>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="2" rowspan="1" scope="col">Google Chrome 34</th>
+   <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
-   <th colspan="3" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="3" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
@@ -2109,11 +2109,11 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by keys in numpad without NumLock state</caption>
  <thead>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="1" rowspan="1" scope="col">Google Chrome 34</th>
+   <th scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
-   <th colspan="2" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="2" scope="col">Gecko 29</th>
   </tr>
   <tr>
    <th scope="col">Windows</th>
@@ -2125,7 +2125,7 @@ tags:
  </thead>
  <tfoot>
   <tr>
-   <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
    <th scope="col">Linux (Ubuntu 14.04)</th>
@@ -2134,9 +2134,9 @@ tags:
   </tr>
   <tr>
    <th scope="col">Internet Explorer 11</th>
-   <th colspan="1" rowspan="1" scope="col">Google Chrome 34</th>
+   <th scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
-   <th colspan="2" rowspan="1" scope="col">Gecko 29</th>
+   <th colspan="2" scope="col">Gecko 29</th>
   </tr>
  </tfoot>
  <tbody>
