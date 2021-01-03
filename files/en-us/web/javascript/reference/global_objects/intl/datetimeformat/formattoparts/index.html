@@ -6,12 +6,14 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Method
   - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.DateTimeFormat.prototype.formatToParts()</code></strong> method allows locale-aware formatting of strings produced by <code>DateTimeFormat</code> formatters.</p>
+<p>The <strong><code>Intl.DateTimeFormat.prototype.formatToParts()</code></strong> method allows locale-aware formatting of strings produced by {{jsxref("Intl.DateTimeFormat")}} formatters.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,8 +22,8 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>date</code> {{optional_inline}}</dt>
- <dd>The date to format.</dd>
+	<dt><code><var>date</var></code> {{optional_inline}}</dt>
+	<dd>The date to format.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -40,34 +42,34 @@ tags:
 <p>Possible types are the following:</p>
 
 <dl>
- <dt>day</dt>
- <dd>The string used for the day, for example "<code>17</code>".</dd>
- <dt>dayPeriod</dt>
- <dd>The string used for the day period, for example, "<code>AM</code>", "<code>PM</code>", "<code>in the morning</code>", or "<code>noon</code>"</dd>
- <dt>era</dt>
- <dd>The string used for the era, for example "<code>BC</code>" or "<code>AD</code>".</dd>
- <dt>fractionalSecond</dt>
- <dd>The string used for the fractional seconds, for example "<code>0</code>" or "<code>00</code>" or "<code>000</code>".</dd>
- <dt>hour</dt>
- <dd>The string used for the hour, for example "<code>3</code>" or "<code>03</code>".</dd>
- <dt>literal</dt>
- <dd>The string used for separating date and time values, for example "<code>/</code>", "<code>,</code>", "<code>o'clock</code>", "<code>de</code>", etc.</dd>
- <dt>minute</dt>
- <dd>The string used for the minute, for example "<code>00</code>".</dd>
- <dt>month</dt>
- <dd>The string used for the month, for example "<code>12</code>".</dd>
- <dt>relatedYear</dt>
- <dd>The string used for the related 4-digit Gregorian year, in the event that the calendar's representation would be a yearName instead of a year, for example "<code>2019</code>".</dd>
- <dt>second</dt>
- <dd>The string used for the second, for example "<code>07</code>" or "<code>42</code>".</dd>
- <dt>timeZoneName</dt>
- <dd>The string used for the name of the time zone, for example "<code>UTC</code>".</dd>
- <dt>weekday</dt>
- <dd>The string used for the weekday, for example "<code>M</code>", "<code>Monday</code>", or "<code>Montag</code>".</dd>
- <dt>year</dt>
- <dd>The string used for the year, for example "<code>2012</code>" or "<code>96</code>".</dd>
- <dt>yearName</dt>
- <dd>The string used for the yearName in relevant contexts, for example "<code>geng-zi</code>"</dd>
+	<dt>day</dt>
+	<dd>The string used for the day, for example "<code>17</code>".</dd>
+	<dt>dayPeriod</dt>
+	<dd>The string used for the day period, for example, "<code>AM</code>", "<code>PM</code>", "<code>in the morning</code>", or "<code>noon</code>"</dd>
+	<dt>era</dt>
+	<dd>The string used for the era, for example "<code>BC</code>" or "<code>AD</code>".</dd>
+	<dt>fractionalSecond</dt>
+	<dd>The string used for the fractional seconds, for example "<code>0</code>" or "<code>00</code>" or "<code>000</code>".</dd>
+	<dt>hour</dt>
+	<dd>The string used for the hour, for example "<code>3</code>" or "<code>03</code>".</dd>
+	<dt>literal</dt>
+	<dd>The string used for separating date and time values, for example "<code>/</code>", "<code>,</code>", "<code>o'clock</code>", "<code>de</code>", etc.</dd>
+	<dt>minute</dt>
+	<dd>The string used for the minute, for example "<code>00</code>".</dd>
+	<dt>month</dt>
+	<dd>The string used for the month, for example "<code>12</code>".</dd>
+	<dt>relatedYear</dt>
+	<dd>The string used for the related 4-digit Gregorian year, in the event that the calendar's representation would be a yearName instead of a year, for example "<code>2019</code>".</dd>
+	<dt>second</dt>
+	<dd>The string used for the second, for example "<code>07</code>" or "<code>42</code>".</dd>
+	<dt>timeZoneName</dt>
+	<dd>The string used for the name of the time zone, for example "<code>UTC</code>".</dd>
+	<dt>weekday</dt>
+	<dd>The string used for the weekday, for example "<code>M</code>", "<code>Monday</code>", or "<code>Montag</code>".</dd>
+	<dt>year</dt>
+	<dd>The string used for the year, for example "<code>2012</code>" or "<code>96</code>".</dd>
+	<dt>yearName</dt>
+	<dd>The string used for the yearName in relevant contexts, for example "<code>geng-zi</code>"</dd>
 </dl>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -209,31 +211,28 @@ df.formatToParts(date)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+	<li>{{jsxref("Intl.DateTimeFormat")}}</li>
+	<li>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
 </ul>

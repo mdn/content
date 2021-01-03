@@ -6,6 +6,7 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - RelativeTimeFormat
   - Reference
 ---
@@ -14,32 +15,31 @@ tags:
 <p>The <strong><code>Intl.RelativeTimeFormat</code></strong> object enables language-sensitive relative time formatting.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}</dt>
- <dd>Creates a new <code>Intl.RelativeTimeFormat</code> object.</dd>
+	<dt>{{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}</dt>
+	<dd>Creates a new <code>Intl.RelativeTimeFormat</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
+	<dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
+	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
- <dd>Formats a <code>value</code> and a <code>unit</code> according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.</dd>
- <dt>{{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
- <dd>Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.</dd>
- <dt>{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
+	<dt>{{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
+	<dd>Formats a <code>value</code> and a <code>unit</code> according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.</dd>
+	<dt>{{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
+	<dd>Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.</dd>
+	<dt>{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
+	<dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -87,16 +87,16 @@ rtf.formatToParts(100, "day");
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -106,6 +106,6 @@ rtf.formatToParts(100, "day");
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Intl")}}</li>
- <li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">The Intl.RelativeTimeFormat API</a></li>
+	<li>{{jsxref("Intl")}}</li>
+	<li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">The Intl.RelativeTimeFormat API</a></li>
 </ul>

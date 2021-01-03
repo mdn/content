@@ -7,6 +7,7 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Reference
 ---
 <div>{{JSRef}}</div>
@@ -14,36 +15,35 @@ tags:
 <p>The <strong><code>Intl.DateTimeFormat</code></strong> object enables language-sensitive date and time formatting.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
- <dd>Creates a new <code>Intl.DateTimeFormat</code> object.</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
+	<dd>Creates a new <code>Intl.DateTimeFormat</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
+	<dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
+	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
- <dd>Getter function that formats a date according to the locale and formatting options of this {{jsxref("DateTimeFormat", "DateTimeFormat")}} object.</dd>
- <dt>{{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
- <dd>Returns an {{jsxref("Array")}} of objects representing the date string in parts that can be used for custom locale-aware formatting.</dd>
- <dt>{{jsxref("DateTimeFormat.resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
- <dt>{{jsxref("DateTimeFormat.formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
- <dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("DateTimeFormat", "DateTimeFormat")}}.</dd>
- <dt>{{jsxref("DateTimeFormat.formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
- <dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.</dd>
+	<dt>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
+	<dd>Getter function that formats a date according to the locale and formatting options of this {{jsxref("DateTimeFormat", "DateTimeFormat")}} object.</dd>
+	<dt>{{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
+	<dd>Returns an {{jsxref("Array")}} of objects representing the date string in parts that can be used for custom locale-aware formatting.</dd>
+	<dt>{{jsxref("DateTimeFormat.resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
+	<dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
+	<dt>{{jsxref("DateTimeFormat.formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
+	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("DateTimeFormat", "DateTimeFormat")}}.</dd>
+	<dt>{{jsxref("DateTimeFormat.formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
+	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -169,16 +169,16 @@ console.log(usedOptions.timeZone);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -188,5 +188,5 @@ console.log(usedOptions.timeZone);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Intl")}}</li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>
