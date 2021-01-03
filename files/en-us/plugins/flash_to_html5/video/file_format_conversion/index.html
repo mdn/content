@@ -30,7 +30,7 @@ tags:
 
 <p>If your Flash video files use a web-compatible video compression format, and they have same bitrate you want for the web, you may be able to swap the container format without having to do any transcoding. This would give you the same quality, and save you some time too. Many transcoders have an option to do this, for example FFmpeg has the <code>-c copy</code> option:</p>
 
-<pre class="brush: bash"><span class="inline_editor_value"><span class="rendered_qtext"><span class="pln">ffmpeg </span><span class="pun">-</span><span class="pln">i mymovie</span><span class="pun">.</span><span class="pln">flv </span><span class="pun">-</span><span class="pln">c copy mymovie</span><span class="pun">.</span><span class="pln">mp4</span></span></span></pre>
+<pre class="brush: bash">ffmpeg -i mymovie.flv -c copy mymovie.mp4</pre>
 
 <h2 id="Formats_for_adaptive_streaming">Formats for adaptive streaming</h2>
 

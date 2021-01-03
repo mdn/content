@@ -126,7 +126,6 @@ console.log("immediate logging");
 
 <p>The same concept applies to promises. If we modify the above example a little bit, we get this:</p>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
 &lt;script&gt; // we have a realm here as well
@@ -139,11 +138,9 @@ console.log("immediate logging");
   // realm (the incumbent) on the stack
 &lt;/script&gt;
 </pre>
-</div>
 
 <p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent settings object:</p>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!-- y.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;iframe src="x.html"&gt;&lt;/iframe&gt;
@@ -152,9 +149,7 @@ console.log("immediate logging");
   Promise.resolve(undefined).then(bound);
 &lt;/script&gt;
 </pre>
-</div>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!-- x.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;script&gt;
@@ -165,7 +160,6 @@ window.addEventListener("message", (event) =&gt; {
 }, false);
 &lt;/script&gt;
 </pre>
-</div>
 
 <p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
 

@@ -157,7 +157,7 @@ exports.default = function(cb) {
   <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it in the <code>devDependencies</code> property.</p>
   </div>
  </li>
- <li class="line">Add the following dependency to <code>gulpfile.js</code>:
+ <li>Add the following dependency to <code>gulpfile.js</code>:
   <pre class="brush: js notranslate">const htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
@@ -245,7 +245,7 @@ npm install --save-dev @babel/core
 <span class="js source"><span class="js storage type"><span>const</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
 </pre>
  </li>
- <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:
+ <li>Add the following test to the bottom of <code>gulpfile.js</code>:
   <pre class="brush: js notranslate">function js(cb) {
     return gulp.src('src/main.js')
         .pipe(jshint())
