@@ -10,7 +10,7 @@ tags:
   - Interface
   - Reference
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
 
 <p class="summary">The <strong><code>CSSNumericValue</code></strong> interface of the <a href="/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> represents operations that all numeric values can perform.</p>
 
@@ -37,11 +37,9 @@ tags:
 
 <p>None.</p>
 
-<h3 id="Event_handlers">Event handlers</h3>
-
-<p>No</p>
-
 <h2 id="Methods">Methods</h2>
+
+<h3 id="Instance_methods">Instance methods</h3>
 
 <dl>
 	<dt>{{domxref('CSSNumericValue.add')}}</dt>
@@ -61,9 +59,14 @@ tags:
 	<dt>{{domxref('CSSNumericValue.to')}}</dt>
 	<dd>Converts <code>value</code> into another one with the specified <var>unit.</var></dd>
 	<dt>{{domxref('CSSNumericValue.toSum')}}</dt>
-	<dd>TBD</dd>
+	<dd>Converts an existing <code>CSSNumericValue</code> into a {{domxref("CSSMathSum")}} object with values of a specified unit.</dd>
 	<dt>{{domxref('CSSNumericValue.type')}}</dt>
-	<dd>TBD</dd>
+	<dd>Returns the type of <code>CSSNumericValue</code>, one of <code>angle</code>, <code>flex</code>, <code>frequency</code>, <code>length</code>, <code>resolution</code>, <code>percent</code>, <code>percentHint</code>, or <code>time</code>.</dd>
+</dl>
+
+<h3 id="Static_methods">Static methods</h3>
+
+<dl>
 	<dt>{{domxref('CSSNumericValue.parse')}}</dt>
 	<dd>Allows a <code class="idl">CSSNumericValue</code> to be constructed directly from a string containing CSS. </dd>
 </dl>

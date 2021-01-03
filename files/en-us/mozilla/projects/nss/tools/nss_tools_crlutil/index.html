@@ -15,7 +15,7 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <p><a id="1028271"> where <i>options</i> and <i>arguments</i> are combinations of the options and arguments listed in the following section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue the command without options, or with the <code>-H</code> option.</a></p>
 <h3 id="Options_and_Arguments"> <a id="1027593"> Options and Arguments </a></h3>
 <p><a id="1028291"> Options specify an action and are uppercase. Option arguments modify an action and are lowercase. Certificate Revocation List Management Tool command options and their arguments are defined as follows:</a></p>
-<p><a id="1028291"> </a></p>
+
 <table>
   <tbody>
     <tr>
@@ -324,7 +324,7 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <blockquote>
   <a id="1037935"> <code>-L [-n </code><i>crl-name</i><code>] [-d </code><i>krydir</i><code>] </code></a></blockquote>
 <blockquote>
-  <code>crlutil -D -n nickname [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] </code</blockquote>
+  <code>crlutil -D -n nickname [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] </code></blockquote>
 <blockquote>
   <code>crlutil -E [-d </code><i>keydir</i><code>] [-P </code><i>dbprefix</i><code>] </code></blockquote>
 <blockquote>
@@ -389,6 +389,6 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <p><code><code>crlutil -M -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> &lt;&lt;<i>EOF<br>
   update=20050204153000Z<br>
   addcert 40-60 20050105153000Z<br>
-  EOF</i></code></a></code></p>
+  EOF</i></code></code></p>
 <p><code>The CRL Management Tool extracts existing CRL from a database, will modify and sign with certificate <i>cert-nickname</i> and will store it in database. To modify while importing CRL from file user should supply <code>-i </code><i>import-crl-file</i> option. </code></p>
 <hr>
