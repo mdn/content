@@ -6,6 +6,7 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Method
   - Reference
   - RelativeTimeFormat
@@ -15,8 +16,7 @@ tags:
 <p>The <strong><code>Intl.RelativeTimeFormat.supportedLocalesOf()</code></strong> method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,17 +25,17 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>locales</var></code></dt>
- <dd>A string with a BCP 47 language tag, or an array of such strings. For the general form of the <code><var>locales</var></code> argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.</dd>
- <dt><code><var>options</var></code> {{optional_inline}}</dt>
- <dd>
- <p>An object that may have the following property:</p>
-
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
- </dl>
- </dd>
+	<dt><code><var>locales</var></code></dt>
+	<dd>A string with a BCP 47 language tag, or an array of such strings. For the general form of the <code><var>locales</var></code> argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.</dd>
+	<dt><code><var>options</var></code> {{optional_inline}}</dt>
+	<dd>
+		<p>An object that may have the following property:</p>
+		
+		<dl>
+			<dt><code>localeMatcher</code></dt>
+			<dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
+		</dl>
+	</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -61,16 +61,16 @@ console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(',
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.supportedLocalesOf', 'RelativeTimeFormat.supportedLocalesOf()')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.supportedLocalesOf', 'RelativeTimeFormat.supportedLocalesOf()')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -80,5 +80,5 @@ console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(',
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Intl.RelativeTimeFormat")}}</li>
+	<li>{{jsxref("Intl.RelativeTimeFormat")}}</li>
 </ul>
