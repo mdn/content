@@ -7,13 +7,13 @@ tags:
   - NSS
   - Security
 ---
-<p>Getting the source code of <a href="/en-US/docs/NSS" title="/en-US/docs/NSS">Network Security Services (NSS)</a>, how to build it, and how to run its test suite.</p>
+<p>Getting the source code of <a href="/en-US/docs/NSS">Network Security Services (NSS)</a>, how to build it, and how to run its test suite.</p>
 
 <h2 id="Getting_source_code_and_a_quick_overview">Getting source code, and a quick overview</h2>
 
-<p>The easiest way is to download archives of NSS releases from <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/" title="https://ftp.mozilla.org/pub/security/nss/releases/">Mozilla's download server</a>. Find the directory that contains the highest version number. Because NSS depends on the base library <a href="/en-US/docs/NSPR" title="/en-US/docs/NSPR">NSPR</a>, you should download the archive that combines both NSS and NSPR.</p>
+<p>The easiest way is to download archives of NSS releases from <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/" title="https://ftp.mozilla.org/pub/security/nss/releases/">Mozilla's download server</a>. Find the directory that contains the highest version number. Because NSS depends on the base library <a href="/en-US/docs/NSPR">NSPR</a>, you should download the archive that combines both NSS and NSPR.</p>
 
-<p>If you are a software developer and intend to contribute enhancements to NSS, you should obtain the latest development snapshot of NSS using mercurial/hg (a <a href="https://www.mercurial-scm.org/" title="https://www.mercurial-scm.org/">distributed source control management tool</a>). In order to get started, anonymous read-only access is sufficient. Create a new directory on your computer that you will use as your local work area, and run the following commands.</p>
+<p>If you are a software developer and intend to contribute enhancements to NSS, you should obtain the latest development snapshot of NSS using mercurial/hg (a <a href="https://www.mercurial-scm.org/">distributed source control management tool</a>). In order to get started, anonymous read-only access is sufficient. Create a new directory on your computer that you will use as your local work area, and run the following commands.</p>
 
 <pre class="language-html" style='margin-top: 0.5em; margin-bottom: 0.5em; padding: 1em; background-color: rgb(15, 12, 10); font-size: 14px; line-height: 21px; font-family: Consolas, Monaco, "Andale Mono", monospace; color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 1px; direction: ltr;'>hg clone https://hg.mozilla.org/projects/nspr
 hg clone https://hg.mozilla.org/projects/nss</pre>

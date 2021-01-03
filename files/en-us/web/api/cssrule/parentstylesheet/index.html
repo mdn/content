@@ -5,7 +5,6 @@ tags:
   - API
   - CSSOM
   - CSSRule
-  - NeedsSpecTable
   - Property
   - Reference
 ---
@@ -17,18 +16,17 @@ tags:
 
 <pre class="syntaxbox">var <em>stylesheet</em> = cssRule.parentStyleSheet</pre>
 
-<h3 id="Parameters">Parameters</h3>
+<h3 id="Values">Values</h3>
 
-<ul>
- <li><code>stylesheet</code> is a {{domxref("StyleSheet")}} object.</li>
-</ul>
+<dl>
+  <dt><code>stylesheet</code></dt>
+  <dd>A {{domxref("StyleSheet")}} object.</dd>
+</dl>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">if (bgRule.parentStyleSheet != mySheet) {
-  // Alien style rule!
-}
-</pre>
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules.parentStyleSheet);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

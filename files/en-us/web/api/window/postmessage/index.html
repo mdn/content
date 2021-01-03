@@ -34,7 +34,7 @@ tags:
  </ul>
  </dd>
  <dt><code><em>message</em></code></dt>
- <dd>Data to be sent to the other window. The data is serialized using <a href="/en-US/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself. [<a href="/en-US/docs/">1</a>]</dd>
+ <dd>Data to be sent to the other window. The data is serialized using {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone algorithm")}}. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.</dd>
  <dt><code><em>targetOrigin</em></code></dt>
  <dd>Specifies what the origin of <code>targetWindow</code> must be for the event to be dispatched, either as the literal string <code>"*"</code> (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of <code>targetWindow</code>'s document does not match that provided in <code>targetOrigin</code>, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if <code>postMessage()</code> was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. <strong>Always provide a specific <code>targetOrigin</code>, not <code>*</code>, if you know where the other window's document should be located. Failing to provide a specific target discloses the data you send to any interested malicious site.</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
@@ -59,9 +59,9 @@ tags:
  <dt><code>data</code></dt>
  <dd>The object passed from the other window.</dd>
  <dt><code>origin</code></dt>
- <dd>The <a href="/en-US/docs/Origin">origin</a> of the window that sent the message at the time <code>postMessage</code> was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are <code class="nowiki">https://example.org</code> (implying port <code>443</code>), <code class="nowiki">http://example.net</code> (implying port <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that this origin is <em>not</em> guaranteed to be the current or future origin of that window, which might have been navigated to a different location since <code>postMessage</code> was called.</dd>
+ <dd>The {{Glossary("origin")}} of the window that sent the message at the time <code>postMessage</code> was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are <code class="nowiki">https://example.org</code> (implying port <code>443</code>), <code class="nowiki">http://example.net</code> (implying port <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that this origin is <em>not</em> guaranteed to be the current or future origin of that window, which might have been navigated to a different location since <code>postMessage</code> was called.</dd>
  <dt><code>source</code></dt>
- <dd>A reference to the <code><a href="/en-US/docs/DOM/window">window</a></code> object that sent the message; you can use this to establish two-way communication between two windows with different origins.</dd>
+ <dd>A reference to the {{domxref("window")}} object that sent the message; you can use this to establish two-way communication between two windows with different origins.</dd>
 </dl>
 
 <h2 id="Security_concerns">Security concerns</h2>
@@ -77,15 +77,15 @@ tags:
 <p>If <code>postMessage()</code> throws when used with {{jsxref("SharedArrayBuffer")}} objects, you might need to make sure you cross-site isolated your site properly. Shared memory is gated behind two HTTP headers:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy"><code>Cross-Origin-Opener-Policy</code></a> with <code>same-origin</code> as value (protects your origin from attackers)</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy"><code>Cross-Origin-Embedder-Policy</code></a> with <code>require-corp</code> as value (protects victims from your origin)</li>
+ <li>{{HTTPHeader("Cross-Origin-Opener-Policy")}} with <code>same-origin</code> as value (protects your origin from attackers)</li>
+ <li>{{HTTPHeader("Cross-Origin-Embedder-Policy")}} with <code>require-corp</code> as value (protects victims from your origin)</li>
 </ul>
 
 <pre class="notranslate">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
-<p>To check if cross origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+<p>To check if cross origin isolation has been successful, you can test against the {{domxref("WindowOrWorkerGlobalScope.crossOriginIsolated", "crossOriginIsolated")}} property available to window and worker contexts:</p>
 
 <pre class="brush: js notranslate">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
@@ -93,7 +93,7 @@ Cross-Origin-Embedder-Policy: require-corp
   // Do something else
 }</pre>
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes">Planned changes to shared memory</a> which is starting to roll out to browsers (Firefox 79, for example).</p>
+<p>See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for example).</p>
 
 <h2 id="Example">Example</h2>
 
@@ -167,7 +167,7 @@ window.addEventListener("message", (event) =&gt; {
 
 <p>It is not possible for content or web context scripts to specify a <code>targetOrigin</code> to communicate directly with an extension (either the background script or a content script). Web or content scripts <em>can</em> use <code>window.postMessage</code> with a <code>targetOrigin</code> of <code>"*"</code> to broadcast to every listener, but this is discouraged, since an extension cannot be certain the origin of such messages, and other listeners (including those you do not control) can listen in.</p>
 
-<p>Content scripts should use <a href="/en-US/Add-ons/WebExtensions/API/runtime">runtime.sendMessage</a> to communicate with the background script. Web context scripts can use custom events to communicate with content scripts (with randomly generated event names, if needed, to prevent snooping from the guest page).</p>
+<p>Content scripts should use {{WebExtAPIRef("runtime.sendMessage")}} to communicate with the background script. Web context scripts can use custom events to communicate with content scripts (with randomly generated event names, if needed, to prevent snooping from the guest page).</p>
 
 <p>Lastly, posting a message to a page at a <code>file:</code> URL currently requires that the <code>targetOrigin</code> argument be <code>"*"</code>. <code>file://</code> cannot be used as a security restriction; this restriction may be modified in the future.</p>
 

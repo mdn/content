@@ -167,7 +167,7 @@ for (let i = 0; i &lt; colors.length; i++) {
 }
 </pre>
 
-<p>If you know that none of the elements in your array evaluate to <code>false</code> in a boolean context—if your array consists only of <a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a> nodes, for example—you can use a more efficient idiom:</p>
+<p>If you know that none of the elements in your array evaluate to <code>false</code> in a boolean context—if your array consists only of <a href="/en-US/docs/DOM">DOM</a> nodes, for example—you can use a more efficient idiom:</p>
 
 <pre class="brush: js notranslate">let divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {

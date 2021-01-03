@@ -54,6 +54,8 @@ objectStore1.put("1", "key");
 <dl>
  <dt>{{domxref("IDBTransaction.db")}} {{readonlyInline}}</dt>
  <dd>The database connection with which this transaction is associated.</dd>
+ <dt>{{domxref("IDBTransaction.durability")}} {{readonlyInline}}</dt>
+ <dd>Returns the durability hint the transaction was created with.</dd>
  <dt>{{domxref("IDBTransaction.error")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.</dd>
  <dt>{{domxref("IDBTransaction.mode")}} {{readonlyInline}}</dt>

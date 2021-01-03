@@ -5,7 +5,6 @@ tags:
   - NSS
   - Security
 ---
-<p> </p>
 
 <h3 id="PKCS11_FAQ">PKCS11 FAQ</h3>
 
@@ -145,8 +144,6 @@ tags:
 <h6 id="If_the_smartcard_can.27t_do_key_generation.2C_will_NSS_do_the_key_generation_automatically.3F">If the smartcard can't do key generation, will NSS do the key generation automatically?</h6>
 
 <p>Yes. If your token can do CKM_RSA_PKCS, and is writable, NSS displays it as one of the options to do key generation with. If the token cannot do CKM_RSA_PKCS_GEN_KEYPAIR, NSS uses its software key generation code and writes the private and public keys into the token using C_CreateObject. The RSA private key will contain all the attributes specified by PKCS #11 version 2.0. This is also true for CKM_DSA and CKM_DSA_GEN_KEYPAIR.</p>
-
-<p> </p>
 
 <h6 id="What_is_the_C_GenerateKeyPair_process.3F_For_example.2C_what_happens_when_an_application_in_the_a_server_asks_an_NSS_based_client_to_do_a_keypair_generation_while_a_smartCard_is_attached.3F_How_is_the_private_key_stored_to_the_smartCard.2C_and_how_is_the_public_key_sent_to_the_server_.28with_wrapping.3F.29.">What is the C_GenerateKeyPair process? For example, what happens when an application in the a server asks an NSS based client to do a keypair generation while a smartCard is attached? How is the private key stored to the smartCard, and how is the public key sent to the server (with wrapping?).</h6>
 
