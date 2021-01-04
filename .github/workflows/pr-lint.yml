@@ -4,6 +4,7 @@ name: PR Lint
 
 on:
   pull_request:
+    types: [opened, edited, synchronize, reopened]
 
 jobs:
   check:
