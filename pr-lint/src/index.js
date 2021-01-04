@@ -58,7 +58,7 @@ main()
       process.exitCode = 2;
     } else {
       console.log(
-        boxen("Happiness is when nothing's wrong! 🦄 ☀️", {
+        boxen("Happiness is when nothing's wrong!", {
           padding: 1,
           margin: 1,
           borderStyle: "double",
