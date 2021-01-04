@@ -357,17 +357,17 @@ x-card:nth-child(3) {
 
 <p>This means that mobile browsers only download the mobile background image asset — not the desktop mobile assets — because they fail the media query tests and therefore ignore the media queries. You can also serve a larger graphic to a higher resolution device using a resolution media query, like so:</p>
 
-<pre class="prettyprint prettyprinted notranslate"><code><span class="brush: css">button {
+<pre class="brush: css notranslate">button {
   background: url(images/low-res-header.jpg) 1rem center ;
 }
 
-@media</span><span class="pln"> only screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">min</span><span class="pun">-</span><span class="pln">device</span><span class="pun">-</span><span class="pln">pixel</span><span class="pun">-</span><span class="pln">ratio</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">),</span><span class="pln">
-       only screen </span><span class="kwd">and</span><span class="pln"> </span><span>(</span><span class="pln"> min</span><span class="pun">-</span><span class="pln">resolution</span><span class="pun">:</span><span class="pln"> </span><span class="lit">192dpi</span><span class="pun">),</span><span class="pln">
-       only screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> min</span><span class="pun">-</span><span class="pln">resolution</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2dppx</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-<code><span class="lit">  button {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and ( min-resolution: 192dpi),
+       only screen and ( min-resolution: 2dppx) {
+  button {
     background: url(images/high-res-header.jpg) 1rem center ;
-  }</span></code> </span><span class="pln">
-</span><span class="pun">}</span></code></pre>
+  }
+}</pre>
 
 <p>This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at <a href="http://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/">Cross Browser Retina/High Resolution Media Queries</a>.</p>
 

@@ -251,10 +251,10 @@ button:active {
 
 <p>IE conditional comments are a modified proprietary HTML comment syntax, which can be used to selectively apply HTML code to different versions of IE. This has proven to be a very effective mechanism for fixing cross browser bugs. The syntax looks like this:</p>
 
-<pre class="brush: html"><span class="c">&lt;!--[if lte IE 8]&gt;
-  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;</span>
+<pre class="brush: html">&lt;!--[if lte IE 8]&gt;
+  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
-<span class="c">&lt;![endif]--&gt;</span></pre>
+&lt;![endif]--&gt;</pre>
 
 <p>This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. <code>lte</code> means "less than or equal to", but you can also use lt, gt, gte, <code>!</code> for NOT, and other logical syntax.</p>
 
