@@ -47,9 +47,7 @@ tags:
 
 <p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled. These methods also return a newly generated promise object, which can optionally be used for chaining; for example, like this:</p>
 
-<dl>
- <dd>
- <pre class="brush: js notranslate">const myPromise =
+<pre class="brush: js notranslate">const myPromise =
   (new Promise(myExecutorFunc))
   .then(handleFulfilledA,handleRejectedA)
   .then(handleFulfilledB,handleRejectedB)
@@ -63,8 +61,6 @@ const myPromise =
   .then(handleFulfilledB)
   .then(handleFulfilledC)
   .catch(handleRejectedAny);</pre>
- </dd>
-</dl>
 
 <p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
 

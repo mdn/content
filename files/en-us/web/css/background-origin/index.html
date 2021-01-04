@@ -78,6 +78,26 @@ background-origin: unset;
   background-origin: content-box, padding-box;
 }</pre>
 
+<h3 id="Using_two_gradients">Using two gradients</h3>
+
+<p>In this example the box has a thick dotted border. The first gradient uses the <code>padding-box</code> as the <code>background-origin</code> and therefore the background sits inside the border. The second uses the <code>content-box</code> and so only displays behind the content.</p>
+
+<pre class="brush:css;">.box {
+  margin: 10px 0;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%), 
+  radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  border: 20px dashed black;
+  padding: 20px;
+  width: 400px;
+  background-origin: padding-box, content-box;
+  background-repeat: no-repeat;
+}</pre>
+
+<pre class="brush:html">&lt;div class="box"&gt;Hello!&lt;/div&gt;</pre>
+
+<p>{{EmbedLiveSample('Using_two_gradients', 420, 140)}}</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">

@@ -30,15 +30,17 @@ tags:
                 <pre class="eval">    void openFile(in nsIFile file);
     attribute AString filename;
     attribute long unknownEntries;
-</li></ul>
-</dd>
+</pre>
+            </li>
+        </ul>
+    </dd>
     <dt><strong>Rule:</strong> Use attributes wherever you are referring to a single, non-dynamic value.</dt>
     <dt><strong>Why:</strong> Scripted access to the interface is easier to read.</dt>
     <dd>Combining two get/set methods into a single attribute also syntactically shows their relevance. Methods also
         imply some sort of action or side effect.
         <ul>
             <li>Incorrect:
-<pre class="eval">    /* These refer to the same value, why make them functions? */
+                <pre class="eval">    /* These refer to the same value, why make them functions? */
     long getColorValue();
     void setColorValue(in long value);
 

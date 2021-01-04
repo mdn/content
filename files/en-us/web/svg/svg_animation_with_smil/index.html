@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Example_1_Linear_motion">Example 1: Linear motion</h3>
 
-<p>In this example, a blue circle bounces between the left and right edges of a black box, over and over again, indefinitely. The animation here is handled by the {{ SVGElement("animateMotion") }} element. In this case, we're establishing a path consisting of a <strong>M</strong>oveTo command to establish the starting point for the animation, then the <strong>H</strong>orizontal-line command to move the circle 300 pixels to the right, followed by the <strong>Z</strong> command, which closes the path, establishing a loop back to the beginning. By setting the value of the <strong>repeatCount</strong> attribute to <code>indefinite</code>, we indicate that the animation should loop forever, as long as the SVG image exists.</p>
+<p>In this example, a blue circle bounces between the left and right edges of a black box, over and over again, indefinitely. The animation here is handled by the {{ SVGElement("animateMotion") }} element. In this case, we're establishing a path consisting of a <strong>MoveTo</strong> command to establish the starting point for the animation, then the <strong>Horizontal-line</strong> command to move the circle 300 pixels to the right, followed by the <strong>Z command</strong>, which closes the path, establishing a loop back to the beginning. By setting the value of the <strong>repeatCount</strong> attribute to <code>indefinite</code>, we indicate that the animation should loop forever, as long as the SVG image exists.</p>
 
 <pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="300" height="100"&gt;
   &lt;title&gt;SVG SMIL Animate with Path&lt;/title&gt;

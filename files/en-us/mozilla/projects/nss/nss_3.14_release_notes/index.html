@@ -36,7 +36,7 @@ slug: Mozilla/Projects/NSS/NSS_3.14_release_notes
     <div>
       <ul>
         <li>When connecting to a server, the record layer version of the initial ClientHello will be at most { 3, 1 } (TLS 1.0), even when attempting to negotiate TLS 1.1 (https://bugzilla.mozilla.org/show_bug.cgi?id=774547)</li>
-        <li>The choice of client_version sent during renegotiations has changed. See the "<a href="#changes" title="#changes">Changes</a>" section below.</li>
+        <li>The choice of client_version sent during renegotiations has changed. See the "<a href="#changes">Changes</a>" section below.</li>
       </ul>
     </div>
   </li>
@@ -86,14 +86,14 @@ slug: Mozilla/Projects/NSS/NSS_3.14_release_notes
 <h2 id="Changes_in_NSS_3.14"><a name="changes">Changes in NSS 3.14</a></h2>
 <ul>
   <li>
-    <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333601" title="https://bugzilla.mozilla.org/show_bug.cgi?id=333601">Bug 333601</a> - Performance enhancements for Intel Macs</p>
+    <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333601">Bug 333601</a> - Performance enhancements for Intel Macs</p>
     <p>When building for Intel Macs, NSS will now take advantage of optimized assembly code for common operations. These changes have the observed effect of doubling RSA performance.</p>
   </li>
   <li>
-    <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792681" title="https://bugzilla.mozilla.org/show_bug.cgi?id=792681">Bug 792681</a> - New default cipher suites</p>
+    <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=792681">Bug 792681</a> - New default cipher suites</p>
     <p>The default cipher suites in NSS 3.14 have been changed to better reflect the current security landscape. The defaults now better match the set that most major Web browsers enable by default.</p>
   </li>
-  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783448" title="https://bugzilla.mozilla.org/show_bug.cgi?id=783448">Bug 783448</a> - When performing an SSL renegotiation, the client_version that is sent in the renegotiation ClientHello will be set to match the client_version that was sent in the initial ClientHello. This is needed for compatibility with IIS.</li>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783448">Bug 783448</a> - When performing an SSL renegotiation, the client_version that is sent in the renegotiation ClientHello will be set to match the client_version that was sent in the initial ClientHello. This is needed for compatibility with IIS.</li>
   <li>Certificate signatures that make use of the MD5 hash algorithm will now be rejected by default. Support for MD5 may be manually enabled (but is discouraged) by setting the environment variable of "NSS_HASH_ALG_SUPPORT=+MD5" or by using the NSS_SetAlgorithmPolicy function. Note that SSL cipher suites with "MD5" in their names are NOT disabled by this change; those cipher suites use HMAC-MD5, not plain MD5, and are still considered safe.</li>
   <li>Maximum key sizes for RSA and Diffie-Hellman keys have been increased to 16K bits.</li>
   <li>Command line utilities tstclnt, strsclnt, and selfserv have changed. The old options to disable SSL 2, SSL 3 and TLS 1.0 have been removed and replaced with a new -V option that specifies the enabled range of protocol versions (see usage output of those tools).</li>
