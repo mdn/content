@@ -432,7 +432,7 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
 
 <p>The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be shifted. The direction of the shift operation is controlled by the operator used.</p>
 
-<p>Shift operators convert their operands to thirty-two-bit integers and return a result of type Number.</p>
+<p>Shift operators convert their operands to thirty-two-bit integers and return a result of either type {{jsxref("Number")}} or {{jsxref("BigInt")}}: specifically, if the type of the left operand is {{jsxref("BigInt")}}, they return {{jsxref("BigInt")}}; otherwise, they return {{jsxref("Number")}}.</p>
 
 <p>The shift operators are listed in the following table.</p>
 
