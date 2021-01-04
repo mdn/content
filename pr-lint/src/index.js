@@ -25,9 +25,9 @@ async function main() {
     // to come up with a better title.
     // See https://github.com/mdn/content/issues/782
     return (
-      'Pull request title can\'t just be "Update index.html".\n' +
+      'Pull request title can\'t just be "Update index.html"\n' +
       "Please update the pull request to be more descriptive. " +
-      "For example 'fix typo on Web/JavaScript'"
+      "For example 'fix typo on Web/JavaScript'."
     );
   }
 
@@ -53,7 +53,7 @@ main()
       );
       // Because boxen breaks, in GitHub Actions logging, when multiple lines.
       if (lines.length > 1) {
-        console.log(lines.slice(1).join("\n"));
+        console.log(`\n${lines.slice(1).join("\n")}\n`);
       }
       process.exitCode = 2;
     } else {
