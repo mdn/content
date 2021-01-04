@@ -1,4 +1,5 @@
-const core = require("@actions/core");
+const boxen = require("boxen");
+// const core = require("@actions/core");
 const github = require("@actions/github");
 
 async function main() {
@@ -12,7 +13,7 @@ async function main() {
     );
   }
 
-  console.log(contextPullRequest);
+  // console.log(contextPullRequest);
   const { title } = contextPullRequest;
   if (title === "Update index.html") {
     // This is the default title you get when you use the GitHub UI to
@@ -40,5 +41,9 @@ async function main() {
 
 main().catch((error) => {
   console.error(error);
+  console.log(
+    boxen(error.message, { padding: 1, margin: 1, borderStyle: "double" })
+  );
+
   process.exitCode = 1;
 });
