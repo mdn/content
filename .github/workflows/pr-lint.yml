@@ -35,4 +35,4 @@ jobs:
       - name: Testing out
         run: |
           cd pr-lint
-          yarn check
+          yarn run
