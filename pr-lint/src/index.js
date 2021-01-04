@@ -22,7 +22,12 @@ async function main() {
     // rather "useless" title so let's put the onus back on the author
     // to come up with a better title.
     // See https://github.com/mdn/content/issues/782
-    boxen("Single line", { padding: 1, margin: 1, borderStyle: "double" });
+    boxen("Single line", {
+      padding: 1,
+      margin: 1,
+      borderStyle: "double",
+      align: "center",
+    });
     throw new Error(
       'Pull request title can\'t just be "Update index.html".\n' +
         "Please update the pull request to be more descriptive. " +
