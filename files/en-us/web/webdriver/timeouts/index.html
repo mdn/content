@@ -5,7 +5,7 @@ tags:
   - WebDriver
   - timeouts
 ---
-<p>Associated with a <a href="/en-US/docs/Web/WebDriver">WebDriver</a> session are various timeout definitions that control behavior for <a class="new" href="/en-US/docs/Web/WebDriver/Timeouts#script" rel="nofollow">script injection</a>, <a class="new" href="/en-US/docs/Web/WebDriver/Timeouts#pageLoad" rel="nofollow">document navigation</a>, and <a class="new" href="/en-US/docs/Web/WebDriver/Timeouts#implicit" rel="nofollow">element retrieval</a>.</p>
+<p>Associated with a <a href="/en-US/docs/Web/WebDriver">WebDriver</a> session are various timeout definitions that control behavior for <a href="/en-US/docs/Web/WebDriver/Timeouts#script" rel="nofollow">script injection</a>, <a href="/en-US/docs/Web/WebDriver/Timeouts#pageLoad" rel="nofollow">document navigation</a>, and <a href="/en-US/docs/Web/WebDriver/Timeouts#implicit" rel="nofollow">element retrieval</a>.</p>
 
 <p>You will find the <em><a href="#payload">timeouts object</a></em> used in a few different contexts. It can be used as configuration when <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">creating a new session</a> through <a href="/en-US/docs/Web/WebDriver/Capabilities">capabilities</a>, it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the <a href="/en-US/docs/Web/WebDriver/Commands/SetTimeouts">Set Timeouts</a> and <a href="/en-US/docs/Web/WebDriver/Commands/GetTimeouts">Get Timeouts</a> commands.</p>
 
@@ -17,11 +17,11 @@ tags:
 
 <dl>
  <dt><code>implicit</code></dt>
- <dd>Time in milliseconds to retry the <a class="new" href="/en-US/docs/Web/WebDriver/WebElement" rel="nofollow">element location strategy</a> when finding an element. This defaults to 0, meaning the strategy is run only once.</dd>
+ <dd>Time in milliseconds to retry the <a href="/en-US/docs/Web/WebDriver/WebElement" rel="nofollow">element location strategy</a> when finding an element. This defaults to 0, meaning the strategy is run only once.</dd>
  <dt><code>pageLoad</code></dt>
  <dd>Time in milliseconds to wait for the document to finish loading. By default WebDriver will wait five minutes (or 300,000 ms).</dd>
  <dt><code>script</code></dt>
- <dd>Scripts injected with <a class="new" href="/en-US/docs/Web/WebDriver/Commands/ExecuteScript" rel="nofollow">Execute Script</a> or <a class="new" href="/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript" rel="nofollow">Execute Async Script</a> will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a <a class="new" href="/en-US/docs/Web/WebDriver/Errors/ScriptTimeoutError" rel="nofollow">script timeout error</a> will be returned. Defaults to 30 seconds (or 30,000 ms).</dd>
+ <dd>Scripts injected with <a href="/en-US/docs/Web/WebDriver/Commands/ExecuteScript" rel="nofollow">Execute Script</a> or <a href="/en-US/docs/Web/WebDriver/Commands/ExecuteAsyncScript" rel="nofollow">Execute Async Script</a> will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a <a href="/en-US/docs/Web/WebDriver/Errors/ScriptTimeoutError" rel="nofollow">script timeout error</a> will be returned. Defaults to 30 seconds (or 30,000 ms).</dd>
 </dl>
 
 <p>When the object is used as input for the <a href="/en-US/docs/Web/WebDriver/Commands/SetTimeouts">Set Timeouts</a> command or as part of the <a href="/en-US/docs/Web/WebDriver/Capabilities">timeouts capability</a> when <a href="/en-US/docs/Web/WebDriver/Commands/NewSession">creating a new session</a>, all fields are optional. This means you can configure zero or more of the timeout duration values individually or all at once.</p>
