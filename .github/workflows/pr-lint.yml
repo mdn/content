@@ -24,8 +24,7 @@ jobs:
           cd pr-lint
           yarn --frozen-lockfile
 
-      - name: Testing out
+      - name: Run checks
         run: |
           cd pr-lint
           yarn run check
-          echo "All is well in the world(?)"
