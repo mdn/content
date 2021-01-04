@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>getTimezoneOffset()</code></strong> method returns the time zone difference, in minutes, from current locale (host system settings) to UTC.</p>
+<p>The <strong><code>getTimezoneOffset()</code></strong> method returns the time-zone difference, in minutes, between UTC time and local time.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}</div>
 
@@ -20,13 +20,13 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A number representing the time-zone offset, in minutes, from the date based on current host system settings to UTC.</p>
+<p>A number representing the time-zone offset, in minutes, between UTC and local time.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The time-zone offset is the difference, in minutes, from local time to UTC.</p>
+<p>The time-zone offset is the difference, in minutes, between UTC time and local time.</p>
 
-<p>Note that this means that the offset is positive if the local timezone is behind UTC, and negative if it is ahead. For example, for time zone UTC+10:00 (Australian Eastern Standard Time, Vladivostok Time, Chamorro Standard Time), <code>-600</code> will be returned.</p>
+<p>Note that this means that the offset is positive if the local time zone is behind UTC, and negative if the local time zone is ahead of UTC. For example, for time zone UTC+10:00 (Australian Eastern Standard Time, Vladivostok Time, Chamorro Standard Time), <code>-600</code> will be returned.</p>
 
 <table class="standard-table">
  <thead>
@@ -47,24 +47,20 @@ tags:
  </tbody>
 </table>
 
-<p>The time zone offset returned is the one that applies for the Date that it's called on.</p>
-
-<p>If the host system is configured for daylight saving, the offset will change depending on the date and time that the Date represents and that daylight saving applies.</p>
+<div class="notecard note">
+<p>{{jsxref("Date")}} instances do not store a time zone — instead they just store a single value representing the number of milliseconds that have elapsed since midnight on January 1, 1970, UTC — so regardless of what {{jsxref("Date")}} instance the <code>getTimezoneOffset()</code> method is called from, the result isn’t calculated based on the value of the particular {{jsxref("Date")}} instance, but is instead always just the difference between UTC time and local time.</p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_getTimezoneOffset">Using getTimezoneOffset()</h3>
 
-<pre class="brush: js notranslate">// Get current timezone offset for host device
-let x = new Date();
-let currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
-// 1
-
-// Get timezone offset for International Labour Day (May 1) in 2016
-// Be careful, the Date() constructor uses 0-indexed months, so May is
-// represented with 4 (and not 5)
-let labourDay = new Date(2016, 4, 1)
-let labourDayOffset = labourDay.getTimezoneOffset() / 60;
+<pre class="brush: js notranslate">// Create a Date instance for the current time
+let currentLocalDate = new Date();
+// Create a Date instance for 03:24 GMT-0200 on May 1st in 2016
+let laborDay2016at0324GMTminus2 = new Date('May 1, 2016 03:24:00 GMT-0200');
+currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
+// true, always — regardless of the values of the Date instances
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
