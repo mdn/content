@@ -28,6 +28,11 @@ async function main() {
       borderStyle: "double",
       align: "center",
     });
+    return (
+      'Pull request title can\'t just be "Update index.html".\n' +
+      "Please update the pull request to be more descriptive. " +
+      "For example 'fix typo on Web/JavaScript'"
+    );
     throw new Error(
       'Pull request title can\'t just be "Update index.html".\n' +
         "Please update the pull request to be more descriptive. " +
@@ -45,11 +50,15 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  console.log(
-    boxen(error.message, { padding: 1, margin: 1, borderStyle: "double" })
-  );
+main()
+  .then((ret) => {
+    console.log({ ret });
+  })
+  .catch((error) => {
+    console.error(error);
+    console.log(
+      boxen(error.message, { padding: 1, margin: 1, borderStyle: "double" })
+    );
 
-  process.exitCode = 1;
-});
+    process.exitCode = 1;
+  });
