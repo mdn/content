@@ -48,7 +48,8 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>The <strong>value</strong> of the <strong>first element</strong> in the array that satisfies the provided testing function. Otherwise, {{jsxref("undefined")}} is returned.</p>
-<p class="warning">Index zero will be interpreted as a falsy value in conditional statements.</p>
+<p class="warning">Index <code>0</code> will be interpreted as a {{Glossary("Falsy")}} value in conditional statements.</p>
+
 <h2 id="Description">Description</h2>
 
 <p>The <code>find</code> method executes the <code><var>callback</var></code> function once for each index of the array until the <code><var>callback</var></code> returns a <a href="/en-US/docs/Glossary/truthy">truthy</a> value. If so, <code>find</code> immediately returns the value of that element. Otherwise, <code>find</code> returns {{jsxref("undefined")}}.</p>
