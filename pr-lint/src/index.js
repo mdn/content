@@ -22,43 +22,59 @@ async function main() {
     // rather "useless" title so let's put the onus back on the author
     // to come up with a better title.
     // See https://github.com/mdn/content/issues/782
-    boxen("Single line", {
-      padding: 1,
-      margin: 1,
-      borderStyle: "double",
-      align: "center",
-    });
+    console.log(
+      boxen("Single line", {
+        padding: 1,
+        margin: 1,
+        borderStyle: "double",
+        align: "center",
+      })
+    );
     return (
       'Pull request title can\'t just be "Update index.html".\n' +
       "Please update the pull request to be more descriptive. " +
       "For example 'fix typo on Web/JavaScript'"
     );
-    throw new Error(
-      'Pull request title can\'t just be "Update index.html".\n' +
-        "Please update the pull request to be more descriptive. " +
-        "For example 'fix typo on Web/JavaScript'"
-    );
+    // throw new Error(
+    //   'Pull request title can\'t just be "Update index.html".\n' +
+    //     "Please update the pull request to be more descriptive. " +
+    //     "For example 'fix typo on Web/JavaScript'"
+    // );
   }
 
   const { body } = contextPullRequest;
   if (!body.trim()) {
     // Even for typos it's required that to explain something about the PR.
-    throw new Error(
+    // throw new Error(
+    //   "Pull request body can't be empty. " +
+    //     "Please try to explain what the pull request accomplishes."
+    // );
+    return (
       "Pull request body can't be empty. " +
-        "Please try to explain what the pull request accomplishes."
+      "Please try to explain what the pull request accomplishes."
     );
   }
+
+  // No errors or problems!
+  return null;
 }
 
 main()
   .then((ret) => {
-    console.log({ ret });
+    if (ret) {
+      console.log(boxen(ret, { padding: 1, margin: 1, borderStyle: "double" }));
+      process.exitCode = 2;
+    } else {
+      console.log(
+        boxen("Happiness is when nothing's wrong! 🦄 ☀️", {
+          padding: 1,
+          margin: 1,
+          borderStyle: "double",
+        })
+      );
+    }
   })
   .catch((error) => {
     console.error(error);
-    console.log(
-      boxen(error.message, { padding: 1, margin: 1, borderStyle: "double" })
-    );
-
     process.exitCode = 1;
   });
