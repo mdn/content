@@ -516,25 +516,17 @@ gDevTools.once("netmonitor-init").then(toolbox =&gt; {
 
 <p>To build a sidebar in your tool, first, add a xul:tabbox where you want the sidebar to live:</p>
 
-<pre class="line"><code class="brush: html">    <span class="nt">&lt;splitter</span> <span class="na">class=</span><span class="s">"devtools-side-splitter"</span><span class="nt">/&gt;</span></code>
-<code>    <span class="nt">&lt;tabbox</span> <span class="na">id=</span><span class="s">"mytool-sidebar"</span> <span class="na">class=</span><span class="s">"devtools-sidebar-tabs"</span> <span class="na">hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span></code>
-<code>      <span class="nt">&lt;tabs/&gt;</span></code>
-<code>      <span class="nt">&lt;tabpanels</span> <span class="na">flex=</span><span class="s">"1"</span><span class="nt">/&gt;</span></code>
-<code>    <span class="nt">&lt;/tabbox&gt;</span></code></pre>
+<pre class="brush: html">    &lt;splitter class="devtools-side-splitter"/&gt;
+    &lt;tabbox id="mytool-sidebar" class="devtools-sidebar-tabs" hidden="true"&gt;
+      &lt;tabs/&gt;
+      &lt;tabpanels flex="1"/&gt;
+    &lt;/tabbox&gt;</pre>
 
-<div class="line"> </div>
+<p>A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab he wants to see.</p>
 
-<div class="line">A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab he wants to see.</div>
+<p>If the availability of the tabs depends on some tool-related conditions, we might want to not let the user select a tab. This API provides methods to hide the tabstripe. For example, in the Web Console, there are 2 views (Network View and Object View). These views are only available in certain conditions controlled by the WebConsole code. So it's up the WebConsole the hide and show the sidebar, and select the correct tab.</p>
 
-<div class="line"> </div>
-
-<div class="line">If the availability of the tabs depends on some tool-related conditions, we might want to not let the user select a tab. This API provides methods to hide the tabstripe. For example, in the Web Console, there are 2 views (Network View and Object View). These views are only available in certain conditions controlled by the WebConsole code. So it's up the WebConsole the hide and show the sidebar, and select the correct tab.</div>
-
-<div class="line"> </div>
-
-<div class="line">If the loaded document exposes a <code>window.setPanel(ToolPanel)</code> function, the sidebar will call it once the document is loaded.</div>
-
-<div class="line"> </div>
+<p>If the loaded document exposes a <code>window.setPanel(ToolPanel)</code> function, the sidebar will call it once the document is loaded.</p>
 
 <table class="standard-table">
  <tbody>

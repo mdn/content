@@ -247,8 +247,8 @@ interface SpeechSynthesis {
 
 <p>Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the <code>[LenientSetter]</code> annotation can be used.</p>
 
-<pre class="syntaxbox"><code id="line-223">partial interface Document {</code><code id="line-225"><span class="c">
-</span></code><code id="line-226"><strong>  [LenientSetter]</strong>
+<pre class="syntaxbox"><code id="line-223">partial interface Document {</code><code id="line-225">
+</code><code id="line-226"><strong>  [LenientSetter]</strong>
 </code><code id="line-227">  readonly attribute boolean fullscreen;</code><code id="line-229">
 </code><code id="line-230"><strong>  [LenientSetter]</strong>
 </code><code id="line-231">  readonly attribute boolean fullscreenEnabled;
