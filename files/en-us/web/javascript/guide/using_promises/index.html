@@ -31,27 +31,20 @@ function failureCallback(error) {
 createAudioFileAsync(audioSettings, successCallback, failureCallback);
 </pre>
 
-<p>Modern functions return a promise that you can attach your callbacks to instead:</p>
+<p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, you would attach your callbacks to it instead:</p>
 
-<p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, using it could be as simple as this:</p>
+<pre class="brush: js line-numbers  language-js notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
 
-<pre class="brush: js notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
-
-<p>That's shorthand for:</p>
-
-<pre class="brush: js line-numbers  language-js notranslate">const promise = createAudioFileAsync(audioSettings);
-promise.then(successCallback, failureCallback);</pre>
-
-<p>We call this an <em>asynchronous function call</em>. This convention has several advantages. We will explore each one.</p>
+<p>This convention has several advantages. We will explore each one.</p>
 
 <h2 id="Guarantees">Guarantees</h2>
 
 <p>Unlike old-fashioned <em>passed-in</em> callbacks, a promise comes with some guarantees:</p>
 
 <ul>
- <li>Callbacks will never be called before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
- <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>, as above, will be called even <em>after</em> the success or failure of the asynchronous operation.</li>
- <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. Each callback is executed one after another, in the order in which they were inserted.</li>
+ <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be invoked before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
+ <li>These callbacks will be invoked even if they were added <em>after</em> the success or failure of the asynchronous operation that the promise represents.</li>
+ <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. They will be invoked one after another, in the order in which they were inserted.</li>
 </ul>
 
 <p>One of the great things about using promises is <strong>chaining</strong>.</p>
@@ -220,7 +213,7 @@ Do this, no matter what happened before
 
 <p>A {{jsxref("Promise")}} can be created from scratch using its constructor. This should be needed only to wrap old APIs.</p>
 
-<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> function:</p>
+<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> function:</p>
 
 <pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
 </pre>
