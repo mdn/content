@@ -50,7 +50,7 @@ the audio context's state changes to "interrupted" and needs to be resumed. For 
 <pre class="brush: js">
 function play() {
   if (audioCtx.state === 'interrupted') {
-    audioCtx.resume().then(() => play());
+    audioCtx.resume().then(() =&gt; play());
     return;
   }
   // ... rest of the play() function
