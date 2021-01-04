@@ -1,4 +1,4 @@
-# Checks the PR itself for hygene things.
+# Checks the PR itself for hygiene things.
 
 name: PR Lint
 

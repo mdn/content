@@ -1,9 +1,12 @@
 const boxen = require("boxen");
-// const core = require("@actions/core");
 const github = require("@actions/github");
 
 async function main() {
-  // const client = new github.GitHub(process.env.GITHUB_TOKEN);
+  // TODO: Consider being super friendly and possibly...
+  //  * Post a comment that is friendly and useful that explains the problems.
+  //  * Just edit the PR title (or whatever it is) if it's easily fixable.
+  // See https://www.npmjs.com/package/@actions/github for documentation
+  // about how to use @actions/github to do authenticated things.
   const context = github.context;
 
   const contextPullRequest = context.payload.pull_request;
@@ -35,20 +38,11 @@ async function main() {
       "Please update the pull request to be more descriptive. " +
       "For example 'fix typo on Web/JavaScript'"
     );
-    // throw new Error(
-    //   'Pull request title can\'t just be "Update index.html".\n' +
-    //     "Please update the pull request to be more descriptive. " +
-    //     "For example 'fix typo on Web/JavaScript'"
-    // );
   }
 
   const { body } = contextPullRequest;
   if (!body.trim()) {
     // Even for typos it's required that to explain something about the PR.
-    // throw new Error(
-    //   "Pull request body can't be empty. " +
-    //     "Please try to explain what the pull request accomplishes."
-    // );
     return (
       "Pull request body can't be empty. " +
       "Please try to explain what the pull request accomplishes."
@@ -62,7 +56,14 @@ async function main() {
 main()
   .then((ret) => {
     if (ret) {
-      console.log(boxen(ret, { padding: 1, margin: 1, borderStyle: "double" }));
+      const lines = ret.split("\n");
+      console.log(
+        boxen(lines[0], { padding: 1, margin: 1, borderStyle: "double" })
+      );
+      // Because boxen breaks, in GitHub Actions logging, when multiple lines.
+      if (lines.length > 1) {
+        console.log(lines.slice(1).join("\n"));
+      }
       process.exitCode = 2;
     } else {
       console.log(
