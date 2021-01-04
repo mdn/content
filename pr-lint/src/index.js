@@ -20,12 +20,22 @@ async function main() {
     // These PRs are hard to triage and to organize because of the
     // rather "useless" title so let's put the onus back on the author
     // to come up with a better title.
+    // See https://github.com/mdn/content/issues/782
     throw new Error(
       'Pull request title can\'t just be "Update index.html".\n' +
         "Please update the pull request to be more descriptive. " +
         "For example 'fix typo on Web/JavaScript'"
     );
   }
+
+  const { body } = contextPullRequest;
+  if (!body.trim()) {
+    // Even for typos it's required that to explain something about the PR.
+    throw new Error(
+      "Pull request body can't be empty. " +
+        "Please try to explain what the pull request accomplishes."
+    );
+  }
 }
 
-main().catch(console.error);
+main();
