@@ -642,7 +642,7 @@ avg(2, 3, 4, 5); // 3.5
 
 <div class="note">In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.<br>
 <br>
-It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. <em>i.e. function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em><strong> </strong>will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</div>
+It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. <em>i.e. function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</div>
 
 <pre class="brush: js notranslate">function avgArray(arr) {
   var sum = 0;

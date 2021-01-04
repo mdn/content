@@ -100,7 +100,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro.html
 <p><a id="1041247"> After establishing a connection, an application first calls <code>PR_Send</code>, <code>PR_Recv</code>, <code>PR_Read</code>, <code>PR_Write</code>, or <code>SSL_ForceHandshake</code> to initiate the handshake. The application's protocol (for example, HTTP) determines which end has responsibility to talk first. The end that has to talk first should call <code>PR_Send</code> or <code>PR_Write</code>, and the other end should call <code>PR_Read</code> or <code>PR_Recv</code>. </a></p>
 <p><a id="1041377"> Use </a><a href="sslfnc.html#1133431"><code>SSL_ForceHandshake</code></a> when the socket has been prepared for a handshake but neither end has anything to say immediately. This occurs, for example, when an HTTPS server has received a request and determines that before it can answer the request, it needs to request an authentication certificate from the client. At the HTTP protocol level, nothing more is being said (that is, no HTTP request or response is being sent), so the server first uses <a href="sslfnc.html#1232052"><code>SSL_ReHandshake</code></a> to begin a new handshake and then call <code>SSL_ForceHandshake</code> to drive the handshake to completion.</p>
 <h2 id="Functions_Used_by_Callbacks"><a id="1027820"> Functions Used by Callbacks </a></h2>
-<p><a id="1029817"> An SSL application typically provides one or more callback functions that are called by the SSL or PKCS #11 library code under certain circumstances. Numerous functions provided by the NSS libraries are useful for such application callback functions, including these:<b> </b></a></p>
+<p><a id="1029817"> An SSL application typically provides one or more callback functions that are called by the SSL or PKCS #11 library code under certain circumstances. Numerous functions provided by the NSS libraries are useful for such application callback functions, including these:</a></p>
 <p><a id="1030355"> </a><a href="sslcrt.html#1056662"><code>CERT_CheckCertValidTimes</code></a><br>
   <a href="sslcrt.html#1052308"><code>CERT_GetDefaultCertDB</code></a><br>
   <a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a><br>
@@ -117,8 +117,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro.html
   <code><a href="../../../../../nspr/reference/html/plstr.html#21753">PL_strdup</a></code><br>
   <code><a href="../../../../../nspr/reference/html/plstr.html#21772">PL_strfree</a></code><br>
   <code><a href="../../../../../nspr/reference/html/plstr.html#21717">PL_strlen</a></code><br>
-  <a href="sslfnc.html#1096168"><code>SSL_PeerCertificate</code></a><code> </code><br>
+  <a href="sslfnc.html#1096168"><code>SSL_PeerCertificate</code></a> <br>
   <a href="sslfnc.html#1081175"><code>SSL_RevealURL</code></a><br>
-  <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a><code> </code></p>
+  <a href="sslfnc.html#1123385"><code>SSL_RevealPinArg</code></a> </p>
 <h2 id="Cleanup_2"><a id="Cleanup"></a> <a id="1030535"> Cleanup </a></h2>
 <p><a id="1030536"> This portion of an SSL-enabled application consists primarily of closing the socket and freeing memory. After these tasks have been performed, call </a><a href="sslfnc.html#1061858"><code>NSS_Shutdown</code></a> to close the certificate and key databases opened by <a href="sslfnc.html#1067601"><code>NSS_Init</code></a>, and <code><a href="../../../../../nspr/reference/html/prinit.html#15811">PR_Cleanup</a></code> to coordinate a graceful shutdown of NSPR.</p>
