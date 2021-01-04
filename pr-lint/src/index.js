@@ -12,7 +12,20 @@ async function main() {
     );
   }
 
-  console.log({ title: contextPullRequest.title });
+  console.log(contextPullRequest);
+  const { title } = contextPullRequest;
+  if (title === "Update index.html") {
+    // This is the default title you get when you use the GitHub UI to
+    // edit a file and following web form steps to create a PR.
+    // These PRs are hard to triage and to organize because of the
+    // rather "useless" title so let's put the onus back on the author
+    // to come up with a better title.
+    throw new Error(
+      'Pull request title can\'t just be "Update index.html".\n' +
+        "Please update the pull request to be more descriptive. " +
+        "For example 'fix typo on Web/JavaScript'"
+    );
+  }
 }
 
 main().catch(console.error);
