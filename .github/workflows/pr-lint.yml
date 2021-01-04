@@ -27,3 +27,4 @@ jobs:
         run: |
           cd pr-lint
           yarn run check
+          echo "All is well in the world(?)"
