@@ -55,7 +55,7 @@ tags:
 
 <p>On Windows, plug-ins are found according to the section <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins">How Gecko Finds Plug-ins</a>.</p>
 
-<p>To determine the MIME types and file extensions that the plug-in handles, the browser normally uses the content of the registry entries for the plug-in described below in <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Windows_Installation_Using_the_Registry" title="en/Gecko Plugin API Reference/Plug-in Development Overview#Windows Installation Using the Registry">installation using the registry</a>.</p>
+<p>To determine the MIME types and file extensions that the plug-in handles, the browser normally uses the content of the registry entries for the plug-in described below in <a href="/en/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Windows_Installation_Using_the_Registry">installation using the registry</a>.</p>
 
 <p>But when the plug-in is loaded from a well-known directory, a different method must be used. In this case to ensure the plug-in file will be loaded, it should have a name in the form of "np*.dll". Also, the Windows version information for the plug-in DLL will be used to determines the MIME types, file extensions, file open template, plug-in name, and description.</p>
 

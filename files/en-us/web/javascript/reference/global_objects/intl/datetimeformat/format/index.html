@@ -6,16 +6,17 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Method
   - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.DateTimeFormat.prototype.format()</code></strong> method formats a date according to the locale and formatting options of this {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} object.</p>
+<p>The <strong><code>Intl.DateTimeFormat.prototype.format()</code></strong> method formats a date according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,8 +25,8 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>date</var></code></dt>
- <dd>The date to format.</dd>
+	<dt><code><var>date</var></code></dt>
+	<dd>The date to format.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -84,27 +85,27 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.datetimeformat.prototype.format', 'Intl.DateTimeFormat.format')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-intl.datetimeformat.prototype.format', 'Intl.DateTimeFormat.format')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.format")}}</p>
+<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.format")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+	<li>{{jsxref("Intl.DateTimeFormat")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+	<li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
 </ul>
