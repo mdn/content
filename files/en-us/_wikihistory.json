@@ -13910,59 +13910,6 @@
       "mgnrsb"
     ]
   },
-  "MDN/Contribute/Howto/Delete_my_profile": {
-    "modified": "2019-01-17T00:58:50.206Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2020-11-10T10:02:20.383Z",
-    "contributors": [
-      "SphinxKnight",
-      "sbilawal8",
-      "jswisher",
-      "sideshowbarker",
-      "Webtechno-G",
-      "bleigha1982",
-      "xsss",
-      "bminard",
-      "shubham777777777",
-      "mfuji09",
-      "jbrandes",
-      "thekosiguy",
-      "wbamberg",
-      "chrisdavidmills",
-      "ajith913",
-      "mfluehr",
-      "linjimmy168",
-      "Tonnes",
-      "jwhitlock",
-      "Arjun_123yadav",
-      "fscholz",
-      "Sheppy",
-      "tedmcox",
-      "FeRnAndOBoGiE",
-      "teoli",
-      "rathoddevhd123",
-      "ddbeck",
-      "Sebastianz",
-      "Arun.E",
-      "Priyanka13"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_Mozilla_projects": {
-    "modified": "2019-03-24T00:10:08.850Z",
-    "contributors": [
-      "wbamberg",
-      "xfq",
-      "Sheppy",
-      "jswisher",
-      "syssgx",
-      "SamB"
-    ]
-  },
   "MDN/Contribute/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
@@ -13977,32 +13924,6 @@
       "dharkness",
       "FredB",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_a_CSS_property/Property_template": {
-    "modified": "2020-10-15T21:11:18.185Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "SphinxKnight",
-      "Sebastianz",
-      "jswisher",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "teoli",
-      "grendel",
-      "Jürgen Jeka",
-      "BijuGC",
-      "Waldo",
-      "Pastelgrim",
-      "DBaron",
-      "Backinblakk",
-      "Nickolay",
-      "Mgjbot",
-      "Dria"
     ]
   },
   "MDN/Contribute/Howto/Document_an_HTTP_header": {
@@ -14030,24 +13951,6 @@
       "chrisdavidmills"
     ]
   },
-  "MDN/Contribute/Howto/Recruit_a_technical_reviewer": {
-    "modified": "2020-02-18T21:00:48.309Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Remove_Experimental_Macros": {
-    "modified": "2019-05-03T10:05:25.748Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "irenesmith",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
   "MDN/Contribute/Howto/Report_a_problem": {
     "modified": "2019-12-31T16:24:19.538Z",
     "contributors": [
@@ -14055,25 +13958,6 @@
       "jswisher",
       "wbamberg",
       "hamasaki"
-    ]
-  },
-  "MDN/Contribute/Howto/Resolve_a_dev-doc-needed_bug": {
-    "modified": "2019-09-09T10:03:45.390Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "fscholz",
-      "williamr",
-      "jenzed"
-    ]
-  },
-  "MDN/Contribute/Howto/Resolve_a_mentored_developer_doc_request": {
-    "modified": "2019-03-18T21:09:58.259Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "phongkhamdongy",
-      "Sheppy"
     ]
   },
   "MDN/Contribute/Howto/Tag": {
@@ -14111,21 +13995,6 @@
       "maybe",
       "teoli",
       "markg"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag_JavaScript_pages": {
-    "modified": "2020-06-05T05:36:25.086Z",
-    "contributors": [
-      "sideshowbarker",
-      "SphinxKnight",
-      "dangeroushackerbangladesh710",
-      "wbamberg",
-      "jsx",
-      "pcsaini",
-      "jswisher",
-      "zng",
-      "SaurabhJunankar",
-      "Sheppy"
     ]
   },
   "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
