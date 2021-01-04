@@ -9,13 +9,13 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p>As the <a href="/en-US/docs/Web/CSS">CSS</a> standards evolve, new properties are always being added. The MDN <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> needs to be kept up to date with these developments. This document gives step-by-step instructions for creating a CSS property reference page.</p>
+<p>As the <a href="/en-US/docs/Web/CSS">CSS</a> standards evolve, new properties are always being added. The MDN <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> needs to be kept up-to-date with these developments. This document gives step-by-step instructions for creating a CSS property reference page.</p>
 
 <p>Each CSS property reference page follows the same structure. This helps readers find information more easily, especially once they are familiar with the standard reference page format.</p>
 
 <h2 id="Step_1_—_Decide_which_property_to_document">Step 1 — Decide which property to document</h2>
 
-<p>First, you will need to decide which property to document. The <em>CSS Documentation status</em> page lists properties that <a href="/en-US/docs/Web/CSS/Documentation_status#Missing_pages">need to be documented</a>. For details about the CSS property you will need to find a relevant specification for it (e.g., a <a href="https://www.w3.org/Style/CSS/">W3C specification</a>, a <a href="https://wiki.mozilla.org">Mozilla Wiki page</a>, or a bug report for a non-standard property used in rendering engines like Gecko or Blink).</p>
+<p>First, you will need to decide which property to document. You might have noticed that a page is missing, or you might have seen missing content reported in our <a href="https://github.com/mdn/content/issues">issues list</a>. For details about the CSS property you will need to find a relevant specification for it (e.g., a <a href="https://www.w3.org/Style/CSS/">W3C specification</a>, or a bug report for a non-standard property used in rendering engines like Gecko or Blink).</p>
 
 <div class="note">
 <p><strong>Pro tips:</strong></p>
@@ -30,55 +30,12 @@ tags:
 
 <p>Several characteristics of a CSS property, such as its syntax or if it can be animated, are mentioned in several pages and are therefore stored in an ad-hoc database. Macros that you'll use on the page need information about the property that is stored there, so start by <a href="/en-US/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB">checking that this information is there</a>.</p>
 
-<p>If not, contact an admin or a power user, either in the <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs (Matrix) chat room</a>, or, if nobody is available, by <a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md">filing an issue report</a>.</p>
-
 <h2 id="Step_3_—_Creating_the_CSS_property_page">Step 3 — Creating the CSS property page</h2>
 
-<p>Preparations finished! Now we can add the actual CSS property page. The easiest way to create a new CSS property page is to copy the content of an existing page and to edit it. We will go through the different steps now.</p>
+<p>Preparations finished! Now we can add the actual CSS property page. The easiest way to create a new CSS property page is to copy the content of an existing page and to edit it to suit the new property. You can find out how to add a new page in our <a href="https://github.com/mdn/content#adding-a-new-document">GitHub README</a>.</p>
 
-<div class="note">
-<p>Cloning a page is currently broken on MDN. That's why we need to go through these somewhat more complex steps. Please vote for ({{bug(870691)}}).</p>
-</div>
-
-<ol>
- <li>Clone the <a href="/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property/Property_template">following page</a>, set the title to <em>your-property</em> (without capitals) and the slug to <code>Web/CSS/<em>your-property</em></code><em>.</em></li>
- <li>Change the summary to fit, but keep it starting the same way : "The <em><code>your-property</code></em> <a href="/en-US/docs/Web/CSS">CSS</a> property…". Explain briefly what this property is for.</li>
- <li>If the property is not experimental, remove the <code>\{{SeeCompatTable}}</code> macro. The purpose of this macro is to alert developers to the possibility that the feature may not yet have consistent support across browsers, and may change in the future as its specification evolves. Deciding whether a feature is experimental is a matter of judgement, and should include factors like:
-  <ul>
-   <li>Is the feature supported by several browsers?</li>
-   <li>Is the feature prefixed or behind a preference?</li>
-   <li>Is there any reason to think that the implementation of the feature will change in the future?</li>
-  </ul>
- </li>
- <li>Replace the parameter of the <code>\{{cssinfo("animation-name")}}</code> macro by the name of the CSS property you are documenting. This will allow you to build the summary box using the data you entered in step 2.</li>
- <li>Replace the example of the syntax by relevant ones. Keep them very simple and don't forget that a lot of people don't understand a formal syntax so it needs to be simple and exhaustive. Keep the <code>inherit</code>, <code>initial</code>, and <code>unset</code> keywords examples at the end. It reminds users that these are valid values, too.</li>
- <li>Under the chapter <em>Values</em>, put the meaning of each value. If it is a keyword, don't forget to mark it as code (select it and press <code>CTRL-O</code>). Each description should start by "Is a" followed by the type of the value, or indicating it is a keyword.</li>
- <li>Clear the <em>Examples</em> chapter, we will add them at the end!</li>
- <li>Update the specification table. For information about how to do it, read this <a href="/en-US/docs/MDN/Contribute/Structures/Specification_tables">tutorial</a>.</li>
- <li>Update the compatibility information. For information about how to do it, read this <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">tutorial</a>.</li>
- <li>Update the <em>See also</em> section with relevant links. Do not link to specs here and usually link to internal documents. External documents are welcome, but only if they bring really good information. There are spam or SEO links often, so don't worry if external links are removed sometimes. Just start the discussion if you still find it useful and want to see it back.</li>
- <li>Add the relevant tags: you need to add <code>CSS</code>, <code>CSS Property</code>, and <code>Reference.</code> You also need to add <code>Experimental</code> or <code>Non-standard</code> if this is the case. Finally you also need to add a <code>CSS XYZ</code> tag, where XYZ stands for the group of CSS properties it belongs to. It is often the spec short name. All these tags are used to generate quicklinks and other niceties.</li>
-</ol>
-
-<p>At any point, you can save by hitting the <code>SAVE</code> button. You can continue to edit right along. If you haven't saved your page until now, please do so! :-)</p>
-
-<p>The last step is to add <em>Examples</em>. To do that follow this <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide/Live_samples">tutorial about live samples</a>. Don't forget that we are in a document explaining one single property: you need to add examples that show how this  property is working in isolation, not how the whole specification is used. That means, examples for <code>list-style-type</code> will show what the different values generate, but not how to combine it with other property, pseudo-classes or pseudo-elements to generate nice effects; tutorials and guide can be written to show more.</p>
+<p>When creating a reference page, you'll want to add <em>Examples</em>. To do that follow this <a href="/en-US/docs/MDN/Structures/Live_samples">tutorial about live samples</a>. Don't forget that we are in a document explaining one single property: you need to add examples that show how this property is working in isolation, not how the whole specification is used. That means that examples for <code>list-style-type</code> should show what the different property values generate, not how to combine it with other properties, pseudo-classes, or pseudo-elements to generate nice effects. Tutorials and guides can be written to show more.</p>
 
 <h2 id="Step_4_—_Getting_a_review">Step 4 — Getting a review</h2>
 
-<p>You have documented your CSS property! Congratulations!</p>
-
-<p>In order to have a good quality and consistency throughout the MDN CSS reference, it is good practice to request a review. Just click on the checkbox at the bottom of the article (in edit mode), and, optional, if you want to have a more personal review helping you to improve editorial skills, ask for it on the <a href="https://discourse.mozilla-community.org/c/mdn">MDN forum</a>.</p>
-
-<h2 id="Step_5_—_Integrating_the_new_page_in_the_MDN">Step 5 — Integrating the new page in the MDN</h2>
-
-<p>Now that your page is created, you want it to be found by the readers. Adding tags in Step 3 already helped with this, as it allowed the page to appear in the quicklinks to related CSS pages. Also you want it to appear on the <a href="/en-US/docs/Web/CSS/Reference">CSS index page</a>. If the newly documented property is on the standard track and at least one major browser is implementing it, it deserves to be listed there. Only administrator can add it there, so contact MDN staff (via <a href="https://riot.im/app/#/room/#mdn:mozilla.org">chat</a>)  or <a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md">file a documentation issue</a> requesting it.</p>
-
-<p>Also, if the property is implemented by Firefox, you need to check that it is listed, and linked! in the correct <a href="/en-US/Firefox/Releases">Firefox for developers</a> MDN page. The new CSS property is likely already listed in the HTML section, just be sure that its name links back to your newly created page.</p>
-
-<h2 id="Contact_us">Contact us</h2>
-
-<ul>
- <li>On Matrix: <a href="https://riot.im/app/#/room/#mdn:mozilla.org">MDN Web Docs</a></li>
- <li><a href="https://discourse.mozilla.org/c/mdn">Discourse forum</a></li>
-</ul>
+<p>Once your page is created, submit it as a PR, and a member of our review team will be assigned automatically to review your page.</p>
