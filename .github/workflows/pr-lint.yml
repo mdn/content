@@ -25,6 +25,5 @@ jobs:
 
       - name: Testing out
         run: |
-          set -e
           cd pr-lint
           yarn run check
