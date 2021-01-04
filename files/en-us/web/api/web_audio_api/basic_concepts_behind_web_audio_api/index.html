@@ -276,8 +276,8 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
     The central (<code>C</code>) is mixed with the lateral non-surround channels (<code>L</code> and <code>R</code>). As it is mixed down to two channels, it is mixed at a lower power: in each case it is multiplied by <code>√2/2</code>. The surround channels are passed unchanged. The subwoofer (<code>LFE</code>) channel is lost.<br>
     <code>output.L = input.L + 0.7071 * input.C<br>
     output.R = input.R + 0.7071 * input.C<br>
-    <code>output.SL = input.SL<br>
-    output.SR = input.SR</code></code></td>
+    output.SL = input.SL<br>
+    output.SR = input.SR</code></td>
   </tr>
   <tr>
    <td colspan="2">Other, non-standard layouts</td>

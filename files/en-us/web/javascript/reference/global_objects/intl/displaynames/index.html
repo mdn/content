@@ -7,6 +7,7 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Reference
 ---
 <div>{{JSRef}}</div>
@@ -14,30 +15,29 @@ tags:
 <p>The <strong><code>Intl.DisplayNames</code></strong> object enables the consistent translation of language, region and script display names.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}</dt>
- <dd>Creates a new <code>Intl.DisplayNames</code> object.</dd>
+	<dt>{{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}</dt>
+	<dd>Creates a new <code>Intl.DisplayNames</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
+	<dt>{{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}</dt>
+	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}</dt>
- <dd>This method receives a <code>code</code> and returns a string based on the locale and options provided when instantiating <code>Intl.DisplayNames</code>.</dd>
- <dt>{{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
+	<dt>{{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}</dt>
+	<dd>This method receives a <code>code</code> and returns a string based on the locale and options provided when instantiating <code>Intl.DisplayNames</code>.</dd>
+	<dt>{{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}</dt>
+	<dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -120,16 +120,16 @@ currencyNames.of('CNY'); // "人民幣"</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -145,5 +145,5 @@ currencyNames.of('CNY'); // "人民幣"</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Intl")}}</li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>

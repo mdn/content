@@ -136,7 +136,7 @@ while (true) {
  <dt><code>data</code></dt>
  <dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="https://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
  <dt><code>id</code></dt>
- <dd>The event ID to set the <a href="/en/Server-sent_events/EventSource" title="en/Server-sent events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
+ <dd>The event ID to set the <a href="/en/Server-sent_events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
  <dt><code>retry</code></dt>
  <dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
 </dl>
