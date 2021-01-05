@@ -33,9 +33,9 @@ tags:
 
  <p>If <code><var>endIndex</var></code> is omitted or undefined, or greater than <code><var>str</var>.length</code>, <code>slice()</code> extracts to the end of the string. If negative, it is treated as <code><var>str</var>.length + <var>endIndex</var></code>. (For example, if <code><var>endIndex</var></code> is <code>-3</code>, it is treated as <code><var>str</var>.length - 3</code>.) If it is not undefined and not a number after <code>Number(<var>endIndex</var>)</code>, an empty string is returned.</p>
 
- <p>If <code><var>endIndex</var></code> is specified and <code><var>startIndex</var></code> is negative, <code><var>endIndex</var></code> should be negative, otherwise an empty string is returned. (For example, <code>slice(-3, 0)</code> returns <code>""</code>.)</p>
+ <p>If <code><var>endIndex</var></code> is specified and <code><var>beginIndex</var></code> is negative, <code><var>endIndex</var></code> should be negative, otherwise an empty string is returned. (For example, <code>slice(-3, 0)</code> returns <code>""</code>.)</p>
 
- <p>If <code><var>endIndex</var></code> is specified, and <code><var>startIndex</var></code> and <code><var>endIndex</var></code> are both positive or negative, <code><var>endIndex</var></code> should be greater than <code><var>startIndex</var></code>, otherwise an empty string is returned. (For example, <code>slice(-1, -3)</code> or <code>slice(3, 1)</code> returns <code>""</code>.)</p>
+ <p>If <code><var>endIndex</var></code> is specified, and <code><var>beginIndex</var></code> and <code><var>endIndex</var></code> are both positive or negative, <code><var>endIndex</var></code> should be greater than <code><var>beginIndex</var></code>, otherwise an empty string is returned. (For example, <code>slice(-1, -3)</code> or <code>slice(3, 1)</code> returns <code>""</code>.)</p>
  </dd>
 </dl>
 
