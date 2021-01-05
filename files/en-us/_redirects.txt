@@ -11619,6 +11619,7 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
+/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.init()	/en-US/docs/Web/API/XMLHttpRequest/init
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
 /en-US/docs/Web/API/XMLHttpRequest/init()	/en-US/docs/Web/API/XMLHttpRequest/init
 /en-US/docs/Web/API/XMLHttpRequest/openRequest()	/en-US/docs/Web/API/XMLHttpRequest/openRequest

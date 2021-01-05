@@ -99648,13 +99648,6 @@
       "jsx"
     ]
   },
-  "Web/API/XMLHttpRequest/XMLHttpRequest.init()": {
-    "modified": "2019-03-23T22:33:16.696Z",
-    "contributors": [
-      "david_ross",
-      "MashKao"
-    ]
-  },
   "Web/API/XMLHttpRequest/abort": {
     "modified": "2020-10-15T21:39:59.326Z",
     "contributors": [
@@ -99734,6 +99727,13 @@
       "chrisdavidmills",
       "MashKao",
       "jsx"
+    ]
+  },
+  "Web/API/XMLHttpRequest/XMLHttpRequest/init": {
+    "modified": "2019-03-23T22:33:16.696Z",
+    "contributors": [
+      "david_ross",
+      "MashKao"
     ]
   },
   "Web/API/XMLHttpRequest/load_event": {
