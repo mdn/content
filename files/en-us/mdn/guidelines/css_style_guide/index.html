@@ -176,14 +176,16 @@ Which gives you the following output:
 
 <p>A <code>&lt;details&gt;</code> element can be wrapped around a block of content to hide that content and instead display a "▶︎ Details" link that can be clicked to expand/collapse the content contained within.</p>
 
-<details>
+<details open>
+  <summary>
 <h4 id="Example_syntax_9">Example syntax</h4>
-
+  </summary>
 <p>This is an example syntax section for {{HTMLElement("details")}} that was hidden with {{HTMLElement("details")}}. Ooooooh, how meta.</p>
 
-
 <pre class="brush: html; notranslate">&lt;details&gt;
+    &lt;summary&gt;
 &lt;h4&gt;Example syntax&lt;/h4&gt;
+    &lt;/summary&gt;
 &lt;p&gt;This is an example syntax section for &lt;code&gt;.detail&lt;/code&gt; that was hidden with &lt;code&gt;.detail&lt;/code&gt;. Ooooooh, how meta.&lt;/p&gt;
 &lt;/details&gt;</pre>
 </details>
