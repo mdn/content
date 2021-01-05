@@ -60118,12 +60118,6 @@
       "rabimba"
     ]
   },
-  "Web/API/HashChangeEvent/HashChangeEvent.oldURL": {
-    "modified": "2019-01-17T03:16:44.161Z",
-    "contributors": [
-      "Claas"
-    ]
-  },
   "Web/API/HashChangeEvent/newURL": {
     "modified": "2020-12-10T11:18:01.307Z",
     "contributors": [
@@ -60134,11 +60128,8 @@
     ]
   },
   "Web/API/HashChangeEvent/oldURL": {
-    "modified": "2020-12-10T11:17:16.897Z",
+    "modified": "2019-01-17T03:16:44.161Z",
     "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "sideshowbarker",
       "Claas"
     ]
   },
