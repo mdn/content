@@ -9878,6 +9878,7 @@
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
+/en-US/docs/Web/API/EventTarget/EventTarget.attachEvent()	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget/attachEvent	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget/detachEvent	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/EventTarget/fireEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
