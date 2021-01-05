@@ -10005,6 +10005,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseenter	/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseleave	/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmousewheel	/en-US/docs/Web/API/GlobalEventHandlers/onmousewheel
