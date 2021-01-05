@@ -232,9 +232,6 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
      <li><a id="1202784"> <code>SSL_ENABLE_FDX</code> tells the SSL library whether the application will have two threads, one reading and one writing, or just one thread doing reads and writes alternately. The factory setting for this option (which is the default, unless the application changes the default) is off (<code>PR_FALSE</code>), which means that the application will not do simultaneous reads and writes. An application that wishes to do sumultaneous reads and writes should set this to <code>PR_TRUE</code>.</a></li>
     </ul>
     <a id="1202785"> In NSS 2.8, the <code>SSL_ENABLE_FDX</code> option only affects the behavior of non-blocking SSL sockets. See the description below for more information on this option.</a>
-
-    <ul>
-    </ul>
    </td>
   </tr>
   <tr>
@@ -1170,8 +1167,6 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
     </ul>
     <a id="1192616"> In NSS 2.8, the <code>SSL_ENABLE_FDX</code> option only affects the behavior of nonblocking SSL sockets. See the description below for more information on this option.</a>
 
-    <ul>
-    </ul>
    </td>
   </tr>
   <tr>
@@ -1576,7 +1571,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc.html
 
 <h4 id="SSL_SetPKCS11PinArg"> <a id="1088040"> SSL_SetPKCS11PinArg </a></h4>
 
-<p><a id="1088041"> Sets the argument passed to the password callback function specified by a call to </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a>.<strong> </strong></p>
+<p><a id="1088041"> Sets the argument passed to the password callback function specified by a call to </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a>. </p>
 
 <h5 id="Syntax_24"> <a id="1221656"> Syntax </a></h5>
 
