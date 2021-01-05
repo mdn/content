@@ -7,6 +7,25 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is hosted within the
 [MDN Organization](https://github.com/mdn) on GitHub.
 
+<!-- You can quickly regenerate this TOC by running: npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
+
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+- [Making contributions](#making-contributions)
+  - [Setup](#setup)
+  - [Fundamental concepts](#fundamental-concepts)
+  - [Simple changes](#simple-changes)
+  - [More substantial changes](#more-substantial-changes)
+  - [Pull request etiquette](#pull-request-etiquette)
+  - [Adding a new document](#adding-a-new-document)
+  - [Moving one or more documents](#moving-one-or-more-documents)
+  - [Deleting a document](#deleting-a-document)
+  - [Adding images](#adding-images)
+  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
+  - [Adding code examples](#adding-code-examples)
+  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
+  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
+
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow
