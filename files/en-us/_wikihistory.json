@@ -71994,14 +71994,6 @@
       "Puddingsan"
     ]
   },
-  "Web/API/PaintWorklet/devicePizelRatio": {
-    "modified": "2020-10-15T22:17:26.519Z",
-    "contributors": [
-      "estelle",
-      "Puddingsan",
-      "jpmedley"
-    ]
-  },
   "Web/API/PaintWorklet/registerPaint": {
     "modified": "2020-12-10T11:13:09.249Z",
     "contributors": [
