@@ -41,11 +41,11 @@ myFun("one", "two", "three", "four", "five", "six")
 <h4 id="Quick_Reference">Quick reference</h4>
 
  <p>A function definition can have only one <code>...</code><var>restParam</var>.</p>
-  <pre>foo(...one, ...wrong, ...wrong)</pre>
+  <pre class="brush:js example-bad">foo(...one, ...wrong, ...wrong)</pre>
  <p>The rest parameter must be the last parameter in the function
  definition.</p>
-  <pre>foo(...wrong, arg2, arg3)</pre>
-  <pre>foo(arg1, arg2, ...correct)</pre>
+  <pre class="brush:js example-bad">foo(...wrong, arg2, arg3)</pre>
+  <pre class="brush:js example-good">foo(arg1, arg2, ...correct)</pre>
 
 <h3>The difference between rest parameters and the <code>arguments</code> object</h3>
 
