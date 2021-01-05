@@ -9039,6 +9039,7 @@
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/illuminance	/en-US/docs/Web/API/AmbientLightSensor/illuminance
+/en-US/docs/Web/API/Ambient_Light_Sensor_API	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AnalyserNode.fftSize	/en-US/docs/Web/API/AnalyserNode/fftSize
 /en-US/docs/Web/API/AnalyserNode.frequencyBinCount	/en-US/docs/Web/API/AnalyserNode/frequencyBinCount
 /en-US/docs/Web/API/AnalyserNode.getByteFrequencyData	/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData
