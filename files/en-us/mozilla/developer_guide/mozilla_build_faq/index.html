@@ -17,9 +17,11 @@ tags:
 <dl>
 	<dt>Build failed without any error message, how can I find the problem?</dt>
 	<dd>In your obj directory, go to the directory in which build failed and type <code>make</code> (or <code>gmake</code> if necessary). This will relaunch the build for this specific piece of code, displaying more detailed error messages.</dd>
-	<dt>
-	<h2 id="Getting_Help">Getting Help</h2>
-	</dt>
+</dl>
+
+<h2 id="Getting_Help">Getting Help</h2>
+
+<dl>
 	<dt>I'm running into a problem and I don't see a solution for it. Where can I get help?</dt>
 	<dd>We have an IRC channel dedicated to helping people getting started with the Mozilla codebase called #introduction on the IRC.mozilla.org server. <a href="https://wiki.mozilla.org/IRC">You can learn more about connecting with Mozillians on IRC here.</a> You can also send your question directly to Mike Hoye - <a href="mailto:mhoye@mozilla.com">mhoye@mozilla.com</a> - and he will steer it to the right people.</dd>
 </dl>
@@ -57,7 +59,6 @@ git config core.eof lf
 <h2 id="Mac-specific_questions">Mac-specific questions</h2>
 
 <dl>
-	<dt> </dt>
 	<dt>It doesn't work</dt>
 	<dd>For common Mac build errors and additional troubleshooting tips, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites#Troubleshooting">Troubleshooting</a> in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X Build Prerequisites</a>.  In particular, <code>bootstrap.py</code> can diagnose and suggest fixes for most common errors (wrong Xcode version, missing build dependencies).</dd>
 </dl>
@@ -65,7 +66,6 @@ git config core.eof lf
 <pre>curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py &gt; bootstrap.py &amp;&amp; python bootstrap.py</pre>
 
 <dl>
-	<dt> </dt>
 	<dt>Can I build a Mozilla application as a Universal Binary?</dt>
 	<dd>Yes. See <a href="/en/Mac_OS_X_Universal_Binaries">Mac OS X Universal Binaries</a> for instructions.</dd>
 </dl>
@@ -146,10 +146,9 @@ cd obj-debug
 </pre>
 	</dd>
 	<dt>Can I cross-compile Mozilla?</dt>
-	<dd>Yes, see the <a class="external" href="http://www.mozilla.org/build/cross-compiling.html">Cross-Compiling Mozilla</a> document for details.</dd>
+	<dd>Yes, see the <a class="external" href="https://www.mozilla.org/build/cross-compiling.html">Cross-Compiling Mozilla</a> document for details.</dd>
 	<dt>How do I force the build system to pick up any of the changes made to my mozconfig file?</dt>
 	<dd>Touch any of the configure scripts in the tree. There is no explicit dependency upon the mozconfig file as the file can reside anywhere via the MOZCONFIG environment variable.</dd>
-	<dt> </dt>
 </dl>
 
 <h2 id="Implementation_questions">Implementation questions</h2>

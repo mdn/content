@@ -145,7 +145,7 @@ partial interface Performance {
  <dt><code>Worker</code></dt>
  <dd>The partial interface is available to any kind of worker, that is if the global scope is a descendant of {{domxref('WorkerGlobalScope')}} — {{domxref('DedicatedWorkerGlobalScope')}}, {{domxref('SharedWorkerGlobalScope')}}, or {{domxref('ServiceWorkerGlobalScope')}} (It also is available to <code>ChromeWorker</code>, but we don't document this as they are not visible on the Web and are internal to Firefox.)</dd>
  <dt><code>DedicatedWorker</code></dt>
- <dd>The partial interface is available to the {{domxref('DedicatedWorkerGlobalScope')}} only.<code> </code></dd>
+ <dd>The partial interface is available to the {{domxref('DedicatedWorkerGlobalScope')}} only. </dd>
  <dt><code>SharedWorker</code></dt>
  <dd>The partial interface is available to the {{domxref('SharedWorkerGlobalScope')}} only.</dd>
  <dt><code>ServiceWorker</code></dt>
@@ -224,9 +224,6 @@ interface SpeechSynthesis {
 <p><span><em><strong>Note:</strong> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</em></span></p>
 </div>
 
-<ul>
-</ul>
-
 <h3 id="Throwing_exceptions">Throwing exceptions</h3>
 
 <pre class="syntaxbox" lang="en"><strong>[SetterThrows]</strong>
@@ -250,8 +247,8 @@ interface SpeechSynthesis {
 
 <p>Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the <code>[LenientSetter]</code> annotation can be used.</p>
 
-<pre class="syntaxbox"><code id="line-223">partial interface Document {</code><code id="line-225"><span class="c">
-</span></code><code id="line-226"><strong>  [LenientSetter]</strong>
+<pre class="syntaxbox"><code id="line-223">partial interface Document {</code><code id="line-225">
+</code><code id="line-226"><strong>  [LenientSetter]</strong>
 </code><code id="line-227">  readonly attribute boolean fullscreen;</code><code id="line-229">
 </code><code id="line-230"><strong>  [LenientSetter]</strong>
 </code><code id="line-231">  readonly attribute boolean fullscreenEnabled;
@@ -290,7 +287,7 @@ interface SpeechSynthesis {
  <dd><em>Returns a new \{{domxref("TimeRanges")}} object that …</em></dd>
 </dl>
 
-<p>In the case of a reference to a collection object (like <code>HTMLCollection</code>, <code>HTMLFormElementsCollection</code>, or <code>HTMLOptionsCollection</code>, always without <code>[NewObject]</code>), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a <strong>live </strong><code>HTMLCollection</code><strong> </strong>(or <code>HTMLFormElementsCollections</code>, or <code>HTMLOptionsCollection</code>), both in the interface description and in the subpage.</p>
+<p>In the case of a reference to a collection object (like <code>HTMLCollection</code>, <code>HTMLFormElementsCollection</code>, or <code>HTMLOptionsCollection</code>, always without <code>[NewObject]</code>), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a <strong>live </strong><code>HTMLCollection</code> (or <code>HTMLFormElementsCollections</code>, or <code>HTMLOptionsCollection</code>), both in the interface description and in the subpage.</p>
 
 <p>E.g.</p>
 
@@ -383,8 +380,6 @@ interface SpeechSynthesis {
 <div class="note">
 <p><span><strong>Note:</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</span></p>
 </div>
-
-<h3 id="sect1"></h3>
 
 <h2 id="Special_methods">Special methods</h2>
 

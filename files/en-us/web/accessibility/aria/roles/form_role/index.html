@@ -29,13 +29,9 @@ tags:
 
 <p>A <code>form</code> <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Landmark_roles">landmark</a> identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_Role">main</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Search_Role">search</a></code>).</p>
 
-<dl>
- <dd>
- <div class="note">
- <p>Using the <a href="/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> element</a> will automatically communicate a section of content as a <code>form</code> landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.</p>
- </div>
- </dd>
-</dl>
+<div class="note">
+<p>Using the <a href="/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> element</a> will automatically communicate a section of content as a <code>form</code> landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.</p>
+</div>
 
 <p>Use the HTML <a href="/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> element</a> if possible. The &lt;form&gt; element defines a <code>form</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the <code>search</code> landmark instead of the <code>form</code> landmark when the form is used for search functionality.</p>
 
@@ -58,7 +54,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre><span class="tag">&lt;div role="form" id="send-comment" aria-label="Add a comment"&gt;</span>
+<pre class="brush: html">&lt;div role="form" id="send-comment" aria-label="Add a comment"&gt;
   &lt;label for="username"&gt;Username&lt;/label&gt;
   &lt;input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text"&gt;
 
@@ -69,14 +65,14 @@ tags:
   &lt;textarea id="comment" name="comment"&gt;&lt;/textarea&gt;
 
   &lt;input value="Comment" type="submit"&gt;
-<span class="tag">&lt;/div</span>&gt;
+&lt;/div&gt;
 </pre>
 
 <p>It is recommended to use &lt;form&gt; instead.</p>
 
-<pre><span class="tag">&lt;form id="send-comment" aria-label="Add a comment"&gt;</span>
+<pre class="brush: html">&lt;form id="send-comment" aria-label="Add a comment"&gt;
   ....
-<span class="tag">&lt;/form</span>&gt;
+&lt;/form&gt;
 </pre>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
@@ -95,7 +91,7 @@ tags:
 
 <h3 id="Labeling_landmarks">Labeling landmarks</h3>
 
-<p>Each <a href="/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> element</a> and form <code>role</code> that needs to be exposed as a landmark must be given an accessible name. This name will allow an assitive technology user to be able to quickly understand the purpose of the form landmark.</p>
+<p>Each <a href="/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> element</a> and form <code>role</code> that needs to be exposed as a landmark must be given an accessible name. This name will allow an assistive technology user to be able to quickly understand the purpose of the form landmark.</p>
 
 <p>Use an <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>  on the same element that was given the <code>role="form"</code> to provide it an accessible name.</p>
 
@@ -121,10 +117,6 @@ tags:
 
 <ul>
  <li><a href="http://matatk.agrip.org.uk/landmarks/">Landmarks browser extension</a></li>
-</ul>
-
-<ul>
- <li></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>

@@ -47,9 +47,7 @@ tags:
 
 <p>The methods <code>promise.then()</code>, <code>promise.catch()</code>, and <code>promise.finally()</code> are used to associate further action with a promise that becomes settled. These methods also return a newly generated promise object, which can optionally be used for chaining; for example, like this:</p>
 
-<dl>
- <dd>
- <pre class="brush: js notranslate">const myPromise =
+<pre class="brush: js notranslate">const myPromise =
   (new Promise(myExecutorFunc))
   .then(handleFulfilledA,handleRejectedA)
   .then(handleFulfilledB,handleRejectedB)
@@ -63,8 +61,6 @@ const myPromise =
   .then(handleFulfilledB)
   .then(handleFulfilledC)
   .catch(handleRejectedAny);</pre>
- </dd>
-</dl>
 
 <p>Handling a rejected promise too early has consequences further down the promise chain. Sometimes there is no choice because an error must be handled immediately; in such cases we must <code>throw</code> something, even if it is a dummy error message like <code>throw -999</code>, to maintain error state down the chain. On the other hand, in the absence of an immediate need it is simpler to leave out error handling until a final <code>.catch()</code> statement.</p>
 
@@ -130,7 +126,6 @@ console.log("immediate logging");
 
 <p>The same concept applies to promises. If we modify the above example a little bit, we get this:</p>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;iframe&gt;&lt;/iframe&gt; &lt;!-- we have a realm here --&gt;
 &lt;script&gt; // we have a realm here as well
@@ -140,14 +135,12 @@ console.log("immediate logging");
     // code on the stack -- which realm do we use?
   Promise.resolve(undefined).then(bound);
   // this still works, because we use the youngest
-  realm (the incumbent) on the stack
+  // realm (the incumbent) on the stack
 &lt;/script&gt;
 </pre>
-</div>
 
 <p>If we change this so that the <code>&lt;iframe&gt;</code> in the document is listening to post messages, we can observe the effect of the incumbent settings object:</p>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!-- y.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;iframe src="x.html"&gt;&lt;/iframe&gt;
@@ -156,9 +149,7 @@ console.log("immediate logging");
   Promise.resolve(undefined).then(bound);
 &lt;/script&gt;
 </pre>
-</div>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;!-- x.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;script&gt;
@@ -169,7 +160,6 @@ window.addEventListener("message", (event) =&gt; {
 }, false);
 &lt;/script&gt;
 </pre>
-</div>
 
 <p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
 

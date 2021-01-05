@@ -31,12 +31,29 @@ tags:
  <li><code>closed</code>: The audio context has been closed (with the {{domxref("AudioContext.close()")}} method.)</li>
 </ul>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>The following snippet is taken from our <a href="https://github.com/mdn/webaudio-examples">AudioContext states demo</a> (<a href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running live</a>.) The {{domxref("AudioContext.onstatechange")}} hander is used to log the current state to the console every time it changes.</p>
+<h3 id="Handling_state_changes">Handling state changes</h3>
+
+<p>The following snippet is taken from our <a href="https://github.com/mdn/webaudio-examples">AudioContext states demo</a> (<a href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running live</a>.) The {{domxref("AudioContext.onstatechange")}} handler is used to log the current state to the console every time it changes.</p>
 
 <pre class="brush: js">audioCtx.onstatechange = function() {
   console.log(audioCtx.state);
+}
+</pre>
+
+<h3 id="Resuming_interrupted_play_states_in_iOS_Safari">Resuming interrupted play states in iOS Safari</h3>
+
+In iOS Safari, when a user leaves the page (e.g. switches tabs, minimizes the browser, or turns off the screen) 
+the audio context's state changes to "interrupted" and needs to be resumed. For example:
+
+<pre class="brush: js">
+function play() {
+  if (audioCtx.state === 'interrupted') {
+    audioCtx.resume().then(() => play());
+    return;
+  }
+  // ... rest of the play() function
 }
 </pre>
 

@@ -28,7 +28,7 @@ tags:
 
 <p>A long, unsigned integer value indicating the priority of the candidate according to the remote peer. The larger this value is, the more preferable the remote peer considers this candidate to be.</p>
 
-<p><code>priority</code> is initialized to <code>null</code> if it is not specified in the <code>candidate</code>, or if the <code>candidate</code> string can't be parsed propertly.</p>
+<p><code>priority</code> is initialized to <code>null</code> if it is not specified in the <code>candidate</code>, or if the <code>candidate</code> string can't be parsed properly.</p>
 
 <div class="note">
 <p><strong>Note:</strong> If <code>priority</code> is <code>null</code>, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} will fail, throwing an <code>OperationError</code> exception. This applies only if the candidate implements the <code>priority</code> property.</p>

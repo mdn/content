@@ -55,7 +55,7 @@ tags:
 <p>A value passed as the radix argument is coerced to a Number (if necessary), then if the value is 0, <code>NaN</code> or <code>Infinity</code> (undefined is coerced to <code>NaN</code>), JavaScript assumes the following:</p>
 
 <ol>
- <li>If the input <code>string</code> begins with "<code>0x</code>" or "<code>0X</code>" (a zero, followed by lowercase or uppercase X), <code><var>radix</var></code> is assumed to be <code>16</code> and the rest of the string is parsed as a hexidecimal number.</li>
+ <li>If the input <code>string</code> begins with "<code>0x</code>" or "<code>0X</code>" (a zero, followed by lowercase or uppercase X), <code><var>radix</var></code> is assumed to be <code>16</code> and the rest of the string is parsed as a hexadecimal number.</li>
  <li>If the input <code>string</code> begins with "<code>0</code>" (a zero), <code><var>radix</var></code> is assumed to be <code>8</code> (octal) or <code>10</code> (decimal). Exactly which radix is chosen is implementation-dependent. ECMAScript 5 clarifies that <code>10</code> (decimal) <em>should</em> be used, but not all browsers support this yet. For this reason, <strong>always specify a <code><var>radix</var></code> when using <code>parseInt</code></strong>.</li>
  <li>If the input <code>string</code> begins with any other value, the radix is <code>10</code> (decimal).</li>
 </ol>

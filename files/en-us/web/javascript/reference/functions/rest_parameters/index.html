@@ -10,12 +10,9 @@ tags:
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p><span class="seoSummary">The <strong>rest parameter</strong> syntax allows us to represent an indefinite number of arguments as an array.</span></p>
+<p><span class="seoSummary">The <strong>rest parameter</strong> syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent {{interwiki("wikipedia", "Variadic_function", "variadic functions")}} in JavaScript.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</div>
-
-<ul>
-</ul>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,14 +20,9 @@ tags:
   // ...
 }</pre>
 
-<ul>
-</ul>
-
 <h2 id="Description">Description</h2>
 
-<p>A function's last parameter can be prefixed with <code>...</code> which will cause all remaining (user supplied) arguments to be placed within a "standard" JavaScript array.</p>
-
-<p>Only the last parameter can be a "rest parameter".</p>
+<p>A function definition's last parameter can be prefixed with "<code>...</code>" (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">"standard" JavaScript array.</a>. Only the last parameter in a function definition can be a rest parameter.</p>
 
 <pre class="brush: js notranslate">function myFun(a,  b, ...manyMoreArgs) {
   console.log("a", a)
@@ -46,19 +38,16 @@ myFun("one", "two", "three", "four", "five", "six")
 // manyMoreArgs, ["three", "four", "five", "six"]
 </pre>
 
-<h4 id="Quick_Reference">Quick Reference:</h4>
+<h4 id="Quick_Reference">Quick reference</h4>
 
-<ul>
- <li>There can be only one ...restParam.<br>
-  <code>   foo(...one, ...wrong, ...wrong)</code></li>
- <li>Rest parameter must be the last argument.<br>
-  <code>   foo(...wrong, arg2, arg3)</code><br>
-  <code>   foo(arg1, arg2, ...correct)</code></li>
- <li>Rest parameter can be <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructured Arrays</a> (for advanced users only :).<br>
-  <code>   foo(arg1, ...[2,4,6])</code></li>
-</ul>
+ <p>A function definition can have only one <code>...</code><var>restParam</var>.</p>
+  <pre class="brush:js example-bad">foo(...one, ...wrong, ...wrong)</pre>
+ <p>The rest parameter must be the last parameter in the function
+ definition.</p>
+  <pre class="brush:js example-bad">foo(...wrong, arg2, arg3)</pre>
+  <pre class="brush:js example-good">foo(arg1, arg2, ...correct)</pre>
 
-<h3 id="Difference_between_rest_parameters_and_the_arguments_object">Difference between rest parameters and the <code>arguments</code> object</h3>
+<h3>The difference between rest parameters and the <code>arguments</code> object</h3>
 
 <p>There are three main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:</p>
 
@@ -70,7 +59,7 @@ myFun("one", "two", "three", "four", "five", "six")
 
 <h3 id="From_arguments_to_an_array">From arguments to an array</h3>
 
-<p>Rest parameters have been introduced to reduce the boilerplate code that was induced by the arguments</p>
+<p>Rest parameters were introduced to reduce the boilerplate code that was commonly used for converting a set of arguments to an array.</p>
 
 <pre class="brush: js notranslate">// Before rest parameters, "arguments" could be converted to a normal array using:
 
@@ -115,7 +104,7 @@ myFun("one", "two", "three", "four", "five", "six")
 // manyMoreArgs, ["three", "four", "five", "six"] &lt;-- notice it's an array
 </pre>
 
-<p>Below... even though there is just one value, the last argument still gets put into an array.</p>
+<p>Below, even though there is just one value, the last argument still gets put into an array.</p>
 
 <pre class="brush: js notranslate">// using the same function definition from example above
 
@@ -148,9 +137,9 @@ fun1(5)        // 1
 fun1(5, 6, 7)  // 3
 </pre>
 
-<h3 id="Ordinary_parameter_and_rest_parameters">Ordinary parameter and rest parameters</h3>
+<h3>Using rest parameters in combination with ordinary parameters</h3>
 
-<p>In the next example, a rest parameter is used to collect all parameters after the first into an array. Each one of them is then multiplied by the first parameter, and the array is returned:</p>
+<p>In the next example, a rest parameter is used to collect all parameters after the first parameter into an array. Each one of the parameter values collected into the array is then multiplied by the first parameter, and the array is returned:</p>
 
 <pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
   return theArgs.map(element =&gt; {
@@ -162,7 +151,7 @@ let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
 </pre>
 
-<h3 id="Rest_param_is_a_real_array_arguments_is_not.">Rest param is a real array, arguments is not.</h3>
+<h3>Rest parameters are real arrays; the arguments object is not.</h3>
 
 <p><code>Array</code> methods can be used on rest parameters, but not on the <code>arguments</code> object:</p>
 
@@ -214,8 +203,8 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread syntax</a> (also ‘<code>...</code>’)</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread syntax</a> (also ‘<code>...</code>’)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments object</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
  <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>

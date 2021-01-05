@@ -5,9 +5,11 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Method
   - NumberFormat
   - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
@@ -15,12 +17,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Intl.NumberFormat.prototype.formatToParts(number)</pre>
+<pre class="syntaxbox notranslate">Intl.NumberFormat.prototype.formatToParts(<var>number</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>number</code> {{optional_inline}}</dt>
+ <dt><code><var>number</var></code> {{optional_inline}}</dt>
  <dd>A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.</dd>
 </dl>
 
@@ -41,33 +43,30 @@ tags:
 <p>Possible types are the following:</p>
 
 <dl>
- <dt>currency</dt>
- <dd>The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro" depending on how <code>currencyDisplay</code> is specified.</dd>
- <dt>decimal</dt>
- <dd>The decimal separator string (".").</dd>
- <dt>fraction</dt>
- <dd>The fraction number.</dd>
- <dt>group</dt>
- <dd>The group separator string (",").</dd>
- <dt>infinity</dt>
- <dd>The {{jsxref("Infinity")}} string ("∞").</dd>
- <dt>integer</dt>
- <dd>The integer number.</dd>
- <dt>literal</dt>
- <dd>Any literal strings or whitespace in the formatted number.</dd>
- <dt>minusSign</dt>
- <dd>The minus sign string ("-").</dd>
- <dt>nan</dt>
- <dd>The {{jsxref("NaN")}} string ("NaN").</dd>
- <dt>plusSign</dt>
- <dd>The plus sign string ("+").</dd>
-</dl>
-
-<dl>
- <dt>percentSign</dt>
- <dd>The percent sign string ("%").</dd>
- <dt>unit</dt>
- <dd>The unit string, such as the "l" or "litres", depending on how <code>unitDisplay</code> is specified.</dd>
+	<dt>currency</dt>
+	<dd>The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro" depending on how <code>currencyDisplay</code> is specified.</dd>
+	<dt>decimal</dt>
+	<dd>The decimal separator string (".").</dd>
+	<dt>fraction</dt>
+	<dd>The fraction number.</dd>
+	<dt>group</dt>
+	<dd>The group separator string (",").</dd>
+	<dt>infinity</dt>
+	<dd>The {{jsxref("Infinity")}} string ("∞").</dd>
+	<dt>integer</dt>
+	<dd>The integer number.</dd>
+	<dt>literal</dt>
+	<dd>Any literal strings or whitespace in the formatted number.</dd>
+	<dt>minusSign</dt>
+	<dd>The minus sign string ("-").</dd>
+	<dt>nan</dt>
+	<dd>The {{jsxref("NaN")}} string ("NaN").</dd>
+	<dt>plusSign</dt>
+	<dd>The plus sign string ("+").</dd>
+	<dt>percentSign</dt>
+	<dd>The percent sign string ("%").</dd>
+	<dt>unit</dt>
+	<dd>The unit string, such as the "l" or "litres", depending on how <code>unitDisplay</code> is specified.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -121,29 +120,26 @@ formatter.format(number);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.formattoparts', 'Intl.NumberFormat.prototype.formatToParts')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.formattoparts', 'Intl.NumberFormat.prototype.formatToParts')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
- <li>{{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}</li>
- <li>Formatting dates: {{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
+	<li>{{jsxref("Intl.NumberFormat")}}</li>
+	<li>{{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}</li>
+	<li>Formatting dates: {{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
 </ul>

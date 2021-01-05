@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
-<p>The <code>write()</code> method of {{DOMxRef("NDEFReader")}} interface writes a specified message to a compatiable NFC tag.</p>
+<p>The <code>write()</code> method of {{DOMxRef("NDEFReader")}} interface writes a specified message to a compatible NFC tag.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,9 +23,8 @@ tags:
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>
  <ul>
-  <li><code>ignoreRead</code> -- {{JSxRef("Boolean")}} specifying whether or not to skip reading for the activated reader objects. Will be ignored if <code>overwrite</code> is <code>false</code>.</li>
   <li><code>overwrite</code> -- {{JSxRef("Boolean")}} specifying whether or not existing record should be overwritten, if such exists.</li>
-  <li><code>signal</code> -- optional {{DOMxRef("AbortSignal")}} that allows to cancell this write operation.</li>
+  <li><code>signal</code> -- optional {{DOMxRef("AbortSignal")}} that allows to cancel this write operation.</li>
  </ul>
  </dd>
 </dl>

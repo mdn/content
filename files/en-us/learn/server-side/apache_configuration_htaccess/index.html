@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Redirects">Redirects</h2>
 
-<p>There are times when we need to tell users that a resource has moved, either temporarily or permanently. This is what we use <code>Redirect</code> and <code>Redirectmatch</code> for.</p>
+<p>There are times when we need to tell users that a resource has moved, either temporarily or permanently. This is what we use <code>Redirect</code> and <code>RedirectMatch</code> for.</p>
 
 <pre class="brush: bash notranslate">&lt;IfModule mod_alias.c&gt;
   # Redirect to a URL on a different host
@@ -58,7 +58,7 @@ tags:
 
 <p>The first set of directives control <a class="external" href="https://www.w3.org/TR/cors/">CORS</a> (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.</p>
 
-<p>For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the apprpriate CORS headers.</p>
+<p>For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the appropriate CORS headers.</p>
 
 <h3 id="General_CORS_access">General CORS access</h3>
 
@@ -111,7 +111,7 @@ tags:
   Header set Timing-Allow-Origin: "*"
 &lt;/IfModule&gt;</pre>
 
-<h2 id="Custom_Error_PagesMesssages">Custom Error Pages/Messsages</h2>
+<h2 id="Custom_Error_PagesMessages">Custom Error Pages/Messages</h2>
 
 <p>Apache allows you to provide custom error pages for users depending on the type of error they receive.</p>
 
@@ -183,7 +183,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
     AddType image/heifs                   heifs
   # AVIF Images
     AddType image/avif                    avif
-  # AVIF Image Seuqence
+  # AVIF Image Sequence
     AddType image/avis                    avis
   # WebAssembly
     AddType application/wasm              wasm

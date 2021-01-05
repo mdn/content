@@ -195,9 +195,6 @@ tags:
 
 <p>When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like <code>srcset</code>. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.</p>
 
-<ul>
-</ul>
-
 <h3 id="Use_modern_image_formats_boldly">Use modern image formats boldly</h3>
 
 <p>There are several exciting new image formats (such as <a href="/en-US/docs/Glossary/webp">WebP</a>, <a href="/en-US/docs/Web/Media/Formats/Image_types#AVIF">AVIF</a>, and JPEG-2000) that can maintain a low file size and high quality at the same time. However, browser support is spotty.</p>

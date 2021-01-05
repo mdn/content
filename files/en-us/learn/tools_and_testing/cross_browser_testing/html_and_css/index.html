@@ -116,7 +116,7 @@ tags:
 
 <p>Some problems can be solved by just taking advantage of the natural way in which HTML/CSS work.</p>
 
-<p>Unrecognised HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
+<p>Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
 
 <div class="note">
 <p><strong>Note</strong>: See {{anch("IE conditional comments")}} for the best way to do this.</p>
@@ -251,10 +251,10 @@ button:active {
 
 <p>IE conditional comments are a modified proprietary HTML comment syntax, which can be used to selectively apply HTML code to different versions of IE. This has proven to be a very effective mechanism for fixing cross browser bugs. The syntax looks like this:</p>
 
-<pre class="brush: html"><span class="c">&lt;!--[if lte IE 8]&gt;
-  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;</span>
+<pre class="brush: html">&lt;!--[if lte IE 8]&gt;
+  &lt;script src="ie-fix.js"&gt;&lt;/script&gt;
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
-<span class="c">&lt;![endif]--&gt;</span></pre>
+&lt;![endif]--&gt;</pre>
 
 <p>This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. <code>lte</code> means "less than or equal to", but you can also use lt, gt, gte, <code>!</code> for NOT, and other logical syntax.</p>
 
@@ -438,7 +438,7 @@ transform: rotate(90deg);</pre>
 
 <p>Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, and make sure it is applied correctly using <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport</a>. You can find a detailed account of such practices in <a href="/en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a>.</p>
 
-<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixellated. There are a number of techniques that allow you to work around such problems, from simple <a href="/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
+<p>Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple <a href="/en-US/Apps/Progressive/Responsive/Mobile_first">mobile first media queries</a>, to more complex <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes">responsive image techniques</a>.</p>
 
 <p>Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like <a href="https://code.google.com/archive/p/css3-mediaqueries-js/">css3-mediaqueries-js</a>, or <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p>
 

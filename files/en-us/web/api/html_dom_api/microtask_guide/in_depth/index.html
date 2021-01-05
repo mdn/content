@@ -108,9 +108,6 @@ greetUser("Veronica");</pre>
 
 <p>Here we look at how the runtime functions in slightly more detail.</p>
 
-<ul>
-</ul>
-
 <h3 id="Event_loops">Event loops</h3>
 
 <p>Each agent is driven by an <strong>event loop</strong>, which collects any user and other events, enqueuing tasks to handle each callback. It then runs any pending JavaScript tasks, then any pending microtasks, then performs any needed rendering and painting before looping again to check for pending tasks.</p>

@@ -42,7 +42,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="xml">&lt;xsl:for-each select="regExp:match('<span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>',
+<pre class="xml">&lt;xsl:for-each select="regExp:match('<span class="nowiki">https://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>',
                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
    Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
 &lt;/xsl:for-each&gt;
@@ -50,8 +50,8 @@ tags:
 
 <p>This code generates the following output:</p>
 
-<pre class="eval">Part 1 = <span class="nowiki">http://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>
-Part 2 = http
+<pre class="eval">Part 1 = <span class="nowiki">https://developer.mozilla.org/en/docs/Firefox_3_for_developers</span>
+Part 2 = https
 Part 3 = developer.mozilla.org
 Part 4 =
 Part 5 = /en/docs/Firefox_3_for_developers

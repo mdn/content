@@ -7,6 +7,25 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is hosted within the
 [MDN Organization](https://github.com/mdn) on GitHub.
 
+<!-- You can quickly regenerate this TOC by running: npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
+
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+- [Making contributions](#making-contributions)
+  - [Setup](#setup)
+  - [Fundamental concepts](#fundamental-concepts)
+  - [Simple changes](#simple-changes)
+  - [More substantial changes](#more-substantial-changes)
+  - [Pull request etiquette](#pull-request-etiquette)
+  - [Adding a new document](#adding-a-new-document)
+  - [Moving one or more documents](#moving-one-or-more-documents)
+  - [Deleting a document](#deleting-a-document)
+  - [Adding images](#adding-images)
+  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
+  - [Adding code examples](#adding-code-examples)
+  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
+  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
+
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow
@@ -46,7 +65,7 @@ There are several ways forward from this point. It's up to you. Here are some op
 If you choose an option other than the GitHub UI, you want to install
 [Node.js (version >=12.11)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
 
-### Fundamental content concepts
+### Fundamental concepts
 
 These are some important things to keep in mind about the MDN content.
 
@@ -56,7 +75,7 @@ represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/ja
 * **Documents are hierarchical** - A document folder may contain other folders, where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
 * **Document folders may contain image files** -- A document folder may also contain image files, which are referenced within that document's `index.html` file.
 * **All redirects are specified in a single file** -- All of the redirects are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt), one redirect per line. Each line specifies a `from` and `to` URI separated by whitespace. When you move a document, you'll need to add a redirect to this file specifying that its old URI now redirects to its new URI. If both an `index.html` file and a redirect exist for a document, the document takes precedence and the redirect is ignored.
-* **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some YAML called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
+* **A document's `index.html` starts with "front-matter"** -- Each document's `index.html` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML) called front-matter that defines some important information about the document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) (if any). Here's an example that shows the front-matter from the [JavaScript landing page](files/en-us/web/javascript/index.html):
 
     ```yaml
     ---

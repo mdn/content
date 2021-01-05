@@ -148,66 +148,6 @@ let bob = a =&gt; a + 100;</pre>
 
 <h2 id="Description">Description</h2>
 
-<p>See also <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
-
-<h3 id="this_and_Arrow_Functions">"this" and Arrow Functions</h3>
-
-<p class="brush: js notranslate">One reason arrow functions were introduced was to alleviate scope ( <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> ) complexities and make executing functions much more intuitive.</p>
-
-<div class="notecard note">
-<p class="brush: js notranslate">If <code>this</code> is a mystery, please refer to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this document</a> for more information on how <code>this</code> works. To summarize, <code>this</code> refers to the instance. Instances are created when the <code>new</code> keyword is invoked. Otherwise, <code>this</code> will default to the window <a href="/en-US/docs/Glossary/Scope">scope</a>.</p>
-</div>
-
-<p class="brush: js notranslate"><strong>Traditional functions</strong> default <code>this</code> to the window scope:</p>
-
-<ul>
-</ul>
-
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- notice me?
-function Person() {
-  this.age = 42; // &lt;-- notice me?
-  setTimeout(function () { // &lt;-- Traditional function is executing on the window scope
-    console.log("this.age", this.age); // yields "10" because the function executes on the window scope
-  }, 100);
-}
-
-var p = new Person();
-
-</pre>
-
-<p><strong>Arrow functions</strong> do <strong>not</strong> default <code>this</code> to the window <a href="/en-US/docs/Glossary/Scope">scope</a>, rather they execute in the <a href="/en-US/docs/Glossary/Scope">scope</a> they are created:</p>
-
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- notice me?
-function Person() {
-  this.age = 42; // &lt;-- notice me?
-  setTimeout(() =&gt; { // &lt;-- Arrow function executing in the "p" (an instance of Person) scope
-    console.log("this.age", this.age); // yields "42" because the function executes on the Person scope
-  }, 100);
-}
-
-var p = new Person();
-
-</pre>
-
-<p>In our example above, the arrow function does not have its own <code>this</code>. The <code>this</code> value of the enclosing lexical <a href="/en-US/docs/Glossary/Scope">scope</a> is used; arrow functions follow the normal variable lookup rules. So while searching for <code>this</code> which is not present in the current <a href="/en-US/docs/Glossary/Scope">scope</a>, an arrow function ends up finding the <code>this</code> from its enclosing <a href="/en-US/docs/Glossary/Scope">scope</a>.</p>
-
-<p><strong>Relation with strict mode</strong></p>
-
-<p>Given that <code>this</code> comes from the surrounding lexical context, <code><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></code> rules with regard to <code>this</code> are ignored.</p>
-
-<pre class="brush: js notranslate">var f = () =&gt; {
-    'use strict';
-    return this;
-};
-
-f() === window; // or the global object</pre>
-
-<p>All other <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> rules apply normally.</p>
-
-<div class="notecard warning">
-<p>NOTE: Please fact-check notes on <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
-</div>
-
 <h3 id="Arrow_functions_used_as_methods">Arrow functions used as methods</h3>
 
 <p>As stated previously, arrow function expressions are best suited for non-method functions. Let's see what happens when we try to use them as methods:</p>

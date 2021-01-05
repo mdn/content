@@ -71,7 +71,7 @@ const someObj = {
 
 <p>If an iterable's <code>@@iterator</code> method does not return an iterator object, then it is a non-well-formed iterable. Using it as such is likely to result in runtime exceptions or buggy behavior:</p>
 
-<pre class="brush: js">var nonWellFormedIterable = {}
+<pre class="brush: js example-bad">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
 </pre>

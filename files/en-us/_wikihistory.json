@@ -13910,59 +13910,6 @@
       "mgnrsb"
     ]
   },
-  "MDN/Contribute/Howto/Delete_my_profile": {
-    "modified": "2019-01-17T00:58:50.206Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2020-11-10T10:02:20.383Z",
-    "contributors": [
-      "SphinxKnight",
-      "sbilawal8",
-      "jswisher",
-      "sideshowbarker",
-      "Webtechno-G",
-      "bleigha1982",
-      "xsss",
-      "bminard",
-      "shubham777777777",
-      "mfuji09",
-      "jbrandes",
-      "thekosiguy",
-      "wbamberg",
-      "chrisdavidmills",
-      "ajith913",
-      "mfluehr",
-      "linjimmy168",
-      "Tonnes",
-      "jwhitlock",
-      "Arjun_123yadav",
-      "fscholz",
-      "Sheppy",
-      "tedmcox",
-      "FeRnAndOBoGiE",
-      "teoli",
-      "rathoddevhd123",
-      "ddbeck",
-      "Sebastianz",
-      "Arun.E",
-      "Priyanka13"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_Mozilla_projects": {
-    "modified": "2019-03-24T00:10:08.850Z",
-    "contributors": [
-      "wbamberg",
-      "xfq",
-      "Sheppy",
-      "jswisher",
-      "syssgx",
-      "SamB"
-    ]
-  },
   "MDN/Contribute/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [
@@ -13977,32 +13924,6 @@
       "dharkness",
       "FredB",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_a_CSS_property/Property_template": {
-    "modified": "2020-10-15T21:11:18.185Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "fscholz",
-      "mfluehr",
-      "SphinxKnight",
-      "Sebastianz",
-      "jswisher",
-      "FredB",
-      "Sheppy",
-      "ethertank",
-      "teoli",
-      "grendel",
-      "Jürgen Jeka",
-      "BijuGC",
-      "Waldo",
-      "Pastelgrim",
-      "DBaron",
-      "Backinblakk",
-      "Nickolay",
-      "Mgjbot",
-      "Dria"
     ]
   },
   "MDN/Contribute/Howto/Document_an_HTTP_header": {
@@ -14030,24 +13951,6 @@
       "chrisdavidmills"
     ]
   },
-  "MDN/Contribute/Howto/Recruit_a_technical_reviewer": {
-    "modified": "2020-02-18T21:00:48.309Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Remove_Experimental_Macros": {
-    "modified": "2019-05-03T10:05:25.748Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "irenesmith",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
   "MDN/Contribute/Howto/Report_a_problem": {
     "modified": "2019-12-31T16:24:19.538Z",
     "contributors": [
@@ -14055,25 +13958,6 @@
       "jswisher",
       "wbamberg",
       "hamasaki"
-    ]
-  },
-  "MDN/Contribute/Howto/Resolve_a_dev-doc-needed_bug": {
-    "modified": "2019-09-09T10:03:45.390Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "fscholz",
-      "williamr",
-      "jenzed"
-    ]
-  },
-  "MDN/Contribute/Howto/Resolve_a_mentored_developer_doc_request": {
-    "modified": "2019-03-18T21:09:58.259Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "phongkhamdongy",
-      "Sheppy"
     ]
   },
   "MDN/Contribute/Howto/Tag": {
@@ -14111,21 +13995,6 @@
       "maybe",
       "teoli",
       "markg"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag_JavaScript_pages": {
-    "modified": "2020-06-05T05:36:25.086Z",
-    "contributors": [
-      "sideshowbarker",
-      "SphinxKnight",
-      "dangeroushackerbangladesh710",
-      "wbamberg",
-      "jsx",
-      "pcsaini",
-      "jswisher",
-      "zng",
-      "SaurabhJunankar",
-      "Sheppy"
     ]
   },
   "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
@@ -17761,13 +17630,6 @@
       "ExE-Boss"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()": {
-    "modified": "2020-12-07T18:40:50.176Z",
-    "contributors": [
-      "bershanskiy",
-      "tim-we"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/menus/onClicked": {
     "modified": "2020-10-15T21:41:54.138Z",
     "contributors": [
@@ -17791,10 +17653,10 @@
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/overrideContext": {
-    "modified": "2020-12-07T18:43:27.468Z",
+    "modified": "2020-12-07T18:40:50.176Z",
     "contributors": [
       "bershanskiy",
-      "irenesmith"
+      "tim-we"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/refresh": {
@@ -19849,14 +19711,6 @@
       "irenesmith",
       "bershanskiy",
       "pesar81"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()": {
-    "modified": "2020-12-07T18:26:18.205Z",
-    "contributors": [
-      "bershanskiy",
-      "Aaron228",
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
@@ -40222,12 +40076,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DOMPoint/DOMPoint.fromPoint()": {
-    "modified": "2020-10-15T22:06:38.613Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/DOMPoint/w": {
     "modified": "2020-10-15T22:06:40.384Z",
     "contributors": [
@@ -49827,15 +49675,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/EventTarget/EventTarget.attachEvent()": {
-    "modified": "2020-12-07T18:10:22.949Z",
-    "contributors": [
-      "bershanskiy",
-      "cpplearner",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
   "Web/API/EventTarget/addEventListener": {
     "modified": "2020-11-09T05:27:10.943Z",
     "contributors": [
@@ -53106,13 +52945,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart": {
-    "modified": "2019-03-23T22:36:54.161Z",
-    "contributors": [
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onabort": {
     "modified": "2020-10-15T21:15:09.905Z",
     "contributors": [
@@ -53735,14 +53567,10 @@
     ]
   },
   "Web/API/GlobalEventHandlers/onloadstart": {
-    "modified": "2020-10-15T21:51:38.052Z",
+    "modified": "2019-03-23T22:36:54.161Z",
     "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "niklasHagner",
-      "Sebastianz",
-      "chrisdavidmills"
+      "rolfedh",
+      "Guillaume-Heras"
     ]
   },
   "Web/API/GlobalEventHandlers/onlostpointercapture": {
@@ -58881,12 +58709,6 @@
       "Jesdisciple"
     ]
   },
-  "Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex": {
-    "modified": "2019-01-16T22:55:40.822Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
   "Web/API/HTMLSelectElement/add": {
     "modified": "2020-10-17T18:33:45.934Z",
     "contributors": [
@@ -60296,12 +60118,6 @@
       "rabimba"
     ]
   },
-  "Web/API/HashChangeEvent/HashChangeEvent.oldURL": {
-    "modified": "2019-01-17T03:16:44.161Z",
-    "contributors": [
-      "Claas"
-    ]
-  },
   "Web/API/HashChangeEvent/newURL": {
     "modified": "2020-12-10T11:18:01.307Z",
     "contributors": [
@@ -60312,11 +60128,8 @@
     ]
   },
   "Web/API/HashChangeEvent/oldURL": {
-    "modified": "2020-12-10T11:17:16.897Z",
+    "modified": "2019-01-17T03:16:44.161Z",
     "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "sideshowbarker",
       "Claas"
     ]
   },
@@ -158342,13 +158155,6 @@
       "Hamstersoup"
     ]
   },
-  "Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation": {
-    "modified": "2020-04-30T10:28:18.041Z",
-    "contributors": [
-      "fscholz",
-      "Waldo"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:04:01.905Z",
     "contributors": [
@@ -158582,17 +158388,6 @@
       "wbamberg",
       "mfluehr",
       "ChronoKiller",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
-  "Web/Manifest/serviceworker": {
-    "modified": "2020-10-15T22:19:47.486Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "moonmeister",
-      "wbamberg",
       "chrisdavidmills",
       "bershanskiy"
     ]
@@ -166850,6 +166645,19 @@
       "wbamberg",
       "kscarfone",
       "Nikki813"
+    ]
+  },
+  "Web/JavaScript/The_performance_hazards_of_prototype_mutation": {
+    "modified": "2020-04-30T10:28:18.041Z",
+    "contributors": [
+      "fscholz",
+      "Waldo"
+    ]
+  },
+  "Web/API/DOMPoint/fromPoint": {
+    "modified": "2020-10-15T22:06:38.613Z",
+    "contributors": [
+      "Sheppy"
     ]
   }
 }

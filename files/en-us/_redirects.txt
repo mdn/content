@@ -7787,6 +7787,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onInstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.onUninstalled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/management.setEnabled()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/setEnabled
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/clear	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/get	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
@@ -7795,6 +7796,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onError
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/registerProxyScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Accessible_guidelines	https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Add-on_ID	https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/
@@ -7854,6 +7856,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
+/en-US/docs/Mozilla/Mobile/Viewport_meta_tag	/en-US/docs/Web/HTML/Viewport_meta_tag
 /en-US/docs/Mozilla_2_build_documentation	/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial
 /en-US/docs/Mozilla_Build_FAQ	/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -9579,6 +9582,7 @@
 /en-US/docs/Web/API/DOMImplementation.hasFeature	/en-US/docs/Web/API/DOMImplementation/hasFeature
 /en-US/docs/Web/API/DOMMatrix/DOMMatrix.DOMMatrix	/en-US/docs/Web/API/DOMMatrix/DOMMatrix
 /en-US/docs/Web/API/DOMMatrix/DOMMatrixReadOnly	/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
+/en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/Web/API/DOMPoint/fromPoint
 /en-US/docs/Web/API/DOMPoint/toJSON	/en-US/docs/Web/API/DOMPointReadOnly/toJSON
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
@@ -9877,6 +9881,7 @@
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
+/en-US/docs/Web/API/EventTarget/EventTarget.attachEvent()	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget/attachEvent	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget/detachEvent	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/EventTarget/fireEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
@@ -10004,6 +10009,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseenter	/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseleave	/en-US/docs/Web/API/GlobalEventHandlers/onmouseleave
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmousewheel	/en-US/docs/Web/API/GlobalEventHandlers/onmousewheel
@@ -10179,6 +10185,7 @@
 /en-US/docs/Web/API/HTMLSelectElement.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.disabled	/en-US/docs/Web/API/HTMLSelectElement/disabled
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.form	/en-US/docs/Web/API/HTMLSelectElement/form
+/en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex	/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
 /en-US/docs/Web/API/HTMLShadowElement.getDistributedNodes	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
 /en-US/docs/Web/API/HTMLShadowElement.getDistributedNodes()	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
 /en-US/docs/Web/API/HTMLShadowElement/HTMLShadowElement.getDistributedNodes	/en-US/docs/Web/API/HTMLShadowElement/getDistributedNodes
@@ -10219,6 +10226,7 @@
 /en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture()	/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
 /en-US/docs/Web/API/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
+/en-US/docs/Web/API/HashChangeEvent/HashChangeEvent.oldURL	/en-US/docs/Web/API/HashChangeEvent/oldURL
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
@@ -13691,6 +13699,7 @@
 /en-US/docs/Web/JavaScript/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /en-US/docs/Web/JavaScript/Reference/template_strings	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
+/en-US/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
 /en-US/docs/Web/JavaScript/Tutorials	/en-US/docs/Web/JavaScript
 /en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/API/ArrayBufferView

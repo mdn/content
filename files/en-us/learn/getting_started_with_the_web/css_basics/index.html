@@ -28,7 +28,7 @@ tags:
 
 <p>Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as <code>style.css</code> in a directory named <code>styles</code>.</p>
 
-<p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> and <a href="/en-US/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a>.)</p>
+<p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> and <a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a>.)</p>
 
 <ol>
  <li>Open your <code>index.html</code> file. Paste the following line in the head (between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags):
@@ -136,15 +136,12 @@ tags:
 <p>Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the <code>style.css</code> file.</p>
 
 <ol>
-</ol>
-
-<ol>
- <li>First, find the <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">output from Google Fonts</a> that you previously saved from <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like">What will your website look like?</a>. Add the {{htmlelement("link")}} element somewhere inside your <code>index.html</code>'s head (anywhere between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags). It looks something like this:
+ <li>First, find the <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">output from Google Fonts</a> that you previously saved from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like">What will your website look like?</a>. Add the {{htmlelement("link")}} element somewhere inside your <code>index.html</code>'s head (anywhere between the {{HTMLElement("head")}} and <code>&lt;/head&gt;</code> tags). It looks something like this:
 
   <pre class="brush: html notranslate">&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"&gt;</pre>
   This code links your page to a style sheet that loads the Open Sans font family with your webpage.</li>
  <li>Next, delete the existing rule you have in your <code>style.css</code> file. It was a good test, but let's not continue with lots of red text.</li>
- <li>Add the following lines (shown below), replacing the <code>font-family</code> assignment with your <code>font-family</code> selection from <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">What will your website look like?</a>. The property <code>font-family</code> refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same <code>font-size</code> and <code>font-family</code>.
+ <li>Add the following lines (shown below), replacing the <code>font-family</code> assignment with your <code>font-family</code> selection from <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">What will your website look like?</a>. The property <code>font-family</code> refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same <code>font-size</code> and <code>font-family</code>.
   <pre class="brush: css notranslate">html {
   font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
   font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
@@ -206,7 +203,7 @@ p, li {
   background-color: #00539F;
 }</pre>
 
-<p>This rule sets a background color for the entire page. Change the color code to <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color">the color you chose in What will my website look like?</a>.</p>
+<p>This rule sets a background color for the entire page. Change the color code to <a href="/en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color">the color you chose in What will my website look like?</a>.</p>
 
 <h3 id="Styling_the_body">Styling the body</h3>
 
@@ -281,19 +278,19 @@ p, li {
 
 <p>(You can <a href="https://mdn.github.io/beginner-html-site-styled/">view our version here</a>.) If you get stuck, you can always compare your work with our <a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">finished example code on GitHub</a>.</p>
 
-<p>In this exercise, we have just scratched the surface of CSS. To go further, see <a href="https://developer.mozilla.org/en-US/Learn/CSS">Learning to style HTML using CSS</a>.</p>
+<p>In this exercise, we have just scratched the surface of CSS. To go further, see <a href="/en-US/docs/Learn/CSS">Learning to style HTML using CSS</a>.</p>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li id="What_will_your_website_look_like"><a href="/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li id="Dealing_with_files"><a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li id="HTML_basics"><a href="/en-US/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li id="CSS_basics"><a href="/en-US/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li id="JavaScript_basics"><a href="/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li id="Publishing_your_website"><a href="/en-US/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li id="How_the_web_works"><a href="/en-US/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
+ <li id="Installing_basic_software"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
+ <li id="What_will_your_website_look_like"><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
+ <li id="Dealing_with_files"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
+ <li id="HTML_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
+ <li id="CSS_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
+ <li id="JavaScript_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
+ <li id="Publishing_your_website"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
+ <li id="How_the_web_works"><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
 </ul>
