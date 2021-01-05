@@ -82892,15 +82892,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Selection_API": {
-    "modified": "2020-10-15T21:51:38.577Z",
-    "contributors": [
-      "wbamberg",
-      "d4rkne55",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/Sensor": {
     "modified": "2020-10-15T22:08:42.803Z",
     "contributors": [
