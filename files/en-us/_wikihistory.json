@@ -19720,14 +19720,6 @@
       "pesar81"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()": {
-    "modified": "2020-12-07T18:26:18.205Z",
-    "contributors": [
-      "bershanskiy",
-      "Aaron228",
-      "hellosct1"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
     "modified": "2020-10-15T22:22:39.367Z",
     "contributors": [
