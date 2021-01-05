@@ -514,8 +514,13 @@ In such situations:
 1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/> first, and get that merged.
 2. Add the content to this repo.
 
-### Knowing when your change will show up on the production MDN site
+## Frequently asked questions (FAQ)
 
-After your pull request is merged, it may take up to 48 hours at most before the change goes live on the production https://developer.mozilla.org/ site. It should usually be quite a bit less than 48 hours.
+### When will my change show up on the production MDN site?
 
-You can use https://whatsdeployed.io/s/DLi/mdn/content to see if the change has been deployed to the production content area. Once the change has been deployed there, it can take up to 24 for hours for the CDN caches involved to replace their previously-cached content with the updated content from your change.
+After your pull request is merged, it may take up to 48 hours before the change goes live on the production https://developer.mozilla.org/ site, but it will usually be quicker.
+
+* The complete build runs every 24h at around 7PM US/Eastern time, and is then deployed.
+* Once deployment has occurred, it can take up to 24 hours for the associated CDN caches to replace their previously-cached content with the updated content.
+
+You can use https://whatsdeployed.io/s/DLi/mdn/content to see if your change has been deployed to the production site.
