@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Debugging_with_Xcode">Debugging with Xcode</h3>
 
-<p>See <a href="/en-US/docs/Mozilla/Debugging/Debugging_on_Mac_OS_X">Debugging on Mac OS X</a> for initial setup. You'll likely want to create a separate scheme for running GTest ("Product" &gt; "Scheme" &gt; "New Scheme…"). In addition to GTEST_FILTER, Set the following environment variables:</p>
+<p>See <a href="/en-US/docs/Mozilla/Debugging/Debugging_on_Mac_OS_X">Debugging on Mac OS X</a> for initial setup. You'll likely want to create a separate scheme for running GTest ("Product" &gt; "Scheme" &gt; "New Scheme…"). In addition to GTEST_FILTER, Set the following environment variables:</p>
 
 <pre>MOZ_XRE_DIR=/path-to-object-directory/obj-ff-dbg/dist/bin
 MOZ_RUN_GTEST=True
@@ -63,26 +63,26 @@ MOZ_RUN_GTEST=True
 
 <p>Add a configuration like this to your launch.json file (you can edit it via Run / Open Configurations):</p>
 
-<pre>        {
-            "name": "(gdb) Launch gtest",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/dist/bin/firefox",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/_tests/gtest",
-            "environment": [{"name": "MOZ_RUN_GTEST", "value": "True"},
+<pre>        {
+            "name": "(gdb) Launch gtest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/dist/bin/firefox",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/_tests/gtest",
+            "environment": [{"name": "MOZ_RUN_GTEST", "value": "True"},
                             {"name": "GTEST_FILTER", "value": "AsyncPanZoom*"}],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },</pre>
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },</pre>
 
 <h2 id="Writing_a_GTest_Unit_Test">Writing a GTest Unit Test</h2>
 
@@ -132,7 +132,7 @@ UNIFIED_SOURCES = [
 FINAL_LIBRARY = 'xul-gtest'
 </pre>
 
-<p>Update '&lt;submodule&gt;/moz.build' in the parent directory to build your new subdirectory in :</p>
+<p>Update '&lt;submodule&gt;/moz.build' in the parent directory to build your new subdirectory in :</p>
 
 <pre class="brush:cpp">if CONFIG['ENABLE_TESTS']:
     DIRS += ['tests/gtest']
@@ -149,10 +149,10 @@ FINAL_LIBRARY = 'xul-gtest'
 
 <p>The include file for the class you are testing may not need to be globally exported, but it does need to be made available to the unit test you are writing. In that case, add something like this to the Makefile.in inside of the testing directory.</p>
 
-<pre class="brush:cpp"> LOCAL_INCLUDES += [
-     '/gfx/2d',
-     '/gfx/2d/unittest',
-     '/gfx/layers',
+<pre class="brush:cpp"> LOCAL_INCLUDES += [
+     '/gfx/2d',
+     '/gfx/2d/unittest',
+     '/gfx/layers',
  ]
 </pre>
 

@@ -199,11 +199,11 @@ tags:
   <p>Unfortunately, we need to do slightly more than this. Fetch promises do not fail on 404 or 500 errors — only on something catastrophic like a network failure. Instead, they succeed, but with the <code><a href="/en-US/docs/Web/API/Response/ok">response.ok</a></code> property set to <code>false</code>. To produce an error on a 404, for example, we need to check the value of <code>response.ok</code>, and if <code>false</code>, throw an error, only returning the blob if it is <code>true</code>. This can be done like so — add the following lines below your first line of JavaScript.</p>
 
   <pre class="brush: js notranslate">let promise2 = promise.then(response =&gt; {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
-  }
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
 });</pre>
  </li>
  <li>
@@ -255,20 +255,20 @@ document.body.appendChild(image);</pre>
 
 <pre class="brush: js notranslate">fetch('coffee.jpg')
 .then(response =&gt; {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
-  }
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
 })
 .then(myBlob =&gt; {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
 })
 .catch(e =&gt; {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
+  console.log('There has been a problem with your fetch operation: ' + e.message);
 });</pre>
 
 <p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's executor function.</p>
@@ -301,7 +301,7 @@ document.body.appendChild(image);</pre>
   ...
 });</pre>
 
-<p>If they all fulfil, the chained <code>.then()</code> block's executor function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
+<p>If they all fulfil, the chained <code>.then()</code> block's executor function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
 
 <p>This can be very useful. Imagine that we’re fetching information to dynamically populate a UI feature on our page with content. In many cases, it makes sense to receive all the data and only then show the complete content, rather than displaying partial information.</p>
 
@@ -330,20 +330,20 @@ Promise.all([a, b, c]).then(values =&gt; {
   <p>However, we don't want to do this. Our code doesn't care when the <code>fetch()</code> operations are done. Instead, what we want is the loaded data. That means we want to run the <code>Promise.all()</code> block when we get back usable blobs representing the images, and a usable text string. We can write a function that does this; add the following inside your <code>&lt;script&gt;</code> element:</p>
 
   <pre class="brush: js notranslate">function fetchAndDecode(url, type) {
-  return fetch(url).then(response =&gt; {
-    if(!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      if(type === 'blob') {
-        return response.blob();
-      } else if(type === 'text') {
-        return response.text();
-      }
-    }
-  })
-  .catch(e =&gt; {
-    console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
-  });
+  return fetch(url).then(response =&gt; {
+    if(!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      if(type === 'blob') {
+        return response.blob();
+      } else if(type === 'text') {
+        return response.text();
+      }
+    }
+  })
+  .catch(e =&gt; {
+    console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
+  });
 }</pre>
 
   <p>This looks a bit complex, so let's run through it step by step:</p>
@@ -358,7 +358,7 @@ Promise.all([a, b, c]).then(values =&gt; {
     </ul>
    </li>
    <li>
-    <p>At the end of the block, we chain on a <code>.catch()</code> call, to handle any error cases that may occur with any of the promises passed in the array to <code>.all()</code>. If any of the promises reject, the <code>.catch()</code> block will let you know which one had a problem. The <code>.all()</code> block (see below) will still fulfill, but it won't display the resources that had problems. Remember that, once you handle the promise with a  <code>.catch()</code> block, the resulting promise is considered resolved but with a value of <code>undefined</code>; that's why in this case the <code>.all()</code> block will always get fulfilled. If you wanted the <code>.all()</code> to reject, you'd have to chain the <code>.catch()</code> block on to the end of the <code>.all()</code> instead. </p>
+    <p>At the end of the block, we chain on a <code>.catch()</code> call, to handle any error cases that may occur with any of the promises passed in the array to <code>.all()</code>. If any of the promises reject, the <code>.catch()</code> block will let you know which one had a problem. The <code>.all()</code> block (see below) will still fulfill, but it won't display the resources that had problems. Remember that, once you handle the promise with a  <code>.catch()</code> block, the resulting promise is considered resolved but with a value of <code>undefined</code>; that's why in this case the <code>.all()</code> block will always get fulfilled. If you wanted the <code>.all()</code> to reject, you'd have to chain the <code>.catch()</code> block on to the end of the <code>.all()</code> instead. </p>
    </li>
   </ol>
 
@@ -451,14 +451,14 @@ document.body.appendChild(para);</pre>
 <pre class="brush: js notranslate">function fetchAndDecode(url, type) {
   return fetch(url).then(response =&gt; {
     if(!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      if(type === 'blob') {
-        return response.blob();
-      } else if(type === 'text') {
-        return response.text();
-      }
-    }
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      if(type === 'blob') {
+        return response.blob();
+      } else if(type === 'text') {
+        return response.text();
+      }
+    }
   })
   .catch(e =&gt; {
     console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);

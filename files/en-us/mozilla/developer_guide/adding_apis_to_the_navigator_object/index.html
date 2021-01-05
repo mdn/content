@@ -15,10 +15,10 @@ tags:
 <h2 id="Programmatically_adding_an_object_to_navigator">Programmatically adding an object to navigator</h2>
 
 <pre>var categoryManager = Components.classes["@mozilla.org/categorymanager;1"]
-                      .getService(Components.interfaces.nsICategoryManager);
+                      .getService(Components.interfaces.nsICategoryManager);
 
 categoryManager.addCategoryEntry("JavaScript-navigator-property", "myApi",
-                      MY_CONTRACT_ID, false, true);
+                      MY_CONTRACT_ID, false, true);
 </pre>
 
 <p>This adds a new object, <code>myApi</code>, to the {{ domxref("window.navigator") }} object. The newly added object is a reference to the component specified by the contract ID <code>MY_CONTRACT_ID</code>. You can learn more about Contract IDs are unique text identifiers for XPCOM components.</p>

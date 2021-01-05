@@ -17,16 +17,16 @@ tags:
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Lines materialized the position of the glyphs --&gt;
-  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
-  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
+  &lt;!-- Lines materialized the position of the glyphs --&gt;
+  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
+  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
+  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
 
-  &lt;!-- Some reference text --&gt;
-  &lt;text x="10%" y="50%" fill="grey"&gt;SVG&lt;/text&gt;
+  &lt;!-- Some reference text --&gt;
+  &lt;text x="10%" y="50%" fill="grey"&gt;SVG&lt;/text&gt;
 
-  &lt;!-- The same text with a shift along the x-axis --&gt;
-  &lt;text dx="50%" x="10%" y="50%"&gt;SVG&lt;/text&gt;
+  &lt;!-- The same text with a shift along the x-axis --&gt;
+  &lt;text dx="50%" x="10%" y="50%"&gt;SVG&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
 <pre class="brush: css">line {
@@ -159,25 +159,25 @@ tags:
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Lines materialized the position of the glyphs --&gt;
-  &lt;line x1="0"  x2="100%" y1="25%" y2="25%" /&gt;
-  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
-  &lt;line x1="0"  x2="100%" y1="75%" y2="75%" /&gt;
+  &lt;line x1="0"  x2="100%" y1="25%" y2="25%" /&gt;
+  &lt;line x1="0"  x2="100%" y1="50%" y2="50%" /&gt;
+  &lt;line x1="0"  x2="100%" y1="75%" y2="75%" /&gt;
 
-  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="30%" x2="30%" y1="0"   y2="100%" /&gt;
-  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
+  &lt;line x1="10%" x2="10%" y1="0"   y2="100%" /&gt;
+  &lt;line x1="30%" x2="30%" y1="0"   y2="100%" /&gt;
+  &lt;line x1="60%" x2="60%" y1="0"   y2="100%" /&gt;
 
   &lt;!-- Behaviors change based on the number
        of values in the attributes --&gt;
-  &lt;text dx="20%"       x="10%" y="25%"&gt;SVG&lt;/text&gt;
-  &lt;text dx="0 10%"     x="10%" y="50%"&gt;SVG&lt;/text&gt;
-  &lt;text dx="0 10% 20%" x="10%" y="75%"&gt;SVG&lt;/text&gt;
+  &lt;text dx="20%"       x="10%" y="25%"&gt;SVG&lt;/text&gt;
+  &lt;text dx="0 10%"     x="10%" y="50%"&gt;SVG&lt;/text&gt;
+  &lt;text dx="0 10% 20%" x="10%" y="75%"&gt;SVG&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
 <pre class="brush: css">line {
-  stroke: red;
-  stroke-width: .5px;
-  stroke-dasharray: 3px;
+  stroke: red;
+  stroke-width: .5px;
+  stroke-dasharray: 3px;
 }</pre>
 
 <p>{{EmbedLiveSample('text', '100%', 100)}}</p>

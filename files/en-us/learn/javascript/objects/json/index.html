@@ -21,7 +21,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.</p>
+<p class="summary">JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -40,7 +40,7 @@ tags:
 
 <p>{{glossary("JSON")}} is a text-based data format following JavaScript object syntax, which was popularized by <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a>. Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.</p>
 
-<p>JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue —  JavaScript provides a global <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object that has methods available for converting between the two.</p>
+<p>JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue —  JavaScript provides a global <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object that has methods available for converting between the two.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Converting a string to a native object is called <em>deserialization</em>, while converting a native object to a string so it can be transmitted across the network is called <em>serialization</em>.</p>
@@ -53,45 +53,45 @@ tags:
 <p>As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
 
 <pre class="brush: json notranslate">'{
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
   "active": true,
-  "members": [
-    {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
-    },
-    {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
 }'</pre>
 
 <p>If we loaded this string into a JavaScript program, parsed it into a variable called <code>superHeroes</code> for example, we could then access the data inside it using the same dot/bracket notation we looked at in the <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article. For example:</p>
@@ -99,7 +99,7 @@ tags:
 <pre class="brush: js notranslate">superHeroes.homeTown
 superHeroes['active']</pre>
 
-<p>To access data further down the hierarchy, you have to chain the required property names and array indexes together.  For example, to access the third superpower of the second hero listed in the members list, you'd do this:</p>
+<p>To access data further down the hierarchy, you have to chain the required property names and array indexes together.  For example, to access the third superpower of the second hero listed in the members list, you'd do this:</p>
 
 <pre class="brush: js notranslate">superHeroes['members'][1]['powers'][2]</pre>
 
@@ -117,7 +117,7 @@ superHeroes['active']</pre>
 
 <h3 id="Arrays_as_JSON">Arrays as JSON</h3>
 
-<p>Above we mentioned that JSON text basically looks like a JavaScript object inside a string. We can also convert arrays to/from JSON. Below is also valid JSON, for example:</p>
+<p>Above we mentioned that JSON text basically looks like a JavaScript object inside a string. We can also convert arrays to/from JSON. Below is also valid JSON, for example:</p>
 
 <pre class="brush: json notranslate">'[
   {
@@ -131,15 +131,15 @@ superHeroes['active']</pre>
     ]
   },
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secretIdentity": "Jane Wilson",
+    "powers": [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
 ]'</pre>
 
 <p>The above is perfectly valid JSON. You'd just have to access array items (in its parsed version) by starting with an array index, for example <code>[0]["powers"][0]</code>.</p>
@@ -147,7 +147,7 @@ superHeroes['active']</pre>
 <h3 id="Other_notes">Other notes</h3>
 
 <ul>
- <li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li>
+ <li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li>
  <li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li>
  <li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like <a href="http://jsonlint.com/">JSONLint</a>.</li>
  <li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li>
@@ -279,7 +279,7 @@ request.send();</pre>
  <li>Set the <code>&lt;h2&gt;</code> to contain the current hero's <code>name</code>.</li>
  <li>Fill the three paragraphs with their <code>secretIdentity</code>, <code>age</code>, and a line saying "Superpowers:" to introduce the information in the list.</li>
  <li>Store the <code>powers</code> property in another new constant called <code>superPowers</code> — this contains an array that lists the current hero's superpowers.</li>
- <li>Use another <code>for</code> loop to loop through the current hero's superpowers — for each one we create an <code>&lt;li&gt;</code> element, put the superpower inside it, then put the <code>listItem</code> inside the <code>&lt;ul&gt;</code> element (<code>myList</code>) using <code>appendChild()</code>.</li>
+ <li>Use another <code>for</code> loop to loop through the current hero's superpowers — for each one we create an <code>&lt;li&gt;</code> element, put the superpower inside it, then put the <code>listItem</code> inside the <code>&lt;ul&gt;</code> element (<code>myList</code>) using <code>appendChild()</code>.</li>
  <li>The very last thing we do is to append the <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>s, and <code>&lt;ul&gt;</code> inside the <code>&lt;article&gt;</code> (<code>myArticle</code>), then append the <code>&lt;article&gt;</code> inside the <code>&lt;section&gt;</code>. The order in which things are appended is important, as this is the order they will be displayed inside the HTML.</li>
 </ol>
 
@@ -297,7 +297,7 @@ request.send();</pre>
 
 <pre class="brush: js notranslate">request.responseType = 'json';</pre>
 
-<p>But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object is available in browsers, which contains the following two methods:</p>
+<p>But sometimes we aren't so lucky — sometimes we receive a raw JSON string, and we need to convert it to an object ourselves. And when we want to send a JavaScript object across the network, we need to convert it to JSON (a string) before sending. Luckily, these two problems are so common in web development that a built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object is available in browsers, which contains the following two methods:</p>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse()</a></code>: Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.</li>

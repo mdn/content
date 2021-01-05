@@ -65,7 +65,7 @@ tags:
 
 <h3 id="Single_line_text_fields">Single line text fields</h3>
 
-<p>A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to <code>text</code>, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (<code>text</code> is the default value). The value <code>text</code> for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify <code>type="color"</code> and the browser doesn't support native color pickers).</p>
+<p>A single line text field is created using an {{HTMLElement("input")}} element whose {{htmlattrxref("type","input")}} attribute value is set to <code>text</code>, or by omitting the  {{htmlattrxref("type","input")}} attribute altogether (<code>text</code> is the default value). The value <code>text</code> for this attribute is also the fallback value if the value you specify for the {{htmlattrxref("type","input")}} attribute is unknown by the browser (for example if you specify <code>type="color"</code> and the browser doesn't support native color pickers).</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find examples of all the single line text field types on GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">see it live also</a>).</p>
@@ -118,7 +118,7 @@ tags:
 <p><strong>Note</strong>: You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">see it live also</a>).</p>
 </div>
 
-<p>For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.</p>
+<p>For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.</p>
 
 <h3 id="Check_box">Check box</h3>
 
@@ -148,21 +148,21 @@ tags:
 <p>Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all of the buttons without resetting the form.</p>
 
 <pre class="brush: html notranslate">&lt;fieldset&gt;
-  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;label for="soup"&gt;Soup&lt;/label&gt;
-      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="curry"&gt;Curry&lt;/label&gt;
-      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
-      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="soup"&gt;Soup&lt;/label&gt;
+      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="curry"&gt;Curry&lt;/label&gt;
+      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
+      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
 <p>The following screenshots show unchecked and checked radio buttons, radio buttons that have focus, and disabled unchecked and checked radio buttons — on Firefox 71 and Safari 13 on macos and Chrome 79 and Edge 18 on Windows 10.</p>
@@ -270,8 +270,8 @@ tags:
 <table>
  <thead>
   <tr>
-   <th scope="col">Attribute name</th>
-   <th scope="col">Default value</th>
+   <th scope="col">Attribute name</th>
+   <th scope="col">Default value</th>
    <th scope="col">Description</th>
   </tr>
  </thead>

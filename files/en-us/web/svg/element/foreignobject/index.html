@@ -16,31 +16,31 @@ tags:
 </div>
 
 <pre class="brush: html; highlight[16,27]">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
-    div {
-      color: white;
-      font: 18px serif;
-      height: 100%;
-      overflow: auto;
-    }
-  &lt;/style&gt;
+  &lt;style&gt;
+    div {
+      color: white;
+      font: 18px serif;
+      height: 100%;
+      overflow: auto;
+    }
+  &lt;/style&gt;
 
-  &lt;polygon points="5,5 195,10 185,185 10,195" /&gt;
+  &lt;polygon points="5,5 195,10 185,185 10,195" /&gt;
 
   &lt;!-- Common use case: embed HTML text into SVG --&gt;
-  &lt;foreignObject x="20" y="20" width="160" height="160"&gt;
+  &lt;foreignObject x="20" y="20" width="160" height="160"&gt;
     &lt;!--
       In the context of SVG embedded in an HTML document, the XHTML
       namespace could be omitted, but it is mandatory in the
       context of an SVG document
     --&gt;
-    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
       porta vel dui convallis, rutrum imperdiet eros. Aliquam
       erat volutpat.
     &lt;/div&gt;
-  &lt;/foreignObject&gt;
+  &lt;/foreignObject&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>

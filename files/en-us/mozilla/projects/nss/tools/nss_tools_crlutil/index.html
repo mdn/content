@@ -181,13 +181,7 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
     </tr>
   </tbody>
 </table>
-<table>
-  <tbody>
-    <tr>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+
 <h2 id="CRL_Generation_script_syntax"><a id="10232455"> CRL Generation script syntax:</a></h2>
 <p><a id="125455"></a> CRL generation script file has the following syntax:</p>
 
@@ -356,24 +350,24 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <p><a id="1034749"> This example lists all the CRLs in the <code>NSS database</code> in the specified directory: </a></p>
 <p><a id="1034751"> <code>crlutil -L -d </code><i>certdir</i> </a></p>
 <p><a id="1034753"> The CRL Management Tool displays output similar to the following: </a></p>
-<p><a id="1034755"> <code>CRL Name              CRL Type</code></a></p>
-<p><a id="1037237"> <code>CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US  CRL<br>
-  CN=John Smith,O=Netscape,L=Mountain View,ST=California,C=US  CRL</code></a></p>
+<p><a id="1034755"> <code>CRL Name              CRL Type</code></a></p>
+<p><a id="1037237"> <code>CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US  CRL<br>
+  CN=John Smith,O=Netscape,L=Mountain View,ST=California,C=US  CRL</code></a></p>
 <p>To view a particular CRL user should specify <i>-n nickname</i> parameter.<br>
   <code>crlutil -L -d </code><i>certdir</i><code> -n </code><i> nickname</i></p>
 
 <p><code>CRL Info:<br>
   :<br>
-      Version: 2 (0x1)<br>
-      Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
-      Issuer: "CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US"<br>
-      This Update: Wed Feb 23 12:08:38 2005<br>
-      Entry (1):<br>
-          Serial Number: 40 (0x28)<br>
-          Revocation Date: Wed Feb 23 12:08:10 2005<br>
-      Entry (2):<br>
-          Serial Number: 42 (0x2a)<br>
-          Revocation Date: Wed Feb 23 12:08:40 2005</code></p>
+      Version: 2 (0x1)<br>
+      Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
+      Issuer: "CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US"<br>
+      This Update: Wed Feb 23 12:08:38 2005<br>
+      Entry (1):<br>
+          Serial Number: 40 (0x28)<br>
+          Revocation Date: Wed Feb 23 12:08:10 2005<br>
+      Entry (2):<br>
+          Serial Number: 42 (0x2a)<br>
+          Revocation Date: Wed Feb 23 12:08:40 2005</code></p>
 <h3 id="Deleting_CRL_from_a_Database"><a id="1028731"> Deleting CRL from a Database</a></h3>
 <p><a id="1035439"> This example deletes CRL from a database in the specified directory: </a></p>
 <p><a id="1035441"> <code>crlutil -D -n </code><i>nickname</i><code> -d </code><i>certdir</i> </a></p>

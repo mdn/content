@@ -19,23 +19,23 @@ tags:
 <p>First, let's take a quick look at the <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">HTML that's needed</a>. There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:</p>
 
 <pre class="brush: html notranslate">&lt;button id="connectButton" name="connectButton" class="buttonleft"&gt;
-  Connect
+  Connect
 &lt;/button&gt;
 &lt;button id="disconnectButton" name="disconnectButton" class="buttonright" disabled&gt;
-  Disconnect
+  Disconnect
 &lt;/button&gt;</pre>
 
 <p>Then there's a box which contains the text input box into which the user can type a message to transmit, with a button to send the entered text. This {{HTMLElement("div")}} will be the first peer in the channel.</p>
 
-<pre class="brush: html notranslate">  &lt;div class="messagebox"&gt;
-    &lt;label for="message"&gt;Enter a message:
-      &lt;input type="text" name="message" id="message" placeholder="Message text"
-              inputmode="latin" size=60 maxlength=120 disabled&gt;
-    &lt;/label&gt;
-    &lt;button id="sendButton" name="sendButton" class="buttonright" disabled&gt;
+<pre class="brush: html notranslate">  &lt;div class="messagebox"&gt;
+    &lt;label for="message"&gt;Enter a message:
+      &lt;input type="text" name="message" id="message" placeholder="Message text"
+              inputmode="latin" size=60 maxlength=120 disabled&gt;
+    &lt;/label&gt;
+    &lt;button id="sendButton" name="sendButton" class="buttonright" disabled&gt;
       Send
     &lt;/button&gt;
-  &lt;/div&gt;</pre>
+  &lt;/div&gt;</pre>
 
 <p>Finally, there's the little box into which we'll insert the messages. This {{HTMLElement("div")}} block will be the second peer.</p>
 
@@ -86,7 +86,7 @@ sendChannel.onopen = handleSendChannelStatusChange;
 sendChannel.onclose = handleSendChannelStatusChange;
 </pre>
 
-<p>The first step is to create the "local" end of the connection. This is the peer that will send out the connection request.  The next step is to create the {{domxref("RTCDataChannel")}} by calling {{domxref("RTCPeerConnection.createDataChannel()")}} and set up event listeners to monitor the channel so that we know when it's opened and closed (that is, when the channel is connected or disconnected within that peer connection).</p>
+<p>The first step is to create the "local" end of the connection. This is the peer that will send out the connection request.  The next step is to create the {{domxref("RTCDataChannel")}} by calling {{domxref("RTCPeerConnection.createDataChannel()")}} and set up event listeners to monitor the channel so that we know when it's opened and closed (that is, when the channel is connected or disconnected within that peer connection).</p>
 
 <p>It's important to keep in mind that each end of the channel has its own {{domxref("RTCDataChannel")}} object.</p>
 

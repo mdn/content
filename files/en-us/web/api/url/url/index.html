@@ -38,10 +38,10 @@ tags:
 </dl>
 
 <div class="note">
-	<p><strong>Note</strong>: The <code>url</code> and <code>base</code> arguments will
-		each be stringified from whatever value you pass, just like with other Web APIs
-		that accept {{domxref("USVString")}}. In particular, you can use an existing
-		{{domxref("URL")}} object for either argument, and it will stringify to the
+	<p><strong>Note</strong>: The <code>url</code> and <code>base</code> arguments will
+		each be stringified from whatever value you pass, just like with other Web APIs
+		that accept {{domxref("USVString")}}. In particular, you can use an existing
+		{{domxref("URL")}} object for either argument, and it will stringify to the
 		object's {{domxref("URL.href", "href")}} property.</p>
 </div>
 
@@ -68,23 +68,23 @@ tags:
 
 <pre class="brush: js notranslate">// Base urls
 let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
+let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
+let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
+                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
+        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
+        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
+        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

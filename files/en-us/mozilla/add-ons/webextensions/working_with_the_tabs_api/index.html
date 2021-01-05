@@ -41,8 +41,8 @@ tags:
 <p>The following is how you might request <code>"tabs"</code> permission in your extension’s manifest.json file:</p>
 
 <pre class="brush: json">"permissions": [
-  "&lt;all_urls&gt;",
-  "tabs"
+  "&lt;all_urls&gt;",
+  "tabs"
 ],
 </pre>
 
@@ -74,19 +74,19 @@ tags:
 <p>Here is the <code><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a></code>:</p>
 
 <pre class="brush: json">{
-  "browser_action": {
-    "browser_style": true,
-    "default_title": "Tabs, tabs, tabs",
-    "default_popup": "tabs.html"
-  },
-  "description": "A list of methods you can perform on a tab.",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
-  "manifest_version": 2,
-  "name": "Tabs, tabs, tabs",
-  "permissions": [
-    "tabs"
-  ],
-  "version": "1.0"
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Tabs, tabs, tabs",
+    "default_popup": "tabs.html"
+  },
+  "description": "A list of methods you can perform on a tab.",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
+  "manifest_version": 2,
+  "name": "Tabs, tabs, tabs",
+  "permissions": [
+    "tabs"
+  ],
+  "version": "1.0"
 }
 </pre>
 
@@ -111,34 +111,34 @@ tags:
 
 &lt;html&gt;
 
- &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="tabs.css"/&gt;
- &lt;/head&gt;
+ &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="tabs.css"/&gt;
+ &lt;/head&gt;
 
 &lt;body&gt;
 
- &lt;div class="panel"&gt;
-    &lt;div class="panel-section panel-section-header"&gt;
-     &lt;div class="text-section-header"&gt;Tabs-tabs-tabs&lt;/div&gt;
-    &lt;/div&gt;
+ &lt;div class="panel"&gt;
+    &lt;div class="panel-section panel-section-header"&gt;
+     &lt;div class="text-section-header"&gt;Tabs-tabs-tabs&lt;/div&gt;
+    &lt;/div&gt;
 
-    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
 
 &lt;!--
 Define the other menu items
 --&gt;
 
-    &lt;div class="switch-tabs"&gt;
+    &lt;div class="switch-tabs"&gt;
 
-     &lt;p&gt;Switch to tab&lt;/p&gt;
+     &lt;p&gt;Switch to tab&lt;/p&gt;
 
-     &lt;div id="tabs-list"&gt;&lt;/div&gt;
+     &lt;div id="tabs-list"&gt;&lt;/div&gt;
 
-    &lt;/div&gt;
- &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
 
- &lt;script src="tabs.js"&gt;&lt;/script&gt;
+ &lt;script src="tabs.js"&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 
@@ -148,14 +148,14 @@ Define the other menu items
 <p>This does the following:</p>
 
 <ol>
-	<li>The menu items are declared.  </li>
+	<li>The menu items are declared.  </li>
 	<li>An empty <code>div</code> with the ID <code>tabs-list</code> is declared to contain the list of tabs.</li>
 	<li><code>tabs.js</code> is called.</li>
 </ol>
 
 <h3 id="tabs.js">tabs.js</h3>
 
-<p>In <code><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></code>, we’ll see how the list of tabs is built and added to the popup.  </p>
+<p>In <code><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></code>, we’ll see how the list of tabs is built and added to the popup.  </p>
 
 <h4 id="Creating_the_popup">Creating the popup</h4>
 
@@ -166,7 +166,7 @@ Define the other menu items
 <p>The first thing that <code>listTabs()</code> does is to call <code>getCurrentWindowTabs()</code>. This is where {{WebExtAPIRef("tabs.query()")}} is used to get a {{WebExtAPIRef("tabs.Tab")}} object for the tabs in the current window:</p>
 
 <pre class="notranslate brush: js">function getCurrentWindowTabs() {
-  return browser.tabs.query({currentWindow: true});
+  return browser.tabs.query({currentWindow: true});
 }
 </pre>
 
@@ -176,53 +176,53 @@ Define the other menu items
 
 <ol>
 	<li>Grab the <code>tabs-list</code> <code>div</code>.</li>
-	<li>Create a document fragment (into which the list will be built).</li>
-	<li>Set counters.</li>
-	<li>Clear the content of the <code>tabs-list</code> <code>div</code>.</li>
+	<li>Create a document fragment (into which the list will be built).</li>
+	<li>Set counters.</li>
+	<li>Clear the content of the <code>tabs-list</code> <code>div</code>.</li>
 </ol>
 
 <pre class="notranslate brush: js">function listTabs() {
- getCurrentWindowTabs().then((tabs) =&gt; {
-    let tabsList = document.getElementById('tabs-list');
-    let currentTabs = document.createDocumentFragment();
-    let limit = 5;
-    let counter = 0;
+ getCurrentWindowTabs().then((tabs) =&gt; {
+    let tabsList = document.getElementById('tabs-list');
+    let currentTabs = document.createDocumentFragment();
+    let limit = 5;
+    let counter = 0;
 
-    tabsList.textContent = '';
+    tabsList.textContent = '';
 </pre>
 
 <p>Next, we’ll create the links for each tab:</p>
 
 <ol>
 	<li>Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.</li>
-	<li>For each item, add a hyperlink to the document fragment.
+	<li>For each item, add a hyperlink to the document fragment.
 	<ul>
-		<li>The link’s label—that is, its text—is set using the tab’s <code>title</code> (or the <code>id</code>, if it has no <code>title</code>).</li>
+		<li>The link’s label—that is, its text—is set using the tab’s <code>title</code> (or the <code>id</code>, if it has no <code>title</code>).</li>
 		<li>The link’s address is set using the tab’s <code>id</code>.</li>
 	</ul>
 	</li>
 </ol>
 
-<pre class="notranslate brush: js">    for (let tab of tabs) {
-     if (!tab.active &amp;&amp; counter &lt;= limit) {
-        let tabLink = document.createElement('a');
+<pre class="notranslate brush: js">    for (let tab of tabs) {
+     if (!tab.active &amp;&amp; counter &lt;= limit) {
+        let tabLink = document.createElement('a');
 
-        tabLink.textContent = tab.title || tab.id;
+        tabLink.textContent = tab.title || tab.id;
 
-       tabLink.setAttribute('href', tab.id);
-        tabLink.classList.add('switch-tabs');
-        currentTabs.appendChild(tabLink);
-     }
+       tabLink.setAttribute('href', tab.id);
+        tabLink.classList.add('switch-tabs');
+        currentTabs.appendChild(tabLink);
+     }
 
-     counter += 1;
+     counter += 1;
 
-    }
+    }
 </pre>
 
 <p>Finally, the document fragment is written to the <code>tabs-list</code> <code>div</code>:</p>
 
-<pre class="notranslate brush: js">    tabsList.appendChild(currentTabs);
-  });
+<pre class="notranslate brush: js">    tabsList.appendChild(currentTabs);
+  });
 }
 </pre>
 
@@ -230,29 +230,29 @@ Define the other menu items
 
 <p>Another related example feature is the “Alert active tab” info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:</p>
 
-<pre class="notranslate brush: js"> else if (e.target.id === "tabs-alertinfo") {
-   callOnActiveTab((tab) =&gt; {
-     let props = "";
-     for (let item in tab) {
-       props += `${ item } = ${ tab[item] } \n`;
-     }
-     alert(props);
-   });
- }
+<pre class="notranslate brush: js"> else if (e.target.id === "tabs-alertinfo") {
+   callOnActiveTab((tab) =&gt; {
+     let props = "";
+     for (let item in tab) {
+       props += `${ item } = ${ tab[item] } \n`;
+     }
+     alert(props);
+   });
+ }
 </pre>
 
 <p>Where <code>callOnActiveTab()</code> finds the active tab object by looping through the {{WebExtAPIRef("tabs.Tab")}} objects looking for the item with active set:</p>
 
 <pre class="notranslate brush: js">document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) =&gt; {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+ function callOnActiveTab(callback) {
+   getCurrentWindowTabs().then((tabs) =&gt; {
+     for (var tab of tabs) {
+       if (tab.active) {
+         callback(tab, tabs);
+       }
+     }
+   });
+ }
 }
 
 </pre>
@@ -273,7 +273,7 @@ Define the other menu items
 </ul>
 
 <div class="notecard note">
-<p><strong>NOTE: </strong></p>
+<p><strong>NOTE: </strong></p>
 
 <p>These functions all require the ID (or IDs) of the tab they are manipulating:</p>
 
@@ -283,7 +283,7 @@ Define the other menu items
 	<li>{{WebExtAPIRef("tabs.move()")}}</li>
 </ul>
 
-<p>Whereas the following functions will act on the active tab (if no tab <code>id</code> is provided): </p>
+<p>Whereas the following functions will act on the active tab (if no tab <code>id</code> is provided): </p>
 
 <ul>
 	<li>{{WebExtAPIRef("tabs.update()")}}</li>
@@ -307,30 +307,30 @@ Define the other menu items
 
 <p>tabs.html defines the “menu” displayed in the popup, which includes the “Move active tab to the beginning of the window list” option, with a series of <code>&lt;a&gt;</code> tags grouped by a visual separator. Each menu item is given an <code>id</code>, which is used in <code>tabs.js</code> to determine which menu item is being requested.</p>
 
-<pre class="brush: html">    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
-    &lt;a href="#" id="tabs-move-end"&gt;Move active tab to the end of the window&lt;/a&gt;&lt;br&gt;
+<pre class="brush: html">    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#" id="tabs-move-end"&gt;Move active tab to the end of the window&lt;/a&gt;&lt;br&gt;
 
-    &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+    &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
 
-    &lt;a href="#" id="tabs-duplicate"&gt;Duplicate active tab&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#" id="tabs-duplicate"&gt;Duplicate active tab&lt;/a&gt;&lt;br&gt;
 
-    &lt;a href="#" id="tabs-reload"&gt;Reload active tab&lt;/a&gt;&lt;br&gt;
-    &lt;a href="#" id="tabs-alertinfo"&gt;Alert active tab info&lt;/a&gt;&lt;br&gt;</pre>
+    &lt;a href="#" id="tabs-reload"&gt;Reload active tab&lt;/a&gt;&lt;br&gt;
+    &lt;a href="#" id="tabs-alertinfo"&gt;Alert active tab info&lt;/a&gt;&lt;br&gt;</pre>
 
 <h4 id="tabs.js_2"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></h4>
 
 <p>To implement the “menu” defined in <code>tabs.html</code>, <code>tabs.js</code> includes a listener for clicks in <code>tabs.html</code>:</p>
 
 <pre class="notranslate brush: js">document.addEventListener("click", function(e) {
- function callOnActiveTab(callback) {
+ function callOnActiveTab(callback) {
 
-   getCurrentWindowTabs().then((tabs) =&gt; {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
+   getCurrentWindowTabs().then((tabs) =&gt; {
+     for (var tab of tabs) {
+       if (tab.active) {
+         callback(tab, tabs);
+       }
+     }
+   });
 }
 }
 </pre>
@@ -339,16 +339,16 @@ Define the other menu items
 
 <p>This code snippet is for the “Move active tab to the beginning of the window list” option:</p>
 
-<pre class="notranslate brush: js"> if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) =&gt; {
-     var index = 0;
-     if (!tab.pinned) {
-       index = firstUnpinnedTab(tabs);
-     }
-     console.log(`moving ${tab.id} to ${index}`)
-     browser.tabs.move([tab.id], {index});
-   });
- }
+<pre class="notranslate brush: js"> if (e.target.id === "tabs-move-beginning") {
+   callOnActiveTab((tab, tabs) =&gt; {
+     var index = 0;
+     if (!tab.pinned) {
+       index = firstUnpinnedTab(tabs);
+     }
+     console.log(`moving ${tab.id} to ${index}`)
+     browser.tabs.move([tab.id], {index});
+   });
+ }
 </pre>
 
 <p>It's worth noting the use of <code>console.log()</code>. This enables you to output information to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">debugger</a> console, which can be useful when resolving issues found during development.</p>
@@ -357,15 +357,15 @@ Define the other menu items
 
 <p>The move code first calls <code>callOnActiveTab()</code> which in turn calls <code>getCurrentWindowTabs()</code> to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:</p>
 
-<pre class="notranslate brush: js"> function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) =&gt; {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+<pre class="notranslate brush: js"> function callOnActiveTab(callback) {
+   getCurrentWindowTabs().then((tabs) =&gt; {
+     for (var tab of tabs) {
+       if (tab.active) {
+         callback(tab, tabs);
+       }
+     }
+   });
+ }
 </pre>
 
 <h5 id="Pinned_tabs">Pinned tabs</h5>
@@ -373,17 +373,17 @@ Define the other menu items
 <p>A feature of tabs is that the user can <dfn>pin</dfn> tabs in a window. Pinned tabs are placed at the start of the tab list and cannot be moved. This means that the earliest position a tab can move to is the first position after any pinned tabs. So, <code>firstUnpinnedTab()</code> is called to find the position of the first unpinned tab by looping through the <code>tabs</code> object:</p>
 
 <pre class="notranslate brush: js">function firstUnpinnedTab(tabs) {
- for (let tab of tabs) {
-   if (!tab.pinned) {
-     return tab.index;
-   }
- }
+ for (let tab of tabs) {
+   if (!tab.pinned) {
+     return tab.index;
+   }
+ }
 }
 </pre>
 
 <p>We now have everything needed to move the tab: the active tab object from which we can get the tab <code>id</code> and the position the tab is to be moved to. So, we can implement the move:</p>
 
-<pre class="notranslate brush: js">     browser.tabs.move([tab.id], {index});</pre>
+<pre class="notranslate brush: js">     browser.tabs.move([tab.id], {index});</pre>
 
 <p>The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.</p>
 
@@ -431,23 +431,23 @@ const DEFAULT_ZOOM = 1;
 
 <p>For the zoom in feature, this runs:</p>
 
-<pre class="notranslate brush: js"> else if (e.target.id === "tabs-add-zoom") {
-   callOnActiveTab((tab) =&gt; {
-     var gettingZoom = browser.tabs.getZoom(tab.id);
-     gettingZoom.then((zoomFactor) =&gt; {
-       //the maximum zoomFactor is 3, it can't go higher
-       if (zoomFactor &gt;= MAX_ZOOM) {
-         alert("Tab zoom factor is already at max!");
-       } else {
-         var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-         //if the newZoomFactor is set to higher than the max accepted
-         //it won't change, and will never alert that it's at maximum
-         newZoomFactor = newZoomFactor &gt; MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
-         browser.tabs.setZoom(tab.id, newZoomFactor);
-       }
-     });
-   });
- }
+<pre class="notranslate brush: js"> else if (e.target.id === "tabs-add-zoom") {
+   callOnActiveTab((tab) =&gt; {
+     var gettingZoom = browser.tabs.getZoom(tab.id);
+     gettingZoom.then((zoomFactor) =&gt; {
+       //the maximum zoomFactor is 3, it can't go higher
+       if (zoomFactor &gt;= MAX_ZOOM) {
+         alert("Tab zoom factor is already at max!");
+       } else {
+         var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
+         //if the newZoomFactor is set to higher than the max accepted
+         //it won't change, and will never alert that it's at maximum
+         newZoomFactor = newZoomFactor &gt; MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
+         browser.tabs.setZoom(tab.id, newZoomFactor);
+       }
+     });
+   });
+ }
 </pre>
 
 <p>This code uses <code>callOnActiveTab()</code> to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab’s current zoom factor. The current zoom is compared to the defined maximum (<code>MAX_ZOOM</code>) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.</p>
@@ -456,7 +456,7 @@ const DEFAULT_ZOOM = 1;
 
 <p>Another significant capability offered by the Tabs API is the ability to manipulate the CSS within a tab—add new CSS to a tab ({{WebExtAPIRef("tabs.insertCSS()")}}) or remove CSS from a tab ({{WebExtAPIRef("tabs.removeCSS()")}}).</p>
 
-<p>This can be useful, for example, if you want to highlight certain page elements or change the default layout of the page.</p>
+<p>This can be useful, for example, if you want to highlight certain page elements or change the default layout of the page.</p>
 
 <h3 id="How_to_example_4">How to example</h3>
 
@@ -478,28 +478,28 @@ const DEFAULT_ZOOM = 1;
 <p>The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS()")}} and {{WebExtAPIRef("tabs.removeCSS()")}} in the active tab when run from the extension’s browser or page action, context menu, or a shortcut.</p>
 
 <pre class="brush: json">{
-  "description": "Adds a page action to toggle applying CSS to pages.",
+  "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+ "manifest_version": 2,
+ "name": "apply-css",
+ "version": "1.0",
+ "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
 
- "background": {
+ "background": {
 
-    "scripts": ["background.js"]
- },
+    "scripts": ["background.js"]
+ },
 
- "page_action": {
+ "page_action": {
 
-    "default_icon": "icons/off.svg",
-    "browser_style": true
- },
+    "default_icon": "icons/off.svg",
+    "browser_style": true
+ },
 
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
+ "permissions": [
+    "activeTab",
+    "tabs"
+ ]
 
 }
 </pre>
@@ -528,18 +528,18 @@ const APPLICABLE_PROTOCOLS = ["http:", "https:"];
 <pre class="notranslate brush: js">var gettingAllTabs = browser.tabs.query({});
 
 gettingAllTabs.then((tabs) =&gt; {
- for (let tab of tabs) {
-   initializePageAction(tab);
- }
+ for (let tab of tabs) {
+   initializePageAction(tab);
+ }
 });
 </pre>
 
 <p><code>initializePageAction</code> uses <code>protocolIsApplicable()</code> to determine whether the active tab’s URL is one the CSS can be applied to:</p>
 
 <pre class="notranslate brush: js">function protocolIsApplicable(url) {
- var anchor =  document.createElement('a');
- anchor.href = url;
- return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+ var anchor =  document.createElement('a');
+ anchor.href = url;
+ return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
 }
 </pre>
 
@@ -547,15 +547,15 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <pre class="notranslate brush: js">function initializePageAction(tab) {
 
- if (protocolIsApplicable(tab.url)) {
-   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-   browser.pageAction.show(tab.id);
- }
+ if (protocolIsApplicable(tab.url)) {
+   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
+   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
+   browser.pageAction.show(tab.id);
+ }
 }
 </pre>
 
-<p>Next, a listener on <code>pageAction.onClicked</code> waits for the <code>pageAction</code> icon to be clicked, and calls <code>toggleCSS</code> when it is.</p>
+<p>Next, a listener on <code>pageAction.onClicked</code> waits for the <code>pageAction</code> icon to be clicked, and calls <code>toggleCSS</code> when it is.</p>
 
 <pre class="notranslate brush: js">browser.pageAction.onClicked.addListener(toggleCSS);</pre>
 
@@ -579,29 +579,29 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <pre class="notranslate brush: js">function toggleCSS(tab) {
 
- function gotTitle(title) {
+ function gotTitle(title) {
 
-    if (title === TITLE_APPLY) {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-     browser.tabs.insertCSS({code: CSS});
-    } else {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-     browser.tabs.removeCSS({code: CSS});
-    }
- }
+    if (title === TITLE_APPLY) {
+     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
+     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
+     browser.tabs.insertCSS({code: CSS});
+    } else {
+     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
+     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
+     browser.tabs.removeCSS({code: CSS});
+    }
+ }
 
- var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+ var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
 
- gettingTitle.then(gotTitle);
+ gettingTitle.then(gotTitle);
 }
 </pre>
 
 <p>Finally, to ensure that the <code>pageAction</code> is valid after each update to the tab, a listener on {{WebExtAPIRef("tabs.onUpdated")}} calls <code>initializePageAction()</code> each time the tab is updated to check that the tab is still using a protocol to which the CSS can be applied.</p>
 
 <pre class="notranslate brush: js">browser.tabs.onUpdated.addListener((id, changeInfo, tab) =&gt; {
- initializePageAction(tab);
+ initializePageAction(tab);
 });
 </pre>
 
@@ -611,7 +611,7 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <ul>
 	<li>Capture the visible tab content with {{WebExtAPIRef("tabs.captureVisibleTab")}}.</li>
-	<li>Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, for example, to match the language in your extension’s UI with that of the page it’s running in.</li>
+	<li>Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, for example, to match the language in your extension’s UI with that of the page it’s running in.</li>
 </ul>
 
 <h2 id="Learn_more">Learn more</h2>
@@ -620,5 +620,5 @@ gettingAllTabs.then((tabs) =&gt; {
 
 <ul>
 	<li><a href="/en-US/Add-ons/WebExtensions/API/tabs">Tabs API reference</a></li>
-	<li><a href="/en-US/Add-ons/WebExtensions/Examples">Example extensions</a> (many of which use the Tabs API)</li>
+	<li><a href="/en-US/Add-ons/WebExtensions/Examples">Example extensions</a> (many of which use the Tabs API)</li>
 </ul>

@@ -6,7 +6,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
 <h3 id="NSS_Technical_Note_5">NSS Technical Note: 5</h3>
 <ul>
   <li>NSS Project Info is at <a href="https://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></li>
-  <li>You can browse the NSS source online at <a href="http://lxr.mozilla.org/mozilla/source/security/nss/">http://lxr.mozilla.org/mozilla/source/security/nss/</a>  and <a href="http://lxr.mozilla.org/security/">http://lxr.mozilla.org/security/</a></li>
+  <li>You can browse the NSS source online at <a href="http://lxr.mozilla.org/mozilla/source/security/nss/">http://lxr.mozilla.org/mozilla/source/security/nss/</a>  and <a href="http://lxr.mozilla.org/security/">http://lxr.mozilla.org/security/</a></li>
   <li>Be sure to look for <a href="/NSS/NSS_Sample_Code">sample code</a> first for things you need to do.</li>
   <li><b>Note: </b>This document contains code snippets that focus on essential aspects of the task and often do not illustrate all the cleanup that needs to be done. Also, this document does not attempt to be an exhaustive survey of all possible ways to do a certain task; it merely tries to show a certain way.</li>
 </ul>
@@ -21,7 +21,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
   <li>Choose a cipher mechanism. Note that some mechanisms (*_PAD) imply the padding is handled for you by NSS. If you choose something else, then data padding is the application's responsibility. You can find a list of cipher mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_EN_DE_.<br>
     <small><i>CK_MECHANISM_TYPE cipherMech = CKM_DES_CBC_PAD </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
   <li>Choose a slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(cipherMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(cipherMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* alwys returns internal slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
     <ul>
@@ -33,9 +33,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, cipherMech, PK11_OriginUnwrap,<br>
-                                                                                                CKA_ENCRYPT, &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                CKA_ENCRYPT, &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
-         </li>
+         </li>
     </ul>
   </li>
   <li><small>&lt;big&gt;Prepare the parameter for crypto context. IV is relevant only when using CBC mode of encryption. If not using CBC mode, just pass a NULL IV parm to PK11_ParamFromIV function<br>
@@ -47,13 +47,13 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <ul>
       <li>Create Encryption context<br>
         <small><i>PK11Context* EncContext = PK11_CreateContextBySymKey(cipherMech,<br>
-                                                                                         CKA_ENCRYPT or CKA_DECRYPT,<br>
-                                                                                         SymKey, SecParam);</i></small></li>
+                                                                                         CKA_ENCRYPT or CKA_DECRYPT,<br>
+                                                                                         SymKey, SecParam);</i></small></li>
       <li>Do the Operation. If encrypting, outbuf len must be atleast (inbuflen + blocksize). If decrypting, outbuflen must be atleast inbuflen.<br>
         <small><i>SECStatus s = PK11_CipherOp(EncContext, outbuf, &amp;tmp1_outlen, sizeof outbuf, inbuf,<br>
-                                                                    inbuflen);<br>
+                                                                    inbuflen);<br>
         s = PK11_DigestFinal(EncContext, outbuf+tmp1_outlen, &amp;tmp2_outlen,<br>
-                                                   sizeof outbuf - tmp1_outlen);<br>
+                                                   sizeof outbuf - tmp1_outlen);<br>
         result_len = tmp1_outlen + tmp2_outlen;</i></small></li>
       <li><small>&lt;big&gt;Destroy the Context<br>
         <small><i>PK11_DestroyContext(EncContext, PR_TRUE);</i></small>&lt;/big&gt;</small></li>
@@ -102,7 +102,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
   <li>Choose a digest mechanism. You can find a list of digest mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_DIGEST.<br>
     <small><i>CK_MECHANISM_TYPE digestMech = CKM_MD5 </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
   <li>Choose a slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(digestMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(digestMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
     <ul>
@@ -114,9 +114,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, digestMech, PK11_OriginUnwrap,<br>
-                                                                                                CKA_DIGEST, &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                CKA_DIGEST, &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
-         </li>
+         </li>
     </ul>
   </li>
   <li><small>&lt;big&gt;Prepare the parameter for crypto context. The param must be provided, but can be empty.<br>
@@ -125,7 +125,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     param.len = 0;</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;Create Crypto context&lt;/big&gt;</small><br>
     <small><i>PK11Context* DigestContext = PK11_CreateContextBySymKey(digestMech, CKA_DIGEST, SymKey,<br>
-                                                                                                                           &amp;param);</i></small></li>
+                                                                                                                           &amp;param);</i></small></li>
   <li><small>&lt;big&gt;Digest the data&lt;/big&gt;</small>, providing the key<br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_DigestBegin(DigestContext);<br>
     s = PK11_DigestKey(DigestContext, SymKey);<br>
@@ -146,10 +146,10 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     #include "pk11pub.h"</i></small></li>
   <li>Make sure NSS is initialized.The simplest Init function, in case you don't need a NSS database is<br>
     <small><i>NSS_NoDB_Init(".")</i></small></li>
-  <li>Choose a  HMAC mechanism. You can find a list of HMAC mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_SN_VR, and choose the mechanisms that contain HMAC in the name<br>
+  <li>Choose a  HMAC mechanism. You can find a list of HMAC mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_SN_VR, and choose the mechanisms that contain HMAC in the name<br>
     <small><i>CK_MECHANISM_TYPE hmacMech = CKM_MD5_HMAC; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
   <li>Choose a slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(hmacMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(hmacMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small></li>
   <li>Prepare the Key
     <ul>
@@ -162,9 +162,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, hmacMech, PK11_OriginUnwrap,<br>
-                                                                                                CKA_SIGN,  &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                CKA_SIGN,  &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
-         </li>
+         </li>
     </ul>
   </li>
   <li><small>&lt;big&gt;Prepare the parameter for crypto context. The param must be provided, but can be empty.<br>
@@ -174,7 +174,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     param.len = 0;</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;Create Crypto context&lt;/big&gt;</small><br>
     <small><i>PK11Context* DigestContext = PK11_CreateContextBySymKey(hmacMech, CKA_SIGN,<br>
-                                                                                                                           SymKey, &amp;param);</i></small></li>
+                                                                                                                           SymKey, &amp;param);</i></small></li>
   <li><small>&lt;big&gt;Digest the data&lt;/big&gt;</small><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_DigestBegin(DigestContext);<br>
     s = PK11_DigestOp(DigestContext, data, sizeof data);<br>
@@ -198,10 +198,10 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     #include "pk11pub.h"</i></small></li>
   <li>Make sure NSS is initialized.The simplest Init function, in case you don't need a NSS database is<br>
     <small><i>NSS_NoDB_Init(".")</i></small></li>
-  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
+  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
   <li>Choose a slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i><br>
     <br>
     &lt;big&gt;Regarding the choice of slot and wrapMech, if you know one, you can derive the other. You can get the best slot given a wrap mechanism (as shown above), or get the best wrap mechanism given a slot using:&lt;/big&gt;</small><br>
@@ -216,11 +216,11 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* WrappingSymKey = PK11_ImportSymKey(slot, wrapMech,<br>
-                                                                                                                 PK11_OriginUnwrap,<br>
-                                                                                                                 CKA_WRAP,  &amp;keyItem, NULL)</i></small><br>
-         </li>
+                                                                                                                 PK11_OriginUnwrap,<br>
+                                                                                                                 CKA_WRAP,  &amp;keyItem, NULL)</i></small><br>
+         </li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
-         </li>
+         </li>
     </ul>
   </li>
   <li>Prepare the To-be-Wrapped Key
@@ -233,10 +233,10 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* ToBeWrappedSymKey = PK11_ImportSymKey(slot, wrapMech,,<br>
-                                                                                                                         PK11_OriginUnwrap,<br>
-                                                                                                                        CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                                         PK11_OriginUnwrap,<br>
+                                                                                                                        CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
-         </li>
+         </li>
     </ul>
   </li>
   <li><small>&lt;big&gt;Prepare the parameter for crypto context. IV is relevant only when using CBC cipher mode. If not using CBC mode, just pass a NULL <i>SecParam </i>to <i>PK11_WrapSymKey </i>or<i> PK11_UnwrapSymKey </i>function<br>
@@ -248,19 +248,19 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_WrapSymKey(wrapMech, SecParam, WrappingSymKey,<br>
-                                                                     ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
+                                                                     ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
-  <li><small>&lt;big&gt;<small>&lt;big&gt;Unwrapping. &lt;/big&gt;</small>&lt;/big&gt;</small>
+  <li><small>&lt;big&gt;<small>&lt;big&gt;Unwrapping. &lt;/big&gt;</small>&lt;/big&gt;</small>
     <ul>
-      <li><small>&lt;big&gt;<small>&lt;big&gt;Set up the args to the function <small><i>PK11_UnwrapSymKey</i></small>, most of which are illustrated above. The <small><i>keyTypeMech </i></small>arg of type <small><i>CK_MECHANISM_TYPE  </i>&lt;big&gt;indicates the type of key that was wrapped and can be same as the <small><i>wrapMech </i></small>(e.g. <i><small>wrapMech=CKM_SKIPJACK_WRAP, keyTypeMech=CKM_SKIPJACK_CBC64; wrapMech=CKM_SKIPJACK_CBC64, keyTypeMech=CKM_SKIPJACK_CBC64</small></i>).&lt;/big&gt;</small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
+      <li><small>&lt;big&gt;<small>&lt;big&gt;Set up the args to the function <small><i>PK11_UnwrapSymKey</i></small>, most of which are illustrated above. The <small><i>keyTypeMech </i></small>arg of type <small><i>CK_MECHANISM_TYPE  </i>&lt;big&gt;indicates the type of key that was wrapped and can be same as the <small><i>wrapMech </i></small>(e.g. <i><small>wrapMech=CKM_SKIPJACK_WRAP, keyTypeMech=CKM_SKIPJACK_CBC64; wrapMech=CKM_SKIPJACK_CBC64, keyTypeMech=CKM_SKIPJACK_CBC64</small></i>).&lt;/big&gt;</small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
       <li>Do the unwrap<br>
         <small>&lt;big&gt;<small>&lt;big&gt;<small><i>PK11SymKey* UnwrappedSymKey = PK11_UnwrapSymKey(WrappingSymKey,<br>
-                                                                                            wrapMech</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>, SecParam, &amp;WrappedKey,<br>
-                                                                                            keyTypeMech,</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><br>
-        <small>&lt;big&gt;<small>&lt;big&gt;<small><i>                                                                                   CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
-                                                                                           size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
+                                                                                            wrapMech</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>, SecParam, &amp;WrappedKey,<br>
+                                                                                            keyTypeMech,</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><br>
+        <small>&lt;big&gt;<small>&lt;big&gt;<small><i>                                                                                   CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
+                                                                                           size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
     </ul>
   </li>
   <li>Clean up<br>
@@ -269,7 +269,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     PK11_FreeSymKey(UnwrappedSymKey);<br>
     if (SecParam) SECITEM_FreeItem(SecParam, PR_TRUE);</small><br>
     <small>SECITEM_FreeItem(&amp;WrappedKey, PR_TRUE);</small><br>
-    <small>PK11_FreeSlot(slot);</small> </i></li>
+    <small>PK11_FreeSlot(slot);</small> </i></li>
 </ol>
 <hr>
 <h2 id="Symmetric_Key_WrappingUnwrapping_of_a_Private_Key"><a name="Symmetric_Key_WrappingUnwrapping_PvtKey"></a>Symmetric Key Wrapping/Unwrapping of a Private Key</h2>
@@ -278,10 +278,10 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>#include "nss.h"<br>
     #include "pk11pub.h"</i></small></li>
   <li>Make sure NSS is initialized.</li>
-  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
+  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example).&lt;/big&gt;</small></li>
   <li>Slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small><br>
     This should be the slot that is best suited for the wrapping. This may or may not be the slot that contains the private key or the slot that contains the Symmetric key.<br>
     <br>
@@ -297,15 +297,15 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* WrappingSymKey = PK11_ImportSymKey(slot, wrapMech,<br>
-                                                                                                                 PK11_OriginUnwrap,<br>
-                                                                                                                 CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                                 PK11_OriginUnwrap,<br>
+                                                                                                                 CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
-         </li>
+         </li>
     </ul>
   </li>
   <li>Prepare the To-be-Wrapped Key
     <ul>
-      <li><small><i>SECKEYPrivateKey *ToBeWrappedPrivKey </i></small></li>
+      <li><small><i>SECKEYPrivateKey *ToBeWrappedPrivKey </i></small></li>
     </ul>
   </li>
   <li><small>&lt;big&gt;Prepare the parameter for crypto context. IV is relevant only when using CBC cipher mode. If not using CBC mode, just pass a NULL <i>SecParam </i>to <i>PK11_WrapPrivKey </i>function<br>
@@ -317,9 +317,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedPvtKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
-    <small>&lt;big&gt;<small><i>SECStatus s = PK11_WrapPrivKey(slot, WrappingSymKey,  ToBeWrappedPvtKey, wrapMech,<br>
-                                                                     SecParam, &amp;WrappedKey, NULL);</i></small>&lt;/big&gt;</small></li>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedPvtKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+    <small>&lt;big&gt;<small><i>SECStatus s = PK11_WrapPrivKey(slot, WrappingSymKey,  ToBeWrappedPvtKey, wrapMech,<br>
+                                                                     SecParam, &amp;WrappedKey, NULL);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Unwrapping.&lt;/big&gt;</small>&lt;/big&gt;</small>
     <ul>
@@ -336,20 +336,20 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         int numAttribs;</small><br>
         <small>/* figure out which operations to enable for this key */<br>
         if( keyType == CKK_RSA ) {<br>
-                attribs[0] = CKA_SIGN;<br>
-                attribs[1] = CKA_DECRYPT;<br>
-                attribs[2] = CKA_SIGN_RECOVER;<br>
-                attribs[3] = CKA_UNWRAP;<br>
-                numAttribs = 4;<br>
+                attribs[0] = CKA_SIGN;<br>
+                attribs[1] = CKA_DECRYPT;<br>
+                attribs[2] = CKA_SIGN_RECOVER;<br>
+                attribs[3] = CKA_UNWRAP;<br>
+                numAttribs = 4;<br>
         } else if(keyType == CKK_DSA) {<br>
-                attribs[0] = CKA_SIGN;<br>
-                numAttribs = 1;<br>
+                attribs[0] = CKA_SIGN;<br>
+                numAttribs = 1;<br>
         }</small></i></li>
       <li><small>&lt;big&gt;Do the unwrap&lt;/big&gt;</small><br>
         <i><small>SECKEYPrivateKey *UnwrappedPvtKey =<br>
-                      PK11_UnwrapPrivKey(slot, WrappingSymKey, wrapMech, SecParam, &amp;WrappedKey,<br>
-                                                                  &amp;label,  pubValue, token, PR_TRUE /* sensitive */<br>
-                                                                  keyType,  attribs, numAttribs, NULL /*wincx*/);</small></i><br>
+                      PK11_UnwrapPrivKey(slot, WrappingSymKey, wrapMech, SecParam, &amp;WrappedKey,<br>
+                                                                  &amp;label,  pubValue, token, PR_TRUE /* sensitive */<br>
+                                                                  keyType,  attribs, numAttribs, NULL /*wincx*/);</small></i><br>
         </li>
     </ul>
   </li>
@@ -357,7 +357,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>PK11_FreeSymKey(WrappingSymKey);</i></small><br>
     <small>&lt;big&gt;<small><i>if (SecParam) SECITEM_FreeItem(SecParam, PR_TRUE);</i></small>&lt;/big&gt;</small><br>
     <small>&lt;big&gt;<small><i>SECITEM_FreeItem(&amp;WrappedKey, PR_TRUE);</i></small>&lt;/big&gt;<br>
-    <i>if (pubValue)  SECITEM_FreeItem(pubValue, PR_TRUE);</i></small><br>
+    <i>if (pubValue)  SECITEM_FreeItem(pubValue, PR_TRUE);</i></small><br>
     <small><i>if (UnwrappedPvtKey) SECKEY_DestroyPrivateKey(UnwrappedPvtKey);</i></small><br>
     <small><i>if (ToBeWrappedPvtKey) SECKEY_DestroyPrivateKey(ToBeWrappedPvtKey);</i></small><br>
     <small><i>PK11_FreeSlot(slot);</i></small></li>
@@ -369,10 +369,10 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>#include "nss.h"<br>
     #include "pk11pub.h"</i></small></li>
   <li>Make sure NSS is initialized.</li>
-  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
+  <li>Choose a  Wrapping mechanism. See wrapMechanismList in security/nss/lib/pk11wrap/pk11slot.c and security/nss/lib/ssl/ssl3con.c for examples of wrapping mechanisms. Most of them are cipher mechanisms.<br>
     <small><i>CK_MECHANISM_TYPE wrapMech = CKM_DES3_ECB; </i>&lt;big&gt;(for example)&lt;/big&gt;</small></li>
   <li>Slot on which to do the operation<br>
-    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
+    <small><i>PK11SlotInfo* slot = PK11_GetBestSlot(wrapMech, NULL);   <b>OR</b><br>
     PK11SlotInfo* slot = PK11_GetInternalKeySlot(); /* always returns int slot, may not be optimal */</i></small><br>
     This should be the slot that is best suited for the wrapping. This may or may not be the slot that contains the public/private key or the slot that contains the Symmetric key.<br>
     <br>
@@ -393,8 +393,8 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         <br>
         /* turn the SECItem into a key object */<br>
         PK11SymKey* ToBeWrappedSymKey = PK11_ImportSymKey(slot, wrapMech,,<br>
-                                                                                                                         PK11_OriginUnwrap,<br>
-                                                                                                                        CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
+                                                                                                                         PK11_OriginUnwrap,<br>
+                                                                                                                        CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
       <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a></li>
     </ul>
   </li>
@@ -402,9 +402,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingPubKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingPubKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_PubWrapSymKey(wrapMech, WrappingPubKey,<br>
-                                                                            ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
+                                                                            ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Unwrapping. &lt;/big&gt;</small>&lt;/big&gt;</small>
     <ul>
@@ -413,9 +413,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         CK_MECHANISM_TYPE keyTypeMech = ??; </small></i></li>
       <li><small>&lt;big&gt;Do the unwrap&lt;/big&gt;<br>
         <i>PK11SymKey *UnwrappedSymKey =<br>
-                  PK11_PubUnwrapSymKey(UnWrappingPvtKey, WrappedKey, keyTypeMech,<br>
-                                                                     </i></small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
-                                                                     </i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
+                  PK11_PubUnwrapSymKey(UnWrappingPvtKey, WrappedKey, keyTypeMech,<br>
+                                                                     </i></small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>CKA_UNWRAP, /* or CKA_DECRYPT? */<br>
+                                                                     </i></small>&lt;/big&gt;</small>&lt;/big&gt;</small><small>&lt;big&gt;<small>&lt;big&gt;<small><i>size_of_key_that_was_wrapped_bytes);</i></small>&lt;/big&gt;</small>&lt;/big&gt;</small></li>
     </ul>
   </li>
   <li>Clean up<br>
@@ -429,7 +429,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
 <hr>
 <h2 id="Generate_a_Symmetric_Key_2"><a name="Generate_a_Symmetric_Key"></a>Generate a Symmetric Key</h2>
 <p>Subsequent to the operation, the symmetric key may need to be transported/stored in wrapped or raw form. You can find a list of key generation mechanisms in security/nss/lib/softoken/pkcs11.c - grep for CKF_GENERATE. For some key gen mechanisms, the keysize is in bytes, and for some it is in bits.<br>
-   </p>
+   </p>
 <ol>
   <li><small>&lt;big&gt;Choose a key generation mechanism&lt;/big&gt;<br>
     <i>CK_MECHANISM_TYPE keygenMech = CKM_DES_KEY_GEN;</i></small> (for example)</li>
@@ -437,7 +437,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <i>PK11SymKey* SymKey = PK11_KeyGen(slot, keygenMech, NULL, keysize, NULL);</i></small></li>
 </ol>
 <p><small>&lt;big&gt;You can also see an <a href="../sample-code/sample1.html">sample program</a> that does key generation.&lt;/big&gt;</small></p>
-<h4 id="Extract_the_raw_key_(This_should_not_normally_be_used._Better_to_use_wrapping_instead._See_method1_and_method2_).">Extract the raw key (This should not normally be used. Better to use wrapping instead. See <a href="#Symmetric_Key_WrappingUnwrapping_Sym_key">method1</a> and <a href="#PKI_Wrap_SymKey">method2</a> ). </h4>
+<h4 id="Extract_the_raw_key_(This_should_not_normally_be_used._Better_to_use_wrapping_instead._See_method1_and_method2_).">Extract the raw key (This should not normally be used. Better to use wrapping instead. See <a href="#Symmetric_Key_WrappingUnwrapping_Sym_key">method1</a> and <a href="#PKI_Wrap_SymKey">method2</a> ). </h4>
 <p><i><small>SECStatus rv = PK11_ExtractKeyValue(SymKey);<br>
   SECItem *keydata = PK11_GetKeyData(SymKey);</small></i></p>
 
@@ -447,9 +447,9 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
   keyid.data = /* ptr to an array of bytes representing the id of the key to be generated */;<br>
   keyid.len = /* length of the array of bytes */;<br>
   /* keysize must be 0 for fixed key-length algorithms like DES... and appropriate value<br>
-   *  for non fixed-key-length algorithms */<br>
+   *  for non fixed-key-length algorithms */<br>
   PK11SymKey *key = PK11_TokenKeyGen(slot, cipherMech, 0, 32 /* keysize */,<br>
-                                                                                 &amp;keyid, PR_TRUE, 0);</i></small><br>
+                                                                                 &amp;keyid, PR_TRUE, 0);</i></small><br>
   <br>
   <small><i>int keylen = PK11_GetKeyLength(key);<br>
   cipherMech = PK11_GetMechanism(key);</i></small><br>
@@ -496,22 +496,6 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>int keylen = PK11_GetKeyLength(PK11SymKey *symkey);</i></small></li>
   <li>Get the mechanism given a symmetric key<br>
     <small><i>CK_MECHANISM_TYPE mech = PK11_GetMechanism(PK11SymKey *key);</i></small><br>
-     </li>
+     </li>
 </ol>
 <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

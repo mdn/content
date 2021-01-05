@@ -15,31 +15,31 @@ tags:
 <p>The table value of the ARIA role attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native <a href="/en-US/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> HTML element.</p>
 
 <pre class="brush: html">&lt;div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
-  &lt;div id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-      &lt;span role="columnheader" aria-sort="none"&gt;ARIA Role&lt;/span&gt;
-      &lt;span role="columnheader" aria-sort="none"&gt;Semantic Element&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-    &lt;div role="row" aria-rowindex="11"&gt;
-      &lt;span role="cell"&gt;header&lt;/span&gt;
-      &lt;span role="cell"&gt;h1&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row" aria-rowindex="16"&gt;
-      &lt;span role="cell"&gt;header&lt;/span&gt;
-      &lt;span role="cell"&gt;h6&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row" aria-rowindex="18"&gt;
-      &lt;span role="cell"&gt;rowgroup&lt;/span&gt;
-      &lt;span role="cell"&gt;thead&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row" aria-rowindex="24"&gt;
-      &lt;span role="cell"&gt;term&lt;/span&gt;
-      &lt;span role="cell"&gt;dt&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+      &lt;span role="columnheader" aria-sort="none"&gt;ARIA Role&lt;/span&gt;
+      &lt;span role="columnheader" aria-sort="none"&gt;Semantic Element&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+    &lt;div role="row" aria-rowindex="11"&gt;
+      &lt;span role="cell"&gt;header&lt;/span&gt;
+      &lt;span role="cell"&gt;h1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row" aria-rowindex="16"&gt;
+      &lt;span role="cell"&gt;header&lt;/span&gt;
+      &lt;span role="cell"&gt;h6&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row" aria-rowindex="18"&gt;
+      &lt;span role="cell"&gt;rowgroup&lt;/span&gt;
+      &lt;span role="cell"&gt;thead&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row" aria-rowindex="24"&gt;
+      &lt;span role="cell"&gt;term&lt;/span&gt;
+      &lt;span role="cell"&gt;dt&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -51,13 +51,13 @@ tags:
 <p>If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
 </div>
 
-<p>To create an ARIA table, add <code>role="table"</code> to the container element. Within that container, each row has <code>role="row"</code> set and contains child cells. Each cell has a role of either <code>columnheader</code>, <code>rowheader</code>, or <code>cell</code>. Rows can be children of the table or within a <code>rowgroup</code>.</p>
+<p>To create an ARIA table, add <code>role="table"</code> to the container element. Within that container, each row has <code>role="row"</code> set and contains child cells. Each cell has a role of either <code>columnheader</code>, <code>rowheader</code>, or <code>cell</code>. Rows can be children of the table or within a <code>rowgroup</code>.</p>
 
-<p>The table caption can be defined via aria-labelledby or aria-label.  All other semantic table elements, such as <code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> need to be added via associated roles, such as <code>rowgroup</code>, <code>row</code>, <code>columnheader</code>, and <code>cell</code>.</p>
+<p>The table caption can be defined via aria-labelledby or aria-label.  All other semantic table elements, such as <code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> need to be added via associated roles, such as <code>rowgroup</code>, <code>row</code>, <code>columnheader</code>, and <code>cell</code>.</p>
 
 <p>If the table contains sortable columns or rows, the <code>aria-sort</code> attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the <code>aria-colcount</code> or <code>aria-rowcount</code> should be included indicating the total number of columns or rows, respectively, along with the <code>aria-colindex</code> or <code>aria-rowindex</code> on each cell. The <code>aria-colindex</code> or <code>aria-rowindex</code> is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then <code>aria-rowspan</code> or <code>aria-colspan</code> should be included as well. Realize, it is much simpler to use the <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.</p>
 
-<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
 
 <div class="note">
 <p>Note: Using a native HTML table element whenever possible is strongly encouraged.</p>
@@ -71,7 +71,7 @@ tags:
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></dt>
  <dd>A row within the table, and optionally within a rowgroup, that is a container for one or more cells, columnheaders, or rowheaders.</dd>
  <dt>aria-describedby attribute</dt>
- <dd>Takes as its value the id of the element that serves as a description for the table.</dd>
+ <dd>Takes as its value the id of the element that serves as a description for the table.</dd>
  <dt>aria-label attribute</dt>
  <dd>The aria-label provides an accessible name for the table.</dd>
  <dt>aria-colcount attribute</dt>
@@ -97,28 +97,28 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: html">&lt;div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
-  &lt;div id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-     &lt;div role="row"&gt;
-       &lt;span role="columnheader" aria-sort="none"&gt;ARIA Role&lt;/span&gt;
-       &lt;span role="columnheader" aria-sort="none"&gt;Semantic Element&lt;/span&gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div role="rowgroup"&gt;
-    &lt;div role="row" aria-rowindex="11"&gt;
-       &lt;span role="cell"&gt;header&lt;/span&gt;
-       &lt;span role="cell"&gt;h1&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"  aria-rowindex="16"&gt;
-      &lt;span role="cell"&gt;header&lt;/span&gt;
-      &lt;span role="cell"&gt;h6&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"  aria-rowindex="18"&gt;
-      &lt;span role="cell"&gt;rowgroup&lt;/span&gt;
-      &lt;span role="cell"&gt;thead&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"  aria-rowindex="24"&gt;
-      &lt;span role="cell"&gt;term&lt;/span&gt;
+  &lt;div id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+     &lt;div role="row"&gt;
+       &lt;span role="columnheader" aria-sort="none"&gt;ARIA Role&lt;/span&gt;
+       &lt;span role="columnheader" aria-sort="none"&gt;Semantic Element&lt;/span&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div role="rowgroup"&gt;
+    &lt;div role="row" aria-rowindex="11"&gt;
+       &lt;span role="cell"&gt;header&lt;/span&gt;
+       &lt;span role="cell"&gt;h1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"  aria-rowindex="16"&gt;
+      &lt;span role="cell"&gt;header&lt;/span&gt;
+      &lt;span role="cell"&gt;h6&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"  aria-rowindex="18"&gt;
+      &lt;span role="cell"&gt;rowgroup&lt;/span&gt;
+      &lt;span role="cell"&gt;thead&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"  aria-rowindex="24"&gt;
+      &lt;span role="cell"&gt;term&lt;/span&gt;
       &lt;span role="cell"&gt;dt&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;

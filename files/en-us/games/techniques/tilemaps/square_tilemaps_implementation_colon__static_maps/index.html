@@ -17,7 +17,7 @@ tags:
 <p class="summary">This article covers how to implement static square tilemaps using the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas API tutorial</a>, as well as the basic information included in our <a href="/en-US/docs/Games/Techniques/Tilemaps">Tilemaps</a> introduction article.</p>
+<p><strong>Note</strong>: When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas API tutorial</a>, as well as the basic information included in our <a href="/en-US/docs/Games/Techniques/Tilemaps">Tilemaps</a> introduction article.</p>
 </div>
 
 <h2 id="The_tile_atlas">The tile atlas</h2>
@@ -84,22 +84,22 @@ tags:
 </ul>
 
 <pre class="brush: js">for (var c = 0; c &lt; map.cols; c++) {
-  for (var r = 0; r &lt; map.rows; r++) {
-    var tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 =&gt; empty tile
-      context.drawImage(
-        tileAtlas, // image
-        (tile - 1) * map.tsize, // source x
-        0, // source y
-        map.tsize, // source width
-        map.tsize, // source height
-        c * map.tsize, // target x
-        r * map.tsize, // target y
-        map.tsize, // target width
-        map.tsize // target height
-      );
-    }
-  }
+  for (var r = 0; r &lt; map.rows; r++) {
+    var tile = map.getTile(c, r);
+    if (tile !== 0) { // 0 =&gt; empty tile
+      context.drawImage(
+        tileAtlas, // image
+        (tile - 1) * map.tsize, // source x
+        0, // source y
+        map.tsize, // source width
+        map.tsize, // source height
+        c * map.tsize, // target x
+        r * map.tsize, // target y
+        map.tsize, // target width
+        map.tsize // target height
+      );
+    }
+  }
 }</pre>
 
 <h2 id="Demo">Demo</h2>

@@ -19,43 +19,43 @@ tags:
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- No dash array --&gt;
-  &lt;line x1="0" y1="1" x2="30" y2="1" stroke="black" /&gt;
+  &lt;!-- No dash array --&gt;
+  &lt;line x1="0" y1="1" x2="30" y2="1" stroke="black" /&gt;
 
-  &lt;!-- No dash offset --&gt;
-  &lt;line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" /&gt;
+  &lt;!-- No dash offset --&gt;
+  &lt;line x1="0" y1="3" x2="30" y2="3" stroke="black"
+        stroke-dasharray="3 1" /&gt;
 
-  &lt;!--
-  The start of the dash array computation
-  is pulled by 3 user units
-  --&gt;
-  &lt;line x1="0" y1="5" x2="30" y2="5" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="3" /&gt;
+  &lt;!--
+  The start of the dash array computation
+  is pulled by 3 user units
+  --&gt;
+  &lt;line x1="0" y1="5" x2="30" y2="5" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="3" /&gt;
 
-  &lt;!--
-  The start of the dash array computation
-  is pushed by 3 user units
-  --&gt;
-  &lt;line x1="0" y1="7" x2="30" y2="7" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="-3" /&gt;
+  &lt;!--
+  The start of the dash array computation
+  is pushed by 3 user units
+  --&gt;
+  &lt;line x1="0" y1="7" x2="30" y2="7" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="-3" /&gt;
 
-  &lt;!--
-  The start of the dash array computation
-  is pulled by 1 user units which ends up
-  in the same rendering as the previous example
-  --&gt;
-  &lt;line x1="0" y1="9" x2="30" y2="9" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="1" /&gt;
+  &lt;!--
+  The start of the dash array computation
+  is pulled by 1 user units which ends up
+  in the same rendering as the previous example
+  --&gt;
+  &lt;line x1="0" y1="9" x2="30" y2="9" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="1" /&gt;
 
-  &lt;!--
-  the following red lines highlight the
-  offset of the dash array for each line
-  --&gt;
-  &lt;path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" /&gt;
+  &lt;!--
+  the following red lines highlight the
+  offset of the dash array for each line
+  --&gt;
+  &lt;path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" /&gt;
 &lt;/svg&gt;
 </pre>
 

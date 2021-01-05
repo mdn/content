@@ -44,10 +44,10 @@ tags:
 <p>You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a <code>changeInfo</code> object that contains a <code>cause</code> property, whose value is the <code>OnChangeCaused</code> string:</p>
 
 <pre class="notranslate brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
 });</pre>
 
 <p>{{WebExtExamples}}</p>

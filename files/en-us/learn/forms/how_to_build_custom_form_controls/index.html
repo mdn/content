@@ -90,7 +90,7 @@ tags:
 
 <p>In our example, the missing specifications are obvious so we will handle them, but it can be a real problem for exotic new controls. When it comes to standardized elements, of which the {{htmlelement('select')}} is one, the specification authors spent an inordinate amount of time specifying all interactions for every use case for every input device. Creating new controls is not that easy, especially if you are creating something that has not been done before, and therefore which nobody has the slightest idea of what the expected behaviors and interactions are. At least select has been done before, so we know how it should behave!</p>
 
-<p>Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do. </p>
+<p>Designing new interactions is generally only an option for very large industry players who have enough reach that an interaction they create can become a standard. For example, Apple introduced the scroll wheel with the iPod in 2001. They had the market share to successfully introduce a completely new way of interacting with a device, something most device companies can't do. </p>
 
 <p>It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to <a href="https://en.wikipedia.org/wiki/Usability_testing" rel="external">perform user tests</a>. This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:</p>
 
@@ -101,7 +101,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note:</strong> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the <code>click</code> event.</p>
+<p><strong>Note:</strong> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the <code>click</code> event.</p>
 </div>
 
 <h2 id="Defining_the_HTML_structure_and_some_semantics">Defining the HTML structure and (some) semantics</h2>
@@ -428,7 +428,7 @@ tags:
   Array.prototype.forEach.call(this, callback);
 }</pre>
 
-<p>If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.</p>
+<p>If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.</p>
 
 <h3 id="Building_event_callbacks">Building event callbacks</h3>
 
@@ -670,7 +670,7 @@ window.addEventListener('load', function () {
   });
 });</pre>
 
-<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.</p>
+<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.</p>
 
 <p>With that, we're done! Here's the result:</p>
 
@@ -778,65 +778,65 @@ window.addEventListener('load', function () {
 
 <p>We can start with a completely semantic, accessible, unordered list of {{htmlelement('input/radio','radio')}} buttons with an associated {{htmlelement('label')}}, labeling the entire group with a semantically appropriate {{htmlelement('fieldset')}} and {{htmlelement('legend')}} pair.</p>
 
-<pre class="brush: html notranslate"> &lt;fieldset&gt;
-  &lt;legend&gt;Pick a fruit&lt;/legend&gt;
-    &lt;ul class="styledSelect"&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Lemon" id="fruitLemon"&gt;&lt;label for="fruitLemon"&gt;Lemon&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Banana" id="fruitBanana"&gt;&lt;label for="fruitBanana""&gt;Banana&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"&gt;&lt;label for="fruitStrawberry"&gt;Strawberry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Apple" id="fruitApple"&gt;&lt;label for="fruitApple"&gt;Apple&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/fieldset&gt;</pre>
+<pre class="brush: html notranslate"> &lt;fieldset&gt;
+  &lt;legend&gt;Pick a fruit&lt;/legend&gt;
+    &lt;ul class="styledSelect"&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Lemon" id="fruitLemon"&gt;&lt;label for="fruitLemon"&gt;Lemon&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Banana" id="fruitBanana"&gt;&lt;label for="fruitBanana""&gt;Banana&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"&gt;&lt;label for="fruitStrawberry"&gt;Strawberry&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Apple" id="fruitApple"&gt;&lt;label for="fruitApple"&gt;Apple&lt;/label&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/fieldset&gt;</pre>
 
-<p>We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:</p>
+<p>We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:</p>
 
 <pre class="brush: css notranslate">.styledSelect {
-  display: inline-block;
-  padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 .styledSelect li {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 }
 .styledSelect [type=radio] {
-  position: absolute;
-  left: -100vw;
-  top: -100vh;
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
 }
 .styledSelect label {
-  margin: 0;
-  line-height: 2;
-  padding: 0 0 0 4px;
+  margin: 0;
+  line-height: 2;
+  padding: 0 0 0 4px;
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
-  height: 0;
-  outline: none;
-  overflow: hidden;
+  height: 0;
+  outline: none;
+  overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
-  content : "▼";
-  background: black;
-  float: right;
-  color: white;
-  padding: 0 4px;
-  margin: 0 -4px 0 4px;
+  content : "▼";
+  background: black;
+  float: right;
+  color: white;
+  padding: 0 4px;
+  margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
-  color: #fff;
-  width: 100%;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
 }</pre>
 
 <p>With no JavaScript, and just a little bit of CSS, we are able to style the list of radio buttons to display only the checked item. When the focus is within the <code>&lt;ul&gt;</code> in the <code>&lt;fieldset&gt;</code>, the list opens up, and the up and down (and left and right) arrows work to select the previous and next items. Try it out:</p>
@@ -851,7 +851,7 @@ window.addEventListener('load', function () {
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.</p>
+<p>We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.</p>
 
 <p>Here are a few libraries you should consider before coding your own:</p>
 

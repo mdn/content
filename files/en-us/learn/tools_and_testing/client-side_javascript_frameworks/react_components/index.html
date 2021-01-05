@@ -42,7 +42,7 @@ tags:
  <li>If it gets reused often, it's probably a component.</li>
 </ul>
 
-<p>That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.</p>
+<p>That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.</p>
 
 <h2 id="Make_a_&lt;Todo_&gt;">Make a <code>&lt;Todo /&gt;</code></h2>
 
@@ -161,7 +161,7 @@ touch src/components/Todo.js</pre>
 
 <h3 id="Is_it_completed">Is it <code>completed</code>?</h3>
 
-<p>In our original static list, only <code>Eat</code> was checked. Once again, we want to reuse <em>most</em> of the UI that makes up a <code>&lt;Todo /&gt;</code>  component, but change one thing. That's a good job for another prop!  Give each <code>&lt;Todo /&gt;</code> call in <code>App.js</code> a new prop of <code>completed</code>. The first (<code>Eat</code>) should have a value of <code>true</code>; the rest should be <code>false</code>:</p>
+<p>In our original static list, only <code>Eat</code> was checked. Once again, we want to reuse <em>most</em> of the UI that makes up a <code>&lt;Todo /&gt;</code>  component, but change one thing. That's a good job for another prop!  Give each <code>&lt;Todo /&gt;</code> call in <code>App.js</code> a new prop of <code>completed</code>. The first (<code>Eat</code>) should have a value of <code>true</code>; the rest should be <code>false</code>:</p>
 
 <pre class="brush: js notranslate">&lt;Todo name="Eat" completed={true} /&gt;
 &lt;Todo name="Sleep" completed={false} /&gt;
@@ -250,7 +250,7 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: js notranslate"> const taskList = props.tasks.map(task =&gt; &lt;Todo /&gt;);</pre>
 
-<p>Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the <code>id</code>, <code>name</code>, and <code>checked</code> properties we want to pass into our <code>&lt;Todo /&gt;</code> component. If we put that knowledge together, we get code like this:</p>
+<p>Look again at your app; now our tasks look more like they used to, but they’re missing the names of the tasks themselves.  Remember that each task we map over has the <code>id</code>, <code>name</code>, and <code>checked</code> properties we want to pass into our <code>&lt;Todo /&gt;</code> component. If we put that knowledge together, we get code like this:</p>
 
 <pre class="brush: js notranslate">const taskList = props.tasks.map(task =&gt; (
   &lt;Todo id={task.id} name={task.name} completed={task.completed} /&gt;
@@ -265,13 +265,13 @@ touch src/components/Todo.js</pre>
 <p>Because keys should be unique, we're going to re-use the <code>id</code> of each task object as its key. Update your <code>taskList</code> constant like so:</p>
 
 <pre class="brush: js notranslate">const taskList = props.tasks.map(task =&gt; (
-    &lt;Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    /&gt;
-  )
+    &lt;Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    /&gt;
+  )
 );</pre>
 
 <p><strong>You should always pass a unique key to anything you render with iteration.</strong> Nothing obvious will change in your browser, but if you do not use unique keys, React will log warnings to your console and your app may behave strangely!</p>

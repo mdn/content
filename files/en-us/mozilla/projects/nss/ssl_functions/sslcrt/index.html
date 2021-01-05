@@ -31,11 +31,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Syntax"> <a id="1050633"> Syntax </a></h5>
 <pre><a id="1050648">#include &lt;cert.h&gt; </a></pre>
 <pre><a id="1052833">SECStatus CERT_VerifyCertNow(
-   CERTCertDBHandle *handle,
-   CERTCertificate *cert,
-   PRBool checkSig,
-   SECCertUsage certUsage,
-   void *wincx);</a></pre>
+   CERTCertDBHandle *handle,
+   CERTCertificate *cert,
+   PRBool checkSig,
+   SECCertUsage certUsage,
+   void *wincx);</a></pre>
 <h5 id="Parameters"> <a id="1050863"> Parameters </a></h5>
 <p><a id="1051016"> This function has the following parameters:</a></p>
 <table>
@@ -112,8 +112,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Syntax_2"> <a id="1050521"> Syntax </a></h5>
 <pre><a id="1058759">#include &lt;cert.h&gt;</a></pre>
 <pre><a id="1058760">SECStatus CERT_VerifyCertName(
-   CERTCertificate *cert,
-   char *hostname);</a></pre>
+   CERTCertificate *cert,
+   char *hostname);</a></pre>
 <h5 id="Parameters_2"> <a id="1051266"> Parameters </a></h5>
 <p><a id="1051252"> This function has the following parameters:</a></p>
 <table>
@@ -163,8 +163,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <pre><a id="1056665">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;</a></pre>
 <pre><a id="1056666">SECCertTimeValidity CERT_CheckCertValidTimes(
-   CERTCertificate *cert,
-   int64 t);</a></pre>
+   CERTCertificate *cert,
+   int64 t);</a></pre>
 <h5 id="Parameters_3"> <a id="1056667"> Parameters </a></h5>
 <p><a id="1056677"> This function has the following parameters:</a></p>
 <table>
@@ -192,17 +192,17 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Returns_3"> <a id="1056678"> Returns </a></h5>
 <p><a id="1056679"> The function returns an enumerator of type <code>SECCertTimeValidity</code>:</a></p>
 <pre><a id="1056680">typedef enum {
-   secCertTimeValid,
-   secCertTimeExpired,
-   secCertTimeNotValidYet
+   secCertTimeValid,
+   secCertTimeExpired,
+   secCertTimeNotValidYet
 } SECCertTimeValidity;</a></pre>
 <h4 id="NSS_CmpCertChainWCANames"> <a id="1056760"> NSS_CmpCertChainWCANames </a></h4>
 <p><a id="1056761"> Determines whether any of the signers in the certificate chain for a specified certificate are on a specified list of CA names.</a></p>
 <h5 id="Syntax_4"> <a id="1056762"> Syntax </a></h5>
 <pre><a id="1056763">#include &lt;nss.h&gt;</a></pre>
 <pre><a id="1056764">SECStatus NSS_CmpCertChainWCANames(
-   CERTCertificate *cert,
-   CERTDistNames *caNames);</a></pre>
+   CERTCertificate *cert,
+   CERTDistNames *caNames);</a></pre>
 <h5 id="Parameters_4"> <a id="1056765"> Parameters </a></h5>
 <p><a id="1056775"> This function has the following parameters:</a></p>
 <table>
@@ -295,8 +295,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Syntax_7"> <a id="1051704"> Syntax </a></h5>
 <pre><a id="1051729">#include &lt;cert.h&gt;</a></pre>
 <pre><a id="1053000">CERTCertificate *CERT_FindCertByName (
-   CERTCertDBHandle *handle,
-   SECItem *name);</a></pre>
+   CERTCertDBHandle *handle,
+   SECItem *name);</a></pre>
 <h5 id="Parameters_6"> <a id="1051753"> Parameters </a></h5>
 <p><a id="1051763"> This function has the following parameters:</a></p>
 <table>
@@ -329,9 +329,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <pre><a id="1051868">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;</a></pre>
 <pre><a id="1053022">CERTCertNicknames *CERT_GetCertNicknames (
-   CERTCertDBHandle *handle,
-   int what,
-   void *wincx);</a></pre>
+   CERTCertDBHandle *handle,
+   int what,
+   void *wincx);</a></pre>
 <h5 id="Parameters_7"> <a id="1051901"> Parameters </a></h5>
 <p><a id="1051911"> This function has the following parameters:</a></p>
 <table>
@@ -440,8 +440,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <pre><a id="1057034">#include &lt;secitem.h&gt;
 #include &lt;seccomon.h&gt;</a></pre>
 <pre><a id="1057035">SECComparison SECITEM_CompareItem(
-   SECItem *a,
-   SECItem *b);</a></pre>
+   SECItem *a,
+   SECItem *b);</a></pre>
 <h5 id="Parameters_9"> <a id="1057036"> Parameters </a></h5>
 <p><a id="1057046"> This function has the following parameters:</a></p>
 <table>
@@ -469,8 +469,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 <h5 id="Returns_10"> <a id="1057047"> Returns </a></h5>
 <p><a id="1057048"> The function returns an enumerator of type <code>SECComparison</code>.</a></p>
 <pre><a id="1057049">typedef enum _SECComparison {
-   SECLessThan                = -1,
-   SECEqual                = 0,
-   SECGreaterThan = 1
+   SECLessThan                = -1,
+   SECEqual                = 0,
+   SECGreaterThan = 1
 } SECComparison;</a></pre>
 <p><a id="1057024"> </a></p>

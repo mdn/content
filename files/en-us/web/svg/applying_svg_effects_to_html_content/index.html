@@ -107,7 +107,7 @@ p {
 
 <pre class="brush: js">function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 </pre>
 
@@ -154,20 +154,20 @@ p {
 
 <pre class="brush: html">&lt;svg height="0"&gt;
   &lt;filter id="f3"&gt;
-    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
-  &lt;/filter&gt;
+    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
+  &lt;/filter&gt;
   &lt;filter id="f4"&gt;
-    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white"&gt;
-      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-    &lt;/feSpecularLighting&gt;
+    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
+                        specularExponent="10" lighting-color="white"&gt;
+      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
+    &lt;/feSpecularLighting&gt;
   &lt;/filter&gt;
   &lt;filter id="f5"&gt;
-    &lt;feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
+    &lt;feColorMatrix values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
@@ -211,12 +211,12 @@ pre.target:hover { filter:url(#f3); }
 
 <h3 id="Example_Text_Effects">Example: Text Effects</h3>
 
-<p>SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text. </p>
+<p>SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text. </p>
 
 <p>By creating the text using SVG elements combined with HTML you can make a variety of different text effects. You can rotate the text:</p>
 
 <pre class="brush: html">&lt;svg height="60" width="200"&gt;
-  &lt;text x="0" y="15" fill="blue" transform="rotate(30 20,50)"&gt;Example text&lt;/text&gt;
+  &lt;text x="0" y="15" fill="blue" transform="rotate(30 20,50)"&gt;Example text&lt;/text&gt;
 &lt;/svg&gt;
 </pre>
 

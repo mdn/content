@@ -40,7 +40,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p class="note">Note: the URL type is <code>ur<em><strong>i</strong></em>-list</code> with an <em>I</em>, not an <em>L</em>.</p>
 
-<p>To drag multiple links, separate each link inside the <code>text/uri-list</code> data with a CRLF linebreak. Lines that begin with a number sign (<code>#</code>) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.</p>
+<p>To drag multiple links, separate each link inside the <code>text/uri-list</code> data with a CRLF linebreak. Lines that begin with a number sign (<code>#</code>) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.</p>
 
 <div class="notecard warning">
 <p>The <code>text/plain</code> fallback for multiple links should include all URLs, but no comments.</p>
@@ -179,7 +179,7 @@ function dataProvider(){}
 dataProvider.prototype = {
   QueryInterface : function(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+                  || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },

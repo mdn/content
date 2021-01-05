@@ -17,25 +17,25 @@ tags:
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- All geometry properties are relative to the current user space --&gt;
-  &lt;pattern id="p1" x="12.5" y="12.5" width="25" height="25"
-           patternUnits="userSpaceOnUse"&gt;
-    &lt;circle cx="10" cy="10" r="10" /&gt;
-  &lt;/pattern&gt;
+  &lt;!-- All geometry properties are relative to the current user space --&gt;
+  &lt;pattern id="p1" x="12.5" y="12.5" width="25" height="25"
+           patternUnits="userSpaceOnUse"&gt;
+    &lt;circle cx="10" cy="10" r="10" /&gt;
+  &lt;/pattern&gt;
 
-  &lt;!-- All geometry properties are relative to the target bounding box --&gt;
-  &lt;pattern id="p2" x=".125" y=".125" width=".25" height=".25"
-           patternUnits="objectBoundingBox"&gt;
-    &lt;circle cx="10" cy="10" r="10" /&gt;
-  &lt;/pattern&gt;
+  &lt;!-- All geometry properties are relative to the target bounding box --&gt;
+  &lt;pattern id="p2" x=".125" y=".125" width=".25" height=".25"
+           patternUnits="objectBoundingBox"&gt;
+    &lt;circle cx="10" cy="10" r="10" /&gt;
+  &lt;/pattern&gt;
 
-  &lt;!-- Left square with user space tiles --&gt;
-  &lt;rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" /&gt;
+  &lt;!-- Left square with user space tiles --&gt;
+  &lt;rect x="10"  y="10" width="80" height="80"
+        fill="url(#p1)" /&gt;
 
-  &lt;!-- Right square with bounding box tiles --&gt;
-  &lt;rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" /&gt;
+  &lt;!-- Right square with bounding box tiles --&gt;
+  &lt;rect x="110" y="10" width="80" height="80"
+        fill="url(#p2)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>

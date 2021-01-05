@@ -212,7 +212,7 @@ comment();</pre>
 
 <p>A specialized third comment syntax, the <strong>hashbang comment</strong>, is in the process of being standardized in ECMAScript (see the <a href="https://github.com/tc39/proposal-hashbang">Hashbang Grammar proposal</a>).</p>
 
-<p>A hashbang comment behaves exactly like a single line-only (<code>//</code>) comment. Instead, it begins with <code>#!</code> and <strong>is only valid at the absolute start of a script or module</strong>. Note also that no whitespace of any kind is permitted before the <code>#!</code>. The comment consists of all the characters after <code>#!</code> up to the end of the first line; only one such comment is permitted.</p>
+<p>A hashbang comment behaves exactly like a single line-only (<code>//</code>) comment. Instead, it begins with <code>#!</code> and <strong>is only valid at the absolute start of a script or module</strong>. Note also that no whitespace of any kind is permitted before the <code>#!</code>. The comment consists of all the characters after <code>#!</code> up to the end of the first line; only one such comment is permitted.</p>
 
 <p>The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:</p>
 
@@ -378,18 +378,18 @@ false</pre>
 0777 // parsed as octal, 511 in decimal
 </pre>
 
-<p>Note that decimal literals can start with a zero (<code>0</code>) followed by another decimal digit, but If all digits after the leading <code>0</code> are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=957513">bug 957513</a>. See also the page about {{jsxref("parseInt", "parseInt()")}}</p>
+<p>Note that decimal literals can start with a zero (<code>0</code>) followed by another decimal digit, but If all digits after the leading <code>0</code> are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=957513">bug 957513</a>. See also the page about {{jsxref("parseInt", "parseInt()")}}</p>
 
 <h5 id="Exponential">Exponential</h5>
 
-<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and <code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
+<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and <code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
 
-<pre class="brush: js notranslate">0e-5   // =&gt; 0
-0e+5   // =&gt; 0
-5e1    // =&gt; 50
+<pre class="brush: js notranslate">0e-5   // =&gt; 0
+0e+5   // =&gt; 0
+5e1    // =&gt; 50
 175e-2 // =&gt; 1.75
-1e3    // =&gt; 1000
-1e-3   // =&gt; 0.001
+1e3    // =&gt; 1000
+1e-3   // =&gt; 0.001
 </pre>
 
 <h4 id="Binary">Binary</h4>
@@ -425,9 +425,9 @@ var m = 0o644; // 420
 
 <p>The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending <code>n</code> to the end of an integer.</p>
 
-<pre class="brush: js notranslate">123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
+<pre class="brush: js notranslate">123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
 0b11101001010101010101n // 955733
 </pre>
 

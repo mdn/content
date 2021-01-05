@@ -29,23 +29,23 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: js">navigator.getVRDisplays().then(function(displays) {
-  // If a display is available, use it to present the scene
-  if(displays.length &gt; 0) {
-    vrDisplay = displays[0];
+  // If a display is available, use it to present the scene
+  if(displays.length &gt; 0) {
+    vrDisplay = displays[0];
 
-    // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', function() {
-      // Only request presentation if the display is still connected.
-      if(vrDisplay.isConnected) {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-          // start rendering the app, etc.
-        });
-      } else {
-        console.log('Connection to display lost');
-      }
-    });
-  }
-});  </pre>
+    // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+    btn.addEventListener('click', function() {
+      // Only request presentation if the display is still connected.
+      if(vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+          // start rendering the app, etc.
+        });
+      } else {
+        console.log('Connection to display lost');
+      }
+    });
+  }
+});  </pre>
 
 <h2 id="Specifications">Specifications</h2>
 

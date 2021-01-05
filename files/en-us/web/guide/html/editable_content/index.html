@@ -48,14 +48,14 @@ tags:
 <p>Try it out in the above example.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Internet Explorer, which is no longer being developed, uses {{htmlelement("p")}} elements instead of <code>&lt;div&gt;</code>.</p>
+<p><strong>Note</strong>: Internet Explorer, which is no longer being developed, uses {{htmlelement("p")}} elements instead of <code>&lt;div&gt;</code>.</p>
 </div>
 
 <p>If you want to use a different paragraph separator, the above browsers all support {{domxref("document.execCommand")}}, which provides a <code>defaultParagraphSeparator</code> command to allow you to change it. For example, to use {{htmlelement("p")}} elements:</p>
 
 <pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>Additionally, Firefox supports the <em>non-standard</em> argument, <code>br</code>, for <code>defaultParagraphSeparator</code> since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:</p>
+<p>Additionally, Firefox supports the <em>non-standard</em> argument, <code>br</code>, for <code>defaultParagraphSeparator</code> since Firefox 55. This is useful if your web application expects the older Firefox behavior, and you don't want to or don't have the time to update it to use the new behavior. You can use the older Firefox behavior with this line:</p>
 
 <pre class="notranslate"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
@@ -78,53 +78,53 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre
 var oDoc, sDefTxt;
 
 function initDoc() {
-  oDoc = document.getElementById("textBox");
-  sDefTxt = oDoc.innerHTML;
-  if (document.compForm.switchMode.checked) { setDocMode(true); }
+  oDoc = document.getElementById("textBox");
+  sDefTxt = oDoc.innerHTML;
+  if (document.compForm.switchMode.checked) { setDocMode(true); }
 }
 
 function formatDoc(sCmd, sValue) {
-  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
 }
 
 function validateMode() {
-  if (!document.compForm.switchMode.checked) { return true ; }
-  alert("Uncheck \"Show HTML\".");
-  oDoc.focus();
-  return false;
+  if (!document.compForm.switchMode.checked) { return true ; }
+  alert("Uncheck \"Show HTML\".");
+  oDoc.focus();
+  return false;
 }
 
 function setDocMode(bToSource) {
-  var oContent;
-  if (bToSource) {
-    oContent = document.createTextNode(oDoc.innerHTML);
-    oDoc.innerHTML = "";
-    var oPre = document.createElement("pre");
-    oDoc.contentEditable = false;
-    oPre.id = "sourceText";
-    oPre.contentEditable = true;
-    oPre.appendChild(oContent);
-    oDoc.appendChild(oPre);
+  var oContent;
+  if (bToSource) {
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
     document.execCommand("defaultParagraphSeparator", false, "div");
-  } else {
-    if (document.all) {
-      oDoc.innerHTML = oDoc.innerText;
-    } else {
-      oContent = document.createRange();
-      oContent.selectNodeContents(oDoc.firstChild);
-      oDoc.innerHTML = oContent.toString();
-    }
-    oDoc.contentEditable = true;
-  }
-  oDoc.focus();
+  } else {
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
+  }
+  oDoc.focus();
 }
 
 function printDoc() {
-  if (!validateMode()) { return; }
-  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
-  oPrntWin.document.open();
-  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
-  oPrntWin.document.close();
+  if (!validateMode()) { return; }
+  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+  oPrntWin.document.open();
+  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
+  oPrntWin.document.close();
 }
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
@@ -132,17 +132,17 @@ function printDoc() {
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }
 #textBox {
-  width: 540px;
-  height: 200px;
-  border: 1px #000000 solid;
-  padding: 12px;
-  overflow: scroll;
+  width: 540px;
+  height: 200px;
+  border: 1px #000000 solid;
+  padding: 12px;
+  overflow: scroll;
 }
 #textBox #sourceText {
-  padding: 0;
-  margin: 0;
-  min-width: 498px;
-  min-height: 200px;
+  padding: 0;
+  margin: 0;
+  min-width: 498px;
+  min-height: 200px;
 }
 #editMode label { cursor: pointer; }
 &lt;/style&gt;

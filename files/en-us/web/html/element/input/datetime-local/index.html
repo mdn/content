@@ -148,8 +148,8 @@ dateControl.value = '2017-06-01T08:30';</pre>
 <p>The simplest use of <code>&lt;input type="datetime-local"&gt;</code> involves a basic <code>&lt;input&gt;</code> and {{htmlelement("label")}} element combination, as seen below:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
-    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate"&gt;
+    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
+    &lt;input id="party" type="datetime-local" name="partydate"&gt;
 &lt;/form&gt;</pre>
 
 <p>{{ EmbedLiveSample('Basic_uses_of_datetime-local', 600, 40) }}</p>
@@ -158,10 +158,10 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of <code>2017-06-01T08:30</code> and a maximum datetime of <code>2017-06-30T16:30</code>:</p>
 
-<pre class="brush: html notranslate">  &lt;form&gt;
-    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"&gt;
-  &lt;/form&gt;</pre>
+<pre class="brush: html notranslate">  &lt;form&gt;
+    &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
+    &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"&gt;
+  &lt;/form&gt;</pre>
 
 <p>{{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}</p>
 
@@ -217,14 +217,14 @@ dateControl.value = '2017-06-01T08:30';</pre>
 <p>Let's look at an example; here we've set minimum and maximum date/time values, and also made the field required:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
-    &lt;div&gt;
-        &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
-        &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;input type="submit" value="Book party!"&gt;
-    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
+        &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required&gt;
+        &lt;span class="validity"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="submit" value="Book party!"&gt;
+    &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:</p>
@@ -259,7 +259,7 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
 </div>
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
@@ -286,17 +286,17 @@ input:valid+span:after {
 <p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your <code>datetime-local</code> input. Even though the <code>datetime-local</code> input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
-    &lt;input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="submit" value="Book party!"&gt;
-  &lt;/div&gt;
-  &lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;
+  &lt;div&gt;
+    &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
+    &lt;input id="party" type="datetime-local" name="partydate"
+           min="2017-06-01T08:30" max="2017-06-30T16:30"
+           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" value="Book party!"&gt;
+  &lt;/div&gt;
+  &lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;
 &lt;/form&gt;</pre>
 
 <p>{{EmbedLiveSample('Handling_browser_support', 600, 100)}}</p>
@@ -354,7 +354,7 @@ input:valid + span:after {
 
 <pre class="brush: js notranslate">function setValue(element, date) {
     var isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
 }</pre>
 
 <p>Why worry about the Y10K problem if it is going to happen many centuries after your death? Exactly because you will already be dead, so the companies using your software will be stuck using your software without any other coder who knows the system well enough to come in and fix it.</p>
@@ -368,55 +368,55 @@ input:valid + span:after {
 <p>The HTML looks like so:</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div class="nativeDateTimePicker"&gt;
-    &lt;label for="party"&gt;Choose a date and time for your party:&lt;/label&gt;
-    &lt;input type="datetime-local" id="party" name="bday"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;p class="fallbackLabel"&gt;Choose a date and time for your party:&lt;/p&gt;
-  &lt;div class="fallbackDateTimePicker"&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="day"&gt;Day:&lt;/label&gt;
-        &lt;select id="day" name="day"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="month"&gt;Month:&lt;/label&gt;
-        &lt;select id="month" name="month"&gt;
-          &lt;option selected&gt;January&lt;/option&gt;
-          &lt;option&gt;February&lt;/option&gt;
-          &lt;option&gt;March&lt;/option&gt;
-          &lt;option&gt;April&lt;/option&gt;
-          &lt;option&gt;May&lt;/option&gt;
-          &lt;option&gt;June&lt;/option&gt;
-          &lt;option&gt;July&lt;/option&gt;
-          &lt;option&gt;August&lt;/option&gt;
-          &lt;option&gt;September&lt;/option&gt;
-          &lt;option&gt;October&lt;/option&gt;
-          &lt;option&gt;November&lt;/option&gt;
-          &lt;option&gt;December&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;span&gt;
-        &lt;label for="hour"&gt;Hour:&lt;/label&gt;
-        &lt;select id="hour" name="hour"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="minute"&gt;Minute:&lt;/label&gt;
-        &lt;select id="minute" name="minute"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class="nativeDateTimePicker"&gt;
+    &lt;label for="party"&gt;Choose a date and time for your party:&lt;/label&gt;
+    &lt;input type="datetime-local" id="party" name="bday"&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p class="fallbackLabel"&gt;Choose a date and time for your party:&lt;/p&gt;
+  &lt;div class="fallbackDateTimePicker"&gt;
+    &lt;div&gt;
+      &lt;span&gt;
+        &lt;label for="day"&gt;Day:&lt;/label&gt;
+        &lt;select id="day" name="day"&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+      &lt;span&gt;
+        &lt;label for="month"&gt;Month:&lt;/label&gt;
+        &lt;select id="month" name="month"&gt;
+          &lt;option selected&gt;January&lt;/option&gt;
+          &lt;option&gt;February&lt;/option&gt;
+          &lt;option&gt;March&lt;/option&gt;
+          &lt;option&gt;April&lt;/option&gt;
+          &lt;option&gt;May&lt;/option&gt;
+          &lt;option&gt;June&lt;/option&gt;
+          &lt;option&gt;July&lt;/option&gt;
+          &lt;option&gt;August&lt;/option&gt;
+          &lt;option&gt;September&lt;/option&gt;
+          &lt;option&gt;October&lt;/option&gt;
+          &lt;option&gt;November&lt;/option&gt;
+          &lt;option&gt;December&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+      &lt;span&gt;
+        &lt;label for="year"&gt;Year:&lt;/label&gt;
+        &lt;select id="year" name="year"&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span&gt;
+        &lt;label for="hour"&gt;Hour:&lt;/label&gt;
+        &lt;select id="hour" name="hour"&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+      &lt;span&gt;
+        &lt;label for="minute"&gt;Minute:&lt;/label&gt;
+        &lt;select id="minute" name="minute"&gt;
+        &lt;/select&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>The months are hard-coded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and minutes, as there are so many of them!</p>
@@ -469,9 +469,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'datetime-local';
+  test.type = 'datetime-local';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // if it does, run the code inside the if() {} block

@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API is fired when a cookie is set or removed.</p>
+<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API is fired when a cookie is set or removed.</p>
 
 <p>Note that updating a cookie's properties is implemented as a two step process:</p>
 
@@ -60,7 +60,7 @@ browser.cookies.onChanged.hasListener(listener)
    <dt><code>removed</code></dt>
    <dd>A <code>boolean</code> that is set to <code>true</code> if a cookie was removed, and false if not.</dd>
    <dt><code>cookie</code></dt>
-   <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
+   <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
    <dt><code>cause</code></dt>
    <dd>A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.</dd>
   </dl>
@@ -80,10 +80,10 @@ browser.cookies.onChanged.hasListener(listener)
 <p>This example listens for <code>onChanged</code> events and logs details from the <code>changeInfo</code> argument:</p>
 
 <pre class="notranslate brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+  console.log('Cookie changed: ' +
+              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
+              '\n * Cause: ' + changeInfo.cause +
+              '\n * Removed: ' + changeInfo.removed);
 });</pre>
 
 <p>{{WebExtExamples}}</p>

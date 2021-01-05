@@ -16,7 +16,7 @@ tags:
 
 <ul>
  <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
- <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
+ <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
 </ul>
 
 <p>This article documents the new standard. See <a href="#Browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
@@ -28,12 +28,12 @@ tags:
 
 <h3 id="Lax"><code>Lax</code></h3>
 
-<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is <em>navigating to</em> the origin site (i.e. when following a link).</p>
+<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is <em>navigating to</em> the origin site (i.e. when following a link).</p>
 
 <p>This is the default cookie value if <code>SameSite</code> has not been explicitly specified in recent browser versions (see the "SameSite: Defaults to Lax" feature in the Browser Compatibility).</p>
 
 <div class="notecard note">
-<p><code>Lax</code> replaced <code>None</code> as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.</p>
+<p><code>Lax</code> replaced <code>None</code> as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.</p>
 </div>
 
 <h3 id="Strict"><code>Strict</code></h3>
@@ -42,13 +42,13 @@ tags:
 
 <h3 id="None"><code>None</code></h3>
 
-<p>Cookies will be sent in all contexts, i.e in responses to both first-party and cross-origin requests.If <code>SameSite=None</code> is set, the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Secure"><code>Secure</code></a> attribute must also be set (or the cookie will be blocked).</p>
+<p>Cookies will be sent in all contexts, i.e in responses to both first-party and cross-origin requests.If <code>SameSite=None</code> is set, the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Secure"><code>Secure</code></a> attribute must also be set (or the cookie will be blocked).</p>
 
 <h2 id="Fixing_common_warnings">Fixing common warnings</h2>
 
 <h3 id="SameSiteNone_requires_Secure"><code>SameSite=None</code> requires <code>Secure</code></h3>
 
-<p>Warnings like the ones below might appear in your console:</p>
+<p>Warnings like the ones below might appear in your console:</p>
 
 <pre class="brush: html notranslate">Cookie “<em>myCookie</em>” rejected because it has the “SameSite=None” attribute but is missing the “secure” attribute.
 
@@ -82,7 +82,7 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 <pre class="example-bad notranslate">Set-Cookie: flavor=choco</pre>
 
-<p>You should explicitly communicate the intended <code>SameSite</code> policy for your cookie (rather than relying on browsers to apply <code>SameSite=Lax</code> automatically). This will also improve the experience across browsers as not all of them default to <code>Lax</code> yet.</p>
+<p>You should explicitly communicate the intended <code>SameSite</code> policy for your cookie (rather than relying on browsers to apply <code>SameSite=Lax</code> automatically). This will also improve the experience across browsers as not all of them default to <code>Lax</code> yet.</p>
 
 <pre class="example-good notranslate">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
 
@@ -90,8 +90,8 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 <pre class="notranslate">RewriteEngine on
 RewriteBase "/"
-RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
 RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;01;https://www.example.org;30/;SameSite=None;Secure]
 RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;02;https://www.example.org;30/;SameSite=None;Secure]
 RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;03;https://www.example.org;30/;SameSite=None;Secure]

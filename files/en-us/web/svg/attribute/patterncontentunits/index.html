@@ -19,35 +19,35 @@ tags:
 </div>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
-  A pattern tile that content coordinates and values are
-  computed against the current coordinate user space.
-  Note that the size of the tile is computed against
-  the bounding box of the target element
-  --&gt;
-  &lt;pattern id="p1" width="20%" height="20%"
-           patternContentUnits="userSpaceOnUse"&gt;
-    &lt;circle cx="10" cy="10" r="10" /&gt;
-  &lt;/pattern&gt;
+  &lt;!--
+  A pattern tile that content coordinates and values are
+  computed against the current coordinate user space.
+  Note that the size of the tile is computed against
+  the bounding box of the target element
+  --&gt;
+  &lt;pattern id="p1" width="20%" height="20%"
+           patternContentUnits="userSpaceOnUse"&gt;
+    &lt;circle cx="10" cy="10" r="10" /&gt;
+  &lt;/pattern&gt;
 
-  &lt;!--
-  A pattern tile that content coordinates and values are
-  computed against the bounding box of the target element.
-  Note that the size of the tile is also computed against
-  the bounding box of the target element
-  --&gt;
-  &lt;pattern id="p2" width="20%" height="20%"
-           patternContentUnits="objectBoundingBox"&gt;
-    &lt;circle cx=".1" cy=".1" r=".1" /&gt;
-  &lt;/pattern&gt;
+  &lt;!--
+  A pattern tile that content coordinates and values are
+  computed against the bounding box of the target element.
+  Note that the size of the tile is also computed against
+  the bounding box of the target element
+  --&gt;
+  &lt;pattern id="p2" width="20%" height="20%"
+           patternContentUnits="objectBoundingBox"&gt;
+    &lt;circle cx=".1" cy=".1" r=".1" /&gt;
+  &lt;/pattern&gt;
 
-  &lt;!-- Left square with user space tiles --&gt;
-  &lt;rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" /&gt;
+  &lt;!-- Left square with user space tiles --&gt;
+  &lt;rect x="10"  y="10" width="80" height="80"
+        fill="url(#p1)" /&gt;
 
-  &lt;!-- Right square with bounding box tiles --&gt;
-  &lt;rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" /&gt;
+  &lt;!-- Right square with bounding box tiles --&gt;
+  &lt;rect x="110" y="10" width="80" height="80"
+        fill="url(#p2)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>

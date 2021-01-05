@@ -160,7 +160,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 <p>Each file should include a CVS ID string for identification. The preferred format is:</p>
 
 <pre>        "@(#) $RCSfile: nss-guidelines.html,
-            v $ $Revision: 48936 $ $Date: 2009-08-11 07:45:57 -0700 (Tue, 11 Aug 2009) $ $Name$"
+            v $ $Revision: 48936 $ $Date: 2009-08-11 07:45:57 -0700 (Tue, 11 Aug 2009) $ $Name$"
 </pre>
 
 <p>You can put the string in a comment or in a static char array. Use #ifdef DEBUG to include the array in debug builds only. The advantage of using an array is that you can use strings(1) to pull the ID tags out of a (debug) compiled library. You can even put them in header files; the header files are protected from double inclusion. The only catch is that you have to determine the name of the array.</p>
@@ -169,7 +169,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <pre>    #ifdef DEBUG
     static const char BASET_CVS_ID[] = "@(#) $RCSfile: nss-guidelines.html,
-            v $ $Revision: 48936 $ $Date: 2009-08-11 07:45:57 -0700 (Tue, 11 Aug 2009) $ $Name$";
+            v $ $Revision: 48936 $ $Date: 2009-08-11 07:45:57 -0700 (Tue, 11 Aug 2009) $ $Name$";
     #endif /* DEBUG */
 </pre>
 
@@ -178,7 +178,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 <h3 id="Header_Files"><a name="HeaderFiles">Header Files</a></h3>
 
 <p>We have a preferred naming system for include files. We had been moving towards one, for some time, but for the NSS 3.0 project we finally wrote it down.<br>
-  </p>
+  </p>
 
 <table style="width: 90%;">
  <tbody>
@@ -222,9 +222,9 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <ol>
  <li>Header files for consumption outside NSS start with "nss."</li>
- <li>Header files with types have a trailing "t", header files with prototypes don't. "extern" declarations of data also go in the prototypes files.</li>
- <li>"Friend" headers are for things that we really wish weren't used by non-NSS code, but which are. Those files have a trailing "f," and their use should be deprecated.</li>
- <li>"Module" headers are for things used only within a specific subset of NSS; things which would have been "static" if we had combined separate C source files together. These header files have a trailing "m."<a name="FuncsAndTypes"></a></li>
+ <li>Header files with types have a trailing "t", header files with prototypes don't. "extern" declarations of data also go in the prototypes files.</li>
+ <li>"Friend" headers are for things that we really wish weren't used by non-NSS code, but which are. Those files have a trailing "f," and their use should be deprecated.</li>
+ <li>"Module" headers are for things used only within a specific subset of NSS; things which would have been "static" if we had combined separate C source files together. These header files have a trailing "m."<a name="FuncsAndTypes"></a></li>
 </ol>
 
 <h3 id="Functions_and_Types"><a name="FuncsAndTypes">Functions and Types</a></h3>
@@ -296,7 +296,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 <ol>
  <li>Thread A marks the arena, and allocates some memory from it.</li>
  <li>Thread B allocates some memory from the arena.</li>
- <li>Thread A releases the arena back to the mark.</li>
+ <li>Thread A releases the arena back to the mark.</li>
  <li>Thread B now finds itself with a pointer to released data.</li>
  <li>Some thread -- doesn't matter which -- allocates some data from the arena; this may overlap the chunk thread B has.</li>
  <li>Boom!</li>
@@ -324,7 +324,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 <p>Note: Error stacks are vertical, and never horizontal. If multiple things go wrong simultaneously, and you want to report them all, use another mechanism.</p>
 </div>
 
-<p>Errors, though not integers, are done as external constants, instead of preprocessor definitions. This is so any additional error doesn't trigger the entire tree to rebuild. Likewise, the external references to errors are made in the prototypes files, with the functions which can return them.  Error stacks are thread-private.</p>
+<p>Errors, though not integers, are done as external constants, instead of preprocessor definitions. This is so any additional error doesn't trigger the entire tree to rebuild. Likewise, the external references to errors are made in the prototypes files, with the functions which can return them.  Error stacks are thread-private.</p>
 
 <p>The usual semantic is that public routines clear the stack first, private routines don't. Usually, every public routine has a private counterpart, and the implementation of the public routine looks like this:</p>
 
@@ -339,8 +339,8 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
         nss_ClearErrorStack();
 
         #ifdef DEBUG
-            if( !nssFoo_verifyPointer(arg1) ) return (rv *)NULL;
-            if( !nssBar_verifyPointer(arg2) ) return (rv *)NULL;
+            if( !nssFoo_verifyPointer(arg1) ) return (rv *)NULL;
+            if( !nssBar_verifyPointer(arg2) ) return (rv *)NULL;
         #endif /* DEBUG */
 
         return nssType_Method(t, arg1, arg2);
@@ -482,7 +482,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>All callback operating search functions should be in the low level of the API, if exposed at all. Developers dealing with SSL and PKCS #7 layers should not have to see any of these functions. These functions should have the form LAYER_TraverseStorageObjectOrList().</p>
 
-<p>List and Array returning functions should be available at the higher layers of the API, most wrapping  LAYER_Traverse() functions. They should have the form LAYER_LookupDataType{List|Array}[ByDataType]().</p>
+<p>List and Array returning functions should be available at the higher layers of the API, most wrapping  LAYER_Traverse() functions. They should have the form LAYER_LookupDataType{List|Array}[ByDataType]().</p>
 
 <p><a name="Accessors"> </a></p>
 

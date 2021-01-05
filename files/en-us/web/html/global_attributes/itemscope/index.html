@@ -81,43 +81,43 @@ tags:
 <p>There are four <code>itemscope</code> attributes in the following example. Each <code>itemscope</code> attribute sets the scope of its corresponding <code>itemtype</code> attribute. The <code>itemtype</code>s, <code>Recipe</code>, <code>AggregateRating</code>, and <code>NutritionInformation</code> in the following example are part of the <a href="www.schema.org">schema.org</a> structured data for a recipe, as specified by the first <code>itemtype</code>, http://schema.org/Recipe.</p>
 
 <pre class="brush: html notranslate">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
-  &lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
-  &lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" /&gt;
-  &lt;p&gt;
-    By &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person"&gt;
-      &lt;span itemprop="name"&gt;Carol Smith&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    Published: &lt;time datetime="2009-11-05" itemprop="datePublished"&gt;November 5, 2009&lt;/time&gt;
-  &lt;/p&gt;
-  &lt;span itemprop="description"&gt;This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.&lt;/span&gt;
-  &lt;br&gt;
-  &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
-    &lt;span itemprop="ratingValue"&gt;4.0&lt;/span&gt; stars based on &lt;span itemprop="reviewCount"&gt;35&lt;/span&gt; reviews
-  &lt;/span&gt;
-  &lt;br&gt;
-  Prep time: &lt;time datetime="PT30M" itemprop="prepTime"&gt;30 min&lt;/time&gt;&lt;br&gt;
-  Cook time: &lt;time datetime="PT1H" itemprop="cookTime"&gt;1 hou&lt;/time&gt;r&lt;br&gt;
-  Total time: &lt;time datetime="PT1H30M" itemprop="totalTime"&gt;1 hour 30 min&lt;/time&gt;&lt;br&gt;
-  Yield: &lt;span itemprop="recipeYield"&gt;1 9" pie (8 servings)&lt;/span&gt;&lt;br&gt;
-  &lt;span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"&gt;
-    Serving size: &lt;span itemprop="servingSize"&gt;1 medium slice&lt;/span&gt;&lt;br&gt;
-    Calories per serving: &lt;span itemprop="calories"&gt;250 cal&lt;/span&gt;&lt;br&gt;
-    Fat per serving: &lt;span itemprop="fatContent"&gt;12 g&lt;/span&gt;&lt;br&gt;
-  &lt;/span&gt;
-  &lt;p&gt;
-    Ingredients:&lt;br&gt;
-    &lt;span itemprop="recipeIngredient"&gt;Thinly-sliced apples: 6 cups&lt;br&gt;&lt;/span&gt;
-    &lt;span itemprop="recipeIngredient"&gt;White sugar: 3/4 cup&lt;br&gt;&lt;/span&gt;
-    ...
-  &lt;/p&gt;
-  Directions: &lt;br&gt;
-  &lt;div itemprop="recipeInstructions"&gt;
-    1. Cut and peel apples&lt;br&gt;
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. &lt;br&gt;
-    ...
-  &lt;/div&gt;
+  &lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
+  &lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50" /&gt;
+  &lt;p&gt;
+    By &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person"&gt;
+      &lt;span itemprop="name"&gt;Carol Smith&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    Published: &lt;time datetime="2009-11-05" itemprop="datePublished"&gt;November 5, 2009&lt;/time&gt;
+  &lt;/p&gt;
+  &lt;span itemprop="description"&gt;This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.&lt;/span&gt;
+  &lt;br&gt;
+  &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
+    &lt;span itemprop="ratingValue"&gt;4.0&lt;/span&gt; stars based on &lt;span itemprop="reviewCount"&gt;35&lt;/span&gt; reviews
+  &lt;/span&gt;
+  &lt;br&gt;
+  Prep time: &lt;time datetime="PT30M" itemprop="prepTime"&gt;30 min&lt;/time&gt;&lt;br&gt;
+  Cook time: &lt;time datetime="PT1H" itemprop="cookTime"&gt;1 hou&lt;/time&gt;r&lt;br&gt;
+  Total time: &lt;time datetime="PT1H30M" itemprop="totalTime"&gt;1 hour 30 min&lt;/time&gt;&lt;br&gt;
+  Yield: &lt;span itemprop="recipeYield"&gt;1 9" pie (8 servings)&lt;/span&gt;&lt;br&gt;
+  &lt;span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"&gt;
+    Serving size: &lt;span itemprop="servingSize"&gt;1 medium slice&lt;/span&gt;&lt;br&gt;
+    Calories per serving: &lt;span itemprop="calories"&gt;250 cal&lt;/span&gt;&lt;br&gt;
+    Fat per serving: &lt;span itemprop="fatContent"&gt;12 g&lt;/span&gt;&lt;br&gt;
+  &lt;/span&gt;
+  &lt;p&gt;
+    Ingredients:&lt;br&gt;
+    &lt;span itemprop="recipeIngredient"&gt;Thinly-sliced apples: 6 cups&lt;br&gt;&lt;/span&gt;
+    &lt;span itemprop="recipeIngredient"&gt;White sugar: 3/4 cup&lt;br&gt;&lt;/span&gt;
+    ...
+  &lt;/p&gt;
+  Directions: &lt;br&gt;
+  &lt;div itemprop="recipeInstructions"&gt;
+    1. Cut and peel apples&lt;br&gt;
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. &lt;br&gt;
+    ...
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <h3 id="Results">Results</h3>

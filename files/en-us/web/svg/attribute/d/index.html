@@ -9,7 +9,7 @@ tags:
 
 <p>The <strong><code>d</code></strong> attribute defines a path to be drawn.</p>
 
-<p>A path definition is a list of <a href="#Path_commands">path commands</a> where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.</p>
+<p>A path definition is a list of <a href="#Path_commands">path commands</a> where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.</p>
 
 <p>Three elements have this attribute: {{SVGElement("path")}}, {{SVGElement("glyph")}}, and {{SVGElement("missing-glyph")}}</p>
 
@@ -19,7 +19,7 @@ tags:
 </div>
 
 <pre class="brush: html notranslate">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -120,8 +120,8 @@ tags:
 
 <ul>
  <li>negative angles will be anti-clockwise;</li>
- <li><em>absolute</em> negative <var>x</var> and <var>y</var> values are interpreted as negative coordinates;</li>
- <li><em>relative</em> negative <var>x</var> values move to the left, and relative negative <var>y</var> values move upwards.</li>
+ <li><em>absolute</em> negative <var>x</var> and <var>y</var> values are interpreted as negative coordinates;</li>
+ <li><em>relative</em> negative <var>x</var> values move to the left, and relative negative <var>y</var> values move upwards.</li>
 </ul>
 
 <h3 id="MoveTo_path_commands">MoveTo path commands</h3>
@@ -163,18 +163,18 @@ tags:
 </div>
 
 <pre class="brush: html notranslate">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 40,20 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
-       m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" /&gt;
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('MoveTo_path_commands', '100%', 200)}}</p>
@@ -255,18 +255,18 @@ tags:
 
 <pre class="brush: html notranslate">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- LineTo commands with absolute coordinates --&gt;
-  &lt;path fill="none" stroke="red"
-        d="M 10,10
-           L 90,90
-           V 10
-           H 50" /&gt;
+  &lt;path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" /&gt;
 
   &lt;!-- LineTo commands with relative coordinates --&gt;
   &lt;path fill="none" stroke="red"
-        d="M 110,10
-           l 80,80
-           v -80
-           h -40" /&gt;
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}</p>
@@ -301,7 +301,7 @@ tags:
    <th scope="row">C</th>
    <td>(<code><var>x1</var></code>,<code><var>y1</var></code>, <code><var>x2</var></code>,<code><var>y2</var></code>, <code><var>x</var></code>,<code><var>y</var></code>)+</td>
    <td>
-    <p>Draw a cubic Bézier curve from the <em>current point</em> to the <em>end point</em> specified by <code><var>x</var></code>,<code><var>y</var></code>. The <em>start control point</em> is specified by <code><var>x1</var></code>,<code><var>y1</var></code> and the <em>end control point</em> is specified by <code><var>x2</var></code>,<code><var>y2</var></code>. Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute cubic Bézier curve (<code>C</code>) command(s).</p>
+    <p>Draw a cubic Bézier curve from the <em>current point</em> to the <em>end point</em> specified by <code><var>x</var></code>,<code><var>y</var></code>. The <em>start control point</em> is specified by <code><var>x1</var></code>,<code><var>y1</var></code> and the <em>end control point</em> is specified by <code><var>x2</var></code>,<code><var>y2</var></code>. Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute cubic Bézier curve (<code>C</code>) command(s).</p>
 
     <dl>
      <dt>Formulae:</dt>
@@ -333,7 +333,7 @@ tags:
   <tr>
    <th scope="row">s</th>
    <td>(<code><var>dx2</var></code>,<code><var>dy2</var></code>, <code><var>dx</var></code>,<code><var>dy</var></code>)+</td>
-   <td>Draw a smooth cubic Bézier curve from the <em>current point</em> to the <em>end point</em>, which is the <em>current point</em> shifted by <code><var>dx</var></code> along the x-axis and <code><var>dy</var></code> along the y-axis. The <em>end control point</em> is the <em>current point</em> (starting point of the curve) shifted by <code><var>dx2</var></code> along the x-axis and <code><var>dy2</var></code> along the y-axis. The <em>start control point</em> is a reflection of the <em>end control point</em> of the previous curve command. If the previous command wasn't a cubic Bézier curve, the <em>start control point</em> is the same as the curve starting point (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative smooth cubic Bézier curve (<code>s</code>) commands.</td>
+   <td>Draw a smooth cubic Bézier curve from the <em>current point</em> to the <em>end point</em>, which is the <em>current point</em> shifted by <code><var>dx</var></code> along the x-axis and <code><var>dy</var></code> along the y-axis. The <em>end control point</em> is the <em>current point</em> (starting point of the curve) shifted by <code><var>dx2</var></code> along the x-axis and <code><var>dy2</var></code> along the y-axis. The <em>start control point</em> is a reflection of the <em>end control point</em> of the previous curve command. If the previous command wasn't a cubic Bézier curve, the <em>start control point</em> is the same as the curve starting point (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative smooth cubic Bézier curve (<code>s</code>) commands.</td>
   </tr>
  </tbody>
 </table>
@@ -584,7 +584,7 @@ tags:
 
 <h3 id="ClosePath">ClosePath</h3>
 
-<p><em>ClosePath</em> instructions draw a straight line from the <em>current position</em> to the first point in the path.</p>
+<p><em>ClosePath</em> instructions draw a straight line from the <em>current position</em> to the first point in the path.</p>
 
 <table class="standard-table">
  <tbody>

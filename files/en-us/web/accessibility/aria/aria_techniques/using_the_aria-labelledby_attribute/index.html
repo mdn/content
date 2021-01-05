@@ -8,7 +8,7 @@ tags:
 ---
 <h3 id="Description">Description</h3>
 
-<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" rel="external"><code>aria-labelledby</code></a> attribute establishes relationships between objects and their label(s), and its value should be one or more element IDs, which refer to elements that have the text needed for labeling. List multiple element IDs in a space delimited fashion.</span></p>
+<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-labelledby" rel="external"><code>aria-labelledby</code></a> attribute establishes relationships between objects and their label(s), and its value should be one or more element IDs, which refer to elements that have the text needed for labeling. List multiple element IDs in a space delimited fashion.</span></p>
 
 <div class="notecard note">
 <p><span class="seoSummary">This idea is similar to how the "for" attribute is used to link a LABEL to an INPUT.</span></p>
@@ -16,11 +16,11 @@ tags:
 
 <p><span class="seoSummary">Assistive technology, such as screen readers, use this attribute to catalog the objects in a document so that users can navigate between them. Without an element ID, the assistive technology cannot catalog the object.</span></p>
 
-<p><code>aria-labelledby</code> is very similar to <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a>: A label provides essential information about an object, while a description provides extended information that the user might need.</p>
+<p><code>aria-labelledby</code> is very similar to <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a>: A label provides essential information about an object, while a description provides extended information that the user might need.</p>
 
 <p>In addition to form elements, you can use the <code>aria-labelledby</code> attribute to associate static text with widgets, groups of elements, panes, regions that have a heading, definitions, and other types of objects. The {{ anch("Examples") }} section below provides more information on how to use the attribute this way.</p>
 
-<p>To improve compatibility with user agents that do not support ARIA, you can use <code>aria-labelledby</code> with the {{ HTMLElement("label") }} element (using the <code>for</code> attribute).</p>
+<p>To improve compatibility with user agents that do not support ARIA, you can use <code>aria-labelledby</code> with the {{ HTMLElement("label") }} element (using the <code>for</code> attribute).</p>
 
 <p>This attribute can be used with any typical HTML form element; it is not limited to elements that have an ARIA <code>role</code> assigned.</p>
 
@@ -28,9 +28,9 @@ tags:
 
 <p>A space-separated list of element IDs</p>
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
-<p>When user agents compute the accessible name property of elements that have both an <code>aria-labelledby</code> attribute and an <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute"><code>aria-label</code></a> attribute, the user agents give precedence to <code>aria-labelledby</code>.</p>
+<p>When user agents compute the accessible name property of elements that have both an <code>aria-labelledby</code> attribute and an <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute"><code>aria-label</code></a> attribute, the user agents give precedence to <code>aria-labelledby</code>.</p>
 
 <h3 id="Examples">Examples</h3>
 
@@ -98,7 +98,7 @@ an inert preparation prescribed more for the mental relief of the patient than f
 <pre class="brush: html">&lt;dl&gt;
     &lt;dt id="anathema"&gt;anathema&lt;/dt&gt;
     &lt;dd role="definition" aria-labelledby="anathema"&gt;a ban or curse solemnly pronounced by ecclesiastical authority
-                                                     and accompanied by excommunication&lt;/dd&gt;
+                                                     and accompanied by excommunication&lt;/dd&gt;
     &lt;dd role="definition" aria-labelledby="anathema"&gt;a vigorous denunciation : cursor&lt;/dd&gt;
 
     &lt;dt id="homily"&gt;homily&lt;/dt&gt;
@@ -123,7 +123,7 @@ an inert preparation prescribed more for the mental relief of the patient than f
 &lt;/div&gt;
 </pre>
 
-<h4 id="Notes">Notes </h4>
+<h4 id="Notes">Notes </h4>
 
 <p>The most common <em>accessibility API</em> mapping for a label is the <em>accessible name</em> property</p>
 
@@ -131,7 +131,7 @@ an inert preparation prescribed more for the mental relief of the patient than f
 
 <p>All elements of the base markup</p>
 
-<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
+<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">Using the aria-label attribute</a></li>

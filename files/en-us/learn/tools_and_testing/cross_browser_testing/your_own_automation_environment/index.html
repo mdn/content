@@ -37,7 +37,7 @@ tags:
 
 <p><a href="http://www.seleniumhq.org/">Selenium</a> is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.</p>
 
-<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
+<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
 
 <p>Different browsers require different drivers to allow WebDriver to communicate with and control them. See <a href="https://www.selenium.dev/downloads/">Platforms Supported by Selenium</a> for more information on where to get browser drivers from, etc.</p>
 
@@ -108,7 +108,7 @@ driver.get('http://www.google.com');
 driver.findElement(By.name('q')).sendKeys('webdriver');
 
 driver.sleep(1000).then(function() {
-  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
 });
 
 driver.findElement(By.name('btnK')).click();
@@ -138,7 +138,7 @@ driver.sleep(2000).then(function() {
 <p>There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!</p>
 
 <ol>
- <li>Create another new file inside your project directory called <code>google_test_multiple.js</code>. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the <code>.forBrowser()</code> method for other browsers,  see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html">Browser enum</a> reference page.</li>
+ <li>Create another new file inside your project directory called <code>google_test_multiple.js</code>. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the <code>.forBrowser()</code> method for other browsers,  see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html">Browser enum</a> reference page.</li>
  <li>Give it the following contents, then save it:
   <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
@@ -159,11 +159,11 @@ function searchTest(driver) {
   driver.get('http://www.google.com');
   driver.findElement(By.name('q')).sendKeys('webdriver');
 
-  driver.sleep(1000).then(function() {
-    driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+  driver.sleep(1000).then(function() {
+    driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
   });
 
-  driver.findElement(By.name('btnK')).click();
+  driver.findElement(By.name('btnK')).click();
 
   driver.sleep(2000).then(function() {
     driver.getTitle().then(function(title) {
@@ -244,7 +244,7 @@ var driver = new webdriver.Builder()
 
 <pre class="brush: js notranslate">driver.get('http://localhost:8888/fake-div-buttons.html');</pre>
 
-<p>But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths. </p>
+<p>But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths. </p>
 
 <p>Add this line to the bottom of <code>quick_test.js</code> now:</p>
 
@@ -256,7 +256,7 @@ var driver = new webdriver.Builder()
 
 <pre class="brush: js notranslate"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
 
-<p>One of the most useful ways to find an element by CSS — the  By.css method allows you to select an element using a CSS selector</p>
+<p>One of the most useful ways to find an element by CSS — the  By.css method allows you to select an element using a CSS selector</p>
 
 <p>Enter the following at the bottom of your <code>quick_test.js</code> code now:</p>
 
@@ -329,12 +329,12 @@ input.</span>sendKeys('Filling in my form');</pre>
 <p>We could add a <code>sleep()</code> method to our <code>quick_test.js</code> test too — try wrapping your last line of code in a block like this:</p>
 
 <pre class="brush: js notranslate">driver.sleep(2000).then(function() {
-  input.sendKeys('Filling in my form');
-  input.getAttribute("value").then(function(value) {
-    if(value !== '') {
-      console.log('Form input editable');
-    }
-  });
+  input.sendKeys('Filling in my form');
+  input.getAttribute("value").then(function(value) {
+    if(value !== '') {
+      console.log('Form input editable');
+    }
+  });
 });</pre>
 
 <p>WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using <code>getAttribute()</code> to retrieve it's <code>value</code> attribute value, and print a message to the console if it is not empty.</p>
@@ -384,7 +384,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <h3 id="LambdaTest">LambdaTest</h3>
 
-<p>Getting Selenium tests to run remotely on LambdaTest is very simple. The code you need should follow the pattern seen below.</p>
+<p>Getting Selenium tests to run remotely on LambdaTest is very simple. The code you need should follow the pattern seen below.</p>
 
 <p>Let's write an example:</p>
 
@@ -398,7 +398,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 // username: Username can be found at automation dashboard
 const USERNAME = '{username}';
 
-// AccessKey:  AccessKey can be generated from automation dashboard or profile section
+// AccessKey:  AccessKey can be generated from automation dashboard or profile section
 const KEY = '{accessKey}';
 
 // gridUrl: gridUrl can be found at automation dashboard
@@ -407,15 +407,15 @@ const GRID_HOST = 'hub.lambdatest.com/wd/hub';
 function searchTextOnGoogle() {
 // Setup Input capabilities
     const capabilities = {
-       platform: 'windows 10',
-       browserName: 'chrome',
-       version: '67.0',
-       resolution: '1280x800',
-       network: true,
-       visual: true,
-       console: true,
-       video: true,
-       name: 'Test 1', // name of the test
+       platform: 'windows 10',
+       browserName: 'chrome',
+       version: '67.0',
+       resolution: '1280x800',
+       network: true,
+       visual: true,
+       console: true,
+       video: true,
+       name: 'Test 1', // name of the test
        build: 'NodeJS build' // name of the build
      };
 
@@ -425,41 +425,41 @@ const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
 
 // setup and build selenium driver object
      const driver = new webdriver.Builder()
-     .usingServer(gridUrl)
-     .withCapabilities(capabilities)
-     .build();
+     .usingServer(gridUrl)
+     .withCapabilities(capabilities)
+     .build();
 
 // navigate to a url, search for a text and get title of page
 driver.get('https://www.google.com/ncr').then(function() {
     driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
          driver.getTitle().then(function(title) {
                setTimeout(function() {
-               console.log(title);
-               driver.quit();
-               }, 5000);
-            });
-         });
-      });
+               console.log(title);
+               driver.quit();
+               }, 5000);
+            });
+         });
+      });
    }
 
 searchTextOnGoogle();
 </pre>
  </li>
- <li>Visit your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest automation dashboard</a>, to fetch your LambdaTest's username and access key by clicking on the <strong>key </strong>icon on the top-right(see <em>Username and Access Keys</em>). Replace the <code>{username}</code> and <code>{accessKey}</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
+ <li>Visit your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest automation dashboard</a>, to fetch your LambdaTest's username and access key by clicking on the <strong>key </strong>icon on the top-right(see <em>Username and Access Keys</em>). Replace the <code>{username}</code> and <code>{accessKey}</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
  <li>Run the below command in your terminal to execute your test:
   <pre class="brush: bash notranslate">node <code>lambdatest_google_test</code></pre>
-  The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.<br>
-  If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using <a href="https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/">LambdaTest restful API</a>.</li>
- <li>Now if you go to your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest Automation dashboard</a>, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg" style="border-style: solid; border-width: 2px; height: 758px; width: 1600px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
+  The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.<br>
+  If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using <a href="https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/">LambdaTest restful API</a>.</li>
+ <li>Now if you go to your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest Automation dashboard</a>, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
+  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg" style="border-style: solid; border-width: 2px; height: 758px; width: 1600px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: The <em>HELP</em>  button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about <a href="https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/">running first Selenium script in Node JS</a>.</p>
+<p><strong>Note</strong>: The <em>HELP</em>  button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about <a href="https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/">running first Selenium script in Node JS</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the <a href="https://www.lambdatest.com/capabilities-generator/">Selenium Desired Capabilities Generator</a>. </p>
+<p><strong>Note</strong>: If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the <a href="https://www.lambdatest.com/capabilities-generator/">Selenium Desired Capabilities Generator</a>. </p>
 </div>
 
 <h4 id="Filling_in_test_details_on_LambdaTest_programmatically">Filling in test details on LambdaTest programmatically</h4>
@@ -493,15 +493,15 @@ searchTextOnGoogle();
 
 // Input capabilities
 let capabilities = {
-   'browserName' : 'Firefox',
-   'browser_version' : '56.0 beta',
-   'os' : 'OS X',
-   'os_version' : 'Sierra',
-   'resolution' : '1280x1024',
-   'browserstack.user' : '<code>YOUR-USER-NAME</code>',
-   'browserstack.key' : '<code>YOUR-ACCESS-KEY</code>',
-   'browserstack.debug' : 'true',
-   'build' : 'First build'
+   'browserName' : 'Firefox',
+   'browser_version' : '56.0 beta',
+   'os' : 'OS X',
+   'os_version' : 'Sierra',
+   'resolution' : '1280x1024',
+   'browserstack.user' : '<code>YOUR-USER-NAME</code>',
+   'browserstack.key' : '<code>YOUR-ACCESS-KEY</code>',
+   'browserstack.debug' : 'true',
+   'build' : 'First build'
 };
 
 let driver = new webdriver.Builder().
@@ -541,7 +541,7 @@ driver.quit();</pre>
 <p>If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <em>Resources</em> menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See <a href="https://www.browserstack.com/automate/node">Node JS Documentation for writing automate test scripts in Node JS</a> for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.</p>
+<p><strong>Note</strong>: The <em>Resources</em> menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See <a href="https://www.browserstack.com/automate/node">Node JS Documentation for writing automate test scripts in Node JS</a> for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.</p>
 </div>
 
 <div class="note">
@@ -570,15 +570,15 @@ driver.session_.then(function(sessionData) {
  </li>
  <li>Finally, update the <code>driver.sleep(2000)</code> ... block near the bottom of the code to add REST API calls (again, replace the <code>YOUR-USER-NAME</code> and <code>YOUR-ACCESS-KEY</code> placeholders in the code with your actual user name and access key values):
   <pre class="brush: js notranslate">driver.sleep(2000).then(function() {
-  driver.getTitle().then(function(title) {
-    if(title === 'webdriver - Google Search') {
-      console.log('Test passed');
-      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
-    } else {
-      console.log('Test failed');
-      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"failed","reason":"Google results showed wrong title"}});
-    }
-  });
+  driver.getTitle().then(function(title) {
+    if(title === 'webdriver - Google Search') {
+      console.log('Test passed');
+      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
+    } else {
+      console.log('Test failed');
+      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"failed","reason":"Google results showed wrong title"}});
+    }
+  });
 });</pre>
  </li>
 </ol>
@@ -621,7 +621,7 @@ driver.get('http://www.google.com');
 driver.findElement(By.name('q')).sendKeys('webdriver');
 
 driver.sleep(1000).then(function() {
-  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
 });
 
 driver.findElement(By.name('btnK')).click();

@@ -105,11 +105,11 @@ tags:
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
-      }
-    }
+      "url" : {
+        "content" : "$1",
+        "example" : "https://developer.mozilla.org"
+      }
+    }
   }
 }</pre>
 
@@ -179,7 +179,7 @@ tags:
 <pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
-<p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>
+<p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>
 
 <pre class="brush: json">"notificationContent": {
   "message": "You clicked $URL$.",
@@ -195,7 +195,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>The <code>"placeholders"</code> member defines all the placeholders, and where they are retrieved from. The <code>"url"</code> placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of <code>getMessage()</code>. Since the placeholder is called <code>"url"</code>, we use <code>$URL$</code> to call it inside the actual message string (so for <code>"name"</code> you'd use <code>$NAME$</code>, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — <code>[a, b, c]</code> will be available as <code>$1</code>, <code>$2</code>, and <code>$3</code>, and so on, inside <code>messages.json</code>.</p>
 
-<p>Let's run through an example: the original <code>notificationContent</code> message string in the <code>en/messages.json</code> file is</p>
+<p>Let's run through an example: the original <code>notificationContent</code> message string in the <code>en/messages.json</code> file is</p>
 
 <pre>You clicked $URL$.</pre>
 
@@ -389,7 +389,7 @@ padding-left: 1.5em;</pre>
  <li>Open "about:config" in Firefox, and search for the <code>intl.locale.requested</code> preference (bear in mind that before Firefox 59, this pref is called <code>general.useragent.locale</code>).</li>
  <li>If the preference exists, double-click it (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported. You can also set the value to an empty string (<code>""</code>), which will cause the browser to use the OS default locale.</li>
  <li>If the <code>intl.locale.requested</code> preference does not exist, right-click the list of preferences (or activate the context menu using the keyboard), and choose "New" followed by "String". Enter <code>intl.locale.requested</code> for the preference name and, "de", or "nl", etc. for the preference value, as described in step 2 above.</li>
- <li>Search for <code>intl.locale.matchOS</code> and, if the preference exists and has the value <code>true</code>, double-click it  so that it is set to <code>false</code>.</li>
+ <li>Search for <code>intl.locale.matchOS</code> and, if the preference exists and has the value <code>true</code>, double-click it  so that it is set to <code>false</code>.</li>
  <li>Restart your browser to complete the change.</li>
 </ol>
 

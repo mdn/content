@@ -9,12 +9,12 @@ tags:
   - Mozilla
 ---
 <div class="summary">
-<p><span class="seoSummary">FxOS Powertool is a command-line-based, power testing framework that is useful to optimize client software/applications for power consumption. The tool collects data from multiple tests and outputs them with basic statistics calculations. This page walks you through how to use this tool with examples.</span></p>
+<p><span class="seoSummary">FxOS Powertool is a command-line-based, power testing framework that is useful to optimize client software/applications for power consumption. The tool collects data from multiple tests and outputs them with basic statistics calculations. This page walks you through how to use this tool with examples.</span></p>
 </div>
 
 <h2 id="Power_Testing_with_the_FxOS_Powertool!">Power Testing with the FxOS Powertool!</h2>
 
-<p>The FxOS Powertool is intended for FxOS developers to use when optimizing software/apps for power consumption. It is also handy for verifying and fixing power consumption bugs. This is the client software part of the power testing framework.</p>
+<p>The FxOS Powertool is intended for FxOS developers to use when optimizing software/apps for power consumption. It is also handy for verifying and fixing power consumption bugs. This is the client software part of the power testing framework.</p>
 
 <h3 id="Prerequisites">Prerequisites</h3>
 
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Quick_Start">Quick Start</h3>
 
-<p>The first step is to clone the repo. The FxOS Powertool! is written in Python and uses the Tkinter UI package and should be cross-platform.  Using git, clone the repo:</p>
+<p>The first step is to clone the repo. The FxOS Powertool! is written in Python and uses the Tkinter UI package and should be cross-platform.  Using git, clone the repo:</p>
 
 <pre class="brush: bash">$ git clone git://github.com/JonHylands/fxos-powertool</pre>
 
@@ -72,20 +72,20 @@ $ sudo python ./setup.py install</pre>
 <p>The FxOS Powertool! is a command line utility. Here are the command line options for executing the tool:</p>
 
 <pre class="brush: bash">usage: powertool [-h] -d {yocto,mozilla} [-p PATH] -u {tk,cli} [-f FILE]
-                 [-o OUT] [-s SHOW]
+                 [-o OUT] [-s SHOW]
 
 Mozilla Powertool
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -d {yocto,mozilla}, --device {yocto,mozilla}
-                        specify ammeter device to use
-  -p PATH, --path PATH  specify path to ammeter device (e.g. /dev/ttyACM0)
-  -u {tk,cli}, --ui {tk,cli}
-                        specify which UI to use
-  -f FILE, --file FILE  test run config file
-  -o OUT, --out OUT     output data file
-  -s SHOW, --show SHOW  name of the sample source to display
+  -h, --help            show this help message and exit
+  -d {yocto,mozilla}, --device {yocto,mozilla}
+                        specify ammeter device to use
+  -p PATH, --path PATH  specify path to ammeter device (e.g. /dev/ttyACM0)
+  -u {tk,cli}, --ui {tk,cli}
+                        specify which UI to use
+  -f FILE, --file FILE  test run config file
+  -o OUT, --out OUT     output data file
+  -s SHOW, --show SHOW  name of the sample source to display
 </pre>
 
 <p>The FxOS Powertool! supports saving the collected data in two different formats. It determines the format from the file extension of the file specified in the --out option. Currently it supports JSON and comma separated values formats. If my test suite description file is called mytests.json, I am using a Yoctopuce ammeter, I want the Tk GUI to show the current consumption graph, and I want the collected data to be saved in .csv files, my command line would look like this:</p>
@@ -109,8 +109,8 @@ optional arguments:
 
 <p><a href="https://wiki.mozilla.org/images/6/6d/Powertool_test_two.png"><img alt="Powertool Test Two Data Run" src="https://wiki.mozilla.org/images/thumb/6/6d/Powertool_test_two.png/691px-Powertool_test_two.png" style="height: 599px; width: 691px;"></a></p>
 
-<p>After you have collected all of the data for your tests, the data files are written to disk when you quit the application. You can quit by either clicking on the close window button in the title bar or hitting the 'Q' button on the keyboard. In our example, we chose to have the data written out in CSV format by giving it "mytests.csv" as the --out parameter value.  With CSV, the application will create a directory named "mytests" and then write out a CSV file for each test with all of the data gathered for the test. Below is a screenshot of the "My first test" CSV file open in a spreadsheet application:</p>
+<p>After you have collected all of the data for your tests, the data files are written to disk when you quit the application. You can quit by either clicking on the close window button in the title bar or hitting the 'Q' button on the keyboard. In our example, we chose to have the data written out in CSV format by giving it "mytests.csv" as the --out parameter value.  With CSV, the application will create a directory named "mytests" and then write out a CSV file for each test with all of the data gathered for the test. Below is a screenshot of the "My first test" CSV file open in a spreadsheet application:</p>
 
 <p><a href="https://wiki.mozilla.org/images/6/61/Powertool_csv.png"><img alt="CSV File Open in a Spreadsheet Application" src="https://wiki.mozilla.org/images/thumb/6/61/Powertool_csv.png/800px-Powertool_csv.png" style="height: 500px; width: 800px;"></a></p>
 
-<p>As you can see, the FxOS Powertool! will do some very basic statistical calculations for you.  Along with the raw data for each data run, it will calculate the minimum value, maximum value, mean, and standard deviation for all of the data collected for the test.</p>
+<p>As you can see, the FxOS Powertool! will do some very basic statistical calculations for you.  Along with the raw data for each data run, it will calculate the minimum value, maximum value, mean, and standard deviation for all of the data collected for the test.</p>

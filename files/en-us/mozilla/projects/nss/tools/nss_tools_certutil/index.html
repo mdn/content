@@ -34,7 +34,7 @@ tags:
 <table>
  <tbody>
   <tr>
-   <td> <strong>Options </strong></td>
+   <td> <strong>Options </strong></td>
    <td></td>
   </tr>
   <tr>
@@ -334,14 +334,14 @@ tags:
 
     <p>There are three available trust categories for each certificate, expressed in this order: "<em>SSL</em> ,<em>email</em> ,<em>object signing</em> ". In each category position use zero or more of the following attribute codes:</p>
 
-    <p><code>p</code>    prohibited (explicitly distrusted)<br>
-     <code>P</code>    Trusted peer<br>
-     <code>c</code>    Valid CA<br>
-     <code>T</code>    Trusted CA to issue client certificates (implies <code>c</code>)<br>
-     <code>C</code>    Trusted CA to issue server certificates (SSL only)<br>
-           (implies <code>c</code>)<br>
-     <code>u</code>    Certificate can be used for authentication or signing<br>
-     <code>w</code>    Send warning (use with other attributes to include a warning when the certificate is used in that context)</p>
+    <p><code>p</code>    prohibited (explicitly distrusted)<br>
+     <code>P</code>    Trusted peer<br>
+     <code>c</code>    Valid CA<br>
+     <code>T</code>    Trusted CA to issue client certificates (implies <code>c</code>)<br>
+     <code>C</code>    Trusted CA to issue server certificates (SSL only)<br>
+           (implies <code>c</code>)<br>
+     <code>u</code>    Certificate can be used for authentication or signing<br>
+     <code>w</code>    Send warning (use with other attributes to include a warning when the certificate is used in that context)</p>
 
     <p>The attribute codes for the categories are separated by commas, and the entire set of attributes enclosed by quotation marks. For example:</p>
 
@@ -530,36 +530,36 @@ tags:
 
 <p>The Certificate Database Tool displays output similar to the following:</p>
 
-<p><code>Certificate Name              Trust Attributes </code><br>
- <code>Uptime Group Plc. Class 1 CA        C,C,<br>
- VeriSign Class 1 Primary CA         ,C,<br>
- VeriSign Class 2 Primary CA         C,C,C<br>
- AT&amp;T Certificate Services           C,C,<br>
- GTE CyberTrust Secure Server CA     C,,<br>
- Verisign/RSA Commercial CA          C,C,<br>
- AT&amp;T Directory Services             C,C,<br>
- BelSign Secure Server CA            C,,<br>
- Verisign/RSA Secure Server CA       C,C,<br>
- GTE CyberTrust Root CA              C,C,<br>
- Uptime Group Plc. Class 4 CA        ,C,<br>
- VeriSign Class 3 Primary CA         C,C,C<br>
- Canada Post Corporation CA          C,C,<br>
- Integrion CA                        C,C,C<br>
- IBM World Registry CA               C,C,C<br>
- GTIS/PWGSC, Canada Gov. Web CA      C,C,<br>
- GTIS/PWGSC, Canada Gov. Secure CA   C,C,C<br>
- MCI Mall CA                         C,C,<br>
- VeriSign Class 4 Primary CA         C,C,C<br>
- KEYWITNESS, Canada CA               C,C,<br>
- BelSign Object Publishing CA        ,,C<br>
- BBN Certificate Services CA Root 1  C,C,<br>
- p    prohibited (explicitly distrusted)<br>
- P    Trusted peer<br>
- c    Valid CA<br>
- T    Trusted CA to issue client certs (implies c)<br>
- C    Trusted CA to issue server certs(for ssl only) (implies c)<br>
- u    User cert<br>
- w    Send warning </code></p>
+<p><code>Certificate Name              Trust Attributes </code><br>
+ <code>Uptime Group Plc. Class 1 CA        C,C,<br>
+ VeriSign Class 1 Primary CA         ,C,<br>
+ VeriSign Class 2 Primary CA         C,C,C<br>
+ AT&amp;T Certificate Services           C,C,<br>
+ GTE CyberTrust Secure Server CA     C,,<br>
+ Verisign/RSA Commercial CA          C,C,<br>
+ AT&amp;T Directory Services             C,C,<br>
+ BelSign Secure Server CA            C,,<br>
+ Verisign/RSA Secure Server CA       C,C,<br>
+ GTE CyberTrust Root CA              C,C,<br>
+ Uptime Group Plc. Class 4 CA        ,C,<br>
+ VeriSign Class 3 Primary CA         C,C,C<br>
+ Canada Post Corporation CA          C,C,<br>
+ Integrion CA                        C,C,C<br>
+ IBM World Registry CA               C,C,C<br>
+ GTIS/PWGSC, Canada Gov. Web CA      C,C,<br>
+ GTIS/PWGSC, Canada Gov. Secure CA   C,C,C<br>
+ MCI Mall CA                         C,C,<br>
+ VeriSign Class 4 Primary CA         C,C,C<br>
+ KEYWITNESS, Canada CA               C,C,<br>
+ BelSign Object Publishing CA        ,,C<br>
+ BBN Certificate Services CA Root 1  C,C,<br>
+ p    prohibited (explicitly distrusted)<br>
+ P    Trusted peer<br>
+ c    Valid CA<br>
+ T    Trusted CA to issue client certs (implies c)<br>
+ C    Trusted CA to issue server certs(for ssl only) (implies c)<br>
+ u    User cert<br>
+ w    Send warning </code></p>
 
 <h3 id="Creating_a_Certificate_Request">Creating a Certificate Request</h3>
 
@@ -594,49 +594,49 @@ tags:
 <p>The Certificate Database Tool displays output similar to the following:</p>
 
 <p><code>Certificate:<br>
-   Data:<br>
-     Version: 3 (0x2)<br>
-     Serial Number: 0 (0x0)<br>
-     Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
-     Issuer: CN=John Smith, O=Netscape, L=Mountain View, ST=California, C=US<br>
-     Validity:<br>
-         Not Before: Thu Mar 12 00:10:40 1998<br>
-         Not After: Sat Sep 12 00:10:40 1998<br>
+   Data:<br>
+     Version: 3 (0x2)<br>
+     Serial Number: 0 (0x0)<br>
+     Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
+     Issuer: CN=John Smith, O=Netscape, L=Mountain View, ST=California, C=US<br>
+     Validity:<br>
+         Not Before: Thu Mar 12 00:10:40 1998<br>
+         Not After: Sat Sep 12 00:10:40 1998<br>
  Subject: CN=John Smith, O=Netscape, L=Mountain View, ST=California, C=US </code><br>
  <code>Subject Public Key Info:<br>
-   Public Key Algorithm: PKCS #1 RSA Encryption<br>
-   RSA Public Key:<br>
-     Modulus:<br>
-         00:da:53:23:58:00:91:6a:d1:a2:39:26:2f:06:3a:<br>
-         38:eb:d4:c1:54:a3:62:00:b9:f0:7f:d6:00:76:aa:<br>
-         18:da:6b:79:71:5b:d9:8a:82:24:07:ed:49:5b:33:<br>
-         bf:c5:79:7c:f6:22:a7:18:66:9f:ab:2d:33:03:ec:<br>
-         63:eb:9d:0d:02:1b:da:32:ae:6c:d4:40:95:9f:b3:<br>
-         44:8b:8e:8e:a3:ae:ad:08:38:4f:2e:53:e9:e1:3f:<br>
-         8e:43:7f:51:61:b9:0f:f3:a6:25:1e:0b:93:74:8f:<br>
-         c6:13:a3:cd:51:40:84:0e:79:ea:b7:6b:d1:cc:6b:<br>
-         78:d0:5d:da:be:2b:57:c2:6f<br>
-     Exponent: 65537 (0x10001)<br>
+   Public Key Algorithm: PKCS #1 RSA Encryption<br>
+   RSA Public Key:<br>
+     Modulus:<br>
+         00:da:53:23:58:00:91:6a:d1:a2:39:26:2f:06:3a:<br>
+         38:eb:d4:c1:54:a3:62:00:b9:f0:7f:d6:00:76:aa:<br>
+         18:da:6b:79:71:5b:d9:8a:82:24:07:ed:49:5b:33:<br>
+         bf:c5:79:7c:f6:22:a7:18:66:9f:ab:2d:33:03:ec:<br>
+         63:eb:9d:0d:02:1b:da:32:ae:6c:d4:40:95:9f:b3:<br>
+         44:8b:8e:8e:a3:ae:ad:08:38:4f:2e:53:e9:e1:3f:<br>
+         8e:43:7f:51:61:b9:0f:f3:a6:25:1e:0b:93:74:8f:<br>
+         c6:13:a3:cd:51:40:84:0e:79:ea:b7:6b:d1:cc:6b:<br>
+         78:d0:5d:da:be:2b:57:c2:6f<br>
+     Exponent: 65537 (0x10001)<br>
  Signature Algorithm: PKCS #1 MD5 With RSA Encryption<br>
  Signature:<br>
-   44:15:e5:ae:c4:30:2c:cd:60:89:f1:1d:22:ed:5e:5b:10:c8:<br>
-   7e:5f:56:8c:b4:00:12:ed:5f:a4:6a:12:c3:0d:01:03:09:f2:<br>
-   2f:e7:fd:95:25:47:80:ea:c1:25:5a:33:98:16:52:78:24:80:<br>
-   c9:53:11:40:99:f5:bd:b8:e9:35:0e:5d:3e:38:6a:5c:10:d1:<br>
-   c6:f9:54:af:28:56:62:f4:2f:b3:9b:50:e1:c3:a2:ba:27:ee:<br>
-   07:9f:89:2e:78:5c:6d:46:b6:5e:99:de:e6:9d:eb:d9:ff:b2:<br>
-   5f:c6:f6:c6:52:4a:d4:67:be:8d:fc:dd:52:51:8e:a2:d7:15:<br>
-   71:3e </code><br>
+   44:15:e5:ae:c4:30:2c:cd:60:89:f1:1d:22:ed:5e:5b:10:c8:<br>
+   7e:5f:56:8c:b4:00:12:ed:5f:a4:6a:12:c3:0d:01:03:09:f2:<br>
+   2f:e7:fd:95:25:47:80:ea:c1:25:5a:33:98:16:52:78:24:80:<br>
+   c9:53:11:40:99:f5:bd:b8:e9:35:0e:5d:3e:38:6a:5c:10:d1:<br>
+   c6:f9:54:af:28:56:62:f4:2f:b3:9b:50:e1:c3:a2:ba:27:ee:<br>
+   07:9f:89:2e:78:5c:6d:46:b6:5e:99:de:e6:9d:eb:d9:ff:b2:<br>
+   5f:c6:f6:c6:52:4a:d4:67:be:8d:fc:dd:52:51:8e:a2:d7:15:<br>
+   71:3e </code><br>
  <code>Certificate Trust Flags:<br>
-   SSL Flags:<br>
-     Valid CA<br>
-     Trusted CA<br>
-   Email Flags:<br>
-     Valid CA<br>
-     Trusted CA<br>
-   Object Signing Flags:<br>
-     Valid CA<br>
-     Trusted CA </code></p>
+   SSL Flags:<br>
+     Valid CA<br>
+     Trusted CA<br>
+   Email Flags:<br>
+     Valid CA<br>
+     Trusted CA<br>
+   Object Signing Flags:<br>
+     Valid CA<br>
+     Trusted CA </code></p>
 
 <h3 id="Validating_a_Certificate">Validating a Certificate</h3>
 

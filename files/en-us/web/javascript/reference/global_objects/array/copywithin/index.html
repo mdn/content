@@ -13,7 +13,7 @@ tags:
 <div>{{JSRef}}</div>
 
 <p>The <code><strong>copyWithin()</strong></code> method shallow copies part of an array
-  to another location in the same array and returns it without modifying its length.</p>
+  to another location in the same array and returns it without modifying its length.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}</div>
 
@@ -35,13 +35,13 @@ tags:
   <dd>Zero-based index at which to start copying elements from. If negative,
     <code>start</code> will be counted from the end.</dd>
   <dd>If <code>start</code> is omitted, <code>copyWithin</code> will copy from index
-    <code>0</code>. </dd>
+    <code>0</code>. </dd>
   <dt><code>end</code> {{optional_inline}}</dt>
   <dd>Zero-based index at which to end copying elements from. <code>copyWithin</code>
     copies up to but not including <code>end</code>. If negative, <code>end</code> will be
     counted from the end.</dd>
   <dd>If <code>end</code> is omitted, <code>copyWithin</code> will copy until the last
-    index (default to <code>arr.length</code>).</dd>
+    index (default to <code>arr.length</code>).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -60,77 +60,77 @@ tags:
   require that its <code>this</code> value be an {{jsxref("Array")}} object.</p>
 
 <p>The <code>copyWithin</code> method is a mutable method. It does not alter the length of
-  <code>this</code>, but it will change its content and create new properties, if
+  <code>this</code>, but it will change its content and create new properties, if
   necessary.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js notranslate">if (!Array.prototype.copyWithin) {
-  Object.defineProperty(Array.prototype, 'copyWithin', {
-    value: function(target, start/*, end*/) {
-    // Steps 1-2.
-    if (this == null) {
-      throw new TypeError('this is null or not defined');
-    }
+  Object.defineProperty(Array.prototype, 'copyWithin', {
+    value: function(target, start/*, end*/) {
+    // Steps 1-2.
+    if (this == null) {
+      throw new TypeError('this is null or not defined');
+    }
 
-    var O = Object(this);
+    var O = Object(this);
 
-    // Steps 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
+    // Steps 3-5.
+    var len = O.length &gt;&gt;&gt; 0;
 
-    // Steps 6-8.
-    var relativeTarget = target &gt;&gt; 0;
+    // Steps 6-8.
+    var relativeTarget = target &gt;&gt; 0;
 
-    var to = relativeTarget &lt; 0 ?
-      Math.max(len + relativeTarget, 0) :
-      Math.min(relativeTarget, len);
+    var to = relativeTarget &lt; 0 ?
+      Math.max(len + relativeTarget, 0) :
+      Math.min(relativeTarget, len);
 
-    // Steps 9-11.
-    var relativeStart = start &gt;&gt; 0;
+    // Steps 9-11.
+    var relativeStart = start &gt;&gt; 0;
 
-    var from = relativeStart &lt; 0 ?
-      Math.max(len + relativeStart, 0) :
-      Math.min(relativeStart, len);
+    var from = relativeStart &lt; 0 ?
+      Math.max(len + relativeStart, 0) :
+      Math.min(relativeStart, len);
 
-    // Steps 12-14.
-    var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
+    // Steps 12-14.
+    var end = arguments[2];
+    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
 
-    var final = relativeEnd &lt; 0 ?
-      Math.max(len + relativeEnd, 0) :
-      Math.min(relativeEnd, len);
+    var final = relativeEnd &lt; 0 ?
+      Math.max(len + relativeEnd, 0) :
+      Math.min(relativeEnd, len);
 
-    // Step 15.
-    var count = Math.min(final - from, len - to);
+    // Step 15.
+    var count = Math.min(final - from, len - to);
 
-    // Steps 16-17.
-    var direction = 1;
+    // Steps 16-17.
+    var direction = 1;
 
-    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
-      direction = -1;
-      from += count - 1;
-      to += count - 1;
-    }
+    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
+      direction = -1;
+      from += count - 1;
+      to += count - 1;
+    }
 
-    // Step 18.
-    while (count &gt; 0) {
-      if (from in O) {
-        O[to] = O[from];
-      } else {
-        delete O[to];
-      }
+    // Step 18.
+    while (count &gt; 0) {
+      if (from in O) {
+        O[to] = O[from];
+      } else {
+        delete O[to];
+      }
 
-      from += direction;
-      to += direction;
-      count--;
-    }
+      from += direction;
+      to += direction;
+      count--;
+    }
 
-    // Step 19.
-    return O;
-  },
-  configurable: true,
-  writable: true
-  });
+    // Step 19.
+    return O;
+  },
+  configurable: true,
+  writable: true
+  });
 }</pre>
 
 <h2 id="Examples">Examples</h2>

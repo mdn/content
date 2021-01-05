@@ -208,7 +208,7 @@ tags:
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>url</code> edit box is 30 characters wide:</p>
 
 <pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       size="30"&gt;</pre>
+       size="30"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
 
@@ -219,7 +219,7 @@ tags:
 <p>The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.</p>
 
 <pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80"&gt;
+       size="30" minlength="10" maxlength="80"&gt;
 </pre>
 
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
@@ -244,13 +244,13 @@ tags:
 <p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
 
 <pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       list="defaultURLs"&gt;
+       list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
-  &lt;option value="https://developer.mozilla.org/"&gt;
-  &lt;option value="http://www.google.com/"&gt;
-  &lt;option value="http://www.microsoft.com/"&gt;
-  &lt;option value="https://www.mozilla.org/"&gt;
+  &lt;option value="https://developer.mozilla.org/"&gt;
+  &lt;option value="http://www.google.com/"&gt;
+  &lt;option value="http://www.microsoft.com/"&gt;
+  &lt;option value="https://www.mozilla.org/"&gt;
   &lt;option value="http://w3.org/"&gt;
 &lt;/datalist&gt;</pre>
 
@@ -263,13 +263,13 @@ tags:
 <p>You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your <code>&lt;option&gt;</code> elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.</p>
 
 <pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       list="defaultURLs"&gt;
+       list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
-  &lt;option value="https://developer.mozilla.org/" label="MDN Web Docs"&gt;
-  &lt;option value="http://www.google.com/" label="Google"&gt;
-  &lt;option value="http://www.microsoft.com/" label="Microsoft"&gt;
-  &lt;option value="https://www.mozilla.org/" label="Mozilla"&gt;
+  &lt;option value="https://developer.mozilla.org/" label="MDN Web Docs"&gt;
+  &lt;option value="http://www.google.com/" label="Google"&gt;
+  &lt;option value="http://www.microsoft.com/" label="Microsoft"&gt;
+  &lt;option value="https://www.mozilla.org/" label="Mozilla"&gt;
   &lt;option value="http://w3.org/" label="W3C"&gt;
 &lt;/datalist&gt;</pre>
 
@@ -339,22 +339,22 @@ tags:
 </div>
 
 <pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="myURL"&gt;Enter the problem website address:&lt;/label&gt;
-    &lt;input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="myComment"&gt;What is the problem?&lt;/label&gt;
-    &lt;input id="myComment" name="myComment" type="text"
-           required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="myURL"&gt;Enter the problem website address:&lt;/label&gt;
+    &lt;input id="myURL" name="myURL" type="url"
+           required pattern=".*\.myco\..*"
+           title="The URL must be in a Myco domain"&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="myComment"&gt;What is the problem?&lt;/label&gt;
+    &lt;input id="myComment" name="myComment" type="text"
+           required&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
 </pre>
 

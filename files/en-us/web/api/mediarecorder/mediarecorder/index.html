@@ -34,7 +34,7 @@ tags:
   <dd>The {{domxref("MediaStream")}} that will be recorded. This source media can come
     from a stream created using {{domxref("MediaDevices.getUserMedia",
     "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
-    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.</dd>
+    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.</dd>
   <dt>
     <p><strong><code>options</code> </strong>{{optional_inline}}</p>
   </dt>
@@ -89,13 +89,13 @@ if (navigator.mediaDevices.getUserMedia) {
   var chunks = [];
 
   var onSuccess = function(stream) {
-    var options = {
-      audioBitsPerSecond : 128000,
-      videoBitsPerSecond : 2500000,
-      mimeType : 'video/mp4'
-    }
-    var mediaRecorder = new MediaRecorder(stream,options);
-    m = mediaRecorder;
+    var options = {
+      audioBitsPerSecond : 128000,
+      videoBitsPerSecond : 2500000,
+      mimeType : 'video/mp4'
+    }
+    var mediaRecorder = new MediaRecorder(stream,options);
+    m = mediaRecorder;
 
 ...
   }

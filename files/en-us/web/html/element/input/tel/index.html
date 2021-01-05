@@ -203,7 +203,7 @@ tags:
 <p>Here, we have an <code>tel</code> input with the placeholder <code>123-4567-8901</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 
 <pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901"&gt;</pre>
+       placeholder="123-4567-8901"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
 
@@ -216,7 +216,7 @@ tags:
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>tel</code> edit box is 20 characters wide:</p>
 
 <pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
-       size="20"&gt;</pre>
+       size="20"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
 
@@ -227,7 +227,7 @@ tags:
 <p>The example below creates a 20-character wide telephone number entry box, requiring that the contents be no shorter than 9 characters and no longer than 14 characters.</p>
 
 <pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14"&gt;</pre>
+       size="20" minlength="9" maxlength="14"&gt;</pre>
 
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
@@ -241,7 +241,7 @@ tags:
 
 <div id="Default_value">
 <pre class="brush: html notranslate">&lt;input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444"&gt;</pre>
+       value="333-4444-4444"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
@@ -254,10 +254,10 @@ tags:
 &lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
 
 &lt;datalist id="defaultTels"&gt;
-  &lt;option value="111-1111-1111"&gt;
-  &lt;option value="122-2222-2222"&gt;
-  &lt;option value="333-3333-3333"&gt;
-  &lt;option value="344-4444-4444"&gt;
+  &lt;option value="111-1111-1111"&gt;
+  &lt;option value="122-2222-2222"&gt;
+  &lt;option value="333-3333-3333"&gt;
+  &lt;option value="344-4444-4444"&gt;
 &lt;/datalist&gt;</pre>
 
 <p>{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}</p>
@@ -273,7 +273,7 @@ tags:
 <p>As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Making_telephone_numbers_required">Making telephone numbers required</h3>

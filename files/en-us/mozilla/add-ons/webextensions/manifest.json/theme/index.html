@@ -49,7 +49,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See <a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distributing your add-on</a> for more details.</p>
+<p><strong>Note</strong>: Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See <a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distributing your add-on</a> for more details.</p>
 </div>
 
 <div class="note">
@@ -146,7 +146,7 @@ tags:
 
     <p>Optional in desktop Firefox from Firefox 60 onwards. One of <code>theme_frame</code> or <code>headerURL</code> had to be specified before Firefox 60. Note also that in Firefox 60 onwards, any {{cssxref("text-shadow")}} applied to the header text is removed if no <code>headerURL</code> is specified (see {{bug(1404688)}}).</p>
 
-    <p>In Firefox for Android, <code>headerURL</code> or <code>theme_frame</code>  must be specified.</p>
+    <p>In Firefox for Android, <code>headerURL</code> or <code>theme_frame</code>  must be specified.</p>
    </td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ tags:
 
     <p>Optional in desktop Firefox 60 onwards. One of <code>theme_frame</code> or <code>headerURL</code> had to be specified before Firefox 60.</p>
 
-    <p>In Firefox for Android, <code>headerURL</code> or <code>theme_frame</code>  must be specified.</p>
+    <p>In Firefox for Android, <code>headerURL</code> or <code>theme_frame</code>  must be specified.</p>
    </td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ tags:
 
 <h3 id="colors">colors</h3>
 
-<p>These properties define the colors used for different parts of the browser. They are all optional (but note that <code>"accentcolor"</code> and <code>"textcolor"</code> were mandatory in Firefox before version 63).  How these properties affect the Firefox UI  is shown here:</p>
+<p>These properties define the colors used for different parts of the browser. They are all optional (but note that <code>"accentcolor"</code> and <code>"textcolor"</code> were mandatory in Firefox before version 63).  How these properties affect the Firefox UI  is shown here:</p>
 
 <table class="fullwidth-table standard-table">
  <tbody>
@@ -238,10 +238,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "accentcolor": "red",
-     "tab_background_text": "white"
-  }
+  "colors": {
+     "accentcolor": "red",
+     "tab_background_text": "white"
+  }
 }</pre>
     </details>
 
@@ -251,7 +251,7 @@ tags:
   <tr>
    <td><code>bookmark_text</code></td>
    <td>
-    <p>The color of text and icons in the bookmark and find bars. Also, if <code>tab_text</code> isn't defined it sets the color of the active tab text and if <code>icons</code> isn't defined the color of the toolbar icons. Provided as Chrome compatible alias for <code>toolbar_text</code>.</p>
+    <p>The color of text and icons in the bookmark and find bars. Also, if <code>tab_text</code> isn't defined it sets the color of the active tab text and if <code>icons</code> isn't defined the color of the toolbar icons. Provided as Chrome compatible alias for <code>toolbar_text</code>.</p>
 
     <div class="notecard note">
     <p>Ensure any color used contrasts well with those used in <code>frame</code> and <code>frame_inactive</code> or <code>toolbar</code> if you're using that property.</p>
@@ -263,13 +263,13 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
+  "colors": {
+    "frame": "black",
     "tab_background_text": "white",
-    "tab_text": "white",
-    "toolbar": "black",
-    "bookmark_text": "red"
-  }
+    "tab_text": "white",
+    "toolbar": "black",
+    "bookmark_text": "red"
+  }
 }</pre>
     </details>
 
@@ -285,11 +285,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_active": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "button_background_active": "red"
+  }
 }</pre>
     </details>
 
@@ -305,11 +305,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_hover": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "button_background_hover": "red"
+  }
 }</pre>
     </details>
 
@@ -322,18 +322,18 @@ tags:
     <p>The color of toolbar icons, excluding those in the find toolbar.</p>
 
     <div class="notecard note">
-    <p>Ensure the color used contrasts well with those used in <code>frame</code>,  <code>frame_inactive</code>, <code>button_background_active</code>, and <code>button_background_hover</code>.</p>
+    <p>Ensure the color used contrasts well with those used in <code>frame</code>,  <code>frame_inactive</code>, <code>button_background_active</code>, and <code>button_background_hover</code>.</p>
     </div>
 
     <details open><summary>See example</summary>
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "icons": "red"
+  }
 }</pre>
     </details>
 
@@ -346,18 +346,18 @@ tags:
     <p>The color of toolbar icons in attention state such as the starred bookmark icon or finished download icon.</p>
 
     <div class="notecard note">
-    <p>Ensure the color used contrasts well with those used in <code>frame</code>,  <code>frame_inactive</code>, <code>button_background_active</code>, and <code>button_background_hover</code>.</p>
+    <p>Ensure the color used contrasts well with those used in <code>frame</code>,  <code>frame_inactive</code>, <code>button_background_active</code>, and <code>button_background_hover</code>.</p>
     </div>
 
     <details open><summary>See example</summary>
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons_attention": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "icons_attention": "red"
+  }
 }</pre>
     </details>
 
@@ -373,10 +373,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
-     "tab_background_text": "white"
-  }
+  "colors": {
+     "frame": "red",
+     "tab_background_text": "white"
+  }
 }</pre>
     </details>
 
@@ -392,11 +392,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
+  "colors": {
+     "frame": "red",
      "frame_inactive": "gray",
-     "tab_text": "white"
-  }
+     "tab_text": "white"
+  }
 }</pre>
     </details>
 
@@ -412,10 +412,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
-  }
+  "colors": {
+     "ntp_background": "red",
+     "ntp_text": "white"
+  }
 }</pre>
     </details>
 
@@ -435,10 +435,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
+  "colors": {
+     "ntp_background": "red",
      "ntp_text": "white"
-  }
+  }
 }</pre>
     </details>
 
@@ -454,11 +454,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "red"
+  }
 }</pre>
     </details>
 
@@ -474,13 +474,13 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "white",
-     "popup_border": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "black",
+     "popup_text": "white",
+     "popup_border": "red"
+  }
 }</pre>
     </details>
 
@@ -500,12 +500,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "red",
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup_highlight": "red",
      "popup_highlight_text": "white"
-  }
+  }
 }</pre>
     </details>
 
@@ -525,12 +525,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "black",
-     "popup_highlight_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup_highlight": "black",
+     "popup_highlight_text": "red"
+  }
 }</pre>
     </details>
 
@@ -550,12 +550,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "black",
+     "popup_text": "red"
+  }
 }</pre>
     </details>
 
@@ -571,12 +571,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
      "sidebar_text": "white"
-  }
+  }
 }</pre>
     </details>
 
@@ -592,9 +592,9 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar_border": "red"
-  }
+  "colors": {
+     "sidebar_border": "red"
+  }
 }</pre>
     </details>
 
@@ -610,10 +610,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar_highlight": "red",
+  "colors": {
+     "sidebar_highlight": "red",
      "sidebar_highlight_text": "white"
-  }
+  }
 }</pre>
     </details>
 
@@ -633,10 +633,10 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
+  "colors": {
     "sidebar_highlight": "pink",
     "sidebar_highlight_text": "red",
-  }
+  }
 }</pre>
     </details>
 
@@ -656,12 +656,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
      "sidebar_text": "white"
-  }
+  }
 }</pre>
     </details>
 
@@ -677,11 +677,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_background_separator": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_background_separator": "red"
+  }
 }</pre>
     </details>
 
@@ -694,18 +694,18 @@ tags:
     <p>The color of the text displayed in the inactive page tabs. If <code>tab_text</code> or <code>bookmark_text</code> isn't specified, applies to the active tab text.</p>
 
     <div class="notecard note">
-    <p>Ensure the color used contrasts well with those used in <code>tab_selected</code> or <code>frame</code> and  <code>frame_inactive</code>.</p>
+    <p>Ensure the color used contrasts well with those used in <code>tab_selected</code> or <code>frame</code> and  <code>frame_inactive</code>.</p>
     </div>
 
     <details open><summary>See example</summary>
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "tab_background_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "white",
+    "tab_background_text": "red"
+  }
 }</pre>
     </details>
 
@@ -721,11 +721,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_line": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_line": "red"
+  }
 }</pre>
     </details>
 
@@ -741,11 +741,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_loading": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_loading": "red"
+  }
 }</pre>
     </details>
 
@@ -761,14 +761,14 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "images": {
-  "theme_frame": "weta.png"
+  "images": {
+  "theme_frame": "weta.png"
 },
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_selected": "red"
+  }
 }</pre>
     </details>
 
@@ -781,7 +781,7 @@ tags:
     <p>From Firefox 59, it represents the text color for the selected tab. If <code>tab_line</code> isn't specified, it also defines the color of the selected tab line.</p>
 
     <div class="notecard note">
-    <p>Ensure the color used contrasts well with those used in <code>tab_selected</code> or <code>frame</code> and  <code>frame_inactive</code>.</p>
+    <p>Ensure the color used contrasts well with those used in <code>tab_selected</code> or <code>frame</code> and  <code>frame_inactive</code>.</p>
     </div>
 
     <p>From Firefox 55 to 58, it is incorrectly implemented as alias for <code>"textcolor"</code></p>
@@ -790,15 +790,15 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "images": {
-  "theme_frame": "weta.png"
+  "images": {
+  "theme_frame": "weta.png"
 },
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "white",
-     "tab_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_selected": "white",
+     "tab_text": "red"
+  }
 }</pre>
     </details>
 
@@ -818,11 +818,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "textcolor": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "white",
+    "textcolor": "red"
+  }
 }</pre>
     </details>
 
@@ -840,11 +840,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "red",
-    "tab_background_text": "white"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "red",
+    "tab_background_text": "white"
+  }
 }</pre>
     </details>
 
@@ -860,11 +860,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_bottom_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar_bottom_separator": "red"
+  }
 }</pre>
     </details>
 
@@ -882,11 +882,11 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "red"
+  }
 }</pre>
     </details>
 
@@ -904,14 +904,14 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_border": "red"
+  }
 }</pre>
     </details>
 
@@ -927,14 +927,14 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_border_focus": "red"
+  }
 }</pre>
     </details>
 
@@ -950,14 +950,14 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_focus": "red"
+  }
 }</pre>
     </details>
 
@@ -1008,7 +1008,7 @@ tags:
 
     <p><img alt="Example showing customized text and highlight colors in the URL bar" src="https://mdn.mozillademos.org/files/16632/toolbar_field_highlight.png" style="height: 289px; width: 738px;"></p>
 
-    <p>Here, the <code>toolbar_field_highlight_text</code> field is used to set the text color to a dark medium-dark green, while the highlight color is  a light green.</p>
+    <p>Here, the <code>toolbar_field_highlight_text</code> field is used to set the text color to a dark medium-dark green, while the highlight color is  a light green.</p>
    </td>
   </tr>
   <tr>
@@ -1020,12 +1020,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field_separator": "red"
+  }
 }</pre>
     </details>
 
@@ -1047,13 +1047,13 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "red"
+  }
 }</pre>
     </details>
 
@@ -1073,14 +1073,14 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_text_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_text_focus": "red"
+  }
 }</pre>
     </details>
 
@@ -1090,7 +1090,7 @@ tags:
   <tr>
    <td><code>toolbar_text </code></td>
    <td>
-    <p>The color of toolbar text. This also sets the color of  text in the "Find" bar.</p>
+    <p>The color of toolbar text. This also sets the color of  text in the "Find" bar.</p>
 
     <div class="notecard note">
     <p>For compatibility with Chrome, use the alias <code>bookmark_text</code>.</p>
@@ -1100,12 +1100,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_text": "red"
+  }
 }</pre>
     </details>
 
@@ -1121,12 +1121,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_top_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_top_separator": "red"
+  }
 }</pre>
     </details>
 
@@ -1142,12 +1142,12 @@ tags:
 
     <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_vertical_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_vertical_separator": "red"
+  }
 }</pre>
     </details>
 
@@ -1304,24 +1304,24 @@ tags:
 
 <p><a id="example-screenshot">The following example uses most of the different values for <code>theme.colors</code>:</a></p>
 
-<pre class="brush: json">  "theme": {
-    "images": {
-      "theme_frame": "weta.png"
-    },
+<pre class="brush: json">  "theme": {
+    "images": {
+      "theme_frame": "weta.png"
+    },
 
-    "colors": {
-       "frame": "darkgreen",
-       "tab_background_text": "white",
-       "toolbar": "blue",
-       "bookmark_text": "cyan",
-       "toolbar_field": "orange",
+    "colors": {
+       "frame": "darkgreen",
+       "tab_background_text": "white",
+       "toolbar": "blue",
+       "bookmark_text": "cyan",
+       "toolbar_field": "orange",
        "toolbar_field_border": "white",
-       "toolbar_field_text": "green",
-       "toolbar_top_separator": "red",
-       "toolbar_bottom_separator": "white",
-       "toolbar_vertical_separator": "white"
-    }
-  }</pre>
+       "toolbar_field_text": "green",
+       "toolbar_top_separator": "red",
+       "toolbar_bottom_separator": "white",
+       "toolbar_vertical_separator": "white"
+    }
+  }</pre>
 
 <p>It will give you a browser that looks like this:</p>
 
@@ -1356,11 +1356,11 @@ tags:
  <li><code>images/theme_frame</code> anchors the image to the top left of the header and if the image doesn’t fill the header area tile the image.</li>
  <li>all colors must be specified as an array of RGB values, like this:
   <pre class="brush: json">"theme": {
-  "colors": {
-     "frame": [255, 0, 0],
-     "tab_background_text": [0, 255, 0],
-     "bookmark_text": [0, 0, 255]
-  }
+  "colors": {
+     "frame": [255, 0, 0],
+     "tab_background_text": [0, 255, 0],
+     "bookmark_text": [0, 0, 255]
+  }
 }</pre>
 
   <p>From Firefox 59 onward, both the array form and the CSS color form are accepted for all properties. Before that, <code>colors/frame</code> and <code>colors/tab_background_text</code> required the array form, while other properties required the CSS color form.</p>

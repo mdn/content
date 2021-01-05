@@ -31,7 +31,7 @@ tags:
  </tbody>
 </table>
 
-<p>The flexibility of forms makes them one of the most complex structures in <a href="/en-US/docs/Learn/HTML">HTML</a>; you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and <a href="/en-US/docs/Learn/Accessibility">accessible</a>.</p>
+<p>The flexibility of forms makes them one of the most complex structures in <a href="/en-US/docs/Learn/HTML">HTML</a>; you can build any kind of basic form using dedicated form elements and attributes. Using correct structure when building an HTML form will help ensure that the form is both usable and <a href="/en-US/docs/Learn/Accessibility">accessible</a>.</p>
 
 <h2 id="The_&lt;form&gt;_element">The &lt;form&gt; element</h2>
 
@@ -49,26 +49,26 @@ tags:
 
 <p>The {{HTMLElement("fieldset")}} element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a {{HTMLElement("fieldset")}} by including a {{HTMLElement("legend")}} element just below the opening {{HTMLElement("fieldset")}} tag. The text content of the {{HTMLElement("legend")}} formally describes the purpose of the {{HTMLElement("fieldset")}} it is included inside.</p>
 
-<p>Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as <a href="http://www.freedomscientific.com/products/software/jaws/" rel="external">Jaws</a> and <a href="http://www.nvda-project.org/" rel="external">NVDA</a> will speak the legend's content before speaking the label of each control.</p>
+<p>Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as <a href="http://www.freedomscientific.com/products/software/jaws/" rel="external">Jaws</a> and <a href="http://www.nvda-project.org/" rel="external">NVDA</a> will speak the legend's content before speaking the label of each control.</p>
 
 <p>Here is a little example:</p>
 
 <pre class="brush:html;">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Fruit juice size&lt;/legend&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
-      &lt;label for="size_1"&gt;Small&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
-      &lt;label for="size_2"&gt;Medium&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
-      &lt;label for="size_3"&gt;Large&lt;/label&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Fruit juice size&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
+      &lt;label for="size_1"&gt;Small&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
+      &lt;label for="size_2"&gt;Medium&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
+      &lt;label for="size_3"&gt;Large&lt;/label&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
 
 <div class="note">
@@ -77,9 +77,9 @@ tags:
 
 <p>When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.</p>
 
-<p>The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.</p>
+<p>The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.</p>
 
-<p>Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">listen to how a screen reader</a> interprets it. If it sounds odd, try to improve the form structure.</p>
+<p>Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however it is your responsibility not to abuse it. If possible, each time you build a form, try to <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">listen to how a screen reader</a> interprets it. If it sounds odd, try to improve the form structure.</p>
 
 <h2 id="The_&lt;label&gt;_element">The &lt;label&gt; element</h2>
 
@@ -106,14 +106,14 @@ tags:
 <p>For example, clicking on the "I like cherry" label text in the example below will toggle the selected state of the <em>taste_cherry</em> checkbox:</p>
 
 <pre class="brush:html;">&lt;form&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="cherry"&gt;
+  &lt;p&gt;
+    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="cherry"&gt;
     &lt;label for="taste_1"&gt;I like cherry&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="banana"&gt;
-    &lt;label for="taste_2"&gt;I like banana&lt;/label&gt;
-  &lt;/p&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="banana"&gt;
+    &lt;label for="taste_2"&gt;I like banana&lt;/label&gt;
+  &lt;/p&gt;
 &lt;/form&gt;</pre>
 
 <div class="note">
@@ -152,7 +152,7 @@ tags:
 
 <p>{{EmbedLiveSample("Multiple_labels", 120, 120)}}</p>
 
-<p>The paragraph at the top states a rule for required elements. The rule must be included <em>before</em> it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "<em>star</em>"  when encountered. When hovered by a sighted mouse user, "<em>required</em>" should appear,  which is achieved by use of the <code>title</code> attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code> attribute, which is always read by screen readers.</p>
+<p>The paragraph at the top states a rule for required elements. The rule must be included <em>before</em> it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "<em>star</em>"  when encountered. When hovered by a sighted mouse user, "<em>required</em>" should appear,  which is achieved by use of the <code>title</code> attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code> attribute, which is always read by screen readers.</p>
 
 <p>The above variants increase in effectiveness as you go through them:</p>
 
@@ -178,7 +178,7 @@ tags:
 
 <p>In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("h1")}}, {{htmlelement("h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.</p>
 
-<p>Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.</p>
+<p>Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.</p>
 
 <h3 id="Active_learning_building_a_form_structure">Active learning: building a form structure</h3>
 
@@ -239,12 +239,12 @@ tags:
       &lt;input type="email" id="mail" name="usermail"&gt;
     &lt;/p&gt;
     &lt;p&gt;
-      &lt;label for="pwd"&gt;
-        &lt;span&gt;Password: &lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="password" id="pwd" name="password"&gt;
-    &lt;/p&gt;
+      &lt;label for="pwd"&gt;
+        &lt;span&gt;Password: &lt;/span&gt;
+        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+      &lt;/label&gt;
+      &lt;input type="password" id="pwd" name="password"&gt;
+    &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
  <li>The second <code>&lt;section&gt;</code> of our form is the payment information. We have three distinct controls along with their labels, each contained inside a <code>&lt;p&gt;</code>. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an <code>&lt;input&gt;</code> element of type <code>tel</code>, for entering a credit card number; while we could have used the <code>number</code> type, we don't want the number's spinner UI. The last one is an <code>&lt;input&gt;</code> element of type <code>date</code>, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in <a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a>.<br>

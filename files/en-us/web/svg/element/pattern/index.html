@@ -18,14 +18,14 @@ tags:
 </div>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
-      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+  &lt;defs&gt;
+    &lt;pattern id="star" viewBox="0,0,10,10" width="10%" height="10%"&gt;
+      &lt;polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
 
-  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
-  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
+  &lt;circle cx="50"  cy="50" r="50" fill="url(#star)"/&gt;
+  &lt;circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
@@ -49,7 +49,7 @@ tags:
  <dd>This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.<br>
  <small><em>Value type</em>: <strong><a href="/docs/Web/SVG/Content_type#Transform-list">&lt;transform-list&gt;</a></strong>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("patternUnits")}}</dt>
- <dd>This attribute defines the coordinate system for attributes <code>x</code>, <code>y</code>, <code>width</code> , and <code>height</code>.<br>
+ <dd>This attribute defines the coordinate system for attributes <code>x</code>, <code>y</code>, <code>width</code> , and <code>height</code>.<br>
  <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
  <dd>This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different aspect ratio.<br>

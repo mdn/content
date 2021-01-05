@@ -78,13 +78,13 @@ tags:
   directory when it exceeds a megabyte in size.</p>
 
 <pre class="brush: js">workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if (metadata.size &gt; 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
+  fileEntry.getMetadata(function(metadata) {
+    if (metadata.size &gt; 1048576) {
+      workingDirectory.getDirectory("log", {}, function(dirEntry) {
+        fileEntry.moveTo(dirEntry);
+      }, handleError);
+    }
+  });
 }, handleError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

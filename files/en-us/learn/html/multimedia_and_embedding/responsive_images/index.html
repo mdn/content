@@ -45,7 +45,7 @@ tags:
 
 <h2 id="Why_responsive_images">Why responsive images?</h2>
 
-<p>Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:</p>
+<p>Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:</p>
 
 <p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="picture-element-wide.png" style="display: block; margin: 0px auto;"></p>
 
@@ -53,28 +53,28 @@ tags:
 
 <ul>
  <li>The body content has been set to a maximum width of 1200 pixels — in viewports above that width, the body remains at 1200px and centers itself in the available space. In viewports below that width, the body will stay at 100% of the width of the viewport.</li>
- <li>The header image has been set so that its center always stays in the center of the header, no matter what width the heading is set at. If the site is being viewed on a narrower screen, the important detail in the center of the image (the people) can still be seen, and the excess is lost off either side. It is 200px high.</li>
- <li>The content images have been set so that if the body element becomes smaller than the image, the images start to shrink so that they always stay inside the body, rather than overflowing it.</li>
+ <li>The header image has been set so that its center always stays in the center of the header, no matter what width the heading is set at. If the site is being viewed on a narrower screen, the important detail in the center of the image (the people) can still be seen, and the excess is lost off either side. It is 200px high.</li>
+ <li>The content images have been set so that if the body element becomes smaller than the image, the images start to shrink so that they always stay inside the body, rather than overflowing it.</li>
 </ul>
 
-<p>However, issues arise when you start to view the site on a narrow screen device. The header below looks ok, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see the people within the first content image.</p>
+<p>However, issues arise when you start to view the site on a narrow screen device. The header below looks ok, but it's starting to take up a lot of the screen height for a mobile device. And at this size, it is difficult to see the people within the first content image.</p>
 
 <p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="non-responsive-narrow.png" style="display: block; margin: 0px auto;"></p>
 
 <p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium width screen device, like a tablet. This is commonly known as the <strong>art direction problem</strong>.</p>
 
-<p>In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small <a href="/en-US/docs/Glossary/Raster_image">raster image</a> starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a>). This is called the <strong>resolution switching problem</strong>.</p>
+<p>In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small <a href="/en-US/docs/Glossary/Raster_image">raster image</a> starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a>). This is called the <strong>resolution switching problem</strong>.</p>
 
-<p>Conversely, it is unnecessary to display a large image on a screen significantly smaller than the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop, when a small image would do for their device. Ideally, you would have multiple resolutions available and serve the appropriate size depending upon the device accessing the data on the website.</p>
+<p>Conversely, it is unnecessary to display a large image on a screen significantly smaller than the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop, when a small image would do for their device. Ideally, you would have multiple resolutions available and serve the appropriate size depending upon the device accessing the data on the website.</p>
 
-<p>To make things more complicated, some devices have high resolution screens that need larger images than you might expect to display nicely. This is essentially the same problem, but in a slightly different context.</p>
+<p>To make things more complicated, some devices have high resolution screens that need larger images than you might expect to display nicely. This is essentially the same problem, but in a slightly different context.</p>
 
-<p>You might think that vector images would solve these problems, and they do to a certain degree — they are small in file size and scale well, and you should use them wherever possible. However, they aren't suitable for all image types. Vector images are great for simple graphics, patterns, interface elements, etc., but it starts to get very complex to create a vector-based image with the kind of detail that you'd find in say, a photo. Raster image formats such as JPEGs are more suited to the kind of images we see in the above example.</p>
+<p>You might think that vector images would solve these problems, and they do to a certain degree — they are small in file size and scale well, and you should use them wherever possible. However, they aren't suitable for all image types. Vector images are great for simple graphics, patterns, interface elements, etc., but it starts to get very complex to create a vector-based image with the kind of detail that you'd find in say, a photo. Raster image formats such as JPEGs are more suited to the kind of images we see in the above example.</p>
 
 <p>This kind of problem didn't exist when the web first existed, in the early to mid 90s — back then the only devices in existence to browse the Web were desktops and laptops, so browser engineers and spec writers didn't even think to implement solutions. <em>Responsive image technologies</em> were implemented recently to solve the problems indicated above by letting you offer the browser several image files, either all showing the same thing but containing different numbers of pixels (<em>resolution switching</em>), or different images suitable for different space allocations (<em>art direction</em>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in release versions of modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
+<p><strong>Note</strong>: The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in release versions of modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
 </div>
 
 <h2 id="How_do_you_create_responsive_images">How do you create responsive images?</h2>
@@ -90,13 +90,13 @@ tags:
 <p>We can however use two new attributes — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — to provide several additional source images along with hints to help the browser pick the right one. You can see an example of this in our <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> example on Github (see also <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">the source code</a>):</p>
 
 <pre class="brush: html notranslate">&lt;img srcset="elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 600px) 480px,
-            800px"
-     src="elva-fairy-800w.jpg"
-     alt="Elva dressed as a fairy"&gt;</pre>
+             elva-fairy-800w.jpg 800w"
+     sizes="(max-width: 600px) 480px,
+            800px"
+     src="elva-fairy-800w.jpg"
+     alt="Elva dressed as a fairy"&gt;</pre>
 
-<p>The <code>srcset</code> and <code>sizes</code> attributes look complicated, but they're not too hard to understand if you format them as shown above, with a different part of the attribute value on each line. Each value contains a comma-separated list, and each part of those lists is made up of three sub-parts. Let's run through the contents of each now:</p>
+<p>The <code>srcset</code> and <code>sizes</code> attributes look complicated, but they're not too hard to understand if you format them as shown above, with a different part of the attribute value on each line. Each value contains a comma-separated list, and each part of those lists is made up of three sub-parts. Let's run through the contents of each now:</p>
 
 <p><strong><code>srcset</code></strong> defines the set of images we will allow the browser to choose between, and what size each image is. Each set of image information is separated from the previous one by a comma. For each one, we write:</p>
 
@@ -127,7 +127,7 @@ tags:
  <li>Load the image referenced in the <code>srcset</code> list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.</li>
 </ol>
 
-<p>And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the <code>(max-width: 600px)</code> media condition will be true, and so the browser chooses the <code>480px</code> slot. The <code>elva-fairy-480w.jpg</code> will be loaded, as its inherent width (<code>480w</code>) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.</p>
+<p>And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the <code>(max-width: 600px)</code> media condition will be true, and so the browser chooses the <code>480px</code> slot. The <code>elva-fairy-480w.jpg</code> will be loaded, as its inherent width (<code>480w</code>) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'html'</span>).<span class="cm-property">clientWidth</span></span></span></span></code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
@@ -138,7 +138,7 @@ tags:
 <p>Older browsers that don't support these features will just ignore them. Instead, those browsers will go ahead and load the image referenced in the {{htmlattrxref("src", "img")}} attribute as normal.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In the {{htmlelement("head")}} of the example linked above, you'll find the line <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).</p>
+<p><strong>Note</strong>: In the {{htmlelement("head")}} of the example linked above, you'll find the line <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).</p>
 </div>
 
 <h3 id="Resolution_switching_Same_size_different_resolutions">Resolution switching: Same size, different resolutions</h3>
@@ -146,9 +146,9 @@ tags:
 <p>If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using <code>srcset</code> with x-descriptors and without <code>sizes</code> — a somewhat easier syntax! You can find an example of what this looks like in <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">srcset-resolutions.html</a> (see also <a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">the source code</a>):</p>
 
 <pre class="brush: html notranslate">&lt;img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg"
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg"
      alt="Elva dressed as a fairy"&gt;
 </pre>
 
@@ -162,7 +162,7 @@ tags:
 
 <h3 id="Art_direction">Art direction</h3>
 
-<p>To recap, the <strong>art direction problem</strong> involves wanting to change the image displayed to suit different image display sizes. For example, a web page includes a large landscape shot with a person in the middle when viewed on a desktop browser. When viewed on a mobile browser, that same image is shrunk down, making the person in the image very small and hard to see. It would probably be better to show a smaller, portrait image on mobile, which zooms in on the person. The {{htmlelement("picture")}} element allows us to implement just this kind of solution.</p>
+<p>To recap, the <strong>art direction problem</strong> involves wanting to change the image displayed to suit different image display sizes. For example, a web page includes a large landscape shot with a person in the middle when viewed on a desktop browser. When viewed on a mobile browser, that same image is shrunk down, making the person in the image very small and hard to see. It would probably be better to show a smaller, portrait image on mobile, which zooms in on the person. The {{htmlelement("picture")}} element allows us to implement just this kind of solution.</p>
 
 <p>Returning to our original <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> example, we have an image that badly needs art direction:</p>
 
@@ -172,8 +172,8 @@ tags:
 
 <pre class="brush: html notranslate">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
-  &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg"&gt;
-  &lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;
+  &lt;source media="(min-width: 800px)" srcset="elva-800w.jpg"&gt;
+  &lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;
 &lt;/picture&gt;
 </pre>
 
@@ -193,7 +193,7 @@ tags:
 
 <h3 id="Why_cant_we_just_do_this_using_CSS_or_JavaScript">Why can't we just do this using CSS or JavaScript?</h3>
 
-<p>When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like <code>srcset</code>. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.</p>
+<p>When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like <code>srcset</code>. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.</p>
 
 <h3 id="Use_modern_image_formats_boldly">Use modern image formats boldly</h3>
 
@@ -235,8 +235,8 @@ tags:
 <p>That's a wrap for responsive images — we hope you enjoyed playing with these new techniques. As a recap, there are two distinct problems we've been discussing here:</p>
 
 <ul>
- <li><strong>Art direction</strong>: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.</li>
- <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. You can solve this problem by using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
+ <li><strong>Art direction</strong>: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.</li>
+ <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. You can solve this problem by using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
 </ul>
 
 <p>This also draws to a close the entire <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a> module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun!</p>

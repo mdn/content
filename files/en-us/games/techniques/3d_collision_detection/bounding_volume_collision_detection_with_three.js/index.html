@@ -67,14 +67,14 @@ knotBSphere.radius = knot.geometry.radius * 2;
 
 <h3 id="Intersection_tests">Intersection tests</h3>
 
-<h4 id="Point_vs._Box3_Sphere">Point vs. <code>Box3</code> / <code>Sphere</code></h4>
+<h4 id="Point_vs._Box3_Sphere">Point vs. <code>Box3</code> / <code>Sphere</code></h4>
 
 <p>Both <code>Box3</code> and <code>Sphere</code> have a <strong><code>containsPoint</code></strong> method to do this test.</p>
 
 <pre class="brush: js notranslate">var point = new THREE.Vector3(2, 4, 7);
 knotBBox.containsPoint(point);</pre>
 
-<h4 id="Box3_vs._Box3"><code>Box3</code> vs. <code>Box3</code></h4>
+<h4 id="Box3_vs._Box3"><code>Box3</code> vs. <code>Box3</code></h4>
 
 <p>The <strong><code>Box3.intersectsBox</code></strong> method is available for performing this test.</p>
 
@@ -84,13 +84,13 @@ knotBBox.containsPoint(point);</pre>
 <p><strong>Note</strong>: This is different from the <code>Box3.containsBox</code> method, which checks whether the Box3 <em>fully</em> wraps another one.</p>
 </div>
 
-<h4 id="Sphere_vs._Sphere"><code>Sphere</code> vs. <code>Sphere</code></h4>
+<h4 id="Sphere_vs._Sphere"><code>Sphere</code> vs. <code>Sphere</code></h4>
 
 <p>In a similar fashion as before, there is a <code><strong>Sphere.intersectsSphere</strong></code> method to perform this test.</p>
 
 <pre class="brush: js notranslate">knotBSphere.intersectsSphere(otherSphere);</pre>
 
-<h4 id="Sphere_vs._Box3"><code>Sphere</code> vs. <code>Box3</code></h4>
+<h4 id="Sphere_vs._Box3"><code>Sphere</code> vs. <code>Box3</code></h4>
 
 <p>Unfortunately this test is not implemented in Three.js, but we can patch Sphere to implement a <a href="/en-US/docs/Games/Techniques/3D_collision_detection">Sphere vs. AABB intersection</a> algorithm.</p>
 
@@ -122,7 +122,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <h2 id="Using_BoxHelper">Using <code>BoxHelper</code></h2>
 
-<p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong> (previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
+<p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong> (previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
 
 <div>
 <p><code>BoxHelper</code> is the <strong>recommended</strong> way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.</p>
@@ -169,6 +169,6 @@ box3.containsPoint(point.position);</pre>
 
 <h3 id="Demos_2">Demos</h3>
 
-<p>There are <strong>two demos</strong> you can take a look at on our <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/">live demos page</a>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html">first one</a> showcases point vs. box collisions using <code>BoxHelper</code>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html">second one</a> performs box vs. box tests.</p>
+<p>There are <strong>two demos</strong> you can take a look at on our <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/">live demos page</a>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_point.html">first one</a> showcases point vs. box collisions using <code>BoxHelper</code>. The <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/api_box.html">second one</a> performs box vs. box tests.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11821/Screen%20Shot%202015-10-19%20at%2012.10.06.png" style="display: block; height: 256px; margin: 0px auto; width: 256px;"></p>

@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>fill</code></strong> attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (<em>or any SVG paint servers like gradients or patterns</em>) used to paint the element; for animation it defines the final state of the animation.</p>
+<p>The <strong><code>fill</code></strong> attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (<em>or any SVG paint servers like gradients or patterns</em>) used to paint the element; for animation it defines the final state of the animation.</p>
 
 <p>As a presentation attribute, it can be applied to any element but it only has an effect on the following eleven elements: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}.</p>
 
@@ -19,29 +19,29 @@ tags:
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Simple color fill --&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
+  &lt;!-- Simple color fill --&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
 
-  &lt;!-- Fill circle with a gradient --&gt;
-  &lt;defs&gt;
-    &lt;radialGradient id="myGradient"&gt;
-      &lt;stop offset="0%"   stop-color="pink" /&gt;
-      &lt;stop offset="100%" stop-color="black" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+  &lt;!-- Fill circle with a gradient --&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id="myGradient"&gt;
+      &lt;stop offset="0%"   stop-color="pink" /&gt;
+      &lt;stop offset="100%" stop-color="black" /&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
 
-  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
+  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
 
-  &lt;!--
-  Keeping the final state of an animated circle
-  which is a circle with a radius of 40.
-  --&gt;
-  &lt;circle cx="250" cy="50" r="20"&gt;
-    &lt;animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" /&gt;
-  &lt;/circle&gt;
+  &lt;!--
+  Keeping the final state of an animated circle
+  which is a circle with a radius of 40.
+  --&gt;
+  &lt;circle cx="250" cy="50" r="20"&gt;
+    &lt;animate attributeType="XML"
+             attributeName="r"
+             from="0" to="40" dur="5s"
+             fill="freeze" /&gt;
+  &lt;/circle&gt;
 &lt;/svg&gt;
 </pre>
 

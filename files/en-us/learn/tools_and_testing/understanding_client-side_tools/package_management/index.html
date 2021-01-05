@@ -180,7 +180,7 @@ cd parcel-experiment
 ✨  Built in 193ms.</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you have trouble with the terminal returning a "command not found" type error, try running the above command with the <code>npx</code> utility, i.e. <code>npx parcel index.html</code>.</p>
+<p><strong>Note</strong>: If you have trouble with the terminal returning a "command not found" type error, try running the above command with the <code>npx</code> utility, i.e. <code>npx parcel index.html</code>.</p>
 </div>
 
 <p>Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at <code>http://localhost:1234</code>. Go there now and you’ll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.</p>
@@ -258,7 +258,7 @@ dist/index.html                        288 B    806ms</pre>
 
 <pre class="brush: bash notranslate">parcel build index.html --experimental-scope-hoisting</pre>
 
-<p>You’ll see that this makes a huge difference:                                                         </p>
+<p>You’ll see that this makes a huge difference:                                                         </p>
 
 <pre class="brush: bash notranslate">✨  Built in 7.87s.
 
@@ -368,13 +368,13 @@ yarn why date-fns</pre>
 <p>If you followed the tutorial from earlier, you should have a <code>package.json</code> file inside your parcel-experiment directory. Open it up, and its <code>scripts</code> member should look like this:</p>
 
 <pre class="brush: json notranslate">"scripts": {
-  "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+  "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
 },</pre>
 
 <p>Update it so that it looks like this, and save the file:</p>
 
 <pre class="brush: json notranslate">"scripts": {
-  "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+  "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
   "dev": "parcel serve index.html"
 },</pre>
 

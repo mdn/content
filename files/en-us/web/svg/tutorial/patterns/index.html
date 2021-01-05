@@ -10,32 +10,32 @@ tags:
 
 <h2 id="Patterns">Patterns</h2>
 
-<p>Patterns are arguably one of the more confusing fill types to use in SVG. They're also very powerful, so they're worth talking about and getting at least a fundamental grasp on. Like gradients, the {{SVGElement('pattern')}} element should be put in the {{SVGElement("defs")}} section of your SVG file.</p>
+<p>Patterns are arguably one of the more confusing fill types to use in SVG. They're also very powerful, so they're worth talking about and getting at least a fundamental grasp on. Like gradients, the {{SVGElement('pattern')}} element should be put in the {{SVGElement("defs")}} section of your SVG file.</p>
 
 <pre class="brush: html">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient1"&gt;
-      &lt;stop offset="5%" stop-color="white"/&gt;
-      &lt;stop offset="95%" stop-color="blue"/&gt;
-    &lt;/linearGradient&gt;
-    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
-      &lt;stop offset="5%" stop-color="red"/&gt;
-      &lt;stop offset="95%" stop-color="orange"/&gt;
-    &lt;/linearGradient&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient1"&gt;
+      &lt;stop offset="5%" stop-color="white"/&gt;
+      &lt;stop offset="95%" stop-color="blue"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
+      &lt;stop offset="5%" stop-color="red"/&gt;
+      &lt;stop offset="95%" stop-color="orange"/&gt;
+    &lt;/linearGradient&gt;
 
-    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
-      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
-      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
-      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
+      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
+      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
+      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
 
-  &lt;rect fill="url(#Pattern)" stroke="black" width="200" height="200"/&gt;
+  &lt;rect fill="url(#Pattern)" stroke="black" width="200" height="200"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{ EmbedLiveSample('Patterns','220','220','/files/725/SVG_Pattern_Example.png') }}</p>
 
-<p>Inside the {{SVGElement("pattern")}} element, you can include any of the other basic shapes you've included before, and each of them can be styled using any of the styles you've learned before, including gradients and opacity. Here, we've just drawn two rectangle elements inside the pattern (which overlap, and one of which is twice the size of the other and is used to fill in the entire pattern), and one circle.</p>
+<p>Inside the {{SVGElement("pattern")}} element, you can include any of the other basic shapes you've included before, and each of them can be styled using any of the styles you've learned before, including gradients and opacity. Here, we've just drawn two rectangle elements inside the pattern (which overlap, and one of which is twice the size of the other and is used to fill in the entire pattern), and one circle.</p>
 
 <p>The confusing thing about patterns is defining a unit system and their size. In the example above, we've defined a <code>width</code> and <code>height</code> attribute on the pattern element to describe how far the pattern should go before it begins repeating itself again. There are also <code>x</code> and <code>y</code> attributes available if you want to offset the start point of this rectangle somewhere within your drawing. The reason they've been used here is described below.</p>
 

@@ -45,7 +45,7 @@ tags:
   <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be
     used for decryption. If using RSA-OAEP, this is the <code>privateKey</code> property
     of the {{domxref("CryptoKeyPair")}} object.</li>
-  <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to
+  <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to
     be decrypted (also known as {{glossary("ciphertext")}}).</li>
 </ul>
 
@@ -67,7 +67,7 @@ tags:
   </dd>
   <dt>OperationError</dt>
   <dd>Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or there was an error decrypting the ciphertext).</dd>
+    parameters of invalid sizes, or there was an error decrypting the ciphertext).</dd>
 </dl>
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
@@ -92,12 +92,12 @@ tags:
     rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">function decryptMessage(privateKey, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "RSA-OAEP"
-    },
-    privateKey,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "RSA-OAEP"
+    },
+    privateKey,
+    ciphertext
   );
 }</pre>
 
@@ -110,14 +110,14 @@ tags:
     rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CTR",
-      counter,
-      length: 64
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-CTR",
+      counter,
+      length: 64
+    },
+    key,
+    ciphertext
   );
 }</pre>
 
@@ -130,13 +130,13 @@ tags:
     rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-CBC",
-      iv: iv
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-CBC",
+      iv: iv
+    },
+    key,
+    ciphertext
   );
 }</pre>
 
@@ -149,13 +149,13 @@ tags:
     rel="noopener">See the complete code on GitHub.</a></p>
 
 <pre class="brush: js">function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    {
-      name: "AES-GCM",
-      iv: iv
-    },
-    key,
-    ciphertext
+  return window.crypto.subtle.decrypt(
+    {
+      name: "AES-GCM",
+      iv: iv
+    },
+    key,
+    ciphertext
   );
 }</pre>
 
@@ -191,7 +191,7 @@ tags:
   <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST
       SP800-38A</a> specifies CBC mode.</li>
   <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST
-      SP800-38D</a> specifies GCM mode.</li>
+      SP800-38D</a> specifies GCM mode.</li>
   <li><a
       href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS
       198-1</a> specifies HMAC.</li>

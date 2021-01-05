@@ -26,11 +26,11 @@ tags:
 
 <p>In JavaScript an <strong>iterator</strong> is an object which defines a sequence and potentially a return value upon its termination.</p>
 
-<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
+<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
 
 <dl>
  <dt><code><var>value</var></code></dt>
- <dd>The next value in the iteration sequence.</dd>
+ <dd>The next value in the iteration sequence.</dd>
  <dt><code><var>done</var></code></dt>
  <dd>This is <code>true</code> if the last value in the sequence has already been consumed. If <code><var>value</var></code> is present alongside <code><var>done</var></code>, it is the iterator's return value.</dd>
 </dl>
@@ -83,13 +83,13 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <h2 id="Generator_functions">Generator functions</h2>
 
-<p>While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. <strong>Generator functions</strong> provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*","function*")}} syntax.</p>
+<p>While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. <strong>Generator functions</strong> provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*","function*")}} syntax.</p>
 
-<p>When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a <strong>Generator</strong>. When a value is consumed by calling the generator's <code>next</code> method, the Generator function executes until it encounters the <code>yield</code> keyword.</p>
+<p>When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a <strong>Generator</strong>. When a value is consumed by calling the generator's <code>next</code> method, the Generator function executes until it encounters the <code>yield</code> keyword.</p>
 
-<p>The function can be called as many times as desired, and returns a new Generator each time. Each Generator may only be iterated once.</p>
+<p>The function can be called as many times as desired, and returns a new Generator each time. Each Generator may only be iterated once.</p>
 
-<p>We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.</p>
+<p>We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.</p>
 
 <pre class="brush: js notranslate">function* makeRangeIterator(<var>start</var> = 0, <var>end</var> = 100, <var>step</var> = 1) {
     let iterationCount = 0;
@@ -108,7 +108,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.</p>
 
-<p>Iterables which can iterate only once (such as Generators) customarily return <code>this</code> from their <strong>@@iterator</strong> method, whereas iterables which can be iterated many times must return a new iterator on each invocation of <strong>@@iterator</strong>.</p>
+<p>Iterables which can iterate only once (such as Generators) customarily return <code>this</code> from their <strong>@@iterator</strong> method, whereas iterables which can be iterated many times must return a new iterator on each invocation of <strong>@@iterator</strong>.</p>
 
 <pre class="brush: js notranslate">function* makeIterator() {
     yield 1;
@@ -196,25 +196,25 @@ a;
 
 <p>Generators compute their <code>yield</code>ed values <em>on demand</em>, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above).</p>
 
-<p>The {{jsxref("Global_Objects/Generator/next","next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to <code>next()</code> will be received by <code>yield</code> .</p>
+<p>The {{jsxref("Global_Objects/Generator/next","next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to <code>next()</code> will be received by <code>yield</code> .</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> A value passed to the <em>first</em> invocation of <code>next()</code> is always ignored.</p>
+<p><strong>Note:</strong> A value passed to the <em>first</em> invocation of <code>next()</code> is always ignored.</p>
 </div>
 
 <p>Here is the fibonacci generator using <code>next(<var>x</var>)</code> to restart the sequence:</p>
 
 <pre class="brush: js notranslate">function* fibonacci() {
-  let current = 0;
-  let next = 1;
-  while (true) {
-    let reset = yield current;
-    [current, next] = [next, next + current];
-    if (reset) {
-        current = 0;
-        next = 1;
-    }
-  }
+  let current = 0;
+  let next = 1;
+  while (true) {
+    let reset = yield current;
+    [current, next] = [next, next + current];
+    if (reset) {
+        current = 0;
+        next = 1;
+    }
+  }
 }
 
 const sequence = fibonacci();
@@ -232,7 +232,7 @@ console.log(sequence.next().value);     // 2</pre>
 
 <p>You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the <code>yield</code> that is currently suspended were instead a <code>throw <var>value</var></code> statement.</p>
 
-<p>If the exception is not caught from within the generator,  it will propagate up through the call to <code>throw()</code>, and subsequent calls to <code>next()</code> will result in the <code>done</code> property being <code>true</code>.</p>
+<p>If the exception is not caught from within the generator,  it will propagate up through the call to <code>throw()</code>, and subsequent calls to <code>next()</code> will result in the <code>done</code> property being <code>true</code>.</p>
 
 <p>Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.</p>
 

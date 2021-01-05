@@ -32,7 +32,7 @@ tags:
 
 <h4 id="eslint">eslint</h4>
 
-<p>Mozilla uses <a href="https://eslint.org/">eslint</a> to automate various coding style checks for JavaScript sources.  See <a href="https://wiki.mozilla.org/DevTools/CodingStandards#Running_ESLint_in_Emacs">the devtools documentation</a> that describes how to integrate this into Emacs.</p>
+<p>Mozilla uses <a href="https://eslint.org/">eslint</a> to automate various coding style checks for JavaScript sources.  See <a href="https://wiki.mozilla.org/DevTools/CodingStandards#Running_ESLint_in_Emacs">the devtools documentation</a> that describes how to integrate this into Emacs.</p>
 
 <h3 id="CC_Development_Packages">C/C++ Development Packages</h3>
 
@@ -79,11 +79,11 @@ make export
 
 <p>Projectile comes preconfigured for many project types. Since, gecko uses its own special build system (mach), a new project type needs to be added. This can be done via adding the following elisp configuration command to your emacs configuration file.</p>
 
-<pre>    (projectile-register-project-type 'gecko
-                                      '("mach" "moz.build")
-                                      "python mach --log-no-times build"
-                                      "python mach mochitest"
-                                      "python mach run")</pre>
+<pre>    (projectile-register-project-type 'gecko
+                                      '("mach" "moz.build")
+                                      "python mach --log-no-times build"
+                                      "python mach mochitest"
+                                      "python mach run")</pre>
 
 <p>Assuming projectile-global-mode is on, this will allow projectile to run the correct commands whenever it is working in a gecko repo.</p>
 
@@ -94,14 +94,14 @@ make export
 <pre>[gecko_repo_directory]/mach run --debug --debugparams=-i=mi
 </pre>
 
-<p>In some cases you may still see symptoms that M-x gdb is not cooperating.  Symptoms include:</p>
+<p>In some cases you may still see symptoms that M-x gdb is not cooperating.  Symptoms include:</p>
 
 <ul>
 	<li>error message "<em>Error: you did not specify -i=mi on GDB's command line!</em>"</li>
 	<li>unexpected output in the "<code>*gud*</code>" buffer every time you hit RET at the (gdb) prompt</li>
 </ul>
 
-<p>Directing file descriptor "2" (STDERR) to <code>/dev/null</code> has been shown to get M-x gdb to cooperate.  Therefore, the next thing to try is to put the following code into an executable script, then type the path to your script when prompted by M-x gdb:</p>
+<p>Directing file descriptor "2" (STDERR) to <code>/dev/null</code> has been shown to get M-x gdb to cooperate.  Therefore, the next thing to try is to put the following code into an executable script, then type the path to your script when prompted by M-x gdb:</p>
 
 <pre>#!/bin/bash
 [gecko_repo_directory]/mach run --debug --debugger-args=-i=mi 2&gt;/dev/null

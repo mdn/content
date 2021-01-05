@@ -127,11 +127,11 @@ this.shadowRoot.append(style,wrapper);
 <p><strong>Note</strong>: You can see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js">full JavaScript source</a> code here.</p>
 </div>
 
-<h3 id="Internal_vs._external_styles">Internal vs. external styles</h3>
+<h3 id="Internal_vs._external_styles">Internal vs. external styles</h3>
 
 <p>In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.</p>
 
-<p>For example, take a look at this code from our <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> example (see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
+<p>For example, take a look at this code from our <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> example (see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
 
 <pre class="brush: js notranslate">// Apply external styles to the shadow dom
 const linkElem = document.createElement('link');
@@ -141,9 +141,9 @@ linkElem.setAttribute('href', 'style.css');
 // Attach the created element to the shadow dom
 shadow.appendChild(linkElem);</pre>
 
-<p>Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.</p>
+<p>Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.</p>
 
-<p>Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.</p>
+<p>Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.</p>
 
 <h3 id="Customized_built-in_elements">Customized built-in elements</h3>
 
@@ -187,7 +187,7 @@ shadow.appendChild(linkElem);</pre>
 <p>You can define several different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle:</p>
 
 <ul>
- <li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
+ <li><code>connectedCallback</code>: Invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved, and may happen before the element's contents have been fully parsed.
 
   <div class="note">
   <p><strong>Note</strong>: <code>connectedCallback</code> may be called once your element is no longer connected, use {{domxref("Node.isConnected")}} to make sure.</p>
@@ -214,14 +214,14 @@ shadow.appendChild(div);</pre>
 <p>The key function in this example is <code>updateStyle()</code> — this takes an element, gets its shadow root, finds its <code>&lt;style&gt;</code> element, and adds {{cssxref("width")}}, {{cssxref("height")}}, and {{cssxref("background-color")}} to the style.</p>
 
 <pre class="brush: js notranslate">function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
-    div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
-    }
-  `;
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
 }</pre>
 
 <p>The actual updates are all handled by the life cycle callbacks, which are placed inside the class definition as methods. The <code>connectedCallback()</code> runs each time the element is added to the DOM — here we run the <code>updateStyle()</code> function to make sure the square is styled as defined in its attributes:</p>
@@ -248,7 +248,7 @@ adoptedCallback() {
   updateStyle(this);
 }</pre>
 
-<p>Note that to get the <code>attributeChangedCallback()</code> callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a <code>static get observedAttributes()</code> method inside custom element class - this should <code>return</code>  an array containing the names of the attributes you want to observe:</p>
+<p>Note that to get the <code>attributeChangedCallback()</code> callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a <code>static get observedAttributes()</code> method inside custom element class - this should <code>return</code>  an array containing the names of the attributes you want to observe:</p>
 
 <pre class="brush: js notranslate">static get observedAttributes() { return ['c', 'l']; }</pre>
 
@@ -258,9 +258,9 @@ adoptedCallback() {
 <p><strong>Note</strong>: Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
 </div>
 
-<h2 id="Transpilers_vs._classes">Transpilers vs. classes</h2>
+<h2 id="Transpilers_vs._classes">Transpilers vs. classes</h2>
 
-<p>Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> for Babel 6, and target ES2015 in TypeScript instead of legacy.</p>
+<p>Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> for Babel 6, and target ES2015 in TypeScript instead of legacy.</p>
 
 <h2 id="Libraries">Libraries</h2>
 

@@ -40,7 +40,7 @@ tags:
  <li>{{SVGAttr("kernelUnitLength")}}</li>
 </ul>
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+<h2 id="DOM_Interface">DOM Interface</h2>
 
 <p>This element implements the {{domxref("SVGFESpecularLightingElement")}} interface.</p>
 
@@ -48,15 +48,15 @@ tags:
 
 <pre class="brush: html; highlight[4-7]">&lt;svg height="200" width="200" viewBox="0 0 220 220"
     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id = "filter"&gt;
-    &lt;feSpecularLighting result="specOut"
+  &lt;filter id = "filter"&gt;
+    &lt;feSpecularLighting result="specOut"
         specularExponent="20" lighting-color="#bbbbbb"&gt;
-      &lt;fePointLight x="50" y="75" z="200"/&gt;
-    &lt;/feSpecularLighting&gt;
-    &lt;feComposite in="SourceGraphic" in2="specOut"
+      &lt;fePointLight x="50" y="75" z="200"/&gt;
+    &lt;/feSpecularLighting&gt;
+    &lt;feComposite in="SourceGraphic" in2="specOut"
         operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/&gt;
-  &lt;/filter&gt;
-  &lt;circle cx="110" cy="110" r="100" style="filter:url(#filter)"/&gt;
+  &lt;/filter&gt;
+  &lt;circle cx="110" cy="110" r="100" style="filter:url(#filter)"/&gt;
 &lt;/svg&gt;</pre>
 
 <h3 id="Result">Result</h3>

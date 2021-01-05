@@ -26,7 +26,7 @@ tags:
 
 <p>One major difference between Mozilla and Internet Explorer that affects designMode is the generated code in the editable document: while Internet Explorer uses HTML tags (em, i, etc), Mozilla 1.3 will generate by default spans with inline style rules. The <code>styleWithCSS</code> command can be used to toggle between CSS and HTML markup creation.</p>
 
-<p><strong>Figure 1 : Generated HTML differences</strong></p>
+<p><strong>Figure 1 : Generated HTML differences</strong></p>
 
 <p>Mozilla:</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <p>The first example is an HTML document setting its own <code>designMode</code> to "On". This makes the entire document editable in Mozilla 1.3. Internet Explorer, however, does not allow javascript to change the current document's designMode. For it to work in Internet Explorer, the <code>contentEditable</code> attribute of the body tag needs to be set to "true".</p>
 
-<p><strong>Figure 2 : First example</strong></p>
+<p><strong>Figure 2 : First example</strong></p>
 
 <pre class="brush: js">HTML:
 &lt;body contentEditable="true" onload="load()"&gt;
@@ -75,7 +75,7 @@ function load(){
 
 <p>The second example is a simple rich text editing page, where text can be bolded/italicized/underlined, new links can be added and the color of text changed. The example page consists of an iframe, which will be the rich editing area, as well as elements for basic editing commands such as bold/italics/text color.</p>
 
-<p><strong>Figure 3 : Setting up rich-text editing</strong></p>
+<p><strong>Figure 3 : Setting up rich-text editing</strong></p>
 
 <pre class="brush: js">HTML:
 &lt;body onload="load()"&gt;
@@ -98,7 +98,7 @@ function getIFrameDocument(aID){
 
 <p>The example contains a <code>doRichEditCommand</code> function that makes it easier to execute commands on the iframe's document and keeps the HTML code clean. The function executed the requested command using <code>execCommand()</code> and then sets focus back to the editable document, as clicking on a button will set focus on the button itself, which breaks the editing flow.</p>
 
-<p><strong>Figure 4 : Executing Rich Editing Commands</strong></p>
+<p><strong>Figure 4 : Executing Rich Editing Commands</strong></p>
 
 <pre class="brush: js">HTML:
 &lt;button onclick="doRichEditCommand('bold')" style="font-weight:bold;"&gt;B&lt;/button&gt;
@@ -121,52 +121,52 @@ function doRichEditCommand(aName, aArg){
 var oDoc, sDefTxt;
 
 function initDoc() {
-  oDoc = document.getElementById("textBox");
-  sDefTxt = oDoc.innerHTML;
-  if (document.compForm.switchMode.checked) { setDocMode(true); }
+  oDoc = document.getElementById("textBox");
+  sDefTxt = oDoc.innerHTML;
+  if (document.compForm.switchMode.checked) { setDocMode(true); }
 }
 
 function formatDoc(sCmd, sValue) {
-  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
 }
 
 function validateMode() {
-  if (!document.compForm.switchMode.checked) { return true ; }
-  alert("Uncheck \"Show HTML\".");
-  oDoc.focus();
-  return false;
+  if (!document.compForm.switchMode.checked) { return true ; }
+  alert("Uncheck \"Show HTML\".");
+  oDoc.focus();
+  return false;
 }
 
 function setDocMode(bToSource) {
-  var oContent;
-  if (bToSource) {
-    oContent = document.createTextNode(oDoc.innerHTML);
-    oDoc.innerHTML = "";
-    var oPre = document.createElement("pre");
-    oDoc.contentEditable = false;
-    oPre.id = "sourceText";
-    oPre.contentEditable = true;
-    oPre.appendChild(oContent);
-    oDoc.appendChild(oPre);
-  } else {
-    if (document.all) {
-      oDoc.innerHTML = oDoc.innerText;
-    } else {
-      oContent = document.createRange();
-      oContent.selectNodeContents(oDoc.firstChild);
-      oDoc.innerHTML = oContent.toString();
-    }
-    oDoc.contentEditable = true;
-  }
-  oDoc.focus();
+  var oContent;
+  if (bToSource) {
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
+  } else {
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
+  }
+  oDoc.focus();
 }
 
 function printDoc() {
-  if (!validateMode()) { return; }
-  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
-  oPrntWin.document.open();
-  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
-  oPrntWin.document.close();
+  if (!validateMode()) { return; }
+  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+  oPrntWin.document.open();
+  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
+  oPrntWin.document.close();
 }
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
@@ -174,17 +174,17 @@ function printDoc() {
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }
 #textBox {
-  width: 540px;
-  height: 200px;
-  border: 1px #000000 solid;
-  padding: 12px;
-  overflow: scroll;
+  width: 540px;
+  height: 200px;
+  border: 1px #000000 solid;
+  padding: 12px;
+  overflow: scroll;
 }
 #textBox #sourceText {
-  padding: 0;
-  margin: 0;
-  min-width: 498px;
-  min-height: 200px;
+  padding: 0;
+  margin: 0;
+  min-width: 498px;
+  min-height: 200px;
 }
 #editMode label { cursor: pointer; }
 &lt;/style&gt;

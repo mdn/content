@@ -13,15 +13,15 @@ tags:
 
 <p>A matrix convolution is based on an n-by-m matrix (the convolution kernel) which describes how a given pixel value in the input image is combined with its neighboring pixel values to produce a resulting pixel value. Each result pixel is determined by applying the kernel matrix to the corresponding source pixel and its neighboring pixels. The basic convolution formula which is applied to each color value for a given pixel is:</p>
 
-<p id="feConvolveMatrixElementFormula">COLOR<sub>X,Y</sub> = ( <br>
-               SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { <br>
-                 SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { <br>
-                   SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> *  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> <br>
-                 } <br>
-               } <br>
-             ) /  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">divisor</a> +  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute">bias</a> * ALPHA<sub>X,Y</sub> </p>
+<p id="feConvolveMatrixElementFormula">COLOR<sub>X,Y</sub> = ( <br>
+               SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { <br>
+                 SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { <br>
+                   SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> *  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> <br>
+                 } <br>
+               } <br>
+             ) /  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">divisor</a> +  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute">bias</a> * ALPHA<sub>X,Y</sub> </p>
 
-<p>where "orderX" and "orderY" represent the X and Y values for the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">‘order’</a> attribute, "targetX" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">‘targetX’</a> attribute, "targetY" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">‘targetY’</a> attribute, "kernelMatrix" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">‘kernelMatrix’</a> attribute, "divisor" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">‘divisor’</a> attribute, and "bias" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute">‘bias’</a> attribute.</p>
+<p>where "orderX" and "orderY" represent the X and Y values for the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">‘order’</a> attribute, "targetX" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">‘targetX’</a> attribute, "targetY" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">‘targetY’</a> attribute, "kernelMatrix" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">‘kernelMatrix’</a> attribute, "divisor" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">‘divisor’</a> attribute, and "bias" represents the value of the <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute">‘bias’</a> attribute.</p>
 
 <p>Note in the above formulas that the values in the kernel matrix are applied such that the kernel matrix is rotated 180 degrees relative to the source and destination images in order to match convolution theory as described in many computer graphics textbooks.</p>
 
@@ -41,7 +41,7 @@ tags:
 7 8 9
 </pre>
 
-<p>Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">‘divisor’</a>, <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">‘targetX’</a> and <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">‘targetY’</a>, then resulting color value will be:</p>
+<p>Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute">‘divisor’</a>, <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">‘targetX’</a> and <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">‘targetY’</a>, then resulting color value will be:</p>
 
 <pre>(9*  0 + 8* 20 + 7* 40 +
  6*100 + 5*120 + 4*140 +
@@ -78,7 +78,7 @@ tags:
  <li>{{SVGAttr("preserveAlpha")}}</li>
 </ul>
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+<h2 id="DOM_Interface">DOM Interface</h2>
 
 <p>This element implements the {{domxref("SVGFEConvolveMatrixElement")}} interface.</p>
 

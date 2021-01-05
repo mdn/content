@@ -22,9 +22,9 @@ tags:
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 
-    &lt;h1&gt;       Hello      World!     &lt;/h1&gt;</pre>
+    &lt;h1&gt;       Hello      World!     &lt;/h1&gt;</pre>
 
-<p>This source code contains a couple of line feeds after the <code>DOCTYPE</code> and a bunch of space characters before,  after, and inside the <code>&lt;h1&gt;</code> element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:</p>
+<p>This source code contains a couple of line feeds after the <code>DOCTYPE</code> and a bunch of space characters before,  after, and inside the <code>&lt;h1&gt;</code> element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:</p>
 
 <p>{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}</p>
 
@@ -301,7 +301,7 @@ li {
 
 <h2 id="DOM_traversal_and_whitespace">DOM traversal and whitespace</h2>
 
-<p>When trying to do <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using <code><a href="/en-US/docs/Web/API/Node/firstChild">Node.firstChild</a></code>, if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.</p>
+<p>When trying to do <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using <code><a href="/en-US/docs/Web/API/Node/firstChild">Node.firstChild</a></code>, if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.</p>
 
 <p>As another example, if you have a certain subset of elements that you want to do something to based on whether they are empty (have no child nodes) or not, you could check whether each element is empty using something like <code><a href="/en-US/docs/Web/API/Node/hasChildNodes">Node.hasChildNodes()</a></code>, but again, if any target elements contain text nodes, you could end up with false results.</p>
 
