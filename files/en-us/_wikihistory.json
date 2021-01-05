@@ -58750,12 +58750,6 @@
       "Jesdisciple"
     ]
   },
-  "Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex": {
-    "modified": "2019-01-16T22:55:40.822Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
   "Web/API/HTMLSelectElement/add": {
     "modified": "2020-10-17T18:33:45.934Z",
     "contributors": [
