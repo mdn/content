@@ -17630,13 +17630,6 @@
       "ExE-Boss"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/menus/menus.overrideContext()": {
-    "modified": "2020-12-07T18:40:50.176Z",
-    "contributors": [
-      "bershanskiy",
-      "tim-we"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/menus/onClicked": {
     "modified": "2020-10-15T21:41:54.138Z",
     "contributors": [
@@ -17660,10 +17653,10 @@
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/overrideContext": {
-    "modified": "2020-12-07T18:43:27.468Z",
+    "modified": "2020-12-07T18:40:50.176Z",
     "contributors": [
       "bershanskiy",
-      "irenesmith"
+      "tim-we"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/menus/refresh": {
