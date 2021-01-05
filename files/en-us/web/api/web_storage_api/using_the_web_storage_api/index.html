@@ -48,7 +48,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 <p>Note: This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, such as Internet Explorer 6 or 7, or in the limited circumstances described below.</p>
 </div>
 
-<p>Browsers that support localStorage have a property on the window object named <code>localStorage</code>. However, just asserting that that property exists may throw exceptions. If the <code>localStorage</code> object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may <em>support</em> localStorage, but not make it <em>available</em> to the scripts on the page.</p>
+<p>Browsers that support localStorage have a property on the window object named <code>localStorage</code>. However, just asserting that the property exists may throw exceptions. If the <code>localStorage</code> object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may <em>support</em> localStorage, but not make it <em>available</em> to the scripts on the page.</p>
 
 <p>For example, Safari browser in Private Browsing mode gives us an empty localStorage object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate <code>QuotaExceededError</code>, which means that we've used up all available storage space, but storage <em>is</em> actually <em>available</em>. Our feature detection should take these scenarios into account.</p>
 

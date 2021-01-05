@@ -10,12 +10,9 @@ tags:
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p><span class="seoSummary">The <strong>rest parameter</strong> syntax allows us to represent an indefinite number of arguments as an array.</span></p>
+<p><span class="seoSummary">The <strong>rest parameter</strong> syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent {{interwiki("wikipedia", "Variadic_function", "variadic functions")}} in JavaScript.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</div>
-
-<ul>
-</ul>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,12 +20,9 @@ tags:
   // ...
 }</pre>
 
-<ul>
-</ul>
-
 <h2 id="Description">Description</h2>
 
-<p>A function's last parameter can be prefixed with <code>...</code> which will cause all remaining (user supplied) arguments to be placed within a "standard" JavaScript array.</p>
+<p>A function's last parameter can be prefixed with <code>...</code> which will cause all remaining (user supplied) arguments to be placed within a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">"standard" JavaScript array.</a></p>
 
 <p>Only the last parameter can be a "rest parameter".</p>
 
@@ -215,7 +209,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread syntax</a> (also ‘<code>...</code>’)</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments object</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
  <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>

@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>delete()</code></strong> method removes the specified element from a <code>Set</code> object.</p>
+<p>The <strong><code>delete()</code></strong> method removes a specified value from a <code>Set</code> object, if it is in the set.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
 
@@ -30,7 +30,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns <code>true</code> if <code><var>value</var></code> was successfully removed from <code><var>mySet</var></code>; otherwise <code>false</code>.</p>
+<p>Returns <code>true</code> if <code><var>value</var></code> was already in <code><var>mySet</var></code>; otherwise <code>false</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -40,14 +40,14 @@ tags:
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
-mySet.delete('foo'); // Returns true.  Successfully removed.
+mySet.delete('foo'); // Returns true. Successfully removed.
 
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 </pre>
 
 <p>Let's checkout below how to delete an Object from a Set.</p>
 
-<pre class="brush: js notranslate">const setObj = new Set();   // Create a New Set.
+<pre class="brush: js notranslate">const setObj = new Set();   // Create a new set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 

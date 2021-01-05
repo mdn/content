@@ -71,7 +71,7 @@ eval(expression.toString());            // returns 4
 
 <p><code>eval()</code> is also slower than the alternatives, since it has to invoke the JavaScript interpreter, while many other constructs are optimized by modern JS engines.</p>
 
-<p>Additionally, modern javascript interpreters convert javascript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of <code>eval()</code> will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additonally, new things can be introduced to that variable through <code>eval()</code> such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.</p>
+<p>Additionally, modern javascript interpreters convert javascript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of <code>eval()</code> will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additionally, new things can be introduced to that variable through <code>eval()</code> such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.</p>
 
 <p>Fortunately, there's a very good alternative to <code>eval()</code>: using {{jsxref("Function", "window.Function()")}}. See this example of how to convert code using a dangerous <code>eval()</code> to using <code>Function()</code>, see below.</p>
 
@@ -195,7 +195,7 @@ var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c will now be 1</p
 
 <h3 id="Use_functions_instead_of_evaluating_snippets_of_code">Use functions instead of evaluating snippets of code</h3>
 
-<p>JavaScript has <a class="external" href="http://en.wikipedia.org/wiki/First-class_function">first-class functions</a>, which means you can pass functions as arguments to other APIs, store them in variables and objects' properties, and so on. Many DOM APIs are designed with this in mind, so you can (and should) write:</p>
+<p>JavaScript has <a class="external" href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>, which means you can pass functions as arguments to other APIs, store them in variables and objects' properties, and so on. Many DOM APIs are designed with this in mind, so you can (and should) write:</p>
 
 <pre class="brush: js">// instead of setTimeout(" ... ", 1000) use:
 setTimeout(function() { ... }, 1000);
@@ -207,7 +207,7 @@ elt.addEventListener('click', function() { ... } , false); </pre>
 
 <h3 id="Parsing_JSON_converting_strings_to_JavaScript_objects">Parsing JSON (converting strings to JavaScript objects)</h3>
 
-<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
+<p>If the string you're calling <code>eval()</code> on contains data (for example, an array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to represent data. See also <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>.</p>
 
 <p>Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.</p>
 

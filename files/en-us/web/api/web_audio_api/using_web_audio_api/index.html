@@ -186,7 +186,7 @@ volumeControl.addEventListener('input', function() {
 
 <h2 id="Adding_stereo_panning_to_our_app">Adding stereo panning to our app</h2>
 
-<p>Let's add another modification node to practise what we've just learnt.</p>
+<p>Let's add another modification node to practice what we've just learnt.</p>
 
 <p>There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.</p>
 
@@ -196,7 +196,7 @@ volumeControl.addEventListener('input', function() {
 
 <p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="https://mdn.mozillademos.org/files/16229/graphPan.jpg" style="border-style: solid; border-width: 1px; height: 532px; width: 2236px;"></p>
 
-<p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that that particular node may take:</p>
+<p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that the particular node may take:</p>
 
 <pre class="brush: js notranslate">const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
@@ -243,6 +243,6 @@ pannerControl.addEventListener('input', function() {
 
 <p>Another application developed specifically to demonstrate the Web Audio API is the <a href="https://mdn.github.io/violent-theremin/">Violent Theremin</a>, a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow (<a href="https://github.com/mdn/violent-theremin">see Violent Theremin source code</a>).</p>
 
-<p><img alt="A page full of rainbow colours, with two buttons labeled Clear screen and mute." src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="border-style: solid; border-width: 1px; display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="A page full of rainbow colors, with two buttons labeled Clear screen and mute." src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="border-style: solid; border-width: 1px; display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
 
 <p>Also see our <a href="https://github.com/mdn/webaudio-examples">webaudio-examples repo</a> for more examples.</p>

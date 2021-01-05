@@ -3,15 +3,16 @@ title: '<dt>: The Description Term element'
 slug: Web/HTML/Element/dt
 tags:
   - Definition
-  - Definition List
+  - Description list
   - Definition Term
+  - Description Term
   - Element
   - HTML
   - HTML grouping content
   - Reference
   - Term
+  - Web
   - dt
-  - lists
 ---
 <div>{{HTMLRef}}</div>
 
@@ -21,7 +22,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -35,11 +36,12 @@ tags:
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
-   <td>Must have a start tag. The end tag may be omitted if this element is immediately followed by another <code>&lt;dt&gt;</code> or a {{HTMLElement("dd")}} element, or if there is no more content in the parent element.</td>
+   <td>The start tag is required. The end tag may be omitted if this element is immediately followed by another <code>&lt;dt&gt;</code> element or a {{HTMLElement("dd")}} element, or if there is no more content in the parent element.</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Before a {{HTMLElement("dt")}} or a {{HTMLElement("dd")}} element, inside a {{HTMLElement("dl")}} or (in <a href="/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML) a {{HTMLElement("div")}} that is inside a {{HTMLElement("dl")}}.</td>
+   <td>A {{HTMLElement("dl")}} or (in {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2 and later) a {{HTMLElement("div")}} that is a child of a {{HTMLElement("dl")}}.<br>
+   This element can be used before a {{HTMLElement("dd")}} or another {{HTMLElement("dt")}} element.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -51,7 +53,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the <a href="/en-US/docs/Web/API/HTMLSpanElement"><code>HTMLSpanElement</code></a> interface for this element.</td>
+   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
   </tr>
  </tbody>
 </table>
@@ -60,9 +62,9 @@ tags:
 
 <p>This element only includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>For an example, see the <a href="/en-US/docs/Web/HTML/Element/dl#Examples">example provided for the <code>&lt;dl&gt;</code> element</a>.</p>
+<p>For examples, see the <a href="/en-US/docs/Web/HTML/Element/dl#Examples">examples provided for the <code>&lt;dl&gt;</code> element</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -81,9 +83,9 @@ tags:
    <td></td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
+   <td>{{SpecName('HTML5.2', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}</td>
+   <td>{{Spec2('HTML5.2')}}</td>
+   <td><code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements can now be included in {{HTMLElement("div")}} elements.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}</td>
@@ -100,5 +102,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTMLElement("dd")}}, {{HTMLElement("dl")}}</li>
+ <li>{{HTMLElement("dl")}}</li>
+ <li>{{HTMLElement("dd")}}</li>
 </ul>

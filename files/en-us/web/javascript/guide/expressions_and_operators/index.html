@@ -379,8 +379,8 @@ var var2 = 4;
 
 <ul>
  <li>The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones). Numbers with more than 32 bits get their most significant bits discarded. For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
-  <pre class="notranslate">Before: 1110<code> </code>0110<code> </code>1111<code> </code>1010<code> </code>0000<code> </code>0000<code> </code>0000<code> </code>0110<code> </code>0000<code> </code>0000<code> </code>0001
-After:               1010<code> </code>0000<code> </code>0000<code> </code>0000<code> </code>0110<code> </code>0000<code> </code>0000<code> </code>0001</pre>
+  <pre class="notranslate">Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
  </li>
  <li>Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.</li>
  <li>The operator is applied to each pair of bits, and the result is constructed bitwise.</li>
@@ -416,12 +416,12 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
   <tr>
    <td><code>~15</code></td>
    <td><code>-16</code></td>
-   <td><code>~ 0000 0000 ... 0000 1111 = 1111 1111 ... 1111 0000</code></td>
+   <td><code>~ 0000 0000 ... 0000 1111 = 1111 1111 ... 1111 0000</code></td>
   </tr>
   <tr>
    <td><code>~9</code></td>
    <td><code>-10</code></td>
-   <td><code>~ 0000 0000 ... 0000 1001 = 1111 1111 ... 1111 0110</code></td>
+   <td><code>~ 0000 0000 ... 0000 1001 = 1111 1111 ... 1111 0110</code></td>
   </tr>
  </tbody>
 </table>
@@ -432,7 +432,7 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
 
 <p>The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be shifted. The direction of the shift operation is controlled by the operator used.</p>
 
-<p>Shift operators convert their operands to thirty-two-bit integers and return a result of the same type as the left operand.</p>
+<p>Shift operators convert their operands to thirty-two-bit integers and return a result of either type {{jsxref("Number")}} or {{jsxref("BigInt")}}: specifically, if the type of the left operand is {{jsxref("BigInt")}}, they return {{jsxref("BigInt")}}; otherwise, they return {{jsxref("Number")}}.</p>
 
 <p>The shift operators are listed in the following table.</p>
 
@@ -480,7 +480,7 @@ After:               1010<code> </code>0000<code> </code>0000<code> </code
  </thead>
  <tbody>
   <tr>
-   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND</a><code> </code>(<code>&amp;&amp;</code>)</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND</a> (<code>&amp;&amp;</code>)</td>
    <td><code>expr1 &amp;&amp; expr2</code></td>
    <td>Returns <code>expr1</code> if it can be converted to <code>false</code>; otherwise, returns <code>expr2</code>. Thus, when used with Boolean values, <code>&amp;&amp;</code> returns <code>true</code> if both operands are true; otherwise, returns <code>false</code>.</td>
   </tr>

@@ -684,12 +684,9 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </tbody>
 </table>
 
-<dl>
- <dd>
- <p><br>
-  Possible values in WebGL2 for the versions of <code>texImage2D</code> that take a texture an <code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, or <code>ImageData</code></p>
+<p>Possible values in WebGL2 for the versions of <code>texImage2D</code> that take a texture an <code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, or <code>ImageData</code></p>
 
- <ul>
+<ul>
   <li><code>gl.ALPHA</code>: Discards the red, green and blue components and reads the alpha component.</li>
   <li><code>gl.RGB</code>: Discards the alpha components and reads the red, green and blue components.</li>
   <li><code>gl.RGBA</code>: Red, green, blue and alpha components are read from the color buffer.</li>
@@ -738,7 +735,8 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
    </ul>
   </li>
  </ul>
- </dd>
+
+<dl>
  <dt><code>width</code></dt>
  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
  <dt><code>height</code></dt>

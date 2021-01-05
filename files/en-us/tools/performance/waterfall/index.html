@@ -340,9 +340,6 @@ slug: Tools/Performance/Waterfall
 
 <p>To help reduce the length of pauses, SpiderMonkey implements <em>incremental GC</em>: this means that it can perform garbage collection in fairly small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 
-<ul>
-</ul>
-
 <p>In trying to avoid GC events, and especially non-incremental GC events, it's wise not to try to optimize for the specific implementation of the JavaScript engine. SpiderMonkey uses a complex set of heuristics to determine when GC is needed, and when non-incremental GC in particular is needed. In general, though:</p>
 
 <ul>

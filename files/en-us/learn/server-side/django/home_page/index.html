@@ -58,7 +58,7 @@ tags:
  <li><code>catalog/books/</code> — A list of all books.</li>
  <li><code>catalog/authors/</code> — A list of all authors.</li>
  <li><code>catalog/book/<em>&lt;id&gt;</em></code> — The detail view for a particular book, with a field primary key of <code><em>&lt;id&gt;</em></code> (the default). For example, the URL for the third book added to the list will be <code>/catalog/book/3</code>.</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— The detail view for the specific author with a primary key field of <em><code>&lt;id&gt;</code></em>. For example, the URL for the 11th author added to the list will be  <code>/catalog/author/11</code>.</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code> — The detail view for the specific author with a primary key field of <em><code>&lt;id&gt;</code></em>. For example, the URL for the 11th author added to the list will be  <code>/catalog/author/11</code>.</li>
 </ul>
 
 <p>The first three URLs will return the index page, books list, and authors list. These URLs do not encode any additional information, and the queries that fetch data from the database will always be the same. However, the results that the queries return will depend on the contents of the database.</p>
@@ -383,9 +383,6 @@ return render(request, 'index.html', context=context)</pre>
  <li>Modify the <a href="#View_(function-based)">view</a> to generate counts for <em>genres</em> and <em>books</em> that contain a particular word (case insensitive), and pass the results to the <code>context.</code> You accomplish this in a similar way to creating and using <code>num_books</code> and <code>num_instances_available</code>. Then update the <a href="#The_index_template">index template</a> to include these variables.<br>
    </li>
 </ol>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

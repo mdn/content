@@ -14,7 +14,7 @@ tags:
 ---
 <p>This document describes the interface for using <a href="/en-US/docs/XPath">XPath</a> in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the <a class="external" href="https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/">DOM 3 XPath</a>, which means that XPath expressions can be run against both HTML and XML documents.</p>
 
-<p>The main interface to using XPath is the <a href="/en-US/docs/Web/API/document.evaluate">evaluate</a> function of the <a href="/en-US/Web/API/document">document</a> object.</p>
+<p>The main interface to using XPath is the <a href="/en-US/docs/Web/API/document.evaluate">evaluate</a> function of the <a href="/en-US/docs/Web/API/document">document</a> object.</p>
 
 <h2 id="document.evaluate">document.evaluate</h2>
 
@@ -328,7 +328,7 @@ doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
 
 <p>For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: <code>var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='<span class="nowiki">http://www.w3.org/1999/xlink</span>'];</code></p>
 
-<p>This could inadvertently grab some elements if one of its attributes existed that had a local name of "<code>href</code>", but it was a different attribute which had the targeted (XLink) namespace (instead of <code><a href="/en/XPath/Axes/attribute">@href</a></code>).</p>
+<p>This could inadvertently grab some elements if one of its attributes existed that had a local name of "<code>href</code>", but it was a different attribute which had the targeted (XLink) namespace (instead of <code><a href="/en-US/docs/Web/XPath/Axes/attribute">@href</a></code>).</p>
 
 <p>In order to accurately grab elements with the XLink <code>@href</code> attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:</p>
 

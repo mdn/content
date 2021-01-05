@@ -31,7 +31,7 @@ tags:
   /*
        define if alphatransparency  is allowed alpha
        is set to true by default. If set to false, all
-       colours used on the canvas will be fully opaque
+       colors used on the canvas will be fully opaque
     */
   static get contextOptions() {
            return { alpha: true };
@@ -51,7 +51,7 @@ tags:
 
 <p>We have then used the <code>paint()</code> function to paint to our canvas.</p>
 
-<p>A <code>paint()</code> function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often refered to by the variable name <code>ctx</code>. The 2D Rendering Context is a subset of the <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas API</a>; the version available to Houdini (called the <code>PaintRenderingContext2D</code>) is a further subset containing most of the features available in the full Canvas API with the <a href="https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)">exception</a> of the <code>CanvasImageData</code>, <code>CanvasUserInterface</code>, <code>CanvasText</code>, and <code>CanvasTextDrawingStyles</code> APIs.</p>
+<p>A <code>paint()</code> function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name <code>ctx</code>. The 2D Rendering Context is a subset of the <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas API</a>; the version available to Houdini (called the <code>PaintRenderingContext2D</code>) is a further subset containing most of the features available in the full Canvas API with the <a href="https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)">exception</a> of the <code>CanvasImageData</code>, <code>CanvasUserInterface</code>, <code>CanvasText</code>, and <code>CanvasTextDrawingStyles</code> APIs.</p>
 
 <p>We define the <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> as being <code>hsla(55, 90%, 60%, 1.0)</code>, which is a shade of yellow, and then call <code>fillRect()</code> to create a rectangle of that color. The <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">fillRect()</a></code> parameters are, in order, x-axis origin, y-axis origin, width, and height. <code>fillRect(0, 15, 200, 20)</code> results in the creation of a rectangle that is 200 units wide by 20 units tall, positioned 0 units from the left and 15 units from the top of the content box.</p>
 
@@ -357,7 +357,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 	// if stroke arg is 'stroke', don't fill
 	if (hasStroke === 'stroke') {
 		ctx.fillStyle = 'transparent';
-		ctx.strokeStyle = colour;
+		ctx.strokeStyle = color;
 	}
 	...
 }
@@ -435,7 +435,7 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 		const blockHeight = size.height * 0.85;
 
 		// the values passed in the paint() function in the CSS
-		const colour = props.get( '--boxColor' );
+		const color = props.get( '--boxColor' );
 		const strokeType = args[0].toString();
 		const strokeWidth = parseInt(args[1]);
 
@@ -448,10 +448,10 @@ h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
 		// set the fill type
 		if ( strokeType === 'stroke' ) {
 			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = colour;
+			ctx.strokeStyle = color;
 		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = colour;
-			ctx.strokeStyle = colour;
+			ctx.fillStyle = color;
+			ctx.strokeStyle = color;
 		} else {
 			ctx.fillStyle = 'none';
 			ctx.strokeStyle = 'none';

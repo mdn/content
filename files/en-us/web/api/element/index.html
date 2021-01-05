@@ -117,7 +117,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}<em>, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}<em>, {{DOMxRef("NonDocumentTypeChildNode")}}, </em></em>and {{DOMxRef("Animatable")}}.</em></p>
+<p><em>Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}, {{DOMxRef("NonDocumentTypeChildNode")}}, and {{DOMxRef("Animatable")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("EventTarget.addEventListener()")}}</dt>
@@ -206,9 +206,11 @@ tags:
  <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
  <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
  <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
- <dt>
- <h3 id="Obsolete_methods">Obsolete methods</h3>
- </dt>
+</dl>
+
+<h3 id="Obsolete_methods">Obsolete methods</h3>
+
+<dl>
  <dt>{{DOMxRef("Element.getAttributeNode()")}} {{Obsolete_Inline}}</dt>
  <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNodeNS()")}} {{Obsolete_Inline}}</dt>
@@ -239,7 +241,7 @@ tags:
  <dd>Fired when some text has been selected.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.</dd>
  <dt>{{domxref("Element/show_event", "show")}}</dt>
- <dd>Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a <code><a href="/en-US/docs/Web/html/Global_attributes/contextmenu">contextmenu</a></code> attribute. {{deprecated_inline}}<br>
+ <dd>Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> attribute. {{deprecated_inline}}<br>
  Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.</dd>
  <dt>{{domxref("Element/wheel_event","wheel")}}</dt>
  <dd>Fired when the user rotates a wheel button on a pointing device (typically a mouse).<br>

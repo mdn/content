@@ -8,7 +8,7 @@ tags:
   - NSS
   - Tools
 ---
-<p style="margin-left: 40px;">A High-Level Overview to the Internals of <a href="/en-US/docs/NSS" title="/en-US/docs/NSS">Network Security Services (NSS)</a><br>
+<p style="margin-left: 40px;">A High-Level Overview to the Internals of <a href="/en-US/docs/NSS">Network Security Services (NSS)</a><br>
  <br>
  Software developed by the Mozilla.org projects traditionally used its own implementation of security protocols and cryptographic algorithms, originally called Netscape Security Services, nowadays called Network Security Services (NSS). NSS is a library written in the C programming language. It's free and open source software, and many other software projects have decided to use it. In order to support multiple operating systems (OS), it is based on a cross platform portability layer, called the Netscape Portable Runtime (NSPR), which provides cross platform application programming interfaces (APIs) for OS specific APIs like file system access, memory management, network communication, and multithreaded programming.<br>
  <br>
@@ -98,4 +98,4 @@ tags:
  <br>
  The key database file will contain at least one symmetric key, which NSS will automatically create on demand, and which will be used to protect your secret (private) keys. The symmetric key can be protected with PBE by setting a master password on the database. As soon as you set a master password, an attacker stealing your key database will no longer be able to get access to your private key, unless the attacker would also succeed in stealing the master password.<br>
  <br>
- Now you might be interest in how to get the <a href="/en-US/docs/NSS_Sources_Building_Testing" title="/en-US/docs/NSS_Sources_Building_Testing">NSS sources, building and testing NSS.</a></p>
+ Now you might be interest in how to get the <a href="/en-US/docs/NSS_Sources_Building_Testing">NSS sources, building and testing NSS.</a></p>

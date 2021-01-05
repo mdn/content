@@ -750,7 +750,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 	<pre class="brush: html notranslate">&lt;TodosStatus {todos} /&gt;</pre>
 	</li>
 	<li>
-	<p>You can also do a bit of clean-up, removing the <code>totalTodos</code> and <code>completedTodos</code> variables from <code>Todos.svelte</code>. Just remove the <code>$: totalTodos = ...</code> and the <code>$: completedTodos = ...</code> lines, and also remove the reference to <code>totalTodos</code> when we calculare <code>newTodoId</code> and use <code>todos.length</code>, instead. To do this, replace the block that begins with <code>let newTodoId</code> with this:</p>
+	<p>You can also do a bit of clean-up, removing the <code>totalTodos</code> and <code>completedTodos</code> variables from <code>Todos.svelte</code>. Just remove the <code>$: totalTodos = ...</code> and the <code>$: completedTodos = ...</code> lines, and also remove the reference to <code>totalTodos</code> when we calculate <code>newTodoId</code> and use <code>todos.length</code>, instead. To do this, replace the block that begins with <code>let newTodoId</code> with this:</p>
 
 	<pre class="brush: js notranslate">$: newTodoId = todos.length ? Math.max(...todos.map(t =&gt; t.id)) + 1 : 1</pre>
 	</li>

@@ -60,9 +60,6 @@ touch-action: unset;
  <dd>Enable single-finger vertical panning gestures. May be combined with <strong>pan-x</strong>, <strong>pan-left</strong>, <strong>pan-right</strong> and/or <strong>pinch-zoom</strong>.</dd>
  <dt id="manipulation"><code>manipulation</code></dt>
  <dd>Enable panning and pinch zoom gestures, but disable additional non-standard gestures such as double-tap to zoom. Disabling double-tap to zoom removes the need for browsers to delay the generation of <strong>click</strong> events when the user taps the screen. This is an alias for "<strong>pan-x pan-y pinch-zoom</strong>" (which, for compatibility, is itself still valid).</dd>
-</dl>
-
-<dl>
  <dt id="pan-keywords"><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
  <dd>Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (<strong>pan-up</strong>) means that the user is dragging their finger downward on the screen surface, and likewise <strong>pan-left</strong> means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, <strong>"pan-left pan-right</strong>" is invalid since "<strong>pan-x</strong>" is simpler, but "<strong>pan-left pan-down</strong>" is valid).</dd>
  <dt id="pinch-zoom"><code>pinch-zoom</code></dt>

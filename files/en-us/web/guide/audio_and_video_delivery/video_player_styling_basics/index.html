@@ -131,7 +131,7 @@ tags:
    background-repeat:no-repeat;
 }</pre>
 
-<p>By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background colour of the button is set to be transparent, non-repeated, and the element should fully contain the image.</p>
+<p>By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.</p>
 
 <p>Simple <code>:hover</code> and <code>:focus</code> states are then set for each button that alters the opacity of the button:</p>
 
@@ -171,7 +171,7 @@ tags:
    border-radius:2px;
 }</pre>
 
-<p>Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The <code>color</code> property is also defined here as Internet Explorer uses this defined colour for styling the progress bar's background colour as it increases.<br>
+<p>Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The <code>color</code> property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.<br>
  <br>
  As mentioned in the <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">previous article</a>, there is a fallback provided for browsers that do not support the {{htmlelement("progress") }} element; this also needs to be styled appropriately:</p>
 
@@ -186,9 +186,9 @@ tags:
    background-color:#2a84cd;
 }</pre>
 
-<p>A <code>.data-state</code> class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background colour needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background colour set.</p>
+<p>A <code>.data-state</code> class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.</p>
 
-<p>There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required colour for the progress bar:</p>
+<p>There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:</p>
 
 <pre class="brush: css">.controls progress::-moz-progress-bar {
    background-color:#0095dd;

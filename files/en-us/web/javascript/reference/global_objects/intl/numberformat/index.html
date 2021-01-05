@@ -6,40 +6,40 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - NumberFormat
   - Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Intl.NumberFormat</code></strong> object is a constructor for objects that enable language sensitive number formatting.</p>
+<p>The <strong><code>Intl.NumberFormat</code></strong> object enables language-sensitive number formatting.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}</dt>
- <dd>Creates a new <code>NumberFormat</code> object.</dd>
+	<dt>{{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}</dt>
+	<dd>Creates a new <code>NumberFormat</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
- <dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
+	<dt>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</dt>
+	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format()")}}</dt>
- <dd>Getter function that formats a number according to the locale and formatting options of this {{jsxref("NumberFormat")}} object.</dd>
- <dt>{{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}</dt>
- <dd>Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.</dd>
- <dt>{{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.</dd>
+	<dt>{{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format()")}}</dt>
+	<dd>Getter function that formats a number according to the locale and formatting options of this {{jsxref("NumberFormat")}} object.</dd>
+	<dt>{{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}</dt>
+	<dd>Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.</dd>
+	<dt>{{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}</dt>
+	<dd>Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -124,27 +124,24 @@ console.log((16).toLocaleString('en-GB', {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Intl.NumberFormat")}}</p>
-</div>
+<div>{{Compat("javascript.builtins.Intl.NumberFormat")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Intl")}}</li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>

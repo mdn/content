@@ -43,7 +43,7 @@ tags:
 
 <p>In JavaScript, when an object is passed to a function expecting a string (like {{DOMxRef("Window.alert()")}}), the object's {{JSxRef("Object.toString", "toString()")}} method is called and the returned value is passed to the function. This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.</p>
 
-<p>In the above example, <code>selObj.toString()</code> is automatically called when it is passed to {{DOMxRef("Window.alert()")}}. However, attempting to use a JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> property or method such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code> directly on a {{DOMxRef("Selection")}} object results in an error if it does not have that property or method and may return unexpected results if it does. To use a <code>Selection</code> object as a string, call its <code>toString()</code> method directly:</p>
+<p>In the above example, <code>selObj.toString()</code> is automatically called when it is passed to {{DOMxRef("Window.alert()")}}. However, attempting to use a JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> property or method such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr">substr</a></code> directly on a {{DOMxRef("Selection")}} object results in an error if it does not have that property or method and may return unexpected results if it does. To use a <code>Selection</code> object as a string, call its <code>toString()</code> method directly:</p>
 
 <pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
 
@@ -77,7 +77,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 

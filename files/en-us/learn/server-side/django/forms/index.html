@@ -204,7 +204,7 @@ class RenewBookForm(forms.Form):
     path('book/&lt;uuid:pk&gt;/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
+<p>The URL configuration will redirect URLs with the format <strong>/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</strong> to the function named <code>renew_book_librarian()</code> in <strong>views.py</strong>, and send the <code>BookInstance</code> id as the parameter named <code>pk</code>. The pattern only matches if <code>pk</code> is a correctly formatted <code>uuid</code>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: We can name our captured URL data "<code>pk</code>" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, <code>pk</code> short for "primary key", is a reasonable convention to use!</p>
@@ -449,7 +449,7 @@ def renew_book_librarian(request, pk):
 <p><strong>Note</strong>: Remember that your test login will need to have the permission "<code>catalog.can_mark_returned</code>" in order to access the renew book page (perhaps use your superuser account).</p>
 </div>
 
-<p>You can alternatively manually construct a test URL like this — <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
+<p>You can alternatively manually construct a test URL like this — <code>http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</code> (a valid <code>bookinstance_id</code> can be obtained by navigating to a book detail page in your library, and copying the <code>id</code> field).</p>
 
 <h3 id="What_does_it_look_like">What does it look like?</h3>
 
@@ -516,7 +516,7 @@ class RenewBookModelForm(ModelForm):
        if data &lt; datetime.date.today():
            raise ValidationError(_('Invalid date - renewal in past'))
 
-       <strong># Check if a date is in the allowed range (+4 weeks from today).</strong>
+       # Check if a date is in the allowed range (+4 weeks from today).
        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
@@ -647,9 +647,6 @@ class AuthorDelete(DeleteView):
 <p>Create some forms to create, edit, and delete <code>Book</code> records. You can use exactly the same structure as for <code>Authors</code>. If your <strong>book_form.html</strong> template is just a copy-renamed version of the <strong>author_form.html</strong> template, then the new "create book" page will look like the screenshot below:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

@@ -18,9 +18,6 @@ tags:
 
 <p>This document describes the JCA Provider shipped with JSS. The provider's name is "Mozilla-JSS". It implements cryptographic operations in native code using the <a href="../nss">NSS</a> libraries.</p>
 
-<ul>
-</ul>
-
 <h3 id="Contents">Contents</h3>
 
 <ul>
@@ -32,7 +29,6 @@ tags:
 </ul>
 
 <hr>
-<p><a name="signed-jar"></a></p>
 
 <h3 id="Signed_JAR_file"><a name="signed-jar">Signed JAR file</a></h3>
 
@@ -43,22 +39,17 @@ tags:
 
   <ol>
    <li>Use the binary release of JSS from mozilla.org.
-    <p> </p>
    </li>
-   <li>Apply for your own JCE code-signing certificate following the procedure at <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/crypto/HowToImplAProvider.html#Step61">How to Implement a Provider for the Java<sup><font size="-2">TM</font></sup> Cryptography Extension</a>. Then you can sign your own JSS JAR file.</li>
+   <li>Apply for your own JCE code-signing certificate following the procedure at <a href="http://java.sun.com/javase/6/docs/technotes/guides/security/crypto/HowToImplAProvider.html#Step61">How to Implement a Provider for the Java<sup>TM</sup> Cryptography Extension</a>. Then you can sign your own JSS JAR file.</li>
   </ol>
  </li>
 </ul>
-
-<p><a name="installing-provider"></a></p>
 
 <h3 id="Installing_the_Provider"><a name="installing-provider">Installing the Provider</a></h3>
 
 <ul>
  <li>In order to use any part of JSS, including the JCA provider, you must first call <code> <a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager">CryptoManager</a>.initialize()</code>. By default, the JCA provider will be installed in the list of providers maintained by the <code>java.security.Security</code> class. If you do not wish the provider to be installed, create a <a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager/CryptoManager.InitializationValues"><code> CryptoManager.InitializationValues</code></a> object, set its <code>installJSSProvider</code> field to <code>false</code>, and pass the <code>InitializationValues</code> object to <code>CryptoManager.initialize()</code>.</li>
 </ul>
-
-<p><a name="specifying-token"></a></p>
 
 <h3 id="Specifying_the_CryptoToken"><a name="specifying-token">Specifying the CryptoToken</a></h3>
 
@@ -100,8 +91,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
  </li>
 </ul>
 
-<p><a name="supported-classes"></a></p>
-
 <h3 id="Supported_Classes"><a name="supported-classes">Supported Classes</a></h3>
 
 <ul>
@@ -119,14 +108,12 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
  <li><a href="#SecretKey">SecretKey</a></li>
  <li><a href="#SecureRandom">SecureRandom</a></li>
  <li><a href="#Signature">Signature</a>
-  <p> </p>
   <a name="not-supported"></a>
 
   <h3 id="What's_Not_Supported"><a name="not-supported">What's Not Supported</a></h3>
 
   <ul>
    <li>The following classes don't work very well:
-    <p> </p>
 
     <ul>
      <li><strong>KeyStore:</strong> There are many serious problems mapping the JCA keystore interface onto NSS's model of PKCS #11 modules. The current implementation is almost useless. Since these problems lie deep in the NSS design and implementation, there is no clear timeframe for fixing them. Meanwhile, the <code>org.mozilla.jss.crypto.CryptoStore</code> class can be used for some of this functionality.</li>
@@ -251,8 +238,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
         <ul>
          <li>The following transformations are supported for <code>generatePublic()</code> and <code>generatePrivate()</code>:
 
-          <p> </p>
-
           <table>
            <tbody>
             <tr>
@@ -287,11 +272,8 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
             </tr>
            </tbody>
           </table>
-
-          <p> </p>
          </li>
          <li><code>getKeySpec()</code> is not supported. This method exports key material in plaintext and is therefore insecure. Note that a public key's data can be accessed directly from the key.
-          <p> </p>
          </li>
          <li><code>translateKey()</code> simply gets the encoded form of the given key and then tries to import it by calling <code>generatePublic()</code> or <code>generatePrivate()</code>. Only <code>X509EncodedKeySpec</code> is supported for public keys, and only <code>PKCS8EncodedKeySpec</code> is supported for private keys.</li>
         </ul>
@@ -318,8 +300,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
 
         <ul>
          <li>The SecureRandom argument passed to <code>init()</code> is ignored, because NSS does not support specifying an external source of randomness.
-
-          <p> </p>
          </li>
          <li>None of the key generation algorithms accepts an <code>AlgorithmParameterSpec</code>.</li>
         </ul>
@@ -365,8 +345,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
 
         <ul>
          <li>Any secret key type (AES, DES, etc.) can be used as the MAC key, but it must be a JSS key. That is, it must be an <code>instanceof org.mozilla.jss.crypto.SecretKeyFacade</code>.
-
-          <p> </p>
          </li>
          <li>The params passed to <code>init()</code> are ignored.</li>
         </ul>
@@ -401,8 +379,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
        <li>
         <ul>
          <li><code>getModulus()</code> is not supported because NSS does not support extracting data from private keys.
-
-          <p> </p>
          </li>
          <li><code>getPrivateExponent()</code> is not supported because NSS does not support extracting data from private keys.</li>
         </ul>
@@ -466,8 +442,6 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
             </tr>
            </tbody>
           </table>
-
-          <p> </p>
          </li>
          <li><code>getKeySpec</code> supports the following transformations:
           <table>
@@ -491,18 +465,12 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
               RC4</td>
              <td>SecretKeySpec</td>
             </tr>
-            <tr>
-            </tr>
            </tbody>
           </table>
-
-          <p> </p>
          </li>
          <li>For increased security, some SecretKeys may not be extractable from their PKCS #11 token. In this case, the key should be wrapped (encrypted with another key), and then the encrypted key might be extractable from the token. This policy varies across PKCS #11 tokens.
-          <p> </p>
          </li>
          <li><code>translateKey</code> tries two approaches to copying keys. First, it tries to copy the key material directly using NSS calls to PKCS #11. If that fails, it calls <code>getEncoded()</code> on the source key, and then tries to create a new key on the target token from the encoded bits. Both of these operations will fail if the source key is not extractable.
-          <p> </p>
          </li>
          <li>The class <code>java.security.spec.PBEKeySpec</code> in JDK versions earlier than 1.4 does not contain the salt and iteration fields, which are necessary for PBE key generation. These fields were added in JDK 1.4. If you are using a JDK (or JRE) version earlier than 1.4, you cannot use class <code>java.security.spec.PBEKeySpec</code>. Instead, you can use <code>org.mozilla.jss.crypto.PBEKeyGenParams</code>. If you are using JDK (or JRE) 1.4 or later, you can use <code>java.security.spec.PBEKeySpec</code> or <code>org.mozilla.jss.crypto.PBEKeyGenParams</code>.</li>
         </ul>
@@ -585,5 +553,3 @@ KeyPair dsaPair = dsaKpg.generateKeyPair();
   </table>
  </li>
 </ul>
-
-<p> </p>
