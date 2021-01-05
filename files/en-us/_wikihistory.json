@@ -52945,13 +52945,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart": {
-    "modified": "2019-03-23T22:36:54.161Z",
-    "contributors": [
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onabort": {
     "modified": "2020-10-15T21:15:09.905Z",
     "contributors": [
@@ -53574,14 +53567,10 @@
     ]
   },
   "Web/API/GlobalEventHandlers/onloadstart": {
-    "modified": "2020-10-15T21:51:38.052Z",
+    "modified": "2019-03-23T22:36:54.161Z",
     "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "niklasHagner",
-      "Sebastianz",
-      "chrisdavidmills"
+      "rolfedh",
+      "Guillaume-Heras"
     ]
   },
   "Web/API/GlobalEventHandlers/onlostpointercapture": {
