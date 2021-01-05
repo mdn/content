@@ -10072,6 +10072,7 @@
 /en-US/docs/Web/API/HTMLCanvasElement.toDataURL	/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
 /en-US/docs/Web/API/HTMLCanvasElement.width	/en-US/docs/Web/API/HTMLCanvasElement/width
 /en-US/docs/Web/API/HTMLCollection.item	/en-US/docs/Web/API/HTMLCollection/item
+/en-US/docs/Web/API/HTMLCollection/HTMLCollection.length	/en-US/docs/Web/API/HTMLCollection/length
 /en-US/docs/Web/API/HTMLContentElement.getDistributedNodes	/en-US/docs/Web/API/HTMLContentElement/getDistributedNodes
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLContentElement/select
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
