@@ -7795,6 +7795,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onError
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/registerProxyScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Accessible_guidelines	https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Add-on_ID	https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/
