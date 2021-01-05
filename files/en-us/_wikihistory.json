@@ -100763,12 +100763,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView": {
-    "modified": "2020-10-15T22:22:37.036Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
   "Web/API/XRRenderState/baseLayer": {
     "modified": "2020-10-15T22:22:37.949Z",
     "contributors": [
