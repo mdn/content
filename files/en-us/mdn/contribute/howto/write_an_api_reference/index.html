@@ -52,7 +52,7 @@ tags:
 
 <p>When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.</p>
 
-<div class="note">
+<div class="note notecard">
 <p><strong>Note</strong>: If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered. If you need help, refer to demos you have found, or ask an engineering contact.</p>
 </div>
 
@@ -186,26 +186,11 @@ tags:
 
 <p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for {{domxref("AudioContext")}} would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each {{anch("Interface pages", "interface page")}} explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, {{domxref("AudioContext.currentTime")}} is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
 
-<p>For example, given the list above, the {{domxref("AudioContext")}} interface is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext</p>
-
 <h3 id="Create_the_overview_page">Create the overview page</h3>
 
-<p>Now create the overview (API landing) page:</p>
-
-<ol>
- <li>Go to <a href="/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a> and, making sure you are logged in, select the <em>Cog icon &gt; New sub-page</em>. You should now be in an editor for a new page.</li>
- <li>Enter the title as the API name as defined by the spec, plus "API". So for example "Web Audio API", "IndexedDB API", or "MediaRecorder API".</li>
- <li>The Slug should be auto-filled, with underscores in the place of spaces. If it isn't, correct it.</li>
- <li>Enter some dummy content into the large content area, such as "TBD" or "Content", then click <em>Save Changes</em>. Or just soar right on into the section {{anch("Overview page")}} and start filling out the real content right away.</li>
-</ol>
-
-<p>Your landing page now exists! Now all you have to do is fill it in, which is discussed in the next section.</p>
+<p>Now create the overview (API landing) page. Our <a href="https://github.com/mdn/content#adding-a-new-document">MDN content README</a> contains instructions on creating a new document.</p>
 
 <h2 id="Structure_of_an_overview_page">Structure of an overview page</h2>
-
-<div class="warning">
-<p><strong>Important</strong>: This section is still a proposal, without consensus yet reached. Don't use it yet.</p>
-</div>
 
 <p>API landing pages will differ greatly in length, depending on how big the API is, but they will all have basically the same features. See <a href="/en-US/docs/Web/API/Web_Audio_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a> for an example of a big landing page.</p>
 
@@ -215,9 +200,8 @@ tags:
  <li><strong>Description</strong>: the first paragraph of the landing page should provide a short, concise description of the API's overarching purpose.</li>
  <li><strong>Concepts and usage section</strong>: The next section should be titled "[name  of  API] concepts and usage", and provide an overview of all the main functionality that the API provides, what problems it solves, and how it  works — all at a high level. This section should be fairly short,  and not go into code or specific implementation details.</li>
  <li><strong>List of interfaces</strong>: This section should be titled "[name of API]  interfaces", and provide links to the reference page for each interface that makes up the API, along with a short description of what each one does. See the "Referencing other API features with the \{{domxref}} macro" section for a quicker way to create new pages. Only current interfaces should be in this list; obsolete ones should be placed in (or moved into, if obsoleted after initially being documented) the following section.</li>
- <li><strong>Obsolete interfaces:</strong> This section lists obsolete interfaces. <em>Ed. note: should this be a subsection of the main "Interfaces" section above?</em></li>
- <li><strong>List of mixins</strong>: If any mixins are defined on the API spec, list them under a separate section, as they aren't interfaces as such.</li>
- <li><strong>Example</strong>: This section should show a simple use case for the API.</li>
+ <li><strong>Obsolete interfaces:</strong> This section lists obsolete interfaces, and should be included as a subsection of the main Interfaces section.</li>
+ <li><strong>Examples</strong>: This section should show a simple use case or two for the API.</li>
  <li><strong>Specifications table</strong>: At this point you need to include a  specifications table — see the "Creating a spec reference table"  section for more details.</li>
  <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
  <li><strong>See also</strong>: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.</li>
@@ -251,15 +235,15 @@ tags:
    <em>This interface also inherits methods from \{{domxref("XYZ")}}, and \{{domxref("XYZ2")}}.</em>
   </p>
 
-  <div class="note">
+  <div class="note notecard">
   <p><strong>Note</strong>: If the interface features event handlers, put these inside the "Properties" section (they are a type of property) under a subheading of "Event handlers".</p>
   </div>
 
-  <div class="note">
+  <div class="note notecard">
   <p><strong>Note</strong>:  Properties that are read-only should have the \{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \{{domxref}} links (after the use of the \{{experimentalInline}}, \{{obsoleteInline}}, \{{non-standard_Inline}} and \{{deprecatedInline}} macros, if some of these are needed.</p>
   </div>
  </li>
- <li><strong>Example</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could  also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.
+ <li><strong>Examples</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could  also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.
   <div class="note">
   <p><strong>Note</strong>: More details about writing code examples can be found in the "Examples" section.</p>
   </div>
@@ -289,7 +273,7 @@ tags:
 
 <h2 id="Structure_of_a_property_page">Structure of a property page</h2>
 
-<p>You can now fill in your interface property pages. Since the structures of all of them are the same, it usually works best to open all the property  pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other property pages and just update the bits that need changing,  rather than having to fill each one in from scratch.</p>
+<p>Create your property pages as subpages of the interface they are implemented on. Copy the structure of another property page to act as the basis for your new page.</p>
 
 <p>Edit the property page name to follow the <code>Interface.property_name</code> convention.</p>
 
@@ -323,9 +307,9 @@ tags:
 </pre>
   The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}</li>
  <li>
-  <p><strong>Example</strong>: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href="/en-US/docs/MDN/Contribute/Tools/Sample_server">MDN Sample Server</a>, which is particularly helpful for more complex samples. If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</p>
+  <p><strong>Examples</strong>: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">github gh-pages feature</a> (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</p>
 
-  <div class="note"><strong>Note</strong>: If you make use of Github, the example must live under <a href="https://github.com/mdn/">github.com/mdn</a>. See the "Examples" section for more details.</div>
+  <div class="note notecard"><strong>Note</strong>: If you make use of Github, the example must live under <a href="https://github.com/mdn/">github.com/mdn</a>. See the "Examples" section for more details.</div>
  </li>
  <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table"  section for more details.</li>
  <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
@@ -344,7 +328,7 @@ tags:
 
 <h2 id="Structure_of_a_method_page">Structure of a method page</h2>
 
-<p>You can now fill in your interface method pages. Since the structure of  all of them are the same, one possible way of doing it is to open all the method pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other method pages and just update the bits that need changing, rather than having to fill each one in from scratch.</p>
+<p>Create your method pages as subpages of the interface they are implemented on. Copy the structure of another method page to act as the basis for your new page.</p>
 
 <p>Method pages need the following sections:</p>
 
@@ -366,7 +350,7 @@ tags:
    <dd>The <strong>InterfaceName.method()</strong> method interface ...</dd>
   </dl>
 
-  <div class="note"><strong>Note:</strong> <code>InterfaceName.method()</code> should be in <code>&lt;code&gt;</code>, and should also be in bold (<code>&lt;strong&gt;</code>) the first time it's used.</div>
+  <div class="note notecard"><strong>Note:</strong> <code>InterfaceName.method()</code> should be in <code>&lt;code&gt;</code>, and should also be in bold (<code>&lt;strong&gt;</code>) the first time it's used.</div>
  </li>
  <li><strong>Syntax</strong>: The syntax section should include a 2–3 line example — usually just construction of the  interface, then calling of the interface method.
   <dl>
@@ -383,10 +367,9 @@ tags:
    <li>"Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.</li>
   </ul>
  </li>
- <li><strong>Example</strong>: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages feature</a> (so long as it uses only client-side code of course.) You can also make use of the <a href="/en-US/docs/MDN/Contribute/Tools/Sample_server">MDN Sample Server</a>, which is particularly helpful for more complex samples. See the "Examples" section for more details. If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</li>
+ <li><strong>Examples</strong>: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a <a href="https://github.com/">Github</a> repo containing the full example, and you could also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/">Github gh-pages feature</a> (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.</li>
  <li><strong>Specifications table</strong>: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.</li>
  <li><strong>Browser compatibility</strong>: Now you need to include a browser compatibility table. See <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Compatibility tables</a> for details.</li>
- <li><strong>Polyfill</strong>: If appropriate (especially if common browsers are still shipping without support for the method), you can include a section which includes the code for a polyfill to allow the API to be used in browsers that don't implement it.</li>
 </ol>
 
 <h3 id="Method_page_examples">Method page examples</h3>
@@ -435,7 +418,6 @@ tags:
 <p>In all cases, also add a keyword indicating the standardization status:</p>
 
 <ul>
- <li>Experimental (if the spec is not a CR)</li>
  <li>Deprecated</li>
  <li>Obsolete</li>
  <li>Non-standard</li>

@@ -14009,18 +14009,6 @@
       "teoli"
     ]
   },
-  "MDN/Contribute/Howto/Use_navigation_sidebars": {
-    "modified": "2019-12-05T06:54:05.208Z",
-    "contributors": [
-      "ElliotHawkins",
-      "ExE-Boss",
-      "IzaS",
-      "edprince",
-      "jswisher",
-      "Teeling1",
-      "Sheppy"
-    ]
-  },
   "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
     "modified": "2020-12-14T04:30:45.303Z",
     "contributors": [
@@ -14058,19 +14046,6 @@
       "ChrisL"
     ]
   },
-  "MDN/Contribute/Howto/Write_an_API_reference/Find_info_in_specifications": {
-    "modified": "2019-01-16T17:53:41.594Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "Sheppy",
-      "hbloomer",
-      "Sebastianz",
-      "irvinfly",
-      "gregtatum",
-      "Ms2ger"
-    ]
-  },
   "MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
     "modified": "2019-10-01T06:57:46.015Z",
     "contributors": [
@@ -14094,43 +14069,6 @@
       "wbamberg",
       "Sheppy",
       "Havvy"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_interface_reference_documentation": {
-    "modified": "2019-07-15T08:28:23.897Z",
-    "contributors": [
-      "Sheppy",
-      "ExE-Boss",
-      "wbamberg",
-      "ifilin",
-      "LightGuard",
-      "Lisa1",
-      "jswisher",
-      "Nicholas_Adamson",
-      "ethertank",
-      "mnoorenberghe",
-      "teoli",
-      "trevorh",
-      "fscholz",
-      "Hashem",
-      "Grubshka",
-      "olleolleolle",
-      "sorinelpustiu1978",
-      "Nickolay"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_interface_reference_documentation/Sample_interface_document": {
-    "modified": "2019-04-20T00:32:23.653Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "Sheppy",
-      "jswisher",
-      "trevorh",
-      "fscholz",
-      "Smi",
-      "Sevenspade",
-      "Nickolay"
     ]
   },
   "MDN/Contribute/Localize": {
@@ -14165,113 +14103,6 @@
       "foolip",
       "Sheppy",
       "KWierso2"
-    ]
-  },
-  "MDN/Editor": {
-    "modified": "2020-12-07T07:16:17.239Z",
-    "contributors": [
-      "davod3500065",
-      "SphinxKnight",
-      "annapacholekstepniak",
-      "gammlerfranz",
-      "chrisdavidmills",
-      "sideshowbarker",
-      "infoluckydrawcustomercare",
-      "boonedam57",
-      "fatane.khani.mazleghani",
-      "Zearin_Galaurum",
-      "modster",
-      "brasmon8351",
-      "phoebe721",
-      "Ahhmyeyes",
-      "jswisher",
-      "1991Cody",
-      "thniig1933",
-      "ExE-Boss",
-      "voiceofmoments",
-      "wbamberg",
-      "MichelleKwa12",
-      "lokaty",
-      "rolfedh",
-      "jwhitlock",
-      "keesh",
-      "dino42058",
-      "nifkinwins",
-      "REAP720801",
-      "ishan412",
-      "boa0332",
-      "THEOCHR",
-      "umacrawl",
-      "Thibaut",
-      "elwakil",
-      "peekayfreelancer",
-      "Sheppy",
-      "jubayed",
-      "Forever_Carlyle",
-      "jsx",
-      "HIS_EYES",
-      "wyrewolwerowany",
-      "Saleho",
-      "BrianLinux",
-      "mistermacfly83",
-      "teoli",
-      "BrKaosh",
-      "Suicide",
-      "alispivak",
-      "samanthaibrahim8383",
-      "Setiawati940@gmail.com",
-      "tikma",
-      "poeemah",
-      "Zzvdk",
-      "Virgil",
-      "SaiCharanReddy.P",
-      "klo",
-      "Marsf",
-      "joviar",
-      "michihito",
-      "Anniej333",
-      "charmander",
-      "sid38",
-      "silviabishop",
-      "FredB",
-      "fingertrick"
-    ]
-  },
-  "MDN/Editor/Basics": {
-    "modified": "2020-10-30T22:19:13.319Z",
-    "contributors": [
-      "mfuji09",
-      "我不会算命",
-      "chrisdavidmills",
-      "jswisher",
-      "cedillosguera01",
-      "lucy8790",
-      "sideshowbarker",
-      "erhan35",
-      "hsn124421",
-      "kenj115188",
-      "1991Cody",
-      "chadf1472",
-      "SphinxKnight",
-      "ahmedmousa",
-      "zhangqiangoffice",
-      "pawa2007",
-      "wbamberg",
-      "David263",
-      "Sheppy",
-      "stevea1",
-      "brzecz235",
-      "Sruthi_Mohan",
-      "amuntner-test",
-      "NameChangedAsItWasSpam",
-      "maybe",
-      "ifilin",
-      "pcat",
-      "ShaunMBrown",
-      "tynna",
-      "stephaniehobson",
-      "Marsf",
-      "michihito"
     ]
   },
   "MDN/Editor/Basics/Attachments": {
@@ -14329,99 +14160,6 @@
       "wbamberg",
       "suterj",
       "jswisher"
-    ]
-  },
-  "MDN/Editor/Images": {
-    "modified": "2020-09-30T15:34:28.440Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "jwhitlock"
-    ]
-  },
-  "MDN/Editor/Keyboard_shortcuts": {
-    "modified": "2020-09-30T15:34:30.223Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "wangbing945",
-      "ExE-Boss",
-      "jswisher",
-      "saigowthamr",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Editor/Links": {
-    "modified": "2020-09-30T15:34:29.006Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "SphinxKnight",
-      "Llamaless",
-      "sideshowbarker",
-      "devinea2",
-      "rachnac57",
-      "fscholz",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "thegregtyler",
-      "teoli",
-      "Bownee1",
-      "suopte"
-    ]
-  },
-  "MDN/Editor/Redirects": {
-    "modified": "2020-09-30T15:34:29.151Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jeremynwilliams223",
-      "wbamberg",
-      "Sheppy",
-      "Uemmra3",
-      "nettalopez",
-      "jswisher",
-      "webmaster"
-    ]
-  },
-  "MDN/Editor/Source_mode": {
-    "modified": "2020-09-30T15:34:29.804Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "enejko",
-      "jennyevans",
-      "SphinxKnight",
-      "vmr1532",
-      "9999472",
-      "ExE-Boss",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "sparklust",
-      "kscarfone"
-    ]
-  },
-  "MDN/Editor/Syntax_highlighting": {
-    "modified": "2020-09-30T15:34:30.051Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "MDN/Editor/Tables": {
-    "modified": "2020-09-30T15:34:28.668Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "suterj",
-      "jswisher",
-      "Sheppy"
     ]
   },
   "MDN/Guidelines": {
