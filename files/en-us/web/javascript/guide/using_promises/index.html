@@ -194,20 +194,17 @@ Do this, no matter what happened before
 
 <p>These make it possible to offer fallback error handling for promises, as well as to help debug issues with your promise management. These handlers are global per context, so all errors will go to the same event handlers, regardless of source.</p>
 
-<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises. These get logged to the console by the Node runtime. You can capture these for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the <a href="/en-US/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> event, like this:</p>
+<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises, logged to the console by the Node.js runtime. You can capture them for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the Node.js <code>unhandledRejection</code> event (notice the difference in capitalization of the name), like this:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js notranslate">process.on("unhandledRejection", (reason, promise) =&gt; {
   /* You might start here by adding code to examine the
-     promise specified by event.promise and the reason in
-     event.reason */
-
-  event.preventDefault();
-}, false);
+   * "promise" and "reason" values. */
+});
 </pre>
 
-<p>By calling the event's <a href="/en-US/docs/Web/API/Event/preventDefault" title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> method, you tell the JavaScript runtime not to do its default action when rejected promises go unhandled. That default action usually involves logging the error to console, and this is indeed the case for Node.</p>
+<p>For Node.js, to prevent the error from being logged to the console (the default action that would otherwise occur), adding that <code>process.on()</code> listener is all that’s necessary; there's no need for an equivalent of the browser runtime’s <a href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> method.</p>
 
-<p>Ideally, of course, you should examine the rejected promises to make sure none of them are actual code bugs before just discarding these events.</p>
+<p>However, if you add that <code>process.on</code> listener but don't also have code within it to handle rejected promises, they will just be dropped on the floor and silently ignored. So ideally, you should add code within that listener to examine each rejected promise and make sure it was not caused by an actual code bug.</p>
 
 <h2 id="Creating_a_Promise_around_an_old_callback_API">Creating a Promise around an old callback API</h2>
 
