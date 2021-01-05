@@ -40091,12 +40091,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DOMPoint/DOMPoint.fromPoint()": {
-    "modified": "2020-10-15T22:06:38.613Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/DOMPoint/w": {
     "modified": "2020-10-15T22:06:40.384Z",
     "contributors": [
@@ -166693,6 +166687,12 @@
     "contributors": [
       "fscholz",
       "Waldo"
+    ]
+  },
+  "Web/API/DOMPoint/fromPoint": {
+    "modified": "2020-10-15T22:06:38.613Z",
+    "contributors": [
+      "Sheppy"
     ]
   }
 }
