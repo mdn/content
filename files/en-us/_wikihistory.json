@@ -49696,15 +49696,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/EventTarget/EventTarget.attachEvent()": {
-    "modified": "2020-12-07T18:10:22.949Z",
-    "contributors": [
-      "bershanskiy",
-      "cpplearner",
-      "rolfedh",
-      "cvrebert"
-    ]
-  },
   "Web/API/EventTarget/addEventListener": {
     "modified": "2020-11-09T05:27:10.943Z",
     "contributors": [
