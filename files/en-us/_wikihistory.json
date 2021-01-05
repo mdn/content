@@ -158442,17 +158442,6 @@
       "bershanskiy"
     ]
   },
-  "Web/Manifest/serviceworker": {
-    "modified": "2020-10-15T22:19:47.486Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "moonmeister",
-      "wbamberg",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
   "Web/Manifest/short_name": {
     "modified": "2020-10-15T22:19:34.266Z",
     "contributors": [
