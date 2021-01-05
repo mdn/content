@@ -37,7 +37,7 @@ alert(new XMLSerializer().serializeToString(docu));
 
 <ul>
  <li>This will only work with XML, not HTML documents (as HTML documents do not support CDATA sections); attempting it on an HTML document will throw <code>NOT_SUPPORTED_ERR</code>.</li>
- <li>Will throw a <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code> exception if one tries to submit the closing CDATA sequence ("<code>]]&gt;</code>") as part of the data, so unescaped user-provided data cannot be safely used without with this method getting this exception ({{domxref("document.createTextNode","createTextNode()")}} can often be used in its place).</li>
+ <li>Will throw a <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code> exception if one tries to submit the closing CDATA sequence ("<code>]]&gt;</code>") as part of the data, so unescaped user-provided data cannot be safely used without this method getting this exception ({{domxref("document.createTextNode","createTextNode()")}} can often be used in its place).</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
