@@ -13708,7 +13708,6 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/constructor	/en-US/docs/Web/JavaScript/Reference/Classes/constructor
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
 /en-US/docs/Web/JavaScript/Reference/Operators/get	/en-US/docs/Web/JavaScript/Reference/Functions/get
-/en-US/docs/Web/JavaScript/Reference/Operators/new.target	/en-US/docs/Web/JavaScript/Reference/Operators/new/target
 /en-US/docs/Web/JavaScript/Reference/Operators/set	/en-US/docs/Web/JavaScript/Reference/Functions/set
 /en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentValidationErrors
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference
