@@ -71412,16 +71412,8 @@
       "adria"
     ]
   },
-  "Web/API/OffscreenCanvas/OffscreenCanvas.convertToBlob()": {
-    "modified": "2020-12-07T17:59:57.703Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "kebo"
-    ]
-  },
   "Web/API/OffscreenCanvas/convertToBlob": {
-    "modified": "2020-12-07T17:57:11.222Z",
+    "modified": "2020-12-07T17:59:57.703Z",
     "contributors": [
       "bershanskiy",
       "sideshowbarker",
