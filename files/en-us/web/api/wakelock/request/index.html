@@ -55,7 +55,7 @@ tags:
     const wakeLock = await navigator.wakeLock.request('screen');
 
   } catch (err) {
-    // the wake lock request fails - usually system related, such low as battery
+    // The wake lock request fails - usually system-related, such as low battery.
 
     console.log(`${err.name}, ${err.message}`);
   }
