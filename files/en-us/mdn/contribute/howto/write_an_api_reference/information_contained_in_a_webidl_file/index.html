@@ -60,7 +60,7 @@ tags:
 
 <pre class="syntaxbox" lang="en">interface HTMLMediaElement : <strong>HTMLElement</strong> {…}</pre>
 
-<p><span>The inheritance chain is listed automatically in the sidebar (using the \{{APIRef}} macro). It can also be added as an SVG image via the macro \{{InheritanceDiagram}}.</span></p>
+<p>The inheritance chain is listed automatically in the sidebar (using the \{{APIRef}} macro). It can also be added as an SVG image via the macro \{{InheritanceDiagram}}.</p>
 
 <h3 id="Mixins">Mixins</h3>
 
@@ -100,7 +100,7 @@ MyInterface includes MyMixin;</pre>
 </ul>
 
 <div class="notecard note">
-<p><span><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface. (Such cases are bugs in the relevant specs. They shouldn't be defined as mixins, but as partial interfaces.)</span></p>
+<p><strong>Note:</strong> Mixin names do not appear in a Web developer console. We shouldn't show them, but we currently do this as it saves us from duplicating content, which would lead to a maintenance issue. We do this if the mixin is only used in one interface. (Such cases are bugs in the relevant specs. They shouldn't be defined as mixins, but as partial interfaces.)</p>
 </div>
 
 <h3 id="Old_mixin_syntax">Old mixin syntax</h3>
@@ -114,7 +114,7 @@ MyInterface includes MyMixin;</pre>
 
 <pre class="syntaxbox" lang="en">MyInterface <strong>implements</strong> MyMixin;</pre>
 
-<h3 id="Availability_in_window_and_workers"><span>Availability in window and workers</span></h3>
+<h3 id="Availability_in_window_and_workers">Availability in window and workers</h3>
 
 <p>Availability in Web workers (of any type) and on the Window scope is defined using an annotation: <code>[Exposed=(Window,Worker)]</code>. The annotation applies to the partial interface it is listed with.</p>
 
@@ -175,10 +175,10 @@ interface SpeechSynthesis {
    readonly attribute boolean paused;
 };</pre>
 
-<p><span>Here <code>media.webspeech.synth.enabled</code> controls the <code>SpeechSynthesis</code> interface and its properties (the full listing has more than 3.)</span></p>
+<p>Here <code>media.webspeech.synth.enabled</code> controls the <code>SpeechSynthesis</code> interface and its properties (the full listing has more than 3.)</p>
 
 <div class="note notecard">
-<p><span><strong>Note:</strong> the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</span></p>
+<p><strong>Note:</strong> the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
 </div>
 
 <h3 id="Available_only_in_system_code">Available only in system code</h3>
@@ -204,23 +204,23 @@ interface SpeechSynthesis {
 
 <pre class="syntaxbox">readonly attribute <strong>MediaError?</strong> error;</pre>
 
-<p><span>The property value is an object of type <code>MediaError</code>. The question mark (<code>'?'</code>) indicates that it can take a value of <code>null</code>, and the documentation must explain <em>when</em> this may occur. If no question mark is present, the <code>error</code> property can't be <code>null</code>.</span></p>
+<p>The property value is an object of type <code>MediaError</code>. The question mark (<code>'?'</code>) indicates that it can take a value of <code>null</code>, and the documentation must explain <em>when</em> this may occur. If no question mark is present, the <code>error</code> property can't be <code>null</code>.</p>
 
-<h3 id="Writing_permissions_on_the_property"><span>Writing permissions on the property</span></h3>
+<h3 id="Writing_permissions_on_the_property">Writing permissions on the property</h3>
 
 <pre class="syntaxbox"><strong>readonly</strong> attribute MediaError? error;</pre>
 
-<p><span>If the keyword <code>readonly</code> is present, the property can't be modified. It must be marked as read-only:</span></p>
+<p>If the keyword <code>readonly</code> is present, the property can't be modified. It must be marked as read-only:</p>
 
 <ul>
- <li><span>In the interface, by adding the \{{ReadOnlyInline}} macro next to its definition term.</span></li>
- <li><span>In the first sentence of its own page, by starting the description with: <em>The read-only <code><strong>HTMLMediaElement.error</strong></code> property…</em></span></li>
- <li><span>By adding the <code>Read-only</code> tag to its own page.</span></li>
- <li><span>By starting its description in the interface page with <em>Returns…</em></span></li>
+ <li>In the interface, by adding the \{{ReadOnlyInline}} macro next to its definition term.</li>
+ <li>In the first sentence of its own page, by starting the description with: <em>The read-only <code><strong>HTMLMediaElement.error</strong></code> property…</em></li>
+ <li>By adding the <code>Read-only</code> tag to its own page.</li>
+ <li>By starting its description in the interface page with <em>Returns…</em></li>
 </ul>
 
 <div class="note notecard">
-<p><span><em><strong>Note:</strong> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</em></span></p>
+<p><em><strong>Note:</strong> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</em></p>
 </div>
 
 <h3 id="Throwing_exceptions">Throwing exceptions</h3>
@@ -228,11 +228,11 @@ interface SpeechSynthesis {
 <pre class="syntaxbox" lang="en"><strong>[SetterThrows]</strong>
             attribute DOMString src;</pre>
 
-<p><span>In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the <code>[SetterThrows]</code> annotation. When this happens, the Syntax section of the property page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</span></p>
+<p>In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the <code>[SetterThrows]</code> annotation. When this happens, the Syntax section of the property page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
 
-<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.</span></p>
+<p>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.</p>
 
-<p><span>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</span></p>
+<p>It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the <code>[GetterThrows]</code> annotation is used. Here also, the Syntax section of the property page <em>must</em> have an Exceptions subsection.</p>
 
 <pre class="syntaxbox"><code id="line-16">partial interface Blob {</code><code id="line-17">
 </code><code id="line-18">  <strong>[GetterThrows]</strong>
@@ -258,16 +258,16 @@ interface SpeechSynthesis {
 
 <p><em>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</em></p>
 
-<h3 id="New_objects_or_references"><span>New objects or references</span></h3>
+<h3 id="New_objects_or_references">New objects or references</h3>
 
-<p><span>The return value of a property can be either a copy of an internal object, a newly created synthetic object, or a reference to an internal object.</span></p>
+<p>The return value of a property can be either a copy of an internal object, a newly created synthetic object, or a reference to an internal object.</p>
 
-<p><span>Basic objects with types like {{jsxref("String")}} (being an IDL <code>DOMString</code>, or other), {{jsxref("Number")}} (being an IDL <code>byte</code>, <code>octet</code>, <code>unsigned int</code>, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)</span></p>
+<p>Basic objects with types like {{jsxref("String")}} (being an IDL <code>DOMString</code>, or other), {{jsxref("Number")}} (being an IDL <code>byte</code>, <code>octet</code>, <code>unsigned int</code>, or other), and {{jsxref("Boolean")}} are always copied and nothing special has to be noted about them (it is natural behavior expected by a JavaScript developer.)</p>
 
-<p><span>For interface objects, the default is to return a <em>reference</em> to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.</span></p>
+<p>For interface objects, the default is to return a <em>reference</em> to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.</p>
 
 <div class="note notecard">
-<p><span><strong>Note:</strong> The keyword <code>readonly</code> used with a property returning an object applies to the <u>reference</u> (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.</span></p>
+<p><strong>Note:</strong> The keyword <code>readonly</code> used with a property returning an object applies to the <u>reference</u> (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.</p>
 </div>
 
 <p>Sometimes an API must return a <em>new</em> object, or a <em>copy</em> of an internal one. This case is indicated in the WebIDL using the <code>[NewObject]</code> annotation.</p>
@@ -295,7 +295,7 @@ interface SpeechSynthesis {
  <dd>Returns a live \{{domxref("HTMLFormControlsCollection")}} containing…</dd>
 </dl>
 
-<h3 id="Availability_in_workers"><span>Availability in workers</span></h3>
+<h3 id="Availability_in_workers">Availability in workers</h3>
 
 <p>Individual property availability in workers is also found in the WebIDL. For a property, the default is the same availability as the <code>interface</code> (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the <code>partial interface</code> it is defined in.</p>
 
@@ -312,10 +312,10 @@ interface SpeechSynthesis {
 <pre class="syntaxbox" lang="en"><strong>[Pref="media.webvtt.enabled"]</strong>
     readonly attribute TextTrackList? textTracks;</pre>
 
-<p><span>Here <code>media.webvtt.enabled</code> controls the <code>textTracks</code> property. </span></p>
+<p>Here <code>media.webvtt.enabled</code> controls the <code>textTracks</code> property.</p>
 
 <div class="note notecard">
-<p><span>The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).</span></p>
+<p>The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -340,22 +340,22 @@ interface SpeechSynthesis {
 
 <pre class="syntaxbox" lang="en">DOMString <strong>canPlayType</strong>(DOMString type);</pre>
 
-<p><span>The return value type is indicated first inside the parentheses — in the above case the value is an object of type <code>DOMString</code>. if followed by a question mark (<code>'?'</code>), a value of <code>null</code> can be returned too, and the documentation must explain <em>when</em> this may happen. If no question mark is present, like here,  the return value can't be <code>null</code>.</span></p>
+<p>The return value type is indicated first inside the parentheses — in the above case the value is an object of type <code>DOMString</code>. if followed by a question mark (<code>'?'</code>), a value of <code>null</code> can be returned too, and the documentation must explain <em>when</em> this may happen. If no question mark is present, like here,  the return value can't be <code>null</code>.</p>
 
-<p><span>The keyword <code>void</code> means that there is no return value. It is not a return value type. If the WebIDL entry reads <code>void</code>, the <em>Return value</em> section in the docs should contain only a simple <em>None</em>.</span></p>
+<p>The keyword <code>void</code> means that there is no return value. It is not a return value type. If the WebIDL entry reads <code>void</code>, the <em>Return value</em> section in the docs should contain only a simple <em>None</em>.</p>
 
 <h3 id="Throwing_exceptions_2">Throwing exceptions</h3>
 
 <pre class="syntaxbox" lang="en"><strong>[Throws]</strong>
    void fastSeek(double time);</pre>
 
-<p><span>Some methods can throw exceptions. This is marked using the <code>[Throws]</code> annotation. When this happens, the Syntax section of the method page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</span></p>
+<p>Some methods can throw exceptions. This is marked using the <code>[Throws]</code> annotation. When this happens, the Syntax section of the method page <em>must</em> have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.</p>
 
-<p><span>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</span></p>
+<p>Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. <a href="https://heycam.github.io/webidl/#es-enumeration">Trying to set an illegal enumerated value</a> (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.</p>
 
-<p><span>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions"><em>Exceptions</em> sections</a>.</span></p>
+<p>Have a look at one of these <a href="/en-US/docs/Web/API/SubtleCrypto/importKey#Exceptions"><em>Exceptions</em> sections</a>.</p>
 
-<h3 id="Availability_in_workers_2"><span>Availability in workers</span></h3>
+<h3 id="Availability_in_workers_2">Availability in workers</h3>
 
 <p>Individual method availability in workers is also found in the WebIDL. For a method, the default is the same availability as the <code>interface</code> (that is available to {{domxref('Window')}} context only if nothing special is marked) or as the <code>partial interface</code> it is defined it.</p>
 
@@ -374,10 +374,10 @@ interface SpeechSynthesis {
                           optional DOMString label = "",
                           optional DOMString language = "");</pre>
 
-<p><span>Here <code>media.webvtt.enabled</code> controls the <code>addTextTrack()</code> method. </span></p>
+<p>Here <code>media.webvtt.enabled</code> controls the <code>addTextTrack()</code> method.</p>
 
 <div class="note notecard">
-<p><span><strong>Note:</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</span></p>
+<p><strong>Note:</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
 </div>
 
 <h2 id="Special_methods">Special methods</h2>
@@ -394,8 +394,8 @@ interface SpeechSynthesis {
 
 <p>A jsonifier is mapped to <code>toJSON()</code> and defined as:</p>
 
-<pre class="syntaxbox" lang="en"><strong>jsonifier;</strong> <span>// Gecko version</span><strong><span>
-serializer;</span></strong><span> // Standard version</span>
+<pre class="syntaxbox" lang="en"><strong>jsonifier;</strong> // Gecko version<strong>
+serializer;</strong> // Standard version
 </pre>
 
 <p>The <code>toJSON()</code> method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})</p>
@@ -519,9 +519,9 @@ console.log(interfaceIdentifier.name);
   Exposed=(Window,Worker)]
     interface MessageChannel {…};</pre>
 
-<p><span>A constructor with the same interface is defined using the <code>Constructor</code> annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug <em>Web/API/MessageChannel/MessageChannel</em> and the title <code>MessageChannel()</code>.</span></p>
+<p>A constructor with the same interface is defined using the <code>Constructor</code> annotation on the interface. There can be parenthesis and a list of parameters or not (like in the above example.) We document all the unnamed constructors on a sub-page — for example the above is given the slug <em>Web/API/MessageChannel/MessageChannel</em> and the title <code>MessageChannel()</code>.</p>
 
-<p><span>Another example of an unnamed constructor, with parameters:</span></p>
+<p>Another example of an unnamed constructor, with parameters:</p>
 
 <pre class="syntaxbox" lang="en">[<strong>Constructor</strong>(DOMString type, optional MessageEventInit eventInitDict),
  Exposed=(Window,Worker,System)]
@@ -539,13 +539,13 @@ console.log(interfaceIdentifier.name);
 <pre class="syntaxbox" lang="en">[<strong>NamedConstructor</strong>=Image(optional unsigned long width, optional unsigned long height)]
     interface HTMLImageElement : HTMLElement {…</pre>
 
-<p><span>A named constructor is a constructor that has a different name than that of its interface. For example<code> new Image(…)</code> creates a new <code>HTMLImageElement</code> object. They are defined in the WebIDL using the <code>NamedConstructor</code> annotation on the interface, followed by the name of the constructor after the equality sign (<code>'='</code>) and the parameter inside the parenthesis, in the same format as you'll see for methods.</span></p>
+<p>A named constructor is a constructor that has a different name than that of its interface. For example<code> new Image(…)</code> creates a new <code>HTMLImageElement</code> object. They are defined in the WebIDL using the <code>NamedConstructor</code> annotation on the interface, followed by the name of the constructor after the equality sign (<code>'='</code>) and the parameter inside the parenthesis, in the same format as you'll see for methods.</p>
 
-<p><span>There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.</span></p>
+<p>There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.</p>
 
-<h3 id="New_constructor_syntax"><span>New constructor syntax</span></h3>
+<h3 id="New_constructor_syntax">New constructor syntax</h3>
 
-<p><span>As of September 2019, WebIDL constructor syntax was updated. </span>Constructor syntax no longer involves an extended attribute on the interface:</p>
+<p>As of September 2019, WebIDL constructor syntax was updated. </span>Constructor syntax no longer involves an extended attribute on the interface:</p>
 
 <pre>[Constructor(DOMString str)]
     interface MyInterface {
@@ -566,7 +566,7 @@ console.log(interfaceIdentifier.name);
 
 <p>It is unlikely that <em>all</em> specs will be updated to use the new syntax, so you'll probably encounter both out in the wild. We will therefore continue to cover both types of syntax here.</p>
 
-<h3 id="Availability_in_workers_3"><span>Availability in workers</span></h3>
+<h3 id="Availability_in_workers_3">Availability in workers</h3>
 
 <p>Constructors have the same availability as the interface, or partial interface, they are defined on. The sub-page provides this information in the same way as for a method.</p>
 
