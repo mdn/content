@@ -16085,7 +16085,7 @@
       "bershanskiy"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow": {
     "modified": "2020-10-15T21:53:38.497Z",
     "contributors": [
       "rebloor",
@@ -16093,7 +16093,7 @@
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval": {
     "modified": "2020-10-15T21:53:37.088Z",
     "contributors": [
       "wbamberg",
@@ -16104,20 +16104,20 @@
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload": {
     "modified": "2020-10-15T21:53:37.505Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId": {
     "modified": "2020-10-15T21:53:38.188Z",
     "contributors": [
       "wbamberg",
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.network": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/network": {
     "modified": "2020-11-04T21:11:17.468Z",
     "contributors": [
       "sideshowbarker",
@@ -16126,27 +16126,27 @@
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR": {
     "modified": "2020-10-15T22:04:13.474Z",
     "contributors": [
       "wbamberg",
       "hellosct1"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated": {
     "modified": "2020-10-15T21:53:33.843Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished": {
     "modified": "2020-12-07T21:17:54.796Z",
     "contributors": [
       "dgp1130",
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels": {
     "modified": "2020-10-15T21:53:32.053Z",
     "contributors": [
       "rebloor",
@@ -16154,41 +16154,41 @@
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel": {
     "modified": "2020-10-15T21:56:19.046Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane": {
     "modified": "2020-10-15T21:58:10.530Z",
     "contributors": [
       "JanTheMan1010",
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged": {
     "modified": "2020-10-15T21:56:27.723Z",
     "contributors": [
       "wbamberg",
       "hellosct1"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel": {
     "modified": "2020-10-15T21:53:34.275Z",
     "contributors": [
       "wbamberg",
       "hellosct1"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane": {
     "modified": "2020-10-15T21:58:09.444Z",
     "contributors": [
       "irenesmith",
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden": {
     "modified": "2020-10-15T21:58:11.637Z",
     "contributors": [
       "hellosct1",
@@ -16196,32 +16196,32 @@
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown": {
     "modified": "2020-10-15T21:58:10.316Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression": {
     "modified": "2020-10-15T21:58:11.197Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject": {
     "modified": "2020-10-15T21:58:09.289Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage": {
     "modified": "2020-10-15T22:14:47.719Z",
     "contributors": [
       "hellosct1",
       "irenesmith"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/create": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/create": {
     "modified": "2020-10-15T21:53:37.489Z",
     "contributors": [
       "wbamberg",
@@ -16230,20 +16230,20 @@
       "andrewtruongmoz"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements": {
     "modified": "2020-10-15T21:58:10.696Z",
     "contributors": [
       "wbamberg"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged": {
     "modified": "2020-10-15T21:54:34.814Z",
     "contributors": [
       "wbamberg",
       "hellosct1"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName": {
+  "Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName": {
     "modified": "2020-10-15T21:54:35.500Z",
     "contributors": [
       "wbamberg",
