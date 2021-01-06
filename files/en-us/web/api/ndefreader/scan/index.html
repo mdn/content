@@ -21,14 +21,14 @@ tags:
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>
  <ul>
-  <li><code>signal</code> -- optional {{DOMxRef("AbortSignal")}} that allows to cancell this <code>scan()</code> operation.</li>
+  <li><code>signal</code> -- optional {{DOMxRef("AbortSignal")}} that allows to cancel this <code>scan()</code> operation.</li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{JSxRef("Promise")}} that resolves with <code>undefined</code> immediatelly after scheduling read operations for the NFC adapter.</p>
+<p>A {{JSxRef("Promise")}} that resolves with <code>undefined</code> immediately after scheduling read operations for the NFC adapter.</p>
 
 <h2 id="Exceptions">Exceptions</h2>
 
@@ -37,6 +37,8 @@ tags:
 <dl>
  <dt><code>AbortError</code></dt>
  <dd>The scan operation was aborted with {{DOMxRef("AbortSignal")}} passed in options.</dd>
+ <dt><code>InvalidStateError</code></dt>
+ <dd>There's already an ongoing scan.</dd>
  <dt><code>NotAllowedError</code></dt>
  <dd>The permission for this operation was rejected.</dd>
  <dt><code>NotSupportedError</code></dt>
