@@ -54433,7 +54433,7 @@
       "Brettz9"
     ]
   },
-  "Web/API/HTMLCollection/HTMLCollection.length": {
+  "Web/API/HTMLCollection/length": {
     "modified": "2020-10-15T22:28:42.682Z",
     "contributors": [
       "NotWoods"
