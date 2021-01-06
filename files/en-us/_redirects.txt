@@ -13388,6 +13388,7 @@
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
+/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Server-Side_Access_Control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Status/416_Range_Not_Satisfiable	/en-US/docs/Web/HTTP/Status/416
@@ -13511,7 +13512,7 @@
 /en-US/docs/Web/JavaScript/Microsoft_Extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/debugger	/en-US/docs/Web/JavaScript/Reference/Statements/debugger
 /en-US/docs/Web/JavaScript/Other_JavaScript_tools	/en-US/docs/Tools
-/en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
+/en-US/docs/Web/JavaScript/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_elements	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
