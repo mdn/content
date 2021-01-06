@@ -88531,12 +88531,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/USBDevice/USBDevice.deviceClass": {
-    "modified": "2020-10-15T22:05:42.029Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
   "Web/API/USBDevice/claimInterface": {
     "modified": "2020-10-15T22:05:45.086Z",
     "contributors": [
@@ -88583,7 +88577,7 @@
     ]
   },
   "Web/API/USBDevice/deviceClass": {
-    "modified": "2020-10-15T22:05:42.446Z",
+    "modified": "2020-10-15T22:05:42.029Z",
     "contributors": [
       "jpmedley"
     ]
