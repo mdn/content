@@ -14378,39 +14378,6 @@
       "Tuqui"
     ]
   },
-  "MDN/Kuma": {
-    "modified": "2019-12-31T16:22:53.307Z",
-    "contributors": [
-      "peterbe",
-      "SphinxKnight",
-      "jswisher",
-      "9999472",
-      "ExE-Boss",
-      "wbamberg",
-      "chrisdavidmills",
-      "LikeVincent",
-      "xGabey",
-      "xgqfrms",
-      "jrdacosta2002",
-      "groovecoder",
-      "Sheppy",
-      "Nickolay"
-    ]
-  },
-  "MDN/Kuma/Server_charts": {
-    "modified": "2020-09-08T02:44:58.627Z",
-    "contributors": [
-      "SphinxKnight",
-      "thanhphong99991111",
-      "momack2",
-      "jwhitlock",
-      "ExE-Boss",
-      "wbamberg",
-      "jswisher",
-      "groovecoder",
-      "Sheppy"
-    ]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2019-06-05T12:41:23.682Z",
     "contributors": [
@@ -14452,31 +14419,6 @@
       "chrisdavidmills",
       "wbamberg",
       "jswisher"
-    ]
-  },
-  "MDN/Structures/API_references": {
-    "modified": "2020-09-30T09:04:07.709Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/API_references/API_reference_sidebars": {
-    "modified": "2020-09-30T09:04:08.085Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "Sheppy",
-      "wbamberg",
-      "Thw0rted"
-    ]
-  },
-  "MDN/Structures/API_references/What_does_an_API_reference_need": {
-    "modified": "2020-09-30T09:04:07.900Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg"
     ]
   },
   "MDN/Structures/Banners_and_notices": {
@@ -14557,19 +14499,6 @@
       "dbs",
       "prasannamoharana",
       "Rupesh",
-      "codepo8"
-    ]
-  },
-  "MDN/Structures/Live_samples/Simple_live_sample_demo": {
-    "modified": "2020-09-30T09:04:06.422Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "willi-berger",
-      "fuggy",
-      "wbamberg",
-      "jswisher",
-      "Sheppy",
       "codepo8"
     ]
   },
@@ -166337,6 +166266,35 @@
     "modified": "2020-10-15T22:06:38.613Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-12-31T16:22:53.307Z",
+    "contributors": [
+      "peterbe",
+      "SphinxKnight",
+      "jswisher",
+      "9999472",
+      "ExE-Boss",
+      "wbamberg",
+      "chrisdavidmills",
+      "LikeVincent",
+      "xGabey",
+      "xgqfrms",
+      "jrdacosta2002",
+      "groovecoder",
+      "Sheppy",
+      "Nickolay"
+    ]
+  },
+  "MDN/Contribute/Howto/Write_an_API_reference/Sidebars": {
+    "modified": "2020-09-30T09:04:08.085Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "Sheppy",
+      "wbamberg",
+      "Thw0rted"
     ]
   }
 }
