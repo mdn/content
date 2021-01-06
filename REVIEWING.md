@@ -89,3 +89,4 @@ Note that changes to any content areas not explicitly listed below will be handl
   * [@Rumyra](https://github.com/Rumyra)
   * [@sideshowbarker](https://github.com/sideshowbarker)
   * [@Elchi3](https://github.com/Elchi3)
+  * [@jpmedley](https://github.com/jpmedley)
