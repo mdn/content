@@ -155930,7 +155930,7 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Operators/new.target": {
+  "Web/JavaScript/Reference/Operators/new/target": {
     "modified": "2020-10-15T21:37:38.244Z",
     "contributors": [
       "fscholz",
