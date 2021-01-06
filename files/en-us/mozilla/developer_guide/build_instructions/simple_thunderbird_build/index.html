@@ -27,7 +27,7 @@ tags:
  <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">macOS Build Prerequisites</a></li>
 </ul>
 
-<h2 class="editable" id="MAPI_Headers">MAPI Headers</h2>
+<h2 id="MAPI_Headers">MAPI Headers</h2>
 
 <p>On Windows: check that the MAPI header files from <a href="https://www.microsoft.com/en-us/download/details.aspx?id=12905">https://www.microsoft.com/en-us/download/details.aspx?id=12905</a> are installed because the MAPI header files (except MAPI.h) are not bundled with Visual Studio 2017 (Windows SDK 10). You should copy 17 of the 18 header files to a Windows SDK include directory so that the build process will find the files, that is <code>C:\Program Files (x86)\Windows Kits\10\Include\10.0.nnnnn.0\shared</code>, where <code>nnnnn</code> is the highest number present on the system. Note that the downloaded Outlook 2010 MAPI Header Files contain 18 fies, of which only 17 are needed. Do <strong>not</strong> copy MAPI.h, it is already in C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um\MAPI.h.</p>
 
@@ -64,11 +64,11 @@ cd source/
 hg clone https://hg.mozilla.org/comm-central comm/
 </pre>
 
-<p class="editable">The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. Instead of using <code>hg clone</code>, you can follow <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">these instructions</a> on downloading and "unpacking" a Mercurial bundle.</p>
+<p>The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. Instead of using <code>hg clone</code>, you can follow <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">these instructions</a> on downloading and "unpacking" a Mercurial bundle.</p>
 
-<p class="editable"><strong>Warning: The page </strong><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a><strong> is 99% out of date!</strong> Only useful content is working with Github.</p>
+<p><strong>Warning: The page </strong><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a><strong> is 99% out of date!</strong> Only useful content is working with Github.</p>
 
-<h2 class="editable" id="Build_configuration">Build configuration</h2>
+<h2 id="Build_configuration">Build configuration</h2>
 
 <p>To build Thunderbird, you need to add a file named <code>mozconfig</code> to the root directory of the mozilla-central checkout that contains the following line:</p>
 
