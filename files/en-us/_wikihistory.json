@@ -30572,15 +30572,6 @@
       "daviddoran"
     ]
   },
-  "Web/API/Ambient_Light_Sensor_API": {
-    "modified": "2019-03-23T22:25:15.244Z",
-    "contributors": [
-      "jpmedley",
-      "fscholz",
-      "riju",
-      "david_ross"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:22:20.042Z",
     "contributors": [
