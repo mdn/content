@@ -11635,6 +11635,7 @@
 /en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/ondevicechange
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
+/en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRTargetRayMode
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.exception	/en-US/docs/Web/API/console.error
