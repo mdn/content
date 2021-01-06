@@ -71701,27 +71701,12 @@
       "jpmedley"
     ]
   },
-  "Web/API/PaintWorklet/PaintWorklet.devicePixelRatio": {
-    "modified": "2020-10-15T22:17:39.475Z",
-    "contributors": [
-      "estelle",
-      "Puddingsan"
-    ]
-  },
   "Web/API/PaintWorklet/devicePixelRatio": {
     "modified": "2020-12-10T11:15:36.190Z",
     "contributors": [
       "bershanskiy",
       "estelle",
       "Puddingsan"
-    ]
-  },
-  "Web/API/PaintWorklet/devicePizelRatio": {
-    "modified": "2020-10-15T22:17:26.519Z",
-    "contributors": [
-      "estelle",
-      "Puddingsan",
-      "jpmedley"
     ]
   },
   "Web/API/PaintWorklet/registerPaint": {
