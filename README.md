@@ -25,6 +25,8 @@ The following is a set of guidelines for contributing to the
   - [Adding code examples](#adding-code-examples)
   - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
   - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
+- [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
+  - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
 
 ## Code of Conduct
 
