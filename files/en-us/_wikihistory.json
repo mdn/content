@@ -101852,7 +101852,7 @@
       "irenesmith"
     ]
   },
-  "Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role": {
+  "Web/Accessibility/ARIA/Roles/Tabpanel_Role": {
     "modified": "2019-06-12T09:57:18.481Z",
     "contributors": [
       "chrisdavidmills",
@@ -155930,7 +155930,7 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Operators/new/target": {
+  "Web/JavaScript/Reference/Operators/new.target": {
     "modified": "2020-10-15T21:37:38.244Z",
     "contributors": [
       "fscholz",
