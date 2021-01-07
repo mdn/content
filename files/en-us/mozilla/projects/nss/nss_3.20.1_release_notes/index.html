@@ -23,15 +23,15 @@ slug: Mozilla/Projects/NSS/NSS_3.20.1_release_notes
 <p>The following security-relevant bugs have been resolved in NSS 3.20.1. Users are encouraged to upgrade immediately.</p>
 
 <ul>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1192028">Bug 1192028</a> (<span><span>CVE-2015-7181</span></span>) and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202868">Bug 1202868</a> (<span id="summary_alias_container"><span id="alias_nonedit_display">CVE-2015-7182):</span></span><br>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1192028">Bug 1192028</a> (CVE-2015-7181) and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202868">Bug 1202868</a> (CVE-2015-7182):<br>
   Several issues existed within the ASN.1 decoder used by NSS for handling streaming BER data. While the majority of NSS uses a separate, unaffected DER decoder, several public routines also accept BER data, and thus are affected. An attacker that successfully exploited these issues can overflow the heap and may be able to obtain remote code execution.</li>
 </ul>
 
 <p>The following security-relevant bugs have been resolved in NSPR 4.10.10, which affect NSS.<br>
- Because NSS includes portions of the affected NSPR code at build time, <span id="summary_alias_container"><span id="alias_nonedit_display">it is necessary to use NSPR 4.10.10 when building NSS.</span></span></p>
+ Because NSS includes portions of the affected NSPR code at build time, it is necessary to use NSPR 4.10.10 when building NSS.</p>
 
 <ul>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205157">Bug 1205157</a> (NSPR, <span id="summary_alias_container"><span id="alias_nonedit_display">CVE-2015-7183):</span></span><br>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205157">Bug 1205157</a> (NSPR, CVE-2015-7183):<br>
   A logic bug in the handling of large allocations would allow exceptionally large allocations to be reported as successful, without actually allocating the requested memory. This may allow attackers to bypass security checks and obtain control of arbitrary memory.</li>
 </ul>
 
