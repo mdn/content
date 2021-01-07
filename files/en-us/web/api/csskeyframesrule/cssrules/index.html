@@ -1,6 +1,6 @@
 ---
-title: CSSKeyframesRule.name
-slug: Web/API/CSSKeyframesRule/name
+title: CSSKeyframesRule.cssRules
+slug: Web/API/CSSKeyframesRule/cssRules
 tags:
   - API
   - CSSOM
@@ -11,21 +11,20 @@ tags:
 ---
 <div>{{APIRef("CSSOM") }}</div>
 
-<p class="summary">The <strong><code>name</code></strong> property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.</p>
+<p class="summary">The read-only <strong><code>cssRules</code></strong> property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes {{cssxref("at-rule")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>name</var> = <var>CSSKeyframesRule</var>.name;
-<var>CSSKeyframesRule</var>.name = <var>name</var>;</pre>
+<pre class="syntaxbox notranslate">var <var>cssRules</var> = <var>CSSKeyframesRule</var>.cssRules;</pre>
 
 <h3 id="value">Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+<p>A {{domxref('CSSRuleList')}}.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>
     The CSS includes a keyframes at-rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>. 
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, with the <code>name</code> set to "slidein".
+    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, the <code>cssRules</code> property returns a {{domxref("CSSRuleList")}} containing two rules.
 </p>
   
 <pre class="brush: css">@keyframes slidein {
@@ -40,7 +39,7 @@ tags:
 
 <pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.name); // "slidein"</pre>
+console.log(keyframes.cssRules); // a CSSRuleList object with two rules</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -54,7 +53,7 @@ console.log(keyframes.name); // "slidein"</pre>
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('CSS3 Animations', '#dom-csskeyframesrule-name', 'CSSKeyframesRule.name')}}</td>
+   <td>{{SpecName('CSS3 Animations', '#dom-csskeyframesrule-cssrules', 'CSSKeyframesRule.cssRules')}}</td>
    <td>{{Spec2('CSS3 Animations')}}</td>
    <td>Initial definition</td>
   </tr>
@@ -63,4 +62,4 @@ console.log(keyframes.name); // "slidein"</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSKeyframesRule.name")}}</p>
+<p>{{Compat("api.CSSKeyframesRule.cssRules")}}</p>
