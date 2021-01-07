@@ -87,8 +87,7 @@ exports<span class="punctuation token">.</span>author_create_post <span class="o
 
   <pre class="brush: js notranslate">// Validate fields.
 body('first_name').trim().isLength({ min: 1 }).escape().withMessage('First name must be specified.')
-    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),<code>
-</code></pre>
+    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),</pre>
  </li>
  <li>We can use the <code>optional()</code> function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields). For example, below we check that the optional date of birth is an ISO8601-compliant date (the <code>checkFalsy</code> flag means that we'll accept either an empty string or <code>null</code> as an empty value).
   <pre class="line-numbers  language-html notranslate"><code class="language-html">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601().toDate(),</code></pre>
