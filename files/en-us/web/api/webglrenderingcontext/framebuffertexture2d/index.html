@@ -26,9 +26,10 @@ tags:
   <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha, depth and stencil buffers used to render an image.</li>
   <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
    <ul>
-    <li><code>gl.DRAW_FRAMEBUFFER</code>: Equivalent to <code>gl.FRAMEBUFFER</code>. Used as a destination for drawing, rendering, clearing, and writing operations.</li>
+    <li><code>gl.DRAW_FRAMEBUFFER</code>: Used as a destination for drawing, rendering, clearing, and writing operations.</li>
     <li><code>gl.READ_FRAMEBUFFER</code>: Used as a source for reading operations.</li>
    </ul>
+   When binding, <code>gl.FRAMEBUFFER</code> sets both the <code>gl.DRAW_FRAMEBUFFER</code> and <code>gl.READ_FRAMEBUFFER</code> binding points. When referencing, <code>gl.FRAMEBUFFER</code> refers to the <code>gl.DRAW_FRAMEBUFFER</code> binding
   </li>
  </ul>
  </dd>
