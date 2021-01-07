@@ -71,7 +71,7 @@ Hello #2</pre>
 
 <p>As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{templateName(<code class="language-json">{ "Alpha": "one", "Beta": ["a", "b", "c"], "Foo": "https:\/\/mozilla.org\/" }</code>)}}</pre>
+<pre class="brush: none no-line-numbers notranslate">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
 
 <p>The data from this macro is available in template code as an object in the <code class="language-javascript">$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
 
@@ -320,7 +320,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>The resulting dialog looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png" style="height: 289px; width: 500px;"></p>
+<p><img alt="" src="screen_shot_2016-11-28_at_3.08.39_pm.png" style="height: 289px; width: 500px;"></p>
 
 <p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at {{TemplateLink("ListSubpages")}}.</p>
 
@@ -348,7 +348,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>If you edit the page, you'll probably see a macro like this at the bottom of the page:</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{ wiki.languages(<code class="language-json">{ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }</code>) }}</pre>
+<pre class="brush: none no-line-numbers notranslate">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
 
 <p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
 
