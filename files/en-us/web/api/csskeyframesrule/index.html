@@ -38,6 +38,25 @@ tags:
  <dd>Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between <code>0%</code> and <code>100%</code>. If no such keyframe exists, <code>findRule</code> returns <code>null</code>.</dd>
 </dl>
 
+<h2 id="Example">Example</h2>
+
+<p>
+    The CSS includes a keyframes at-rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>. 
+    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object.</p>
+
+<pre class="brush: css">@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule </pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
