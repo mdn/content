@@ -79,25 +79,25 @@ tags:
 
 <p>One of the best accessibility aids a screen reader user can have is an excellent content structure with headings, paragraphs, lists, etc. An excellent semantic example might look something like the following:</p>
 
-<pre class="brush: html example-good line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>My heading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-good line-numbers language-html notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the first section of my document.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>I'll add another paragraph here too.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;
+&lt;p&gt;I'll add another paragraph here too.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Here is&lt;/li&gt;
   &lt;li&gt;a list for&lt;/li&gt;
   &lt;li&gt;you to read&lt;/li&gt;
-&lt;/ol&gt;</span></span>
+&lt;/ol&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>My subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;My subheading&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the first subsection of my document. I'd love people to be able to find this content!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;This is the first subsection of my document. I'd love people to be able to find this content!&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>My 2nd subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;My 2nd subheading&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the second subsection of my content. I think is more interesting than the last one.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;p&gt;This is the second subsection of my content. I think is more interesting than the last one.&lt;/p&gt;</pre>
 
 <p>We've prepared a version with longer text for you to try out with a screen reader (see <a href="https://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>). If you try navigating through this, you'll see that this is pretty easy to navigate:</p>
 
@@ -110,25 +110,25 @@ tags:
 
 <p>People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:</p>
 
-<pre class="brush: html example-bad line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>7<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My heading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-bad line-numbers language-html notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 This is the first section of my document.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
 I'll add another paragraph here too.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 1. Here is
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 2. a list for
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 3. you to read
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;My subheading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 This is the first subsection of my document. I'd love people to be able to find this content!
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My 2nd subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-This is the second subsection of my content. I think is more interesting than the last one.</code></pre>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;My 2nd subheading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+This is the second subsection of my content. I think is more interesting than the last one.</pre>
 
 <p>If you try our longer version out with a screen reader (see <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>), you'll not have a very good experience — the screen reader hasn't got anything to use as signposts, so you can't retrieve a useful table of contents, and the whole page is seen as a single giant block, so it is just read out in one go, all at once.</p>
 
@@ -342,11 +342,11 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Whilst the above addition allows us to tab to the buttons, it does not allow us to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span>onkeydown <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// The Enter/Return key</span>
-    document<span class="punctuation token">.</span>activeElement<span class="punctuation token">.</span><span class="function token">click</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate">document.onkeydown = function(e) {
+  if(e.keyCode === 13) { // The Enter/Return key
+    document.activeElement.click();
+  }
+};</code></pre>
 
 <p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 

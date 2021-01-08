@@ -126,13 +126,13 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>video</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video<span class="punctuation token">"</span></span> <span class="attr-name token">controls</span> <span class="attr-name token">preload</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>metadata<span class="punctuation token">"</span></span> <span class="attr-name token">poster</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>img/poster.jpg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token"> &lt;</span>source</span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.webm<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/webm<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- Offer download --&gt;</span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;p&gt;Your browser does not support HTML5 video; here is a link to
-  &lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video/tears-of-steel-battle-clip-medium.mp4<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>view the video<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt; directly.&lt;/p&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>video</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;video id="video" controls preload="metadata" poster="img/poster.jpg"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4"&gt;
+  &lt;source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm"&gt;
+  &lt;!-- Offer download --&gt;
+  &lt;p&gt;Your browser does not support HTML5 video; here is a link to
+  &lt;a href="video/tears-of-steel-battle-clip-medium.mp4"&gt;view the video&lt;/a&gt; directly.&lt;/p&gt;
+&lt;/video&gt;</pre>
 
 <p>This example includes a simple link allowing you to download the video if even the HTML5 video player doesn't work, so at least the user can still access the video.</p>
 
@@ -259,7 +259,7 @@ button:active {
 <p>This block will apply the IE-specific CSS and JavaScript only if the browser viewing the page is IE 8 or older. <code>lte</code> means "less than or equal to", but you can also use lt, gt, gte, <code>!</code> for NOT, and other logical syntax.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sitepoint's <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</span></p>
+<p><strong>Note</strong>: Sitepoint's <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer Conditional Comments</a> provides a useful beginner's tutorial/reference that explains the conditional comment syntax in detail.</p>
 </div>
 
 <p>As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements stylable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:</p>
