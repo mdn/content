@@ -13,7 +13,7 @@ tags:
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>add()</code></strong> method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the value, and stores the cloned value in the object store. This is for adding new records to an object store.</p>
+<p>The <strong><code>add()</code></strong> method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the value, and stores the cloned value in the object store. This is for adding new records to an object store.</p>
 </div>
 
 <p>To determine if the add operation has completed successfully, listen for the transaction’s <code>complete</code> event in addition to the <code>IDBObjectStore.add</code> request’s <code>success</code> event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued.</p>
