@@ -14763,30 +14763,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Tools/Add-ons_and_plug-ins": {
-    "modified": "2020-09-30T16:47:39.854Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3",
-      "christiankaindl",
-      "Sheppy",
-      "jswisher",
-      "alispivak"
-    ]
-  },
-  "MDN/Tools/Feeds": {
-    "modified": "2020-09-30T16:47:38.331Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jswisher",
-      "Mingun",
-      "Sheppy",
-      "lorchard",
-      "lmorchard"
-    ]
-  },
   "MDN/Tools/KumaScript": {
     "modified": "2020-11-30T12:49:14.386Z",
     "contributors": [
