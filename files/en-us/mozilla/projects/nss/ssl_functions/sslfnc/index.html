@@ -446,7 +446,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1219511"> <code>SSL_ImplementedCiphers[]</code> is an external array of unsigned 16-bit integers whose values are either SSL2 cipher kinds or SSL3 cipher suites. The values are the same as the values used to enable or disable a cipher suite via calls to </a><a href="#1084747"><code>SSL_CipherPrefSetDefault</code></a>, and are defined in <code>sslproto.h</code>. The number of values in the table is contained in an external 16-bit integer named <code>SSL_NumImplementedCiphers</code>. The macro <code>SSL_IS_SSL2_CIPHER</code> can be used to determine whether a particular value is an SSL2 or an SSL3 cipher.</p>
 
-<p><a id="1219511"> <code><strong>WARNING</strong>: Using the external array SSL_ImplementedCiphers[]</code> directly is deprecated.  It causes dynamic linking issues at run-time after an update of NSS because the actual size of the array changes between releases.  The recommended way of accessing the array is through the <code>SSL_GetImplementedCiphers() </code>and<code> SSL_GetNumImplementedCiphers() </code>accessors<code>.</code></a></p>
+<p><strong>WARNING</strong>: Using the external array <code>SSL_ImplementedCiphers[]</code> directly is deprecated.  It causes dynamic linking issues at run-time after an update of NSS because the actual size of the array changes between releases.  The recommended way of accessing the array is through the <code>SSL_GetImplementedCiphers()</code> and <code>SSL_GetNumImplementedCiphers()</code> accessors.</p>
 
 <p><a id="1124282"> By default, all SSL2 and 12 SSL3/TLS cipher suites are enabled. However, this does not necessarily mean that they are all permitted. The <code>SSL_CipherPrefSetDefault</code> function cannot override cipher suite policy settings that are not permitted; see </a><a href="#1098841">SSL Export Policy Functions</a> for details. Your application must call one of the export policy functions before it can perform any cryptographic operations.</p>
 
@@ -1840,7 +1840,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1088928"> SSL_BadCertHook</a></p>
 
-<p><a id="1088928"> </a> <a id="1088932"> Sets up a callback function to deal with a situation where the </a><a href="#1088888"><code>SSL_AuthCertificate</code></a> callback function has failed. This callback function allows the application to override the decision made by the certificate authorization callback and authorize the certificate for use in the SSL connection.</p>
+<p><a id="1088932"> Sets up a callback function to deal with a situation where the </a><a href="#1088888"><code>SSL_AuthCertificate</code></a> callback function has failed. This callback function allows the application to override the decision made by the certificate authorization callback and authorize the certificate for use in the SSL connection.</p>
 
 <h5 id="Syntax_27"> <a id="1088933"> Syntax </a></h5>
 
@@ -1941,7 +1941,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1126622"> SSL_GetClientAuthDataHook</a></p>
 
-<p><a id="1126622"> </a> <a id="1088993"> Defines a callback function for SSL to use in a client application when a server asks for client authentication information. This callback function is required if your client application is going to support client authentication. </a></p>
+<p> <a id="1088993"> Defines a callback function for SSL to use in a client application when a server asks for client authentication information. This callback function is required if your client application is going to support client authentication. </a></p>
 
 <h5 id="Syntax_28"> <a id="1088994"> Syntax </a></h5>
 
@@ -2375,7 +2375,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
     <p><a id="1092826"> A pointer to a string pointer. On output, the string pointer references a newly allocated string specifying the name of the cipher. For SSL v2, the string is one of the following:</a></p>
     <a id="1092827"> <code>RC4</code></a>
 
-    <p><a id="1092827"> <code>RC4-Export</code></a></p>
+    <p><code>RC4-Export</code></p>
 
     <p><a id="1092829"> <code>RC2-CBC</code></a></p>
 
@@ -2390,7 +2390,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
     <p><a id="1094891"> For SSL v3, the string is one of the following: </a></p>
     <a id="1092834"> <code>RC4</code> </a>
 
-    <p><a id="1092834"> <code>RC4-40</code> </a></p>
+    <p><code>RC4-40</code></p>
 
     <p><a id="1092836"> <code>RC2-CBC</code> </a></p>
 
@@ -2485,8 +2485,6 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <p><a id="1092882"> The function returns one of these values:</a></p>
 
 <p><a id="1092884"> If unsuccessful, <code>NULL</code>.</a></p>
-
-<p><a id="1092884"></a></p>
 
 <h5 id="Description_34"> <a id="1149047"> Description </a></h5>
 

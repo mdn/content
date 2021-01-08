@@ -56,7 +56,7 @@ tags:
 
 <p>In prior versions of Firefox, any web page could load scripts or images from chrome using the <code>chrome://</code> protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.</p>
 
-<p>Firefox 3 only allows web content to access items in the <code><a rel="freelink">chrome://browser/</a></code> and <code><a rel="freelink">chrome://toolkit/</a></code> spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.</p>
+<p>Firefox 3 only allows web content to access items in the <code>chrome://browser/</code> and <code>chrome://toolkit/</code> spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.</p>
 
 <p>There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their <code>chrome.manifest</code> file, like this:</p>
 

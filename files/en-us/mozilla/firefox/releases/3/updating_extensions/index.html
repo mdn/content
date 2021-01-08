@@ -160,7 +160,7 @@ tags:
 <p><em>Add simple changes you had to make while updating your extension to work with Firefox 3 here.</em></p>
 
 <ul>
- <li><code><a class="external" rel="freelink">chrome://browser/base/utilityOverlay.js</a></code> is no longer supported for security reasons. If you were previously using this, you should switch to <code><a class="external" rel="freelink">chrome://browser/content/utilityOverlay.js</a></code>.</li>
+ <li><code>chrome://browser/base/utilityOverlay.js</code> is no longer supported for security reasons. If you were previously using this, you should switch to <code>chrome://browser/content/utilityOverlay.js</code>.</li>
  <li>{{ Interface("nsIAboutModule") }} implementations are now required to support the <code>getURIFlags</code> method. See {{ Source("netwerk/protocol/about/public/nsIAboutModule.idl", "nsIAboutModule.idl") }} for documentation. This affects extensions that provide new <code>about:</code> URIs. ({{ Bug(337746) }})</li>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).</li>
  <li>Changes to <a href="/en-US/docs/nsISupports_proxies">nsISupports proxies</a> and possibly to threading-related interfaces need to be documented.</li>

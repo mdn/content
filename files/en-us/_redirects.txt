@@ -12148,6 +12148,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints/alerts	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints/alerts
+/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/ARIA_timer_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/checkbox	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/dialog	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
@@ -13710,7 +13711,6 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/constructor	/en-US/docs/Web/JavaScript/Reference/Classes/constructor
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
 /en-US/docs/Web/JavaScript/Reference/Operators/get	/en-US/docs/Web/JavaScript/Reference/Functions/get
-/en-US/docs/Web/JavaScript/Reference/Operators/new.target	/en-US/docs/Web/JavaScript/Reference/Operators/new/target
 /en-US/docs/Web/JavaScript/Reference/Operators/set	/en-US/docs/Web/JavaScript/Reference/Functions/set
 /en-US/docs/Web/JavaScript/Reference/PaymentValidationErrors	/en-US/docs/Web/API/PaymentValidationErrors
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference

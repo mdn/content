@@ -101781,7 +101781,7 @@
       "irenesmith"
     ]
   },
-  "Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role": {
+  "Web/Accessibility/ARIA/Roles/Tabpanel_Role": {
     "modified": "2019-06-12T09:57:18.481Z",
     "contributors": [
       "chrisdavidmills",
@@ -155859,7 +155859,7 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Operators/new/target": {
+  "Web/JavaScript/Reference/Operators/new.target": {
     "modified": "2020-10-15T21:37:38.244Z",
     "contributors": [
       "fscholz",
@@ -166177,74 +166177,6 @@
       "tomasdev",
       "jpmedley",
       "chrisdavidmills"
-    ]
-  },
-  "web-rtc-tutorial-landing": {
-    "modified": "2020-12-09T13:11:02.464Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/Building_the_Server": {
-    "modified": "2020-12-09T13:52:08.450Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/Deployment_and_Further_Reading": {
-    "modified": "2020-12-09T14:11:45.665Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/Setup": {
-    "modified": "2020-12-09T13:16:21.696Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers": {
-    "modified": "2020-12-11T16:57:08.856Z",
-    "contributors": [
-      "ohaver",
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Answering_a_Call": {
-    "modified": "2020-12-09T14:08:41.032Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Creating_a_Call": {
-    "modified": "2020-12-09T14:06:26.876Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Creating_a_Peer_Connection": {
-    "modified": "2020-12-09T14:04:37.485Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Ending_a_Call": {
-    "modified": "2020-11-17T13:24:45.084Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Getting_Browser_Microphone_Permission": {
-    "modified": "2020-11-17T13:22:08.247Z",
-    "contributors": [
-      "lolaodelola"
-    ]
-  },
-  "web-rtc-tutorial-landing/connecting_the_peers/Showing_and_Hiding_the_HTML": {
-    "modified": "2020-12-12T11:47:25.930Z",
-    "contributors": [
-      "ohaver",
-      "lolaodelola"
     ]
   },
   "Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE": {

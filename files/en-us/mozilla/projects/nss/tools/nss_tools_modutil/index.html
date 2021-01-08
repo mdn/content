@@ -11,7 +11,7 @@ Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev
     <code>secmod.db</code> files or within hardware tokens. You can use the tool to add and delete PKCS #11 modules,
     change passwords, set defaults, list module contents, enable or disable slots, enable or disable FIPS 140-2
     compliance, and assign default providers for cryptographic operations. This tool can also create
-    <code>key3.db</code>, <code>cert8.db</code>, and <code>secmod.db</code><var> </var>security database files.
+    <code>key3.db</code>, <code>cert8.db</code>, and <code>secmod.db</code> security database files.
 </p>
 <a id="1043099">
     The tasks associated with security module database management are part of a process that typically also involves
@@ -445,16 +445,14 @@ command are defined as follows:
     <li><a id="1043252">
             Setting the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
         <blockquote><a id="1043253">
-                <code>-default </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i><code>
-</code></a></blockquote>
+                <code>-default </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
     </li>
 
     <li><a id="1043254">
             Clearing the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
 
         <blockquote><a id="1043255">
-                <code>-undefault </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i><code>
-</code></a></blockquote>
+                <code>-undefault </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
     </li>
 
     <li><a id="1043256">
@@ -522,7 +520,7 @@ command are defined as follows:
     The script file grammar is as follows:</a>
 <pre><a id="1040388"><code>--&gt; </code><i>valuelist</i></a></pre>
 <pre><a id="1040390"><i>valuelist</i><code> --&gt; </code><i>value valuelist<br></i><code>               &lt;</code><i>null&gt;</i></a></pre>
-<pre><a id="1040394"><i>value</i><code> ---&gt; </code><i>key_value_pair<br></i><code>            </code><i>string</i></a></pre>
+<pre><a id="1040394"><i>value</i><code> ---&gt; </code><i>key_value_pair<br></i>            <i>string</i></a></pre>
 <pre><a id="1040397"><i>key_value_pair</i><code> --&gt; </code><i>key </i><code>{ </code><i>valuelist</i><code> }</code></a></pre>
 <pre><a id="1040399"><i>key</i><code> --&gt; </code><i>string</i></a></pre>
 <pre><a id="1040401"><i>string</i><code> --&gt; </code><i>simple_string<br></i><code>            "</code><i>complex_string</i><code>"</code></a></pre>
