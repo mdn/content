@@ -14875,15 +14875,6 @@
       "jswisher"
     ]
   },
-  "MDN/Tools/Revision_dashboard": {
-    "modified": "2020-09-30T16:47:38.795Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jswisher",
-      "Sheppy"
-    ]
-  },
   "MDN/Tools/Sample_server": {
     "modified": "2020-09-30T16:47:39.734Z",
     "contributors": [
