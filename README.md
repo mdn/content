@@ -482,7 +482,7 @@ push your branch to your fork:
 
 When you add images to MDN, you should make sure that they are compressed as much as possible without degrading quality, to save on download size for our readers. In fact, if you don't do this our CI process will fail and the build results will warn you that some of your images are too big.
 
-The best way to compress them is by using our built-in compression tool. You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option — this compresses the specified image as much as possible, and saves the result over the top of the original.
+The best way to compress them is by using the built-in compression tool. You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option — this compresses the specified image as much as possible, and saves the result over the top of the original.
 
 For example:
 
