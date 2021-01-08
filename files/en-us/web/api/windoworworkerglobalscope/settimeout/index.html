@@ -369,17 +369,14 @@ window.setTimeout("alert('Hello World!');", 500);
   symbols in the context where <code>setTimeout()</code> was called will not be available
   when the string is evaluated as code.</p>
 
-<h3 id="Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified
-</h3>
+<h2 id="Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</h2>
 
 <p>There are a number of reasons why a timeout may take longer to fire than anticipated.
   This section describes the most common reasons.</p>
 
-<h4 id="Timeouts_throttled_to_≥_4ms">Timeouts throttled to ≥ 4ms</h4>
+<h2 id="Timeouts">Timeouts throttled</h2>
 
 <p>In modern browsers, <code>setTimeout()</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
-
-<h2 id="timeout">Live timeout demo</h2>
 
 <p>This code defines several functions, three of which demonstrate this throttling effect:
 <em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
@@ -387,6 +384,7 @@ window.setTimeout("alert('Hello World!');", 500);
 <em><code>run()</code></em>, called at program start.</p>
 
 <h3 id="HTML">Example</h3>
+
 <p><code>interval()</code> logs the current millisecond since start</p>
 <p><code>timeout()</code> logs the current millisecond since start, and reschedules itself
 <p><code>run()</code> kicks off <code>interval()</code> and <code>timeout()</code> </p>
@@ -451,7 +449,7 @@ function logline(msec) {
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Live_timeout_demo', 100, 700)}}</p>
+<p>{{EmbedLiveSample('Timeouts_throttled', 100, 700)}}</p>
 
 <h2>Notes</h2>
 
