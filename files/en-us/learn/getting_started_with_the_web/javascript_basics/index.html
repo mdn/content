@@ -320,6 +320,8 @@ myHTML.onclick = function() {};</pre>
 
 <p>With this review of JavaScript basics completed (above), let's add some new features to our example site.</p>
 
+<p>Before going any further, delete the current contents of your <code>main.js</code> file — the bit you added earlier during the "Hello world!" example — and save the empty file. If you don't, the existing code will clash with the new code you are about to add.</p>
+
 <h3 id="Adding_an_image_changer">Adding an image changer</h3>
 
 <p>In this section, you will learn how to use JavaScript and DOM API features to alternate the display of one of two images. This change will happen as a user clicks the displayed image.</p>
@@ -328,7 +330,7 @@ myHTML.onclick = function() {};</pre>
  <li>Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.</li>
  <li>Save this image in your <code>images</code> folder.</li>
  <li>Rename the image <em>firefox2.png</em>.</li>
- <li>Add the JavaScript below to your <code>main.js</code> file. (Also delete your <em>Hello world!</em> JavaScript from the earlier exercise.)
+ <li>Add the JavaScript below to your <code>main.js</code> file.
   <pre class="brush: js notranslate"><code>let </code>myImage = document.querySelector('img');
 
 myImage.onclick = function() {
