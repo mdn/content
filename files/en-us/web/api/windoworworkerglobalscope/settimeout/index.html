@@ -377,21 +377,85 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <h4 id="Timeouts_throttled_to_≥_4ms">Timeouts throttled to ≥ 4ms</h4>
 
-<p>In modern browsers,
-  <code>setTimeout()</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}}
-  calls are throttled to a minimum of once every 4 ms when successive calls are triggered
-  due to callback nesting (where the nesting level is at least a certain depth), or after
-  certain number of successive intervals. Take this example:</p>
+<p>In modern browsers, <code>setTimeout()</code>/{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} calls are throttled to a minimum of once every 4 ms when successive calls are triggered due to callback nesting (where the nesting level is at least a certain depth), or after certain number of successive intervals.</p>
 
-<pre class="brush: js notranslate">function cb() { setTimeout(cb, 0); }
-function f() { setInterval(f, 0); }
-setTimeout(cb, 0);
-setInterval(f, 0);</pre>
+<h2 id="timeout">Live Timeout Demo</h2>
 
-<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on
-  the 6th call; in Edge its the 3rd one. Gecko started to treat <code>setInterval()</code>
-  like this in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it
-  already did this with <code>setTimeout()</code>; see below).</p>
+<p>This code defines several functions, three of which demonstrate this throttling effect:
+<em><code>interval()</code></em>, called after <code>setInterval</code> timer expiration; 
+<em><code>timeout()</code></em> called after <code>setTimeout()</code> timer expiration;
+<em><code>run()</code></em>, called at program start.</p>
+
+<h3 id="HTML">Example</h3>
+<p><code>interval()</code> logs the current millisecond since start</p>
+<p><code>timeout()</code> logs the current millisecond since start, and reschedules itself
+<p><code>run()</code> kicks off <code>interval()</code> and <code>timeout()</code> </p>
+<p>The timers for <code>interval()</code> and <code>timeout()</code> expire immediately. Both functions are called in a tight loop because of this immediate expiration. You'll see the throttling effect after a few milliseconds... </p>
+<pre class="brush: html notranslate">&lt;p&gt;Live Example&lt;/p&gt;
+&lt;button onclick="run();"&gt;Run&lt;/button&gt;
+&lt;div id='log'&gt;&lt;/div&gt;
+</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js notranslate">
+var to_timer = 0;
+var interval_timer = 0;
+var cleanup_timer = 0;
+var last = 0;
+var duration = 15;
+var cycle = 0;
+
+function interval() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+}
+
+function timeout() {
+  var d = new Date();
+  logline(d.getMilliseconds());
+  interval();
+  to_timer = setTimeout(timeout, 0);
+}
+
+function run() {
+  interval_timer = setInterval(interval, 0);
+  to_timer = setTimeout(timeout, 0);
+  cleanup_timer = setInterval(cleanup, duration);
+  last = 0;
+  cycle = 0;
+  document.getElementById('log').innerHTML = "";
+  document.getElementById('log').innerHTML += ("&lt;div&gt;^&nbsp;&rArr;&nbsp;Current interval greater than last interval");
+  document.getElementById('log').innerHTML += ("&lt;div&gt;v&nbsp;&rArr;&nbsp;Current interval less than last interval (should never be seen)");
+}
+
+function cleanup() {
+  clearTimeout(to_timer);
+  clearInterval(interval_timer);
+  clearInterval(cleanup_timer);
+  document.getElementById('log').innerHTML += ("--- Done ---");
+}
+
+function pad(d) {
+  return (d < 10) ? '0' + d.toString() : d.toString();
+}
+
+function logline(msec) {
+  var c = "";
+  if (last < msec) { c = "^"; } 
+  if (last > msec) { c = "v"; } // Should never happen
+  document.getElementById('log').innerHTML += ("&lt;pre&gt;" + pad(cycle++) + " " + last + " " + msec + " " + c);
+  last = msec;
+}
+</pre>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample('Live_Timeout_Demo', 100, 700)}}</p>
+
+<h2>Notes</h2>
+
+<p>In Chrome and Firefox, the 5th successive callback call is clamped; Safari clamps on the 6th call; in Edge it's the 3rd one. Gecko started to clamp after 4ms <code>setInterval()</code> in <a href="/en-US/docs/Mozilla/Firefox/Releases/56">version 56</a> (it already did this with <code>setTimeout()</code>; see below).</p>
 
 <p><a class="external"
     href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a>
