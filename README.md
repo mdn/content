@@ -451,7 +451,8 @@ a new image to the `files/en-us/web/css` document.
     cp /some/path/my-cool-image.png files/en-us/web/css/
     ```
 
-1. Run our `filecheck` command on each image you add. It'll complain if something's wrong (see also the [Compressing images](####Compressing_images) section below).
+1. Run the `filecheck` command on each image you add. It'll complain if something's wrong 
+  (see also the [Compressing images](#compressing-images) section below).
 We'll automatically run this as one of the tests we run when your new pull request is created,
 but why wait to fix any possible issues later?
 
