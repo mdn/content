@@ -2,18 +2,22 @@
 title: CSSStyleRule.selectorText
 slug: Web/API/CSSStyleRule/selectorText
 tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Reference
+- API
+- CSSOM
+- CSSStyleRule
+- Reference
 ---
 <div>{{APIRef("CSSOM") }}</div>
 
-<p>The <code><strong>CSSRule.selectorText</strong></code> property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see <a href="/en-US/docs/DOM/Using_dynamic_styling_information">Using dynamic styling information</a>.</p>
+<p>The <code><strong>CSSRule.selectorText</strong></code> property gets the textual
+	representation of the selector for the rule set. This is readonly in some browsers; to
+	set stylesheet rules dynamically cross-browser, see <a
+		href="/en-US/docs/DOM/Using_dynamic_styling_information">Using dynamic styling
+		information</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>string</em> = cssRule.selectorText
+<pre class="brush: js notranslate"><em>string</em> = cssRule.selectorText
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -26,7 +30,9 @@ alert(stylesheet.cssRules[0].selectorText); // body
 
 <h2 id="Notes">Notes</h2>
 
-<p>The implementation may have stripped out insignificant whitespace while parsing the selector. If set to a selector string which cannot be parsed, a SyntaxError is thrown.</p>
+<p>The implementation may have stripped out insignificant whitespace while parsing the
+	selector. If set to a selector string which cannot be parsed, a SyntaxError is thrown.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -40,7 +46,8 @@ alert(stylesheet.cssRules[0].selectorText); // body
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('CSSOM', '#dom-cssstylerule-selectortext', 'CSSStyleRule.selectorText')}}</td>
+			<td>{{SpecName('CSSOM', '#dom-cssstylerule-selectortext',
+				'CSSStyleRule.selectorText')}}</td>
 			<td>{{Spec2('CSSOM')}}</td>
 			<td> </td>
 		</tr>

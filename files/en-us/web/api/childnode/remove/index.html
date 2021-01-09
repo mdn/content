@@ -2,19 +2,20 @@
 title: ChildNode.remove()
 slug: Web/API/ChildNode/remove
 tags:
-  - API
-  - ChildNode
-  - DOM
-  - Experimental
-  - Method
+- API
+- ChildNode
+- DOM
+- Experimental
+- Method
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>ChildNode.remove()</strong></code> method removes the object from the tree it belongs to.</p>
+<p>The <code><strong>ChildNode.remove()</strong></code> method removes the object from the
+  tree it belongs to.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>node</var>.remove();
+<pre class="brush: js notranslate"><var>node</var>.remove();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -32,7 +33,8 @@ el.remove(); // Removes the div with the 'div-02' id
 
 <h3 id="ChildNode.remove_is_unscopable"><code>ChildNode.remove()</code> is unscopable</h3>
 
-<p>The <code>remove()</code> method is not scoped into the <code>with</code> statement. See {{jsxref("Symbol.unscopables")}} for more information.</p>
+<p>The <code>remove()</code> method is not scoped into the <code>with</code> statement.
+  See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
 <pre class="brush: js notranslate">with(node) {
   remove();
@@ -41,7 +43,8 @@ el.remove(); // Removes the div with the 'div-02' id
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>You can polyfill the <code>remove()</code> method in Internet Explorer 9 and higher with the following code:</p>
+<p>You can polyfill the <code>remove()</code> method in Internet Explorer 9 and higher
+  with the following code:</p>
 
 <pre class="brush: js notranslate">// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
 (function (arr) {
@@ -63,20 +66,20 @@ el.remove(); // Removes the div with the 'div-02' id
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-childnode-remove', 'ChildNode.remove')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-childnode-remove', 'ChildNode.remove')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,8 +89,10 @@ el.remove(); // Removes the div with the 'div-02' id
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>The {{domxref("ChildNode")}} pure interface.</li>
-	<li>
-	<div class="syntaxbox">Object types implementing this pure interface: {{domxref("CharacterData")}}, {{domxref("Element")}}, and {{domxref("DocumentType")}}.</div>
-	</li>
+  <li>The {{domxref("ChildNode")}} pure interface.</li>
+  <li>
+    <div class="brush: js">Object types implementing this pure interface:
+      {{domxref("CharacterData")}}, {{domxref("Element")}}, and
+      {{domxref("DocumentType")}}.</div>
+  </li>
 </ul>

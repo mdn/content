@@ -2,21 +2,24 @@
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
 tags:
-  - API
-  - CountQueuingStrategy
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - size
+- API
+- CountQueuingStrategy
+- Experimental
+- Method
+- Reference
+- Streams
+- size
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>size()</code></strong> method of the {{domxref("CountQueuingStrategy")}} interface always returns <code>1</code>, so that the total queue size is a count of the number of chunks in the queue.</p>
+<p class="summary">The <strong><code>size()</code></strong> method of the
+  {{domxref("CountQueuingStrategy")}} interface always returns <code>1</code>, so that the
+  total queue size is a count of the number of chunks in the queue.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var><code>var <em>size</em> = </code>countQueuingStrategy</var>.size();</pre>
+<pre
+  class="brush: js notranslate"><var><code>var <em>size</em> = </code>countQueuingStrategy</var>.size();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,7 +31,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">CountQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre
+  class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">CountQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
 <span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   <span class="comment token">// Implement the sink</span>
@@ -48,18 +52,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#cqs-size","size")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#cqs-size","size")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

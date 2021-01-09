@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.proxy.onRequest.addListener(
+<pre class="brush:js">browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
@@ -89,7 +89,7 @@ browser.proxy.onRequest.hasListener(listener)
 
 <p>This code intercepts requests to <code>&lt;all_urls&gt;</code>, and proxies them if they are not for a top-level frame.</p>
 
-<pre class="brush: js">function shouldProxyRequest(requestInfo) {
+<pre class="notranslate brush: js">function shouldProxyRequest(requestInfo) {
   return requestInfo.parentFrameId != -1;
 }
 

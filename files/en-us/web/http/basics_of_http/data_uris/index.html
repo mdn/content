@@ -20,7 +20,7 @@ tags:
 
 <p>Data URLs are composed of four parts: a prefix (<code>data:</code>), a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> indicating the type of data, an optional <code>base64</code> token if non-textual, and the data itself:</p>
 
-<pre class="syntaxbox notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
+<pre class="brush: html notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
 </pre>
 
 <p>The <code>mediatype</code> is a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
@@ -67,13 +67,13 @@ base64 a.txt&gt;b.txt
 
 <p>On Windows, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0">Convert.ToBase64String</a> from PowerShell can be used to perform the Base64 encoding:</p>
 
-<pre class="syntaxbox notranslate">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
+<pre class="brush: html notranslate">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
 </pre>
 
 <p>Alternatively, a GNU/Linux shell (such as <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>) provides the utility <code>base64</code>:</p>
 
-<pre class="syntaxbox notranslate">bash$ echo -n hello | base64
+<pre class="brush: html notranslate">bash$ echo -n hello | base64
 # outputs to console: aGVsbG8=
 </pre>
 

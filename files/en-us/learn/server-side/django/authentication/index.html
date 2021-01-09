@@ -660,7 +660,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>Normally you will want the <code>PermissionRequiredMixin</code> behavior: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
 
-<pre class="syntaxbox notranslate">from django.contrib.auth.decorators import login_required, permission_required
+<pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required, permission_required
 
 @login_required
 @permission_required('catalog.can_mark_returned', raise_exception=True)

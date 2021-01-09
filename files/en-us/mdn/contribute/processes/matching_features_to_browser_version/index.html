@@ -97,7 +97,7 @@ tags:
 
 <p>One useful resource is <a href="https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt">this file which lists the interfaces and/or interface members</a> which are not available in a WebView.</p>
 
-<pre class="notranslate">interface HTMLIFrameElement : HTMLElement
+<pre class="brush: js notranslate">interface HTMLIFrameElement : HTMLElement
     getter allowPaymentRequest
     setter allowPaymentRequest</pre>
 
@@ -326,7 +326,7 @@ tags:
  <li>
   <p>Find the bug that introduces the change you're looking for, then look at the tests for that bug. See if the test for the feature is disabled by a line that looks something like one of the following:</p>
 
-  <pre class="notranslate">skip-if = toolkit == 'android'
+  <pre class="brush: cpp notranslate">skip-if = toolkit == 'android'
 skip-if = os == 'android'</pre>
 
   <p>If either of those are present, for example, the test is disabled on Android, which means the feature is almost certainly not included on Android. Similar things can happen to disable tests on Mac or Windows.</p>
