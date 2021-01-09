@@ -1,0 +1,11 @@
+# Add regex filters for the Nu Validator error messages for proposed changes
+# not yet added to the validator.
+#
+# Ignore failures
+# .*Bad value “.*” for attribute “href” on element “a”: Illegal character in fragment: “#” is not allowed\.\n
+# .*Element “head” is missing a required instance of child element “title”\.\n
+# .*Non-space characters found without seeing a doctype first\. Expected “<!DOCTYPE html>”\.\n
+An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
+Bad value .*“#” is not allowed.
+Element “head” is missing .*“title”.
+Non-space characters found without seeing a doctype first. Expected “<!DOCTYPE html>”.

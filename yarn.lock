@@ -4382,6 +4382,11 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+vnu-jar@^20.6.30:
+  version "20.6.30"
+  resolved "https://registry.yarnpkg.com/vnu-jar/-/vnu-jar-20.6.30.tgz#897882d4502411e77a3f17a2e793b26396603109"
+  integrity sha512-zlNNe7jW6cTIrxVlZK9AcZiNWjxzjqi7LpTafBCi4OY4bsh2uyGhxXT2l6hZ3ibpxP0ZC/pQsBpFQEACS0ePIg==
+
 webpack-cli@4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-4.3.1.tgz#87a7873bc9c6a4708aa657759274b691e72a04a8"
