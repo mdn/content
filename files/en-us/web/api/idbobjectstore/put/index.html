@@ -13,22 +13,9 @@ tags:
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
-<div>
-  <p>The <strong><code>put()</code></strong> method of the {{domxref("IDBObjectStore")}}
-    interface updates a given record in a database, or inserts a new record if the given
-    item does not already exist.</p>
+<p>The <strong><code>put()</code></strong> method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.</p>
 
-  <p>It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a
-    <a
-      href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured
-      clone</a> of the value and stores the cloned value in the object store. This is for
-    adding new records, or updating existing records in an object store when the
-    transaction's mode is <code>readwrite</code>. If the record is successfully stored,
-    then a success event is fired on the returned request object with the
-    <code>result</code> set to the key for the stored record, and the
-    <code>transaction</code> set to the transaction in which this object store is opened.
-  </p>
-</div>
+<p>It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is <code>readwrite</code>. If the record is successfully stored, then a success event is fired on the returned request object with the <code>result</code> set to the key for the stored record, and the <code>transaction</code> set to the transaction in which this object store is opened.</p>
 
 <p>The put method is an<span class="database"> <em>update or insert</em> </span>method.
   See the {{domxref("IDBObjectStore.add")}} method for an <em>insert only</em> method.</p>

@@ -10404,24 +10404,6 @@
       "Sebastianz"
     ]
   },
-  "Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:41.921Z",
-    "contributors": [
-      "kruschk",
-      "SphinxKnight",
-      "stephaniehobson",
-      "chrisdavidmills",
-      "DeboraG",
-      "ifilin",
-      "khalid32",
-      "jswisher",
-      "Jeremie",
-      "SahityaEeshu",
-      "hbloomer",
-      "ariestiyansyah",
-      "Sheppy"
-    ]
-  },
   "Learn/Index": {
     "modified": "2020-12-13T12:30:03.374Z",
     "contributors": [
@@ -14811,70 +14793,6 @@
       "stephaniehobson"
     ]
   },
-  "MDN/Tools/PUT_API": {
-    "modified": "2020-09-30T16:47:38.576Z",
-    "contributors": [
-      "chrisdavidmills",
-      "sideshowbarker",
-      "KoreNBeatZ",
-      "ExE-Boss",
-      "Sheppy",
-      "wbamberg",
-      "peterkinalex",
-      "Krenair",
-      "jswisher",
-      "lmorchard",
-      "oncletom"
-    ]
-  },
-  "MDN/Tools/Page_deletion": {
-    "modified": "2020-09-30T16:47:39.193Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/Page_moving": {
-    "modified": "2020-09-30T16:47:40.110Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "jswisher",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/Page_regeneration": {
-    "modified": "2020-09-30T16:47:39.967Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "kammasreenew",
-      "Sheppy",
-      "wbamberg",
-      "libri-nozze",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/Page_watching": {
-    "modified": "2020-12-11T15:32:02.846Z",
-    "contributors": [
-      "chrisdavidmills",
-      "josecalz",
-      "calin",
-      "bagaffey",
-      "Sheppy",
-      "wbamberg",
-      "genSud",
-      "SphinxKnight",
-      "Bodo1445",
-      "superwriter",
-      "htc2u",
-      "jswisher"
-    ]
-  },
   "MDN/Tools/Sample_server": {
     "modified": "2020-09-30T16:47:39.734Z",
     "contributors": [
@@ -14899,37 +14817,6 @@
       "jswisher",
       "groovecoder",
       "Mingun"
-    ]
-  },
-  "MDN/Tools/Special_pages": {
-    "modified": "2020-09-30T16:47:40.225Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/Template_editing": {
-    "modified": "2020-09-30T16:47:39.588Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jswisher",
-      "Sebastianz",
-      "escattone",
-      "MexieAndCo",
-      "teoli",
-      "Sheppy",
-      "fscholz"
-    ]
-  },
-  "MDN/Troubleshooting": {
-    "modified": "2020-09-30T16:58:04.233Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Sheppy",
-      "jswisher"
     ]
   },
   "MDN_at_ten": {

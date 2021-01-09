@@ -451,7 +451,8 @@ a new image to the `files/en-us/web/css` document.
     cp /some/path/my-cool-image.png files/en-us/web/css/
     ```
 
-1. Run our `filecheck` command on each image you add. It'll complain if something's wrong.
+1. Run the `filecheck` command on each image you add. It'll complain if something's wrong 
+  (see also the [Compressing images](#compressing-images) section below).
 We'll automatically run this as one of the tests we run when your new pull request is created,
 but why wait to fix any possible issues later?
 
@@ -476,6 +477,18 @@ push your branch to your fork:
     ```
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+#### Compressing images
+
+When you add images to MDN, you should make sure that they are compressed as much as possible without degrading quality, to save on download size for our readers. In fact, if you don't do this our CI process will fail and the build results will warn you that some of your images are too big.
+
+The best way to compress them is by using the built-in compression tool. You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option — this compresses the specified image as much as possible, and saves the result over the top of the original.
+
+For example:
+
+```sh
+yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+``` 
 
 ### Updating a browser compatibility table
 
