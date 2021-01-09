@@ -28,7 +28,7 @@ tags:
 <dl>
  <dt><code><var>value</var></code></dt>
  <dd>Value to fill the array with. (Note all elements in the array will be this exact value.)</dd>
- <dt><code><var>start<var></code> {{optional_inline}}</dt>
+ <dt><code><var>start</var></code> {{optional_inline}}</dt>
  <dd>Start index, default <code>0</code>.</dd>
  <dt><code><var>end</var></code> {{optional_inline}}</dt>
  <dd>End index, default <code>arr.length</code>.</dd>
@@ -41,7 +41,7 @@ tags:
 <h2 id="Description">Description</h2>
 
 <ul>
- <li>If <code><var>start<var></code> is negative, it is treated as <code>array.length + <var>start<var></code>.</li>
+ <li>If <code><var>start</var></code> is negative, it is treated as <code>array.length + <var>start</var></code>.</li>
  <li>If <code><var>end</var></code> is negative, it is treated as <code>array.length + <var>end</var></code>.</li>
  <li><code>fill</code> is intentionally generic: it does not require that its <code>this</code> value be an <code>Array</code> object.</li>
  <li><code>fill</code> is a mutator method: it will change the array itself and return it, not a copy of it.</li>
@@ -123,7 +123,7 @@ arr[0].hi = "hi"            // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 <p>This example shows how to create a matrix of all 1, like the <em>ones()</em> function of Octave or MATLAB.</p>
 
 <pre class="brush: js notranslate">const arr = new Array(3);
-for (let i=0; i<arr.length; i++) {
+for (let i=0; i&lt;arr.length; i++) {
   arr[i] = new Array(4).fill(1); // Creating an array of size 4 and filled of 1
 }
 arr[0][0] = 10;
