@@ -2,26 +2,31 @@
 title: ByteLengthQueuingStrategy.ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
+- API
+- ByteLengthQueuingStrategy
+- Constructor
+- Experimental
+- Reference
+- Streams
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>ByteLengthQueuingStrategy()</code></strong> constructor creates and returns a <code>ByteLengthQueuingStrategy</code> object instance.</p>
+<p class="summary">The <strong><code>ByteLengthQueuingStrategy()</code></strong>
+  constructor creates and returns a <code>ByteLengthQueuingStrategy</code> object
+  instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>byteLengthQueuingStrategy</em> = new ByteLengthQueuingStrategy({<em>highWaterMark</em>});</pre>
+<pre
+  class="brush: js notranslate">var <em>byteLengthQueuingStrategy</em> = new ByteLengthQueuingStrategy({<em>highWaterMark</em>});</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>{highWaterMark}</dt>
- <dd>An object containing a <code>highWaterMark</code> property. This is a non-negative integer defining the total number of chunks that can be contained in the internal queue before backpressure is applied.</dd>
+  <dt>{highWaterMark}</dt>
+  <dd>An object containing a <code>highWaterMark</code> property. This is a non-negative
+    integer defining the total number of chunks that can be contained in the internal
+    queue before backpressure is applied.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +39,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ByteLengthQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre
+  class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ByteLengthQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
 <span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ReadableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -53,18 +59,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#blqs-constructor","ByteLengthQueuingStrategy()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#blqs-constructor","ByteLengthQueuingStrategy()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

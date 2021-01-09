@@ -76,11 +76,11 @@ handleRejection(reason)  { /*...*/; return nextValue;  }</pre>
 
 <p>The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.</p>
 
-<pre class="notranslate">(promise D, (promise C, (promise B, (promise A) ) ) )</pre>
+<pre class="brush: plain notranslate">(promise D, (promise C, (promise B, (promise A) ) ) )</pre>
 
 <p>When a <code>nextValue</code> is a promise, the effect is a dynamic replacement. The <code>return</code> causes a promise to be popped, but the <code>nextValue</code> promise is pushed into its place. For the nesting shown above, suppose the <code>.then()</code> associated with "promise B" returns a <code>nextValue</code> of "promise X". The resulting nesting would look like this:</p>
 
-<pre class="notranslate">(promise D, (promise C, (promise X) ) )</pre>
+<pre class="brush: plain notranslate">(promise D, (promise C, (promise X) ) )</pre>
 
 <p>A promise can participate in more than one nesting. For the following code, the transition of <code>promiseA</code> into a "settled" state will cause both instances of <code>.then()</code> to be invoked.</p>
 
@@ -212,7 +212,7 @@ window.addEventListener("message", (event) =&gt; {
 
 <h3 id="Basic_Example">Basic Example</h3>
 
-<pre class="brush: js; notranslate">let myFirstPromise = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js notranslate">let myFirstPromise = new Promise((resolve, reject) =&gt; {
   // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
   // In this example, we use setTimeout(...) to simulate async code.
   // In reality, you will probably be using something like XHR or an HTML5 API.
@@ -317,7 +317,7 @@ function promiseGetWord(parityInfo) {
 <h3 id="Advanced_Example">Advanced Example</h3>
 
 <div class="hidden">
-<pre class="brush: html; notranslate">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
+<pre class="brush: html notranslate">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 </div>
@@ -326,7 +326,7 @@ function promiseGetWord(parityInfo) {
 
 <p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
-<pre class="brush: js; notranslate">"use strict";
+<pre class="brush: js notranslate">"use strict";
 var promiseCount = 0;
 
 function testPromise() {
@@ -361,7 +361,7 @@ function testPromise() {
 </pre>
 
 <div class="hidden">
-<pre class="brush: js; notranslate">if ("Promise" in window) {
+<pre class="brush: js notranslate">if ("Promise" in window) {
   let btn = document.getElementById("btn");
   btn.addEventListener("click",testPromise);
 } else {

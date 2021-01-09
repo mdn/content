@@ -36,12 +36,12 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>First, replace where you initially called <code>setInterval()</code></p>
 
-<pre class="notranslate">setInterval(draw, 10);
+<pre class="brush: js ">setInterval(draw, 10);
 </pre>
 
 <p>with:</p>
 
-<pre class="notranslate">var interval = setInterval(draw, 10);
+<pre class="brush: js notranslate">var interval = setInterval(draw, 10);
 </pre>
 
 <p>Then replace the second if statement with the following:</p>

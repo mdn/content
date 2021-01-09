@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.history.getVisits(
+<pre class="brush:js">var getting = browser.history.getVisits(
   details                // object
 )
 </pre>
@@ -52,7 +52,7 @@ tags:
 
 <p>List all visits to the most recently-visited page:</p>
 
-<pre class="brush: js">function gotVisits(visits) {
+<pre class="notranslate brush: js">function gotVisits(visits) {
   console.log("Visit count: " + visits.length);
   for (visit of visits) {
     console.log(visit.visitTime);

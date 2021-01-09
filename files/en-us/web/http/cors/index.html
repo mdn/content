@@ -146,7 +146,7 @@ Content-Type: application/xml
 
 <p>In response, the server sends back an {{HTTPHeader("Access-Control-Allow-Origin")}} header with <code>Access-Control-Allow-Origin: *</code>, which means that the resource can be accessed by <strong>any</strong> origin.</p>
 
-<pre class="syntaxbox notranslate"><code class="plain">Access-Control-Allow-Origin: *</code></pre>
+<pre class="brush: html notranslate">Access-Control-Allow-Origin: *</pre>
 
 <p>This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at <code class="plain">https://bar.other</code> wished to restrict access to the resource to requests <em>only</em> from <code class="plain">https://foo.example</code>, (i.e no domain other than <code class="plain">https://foo.example</code> can access the resource in a cross-site manner) they would send:</p>
 

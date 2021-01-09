@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingAll = browser.management.getAll()
+<pre class="brush:js">var gettingAll = browser.management.getAll()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -43,7 +43,7 @@ tags:
 
 <p>Log the name of all installed add-ons:</p>
 
-<pre class="brush: js">function gotAll(infoArray) {
+<pre class="notranslate brush: js">function gotAll(infoArray) {
   for (info of infoArray) {
     if (info.type == "extension") {
       console.log(info.name);

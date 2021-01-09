@@ -26,7 +26,7 @@ tags:
 
 <p>There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or <code>M</code>, which was described above. It takes two parameters, a coordinate (<code>x</code>) and coordinate (<code>y</code>) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:</p>
 
-<pre class="syntaxbox notranslate"><strong>M</strong> <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"><strong>M</strong> <var>x</var> <var>y</var>
 (or)
 <strong>m</strong> <var>dx</var> <var>dy</var>
 </pre>
@@ -46,14 +46,14 @@ tags:
 
 <p>There are three commands that draw lines. The most generic is the "Line To" command, called with <code>L</code>. <code>L</code> takes two parameters—x and y coordinates—and draws a line from the current position to a new position.</p>
 
-<pre class="syntaxbox notranslate"> <strong>L</strong> <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>L</strong> <var>x</var> <var>y</var>
  (or)
  <strong>l</strong> <var>dx</var> <var>dy</var>
 </pre>
 
 <p>There are two abbreviated forms for drawing horizontal and vertical lines. <code>H</code> draws a horizontal line, and <code>V</code> draws a vertical line. Both commands only take one parameter since they only move in one direction.</p>
 
-<pre class="syntaxbox notranslate"> <strong>H</strong> <var>x</var>
+<pre class="brush: html notranslate"> <strong>H</strong> <var>x</var>
  (or)
  <strong>h</strong> <var>dx</var>
 
@@ -80,7 +80,7 @@ tags:
 
 <p>We can shorten the above path declaration a little bit by using the "Close Path" command, called with <code>Z</code>. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.</p>
 
-<pre class="syntaxbox notranslate"> <strong>Z</strong>
+<pre class="brush: html notranslate"> <strong>Z</strong>
  (or)
  <strong>z</strong>
 </pre>
@@ -107,7 +107,7 @@ tags:
 
 <p>The cubic curve, <code>C</code>, is the slightly more complex curve. Cubic Béziers take in two control points for each point. Therefore, to create a cubic Bézier, three sets of coordinates need to be specified.</p>
 
-<pre class="syntaxbox notranslate"> <strong>C</strong> <var>x1</var> <var>y1</var>, <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>C</strong> <var>x1</var> <var>y1</var>, <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
  (or)
  <strong>c</strong> <var>dx1</var> <var>dy1</var>, <var>dx2</var> <var>dy2</var>, <var>dx</var> <var>dy</var>
 </pre>
@@ -135,7 +135,7 @@ tags:
 
 <p>Several Bézier curves can be stringed together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command <code>S</code> (or <code>s</code>).</p>
 
-<pre class="syntaxbox notranslate"> <strong>S</strong> <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>S</strong> <var>x2</var> <var>y2</var>, <var>x</var> <var>y</var>
  (or)
  <strong>s</strong> <var>dx2</var> <var>dy2</var>, <var>dx</var> <var>dy</var>
 </pre>
@@ -156,7 +156,7 @@ tags:
 <p><strong>Note:</strong> The co-ordinate deltas for <code>q</code> are both relative to the previous point (that is, <code>dx</code> and <code>dy</code> are not relative to <code>dx1</code> and <code>dy1</code>).</p>
 </div>
 
-<pre class="syntaxbox notranslate"> <strong>Q</strong> <var>x1</var> <var>y1</var>, <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>Q</strong> <var>x1</var> <var>y1</var>, <var>x</var> <var>y</var>
  (or)
  <strong>q</strong> <var>dx1</var> <var>dy1</var>, <var>dx</var> <var>dy</var>
 </pre>
@@ -169,7 +169,7 @@ tags:
 
 <p>As with the cubic Bézier curve, there is a shortcut for stringing together multiple quadratic Béziers, called with <code>T</code>.</p>
 
-<pre class="syntaxbox notranslate"> <strong>T</strong> <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>T</strong> <var>x</var> <var>y</var>
  (or)
  <strong>t</strong> <var>dx</var> <var>dy</var>
 </pre>
@@ -194,7 +194,7 @@ tags:
 
 <p>Because of that, arcs require quite a few parameters:</p>
 
-<pre class="syntaxbox notranslate"> <strong>A</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>x</var> <var>y</var>
+<pre class="brush: html notranslate"> <strong>A</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>x</var> <var>y</var>
  <strong>a</strong> <var>rx</var> <var>ry</var> <var>x-axis-rotation</var> <var>large-arc-flag</var> <var>sweep-flag</var> <var>dx</var> <var>dy</var>
 </pre>
 

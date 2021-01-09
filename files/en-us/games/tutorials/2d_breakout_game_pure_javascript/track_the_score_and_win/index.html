@@ -38,7 +38,7 @@ tags:
 
 <p>To award a score each time a brick is hit, add a line to the <code>collisionDetection()</code> function to increment the value of the score variable each time a collision is detected. Add the following highlighted line to your code:</p>
 
-<pre class="brush: js; highlight:[9] notranslate">function collisionDetection() {
+<pre class="brush: js highlight:[9] notranslate">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -61,7 +61,7 @@ tags:
 
 <p>Collecting the points works well, but you won't be adding them forever — what about when all the bricks have been destroyed? It's the main purpose of the game after all, so you should display a winning message if all available points have been collected. Add the following highlighted section into your <code>collisionDetection()</code> function:</p>
 
-<pre class="brush: js; highlight:[10,11,12,13] notranslate">function collisionDetection() {
+<pre class="brush: js highlight:[10,11,12,13] notranslate">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];

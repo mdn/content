@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var showing = browser.tabs.show(
+<pre class="brush:js">var showing = browser.tabs.show(
   tabIds          // integer or integer array
 )
 </pre>
@@ -39,7 +39,7 @@ tags:
 
 <p>Show a single tab:</p>
 
-<pre class="brush: js">function onShown() {
+<pre class="notranslate brush: js">function onShown() {
   console.log(`Shown`);
 }
 
@@ -51,7 +51,7 @@ browser.tabs.show(2).then(onShown, onError);</pre>
 
 <p>Show multiple tabs:</p>
 
-<pre class="brush: js">function onShown() {
+<pre class="notranslate brush: js">function onShown() {
   console.log(`Shown`);
 }
 

@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var port = browser.runtime.connect(
+<pre class="brush:js">var port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
 )
@@ -71,7 +71,7 @@ tags:
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
 </ul>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// content-script.js</span>
 
 <span class="keyword token">var</span> myPort <span class="operator token">=</span> browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">connect</span><span class="punctuation token">(</span><span class="punctuation token">{</span>name<span class="punctuation token">:</span><span class="string token">"port-from-cs"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 myPort<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>greeting<span class="punctuation token">:</span> <span class="string token">"hello from content script"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -99,7 +99,7 @@ document<span class="punctuation token">.</span>body<span class="punctuation tok
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
 </ul>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// background-script.js</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// background-script.js</span>
 
 <span class="keyword token">var</span> portFromCS<span class="punctuation token">;</span>
 

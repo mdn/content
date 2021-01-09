@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.devtools.panels.onShown.addListener(listener)
+<pre class="brush:js">browser.devtools.panels.onShown.addListener(listener)
 browser.devtools.panels.onShown.removeListener(listener)
 browser.devtools.panels.onShown.hasListener(listener)
 </pre>
@@ -55,7 +55,7 @@ browser.devtools.panels.onShown.hasListener(listener)
 
 <p>Create a sidebar pane, and log show and hide events.</p>
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+<pre class="notranslate brush: js">function onCreated(sidebarPane) {
 
   sidebarPane.onShown.addListener(() =&gt; {
     console.log("Shown");

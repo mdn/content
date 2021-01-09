@@ -161,7 +161,7 @@ tags:
 
 <p>Given this JSON manifest, the <code>favourite-colour-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">let</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="notranslate brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">let</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
   console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
@@ -243,7 +243,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>Given this JSON manifest, saved as <code>my_module.json</code>, the <code>my-extension@mozilla.org</code> extension could install the security module at <code>/path/to/libpkcs11testmodule.dylib</code> using code like this:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">browser.pkcs11.installModule("my_module");</pre>
+<pre class="notranslate brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Manifest_location">Manifest location</h2>
 
