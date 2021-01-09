@@ -135,7 +135,7 @@ tags:
 
 <p>This technique involves binding a single event handler to the container widget and using the <code>aria-activedescendant</code> to track a "virtual" focus. (For more information about ARIA, see this <a class="external text" href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets" rel="nofollow">overview of accessible web applications and widgets</a>.)</p>
 
-<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color). See the source code of this <a class="external text" href="http://www.oaa-accessibility.org/example/28/" rel="nofollow">ARIA radiogroup example</a> for a direct illustration of how this works.</p>
+<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color).</p>
 
 <h3 id="General_Guidelines">General Guidelines</h3>
 
