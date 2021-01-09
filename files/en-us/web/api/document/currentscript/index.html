@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Document.currentScript</strong></code> property returns the {{HTMLElement("script")}} element whose script is currently being processed and <a href="https://github.com/whatwg/html/issues/997">isn't a JavaScript module</a>. (For modules use {{JSxRef("Statements/import%2Emeta", "import.meta")}} instead.)</p>
+<p>The <code><strong>Document.currentScript</strong></code> property returns the {{HTMLElement("script")}} element whose script is currently being processed and <a href="https://github.com/whatwg/html/issues/997">isn't a JavaScript module</a>. (For modules use <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a> instead.)</p>
 
 <p>It's important to note that this will not reference the {{HTMLElement("script")}} element if the code in the script is being called as a callback or event handler; it will only reference the element while it's initially being processed.</p>
 
@@ -29,7 +29,7 @@ tags:
   console.log("Executing synchronously");
 }</pre>
 
-<p><a href="/samples/html/currentScript.html">View Live Examples</a></p>
+<p><a href="https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html">View Live Examples</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -57,7 +57,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{JSxRef("Statements/import%2Emeta", "import.meta")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a></li>
  <li>{{HTMLElement("script")}}</li>
  <li>{{DOMxRef("document.onafterscriptexecute")}}</li>
  <li>{{DOMxRef("document.onbeforescriptexecute")}}</li>
