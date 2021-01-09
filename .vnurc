@@ -1,0 +1,6 @@
+# Add regex filters for the Nu Validator error messages for proposed changes
+# not yet added to the validator.
+An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
+Bad value .*“#” is not allowed.
+Element “head” is missing .*“title”.
+Non-space characters found without seeing a doctype first. Expected “<!DOCTYPE html>”.

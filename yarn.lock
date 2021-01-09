@@ -4644,6 +4644,11 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
+vnu-jar@^21.4.9:
+  version "21.4.9"
+  resolved "https://registry.yarnpkg.com/vnu-jar/-/vnu-jar-21.4.9.tgz#63e6ec7c272eafe35a85b94dacc46cb426ec9f5c"
+  integrity sha512-R7srw8MSJCak+zWmJ673TxOppXvgMaR+03mKyU2h2Uhrg5jrTLkTGheP+xe6OpQowEO+7R2Xl4Fn771yGAvfMQ==
+
 web-namespaces@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"

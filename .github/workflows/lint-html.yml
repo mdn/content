@@ -1,0 +1,55 @@
+name: HTML Linting
+on:
+  push:
+    branches-ignore:
+      - "dependabot/**"
+    paths:
+      - "package.json"
+      - "yarn.lock"
+      - ".vnurc"
+      - "files/**/*.html"
+      - ".github/workflows/lint-html.yml"
+
+  pull_request:
+    paths:
+      - "package.json"
+      - "yarn.lock"
+      - ".vnurc"
+      - "files/**/*.html"
+      - ".github/workflows/lint-html.yml"
+
+jobs:
+  lint-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2.1.4
+
+      - name: Cache node_modules
+        uses: actions/cache@v2.1.3
+        id: cached-node_modules
+        with:
+          path: |
+            node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install all yarn packages
+        if: steps.cached-node_modules.outputs.cache-hit != 'true'
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Escape HTML tags in frontmatter
+        # On macOS it is:
+        # find files/en-us/ -name 'index.html' -type f -exec sed -i '' 's/^title:.*<.*/title:/; s/^  - <.*/  -/' {} \;
+        # from https://stackoverflow.com/a/57766728/455535
+        run: |
+          find files/en-us/ -name 'index.html' -type f -exec sed -i 's/^title:.*<.*/title:/; s/^  - <.*/  -/' {} \;
+
+      - name: HTML Validator
+        run: |
+          echo "::add-matcher::.github/workflows/vnu-jar-problem-matcher.json"
+          yarn vnu-jar
