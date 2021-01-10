@@ -99,9 +99,9 @@ tags:
     <code>postMessage</code> was called. This string is the concatenation of the protocol
     and "://", the host name if one exists, and ":" followed by a port number if a port is
     present and differs from the default port for the given protocol. Examples of typical
-    origins are <code class="nowiki">https://example.org</code> (implying port
-    <code>443</code>), <code class="nowiki">http://example.net</code> (implying port
-    <code>80</code>), and <code class="nowiki">http://example.com:8080</code>. Note that
+    origins are <code>https://example.org</code> (implying port
+    <code>443</code>), <code>http://example.net</code> (implying port
+    <code>80</code>), and <code>http://example.com:8080</code>. Note that
     this origin is <em>not</em> guaranteed to be the current or future origin of that
     window, which might have been navigated to a different location since
     <code>postMessage</code> was called.</dd>
@@ -119,8 +119,8 @@ tags:
 
 <p>If you do expect to receive messages from other sites, <strong>always verify the
     sender's identity</strong> using the <code>origin</code> and possibly
-  <code>source</code> properties. Any window (including, for example, <code
-    class="nowiki">http://evil.example.com</code>) can send a message to any other window,
+  <code>source</code> properties. Any window (including, for example,
+  <code>http://evil.example.com</code>) can send a message to any other window,
   and you have no guarantees that an unknown sender will not send malicious messages.
   Having verified identity, however, you still should <strong>always verify the syntax of
     the received message</strong>. Otherwise, a security hole in the site you trusted to

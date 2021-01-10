@@ -27,14 +27,14 @@ tags:
       class="internal" href="/en/DOM/node.tagName"><code>tagName</code></a> continues to return in upper case in HTML
     documents.)</li>
   <li>The <a class="internal" href="/En/DOM/Node.namespaceURI"><code>namespaceURI</code></a> DOM property now returns
-    <code>"<span class="nowiki">http://www.w3.org/1999/xhtml</span>"</code> on HTML element nodes. Previously, in
+    <code>"http://www.w3.org/1999/xhtml"</code> on HTML element nodes. Previously, in
     HTML documents, it returned <code>null</code>.
   </li>
   <li>
     <code>document.<a class="internal" href="/en/DOM/document.createElementNS">createElementNS</a>(null, "FOO")</code>
     no longer creates an HTML element node in HTML documents.
     <code>document.<a class="internal" href="/en/DOM/document.createElement">createElement</a>("FOO")</code>
-    or <code>document.createElementNS("<span class="nowiki">http://www.w3.org/1999/xhtml</span>", "foo")</code> continue
+    or <code>document.createElementNS("http://www.w3.org/1999/xhtml", "foo")</code> continue
     to work in HTML documents.
   </li>
   <li>The <a href="/en-US/docs/Web/XPath/Functions/name"><code>name</code></a> and the <a
