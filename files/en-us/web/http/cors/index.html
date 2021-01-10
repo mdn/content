@@ -210,7 +210,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will be sent with a <code>POST</code> request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will be sent with a <code>X-PINGOTHER</code> and <code>Content-Type</code> custom headers. The server now has an opportunity to determine whether it wishes to accept a request under these circumstances.</p>
 
-<p>Lines 13 - 22 above are the response that the server sends back, which indicate <span>that the request method (</span><code>POST</code><span>) and request headers (</span><code>X-PINGOTHER</code><span>) are acceptable. In particular, let's look at lines 16-19:</span></p>
+<p>Lines 13 - 22 above are the response that the server sends back, which indicate that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
 
 <pre class="brush: none notranslate">Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS

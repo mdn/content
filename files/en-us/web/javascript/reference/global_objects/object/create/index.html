@@ -165,7 +165,7 @@ Note that neither property gets shown.</pre>
 
 ocn.toString = Object.toString; // since new object lacks method then try assigning it directly from standard-object
 
-<span>&gt; ocn.toString // shows "toString() { [native code] }" -- missing method seems to be there now</span>
+&gt; ocn.toString // shows "toString() { [native code] }" -- missing method seems to be there now
 &gt; ocn.toString == Object.toString // shows "true" -- method seems to be same as the standard object-method
 
 &gt; ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
