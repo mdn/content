@@ -261,7 +261,7 @@ module.exports = {
 <p>Finally, create the <code>index.js</code> referenced in the HTML file and give it these contents:</p>
 
 <pre class="brush: js notranslate">const js = import("./node_modules/hello-wasm/hello_wasm.js");
-js.then(js =&gt; {
+js.then(() =&gt; {
   js.greet("WebAssembly");
 });</pre>
 
