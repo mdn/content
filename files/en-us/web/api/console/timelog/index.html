@@ -22,8 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">console.timeLog(<em>label</em>);
-</pre>
+<pre class="brush: js notranslate">console.timeLog(<em>label</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,19 +39,17 @@ tags:
 
 <p>If an existing <code>label</code> is included:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">timer name: 1242ms</span></span></span></span></pre>
+<pre>timer name: 1242ms</pre>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <p>If there is no running timer, <code>timeLog()</code> returns the warning:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “default” doesn’t exist.</span></span></span></pre>
+<pre>Timer “default” doesn’t exist.</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span
-        class="devtools-monospace message-body">If a label parameter is included, but
-        there is no corresponding timer:</span></span></span></p>
+<p>If a label parameter is included, but there is no corresponding timer:</p>
 
-<pre> <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “timer name” doesn’t exist.</span></span></span> </pre>
+<pre> Timer “timer name” doesn’t exist. </pre>
 
 <h2 id="Examples">Examples</h2>
 
