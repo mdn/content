@@ -114,14 +114,14 @@ tags:
 
 <h3 id="Example_1_a_simple_cache_manifest_file">Example 1: a simple cache manifest file</h3>
 
-<p>The following is a simple cache manifest file, <code>example.appcache</code>, for an imaginary web site at <span class="nowiki">www.example.com</span>.</p>
+<p>The following is a simple cache manifest file, <code>example.appcache</code>, for an imaginary web site at <code>www.example.com</code>.</p>
 
 <pre class="eval notranslate">CACHE MANIFEST
 # v1 - 2011-08-13
 # This is a comment.
-<span class="nowiki">http://www.example.com/index.html</span>
-<span class="nowiki">http://www.example.com/header.png</span>
-<span class="nowiki">http://www.example.com/blah/blah</span>
+http://www.example.com/index.html
+http://www.example.com/header.png
+http://www.example.com/blah/blah
 </pre>
 
 <p>A cache manifest file can include three sections (<code>CACHE</code>, <code>NETWORK</code>, and <code>FALLBACK</code>, discussed below). In the example above, there is no section header, so all data lines are assumed to be in the explicit (<code>CACHE</code>) section, meaning that the browser should cache all the listed resources in the application cache. Resources can be specified using either absolute or relative URLs (e.g., <code>index.html</code>).</p>
@@ -147,7 +147,7 @@ tags:
 
 <h3 id="Example_2_a_more_complete_cache_manifest_file">Example 2: a more complete cache manifest file</h3>
 
-<p>The following is a more complete cache manifest file for the imaginary web site at <span class="nowiki">www.example.com</span>:</p>
+<p>The following is a more complete cache manifest file for the imaginary web site at <code>www.example.com</code>:</p>
 
 <pre class="eval notranslate">CACHE MANIFEST
 # v1 2011-08-14
