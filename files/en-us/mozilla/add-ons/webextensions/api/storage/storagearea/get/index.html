@@ -138,7 +138,7 @@ gettingItem.then(onGot, onError);
 <p>Or using a Promise</p>
 
 <pre class="notranslate brush: js">let gettingItem = new Promise(resolve =&gt; chrome.storage.local.get("kitten", resolve));
-<code class="language-js">gettingItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onGot<span class="punctuation token">)</span><span class="punctuation token">; </span></code><code class="language-js"><span class="comment token">// -&gt; Object { kitten: Object }</span></code></pre>
+gettingItem.then(onGot); // -&gt; Object { kitten: Object }</pre>
 
 <div class="note"><strong>Acknowledgements</strong>
 
