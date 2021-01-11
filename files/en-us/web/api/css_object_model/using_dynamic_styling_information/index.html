@@ -29,7 +29,8 @@ body {
 }
 &lt;/style&gt;
 &lt;script type="text/javascript"&gt;
-var stylesheet = document.styleSheets[0];
+// get the nearest (last) stylesheet
+var stylesheet = document.styleSheets[document.styleSheets.length - 1];
 stylesheet.cssRules[0].style.backgroundColor="blue";
 &lt;/script&gt;
 &lt;/head&gt;
