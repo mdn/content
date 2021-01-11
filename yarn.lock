@@ -33,20 +33,20 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
   integrity sha512-HyYEUDeIj5rRQU2Hk5HTB2uHsbRQpF70nvMhVzi+VJR0X+xNEhjPui4/kBf3VeH/wqD28PT4sVOm8qqLjBrSZg==
 
-"@mdn/browser-compat-data@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.1.tgz#2a4e6aeb4ddc627075f18c02f5abf71a3254a85f"
-  integrity sha512-m8uDiEsOz6n543SbQYoWG5s0/vHEw6B+57Px05HOVX+aiBUhp/RGtyB8vTjU0lDJea79crk6ovpvsHDaa3Vq4g==
+"@mdn/browser-compat-data@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.2.tgz#b4e4ef86339ecb3fb7dc3d9d895e23a40a190813"
+  integrity sha512-3R89/dNhm9SfCTIt0ZwBFhuz8SmInyqyVeBtGSE4odXxNZVz9YVHGSFECStfFwrEo3F4AwCTzt9V9wI5NO9SMA==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.469":
-  version "0.1.469"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.469.tgz#3ea56ff79dbf7623f518e508384f788864f24b2c"
-  integrity sha512-a9FIRTKya7XiWNhi0RUsoEEE3zCa2hVwe1+RVBgPPAT3SBzVk83IWfRtJb8WRs/mDyJCPKqm02vTUDPX113okA==
+"@mdn/yari@0.1.482":
+  version "0.1.482"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.482.tgz#81c8506248a66931982629af7cf3e02e13190ed2"
+  integrity sha512-zhDOybGShkIEjcS2/fPzvy8OMvsV5SQ8zGiS8HOjfJVoKdKR9oh3LPutR0WCbvq6NhoCrehzvqJA9+k/j5Fdiw==
   dependencies:
     "@caporal/core" "2.0.2"
-    "@mdn/browser-compat-data" "3.0.1"
+    "@mdn/browser-compat-data" "3.0.2"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -60,7 +60,7 @@
     cssesc "^3.0.0"
     diff "5.0.0"
     dotenv "8.2.0"
-    downshift "^6.0.10"
+    downshift "^6.0.11"
     ejs "3.1.5"
     express "4.17.1"
     express-http-proxy "1.6.2"
@@ -81,8 +81,8 @@
     is-svg "4.2.1"
     js-yaml "3.14.1"
     jsesc "3.0.2"
-    mdn-data "2.0.14"
-    open "^7.3.0"
+    mdn-data "2.0.15"
+    open "^7.3.1"
     open-editor "3.0.0"
     prismjs "1.23.0"
     prompts "^2.4.0"
@@ -90,7 +90,7 @@
     send "0.17.1"
     sockette "^2.0.6"
     source-map-support "0.5.19"
-    swr "0.3.11"
+    swr "0.4.0"
     tempy "1.0.0"
     use-debounce "^5.2.0"
     webpack-cli "4.3.1"
@@ -1348,10 +1348,10 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-downshift@^6.0.10:
-  version "6.0.10"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.0.10.tgz#c0fdc353b286c0b5f8d93af80a2bce57d90854d5"
-  integrity sha512-TuUh448snXiOXrstL1q6s13xev2kWEHAuNlwzEHXRMhG7NbPgvzFvjYelwkaOSZ1dFNJjzRnpK6cbvUO7oHlMQ==
+downshift@^6.0.11:
+  version "6.0.13"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.0.13.tgz#c05cc2663ddb632f8d16760e5d3147bb275868fb"
+  integrity sha512-n9GWWBW8e1zw4E4GlCSUtTJ6egmOMsnbfVX3bYoDlngxxksO1tHOrDz2zU2tMeY2qNUWmz7EDwpiqhjAXvCyDg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     compute-scroll-into-view "^1.0.16"
@@ -2765,10 +2765,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
   integrity sha1-2TPOuSBdgr3PSIb2dCvcK03qFG0=
 
-mdn-data@2.0.14:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
-  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
+mdn-data@2.0.15:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.15.tgz#4b31efd913cc9b0d8d99123033fbb805f458c541"
+  integrity sha512-1e9FFjfvzeTxVzBtcbAFDw9R+i+ka92rb9aT4TrV/68ZuLpM2kff4jatBDs/I/VvKPBLjCqv6/BtnD+pnAxyMg==
 
 mdn-data@2.0.4:
   version "2.0.4"
@@ -3085,10 +3085,10 @@ open-editor@3.0.0:
     line-column-path "^2.0.0"
     open "^7.3.0"
 
-open@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/open/-/open-7.3.0.tgz#45461fdee46444f3645b6e14eb3ca94b82e1be69"
-  integrity sha512-mgLwQIx2F/ye9SmbrUkurZCnkoXyXyu9EbHtJZrICjVAJfyMArdHp3KkixGdZx1ZHFPNIwl0DDM1dFFqXbTLZw==
+open@^7.3.0, open@^7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/open/-/open-7.3.1.tgz#111119cb919ca1acd988f49685c4fdd0f4755356"
+  integrity sha512-f2wt9DCBKKjlFbjzGb8MOAW8LH8F0mrs1zc7KTjAJ9PZNQbfenzWbNP1VZJvw6ICMG9r14Ah6yfwPn7T7i646A==
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
@@ -4079,10 +4079,10 @@ svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swr@0.3.11:
-  version "0.3.11"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.3.11.tgz#f7f50ed26c06afea4249482cec504768a2272664"
-  integrity sha512-ya30LuRGK2R7eDlttnb7tU5EmJYJ+N6ytIOM2j0Hqs0qauJcDjVLDOGy7KmFeH5ivOwLHalFaIyYl2K+SGa7HQ==
+swr@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.4.0.tgz#e76da9f981fe6dee0e133289e9b582fc80d9c41d"
+  integrity sha512-70qd1FHYHwIdYXW0jTpm5ktitzvPBCtyKz8ZzynWlY/rMqe4drYPgcl/H9Ipuh+Xv6ZW5viNx13ro8EKIWZcoQ==
   dependencies:
     dequal "2.0.2"
 
