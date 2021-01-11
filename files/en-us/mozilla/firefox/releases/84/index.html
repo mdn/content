@@ -88,6 +88,15 @@ tags:
  <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
 </ul>
 
+<h4 id="WebDriver_known_bugs">Known bugs</h4>
+
+<ul>
+  <li>After page navigations accessing a previously retrieved element might not
+  always raise a "stale element" error, but could also lead to a "no such element"
+  error. To prevent that set the <code>marionette.actors.enabled</code> preference
+  to <code>false</code> ({{bug(1684827)}}).
+</ul>
+
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
