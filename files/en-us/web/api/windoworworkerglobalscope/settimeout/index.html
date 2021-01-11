@@ -401,7 +401,7 @@ var to_timer = 0;
 var interval_timer = 0;
 var cleanup_timer = 0;
 var last = 0;
-var duration = 15;
+var duration = 15; // total milliseconds
 var cycle = 0;
 
 function interval() {
@@ -438,7 +438,7 @@ function pad(d) {
   return (d < 10) ? '0' + d.toString() : d.toString();
 }
 
-function logline(msec) {
+function logline(msec) { // msec can't wrap: run duration < 1 second
   var c = "";
   if (last < msec) { c = "^"; } 
   if (last > msec) { c = "v"; } // Should never happen
