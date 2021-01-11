@@ -33,7 +33,7 @@ MediaRecorder.addEventListener('stop', function(event) { ... })</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js"><span>...
+<pre class="brush: js">...
 
   mediaRecorder.onstop = function(e) {
     console.log("data available after MediaRecorder.stop() called.");
@@ -48,7 +48,7 @@ MediaRecorder.addEventListener('stop', function(event) { ... })</pre>
 
   mediaRecorder.ondataavailable = function(e) {
     chunks.push(e.data);
-  }</span>
+  }
 
 ...</pre>
 
