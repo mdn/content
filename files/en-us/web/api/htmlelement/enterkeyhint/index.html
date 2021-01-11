@@ -1,6 +1,6 @@
 ---
-title: HTMLElement.enterkeyhint
-slug: Web/API/HTMLElement/enterkeyhint
+title: HTMLElement.enterKeyHint
+slug: Web/API/HTMLElement/enterKeyHint
 tags:
   - API
   - HTML DOM
@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>enterkeyhint</code></strong> property is an enumerated property defining 
+<p>The <strong><code>enterKeyHint</code></strong> property is an enumerated property defining 
 what action label (or icon) to present for the enter key on virtual keyboards. <br>
 It reflects the <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a>
 HTML global attribute and is an enumerated property only accepting the following values 
@@ -27,7 +27,7 @@ as a <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a>:</p>
  <li><code>'send'</code> typically delivering the text to its target.	</li>
 </ul>
 
-<p>If no <code>enterkeyhint</code> value has been specified or if it was set to a different value than the allowed ones, it will return an empty string.</p>
+<p>If no <code>enterKeyHint</code> value has been specified or if it was set to a different value than the allowed ones, it will return an empty string.</p>
 
 <h2 id="Examples">Examples</h2>
 <p>Give a virtual keyboard a hint how to label the enter key (might render as <kbd>Send</kbd> and <kbd>Search</kbd>, depending on the OS or the user's language).</p>
@@ -35,8 +35,8 @@ as a <a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a>:</p>
 const send = document.getElementById('sendInput');
 const search = document.getElementById('searchInput');
 
-send.enterkeyhint = 'send';
-search.enterkeyhint = 'search';
+send.enterKeyHint = 'send';
+search.enterKeyHint = 'search';
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -49,14 +49,14 @@ search.enterkeyhint = 'search';
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-enterkeyhint', 'enterkeyhint')}}</td>
+   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-enterkeyhint', 'enterKeyHint')}}</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.enterkeyhint")}}</p>
+<p>{{Compat("api.HTMLElement.enterKeyHint")}}</p>
 
 <h2 id="See_also">See also</h2>
 
