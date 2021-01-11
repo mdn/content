@@ -66,7 +66,7 @@ interface nsIDOMMyEvent: nsIDOMEvent
 </pre>
 <ul> <li>Implement the interface you created with a class that inherits from <code>nsDOMEvent</code>. Use <a class="external" href="http://landfill.mozilla.org/mxr-test/mozilla1.8.x/ident?i=NS_FORWARD_TO_NSDOMEVENT">nsDOMEvent.h's NS_FORWARD_TO_NSDOMEVENT</a> macro so that you don't have to forward manually (unless you plan on overriding one of nsDOMEvent's original functions).</li>
 </ul>
-<p><span>Example TBP</span></p>
+<p>Example TBP</p>
 <h4 id="Note_for_extension_developers">Note for extension developers</h4>
 <p>In order for your event to work the way it is described here it <strong>must</strong> be derived from nsDOMEvent. The problem that extension developers will hit is that you are not allowed derive from nsDOMEvent in an extension. You can try to rewrite code but it will have to be a lot of code because nsDOMEvent uses a lot of code outside of itself which you, again, cannot access from an extension. This remains true even if you mark you extension code as "internal".</p>
 <h3 id="Dispatching_your_event_in_JavaScript">Dispatching your event in JavaScript</h3>
