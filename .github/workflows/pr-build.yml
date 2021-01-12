@@ -97,6 +97,11 @@ jobs:
           du -sh client/build
           du -sh client/build/en-us
 
+      - uses: actions/checkout@v2
+        with:
+          repository: mdn/yari
+          path: yari
+
       - name: Install Python
         uses: actions/setup-python@v2
         with:
@@ -112,13 +117,13 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
-          path: deployer/.venv
+          path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install deployer
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
-          cd deployer
+          cd yari/deployer
           poetry install
 
       - name: Deploy built files
@@ -132,6 +137,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
 
         run: |
-          cd deployer
+          cd yari/deployer
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" ../client/build
