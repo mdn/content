@@ -95,7 +95,6 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          # node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
       - uses: technote-space/get-diff-action@v4.0.5
@@ -110,9 +109,7 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           export CONTENT_ROOT=$(pwd)/files
-          # node node_modules/@mdn/yari/filecheck/cli.js ${{ env.GIT_DIFF_FILES }}
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
-          # yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
       - uses: technote-space/get-diff-action@v4.0.5
         id: git_diff_redirects
