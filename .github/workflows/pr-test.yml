@@ -9,35 +9,26 @@
 #
 # That way, you can behave on your laptop like, this action behaves here.
 
-name: PR Build
+name: PR Test
 
 on:
   pull_request:
     branches:
       - main
-    paths:
-      - files/**/*.html
-      - .github/workflows/pr-build.yml
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - uses: technote-space/get-diff-action@v4.0.5
-        with:
-          PATTERNS: files/**/*.html
-
       - name: Setup Node.js environment
-        if: env.GIT_DIFF
         uses: actions/setup-node@v2.1.4
         with:
           node-version: "12"
 
       - name: Cache node_modules
-        if: env.GIT_DIFF
         uses: actions/cache@v2.1.3
         id: cached-node_modules
         with:
@@ -46,13 +37,20 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install all yarn packages
-        if: env.GIT_DIFF && steps.cached-node_modules.outputs.cache-hit != 'true'
+        if: steps.cached-node_modules.outputs.cache-hit != 'true'
         run: |
           yarn --frozen-lockfile
 
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_content
+        with:
+          PATTERNS: files/**/*.html
+          SET_ENV_NAME: GIT_DIFF_CONTENT
+
       - name: Build changed content
-        if: env.GIT_DIFF
+        if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
+          echo ${{ env.GIT_DIFF_CONTENT }}
           export CONTENT_ROOT=$(pwd)/files
 
           # Some day, when our number of flaws have reached 0 we'll change
@@ -97,4 +95,30 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
+          yarn build ${{ env.GIT_DIFF_CONTENT }}
+
+      - uses: technote-space/get-diff-action@v4.0.5
+        with:
+          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
+          ABSOLUTE: true
+          SET_ENV_NAME: GIT_DIFF_FILES
+
+      - name: Check changed files
+        if: ${{ env.GIT_DIFF_FILES }}
+        run: |
+          echo ${{ env.GIT_DIFF_FILES }}
+
+          export CONTENT_ROOT=$(pwd)/files
+          yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_redirects
+        with:
+          PATTERNS: files/**/_redirects.txt
+          SET_ENV_NAME: GIT_DIFF_REDIRECTS
+
+      - name: Validate redirects
+        if: ${{ env.GIT_DIFF_REDIRECTS }}
+        run: |
+          echo ${{ env.GIT_DIFF_REDIRECTS }}
+          yarn content validate-redirects

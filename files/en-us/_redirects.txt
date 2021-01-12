@@ -14714,7 +14714,6 @@
 /en-US/docs/screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/screenY	/en-US/docs/Web/API/MouseEvent/screenY
 /en-US/docs/scrollbar-color	/en-US/docs/Web/CSS/scrollbar-color
-/en-US/docs/sdfsdf%22%3E%3Cimg%20src='1.jpg'onerror=javascript:alert(%22XSS%22)%3E	/en-US/docs/blablablabla
 /en-US/docs/selectorText	/en-US/docs/Web/API/CSSStyleRule/selectorText
 /en-US/docs/setAttribute	/en-US/docs/Web/API/element.setAttribute
 /en-US/docs/setAttributeNS	/en-US/docs/Web/API/element.setAttributeNS
