@@ -120,61 +120,61 @@ tags:
 
 <p>The app.js file does a few things we will look into closely in the next articles. First of all it generates the content based on this template:</p>
 
-<pre class="brush: js">var template = "&lt;article&gt;\n\
-    &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
-    &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
-    &lt;ul&gt;\n\
-    &lt;li&gt;&lt;span&gt;Author:&lt;/span&gt; &lt;strong&gt;AUTHOR&lt;/strong&gt;&lt;/li&gt;\n\
-    &lt;li&gt;&lt;span&gt;Twitter:&lt;/span&gt; &lt;a href='https://twitter.com/TWITTER'&gt;@TWITTER&lt;/a&gt;&lt;/li&gt;\n\
-    &lt;li&gt;&lt;span&gt;Website:&lt;/span&gt; &lt;a href='http://WEBSITE/'&gt;WEBSITE&lt;/a&gt;&lt;/li&gt;\n\
-    &lt;li&gt;&lt;span&gt;GitHub:&lt;/span&gt; &lt;a href='https://GITHUB'&gt;GITHUB&lt;/a&gt;&lt;/li&gt;\n\
-    &lt;li&gt;&lt;span&gt;More:&lt;/span&gt; &lt;a href='http://js13kgames.com/entries/SLUG'&gt;js13kgames.com/entries/SLUG&lt;/a&gt;&lt;/li&gt;\n\
-    &lt;/ul&gt;\n\
-&lt;/article&gt;";
-var content = '';
-for(var i=0; i&lt;games.length; i++) {
-    var entry = template.replace(/POS/g,(i+1))
-        .replace(/SLUG/g,games[i].slug)
-        .replace(/NAME/g,games[i].name)
-        .replace(/AUTHOR/g,games[i].author)
-        .replace(/TWITTER/g,games[i].twitter)
-        .replace(/WEBSITE/g,games[i].website)
-        .replace(/GITHUB/g,games[i].github);
-    entry = entry.replace('&lt;a href=\'http:///\'&gt;&lt;/a&gt;','-');
-    content += entry;
-};
+<pre class="brush: js">const template = `&lt;article&gt;
+  &lt;img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'&gt;
+  &lt;h3&gt;#POS. NAME&lt;/h3&gt;
+  &lt;ul&gt;
+  &lt;li&gt;&lt;span&gt;Author:&lt;/span&gt; &lt;strong&gt;AUTHOR&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;Twitter:&lt;/span&gt; &lt;a href='https://twitter.com/TWITTER'&gt;@TWITTER&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;Website:&lt;/span&gt; &lt;a href='http://WEBSITE/'&gt;WEBSITE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;GitHub:&lt;/span&gt; &lt;a href='https://GITHUB'&gt;GITHUB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;More:&lt;/span&gt; &lt;a href='http://js13kgames.com/entries/SLUG'&gt;js13kgames.com/entries/SLUG&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/article&gt;`;
+let content = '';
+for (let i = 0; i &lt; games.length; i++) {
+  let entry = template.replace(/POS/g, (i + 1))
+    .replace(/SLUG/g, games[i].slug)
+    .replace(/NAME/g, games[i].name)
+    .replace(/AUTHOR/g, games[i].author)
+    .replace(/TWITTER/g, games[i].twitter)
+    .replace(/WEBSITE/g, games[i].website)
+    .replace(/GITHUB/g, games[i].github);
+  entry = entry.replace('&lt;a href=\'http:///\'&gt;&lt;/a&gt;', '-');
+  content += entry;
+}
 document.getElementById('content').innerHTML = content;</pre>
 
 <p>Next, it registers a service worker:</p>
 
 <pre class="brush: js">if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
+  navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
 };</pre>
 
 <p>The next code block requests permission for notifications when a button is clicked:</p>
 
-<pre class="brush: js">var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+<pre class="brush: js">const button = document.getElementById('notifications');
+button.addEventListener('click', () =&gt; {
+  Notification.requestPermission().then((result) =&gt; {
+    if (result === 'granted') {
+      randomNotification();
+    }
+  });
 });</pre>
 
 <p>The last block creates notifications that display a randomly-selected item from the games list:</p>
 
 <pre class="brush: js">function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  const randomItem = Math.floor(Math.random() * games.length);
+  const notifTitle = games[randomItem].name;
+  const notifBody = `Created by ${games[randomItem].author}.`;
+  const notifImg = `data/img/${games[randomItem].slug}.jpg`;
+  const options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }</pre>
 
 <h3 id="The_service_worker">The service worker</h3>
@@ -185,8 +185,8 @@ button.addEventListener('click', function(e) {
 
 <p>Next, it creates a list of all the files to be cached, both from the app shell and the content:</p>
 
-<pre class="brush: js">var cacheName = 'js13kPWA-v1';
-var appShellFiles = [
+<pre class="brush: js">const cacheName = 'js13kPWA-v1';
+const appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
   '/pwa-examples/js13kpwa/app.js',
@@ -204,41 +204,38 @@ var appShellFiles = [
   '/pwa-examples/js13kpwa/icons/icon-168.png',
   '/pwa-examples/js13kpwa/icons/icon-192.png',
   '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  '/pwa-examples/js13kpwa/icons/icon-512.png',
 ];
-var gamesImages = [];
-for(var i=0; i&lt;games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+const gamesImages = [];
+for (let i = 0; i &lt; games.length; i++) {
+  gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
-var contentToCache = appShellFiles.concat(gamesImages);</pre>
+const contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>The next block installs the service worker, which then actually caches all the files contained in the above list:</p>
 
-<pre class="brush: js">self.addEventListener('install', function(e) {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
   console.log('[Service Worker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[Service Worker] Caching all: app shell and content');
-      return cache.addAll(contentToCache);
-    })
-  );
+  e.waitUntil((async () =&gt; {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Caching all: app shell and content');
+    await cache.addAll(contentToCache);
+  })());
 });</pre>
 
 <p>Last of all, the service worker fetches content from the cache if it is available there, providing offline functionality:</p>
 
-<pre class="brush: js">self.addEventListener('fetch', function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(r) {
-      console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then(function(response) {
-        return caches.open(cacheName).then(function(cache) {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
+  e.respondWith((async () =&gt; {
+    const r = await caches.match(e.request);
+    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+    if (r) return r;
+    const response = await fetch(e.request);
+    const cache = await caches.open(cacheName);
+    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+    cache.put(e.request, response.clone());
+    return response;
+  })());
 });</pre>
 
 <h3 id="The_JavaScript_data">The JavaScript data</h3>
@@ -246,31 +243,31 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 <p>The games data is present in the data folder in a form of a JavaScript object (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js">games.js</a>):</p>
 
 <pre class="brush: js">var games = [
-    {
-        slug: 'lost-in-cyberspace',
-        name: 'Lost in Cyberspace',
-        author: 'Zosia and Bartek',
-        twitter: 'bartaz',
-        website: '',
-        github: 'github.com/bartaz/lost-in-cyberspace'
-    },
-    {
-        slug: 'vernissage',
-        name: 'Vernissage',
-        author: 'Platane',
-        twitter: 'platane_',
-        website: 'github.com/Platane',
-        github: 'github.com/Platane/js13k-2017'
-    },
-// ...
-    {
-        slug: 'emma-3d',
-        name: 'Emma-3D',
-        author: 'Prateek Roushan',
-        twitter: '',
-        website: '',
-        github: 'github.com/coderprateek/Emma-3D'
-    }
+  {
+    slug: 'lost-in-cyberspace',
+    name: 'Lost in Cyberspace',
+    author: 'Zosia and Bartek',
+    twitter: 'bartaz',
+    website: '',
+    github: 'github.com/bartaz/lost-in-cyberspace'
+  },
+  {
+    slug: 'vernissage',
+    name: 'Vernissage',
+    author: 'Platane',
+    twitter: 'platane_',
+    website: 'github.com/Platane',
+    github: 'github.com/Platane/js13k-2017'
+  },
+  // ...
+  {
+    slug: 'emma-3d',
+    name: 'Emma-3D',
+    author: 'Prateek Roushan',
+    twitter: '',
+    website: '',
+    github: 'github.com/coderprateek/Emma-3D'
+  }
 ];</pre>
 
 <p>Every entry has its own image in the data/img folder. This is our content, loaded into the content section with JavaScript.</p>
