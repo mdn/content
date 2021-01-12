@@ -9,26 +9,19 @@
 #
 # That way, you can behave on your laptop like, this action behaves here.
 
-name: PR Build
+name: PR Test
 
 on:
   pull_request:
     branches:
       - main
-    paths:
-      - files/**/*.html
-      # - .github/workflows/pr-build.yml
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
-      - uses: technote-space/get-diff-action@v4.0.5
-        with:
-          PATTERNS: files/**/*.html
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
@@ -48,10 +41,18 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_content
+        with:
+          PATTERNS: files/**/*.html
+          SET_ENV_NAME: GIT_DIFF_CONTENT
+
       - name: Build changed content
-        if: env.GIT_DIFF
-        env:
-          CONTENT_ROOT: ${{ github.workspace }}/files
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: |
+          echo ${{ env.GIT_DIFF_CONTENT }}
+          export CONTENT_ROOT=$(pwd)/files
+
           # Some day, when our number of flaws have reached 0 we'll change
           # this to "*:error" which means the slightest flaw in the build
           # will break the build.
@@ -94,50 +95,30 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
+          yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-          du -sh $BUILD_OUT_ROOT
-
-      - uses: actions/checkout@v2
+      - uses: technote-space/get-diff-action@v4.0.5
         with:
-          repository: mdn/yari
-          path: yari
+          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
+          ABSOLUTE: true
+          SET_ENV_NAME: GIT_DIFF_FILES
 
-      - name: Install Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-
-      - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v2
-        with:
-          path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install deployer
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      - name: Check changed files
+        if: ${{ env.GIT_DIFF_FILES }}
         run: |
-          cd yari/deployer
-          poetry install
+          echo ${{ env.GIT_DIFF_FILES }}
 
-      - name: Deploy built files
-        env:
-          CONTENT_ROOT: ${{ github.workspace }}/files
-          DEPLOYER_BUCKET_NAME: mdn-content-dev
+          export CONTENT_ROOT=$(pwd)/files
+          yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+      - uses: technote-space/get-diff-action@v4.0.5
+        id: git_diff_redirects
+        with:
+          PATTERNS: files/**/_redirects.txt
+          SET_ENV_NAME: GIT_DIFF_REDIRECTS
 
-          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
-
+      - name: Validate redirects
+        if: ${{ env.GIT_DIFF_REDIRECTS }}
         run: |
-          cd yari/deployer
-          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-          poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
+          echo ${{ env.GIT_DIFF_REDIRECTS }}
+          yarn content validate-redirects
