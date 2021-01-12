@@ -62,7 +62,7 @@ tags:
 <p>In some cases, earlier versions may support only some features of ARIA. More detailed browser compatibility charts are available from multiple sources:</p>
 
 <ul>
- <li><a class="external" href="http://caniuse.com/wai-aria">caniuse.com</a></li>
+ <li><a class="external" href="https://caniuse.com/wai-aria">caniuse.com</a></li>
  <li><a class="external" href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
 </ul>
 
@@ -147,7 +147,7 @@ tags:
 
 <p>Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:</p>
 
-<pre class="brush: javascript">// Find the progress bar &lt;div&gt; in the DOM.
+<pre class="brush: js">// Find the progress bar &lt;div&gt; in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -203,7 +203,7 @@ function updateProgress(percentComplete) {
 
 <p>... and here is the JavaScript code that will ensure the progress bar still works in older browsers:</p>
 
-<pre class="brush: javascript">var progressBar = document.getElementById("progress-bar");
+<pre class="brush: js">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
@@ -295,7 +295,7 @@ initDemo();
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">An overview of accessible web applications and widgets</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Accessible_forms">Accessible forms</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Accessible forms</a></li>
  <li>The W3C's <a class="external" href="https://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
  <li>WebAIM's <a class="external" href="http://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
 </ul>

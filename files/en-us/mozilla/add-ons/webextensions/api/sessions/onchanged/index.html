@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.sessions.onChanged.addListener(listener)
+<pre class="brush:js">browser.sessions.onChanged.addListener(listener)
 browser.sessions.onChanged.removeListener(listener)
 browser.sessions.onChanged.hasListener(listener)
 </pre>
@@ -55,7 +55,7 @@ browser.sessions.onChanged.hasListener(listener)
 
 <p>This very annoying extension listens for <code>onChanged</code>, then immediately restores the most recently closed session, thus making it impossible to close windows or tabs:</p>
 
-<pre class="brush: js">function restoreSession(sessionInfos) {
+<pre class="notranslate brush: js">function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;

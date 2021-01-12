@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var setting = browser.cookies.set(
+<pre class="brush:js">var setting = browser.cookies.set(
   details               // object
 )
 </pre>
@@ -74,7 +74,7 @@ tags:
 
 <p>This example sets a cookie for the document hosted by the currently active tab:</p>
 
-<pre class="brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
+<pre class="notranslate brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {

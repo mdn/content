@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var setting = browser.devtools.panels.setObject(
+<pre class="brush:js">var setting = browser.devtools.panels.setObject(
   jsonObject,       // string, array, or JSON object
   rootTitle         // string
 )
@@ -51,7 +51,7 @@ tags:
 
 <p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   sidebarPane<span class="punctuation token">.</span><span class="function token">setObject</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
     someBool<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
     someString<span class="punctuation token">:</span> <span class="string token">"hello there"</span><span class="punctuation token">,</span>

@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Tips_to_keep_your_CSS_tidy">Tips to keep your CSS tidy</h2>
 
-<p>Here are some general suggestions for ways to keep your stylesheets organised and tidy.</p>
+<p>Here are some general suggestions for ways to keep your stylesheets organized and tidy.</p>
 
 <h3 id="Does_your_project_have_a_coding_style_guide">Does your project have a coding style guide?</h3>
 
@@ -288,11 +288,11 @@ blockquote { ... }
 
 <h3 id="Build_systems_for_CSS">Build systems for CSS</h3>
 
-<p>Another way to organise CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools which we refer to as <em>pre-processors</em> and <em>post-processors</em>. A pre-processor runs over your raw files and turns them into a stylesheet, whereas a post-processor takes your finished stylesheet and does something to it — perhaps to optimize it in order that it will load faster.</p>
+<p>Another way to organize CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools which we refer to as <em>pre-processors</em> and <em>post-processors</em>. A pre-processor runs over your raw files and turns them into a stylesheet, whereas a post-processor takes your finished stylesheet and does something to it — perhaps to optimize it in order that it will load faster.</p>
 
 <p>Using any of these tools will require that your development environment can run the scripts that do the pre and post-processing. Many code editors can do this for you, or you can install command line tools to help.</p>
 
-<p>The most popular pre-processor is <a href="https://sass-lang.com/">Sass</a>. This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organisation, even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the <a href="https://sass-lang.com/guide">Sass basics</a> article, then move on to their other documentation.</p>
+<p>The most popular pre-processor is <a href="https://sass-lang.com/">Sass</a>. This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organization, even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the <a href="https://sass-lang.com/guide">Sass basics</a> article, then move on to their other documentation.</p>
 
 <h4 id="Defining_variables">Defining variables</h4>
 
@@ -314,7 +314,7 @@ blockquote { ... }
 
 <h4 id="Compiling_component_stylesheets">Compiling component stylesheets</h4>
 
-<p>I mentioned above that one way to organise CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the include functionality in Sass (partials) these can then all be compiled together into one, or a small number of stylesheets to actually link into your website.</p>
+<p>I mentioned above that one way to organize CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the include functionality in Sass (partials) these can then all be compiled together into one, or a small number of stylesheets to actually link into your website.</p>
 
 <p>So for example, with <a href="https://sass-lang.com/documentation/at-rules/use#partials">partials</a>, you could have several style files inside a directory, say <code>foundation/_code.scss</code>, <code>foundation/_lists.scss</code>, <code>foundation/_footer.scss</code>, <code>foundation/_links.scss</code>, etc., then use the Sass <code>@use</code> role to load them into other stylesheets:</p>
 

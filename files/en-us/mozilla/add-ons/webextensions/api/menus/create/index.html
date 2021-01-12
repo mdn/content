@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">browser.menus.create(
+<pre class="brush:js notranslate">browser.menus.create(
   createProperties, // object
   function() {...}  // optional function
 )
@@ -127,7 +127,7 @@ tags:
 
 <p>This example creates a context menu item that's shown when the user has selected some text in the page. It just logs the selected text to the console:</p>
 
-<pre class="brush: js notranslate">browser.menus.create({
+<pre class="notranslate brush: js">browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
   contexts: ["selection"]
@@ -141,7 +141,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 <p>This example adds two radio items, which you can use to choose whether to apply a green or a blue border to the page. Note that this example will need the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab permission</a>.</p>
 
-<pre class="brush: js notranslate">function onCreated() {
+<pre class="notranslate brush: js">function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {

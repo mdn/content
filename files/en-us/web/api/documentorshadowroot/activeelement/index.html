@@ -2,34 +2,51 @@
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/DocumentOrShadowRoot/activeElement
 tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Focus
-  - Property
-  - Reference
-  - ShadowRoot
-  - activeElement
+- API
+- Document
+- DocumentOrShadowRoot
+- Focus
+- Property
+- Reference
+- ShadowRoot
+- activeElement
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>activeElement</code></strong> read-only property of the {{domxref("Document")}} and {{domxref("ShadowRoot")}} interfaces returns the {{domxref("Element")}} within the DOM or shadow DOM tree that currently has focus.</span></p>
+<p><span class="seoSummary">The <strong><code>activeElement</code></strong> read-only
+    property of the {{domxref("Document")}} and {{domxref("ShadowRoot")}} interfaces
+    returns the {{domxref("Element")}} within the DOM or shadow DOM tree that currently
+    has focus.</span></p>
 
-<p>Often <code>activeElement</code> will return a {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If so, you can get more detail by using the object's {{domxref("Document.selectionStart", "selectionStart")}} and {{domxref("Document.selectionEnd", "selectionEnd")}} properties. Other times the focused element might be a {{HTMLElement("select")}} element (menu) or an {{HTMLElement("input")}} element, of <code>type</code> <code>"button"</code>, <code>"checkbox"</code>, or <code>"radio"</code>.</p>
+<p>Often <code>activeElement</code> will return a {{domxref("HTMLInputElement")}} or
+  {{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
+  so, you can get more detail by using the object's {{domxref("Document.selectionStart",
+  "selectionStart")}} and {{domxref("Document.selectionEnd", "selectionEnd")}} properties.
+  Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
+  an {{HTMLElement("input")}} element, of <code>type</code> <code>"button"</code>,
+  <code>"checkbox"</code>, or <code>"radio"</code>.</p>
 
-<p>Typically a user can press the tab key to move the focus around the page among focusable elements, and use the space bar to activate one (that is, to press a button or toggle a radio button). Which elements are focusable varies depending on the platform and the browser's current configuration. For example, on macOS systems, elements that aren't text input elements are not typically focusable by default.</p>
+<p>Typically a user can press the tab key to move the focus around the page among
+  focusable elements, and use the space bar to activate one (that is, to press a button or
+  toggle a radio button). Which elements are focusable varies depending on the platform
+  and the browser's current configuration. For example, on macOS systems, elements that
+  aren't text input elements are not typically focusable by default.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Focus (which element is receiving user input events) is not the same thing as selection (the currently highlighted part of the document). You can get the current selection using {{domxref("window.getSelection()")}}.</p>
+  <p><strong>Note:</strong> Focus (which element is receiving user input events) is not
+    the same thing as selection (the currently highlighted part of the document). You can
+    get the current selection using {{domxref("window.getSelection()")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>element</em> = <em>DocumentOrShadowRoot</em>.activeElement</pre>
+<pre
+  class="brush: js notranslate"><em>element</em> = <em>DocumentOrShadowRoot</em>.activeElement</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or <code>null</code> if there is no focused element.</p>
+<p>The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
+  <code>null</code> if there is no focused element.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -71,23 +88,24 @@ textarea2.addEventListener('mouseup', onMouseUp, false);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement', 'activeElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-activeelement',
+        'activeElement')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("api.DocumentOrShadowRoot.activeElement")}}</p>
+  <p>{{Compat("api.DocumentOrShadowRoot.activeElement")}}</p>
 </div>

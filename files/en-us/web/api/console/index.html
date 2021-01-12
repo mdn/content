@@ -94,7 +94,7 @@ console.log(someObject);
 
 <p>The output looks something like this:</p>
 
-<pre class="notranslate">[09:27:13.475] ({str:"Some text", id:5})</pre>
+<pre class="brush: bash notranslate">[09:27:13.475] ({str:"Some text", id:5})</pre>
 
 <h4 id="Outputting_multiple_objects">Outputting multiple objects</h4>
 
@@ -106,7 +106,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>This output will look like this:</p>
 
-<pre class="notranslate">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+<pre class="brush: bash notranslate">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 </pre>
 
 <h4 id="Using_string_substitutions">Using string substitutions</h4>
@@ -130,14 +130,14 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>Each of these pulls the next argument after the format string off the parameter list. For example:</p>
 
-<pre class="notranslate">for (var i=0; i&lt;5; i++) {
+<pre class="brush: js notranslate">for (var i=0; i&lt;5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 </pre>
 
 <p>The output looks like this:</p>
 
-<pre class="notranslate">[13:14:13.481] Hello, Bob. You've called me 1 times.
+<pre class="brush: bash notranslate">[13:14:13.481] Hello, Bob. You've called me 1 times.
 [13:14:13.483] Hello, Bob. You've called me 2 times.
 [13:14:13.485] Hello, Bob. You've called me 3 times.
 [13:14:13.487] Hello, Bob. You've called me 4 times.

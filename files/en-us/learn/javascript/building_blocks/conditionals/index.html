@@ -90,11 +90,12 @@ else run some other code instead</pre>
 <p>To understand this syntax better, let's consider a real example. Imagine a child being asked for help with a chore by their mother or father. The parent might say "Hey sweetheart! If you help me by going and doing the shopping, I'll give you some extra allowance so you can afford that toy you wanted." In JavaScript, we could represent this like so:</p>
 
 <pre class="brush: js">let shoppingDone = false;
+let childsAllowance;
 
 if (shoppingDone === true) {
-  let childsAllowance = 10;
+  childsAllowance = 10;
 } else {
-  let childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
 <p>This code as shown always results in the <code>shoppingDone</code> variable returning <code>false</code>, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the <code>shoppingDone</code> variable to <code>true</code> if the child did the shopping.</p>
@@ -183,11 +184,12 @@ if (cheese) {
 <p>And, returning to our previous example about the child doing a chore for their parent, you could write it like this:</p>
 
 <pre class="brush: js">let shoppingDone = false;
+let childsAllowance;
 
 if (shoppingDone) { // don't need to explicitly specify '=== true'
-  let childsAllowance = 10;
+  childsAllowance = 10;
 } else {
-  let childsAllowance = 5;
+  childsAllowance = 5;
 }</pre>
 
 <h3 id="Nesting_if_..._else">Nesting if ... else</h3>
