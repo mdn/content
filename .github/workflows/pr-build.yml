@@ -94,6 +94,9 @@ jobs:
           # package.json.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
 
+          du -sh client/build
+          du -sh client/build/en-us
+
       - name: Install Python
         uses: actions/setup-python@v2
         with:
