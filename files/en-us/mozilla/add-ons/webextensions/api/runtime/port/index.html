@@ -18,7 +18,7 @@ tags:
 
 <p>One side initiates the connection, using a <code>connect()</code> API. This returns a <code>Port</code> object. The other side listens for connection attempts using an <code>onConnect</code> listener. This is passed a corresponding <code>Port</code> object.</p>
 
-<p>Once both sides have <code>Port</code> objects, they can exchange JSON messages using <code>Port.postMessage()</code> and <code>Port.onMessage</code>. When they are finished, either end can disconnect using <code>Port.disconnect()</code>, which will generate a <code>Port.onDisconnect</code> event at the other end, enabling the other end to do any cleanup required.</p>
+<p>Once both sides have <code>Port</code> objects, they can exchange messages using <code>Port.postMessage()</code> and <code>Port.onMessage</code>. When they are finished, either end can disconnect using <code>Port.disconnect()</code>, which will generate a <code>Port.onDisconnect</code> event at the other end, enabling the other end to do any cleanup required.</p>
 
 <p>You can use this pattern to communicate between:</p>
 
@@ -86,9 +86,9 @@ tags:
  <p>Note that in Google Chrome <code>port.error</code> is not supported: instead, use {{WebExtAPIRef("runtime.lastError")}} to get the error message.</p>
  </dd>
  <dt><code>onMessage</code></dt>
- <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the JSON object that the other end sent.</dd>
+ <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.</dd>
  <dt><code>postMessage</code></dt>
- <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a JSON object representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
+ <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a serializable value (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#Data_cloning_algorithm">Data cloning algorithm</a>) representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
  <dt><code>sender</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to <code>onConnect</code>/<code>onConnectExternal</code> listeners.</dd>
 </dl>
