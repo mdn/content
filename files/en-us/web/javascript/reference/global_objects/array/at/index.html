@@ -1,0 +1,122 @@
+---
+title: Array.prototype.at()
+slug: Web/JavaScript/Reference/Global_Objects/Array/at
+tags:
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - polyfill
+  - at
+  - Experimental
+---
+<div>{{JSRef}}</div>
+
+<p class="summary">The <strong><code>at()</code></strong> method takes an integer value and returns the item at that index, allowing for negative integers which count back from the last item.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/array-at.html","shorter")}}</div>
+
+<ul>
+  <li>If you need to find an element based on a provided testing function, use {{jsxref("Array.prototype.find()", "find()")}}.</li>
+  <li>If you need to find if a value <strong>exists</strong> in an array, use {{jsxref("Array.prototype.includes()")}}.</li>
+  <li>If you need the <strong>index</strong> of an element in the array, use {{jsxref("Array.indexOf", "indexOf()")}}.</li>
+</ul>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>item</var> = arr.at(index)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>index</code></dt>
+  <dd>The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index. i.e. If a negative number is used the element returned will be found by counting back from the end of the array.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>The element in the array matching the given index. Returns {{jsxref('undefined')}} if the given index can not be found.</p>
+
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>This method may not be available in all JavaScript implementations yet. However you can polyfill <code>Array.prototype.at</code> with the following snippet:</p>
+
+<pre class="brush: js notranslate">
+function at(n) {
+	// ToInteger() abstract op
+	n = Math.trunc(n) || 0;
+	// Allow negative indexing from the end
+	if(n < 0) n += this.length;
+	// OOB access is guaranteed to return undefined
+	if(n < 0 || n >= this.length) return undefined;
+	// Otherwise, this is just normal property access
+	return this[n];
+}
+
+// Other TypedArray constructors omitted for brevity.
+for (let C of [Array, String, Uint8Array]) {
+    Object.defineProperty(C.prototype, "at",
+                        { value: at,
+                          writable: true,
+                          enumerable: false,
+                          configurable: true });
+}</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Return the last value of an array.</h3>
+
+<p>The following example provides a function which returns the last element found in a specified array.</p>
+
+<pre class="brush: js notranslate">
+  // Our array with items
+  const cart = ['apple', 'banana', 'pear'];
+
+  // A function which returns the last item of a given array
+  function returnLast(arr) {
+    return arr.at(-1);
+  }
+
+  // Get the last item of our array 'cart'
+  const item1 = returnLast(cart);
+  console.log(item1); // Logs: 'pear'
+
+  // Add an item to our 'cart' array
+  cart.push('orange');
+  const item2 = returnLast(cart);
+  console.log(item2); // Logs: 'orange'
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Array','#TBD','at')}}</td>
+   <td>{{Spec2('Array')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Array.prototype.at")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{jsxref("Array.prototype.find()")}} – return a value based on a given test.</li>
+  <li>{{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array.</li>
+  <li>{{jsxref("Array.prototype.indexOf()")}} – return the index of a given element.</li>
+</ul>
+
