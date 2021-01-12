@@ -77,7 +77,7 @@ jobs:
           # TODO: This should be implicit when `CI=true`
           BUILD_NO_PROGRESSBAR: true
 
-          BUILD_OUT_ROOT: /tmp/
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
 
         run: |
           # Note, it might be interesting to explore building *some*
@@ -96,10 +96,9 @@ jobs:
           # package.json.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF }}
 
-          ls -l /tmp
-          ls -l /tmp/build
-          du -sh client/build
-          du -sh client/build/en-us
+          echo $BUILD_OUT_ROOT
+          ls $BUILD_OUT_ROOT
+          du -sh $BUILD_OUT_ROOT
 
       - uses: actions/checkout@v2
         with:
@@ -140,7 +139,12 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
 
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+
         run: |
           cd yari/deployer
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-          poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" ../client/build
+          echo $BUILD_OUT_ROOT
+          ls $BUILD_OUT_ROOT
+          du -sh $BUILD_OUT_ROOT
+          poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
