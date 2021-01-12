@@ -165,3 +165,15 @@ jobs:
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+
+          BUILD_OUT_ROOT: ${{ github.workspace }}/node_modules/@mdn/yari/client/build
+
+        run: |
+          cd yari/deployer
+          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          poetry run deployer --dry-run upload --prefix="pr$PR_NUMBER" $BUILD_OUT_ROOT
