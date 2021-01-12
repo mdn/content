@@ -33,10 +33,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.1.492":
-  version "0.1.492"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.1.492.tgz#4f9edab0f80a613b80b106735e2d778f98b45541"
-  integrity sha512-me5MvnAzbai2HW640ua2XOEaJXJE+wpv0f3fEp0L696CQ7laCe13GyT/RO0fEnHTZ0Dh1AmalYNS8M8l3Itmnw==
+"@mdn/yari@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.2.0.tgz#24f9d7314a1d28013d2128e0fe14e9cdbb67cb89"
+  integrity sha512-fkFeWnt9Ua2sxV2XcKmOdkEArl9sk+GASu299bgI9btN78O9uZf0HI9fJp7wGsiiXXPF7+DZAno/n4NKU8ll7w==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "3.0.2"
@@ -71,7 +71,7 @@
     imagemin-svgo "8.0.0"
     include-media "1.4.9"
     is-svg "4.2.1"
-    js-yaml "3.14.1"
+    js-yaml "4.0.0"
     jsesc "3.0.2"
     mdn-data "2.0.15"
     open "^7.3.1"
@@ -82,7 +82,6 @@
     send "0.17.1"
     sockette "^2.0.6"
     source-map-support "0.5.19"
-    swr "0.4.0"
     tempy "1.0.0"
     use-debounce "^5.2.0"
     webpack-cli "4.3.1"
@@ -398,6 +397,11 @@ argparse@^1.0.7:
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
 array-find-index@^1.0.1:
   version "1.0.2"
@@ -1207,11 +1211,6 @@ depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
-
-dequal@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.2.tgz#85ca22025e3a87e65ef75a7a437b35284a7e319d"
-  integrity sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
 
 destroy@~1.0.4:
   version "1.0.4"
@@ -2543,7 +2542,14 @@ jpegtran-bin@^5.0.0:
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
 
-js-yaml@3.14.1, js-yaml@^3.13.1:
+js-yaml@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
+  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+  dependencies:
+    argparse "^2.0.1"
+
+js-yaml@^3.13.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -4019,13 +4025,6 @@ svgo@^1.3.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
-
-swr@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-0.4.0.tgz#e76da9f981fe6dee0e133289e9b582fc80d9c41d"
-  integrity sha512-70qd1FHYHwIdYXW0jTpm5ktitzvPBCtyKz8ZzynWlY/rMqe4drYPgcl/H9Ipuh+Xv6ZW5viNx13ro8EKIWZcoQ==
-  dependencies:
-    dequal "2.0.2"
 
 table@5.4.6:
   version "5.4.6"
