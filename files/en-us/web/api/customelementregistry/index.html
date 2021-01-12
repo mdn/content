@@ -20,7 +20,7 @@ tags:
  <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
  <dd>Defines a new <a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>.</dd>
  <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>Returns the constuctor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.</dd>
+ <dd>Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.</dd>
  <dt>{{domxref("CustomElementRegistry.upgrade()")}}</dt>
  <dd>Upgrades a custom element directly, even before it is connected to its shadow root.</dd>
  <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
@@ -57,7 +57,6 @@ class WordCount extends HTMLParagraphElement {
     // Append it to the shadow root
     shadow.appendChild(text);
 
-
     // Update count when element content changes
     setInterval(function() {
       var count = 'Words: ' + countWords(wcParent);
@@ -92,7 +91,5 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.CustomElementRegistry")}}</p>

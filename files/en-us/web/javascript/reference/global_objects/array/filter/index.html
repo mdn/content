@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
+<pre class="brush: js notranslate">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
   // return element for <var>newArray,</var> if true
 }[, <var>thisArg</var>]);
 </pre>
@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>filter()</code> calls a provided <code><var>callback</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callback</var></code> test are simply skipped, and are not included in the new array.</p>
+<p><code>filter()</code> calls a provided <code><var>callback</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new array.</p>
 
 <p><code><var>callback</var></code> is invoked with three arguments:</p>
 
@@ -132,7 +132,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 
 <p>The following example returns all prime numbers in the array:</p>
 
-<pre class="notranslate"><code>const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+<pre class="brush: js notranslate">const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
   for (let i = 2; num &gt; i; i++) {
@@ -143,7 +143,7 @@ function isPrime(num) {
   return num &gt; 1;
 }
 
-console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]</code></pre>
+console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]</pre>
 
 <h3 id="Filtering_invalid_entries_from_JSON">Filtering invalid entries from JSON</h3>
 
@@ -271,7 +271,6 @@ console.log(deleteWords)
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.builtins.Array.filter")}}</p>
 </div>

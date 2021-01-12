@@ -4,13 +4,13 @@ slug: Web/HTML/Element/dd
 tags:
   - Definition
   - Description Details
+  - Description list
   - Element
   - HTML
   - HTML grouping content
   - Reference
   - Web
   - dd
-  - description list
   - details
 ---
 <div>{{HTMLRef}}</div>
@@ -19,29 +19,26 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
    <td>None.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
-   <td>The start tag is required. The end tag may be omitted if the {{HTMLElement("dd")}} element is immediately followed by another <code>&lt;dd&gt;</code> element or a {{HTMLElement("dt")}} element, or if there is no more content in the parent element.</td>
+   <td>The start tag is required. The end tag may be omitted if this element is immediately followed by another <code>&lt;dd&gt;</code> element or a {{HTMLElement("dt")}} element, or if there is no more content in the parent element.</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>{{HTMLElement("dl")}} or (in <a href="/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML) a {{HTMLElement("div")}} that is inside a {{HTMLElement("dl")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Previous sibling</th>
-   <td>{{HTMLElement("dt")}} or another {{HTMLElement("dd")}} element.</td>
+   <td>A {{HTMLElement("dl")}} or (in {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2 and later) a {{HTMLElement("div")}} that is a child of a {{HTMLElement("dl")}}.<br>
+   This element can be used after a {{HTMLElement("dt")}} or another {{HTMLElement("dl")}} element.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -60,16 +57,16 @@ tags:
 
 <h2 id="Attributes">Attributes</h2>
 
-<p>This element's attributes include the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+<p>This element's attributes include the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("nowrap")}} {{Non-standard_inline}}</dt>
  <dd>If the value of this attribute is set to <code>yes</code>, the definition text will not wrap. The default value is <code>no</code>.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>For an example, see <a href="/en-US/docs/HTML/Element/dl#examples">&lt;dl&gt; examples</a>.</p>
+<p>For examples, see the <a href="/en-US/docs/Web/HTML/Element/dl#Examples">examples provided for the <code>&lt;dl&gt;</code> element</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -88,9 +85,9 @@ tags:
    <td></td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
+   <td>{{SpecName('HTML5.2', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}}</td>
+   <td>{{Spec2('HTML5.2')}}</td>
+   <td><code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements can now be included in {{HTMLElement("div")}} elements.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}</td>
@@ -102,13 +99,11 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("html.elements.dd")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTMLELement("dl")}}</li>
+ <li>{{HTMLElement("dl")}}</li>
  <li>{{HTMLElement("dt")}}</li>
 </ul>

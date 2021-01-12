@@ -55,7 +55,7 @@ tags:
 MediaSource.isTypeSupported('video/mp4'); // true
 MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true</pre>
 
-<p>The string is the MIME type of the container, optionally followed by a list of codecs. While the MIME type is fairly simple to figure out, we can get the codec string using the <a href="http://nickdesaulniers.github.io/mp4info/">mp4info</a> utility.</p>
+<p>The string is the MIME type of the container, optionally followed by a list of codecs. While the MIME type is fairly simple to figure out, we can get the codec string using the <a href="https://nickdesaulniers.github.io/mp4info/">mp4info</a> utility.</p>
 
 <p>Currently, MP4 containers with H.264 video and AAC audio codecs have support across all modern browsers, while others don't.</p>
 
@@ -69,7 +69,7 @@ bunny.mp4         trailer_1080p.mov</pre>
 
 <p>In order to properly stream MP4, we need the asset to be an <a href="https://www.w3.org/TR/mse-byte-stream-format-isobmff/">ISO BMF</a> format MP4. Without proper fragmentation, any given MP4 file is not guaranteed to work with MSE.  This means that metadata within the container is spread out and not lumped together.</p>
 
-<p>To check whether an MP4 file is a proper MP4 stream, you can again use the <a href="http://nickdesaulniers.github.io/mp4info/">mp4info</a> utility to list the atoms of an MP4.</p>
+<p>To check whether an MP4 file is a proper MP4 stream, you can again use the <a href="https://nickdesaulniers.github.io/mp4info/">mp4info</a> utility to list the atoms of an MP4.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.</p>

@@ -13,7 +13,7 @@ tags:
 
 <p>Setting the window rect takes <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> as input. All the fields are optional, e.g. the command may be called with an empty object, and in this case it will act as a no-op. To set the position both of <code>x</code> and <code>y</code> are required, and correspondingly both <code>width</code> and <code>height</code> are required for altering the window’s dimensions.</p>
 
-<p>When setting the width or height, it is not guarnateed that the resulting window size will exactly match that which was requested. The driver is expected to clamp values that are larger than the physical screen dimensions, or smaller than the minimum window size. Some drivers may also have other limitations such as not being able to resize in single-pixel increments. For this reason, the returned <code>width</code> and <code>height</code> might not exactly match <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code> and <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</p>
+<p>When setting the width or height, it is not guaranteed that the resulting window size will exactly match that which was requested. The driver is expected to clamp values that are larger than the physical screen dimensions, or smaller than the minimum window size. Some drivers may also have other limitations such as not being able to resize in single-pixel increments. For this reason, the returned <code>width</code> and <code>height</code> might not exactly match <code><a href="/en-US/docs/Web/API/Window/outerWidth">Window.outerWidth</a></code> and <code><a href="/en-US/docs/Web/API/Window/outerHeight">Window.outerHeight</a></code>.</p>
 
 <p>Setting the window’s position is similar in nature to calling <code><a href="/en-US/docs/Web/API/Window/moveTo">Window.moveTo(<em>x</em>, <em>y</em>)</a></code>, but differences itself by bypassing security restrictions related to window manipulation.</p>
 
@@ -84,9 +84,6 @@ tags:
  <dd>If the <code><a href="/en-US/docs/Web/API/Window">window</a></code> has been closed.</dd>
  <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnexpectedAlertOpen">Unexpected alert open</a></dt>
  <dd>A user prompt, such as <code><a href="/en-US/docs/Web/API/Window/alert">window.alert</a></code>, blocks execution of command until it is dealt with.</dd>
-</dl>
-
-<dl>
  <dt><a href="/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation">Unsupported operation</a></dt>
  <dd>If the driver does not support altering the window’s size or position. This is usually the case on mobile devices, where the browser has a set dimension and cannot be moved around on the screen.<br>
  <br>
@@ -111,8 +108,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webdriver.commands.SetWindowRect")}}</p>
 

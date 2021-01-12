@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.sidebarAction.setPanel(
+<pre class="brush:js">browser.sidebarAction.setPanel(
   details // object
 )
 </pre>
@@ -67,7 +67,7 @@ tags:
 
 <p>This code toggles the sidebar document when the user clicks a browser action:</p>
 
-<pre class="brush: js">var thisPanel = browser.runtime.getURL("/this.html");
+<pre class="notranslate brush: js">var thisPanel = browser.runtime.getURL("/this.html");
 var thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
@@ -85,7 +85,6 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<p> </p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -93,7 +92,6 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{Compat("webextensions.api.sidebarAction.setPanel",2)}}</p>
 
-<p> </p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

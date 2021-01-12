@@ -46,7 +46,7 @@ tags:
  <ul>
   <li><code>download</code> only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>, or the <code>blob:</code> and <code>data:</code> schemes.</li>
   <li>
-   <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behaviour may differ:</p>
+   <p>Note: if the <code>Content-Disposition</code> header has different information from the <code>download</code> attribute, resulting behavior may differ:</p>
 
    <ul>
     <li>
@@ -81,7 +81,7 @@ tags:
  <dt id="rel">{{HTMLAttrDef("rel")}}</dt>
  <dd>The relationship of the linked URL as space-separated <a href="/en-US/docs/Web/HTML/Link_types">link types</a>.</dd>
  <dt id="target">{{HTMLAttrDef("target")}}</dt>
- <dd>Where to display the linked URL, as the name for a <em>browsing context</em> (a tab, window, or <code>&lt;iframe&gt;</code>). The following keywords have special meanings for where to load the URL:
+ <dd>Where to display the linked URL, as the name for a <em>browsing context</em> (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
  <ul>
   <li><code>_self</code>: the current browsing context. (Default)</li>
   <li><code>_blank</code>: usually a new tab, but users can configure browsers to open a new window instead.</li>
@@ -90,7 +90,7 @@ tags:
  </ul>
 
  <div class="note">
- <p><strong>Note:</strong> When using <code>target</code>, add <code>rel="noreferrer noopener"</code> to avoid exploitation of the <code>window.opener</code> API;</p>
+ <p><strong>Note:</strong> When using <code>target</code>, add <code>rel="noreferrer noopener"</code> to avoid exploitation of the <code>window.opener</code> API.</p>
  </div>
 
  <div class="note">
@@ -131,12 +131,12 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>) or <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>) or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -144,7 +144,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>, but not other <code>&lt;a&gt;</code> elements.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -236,7 +236,7 @@ tags:
 
 <pre class="brush: html notranslate">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
 
-<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Web/Guide/HTML/Email_links">Email links</a> or {{RFC(6068)}}.</p>
+<p>For details about <code>mailto:</code> URLs, such as including a subject or body, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="Linking_to_telephone_numbers">Linking to telephone numbers</h3>
 
@@ -254,7 +254,7 @@ tags:
 
 <p>See {{RFC(3966)}} for syntax, additional features, and other details about the <code>tel:</code> URL scheme.</p>
 
-<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas>_as_a_PNG">Using the download attribute to save a &lt;canvas&gt; as a PNG</h3>
+<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas&gt;_as_a_PNG">Using the download attribute to save a &lt;canvas&gt; as a PNG</h3>
 
 <p>To save a {{HTMLElement("canvas")}} element’s contents as an image, you can create a link with a <code>download</code> attribute and the canvas data as a <code>data:</code> URL:</p>
 
@@ -486,8 +486,6 @@ document.querySelector('a').addEventListener('click', event =&gt;
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.a")}}</p>
 

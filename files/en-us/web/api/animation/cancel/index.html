@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>Animation</em>.cancel();</pre>
+<pre class="brush: js notranslate"><em>Animation</em>.cancel();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,6 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <p>This method doesn't directly throw exceptions; however, if the animation's {{domxref("Animation.playState", "playState")}} is anything but <code>"idle"</code> when cancelled, the {{domxref("Animation.finished", "current finished promise", "", 1)}} is rejected with a {{domxref("DOMException")}} named <code>AbortError</code>.</p>
-
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -57,11 +56,10 @@ tags:
 
 <div>
 
-
 <p>{{Compat("api.Animation.cancel")}}</p>
 </div>
 
-<h2 id="See_also" style="line-height: 30px; font-size: 2.14285714285714rem;">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>

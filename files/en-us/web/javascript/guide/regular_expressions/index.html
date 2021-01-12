@@ -127,7 +127,7 @@ tags:
 <p>If escape strings are not already part of your pattern you can add them using {{jsxref('String.replace')}}:</p>
 
 <pre class="brush: js notranslate">function escapeRegExp(string) {
-  return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); // $&amp; means the whole matched string
 }
 </pre>
 
@@ -141,7 +141,7 @@ tags:
 
 <h2 id="Using_regular_expressions_in_JavaScript">Using regular expressions in JavaScript</h2>
 
-<p>Regular expressions are used with the <code>RegExp</code> methods <code>test()</code> and <code>exec()</code> and with the <code>String</code> methods <code>match()</code>, <code>replace()</code>, <code>search()</code>, and <code>split()</code>. These methods are explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript reference</a>.</p>
+<p>Regular expressions are used with the <code>RegExp</code> methods <code>test()</code> and <code>exec()</code> and with the <code>String</code> methods <code>match()</code>, <code>replace()</code>, <code>search()</code>, and <code>split()</code>. These methods are explained in detail in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</p>
 
 <table class="standard-table">
  <caption>Methods that use regular expressions</caption>
@@ -449,8 +449,6 @@ function testInfo(phoneInput) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("javascript.builtins.RegExp")}}</p>
 

@@ -105,18 +105,15 @@ tags:
 <p><strong>Note</strong>: Django refers to this organisation as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar <a href="/en-US/docs/Glossary/MVC">Model View Controller</a> architecture. </p>
 </div>
 
-<ul>
-</ul>
-
 <p>The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).</p>
 
 <h3 id="Sending_the_request_to_the_right_view_urls.py">Sending the request to the right view (urls.py)</h3>
 
-<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns) </em>and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
+<p>A URL mapper is typically stored in a file named <strong>urls.py</strong>. In the example below, the mapper (<code>urlpatterns</code>) defines a list of mappings between <em>routes</em> (specific URL <em>patterns)</em> and corresponding view functions. If an HTTP Request is received that has a URL matching a specified pattern, then the associated view function will be called and passed the request.</p>
 
 <pre class="notranslate">urlpatterns = [
-    <strong>path('admin/', admin.site.urls),
-    </strong>path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
+    <strong>path('admin/', admin.site.urls),</strong>
+    path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
     re_path(r'^([0-9]+)/$', views.best),
 ]
@@ -132,7 +129,7 @@ tags:
 
 <p>Views are the heart of the web application, receiving HTTP requests from web clients and returning HTTP responses. In between, they marshall the other resources of the framework to access databases, render templates, etc. </p>
 
-<p>The example below shows a minimal view function <code>index()</code>, which could have been called by our URL mapper in the previous section. Like all view functions it receives an <code>HttpRequest</code> object as a parameter (<code>request</code>) and returns an <code>HttpResponse</code> object. In this case we don't do anything with the request, and our response simply returns a hard-coded string. We'll show you a request that does something more interesting in a later section.</p>
+<p>The example below shows a minimal view function <code>index()</code>, which could have been called by our URL mapper in the previous section. Like all view functions it receives an <code>HttpRequest</code> object as a parameter (<code>request</code>) and returns an <code>HttpResponse</code> object. In this case we don't do anything with the request, and our response returns a hard-coded string. We'll show you a request that does something more interesting in a later section.</p>
 
 <pre class="brush: python notranslate"># filename: views.py (Django view functions)
 
@@ -153,9 +150,6 @@ def index(request):
  <li>Functions are declared using the <code>def</code> keyword as shown above, with named parameters listed in brackets after the name of the function; the whole line ends in a colon. Note how the next lines are all <strong>indented</strong>. The indentation is important, as it specifies that the lines of code are inside that particular block (mandatory indentation is a key feature of Python, and is one reason that Python code is so easy to read).</li>
 </ul>
 </div>
-
-<ul>
-</ul>
 
 <p>Views are usually stored in a file called <strong>views.py</strong>.</p>
 
@@ -185,7 +179,7 @@ class Team(models.Model):
 <p><strong>Note</strong>: A little bit of Python:</p>
 
 <ul>
- <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behaviour between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
+ <li>Python supports "object-oriented programming", a style of programming where we organise our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword <code>class</code> to define the "blueprint" for an object. We can create multiple specific <em>instances</em> of the type of object based on the model in the class.<br>
   <br>
   So for example, here we have a <code>Team</code> class, which derives from the <code>Model</code> class. This means it is a model, and will contain all the methods of a model, but we can also give it specialized features of its own too. In our model we define the fields our database will need to store our data, giving them specific names. Django uses these definitions, including the field names, to create the underlying database.</li>
 </ul>
@@ -207,7 +201,6 @@ def index(request):
     context = {'youngest_teams': list_teams}
     return render(request, '/best/index.html', context)
 </pre>
-
 
 <p>This function uses the <code>render()</code> function to create the <code>HttpResponse</code> that is sent back to the browser. This function is a <em>shortcut</em>; it creates an HTML file by combining a specified HTML template and some data to insert in the template (provided in the variable named "<code>context</code>"). In the next section we show how the template has the data inserted in it to create the HTML.</p>
 

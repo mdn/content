@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.theme.onUpdated.addListener(listener)
+<pre class="brush:js">browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)
 </pre>
@@ -71,7 +71,7 @@ browser.theme.onUpdated.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">function handleUpdated(updateInfo) {
+<pre class="notranslate brush: js">function handleUpdated(updateInfo) {
   if (updateInfo.theme.colors) {
     console.log(`Theme was applied: ${updateInfo.theme}`);
   } else {

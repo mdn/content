@@ -18,8 +18,7 @@ tags:
    <li><code>loc TEXT</code>, the fully-resolved source file containing the declaration or definition of the function. See below.</li>
    <li><code>UNIQUE (name, loc) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>The fully-qualified method name includes the return value, namespaces, class name, method or function name, and parameter types. For instance, the code</p>
+    <p>The fully-qualified method name includes the return value, namespaces, class name, method or function name, and parameter types. For instance, the code</p>
   <pre class="brush: cpp">namespace ns {
   class cs {
     int method(float, double);
@@ -27,7 +26,7 @@ tags:
 };
     </pre>
   <p>would result in a <code>name</code> of <code>int ns::cs::method(float,double)</code>. For nonstatic methods, <code>this</code> is excluded from the parameter list, though we may want to denote nonstatic methods with a separate field. The global namespace is indicated by a leading <code>::</code>. (Types are currently not fully-qualified.) The <code>loc</code> refers to the source file in which the declaration or definition appeared. For classes, the declaration context will always be available, and this location will refer to the file containing the declaration (for instance, <code>foo.h</code>). For function calls, this location may refer to the declaration or definition, and cannot presently be used in concert with <code>name</code> as a reliably unique identifier. (This could potentially be solved by implementing linker-style name resolution rules in Callgraph.) For function pointers, it is impossible to determine a location, and <code>loc</code> will be the empty string. (You should guard on this case using <code>isPtr</code>.) For compiler built-ins, <code>loc</code> will be <code>&lt;built-in&gt;</code>. Since symlinks are prevalent in the Mozilla build process, the path in <code>loc</code> is always fully-resolved; that is, it will be an absolute path which is guaranteed to have a one-to-one mapping with a particular file in the source or object tree. (In the case of generated files, such as from xpidlgen, it will point into the object tree. Note also that one can override gcc's notion of the current source file using the <code>#file</code> directive; in the likely case where this file doesn't exist, the resulting <code>loc</code> will not be fully-resolved. Caveat emptor. Thankfully, this practice is uncommon.)</p>
-  <p>The <code>(name, loc)</code> pair is intended to be a unique identifier for a given function or method call. (Though this currently breaks down for functions and function pointers.) In the future, we may include a <code>mangledName</code> field in the table, which would allow more consistency with linker rules regarding function name resolution and uniqueness. We may also add a field indicating whether the function definition has been seen (which would distinguish, say, calls into library functions from functions who simply don't call anyone else).</p>
+  <p>The <code>(name, loc)</code> pair is intended to be a unique identifier for a given function or method call. (Though this currently breaks down for functions and function pointers.) In the future, we may include a <code>mangledName</code> field in the table, which would allow more consistency with linker rules regarding function name resolution and uniqueness. We may also add a field indicating whether the function definition has been seen (which would distinguish, say, calls into library functions from functions who don't call anyone else).</p>
  </li>
  <li><code>edge</code>. This represents a call between functions, and contains the following fields:
   <ul>
@@ -35,8 +34,7 @@ tags:
    <li><code>callee INTEGER REFERENCES node</code>, likewise for the callee.</li>
    <li><code>PRIMARY KEY(caller, callee) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>The primary key is currently unique on caller and callee, meaning that if the caller calls the callee multiple times, only one edge will exist in the table. We may change this if there are cases where the number of calls is relevant.</p>
+    <p>The primary key is currently unique on caller and callee, meaning that if the caller calls the callee multiple times, only one edge will exist in the table. We may change this if there are cases where the number of calls is relevant.</p>
  </li>
  <li><code>implementors</code>. This table provides information about the inheritance chain of C++ classes, specifically which virtual interface methods are overridden or implemented by which classes.
   <ul>
@@ -47,8 +45,7 @@ tags:
    <li><code>id INTEGER PRIMARY KEY</code>, a unique identifier for the entry.</li>
    <li><code>UNIQUE (implementor, interface, method, loc) ON CONFLICT IGNORE</code></li>
   </ul>
-  <p> </p>
-  <p>An interface is considered a class which declares the method in question to be virtual (either pure or non-pure), while an implementor overrides it with a declaration that is non-pure. (Whether the implementor actually defines the function is not considered.) For instance, consider the code</p>
+    <p>An interface is considered a class which declares the method in question to be virtual (either pure or non-pure), while an implementor overrides it with a declaration that is non-pure. (Whether the implementor actually defines the function is not considered.) For instance, consider the code</p>
   <pre class="brush: cpp">class iFoo {
   public:
     virtual void method1(float) = 0;

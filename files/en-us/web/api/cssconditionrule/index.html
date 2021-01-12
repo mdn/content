@@ -9,22 +9,13 @@ tags:
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p>An object implementing the <strong><code>CSSConditionRule</code></strong> interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of {{domxref("CSSGroupingRule")}}.</p>
+<p>An object implementing the <strong><code>CSSConditionRule</code></strong> interface represents a single condition CSS <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, which consists of a condition and a statement block.</p>
 
-<p>Two objects derive from it : {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<p>The syntax is described using the <a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
-
-<pre>interface CSSConditionRule : CSSGroupingRule {
-    attribute DOMString conditionText;
-}
-</pre>
+<p>Two objects derive from <code>CSSConditionRule</code>: {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p>The <code>CSSConditionRule</code> derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all properties of these classes. It has one specific property:</p>
+<p><em>Inherits properties from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.</em></p>
 
 <dl>
  <dt>{{domxref("CSSConditionRule.conditionText")}}</dt>
@@ -33,7 +24,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p>The <code>CSSConditionRule</code> derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupingRule")}} and inherits all methods of these classes. It has no specific property of its own.</p>
+<p>No specific methods; inherits methods from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -56,12 +47,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.CSSConditionRule")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/DOM/Using_dynamic_styling_information" title="en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+ <li><a href="/en-US/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
 </ul>

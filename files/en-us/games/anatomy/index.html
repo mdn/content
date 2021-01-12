@@ -10,7 +10,7 @@ tags:
 <div>{{GamesSidebar}}</div>
 
 <div class="summary">
-<p><span class="seoSummary">This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to the modern game development arena understand what is required when building a game and how web standards like JavaScript lend themselves as tools.</span> Experienced game programmers who are new to web development could also benefit, too.</p>
+<p><span class="seoSummary">This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools.</span> Experienced game programmers who are new to web development could also benefit, too.</p>
 </div>
 
 <h2 id="Present_accept_interpret_calculate_repeat">Present, accept, interpret, calculate, repeat</h2>
@@ -109,7 +109,7 @@ main(); // Start the cycle</pre>
 
 <h2 id="Building_a_more_optimized_main_loop_in_JavaScript">Building a <em>more</em> <em>optimized</em> main loop in JavaScript</h2>
 
-<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="http://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
+<p>Ultimately, in JavaScript, the browser is running its own main loop and your code exists in some of its stages. The above sections describe main loops which try not to wrestle away control from the browser. These main methods attach themselves to <code>window.requestAnimationFrame()</code>, which asks the browser for control over the upcoming frame. It is up to the browser how to relate these requests to their main loop. The <a href="https://www.w3.org/TR/animation-timing/">W3C spec for requestAnimationFrame</a> does not really define exactly when the browsers must perform the requestAnimationFrame callbacks. This can be a benefit because it leaves browser vendors free to experiment with the solutions that they feel are best and tweak it over time.</p>
 
 <p>Modern versions of Firefox and Google Chrome (and probably others) <em>attempt</em> to connect <code>requestAnimationFrame</code> callbacks to their main thread at the very beginning of a frame's timeslice. The browser's main thread thus <em>tries</em> to look like the following:</p>
 
@@ -122,7 +122,7 @@ main(); // Start the cycle</pre>
 
 <p>You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.</p>
 
-<p>While we are on the topic of budgeting time, many web browsers have a tool called <em>High Resolution Time</em>. The {{ domxref("Date") }} object is no longer the recognised method for timing events because it is very imprecise and can be modified by the system clock. High Resolution Time, on the other hand, counts the number of milliseconds since <code>navigationStart</code> (when the previous document is unloaded). This value is returned as a decimal number accurate to a thousandth of a millisecond. It is known as a {{ domxref("DOMHighResTimeStamp") }} but, for all intents and purposes, consider it a floating point number.</p>
+<p>While we are on the topic of budgeting time, many web browsers have a tool called <em>High Resolution Time</em>. The {{ domxref("Date") }} object is no longer the recognized method for timing events because it is very imprecise and can be modified by the system clock. High Resolution Time, on the other hand, counts the number of milliseconds since <code>navigationStart</code> (when the previous document is unloaded). This value is returned as a decimal number accurate to a thousandth of a millisecond. It is known as a {{ domxref("DOMHighResTimeStamp") }} but, for all intents and purposes, consider it a floating point number.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Systems (hardware or software) that are not capable of microsecond accuracy are allowed to provide millisecond accuracy as a minimum. They should provide 0.001ms accuracy if they are capable of it, however.</p>
@@ -167,7 +167,7 @@ main(); // Start the cycle</pre>
 
 <h3 id="What_most_browser_games_should_look_like">What most browser games should look like</h3>
 
-<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can simply update, render, and then do nothing until VSync.</p>
+<p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.</p>
 
 <pre class="brush: js notranslate">/*
 * Starting with the semicolon is in case whatever line of code above this example
@@ -207,13 +207,13 @@ main(); // Start the cycle</pre>
 <p>One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:</p>
 
 <ul>
- <li>Draw on <code>requestAnimationFrame</code> and update on a {{ domxref("window.setInterval") }} or {{ domxref("window.setTimeout") }}.
+ <li>Draw on <code>requestAnimationFrame</code> and update on a {{ domxref("WindowOrWorkerGlobalScope/setInterval") }} or {{ domxref("WindowOrWorkerGlobalScope/setTimeout") }}.
 
   <ul>
    <li>This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)</li>
   </ul>
  </li>
- <li>Draw on <code>requestAnimationFrame</code> and update on a <code>setInterval</code> or <code>setTimeout</code> in a <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Worker</a>.
+ <li>Draw on <code>requestAnimationFrame</code> and update on a <code>setInterval</code> or <code>setTimeout</code> in a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Worker</a>.
   <ul>
    <li>This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.</li>
   </ul>
@@ -304,7 +304,7 @@ main(); // Start the cycle</pre>
   main(performance.now()); // Start the cycle
 })();</pre>
 
-<p>Another alternative is to simply do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
+<p>Another alternative is to do certain things less often. If a portion of your update loop is difficult to compute but insensitive to time, you might consider scaling back its frequency and, ideally, spreading it out into chunks throughout that lengthened period. An implicit example of this is found over at The Artillery Blog for Artillery Games, where they <a href="http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html">adjust their rate of garbage generation</a> to optimize garbage collection. Obviously, cleaning up resources is not time sensitive (especially if tidying is more disruptive than the garbage itself).</p>
 
 <p>This may also apply to some of your own tasks. Those are good candidates to throttle when available resources become a concern.</p>
 

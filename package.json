@@ -1,7 +1,7 @@
 {
   "name": "content",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "engines": {
     "node": ">=12.0.0"
@@ -12,10 +12,8 @@
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files node node_modules/@mdn/yari/tool/cli.js"
   },
   "dependencies": {
-    "@mdn/yari": "0.1.388",
+    "@mdn/yari": "0.1.492",
+    "cross-env": "7.0.3",
     "env-cmd": "10.1.0"
-  },
-  "devDependencies": {
-    "cross-env": "7.0.3"
   }
 }

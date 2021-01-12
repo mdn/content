@@ -54,7 +54,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentFrame)
     console.log(currentTime)
   }
-  // the process method is required - simply output silence,
+  // the process method is required - output silence,
   // which the outputs are already filled with
   process (inputs, outputs, parameters) {
     return true
@@ -102,7 +102,6 @@ testNode.connect(audioContext.destination)
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("api.AudioWorkletGlobalScope")}}</p>
 </div>

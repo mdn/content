@@ -16,25 +16,21 @@ tags:
 
 <div>Connects the extension to a native application on the user's computer.</div>
 
-<div> </div>
 
 <div>This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller.</div>
 
-<div> </div>
 
 <div>The caller can then use the <code>Port</code> to exchange messages with the native application using <code>Port.postMessage()</code> and <code>port.onMessage</code>.</div>
 
-<div> </div>
 
 <div>The native application will run until it exits itself, or the caller calls <code>Port.disconnect()</code>, or the page that created the <code>Port</code> is destroyed. Once the <code>Port</code> is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.</div>
 
-<div> </div>
 
 <p>For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var port = browser.runtime.connectNative(
+<pre class="brush:js">var port = browser.runtime.connectNative(
   application // string
 )
 </pre>
@@ -60,7 +56,7 @@ tags:
 
 <p>This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:</p>
 
-<pre class="brush: js">/*
+<pre class="notranslate brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");

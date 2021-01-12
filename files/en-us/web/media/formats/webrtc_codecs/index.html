@@ -27,7 +27,7 @@ tags:
 
 <p>Before looking at codec-specific capabilities and requirements, there are a few overall requirements that must be met by <em>any</em> codec configuration used with WebRTC.</p>
 
-<p>Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at at least 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.</p>
+<p>Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.</p>
 
 <p>SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an <code>a=imageattr</code> SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>The network payload format for sharing VP8 using {{Glossary("RTP")}} (such as when using WebRTC) is described in {{RFC(7741, "RTP Payload Format for VP8 Video")}}.</p>
 
-<h3 id="AVC_H.264"><a id="AVC" name="AVC">AVC / H.264</a></h3>
+<h3 id="AVC_H.264"><a id="AVC">AVC / H.264</a></h3>
 
 <p>Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.</p>
 
@@ -108,7 +108,7 @@ tags:
 
 <h4 id="Special_parameter_support_requirements">Special parameter support requirements</h4>
 
-<p>AVC offers a wide array of parameters for controlling optional values. In order to improve reliability of WebRTC media sharing across multiple platforms and browsers, it's required that WebRTC endpoints that support AVC handle certain parameters in specific ways. Sometimes this simply means a parameter must (or must not) be supported. Sometimes it means requiring a specific value for a parameter, or that a specific set of values be allowed. And sometimes the requirements are more intricate.</p>
+<p>AVC offers a wide array of parameters for controlling optional values. In order to improve reliability of WebRTC media sharing across multiple platforms and browsers, it's required that WebRTC endpoints that support AVC handle certain parameters in specific ways. Sometimes this means a parameter must (or must not) be supported. Sometimes it means requiring a specific value for a parameter, or that a specific set of values be allowed. And sometimes the requirements are more intricate.</p>
 
 <h5 id="Parameters_which_are_useful_but_not_required">Parameters which are useful but not required</h5>
 
@@ -221,9 +221,9 @@ tags:
  </tbody>
 </table>
 
-<p><a id="other-audio-foot-1" name="other-audio-foot-1">[1]</a> <strong>{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}</strong> (<strong>iLBC</strong>) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC, but it is not available in all browsers and is not one of the mandatory codecs.</p>
+<p><a id="other-audio-foot-1">[1]</a> <strong>{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}</strong> (<strong>iLBC</strong>) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC, but it is not available in all browsers and is not one of the mandatory codecs.</p>
 
-<p><a id="other-audio-foot-2" name="other-audio-foot-2">[2]</a> The <strong>{{interwiki("wikipedia", "Internet Speech Audio Codec")}}</strong> (<strong>iSAC</strong>) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream. While it's not a mandatory codec, Safari and Chrome support it. Firefox and Edge do not.</p>
+<p><a id="other-audio-foot-2">[2]</a> The <strong>{{interwiki("wikipedia", "Internet Speech Audio Codec")}}</strong> (<strong>iSAC</strong>) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream. While it's not a mandatory codec, Safari and Chrome support it. Firefox and Edge do not.</p>
 
 <p><strong>{{interwiki("wikipedia", "Comfort noise")}}</strong> (<strong>CN</strong>) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.</p>
 

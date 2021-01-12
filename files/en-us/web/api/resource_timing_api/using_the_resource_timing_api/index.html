@@ -77,11 +77,11 @@ Figure 1. Resource timing properties</p>
     t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
     console.log("... Fetch until response end time = " + t);
 
-    // Request start until reponse end
+    // Request start until response end
     t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
     console.log("... Request start until response end time = " + t);
 
-    // Start until reponse end
+    // Start until response end
     t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
     console.log("... Start until response end time = " + t);
   }

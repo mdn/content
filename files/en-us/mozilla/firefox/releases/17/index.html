@@ -20,8 +20,8 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Support for {{cssxref("@supports")}} at-rule defined in <a href="http://dev.w3.org/csswg/css3-conditional/" title="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed. It is disabled by default. Developers can try it by setting <code>layout.css.supports-rule.enabled</code> to true (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740" title="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>).</li>
- <li>Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169" title="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
+ <li>Support for {{cssxref("@supports")}} at-rule defined in <a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed. It is disabled by default. Developers can try it by setting <code>layout.css.supports-rule.enabled</code> to true (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>).</li>
+ <li>Support for the CSS Selectors Level 4 pseudo-class {{cssxref(":dir", ":dir()")}} allowing selection of elements based on their directionality has landed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
  <li>Support for the newly specified <code>isolate-override</code> value of the CSS {{cssxref("unicode-bidi")}} value has landed ({{bug("774335")}})</li>
  <li>Our prefixed implementation of {{cssxref("box-sizing")}} now takes into account {{cssxref("min-height")}} and {{cssxref("max-height")}}. One step closer to its unprefixing ({{bug("308801")}})</li>
 </ul>
@@ -29,7 +29,7 @@ tags:
 <h3 id="DOMAPIs">DOM/APIs</h3>
 
 <ul>
- <li>Support for {{domxref("CSSSupportsRule")}} interface defined in <a href="http://dev.w3.org/csswg/css3-conditional/" title="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed ({{bug("649740")}})</li>
+ <li>Support for {{domxref("CSSSupportsRule")}} interface defined in <a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules specification</a> has been landed ({{bug("649740")}})</li>
  <li>Support for {{domxref("WheelEvent")}} object and <code>wheel</code> event have been landed ({{bug("719320")}}).</li>
  <li>Support DOM Meta key on Linux again ({{bug("751749")}}).</li>
  <li>On {{domxref("HTMLMediaElement")}}, a new method, <code>mozGetMetadata</code>, that returns a javascript object whose properties represent metadata from the playing media resource as {key: value} pairs ({{bug("763010")}}).</li>
@@ -43,11 +43,11 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a> object now offers Harmony <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/startsWith" title="JavaScript/Reference/Global_Objects/String/startsWith"><code>startsWith</code></a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/endsWith" title="JavaScript/Reference/Global_Objects/String/endsWith"><code>endsWith</code></a>, and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/contains" title="JavaScript/Reference/Global_Objects/String/contains"><code>contains</code></a> methods ({{bug("772733")}}).</li>
- <li>The String methods <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/link" title="JavaScript/Reference/Global_Objects/String/link">link</a> and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/anchor" title="JavaScript/Reference/Global_Objects/String/anchor">anchor</a> now escape the <code>'<strong>"</strong>'</code> (quotation mark) ({{bug("352437")}}).</li>
- <li>Experimental support for strawman <a href="/en-US/docs/JavaScript/Reference/Global_Objects/ParallelArray" title="JavaScript/Reference/Global_Objects/ParallelArray"><code>ParallelArray</code></a> object has been implemented ({{bug("778559")}}).</li>
- <li>Support to iterate <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Map" title="JavaScript/Reference/Global_Objects/Map">Map</a></code>/<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Set" title="JavaScript/Reference/Global_Objects/Set">Set</a></code> ({{bug("725909")}}).</li>
- <li>Disabled <a href="/en-US/docs/E4X" title="E4X">E4X</a> for web content by default ({{bug("778851")}}).</li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a> object now offers Harmony <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/startsWith"><code>startsWith</code></a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/endsWith"><code>endsWith</code></a>, and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/contains"><code>contains</code></a> methods ({{bug("772733")}}).</li>
+ <li>The String methods <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/link">link</a> and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/anchor">anchor</a> now escape the <code>'<strong>"</strong>'</code> (quotation mark) ({{bug("352437")}}).</li>
+ <li>Experimental support for strawman <a href="/en-US/docs/JavaScript/Reference/Global_Objects/ParallelArray"><code>ParallelArray</code></a> object has been implemented ({{bug("778559")}}).</li>
+ <li>Support to iterate <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Map">Map</a></code>/<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Set">Set</a></code> ({{bug("725909")}}).</li>
+ <li>Disabled <a href="/en-US/docs/E4X">E4X</a> for web content by default ({{bug("778851")}}).</li>
  <li><code>__exposedProps__</code> must now be set for Chrome JavaScript objects exposed to content. Attempts to access Chrome objects from content without <code>__exposedProps__</code> set will fail silently ({{bug("553102")}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for..of</code></a> loops now work in terms of <code>.iterator()</code> and <code>.next()</code> ({{bug(725907)}}).</li>
 </ul>
@@ -71,13 +71,13 @@ tags:
 <h3 id="XUL">XUL</h3>
 
 <ul>
- <li>XUL <a href="/en-US/docs/XUL/key" title="XUL/key">key</a> element supports "os" modifier which is Win key (Super or Hyper key) ({{bug("778732")}}).</li>
+ <li>XUL <a href="/en-US/docs/XUL/key">key</a> element supports "os" modifier which is Win key (Super or Hyper key) ({{bug("778732")}}).</li>
 </ul>
 
 <h3 id="Network">Network</h3>
 
 <ul>
- <li>Removed the non-standard feature <code>XMLHttpRequest.onuploadprogress</code> which was deprecaed in Firefox 14.</li>
+ <li>Removed the non-standard feature <code>XMLHttpRequest.onuploadprogress</code> which was deprecated in Firefox 14.</li>
 </ul>
 
 <p><em>No change.</em></p>
@@ -120,7 +120,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.mozilla.org/en-US/firefox/17.0/releasenotes/">Firefox 17 Release Notes</a></li>
+ <li><a href="https://www.mozilla.org/en-US/firefox/17.0/releasenotes/">Firefox 17 Release Notes</a></li>
  <li><a href="https://hacks.mozilla.org/2012/08/aurora-17-is-out/">Aurora 17 is out, bringing better security and support for new standards</a> (Mozilla Hacks)</li>
  <li><a href="https://www.fxsitecompat.com/en-US/versions/17/">Site Compatibility for Firefox 17</a></li>
  <li><a href="https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/">Add-on Compatibility for Firefox 17</a> (Add-ons Blog)</li>

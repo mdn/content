@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>.)</td>
+   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -40,7 +40,7 @@ tags:
 <p>In order to put a simple image on a webpage, we use the {{htmlelement("img")}} element. This is an {{glossary("empty element")}} (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — <code>src</code> (sometimes spoken as its full title, <em>source</em>). The <code>src</code> attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <code>href</code> attribute values in {{htmlelement("a")}} elements.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
+<p><strong>Note</strong>: You should read <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
 </div>
 
 <p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
@@ -110,12 +110,12 @@ tags:
  <li>Users have turned off images to reduce data transfer volume and distractions. This is especially common on mobile phones, and in countries where bandwidth is limited or expensive.</li>
 </ul>
 
-<p>What exactly should you write inside your <code>alt</code> attribute? It depends on <em>why </em>the image is there in the first place. In other words, what you lose if your image doesn't show up:</p>
+<p>What exactly should you write inside your <code>alt</code> attribute? It depends on <em>why</em> the image is there in the first place. In other words, what you lose if your image doesn't show up:</p>
 
 <ul>
- <li><strong>Decoration. </strong>You should use {{anch("CSS background images")}} for decorative images, but if you must use HTML, add a blank <code>alt=""</code>. If the image isn't part of the content, a screen reader shouldn't waste time reading it.</li>
- <li><strong>Content. </strong>If your image provides significant information, provide the same information in a <em>brief </em><code>alt</code> text – or even better, in the main text which everybody can see. Don't write redundant <code>alt</code> text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use <code>alt=""</code>.</li>
- <li><strong>Link.</strong> If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide <a href="/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording">accessible link text</a>. In such cases you may, either, write it inside the same <code>&lt;a&gt;</code> element, or inside the image's <code>alt</code> attribute – whichever works best in your case.</li>
+ <li><strong>Decoration.</strong> You should use {{anch("CSS background images")}} for decorative images, but if you must use HTML, add a blank <code>alt=""</code>. If the image isn't part of the content, a screen reader shouldn't waste time reading it.</li>
+ <li><strong>Content.</strong> If your image provides significant information, provide the same information in a <em>brief </em><code>alt</code> text – or even better, in the main text which everybody can see. Don't write redundant <code>alt</code> text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use <code>alt=""</code>.</li>
+ <li><strong>Link.</strong> If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording">accessible link text</a>. In such cases you may, either, write it inside the same <code>&lt;a&gt;</code> element, or inside the image's <code>alt</code> attribute – whichever works best in your case.</li>
  <li><strong>Text.</strong> You should not put your text into images. If your main heading needs a drop shadow, for example, <a href="/en-US/docs/Web/CSS/text-shadow">use CSS</a> for that rather than putting the text into an image. However, If you <em>really can't avoid doing this</em>, you should supply the text inside the <code>alt</code> attribute.</li>
 </ul>
 
@@ -149,7 +149,7 @@ tags:
 
 <h3 id="Image_titles">Image titles</h3>
 
-<p>As <a href="https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
+<p>As <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
 
 <pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;

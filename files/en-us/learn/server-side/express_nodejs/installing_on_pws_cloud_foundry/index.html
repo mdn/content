@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">This article provides a practical demonstration of how to install <em>LocalLibrary</em> on the <a href="http://run.pivotal.io">Pivotal Web Services PaaS cloud</a> — this is a full-featured, open source alternative to Heroku, the PaaS cloud service used in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Part 7 of our tutorial</a>. PWS/Cloud Foundry is definitely worth checking out if you are looking for an alternative to Heroku (or another PaaS cloud service), or simply feel like trying something different.</p>
+<p class="summary">This article provides a practical demonstration of how to install <em>LocalLibrary</em> on the <a href="http://run.pivotal.io">Pivotal Web Services PaaS cloud</a> — this is a full-featured, open source alternative to Heroku, the PaaS cloud service used in <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Part 7 of our tutorial</a>. PWS/Cloud Foundry is definitely worth checking out if you are looking for an alternative to Heroku (or another PaaS cloud service), or feel like trying something different.</p>
 
 <h2 id="Why_PWS">Why PWS?</h2>
 
@@ -96,7 +96,7 @@ tags:
 
 <h3 id="Database_configuration">Database configuration</h3>
 
-<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js </strong>file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parseable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
+<p>So far in this tutorial we've used a single database that is hard coded into the <strong>app.js</strong> file. Normally we'd like to be able to have a different database for production and development, so next we'll modify the LocalLibrary website to get the database URI from the OS environment, and otherwise use our development database that we added manually earlier. Cloud Foundry has a very flexible services model that enables multiple services of the same type to exist in the environment. It stores all services related configurations in a single parsable JSON object called <code>VCAP_SERVICES</code>. A typical <code>VCAP_SERVICES</code> variable looks like this:</p>
 
 <pre class="brush: json">{
  "VCAP_SERVICES": {

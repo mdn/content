@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>repeating-linear-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functionals">function</a> creates an image consisting of repeating linear gradients. It is similar to {{cssxref("linear-gradient")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
+<p>The <strong><code>repeating-linear-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of repeating linear gradients. It is similar to {{cssxref("linear-gradient")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}</div>
 
@@ -68,7 +68,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">repeating-linear-gradient(  [ <a href="/en-US/CSS/angle">&lt;angle&gt;</a> | to &lt;side-or-corner&gt; ,]? &lt;color-stop-list&gt; )
+<pre class="brush: css notranslate">repeating-linear-gradient(  [ <a href="/en-US/CSS/angle">&lt;angle&gt;</a> | to &lt;side-or-corner&gt; ,]? &lt;color-stop-list&gt; )
                             \---------------------------------/ \---------------/
                               Definition of the gradient line   List of color stops
 
@@ -150,8 +150,6 @@ where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <div>{{Compat("css.types.image.gradient.repeating-linear-gradient")}}</div>
 

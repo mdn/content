@@ -79,7 +79,7 @@ mistypeVariable = 17;  // this line throws a ReferenceError due to the
                        // misspelling of variable
 </pre>
 
-<p>Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, <code>NaN</code> is a non-writable global variable. In normal code assigning to <code>NaN</code> does nothing; the developer receives no failure feedback. In strict mode assigning to <code>NaN</code> throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions" title="en-US/JavaScript/Reference/Global Objects/Object/preventExtensions">non-extensible</a> object) will throw in strict mode:</p>
+<p>Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, <code>NaN</code> is a non-writable global variable. In normal code assigning to <code>NaN</code> does nothing; the developer receives no failure feedback. In strict mode assigning to <code>NaN</code> throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions">non-extensible</a> object) will throw in strict mode:</p>
 
 <pre class="brush: js notranslate">'use strict';
 
@@ -102,13 +102,13 @@ Object.preventExtensions(fixed);
 fixed.newProp = 'ohai'; // throws a TypeError
 </pre>
 
-<p>Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would simply have no effect):</p>
+<p>Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would have no effect):</p>
 
 <pre class="brush: js notranslate">'use strict';
 delete Object.prototype; // throws a TypeError
 </pre>
 
-<p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. The normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is simply a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
+<p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. The normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
 
 <div class="note">
 <p>This is no longer the case in ECMAScript 2015 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1041128">bug 1041128</a>).</p>
@@ -141,7 +141,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is simply ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Seventh, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js notranslate">(function() {
 'use strict';
@@ -245,7 +245,7 @@ console.assert(pair[0] === 42);
 console.assert(pair[1] === 17);
 </pre>
 
-<p>Third, <code>arguments.callee</code> is no longer supported. In normal code <code>arguments.callee</code> refers to the enclosing function. This use case is weak: simply name the enclosing function! Moreover, <code>arguments.callee</code> substantially hinders optimizations like inlining functions, because it must be made possible to provide a reference to the un-inlined function if <code>arguments.callee</code> is accessed. <code>arguments.callee</code> for strict mode functions is a non-deletable property which throws an error when set or retrieved:</p>
+<p>Third, <code>arguments.callee</code> is no longer supported. In normal code <code>arguments.callee</code> refers to the enclosing function. This use case is weak: name the enclosing function! Moreover, <code>arguments.callee</code> substantially hinders optimizations like inlining functions, because it must be made possible to provide a reference to the un-inlined function if <code>arguments.callee</code> is accessed. <code>arguments.callee</code> for strict mode functions is a non-deletable property which throws an error when set or retrieved:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var f = function() { return arguments.callee; };
@@ -256,7 +256,7 @@ f(); // throws a TypeError
 
 <p>Strict mode makes it easier to write "secure" JavaScript. Some websites now provide ways for users to write JavaScript which will be run by the website <em>on behalf of other users</em>. JavaScript in browsers can access the user's private information, so such JavaScript must be partially transformed before it is run, to censor access to forbidden functionality. JavaScript's flexibility makes it effectively impossible to do this without many runtime checks. Certain language functions are so pervasive that performing runtime checks has a considerable performance cost. A few strict mode tweaks, plus requiring that user-submitted JavaScript be strict mode code and that it be invoked in a certain manner, substantially reduce the need for those runtime checks.</p>
 
-<p>First, the value passed as <code>this</code> to a function in strict mode is not forced into being an object (a.k.a. "boxed"). For a normal function, <code>this</code> is always an object: either the provided object if called with an object-valued <code>this</code>; the value, boxed, if called with a Boolean, string, or number <code>this</code>; or the global object if called with an <code>undefined</code> or <code>null</code> <code>this</code>. (Use <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>, or <a href="/en-US/Web/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> to specify a particular <code>this</code>.) Not only is automatic boxing a performance cost, but exposing the global object in browsers is a security hazard because the global object provides access to functionality that "secure" JavaScript environments must restrict. Thus for a strict mode function, the specified <code>this</code> is not boxed into an object, and if unspecified, <code>this</code> will be <code>undefined</code>:</p>
+<p>First, the value passed as <code>this</code> to a function in strict mode is not forced into being an object (a.k.a. "boxed"). For a normal function, <code>this</code> is always an object: either the provided object if called with an object-valued <code>this</code>; the value, boxed, if called with a Boolean, string, or number <code>this</code>; or the global object if called with an <code>undefined</code> or <code>null</code> <code>this</code>. (Use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a> to specify a particular <code>this</code>.) Not only is automatic boxing a performance cost, but exposing the global object in browsers is a security hazard because the global object provides access to functionality that "secure" JavaScript environments must restrict. Thus for a strict mode function, the specified <code>this</code> is not boxed into an object, and if unspecified, <code>this</code> will be <code>undefined</code>:</p>
 
 <pre class="brush: js notranslate">'use strict';
 function fun() { return this; }
@@ -338,7 +338,7 @@ function baz() { // kosher
 
 <h2 id="Strict_mode_in_browsers">Strict mode in browsers</h2>
 
-<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a class="external" href="http://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
+<p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a class="external" href="https://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -356,12 +356,12 @@ function baz() { // kosher
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/" title="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/" title="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/" title="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
+ <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
  <li><a href="http://qnimate.com/javascript-strict-mode-in-nutshell/">JavaScript "use strict" tutorial for beginners.</a></li>
- <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/" title="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
+ <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
  <li><a class="external" href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
- <li><a class="external" href="http://kangax.github.io/compat-table/es5/#Strict_mode">Strict mode compatibility table</a></li>
+ <li><a class="external" href="https://kangax.github.io/compat-table/es5/#Strict_mode">Strict mode compatibility table</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">Transitioning to strict mode</a></li>
 </ul>

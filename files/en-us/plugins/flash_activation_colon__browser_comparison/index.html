@@ -14,7 +14,7 @@ tags:
 <table class="fullwidth-table">
  <thead>
   <tr>
-   <td> </td>
+   <td></td>
    <th scope="col">Mozilla Firefox</th>
    <th scope="col">Google Chrome</th>
    <th scope="col">Microsoft Edge</th>
@@ -110,21 +110,21 @@ tags:
 
 <p>If a Flash element is very small, hidden, or covered by other content, users will probably not notice that Flash is required and will become confused. Even if the plugin element will eventually be hidden, pages should create the plugin element so that it's visible on the page, and should resize or hide it only after the user has activated the plugin. This can be done by calling a JavaScript function when the plugin is activated:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">pluginCreated</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// We don't need to see the plugin, so hide it by resizing</span>
-  <span class="keyword token">var</span> plugin <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'myPlugin'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  plugin<span class="punctuation token">.</span>height <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  plugin<span class="punctuation token">.</span>width <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  plugin<span class="punctuation token">.</span><span class="function token">callPluginMethod</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers language-js">function pluginCreated() {
+  // We don't need to see the plugin, so hide it by resizing
+  var plugin = document.getElementById('myPlugin');
+  plugin.height = 0;
+  plugin.width = 0;
+  plugin.callPluginMethod();
+}</pre>
 
 <p>The HTML, by default, specifies the Flash object to be a size that makes it visible, like this:</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="comment token">&lt;!-- Give the plugin an initial size so it is visible --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>object</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/x-shockwave-flash<span class="punctuation token">"</span></span> <span class="attr-name token">data</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>myapp.swf<span class="punctuation token">"</span></span>
-      <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>myPlugin<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>300<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>300<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>callback<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pluginCreated()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>object</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers language-html">&lt;!-- Give the plugin an initial size so it is visible --&gt;
+&lt;object type="application/x-shockwave-flash" data="myapp.swf"
+      id="myPlugin" width="300" height="300"&gt;
+  &lt;param name="callback" value="pluginCreated()"&gt;
+&lt;/object&gt;</pre>
 
 <p>The <code>callback</code> parameter defined in the HTML can be called in Flash using its <code>flash.external.ExternalInterface</code> API.</p>
 
@@ -134,12 +134,12 @@ tags:
 
 <p>First, set your up your HTML with a callback that calls the JavaScript function <code>pluginCreated()</code>, like this:</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>object</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>application/x-my-plugin<span class="punctuation token">"</span></span> <span class="attr-name token">data</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>somedata.mytype<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>myPlugin<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>param</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>callback<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pluginCreated()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>object</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers language-html">&lt;object type="application/x-my-plugin" data="somedata.mytype" id="myPlugin"&gt;
+  &lt;param name="callback" value="pluginCreated()"&gt;
+&lt;/object&gt;</pre>
 
 <p>The <code>pluginCreated()</code> function is then responsible for the setup of your script and any calls back into the plugin that you need to make:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">pluginCreated</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'myPlugin'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">callPluginMethod</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers language-js">function pluginCreated() {
+  document.getElementById('myPlugin').callPluginMethod();
+}</pre>

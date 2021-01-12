@@ -32,8 +32,8 @@ tags:
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
+   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -115,7 +115,7 @@ tags:
   <li><code>allow-forms</code>: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.</li>
   <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
   <li><code>allow-orientation-lock</code>: Lets the resource <a href="/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>
-  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>.</li>
+  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a>.</li>
   <li><code>allow-popups</code>: Allows popups (such as <code>window.open()</code>, <code>target="_blank"</code>, or <code>showModalDialog()</code>). If this keyword is not used, the popup will silently fail to open.</li>
   <li><code>allow-popups-to-escape-sandbox</code>: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.</li>
   <li><code>allow-presentation</code>: Lets the resource start a <a href="/en-US/docs/Web/API/PresentationRequest">presentation session</a>.</li>
@@ -136,7 +136,7 @@ tags:
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>The URL of the page to embed. Use a value of <code>about:blank</code> to embed an empty page that conforms to the <a href="/en-US/docs/Web/Security/Same-origin_policy#Inherited_origins">same-origin policy</a>. Also note that programatically removing an <code>&lt;iframe&gt;</code>'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes <code>about:blank</code> to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.</dd>
+ <dd>The URL of the page to embed. Use a value of <code>about:blank</code> to embed an empty page that conforms to the <a href="/en-US/docs/Web/Security/Same-origin_policy#Inherited_origins">same-origin policy</a>. Also note that programmatically removing an <code>&lt;iframe&gt;</code>'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes <code>about:blank</code> to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.</dd>
  <dt>{{htmlattrdef("srcdoc")}}</dt>
  <dd>Inline HTML to embed, overriding the <code>src</code> attribute. If a browser does not support the <code>srcdoc</code> attribute, it will fall back to the URL in the <code>src</code> attribute.</dd>
  <dt>{{htmlattrdef("width")}}</dt>
@@ -194,17 +194,15 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Example1" name="Example1">A simple &lt;iframe&gt;</h3>
+<h3 id="Example1">A simple &lt;iframe&gt;</h3>
 
 <p>An <code>&lt;iframe&gt;</code> in action. After creating the frame, when the user clicks a button, its title is displayed in an alert.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html"
             title="iframe Example 1" width="400" height="300"&gt;
 &lt;/iframe&gt;</pre>
-</div>
 
 <h4 id="Result">Result</h4>
 
@@ -214,9 +212,7 @@ tags:
 
 <p>People navigating with assistive technology such as a screen reader can use the <a href="/en-US/docs/Web/HTML/Global_attributes/title"><code>title</code> attribute</a> on an <code>&lt;iframe&gt;</code> to label its content. The title's value should concisely describe the embedded content:</p>
 
-<div id="htmlOutputWrapper">
 <pre class="brush: html notranslate">&lt;iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"&gt;&lt;/iframe&gt;</pre>
-</div>
 
 <p>Without this title, they have to navigate into the <code>&lt;iframe&gt;</code> to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple <code>&lt;iframe&gt;</code>s and/or if embeds contain interactive content like video or audio.</p>
 
@@ -260,8 +256,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("html.elements.iframe", 3)}}</p>
 

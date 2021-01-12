@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var duplicating = browser.tabs.duplicate(
+<pre class="brush:js">var duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object
 )
@@ -57,7 +57,7 @@ tags:
 
 <p>Duplicate the first tab, and then log the ID of the newly created tab:</p>
 
-<pre class="brush: js">function onDuplicated(tabInfo) {
+<pre class="notranslate brush: js">function onDuplicated(tabInfo) {
   console.log(tabInfo.id);
 }
 
@@ -81,8 +81,6 @@ querying.then(duplicateFirstTab, onError);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.duplicate")}}</p>
 

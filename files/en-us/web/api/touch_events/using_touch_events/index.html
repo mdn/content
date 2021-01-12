@@ -66,7 +66,7 @@ someElement.addEventListener('touchend', process_touchend, false);
 
 <p>Process an event in an event handler, implementing the application's gesture semantics.</p>
 
-<pre class="notranslate">// touchstart handler
+<pre class="brush: js notranslate">// touchstart handler
 function process_touchstart(ev) {
   // Use the event's data to call out to the appropriate gesture handlers
   switch (ev.touches.length) {
@@ -118,11 +118,11 @@ function process_touchmove(ev) {
 
 <h2 id="What_about_Pointer_Events">What about Pointer Events?</h2>
 
-<p>The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the <a href="http://www.w3.org/TR/pointerevents/">Pointer Events standard</a> <em>defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc.</em>. That is, the abstract <em>pointer</em> creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the <a href="/en-US/docs/Web/API/Pointer_events">Pointer Events MDN article</a>.</p>
+<p>The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the <a href="https://www.w3.org/TR/pointerevents/">Pointer Events standard</a> <em>defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc.</em>. That is, the abstract <em>pointer</em> creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse. See the <a href="/en-US/docs/Web/API/Pointer_events">Pointer Events MDN article</a>.</p>
 
 <p>The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, <code>pointerdown</code> <code>pointerup</code>) thus code to handle pointer events closely matches mouse handling code.</p>
 
-<p>The implementation status of pointer events in browsers is <a href="http://caniuse.com/#search=pointer">relatively high</a> with Chrome, Firefox, IE11 and Edge having complete implementations.</p>
+<p>The implementation status of pointer events in browsers is <a href="https://caniuse.com/#search=pointer">relatively high</a> with Chrome, Firefox, IE11 and Edge having complete implementations.</p>
 
 <h2 id="Examples_and_demos">Examples and demos</h2>
 
@@ -139,7 +139,7 @@ function process_touchmove(ev) {
 
 <ul>
  <li><a href="https://rbyers.github.io/paint.html">Paint Program (by Rick Byers)</a></li>
- <li><a href="http://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
+ <li><a href="https://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
 </ul>
 
 <h2 id="Community">Community</h2>
@@ -153,5 +153,5 @@ function process_touchmove(ev) {
 <h2 id="Related_topics_and_resources">Related topics and resources</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/pointerevents/">Pointer Events Standard</a></li>
+ <li><a href="https://www.w3.org/TR/pointerevents/">Pointer Events Standard</a></li>
 </ul>

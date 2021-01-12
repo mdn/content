@@ -57,7 +57,6 @@ tags:
 
     Usage: express [options] [dir]
 
-
   Options:
 
         --version        output the version number
@@ -73,7 +72,7 @@ tags:
     -h, --help           output usage information
 </pre>
 
-<p>You can simply specify <code>express</code> to create a project inside the <em>current</em> directory using the <em>Jade</em> view engine and plain CSS (if you specify a directory name then the project will be created in a sub-folder with that name).</p>
+<p>You can specify <code>express</code> to create a project inside the <em>current</em> directory using the <em>Jade</em> view engine and plain CSS (if you specify a directory name then the project will be created in a sub-folder with that name).</p>
 
 <pre class="brush: bash notranslate"><code>express</code></pre>
 
@@ -122,7 +121,7 @@ tags:
 <p>The <em>Express Application Generator</em> allows you to create a project that is configured to use the most common CSS stylesheet engines: <a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>.</p>
 
 <div class="note">
-<p><strong>Note: </strong>CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.</p>
+<p><strong>Note:</strong> CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.</p>
 </div>
 
 <p>As with templating engines, you should use the stylesheet engine that will allow your team to be most productive. For this project, we'll use vanilla CSS (the default) as our CSS requirements are not sufficiently complicated to justify using anything else.</p>
@@ -135,7 +134,7 @@ tags:
 
 <h2 id="Creating_the_project">Creating the project</h2>
 
-<p>For the sample <em>Local Library</em> app we're going to build, we'll create a project named <em>express-locallibrary-tutorial </em>using the <em>Pug</em> template library and no CSS engine.</p>
+<p>For the sample <em>Local Library</em> app we're going to build, we'll create a project named <em>express-locallibrary-tutorial</em> using the <em>Pug</em> template library and no CSS engine.</p>
 
 <p>First, navigate to where you want to create the project and then run the <em>Express Application Generator</em> in the command prompt as shown:</p>
 
@@ -185,7 +184,7 @@ tags:
 <p>At this point, we have a complete skeleton project. The website doesn't actually <em>do</em> very much yet, but it's worth running it to show that it works.</p>
 
 <ol>
- <li>First, install the dependencies (the <code>install</code> command will fetch all the dependency packages listed in the project's<strong> package.json</strong> file).
+ <li>First, install the dependencies (the <code>install</code> command will fetch all the dependency packages listed in the project's <strong>package.json</strong> file).
 
   <pre class="brush: bash notranslate">cd express-locallibrary-tutorial
 npm install</pre>
@@ -307,7 +306,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 
 <h3 id="package.json">package.json</h3>
 
-<p>The <strong>package.json </strong>file defines the application dependencies and other information:</p>
+<p>The <strong>package.json</strong> file defines the application dependencies and other information:</p>
 
 <pre class="brush: json notranslate">{
   "name": "express-locallibrary-tutorial",
@@ -496,9 +495,6 @@ block content
 <h2 id="Challenge_yourself">Challenge yourself</h2>
 
 <p>Create a new route in <strong>/routes/users.js</strong> that will display the text "<em>You're so cool"</em> at URL <code>/users/cool/</code>. Test it by running the server and visiting <a href="http://localhost:3000/users/cool/">http://localhost:3000/users/cool/</a> in your browser</p>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

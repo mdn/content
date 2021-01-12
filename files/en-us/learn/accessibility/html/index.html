@@ -79,25 +79,25 @@ tags:
 
 <p>One of the best accessibility aids a screen reader user can have is an excellent content structure with headings, paragraphs, lists, etc. An excellent semantic example might look something like the following:</p>
 
-<pre class="brush: html example-good line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>My heading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-good line-numbers language-html notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the first section of my document.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>I'll add another paragraph here too.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;
+&lt;p&gt;I'll add another paragraph here too.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Here is&lt;/li&gt;
   &lt;li&gt;a list for&lt;/li&gt;
   &lt;li&gt;you to read&lt;/li&gt;
-&lt;/ol&gt;</span></span>
+&lt;/ol&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>My subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;My subheading&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the first subsection of my document. I'd love people to be able to find this content!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;This is the first subsection of my document. I'd love people to be able to find this content!&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>My 2nd subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;My 2nd subheading&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>This is the second subsection of my content. I think is more interesting than the last one.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;p&gt;This is the second subsection of my content. I think is more interesting than the last one.&lt;/p&gt;</pre>
 
 <p>We've prepared a version with longer text for you to try out with a screen reader (see <a href="https://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>). If you try navigating through this, you'll see that this is pretty easy to navigate:</p>
 
@@ -110,25 +110,25 @@ tags:
 
 <p>People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:</p>
 
-<pre class="brush: html example-bad line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>7<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My heading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-bad line-numbers language-html notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 This is the first section of my document.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
 I'll add another paragraph here too.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 1. Here is
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 2. a list for
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 3. you to read
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;My subheading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 This is the first subsection of my document. I'd love people to be able to find this content!
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My 2nd subheading<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-This is the second subsection of my content. I think is more interesting than the last one.</code></pre>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;My 2nd subheading&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+This is the second subsection of my content. I think is more interesting than the last one.</pre>
 
 <p>If you try our longer version out with a screen reader (see <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>), you'll not have a very good experience — the screen reader hasn't got anything to use as signposts, so you can't retrieve a useful table of contents, and the whole page is seen as a single giant block, so it is just read out in one go, all at once.</p>
 
@@ -342,11 +342,11 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Whilst the above addition allows us to tab to the buttons, it does not allow us to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span>onkeydown <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// The Enter/Return key</span>
-    document<span class="punctuation token">.</span>activeElement<span class="punctuation token">.</span><span class="function token">click</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate">document.onkeydown = function(e) {
+  if(e.keyCode === 13) { // The Enter/Return key
+    document.activeElement.click();
+  }
+};</pre>
 
 <p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 
@@ -394,9 +394,6 @@ This is the second subsection of my content. I think is more interesting than th
 <div class="note">
 <p><strong>Note</strong>: you can see some good and bad form examples in <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
 </div>
-
-<ol>
-</ol>
 
 <p>You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the <a href="/en-US/docs/Tools/Accessibility_inspector">Firefox Accessibility Inspector</a>, in the following video:</p>
 
@@ -457,7 +454,6 @@ This is the second subsection of my content. I think is more interesting than th
      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
      title="The Mozilla red dinosaur"&gt;
 
-
 &lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
 &lt;p id="dino-label"&gt;The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.&lt;/p&gt;
@@ -466,14 +462,14 @@ This is the second subsection of my content. I think is more interesting than th
 <p>The first image, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help. In this example the user will at least know it is a dinosaur of some kind, but often files may be uploaded with machine-generated file names (e.g. from a digital camera) and these file names would likely provide no context to the image's content.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is why you should never include text content inside an image — screen readers simply can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!</p>
+<p><strong>Note</strong>: This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!</p>
 </div>
 
 <p>When a screen reader encounters the second image, it reads out the full alt attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.".</p>
 
 <p>This highlights the importance of not only using meaningful file names in case so-called <strong>alt text</strong> is not available, but also making sure that alt text is provided in <code>alt</code> attributes wherever possible. Note that the contents of the <code>alt</code> attribute should always provide a direct representation of the image and what it conveys visually. Any personal knowledge or extra description shouldn't be included here, as it is not useful for people who have not come across the image before.</p>
 
-<p>One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorational, it is better to write an empty text as a value for <code>alt</code> attribute (see <a href="#Empty_alt_attributes">Empty alt attributes</a>) or to just include them in the page as CSS background images.</p>
+<p>One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for <code>alt</code> attribute (see <a href="#Empty_alt_attributes">Empty alt attributes</a>) or to just include them in the page as CSS background images.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a> and <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a> for a lot more information about image implementation and best practices.</p>

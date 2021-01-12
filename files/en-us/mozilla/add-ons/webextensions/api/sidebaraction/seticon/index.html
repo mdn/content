@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var settingIcon = browser.sidebarAction.setIcon(
+<pre class="brush:js">var settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
 </pre>
@@ -49,7 +49,7 @@ tags:
  <dl class="reference-values">
   <dt><code>imageData</code>{{optional_inline}}</dt>
   <dd>
-  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code><code>object</code></code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
 
   <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
 
@@ -62,7 +62,7 @@ tags:
   </dd>
   <dt><code>path</code>{{optional_inline}}</dt>
   <dd>
-  <p><code><code>string</code></code> or <code><code>object</code></code>. This is either a relative path to an icon file or it is a dictionary object. </p>
+  <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or it is a dictionary object. </p>
 
   <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
 
@@ -108,7 +108,7 @@ tags:
 
 <p>The code below toggles the sidebar icon for the active tab when the user clicks a browser action:</p>
 
-<pre class="brush: js">var on = false;
+<pre class="notranslate brush: js">var on = false;
 
 function toggle(tab) {
   if (on) {

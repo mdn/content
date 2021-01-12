@@ -325,7 +325,7 @@ Promise.all([a, b, c]).then(values =&gt; {
   ...
 });</pre>
 
-  <p>When the promise is fulfilled, the <code>values</code> passed into the fulfilment handler would contain three <code>Response</code> objects, one for each of the <code>fetch()</code> operations that have completed.</p>
+  <p>When the promise is fulfilled, the <code>values</code> passed into the fulfillment handler would contain three <code>Response</code> objects, one for each of the <code>fetch()</code> operations that have completed.</p>
 
   <p>However, we don't want to do this. Our code doesn't care when the <code>fetch()</code> operations are done. Instead, what we want is the loaded data. That means we want to run the <code>Promise.all()</code> block when we get back usable blobs representing the images, and a usable text string. We can write a function that does this; add the following inside your <code>&lt;script&gt;</code> element:</p>
 
@@ -482,7 +482,7 @@ document.body.appendChild(para);</pre>
 
 <h3 id="Using_the_Promise_constructor">Using the Promise() constructor</h3>
 
-<p>It is possible to build your own promises using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> constructor. The main situation in which you'll want to do this is when you've got code based on an old-school asynchronous API that is not promise-based, which you want to promis-ify. This comes in handy when you need to use existing, older project code, libraries, or frameworks along with modern promise-based code.</p>
+<p>It is possible to build your own promises using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> constructor. The main situation in which you'll want to do this is when you've got code based on an old-school asynchronous API that is not promise-based, which you want to promisify. This comes in handy when you need to use existing, older project code, libraries, or frameworks along with modern promise-based code.</p>
 
 <p>Let's have a look at a simple example to get you started — here we wrap a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call with a promise — this runs a function after two seconds that resolves the promise (using the passed <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code> call) with a string of "Success!".</p>
 
@@ -494,7 +494,7 @@ document.body.appendChild(para);</pre>
 
 <p><code>resolve()</code> and <code>reject()</code> are functions that you call to fulfil or reject the newly-created promise. In this case, the promise fulfills with a string of "Success!".</p>
 
-<p>So when you call this promise, you can chain a <code>.then()</code> block onto the end of it and it will be passed a string of "Success!". In the below code we simply alert that message:</p>
+<p>So when you call this promise, you can chain a <code>.then()</code> block onto the end of it and it will be passed a string of "Success!". In the below code we alert that message:</p>
 
 <pre class="brush: js notranslate">timeoutPromise
 .then((message) =&gt; {

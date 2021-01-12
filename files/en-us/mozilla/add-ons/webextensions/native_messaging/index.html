@@ -12,7 +12,7 @@ tags:
 
 <p>Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).</p>
 
-<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifiest fill will describe how the browser can connect to the native application.</p>
+<p>The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest fill will describe how the browser can connect to the native application.</p>
 
 <p>The extension must request the <code>"nativeMessaging"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in the <code>manifest.json</code> file. Also, the native application must grant permission for the extension by including the ID in the <code>"allowed_extensions"</code> field of the app manifest.</p>
 
@@ -115,7 +115,7 @@ tags:
   "allowed_extensions": [ "ping_pong@example.org" ]
 }</pre>
 
-<p>(See note above about <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Chrome_incompatibilities">Chrome compatiblity</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
+<p>(See note above about <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#Chrome_incompatibilities">Chrome compatibility</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
 
 <p>The batch file then invokes the Python script:</p>
 
@@ -146,9 +146,6 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 <div class="note">
 <p><strong>Note:</strong> If you base your work on the example located on GitHub, please read <a href="https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup">this part of the readme</a> and check the output of <code>check_config_win.py</code> before installing the WebExtension on your browser.</p>
 </div>
-
-<ul>
-</ul>
 
 <h2 id="Exchanging_messages">Exchanging messages</h2>
 
@@ -186,7 +183,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 
 <p>Here's an example background script that establishes a connection with the <code>"ping_pong"</code> app, listens for messages from it, then sends it a <code>"ping"</code> message whenever the user clicks the browser action:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="notranslate brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -227,7 +224,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Here's the example above, rewritten to use <code>runtime.sendNativeMessage()</code>:</p>
 
-<pre class="brush: js notranslate">function onResponse(response) {
+<pre class="notranslate brush: js">function onResponse(response) {
   console.log("Received " + response);
 }
 
@@ -257,7 +254,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>You can quickly get started sending and receiving messages with this NodeJS code:</p>
 
-<pre class="brush: js notranslate">#!/usr/local/bin/node
+<pre class="notranslate brush: js">#!/usr/local/bin/node
 
 (() =&gt; {
 
@@ -333,7 +330,6 @@ import json
 import sys
 import struct
 
-
 # Read a message from stdin and decode it.
 def get_message():
     raw_length = sys.stdin.read(4)
@@ -343,20 +339,17 @@ def get_message():
     message = sys.stdin.read(message_length)
     return json.loads(message)
 
-
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
     encoded_content = json.dumps(message_content)
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
-
 # Send an encoded message to stdout.
 def send_message(encoded_message):
     sys.stdout.write(encoded_message['length'])
     sys.stdout.write(encoded_message['content'])
     sys.stdout.flush()
-
 
 while True:
     message = get_message()
@@ -375,7 +368,6 @@ import json
 import sys
 import struct
 
-
 # Read a message from stdin and decode it.
 def get_message():
     raw_length = sys.stdin.buffer.read(4)
@@ -386,7 +378,6 @@ def get_message():
     message = sys.stdin.buffer.read(message_length).decode("utf-8")
     return json.loads(message)
 
-
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
     encoded_content = json.dumps(message_content).encode("utf-8")
@@ -394,13 +385,11 @@ def encode_message(message_content):
     #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
     return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
 
-
 # Send an encoded message to stdout.
 def send_message(encoded_message):
     sys.stdout.buffer.write(encoded_message['length'])
     sys.stdout.buffer.write(encoded_message['content'])
     sys.stdout.buffer.flush()
-
 
 while True:
     message = get_message()

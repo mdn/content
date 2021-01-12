@@ -88,10 +88,10 @@ tags:
 <p>Neither the <a href="https://en.wikipedia.org/wiki/Fragment_identifier">URL fragment identifier</a>, nor the <code>#</code> which precedes it, are considered as part of the <em>path</em>.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The path pattern string should not include a port number. Adding a port, as in: <em>"http://localhost:1234/*" </em>causes the match pattern to be ignored. However, "<em>http://localhost:1234</em>" will match with "<em>http://localhost/*</em>"</p>
+<p><strong>Note</strong>: The path pattern string should not include a port number. Adding a port, as in: <em>"http://localhost:1234/*"</em> causes the match pattern to be ignored. However, "<em>http://localhost:1234</em>" will match with "<em>http://localhost/*</em>"</p>
 </div>
 
-<h3 id="&lt;all_urls>">&lt;all_urls&gt;</h3>
+<h3 id="&lt;all_urls&gt;">&lt;all_urls&gt;</h3>
 
 <p>The special value <code>&lt;all_urls&gt;</code> matches all URLs under any of the supported schemes: that is "http", "https", "ws", "wss", "ftp", "data", and "file".</p>
 
@@ -425,7 +425,5 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="scheme_2">scheme</h3>
-
-
 
 <p>{{Compat("webextensions.match_patterns.scheme",10)}}</p>

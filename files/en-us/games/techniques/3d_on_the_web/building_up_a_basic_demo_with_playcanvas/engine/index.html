@@ -101,7 +101,7 @@ camera.setPosition(0, 0, 7);
 <p>Then it adds a <code>camera</code> component to it with the light gray <code>clearColor</code> — the color will be visible as the background. Next, the <code>camera</code> object is added to the root of our application and positioned to be 7 units away from the center of the scene on the <code>z</code> axis. This allows us to make some space to visualize the objects that we will create later on.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.</p>
+<p><strong>Note</strong>: The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.</p>
 </div>
 
 <p>Try saving the file and loading it in your browser. You should now see a gray window. Congratulations!</p>
@@ -122,7 +122,7 @@ box.rotate(10, 15, 0);
 
 <h2 id="Lights">Lights</h2>
 
-<p>The basic light types in PlayCanvas are directional and ambient. The first type is a directional light placed somewhere on the scene while the scond one reflects the light from the first type, so it looks more natural; this can be set globally. Again, add the new code below your previous additions.</p>
+<p>The basic light types in PlayCanvas are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Again, add the new code below your previous additions.</p>
 
 <pre class="brush: js">var light = new pc.Entity();
 light.addComponent('light');
@@ -194,7 +194,7 @@ cylinder.model.model.meshInstances[0].material = cylinderMaterial;
 
 <h3 id="Cone">Cone</h3>
 
-<p>Creating a cone and its material is done in almost exacly the same way as we did for the cylinder. Add the following code, again, at the bottom of your script:</p>
+<p>Creating a cone and its material is done in almost exactly the same way as we did for the cylinder. Add the following code, again, at the bottom of your script:</p>
 
 <pre class="brush: js">var cone = new pc.Entity();
 cone.addComponent("model", { type: "cone" });

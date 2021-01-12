@@ -44,7 +44,7 @@ tags:
 
 <p>Even though you're building a server, a client still has to start the WebSocket handshake process by contacting the server and requesting a WebSocket connection. So, you must know how to interpret the client's request. The <strong>client</strong> will send a pretty standard HTTP request with headers that looks like this (the HTTP version <strong>must</strong> be 1.1 or greater, and the method <strong>must</strong> be <code>GET</code>):</p>
 
-<pre class="notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash notranslate">GET /chat HTTP/1.1
 Host: example.com:8000
 <strong>Upgrade: websocket</strong>
 <strong>Connection: Upgrade</strong>
@@ -71,7 +71,7 @@ Sec-WebSocket-Version: 13
 
 <p>When the <strong>server</strong> receives the handshake request, it should send back a special response that indicates that the protocol will be changing from HTTP to WebSocket. That header looks something like the following (remember each header line ends with <code>\r\n</code> and put an extra <code>\r\n</code> after the last one to indicate the end of the header):</p>
 
-<pre class="notranslate"><strong>HTTP/1.1 101 Switching Protocols</strong>
+<pre class="brush: bash notranslate"><strong>HTTP/1.1 101 Switching Protocols</strong>
 Upgrade: websocket
 Connection: Upgrade
 <strong>Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
@@ -104,8 +104,8 @@ Connection: Upgrade
 
 <p>Each data frame (from the client to the server or vice-versa) follows this same format:</p>
 
-<pre class="notranslate">Frame format:
-​​
+<pre class="brush: bash notranslate">Frame format:
+
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+
@@ -125,7 +125,7 @@ Connection: Upgrade
      |                     Payload Data continued ...                |
      +---------------------------------------------------------------+</pre>
 
-<p>The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, <a href="http://tools.ietf.org/html/rfc6455#section-5.1">section 5.1 of the spec</a> says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. <em>Note: You must mask messages even when using a secure socket. </em>RSV1-3 can be ignored, they are for extensions.</p>
+<p>The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, <a href="https://tools.ietf.org/html/rfc6455#section-5.1">section 5.1 of the spec</a> says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. <em>Note: You must mask messages even when using a secure socket.</em> RSV1-3 can be ignored, they are for extensions.</p>
 
 <p>The opcode field defines how to interpret the payload data: <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>0x0</code> </span><span style="line-height: 1.5;">for continuation,</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">0x1</code><span style="line-height: 1.5;"> for text (which is always encoded in UTF-8), </span><code style="font-style: normal; line-height: 1.5;">0x2</code><span style="line-height: 1.5;"> for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, <code>0x3</code> to <code>0x7</code> and <code>0xB</code> to <code>0xF</code> have no meaning.</span></p>
 
@@ -145,7 +145,7 @@ Connection: Upgrade
 
 <p>If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. <span style="line-height: 1.5;">Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data <strong>ENCODED</strong>, and the key <strong>MASK</strong>. To get <strong>DECODED</strong>, loop through the octets (bytes a.k.a. characters for text data) of <strong>ENCODED</strong> and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):</span></p>
 
-<pre class="notranslate">var DECODED = "";
+<pre class="brush: js notranslate">var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
 <span style="line-height: 1.5;">}</span></pre>
@@ -159,15 +159,15 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 <p><span style="line-height: 1.5;">Recall that the opcode tells what a frame is meant to do. If it's <code>0x1</code>, the payload is text. If it's <code>0x2</code>, the payload is binary data.</span><span style="line-height: 1.5;"> However, if it's </span><code style="font-style: normal; line-height: 1.5;">0x0,</code><span style="line-height: 1.5;"> the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.</span><span style="line-height: 1.5;"> Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:</span></p>
 
 <pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
-<strong>Server:</strong> <em>(process complete message immediately) </em>Hi.
+<strong>Server:</strong> <em>(process complete message immediately)</em> Hi.
 <strong>Client:</strong> FIN=0, opcode=0x1, msg="and a"
 <strong>Server:</strong> <em>(listening, new message containing text started)</em>
 <strong>Client:</strong> FIN=0, opcode=0x0, msg="happy new"
 <strong>Server:</strong> <em>(listening, payload concatenated to previous message)</em>
 <strong>Client:</strong> FIN=1, opcode=0x0, msg="year!"
-<strong>Server:</strong> <em>(process complete message) </em>Happy new year to you too!</pre>
+<strong>Server:</strong> <em>(process complete message)</em> Happy new year to you too!</pre>
 
-<p>Notice the first frame contains an entire message (has <code>FIN=1</code> and <code>opcode!=0x0</code>), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (<code>opcode=0x1</code>), but the entire message has not arrived yet (<code>FIN=0</code>). All remaining parts of that message are sent with continuation frames (<code>opcode=0x0</code>), and the final frame of the message is marked by <code>FIN=1</code>. <a href="http://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a> describes message fragmentation.</p>
+<p>Notice the first frame contains an entire message (has <code>FIN=1</code> and <code>opcode!=0x0</code>), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (<code>opcode=0x1</code>), but the entire message has not arrived yet (<code>FIN=0</code>). All remaining parts of that message are sent with continuation frames (<code>opcode=0x0</code>), and the final frame of the message is marked by <code>FIN=1</code>. <a href="https://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a> describes message fragmentation.</p>
 
 <h2 id="Pings_and_Pongs_The_Heartbeat_of_WebSockets">Pings and Pongs: The Heartbeat of WebSockets</h2>
 
@@ -181,7 +181,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <h2 id="Closing_the_connection">Closing the connection</h2>
 
-<p>To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in <a href="http://tools.ietf.org/html/rfc6455#section-5.5.1">Section 5.5.1</a>). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded. </p>
+<p>To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in <a href="https://tools.ietf.org/html/rfc6455#section-5.5.1">Section 5.5.1</a>). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded. </p>
 
 <h2 id="Miscellaneous_2"><a name="Miscellaneous">Miscellaneous</a></h2>
 
@@ -207,7 +207,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <h3 id="Subprotocols">Subprotocols</h3>
 
-<p>Think of a subprotocol as a custom <a href="https://en.wikipedia.org/wiki/XML_schema">XML schema</a> or <a href="https://en.wikipedia.org/wiki/Document_Type_Definition">doctype declaration</a>. You're still using XML and its syntax, but you're additionally restricted by a structure you agreed on. WebSocket subprotocols are just like that. They do not introduce anything fancy, they just establish structure. Like a doctype or schema, both parties must agree on the subprotocol; unlike a doctype or schema, the subprotocol is implemented on the server and cannot be externally refered to by the client.</p>
+<p>Think of a subprotocol as a custom <a href="https://en.wikipedia.org/wiki/XML_schema">XML schema</a> or <a href="https://en.wikipedia.org/wiki/Document_Type_Definition">doctype declaration</a>. You're still using XML and its syntax, but you're additionally restricted by a structure you agreed on. WebSocket subprotocols are just like that. They do not introduce anything fancy, they just establish structure. Like a doctype or schema, both parties must agree on the subprotocol; unlike a doctype or schema, the subprotocol is implemented on the server and cannot be externally referred to by the client.</p>
 
 <div class="note">
 <p>Subprotocols are explained in sections 1.9, 4.2, 11.3.4, and 11.5 of the spec.</p>
@@ -215,7 +215,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>A client has to ask for a specific subprotocol. To do so, it will send something like this <em>as part of the original handshake</em>:</p>
 
-<pre class="notranslate">GET /chat HTTP/1.1
+<pre class="brush: bash notranslate">GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
 
@@ -223,7 +223,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
 <p>or, equivalently:</p>
 
-<pre class="notranslate">...
+<pre class="brush: bash notranslate">...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
 
@@ -231,7 +231,7 @@ Sec-WebSocket-Protocol: wamp
 
 <p>Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both <code>soap</code> and <code>wamp</code>. Then, in the response handshake, it sends:</p>
 
-<pre class="notranslate">Sec-WebSocket-Protocol: soap
+<pre class="brush: bash notranslate">Sec-WebSocket-Protocol: soap
 
 </pre>
 
@@ -251,7 +251,7 @@ Sec-WebSocket-Protocol: wamp
 <ul>
  <li><a href="https://github.com/alexhultman/libwshandshake">WebSocket handshake library in C++</a></li>
  <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server" title="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
+ <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
  <li><a href="/en-US/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
  <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java">Tutorial: Websocket server in Java</a></li>
 </ul>

@@ -1,0 +1,36 @@
+---
+title: NSPR functions
+slug: Mozilla/Projects/NSS/Reference/NSPR_functions
+---
+<p><a class="external" href="https://www.mozilla.org/projects/nspr/" title="http://www.mozilla.org/projects/nspr/">NSPR</a> is a platform abstraction library that provides a cross-platform API to common OS services.  NSS uses NSPR internally as the porting layer.  However, a small number of NSPR functions are required for using the certificate verification and SSL functions in NSS.  These NSPR functions are listed in this section.</p>
+<h3 id="NSPR_initialization_and_shutdown">NSPR initialization and shutdown</h3>
+<p>NSPR is automatically initialized by the first NSPR function called by the application.  Call <a class="internal" href="/en-US/PR_Cleanup"><code>PR_Cleanup</code></a> to shut down NSPR and clean up its resources.<a class="internal" href="/en-US/PR_Init"><br>
+</a></p>
+<ul> <li><a class="internal" href="/en-US/PR_Cleanup">PR_Cleanup</a></li>
+</ul>
+<h3 id="Error_reporting">Error reporting</h3>
+<p>NSS uses NSPR's thread-specific error code to report errors.  Call <a class="internal" href="/en-US/PR_GetError"><code>PR_GetError</code></a> to get the error code of the last failed NSS or NSPR function.  Call <a class="internal" href="/en-US/PR_SetError"><code>PR_SetError</code></a> to set the error code, which can be retrieved with <code>PR_GetError</code> later.</p>
+<p>The NSS functions <code>PORT_GetError</code> and <code>PORT_SetError</code> are simply wrappers of <code>PR_GetError</code> and <code>PR_SetError</code>.</p>
+<ul> <li><a class="internal" href="/en-US/PR_GetError">PR_GetError</a></li> <li><a class="internal" href="/en-US/PR_SetError">PR_SetError</a></li>
+</ul>
+<h3 id="Calendar_time">Calendar time</h3>
+<p>NSS certificate verification functions take a <code>PRTime</code> parameter that specifies the time instant at which the validity of the certificate should verified.  The NSPR function <a class="internal" href="/en-US/PR_Now"><code>PR_Now</code></a> returns the current time in <code>PRTime</code>.</p>
+<ul> <li><a class="internal" href="/en-US/PR_Now">PR_Now</a></li>
+</ul>
+<h3 id="Interval_time">Interval time</h3>
+<p>The NSPR socket I/O functions <a class="internal" href="/en-US/PR_Recv"><code>PR_Recv</code></a> and <a class="internal" href="/en-US/PR_Send"><code>PR_Send</code></a> (used by the NSS SSL functions) take a <code>PRIntervalTime</code> timeout parameter.  <code>PRIntervalTime</code> has an abstract, platform-dependent time unit.  Call <a class="internal" href="/en-US/PR_SecondsToInterval"><code>PR_SecondsToInterval</code></a> or <code><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a> </code>to convert a time interval in seconds or milliseconds to <code>PRIntervalTime</code>.</p>
+<ul> <li><a class="internal" href="/en-US/PR_SecondsToInterval">PR_SecondsToInterval</a></li> <li><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a></li>
+</ul>
+<h3 id="NSPR_IO_layering">NSPR I/O layering</h3>
+<p>NSPR file descriptors can be layered, corresponding to the layers in the network stack.  The SSL library in NSS implements the SSL protocol as an NSPR I/O layer, which sits on top of another NSPR I/O layer that represents TCP.</p>
+<p>You can implement an NSPR I/O layer that wraps your own TCP socket code.  The following NSPR functions allow you to create your own NSPR I/O layer and manipulate it.</p>
+<ul> <li><a class="internal" href="/en-US/PR_GetUniqueIdentity">PR_GetUniqueIdentity</a></li> <li><a class="internal" href="/en-US/PR_CreateIOLayerStub">PR_CreateIOLayerStub</a></li> <li><a class="internal" href="/en-US/PR_GetDefaultIOMethods">PR_GetDefaultIOMethods</a></li> <li><a class="internal" href="/en-US/PR_GetIdentitiesLayer">PR_GetIdentitiesLayer</a></li> <li><a class="internal" href="/en-US/PR_GetLayersIdentity">PR_GetLayersIdentity</a></li> <li><a class="internal" href="/en-US/PR_PushIOLayer">PR_PushIOLayer</a></li> <li><a class="internal" href="/en-US/PR_PopIOLayer">PR_PopIOLayer</a></li>
+</ul>
+<h3 id="Wrapping_a_native_file_descriptor">Wrapping a native file descriptor</h3>
+<p>If your current TCP socket code uses the standard BSD socket API, a lighter-weight method than creating your own NSPR I/O layer is to simply import a native file descriptor into NSPR.  This method is convenient and works for most applications.</p>
+<ul> <li><a class="internal" href="/en-US/PR_ImportTCPSocket">PR_ImportTCPSocket</a></li>
+</ul>
+<h3 id="Socket_IO_functions">Socket I/O functions</h3>
+<p>As mentioned above, the SSL library in NSS implements the SSL protocol as an NSPR I/O layer.  Users call NSPR socket I/O functions to read from, write to, and shut down an SSL connection, and to close an NSPR file descriptor.</p>
+<ul> <li><a class="internal" href="/en-US/PR_Read">PR_Read</a></li> <li><a class="internal" href="/en-US/PR_Write">PR_Write</a></li> <li><a class="internal" href="/en-US/PR_Recv">PR_Recv</a></li> <li><a class="internal" href="/en-US/PR_Send">PR_Send</a></li> <li><a class="internal" href="/en-US/PR_GetSocketOption">PR_GetSocketOption</a></li> <li><a class="internal" href="/en-US/PR_SetSocketOption">PR_SetSocketOption</a></li> <li><a class="internal" href="/en-US/PR_Shutdown">PR_Shutdown</a></li> <li><a class="internal" href="/en-US/PR_Close">PR_Close</a></li>
+</ul>

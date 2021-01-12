@@ -101,7 +101,6 @@ console.log(p.m()); // 5
 // So when p inherits the function m of o,
 // 'this.a' means p.a, the property 'a' of p
 
-
 </pre>
 
 <h2 id="Using_prototypes_in_JavaScript">Using prototypes in JavaScript</h2>
@@ -158,7 +157,7 @@ console.log( doSomething.prototype );</pre>
 }
 </pre>
 
-<p>We can now use the <code>new</code> operator to create an instance of <code>doSomething()</code> based on this prototype. To use the new operator, simply call the function normally except prefix it with <code>new</code>. Calling a function with the <code>new</code> operator returns an object that is an instance of the function. Properties can then be added onto this object.</p>
+<p>We can now use the <code>new</code> operator to create an instance of <code>doSomething()</code> based on this prototype. To use the new operator, call the function normally except prefix it with <code>new</code>. Calling a function with the <code>new</code> operator returns an object that is an instance of the function. Properties can then be added onto this object.</p>
 
 <p>Try the following code:</p>
 
@@ -301,8 +300,8 @@ console.log(a.a); // print 1
 console.log(b.a); // print 5
 delete b.a;
 console.log(a.a); // print 1
-console.log(b.a); // print 1(b.a value 5 is deleted but it showing value from its prototype chain)
-delete a.a;       // This can also be done via 'delete b.__proto__.a'
+console.log(b.a); // print 1 (b.a value 5 is deleted but it showing value from its prototype chain)
+delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).a'
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
@@ -364,7 +363,7 @@ console.log(g.hasOwnProperty('nope'));
 console.log(g.hasOwnProperty('addVertex'));
 // false
 
-console.log(g.__proto__.hasOwnProperty('addVertex'));
+console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 // true
 </pre>
 
@@ -384,7 +383,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 <p>Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting <code>inst</code> object (thus logging the same results to the console), except in different ways for the purpose of illustration.</p>
 
-<table class="standard-table" style="text-align: top;">
+<table class="standard-table" style="vertical-align: top;">
 	<tbody>
 		<tr>
 			<td style="width: 1%;">Name</td>

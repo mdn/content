@@ -20,7 +20,7 @@ tags:
 
 <p>Here's some code that uses <code>createAudioFileAsync()</code>:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">function successCallback(result) {
+<pre class="brush: js line-numbers notranslate">function successCallback(result) {
   console.log("Audio file ready at URL: " + result);
 }
 
@@ -31,27 +31,20 @@ function failureCallback(error) {
 createAudioFileAsync(audioSettings, successCallback, failureCallback);
 </pre>
 
-<p>Modern functions return a promise that you can attach your callbacks to instead:</p>
+<p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, you would attach your callbacks to it instead:</p>
 
-<p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, using it could be as simple as this:</p>
+<pre class="brush: js line-numbers notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
 
-<pre class="brush: js notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
-
-<p>That's shorthand for:</p>
-
-<pre class="brush: js line-numbers  language-js notranslate">const promise = createAudioFileAsync(audioSettings);
-promise.then(successCallback, failureCallback);</pre>
-
-<p>We call this an <em>asynchronous function call</em>. This convention has several advantages. We will explore each one.</p>
+<p>This convention has several advantages. We will explore each one.</p>
 
 <h2 id="Guarantees">Guarantees</h2>
 
 <p>Unlike old-fashioned <em>passed-in</em> callbacks, a promise comes with some guarantees:</p>
 
 <ul>
- <li>Callbacks will never be called before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
- <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>, as above, will be called even <em>after</em> the success or failure of the asynchronous operation.</li>
- <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. Each callback is executed one after another, in the order in which they were inserted.</li>
+ <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be invoked before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
+ <li>These callbacks will be invoked even if they were added <em>after</em> the success or failure of the asynchronous operation that the promise represents.</li>
+ <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. They will be invoked one after another, in the order in which they were inserted.</li>
 </ul>
 
 <p>One of the great things about using promises is <strong>chaining</strong>.</p>
@@ -138,7 +131,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>This will output the following text:</p>
 
-<pre class="notranslate">Initial
+<pre class="brush: plain notranslate">Initial
 Do that
 Do this, no matter what happened before
 </pre>
@@ -201,26 +194,23 @@ Do this, no matter what happened before
 
 <p>These make it possible to offer fallback error handling for promises, as well as to help debug issues with your promise management. These handlers are global per context, so all errors will go to the same event handlers, regardless of source.</p>
 
-<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises. These get logged to the console by the Node runtime. You can capture these for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the <a href="/en-US/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> event, like this:</p>
+<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises, logged to the console by the Node.js runtime. You can capture them for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the Node.js <code>unhandledRejection</code> event (notice the difference in capitalization of the name), like this:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js notranslate">process.on("unhandledRejection", (reason, promise) =&gt; {
   /* You might start here by adding code to examine the
-     promise specified by event.promise and the reason in
-     event.reason */
-
-  event.preventDefault();
-}, false);
+   * "promise" and "reason" values. */
+});
 </pre>
 
-<p>By calling the event's <a href="/en-US/docs/Web/API/Event/preventDefault" title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> method, you tell the JavaScript runtime not to do its default action when rejected promises go unhandled. That default action usually involves logging the error to console, and this is indeed the case for Node.</p>
+<p>For Node.js, to prevent the error from being logged to the console (the default action that would otherwise occur), adding that <code>process.on()</code> listener is all that’s necessary; there's no need for an equivalent of the browser runtime’s <a href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> method.</p>
 
-<p>Ideally, of course, you should examine the rejected promises to make sure none of them are actual code bugs before just discarding these events.</p>
+<p>However, if you add that <code>process.on</code> listener but don't also have code within it to handle rejected promises, they will just be dropped on the floor and silently ignored. So ideally, you should add code within that listener to examine each rejected promise and make sure it was not caused by an actual code bug.</p>
 
 <h2 id="Creating_a_Promise_around_an_old_callback_API">Creating a Promise around an old callback API</h2>
 
 <p>A {{jsxref("Promise")}} can be created from scratch using its constructor. This should be needed only to wrap old APIs.</p>
 
-<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> function:</p>
+<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> function:</p>
 
 <pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
 </pre>
@@ -267,7 +257,7 @@ const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.r
 const result3 = transformData(data);
 </pre>
 
-<p>In ECMAScript 2017, sequential composition can be done more simply with async/await:</p>
+<p>In ECMAScript 2017, sequential composition can be done more with async/await:</p>
 
 <pre class="brush: js notranslate">let result;
 for (const f of [func1, func2, func3]) {
@@ -305,7 +295,7 @@ console.log(1); // 1, 2, 3, 4
 });
 
 setTimeout(function() {
-  console.log("event-loop cycle: Promise (fullfilled)", promise)
+  console.log("event-loop cycle: Promise (fulfilled)", promise)
 }, 0);
 
 console.log("Promise (pending)", promise);
@@ -313,10 +303,10 @@ console.log("Promise (pending)", promise);
 
 <p>The code above will output:</p>
 
-<pre class="notranslate">Promise callback
+<pre class="brush: plain notranslate">Promise callback
 Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
-event-loop cycle: Promise (fullfilled) Promise {&lt;fulfilled&gt;}</pre>
+event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
 <p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#Tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
 

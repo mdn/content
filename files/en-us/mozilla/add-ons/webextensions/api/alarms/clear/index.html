@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var clearAlarm = browser.alarms.clear(
+<pre class="notranslate brush: js">var clearAlarm = browser.alarms.clear(
   name                       // string
 )
 </pre>
@@ -29,7 +29,7 @@ tags:
 
 <dl>
  <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code><code>string</code></code>. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.</dd>
+ <dd><code>string</code>. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">function onCleared(wasCleared) {
+<pre class="notranslate brush: js">function onCleared(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 

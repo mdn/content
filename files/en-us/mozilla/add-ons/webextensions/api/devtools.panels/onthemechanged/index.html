@@ -6,6 +6,7 @@ tags:
   - Add-ons
   - DevTools
   - Reference
+  - Event
   - WebExtensions
   - devtools.panels
   - onThemeChanged
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.devtools.panels.onThemeChanged.addListener(listener)
+<pre class="brush:js">browser.devtools.panels.onThemeChanged.addListener(listener)
 browser.devtools.panels.onThemeChanged.removeListener(listener)
 browser.devtools.panels.onThemeChanged.hasListener(listener)
 </pre>
@@ -56,7 +57,7 @@ browser.devtools.panels.onThemeChanged.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">browser.devtools.panels.onThemeChanged.addListener((newThemeName) =&gt; {
+<pre class="notranslate brush: js">browser.devtools.panels.onThemeChanged.addListener((newThemeName) =&gt; {
   console.log(`New theme: ${newThemeName}`);
 });
 </pre>

@@ -80,7 +80,7 @@ second.onchange = function() {
   postMessage(workerResult);
 }</pre>
 
-<p>The <code>onmessage</code> handler allows us to run some code whenever a message is received, with the message itself being available in the <code>message</code> event's <code>data</code> attribute. Here we simply multiply together the two numbers then use <code>postMessage()</code> again, to post the result back to the main thread.</p>
+<p>The <code>onmessage</code> handler allows us to run some code whenever a message is received, with the message itself being available in the <code>message</code> event's <code>data</code> attribute. Here we multiply together the two numbers then use <code>postMessage()</code> again, to post the result back to the main thread.</p>
 
 <p>Back in the main thread, we use <code>onmessage</code> again, to respond to the message sent back from the worker:</p>
 
@@ -210,15 +210,13 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
 
-<pre class="notranslate">Content-Security-Policy: script-src 'self'</pre>
+<pre class="brush: plain notranslate">Content-Security-Policy: script-src 'self'</pre>
 
 <div>Among other things, this will prevent any scripts it includes from using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.<br>
 <br>
 To specify a content security policy for the worker, set a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> response header for the request which delivered the worker script itself.<br>
 <br>
 The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.</div>
-
-<div></div>
 
 <h2 id="Transferring_data_to_and_from_workers_further_details">Transferring data to and from workers: further details</h2>
 
@@ -292,7 +290,7 @@ onmessage = function(oEvent) {
 
 <p>If you have to pass some complex data and have to call many different functions both on the main page and in the Worker, you can create a system which groups everything together.</p>
 
-<p>First, we create a QueryableWorker class that takes the <font face="Consolas, Liberation Mono, Courier, monospace">url</font> of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
+<p>First, we create a QueryableWorker class that takes the <code>url</code> of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
 
 <pre class="brush: js notranslate">function QueryableWorker(url, defaultListener, onError) {
     var instance = this,
@@ -705,7 +703,7 @@ onmessage = function(event) {
 
 <h2 id="Debugging_worker_threads">Debugging worker threads</h2>
 
-<p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way </em>as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
+<p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way</em> as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
 
 <p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a>, just like code running in the main thread.</p>
 

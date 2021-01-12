@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removing = browser.tabs.remove(
+<pre class="brush:js">var removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )
 </pre>
@@ -29,7 +29,7 @@ tags:
 
 <dl>
  <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code> of <code><code>integer</code></code></code>. The ids of the tab or tabs to close.</dd>
+ <dd><code>integer</code> or <code>array</code> of <code>integer</code> The ids of the tab or tabs to close.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -40,7 +40,7 @@ tags:
 
 <p>Close a single tab:</p>
 
-<pre class="brush: js">function onRemoved() {
+<pre class="notranslate brush: js">function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -53,7 +53,7 @@ removing.then(onRemoved, onError);</pre>
 
 <p>Close multiple tabs:</p>
 
-<pre class="brush: js">function onRemoved() {
+<pre class="notranslate brush: js">function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -67,8 +67,6 @@ removing.then(onRemoved, onError);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.remove")}}</p>
 

@@ -14,8 +14,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <p>The <code>&lt;basic-shape&gt;</code> data type is defined with one of the basic shape functions listed below.</p>
@@ -27,9 +25,9 @@ tags:
 <p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href="/en-US/docs/Web/CSS/Value_definition_syntax">value definition syntax</a>.</p>
 
 <dl>
- <dt><code><a id="inset()" name="inset()"></a>inset()</code></dt>
+ <dt><code><a id="inset()"></a>inset()</code></dt>
  <dd>
- <pre class="syntaxbox notranslate"><code>inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</code></pre>
+ <pre class="brush: css notranslate">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
 
  <p>Defines an inset rectangle.</p>
 
@@ -39,33 +37,33 @@ tags:
 
  <p>A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.</p>
  </dd>
- <dt><code><a id="circle()" name="circle()"></a>circle()</code></dt>
+ <dt><code><a id="circle()"></a>circle()</code></dt>
  <dd>
- <pre class="syntaxbox notranslate"><code><code><code>circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</code></code></code></pre>
+ <pre class="brush: css notranslate">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> argument represents <em>r</em>, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
 
  <p>The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="ellipse()" name="ellipse()"></a>ellipse()</code></dt>
+ <dt><code><a id="ellipse()"></a>ellipse()</code></dt>
  <dd>
- <pre class="syntaxbox notranslate"><code><code><code>ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</code></code></code></pre>
+ <pre class="brush: css notranslate">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> arguments represent r<sub>x</sub> and r<sub>y</sub>, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the r<sub>x</sub> value) and the used height (for the r<sub>y</sub> value) of the reference box.</p>
 
  <p>The position argument defines the center of the ellipse. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="polygon()" name="polygon()"></a>polygon()</code></dt>
+ <dt><code><a id="polygon()"></a>polygon()</code></dt>
  <dd>
- <pre class="syntaxbox notranslate"><code>polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</code></pre>
+ <pre class="brush: css notranslate">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
  <p><code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
  <p>Each pair argument in the list represents <em>x<sub>i</sub></em> and <em>y<sub>i</sub></em> - the x and y axis coordinates of the i<sup>th</sup> vertex of the polygon.</p>
  </dd>
- <dt><code><a id="path()" name="path()"></a>path()</code></dt>
+ <dt><code><a id="path()"></a>path()</code></dt>
  <dd>
- <pre class="syntaxbox notranslate"><code>path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</code></pre>
+ <pre class="brush: css notranslate">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
 
  <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
@@ -75,8 +73,8 @@ tags:
 
 <p>The arguments not defined above are defined as follows:</p>
 
-<pre class="syntaxbox notranslate"><code>&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
-&lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</code></pre>
+<pre class="brush: css notranslate">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
+&lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</pre>
 
 <p>Defines a radius for a circle or ellipse. If omitted it defaults to <code>closest-side</code>.</p>
 
@@ -164,8 +162,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("css.types.basic-shape")}}</p>
 

@@ -108,7 +108,7 @@ class MyModelName(models.Model):
  <li><code>help_text='Enter field documentation'</code> — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.</li>
 </ul>
 
-<p>The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (<code>verbose_name</code>), the default value of which is <code>None</code>, meaning replacing any underscores in the field name with a space (for example <code>my_field_name</code> would have a default label of <em>my field name</em>). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example <code>my_field_name</code><em> </em>would be <em>My field name</em>).</p>
+<p>The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (<code>verbose_name</code>), the default value of which is <code>None</code>, meaning replacing any underscores in the field name with a space (for example <code>my_field_name</code> would have a default label of <em>my field name</em>). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example <code>my_field_name</code> would be <em>My field name</em>).</p>
 
 <p>The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.</p>
 
@@ -138,10 +138,10 @@ class MyModelName(models.Model):
  <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.IntegerField" title="django.db.models.IntegerField">IntegerField</a> is a field for storing integer (whole number) values, and for validating entered values as integers in forms.</li>
  <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datefield">DateField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#datetimefield">DateTimeField</a> are used for storing/representing dates and date/time information (as Python <code>datetime.date</code> in and <code>datetime.datetime</code> objects, respectively). These fields can additionally declare the (mutually exclusive) parameters <code>auto_now=True</code> (to set the field to the current date every time the model is saved), <code>auto_now_add</code> (to only set the date when the model is first created) , and <code>default</code> (to set a default date that can be overridden by the user).</li>
  <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#emailfield">EmailField</a> is used to store and validate email addresses.</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#filefield">FileField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#imagefield">ImageField</a> are used to upload files and images respectively (the <code>ImageField</code> simply adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#filefield">FileField</a> and <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#imagefield">ImageField</a> are used to upload files and images respectively (the <code>ImageField</code> adds additional validation that the uploaded file is an image). These have parameters to define how and where the uploaded files are stored.</li>
  <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#autofield">AutoField</a> is a special type of <code>IntegerField</code> that automatically increments. A primary key of this type is automatically added to your model if you don’t explicitly specify one.</li>
  <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#foreignkey">ForeignKey</a> is used to specify a one-to-many relationship to another database model (e.g. a car has one manufacturer, but a manufacturer can make many cars). The "one" side of the relationship is the model that contains the "key" (models containing a "foreign key" referring to that "key", are on the "many" side of such a relationship).</li>
- <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#manytomanyfield">ManyToManyField</a> is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to <code>ForeignKeys</code>, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter <code>on_delete</code> to define what happens when the associated record is deleted (e.g. a value of <code>models.SET_NULL</code> would simply set the value to <code>NULL</code>).</li>
+ <li><a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#manytomanyfield">ManyToManyField</a> is used to specify a many-to-many relationship (e.g. a book can have several genres, and each genre can contain several books). In our library app we will use these very similarly to <code>ForeignKeys</code>, but they can be used in more complicated ways to describe the relationships between groups. These have the parameter <code>on_delete</code> to define what happens when the associated record is deleted (e.g. a value of <code>models.SET_NULL</code> would set the value to <code>NULL</code>).</li>
 </ul>
 
 <p>There are many other types of fields, including fields for different types of numbers (big integers, small integers, floats), booleans, URLs, slugs, unique ids, and other "time-related" information (duration, time, etc.). You can view the <a href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types">full list here</a>.</p>
@@ -278,7 +278,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
         """String for representing the Model object."""
         return self.name</pre>
 
-<p>The model has a single <code>CharField</code> field (<code>name</code>), which is used to describe the genre (this is limited to 200 characters and has some <code>help_text</code>. At the end of the model we declare a <code>__str__()</code> method, which simply returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called <code>Name</code> in forms.</p>
+<p>The model has a single <code>CharField</code> field (<code>name</code>), which is used to describe the genre (this is limited to 200 characters and has some <code>help_text</code>. At the end of the model we declare a <code>__str__()</code> method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called <code>Name</code> in forms.</p>
 
 <h3 id="Book_model">Book model</h3>
 
@@ -313,7 +313,12 @@ class Book(models.Model):
 
 <p>The genre is a <code>ManyToManyField</code>, so that a book can have multiple genres and a genre can have many books. The author is declared as <code>ForeignKey</code>, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)</p>
 
-<p>In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the <code>author</code> field are <code>null=True</code>, which allows the database to store a <code>Null</code> value if no author is selected, and <code>on_delete=models.SET_NULL</code>, which will set the value of the author to <code>Null</code> if the associated author record is deleted.</p>
+<p>In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the <code>author</code> field are <code>null=True</code>, which allows the database to store a <code>Null</code> value if no author is selected, and <code>on_delete=models.SET_NULL</code>, which will set the value of the book's author field to <code>Null</code> if the associated author record is deleted.</p>
+
+<div class="notecard warning">
+    <h4>Warning</h4>
+    <p>By default <code>on_delete=models.CASCADE</code>, which means that if the author was deleted, this book would be deleted too! We use <code>SET_NULL</code> here, but we could also use <code>PROTECT</code> or <code>RESTRICT</code> to prevent the author being deleted while any book uses it.</p>
+</div>
 
 <p>The model also defines <code>__str__()</code> , using the book's <code>title</code> field to represent a <code>Book</code> record. The final method, <code>get_absolute_url()</code> returns a URL that can be used to access a detail record for this model (for this to work we will have to define a URL mapping that has the name <code>book-detail</code>, and define an associated view and template).</p>
 
@@ -321,10 +326,10 @@ class Book(models.Model):
 
 <p>Next, copy the <code>BookInstance</code> model (shown below) under the other models. The <code>BookInstance</code> represents a specific copy of a book that someone might borrow, and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details, and a unique id for the book in the library.</p>
 
-<p>Some of the fields and methods will now be familiar. The model uses</p>
+<p>Some of the fields and methods will now be familiar. The model uses:</p>
 
 <ul>
- <li><code>ForeignKey</code> to identify the associated <code>Book</code> (each book can have many copies, but a copy can only have one <code>Book</code>).</li>
+ <li><code>ForeignKey</code> to identify the associated <code>Book</code> (each book can have many copies, but a copy can only have one <code>Book</code>). The key specifies <code>on_delete=models.RESTRICT</code> to ensure that the <code>Book</code> cannot be deleted while referenced by a <code>BookInstance</code>.</li>
  <li><code>CharField</code> to represent the imprint (specific release) of the book.</li>
 </ul>
 
@@ -333,7 +338,7 @@ class Book(models.Model):
 class BookInstance(models.Model):
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
-    book = models.ForeignKey('Book', on_delete=models.SET_NULL, null=True)
+    book = models.ForeignKey('Book', on_delete=models.RESTRICT)
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
 
@@ -369,13 +374,13 @@ class BookInstance(models.Model):
 
 <p>The method <code>__str__()</code> represents the <code>BookInstance</code> object using a combination of its unique id and the associated <code>Book</code>'s title.</p>
 
-<div class="note">
-<p><strong>Note</strong>: A little Python:</p>
-
-<ul>
- <li>Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
- <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
-</ul>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p> A little Python:</p>
+    <ul>
+        <li>Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
+        <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
+     </ul>
 </div>
 
 <h3 id="Author_model">Author model</h3>
@@ -401,7 +406,7 @@ class BookInstance(models.Model):
         return f'{self.last_name}, {self.first_name}'
 </pre>
 
-<p>All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the <code>__str__()</code> returns the name in <em>last name</em>, <em>firstname </em>order. The <code>get_absolute_url()</code> method reverses the <code>author-detail</code> URL mapping to get the URL for displaying an individual author.</p>
+<p>All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the <code>__str__()</code> returns the name in <em>last name</em>, <em>firstname</em> order. The <code>get_absolute_url()</code> method reverses the <code>author-detail</code> URL mapping to get the URL for displaying an individual author.</p>
 
 <h2 id="Re-run_the_database_migrations">Re-run the database migrations</h2>
 
@@ -427,12 +432,6 @@ python3 manage.py migrate</code></pre>
 
 <pre class="brush: bash notranslate"><code>python3 manage.py makemigrations</code><code>
 python3 manage.py migrate</code></pre>
-
-<ul>
-</ul>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

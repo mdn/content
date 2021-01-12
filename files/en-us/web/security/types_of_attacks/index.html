@@ -10,8 +10,6 @@ slug: Web/Security/Types_of_attacks
 
 <p>Click-jacking is the practice of tricking a user into clicking on a link, button, etc. that is other than what the user thinks it is. This can be used, for example, to steal login credentials or to get the user's unwitting permission to install a piece of malware. (Click-jacking is sometimes called "user interface redressing", though this is a misuse of the term "redress".)</p>
 
-<h2 id="Cross-site_request_forgery_CSRF">Cross-site request forgery (CSRF)</h2>
-
 <h2 id="Cross-site_scripting_XSS">Cross-site scripting (XSS)</h2>
 
 <p>Cross-site scripting (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the <a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf">seventh most common Web app vulnerability</a> in 2017.</p>
@@ -33,6 +31,10 @@ slug: Web/Security/Types_of_attacks
  <dd>The payload is executed as a result of modifying the DOM environment (in the victim’s browser) used by the original client-side script. That is, the page itself does not change, but the client side code contained in the page runs in an unexpected manner because of the malicious modifications to the DOM environment.</dd>
 </dl>
 
+<h2 id="Cross-site_request_forgery_CSRF">Cross-site request forgery (CSRF)</h2>
+
+<p>CSRF (sometimes also called XSRF) is a related class of attack. The attacker causes the user's browser to perform a request to the website's backend without the user's consent or knowledge. An attacker can use an XSS payload to launch a CSRF attack.</p>
+
 <p>Wikipedia mentions a good example for CSRF. In this situation, someone includes an image that isn’t really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank’s server to withdraw money:</p>
 
 <pre class="brush: html">&lt;img src="https://bank.example.com/withdraw?account=bob&amp;amount=1000000&amp;for=mallory"&gt;</pre>
@@ -46,11 +48,10 @@ slug: Web/Security/Types_of_attacks
 &lt;/form&gt;
 &lt;script&gt;window.addEventListener('DOMContentLoaded', (e) =&gt; { document.querySelector('form').submit(); }&lt;/script&gt;</pre>
 
-<p><br>
- There are a few techniques that should be used to prevent this from happening:</p>
+<p>There are a few techniques that should be used to prevent this from happening:</p>
 
 <ul>
- <li>GET endpoints should be idempotent—actions that enact a change and do not simply retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.</li>
+ <li>GET endpoints should be idempotent—actions that enact a change and do not retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.</li>
  <li>A CSRF token should be included in &lt;form&gt; elements via a hidden input field. This token should be unique per user and stored (for example, in a cookie) such that the server can look up the expected value when the request is sent. For all non-GET requests that have the potential to perform an action, this input field should be compared against the expected value. If there is a mismatch, the request should be aborted.</li>
  <li>This method of protection relies on an attacker being unable to predict the user's assigned CSRF token. The token should be regenerated on sign-in.</li>
  <li>Cookies that are used for sensitive actions (such as session cookies) should have a short lifetime with the SameSite attribute set to Strict or Lax. (See SameSite cookies above). In supporting browsers, this will have the effect of ensuring that the session cookie is not sent along with cross-site requests and so the request is effectively unauthenticated to the application server.</li>

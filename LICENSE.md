@@ -74,6 +74,7 @@ Creative Commons may be contacted at http://creativecommons.org/.
 Code examples and snippets added on or after August 20, 2010 are in the public domain
 ([CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)). No licensing notice
 is necessary, but if you need one, you can use:
+
 ```
 Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
 ```
@@ -209,6 +210,7 @@ express Statement of Purpose.
 Code examples and snippets added before August 20, 2010 are available under
 the [MIT license](https://opensource.org/licenses/MIT). You should insert
 the following attribution information into the MIT license template:
+
 ```
 © <date of last page revision> <name of person who created it>
 ```

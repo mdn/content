@@ -45,7 +45,7 @@ tags:
 
 <p>If the row is within a treegrid, rows can include the <code>aria-expanded</code> attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the aria-expanded attribute is not present.</p>
 
-<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to botton navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
 
 <div class="note">
 <p>Note: Using the native HTML table element (&lt;table&gt;) along with the table row element (&lt;tr&gt;) whenever possible is strongly encouraged.</p>
@@ -92,7 +92,7 @@ tags:
   <li><code>aria-expended="undefined"</code> or the attribute is missing: The row is neither expandable nor collapsible.</li>
  </ul>
 
- <p>If the element with the aria-expanded attribute controls the expansion of another grouping container that is not 'owned by' the element, the author <strong>should </strong>reference the container by using the aria-controls attribute.</p>
+ <p>If the element with the aria-expanded attribute controls the expansion of another grouping container that is not 'owned by' the element, the author <strong>should</strong> reference the container by using the aria-controls attribute.</p>
  </dd>
  <dt>aria-selected state</dt>
  <dd>Only relevant if the row is in an interactive container, such as a grid or treegrid, but not relevant if the row is in a table. The <code>aria-selected</code> attribute can take one of three values, or be omitted:
@@ -108,7 +108,7 @@ tags:
   <br>
   The attribute takes as its value an integer between 1 and the total number of columns within the table, grid or treegrid. When placed on the row, the <code>aria-colindex</code> defines an element's column index or position with respect to the total number of columns within a row. For example, in a table with 15 columns, and columns 4, 5, and 6 are in the DOM, aria-colindex="4" could be set on every row.<br>
   <br>
-  If the set of columns which is present in the DOM is <strong>not </strong>contiguous, or if there are cells spanning more than one row or column, put the <code>aria-colindex</code> on all of the children of each row instead of on the row itself.</p>
+  If the set of columns which is present in the DOM is <strong>not</strong> contiguous, or if there are cells spanning more than one row or column, put the <code>aria-colindex</code> on all of the children of each row instead of on the row itself.</p>
 
  <p>If all the columns are in the DOM, this attribute is not necessary.</p>
  </dd>
@@ -125,7 +125,6 @@ tags:
 <p>None</p>
 
 <h3 id="Required_JavaScript_features">Required JavaScript features</h3>
-
 
 <p>None. For sortable columns, see the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a> aria role.</p>
 

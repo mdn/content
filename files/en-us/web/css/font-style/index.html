@@ -12,11 +12,9 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The<strong> <code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</span></p>
+<p><span class="seoSummary">The <strong><code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
-
-
 
 <p><strong>Italic</strong> font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while <strong>oblique</strong> faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).</p>
 
@@ -47,7 +45,7 @@ font-style: unset;
  <dt><code>oblique</code> <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code></dt>
  <dd>Selects a font classified as <code>oblique</code>, and additionally specifies an angle for the slant of the text. If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of <code>-90deg</code> to <code>90deg</code> inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.<br>
  <br>
- In general, for a requested angle of 14 degrees or greater, larger angles are prefered; otherwise, smaller angles are preferred (see the spec's <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a> for the precise algorithm).</dd>
+ In general, for a requested angle of 14 degrees or greater, larger angles are preferred; otherwise, smaller angles are preferred (see the spec's <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a> for the precise algorithm).</dd>
 </dl>
 
 <h3 id="Variable_fonts">Variable fonts</h3>
@@ -161,7 +159,7 @@ update();
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -187,7 +185,6 @@ update();
 }</pre>
 
 <p>{{ EmbedLiveSample('Font_styles') }}</p>
-
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -223,9 +220,16 @@ update();
  </tbody>
 </table>
 
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("css.properties.font-style")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("font-style")}}</li>
+ <li>{{cssxref("font-weight")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
+</ul>

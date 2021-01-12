@@ -20,8 +20,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}</div>
 
-
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js notranslate">let o = {}
@@ -81,7 +79,7 @@ let o = {
 
 <pre class="brush: js notranslate">let object = {}</pre>
 
-<p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You simply notate a list of <code>key: value</code> pairs delimited by commas.</p>
+<p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You notate a list of <code>key: value</code> pairs delimited by commas.</p>
 
 <p>The following code creates an object with three properties and the keys are <code>"foo"</code>, <code>"age"</code> and <code>"baz"</code>. The values of these keys are a string <code>"bar"</code>, the number <code>42</code>, and another object.</p>
 
@@ -211,8 +209,6 @@ const obj = {
 console.log(obj); // A,B,C: "Hello"
 console.log(obj["A,B,C"]) // "Hello"
 
-
-
 let param = 'size'
 let config = {
   [param]: 12,
@@ -277,9 +273,6 @@ let obj3 = {['__prot' + 'o__']: 17}
 assert(obj3.__proto__ === 17)
 </pre>
 
-<ul>
-</ul>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -296,7 +289,6 @@ assert(obj3.__proto__ === 17)
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
-
 
 <p>{{Compat("javascript.operators.object_initializer")}}</p>
 </div>

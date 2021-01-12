@@ -25,14 +25,14 @@ tags:
 
 <ul>
  <li>the User has interacted with the domain.</li>
- <li>on mobile the user has <a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">added the site to their home screen</a>.</li>
+ <li>on mobile the user has <a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">added the site to their home screen</a>.</li>
 </ul>
 
-<p>Many browsers will simply ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.</p>
+<p>Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.</p>
 
 <p>For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect <em>any</em> user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a <em>Start</em> button is pressed.</p>
 
-<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practises with the autoplay policy here</a>.</p>
+<p>To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#Autoplay_policy">best practices with the autoplay policy here</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Playing part of your file at zero volume could also work if the browser allows you to change volume (see below). Also note that playing and immediately pausing your audio does not guarantee that a small piece of audio won't be played.</p>
@@ -138,15 +138,15 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Concurrent audio playback is tested using our <a href="http://jsfiddle.net/dmkyaq0r/">concurrent audio test example</a>, where we attempt to play three pieces of audio at the same time using the standard audio API.</p>
+<p><strong>Note</strong>: Concurrent audio playback is tested using our <a href="https://jsfiddle.net/dmkyaq0r/">concurrent audio test example</a>, where we attempt to play three pieces of audio at the same time using the standard audio API.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Simple autoplay functionality is tested with our <a href="http://jsfiddle.net/vpdspp2b/">autoplay test example</a>.</p>
+<p><strong>Note</strong>: Simple autoplay functionality is tested with our <a href="https://jsfiddle.net/vpdspp2b/">autoplay test example</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Volume changeability is tested with our <a href="http://jsfiddle.net/7ta12vw4/">volume test example</a>.</p>
+<p><strong>Note</strong>: Volume changeability is tested with our <a href="https://jsfiddle.net/7ta12vw4/">volume test example</a>.</p>
 </div>
 
 <h2 id="Mobile_workarounds">Mobile workarounds</h2>
@@ -155,7 +155,7 @@ tags:
 
 <h3 id="Audio_sprites">Audio sprites</h3>
 
-<p>Audio sprites borrow their name from <a href="/en-US/docs/Web/Guide/CSS/CSS_Image_Sprites">CSS sprites</a>, which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.</p>
+<p>Audio sprites borrow their name from <a href="/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">CSS sprites</a>, which is a visual technique for using CSS with a single graphic resource to break it into a series of sprites. We can apply the same principle to audio so that rather than having a bunch of small audio files that take time to load and play, we have one larger audio file containing all the smaller audio snippets we need. To play a specific sound from the file, we just use the known start and stop times for each audio sprite.</p>
 
 <p>The advantage is that we can prime one piece of audio and have our sprites ready to go. To do this we can just play and instantly pause the larger piece of audio. You'll also reduce the number of server requests and save bandwidth.</p>
 
@@ -203,7 +203,7 @@ myAudio.addEventListener('timeupdate', function() {
 }, false);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can <a href="http://jsfiddle.net/59vwaame/">try out our audio sprite player live</a> on JSFiddle.</p>
+<p><strong>Note</strong>: You can <a href="https://jsfiddle.net/59vwaame/">try out our audio sprite player live</a> on JSFiddle.</p>
 </div>
 
 <div class="note">
@@ -264,7 +264,7 @@ myAudio.addEventListener('timeupdate', function() {
     &lt;li data-loading="true"&gt;
       &lt;a href="leadguitar.mp3" class="track"&gt;Lead Guitar&lt;/a&gt;
       &lt;p class="loading-text"&gt;Loading...&lt;/p&gt;
-      &lt;button data-playing="false" aria-decribedby="guitar-play-label"&gt;
+      &lt;button data-playing="false" aria-describedby="guitar-play-label"&gt;
         &lt;span id="guitar-play-label"&gt;Play&lt;/span&gt;
       &lt;/button&gt;
     &lt;/li&gt;
@@ -424,7 +424,7 @@ function playTrack(audioBuffer) {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can <a href="http://jsfiddle.net/c87z11jj/2/">try our wait calculator code</a> here, on JSFiddle (I've synched to the bar in this case).</p>
+<p><strong>Note</strong>: You can <a href="https://jsfiddle.net/c87z11jj/2/">try our wait calculator code</a> here, on JSFiddle (I've synched to the bar in this case).</p>
 </div>
 
 <div class="note">
@@ -447,7 +447,7 @@ function playTrack(audioBuffer) {
 
 <p>This is especially useful in a three-dimensional environment rendered using WebGL, where the Web Audio API makes it possible to tie audio to the objects and viewpoints.</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API on MDN</a></li>

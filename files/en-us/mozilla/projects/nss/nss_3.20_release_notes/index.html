@@ -1,0 +1,96 @@
+---
+title: NSS 3.20 release notes
+slug: Mozilla/Projects/NSS/NSS_3.20_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.20, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_20_RTM. NSS 3.20 requires NSPR 4.10.8 or newer.</p>
+
+<p>NSS 3.20 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_20_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_20_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.20">New in NSS 3.20</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>The TLS library has been extended to support DHE ciphersuites in server applications.</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in ssl.h</em>
+
+  <ul>
+   <li><strong>SSL_DHEGroupPrefSet</strong> - Configure the set of allowed/enabled DHE group parameters that can be used by NSS for a server socket.</li>
+   <li><strong>SSL_EnableWeakDHEPrimeGroup</strong> - Enable the use of weak DHE group parameters that are smaller than default minimum size of the library.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Types">New Types</h4>
+
+<ul>
+ <li><em>in sslt.h</em>
+
+  <ul>
+   <li><strong>SSLDHEGroupType</strong> - Enumerates the set of DHE parameters embedded in NSS that can be used with function SSL_DHEGroupPrefSet</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in ssl.h</em>
+
+  <ul>
+   <li><strong>SSL_ENABLE_SERVER_DHE</strong> - A socket option user to enable or disable DHE ciphersuites for a server socket</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.20">Notable Changes in NSS 3.20</h2>
+
+<ul>
+ <li>The TLS library has been extended to support DHE ciphersuites in server applications.</li>
+ <li>For backward compatibility reasons, the server side implementation of the TLS library keeps all DHE ciphersuites disabled by default. They can be enabled with the new socket option SSL_ENABLE_SERVER_DHE and the SSL_OptionSet or the SSL_OptionSetDefault API.</li>
+ <li>The server side implementation of the TLS  does not support session tickets while using a DHE ciphersuite (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1174677">bug 1174677</a>).</li>
+ <li>Support for the following ciphersuites has been added:
+  <ul>
+   <li>TLS_DHE_DSS_WITH_AES_128_GCM_SHA256</li>
+   <li>TLS_DHE_DSS_WITH_AES_128_CBC_SHA256</li>
+   <li>TLS_DHE_DSS_WITH_AES_256_CBC_SHA256</li>
+  </ul>
+ </li>
+ <li>By default, the server side TLS implementation will use DHE parameters with a size of 2048 bits when using DHE ciphersuites.</li>
+ <li>NSS embeds fixed DHE parameters sized 2048, 3072, 4096, 6144 and 8192 bits, which were copied from version 08 of the Internet-Draft <a href="https://tools.ietf.org/html/draft-ietf-tls-negotiated-ff-dhe-08">"Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for TLS"</a>, Appendix A.</li>
+ <li>A new API SSL_DHEGroupPrefSet has been added to NSS, which allows a server application to select one or multiple of the embedded DHE parameters as the preferred parameters. The current implementation of NSS will always use the first entry in the array that is passed as a parameter to the SSL_DHEGroupPrefSet API. In future versions of the TLS implementation, a TLS client might show a preference for certain DHE parameters, and the NSS TLS server side implementation might select a matching entry from the set of parameters that have been configured as preferred on the server side.</li>
+ <li>NSS optionally supports the use of weak DHE parameters with DHE ciphersuites in order to support legacy clients. To enable this support, the new API SSL_EnableWeakDHEPrimeGroup must be used. Each time this API is called for the first time in a process, a fresh set of weak DHE parameters will be randomly created, which may take a long amount of time. Please refer to the comments in the header file that declares the SSL_EnableWeakDHEPrimeGroup API for additional details.</li>
+ <li>The size of the default PQG parameters used by certutil when creating DSA keys has been increased to use 2048 bit parameters.</li>
+ <li>The selfserv utility has been enhanced to support the new DHE features.</li>
+ <li>NSS no longer supports C compilers that predate the ANSI C standard (C89).</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.20">Bugs fixed in NSS 3.20</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.20:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.20">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.20</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.20 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.20 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report at <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

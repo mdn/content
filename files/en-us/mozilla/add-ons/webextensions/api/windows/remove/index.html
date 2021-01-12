@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removing = browser.windows.remove(
+<pre class="brush:js">var removing = browser.windows.remove(
   windowId        // integer
 )
 </pre>
@@ -39,15 +39,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.windows.remove")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>When the user clicks a browser action's icon, close the window in which the icon was clicked:</p>
 
-<pre class="brush: js">function onRemoved() {
+<pre class="notranslate brush: js">function onRemoved() {
   console.log(`Removed window`);
 }
 
@@ -65,7 +63,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 <p><br>
  Close the current, e.g. popup, window when the user clicks a button on the page:</p>
 
-<pre class="brush: js">// in a script loaded by the page in the window
+<pre class="notranslate brush: js">// in a script loaded by the page in the window
 document.querySelector('#close').addEventListener(async ({ button, }) =&gt; { try {
   if (button) return; // not a left click
   const windowId = (await browser.windows.getCurrent()).id;
@@ -73,7 +71,7 @@ document.querySelector('#close').addEventListener(async ({ button, }) =&gt; { tr
   // this point will never be reached, since the window is gone
 } catch (error) { console.error('Closing failed:', error); } });</pre>
 
-<p>In Firefox, the same could be acheived with the <code>.allowScriptsToClose</code> window creation property and <code>window.close()</code>.</p>
+<p>In Firefox, the same could be achieved with the <code>.allowScriptsToClose</code> window creation property and <code>window.close()</code>.</p>
 
 <p>{{WebExtExamples}}</p>
 

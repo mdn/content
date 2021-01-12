@@ -1,0 +1,35 @@
+---
+title: FC_DecryptUpdate
+slug: Mozilla/Projects/NSS/Reference/FC_DecryptUpdate
+tags:
+  - NSS
+---
+
+<h3 id="Name"> Name </h3>
+<p>FC_DecryptUpdate - decrypt a block of a multi-part encryption operation.
+</p>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval"><a href="/en-US/CK_RV">CK_RV</a> FC_DecryptUpdate(
+  <a href="/en-US/CK_SESSION_HANDLE">CK_SESSION_HANDLE</a> hSession,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pEncryptedPart,
+  <a href="/en-US/CK_ULONG">CK_ULONG</a> usEncryptedPartLen,
+  <a href="/en-US/CK_BYTE">CK_BYTE_PTR</a> pPart,
+  <a href="/en-US/CK_ULONG">CK_ULONG_PTR</a> pusPartLen
+);
+</pre>
+<h3 id="Parameters"> Parameters </h3>
+<dl><dt><code>hSession</code></dt><dd> {{ mediawiki.external('in') }} session handle.
+</dd><dt><code>pEncryptedPart</code></dt><dd> {{ mediawiki.external('in') }} pointer to the next block of data to be decrypted.
+</dd><dt><code>usEncryptedPartLen</code></dt><dd> {{ mediawiki.external('in') }} length of data block in bytes.
+</dd><dt><code>pPart</code></dt><dd> {{ mediawiki.external('out') }} pointer to location where recovered block is to be stored.
+</dd><dt><code>pusPartLen</code></dt><dd> {{ mediawiki.external('in,out') }} pointer the location where the number of bytes of recovered data is to be stored.
+</dd></dl>
+<h3 id="Description"> Description </h3>
+<p><code>FC_DecryptUpdate</code> decrypts a block of data according to the attributes of the previous call to <code>FC_DecryptInit</code>. The block may be part of a multi-part decryption operation.
+</p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_DecryptUpdate</code>.
+</p>
+<h3 id="Return_value"> Return value </h3>
+<h3 id="Examples"> Examples </h3>
+<h3 id="See_also"> See also </h3>
+<ul><li> <a href="/en-US/FC_DecryptInit">FC_DecryptInit</a>, <a href="/en-US/NSC_DecryptUpdate">NSC_DecryptUpdate</a>
+</li></ul>

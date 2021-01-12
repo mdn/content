@@ -6,6 +6,8 @@ tags:
   - Intl
   - JavaScript
   - Property
+  - Locale
+  - Localization
   - Prototype
   - Reference
 ---
@@ -22,98 +24,97 @@ tags:
 <h3 id="Valid_collation_types">Valid collation types</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Collation Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>big5han</td>
-   <td>Pinyin ordering for Latin, big5 charset ordering for CJK characters (used in Chinese)</td>
-  </tr>
-  <tr>
-   <td>compat</td>
-   <td>A previous version of the ordering, for compatibility</td>
-  </tr>
-  <tr>
-   <td>dict</td>
-   <td>Dictionary style ordering (such as in Sinhala)</td>
-  </tr>
-  <tr>
-   <td>
-    <div class="notecard warning">
-    <p>The <code>direct</code> collation type has been deprected. Do not use.</p>
-    </div>
-
-    <p>direct</p>
-   </td>
-   <td>Binary code point order (used in Hindi)</td>
-  </tr>
-  <tr>
-   <td>ducet</td>
-   <td>The default Unicode collation element table order</td>
-  </tr>
-  <tr>
-   <td>emoji</td>
-   <td>Recommended ordering for emoji characters</td>
-  </tr>
-  <tr>
-   <td>eor</td>
-   <td>European ordering rules</td>
-  </tr>
-  <tr>
-   <td>gb2312</td>
-   <td>Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (used in Chinese)</td>
-  </tr>
-  <tr>
-   <td>phonebk</td>
-   <td>Phonebook style ordering (such as in German)</td>
-  </tr>
-  <tr>
-   <td>phonetic</td>
-   <td>Phonetic ordering (sorting based on pronunciation)</td>
-  </tr>
-  <tr>
-   <td>pinyin</td>
-   <td>Pinyin ordering for Latin and for CJK characters (used in Chinese)</td>
-  </tr>
-  <tr>
-   <td>reformed</td>
-   <td>Reformed ordering (such as in Swedish)</td>
-  </tr>
-  <tr>
-   <td>search</td>
-   <td>Special collation type for string search</td>
-  </tr>
-  <tr>
-   <td>searchjl</td>
-   <td>Special collation type for Korean initial consonant search</td>
-  </tr>
-  <tr>
-   <td>standard</td>
-   <td>Default ordering for each language</td>
-  </tr>
-  <tr>
-   <td>stroke</td>
-   <td>Pinyin ordering for Latin, stroke order for CJK characters (used in Chinese)</td>
-  </tr>
-  <tr>
-   <td>trad</td>
-   <td>Traditional style ordering (such as in Spanish)</td>
-  </tr>
-  <tr>
-   <td>unihan</td>
-   <td>Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (used in Chinese)</td>
-  </tr>
-  <tr>
-   <td>zhuyin</td>
-   <td>
-    <p>Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (used in Chinese)</p>
-   </td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Collation Type</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>big5han</td>
+			<td>Pinyin ordering for Latin, big5 charset ordering for CJK characters (used in Chinese)</td>
+		</tr>
+		<tr>
+			<td>compat</td>
+			<td>A previous version of the ordering, for compatibility</td>
+		</tr>
+		<tr>
+			<td>dict</td>
+			<td>Dictionary style ordering (such as in Sinhala)</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="notecard warning">
+					<p>The <code>direct</code> collation type has been deprected. Do not use.</p>
+				</div>
+				<p>direct</p>
+			</td>
+			<td>Binary code point order (used in Hindi)</td>
+		</tr>
+		<tr>
+			<td>ducet</td>
+			<td>The default Unicode collation element table order</td>
+		</tr>
+		<tr>
+			<td>emoji</td>
+			<td>Recommended ordering for emoji characters</td>
+		</tr>
+		<tr>
+			<td>eor</td>
+			<td>European ordering rules</td>
+		</tr>
+		<tr>
+			<td>gb2312</td>
+			<td>Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (used in Chinese)</td>
+		</tr>
+		<tr>
+			<td>phonebk</td>
+			<td>Phonebook style ordering (such as in German)</td>
+		</tr>
+		<tr>
+			<td>phonetic</td>
+			<td>Phonetic ordering (sorting based on pronunciation)</td>
+		</tr>
+		<tr>
+			<td>pinyin</td>
+			<td>Pinyin ordering for Latin and for CJK characters (used in Chinese)</td>
+		</tr>
+		<tr>
+			<td>reformed</td>
+			<td>Reformed ordering (such as in Swedish)</td>
+		</tr>
+		<tr>
+			<td>search</td>
+			<td>Special collation type for string search</td>
+		</tr>
+		<tr>
+			<td>searchjl</td>
+			<td>Special collation type for Korean initial consonant search</td>
+		</tr>
+		<tr>
+			<td>standard</td>
+			<td>Default ordering for each language</td>
+		</tr>
+		<tr>
+			<td>stroke</td>
+			<td>Pinyin ordering for Latin, stroke order for CJK characters (used in Chinese)</td>
+		</tr>
+		<tr>
+			<td>trad</td>
+			<td>Traditional style ordering (such as in Spanish)</td>
+		</tr>
+		<tr>
+			<td>unihan</td>
+			<td>Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (used in Chinese)</td>
+		</tr>
+		<tr>
+			<td>zhuyin</td>
+			<td>
+				<p>Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (used in Chinese)</p>
+			</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
@@ -138,26 +139,24 @@ console.log(configColl.collation); // Prints "emoji"</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.collation')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.collation')}}</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
-<p>{{Compat("javascript.builtins.Intl.Locale.collation")}}</p>
+<div>{{Compat("javascript.builtins.Intl.Locale.collation")}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
+	<li>{{jsxref("Intl.Locale")}}</li>
 </ul>

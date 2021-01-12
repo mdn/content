@@ -25,7 +25,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>) and the previous articles in this module.</td>
+   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>) and the previous articles in this module.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -46,10 +46,10 @@ tags:
 
 <h2 id="Active_learning_classic_embedding_uses">Active learning: classic embedding uses</h2>
 
-<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">Youtube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how Youtube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
+<p>In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with <a href="https://www.youtube.com">YouTube</a>, but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.</p>
 
 <ol>
- <li>First, go to Youtube and find a video you like.</li>
+ <li>First, go to YouTube and find a video you like.</li>
  <li>Below the video, you'll find a <em>Share</em> button — select this to display the sharing options.</li>
  <li>Select the <em>Embed</em> button and you'll be given some <code>&lt;iframe&gt;</code> code — copy this.</li>
  <li>Insert it into the <em>Input</em> box below, and see what the result is in the <em>Output</em>.</li>
@@ -209,12 +209,12 @@ textarea.onkeyup = function(){
  <dt>{{htmlattrxref('allowfullscreen','iframe')}}</dt>
  <dd>If set, the <code>&lt;iframe&gt;</code> is able to be placed in fullscreen mode using the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> (somewhat beyond the scope of this article.)</dd>
  <dt>{{htmlattrxref('frameborder','iframe')}}</dt>
- <dd>If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behaviour. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}<code>: none;</code> in your {{Glossary('CSS')}}.</dd>
+ <dd>If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behavior. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}<code>: none;</code> in your {{Glossary('CSS')}}.</dd>
  <dt>{{htmlattrxref('src','iframe')}}</dt>
  <dd>This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.</dd>
  <dt>{{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}</dt>
  <dd>These attributes specify the width and height you want the iframe to be.</dd>
- <dt><strong>F</strong>allback content</dt>
+ <dt>Fallback content</dt>
  <dd>In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing <code>&lt;iframe&gt;&lt;/iframe&gt;</code> tags that will appear if the browser doesn't support the <code>&lt;iframe&gt;</code>. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support <code>&lt;iframe&gt;</code>s these days.</dd>
  <dt>{{htmlattrxref('sandbox','iframe')}}</dt>
  <dd>This attribute, which works in slightly more modern browsers than the rest of the <code>&lt;iframe&gt;</code> features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.</dd>
@@ -234,7 +234,7 @@ textarea.onkeyup = function(){
 <p>{{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.</p>
 </div>
 
-<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) You won't actually see anything displayed on the page, and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told <em>Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
+<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) You won't actually see anything displayed on the page, and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told <em>Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
 
 <h4 id="Only_embed_when_necessary">Only embed when necessary</h4>
 
@@ -255,7 +255,7 @@ textarea.onkeyup = function(){
  <li>HTTPS prevents embedded content from accessing content in your parent document, and vice versa.</li>
 </ol>
 
-<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or Youtube, for example.</p>
+<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or YouTube, for example.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
@@ -263,7 +263,7 @@ textarea.onkeyup = function(){
 
 <h4 id="Always_use_the_sandbox_attribute">Always use the <code>sandbox</code> attribute</h4>
 
-<p>You want to give attackers as little power as you can to do bad things on your website, therefore you should give embedded content <em>only the permissions needed for doing its job. </em>Of course, this applies to your own content, too. A container for code where it can be used appropriately — or for testing — but can't cause any harm to the rest of the codebase (either accidental or malicious) is called a <a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">sandbox</a>.</p>
+<p>You want to give attackers as little power as you can to do bad things on your website, therefore you should give embedded content <em>only the permissions needed for doing its job.</em> Of course, this applies to your own content, too. A container for code where it can be used appropriately — or for testing — but can't cause any harm to the rest of the codebase (either accidental or malicious) is called a <a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">sandbox</a>.</p>
 
 <p>Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default, you should impose all available restrictions by using the <code>sandbox</code> attribute with no parameters, as shown in our previous example.</p>
 
@@ -281,7 +281,7 @@ textarea.onkeyup = function(){
 <p><strong>Note</strong>: You can read Frederik Braun's post <a href="https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/">On the X-Frame-Options Security Header</a> for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.</p>
 </div>
 
-<h2 id="The_&lt;embed>_and_&lt;object>_elements">The &lt;embed&gt; and &lt;object&gt; elements</h2>
+<h2 id="The_&lt;embed&gt;_and_&lt;object&gt;_elements">The &lt;embed&gt; and &lt;object&gt; elements</h2>
 
 <p>The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!</p>
 
@@ -336,7 +336,7 @@ textarea.onkeyup = function(){
 <p><strong>Note</strong>: <code>&lt;object&gt;</code> requires a <code>data</code> attribute, a <code>type</code> attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox and Chrome, as of this writing). <code>typemustmatch</code> keeps the embedded file from running unless the <code>type</code> attribute provides the correct media type. <code>typemustmatch</code> can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).</p>
 </div>
 
-<p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
+<p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
 
 <pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
@@ -346,7 +346,7 @@ textarea.onkeyup = function(){
 
 <p>Pretty horrible, isn't it? The HTML generated by the Adobe Flash tool tended to be even worse, using an <code>&lt;object&gt;</code> element with an <code>&lt;embed&gt;</code> element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.</p>
 
-<p>Now let's look at an <code>&lt;object&gt;</code> example that embeds a PDF into a page (see the <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> and the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
+<p>Now let's look at an <code>&lt;object&gt;</code> example that embeds a PDF into a page (see the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> and the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
 <pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch&gt;
@@ -363,13 +363,13 @@ textarea.onkeyup = function(){
 <p>Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For virtually all applications, it's time to stop delivering content that depends on plugins and start taking advantage of Web technologies instead.</p>
 
 <ul>
- <li><strong>Broaden your reach to everyone. </strong>Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.</li>
+ <li><strong>Broaden your reach to everyone.</strong> Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.</li>
  <li><strong>Give yourself a break from the <a href="https://webaim.org/techniques/flash/">extra accessibility headaches </a>that come with Flash and other plugins.</strong></li>
- <li><strong>Stay clear of additional security hazards. </strong>Adobe Flash is <a href="https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">notoriously insecure,</a> even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook,  <a href="https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">requested that Adobe discontinue Flash.</a></li>
+ <li><strong>Stay clear of additional security hazards.</strong> Adobe Flash is <a href="https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53">notoriously insecure,</a> even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook,  <a href="https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso">requested that Adobe discontinue Flash.</a></li>
 </ul>
 
 <div class="notecard note">
-<p><strong>Note: </strong>Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.</p>
+<p><strong>Note:</strong> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020.  As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completely removed all Flash functionality. Any existing Flash content will be inaccessible after that date.</p>
 </div>
 
 <p>So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use <a href="/en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage">HTML5 video</a> for your media needs, <a href="/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage">SVG</a> for vector graphics, and <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas</a> for complex images and animations. <a href="https://plus.google.com/+PeterElst/posts/P5t4pFhptvp">Peter Elst was already writing some years ago</a> that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.</p>

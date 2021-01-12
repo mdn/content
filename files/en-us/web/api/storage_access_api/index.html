@@ -71,7 +71,7 @@ tags:
 <p><strong>Note</strong>: User interaction propagates to the Promise returned by both of these methods, allowing the callers to take actions that require user interaction without requiring a second click from the user. For example, a caller could open a pop-up window from the resolved Promise without triggering Firefox’s pop-up blocker.</p>
 </div>
 
-<h2 id="Extensions_to_&lt;iframe>_sandbox">Extensions to &lt;iframe&gt; sandbox</h2>
+<h2 id="Extensions_to_&lt;iframe&gt;_sandbox">Extensions to &lt;iframe&gt; sandbox</h2>
 
 <p>The {{htmlelement("iframe")}} element's <code>sandbox</code> attribute has a new token, <code>allow-storage-access-by-user-activation</code>, which permits sandboxed <code>&lt;iframe&gt;</code>s to use the Storage Access API to request storage access.</p>
 
@@ -80,8 +80,6 @@ tags:
 <p>The API is currently only at the proposal stage — the standardization process has yet to begin. You can currently find specification details of the API at Apple's <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</a> blog post, and <a href="https://github.com/whatwg/html/issues/3338">WHATWG HTML issue 3338 — Proposal: Storage Access API</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Document.hasStorageAccess")}}</p>
 

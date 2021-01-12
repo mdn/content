@@ -78,7 +78,7 @@ tags:
 
 <h2 id="Choosing_a_hosting_provider">Choosing a hosting provider</h2>
 
-<p>There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly exhaustive list at <a href="https://djangofriendly.com/index.html">Djangofriendly hosts</a>). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.</p>
+<p>There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly exhaustive list at <a href="https://djangofriendly.com/index.html">DjangoFriendly hosts</a>). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.</p>
 
 <p>Some of the things to consider when choosing a host:</p>
 
@@ -183,14 +183,14 @@ with open('/etc/secret_key.txt') as f:
 
 <h3 id="How_does_Heroku_work">How does Heroku work?</h3>
 
-<p>Heroku runs Django websites within one or more "<a href="https://devcenter.heroku.com/articles/dynos">Dynos</a>", which are isolated, virtualized Unix containers that provide the environment required to run an application. The dynos are completely isolated and have an <em>ephemeral</em> file system (a short-lived file system that is cleaned/emptied every time the dyno restarts). The only thing that dynos share by default are application <a href="https://devcenter.heroku.com/articles/config-vars">configuration variables</a>. Heroku internally uses a load balancer to distribute web traffic to all "web" dynos. Since nothing is shared between them, Heroku can scale an app horizontally simply by adding more dynos (though of course you may also need to scale your database to accept additional connections).</p>
+<p>Heroku runs Django websites within one or more "<a href="https://devcenter.heroku.com/articles/dynos">Dynos</a>", which are isolated, virtualized Unix containers that provide the environment required to run an application. The dynos are completely isolated and have an <em>ephemeral</em> file system (a short-lived file system that is cleaned/emptied every time the dyno restarts). The only thing that dynos share by default are application <a href="https://devcenter.heroku.com/articles/config-vars">configuration variables</a>. Heroku internally uses a load balancer to distribute web traffic to all "web" dynos. Since nothing is shared between them, Heroku can scale an app horizontally by adding more dynos (though of course you may also need to scale your database to accept additional connections).</p>
 
 <p>Because the file system is ephemeral you can't install services required by your application directly (e.g. databases, queues, caching systems, storage, email services, etc). Instead Heroku web applications use backing services provided as independent "add-ons" by Heroku or 3rd parties. Once attached to your web application, the dynos access the services using information contained in application configuration variables.</p>
 
 <p>In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Django apps we provide this information in a number of text files:</p>
 
 <ul>
- <li><strong>runtime.txt</strong>:<strong> </strong>the programming language and version to use.</li>
+ <li><strong>runtime.txt</strong>: the programming language and version to use.</li>
  <li><strong>requirements.txt</strong>: the Python component dependencies, including Django.</li>
  <li><strong>Procfile</strong>: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a <code>.wsgi</code> script).</li>
  <li><strong>wsgi.py</strong>: <a href="http://wsgi.readthedocs.io/en/latest/what.html">WSGI</a> configuration to call our Django application in the Heroku environment.</li>
@@ -415,7 +415,7 @@ STATIC_URL = '/static/'
 <p>There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> project for serving of static assets directly from Gunicorn in production.</p>
 
 <div class="note">
-<p><strong>Note: </strong>Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
+<p><strong>Note:</strong> Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
 </div>
 
 <p>The steps to set up <em>WhiteNoise</em> to use with the project are <a href="http://whitenoise.evans.io/en/stable/django.html">given here</a> (and reproduced below):</p>
@@ -626,9 +626,6 @@ heroku ps
 </pre>
 
 <p>If you need more information than these can provide you will need to start looking into <a href="https://docs.djangoproject.com/en/3.1/topics/logging/">Django Logging</a>.</p>
-
-<ul>
-</ul>
 
 <h2 id="Summary">Summary</h2>
 

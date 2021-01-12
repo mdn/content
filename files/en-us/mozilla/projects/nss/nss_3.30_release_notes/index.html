@@ -1,0 +1,88 @@
+---
+title: NSS 3.30 release notes
+slug: Mozilla/Projects/NSS/NSS_3.30_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p><span class="seoSummary">The Network Security Services (NSS) team has released NSS 3.30, which is a minor release.</span></p>
+
+<h2 id="Distribution_information">Distribution information</h2>
+
+<p>The hg tag is NSS_3_30_RTM. NSS 3.30 requires Netscape Portable Runtime (NSPR); 4.13.1 or newer.</p>
+
+<p>NSS 3.30 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_30_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_30_RTM/src/</a></li>
+</ul>
+
+<h2 id="New_in_NSS_3.30">New in NSS 3.30</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<ul>
+ <li>In the PKCS#11 root CA module (nssckbi), CAs with positive trust are marked with a new boolean attribute, CKA_NSS_MOZILLA_CA_POLICY, set to true. Applications that need to distinguish them from other root CAs, may use the exported function PK11_HasAttributeSet.</li>
+ <li>Support for callback functions that can be used to monitor SSL/TLS alerts that are sent or received.</li>
+</ul>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+ <li><em>in cert.h</em>
+
+  <ul>
+   <li><strong>CERT_CompareAVA</strong> - performs a comparison of two CERTAVA structures, and returns a SECComparison result.</li>
+  </ul>
+ </li>
+ <li><em>in pk11pub.h</em>
+  <ul>
+   <li><strong>PK11_HasAttributeSet</strong> - allows to check if a PKCS#11 object in a given slot has a specific boolean attribute set.</li>
+  </ul>
+ </li>
+ <li><em>in ssl.h</em>
+  <ul>
+   <li><strong>SSL_AlertReceivedCallback</strong> - register a callback function, that will be called whenever an SSL/TLS alert is received</li>
+   <li><strong>SSL_AlertSentCallback</strong> - register a callback function, that will be called whenever an SSL/TLS alert is sent</li>
+   <li><strong>SSL_SetSessionTicketKeyPair</strong> - configures an asymmetric key pair, for use in wrapping session ticket keys, used by the server. This function currently only accepts an RSA public/private key pair.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="New_Macros">New Macros</h4>
+
+<ul>
+ <li><em>in ciferfam.h</em>
+
+  <ul>
+   <li><strong>PKCS12_AES_CBC_128, PKCS12_AES_CBC_192, PKCS12_AES_CBC_256</strong> - cipher family identifiers corresponding to the PKCS#5 v2.1 AES based encryption schemes used in the PKCS#12 support in NSS</li>
+  </ul>
+ </li>
+ <li><em>in pkcs11n.h</em>
+  <ul>
+   <li><strong>CKA_NSS_MOZILLA_CA_POLICY</strong> - identifier for a boolean PKCS#11 attribute, that should be set to true, if a CA is present because of it's acceptance according to the Mozilla CA Policy</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.30">Notable Changes in NSS 3.30</h2>
+
+<ul>
+ <li>The TLS server code has been enhanced to support session tickets when no RSA certificate (e.g. only an ECDSA certificate) is configured.</li>
+ <li>RSA-PSS signatures produced by key pairs with a modulus bit length that is not a multiple of 8 are now supported.</li>
+ <li>The pk12util tool now supports importing and exporting data encrypted in the AES based schemes defined in PKCS#5 v2.1.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.30">Bugs fixed in NSS 3.30</h2>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.30:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.30">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.30</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.30 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.30 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

@@ -1,0 +1,137 @@
+---
+title: NSS 3.54 release notes
+slug: Mozilla/Projects/NSS/NSS_3.54_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.54 on <strong>26 June 2020</strong>, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_54_RTM. NSS 3.54 requires NSPR 4.26 or newer.</p>
+
+<p>NSS 3.54 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_54_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_54_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Notable_Changes_in_NSS_3.54">Notable Changes in NSS 3.54</h2>
+
+<ul>
+ <li>Support for TLS 1.3 external pre-shared keys (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603042">Bug 1603042</a>).</li>
+ <li>Use ARM Cryptography Extension for SHA256, when available. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1528113">Bug 1528113</a>).</li>
+</ul>
+
+<h3 id="Certificate_Authority_Changes">Certificate Authority Changes</h3>
+
+<ul>
+ <li>The following CA certificates were Added:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645186">Bug 1645186 </a>- certSIGN Root CA G2
+
+    <ul>
+     <li>SHA-256 Fingerprint: 657CFE2FA73FAA38462571F332A2363A46FCE7020951710702CDFBB6EEDA3305</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645174">Bug 1645174</a> - e-Szigno Root CA 2017
+    <ul>
+     <li>SHA-256 Fingerprint: BEB00B30839B9BC32C32E4447905950641F26421B15ED089198B518AE2EA1B99</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641716">Bug 1641716</a> - Microsoft ECC Root Certificate Authority 2017
+    <ul>
+     <li>SHA-256 Fingerprint: 358DF39D764AF9E1B766E9C972DF352EE15CFAC227AF6AD1D70E8E4A6EDCBA02</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641716">Bug 1641716</a> - Microsoft RSA Root Certificate Authority 2017
+    <ul>
+     <li>SHA-256 Fingerprint: C741F70F4B2A8D88BF2E71C14122EF53EF10EBA0CFA5E64CFA20F418853073E0</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>The following CA certificates were Removed:
+  <ul>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645199">Bug 1645199</a> - AddTrust Class 1 CA Root
+    <ul>
+     <li>SHA-256 Fingerprint:<br>
+      8C7209279AC04E275E16D07FD3B775E80154B5968046E31F52DD25766324E9A7</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645199">Bug 1645199</a> - AddTrust External CA Root
+    <ul>
+     <li>SHA-256 Fingerprint:<br>
+      687FA451382278FFF0C8B11F8D43D576671C6EB2BCEAB413FB83D965D06D2FF2</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641718">Bug 1641718</a> - LuxTrust Global Root 2
+    <ul>
+     <li>SHA-256 Fingerprint: 54455F7129C20B1447C418F997168F24C58FC5023BF5DA5BE2EB6E1DD8902ED5</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1639987">Bug 1639987</a> - Staat der Nederlanden Root CA - G2
+    <ul>
+     <li>SHA-256 Fingerprint: 668C83947DA63B724BECE1743C31A0E6AED0DB8EC5B31BE377BB784F91B6716F</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618402">Bug 1618402</a> - Symantec Class 2 Public Primary Certification Authority - G4
+    <ul>
+     <li>SHA-256 Fingerprint: FE863D0822FE7A2353FA484D5924E875656D3DC9FB58771F6F616F9D571BC592</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618402">Bug 1618402</a> - Symantec Class 1 Public Primary Certification Authority - G4
+    <ul>
+     <li>SHA-256 Fingerprint: 363F3C849EAB03B0A2A0F636D7B86D04D3AC7FCFE26A0A9121AB9795F6E176DF</li>
+    </ul>
+   </li>
+   <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618402">Bug 1618402</a> - VeriSign Class 3 Public Primary Certification Authority - G3
+    <ul>
+     <li>SHA-256 Fingerprint: EB04CF5EB1F39AFA762F2BB120F296CBA520C1B97DB1589565B81CB9A17B7244</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>A number of certificates had their Email trust bit disabled. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618402#c0">Bug 1618402</a> for a complete list.</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.54">Bugs fixed in NSS 3.54</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1528113">Bug 1528113</a> - Use ARM Cryptography Extension for SHA256.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1603042">Bug 1603042</a> - Add TLS 1.3 external PSK support.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1642802">Bug 1642802</a> - Add uint128 support for HACL* curve25519 on Windows.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645186">Bug 1645186 </a>- Add "certSIGN Root CA G2" root certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645174">Bug 1645174</a> - Add Microsec's "e-Szigno Root CA 2017" root certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641716">Bug 1641716</a> - Add Microsoft's non-EV root certificates.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1621151">Bug 1621151</a> - Disable email trust bit for "O=Government Root Certification Authority; C=TW" root.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645199">Bug 1645199 </a>- Remove AddTrust root certificates.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641718">Bug 1641718 </a>- Remove "LuxTrust Global Root 2" root certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1639987">Bug 1639987</a> - Remove "Staat der Nederlanden Root CA - G2" root certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1618402">Bug 1618402 </a>- Remove Symantec root certificates and disable email trust bit.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1640516">Bug 1640516 </a>- NSS 3.54 should depend on NSPR 4.26.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1642146">Bug 1642146 </a>- Fix undefined reference to `PORT_ZAlloc_stub' in seed.c.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1642153">Bug 1642153 </a>- Fix infinite recursion building NSS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1642638">Bug 1642638 </a>- Fix fuzzing assertion crash.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1642871">Bug 1642871 </a>- Enable SSL_SendSessionTicket after resumption.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643123">Bug 1643123</a> - Support SSL_ExportEarlyKeyingMaterial with External PSKs.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643557">Bug 1643557 </a>- Fix numerous compile warnings in NSS.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1644774">Bug 1644774 </a>- SSL gtests to use ClearServerCache when resetting self-encrypt keys.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1645479">Bug 1645479</a> - Don't use SECITEM_MakeItem in secutil.c.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1646520">Bug 1646520 </a>- Stricter enforcement of ASN.1 INTEGER encoding.</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.54:</p>
+
+<p><a class="external" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.54" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.54</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.54 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.54 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

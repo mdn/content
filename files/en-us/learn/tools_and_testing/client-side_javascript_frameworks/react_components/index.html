@@ -44,7 +44,7 @@ tags:
 
 <p>That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. You don't have to break everything out into components right away, either. Let's take the second bullet point as inspiration and make a component out of the most reused, most important piece of the UI: a todo list item.</p>
 
-<h2 id="Make_a_&lt;Todo_>">Make a <code>&lt;Todo /&gt;</code></h2>
+<h2 id="Make_a_&lt;Todo_&gt;">Make a <code>&lt;Todo /&gt;</code></h2>
 
 <p>Before we can make a component, we should create a new file for it. In fact, we should make a directory just for our components. The following commands make a <code>components</code> directory and then, within that, a file called <code>Todo.js</code>. Make sure you're in the root of your app before you run these!</p>
 
@@ -112,7 +112,7 @@ touch src/components/Todo.js</pre>
 
 <p>We don't only want to eat; we have other things to — well — to do. Next we'll look at how we can make different component calls render unique content.</p>
 
-<h2 id="Make_a_unique_&lt;Todo_>">Make a <em>unique</em> <code>&lt;Todo /&gt;</code></h2>
+<h2 id="Make_a_unique_&lt;Todo_&gt;">Make a <em>unique</em> <code>&lt;Todo /&gt;</code></h2>
 
 <p>Components are powerful because they let us re-use pieces of our UI, and refer to one place for the source of that UI. The problem is, we don't typically want to reuse all of each component; we want to reuse most parts, and change small pieces. This is where props come in.</p>
 
@@ -289,7 +289,7 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: bash notranslate">touch src/components/Form.js src/components/FilterButton.js</pre>
 
-<h3 id="The_&lt;Form_>">The <code>&lt;Form /&gt;</code></h3>
+<h3 id="The_&lt;Form_&gt;">The <code>&lt;Form /&gt;</code></h3>
 
 <p>Open <code>components/Form.js</code> and do the following:</p>
 
@@ -328,7 +328,7 @@ function Form(props) {
 
 export default Form;</pre>
 
-<h3 id="The_&lt;FilterButton_>">The &lt;FilterButton /&gt;</h3>
+<h3 id="The_&lt;FilterButton_&gt;">The &lt;FilterButton /&gt;</h3>
 
 <p>Do the same things you did to create <code>Form.js</code> inside <code>FilterButton.js</code>, but call the component <code>FilterButton()</code> and copy the HTML for the first button inside the <code>&lt;div&gt;</code> element with the <code>class</code> of <code>filters</code> from <code>App.js</code> into the <code>return</code> statement.</p>
 

@@ -67,7 +67,7 @@ tags:
 
 <p><strong>Inline anonymous boxes</strong> are created when a string is split by an inline element, for example, a sentence that includes a section wrapped with <code>&lt;em&gt;&lt;/em&gt;</code>. This splits the sentence into three inline boxes — an anonymous inline box before the emphasized section, the section wrapped in the <code>&lt;em&gt;</code> element, then a final anonymous inline box. As with the anonymous block boxes, these anonymous inline boxes cannot be styled independently in the way the <code>&lt;em&gt;</code> can; they just inherit the styles of their container.</p>
 
-<p>Other formatting contexts also create anonymous boxes. <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid Layout</a> behaves in the same way as the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> example above, turning strings of text into a grid item with an anonymous box. <a href="/en-US/docs/Web/CSS/CSS_Columns">Multiple-column</a> layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targetted. <a href="/en-US/docs/Web/CSS/CSS_Table">Table layout</a> will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with <code>display: table-row</code>.</p>
+<p>Other formatting contexts also create anonymous boxes. <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid Layout</a> behaves in the same way as the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> example above, turning strings of text into a grid item with an anonymous box. <a href="/en-US/docs/Web/CSS/CSS_Columns">Multiple-column</a> layout creates anonymous column boxes around the columns; these also cannot be styled or otherwise targeted. <a href="/en-US/docs/Web/CSS/CSS_Table">Table layout</a> will add anonymous boxes to create a proper table structure — for example adding an anonymous table row — if there was no box with <code>display: table-row</code>.</p>
 
 <h3 id="Line_boxes">Line boxes</h3>
 
@@ -122,7 +122,7 @@ tags:
 
 <h3 id="Independent_formatting_contexts">Independent formatting contexts</h3>
 
-<p>Elements either participate in the formating context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new <strong>Grid Formatting Context</strong> for its children.</p>
+<p>Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new <strong>Grid Formatting Context</strong> for its children.</p>
 
 <p><strong>Independent formatting contexts</strong> contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats remain inside a box. Developers sometimes clear floats by changing the value of the {{cssxref("overflow")}} property, as this creates a new block formatting context. The newer value of <code>display: flow-root</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> in order to gain the useful effects of this, without any unwanted issues caused by changing the value of overflow.</p>
 

@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
-<p>To use the <em>express-validator </em>in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator</strong>' module.</p>
+<p>To use the <em>express-validator</em> in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator</strong>' module.</p>
 
 <p>Open <strong>/controllers/genreController.js</strong>, and add the following line at the top of the file:</p>
 
@@ -30,7 +30,7 @@ validationResult = validator.validationResult();
 
 <h2 id="Controller—get_route">Controller—get route</h2>
 
-<p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This simply renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
+<p>Find the exported <code>genre_create_get()</code> controller method and replace it with the following code. This renders the <strong>genre_form.pug</strong> view, passing a title variable.</p>
 
 <pre class="brush: js notranslate">// Display Genre create form on GET.
 exports.genre_create_get = function(req, res, next) {
@@ -57,7 +57,6 @@ exports.genre_create_post =  [
     var genre = new Genre(
       { name: req.body.name }
     );
-
 
     if (!errors.isEmpty()) {
       // There are errors. Render the form again with sanitized values/error messages.
@@ -178,7 +177,7 @@ block content
 
 <p>The form defines a single required field of type "text" called "name". The default <em>value</em> of the field depends on whether the <code>genre</code> variable is defined. If called from the <code>GET</code> route it will be empty as this is a new form. If called from a <code>POST</code> route it will contain the (invalid) value originally entered by the user.</p>
 
-<p>The last part of the page is the error code. This simply prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
+<p>The last part of the page is the error code. This prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
 
 <div class="note">
 <p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>
@@ -186,7 +185,7 @@ block content
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre </em>link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
+<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
 <p><img alt="Genre Create Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 800px;"></p>
 

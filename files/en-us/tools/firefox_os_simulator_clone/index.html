@@ -20,7 +20,7 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <p><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; color: white; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; display: inline-block; background-color: rgb(129, 188, 46); white-space: nowrap; text-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.298039) 0px -1px 0px 0px inset;">Install Simulator</a></p>
 
-<h2 id="The_Simulator_UI" style="line-height: 30px;">The Simulator UI</h2>
+<h2 id="The_Simulator_UI">The Simulator UI</h2>
 
 <p><span style="line-height: 22.00800132751465px;">The Simulator appears as a separate window, sized so the simulated screen area is 320x480 pixels. </span><span style="line-height: 22.00800132751465px;">To simulate touch events you can click the mouse button and drag while holding the button down. So by clicking and dragging right-to-left from the Home Screen, you'll see the built-in apps, as well as any apps you have added:</span></p>
 
@@ -30,7 +30,7 @@ slug: Tools/Firefox_OS_Simulator_clone
 
 <ul>
  <li>The button on the left takes you to the Home screen, or switches the Simulator off if you hold it down.</li>
- <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href="/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a> event.</li>
+ <li>The button on the right switches the Simulator between portrait and landscape orientation. This will generate the <a href="/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change">orientationchange</a> event.</li>
 </ul>
 
 <h2 id="Limitations_of_the_Simulator">Limitations of the Simulator</h2>
@@ -52,21 +52,21 @@ slug: Tools/Firefox_OS_Simulator_clone
  <li>WebM</li>
 </ul>
 
-<p>This means it isn't possible to use the Simulator to test video playback in apps and on websites like Youtube that rely on these codecs.</p>
+<p>This means it isn't possible to use the Simulator to test video playback in apps and on websites like YouTube that rely on these codecs.</p>
 
 <h3 id="Unsupported_APIs"><a name="Unsupported-APIs">Unsupported APIs</a></h3>
 
 <p>Certain APIs that work on the device won't work on the Simulator, generally because the supporting hardware is not available on the desktop. We've implemented simulations for some APIs such as geolocation, and expect to add more in future releases. However, at the moment the following APIs are not supported. Using them might throw errors or just return incorrect results:</p>
 
 <ul>
- <li><a href="/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
- <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
- <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
- <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
- <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
- <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
- <li><a href="/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
- <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
 </ul>
 
 <h2 id="Getting_help"><a name="Simulator-help"></a>Getting help</h2>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var removing = browser.tabs.removeCSS(
+<pre class="notranslate brush: js">var removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -34,7 +34,6 @@ tags:
  <dt><code>details</code></dt>
  <dd>An object describing the CSS to remove from the page. It contains the following properties:
  <dl class="reference-values">
-  <dt> </dt>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the code will be removed from all frames of the current page. If it is <code>false</code>, code is only removed from the top frame. Defaults to <code>false</code>.</dd>
   <dt><code>code</code>{{optional_inline}}</dt>
@@ -59,7 +58,7 @@ tags:
 
 <p>This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:</p>
 
-<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
+<pre class="notranslate brush: js">var css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
@@ -76,8 +75,6 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.removeCSS")}}</p>
 

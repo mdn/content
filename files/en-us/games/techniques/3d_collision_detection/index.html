@@ -12,7 +12,6 @@ tags:
 
 <p class="summary">This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.</p>
 
-<p> </p>
 
 <h2 id="Axis-aligned_bounding_boxes">Axis-aligned bounding boxes</h2>
 
@@ -20,7 +19,7 @@ tags:
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11797/Screen%20Shot%202015-10-16%20at%2015.11.21.png" style="display: block; height: 275px; margin: 0px auto; width: 432px;"></p>
 
-<p>The<strong> axis-aligned constraint</strong> is there because of performance reasons. The overlapping area between two non-rotated boxes can be checked with logical comparisons alone, whereas rotated boxes require additional trigonometric operations, which are slower to calculate. If you have entities that will be rotating, you can either modify the dimensions of the bounding box so it still wraps the object, or opt to use another bounding geometry type, such as spheres (which are invariant to rotation.) The animated GIF below shows a graphic example of an AABB that adapts its size to fit the rotating entity. The box constantly changes dimensions to snugly fit the entity contained inside.</p>
+<p>The <strong>axis-aligned constraint</strong> is there because of performance reasons. The overlapping area between two non-rotated boxes can be checked with logical comparisons alone, whereas rotated boxes require additional trigonometric operations, which are slower to calculate. If you have entities that will be rotating, you can either modify the dimensions of the bounding box so it still wraps the object, or opt to use another bounding geometry type, such as spheres (which are invariant to rotation.) The animated GIF below shows a graphic example of an AABB that adapts its size to fit the rotating entity. The box constantly changes dimensions to snugly fit the entity contained inside.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11799/rotating_knot.gif" style="display: block; height: 192px; margin: 0px auto; width: 207px;"></p>
 
@@ -30,7 +29,7 @@ tags:
 
 <h3 id="Point_vs._AABB">Point vs. AABB</h3>
 
-<p>Checking if a point is inside an AABB is pretty simple — we just need to check whether the point's coordinates fall inside the AABB; considering each axis separately. If we assume that <em>P<sub>x</sub></em>, <em>P<sub>y</sub> </em>and <em>P<sub>z</sub></em> are the point's coordinates, and <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em>, <em>B<sub>minY</sub></em>–<em>B<sub>maxY</sub></em>, and <em>B<sub>minZ</sub></em>–<em>B<sub>maxZ</sub></em> are the ranges of each axis of the AABB, we can calculate whether a collision has occurred between the two using the following formula:</p>
+<p>Checking if a point is inside an AABB is pretty simple — we just need to check whether the point's coordinates fall inside the AABB; considering each axis separately. If we assume that <em>P<sub>x</sub></em>, <em>P<sub>y</sub></em> and <em>P<sub>z</sub></em> are the point's coordinates, and <em>B<sub>minX</sub></em>–<em>B<sub>maxX</sub></em>, <em>B<sub>minY</sub></em>–<em>B<sub>maxY</sub></em>, and <em>B<sub>minZ</sub></em>–<em>B<sub>maxZ</sub></em> are the ranges of each axis of the AABB, we can calculate whether a collision has occurred between the two using the following formula:</p>
 
 <p><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>x</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>X</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>X</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Y</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>y</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Y</mi></mrow></msub><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><msub><mi>P</mi><mi>z</mi></msub><mo>&gt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>Z</mi></mrow></msub><mo>∧</mo><msub><mi>P</mi><mi>z</mi></msub><mo>&lt;=</mo><msub><mi>B</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>Z</mi></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">f(P,B)= (P_x &gt;= B_{minX} \wedge P_x &lt;= B_{maxX}) \wedge (P_y &gt;= B_{minY} \wedge P_y &lt;= B_{maxY}) \wedge (P_z &gt;= B_{minZ} \wedge P_z &lt;= B_{maxZ})</annotation></semantics></math></p>
 
@@ -112,13 +111,13 @@ tags:
 
 <h3 id="Sphere_vs._AABB">Sphere vs. AABB</h3>
 
-<p>Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's <em>closest</em><em> point</em> (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.</p>
+<p>Testing whether a sphere and an AABB are colliding is slightly more complicated, but still simple and fast. A logical approach would be to check every vertex of the AABB, doing a point vs sphere test for each one. This is overkill, however — testing all the vertices is unnecessary, as we can get away with just calculating the distance between the AABB's <em>closest point</em> (not necessarily a vertex) and the sphere's center, seeing if it is less than or equal to the sphere's radius. We can get this value by clamping the sphere's center to the AABB's limits.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11837/sphere_vs_aabb.png" style="display: block; height: 282px; margin: 0px auto; width: 377px;"></p>
 
 <p>In JavaScript, we'd do this test like so:</p>
 
-<pre class="syntaxbox">function intersect(sphere, box) {
+<pre class="brush: js notranslate">function intersect(sphere, box) {
   // get box closest point to sphere center by clamping
   var x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
   var y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
@@ -137,7 +136,7 @@ tags:
 
 <p><strong>3D physics engines</strong> provide collision detection algorithms, most of them based on bounding volumes as well. The way a physics engine works is by creating a <strong>physical body</strong>, usually attached to a visual representation of it. This body has properties such as velocity, position, rotation, torque, etc., and also a <strong>physical shape</strong>. This shape is the one that is considered in the collision detection calculations.</p>
 
-<p>We have prepared a <a href="http://mozdevs.github.io/gamedev-js-3d-aabb/physics.html">live collision detection demo</a> (with <a href="https://github.com/mozdevs/gamedev-js-3d-aabb">source code</a>) that you can take a look at to see such techniques in action — this uses the open-source 3D physics engine <a href="https://github.com/schteppe/cannon.js">cannon.js</a>.</p>
+<p>We have prepared a <a href="https://mozdevs.github.io/gamedev-js-3d-aabb/physics.html">live collision detection demo</a> (with <a href="https://github.com/mozdevs/gamedev-js-3d-aabb">source code</a>) that you can take a look at to see such techniques in action — this uses the open-source 3D physics engine <a href="https://github.com/schteppe/cannon.js">cannon.js</a>.</p>
 
 <h2 id="See_also">See also</h2>
 

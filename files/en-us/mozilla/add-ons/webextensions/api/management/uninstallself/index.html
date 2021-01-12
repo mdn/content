@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var uninstallingSelf = browser.management.uninstallSelf(
+<pre class="brush:js">var uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )
 </pre>
@@ -52,9 +52,9 @@ tags:
 
  <p>Uninstall the add-on, asking the user to confirm. In the callback, check whether the user canceled uninstallation.</p>
 
- <p>Note that we haven't passed a fulfilment handler because if uninstallation succeeds, the add-on is no longer around to handle it.</p>
+ <p>Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.</p>
 
- <pre class="brush: js">function onCanceled(error) {
+ <pre class="notranslate brush: js">function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -66,7 +66,7 @@ uninstalling.then(null, onCanceled);</pre>
 
  <p>The same, but also adding a custom message to the dialog:</p>
 
- <pre class="brush: js">function onCanceled(error) {
+ <pre class="notranslate brush: js">function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 

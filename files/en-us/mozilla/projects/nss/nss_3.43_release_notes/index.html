@@ -1,0 +1,113 @@
+---
+title: NSS 3.43 release notes
+slug: Mozilla/Projects/NSS/NSS_3.43_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>The NSS team has released Network Security Services (NSS) 3.43 on 16 March 2019, which is a minor release.</p>
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_43_RTM. NSS 3.43 requires NSPR 4.21 or newer.</p>
+
+<p>NSS 3.43 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+	<li>Source tarballs:<br>
+	<a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_43_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_43_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="New_in_NSS_3.43">New in NSS 3.43</h2>
+
+<h3 id="New_Functionality">New Functionality</h3>
+
+<h4 id="New_Functions">New Functions</h4>
+
+<ul>
+	<li><em>in sechash.h</em>
+
+	<ul>
+		<li><strong>HASH_GetHashOidTagByHashType</strong> - convert type HASH_HashType to type SECOidTag</li>
+	</ul>
+	</li>
+	<li><em>in sslexp.h</em>
+	<ul>
+		<li><strong>SSL_SendCertificateRequest</strong> - allow server to request post-handshake client authentication. To use this both peers need to enable the <strong>SSL_ENABLE_POST_HANDSHAKE_AUTH</strong> option. Note that while the mechanism is present, post-handshake authentication is currently not TLS 1.3 compliant due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1532312">Bug 1532312</a></li>
+	</ul>
+	</li>
+</ul>
+
+<h2 id="Notable_Changes_in_NSS_3.43">Notable Changes in NSS 3.43</h2>
+
+<ul>
+	<li>
+	<div class="field indent">
+	<div class="container">
+	<div>The following CA certificates were <strong>Added</strong>:</div>
+	</div>
+	</div>
+
+	<ul>
+		<li>CN = emSign Root CA - G1
+		<ul>
+			<li>SHA-256 Fingerprint: 40F6AF0346A99AA1CD1D555A4E9CCE62C7F9634603EE406615833DC8C8D00367</li>
+		</ul>
+		</li>
+		<li>CN = emSign ECC Root CA - G3
+		<ul>
+			<li>SHA-256 Fingerprint: 86A1ECBA089C4A8D3BBE2734C612BA341D813E043CF9E8A862CD5C57A36BBE6B</li>
+		</ul>
+		</li>
+		<li>CN = emSign Root CA - C1
+		<ul>
+			<li>SHA-256 Fingerprint: 125609AA301DA0A249B97A8239CB6A34216F44DCAC9F3954B14292F2E8C8608F</li>
+		</ul>
+		</li>
+		<li>CN = emSign ECC Root CA - C3
+		<ul>
+			<li>SHA-256 Fingerprint: BC4D809B15189D78DB3E1D8CF4F9726A795DA1643CA5F1358E1DDB0EDC0D7EB3</li>
+		</ul>
+		</li>
+		<li>CN = Hongkong Post Root CA 3
+		<ul>
+			<li>SHA-256 Fingerprint: 5A2FC03F0C83B090BBFA40604B0988446C7636183DF9846E17101A447FB8EFD6</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>The following CA certificates were <strong>Removed</strong>:
+	<ul>
+		<li>None</li>
+	</ul>
+	</li>
+</ul>
+
+<h2 id="Bugs_fixed_in_NSS_3.43">Bugs fixed in NSS 3.43</h2>
+
+<ul>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1528669">Bug 1528669</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1529308">Bug 1529308</a> - Improve Gyp build system handling</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1529950">Bug 1529950</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1521174">Bug 1521174</a> - Improve NSS S/MIME tests for Thunderbird</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1530134">Bug 1530134</a> - If Docker isn't installed, try running a local clang-format as a fallback</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1531267">Bug 1531267</a> - Enable FIPS mode automatically if the system FIPS mode flag is set</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1528262">Bug 1528262</a> - Add a -J option to the strsclnt command to specify sigschemes</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513909">Bug 1513909</a> - Add manual for nss-policy-check</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1531074">Bug 1531074</a> - Fix a deref after a null check in SECKEY_SetPublicValue</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1517714">Bug 1517714</a> - Properly handle ESNI with HRR</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1529813">Bug 1529813</a> - Expose HKDF-Expand-Label with mechanism</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1535122">Bug 1535122</a> - Align TLS 1.3 HKDF trace levels</li>
+	<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1530102">Bug 1530102</a> - Use getentropy on compatible versions of FreeBSD.</li>
+</ul>
+
+<p>This Bugzilla query returns all the bugs fixed in NSS 3.43:</p>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.43">https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Components&amp;query_format=advanced&amp;product=NSS&amp;target_milestone=3.43</a></p>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.43 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.43 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report with<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS"> bugzilla.mozilla.org</a> (product NSS).</p>

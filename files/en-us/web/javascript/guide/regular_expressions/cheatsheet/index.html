@@ -119,7 +119,7 @@ tags:
    <td>Matches a UTF-16 code-unit with the value <code><em>hhhh</em></code> (four hexadecimal digits).</td>
   </tr>
   <tr>
-   <td><code>\u<em>{hhhh} </em>or <em>\u{hhhhh}</em></code></td>
+   <td><code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code></td>
    <td>(Only when the <code>u</code> flag is set.) Matches the character with the Unicode value <code>U+<em>hhhh</em></code> or <code>U+<em>hhhhh</em></code> (hexadecimal digits).</td>
   </tr>
   <tr>
@@ -222,19 +222,19 @@ tags:
   <tr>
    <td><code>x(?!y)</code></td>
    <td>
-    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x"<span> is not followed by </span>"y"<span>.</span> For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
+    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;=y)x</code></td>
    <td>
-    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code><span> matches "Sprat" only if it is preceded by "Jack". </span><code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
+    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;!y)x</code></td>
    <td>
-    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code><span> matches a number only if it is not preceded by a minus sign. </span><code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
+    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
    </td>
   </tr>
  </tbody>
@@ -305,7 +305,7 @@ tags:
   <tr>
    <td>\k&lt;Name&gt;</td>
    <td>
-    <p>A back reference to the last substring matching the <strong>N</strong><strong>amed capture group </strong>specified by <code>&lt;Name&gt;</code>.</p>
+    <p>A back reference to the last substring matching the <strong>Named capture group </strong>specified by <code>&lt;Name&gt;</code>.</p>
 
     <p>For example, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".</p>
 
@@ -424,23 +424,16 @@ tags:
  <dt>UnicodeBinaryPropertyName</dt>
  <dd>The name of a <a href="https://tc39.es/ecma262/#table-binary-unicode-properties">binary property</a>. E.g.: <code><a href="https://unicode.org/reports/tr18/#General_Category_Property">ASCII</a></code>, <code><a href="https://unicode.org/reports/tr44/#Alphabetic">Alpha</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#Diacritic">Diacritic</a></code>, <code><a href="https://unicode.org/reports/tr51/#Emoji_Properties">Emoji</a></code>, <code><a href="https://unicode.org/reports/tr44/#Hex_Digit">Hex_Digit</a></code>, <code>Math</code>, <code><a href="https://unicode.org/reports/tr44/#White_Space">White_space</a></code>, etc. See <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode Data PropList.txt </a>for more info.</dd>
  <dt>UnicodePropertyName</dt>
-</dl>
-
-<dl>
- <dd>The name of a <a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">non-binary</a> property:</dd>
-</dl>
-
+  <dd>The name of a <a href="https://tc39.es/ecma262/#table-nonbinary-unicode-properties">non-binary</a> property:
 <ul>
  <li><a href="https://unicode.org/reports/tr18/#General_Category_Property">General_Category</a> (<code>gc</code>)</li>
  <li><a href="https://unicode.org/reports/tr24/#Script">Script</a> (<code>sc</code>)</li>
  <li><a href="https://unicode.org/reports/tr24/#Script_Extensions">Script_Extensions</a> (<code>scx</code>)</li>
 </ul>
-
 <p>See also <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt">PropertyValueAliases.txt</a></p>
-
-<dl>
+</dd>
  <dt>UnicodePropertyValue</dt>
- <dd>One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value <code>Decimal_Number</code> for the <code>General_Category</code> property may be written <code>Nd</code>, <code>digit</code>, or <code>Decimal_Number</code>). For most values, the <em><code>UnicodePropertyName</code> </em>part and equals sign may be omitted. If a <em><code>UnicodePropertyName</code> </em>is specified, the value must correspond to the property type given.</dd>
+ <dd>One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value <code>Decimal_Number</code> for the <code>General_Category</code> property may be written <code>Nd</code>, <code>digit</code>, or <code>Decimal_Number</code>). For most values, the <em><code>UnicodePropertyName</code></em> part and equals sign may be omitted. If a <em><code>UnicodePropertyName</code></em> is specified, the value must correspond to the property type given.</dd>
 </dl>
 
 <div class="notecard note">

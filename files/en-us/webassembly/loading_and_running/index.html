@@ -43,8 +43,6 @@ tags:
   // Do something with the results!
 });</pre>
 
-
-
 <h3 id="Aside_on_instantiate_overloads">Aside on instantiate() overloads</h3>
 
 <p>The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:</p>
@@ -55,7 +53,7 @@ tags:
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, or simply create more instances.</p>
+<p><strong>Note</strong>: Usually we only care about the instance, but it’s useful to have the module in case we want to cache it, share it with another worker or window via <code><a href="/en-US/docs/Web/API/MessagePort/postMessage">postMessage()</a></code>, or create more instances.</p>
 </div>
 
 <div class="note">

@@ -16,7 +16,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>content-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed.</span> Basically it enables the user agent to skip an element's rendering work, including layout and painting, until it is needed, makes the initial page load much faster.</p>
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css no-line-numbers notranslate">/* Keyword values */
 content-visibility: visible;
@@ -60,7 +60,7 @@ section {
 
 <h3 id="Using_hidden_to_manually_manage_visibility.">Using hidden to manually manage visibility.</h3>
 
-<p>The following example shows that it is possible to manage visibility in script. The added benefit of using <code>content-visiblity: hidden</code> instead of, for example, <code>display: none</code> is that rendered content when hidden with <code>content-visibility</code> will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.</p>
+<p>The following example shows that it is possible to manage visibility in script. The added benefit of using <code>content-visibility: hidden</code> instead of, for example, <code>display: none</code> is that rendered content when hidden with <code>content-visibility</code> will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.</p>
 
 <pre class="brush: html notranslate">&lt;style&gt;
 .hidden {
@@ -73,8 +73,6 @@ section {
   /* this is here to avoid layout shift when switching between .hidden and .visible */
   contain: style layout paint;
 }
-
-
 
 &lt;div class=hidden&gt;...
 &lt;div class=visible&gt;...
@@ -103,11 +101,9 @@ section {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("css.properties.content-visibility")}}</p>
 
-<h2 id="See_Also">See Also</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://web.dev/content-visibility/">content-visibility: the new CSS property that boosts your rendering performance</a> (web.dev)</li>

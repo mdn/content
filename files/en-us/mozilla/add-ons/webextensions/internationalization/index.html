@@ -176,7 +176,7 @@ tags:
 
 <p>In our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example, the<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js"> background script</a> contains the following lines:</p>
 
-<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="notranslate brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>
@@ -396,9 +396,6 @@ padding-left: 1.5em;</pre>
 <div class="note">
 <p><strong>Note</strong>: This works to change the browser's locale, even if you haven't got the <a href="https://addons.mozilla.org/en-US/firefox/language-tools/">language pack</a> installed for that language. You'll just get the browser UI in your default language if this is the case.</p>
 </div>
-
-<ol>
-</ol>
 
 <div class="note">
 <p><strong>Note:</strong> To change the result of <code>getUILanguage</code> the language pack is required, since it reflects the browser UI language and not the language used for extension messages.</p>

@@ -7,9 +7,16 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p>The <b>kitchensink</b> is an <i>attempt</i> to incorporate every possible content element and every Yari macros possible.</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p><b>Don't delete this page.</b> It's used by
+    <a href="https://github.com/mdn/yari">mdn/yari</a> for its automation.</p>
+</div>
 
 <h2>About this page</h2>
+
+<p>The <b>kitchensink</b> is an <i>attempt</i> to incorporate every possible
+  content element and every Yari macros possible.</p>
 
 <p>This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the
 styles and macros. Let's start with some notes...</p>
@@ -39,7 +46,7 @@ styles and macros. Let's start with some notes...</p>
 <h3>Plain text</h3>
 <pre>
   ___________________________
-< I'm an expert in my field. >
+&lt; I'm an expert in my field. &gt;
   ---------------------------
          \   ^__^
           \  (oo)\_______
@@ -55,7 +62,7 @@ styles and macros. Let's start with some notes...</p>
 
 <h3>JavaScript</h3>
 
-<pre class="brush: js">const f = () => {
+<pre class="brush: js">const f = () =&gt; {
   return Math.random();
 }
 </pre>
@@ -83,7 +90,7 @@ styles and macros. Let's start with some notes...</p>
 
 <h3>Rust</h3>
 
-<pre class="brush: rust; notranslate">#[cfg(test)]
+<pre class="brush: rust notranslate">#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
@@ -105,8 +112,7 @@ mod tests {
 
 <p><em>The formal syntax must be taken from the spec and added to the <a href="https://github.com/mdn/data">MDN data repository</a>. It is an important tool to get precise syntax information for advanced users.</em></p>
 
-<pre class="syntaxbox">{{CSSSyntax}}</pre>
-
+<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
 
 <h2>Interactive Examples</h2>
 
@@ -202,11 +208,10 @@ mod tests {
   <tr>
     <td>{{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}</td>
     <td>{{spec2('Fetch')}}</td>
-    <td> </td>
+    <td></td>
    </tr>
 </tbody>
 </table>
-
 
 <h2>Every macro under the sun</h2>
 
@@ -227,7 +232,6 @@ mod tests {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>{{Compat("html.elements.video")}}</div>
-
 
 <h2 id="Axis-Aligned_Bounding_Box">Axis-Aligned Bounding Box</h2>
 
@@ -290,7 +294,7 @@ rect2.bind("EnterFrame", function () {
 
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<h3 id="Obsolete_CSSOM_interfaces" name="Obsolete_CSSOM_interfaces">Obsolete CSSOM interfaces {{Obsolete_Inline}}</h3>
+<h3 id="Obsolete_CSSOM_interfaces">Obsolete CSSOM interfaces {{Obsolete_Inline}}</h3>
 
 <p>{{Obsolete_Header}}</p>
 
@@ -325,7 +329,6 @@ rect2.bind("EnterFrame", function () {
   <li>Set its CSS {{cssxref("width")}} and {{cssxref("height")}} properties to be 2x or 4x the value of the HTML <code>width</code> and <code>height</code>. If the canvas was created with a 128 pixel width, for example, we would set the CSS <code>width</code> to <code>512px</code> if we wanted a 4x scale.</li>
   <li>Set the {{htmlelement("canvas")}} element's <code>image-rendering</code> CSS property to some value that does not make the image blurry. Either <code>crisp-edges</code> or <code>pixelated</code> will work. Check out the {{cssxref("image-rendering")}} article for more information on the differences between these values, and which prefixes to use depending on the browser.</li>
  </ul>
-
 
 <ul>
   <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>:

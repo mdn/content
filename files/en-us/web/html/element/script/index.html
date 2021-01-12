@@ -69,7 +69,7 @@ tags:
  <p>See {{anch("Browser compatibility")}} for notes on browser support. See also <a href="/en-US/docs/Games/Techniques/Async_scripts">Async scripts for asm.js</a>.</p>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Normal <code>script</code> elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a> for a more descriptive explanation of its valid arguments.</dd>
+ <dd>Normal <code>script</code> elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for a more descriptive explanation of its valid arguments.</dd>
  <dt>{{htmlattrdef("defer")}}</dt>
  <dd>
  <p>This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.</p>
@@ -207,13 +207,11 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <div>{{Compat("html.elements.script", 2)}}</div>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
-<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behaviour matches the behaviour of IE and WebKit.</p>
+<p>In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4 Firefox. In Firefox 4, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behavior matches the behavior of IE and WebKit.</p>
 
 <p>To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4), set <code>async="false"</code> on the scripts you want to maintain order.</p>
 

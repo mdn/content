@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onHighlighted.addListener(listener)
+<pre class="brush:js">browser.tabs.onHighlighted.addListener(listener)
 browser.tabs.onHighlighted.removeListener(listener)
 browser.tabs.onHighlighted.hasListener(listener)
 </pre>
@@ -60,14 +60,14 @@ browser.tabs.onHighlighted.hasListener(listener)
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. ID of the window whose tabs changed.</dd>
  <dt><code>tabIds</code></dt>
- <dd><code>array</code> of <code><code>integer</code></code>. IDs of the highlighted tabs in the window.</dd>
+ <dd><code>array</code> of <code>integer</code>. IDs of the highlighted tabs in the window.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Listen for highlighting events, and log the IDs of highlighted tabs:</p>
 
-<pre class="brush: js">function handleHighlighted(highlightInfo) {
+<pre class="notranslate brush: js">function handleHighlighted(highlightInfo) {
   console.log("Highlighted tabs: " + highlightInfo.tabIds);
 }
 
@@ -76,8 +76,6 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.onHighlighted")}}</p>
 

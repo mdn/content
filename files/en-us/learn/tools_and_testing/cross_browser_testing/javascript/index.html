@@ -35,7 +35,7 @@ tags:
 
 <h2 id="The_trouble_with_JavaScript">The trouble with JavaScript</h2>
 
-<p>Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavours (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.</p>
+<p>Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavors (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.</p>
 
 <p class="entry-title">Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like <a href="http://jquery.com/">jQuery</a> came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in <a href="/en-US/docs/AJAX/Getting_Started#Step_1_%E2%80%93_How_to_make_an_HTTP_request">How to make an HTTP request</a>) so developers only have to write one simple bit of code (see <code><a href="http://api.jquery.com/jquery.ajax/">jQuery.ajax()</a></code>). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.</p>
 
@@ -60,7 +60,7 @@ tags:
  <li>Confusion about <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a>, in terms of what scope it applies to, and therefore if its value is what you intended. You can read <a href="/en-US/docs/Learn/JavaScript/Objects/Basics#What_is_this">What is "this"?</a> for a light introduction; you should also study examples like <a href="https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143">this one</a>, which shows a typical pattern of saving a <code>this</code> scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct <code>this</code> scope.</li>
  <li>Incorrectly using functions inside loops that iterate with a global variable (more generally "getting the scope wrong"). For example, in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">bad-for-loop.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">source code</a>), we loop through 10 iterations using a variable defined with <code>var</code>, each time creating a paragraph and adding an <a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handler to it. When clicked, we want each one to display an alert message containing its number (the value of <code>i</code> at the time it was created). Instead they all report <code>i</code> as 11 — because the <code>for</code> loop does all its iterating before nested functions are invoked.
   <div class="note">
-  <p>The easiest solution is to simply declare the iteration variable with <code>let</code> instead of <code>var</code>—the value of <code>i</code> associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.</p>
+  <p>The easiest solution is to declare the iteration variable with <code>let</code> instead of <code>var</code>—the value of <code>i</code> associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.</p>
   </div>
   If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of <code>para</code> and <code>i</code> each time (or something similar). See <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html">good-for-loop.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html">source code</a> also) for a version that works.
 
@@ -244,7 +244,7 @@ showHeroes(superHeroes);</pre>
 
 <p>In the <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Older_browsers_not_supporting_modern_features">previous article</a> we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.</p>
 
-<p>There are a number of modern JavaScript language features defined in recent versions of the specs (<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> / <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla">ECMAScript Next</a>) that simply won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.</p>
+<p>There are a number of modern JavaScript language features defined in recent versions of the specs (<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 6</a> / <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla">ECMAScript Next</a>) that won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.</p>
 
 <p>For example:</p>
 
@@ -303,7 +303,7 @@ showHeroes(superHeroes);</pre>
 <p>JavaScript libraries tend to come in a few main varieties (some libraries will serve more than one of these purposes):</p>
 
 <ul>
- <li>Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. <a href="http://jquery.com/">jQuery</a> for example provides its own fully-featured selectors and DOM manipuation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.</li>
+ <li>Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. <a href="http://jquery.com/">jQuery</a> for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.</li>
  <li>Convenience libraries: Make difficult things easier to do. For example, the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> is really complex and challenging to use when you write it directly, so the <a href="https://threejs.org/">Three.js</a> library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc. The <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the <a href="https://serviceworke.rs/">Service Worker Cookbook</a> for several useful code samples).</li>
  <li>Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when {{glossary("DHTML")}} was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily. See <a href="https://www.javascripting.com/animation/">JavaScripting.com/animation</a> for a list of libraries.</li>
  <li>UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example <a href="http://foundation.zurb.com/">Foundation</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and <a href="https://material-ui.com/">Material-UI</a> (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.</li>
@@ -354,7 +354,7 @@ fetch('flowers.jpg').then(function(response) {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: You can find our finished version at <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
+<p><strong>Note</strong>: You can find our finished version at <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">fetch-polyfill-finished.html</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html">source code</a>).</p>
 </div>
 
 <div class="note">
@@ -400,7 +400,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Note that polyfills.js is basically the two polyfills we are using put together into one file. We did this manually, but there are cleverer solutions that will automatically generate bundles for you — see <a href="http://browserify.org/">Browserify</a> (see <a href="https://www.sitepoint.com/getting-started-browserify/">Getting started with Browserify</a> for a basic tutorial). It is a good idea to bundle JS files into one like this — reducing the number of HTTP requests you need to make improves the performance of your site.</p>
 
-<p>You can see this code in action in <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
+<p>You can see this code in action in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
 
 <div class="note">
 <p><strong>Note</strong>: There are some 3rd party options to consider, for example <a href="https://polyfill.io/v2/docs/">Polyfill.io</a> — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.</p>
@@ -414,7 +414,7 @@ fetch('flowers.jpg').then(function(response) {
 <p><strong>Note</strong>: This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).</p>
 </div>
 
-<p>So for example, we talked about arrow functions (see <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
+<p>So for example, we talked about arrow functions (see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> live, and see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a>) earlier in the article, which only work in the newest browsers:</p>
 
 <pre class="brush: js notranslate">() =&gt; { ... }</pre>
 
@@ -464,7 +464,7 @@ if(ua.indexOf('Firefox') !== -1) {
 
 <h3 id="Handling_JavaScript_prefixes">Handling JavaScript prefixes</h3>
 
-<p>In the previous article, we included quite a lot of discussion about <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">handing CSS prefixes</a>. Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new shint API object called <code>Object</code>:</p>
+<p>In the previous article, we included quite a lot of discussion about <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">handling CSS prefixes</a>. Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called <code>Object</code>:</p>
 
 <ul>
  <li>Mozilla would use <code>mozObject</code></li>
@@ -472,7 +472,7 @@ if(ua.indexOf('Firefox') !== -1) {
  <li>Microsoft would use <code>msObject</code></li>
 </ul>
 
-<p>Here's an example, taken from our <a href="http://mdn.github.io/violent-theremin/">violent-theremin demo</a> (see <a href="https://github.com/mdn/violent-theremin">source code</a>), which uses a combination of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to create a fun (and noisy) drawing tool:</p>
+<p>Here's an example, taken from our <a href="https://mdn.github.io/violent-theremin/">violent-theremin demo</a> (see <a href="https://github.com/mdn/violent-theremin">source code</a>), which uses a combination of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> and the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to create a fun (and noisy) drawing tool:</p>
 
 <pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
@@ -483,7 +483,7 @@ const audioCtx = new AudioContext();</pre>
 
 <p>This pattern can be applied to just about any prefixed JavaScript feature. JavaScript libraries/polyfills also make use of this kind of code, to abstract browser differences away from the developer as much as possible.</p>
 
-<p>Again, prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes for different JavaScript/API features on MDN reference pages, and sites like <a href="http://caniuse.com/">caniuse.com</a>. If you are unsure, you can also find out by doing some testing directly in browsers.</p>
+<p>Again, prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes for different JavaScript/API features on MDN reference pages, and sites like <a href="https://caniuse.com/">caniuse.com</a>. If you are unsure, you can also find out by doing some testing directly in browsers.</p>
 
 <p>For example, try going into your browser's developer console and start typing</p>
 

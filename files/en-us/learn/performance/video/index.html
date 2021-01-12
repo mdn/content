@@ -18,7 +18,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web">client-side web technologies</a>.</td>
+   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web">client-side web technologies</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -41,7 +41,7 @@ tags:
 
 <p>Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as <a href="https://www.ffmpeg.org/">FFmpeg</a> (discussed in section below), that encode, decode, convert, and perform other optimization functions.</p>
 
-<h3 id="Optimize_&lt;source>_order">Optimize <code>&lt;source&gt;</code> order</h3>
+<h3 id="Optimize_&lt;source&gt;_order">Optimize <code>&lt;source&gt;</code> order</h3>
 
 <p>Order video source from smallest to largest.  For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:</p>
 
@@ -56,7 +56,7 @@ tags:
 
 <p>The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.</p>
 
-<p>See <a href="http://caniuse.com/#search=video">CanIUse.com</a> for current browser support of video and other media types.  </p>
+<p>See <a href="https://caniuse.com/#search=video">CanIUse.com</a> for current browser support of video and other media types.  </p>
 
 <h3 id="Video_autoplay">Video autoplay</h3>
 
@@ -83,8 +83,6 @@ tags:
 <p>Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called <a href="https://www.ffmpeg.org/">FFmpeg</a> can do it for you. This is the FFmpeg command string to remove audio:</p>
 
 <pre><a href="https://www.ffmpeg.org/">ffmpeg</a> -i original.mp4 -an -c:v copy audioFreeVersion.mp4</pre>
-
-
 
 <h3 id="Video_preload">Video preload</h3>
 

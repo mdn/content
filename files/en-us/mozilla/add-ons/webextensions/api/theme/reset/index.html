@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.theme.reset(
+<pre class="brush:js">browser.theme.reset(
   windowId     // integer
 )
 </pre>
@@ -33,15 +33,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("webextensions.api.theme.reset")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code applies a theme, then removes it when the user clicks a browser action:</p>
 
-<pre class="brush: js">browser.theme.update(themes.night);
+<pre class="notranslate brush: js">browser.theme.update(themes.night);
 
 browser.browserAction.onClicked.addListener(() =&gt; {
   browser.theme.reset();
@@ -80,4 +78,3 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 </pre>
 </div>
 
-<p> </p>

@@ -71,11 +71,11 @@ document.body.appendChild(contents);
 
 <h3 id="Ranges_and_the_hierarchy_of_the_DOM">Ranges and the hierarchy of the DOM</h3>
 
-<p>In order to define a range of characters within a document in a way that is able to span across zero or more node boundaries, and which is as resilient as possible to changes to the DOM, you can't simply specify the offset to the first and last characters in the {{Glossary("HTML")}}. There are a few good reasons for that.</p>
+<p>In order to define a range of characters within a document in a way that is able to span across zero or more node boundaries, and which is as resilient as possible to changes to the DOM, you can't specify the offset to the first and last characters in the {{Glossary("HTML")}}. There are a few good reasons for that.</p>
 
-<p>First, after your page is loaded, the browser simply isn't thinking in terms of HTML. Once it's been loaded, the page is a tree of DOM {{domxref("Node")}} objects, so you need to specify the beginning and ending locations of a range in terms of nodes and positions within nodes.</p>
+<p>First, after your page is loaded, the browser isn't thinking in terms of HTML. Once it's been loaded, the page is a tree of DOM {{domxref("Node")}} objects, so you need to specify the beginning and ending locations of a range in terms of nodes and positions within nodes.</p>
 
-<p>Second, in order to support the mutability of the DOM tree as much as possible, you need a way to represent positions relative to nodes in the tree, rather than simply global positions within the entire document. By defining points within the document as offsets within a given node, those positions remain consistent with the content even as nodes are added to, removed from, or moved around within the DOM tree—within reason. There are fairly obvious limitations (such as if a node is moved to be after the endpoint of a range, or if the content of a node is heavily altered), but it's far better than nothing.</p>
+<p>Second, in order to support the mutability of the DOM tree as much as possible, you need a way to represent positions relative to nodes in the tree, rather than global positions within the entire document. By defining points within the document as offsets within a given node, those positions remain consistent with the content even as nodes are added to, removed from, or moved around within the DOM tree—within reason. There are fairly obvious limitations (such as if a node is moved to be after the endpoint of a range, or if the content of a node is heavily altered), but it's far better than nothing.</p>
 
 <p>Third, using node-relative positions to define the start and end positions will generally be easier to make perform well. Rather than having to negotiate the DOM figuring out what your global offset refers to, the {{Glossary("user agent")}} (browser) can instead go directly to the node indicated by the starting position and start from there, working its way forward until it reaches the given offset into the ending node.</p>
 
@@ -133,7 +133,7 @@ let fragment = r.cloneContents();
 
 <p>The range's end is located below the {{domxref("p")}} element, so that will be needed within the new fragment. So will the text node containing the word "A", since that's included in the range. Finally, an <code>&lt;em&gt;</code> and a text node below it will be added below the <code>&lt;p&gt;</code> as well.</p>
 
-<p>The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing...". Similarly, the last text node will contain simply "ve", given the request for the first two characters of the ending node.</p>
+<p>The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing...". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.</p>
 
 <p>The resulting document fragment looks like this:</p>
 

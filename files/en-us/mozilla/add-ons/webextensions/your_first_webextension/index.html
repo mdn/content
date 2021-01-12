@@ -9,10 +9,6 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div></div>
-
-<div></div>
-
 <div class="notecard note">
 <p>If you are already familiar with the basic concepts of browser extensions, skip this section to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">see how extension files are put together</a>. Then, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#Reference">reference documentation</a> to start building your extension. Visit <a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">Firefox Extension Workshop</a> to learn more about the workflow for testing, publishing, and extensions for Firefox.</p>
 </div>
@@ -101,7 +97,7 @@ cd borderify</pre>
 
 <p>Finally, create a file called "borderify.js" directly under the "borderify" directory. Give it this content:</p>
 
-<pre class="brush: js">document.body.style.border = "5px solid red";</pre>
+<pre class="notranslate brush: js">document.body.style.border = "5px solid red";</pre>
 
 <p>This script will be loaded into the pages that match the pattern given in the <code>content_scripts</code> manifest.json key. The script has direct access to the document, just like scripts loaded by the page itself.</p>
 
@@ -139,7 +135,7 @@ cd borderify</pre>
 <p>Don't try it on addons.mozilla.org, though! Content scripts are currently blocked on that domain.</p>
 </div>
 
-<p>Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extensions's files by clicking the "Reload" button in about:debugging. You can see the changes right away:</p>
+<p>Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the "Reload" button in about:debugging. You can see the changes right away:</p>
 
 <p>{{EmbedYouTube("NuajE60jfGY")}}</p>
 

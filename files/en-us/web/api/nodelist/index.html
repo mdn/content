@@ -36,7 +36,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <h3 id="Static_NodeLists">Static NodeLists</h3>
 
-<p>In other cases, the <code>NodeList</code> is <em>static, </em>where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a <em>static</em> <code>NodeList</code>.</p>
+<p>In other cases, the <code>NodeList</code> is <em>static,</em> where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a <em>static</em> <code>NodeList</code>.</p>
 
 <p>It's good to keep this distinction in mind when you choose how to iterate over the items in the <code>NodeList</code>, and whether you should cache the list's <code>length</code>.</p>
 
@@ -74,7 +74,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <p><strong>Don't use <code><a href="/en-US/docs/JavaScript/Reference/Statements/for...in" title="JavaScript/ Reference/Statements/for...in">for...in</a></code> to enumerate the items in <code>NodeList</code>s</strong>, since they will <em>also</em> enumerate its <code>length</code> and <code>item</code> properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, <code>for..in</code> is not guaranteed to visit the properties in any particular order.</p>
 
-<p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of" title="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
+<p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
 
 <pre class="brush: js notranslate">const list = document.querySelectorAll('input[type=checkbox]');
 for (let checkbox of list) {
@@ -125,7 +125,5 @@ Array.prototype.forEach.call(list, function (checkbox) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.NodeList")}}</p>

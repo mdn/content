@@ -41,7 +41,6 @@ tags:
  <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
 
-
 <h2 id="Methods">Methods</h2>
 
 <p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
@@ -62,9 +61,6 @@ tags:
  <dt><code><a href="/en-US/docs/Web/API/Worker/messageerror_event">messageerror</a></code></dt>
  <dd>Fires when a <code>Worker</code> object receives a message that can't be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">deserialized</a>.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/Worker/onmessageerror">onmessageerror</a></code> property.</dd>
-</dl>
-
-<dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
  <dd>Fires every time a {{jsxref("Promise")}} rejects, regardless of whether or not there is a handler to catch the rejection.<br>
  Also available through the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> event handler property.</dd>
@@ -86,7 +82,7 @@ first.onchange = function() {
   console.log('Message posted to worker');
 }</pre>
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -109,18 +105,16 @@ first.onchange = function() {
 
 <p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
-
-
 <p>{{Compat("api.Worker")}}</p>
 
-<h3 id="Cross-origin_worker_error_behaviour">Cross-origin worker error behaviour</h3>
+<h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
 
 <p>In early versions of the spec, loading a cross-origin worker script threw a <code>SecurityError</code>. Nowadays, an {{event("error")}} event is thrown instead. Find out how to deal with this in <em><a href="https://www.fxsitecompat.com/en-CA/docs/2016/loading-cross-origin-worker-now-fires-error-event-instead-of-throwing-worker-in-sandboxed-iframe-no-longer-allowed/">Loading cross-origin worker now fires error event instead of throwing; worker in sandboxed iframe no longer allowed</a></em>.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="en/Using DOM workers">Using Web Workers</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a></li>
  <li>Other kind of workers: {{domxref("SharedWorker")}} and <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a>.</li>
 </ul>

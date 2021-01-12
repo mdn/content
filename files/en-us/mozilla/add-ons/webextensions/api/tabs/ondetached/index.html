@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onDetached.addListener(listener)
+<pre class="brush:js">browser.tabs.onDetached.addListener(listener)
 browser.tabs.onDetached.removeListener(listener)
 browser.tabs.onDetached.hasListener(listener)
 </pre>
@@ -70,7 +70,7 @@ browser.tabs.onDetached.hasListener(listener)
 
 <p>Listen for detach events, and log the info:</p>
 
-<pre class="brush: js">function handleDetached(tabId, detachInfo) {
+<pre class="notranslate brush: js">function handleDetached(tabId, detachInfo) {
   console.log("Tab: " + tabId + " moved");
   console.log("Old window: " + detachInfo.oldWindowId);
   console.log("Old index: " + detachInfo.oldPosition);
@@ -81,8 +81,6 @@ browser.tabs.onDetached.addListener(handleDetached);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("webextensions.api.tabs.onDetached")}}</p>
 

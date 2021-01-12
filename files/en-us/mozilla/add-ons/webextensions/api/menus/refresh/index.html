@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.refresh()
+<pre class="brush:js">browser.menus.refresh()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -46,7 +46,7 @@ tags:
 
 <p>This example listens for the context menu to be shown over a link, then updates the <code>openLabelledId</code> menu item with the link's hostname:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">updateMenuItem</span><span class="punctuation token">(</span>linkHostname<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">updateMenuItem</span><span class="punctuation token">(</span>linkHostname<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   browser<span class="punctuation token">.</span>menus<span class="punctuation token">.</span><span class="function token">update</span><span class="punctuation token">(</span>openLabelledId<span class="punctuation token">,</span> <span class="punctuation token">{</span>
     title<span class="punctuation token">:</span> <span class="template-string token"><span class="string token">`Open (</span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>linkHostname<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">)`</span></span>
   <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>

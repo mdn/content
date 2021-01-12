@@ -6,7 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div><article class="text-content" id="wikiArticle">
+<div>{{FirefoxSidebar}}</div>
 <p>Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.</p>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
@@ -65,7 +65,7 @@ tags:
 <h4 id="New_APIs">New APIs</h4>
 
 <ul>
- <li>The <strong><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks API</a></strong> (also known simply as the <strong>Background Tasks API</strong> or the <strong><code>requestIdleCallback</code> API</strong>) is now enabled by default after being available behind a preference since Firefox 53. This API lets you schedule tasks to be executed when the browser determines that there's free time available before the next repaint occurs, so that your code can make use of that time without causing visible performance lag ({{bug(1314959)}}).</li>
+ <li>The <strong><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks API</a></strong> (also known as the <strong>Background Tasks API</strong> or the <strong><code>requestIdleCallback</code> API</strong>) is now enabled by default after being available behind a preference since Firefox 53. This API lets you schedule tasks to be executed when the browser determines that there's free time available before the next repaint occurs, so that your code can make use of that time without causing visible performance lag ({{bug(1314959)}}).</li>
  <li>The <strong><a href="/en-US/docs/Web/API/WebVR_API">WebVR 1.1 API</a></strong> is now turned on by default on Windows (and is available on macOS in Nightly). This API exposes virtual reality devices — for example head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene, and present content into such displays.</li>
  <li>The <strong><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></strong> — which provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <a href="/en-US/docs/Glossary/viewport" title="viewport: A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed. In web browser terms, it refers to the part of the document you're viewing which is currently visible in its window. Content outside the viewport is currently not displayed onscreen.">viewport</a> — has been added ({{bug(1321865)}}).</li>
 </ul>
@@ -140,7 +140,7 @@ tags:
 <h4 id="Encrypted_Media_Extensions_API">Encrypted Media Extensions API</h4>
 
 <ul>
- <li>Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are ouptut to the <a href="/en-US/docs/Tools/Web_Console">web console</a> when this is done. ({{bug(1361000)}}).</li>
+ <li>Firefox currently allows Encrypted Media Extensions to be used in insecure contexts, despite this not being allowed in the specification. This will be changed in the near future, and starting in Firefox 55, deprecation warnings are output to the <a href="/en-US/docs/Tools/Web_Console">web console</a> when this is done. ({{bug(1361000)}}).</li>
  <li>Firefox currently doesn't require that at least one {{domxref("MediaKeySystemCapabilities")}} object be included in the <code>suggestedConfigurations</code> parameter passed into {{domxref("Navigator.requestMediaKeySystemAccess()")}}, which the specification does mandate. Starting in Firefox 55, a warning is output to the web console when any audio or video configuration is specified without specifying supported codecs. Soon, failure to include a valid configuration for one or more of audio and video will throw an exception {{bug(1368683)}}).</li>
 </ul>
 
@@ -234,4 +234,3 @@ tags:
 <h2 id="Older_versions">Older versions</h2>
 
 <p>{{Firefox_for_developers(54)}}</p>
-</article>

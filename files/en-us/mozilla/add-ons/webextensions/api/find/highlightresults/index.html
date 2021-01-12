@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.find.highlightResults(
+<pre class="brush:js">browser.find.highlightResults(
   options // optional object
 )
 </pre>
@@ -58,7 +58,7 @@ tags:
 
 <p>Search the active tab for "banana", log the number of matches, and highlight them:</p>
 
-<pre class="brush: js">function found(results) {
+<pre class="notranslate brush: js">function found(results) {
   console.log(`There were: ${results.count} matches.`);
   if (results.count &gt; 0) {
     browser.find.highlightResults();

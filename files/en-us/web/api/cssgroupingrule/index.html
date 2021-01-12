@@ -9,18 +9,18 @@ tags:
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p>An object implementing the <strong><code>CSSGroupingRule</code></strong> interface represents any CSS at-rule that contains other rules nested within it.</p>
+<p>The <strong><code>CSSGroupingRule</code></strong> interface of the {{domxref("CSS Object Model")}} represents any CSS {{CSSXref("at-rule")}} that contains other rules nested within it.</p>
 
-<p>Objects deriving from it :</p>
+<p>Objects deriving from it:</p>
 
 <ul>
- <li>{{domxref("CSSConditionRule")}} and its children: {{domxref("CSSMediaRule")}}, {{domxref("CSSSupportsRule")}}, and {{domxref("CSSDocumentRule")}}.</li>
+ <li>{{domxref("CSSConditionRule")}} and its children: {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</li>
  <li>{{domxref("CSSPageRule")}}</li>
 </ul>
 
-<h2 id="Properties" name="Properties">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
 
 <pre>interface CSSGroupingRule : CSSRule {
     readonly attribute CSSRuleList cssRules;
@@ -38,9 +38,9 @@ tags:
  <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
 </dl>
 
-<h2 id="Methods_common_to_all_CSSGroupingRule_instances">Methods common to all CSSGroupingRule instances</h2>
+<h2 id="Methods">Methods</h2>
 
-<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all methods of this class. It has two specific methods:</p>
+<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
  <dt id="deleteRule">{{domxref("CSSGroupingRule.deleteRule")}}</dt>
@@ -70,12 +70,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("api.CSSGroupingRule")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/DOM/Using_dynamic_styling_information" title="en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+ <li><a href="/en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
 </ul>

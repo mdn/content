@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var settingIcon = browser.pageAction.setIcon(
+<pre class="brush:js">var settingIcon = browser.pageAction.setIcon(
   details         // object
 )
 </pre>
@@ -39,7 +39,7 @@ tags:
  <dl class="reference-values">
   <dt><code>imageData</code>{{optional_inline}}</dt>
   <dd>
-  <p><code>{{WebExtAPIRef('pageAction.ImageDataType')}}</code> or <code><code>object</code></code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+  <p><code>{{WebExtAPIRef('pageAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
 
   <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
 
@@ -52,7 +52,7 @@ tags:
   </dd>
   <dt><code>path</code>{{optional_inline}}</dt>
   <dd>
-  <p><code><code>string</code></code> or <code><code>object</code></code>. This is either a relative path to an icon file or a dictionary object. </p>
+  <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or a dictionary object. </p>
 
   <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
 
@@ -89,7 +89,7 @@ tags:
 
 <p>Set the icon for the page action when the user clicks it:</p>
 
-<pre class="brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
+<pre class="notranslate brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
   browser.pageAction.setIcon({
     tabId: tab.id, path: "icons/icon-48.png"
   });

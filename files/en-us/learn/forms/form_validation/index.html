@@ -33,7 +33,7 @@ tags:
 
 <p>Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.</p>
 
-<p>However, client-side validation <em>should not be considered </em>an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> <strong>as well</strong> as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
+<p>However, client-side validation <em>should not be considered</em> an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the <em>server-side</em> <strong>as well</strong> as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a> for an idea of what <em>could</em> happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.</p>
 
 <h2 id="What_is_form_validation">What is form validation?</h2>
 
@@ -170,9 +170,9 @@ input:valid {
 
 <h3 id="Validating_against_a_regular_expression">Validating against a regular expression</h3>
 
-<p>Another useful validation feature is the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute, which expects a <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexs are ideal for form validation and serve a variety of other uses in JavaScript.</p>
+<p>Another useful validation feature is the <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute, which expects a <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</p>
 
-<p>Regexs are quite complex, and we don't intend to teach you them exhaustively in this article. Below are some examples to give you a basic idea of how they work.</p>
+<p>Regexps are quite complex, and we don't intend to teach you them exhaustively in this article. Below are some examples to give you a basic idea of how they work.</p>
 
 <ul>
  <li><code>a</code> — Matches one character that is <code>a</code> (not <code>b</code>, not <code>aa</code>, and so on).</li>
@@ -656,7 +656,7 @@ function showError() {
   &lt;p&gt;
     &lt;label for="mail"&gt;
         &lt;span&gt;Please enter an email address:&lt;/span&gt;
-        &lt;input type="text" class="mail" id="mail" name="mail"&gt;
+        &lt;input type="text" id="mail" name="mail"&gt;
         &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
     &lt;/label&gt;
   &lt;/p&gt;
@@ -799,7 +799,7 @@ addEvent(form, "submit", function () {
 
 <p>{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}</p>
 
-<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as <a href="http://rickharrison.github.com/validate.js/" rel="external">Validate.js</a>.</p>
+<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as <a href="https://rickharrison.github.com/validate.js/" rel="external">Validate.js</a>.</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

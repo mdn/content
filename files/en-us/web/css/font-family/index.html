@@ -14,15 +14,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/font-family.html")}}</div>
 
-
-
 <p>Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.</p>
 
 <p>It is often convenient to use the shorthand property {{CSSxRef("font")}} to set <code>font-size</code> and other font related properties all at once.</p>
 
 <p>You should always include at least one generic family name in a <code>font-family</code> list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.</p>
 
-<p>The <code>font-family</code> property specifies a list of fonts, from highest priority to lowest. Font selection <em>does not</em> simply stop at the first font in the list that is on the user's system. Rather, font selection is done <em>one character at a time</em>, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. (However, this doesn't work in Internet Explorer 6 or earlier.) When a font is only available in some <a href="/en-US/docs/Web/CSS/font-style">styles</a>, <a href="/en-US/docs/Web/CSS/font-variant">variants</a>, or <a href="/en-US/docs/Web/CSS/font-size">sizes</a>, those properties may also influence which font family is chosen.</p>
+<p>The <code>font-family</code> property specifies a list of fonts, from highest priority to lowest. Font selection <em>does not</em> stop at the first font in the list that is on the user's system. Rather, font selection is done <em>one character at a time</em>, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. (However, this doesn't work in Internet Explorer 6 or earlier.) When a font is only available in some <a href="/en-US/docs/Web/CSS/font-style">styles</a>, <a href="/en-US/docs/Web/CSS/font-variant">variants</a>, or <a href="/en-US/docs/Web/CSS/font-size">sizes</a>, those properties may also influence which font family is chosen.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -51,7 +49,7 @@ font-family: initial;
 font-family: unset;
 </pre>
 
-<p>The <code>font-family</code> property lists one or more font families, separated by commas. Each font family is specified as either a <code><a href="#&lt;family-name>">&lt;family-name&gt;</a></code> or a <code><a href="#&lt;generic-name>">&lt;generic-name&gt;</a></code> value.</p>
+<p>The <code>font-family</code> property lists one or more font families, separated by commas. Each font family is specified as either a <code><a href="#family-name">&lt;family-name&gt;</a></code> or a <code><a href="#generic-name">&lt;generic-name&gt;</a></code> value.</p>
 
 <p>The example below lists two font families, the first with a <code>&lt;family-name&gt;</code> and the second with a <code>&lt;generic-name&gt;</code>:</p>
 
@@ -60,9 +58,9 @@ font-family: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><a id="&lt;family-name>" name="&lt;family-name>"><code>&lt;family-name&gt;</code></a></dt>
+ <dt><a id="family-name"><code>&lt;family-name&gt;</code></a></dt>
  <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.</dd>
- <dt><a id="&lt;generic-name>" name="&lt;generic-name>"><code>&lt;generic-name&gt;</code></a></dt>
+ <dt><a id="generic-name"><code>&lt;generic-name&gt;</code></a></dt>
  <dd>
  <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:</p>
 
@@ -78,7 +76,7 @@ font-family: unset;
   E.g. <span style="font-family: fira mono,monospace;">"Fira Mono"</span>, <span style="font-family: dejavu sans mono,monospace;">"DejaVu Sans Mono"</span>, <span style="font-family: menlo,monospace;">Menlo</span>, <span style="font-family: consolas,monospace;">Consolas</span>, <span style="font-family: liberation mono,monospace;">"Liberation Mono"</span>, <span style="font-family: monaco,monospace;">Monaco</span>, <span style="font-family: lucida console,monospace;">"Lucida Console"</span>, <span style="font-family: monospace;">monospace</span>.</dd>
   <dt><code>cursive</code></dt>
   <dd style="font-family: cursive;">Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.<br>
-  E.g. <span style="font-family: brush script mt,cursive;">"Brush Script MT</span>", <span style="font-family: brush script std,cursive;">"Brush Script Std</span>", <span>"Lucida Calligraphy"</span>, <span>"Lucida Handwriting"</span>, <span style="font-family: apple chancery,cursive;">"Apple Chancery"</span>, <span style="font-family: cursive;">cursive</span>.</dd>
+  E.g. <span style="font-family: brush script mt,cursive;">"Brush Script MT</span>", <span style="font-family: brush script std,cursive;">"Brush Script Std</span>", "Lucida Calligraphy", "Lucida Handwriting", <span style="font-family: apple chancery,cursive;">"Apple Chancery"</span>, <span style="font-family: cursive;">cursive</span>.</dd>
   <dt><code>fantasy</code></dt>
   <dd style="font-family: fantasy;">Fantasy fonts are primarily decorative fonts that contain playful representations of characters.<br>
   E.g. <span style="font-family: papyrus,fantasy;">Papyrus</span>, <span style="font-family: herculanum,fantasy;">Herculanum</span>, <span style="font-family: party let,fantasy;">Party LET</span>, <span style="font-family: curlz mt,fantasy;">Curlz MT</span>, <span style="font-family: harrington,fantasy;">Harrington</span>, <span style="font-family: fantasy;">fantasy</span>.</dd>
@@ -127,7 +125,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -238,6 +236,12 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
 <p>{{Compat("css.properties.font-family")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("font-style")}}</li>
+ <li>{{cssxref("font-weight")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
+</ul>

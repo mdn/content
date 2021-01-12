@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> algorithm, which includes cyclical references.</p>
+<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
 
 <p>The main scope that spawned the worker can send back information to the thread that spawned it using the {{domxref("Worker.postMessage")}} method.</p>
 
@@ -24,9 +24,9 @@ tags:
 
 <dl>
  <dt><em>aMessage</em></dt>
- <dd>The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> algorithm, which includes cyclical references.</dd>
+ <dd>The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and it becomes available only to the main thread it was sent to.</dd>
+ <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and it becomes available only to the main thread it was sent to.</dd>
  <dd>Only {{domxref("MessagePort")}} and {{domxref("ArrayBuffer")}} objects can be transferred.</dd>
 </dl>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>In the main script, <code>onmessage</code> would have to be called on a <code>Worker object</code>, whereas inside the worker script you just need <code>onmessage</code> because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>postMessage()</code> can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.</p>
@@ -65,14 +65,12 @@ tags:
   <tr>
    <td>{{SpecName('HTML WHATWG', "#dom-dedicatedworkerglobalscope-postmessage", "DedicatedWorkerGlobalScope.postMessage()")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.DedicatedWorkerGlobalScope.postMessage")}}</p>
 
