@@ -292,7 +292,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);</pre>
 
-<p>Note the vector <code>[-truckDistance, 0, 0]</code>. This compensates for the fact that the truck operation works by moving the world rather than the camera. By moving the entire world in the opposite direction from the direction indicated by <code>truckDistance</code>, we achieve the effect of moving the camera the expected direction. This way, p<span>ositive values of </span><code>truckDistance</code><span> will move the camera to the right (by moving the world to the left) and negative values of <code>truckDistance</code> will move the camera to the left by moving the world to the right.</span></p>
+<p>Note the vector <code>[-truckDistance, 0, 0]</code>. This compensates for the fact that the truck operation works by moving the world rather than the camera. By moving the entire world in the opposite direction from the direction indicated by <code>truckDistance</code>, we achieve the effect of moving the camera the expected direction. This way, positive values of <code>truckDistance</code> will move the camera to the right (by moving the world to the left) and negative values of <code>truckDistance</code> will move the camera to the left by moving the world to the right.</p>
 
 <h3 id="Pedestaling_Moving_up_or_down">Pedestaling (Moving up or down)</h3>
 

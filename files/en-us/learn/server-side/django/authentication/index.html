@@ -96,12 +96,12 @@ user.save()
 
 <p>Start the development server and navigate to the admin site in your local web browser (<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the <strong>Authentication and Authorization</strong> section, you can click the <strong>Users</strong> or <strong>Groups</strong> links to see their existing records.</p>
 
-<p><img alt="Admin site - add groups or users" src="https://mdn.mozillademos.org/files/14091/admin_authentication_add.png" style="border-style: solid; border-width: 1px; display: block; height: 364px; margin: 0px auto; width: 661px;"></p>
+<p><img alt="Admin site - add groups or users" src="admin_authentication_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>First lets create a new group for our library members.</p>
 
 <ol>
- <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.<img alt="Admin site - add group" src="https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 561px; margin: 0px auto; width: 800px;"></li>
+ <li>Click the <strong>Add</strong> button (next to Group) to create a new <em>Group</em>; enter the <strong>Name</strong> "Library Members" for the group.<img alt="Admin site - add group" src="admin_authentication_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>We don't need any permissions for the group, so just press <strong>SAVE</strong> (you will be taken to a list of groups).</li>
 </ol>
 
@@ -109,12 +109,12 @@ user.save()
 
 <ol>
  <li>Navigate back to the home page of the admin site</li>
- <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialogue.<img alt="Admin site - add user pt1" src="https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; height: 409px; margin: 0px auto; width: 800px;"></li>
+ <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialogue.<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>Enter an appropriate <strong>Username</strong> and <strong>Password</strong>/<strong>Password confirmation</strong> for your test user</li>
  <li>Press <strong>SAVE</strong> to create the user.<br>
   <br>
-  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).<img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
- <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
+  The admin site will create the new user and immediately take you to a <em>Change user</em> screen where you can change your <strong>username</strong> and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the <strong>Active</strong> flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).<img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>In the <em>Groups</em> section, select <strong>Library Member</strong> group from the list of <em>Available groups</em>, and then press the <strong>right-arrow</strong> between the boxes to move it into the <em>Chosen groups</em> box.<img alt="Admin site - add user to group" src="admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>We don't need to do anything else here, so just select <strong>SAVE</strong> again, to go to the list of users.</li>
 </ol>
 
@@ -246,7 +246,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Navigate back to the login page (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>) once you've saved your template, and you should see something like this:</p>
 
-<p><img alt="Library login page v1" src="https://mdn.mozillademos.org/files/14101/library_login.png" style="border-style: solid; border-width: 1px; display: block; height: 173px; margin: 0px auto; width: 441px;"></p>
+<p><img alt="Library login page v1" src="library_login.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If you log in using valid credentials, you'll be redirected to another page (by default this will be <a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>). The problem is that, by default, Django expects that upon logging in you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!</p>
 
@@ -271,7 +271,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. If you go to the logout URL again you should see this page:</p>
 
-<p><img alt="Library logout page v1" src="https://mdn.mozillademos.org/files/14103/library_logout.png" style="border-style: solid; border-width: 1px; display: block; height: 169px; margin: 0px auto; width: 385px;"></p>
+<p><img alt="Library logout page v1" src="library_logout.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Password_reset_templates">Password reset templates</h3>
 
@@ -592,7 +592,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>When any user is logged in, they'll see the <em>My Borrowed</em> link in the sidebar, and the list of books displayed as below (the first book has no due date, which is a bug we hope to fix in a later tutorial!).</p>
 
-<p><img alt="Library - borrowed books by user" src="https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png" style="border-style: solid; border-width: 1px; display: block; height: 215px; margin: 0px auto; width: 530px;"></p>
+<p><img alt="Library - borrowed books by user" src="library_borrowed_by_user.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Permissions">Permissions</h2>
 
@@ -660,7 +660,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>Normally you will want the <code>PermissionRequiredMixin</code> behavior: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
 
-<pre class="syntaxbox notranslate">from django.contrib.auth.decorators import login_required, permission_required
+<pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required, permission_required
 
 @login_required
 @permission_required('catalog.can_mark_returned', raise_exception=True)
@@ -684,7 +684,7 @@ def my_view(request):
 
 <p>When you are finished, your page should look something like the screenshot below.</p>
 
-<p><img alt="All borrowed books, restricted to librarian" src="https://mdn.mozillademos.org/files/14115/library_borrowed_all.png" style="border-style: solid; border-width: 1px; display: block; height: 283px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Summary">Summary</h2>
 

@@ -184,7 +184,7 @@ if (startPlayPromise !== undefined) {
 
 <p>To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:</p>
 
-<pre class="notranslate">Feature-Policy: autoplay 'self'</pre>
+<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self'</pre>
 
 <p>To do the same for an {{HTMLElement("iframe")}}:</p>
 
@@ -197,7 +197,7 @@ if (startPlayPromise !== undefined) {
 
 <p>Adding <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> permission to the previous example results in a <code>Feature-Policy</code> header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.</p>
 
-<pre class="notranslate">Feature-Policy: autoplay 'self'; fullscreen</pre>
+<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self'; fullscreen</pre>
 
 <p>The same permissions, grated using the <code>&lt;iframe&gt;</code> element's <code>allow</code> property, look like this:</p>
 
@@ -210,7 +210,7 @@ if (startPlayPromise !== undefined) {
 
 <p>The <code>Feature-Policy</code> header to allow media to be played from both the document's (or <code>&lt;iframe&gt;</code>'s) own domain and <code>https://example.media</code> looks like this:</p>
 
-<pre class="notranslate">Feature-Policy: autoplay 'self' https://example.media</pre>
+<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self' https://example.media</pre>
 
 <p>An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:</p>
 
@@ -224,7 +224,7 @@ if (startPlayPromise !== undefined) {
 
 <p>Setting the <code>autoplay</code> feature policy to <code>'none'</code> disables autoplay entirely for the document or <code>&lt;iframe&gt;</code> and all nested frames. The HTTP header is:</p>
 
-<pre class="notranslate">Feature-Policy: autoplay 'none'</pre>
+<pre class="brush: plain notranslate">Feature-Policy: autoplay 'none'</pre>
 
 <p>Using the <code>&lt;iframe&gt;</code>'s <code>allow</code> attribute:</p>
 

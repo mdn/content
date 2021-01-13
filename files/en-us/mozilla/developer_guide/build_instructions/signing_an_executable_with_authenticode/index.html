@@ -55,8 +55,8 @@ openssl crl2pkcs7 -nocrl -certfile cert.pem -outform DER -out authenticode.spc</
  -v authenticode.pvk \
  -a sha1 -$ commercial \
  -n <em>My\ Application</em> \
- -i <em><span class="nowiki">http://www.example.com/</span></em> \
- -t <span class="nowiki">http://timestamp.verisign.com/scripts/timstamp.dll</span> \
+ -i <em>http://www.example.com/</em> \
+ -t http://timestamp.verisign.com/scripts/timstamp.dll \
  -tr 10 \
  <em>MyApp.exe</em>
 </pre>

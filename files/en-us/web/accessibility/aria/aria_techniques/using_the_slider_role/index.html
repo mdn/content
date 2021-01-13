@@ -65,7 +65,7 @@ tags:
 
 <p>The following code snippet allows you to return the output as it is updated by user input:</p>
 
-<pre class="notranslate">function outputUpdate(vol) {
+<pre class="brush: js notranslate">function outputUpdate(vol) {
   document.querySelector('#volume').value = vol;
 }
 </pre>
@@ -90,7 +90,7 @@ tags:
 <pre class="brush: js notranslate">var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
-    handle<span>.setAttribute(<span class="string">"aria-valuenow"</span><span>, </span><span class="string">newValue.toString()</span><span>);</span></span>
+    handle.setAttribute("aria-valuenow", newValue.toString());
     handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
 </pre>

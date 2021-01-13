@@ -89,7 +89,7 @@ const outerGain = 0.3;
 
 <p>The next parameter is <a href="/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
 
-<pre class="notranslate">const distanceModel = 'linear';
+<pre class="brush: js notranslate">const distanceModel = 'linear';
 </pre>
 
 <p>We can set a maximum distance (<a href="/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
