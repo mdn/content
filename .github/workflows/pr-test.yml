@@ -1,13 +1,8 @@
-# Note that this workflow uses `get-diff-action` which is important.
-# It gives us an environment variable called `GIT_DIFF` which is a string
-# that is a list of file paths.
-# If you want to do what this workflow does on your laptop you can simulate
-# it like this:
-#
-#    export GIT_DIFF=`git diff --name-only main... | grep 'files/' | grep '\.html$'`
-#    node content build --no-progressbar --files="${GIT_DIFF}"
-#
-# That way, you can behave on your laptop like, this action behaves here.
+# This file tests more or less everything related to a pull request. All
+# in one big job. At the end, if all the testing passes, it proceeds
+# to upload all the files that were built to our Dev environment.
+# This way, if the tests passed, you'll be able to review the built
+# pages on a public URL.
 
 name: PR Test
 
