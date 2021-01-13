@@ -142,7 +142,7 @@ false.true = '';         // TypeError
 
 })();</pre>
 
-<p>In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">computed property names</a> making duplication possible at runtime, ECMAScript 2015 has removed this restriction.</p>
+<p>In ECMAScript 5 strict-mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">computed property names</a>, making duplication possible at runtime, ECMAScript 2015 removed that restriction.</p>
 
 <pre class="brush: js notranslate">'use strict';
 var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015 
