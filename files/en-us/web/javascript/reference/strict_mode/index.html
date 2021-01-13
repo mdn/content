@@ -116,11 +116,11 @@ delete Object.prototype; // throws a TypeError
 }
 </pre>
 
-<p>Fifth, a strict mode in ECMAScript 5 forbids octal syntax. The octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: <code>0644 === 420</code> and <code>"\045" === "%"</code>. In ECMAScript 2015 Octal number is supported by prefixing a number with "<code>0o</code>". i.e. </p>
+<p>Sixth, a strict mode in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal">forbids a <code>0</code>-prefixed octal literal or octal escape sequence</a>. Outside strict mode, a number beginning with a <code>0</code>, such as <code>0644</code>, is interpreted as an octal number (<code>0644 === 420</code>), if all digits are smaller than 8. Octal escape sequences, such as <code>"\45"</code>, which is equal to <code>"%"</code>, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "<code>0o</code>"; for example:</p>
 
 <pre class="brush: js notranslate">var a = 0o10; // ES2015: Octal</pre>
 
-<p>Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:</p>
+<p>Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var sum = 015 + // !!! syntax error
