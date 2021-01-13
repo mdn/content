@@ -94532,20 +94532,6 @@
       "Wladimir_Palant"
     ]
   },
-  "Web/API/Window/isSecureContext": {
-    "modified": "2020-10-29T06:26:42.696Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "erikadoyle",
-      "mnoorenberghe",
-      "simevidas",
-      "fscholz",
-      "jonathanKingston",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T21:27:31.490Z",
     "contributors": [

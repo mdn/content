@@ -9092,6 +9092,7 @@
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
+/en-US/docs/Web/API/Window/isSecureContext	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
