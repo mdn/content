@@ -152,7 +152,7 @@ var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 
 <p>Strict mode simplifies how variable names map to particular variable definitions in the code. Many compiler optimizations rely on the ability to say that variable <em>X</em> is stored in <em>that</em> location: this is critical to fully optimizing JavaScript code. JavaScript sometimes makes this basic mapping of name to variable definition in the code impossible to perform until runtime. Strict mode removes most cases where this happens, so the compiler can better optimize strict mode code.</p>
 
-<p>First, strict mode prohibits <code>with</code>. The problem with <code>with</code> is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime: it's impossible to know which beforehand. Strict mode makes <code>with</code> a syntax error, so there's no chance for a name in a <code>with</code> to refer to an unknown location at runtime:</p>
+<p>First, strict mode prohibits <a href="/en-US/docs/Web/JavaScript/Reference/Statements/with"><code>with</code></a>. The problem with <code>with</code> is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes <code>with</code> a syntax error, so there's no chance for a name in a <code>with</code> to refer to an unknown location at runtime:</p>
 
 <pre class="brush: js notranslate">'use strict';
 var x = 17;
