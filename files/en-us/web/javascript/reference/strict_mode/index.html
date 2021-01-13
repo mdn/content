@@ -116,7 +116,7 @@ delete Object.prototype; // throws a TypeError
 }
 </pre>
 
-<p>Sixth, a strict mode in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal">forbids a <code>0</code>-prefixed octal literal or octal escape sequence</a>. Outside strict mode, a number beginning with a <code>0</code>, such as <code>0644</code>, is interpreted as an octal number (<code>0644 === 420</code>). Octal escape sequences, such as <code>"\45"</code>, which is equal to <code>"%"</code>, can be used to represent characters by the extended ASCII character codes. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "<code>0o</code>". i.e. </p>
+<p>Sixth, a strict mode in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal">forbids a <code>0</code>-prefixed octal literal or octal escape sequence</a>. Outside strict mode, a number beginning with a <code>0</code>, such as <code>0644</code>, is interpreted as an octal number (<code>0644 === 420</code>), if all digits are smaller than 8. Octal escape sequences, such as <code>"\45"</code>, which is equal to <code>"%"</code>, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "<code>0o</code>". i.e. </p>
 
 <pre class="brush: js notranslate">var a = 0o10; // ES2015: Octal</pre>
 
