@@ -76,7 +76,7 @@ tags:
 <p>The following equivalence returns <code>true</code> if an element is at the end of its
   scroll, <code>false</code> if it isn't.</p>
 
-<pre class="brush: js notranslate">element.scrollHeight - element.scrollTop === element.clientHeight
+<pre class="brush: js notranslate">element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
 </pre>
 
 <p>When the container does not scroll, but has overflowing children, these checks
@@ -153,7 +153,7 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
+  checkReading.read = this.scrollHeight - Math.abs(this.scrollTop) === element.clientHeight;
   document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
