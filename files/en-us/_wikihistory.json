@@ -27709,43 +27709,6 @@
       "bjanaszek"
     ]
   },
-  "Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ": {
-    "modified": "2020-07-16T22:36:25.405Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "stephaniehobson",
-      "RainerBielefeld",
-      "Sevenspade",
-      "penguin_traveller",
-      "Mgjbot",
-      "kohei.yoshino"
-    ]
-  },
-  "Tools/Add-ons/DOM_Inspector/Internals": {
-    "modified": "2020-07-16T22:36:24.984Z",
-    "contributors": [
-      "wbamberg",
-      "ClompenSander",
-      "Sevenspade"
-    ]
-  },
-  "Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector": {
-    "modified": "2020-07-16T22:36:25.719Z",
-    "contributors": [
-      "David263",
-      "wbamberg",
-      "alex_mayorga",
-      "wellington7",
-      "Sevenspade",
-      "penguin_traveller",
-      "Sheppy",
-      "Olivier.parent",
-      "kohei.yoshino",
-      "LouCypher",
-      "Prometeo"
-    ]
-  },
   "Tools/Application": {
     "modified": "2020-07-16T22:36:40.977Z",
     "contributors": [
