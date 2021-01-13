@@ -501,7 +501,6 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 <pre class="brush: wasm no-line-numbers notranslate" style="margin-bottom: 0;">(i32.store (i32.const 0) (i32.const 42))
 (call_indirect (type $void_to_i32) (i32.const 0))</pre>
 
-<div style="display: none;"></div>
 </div>
 
 <p>After converting to assembly, we then use <code>shared0.wasm</code> and <code>shared1.wasm</code> in JavaScript via the following code:</p>
