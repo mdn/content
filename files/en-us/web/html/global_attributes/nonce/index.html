@@ -16,11 +16,11 @@ be allowed to proceed for a given element.</p>
 <h2>Description</h2>
 
 <p>The <code>nonce</code> attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
-It can help you to avoid using the <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> <code>unsafe-inline</code> directive which would allow-list <em>all</em> inline scripts or styles.</p>
+It can help you to avoid using the <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> <code>unsafe-inline</code> directive, which would allow-list <em>all</em> inline scripts or styles.</p>
 
 <div class="note">Note: Only use <code>nonce</code> for cases where you have no way around using unsafe inline script
-or style contents. If you don't need <code>nonce</code>, don't use it. If your script is static, you could also use a CSP hash instead 
-(see usage notes on <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a>)
+or style contents. If you don't need <code>nonce</code>, don't use it. If your script is static, you could also use a CSP hash instead.
+(See usage notes on <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a>.)
 Always try to take full advantage of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> protections and avoid nonces or unsafe inline scripts whenever possible.</div>
 
 <h3>Using nonce to allow-list a &lt;script&gt; element</h3>
@@ -43,7 +43,7 @@ crypto.randomBytes(16).toString('base64');
 
 <pre class="brush: html">&lt;script nonce="8IBTHwOdqNKAWeKl7plt8g=="&gt;…&lt;/script&gt;</pre>
 
-<h4>Sending nonce with a CSP header</h4>
+<h4>Sending a nonce with a CSP header</h4>
 
 <p>Finally, you'll need to send the nonce value in a 
 <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy"><code>Content-Security-Policy</code></a> header 
@@ -56,10 +56,10 @@ crypto.randomBytes(16).toString('base64');
 <p>For security reasons, the <code>nonce</code> content attribute is hidden (an empty string will be returned).</p>
 <pre class="brush: js example-bad">script.getAttribute('nonce'); // returns empty string</pre>
 
-<p>The <a href="/en-US/docs/Web/API/HTMLOrForeignElement/nonce"><code>nonce</code></a> property is only way to access nonces:</p>
+<p>The <a href="/en-US/docs/Web/API/HTMLOrForeignElement/nonce"><code>nonce</code></a> property is the only way to access nonces:</p>
 <pre class="brush: js example-good">script.nonce; // returns nonce value</pre>
 
-<p>Nonce hiding helps preventing that attackers exfiltrate nonce data via mechanisms that can grab data 
+<p>Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data 
 from content attributes like this:</p>
 
 <pre class="brush: css example-bad">script[nonce~=whatever] {
