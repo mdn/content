@@ -4448,6 +4448,7 @@
 /en-US/docs/Developer_Guide/Committing_Rules_and_Responsibilities	/en-US/docs/Mozilla/Developer_guide/Committing_Rules_and_Responsibilities
 /en-US/docs/Developer_Guide/Customizing_Firefox	/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox
 /en-US/docs/Developer_Guide/Development_process_overview	/en-US/docs/Mozilla/Developer_guide/Development_process_overview
+/en-US/docs/Developer_Guide/Editor_Configuration	/en-US/docs/Mozilla/Developer_guide/Editor_configuration
 /en-US/docs/Developer_Guide/Getting_documentation_updated	/en-US/docs/Mozilla/Developer_guide/Getting_documentation_updated
 /en-US/docs/Developer_Guide/How_to_Submit_a_Patch	/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /en-US/docs/Developer_Guide/Include_dependencies	/en-US/docs/Mozilla/Developer_guide/Include_dependencies

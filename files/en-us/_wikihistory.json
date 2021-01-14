@@ -1,21 +1,4 @@
 {
-  "Developer_Guide/Editor_Configuration": {
-    "modified": "2020-01-14T18:38:40.877Z",
-    "contributors": [
-      "baumanj",
-      "krosylight",
-      "sigiesec",
-      "pestophagous",
-      "david_ross",
-      "newpack",
-      "froydnj",
-      "PushpitaPikuDey",
-      "Nickolay",
-      "ttromey",
-      "qdot",
-      "marcosc"
-    ]
-  },
   "Games": {
     "modified": "2020-11-30T03:07:29.673Z",
     "contributors": [
@@ -166008,6 +165991,23 @@
       "Sheppy",
       "wbamberg",
       "Thw0rted"
+    ]
+  },
+  "Mozilla/Developer_guide/Editor_configuration": {
+    "modified": "2020-01-14T18:38:40.877Z",
+    "contributors": [
+      "baumanj",
+      "krosylight",
+      "sigiesec",
+      "pestophagous",
+      "david_ross",
+      "newpack",
+      "froydnj",
+      "PushpitaPikuDey",
+      "Nickolay",
+      "ttromey",
+      "qdot",
+      "marcosc"
     ]
   }
 }
