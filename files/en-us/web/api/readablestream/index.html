@@ -53,6 +53,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="example-fetch-stream">Fetch stream</h3>
+
 <p>In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
 
 <p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{domxref("Uint8Array")}}.</p>
@@ -85,6 +87,27 @@ tags:
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
 </pre>
+
+<h3 id="example-ittr-to-stream">Async iterator to stream</h3>
+
+<p>Converting an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">(async) iterator</a> to a readable stream:</p>
+
+<pre class="brush: js">function iteratorToStream(iterator) {
+  return new ReadableStream({
+    async pull(controller) {
+      const { value, done } = await iterator.next();
+
+      if (done) {
+        controller.close();
+      } else {
+        controller.enqueue(value);
+      }
+    },
+  });
+}
+</pre>
+
+<p>This works with both async and non-async iterators.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -7,34 +7,35 @@ tags:
   - Interface
   - Reference
 ---
-<p>{{APIRef("CSSOM")}} {{SeeCompatTable}}</p>
+<p>{{APIRef("CSSOM")}}</p>
 
-<p>The <strong><code>CSSNamespaceRule</code></strong> interface describes an object representing a single CSS {{ cssxref("@namespace") }} <a href="/en-US/docs/CSS/At-rule">at-rule</a>. It implements the {{ domxref("CSSRule") }} interface, with a type value of <code>10</code> (<code>CSSRule.NAMESPACE_RULE</code>).</p>
+<p>The <strong><code>CSSNamespaceRule</code></strong> interface describes an object representing a single CSS {{ cssxref("@namespace") }} {{cssxref("at-rule")}}.</p>
 
-<h2 id="Syntax">Syntax</h2>
-
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
-
-<pre>interface CSSNamespaceRule : CSSRule {
-    readonly attribute DOMString namespaceURI;
-    readonly attribute DOMString? prefix;
-};
-</pre>
+<p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p>As a {{ domxref("CSSRule") }}, <code>CSSNamespaceRule</code> also implements the properties of that interface. It has some specific properties:</p>
+<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
  <dt id="cssRules">{{domxref("CSSNamespaceRule.namespaceURI")}}</dt>
  <dd>Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.</dd>
  <dt>{{domxref("CSSNamespaceRule.prefix")}}</dt>
- <dd>Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns  <code>null</code>.</dd>
+ <dd>Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p>As a {{ domxref("CSSRule") }}, <code>CSSNamespaceRule</code> also implements the methods of that interface. It has <em>no</em> specific methods:</p>
+<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a <code>CSSNamespaceRule</code>.</p>
+
+<pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSNamespaceRule</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -115,7 +115,15 @@ tags:
  <li>Click <em>Download your kit</em>.</li>
 </ol>
 
-<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p>
+<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p> 
+
+  <p>Web services for font generation typically limit file sizes. In such a case, consider using tools such as:</p>
+<ol>
+  <li><a href="https://github.com/bramstein/sfnt2woff-zopfli">sfnt2woff-zopfli</a> for converting ttf to woff</li>
+  <li><a href="https://fontforge.org/">fontforge</a> for converting from ttf to svg</li>
+  <li><a href="http://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
+  <li><a href="https://github.com/google/woff2">woff2</a>for converting from ttf to woff2</li>
+</ol>
 
 <h3 id="Implementing_the_code_in_your_demo">Implementing the code in your demo</h3>
 

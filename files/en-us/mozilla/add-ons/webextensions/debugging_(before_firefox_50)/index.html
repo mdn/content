@@ -36,7 +36,7 @@ tags:
 
 <p>Here's "content-script.js":</p>
 
-<pre class="brush: js">/*
+<pre class="notranslate brush: js">/*
 If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
@@ -60,7 +60,7 @@ window.addEventListener("click", notifyExtension);
 
 <p>Here's "background-script.js":</p>
 
-<pre class="brush: js">/*
+<pre class="notranslate brush: js">/*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
@@ -178,7 +178,7 @@ chrome.runtime.onMessage.addListener(notify);
 </div>
 
 <div class="notecard warning">
-<p>Enabling worker debugging in Toolbox Options will disable <span id="summary_alias_container"><span id="short_desc_nonedit_display">Browser Content Toolbox debugging, </span></span> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
+<p>Enabling worker debugging in Toolbox Options will disable Browser Content Toolbox debugging, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
 </div>
 
 <p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>

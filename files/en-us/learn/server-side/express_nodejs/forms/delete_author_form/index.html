@@ -39,7 +39,7 @@ exports.author_delete_get = function(req, res, next) {
 <p>The controller gets the id of the <code>Author</code> instance to be deleted from the URL parameter (<code>req.params.id</code>). It uses the <code>async.parallel()</code> method to get the author record and all associated books in parallel. When both operations have completed it renders the <code><strong>author_delete</strong></code><strong>.pug</strong> view, passing variables for the <code>title</code>, <code>author</code>, and <code>author_books</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> If  <code>findById()</code><strong> </strong>returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors. </p>
+<p><strong>Note:</strong> If  <code>findById()</code> returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors. </p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">}, function(err, results) {
     if (err) { return next(err); }
@@ -84,7 +84,7 @@ exports.author_delete_post = function(req, res, next) {
 <p>First we validate that an id has been provided (this is sent via the form body parameters, rather than using the version in the URL). Then we get the author and their associated books in the same way as for the <code>GET</code> route. If there are no books then we delete the author object and redirect to the list of all authors. If there are still books then we just re-render the form, passing in the author and list of books to be deleted.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We could check if the call to <code>findById()</code><strong> </strong>returns any result, and if not,  immediately render the list of all authors.  We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after <code>findByIdAndRemove()</code>).</p>
+<p><strong>Note:</strong> We could check if the call to <code>findById()</code> returns any result, and if not,  immediately render the list of all authors.  We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after <code>findByIdAndRemove()</code>).</p>
 </div>
 
 <h2 class="highlight-spanned" id="View">View</h2>

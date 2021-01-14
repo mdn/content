@@ -5,7 +5,7 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p><span>This page is linked from the build system. Do not remove it without making sure it links to useful information for building Firefox 3</span>
+<p>This page is linked from the build system. Do not remove it without making sure it links to useful information for building Firefox 3
 </p><p>oleacc.idl is a Microsoft COM IDL file which is required to build Mozilla accessibility features on Windows.
 </p><p>The error "System header oleacc.idl is not available" indicates that your do not have a copy of this file in your INCLUDE directory. This is caused by a bug in the Windows Vista version of the Microsoft Platform SDK, which forgot to include the file.
 </p>
@@ -18,8 +18,10 @@ tags:
 </p>
 <h4 id="Use_the_Windows_2008_SDK"> Use the Windows 2008 SDK </h4>
 <p>The Windows 2008 SDK is a free download and comes with oleacc.idl.
-</p><p>{{ Warning("Unfortunately, the Windows 2008 SDK doesn\'t come with ATL headers which are necessary for building Mozilla normally. See <a href='\"en/Atlbase.h\"'>atlbase.h</a> for details.") }}
 </p>
+<div class="notecard warning">
+<p>Warning: Unfortunately, the Windows 2008 SDK doesn't come with ATL headers which are necessary for building Mozilla normally. See <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/atlbase.h">atlbase.h</a> for details.</p>
+</div>
 <h4 id="Disable_Accessibility"> Disable Accessibility </h4>
 <p>If you do not need to build or test Mozilla accessibility support, disable it in your mozconfig file:
 </p>

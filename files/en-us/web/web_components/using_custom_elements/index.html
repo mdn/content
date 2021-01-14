@@ -258,27 +258,6 @@ adoptedCallback() {
 <p><strong>Note</strong>: Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
 </div>
 
-<h2 id="Polyfills_vs._classes">Polyfills vs. classes</h2>
-
-<p>Custom Element polyfills may patch native constructors such as <code>HTMLElement</code> and others, and return a different instance from the one just created.</p>
-
-<p>If you need a <code>constructor</code> and a mandatory <code>super</code> call, remember to pass along optional arguments and return the result of such a <code>super</code> call operation.</p>
-
-<pre class="brush: js notranslate">class CustomElement extends HTMLElement {
-  constructor(...args) {
-    const self = super(...args);
-    // self functionality written in here
-    // self.addEventListener(...)
-    // return the right context
-    return self;
-  }
-}</pre>
-
-<p>If you don't need to perform any operation in the constructor, you can omit it so that its native behavior (see following) will be preserved.</p>
-
-<pre class="brush: js notranslate"> constructor(...args) { return super(...args); }
-</pre>
-
 <h2 id="Transpilers_vs._classes">Transpilers vs. classes</h2>
 
 <p>Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> for Babel 6, and target ES2015 in TypeScript instead of legacy.</p>

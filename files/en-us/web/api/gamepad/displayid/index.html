@@ -28,13 +28,14 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">window<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"gamepadconnected"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{
-  if(</span>!e<span class="punctuation token">.</span>gamepad<span class="punctuation token">.displayId) {
-    </span>console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Gamepad connected'</span><span class="punctuation token">)</span><span class="punctuation token">;
-  } else {</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Gamepad connected, associated with VR display ' +</span> e<span class="punctuation token">.</span>gamepad<span class="punctuation token">.displayId</span><span class="punctuation token">)</span><span class="punctuation token">;
-  }</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js">window.addEventListener("gamepadconnected", function(e) {
+  if(!e.gamepad.displayId) {
+    console.log('Gamepad connected');
+  } else {
+    console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
+  }
+});
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

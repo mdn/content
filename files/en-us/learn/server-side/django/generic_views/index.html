@@ -442,7 +442,7 @@ def book_detail_view(request, primary_key):
   allow_empty_first_page=allow_empty_first_page, **kwargs)
 </pre>
 
-<p>That happens because the <a href="https://docs.djangoproject.com/en/3.1/topics/pagination/#paginator-objects">paginator object</a> expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!<strong> </strong></p>
+<p>That happens because the <a href="https://docs.djangoproject.com/en/3.1/topics/pagination/#paginator-objects">paginator object</a> expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order! </p>
 
 <p>This tutorial hasn't covered <strong>Pagination</strong> (yet!), but since you can't use <code>sort_by()</code> and pass a parameter (the same with <code>filter()</code> described above) you will have to choose between three choices:</p>
 
@@ -561,7 +561,7 @@ def book_detail_view(request, primary_key):
 
 <ul>
  <li><code>catalog/authors/</code> — The list of all authors.</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— The detail view for the specific author with a primary key field named <em><code>&lt;id&gt;</code></em></li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code> — The detail view for the specific author with a primary key field named <em><code>&lt;id&gt;</code></em></li>
 </ul>
 
 <p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different but will share similar behavior.</p>

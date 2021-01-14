@@ -33,7 +33,7 @@ tags:
  <li>First we need a wasm module! Grab our <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> file and save a copy in a new directory on your local machine.</li>
  <li>Next, let’s create a simple HTML file called <code>index.html</code> in the same directory as your wasm file (can use our <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> if you haven’t got one easily available).</li>
  <li>Now, to help us understand what is going on here, let’s look at the text representation of our wasm module (which we also meet in <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
-  <pre class="notranslate">(module
+  <pre class="brush: js notranslate">(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42

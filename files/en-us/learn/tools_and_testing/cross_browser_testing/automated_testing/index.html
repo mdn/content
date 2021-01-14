@@ -150,7 +150,7 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash notranslate"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash notranslate">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -237,12 +237,12 @@ const csslint = require('gulp-csslint');</pre>
  <li>Install using the following lines:
   <pre class="editor editor-colors notranslate">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="editor editor-colors notranslate">const babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>const</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+  <pre class="brush: js editor editor-colors notranslate">const babel = require('gulp-babel');
+const jshint = require('gulp-jshint');
 </pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
