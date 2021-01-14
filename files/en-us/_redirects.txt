@@ -3747,7 +3747,6 @@
 /en-US/docs/DOM/window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/DOM/window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/DOM/window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/DOM/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/DOM/window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/window.getSelection
@@ -4270,7 +4269,6 @@
 /en-US/docs/DOM:window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/DOM:window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/DOM:window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/DOM:window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/DOM:window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/DOM:window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/DOM:window.history	/en-US/docs/Web/API/window.history
@@ -5120,7 +5118,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.frameElement	/en-US/docs/Web/API/window.frameElement
 /en-US/docs/Document_Object_Model_(DOM)/window.frames	/en-US/docs/Web/API/window.frames
 /en-US/docs/Document_Object_Model_(DOM)/window.fullScreen	/en-US/docs/Web/API/window.fullScreen
-/en-US/docs/Document_Object_Model_(DOM)/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/Document_Object_Model_(DOM)/window.getComputedStyle	/en-US/docs/Web/API/window.getComputedStyle
 /en-US/docs/Document_Object_Model_(DOM)/window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/Document_Object_Model_(DOM)/window.history	/en-US/docs/Web/API/window.history
@@ -11385,7 +11382,6 @@
 /en-US/docs/Web/API/Window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Web/API/Window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Web/API/Window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
-/en-US/docs/Web/API/Window.getAttention	/en-US/docs/Web/API/Window/getAttention
 /en-US/docs/Web/API/Window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
 /en-US/docs/Web/API/Window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/Window.history	/en-US/docs/Web/API/Window/history
@@ -14771,7 +14767,6 @@
 /en-US/docs/window.focus	/en-US/docs/Document_Object_Model_(DOM)/window.focus
 /en-US/docs/window.forward	/en-US/docs/Web/API/window.forward
 /en-US/docs/window.frames	/en-US/docs/Web/API/window.frames
-/en-US/docs/window.getAttention	/en-US/docs/Web/API/window.getAttention
 /en-US/docs/window.getSelection	/en-US/docs/Web/API/window.getSelection
 /en-US/docs/window.history	/en-US/docs/Web/API/window.history
 /en-US/docs/window.home	/en-US/docs/Document_Object_Model_(DOM)/window.home
