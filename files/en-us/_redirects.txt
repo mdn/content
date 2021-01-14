@@ -12917,7 +12917,8 @@
 /en-US/docs/Web/Events/canplaythrough_event	/en-US/docs/Web/HTML/Element/audio/canplaythrough_event
 /en-US/docs/Web/Events/change	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/Events/click	/en-US/docs/Web/API/Element/click_event
-/en-US/docs/Web/Events/clipboardchange	/en-US/docs/Web/API/Window/clipboardchange_event
+/en-US/docs/Web/Events/clipboardchange	/en-US/docs/Web/API/Window#clipboard_events
+/en-US/docs/Web/Events/clipboardchange_event	/en-US/docs/Web/API/Window#clipboard_events
 /en-US/docs/Web/Events/close	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Web/Events/close_websocket	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/Events/complete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
