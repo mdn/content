@@ -28,10 +28,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.2.4.tgz#5119838713842a766d6eb6a72f89ea4c989dab90"
-  integrity sha512-2M2e1O/SHBfHIok5o3wO94bJdoiWNU1ber4g9WbFFTLPCFY/IzgSoKOqN7coeDscvuH9DCN91JicLh9OxibMmQ==
+"@mdn/yari@0.2.18":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.2.18.tgz#88e9df6a3be574338fc49b2805cb67c46506c709"
+  integrity sha512-VfqECmdtWa7PPtjVa0SLnEQgJwJSnm7bZqOLVfUr/rbIui4+o5XutO8JFEte5QiO2ZxdRCRRsGtx8p00QzV8BQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "3.0.2"
@@ -43,9 +43,7 @@
     compression "1.7.4"
     cookie "0.4.1"
     cookie-parser "1.4.5"
-    cross-env "^7.0.3"
     cssesc "^3.0.0"
-    diff "5.0.0"
     dotenv "8.2.0"
     ejs "3.1.5"
     express "4.17.1"
@@ -65,7 +63,6 @@
     include-media "1.4.9"
     is-svg "4.2.1"
     js-yaml "4.0.0"
-    jsesc "3.0.2"
     mdn-data "2.0.15"
     open "^7.3.1"
     open-editor "3.0.0"
@@ -73,10 +70,8 @@
     prompts "^2.4.0"
     sanitize-filename "^1.6.3"
     send "0.17.1"
-    sockette "^2.0.6"
     source-map-support "0.5.19"
     tempy "1.0.0"
-    use-debounce "^5.2.0"
     ws "^7.4.2"
 
 "@nodelib/fs.scandir@2.1.3":
@@ -854,7 +849,7 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cross-env@7.0.3, cross-env@^7.0.3:
+cross-env@7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
   integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
@@ -1113,11 +1108,6 @@ diagnostics@^1.1.1:
     colorspace "1.1.x"
     enabled "1.0.x"
     kuler "1.0.x"
-
-diff@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
-  integrity sha512-/VTCrvm5Z0JGty/BWHljh+BAiw3IK+2j87NGMu8Nwc/f48WoDAC395uomO9ZD117ZOBaHmkX1oyLvkVM/aIT3w==
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -2377,11 +2367,6 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-jsesc@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-3.0.2.tgz#bb8b09a6597ba426425f2e4a07245c3d00b9343e"
-  integrity sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==
-
 json-buffer@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
@@ -3506,11 +3491,6 @@ slice-ansi@^2.1.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
-sockette@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/sockette/-/sockette-2.0.6.tgz#63b533f3cfe3b592fc84178beea6577fa18cebf3"
-  integrity sha512-W6iG8RGV6Zife3Cj+FhuyHV447E6fqFM2hKmnaQrTvg3OydINV3Msj3WPFbX76blUlUxvQSMMMdrJxce8NqI5Q==
-
 sort-keys-length@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sort-keys-length/-/sort-keys-length-1.0.1.tgz#9cb6f4f4e9e48155a6aa0671edd336ff1479a188"
@@ -4016,11 +3996,6 @@ url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
   integrity sha1-FQWgOiiaSMvXpDTvuu7FBV9WM6k=
-
-use-debounce@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-5.2.0.tgz#3cb63f5c46f40092c570356e441dbc016ffb2f8b"
-  integrity sha512-lW4tbPsTnvPKYqOYXp5xZ7SP7No/ARLqqQqoyRKuSzP0HxR9arhSAhznXUZFoNPWDRij8fog+N6sYbjb8c3kzw==
 
 utf8-byte-length@^1.0.1:
   version "1.0.4"
