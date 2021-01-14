@@ -87,6 +87,8 @@ Note that changes to any content areas not explicitly listed below will be handl
   * [@sideshowbarker](https://github.com/sideshowbarker)
   * [@Elchi3](https://github.com/Elchi3)
   * [@jpmedley](https://github.com/jpmedley)
+* [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg) — the [@yari-content-svg](https://github.com/orgs/mdn/teams/yari-content-svg) team, which consists of:
+  * [@Ryuno-Ki](https://github.com/Ryuno-Ki)
   
 ### Reviewer alumni
   
