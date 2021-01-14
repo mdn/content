@@ -47,7 +47,7 @@ slug: Web/API/Microdata_DOM_API
 <pre class="brush: js">var user = document.getItems('http://example.net/user')[0];
 alert('Hello ' + user.properties['name'][0].itemValue + '!');</pre>
 
-<p>The <a href="https://www.w3.org/TR/microdata/#htmlpropertiescollection-0">HTMLPropertiesCollection</a> object, when indexed by name in this way, actually returns a PropertyNodeList</a> object with all the matching properties. The PropertyNodeList</a> object can be used to obtain all the values at once using<em>its</em> <a href="https://www.w3.org/TR/microdata/#dom-propertynodelist-getvalues">getValues</a> method, which returns an array of all the values.</p>
+<p>The <a href="https://www.w3.org/TR/microdata/#htmlpropertiescollection-0">HTMLPropertiesCollection</a> object, when indexed by name in this way, actually returns a <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object with all the matching properties. The <a href="https://www.w3.org/TR/microdata/#propertynodelist">PropertyNodeList</a> object can be used to obtain all the values at once using<em>its</em> <a href="https://www.w3.org/TR/microdata/#dom-propertynodelist-getvalues">getValues</a> method, which returns an array of all the values.</p>
 
 <h2 id="Code_example_3">Code example</h2>
 
