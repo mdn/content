@@ -62,15 +62,15 @@ tags:
 
 <p>CSS to size the canvas and render a crisp image:</p>
 
-<pre class="brush: css"><code class="language-css"><span class="selector token">canvas </span><span class="punctuation token">{</span>
-  </code>width: 512px;
-  height: 512px;<code class="language-css">
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> -moz-crisp-edges<span class="punctuation token">;</span>
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> -webkit-crisp-edges<span class="punctuation token">;</span>
-  <span class="property token">image-rendering</span><span class="punctuation token">:</span> pixelated<span class="punctuation token">;
-  image-rendering: crisp-edges;</span>
-<span class="punctuation token">}</span>
-</code></pre>
+<pre class="brush: css">canvas {
+  width: 512px;
+  height: 512px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+</pre>
 
 <p>And some JavaScript to set up the canvas and load the image:</p>
 

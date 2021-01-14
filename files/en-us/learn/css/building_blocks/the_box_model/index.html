@@ -152,12 +152,12 @@ tags:
 
 <p>If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the <code>box-sizing</code> property on the <code>&lt;html&gt;</code> element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>.</p>
 
-<pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="selector token">*, *<span class="pseudo-element token">::before</span>, *<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css notranslate">html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.</p>
