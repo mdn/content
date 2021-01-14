@@ -219,7 +219,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js notranslate">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The as syntax for renaming exported items is explained below in the <a href="#Renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
+<p><strong>Note</strong>: The as syntax for renaming exported items is explained below in the <a href="#renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
 </div>
 
 <h2 id="Avoiding_naming_conflicts">Avoiding naming conflicts</h2>
@@ -406,7 +406,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>The newest part of the JavaScript modules functionality to be available in browsers is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.</p>
 
-<p>This new functionality allows you to call {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see <a href="#Creating_a_module_object">Creating a module object</a>) giving you access to that object's exports, e.g.</p>
+<p>This new functionality allows you to call {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see <a href="#creating_a_module_object">Creating a module object</a>) giving you access to that object's exports, e.g.</p>
 
 <pre class="brush: js notranslate">import('./modules/myModule.js')
   .then((module) =&gt; {
