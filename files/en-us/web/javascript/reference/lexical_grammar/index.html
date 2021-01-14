@@ -580,11 +580,13 @@ tag `string text ${expression} string text`</pre>
 
 <p>1. A semicolon is inserted before, when a <a href="#Line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
 
-<pre class="brush: js notranslate">{ 1 2 } 3
+<pre class="brush: js notranslate">{ 1
+2 } 3
 
-// is transformed by ASI into
+// is transformed by ASI into:
 
-{ 1 2 ;} 3;</pre>
+{ 1
+;2 ;} 3;</pre>
 
 <p>2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.</p>
 
