@@ -16,7 +16,7 @@ tags:
 <div>
   <p>The <strong><code>openCursor()</code></strong> method of the {{domxref("IDBIndex")}}
     interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-    creates a <a href="/en/IndexedDB#gloss_cursor">cursor</a> over the specified key
+    creates a <a href="/en-US/docs/IndexedDB#gloss_cursor">cursor</a> over the specified key
     range.</p>
 </div>
 
@@ -26,12 +26,12 @@ tags:
 <ul>
   <li>If the key range is not specified or is null, then the range includes all the
     records.</li>
-  <li>A <a href="/en/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the
+  <li>A <a href="/en-US/docs/IndexedDB/IDBSuccessEvent">success event</a> is always fired on the
     result object.
     <ul>
       <li>If at least one record matches the key range, then the <code>result</code>
         property of the event is set to the new {{domxref("IDBCursorWithValue")}} object;
-        the <code><a href="/en/IndexedDB/IDBCursor#attr_value">value</a></code> of the
+        the <code><a href="/en-US/docs/IndexedDB/IDBCursor#attr_value">value</a></code> of the
         cursor object is set to a structured clone of the referenced value.</li>
       <li>If no records match the key range then the <code>result</code> property of the
         event is set to <code>null</code>.</li>
@@ -55,8 +55,8 @@ var <em>request</em> = <em>myIndex</em>.openCursor(range, direction);</pre>
     passed, this will default to a key range that selects all the records in this object
     store.</dd>
   <dt>direction {{optional_inline}}</dt>
-  <dd>The cursor's <a href="/en/IndexedDB/IDBCursor#Constants">direction</a>. See <a
-      href="/en/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible
+  <dd>The cursor's <a href="/en-US/docs/IndexedDB/IDBCursor#Constants">direction</a>. See <a
+      href="/en-US/docs/IndexedDB/IDBCursor#Constants">IDBCursor Constants</a> for possible
     values.</dd>
 </dl>
 
