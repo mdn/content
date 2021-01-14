@@ -79,7 +79,7 @@ tags:
 
 <ul>
  <li>Firefox 10 now supports the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
- <li><a href="/en/WebGL#WebGL_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
+ <li><a href="/en-US/docs/WebGL#WebGL_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
 </ul>
 
 <h4 id="Web_Workers">Web Workers</h4>
@@ -97,7 +97,7 @@ tags:
  <li>The <a href="/en/IndexedDB/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en/IndexedDB/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
  <li>The <a href="/en/IndexedDB/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
  <li>When encountering an unknown optional parameter in <a href="/en/IndexedDB/IDBObjectStore#createIndex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en/IndexedDB/IDBDatabase#createObjectStore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
- <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest" title="IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
+ <li>When <a href="/en/IndexedDB/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
  <li>The methods <a href="/en/IndexedDB/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en/IndexedDB/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en/IndexedDB/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
  <li>The method <a href="/en/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en/IndexedDB/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
  <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
@@ -143,14 +143,14 @@ tags:
 
 <ul>
  <li>The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.</li>
- <li>The new <a href="/en/Tools/Page_Inspector" title="Page Inspector">Page Inspector</a> has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.</li>
+ <li>The new <a href="/en-US/docs/Tools/Page_Inspector" title="Page Inspector">Page Inspector</a> has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.</li>
 </ul>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
 <p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
 
-<div class="note"><strong>Note:</strong> The old <a href="/en/PRBool" title="PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
+<div class="note"><strong>Note:</strong> The old <a href="/en/PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
 
 <h3 id="Manifests">Manifests</h3>
 
@@ -196,15 +196,15 @@ tags:
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li><a href="/en/Firefox_9_for_developers" title="en/Firefox 9 for developers">Firefox 9 for developers</a></li>
- <li><a href="/en/Firefox_8_for_developers" title="en/Firefox 8 for developers">Firefox 8 for developers</a></li>
- <li><a href="/en/Firefox_7_for_developers" title="en/Firefox 7 for developers">Firefox 7 for developers</a></li>
- <li><a href="/en/Firefox_6_for_developers" title="en/Firefox 6 for developers">Firefox 6 for developers</a></li>
- <li><a href="/en/Firefox_5_for_developers" title="en/Firefox 5 for developers">Firefox 5 for developers </a></li>
- <li><a href="/en/Firefox_4_for_developers" title="en/Firefox 4 for developers">Firefox 4 for developers </a></li>
- <li><a href="/en/Firefox_3.6_for_developers" title="en/Firefox 3.6 for developers">Firefox 3.6 for developers </a></li>
- <li><a href="/En/Firefox_3.5_for_developers" title="en/Firefox 3.5 for developers">Firefox 3.5 for developers</a></li>
- <li><a href="/en/Firefox_3_for_developers" title="en/Firefox 3 for developers">Firefox 3 for developers</a></li>
- <li><a href="/en/Firefox_2_for_developers" title="en/Firefox 2 for developers">Firefox 2 for developers</a></li>
- <li><a href="/en/Firefox_1.5_for_developers" title="en/Firefox 1.5 for developers">Firefox 1.5 for developers</a></li>
+ <li><a href="/en/Firefox_9_for_developers">Firefox 9 for developers</a></li>
+ <li><a href="/en/Firefox_8_for_developers">Firefox 8 for developers</a></li>
+ <li><a href="/en/Firefox_7_for_developers">Firefox 7 for developers</a></li>
+ <li><a href="/en/Firefox_6_for_developers">Firefox 6 for developers</a></li>
+ <li><a href="/en/Firefox_5_for_developers">Firefox 5 for developers </a></li>
+ <li><a href="/en/Firefox_4_for_developers">Firefox 4 for developers </a></li>
+ <li><a href="/en/Firefox_3.6_for_developers">Firefox 3.6 for developers </a></li>
+ <li><a href="/En/Firefox_3.5_for_developers">Firefox 3.5 for developers</a></li>
+ <li><a href="/en/Firefox_3_for_developers">Firefox 3 for developers</a></li>
+ <li><a href="/en/Firefox_2_for_developers">Firefox 2 for developers</a></li>
+ <li><a href="/en/Firefox_1.5_for_developers">Firefox 1.5 for developers</a></li>
 </ul>

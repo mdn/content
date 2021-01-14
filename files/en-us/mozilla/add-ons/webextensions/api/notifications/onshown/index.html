@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.notifications.onShown.addListener(listener)
+<pre class="brush:js">browser.notifications.onShown.addListener(listener)
 browser.notifications.onShown.removeListener(listener)
 browser.notifications.onShown.hasListener(listener)
 </pre>
@@ -60,7 +60,7 @@ browser.notifications.onShown.hasListener(listener)
 
 <p>Add a listener to the {{WebExtAPIRef("notifications.onShown")}} event and log its details:</p>
 
-<pre class="brush: js">function logShown(itemId) {
+<pre class="notranslate brush: js">function logShown(itemId) {
   console.log(`shown: ${itemId}`);
   browser.notifications.getAll().then((all) =&gt; {
     console.log(all[itemId]);

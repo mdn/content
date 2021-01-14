@@ -210,7 +210,7 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
 
-<pre class="notranslate">Content-Security-Policy: script-src 'self'</pre>
+<pre class="brush: plain notranslate">Content-Security-Policy: script-src 'self'</pre>
 
 <div>Among other things, this will prevent any scripts it includes from using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.<br>
 <br>

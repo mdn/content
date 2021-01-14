@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Features_for_web_developers">Features for web developers</h2>
 
-<p>Gecko now uses the <a href="/en-US/docs/HTML/HTML5" title="en-US/docs/HTML/HTML5">HTML5</a> parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed <a href="/en-US/docs/SVG" title="en-US/docs/SVG">SVG</a> and <a href="/en-US/docs/MathML" title="en-US/docs/MathML">MathML</a> directly in the HTML markup.</p>
+<p>Gecko now uses the <a href="/en-US/docs/HTML/HTML5">HTML5</a> parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed <a href="/en-US/docs/SVG">SVG</a> and <a href="/en-US/docs/MathML">MathML</a> directly in the HTML markup.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -33,7 +33,7 @@ tags:
  <dd>This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.</dd>
  <dt>Other HTML5 elements</dt>
  <dd>Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.</dd>
- <dt><a href="/en-US/docs/WebSockets" title="en-US/docs/WebSockets">WebSockets</a></dt>
+ <dt><a href="/en-US/docs/WebSockets">WebSockets</a></dt>
  <dd>A guide to using the new WebSockets API for real-time communication between a web application and a server. Note that WebSockets as implemented in Firefox 4 is not compatible with the final standard, and should not generally be used.</dd>
 </dl>
 
@@ -60,7 +60,7 @@ tags:
  <li>Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.</li>
  <li>The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.</li>
  <li>Gecko now supports calling <code>click()</code> on {{HTMLElement("input")}} elements to open the file picker. See the <a href="/en-US/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method" title="en-US/docs/Using files from web applications#Using hidden file input elements using the click() method">example</a> in the article <a href="/en-US/docs/Using_files_from_web_applications" title="en-US/docs/Using files from web applications">Using files from web applications</a>.</li>
- <li>The {{HTMLElement("input")}} element supports a new <a href="/en-US/docs/HTML/Element/Input#attr-mozactionhint" title="en-US/docs/HTML/Element/Input#attr-mozactionhint"><code>mozactionhint</code></a> attribute, which lets you specify the label for the enter key on virtual keyboards.</li>
+ <li>The {{HTMLElement("input")}} element supports a new <a href="/en-US/docs/HTML/Element/Input#attr-mozactionhint"><code>mozactionhint</code></a> attribute, which lets you specify the label for the enter key on virtual keyboards.</li>
  <li>{{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.</li>
 </ul>
 
@@ -77,7 +77,7 @@ tags:
  <dd>The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.</dd>
  <dt>CSS touch properties</dt>
  <dd>Support for touch properties is added. Details, and real article names, to come later.</dd>
- <dt><a href="/en-US/docs/CSS/-moz-element" title="en-US/docs/CSS/-moz-element">Using arbitrary elements as CSS backgrounds</a></dt>
+ <dt><a href="/en-US/docs/CSS/-moz-element">Using arbitrary elements as CSS backgrounds</a></dt>
  <dd>You can use the {{cssxref("-moz-element")}} CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.</dd>
  <dt><a href="/en-US/docs/CSS/Privacy_and_the_:visited_selector" title="en-US/docs/CSS/Privacy and the :visited selector">Privacy and the :visited selector</a></dt>
  <dd>Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.</dd>
@@ -233,7 +233,7 @@ tags:
 <h3 id="Graphics_and_video">Graphics and video</h3>
 
 <dl>
- <dt><a href="/en-US/docs/WebGL" title="en-US/docs/WebGL">WebGL</a></dt>
+ <dt><a href="/en-US/docs/WebGL">WebGL</a></dt>
  <dd>The developing WebGL standard is now supported by Firefox.</dd>
  <dt><a href="/en-US/docs/Optimizing_graphics_performance" title="en-US/docs/Optimizing graphics performance">Optimizing graphics performance</a></dt>
  <dd>Tips and tricks for getting the most out of graphics and video performance in Firefox 4.</dd>
@@ -255,7 +255,7 @@ tags:
 
 <dl>
  <dt><a href="/en-US/docs/JavaScript_typed_arrays" title="en-US/docs/JavaScript typed arrays">JavaScript typed arrays</a></dt>
- <dd>Support has been added for JavaScript typed arrays; this allows you to manipulate buffers containing raw data using native data types. Several APIs make use of this, including the <a href="/en-US/docs/DOM/File" title="en-US/docs/DOM/File">File API</a>, <a href="/en-US/docs/WebGL" title="en-US/docs/WebGL">WebGL</a>, and <a href="/en-US/docs/WebSockets" title="en-US/docs/WebSockets">WebSockets</a>.</dd>
+ <dd>Support has been added for JavaScript typed arrays; this allows you to manipulate buffers containing raw data using native data types. Several APIs make use of this, including the <a href="/en-US/docs/DOM/File">File API</a>, <a href="/en-US/docs/WebGL">WebGL</a>, and <a href="/en-US/docs/WebSockets">WebSockets</a>.</dd>
  <dt>Obtaining boundary rectangles for ranges</dt>
  <dd>The {{domxref("Range")}} object now has {{domxref("range.getClientRects()")}} and {{domxref("range.getBoundingClientRect()")}} methods.</dd>
  <dt>Capturing mouse events on arbitrary elements</dt>
@@ -282,18 +282,18 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/HTMLSpanElement" title="en-US/docs/DOM/HTMLSpanElement">HTMLSpanElement</a></code></td>
-   <td><code><a href="/en-US/docs/DOM/HTMLElement" title="en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLSpanElement">HTMLSpanElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
    <td>{{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, {{HTMLElement("blink")}}, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, {{HTMLElement("listing")}}, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, , {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/HTMLDivElement" title="en-US/docs/DOM/HTMLDivElement">HTMLDivElement</a></code></td>
-   <td><code><a href="/en-US/docs/DOM/HTMLElement" title="en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLDivElement">HTMLDivElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
    <td>{{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/HTMLWBRElement" title="en-US/docs/DOM/HTMLWBRElement">HTMLWBRElement</a></code></td>
-   <td><code><a href="/en-US/docs/DOM/HTMLElement" title="en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLWBRElement">HTMLWBRElement</a></code></td>
+   <td><code><a href="/en-US/docs/DOM/HTMLElement">HTMLElement</a></code></td>
    <td>{{HTMLElement("wbr")}}</td>
   </tr>
  </tbody>
@@ -308,8 +308,8 @@ tags:
  <li><a href="/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects" title="en-US/docs/XMLHttpRequest/Using XMLHttpRequest#Using FormData objects">FormData</a> support for XMLHttpRequest.</li>
  <li>The {{domxref("element.isContentEditable")}} property has been implemented.</li>
  <li>The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.</li>
- <li>Added the <a href="/en-US/docs/DragDrop/DataTransfer#mozSourceNode" title="en-US/docs/DragDrop/DataTransfer#mozSourceNode"><code>mozSourceNode</code></a> property to the <a href="/en-US/docs/DragDrop/DataTransfer" title="en-US/docs/DragDrop/DataTransfer"><code>DragTransfer</code></a> object.</li>
- <li>Added the <a href="/en-US/docs/DOM/Selection/modify" title="en-US/docs/DOM/selection/modify"><code>selection.modify()</code></a> method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.</li>
+ <li>Added the <a href="/en-US/docs/DragDrop/DataTransfer#mozSourceNode"><code>mozSourceNode</code></a> property to the <a href="/en-US/docs/DragDrop/DataTransfer"><code>DragTransfer</code></a> object.</li>
+ <li>Added the <a href="/en-US/docs/DOM/Selection/modify"><code>selection.modify()</code></a> method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.</li>
  <li>Support for the <code>window.directories</code> object and the <code>directories</code> feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use <code>personalbar</code> instead. {{Bug(474058)}}</li>
  <li>The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.</li>
  <li>The {{domxref("document.onreadystatechange")}} event has been implemented.</li>
@@ -317,15 +317,15 @@ tags:
  <li>The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a <code>mousedown</code> event has occurred.</li>
  <li>The {{domxref("window.mozPaintCount")}} property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.</li>
  <li>The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the <a href="/en-US/docs/HTTP/Content_negotiation" title="en-US/docs/Content negotiation">Accept-Language header</a> instead. {{Bug(572656)}}</li>
- <li>The <a href="/en-US/docs/XMLHttpRequest" title="en-US/docs/XMLHttpRequest">XMLHttpRequest</a> object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific <code>mozResponseArrayBuffer</code> property.</li>
- <li><a href="/en-US/docs/DOM/Event/UIEvent/MouseEvent" title="en-US/docs/DOM/Event/UIEvent/MouseEvent">Mouse events</a> now include a <code>mozPressure</code> property indicating the amount of pressure on supported pressure-sensitive input devices.</li>
+ <li>The <a href="/en-US/docs/XMLHttpRequest">XMLHttpRequest</a> object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific <code>mozResponseArrayBuffer</code> property.</li>
+ <li><a href="/en-US/docs/DOM/Event/UIEvent/MouseEvent">Mouse events</a> now include a <code>mozPressure</code> property indicating the amount of pressure on supported pressure-sensitive input devices.</li>
  <li>The {{domxref("window.URL.createObjectURL()")}} and {{domxref("window.URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.</li>
  <li>The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.</li>
  <li>{{domxref("Node.mozMatchesSelector()")}} now throws a <code>SYNTAX_ERR</code> exception if the specified selector string is invalid, instead of incorrectly returning <code>false</code>.</li>
  <li>You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: <code>element.style.fill = 'lime'</code>. See {{domxref("element.style")}} for details.</li>
  <li>The document root now has <a href="/en-US/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent" title="en-US/docs/Supporting private browsing mode#Detecting whether private browsing mode is permanent">a <code>privatebrowsingmode</code> attribute</a> that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.</li>
  <li>The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.</li>
- <li>The DOM <a href="/en-US/docs/DOM/event/StorageEvent" title="en-US/docs/DOM/event/StorageEvent"><code>StorageEvent</code></a> object now matches the latest version of the specification.</li>
+ <li>The DOM <a href="/en-US/docs/DOM/event/StorageEvent"><code>StorageEvent</code></a> object now matches the latest version of the specification.</li>
  <li>The minimum allowed delay for the {{domxref("window.setTimeout()")}} method is now a preference, <code>dom.min_timeout_value</code>.</li>
  <li>The <a href="/en-US/docs/Gecko-Specific_DOM_Events#MozAfterPaint" title="en-US/docs/Gecko-Specific DOM Events#MozAfterPaint"><code>MozAfterPaint</code></a> event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.</li>
 </ul>
@@ -333,13 +333,13 @@ tags:
 <h3 id="Security">Security</h3>
 
 <dl>
- <dt><a href="/en-US/docs/Security/CSP" title="en-US/docs/Security/CSP">Content Security Policy (CSP)</a></dt>
+ <dt><a href="/en-US/docs/Security/CSP">Content Security Policy (CSP)</a></dt>
  <dd>Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their web sites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.</dd>
  <dt><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en-US/docs/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></dt>
  <dd>HTTP Strict Transport Security is a security feature that lets a web site tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.</dd>
  <dt><a href="/en-US/docs/The_X-FRAME-OPTIONS_response_header" title="en-US/docs/The X-FRAME-OPTIONS response header">The X-FRAME-OPTIONS response header</a></dt>
  <dd>The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.</dd>
- <dt><a href="/en-US/docs/User_Agent_Strings_Reference" title="en-US/docs/User_Agent_Strings_Reference">User Agent string</a> changes</dt>
+ <dt><a href="/en-US/docs/User_Agent_Strings_Reference">User Agent string</a> changes</dt>
  <dd>As a means to reduce the amount of data and entropy sent out in HTTP requests (see {{bug("572650")}}), the crypto strength and language tokens have been removed from the user agent string.</dd>
 </dl>
 
@@ -397,7 +397,7 @@ tags:
 
 <dl>
  <dt>{{domxref("ChromeWorker")}}</dt>
- <dd>A new type of worker for privileged code; this lets you use things like <a href="/en-US/docs/js-ctypes" title="en-US/docs/js-ctypes">js-ctypes</a> from workers in extensions and application code.</dd>
+ <dd>A new type of worker for privileged code; this lets you use things like <a href="/en-US/docs/js-ctypes">js-ctypes</a> from workers in extensions and application code.</dd>
  <dt><a href="/en-US/docs/DOM/Touch_events" title="en-US/docs/DOM/Touch events">Touch events</a></dt>
  <dd>Support for (non-standard) touch events has been added; these let you track multiple fingers moving on a touch screen at the same time.</dd>
 </dl>
@@ -417,10 +417,10 @@ tags:
 <ul>
  <li>The <code>TabClose</code>, <code>TabSelect</code>, and <code>TabOpen</code> events no longer bubble up to the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element (<code>gBrowser</code>). Event listeners for those events should be added to <code>gBrowser.tabContainer</code> rather than to <code>gBrowser</code> directly.</li>
  <li>The tab context menu is no longer an anonymous child of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code>. It can therefore be overlaid directly with <a href="/en-US/docs/XUL_Overlays" title="en-US/docs/XUL Overlays">XUL overlays</a>. It can also be accessed more directly in JavaScript via <code>gBrowser.tabContextMenu</code>. See <a class="external" href="http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
- <li>The new <code><span><a href="/en-US/docs/XUL/Property/visibleTabs">visibleTabs</a></span></code> property was added to let you get an array of the currently visible tabs; this lets you determine which tabs are visible in the current tab set. This is used by Firefox Panorama, for example.</li>
+ <li>The new <code><a href="/en-US/docs/XUL/Property/visibleTabs">visibleTabs</a></code> property was added to let you get an array of the currently visible tabs; this lets you determine which tabs are visible in the current tab set. This is used by Firefox Panorama, for example.</li>
  <li>Added the new <span id="m-showOnlyTheseTabs"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/showOnlyTheseTabs">showOnlyTheseTabs</a></code></span> method; this is used by Firefox Panorama.</li>
  <li>Added the new <span id="m-getIcon"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/getIcon">getIcon</a></code></span> method, which lets you get a tab's favicon without having to pull up the <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser">&lt;xul:browser&gt;</a></code> element.</li>
- <li>Added the new <code><span><a href="/en-US/docs/XUL/Property/tabbrowser.tabs">tabbrowser.tabs</a></span></code> property, which lets you easily get a list of the tabs in a <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element.</li>
+ <li>Added the new <code><a href="/en-US/docs/XUL/Property/tabbrowser.tabs">tabbrowser.tabs</a></code> property, which lets you easily get a list of the tabs in a <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element.</li>
  <li>The new <span id="m-pinTab"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/pinTab">pinTab</a></code></span> and <span id="m-unpinTab"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/unpinTab">unpinTab</a></code></span> methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).</li>
  <li>Added the <span id="m-getTabModalPromptBox"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/getTabModalPromptBox">getTabModalPromptBox</a></code></span> method and <code id="a-tabmodalPromptShowing"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/tabmodalPromptShowing">tabmodalPromptShowing</a></code> attribute to the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> to support tab-modal alerts.</li>
 </ul>
@@ -429,13 +429,13 @@ tags:
 
 <ul>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/popup">&lt;xul:popup&gt;</a></code> element is no longer supported; you should use <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup">&lt;xul:menupopup&gt;</a></code> instead. (If you continue using <code>popup</code>, you will encounter glitches, since the element has no special meaning anymore. For example, <code><a href="/en-US/docs/Mozilla/Tech/XUL/menuseparator">&lt;xul:menuseparator&gt;</a></code> can appear transparent when used in a <code><a href="/en-US/docs/Mozilla/Tech/XUL/popup">&lt;xul:popup&gt;</a></code>.)</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup">&lt;xul:menupopup&gt;</a></code> XUL element now has a <code><span><a href="/en-US/docs/XUL/Property/triggerNode">triggerNode</a></span></code> property, which indicates the node on which the event occurred that caused the popup to open. This also required the addition of a trigger event parameter to the <span id="m-openPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span> method. Also, the <code><span><a href="/en-US/docs/XUL/Property/anchorNode">anchorNode</a></span></code> property has been added; it returns the anchor specified when the popup was created.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup">&lt;xul:menupopup&gt;</a></code> XUL element now has a <code><a href="/en-US/docs/XUL/Property/triggerNode">triggerNode</a></code> property, which indicates the node on which the event occurred that caused the popup to open. This also required the addition of a trigger event parameter to the <span id="m-openPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span> method. Also, the <code><a href="/en-US/docs/XUL/Property/anchorNode">anchorNode</a></code> property has been added; it returns the anchor specified when the popup was created.</li>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/panel">&lt;xul:panel&gt;</a></code> element now offers <code id="a-fade"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/fade">fade</a></code> and <code id="a-flip"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/flip">flip</a></code> attributes, which are used to configure the behavior of new "arrow" style notification panels.</li>
 </ul>
 
 <h4 id="Remote_XUL_support_removed">Remote XUL support removed</h4>
 
-<p>Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using <span class="nowiki"><code>file://</code></span> URLs unless you create the preference <code>dom.allow_XUL_XBL_for_file</code> and set it to <code>true</code>. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager extension</a> lets you manage this whitelist.</p>
+<p>Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using <code>file://</code> URLs unless you create the preference <code>dom.allow_XUL_XBL_for_file</code> and set it to <code>true</code>. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager extension</a> lets you manage this whitelist.</p>
 
 <h4 id="Miscellaneous_XUL_changes">Miscellaneous XUL changes</h4>
 
@@ -450,7 +450,7 @@ tags:
  <li>Events are now fired during <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code> customization, allowing you to <a href="/en-US/docs/XUL/Toolbars/Toolbar_customization_events" title="en-US/docs/XUL/Toolbars/Toolbar customization events">detect changes to toolbars</a>.</li>
  <li>The <code id="a-alternatingbackground"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/alternatingbackground">alternatingbackground</a></code> attribute for <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree">&lt;xul:tree&gt;</a></code> elements is no longer supported; you can use the <a href="/en-US/docs/Web/CSS/:-moz-tree-row" title="The documentation about this has not yet been written; please consider contributing!"><code>:-moz-tree-row</code></a> pseudo-class instead.</li>
  <li>The Bookmarks Toolbar overflow button with anonid chevronPopup is no longer anonymous; it has an ID of "PlacesChevron".</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs">&lt;xul:tabs&gt;</a></code> element now has a <code><span><a href="/en-US/docs/XUL/Property/tabbox">tabbox</a></span></code> property, replacing the old <code>_tabbox</code> property, which has been deprecated (and was never documented).</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabs">&lt;xul:tabs&gt;</a></code> element now has a <code><a href="/en-US/docs/XUL/Property/tabbox">tabbox</a></code> property, replacing the old <code>_tabbox</code> property, which has been deprecated (and was never documented).</li>
  <li>XUL <code><a href="/en-US/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> elements now have the <code id="a-drawintitlebar"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/drawintitlebar">drawintitlebar</a></code> attribute; if this is <code>true</code>, the window's content area includes the title bar, allowing drawing into the title bar.</li>
  <li>New <code>TabPinned</code> and <code>TabUnpinned</code> events are available, allowing you to <a href="/../../../../en-US/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab_is_pinned_or_unpinned">detect when tabs are pinned and unpinned</a>.</li>
  <li>The new <a href="/en-US/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab%27s_attributes_change" title="en-US/docs/Code snippets/Tabbed browser#Notification when a tab's attributes change"><code>TabAttrModified</code> event</a> is sent when a tab's <code id="a-label"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code>, <code id="a-crop"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code>, <code id="a-busy"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/busy">busy</a></code>, <code id="a-image"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code>, or <code id="a-selected"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code> attributes change.</li>
@@ -459,7 +459,7 @@ tags:
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> element now has a <code id="a-chromemargin"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/chromemargin">chromemargin</a></code> attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.</li>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> element now has a <code id="a-disablechrome"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/disablechrome">disablechrome</a></code> attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as <code>about:addons</code>.</li>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> element now has a <code id="a-disablefastfind"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/disablefastfind">disablefastfind</a></code> attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.</li>
- <li>Toolbars can now be external to toolboxes, while still being considered a member of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code>, by setting the <code><span><a href="/en-US/docs/XUL/Property/toolboxid">toolboxid</a></span></code> property of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbar">&lt;xul:toolbar&gt;</a></code>. Also, the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code> element now has a <code><span><a href="/en-US/docs/XUL/Property/externalToolbars">externalToolbars</a></span></code> property, which lists all the toolbars that are considered members of the toolbox.</li>
+ <li>Toolbars can now be external to toolboxes, while still being considered a member of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code>, by setting the <code><a href="/en-US/docs/XUL/Property/toolboxid">toolboxid</a></code> property of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbar">&lt;xul:toolbar&gt;</a></code>. Also, the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code> element now has a <code><a href="/en-US/docs/XUL/Property/externalToolbars">externalToolbars</a></code> property, which lists all the toolbars that are considered members of the toolbox.</li>
  <li>Support has been added for <a href="/en-US/docs/XUL/Template_Guide/Template_Logging" title="en-US/docs/XUL/Template Guide/Template Logging">logging XUL templates</a> for debugging purposes.</li>
 </ul>
 
@@ -492,7 +492,7 @@ tags:
 <dl>
  <dt><a href="/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0" title="en-US/docs/XPCOM/XPCOM changes in Gecko 2.0">XPCOM changes in Gecko 2.0</a></dt>
  <dd>Details about changes to XPCOM that impact compatibility in Firefox 4.</dd>
- <dt><a href="/en-US/docs/Components.utils.getGlobalForObject" title="en-US/docs/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt>
+ <dt><a href="/en-US/docs/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt>
  <dd>This new method returns the global object with which an object is associated; this replaces a common use case of the now-removed <code>__parent__</code>.</dd>
 </dl>
 
@@ -540,7 +540,7 @@ tags:
  <li>The <code>accessibility.disablecache</code> preference is no longer supported; it was only exposed for debugging purposes and is no longer used.</li>
  <li>Addons whose GUID changes from one version to another can now be updated properly.</li>
  <li>As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.</li>
- <li>By default, <a class="external" href="http://blog.mozilla.com/mwu/2010/09/10/extensions-now-installed-packed/">extensions are no longer unpacked when they are installed</a>, but are instead run directly from the XPI file. Extensions can use the <a href="/en-US/docs/Install_Manifests#unpack">unpack</a> property in the <a href="/en-US/docs/Install_Manifests">install manifest</a> to choose the old behavior. Extensions that use binary components, DLLs loaded using <a href="/en-US/docs/js-ctypes" title="en-US/docs/js-ctypes">js-ctypes</a>, <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox" title="en-US/docs/Creating OpenSearch plugins for Firefox">search plugins</a>, dictionaries, and window icons must specify that they need to be unpacked. Extensions that <a href="/en-US/docs/XUL_School/Local_Storage#SQLite">create SQLite database</a>, or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.</li>
+ <li>By default, <a class="external" href="http://blog.mozilla.com/mwu/2010/09/10/extensions-now-installed-packed/">extensions are no longer unpacked when they are installed</a>, but are instead run directly from the XPI file. Extensions can use the <a href="/en-US/docs/Install_Manifests#unpack">unpack</a> property in the <a href="/en-US/docs/Install_Manifests">install manifest</a> to choose the old behavior. Extensions that use binary components, DLLs loaded using <a href="/en-US/docs/js-ctypes">js-ctypes</a>, <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox" title="en-US/docs/Creating OpenSearch plugins for Firefox">search plugins</a>, dictionaries, and window icons must specify that they need to be unpacked. Extensions that <a href="/en-US/docs/XUL_School/Local_Storage#SQLite">create SQLite database</a>, or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.</li>
  <li>You may now include extensions that <a href="/en-US/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox" title="en-US/docs/Developer Guide/Customizing Firefox#Including extensions with your distribution of Firefox">automatically get installed at application startup</a> within a customized Firefox.</li>
 </ul>
 
@@ -558,9 +558,9 @@ tags:
  <dt>Default plugin removed</dt>
  <dd>The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See {{bug("533891")}}.</dd>
  <dt>Extension Manager replaced by Addon Manager</dt>
- <dd>{{interface("nsIExtensionManager")}} has been replaced by <a href="/en-US/docs/Addons/Add-on_Manager/AddonManager" title="en-US/docs/Addons/Add-on_Manager/AddonManager">AddonManager</a>.</dd>
+ <dd>{{interface("nsIExtensionManager")}} has been replaced by <a href="/en-US/docs/Addons/Add-on_Manager/AddonManager">AddonManager</a>.</dd>
  <dt>Child HWNDs no longer used</dt>
- <dd>Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an <a href="/en-US/docs/NPAPI" title="en-US/docs/NPAPI">NPAPI</a> plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.</dd>
+ <dd>Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an <a href="/en-US/docs/NPAPI">NPAPI</a> plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.</dd>
  <dt>Gesture changes</dt>
  <dd>The three finger up and down swipe gestures on trackpads have been changed to, by default, open and close Firefox Panorama view (neé TabCandy). To change these back to the previous scroll-to-top and scroll-to-bottom commands, open about:config and set <code>browser.gesture.swipe.down</code> to <code>cmd_scrollBottom</code> and <code>browser.gesture.swipe.up</code> to <code>cmd_scrollTop</code>.</dd>
 </dl>

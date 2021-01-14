@@ -34,9 +34,6 @@ way.<br>
                 If SSL server, this will get you the
 server's    cert handle <br>
 
-<h4 id="sect1"><br>
-       </h4>
-
 <h4 id="Don't_forget_to_clean_up_the_cert_handle_when_you're_done_with_it">Don't forget to clean up the cert handle when you're done with it</h4>
        <i>void CERT_DestroyCertificate(CERTCertificate *cert);</i><br>
        <br>
@@ -101,7 +98,7 @@ some other  things.<br>
    = &amp;(*extensions)-&gt;critical;</i></small><br>
          <small><i>        SECItem *ext_value
  =  &amp;(*extensions)-&gt;value;</i></small><br>
-         <small><i>        </i></small><br>
+<br>
          <small><i>        /* id attribute
 of  the   extension */</i></small><br>
          <small><i>        SECOidData *oiddata

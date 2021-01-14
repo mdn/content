@@ -24,7 +24,7 @@ tags:
 
 <dl class="reference-values">
  <dt><code>query</code>{{optional_inline}}</dt>
- <dd>An <code>array</code> of <code><code>string</code></code>s. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>filename</code> or <code>url</code> contains all of the given strings. You can also include terms beginning with a dash (-) — these terms <strong>must not</strong> be contained in the item's <code>filename</code> or <code>url</code> for it to be included.</dd>
+ <dd>An <code>array</code> of <code>string</code>s. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>filename</code> or <code>url</code> contains all of the given strings. You can also include terms beginning with a dash (-) — these terms <strong>must not</strong> be contained in the item's <code>filename</code> or <code>url</code> for it to be included.</dd>
  <dt><code>startedBefore</code>{{optional_inline}}</dt>
  <dd>A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that started before the given time.</dd>
  <dt><code>startedAfter</code>{{optional_inline}}</dt>
@@ -44,7 +44,7 @@ tags:
  <dt><code>limit</code>{{optional_inline}}</dt>
  <dd>An <code>integer</code> representing a number of results. Include only the specified number of {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}.</dd>
  <dt><code>orderBy</code>{{optional_inline}}</dt>
- <dd>An <code>array</code> of <code><code>string</code></code>s representing {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} properties the search results should be sorted by. For example, including <code>startTime</code> then <code>totalBytes</code> in the array would sort the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} by their start time, then total bytes — in ascending order. To specify sorting by a property in descending order, prefix it with a hyphen, for example <code>-startTime</code>.</dd>
+ <dd>An <code>array</code> of <code>string</code>s representing {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} properties the search results should be sorted by. For example, including <code>startTime</code> then <code>totalBytes</code> in the array would sort the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} by their start time, then total bytes — in ascending order. To specify sorting by a property in descending order, prefix it with a hyphen, for example <code>-startTime</code>.</dd>
  <dt><code>id</code>{{optional_inline}}</dt>
  <dd>An <code>integer</code> representing the ID of the {{WebExtAPIRef("downloads.DownloadItem")}} you want to query.</dd>
  <dt><code>url</code>{{optional_inline}}</dt>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var reloading = browser.tabs.reload(
+<pre class="brush:js">var reloading = browser.tabs.reload(
   tabId,            // optional integer
   reloadProperties  // optional object
 )
@@ -48,15 +48,15 @@ tags:
 
 <p>Reload the active tab of the current window:</p>
 
-<pre class="brush: js">browser.tabs.reload();</pre>
+<pre class="notranslate brush: js">browser.tabs.reload();</pre>
 
 <p>Reload the active tab of the current window, bypassing the cache:</p>
 
-<pre class="brush: js">browser.tabs.reload({bypassCache: true});</pre>
+<pre class="notranslate brush: js">browser.tabs.reload({bypassCache: true});</pre>
 
 <p>Reload the tab whose ID is 2, bypassing the cache and calling a callback when done:</p>
 
-<pre class="brush: js">function onReloaded() {
+<pre class="notranslate brush: js">function onReloaded() {
   console.log(`Reloaded`);
 }
 

@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.devtools.panels.elements.createSidebarPane(
+<pre class="brush:js">var creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
 </pre>
@@ -53,7 +53,7 @@ tags:
 
 <p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+<pre class="notranslate brush: js">function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: "hello there",

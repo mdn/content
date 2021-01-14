@@ -25,7 +25,7 @@ tags:
 
 <p>The inline axis is the axis that corresponds to the direction that words in a sentence would run in the writing mode used. Therefore, in a horizontal language such as English or Arabic the inline direction runs horizontally. Should you be in a vertical writing mode the inline axis will run vertically.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15962/Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="inline_axis.png"></p>
 
 <p>To align things on the inline axis you use the properties that start with <code>justify-</code>, {{cssxref("justify-content")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}}.</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>To align things on the block axis you use the properties that start with <code>align-</code>, {{cssxref("align-content")}}, {{cssxref("align-items")}} and {{cssxref("align-self")}}.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15961/Block_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="block_axis.png"></p>
 
 <h2 id="Self_alignment">Self alignment</h2>
 
@@ -66,12 +66,12 @@ tags:
  <li>{{cssxref("row-gap")}}</li>
  <li>{{cssxref("column-gap")}}</li>
  <li>{{cssxref("gap")}}</li>
- <li>{{cssxref("grid-row-gap")}}</li>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
+ <li>{{cssxref("row-gap")}}</li>
+ <li>{{cssxref("column-gap")}}</li>
+ <li>{{cssxref("gap")}}</li>
 </ul>
 
-<p>The Grid specification originally contained the definition for the properties {{cssxref("grid-row-gap")}}, {{cssxref("grid-column-gap")}} and {{cssxref("grid-gap")}}. These have since been moved into the Box Alignment specification and renamed to {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. This allows them to be used for other layout methods where a gap between items makes sense.</p>
+<p>The Grid specification originally contained the definition for the properties {{cssxref("row-gap")}}, {{cssxref("column-gap")}} and {{cssxref("gap")}}. These have since been moved into the Box Alignment specification and renamed to {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. This allows them to be used for other layout methods where a gap between items makes sense.</p>
 
 <p>The updated properties have not yet been implemented in all browsers. Therefore, to use the gap properties in grid layout, you should use the <code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code> versions to ensure full compatibility. You could double up the properties and use both as you would for vendor prefixes.</p>
 

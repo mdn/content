@@ -7,6 +7,27 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is hosted within the
 [MDN Organization](https://github.com/mdn) on GitHub.
 
+<!-- You can quickly regenerate this TOC by running: npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
+
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+- [Making contributions](#making-contributions)
+  - [Setup](#setup)
+  - [Fundamental concepts](#fundamental-concepts)
+  - [Simple changes](#simple-changes)
+  - [More substantial changes](#more-substantial-changes)
+  - [Pull request etiquette](#pull-request-etiquette)
+  - [Adding a new document](#adding-a-new-document)
+  - [Moving one or more documents](#moving-one-or-more-documents)
+  - [Deleting a document](#deleting-a-document)
+  - [Adding images](#adding-images)
+  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
+  - [Adding code examples](#adding-code-examples)
+  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
+  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
+- [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
+  - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
+
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow
@@ -430,7 +451,8 @@ a new image to the `files/en-us/web/css` document.
     cp /some/path/my-cool-image.png files/en-us/web/css/
     ```
 
-1. Run our `filecheck` command on each image you add. It'll complain if something's wrong.
+1. Run the `filecheck` command on each image you add. It'll complain if something's wrong 
+  (see also the [Compressing images](#compressing-images) section below).
 We'll automatically run this as one of the tests we run when your new pull request is created,
 but why wait to fix any possible issues later?
 
@@ -455,6 +477,18 @@ push your branch to your fork:
     ```
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+#### Compressing images
+
+When you add images to MDN, you should make sure that they are compressed as much as possible without degrading quality, to save on download size for our readers. In fact, if you don't do this our CI process will fail and the build results will warn you that some of your images are too big.
+
+The best way to compress them is by using the built-in compression tool. You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option — this compresses the specified image as much as possible, and saves the result over the top of the original.
+
+For example:
+
+```sh
+yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+``` 
 
 ### Updating a browser compatibility table
 
@@ -513,3 +547,14 @@ In such situations:
 
 1. Make the required PR to <https://github.com/mdn/yari/blob/master/kumascript/macros/> first, and get that merged.
 2. Add the content to this repo.
+
+## Frequently asked questions (FAQ)
+
+### When will my change show up on the production MDN site?
+
+After your pull request is merged, it may take up to 48 hours before the change goes live on the production https://developer.mozilla.org/ site, but it will usually be quicker.
+
+* The complete build runs every 24h at around 7PM US/Eastern time, and is then deployed.
+* Once deployment has occurred, it can take up to 24 hours for the associated CDN caches to replace their previously-cached content with the updates.
+
+You can use https://whatsdeployed.io/s/DLi/mdn/content to see if your change has been deployed to the production site.

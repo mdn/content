@@ -77,7 +77,7 @@ function createTCPErrorFromFailedXHR(xhr) {
     } else {
   // Calculating the difference
 
-  <span>let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status &amp; 0xffff);</span>
+  let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status &amp; 0xffff);
 
       switch (sslErr) {
         case 3: // SSL_ERROR_NO_CERTIFICATE, ssl(3)
@@ -181,8 +181,8 @@ function dumpSecurityInfo(xhr, error) {
 
       dump("\tCommon name (CN) = " + cert.commonName + "\n");
       dump("\tIssuer = " + cert.issuerOrganization + "\n");
-      <span>dump("\tOrganisation = " + cert.organization + "\n");</span><span style="font-size: 1rem;">
-      dump("\tSHA1 fingerprint = " + cert.sha1Fingerprint + "\n");</span>
+      dump("\tOrganisation = " + cert.organization + "\n");
+      dump("\tSHA1 fingerprint = " + cert.sha1Fingerprint + "\n");
 
       var validity = cert.validity.QueryInterface(Ci.nsIX509CertValidity);
       dump("\tValid from " + validity.notBeforeGMT + "\n");

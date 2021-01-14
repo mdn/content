@@ -86,7 +86,7 @@ tags:
 
 <p>Usually you create an <code>Error</code> object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword. You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:</p>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js notranslate">try {
   throw new Error('Whoops!')
 } catch (e) {
   console.error(e.name + ': ' + e.message)
@@ -97,7 +97,7 @@ tags:
 
 <p>You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:</p>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js notranslate">try {
   foo.bar()
 } catch (e) {
   if (e instanceof EvalError) {

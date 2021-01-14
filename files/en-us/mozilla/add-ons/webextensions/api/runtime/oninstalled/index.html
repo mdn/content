@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">browser.runtime.onInstalled.addListener(listener)
+<pre class="brush:js">browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)
 </pre>
@@ -74,7 +74,7 @@ browser.runtime.onInstalled.hasListener(listener)
 
 <p>When the extension is installed, log the install reason and open <a class="external external-icon" href="https://example.com">https://example.com</a>:</p>
 
-<pre class="brush: js notranslate">function handleInstalled(details) {
+<pre class="notranslate brush: js notranslate">function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
     url: "<a href="https://example.com/">https://example.com</a>"

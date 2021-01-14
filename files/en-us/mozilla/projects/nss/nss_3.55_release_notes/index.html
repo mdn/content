@@ -29,8 +29,8 @@ slug: Mozilla/Projects/NSS/NSS_3.55_release_notes
 
 <ul>
  <li>P384 and P521 elliptic curve implementations are replaced with verifiable implementations from <a href="https://github.com/mit-plv/fiat-crypto">Fiat-Crypto</a> and <a href="https://gitlab.com/nisec/ecckiila/">ECCKiila</a>. Special thanks to the Network and Information Security Group (NISEC) at Tampere University.</li>
- <li>PK11_FindCertInSlot is added. With this function, a given slot can be queried with a DER-Encoded certificate, providing performance and usability improvements over other mechanisms. See <span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649633">Bug 1649633</a></span></span> for more details.</li>
- <li>DTLS 1.3 implementation is updated to draft-38. See <span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1647752">Bug 1647752</a> </span></span> for details.</li>
+ <li>PK11_FindCertInSlot is added. With this function, a given slot can be queried with a DER-Encoded certificate, providing performance and usability improvements over other mechanisms. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649633">Bug 1649633</a> for more details.</li>
+ <li>DTLS 1.3 implementation is updated to draft-38. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1647752">Bug 1647752</a>  for details.</li>
  <li>NSPR dependency updated to 4.27.</li>
 </ul>
 
@@ -43,25 +43,25 @@ slug: Mozilla/Projects/NSS/NSS_3.55_release_notes
 <h2 id="Bugs_fixed_in_NSS_3.55">Bugs fixed in NSS 3.55</h2>
 
 <ul>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1631583">Bug 1631583</a> (<span class="edit-hide">CVE-2020-6829, </span></span></span>CVE-2020-12400<span><span>) </span></span> - Replace P384 and P521 with new, verifiable implementations from <a href="https://github.com/mit-plv/fiat-crypto">Fiat-Crypto</a> and <a href="https://gitlab.com/nisec/ecckiila/">ECCKiila</a>.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649487">Bug 1649487</a> - Move overzealous assertion in VFY_EndWithSignature.</span></span></li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1631573">Bug 1631573</a> </span></span> (<span id="field-value-status_summary"><span id="field-value-bug_id"><span class="edit-hide">CVE-2020-12401</span></span></span>) - Remove unnecessary scalar padding.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636771">Bug 1636771</a></span></span> (<span id="field-value-status_summary"><span id="field-value-bug_id"><span class="edit-hide">CVE-2020-12403</span></span></span>) - Explicitly disable multi-part ChaCha20 (which was not functioning correctly) and more strictly enforce tag length.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649648">Bug 1649648</a> </span></span> - Don't memcpy zero bytes (sanitizer fix).</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649316">Bug 1649316</a> </span></span>- Don't memcpy zero bytes (sanitizer fix).</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649322">Bug 1649322</a> </span></span>- Don't memcpy zero bytes (sanitizer fix).</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653202">Bug 1653202</a> </span></span> - Fix initialization bug in blapitest when compiled with NSS_DISABLE_DEPRECATED_SEED.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1646594">Bug 1646594</a></span></span> - Fix AVX2 detection in makefile builds.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649633">Bug 1649633</a></span></span> - Add PK11_FindCertInSlot to search a given slot for a DER-encoded certificate.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1651520">Bug 1651520</a> </span></span> - Fix slotLock race in NSC_GetTokenInfo.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1647752">Bug 1647752</a></span></span> - Update DTLS 1.3 implementation to draft-38.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649190">Bug 1649190</a></span></span> - Run cipher, sdr, and ocsp tests under standard test cycle in CI.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649226">Bug 1649226</a> </span></span> - Add Wycheproof ECDSA tests.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1637222">Bug 1637222</a> </span></span> - Consistently enforce IV requirements for DES and 3DES.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1067214">Bug 1067214</a> </span></span> - Enforce minimum PKCS#1 v1.5 padding length in RSA_CheckSignRecover.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643528">Bug 1643528</a> </span> <span> </span></span> - Fix compilation error with -Werror=strict-prototypes.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1646324">Bug 1646324</a> </span> <span> </span></span> - Advertise PKCS#1 schemes for certificates in the signature_algorithms extension.</li>
- <li><span id="field-value-status_summary"><span id="field-value-bug_id"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1652331">Bug 1652331</a></span></span> - Update NSS 3.55 NSPR version to 4.27.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1631583">Bug 1631583</a> (CVE-2020-6829, CVE-2020-12400)  - Replace P384 and P521 with new, verifiable implementations from <a href="https://github.com/mit-plv/fiat-crypto">Fiat-Crypto</a> and <a href="https://gitlab.com/nisec/ecckiila/">ECCKiila</a>.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649487">Bug 1649487</a> - Move overzealous assertion in VFY_EndWithSignature.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1631573">Bug 1631573</a> (CVE-2020-12401) - Remove unnecessary scalar padding.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1636771">Bug 1636771</a> (CVE-2020-12403) - Explicitly disable multi-part ChaCha20 (which was not functioning correctly) and more strictly enforce tag length.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649648">Bug 1649648</a> - Don't memcpy zero bytes (sanitizer fix).</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649316">Bug 1649316</a> - Don't memcpy zero bytes (sanitizer fix).</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649322">Bug 1649322</a> - Don't memcpy zero bytes (sanitizer fix).</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1653202">Bug 1653202</a> - Fix initialization bug in blapitest when compiled with NSS_DISABLE_DEPRECATED_SEED.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1646594">Bug 1646594</a> - Fix AVX2 detection in makefile builds.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649633">Bug 1649633</a> - Add PK11_FindCertInSlot to search a given slot for a DER-encoded certificate.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1651520">Bug 1651520</a> - Fix slotLock race in NSC_GetTokenInfo.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1647752">Bug 1647752</a> - Update DTLS 1.3 implementation to draft-38.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649190">Bug 1649190</a> - Run cipher, sdr, and ocsp tests under standard test cycle in CI.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1649226">Bug 1649226</a> - Add Wycheproof ECDSA tests.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1637222">Bug 1637222</a> - Consistently enforce IV requirements for DES and 3DES.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1067214">Bug 1067214</a> - Enforce minimum PKCS#1 v1.5 padding length in RSA_CheckSignRecover.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643528">Bug 1643528</a> - Fix compilation error with -Werror=strict-prototypes.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1646324">Bug 1646324</a> - Advertise PKCS#1 schemes for certificates in the signature_algorithms extension.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1652331">Bug 1652331</a> - Update NSS 3.55 NSPR version to 4.27.</li>
 </ul>
 
 <p>This Bugzilla query returns all the bugs fixed in NSS 3.55:</p>

@@ -12,7 +12,7 @@ tags:
 
 <p>ARIA provides additional semantics to describe the role, state, and functionality of many familiar user interface controls, such as menus, sliders, trees, and dialogs. It also provides additional structural information, helping authors identify landmarks, regions, and grids on their pages. ARIA enables dynamic, JavaScript-driven applications and widgets to interoperate with a variety of desktop-based assistive technologies.</p>
 
-<p>For more information about how to create accessible widgets with ARIA, see the <a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">Overview of accessible web applications and widgets</a>.</p>
+<p>For more information about how to create accessible widgets with ARIA, see the <a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">Overview of accessible web applications and widgets</a>.</p>
 
 <h2 id="Where_is_ARIA_Supported">Where is ARIA Supported?</h2>
 
@@ -62,7 +62,7 @@ tags:
 <p>In some cases, earlier versions may support only some features of ARIA. More detailed browser compatibility charts are available from multiple sources:</p>
 
 <ul>
- <li><a class="external" href="http://caniuse.com/wai-aria">caniuse.com</a></li>
+ <li><a class="external" href="https://caniuse.com/wai-aria">caniuse.com</a></li>
  <li><a class="external" href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
 </ul>
 
@@ -147,7 +147,7 @@ tags:
 
 <p>Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:</p>
 
-<pre class="brush: javascript">// Find the progress bar &lt;div&gt; in the DOM.
+<pre class="brush: js">// Find the progress bar &lt;div&gt; in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -177,7 +177,7 @@ function updateProgress(percentComplete) {
 
 <p>The new attributes introduced in ARIA, such as <strong>role</strong> and those prefixed with <strong>aria-</strong>, aren't officially part of the HTML 4 or XHTML 4 specifications. As a result, pages that include ARIA may not validate using tools such as the <a class="external" href="http://validator.w3.org/">W3C's Markup Validator</a>.</p>
 
-<p>The first potential solution to this problem is to avoid placing ARIA roles and states in your markup directly. Instead, use JavaScript to dynamically add ARIA to your page, as shown in the answer to <a href="/#aria-in-action" title="#aria-in-action">Can you show me an example of ARIA in action?</a> above. Your page will still be theoretically invalid, but it will correctly pass all static validation checks.</p>
+<p>The first potential solution to this problem is to avoid placing ARIA roles and states in your markup directly. Instead, use JavaScript to dynamically add ARIA to your page, as shown in the answer to <a href="/#aria-in-action">Can you show me an example of ARIA in action?</a> above. Your page will still be theoretically invalid, but it will correctly pass all static validation checks.</p>
 
 <p>Another alternative is to use the HTML5 doctype, which includes built-in support for ARIA. The W3C's HTML5 validator will even find invalid uses of ARIA in HTML5 pages for you.</p>
 
@@ -203,7 +203,7 @@ function updateProgress(percentComplete) {
 
 <p>... and here is the JavaScript code that will ensure the progress bar still works in older browsers:</p>
 
-<pre class="brush: javascript">var progressBar = document.getElementById("progress-bar");
+<pre class="brush: js">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
@@ -294,8 +294,8 @@ initDemo();
 <h2 id="Where_can_I_learn_more_about_ARIA">Where can I learn more about ARIA?</h2>
 
 <ul>
- <li><a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">An overview of accessible web applications and widgets</a></li>
- <li><a href="/en/Accessibility/Accessible_forms" title="en/Accessibility/Accessible forms">Accessible forms</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">An overview of accessible web applications and widgets</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Accessible forms</a></li>
  <li>The W3C's <a class="external" href="https://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
  <li>WebAIM's <a class="external" href="http://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
 </ul>
